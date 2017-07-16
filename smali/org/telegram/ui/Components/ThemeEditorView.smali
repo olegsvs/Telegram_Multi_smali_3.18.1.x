@@ -1673,49 +1673,49 @@
 .end method
 
 .method public show(Landroid/app/Activity;Ljava/lang/String;)V
-    .locals 10
+    .locals 11
     .param p1, "activity"    # Landroid/app/Activity;
     .param p2, "themeName"    # Ljava/lang/String;
 
     .prologue
-    const/4 v9, 0x1
+    const/4 v10, 0x1
+
+    const/4 v9, 0x0
 
     const/4 v8, 0x0
-
-    const/4 v7, 0x0
-
-    .line 892
-    sget-object v5, Lorg/telegram/ui/Components/ThemeEditorView;->Instance:Lorg/telegram/ui/Components/ThemeEditorView;
-
-    if-eqz v5, :cond_0
 
     .line 893
     sget-object v5, Lorg/telegram/ui/Components/ThemeEditorView;->Instance:Lorg/telegram/ui/Components/ThemeEditorView;
 
+    if-eqz v5, :cond_0
+
+    .line 894
+    sget-object v5, Lorg/telegram/ui/Components/ThemeEditorView;->Instance:Lorg/telegram/ui/Components/ThemeEditorView;
+
     invoke-virtual {v5}, Lorg/telegram/ui/Components/ThemeEditorView;->destroy()V
 
-    .line 895
-    :cond_0
-    iput-boolean v7, p0, Lorg/telegram/ui/Components/ThemeEditorView;->hidden:Z
-
     .line 896
-    iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView;->currentThemeName:Ljava/lang/String;
+    :cond_0
+    iput-boolean v8, p0, Lorg/telegram/ui/Components/ThemeEditorView;->hidden:Z
 
     .line 897
+    iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView;->currentThemeName:Ljava/lang/String;
+
+    .line 898
     new-instance v5, Lorg/telegram/ui/Components/ThemeEditorView$1;
 
     invoke-direct {v5, p0, p1}, Lorg/telegram/ui/Components/ThemeEditorView$1;-><init>(Lorg/telegram/ui/Components/ThemeEditorView;Landroid/content/Context;)V
 
     iput-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowView:Landroid/widget/FrameLayout;
 
-    .line 989
+    .line 990
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowView:Landroid/widget/FrameLayout;
 
-    const v6, 0x7f02026c
+    const v6, 0x7f0201a8
 
     invoke-virtual {v5, v6}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 990
+    .line 991
     const-string/jumbo v5, "window"
 
     invoke-virtual {p1, v5}, Landroid/app/Activity;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
@@ -1726,57 +1726,77 @@
 
     iput-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowManager:Landroid/view/WindowManager;
 
-    .line 992
+    .line 993
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "themeconfig"
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v6, v7}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "themeconfig"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6, v8}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
     iput-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->preferences:Landroid/content/SharedPreferences;
 
-    .line 994
+    .line 995
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v6, "sidex"
 
-    invoke-interface {v5, v6, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v5, v6, v10}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 995
+    .line 996
     .local v3, "sidex":I
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v6, "sidey"
 
-    invoke-interface {v5, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v5, v6, v8}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 996
+    .line 997
     .local v4, "sidey":I
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v6, "px"
 
-    invoke-interface {v5, v6, v8}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+    invoke-interface {v5, v6, v9}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v1
 
-    .line 997
+    .line 998
     .local v1, "px":F
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v6, "py"
 
-    invoke-interface {v5, v6, v8}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+    invoke-interface {v5, v6, v9}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v2
 
-    .line 1000
+    .line 1001
     .local v2, "py":F
     :try_start_0
     new-instance v5, Landroid/view/WindowManager$LayoutParams;
@@ -1785,21 +1805,21 @@
 
     iput-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 1001
+    .line 1002
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v6, p0, Lorg/telegram/ui/Components/ThemeEditorView;->editorWidth:I
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 1002
+    .line 1003
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v6, p0, Lorg/telegram/ui/Components/ThemeEditorView;->editorHeight:I
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 1003
+    .line 1004
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v6, 0x1
@@ -1812,7 +1832,7 @@
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 1004
+    .line 1005
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v6, 0x0
@@ -1825,35 +1845,35 @@
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 1005
+    .line 1006
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v6, -0x3
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 1006
+    .line 1007
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v6, 0x33
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 1007
+    .line 1008
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v6, 0x63
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 1008
+    .line 1009
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const v6, 0x1000208
 
     iput v6, v5, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 1009
+    .line 1010
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowManager:Landroid/view/WindowManager;
 
     iget-object v6, p0, Lorg/telegram/ui/Components/ThemeEditorView;->windowView:Landroid/widget/FrameLayout;
@@ -1864,7 +1884,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1014
+    .line 1015
     new-instance v5, Lorg/telegram/ui/Components/WallpaperUpdater;
 
     new-instance v6, Lorg/telegram/ui/Components/ThemeEditorView$2;
@@ -1875,26 +1895,26 @@
 
     iput-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView;->wallpaperUpdater:Lorg/telegram/ui/Components/WallpaperUpdater;
 
-    .line 1032
+    .line 1033
     sput-object p0, Lorg/telegram/ui/Components/ThemeEditorView;->Instance:Lorg/telegram/ui/Components/ThemeEditorView;
 
-    .line 1033
+    .line 1034
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView;->parentActivity:Landroid/app/Activity;
 
-    .line 1034
+    .line 1035
     invoke-direct {p0}, Lorg/telegram/ui/Components/ThemeEditorView;->showWithAnimation()V
 
-    .line 1035
+    .line 1036
     :goto_0
     return-void
 
-    .line 1010
+    .line 1011
     :catch_0
     move-exception v0
 
-    .line 1011
+    .line 1012
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
-.end method
+.end methodяя

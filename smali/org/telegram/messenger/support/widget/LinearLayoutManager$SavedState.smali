@@ -49,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 2249
     new-instance v0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState$1;-><init>()V
@@ -63,10 +62,8 @@
     .locals 0
 
     .prologue
-    .line 2213
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2215
     return-void
 .end method
 
@@ -77,24 +74,20 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 2217
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2218
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
-    .line 2219
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
 
-    .line 2220
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -104,10 +97,8 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
 
-    .line 2221
     return-void
 
-    .line 2220
     :cond_0
     const/4 v0, 0x0
 
@@ -119,25 +110,20 @@
     .param p1, "other"    # Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;
 
     .prologue
-    .line 2223
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2224
     iget v0, p1, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
-    .line 2225
     iget v0, p1, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
 
-    .line 2226
     iget-boolean v0, p1, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
 
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
 
-    .line 2227
     return-void
 .end method
 
@@ -147,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 2239
     const/4 v0, 0x0
 
     return v0
@@ -157,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 2230
     iget v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     if-ltz v0, :cond_0
@@ -177,12 +161,10 @@
     .locals 1
 
     .prologue
-    .line 2234
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
-    .line 2235
     return-void
 .end method
 
@@ -192,17 +174,14 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 2244
     iget v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2245
     iget v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorOffset:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2246
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$SavedState;->mAnchorLayoutFromEnd:Z
 
     if-eqz v0, :cond_0
@@ -212,10 +191,8 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2247
     return-void
 
-    .line 2246
     :cond_0
     const/4 v0, 0x0
 

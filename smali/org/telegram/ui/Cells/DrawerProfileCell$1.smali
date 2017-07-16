@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/DrawerProfileCell;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$1;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$1;->val$activity:Landroid/app/Activity;
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 123
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -63,7 +61,6 @@
 
     move-result-object v0
 
-    .line 124
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
@@ -75,7 +72,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 125
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v1
@@ -84,7 +80,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 126
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v1
@@ -97,7 +92,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/PhotoViewer;->openPhoto(Lorg/telegram/tgnet/TLRPC$FileLocation;Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;)Z
 
-    .line 128
     :cond_0
     return-void
 .end method

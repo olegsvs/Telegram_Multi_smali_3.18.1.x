@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/FileLoader$6;
 
     .prologue
-    .line 440
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iput-object p2, p0, Lorg/telegram/messenger/FileLoader$6$1;->val$finalFileName:Ljava/lang/String;
@@ -51,7 +50,6 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 459
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 460
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -75,7 +72,6 @@
 
     invoke-interface {v0, v1, p2}, Lorg/telegram/messenger/FileLoader$FileLoaderDelegate;->fileLoadProgressChanged(Ljava/lang/String;F)V
 
-    .line 462
     :cond_0
     return-void
 .end method
@@ -86,7 +82,6 @@
     .param p2, "reason"    # I
 
     .prologue
-    .line 451
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -107,7 +102,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/FileLoader;->access$1600(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/tgnet/TLRPC$TL_webDocument;Lorg/telegram/tgnet/TLRPC$FileLocation;Ljava/lang/String;)V
 
-    .line 452
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -118,7 +112,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 453
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -131,7 +124,6 @@
 
     invoke-interface {v0, v1, p2}, Lorg/telegram/messenger/FileLoader$FileLoaderDelegate;->fileDidFailedLoad(Ljava/lang/String;I)V
 
-    .line 455
     :cond_0
     return-void
 .end method
@@ -142,7 +134,6 @@
     .param p2, "finalFile"    # Ljava/io/File;
 
     .prologue
-    .line 443
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -153,7 +144,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 444
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$6;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -168,7 +158,6 @@
 
     invoke-interface {v0, v1, p2, v2}, Lorg/telegram/messenger/FileLoader$FileLoaderDelegate;->fileDidLoaded(Ljava/lang/String;Ljava/io/File;I)V
 
-    .line 446
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$6$1;->this$1:Lorg/telegram/messenger/FileLoader$6;
 
@@ -190,6 +179,5 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/FileLoader;->access$1600(Lorg/telegram/messenger/FileLoader;Lorg/telegram/tgnet/TLRPC$Document;Lorg/telegram/tgnet/TLRPC$TL_webDocument;Lorg/telegram/tgnet/TLRPC$FileLocation;Ljava/lang/String;)V
 
-    .line 447
     return-void
 .end method

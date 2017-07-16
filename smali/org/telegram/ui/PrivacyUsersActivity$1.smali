@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 102
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -41,31 +40,25 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 105
     const/4 v2, -0x1
 
     if-ne p1, v2, :cond_1
 
-    .line 106
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/PrivacyUsersActivity;->finishFragment()V
 
-    .line 129
     :cond_0
     :goto_0
     return-void
 
-    .line 107
     :cond_1
     if-ne p1, v3, :cond_0
 
-    .line 108
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 109
     .local v0, "args":Landroid/os/Bundle;
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
@@ -80,7 +73,6 @@
     :goto_1
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 110
     const-string/jumbo v2, "isGroup"
 
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -91,12 +83,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 111
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/GroupCreateActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 112
     .local v1, "fragment":Lorg/telegram/ui/GroupCreateActivity;
     new-instance v2, Lorg/telegram/ui/PrivacyUsersActivity$1$1;
 
@@ -104,14 +94,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/GroupCreateActivity;->setDelegate(Lorg/telegram/ui/GroupCreateActivity$GroupCreateActivityDelegate;)V
 
-    .line 127
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/PrivacyUsersActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     goto :goto_0
 
-    .line 109
     .end local v1    # "fragment":Lorg/telegram/ui/GroupCreateActivity;
     :cond_2
     const-string/jumbo v2, "isNeverShare"

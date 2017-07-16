@@ -26,7 +26,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     .prologue
-    .line 790
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->val$thumb:Landroid/graphics/Bitmap;
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 799
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -82,7 +80,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 800
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -95,7 +92,6 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 801
     new-instance v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1$1;-><init>(Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;)V
@@ -104,7 +100,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 809
     invoke-static {}, Lorg/telegram/messenger/camera/CameraController;->getInstance()Lorg/telegram/messenger/camera/CameraController;
 
     move-result-object v0
@@ -125,7 +120,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/camera/CameraController;->startPreview(Lorg/telegram/messenger/camera/CameraSession;)V
 
-    .line 810
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -136,7 +130,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$5102(Lorg/telegram/ui/Components/ChatAttachAlert;Ljava/io/File;)Ljava/io/File;
 
-    .line 812
     :cond_0
     const/4 v0, 0x1
 
@@ -150,7 +143,6 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 793
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->val$thumb:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -164,7 +156,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 816
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -177,11 +168,9 @@
 
     if-nez v0, :cond_0
 
-    .line 824
     :goto_0
     return-void
 
-    .line 819
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
@@ -199,7 +188,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->addMediaToGallery(Ljava/lang/String;)V
 
-    .line 820
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -228,7 +216,6 @@
 
     invoke-virtual {v1, v0, p2}, Lorg/telegram/ui/ChatActivity;->sendMedia(Lorg/telegram/messenger/MediaController$PhotoEntry;Lorg/telegram/messenger/VideoEditedInfo;)V
 
-    .line 821
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -237,7 +224,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/ChatAttachAlert;->closeCamera(Z)V
 
-    .line 822
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -246,7 +232,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->dismiss()V
 
-    .line 823
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -264,7 +249,6 @@
     .locals 2
 
     .prologue
-    .line 828
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
@@ -275,6 +259,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4702(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 829
     return-void
 .end method

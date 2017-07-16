@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusChatsStatsActivity;
 
     .prologue
-    .line 466
     iput-object p1, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -60,7 +59,6 @@
 
     const v2, 0x7f07015c
 
-    .line 469
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->getParentActivity()Landroid/app/Activity;
@@ -69,12 +67,10 @@
 
     if-nez v0, :cond_1
 
-    .line 489
     :cond_0
     :goto_0
     return-void
 
-    .line 472
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -84,7 +80,6 @@
 
     if-ne p3, v0, :cond_2
 
-    .line 473
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$600(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -111,7 +106,6 @@
 
     goto :goto_0
 
-    .line 474
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -121,7 +115,6 @@
 
     if-ne p3, v0, :cond_3
 
-    .line 475
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$700(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -148,7 +141,6 @@
 
     goto :goto_0
 
-    .line 476
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -158,7 +150,6 @@
 
     if-ne p3, v0, :cond_4
 
-    .line 477
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$800(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -185,7 +176,6 @@
 
     goto :goto_0
 
-    .line 478
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -195,7 +185,6 @@
 
     if-ne p3, v0, :cond_5
 
-    .line 479
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$900(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -222,7 +211,6 @@
 
     goto/16 :goto_0
 
-    .line 480
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -232,7 +220,6 @@
 
     if-ne p3, v0, :cond_6
 
-    .line 481
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$1000(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -259,7 +246,6 @@
 
     goto/16 :goto_0
 
-    .line 482
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -269,7 +255,6 @@
 
     if-ne p3, v0, :cond_7
 
-    .line 483
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$1100(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -296,7 +281,6 @@
 
     goto/16 :goto_0
 
-    .line 484
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -306,7 +290,6 @@
 
     if-ne p3, v0, :cond_8
 
-    .line 485
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$500(Lorg/telegram/ui/PlusChatsStatsActivity;)I
@@ -335,7 +318,6 @@
 
     goto/16 :goto_0
 
-    .line 486
     :cond_8
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -345,7 +327,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 487
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$4;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$2400(Lorg/telegram/ui/PlusChatsStatsActivity;)I

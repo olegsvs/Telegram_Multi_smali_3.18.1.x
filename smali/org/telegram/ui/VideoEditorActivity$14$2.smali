@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VideoEditorActivity$14;
 
     .prologue
-    .line 965
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$14$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "mp"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 969
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$14$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$14;
 
@@ -62,7 +60,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 973
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$14$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$14;
 
@@ -70,14 +67,11 @@
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$800(Lorg/telegram/ui/VideoEditorActivity;)V
 
-    .line 974
     return-void
 
-    .line 970
     :catch_0
     move-exception v0
 
-    .line 971
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

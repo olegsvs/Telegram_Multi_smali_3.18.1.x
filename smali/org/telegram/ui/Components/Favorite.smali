@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 11
     const/4 v0, 0x0
 
     sput-object v0, Lorg/telegram/ui/Components/Favorite;->Instance:Lorg/telegram/ui/Components/Favorite;
@@ -39,10 +38,8 @@
     .locals 1
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 24
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->databaseHandler:Lorg/telegram/SQLite/DatabaseHandler;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/DatabaseHandler;->getList()Ljava/util/ArrayList;
@@ -51,7 +48,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
-    .line 25
     return-void
 .end method
 
@@ -59,14 +55,11 @@
     .locals 1
 
     .prologue
-    .line 16
     sget-object v0, Lorg/telegram/ui/Components/Favorite;->Instance:Lorg/telegram/ui/Components/Favorite;
 
-    .line 17
     .local v0, "localInstance":Lorg/telegram/ui/Components/Favorite;
     if-nez v0, :cond_0
 
-    .line 18
     new-instance v0, Lorg/telegram/ui/Components/Favorite;
 
     .end local v0    # "localInstance":Lorg/telegram/ui/Components/Favorite;
@@ -75,7 +68,6 @@
     .restart local v0    # "localInstance":Lorg/telegram/ui/Components/Favorite;
     sput-object v0, Lorg/telegram/ui/Components/Favorite;->Instance:Lorg/telegram/ui/Components/Favorite;
 
-    .line 20
     :cond_0
     return-object v0
 .end method
@@ -87,17 +79,14 @@
     .param p1, "id"    # Ljava/lang/Long;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 35
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->databaseHandler:Lorg/telegram/SQLite/DatabaseHandler;
 
     invoke-virtual {v0, p1}, Lorg/telegram/SQLite/DatabaseHandler;->addFavorite(Ljava/lang/Long;)V
 
-    .line 36
     return-void
 .end method
 
@@ -106,17 +95,14 @@
     .param p1, "id"    # Ljava/lang/Long;
 
     .prologue
-    .line 40
     iget-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 41
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->databaseHandler:Lorg/telegram/SQLite/DatabaseHandler;
 
     invoke-virtual {v0, p1}, Lorg/telegram/SQLite/DatabaseHandler;->deleteFavorite(Ljava/lang/Long;)V
 
-    .line 42
     return-void
 .end method
 
@@ -124,7 +110,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -147,7 +132,6 @@
     .end annotation
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
     return-object v0
@@ -158,7 +142,6 @@
     .param p1, "id"    # Ljava/lang/Long;
 
     .prologue
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/Components/Favorite;->list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z

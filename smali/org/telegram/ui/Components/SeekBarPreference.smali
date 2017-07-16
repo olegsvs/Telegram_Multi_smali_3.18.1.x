@@ -43,10 +43,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 44
     invoke-direct {p0, p1, p2}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 25
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -57,40 +55,32 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
-    .line 31
     const/16 v0, 0x64
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
 
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
-    .line 33
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mInterval:I
 
-    .line 35
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsLeft:Ljava/lang/String;
 
-    .line 36
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsRight:Ljava/lang/String;
 
-    .line 41
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->layout:Landroid/widget/RelativeLayout;
 
-    .line 45
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/SeekBarPreference;->initPreference(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 46
     return-void
 .end method
 
@@ -101,10 +91,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0, p1, p2, p3}, Landroid/preference/Preference;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 25
     invoke-virtual {p0}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
     move-result-object v0
@@ -115,40 +103,32 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
-    .line 31
     const/16 v0, 0x64
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
 
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
-    .line 33
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mInterval:I
 
-    .line 35
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsLeft:Ljava/lang/String;
 
-    .line 36
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsRight:Ljava/lang/String;
 
-    .line 41
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->layout:Landroid/widget/RelativeLayout;
 
-    .line 50
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/SeekBarPreference;->initPreference(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 51
     return-void
 .end method
 
@@ -160,19 +140,15 @@
     .param p4, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 80
     invoke-interface {p1, p2, p3}, Landroid/util/AttributeSet;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 81
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 82
     move-object v0, p4
 
-    .line 84
     :cond_0
     return-object v0
 .end method
@@ -183,17 +159,14 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 54
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SeekBarPreference;->setValuesFromXml(Landroid/util/AttributeSet;)V
 
-    .line 55
     new-instance v0, Landroid/widget/SeekBar;
 
     invoke-direct {v0, p1, p2}, Landroid/widget/SeekBar;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     iget v1, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
@@ -204,12 +177,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/SeekBar;->setMax(I)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, p0}, Landroid/widget/SeekBar;->setOnSeekBarChangeListener(Landroid/widget/SeekBar$OnSeekBarChangeListener;)V
 
-    .line 58
     return-void
 .end method
 
@@ -218,7 +189,6 @@
     .param p1, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 61
     const-string/jumbo v3, "http://schemas.android.com/apk/res/android"
 
     const-string/jumbo v4, "max"
@@ -231,7 +201,6 @@
 
     iput v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
 
-    .line 62
     const-string/jumbo v3, "http://robobunny.com"
 
     const-string/jumbo v4, "min"
@@ -244,7 +213,6 @@
 
     iput v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
-    .line 64
     const-string/jumbo v3, "http://robobunny.com"
 
     const-string/jumbo v4, "unitsLeft"
@@ -257,7 +225,6 @@
 
     iput-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsLeft:Ljava/lang/String;
 
-    .line 65
     const-string/jumbo v3, "http://robobunny.com"
 
     const-string/jumbo v4, "units"
@@ -268,7 +235,6 @@
 
     move-result-object v2
 
-    .line 66
     .local v2, "units":Ljava/lang/String;
     const-string/jumbo v3, "http://robobunny.com"
 
@@ -280,7 +246,6 @@
 
     iput-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsRight:Ljava/lang/String;
 
-    .line 69
     :try_start_0
     const-string/jumbo v3, "http://robobunny.com"
 
@@ -290,11 +255,9 @@
 
     move-result-object v1
 
-    .line 70
     .local v1, "newInterval":Ljava/lang/String;
     if-eqz v1, :cond_0
 
-    .line 71
     invoke-static {v1}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v3
@@ -303,17 +266,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 77
     .end local v1    # "newInterval":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :catch_0
     move-exception v0
 
-    .line 74
     .local v0, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
@@ -331,13 +291,11 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 107
     :try_start_0
     invoke-super {p0, p1}, Landroid/preference/Preference;->onBindView(Landroid/view/View;)V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 112
     :try_start_1
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
@@ -345,7 +303,6 @@
 
     move-result-object v2
 
-    .line 113
     .local v2, "oldContainer":Landroid/view/ViewParent;
     const v3, 0x7f0c005f
 
@@ -355,14 +312,11 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 115
     .local v1, "newContainer":Landroid/view/ViewGroup;
     if-eq v2, v1, :cond_1
 
-    .line 117
     if-eqz v2, :cond_0
 
-    .line 118
     check-cast v2, Landroid/view/ViewGroup;
 
     .end local v2    # "oldContainer":Landroid/view/ViewParent;
@@ -370,11 +324,9 @@
 
     invoke-virtual {v2, v3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 121
     :cond_0
     invoke-virtual {v1}, Landroid/view/ViewGroup;->removeAllViews()V
 
-    .line 125
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/4 v4, -0x1
@@ -386,7 +338,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/NullPointerException; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 134
     .end local v1    # "newContainer":Landroid/view/ViewGroup;
     :cond_1
     :goto_0
@@ -403,26 +354,21 @@
 
     if-eqz v3, :cond_2
 
-    .line 135
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     const/4 v4, 0x0
 
     invoke-virtual {v3, v4}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
-    .line 138
     :cond_2
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/SeekBarPreference;->updateView(Landroid/view/View;)V
 
-    .line 142
     :goto_1
     return-void
 
-    .line 130
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "ex":Ljava/lang/Exception;
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
@@ -454,12 +400,10 @@
 
     goto :goto_0
 
-    .line 139
     .end local v0    # "ex":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 140
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_1
 .end method
@@ -469,7 +413,6 @@
     .param p1, "parent"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 91
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SeekBarPreference;->getContext()Landroid/content/Context;
 
@@ -483,7 +426,6 @@
 
     check-cast v1, Landroid/view/LayoutInflater;
 
-    .line 93
     .local v1, "mInflater":Landroid/view/LayoutInflater;
     const v2, 0x7f030015
 
@@ -499,18 +441,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
     .end local v1    # "mInflater":Landroid/view/LayoutInflater;
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->layout:Landroid/widget/RelativeLayout;
 
     return-object v2
 
-    .line 95
     :catch_0
     move-exception v0
 
-    .line 97
     .local v0, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
@@ -531,15 +470,12 @@
 
     const/4 v2, 0x0
 
-    .line 209
     invoke-super {p0, p1, p2}, Landroid/preference/Preference;->onDependencyChanged(Landroid/preference/Preference;Z)V
 
-    .line 212
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->layout:Landroid/widget/RelativeLayout;
 
     if-eqz v0, :cond_0
 
-    .line 214
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     if-nez p2, :cond_1
@@ -549,7 +485,6 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
-    .line 215
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mStatusText:Landroid/widget/TextView;
 
     if-nez p2, :cond_2
@@ -557,20 +492,17 @@
     :goto_1
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 217
     :cond_0
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 214
     goto :goto_0
 
     :cond_2
     move v1, v2
 
-    .line 215
     goto :goto_1
 .end method
 
@@ -580,14 +512,12 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 238
     const/16 v1, 0x32
 
     invoke-virtual {p1, p2, v1}, Landroid/content/res/TypedArray;->getInt(II)I
 
     move-result v0
 
-    .line 239
     .local v0, "defaultValue":I
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -603,22 +533,18 @@
     .param p3, "fromUser"    # Z
 
     .prologue
-    .line 176
     :try_start_0
     iget v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
     add-int v1, p2, v2
 
-    .line 178
     .local v1, "newValue":I
     iget v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
 
     if-le v1, v2, :cond_1
 
-    .line 179
     iget v1, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMaxValue:I
 
-    .line 186
     :cond_0
     :goto_0
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -631,7 +557,6 @@
 
     if-nez v2, :cond_3
 
-    .line 187
     iget v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
 
     iget v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
@@ -640,24 +565,20 @@
 
     invoke-virtual {p1, v2}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 198
     .end local v1    # "newValue":I
     :goto_1
     return-void
 
-    .line 180
     .restart local v1    # "newValue":I
     :cond_1
     iget v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
     if-ge v1, v2, :cond_2
 
-    .line 181
     iget v1, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mMinValue:I
 
     goto :goto_0
 
-    .line 182
     :cond_2
     iget v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mInterval:I
 
@@ -671,7 +592,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 183
     int-to-float v2, v1
 
     iget v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mInterval:I
@@ -690,11 +610,9 @@
 
     goto :goto_0
 
-    .line 192
     :cond_3
     iput v1, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
 
-    .line 193
     iget-object v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mStatusText:Landroid/widget/TextView;
 
     invoke-static {v1}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -703,19 +621,16 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 194
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/SeekBarPreference;->persistInt(I)Z
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_1
 
-    .line 195
     .end local v1    # "newValue":I
     :catch_0
     move-exception v0
 
-    .line 196
     .local v0, "ex":Ljava/lang/NullPointerException;
     goto :goto_1
 .end method
@@ -726,10 +641,8 @@
     .param p2, "defaultValue"    # Ljava/lang/Object;
 
     .prologue
-    .line 246
     if-eqz p1, :cond_0
 
-    .line 247
     iget v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/Components/SeekBarPreference;->getPersistedInt(I)I
@@ -738,15 +651,12 @@
 
     iput v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
 
-    .line 262
     :goto_0
     return-void
 
-    .line 250
     :cond_0
     const/4 v2, 0x0
 
-    .line 252
     .local v2, "temp":I
     :try_start_0
     move-object v0, p2
@@ -761,20 +671,16 @@
 
     move-result v2
 
-    .line 258
     :goto_1
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/SeekBarPreference;->persistInt(I)Z
 
-    .line 259
     iput v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
 
     goto :goto_0
 
-    .line 254
     :catch_0
     move-exception v1
 
-    .line 255
     .local v1, "ex":Ljava/lang/Exception;
     iget-object v3, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 
@@ -810,7 +716,6 @@
     .param p1, "seekBar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 221
     return-void
 .end method
 
@@ -819,10 +724,8 @@
     .param p1, "seekBar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 225
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SeekBarPreference;->notifyChanged()V
 
-    .line 226
     iget-object v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsRight:Ljava/lang/String;
 
     const-string/jumbo v3, "r"
@@ -843,7 +746,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 227
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
@@ -859,13 +761,11 @@
 
     move-result-object v1
 
-    .line 228
     .local v1, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 229
     .local v0, "e":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "need_reboot"
 
@@ -873,10 +773,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 230
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 232
     .end local v0    # "e":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "sharedPref":Landroid/content/SharedPreferences;
     :cond_1
@@ -888,15 +786,12 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 203
     invoke-super {p0, p1}, Landroid/preference/Preference;->setEnabled(Z)V
 
-    .line 204
     iget-object v0, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     invoke-virtual {v0, p1}, Landroid/widget/SeekBar;->setEnabled(Z)V
 
-    .line 205
     return-void
 .end method
 
@@ -905,7 +800,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 152
     :try_start_0
     move-object v0, p1
 
@@ -913,7 +807,6 @@
 
     move-object v2, v0
 
-    .line 154
     .local v2, "layout":Landroid/widget/RelativeLayout;
     const v5, 0x7f0c005e
 
@@ -925,7 +818,6 @@
 
     iput-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mStatusText:Landroid/widget/TextView;
 
-    .line 155
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mStatusText:Landroid/widget/TextView;
 
     iget v6, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
@@ -936,14 +828,12 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 156
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mStatusText:Landroid/widget/TextView;
 
     const/16 v6, 0x1e
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setMinimumWidth(I)V
 
-    .line 158
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mSeekBar:Landroid/widget/SeekBar;
 
     iget v6, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mCurrentValue:I
@@ -954,7 +844,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/SeekBar;->setProgress(I)V
 
-    .line 160
     const v5, 0x7f0c005d
 
     invoke-virtual {v2, v5}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -963,13 +852,11 @@
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 161
     .local v4, "unitsRight":Landroid/widget/TextView;
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsRight:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 163
     const v5, 0x7f0c005c
 
     invoke-virtual {v2, v5}, Landroid/widget/RelativeLayout;->findViewById(I)Landroid/view/View;
@@ -978,7 +865,6 @@
 
     check-cast v3, Landroid/widget/TextView;
 
-    .line 164
     .local v3, "unitsLeft":Landroid/widget/TextView;
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->mUnitsLeft:Ljava/lang/String;
 
@@ -986,18 +872,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
     .end local v2    # "layout":Landroid/widget/RelativeLayout;
     .end local v3    # "unitsLeft":Landroid/widget/TextView;
     .end local v4    # "unitsRight":Landroid/widget/TextView;
     :goto_0
     return-void
 
-    .line 167
     :catch_0
     move-exception v1
 
-    .line 168
     .local v1, "e":Ljava/lang/Exception;
     iget-object v5, p0, Lorg/telegram/ui/Components/SeekBarPreference;->TAG:Ljava/lang/String;
 

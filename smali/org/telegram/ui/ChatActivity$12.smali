@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 1436
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -52,10 +51,8 @@
 
     const/high16 v5, 0x3f800000    # 1.0f
 
-    .line 1456
     sub-int v0, p5, p3
 
-    .line 1459
     .local v0, "height":I
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -69,7 +66,6 @@
 
     if-eq v2, v8, :cond_3
 
-    .line 1460
     div-int/lit8 v2, v0, 0x2
 
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -113,7 +109,6 @@
 
     add-int v1, v3, v2
 
-    .line 1464
     .local v1, "textTop":I
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -146,7 +141,6 @@
 
     invoke-virtual {v2, v6, v1, v3, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->layout(IIII)V
 
-    .line 1466
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -159,7 +153,6 @@
 
     if-eq v2, v8, :cond_1
 
-    .line 1467
     div-int/lit8 v2, v0, 0x2
 
     div-int/lit8 v3, v0, 0x2
@@ -205,7 +198,6 @@
 
     sub-int v1, v2, v3
 
-    .line 1468
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -236,18 +228,15 @@
 
     invoke-virtual {v2, v6, v1, v3, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->layout(IIII)V
 
-    .line 1470
     :cond_1
     return-void
 
-    .line 1460
     .end local v1    # "textTop":I
     :cond_2
     const/high16 v2, 0x40400000    # 3.0f
 
     goto :goto_0
 
-    .line 1462
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -277,22 +266,18 @@
 
     const/high16 v5, -0x80000000
 
-    .line 1440
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 1441
     .local v1, "width":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 1443
     .local v0, "height":I
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/ChatActivity$12;->setMeasuredDimension(II)V
 
-    .line 1445
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -322,7 +307,6 @@
     :goto_0
     invoke-virtual {v3, v2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 1446
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4600(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -345,7 +329,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->measure(II)V
 
-    .line 1448
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -360,7 +343,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1449
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -390,7 +372,6 @@
     :goto_1
     invoke-virtual {v3, v2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 1450
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$12;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$4700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/SimpleTextView;
@@ -413,17 +394,14 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->measure(II)V
 
-    .line 1452
     :cond_0
     return-void
 
-    .line 1445
     :cond_1
     const/16 v2, 0x14
 
     goto :goto_0
 
-    .line 1449
     :cond_2
     const/16 v2, 0x10
 

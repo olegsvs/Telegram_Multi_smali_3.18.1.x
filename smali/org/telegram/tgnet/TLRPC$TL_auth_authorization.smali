@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 1141
     const v0, -0x32faf6ea
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 1140
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,15 +54,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1148
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 1149
     if-eqz p2, :cond_0
 
-    .line 1150
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_auth_authorization"
@@ -89,21 +84,17 @@
 
     throw v1
 
-    .line 1152
     :cond_0
     const/4 v0, 0x0
 
-    .line 1157
     :goto_0
     return-object v0
 
-    .line 1155
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;-><init>()V
 
-    .line 1156
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -118,28 +109,24 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1161
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->flags:I
 
-    .line 1162
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 1163
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->tmp_sessions:I
 
-    .line 1165
     :cond_0
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
@@ -151,7 +138,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->user:Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1166
     return-void
 .end method
 
@@ -160,34 +146,28 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 1169
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1170
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1171
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 1172
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->tmp_sessions:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1174
     :cond_0
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$User;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1175
     return-void
 .end method

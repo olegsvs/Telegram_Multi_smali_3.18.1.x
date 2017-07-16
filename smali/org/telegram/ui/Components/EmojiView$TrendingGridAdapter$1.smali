@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1942
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$1;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/StickerEmojiCell;-><init>(Landroid/content/Context;)V
@@ -41,7 +40,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 1944
     const/high16 v0, 0x42a40000    # 82.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -56,6 +54,5 @@
 
     invoke-super {p0, p1, v0}, Lorg/telegram/ui/Cells/StickerEmojiCell;->onMeasure(II)V
 
-    .line 1945
     return-void
 .end method

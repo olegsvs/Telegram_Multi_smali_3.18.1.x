@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$5;
 
     .prologue
-    .line 1013
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$5$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1016
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$5$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$5;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$5;->val$callback:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 1017
     return-void
 .end method

@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 6154
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$84;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesStorage$84;->val$outbox:Z
@@ -57,17 +56,14 @@
     .locals 6
 
     .prologue
-    .line 6157
     const/4 v0, 0x0
 
-    .line 6159
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :try_start_0
     iget-boolean v2, p0, Lorg/telegram/messenger/MessagesStorage$84;->val$outbox:Z
 
     if-eqz v2, :cond_2
 
-    .line 6160
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$84;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v2}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -102,7 +98,6 @@
 
     move-result-object v0
 
-    .line 6164
     :goto_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -110,7 +105,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 6165
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$84;->val$max:[Ljava/lang/Integer;
 
     const/4 v3, 0x0
@@ -130,24 +124,19 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 6170
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6171
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 6174
     :cond_1
     :goto_1
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$84;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 6175
     return-void
 
-    .line 6162
     :cond_2
     :try_start_1
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$84;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -189,33 +178,27 @@
 
     goto :goto_0
 
-    .line 6167
     :catch_0
     move-exception v1
 
-    .line 6168
     .local v1, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 6170
     if-eqz v0, :cond_1
 
-    .line 6171
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
     goto :goto_1
 
-    .line 6170
     .end local v1    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
     if-eqz v0, :cond_3
 
-    .line 6171
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
     :cond_3

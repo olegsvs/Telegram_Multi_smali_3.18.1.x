@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoPickerActivity;
 
     .prologue
-    .line 784
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$10;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     iput p2, p0, Lorg/telegram/ui/PhotoPickerActivity$10;->val$token:I
@@ -51,13 +50,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 787
     new-instance v0, Lorg/telegram/ui/PhotoPickerActivity$10$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/PhotoPickerActivity$10$1;-><init>(Lorg/telegram/ui/PhotoPickerActivity$10;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 850
     return-void
 .end method

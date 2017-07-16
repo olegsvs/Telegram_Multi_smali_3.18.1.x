@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MusicPlayerService;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lorg/telegram/messenger/MusicPlayerService$1;->this$0:Lorg/telegram/messenger/MusicPlayerService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/MusicPlayerService$1;->this$0:Lorg/telegram/messenger/MusicPlayerService;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MusicPlayerService;->stopSelf()V
 
-    .line 67
     return-void
 .end method

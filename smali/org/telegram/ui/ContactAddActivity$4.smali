@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactAddActivity;
 
     .prologue
-    .line 197
     iput-object p1, p0, Lorg/telegram/ui/ContactAddActivity$4;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 200
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0
 
-    .line 201
     iget-object v0, p0, Lorg/telegram/ui/ContactAddActivity$4;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ContactAddActivity;->access$300(Lorg/telegram/ui/ContactAddActivity;)Landroid/view/View;
@@ -58,10 +55,8 @@
 
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 
-    .line 202
     const/4 v0, 0x1
 
-    .line 204
     :goto_0
     return v0
 

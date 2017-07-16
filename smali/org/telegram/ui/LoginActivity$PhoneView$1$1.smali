@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$PhoneView$1;
 
     .prologue
-    .line 609
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .param p2, "shortName"    # Ljava/lang/String;
 
     .prologue
-    .line 612
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/LoginActivity$PhoneView;->selectCountry(Ljava/lang/String;)V
 
-    .line 613
     new-instance v0, Lorg/telegram/ui/LoginActivity$PhoneView$1$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/LoginActivity$PhoneView$1$1$1;-><init>(Lorg/telegram/ui/LoginActivity$PhoneView$1$1;)V
@@ -59,7 +56,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 619
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -70,7 +66,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/HintEditText;->requestFocus()Z
 
-    .line 620
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$1;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -93,6 +88,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/HintEditText;->setSelection(I)V
 
-    .line 621
     return-void
 .end method

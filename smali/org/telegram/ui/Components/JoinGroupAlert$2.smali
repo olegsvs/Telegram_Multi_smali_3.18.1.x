@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/JoinGroupAlert;
 
     .prologue
-    .line 163
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$2;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,17 +41,14 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 166
     iget-object v1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$2;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/JoinGroupAlert;->dismiss()V
 
-    .line 167
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;-><init>()V
 
-    .line 168
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;
     iget-object v1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$2;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -62,7 +58,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;->hash:Ljava/lang/String;
 
-    .line 169
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -75,6 +70,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 204
     return-void
 .end method

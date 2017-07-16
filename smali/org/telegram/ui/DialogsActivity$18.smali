@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DialogsActivity;
 
     .prologue
-    .line 2446
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$18;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/AnimatorListenerAdapterProxy;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2449
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$18;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DialogsActivity;->access$5200(Lorg/telegram/ui/DialogsActivity;)Z
@@ -78,11 +76,9 @@
     :goto_1
     invoke-virtual {v3, v1, v0, v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 2450
     :cond_0
     return-void
 
-    .line 2449
     :cond_1
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->plusTabsHeight:I
 

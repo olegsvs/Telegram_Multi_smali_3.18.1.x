@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 344
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$5;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 347
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$5;->this$0:Lorg/telegram/messenger/ContactsController;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController;->contacts:Ljava/util/ArrayList;
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 348
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->access$300()Ljava/lang/Object;
 
@@ -68,7 +65,6 @@
 
     monitor-enter v1
 
-    .line 349
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$5;->this$0:Lorg/telegram/messenger/ContactsController;
 
@@ -76,14 +72,11 @@
 
     invoke-static {v0, v2}, Lorg/telegram/messenger/ContactsController;->access$402(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 350
     monitor-exit v1
 
-    .line 354
     :goto_0
     return-void
 
-    .line 350
     :catchall_0
     move-exception v0
 
@@ -93,7 +86,6 @@
 
     throw v0
 
-    .line 353
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$5;->this$0:Lorg/telegram/messenger/ContactsController;
 

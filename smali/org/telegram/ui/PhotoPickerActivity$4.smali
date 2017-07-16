@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoPickerActivity;
 
     .prologue
-    .line 285
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$4;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -46,21 +45,17 @@
 
     const/high16 v10, 0x40800000    # 4.0f
 
-    .line 288
     invoke-super {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;->getItemOffsets(Landroid/graphics/Rect;Landroid/view/View;Lorg/telegram/messenger/support/widget/RecyclerView;Lorg/telegram/messenger/support/widget/RecyclerView$State;)V
 
-    .line 289
     invoke-virtual {p4}, Lorg/telegram/messenger/support/widget/RecyclerView$State;->getItemCount()I
 
     move-result v5
 
-    .line 290
     .local v5, "total":I
     invoke-virtual {p3, p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v1
 
-    .line 291
     .local v1, "position":I
     iget-object v6, p0, Lorg/telegram/ui/PhotoPickerActivity$4;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
@@ -72,7 +67,6 @@
 
     move-result v4
 
-    .line 292
     .local v4, "spanCount":I
     int-to-float v6, v5
 
@@ -88,15 +82,12 @@
 
     double-to-int v3, v8
 
-    .line 293
     .local v3, "rowsCOunt":I
     div-int v2, v1, v4
 
-    .line 294
     .local v2, "row":I
     rem-int v0, v1, v4
 
-    .line 295
     .local v0, "col":I
     add-int/lit8 v6, v4, -0x1
 
@@ -109,7 +100,6 @@
     :goto_0
     iput v6, p1, Landroid/graphics/Rect;->right:I
 
-    .line 296
     add-int/lit8 v6, v3, -0x1
 
     if-eq v2, v6, :cond_0
@@ -121,12 +111,10 @@
     :cond_0
     iput v7, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 297
     return-void
 
     :cond_1
     move v6, v7
 
-    .line 295
     goto :goto_0
 .end method

@@ -54,7 +54,6 @@
 
     const/4 v3, 0x0
 
-    .line 34
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlNone"
@@ -63,7 +62,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlNone:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 35
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlCenter"
@@ -72,7 +70,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlCenter:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 36
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlInnerRadius"
@@ -81,7 +78,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlInnerRadius:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 37
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlOuterRadius"
@@ -90,7 +86,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlOuterRadius:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 38
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlWholeArea"
@@ -99,7 +94,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlWholeArea:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 39
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     const-string/jumbo v1, "BlurViewActiveControlRotation"
@@ -110,7 +104,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->BlurViewActiveControlRotation:Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
-    .line 33
     const/4 v0, 0x6
 
     new-array v0, v0, [Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
@@ -155,7 +148,6 @@
     .end annotation
 
     .prologue
-    .line 33
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -166,7 +158,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const-class v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -182,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 33
     sget-object v0, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->$VALUES:[Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     invoke-virtual {v0}, [Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->clone()Ljava/lang/Object;

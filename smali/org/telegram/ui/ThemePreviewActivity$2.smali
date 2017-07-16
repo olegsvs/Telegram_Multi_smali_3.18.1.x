@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -42,12 +41,10 @@
     .param p3, "drawingTime"    # J
 
     .prologue
-    .line 147
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v0
 
-    .line 148
     .local v0, "result":Z
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -65,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 149
     iget-object v1, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ThemePreviewActivity;->access$900(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -97,11 +93,9 @@
     :goto_0
     invoke-virtual {v2, p1, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->drawHeaderShadow(Landroid/graphics/Canvas;I)V
 
-    .line 151
     :cond_0
     return v0
 
-    .line 149
     :cond_1
     const/4 v1, 0x0
 
@@ -118,22 +112,18 @@
 
     const/4 v3, 0x0
 
-    .line 128
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v9
 
-    .line 129
     .local v9, "widthSize":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v7
 
-    .line 131
     .local v7, "heightSize":I
     invoke-virtual {p0, v9, v7}, Lorg/telegram/ui/ThemePreviewActivity$2;->setMeasuredDimension(II)V
 
-    .line 133
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$000(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -150,7 +140,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ThemePreviewActivity$2;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$100(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -161,7 +150,6 @@
 
     move-result v6
 
-    .line 135
     .local v6, "actionBarHeight":I
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -175,10 +163,8 @@
 
     if-nez v0, :cond_0
 
-    .line 136
     sub-int/2addr v7, v6
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
@@ -192,11 +178,9 @@
 
     check-cast v8, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 139
     .local v8, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     iput v6, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$300(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -213,7 +197,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->measure(II)V
 
-    .line 142
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$2;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$400(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/widget/ImageView;
@@ -230,6 +213,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ThemePreviewActivity$2;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 143
     return-void
 .end method

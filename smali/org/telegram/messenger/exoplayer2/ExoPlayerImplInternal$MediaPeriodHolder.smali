@@ -73,58 +73,44 @@
     .param p11, "startPositionUs"    # J
 
     .prologue
-    .line 1344
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1345
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->renderers:[Lorg/telegram/messenger/exoplayer2/Renderer;
 
-    .line 1346
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->rendererCapabilities:[Lorg/telegram/messenger/exoplayer2/RendererCapabilities;
 
-    .line 1347
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->rendererPositionOffsetUs:J
 
-    .line 1348
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelector:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelector;
 
-    .line 1349
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->loadControl:Lorg/telegram/messenger/exoplayer2/LoadControl;
 
-    .line 1350
     iput-object p7, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
-    .line 1351
     invoke-static {p8}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->uid:Ljava/lang/Object;
 
-    .line 1352
     iput p9, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->index:I
 
-    .line 1353
     iput-boolean p10, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->isLast:Z
 
-    .line 1354
     iput-wide p11, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->startPositionUs:J
 
-    .line 1355
     array-length v0, p1
 
     new-array v0, v0, [Lorg/telegram/messenger/exoplayer2/source/SampleStream;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/SampleStream;
 
-    .line 1356
     array-length v0, p1
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mayRetainStreamFlags:[Z
 
-    .line 1357
     invoke-interface {p6}, Lorg/telegram/messenger/exoplayer2/LoadControl;->getAllocator()Lorg/telegram/messenger/exoplayer2/upstream/Allocator;
 
     move-result-object v0
@@ -135,7 +121,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaPeriod:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
-    .line 1359
     return-void
 .end method
 
@@ -144,7 +129,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;
 
     .prologue
-    .line 1314
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
     return-object v0
@@ -156,7 +140,6 @@
     .locals 4
 
     .prologue
-    .line 1370
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->rendererPositionOffsetUs:J
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->startPositionUs:J
@@ -170,7 +153,6 @@
     .locals 4
 
     .prologue
-    .line 1437
     new-instance v0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$TrackInfo;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackGroups:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
@@ -193,12 +175,10 @@
     .end annotation
 
     .prologue
-    .line 1384
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->prepared:Z
 
-    .line 1385
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaPeriod:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;->getTrackGroups()Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
@@ -207,10 +187,8 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackGroups:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
-    .line 1386
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->selectTracks()Z
 
-    .line 1387
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->startPositionUs:J
 
     const/4 v2, 0x0
@@ -221,7 +199,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->startPositionUs:J
 
-    .line 1388
     return-void
 .end method
 
@@ -229,7 +206,6 @@
     .locals 4
 
     .prologue
-    .line 1379
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->prepared:Z
 
     if-eqz v0, :cond_1
@@ -240,7 +216,6 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaPeriod:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
-    .line 1380
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;->getBufferedPositionUs()J
 
     move-result-wide v0
@@ -267,7 +242,6 @@
     .locals 3
 
     .prologue
-    .line 1442
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
@@ -277,15 +251,12 @@
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1447
     :goto_0
     return-void
 
-    .line 1443
     :catch_0
     move-exception v0
 
-    .line 1445
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string/jumbo v1, "ExoPlayerImplInternal"
 
@@ -305,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 1391
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelector:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelector;
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->rendererCapabilities:[Lorg/telegram/messenger/exoplayer2/RendererCapabilities;
@@ -316,13 +286,11 @@
 
     move-result-object v1
 
-    .line 1393
     .local v1, "selectorResult":Landroid/util/Pair;, "Landroid/util/Pair<Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;Ljava/lang/Object;>;"
     iget-object v0, v1, Landroid/util/Pair;->first:Ljava/lang/Object;
 
     check-cast v0, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
-    .line 1394
     .local v0, "newTrackSelections":Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->periodTrackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
@@ -332,23 +300,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 1395
     const/4 v2, 0x0
 
-    .line 1399
     :goto_0
     return v2
 
-    .line 1397
     :cond_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
-    .line 1398
     iget-object v2, v1, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelectionsInfo:Ljava/lang/Object;
 
-    .line 1399
     const/4 v2, 0x1
 
     goto :goto_0
@@ -360,13 +323,10 @@
     .param p2, "isLast"    # Z
 
     .prologue
-    .line 1374
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->index:I
 
-    .line 1375
     iput-boolean p2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->isLast:Z
 
-    .line 1376
     return-void
 .end method
 
@@ -375,7 +335,6 @@
     .param p1, "rendererTimeUs"    # J
 
     .prologue
-    .line 1366
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->getRendererOffset()J
 
     move-result-wide v0
@@ -390,7 +349,6 @@
     .param p1, "periodTimeUs"    # J
 
     .prologue
-    .line 1362
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->getRendererOffset()J
 
     move-result-wide v0
@@ -406,7 +364,6 @@
     .param p3, "forceRecreateStreams"    # Z
 
     .prologue
-    .line 1403
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->renderers:[Lorg/telegram/messenger/exoplayer2/Renderer;
 
     array-length v0, v0
@@ -431,7 +388,6 @@
 
     const/4 v9, 0x0
 
-    .line 1409
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -442,7 +398,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 1410
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mayRetainStreamFlags:[Z
 
     if-nez p3, :cond_1
@@ -453,16 +408,13 @@
 
     const/4 v1, 0x0
 
-    .line 1411
     :goto_1
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
-    .line 1412
     invoke-virtual {v3, v0}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;->get(I)Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
     move-result-object v3
 
-    .line 1411
     invoke-static {v1, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v1
@@ -474,16 +426,13 @@
     :goto_2
     aput-boolean v1, v2, v0
 
-    .line 1409
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1410
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->periodTrackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
-    .line 1411
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;->get(I)Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
     move-result-object v1
@@ -495,7 +444,6 @@
 
     goto :goto_2
 
-    .line 1416
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->mediaPeriod:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
@@ -517,15 +465,12 @@
 
     move-result-wide p1
 
-    .line 1418
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->periodTrackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
-    .line 1421
     iput-boolean v9, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->hasEnabledTracks:Z
 
-    .line 1422
     const/4 v0, 0x0
 
     :goto_3
@@ -535,14 +480,12 @@
 
     if-ge v0, v1, :cond_6
 
-    .line 1423
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/SampleStream;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_4
 
-    .line 1424
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;->get(I)Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
@@ -556,10 +499,8 @@
     :goto_4
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 1425
     iput-boolean v8, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->hasEnabledTracks:Z
 
-    .line 1422
     :goto_5
     add-int/lit8 v0, v0, 0x1
 
@@ -568,10 +509,8 @@
     :cond_3
     move v1, v9
 
-    .line 1424
     goto :goto_4
 
-    .line 1427
     :cond_4
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->trackSelections:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
@@ -593,7 +532,6 @@
 
     goto :goto_6
 
-    .line 1432
     :cond_6
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImplInternal$MediaPeriodHolder;->loadControl:Lorg/telegram/messenger/exoplayer2/LoadControl;
 
@@ -605,6 +543,5 @@
 
     invoke-interface {v1, v2, v3, v4}, Lorg/telegram/messenger/exoplayer2/LoadControl;->onTracksSelected([Lorg/telegram/messenger/exoplayer2/Renderer;Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;)V
 
-    .line 1433
     return-wide p1
 .end method

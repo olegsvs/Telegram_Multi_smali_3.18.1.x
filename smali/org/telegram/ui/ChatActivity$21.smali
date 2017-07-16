@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2066
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$21;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const-wide/16 v8, 0x3e8
 
-    .line 2069
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$21;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$8000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Cells/ChatActionCell;
@@ -61,17 +59,14 @@
 
     if-nez v4, :cond_0
 
-    .line 2081
     :goto_0
     return-void
 
-    .line 2072
     :cond_0
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v0
 
-    .line 2073
     .local v0, "calendar":Ljava/util/Calendar;
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$21;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -89,14 +84,12 @@
 
     invoke-virtual {v0, v4, v5}, Ljava/util/Calendar;->setTimeInMillis(J)V
 
-    .line 2074
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Ljava/util/Calendar;->get(I)I
 
     move-result v3
 
-    .line 2075
     .local v3, "year":I
     const/4 v4, 0x2
 
@@ -104,7 +97,6 @@
 
     move-result v2
 
-    .line 2076
     .local v2, "monthOfYear":I
     const/4 v4, 0x5
 
@@ -112,14 +104,11 @@
 
     move-result v1
 
-    .line 2078
     .local v1, "dayOfMonth":I
     invoke-virtual {v0}, Ljava/util/Calendar;->clear()V
 
-    .line 2079
     invoke-virtual {v0, v3, v2, v1}, Ljava/util/Calendar;->set(III)V
 
-    .line 2080
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$21;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Ljava/util/Calendar;->getTime()Ljava/util/Date;

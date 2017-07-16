@@ -26,7 +26,6 @@
     .param p3, "spanCount"    # I
 
     .prologue
-    .line 745
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$8;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/messenger/support/widget/GridLayoutManager;-><init>(Landroid/content/Context;I)V
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 748
     const/4 v0, 0x0
 
     return v0

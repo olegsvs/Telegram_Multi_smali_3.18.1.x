@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$4;
 
     .prologue
-    .line 535
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$4$2;->this$1:Lorg/telegram/ui/ProfileActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$4$2;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -47,24 +46,20 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 538
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 539
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$4$2;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 540
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v1
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/ContactsController;->deleteContact(Ljava/util/ArrayList;)V
 
-    .line 541
     return-void
 .end method

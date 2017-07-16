@@ -30,16 +30,12 @@
     .param p2, "values"    # [Ljava/lang/String;
 
     .prologue
-    .line 694
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 695
     iput p1, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mField:I
 
-    .line 696
     iput-object p2, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mValues:[Ljava/lang/String;
 
-    .line 697
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p2, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 719
     iget-object v0, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mValues:[Ljava/lang/String;
 
     iget v1, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mField:I
@@ -64,7 +59,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 720
     return-void
 .end method
 
@@ -72,10 +66,8 @@
     .locals 4
 
     .prologue
-    .line 704
     const/4 v2, 0x0
 
-    .line 705
     .local v2, "max":I
     iget-object v3, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mValues:[Ljava/lang/String;
 
@@ -88,7 +80,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 706
     iget-object v3, p0, Lorg/telegram/messenger/time/FastDatePrinter$TextField;->mValues:[Ljava/lang/String;
 
     aget-object v3, v3, v0
@@ -97,16 +88,13 @@
 
     move-result v1
 
-    .line 707
     .local v1, "len":I
     if-le v1, v2, :cond_0
 
-    .line 708
     move v2, v1
 
     goto :goto_0
 
-    .line 711
     .end local v1    # "len":I
     :cond_1
     return v2

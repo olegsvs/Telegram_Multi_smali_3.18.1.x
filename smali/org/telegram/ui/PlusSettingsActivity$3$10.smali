@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 903
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->val$preferences:Landroid/content/SharedPreferences;
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 906
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->val$preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v2, "showMySettings"
@@ -62,20 +60,17 @@
 
     move-result v0
 
-    .line 907
     .local v0, "flags":I
     iget v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->val$FLAGS:I
 
     if-eq v1, v0, :cond_0
 
-    .line 908
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/PlusSettingsActivity;->getUserAbout()V
 
-    .line 910
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
@@ -87,7 +82,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 911
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$10;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 913
     :cond_1
     return-void
 .end method

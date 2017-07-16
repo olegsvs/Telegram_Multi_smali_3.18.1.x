@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 19711
     const v0, 0x7f3b18ea
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 19710
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputPeer;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 19715
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19716
     return-void
 .end method

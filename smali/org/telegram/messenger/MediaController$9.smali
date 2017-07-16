@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 1765
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$9;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$9;->val$currentMessageObject:Lorg/telegram/messenger/MessageObject;
@@ -45,13 +44,11 @@
     .locals 2
 
     .prologue
-    .line 1768
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$9;->this$0:Lorg/telegram/messenger/MediaController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MediaController$9;->val$currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MediaController;->pauseAudio(Lorg/telegram/messenger/MessageObject;)Z
 
-    .line 1769
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 1028
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$21;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;)V
@@ -40,14 +39,12 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1031
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$21;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 1032
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$21;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -56,7 +53,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 1034
     :cond_0
     invoke-super {p0, p1}, Landroid/support/v4/view/ViewPager;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 

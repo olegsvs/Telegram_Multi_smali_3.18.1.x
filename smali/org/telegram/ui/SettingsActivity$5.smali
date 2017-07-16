@@ -29,12 +29,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 652
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 654
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/SettingsActivity$5;->pressCount:I
@@ -56,7 +54,6 @@
 
     const/4 v5, 0x0
 
-    .line 658
     iget-object v7, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v7}, Lorg/telegram/ui/SettingsActivity;->access$3600(Lorg/telegram/ui/SettingsActivity;)I
@@ -65,19 +62,16 @@
 
     if-ne p2, v7, :cond_1
 
-    .line 659
     iget v7, p0, Lorg/telegram/ui/SettingsActivity$5;->pressCount:I
 
     add-int/lit8 v7, v7, 0x1
 
     iput v7, p0, Lorg/telegram/ui/SettingsActivity$5;->pressCount:I
 
-    .line 660
     iget v7, p0, Lorg/telegram/ui/SettingsActivity$5;->pressCount:I
 
     if-lt v7, v9, :cond_0
 
-    .line 661
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v7, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -88,7 +82,6 @@
 
     invoke-direct {v0, v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 662
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v7, "DebugMenu"
 
@@ -100,14 +93,12 @@
 
     invoke-virtual {v0, v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 663
     new-array v7, v9, [Ljava/lang/CharSequence;
 
     const-string/jumbo v8, "DebugMenuImportContacts"
 
     const v9, 0x7f0701d5
 
-    .line 664
     invoke-static {v8, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v8
@@ -118,7 +109,6 @@
 
     const v8, 0x7f0701d6
 
-    .line 665
     invoke-static {v5, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -129,10 +119,8 @@
 
     invoke-direct {v5, p0}, Lorg/telegram/ui/SettingsActivity$5$1;-><init>(Lorg/telegram/ui/SettingsActivity$5;)V
 
-    .line 663
     invoke-virtual {v0, v7, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 676
     const-string/jumbo v5, "Cancel"
 
     const v7, 0x7f0700f0
@@ -145,7 +133,6 @@
 
     invoke-virtual {v0, v5, v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 677
     iget-object v5, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -154,12 +141,10 @@
 
     invoke-virtual {v5, v7}, Lorg/telegram/ui/SettingsActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 704
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :goto_0
     return v6
 
-    .line 680
     :cond_0
     :try_start_0
     iget-object v5, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -182,17 +167,14 @@
 
     goto :goto_0
 
-    .line 681
     :catch_0
     move-exception v1
 
-    .line 682
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 687
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v7, p0, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -203,7 +185,6 @@
 
     if-ne p2, v7, :cond_3
 
-    .line 688
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v8, "plusconfig"
@@ -212,7 +193,6 @@
 
     move-result-object v3
 
-    .line 689
     .local v3, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v7, "showEmojiKbBtn"
 
@@ -220,13 +200,11 @@
 
     move-result v4
 
-    .line 690
     .local v4, "showEmojiBtn":Z
     invoke-interface {v3}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    .line 691
     .local v2, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v7, "showEmojiKbBtn"
 
@@ -237,10 +215,8 @@
     :cond_2
     invoke-interface {v2, v7, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 692
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 693
     new-instance v5, Lorg/telegram/ui/SettingsActivity$5$2;
 
     invoke-direct {v5, p0, v4}, Lorg/telegram/ui/SettingsActivity$5$2;-><init>(Lorg/telegram/ui/SettingsActivity$5;Z)V
@@ -255,6 +231,5 @@
     :cond_3
     move v6, v5
 
-    .line 704
     goto :goto_0
 .end method

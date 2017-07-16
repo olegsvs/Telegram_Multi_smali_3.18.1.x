@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$5;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$5;->val$session:Lorg/telegram/messenger/camera/CameraSession;
@@ -50,18 +49,15 @@
     .end annotation
 
     .prologue
-    .line 378
     iget-object v3, p0, Lorg/telegram/messenger/camera/CameraController$5;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
     iget-object v3, v3, Lorg/telegram/messenger/camera/CameraSession;->cameraInfo:Lorg/telegram/messenger/camera/CameraInfo;
 
     iget-object v0, v3, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 380
     .local v0, "camera":Landroid/hardware/Camera;
     if-nez v0, :cond_0
 
-    .line 381
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/camera/CameraController$5;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -83,7 +79,6 @@
     .local v1, "camera":Landroid/hardware/Camera;
     move-object v0, v1
 
-    .line 383
     .end local v1    # "camera":Landroid/hardware/Camera;
     .restart local v0    # "camera":Landroid/hardware/Camera;
     :cond_0
@@ -91,15 +86,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 391
     :goto_0
     return-void
 
-    .line 384
     :catch_0
     move-exception v2
 
-    .line 385
     .local v2, "e":Ljava/lang/Exception;
     iget-object v3, p0, Lorg/telegram/messenger/camera/CameraController$5;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -109,13 +101,10 @@
 
     iput-object v4, v3, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 386
     if-eqz v0, :cond_1
 
-    .line 387
     invoke-virtual {v0}, Landroid/hardware/Camera;->release()V
 
-    .line 389
     :cond_1
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

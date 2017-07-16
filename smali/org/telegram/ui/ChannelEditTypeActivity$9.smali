@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditTypeActivity;
 
     .prologue
-    .line 588
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9;->val$name:Ljava/lang/String;
@@ -45,18 +44,15 @@
     .locals 5
 
     .prologue
-    .line 591
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;-><init>()V
 
-    .line 592
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9;->val$name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->username:Ljava/lang/String;
 
-    .line 593
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$100(Lorg/telegram/ui/ChannelEditTypeActivity;)I
@@ -69,7 +65,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 594
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -88,6 +83,5 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$1502(Lorg/telegram/ui/ChannelEditTypeActivity;I)I
 
-    .line 623
     return-void
 .end method

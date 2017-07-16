@@ -27,13 +27,10 @@
     .param p1, "remote"    # Landroid/os/IBinder;
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
-    .line 91
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
     return-object v0
@@ -60,35 +56,28 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 125
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "android.support.customtabs.ICustomTabsCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 126
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 127
     if-eqz p2, :cond_0
 
-    .line 128
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 129
     const/4 v1, 0x0
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 134
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -102,13 +91,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 136
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 139
     return-void
 
-    .line 131
     :cond_0
     const/4 v1, 0x0
 
@@ -119,7 +105,6 @@
 
     goto :goto_0
 
-    .line 136
     :catchall_0
     move-exception v1
 
@@ -132,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 98
     const-string/jumbo v0, "android.support.customtabs.ICustomTabsCallback"
 
     return-object v0
@@ -149,35 +133,28 @@
     .end annotation
 
     .prologue
-    .line 102
     invoke-static {}, Landroid/os/Parcel;->obtain()Landroid/os/Parcel;
 
     move-result-object v0
 
-    .line 105
     .local v0, "_data":Landroid/os/Parcel;
     :try_start_0
     const-string/jumbo v1, "android.support.customtabs.ICustomTabsCallback"
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInterfaceToken(Ljava/lang/String;)V
 
-    .line 106
     invoke-virtual {v0, p1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 107
     if-eqz p2, :cond_0
 
-    .line 108
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 109
     const/4 v1, 0x0
 
     invoke-virtual {p2, v0, v1}, Landroid/os/Bundle;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 114
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback$Stub$Proxy;->mRemote:Landroid/os/IBinder;
 
@@ -191,13 +168,10 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 116
     invoke-virtual {v0}, Landroid/os/Parcel;->recycle()V
 
-    .line 119
     return-void
 
-    .line 111
     :cond_0
     const/4 v1, 0x0
 
@@ -208,7 +182,6 @@
 
     goto :goto_0
 
-    .line 116
     :catchall_0
     move-exception v1
 

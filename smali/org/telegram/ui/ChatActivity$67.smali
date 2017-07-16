@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 4369
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$67;->val$charSequence:Ljava/lang/CharSequence;
@@ -49,7 +48,6 @@
     .locals 12
 
     .prologue
-    .line 4372
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/ChatActivity;->access$14800(Lorg/telegram/ui/ChatActivity;)I
@@ -58,7 +56,6 @@
 
     if-eqz v9, :cond_0
 
-    .line 4373
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v9
@@ -73,18 +70,15 @@
 
     invoke-virtual {v9, v10, v11}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 4374
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v10, 0x0
 
     invoke-static {v9, v10}, Lorg/telegram/ui/ChatActivity;->access$14802(Lorg/telegram/ui/ChatActivity;I)I
 
-    .line 4376
     :cond_0
     const/4 v7, 0x0
 
-    .line 4379
     .local v7, "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     :try_start_0
     sget-object v9, Lorg/telegram/messenger/AndroidUtilities;->WEB_URL:Ljava/util/regex/Pattern;
@@ -100,7 +94,6 @@
     .local v3, "m":Ljava/util/regex/Matcher;
     move-object v8, v7
 
-    .line 4380
     .end local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .local v8, "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     :cond_1
@@ -112,14 +105,12 @@
 
     if-eqz v9, :cond_3
 
-    .line 4381
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->start()I
 
     move-result v9
 
     if-lez v9, :cond_2
 
-    .line 4382
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->val$charSequence:Ljava/lang/CharSequence;
 
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->start()I
@@ -136,18 +127,15 @@
 
     if-eq v9, v10, :cond_1
 
-    .line 4386
     :cond_2
     if-nez v8, :cond_c
 
-    .line 4387
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 4389
     .end local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .restart local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     :goto_1
@@ -176,7 +164,6 @@
     .restart local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     goto :goto_0
 
-    .line 4391
     :cond_3
     if-eqz v8, :cond_6
 
@@ -205,10 +192,8 @@
 
     if-ne v9, v10, :cond_6
 
-    .line 4392
     const/4 v1, 0x1
 
-    .line 4393
     .local v1, "clear":Z
     const/4 v0, 0x0
 
@@ -220,7 +205,6 @@
 
     if-ge v0, v9, :cond_5
 
-    .line 4394
     invoke-virtual {v8, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v9
@@ -245,22 +229,18 @@
 
     if-nez v9, :cond_4
 
-    .line 4395
     const/4 v1, 0x0
 
-    .line 4393
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 4398
     :cond_5
     if-eqz v1, :cond_6
 
     move-object v7, v8
 
-    .line 4502
     .end local v0    # "a":I
     .end local v1    # "clear":Z
     .end local v3    # "m":Ljava/util/regex/Matcher;
@@ -269,7 +249,6 @@
     :goto_3
     return-void
 
-    .line 4402
     .end local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .restart local v3    # "m":Ljava/util/regex/Matcher;
     .restart local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
@@ -278,10 +257,8 @@
 
     invoke-static {v9, v8}, Lorg/telegram/ui/ChatActivity;->access$14902(Lorg/telegram/ui/ChatActivity;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 4403
     if-nez v8, :cond_7
 
-    .line 4404
     new-instance v9, Lorg/telegram/ui/ChatActivity$67$1;
 
     invoke-direct {v9, p0}, Lorg/telegram/ui/ChatActivity$67$1;-><init>(Lorg/telegram/ui/ChatActivity$67;)V
@@ -290,12 +267,10 @@
 
     move-object v7, v8
 
-    .line 4413
     .end local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .restart local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     goto :goto_3
 
-    .line 4415
     .end local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .restart local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     :cond_7
@@ -310,7 +285,6 @@
     .local v6, "textToCheck":Ljava/lang/CharSequence;
     move-object v7, v8
 
-    .line 4434
     .end local v3    # "m":Ljava/util/regex/Matcher;
     .end local v8    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     .restart local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
@@ -331,7 +305,6 @@
 
     if-ne v9, v10, :cond_a
 
-    .line 4435
     new-instance v9, Lorg/telegram/ui/ChatActivity$67$3;
 
     invoke-direct {v9, p0}, Lorg/telegram/ui/ChatActivity$67$3;-><init>(Lorg/telegram/ui/ChatActivity$67;)V
@@ -340,17 +313,14 @@
 
     goto :goto_3
 
-    .line 4416
     .end local v6    # "textToCheck":Ljava/lang/CharSequence;
     :catch_0
     move-exception v2
 
-    .line 4417
     .local v2, "e":Ljava/lang/Exception;
     :goto_5
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 4418
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->val$charSequence:Ljava/lang/CharSequence;
 
     invoke-interface {v9}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -361,7 +331,6 @@
 
     move-result-object v5
 
-    .line 4419
     .local v5, "text":Ljava/lang/String;
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->val$charSequence:Ljava/lang/CharSequence;
 
@@ -389,7 +358,6 @@
 
     if-nez v9, :cond_9
 
-    .line 4420
     :cond_8
     new-instance v9, Lorg/telegram/ui/ChatActivity$67$2;
 
@@ -399,14 +367,12 @@
 
     goto :goto_3
 
-    .line 4431
     :cond_9
     iget-object v6, p0, Lorg/telegram/ui/ChatActivity$67;->val$charSequence:Ljava/lang/CharSequence;
 
     .restart local v6    # "textToCheck":Ljava/lang/CharSequence;
     goto :goto_4
 
-    .line 4460
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v5    # "text":Ljava/lang/String;
     :cond_a
@@ -414,19 +380,16 @@
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_messages_getWebPagePreview;-><init>()V
 
-    .line 4461
     .local v4, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getWebPagePreview;
     instance-of v9, v6, Ljava/lang/String;
 
     if-eqz v9, :cond_b
 
-    .line 4462
     check-cast v6, Ljava/lang/String;
 
     .end local v6    # "textToCheck":Ljava/lang/CharSequence;
     iput-object v6, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getWebPagePreview;->message:Ljava/lang/String;
 
-    .line 4466
     :goto_6
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -444,7 +407,6 @@
 
     invoke-static {v9, v10}, Lorg/telegram/ui/ChatActivity;->access$14802(Lorg/telegram/ui/ChatActivity;I)I
 
-    .line 4501
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v9
@@ -465,7 +427,6 @@
 
     goto/16 :goto_3
 
-    .line 4464
     .restart local v6    # "textToCheck":Ljava/lang/CharSequence;
     :cond_b
     invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
@@ -476,7 +437,6 @@
 
     goto :goto_6
 
-    .line 4416
     .end local v4    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getWebPagePreview;
     .end local v6    # "textToCheck":Ljava/lang/CharSequence;
     .end local v7    # "urls":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"

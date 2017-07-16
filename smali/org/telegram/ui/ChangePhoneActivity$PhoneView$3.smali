@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     .prologue
-    .line 502
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$3;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$3;->val$this$0:Lorg/telegram/ui/ChangePhoneActivity;
@@ -48,12 +47,10 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 505
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 506
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$3;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangePhoneActivity$PhoneView;->access$200(Lorg/telegram/ui/ChangePhoneActivity$PhoneView;)Lorg/telegram/ui/Components/HintEditText;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/HintEditText;->requestFocus()Z
 
-    .line 507
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$3;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangePhoneActivity$PhoneView;->access$200(Lorg/telegram/ui/ChangePhoneActivity$PhoneView;)Lorg/telegram/ui/Components/HintEditText;
@@ -81,10 +77,8 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/HintEditText;->setSelection(I)V
 
-    .line 508
     const/4 v0, 0x1
 
-    .line 510
     :goto_0
     return v0
 

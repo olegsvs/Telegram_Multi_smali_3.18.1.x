@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Painting;
 
     .prologue
-    .line 481
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->val$completionRunnable:Ljava/lang/Runnable;
@@ -47,12 +46,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 484
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$2002(Lorg/telegram/ui/Components/Paint/Painting;Z)Z
 
-    .line 485
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -65,7 +62,6 @@
 
     move-result-object v0
 
-    .line 486
     .local v0, "data":Lorg/telegram/ui/Components/Paint/Painting$PaintingData;
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -93,24 +89,20 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/Paint/Painting;->access$2102(Lorg/telegram/ui/Components/Paint/Painting;Lorg/telegram/ui/Components/Paint/Slice;)Lorg/telegram/ui/Components/Paint/Slice;
 
-    .line 488
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/Paint/Painting;->cleanResources(Z)V
 
-    .line 490
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->val$completionRunnable:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_0
 
-    .line 491
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$5;->val$completionRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 492
     :cond_0
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$1;->this$0:Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$1;->val$listener:Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$OnEventListener;
@@ -50,7 +49,6 @@
     .param p5, "data"    # [B
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$1;->val$listener:Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$OnEventListener;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$1;->this$0:Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;
@@ -65,6 +63,5 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$OnEventListener;->onEvent(Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm;[BII[B)V
 
-    .line 67
     return-void
 .end method

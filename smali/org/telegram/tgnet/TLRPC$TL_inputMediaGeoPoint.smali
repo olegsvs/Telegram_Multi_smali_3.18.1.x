@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 11045
     const v0, -0x63bbebc
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 11044
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputMedia;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 11049
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;->geo_point:Lorg/telegram/tgnet/TLRPC$InputGeoPoint;
 
-    .line 11050
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 11053
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 11054
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;->geo_point:Lorg/telegram/tgnet/TLRPC$InputGeoPoint;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputGeoPoint;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 11055
     return-void
 .end method

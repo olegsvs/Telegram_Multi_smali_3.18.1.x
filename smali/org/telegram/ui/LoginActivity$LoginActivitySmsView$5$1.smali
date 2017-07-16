@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     .prologue
-    .line 1399
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,19 +54,16 @@
 
     const v2, 0x7f070078
 
-    .line 1402
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$2702(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Z)Z
 
-    .line 1403
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
 
-    .line 1404
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -84,7 +80,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 1422
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
@@ -95,10 +90,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 1423
     return-void
 
-    .line 1406
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -106,7 +99,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1407
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -119,7 +111,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1408
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -144,7 +135,6 @@
 
     goto :goto_0
 
-    .line 1409
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -170,7 +160,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1410
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
@@ -196,7 +185,6 @@
 
     goto :goto_0
 
-    .line 1411
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -210,14 +198,12 @@
 
     if-eqz v0, :cond_5
 
-    .line 1412
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->onBackPressed()V
 
-    .line 1413
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -228,7 +214,6 @@
 
     invoke-virtual {v0, v3, v4, v1, v4}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 1414
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -253,7 +238,6 @@
 
     goto/16 :goto_0
 
-    .line 1415
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -267,7 +251,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1416
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -292,7 +275,6 @@
 
     goto/16 :goto_0
 
-    .line 1417
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -302,7 +284,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1418
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;

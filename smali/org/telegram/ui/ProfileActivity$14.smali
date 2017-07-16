@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 1441
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$14;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$14;->val$username:Ljava/lang/String;
@@ -47,10 +46,8 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1444
     if-nez p2, :cond_0
 
-    .line 1446
     :try_start_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -62,7 +59,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 1447
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -90,24 +86,20 @@
 
     move-result-object v0
 
-    .line 1448
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1461
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :cond_0
     :goto_0
     return-void
 
-    .line 1449
     :catch_0
     move-exception v2
 
-    .line 1450
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

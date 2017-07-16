@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 46
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
 
@@ -52,15 +50,12 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 51
     :goto_0
     return-void
 
-    .line 47
     :catch_0
     move-exception v0
 
-    .line 48
     .local v0, "var4":Landroid/os/RemoteException;
     const-string/jumbo v1, "CustomTabsSessionToken"
 

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 464
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -53,7 +52,6 @@
 
     const/4 v2, 0x1
 
-    .line 467
     iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
     iget-object v3, v3, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->documentLocation:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -66,7 +64,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 469
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$cacheFile:Ljava/io/File;
 
@@ -86,11 +83,9 @@
 
     move-result-object v0
 
-    .line 470
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 471
     iget-object v3, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
     iget-object v3, v3, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->documentLocation:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -114,12 +109,10 @@
 
     iput-object v2, v3, Lorg/telegram/tgnet/TLRPC$TL_document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 472
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 478
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
     :goto_1
@@ -131,7 +124,6 @@
 
     if-nez v2, :cond_1
 
-    .line 479
     iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
     iget-object v2, v2, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->documentLocation:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -142,7 +134,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 480
     iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
     iget-object v2, v2, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->documentLocation:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -153,7 +144,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
-    .line 483
     :cond_1
     new-instance v2, Lorg/telegram/messenger/SendMessagesHelper$3$1;
 
@@ -161,22 +151,18 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 496
     return-void
 
-    .line 471
     .restart local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_0
 
-    .line 474
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v1
 
-    .line 475
     .local v1, "e":Ljava/lang/Exception;
     iget-object v2, p0, Lorg/telegram/messenger/SendMessagesHelper$3;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
 
@@ -184,7 +170,6 @@
 
     iput-object v8, v2, Lorg/telegram/tgnet/TLRPC$TL_document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 476
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1

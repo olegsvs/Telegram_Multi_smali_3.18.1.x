@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 23910
     const v0, 0x10e6bd2c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 23909
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23916
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23920
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23921
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputChannel;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23922
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->username:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 23923
     return-void
 .end method

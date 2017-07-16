@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 3920
     const v0, -0x3f1db9cb
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3919
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3924
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;->random:[B
 
-    .line 3925
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 3928
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3929
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;->random:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 3930
     return-void
 .end method

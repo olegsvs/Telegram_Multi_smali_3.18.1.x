@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 155
     iput p1, p0, Lorg/telegram/messenger/Emoji$1;->val$page:I
 
     iput p2, p0, Lorg/telegram/messenger/Emoji$1;->val$page2:I
@@ -48,7 +47,6 @@
     .locals 3
 
     .prologue
-    .line 158
     invoke-static {}, Lorg/telegram/messenger/Emoji;->access$000()[[Landroid/graphics/Bitmap;
 
     move-result-object v0
@@ -63,7 +61,6 @@
 
     aput-object v2, v0, v1
 
-    .line 159
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -76,6 +73,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 160
     return-void
 .end method

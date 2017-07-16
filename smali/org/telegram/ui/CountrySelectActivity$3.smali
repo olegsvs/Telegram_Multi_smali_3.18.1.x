@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 159
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/CountrySelectActivity;->access$000(Lorg/telegram/ui/CountrySelectActivity;)Z
@@ -60,7 +58,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 160
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/CountrySelectActivity;->access$100(Lorg/telegram/ui/CountrySelectActivity;)Lorg/telegram/ui/CountrySelectActivity$CountrySearchAdapter;
@@ -71,18 +68,15 @@
 
     move-result-object v0
 
-    .line 169
     .local v0, "country":Lorg/telegram/ui/CountrySelectActivity$Country;
     :goto_0
     if-gez p2, :cond_2
 
-    .line 176
     .end local v0    # "country":Lorg/telegram/ui/CountrySelectActivity$Country;
     :cond_0
     :goto_1
     return-void
 
-    .line 162
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
@@ -94,7 +88,6 @@
 
     move-result v2
 
-    .line 163
     .local v2, "section":I
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
@@ -106,13 +99,11 @@
 
     move-result v1
 
-    .line 164
     .local v1, "row":I
     if-ltz v1, :cond_0
 
     if-ltz v2, :cond_0
 
-    .line 167
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/CountrySelectActivity;->access$300(Lorg/telegram/ui/CountrySelectActivity;)Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
@@ -126,7 +117,6 @@
     .restart local v0    # "country":Lorg/telegram/ui/CountrySelectActivity$Country;
     goto :goto_0
 
-    .line 172
     .end local v1    # "row":I
     .end local v2    # "section":I
     :cond_2
@@ -134,7 +124,6 @@
 
     invoke-virtual {v3}, Lorg/telegram/ui/CountrySelectActivity;->finishFragment()V
 
-    .line 173
     if-eqz v0, :cond_0
 
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
@@ -145,7 +134,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 174
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity$3;->this$0:Lorg/telegram/ui/CountrySelectActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/CountrySelectActivity;->access$600(Lorg/telegram/ui/CountrySelectActivity;)Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;

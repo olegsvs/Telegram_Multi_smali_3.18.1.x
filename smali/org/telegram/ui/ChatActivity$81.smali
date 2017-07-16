@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 8048
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$81;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$81;->val$i:I
@@ -45,7 +44,6 @@
     .locals 7
 
     .prologue
-    .line 8052
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$81;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -73,7 +71,6 @@
 
     div-float v1, v2, v3
 
-    .line 8053
     .local v1, "y3":F
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$81;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -105,16 +102,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8058
     .end local v1    # "y3":F
     :goto_0
     return-void
 
-    .line 8055
     :catch_0
     move-exception v0
 
-    .line 8056
     .local v0, "e":Ljava/lang/Exception;
     const-string/jumbo v2, "tmessages"
 

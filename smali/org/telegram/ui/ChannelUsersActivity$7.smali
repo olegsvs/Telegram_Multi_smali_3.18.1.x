@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelUsersActivity;
 
     .prologue
-    .line 725
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$7;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 728
     iget-object v3, p0, Lorg/telegram/ui/ChannelUsersActivity$7;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$500(Lorg/telegram/ui/ChannelUsersActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -53,7 +51,6 @@
 
     move-result v2
 
-    .line 729
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -61,7 +58,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 730
     iget-object v3, p0, Lorg/telegram/ui/ChannelUsersActivity$7;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$500(Lorg/telegram/ui/ChannelUsersActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -72,13 +68,11 @@
 
     move-result-object v1
 
-    .line 731
     .local v1, "child":Landroid/view/View;
     instance-of v3, v1, Lorg/telegram/ui/Cells/UserCell;
 
     if-eqz v3, :cond_0
 
-    .line 732
     check-cast v1, Lorg/telegram/ui/Cells/UserCell;
 
     .end local v1    # "child":Landroid/view/View;
@@ -86,13 +80,11 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Cells/UserCell;->update(I)V
 
-    .line 729
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 735
     :cond_1
     return-void
 .end method

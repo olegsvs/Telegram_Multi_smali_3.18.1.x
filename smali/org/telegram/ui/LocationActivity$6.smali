@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 359
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 362
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LocationActivity;->access$900(Lorg/telegram/ui/LocationActivity;)Landroid/location/Location;
@@ -51,7 +49,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 363
     new-instance v0, Lcom/google/android/gms/maps/model/LatLng;
 
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -76,7 +73,6 @@
 
     invoke-direct {v0, v2, v3, v4, v5}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    .line 364
     .local v0, "latLng":Lcom/google/android/gms/maps/model/LatLng;
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -86,7 +82,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 365
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -105,7 +100,6 @@
 
     move-result-object v1
 
-    .line 366
     .local v1, "position":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$6;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -115,7 +109,6 @@
 
     invoke-virtual {v2, v1}, Lcom/google/android/gms/maps/GoogleMap;->animateCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 369
     .end local v0    # "latLng":Lcom/google/android/gms/maps/model/LatLng;
     .end local v1    # "position":Lcom/google/android/gms/maps/CameraUpdate;
     :cond_0

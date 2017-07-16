@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 410
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$11;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -39,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 413
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$11;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1800(Lorg/telegram/ui/Components/StickersAlert;)Z
@@ -48,11 +46,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 417
     :goto_0
     return-void
 
-    .line 416
     :cond_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

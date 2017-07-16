@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 22071
     const v0, 0x3dbc0415
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 22070
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22078
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22082
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22083
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22084
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->g_b:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 22085
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->key_fingerprint:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 22086
     return-void
 .end method

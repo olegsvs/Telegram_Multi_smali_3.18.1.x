@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 449
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$InternalObserver;->this$0:Lorg/telegram/messenger/MediaController;
 
-    .line 450
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 451
     return-void
 .end method
 
@@ -42,16 +39,13 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 455
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 456
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$InternalObserver;->this$0:Lorg/telegram/messenger/MediaController;
 
     sget-object v1, Landroid/provider/MediaStore$Images$Media;->INTERNAL_CONTENT_URI:Landroid/net/Uri;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MediaController;->processMediaObserver(Landroid/net/Uri;)V
 
-    .line 457
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Input;
 
     .prologue
-    .line 187
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Input$1;->this$0:Lorg/telegram/ui/Components/Paint/Input;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Input$1;->val$path:Lorg/telegram/ui/Components/Paint/Path;
@@ -45,13 +44,11 @@
     .locals 1
 
     .prologue
-    .line 190
     new-instance v0, Lorg/telegram/ui/Components/Paint/Input$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/Paint/Input$1$1;-><init>(Lorg/telegram/ui/Components/Paint/Input$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 197
     return-void
 .end method

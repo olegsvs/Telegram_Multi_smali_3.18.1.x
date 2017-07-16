@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/SearchAdapter;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapter$3;->this$0:Lorg/telegram/ui/Adapters/SearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/SearchAdapter$3;->val$query:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 120
     iget-object v1, p0, Lorg/telegram/ui/Adapters/SearchAdapter$3;->this$0:Lorg/telegram/ui/Adapters/SearchAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/SearchAdapter;->access$200(Lorg/telegram/ui/Adapters/SearchAdapter;)Z
@@ -54,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 121
     iget-object v1, p0, Lorg/telegram/ui/Adapters/SearchAdapter$3;->this$0:Lorg/telegram/ui/Adapters/SearchAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/SearchAdapter;->access$500(Lorg/telegram/ui/Adapters/SearchAdapter;)Lorg/telegram/ui/Adapters/SearchAdapterHelper;
@@ -79,13 +76,11 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->queryServerSearch(Ljava/lang/String;ZZZ)V
 
-    .line 123
     :cond_0
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 124
     .local v0, "contactsCopy":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
@@ -95,7 +90,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 125
     sget-object v1, Lorg/telegram/messenger/Utilities;->searchQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v2, Lorg/telegram/ui/Adapters/SearchAdapter$3$1;
@@ -104,6 +98,5 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 182
     return-void
 .end method

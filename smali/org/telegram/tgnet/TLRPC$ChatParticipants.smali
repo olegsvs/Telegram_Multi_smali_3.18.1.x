@@ -42,10 +42,8 @@
     .locals 1
 
     .prologue
-    .line 16265
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 16269
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -62,20 +60,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 16274
     const/4 v0, 0x0
 
-    .line 16275
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     sparse-switch p1, :sswitch_data_0
 
-    .line 16289
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 16290
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ChatParticipants"
@@ -100,40 +94,33 @@
 
     throw v1
 
-    .line 16277
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden;-><init>()V
 
-    .line 16278
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     goto :goto_0
 
-    .line 16280
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants;-><init>()V
 
-    .line 16281
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     goto :goto_0
 
-    .line 16283
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants_old;-><init>()V
 
-    .line 16284
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     goto :goto_0
 
-    .line 16286
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantsForbidden_old;
 
@@ -143,18 +130,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatParticipants;
     goto :goto_0
 
-    .line 16292
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 16293
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ChatParticipants;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 16295
     :cond_1
     return-object v0
 
-    .line 16275
     nop
 
     :sswitch_data_0

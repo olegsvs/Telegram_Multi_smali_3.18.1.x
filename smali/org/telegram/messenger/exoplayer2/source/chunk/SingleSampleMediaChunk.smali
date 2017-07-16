@@ -27,13 +27,10 @@
     .param p11, "sampleFormat"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 52
     invoke-direct/range {p0 .. p10}, Lorg/telegram/messenger/exoplayer2/source/chunk/BaseMediaChunk;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;Lorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJI)V
 
-    .line 54
     iput-object p11, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->sampleFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 55
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 64
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
 
     int-to-long v0, v0
@@ -55,12 +51,10 @@
     .locals 1
 
     .prologue
-    .line 71
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->loadCanceled:Z
 
-    .line 72
     return-void
 .end method
 
@@ -68,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 76
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->loadCanceled:Z
 
     return v0
@@ -78,7 +71,6 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->loadCompleted:Z
 
     return v0
@@ -94,7 +86,6 @@
     .end annotation
 
     .prologue
-    .line 82
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
@@ -103,7 +94,6 @@
 
     move-result-object v6
 
-    .line 85
     .local v6, "loadDataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
@@ -112,7 +102,6 @@
 
     move-result-wide v4
 
-    .line 86
     .local v4, "length":J
     const-wide/16 v2, -0x1
 
@@ -120,14 +109,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 87
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
 
     int-to-long v2, v1
 
     add-long/2addr v4, v2
 
-    .line 89
     :cond_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/DefaultExtractorInput;
 
@@ -139,13 +126,11 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/extractor/DefaultExtractorInput;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;JJ)V
 
-    .line 90
     .local v0, "extractorInput":Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->getTrackOutput()Lorg/telegram/messenger/exoplayer2/extractor/DefaultTrackOutput;
 
     move-result-object v7
 
-    .line 91
     .local v7, "trackOutput":Lorg/telegram/messenger/exoplayer2/extractor/DefaultTrackOutput;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->sampleFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -153,24 +138,20 @@
 
     invoke-virtual {v7, v1, v2, v3}, Lorg/telegram/messenger/exoplayer2/extractor/DefaultTrackOutput;->formatWithOffset(Lorg/telegram/messenger/exoplayer2/Format;J)V
 
-    .line 93
     const/4 v14, 0x0
 
-    .line 94
     .local v14, "result":I
     :goto_0
     const/4 v1, -0x1
 
     if-eq v14, v1, :cond_1
 
-    .line 95
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
 
     add-int/2addr v1, v14
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
 
-    .line 96
     const v1, 0x7fffffff
 
     const/4 v2, 0x1
@@ -181,11 +162,9 @@
 
     goto :goto_0
 
-    .line 98
     :cond_1
     iget v11, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->bytesLoaded:I
 
-    .line 99
     .local v11, "sampleSize":I
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->startTimeUs:J
 
@@ -199,20 +178,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 101
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     invoke-interface {v1}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource;->close()V
 
-    .line 103
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;->loadCompleted:Z
 
-    .line 104
     return-void
 
-    .line 101
     .end local v0    # "extractorInput":Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;
     .end local v4    # "length":J
     .end local v7    # "trackOutput":Lorg/telegram/messenger/exoplayer2/extractor/DefaultTrackOutput;

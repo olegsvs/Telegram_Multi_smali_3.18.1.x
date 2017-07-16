@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 831
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$15;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,11 +40,9 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 834
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$15;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0, p1, p3}, Lorg/telegram/ui/Components/EmojiView;->access$3700(Lorg/telegram/ui/Components/EmojiView;Landroid/view/View;I)V
 
-    .line 835
     return-void
 .end method

@@ -58,22 +58,18 @@
     .locals 1
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 42
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->unreadStickers:Ljava/util/ArrayList;
 
-    .line 43
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->installingStickerSets:Ljava/util/HashMap;
 
-    .line 196
     return-void
 .end method
 
@@ -82,7 +78,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersStartRow:I
 
     return v0
@@ -93,7 +88,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersEndRow:I
 
     return v0
@@ -104,7 +98,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->installingStickerSets:Ljava/util/HashMap;
 
     return-object v0
@@ -115,7 +108,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
     return v0
@@ -126,7 +118,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->unreadStickers:Ljava/util/ArrayList;
 
     return-object v0
@@ -137,7 +128,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersShadowRow:I
 
     return v0
@@ -149,17 +139,14 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 170
     const/4 v1, 0x0
 
     iput v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
-    .line 171
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->getFeaturedStickerSets()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 172
     .local v0, "stickerSets":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -167,12 +154,10 @@
 
     if-nez v1, :cond_1
 
-    .line 173
     iget v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
     iput v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersStartRow:I
 
-    .line 174
     iget v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -183,7 +168,6 @@
 
     iput v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersEndRow:I
 
-    .line 175
     iget v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -194,7 +178,6 @@
 
     iput v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
-    .line 176
     iget v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -203,34 +186,27 @@
 
     iput v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersShadowRow:I
 
-    .line 182
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 183
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     invoke-virtual {v1}, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 185
     :cond_0
     const/4 v1, 0x1
 
     invoke-static {v1}, Lorg/telegram/messenger/query/StickersQuery;->markFaturedStickersAsRead(Z)V
 
-    .line 186
     return-void
 
-    .line 178
     :cond_1
     iput v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersStartRow:I
 
-    .line 179
     iput v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersEndRow:I
 
-    .line 180
     iput v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->stickersShadowRow:I
 
     goto :goto_0
@@ -242,17 +218,14 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 155
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     if-nez v2, :cond_1
 
-    .line 167
     :cond_0
     :goto_0
     return-void
 
-    .line 158
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
@@ -260,22 +233,18 @@
 
     move-result v0
 
-    .line 159
     .local v0, "first":I
     if-eq v0, v3, :cond_0
 
-    .line 162
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->findLastVisibleItemPosition()I
 
     move-result v1
 
-    .line 163
     .local v1, "last":I
     if-eq v1, v3, :cond_0
 
-    .line 166
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     sub-int v3, v1, v0
@@ -298,19 +267,16 @@
 
     const/4 v4, 0x1
 
-    .line 73
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "FeaturedStickers"
@@ -323,7 +289,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 76
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/FeaturedStickersActivity$1;
@@ -332,26 +297,22 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 85
     new-instance v1, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;-><init>(Lorg/telegram/ui/FeaturedStickersActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
-    .line 87
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->fragmentView:Landroid/view/View;
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 89
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     const-string/jumbo v1, "windowBackgroundGray"
 
@@ -361,29 +322,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 91
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v1, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 92
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setItemAnimator(Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;)V
 
-    .line 93
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 94
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setFocusable(Z)V
 
-    .line 95
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/16 v2, 0xe
@@ -394,26 +350,22 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setTag(Ljava/lang/Object;)V
 
-    .line 96
     new-instance v1, Lorg/telegram/ui/FeaturedStickersActivity$2;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/FeaturedStickersActivity$2;-><init>(Lorg/telegram/ui/FeaturedStickersActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
-    .line 102
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     invoke-virtual {v1, v4}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->setOrientation(I)V
 
-    .line 103
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 105
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v2, -0x1
@@ -426,14 +378,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 106
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 107
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/FeaturedStickersActivity$3;
@@ -442,7 +392,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 139
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -454,39 +403,32 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 144
     sget v0, Lorg/telegram/messenger/NotificationCenter;->featuredStickersDidLoaded:I
 
     if-ne p1, v0, :cond_2
 
-    .line 145
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->unreadStickers:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 146
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->getUnreadStickerSets()Ljava/util/ArrayList;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->unreadStickers:Ljava/util/ArrayList;
 
-    .line 148
     :cond_0
     invoke-direct {p0}, Lorg/telegram/ui/FeaturedStickersActivity;->updateRows()V
 
-    .line 152
     :cond_1
     :goto_0
     return-void
 
-    .line 149
     :cond_2
     sget v0, Lorg/telegram/messenger/NotificationCenter;->stickersDidLoaded:I
 
     if-ne p1, v0, :cond_1
 
-    .line 150
     invoke-direct {p0}, Lorg/telegram/ui/FeaturedStickersActivity;->updateVisibleTrendingSets()V
 
     goto :goto_0
@@ -496,7 +438,6 @@
     .locals 11
 
     .prologue
-    .line 275
     const/16 v0, 0x11
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1036,13 +977,10 @@
     .locals 3
 
     .prologue
-    .line 52
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 53
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->checkFeaturedStickers()V
 
-    .line 54
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -1051,7 +989,6 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 55
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -1060,27 +997,22 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 56
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->getUnreadStickerSets()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 57
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-eqz v0, :cond_0
 
-    .line 58
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
     iput-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity;->unreadStickers:Ljava/util/ArrayList;
 
-    .line 60
     :cond_0
     invoke-direct {p0}, Lorg/telegram/ui/FeaturedStickersActivity;->updateRows()V
 
-    .line 61
     const/4 v1, 0x1
 
     return v1
@@ -1090,10 +1022,8 @@
     .locals 2
 
     .prologue
-    .line 66
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 67
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1102,7 +1032,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 68
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1111,7 +1040,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 69
     return-void
 .end method
 
@@ -1119,20 +1047,16 @@
     .locals 1
 
     .prologue
-    .line 190
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 191
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 192
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity;->listAdapter:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 194
     :cond_0
     return-void
 .end method

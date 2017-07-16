@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/RenderView$1;
 
     .prologue
-    .line 85
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$1$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$1$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/RenderView$1;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$1$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/RenderView$1;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->requestRender()V
 
-    .line 91
     :cond_0
     return-void
 .end method

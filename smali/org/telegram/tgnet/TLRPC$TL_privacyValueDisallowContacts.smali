@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 3161
     const v0, -0x77705e6
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3160
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PrivacyRule;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 3165
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3166
     return-void
 .end method

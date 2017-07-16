@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 1232
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$18;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1235
     if-eqz p2, :cond_0
 
-    .line 1236
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -67,11 +64,9 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 1240
     :goto_0
     return-void
 
-    .line 1238
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 

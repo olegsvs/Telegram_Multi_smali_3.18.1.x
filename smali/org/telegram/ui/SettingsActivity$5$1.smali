@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$5;
 
     .prologue
-    .line 666
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$5$1;->this$1:Lorg/telegram/ui/SettingsActivity$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,26 +44,21 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 669
     if-nez p2, :cond_1
 
-    .line 670
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ContactsController;->forceImportContacts()V
 
-    .line 674
     :cond_0
     :goto_0
     return-void
 
-    .line 671
     :cond_1
     if-ne p2, v2, :cond_0
 
-    .line 672
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v0

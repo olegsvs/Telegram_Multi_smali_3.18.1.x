@@ -33,7 +33,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MediaController$8;
 
     .prologue
-    .line 1539
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$8$1;->this$1:Lorg/telegram/messenger/MediaController$8;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MediaController$8$1;->val$pcm:J
@@ -55,7 +54,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1542
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$8$1;->this$1:Lorg/telegram/messenger/MediaController$8;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$8;->this$0:Lorg/telegram/messenger/MediaController;
@@ -64,14 +62,12 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$2802(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 1543
     iget v0, p0, Lorg/telegram/messenger/MediaController$8$1;->val$marker:I
 
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_1
 
-    .line 1544
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$8$1;->this$1:Lorg/telegram/messenger/MediaController$8;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$8;->this$0:Lorg/telegram/messenger/MediaController;
@@ -82,7 +78,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1545
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$8$1;->this$1:Lorg/telegram/messenger/MediaController$8;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$8;->this$0:Lorg/telegram/messenger/MediaController;
@@ -93,20 +88,17 @@
 
     invoke-virtual {v0, v4}, Landroid/media/AudioTrack;->setNotificationMarkerPosition(I)I
 
-    .line 1547
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/MediaController$8$1;->val$finalBuffersWrited:I
 
     if-ne v0, v4, :cond_1
 
-    .line 1548
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$8$1;->this$1:Lorg/telegram/messenger/MediaController$8;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$8;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-virtual {v0, v4, v4, v4}, Lorg/telegram/messenger/MediaController;->cleanupPlayer(ZZZ)V
 
-    .line 1551
     :cond_1
     return-void
 .end method

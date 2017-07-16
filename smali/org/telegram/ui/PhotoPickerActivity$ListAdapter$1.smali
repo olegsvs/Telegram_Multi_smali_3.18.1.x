@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     .prologue
-    .line 1169
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v4, 0x0
 
-    .line 1172
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v2
@@ -63,7 +61,6 @@
 
     move-result v0
 
-    .line 1173
     .local v0, "index":I
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -75,7 +72,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1174
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -92,7 +88,6 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-    .line 1175
     .local v1, "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
@@ -114,7 +109,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1176
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -131,25 +125,20 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1177
     iput-object v4, v1, Lorg/telegram/messenger/MediaController$PhotoEntry;->imagePath:Ljava/lang/String;
 
-    .line 1178
     iput-object v4, v1, Lorg/telegram/messenger/MediaController$PhotoEntry;->thumbPath:Ljava/lang/String;
 
-    .line 1179
     iget-object v2, v1, Lorg/telegram/messenger/MediaController$PhotoEntry;->stickers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 1180
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/PhotoPickerActivity;->updatePhotoAtIndex(I)V
 
-    .line 1184
     :goto_0
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -177,7 +166,6 @@
 
     invoke-virtual {v2, v3, v5}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->setChecked(ZZ)V
 
-    .line 1203
     .end local v1    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -216,7 +204,6 @@
 
     invoke-virtual {v2, v3, v5}, Lorg/telegram/ui/Components/PickerBottomLayout;->updateSelectedCount(IZ)V
 
-    .line 1204
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -227,10 +214,8 @@
 
     invoke-interface {v2}, Lorg/telegram/ui/PhotoPickerActivity$PhotoPickerActivityDelegate;->selectedPhotosChanged()V
 
-    .line 1205
     return-void
 
-    .line 1182
     .restart local v1    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -251,7 +236,6 @@
 
     goto :goto_0
 
-    .line 1186
     .end local v1    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -268,7 +252,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 1188
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -293,7 +276,6 @@
 
     if-nez v2, :cond_2
 
-    .line 1189
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -324,7 +306,6 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$SearchImage;
 
-    .line 1193
     .local v1, "photoEntry":Lorg/telegram/messenger/MediaController$SearchImage;
     :goto_2
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -343,7 +324,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 1194
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -356,20 +336,16 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1195
     iput-object v4, v1, Lorg/telegram/messenger/MediaController$SearchImage;->imagePath:Ljava/lang/String;
 
-    .line 1196
     iput-object v4, v1, Lorg/telegram/messenger/MediaController$SearchImage;->thumbPath:Ljava/lang/String;
 
-    .line 1197
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/PhotoPickerActivity;->updatePhotoAtIndex(I)V
 
-    .line 1201
     :goto_3
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
@@ -395,7 +371,6 @@
 
     goto/16 :goto_1
 
-    .line 1191
     .end local v1    # "photoEntry":Lorg/telegram/messenger/MediaController$SearchImage;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
@@ -431,7 +406,6 @@
     .restart local v1    # "photoEntry":Lorg/telegram/messenger/MediaController$SearchImage;
     goto :goto_2
 
-    .line 1199
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 184
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v7, 0x0
 
-    .line 200
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/ChangeUsernameActivity;->access$300(Lorg/telegram/ui/ChangeUsernameActivity;)Landroid/widget/EditText;
@@ -59,7 +57,6 @@
 
     if-lez v4, :cond_0
 
-    .line 201
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -104,7 +101,6 @@
 
     move-result-object v3
 
-    .line 202
     .local v3, "url":Ljava/lang/String;
     const-string/jumbo v4, "UsernameHelpLink"
 
@@ -118,19 +114,16 @@
 
     move-result-object v1
 
-    .line 203
     .local v1, "text":Ljava/lang/String;
     invoke-virtual {v1, v3}, Ljava/lang/String;->indexOf(Ljava/lang/String;)I
 
     move-result v0
 
-    .line 204
     .local v0, "index":I
     new-instance v2, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v2, v1}, Landroid/text/SpannableStringBuilder;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 205
     .local v2, "textSpan":Landroid/text/SpannableStringBuilder;
     new-instance v4, Lorg/telegram/ui/ChangeUsernameActivity$LinkSpan;
 
@@ -148,7 +141,6 @@
 
     invoke-virtual {v2, v4, v0, v5, v6}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 206
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/ChangeUsernameActivity;->access$600(Lorg/telegram/ui/ChangeUsernameActivity;)Landroid/widget/TextView;
@@ -181,7 +173,6 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 210
     .end local v0    # "index":I
     .end local v1    # "text":Ljava/lang/String;
     .end local v2    # "textSpan":Landroid/text/SpannableStringBuilder;
@@ -189,7 +180,6 @@
     :goto_0
     return-void
 
-    .line 208
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
@@ -216,7 +206,6 @@
     .param p4, "i3"    # I
 
     .prologue
-    .line 188
     return-void
 .end method
 
@@ -228,7 +217,6 @@
     .param p4, "i3"    # I
 
     .prologue
-    .line 192
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeUsernameActivity;->access$200(Lorg/telegram/ui/ChangeUsernameActivity;)Z
@@ -237,11 +225,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 196
     :goto_0
     return-void
 
-    .line 195
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$4;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 

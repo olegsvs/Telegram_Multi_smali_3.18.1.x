@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2151
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$23;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 2154
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$23;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$23;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -57,6 +55,5 @@
 
     invoke-static {v0, v1, v3, v2, v3}, Lorg/telegram/ui/ChatActivity;->access$3300(Lorg/telegram/ui/ChatActivity;IIZI)V
 
-    .line 2155
     return-void
 .end method

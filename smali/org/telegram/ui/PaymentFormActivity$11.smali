@@ -55,12 +55,10 @@
 
     const/4 v3, 0x0
 
-    .line 1112
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$11;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1114
     new-array v0, v5, [Ljava/lang/String;
 
     const-string/jumbo v1, "34"
@@ -73,7 +71,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_15:[Ljava/lang/String;
 
-    .line 1115
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
@@ -130,7 +127,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_14:[Ljava/lang/String;
 
-    .line 1116
     const/16 v0, 0x23
 
     new-array v0, v0, [Ljava/lang/String;
@@ -337,7 +333,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_16:[Ljava/lang/String;
 
-    .line 1134
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->characterAction:I
@@ -352,7 +347,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 1160
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$11;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -365,11 +359,9 @@
 
     if-eqz v18, :cond_0
 
-    .line 1263
     :goto_0
     return-void
 
-    .line 1163
     :cond_0
     move-object/from16 v0, p0
 
@@ -385,17 +377,14 @@
 
     aget-object v12, v18, v19
 
-    .line 1164
     .local v12, "phoneField":Landroid/widget/EditText;
     invoke-virtual {v12}, Landroid/widget/EditText;->getSelectionStart()I
 
     move-result v16
 
-    .line 1165
     .local v16, "start":I
     const-string/jumbo v11, "0123456789"
 
-    .line 1166
     .local v11, "phoneChars":Ljava/lang/String;
     invoke-virtual {v12}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
@@ -405,7 +394,6 @@
 
     move-result-object v17
 
-    .line 1167
     .local v17, "str":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -421,7 +409,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1168
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
@@ -478,10 +465,8 @@
 
     move-result-object v17
 
-    .line 1169
     add-int/lit8 v16, v16, -0x1
 
-    .line 1171
     :cond_1
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -493,7 +478,6 @@
 
     invoke-direct {v5, v0}, Ljava/lang/StringBuilder;-><init>(I)V
 
-    .line 1172
     .local v5, "builder":Ljava/lang/StringBuilder;
     const/4 v3, 0x0
 
@@ -507,7 +491,6 @@
 
     if-ge v3, v0, :cond_3
 
-    .line 1173
     add-int/lit8 v18, v3, 0x1
 
     move-object/from16 v0, v17
@@ -518,7 +501,6 @@
 
     move-result-object v6
 
-    .line 1174
     .local v6, "ch":Ljava/lang/String;
     invoke-virtual {v11, v6}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
@@ -526,16 +508,13 @@
 
     if-eqz v18, :cond_2
 
-    .line 1175
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1172
     :cond_2
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 1178
     .end local v6    # "ch":Ljava/lang/String;
     :cond_3
     move-object/from16 v0, p0
@@ -548,14 +527,11 @@
 
     invoke-static/range {v18 .. v19}, Lorg/telegram/ui/PaymentFormActivity;->access$2702(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 1179
     const/4 v9, 0x0
 
-    .line 1180
     .local v9, "hint":Ljava/lang/String;
     const/16 v10, 0x64
 
-    .line 1181
     .local v10, "maxLength":I
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
@@ -563,12 +539,10 @@
 
     if-lez v18, :cond_6
 
-    .line 1182
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v8
 
-    .line 1183
     .local v8, "currentString":Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -579,23 +553,18 @@
 
     if-ge v3, v0, :cond_5
 
-    .line 1187
     packed-switch v3, :pswitch_data_0
 
-    .line 1200
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_14:[Ljava/lang/String;
 
-    .line 1201
     .local v7, "checkArr":[Ljava/lang/String;
     const/16 v15, 0xe
 
-    .line 1202
     .local v15, "resultMaxLength":I
     const-string/jumbo v14, "xxxx xxxx xxxx xx"
 
-    .line 1205
     .local v14, "resultHint":Ljava/lang/String;
     :goto_3
     const/4 v4, 0x0
@@ -610,10 +579,8 @@
 
     if-ge v4, v0, :cond_4
 
-    .line 1206
     aget-object v13, v7, v4
 
-    .line 1207
     .local v13, "prefix":Ljava/lang/String;
     invoke-virtual {v8}, Ljava/lang/String;->length()I
 
@@ -629,26 +596,21 @@
 
     if-gt v0, v1, :cond_9
 
-    .line 1208
     invoke-virtual {v13, v8}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v18
 
     if-eqz v18, :cond_a
 
-    .line 1209
     move-object v9, v14
 
-    .line 1210
     move v10, v15
 
-    .line 1221
     .end local v13    # "prefix":Ljava/lang/String;
     :cond_4
     :goto_5
     if-eqz v9, :cond_b
 
-    .line 1225
     .end local v4    # "b":I
     .end local v7    # "checkArr":[Ljava/lang/String;
     .end local v14    # "resultHint":Ljava/lang/String;
@@ -656,7 +618,6 @@
     :cond_5
     if-eqz v10, :cond_6
 
-    .line 1226
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v18
@@ -665,18 +626,14 @@
 
     if-le v0, v10, :cond_6
 
-    .line 1227
     invoke-virtual {v5, v10}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 1231
     .end local v8    # "currentString":Ljava/lang/String;
     :cond_6
     if-eqz v9, :cond_f
 
-    .line 1232
     if-eqz v10, :cond_7
 
-    .line 1233
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
 
     move-result v18
@@ -685,7 +642,6 @@
 
     if-ne v0, v10, :cond_7
 
-    .line 1234
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$11;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -702,7 +658,6 @@
 
     invoke-virtual/range {v18 .. v18}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 1237
     :cond_7
     const-string/jumbo v18, "windowBackgroundWhiteBlackText"
 
@@ -714,7 +669,6 @@
 
     invoke-virtual {v12, v0}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 1238
     const/4 v3, 0x0
 
     :goto_6
@@ -726,7 +680,6 @@
 
     if-ge v3, v0, :cond_d
 
-    .line 1239
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
     move-result v18
@@ -735,7 +688,6 @@
 
     if-ge v3, v0, :cond_c
 
-    .line 1240
     invoke-virtual {v9, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v18
@@ -748,17 +700,14 @@
 
     if-ne v0, v1, :cond_8
 
-    .line 1241
     const/16 v18, 0x20
 
     move/from16 v0, v18
 
     invoke-virtual {v5, v3, v0}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
-    .line 1242
     add-int/lit8 v3, v3, 0x1
 
-    .line 1243
     move/from16 v0, v16
 
     if-ne v0, v3, :cond_8
@@ -791,35 +740,28 @@
 
     if-eq v0, v1, :cond_8
 
-    .line 1244
     add-int/lit8 v16, v16, 0x1
 
-    .line 1238
     :cond_8
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_6
 
-    .line 1189
     .restart local v8    # "currentString":Ljava/lang/String;
     :pswitch_0
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_16:[Ljava/lang/String;
 
-    .line 1190
     .restart local v7    # "checkArr":[Ljava/lang/String;
     const/16 v15, 0x10
 
-    .line 1191
     .restart local v15    # "resultMaxLength":I
     const-string/jumbo v14, "xxxx xxxx xxxx xxxx"
 
-    .line 1192
     .restart local v14    # "resultHint":Ljava/lang/String;
     goto/16 :goto_3
 
-    .line 1194
     .end local v7    # "checkArr":[Ljava/lang/String;
     .end local v14    # "resultHint":Ljava/lang/String;
     .end local v15    # "resultMaxLength":I
@@ -828,19 +770,15 @@
 
     iget-object v7, v0, Lorg/telegram/ui/PaymentFormActivity$11;->PREFIXES_15:[Ljava/lang/String;
 
-    .line 1195
     .restart local v7    # "checkArr":[Ljava/lang/String;
     const/16 v15, 0xf
 
-    .line 1196
     .restart local v15    # "resultMaxLength":I
     const-string/jumbo v14, "xxxx xxxx xxxx xxx"
 
-    .line 1197
     .restart local v14    # "resultHint":Ljava/lang/String;
     goto/16 :goto_3
 
-    .line 1214
     .restart local v4    # "b":I
     .restart local v13    # "prefix":Ljava/lang/String;
     :cond_9
@@ -850,29 +788,23 @@
 
     if-eqz v18, :cond_a
 
-    .line 1215
     move-object v9, v14
 
-    .line 1216
     move v10, v15
 
-    .line 1217
     goto/16 :goto_5
 
-    .line 1205
     :cond_a
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_4
 
-    .line 1183
     .end local v13    # "prefix":Ljava/lang/String;
     :cond_b
     add-int/lit8 v3, v3, 0x1
 
     goto/16 :goto_2
 
-    .line 1248
     .end local v4    # "b":I
     .end local v7    # "checkArr":[Ljava/lang/String;
     .end local v8    # "currentString":Ljava/lang/String;
@@ -885,7 +817,6 @@
 
     invoke-virtual {v5, v3, v0}, Ljava/lang/StringBuilder;->insert(IC)Ljava/lang/StringBuilder;
 
-    .line 1249
     add-int/lit8 v18, v3, 0x1
 
     move/from16 v0, v16
@@ -922,18 +853,14 @@
 
     if-eq v0, v1, :cond_d
 
-    .line 1250
     add-int/lit8 v16, v16, 0x1
 
-    .line 1258
     :cond_d
     :goto_7
     invoke-virtual {v12, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1259
     if-ltz v16, :cond_e
 
-    .line 1260
     invoke-virtual {v12}, Landroid/widget/EditText;->length()I
 
     move-result v18
@@ -950,7 +877,6 @@
 
     invoke-virtual {v12, v0}, Landroid/widget/EditText;->setSelection(I)V
 
-    .line 1262
     :cond_e
     move-object/from16 v0, p0
 
@@ -964,7 +890,6 @@
 
     goto/16 :goto_0
 
-    .line 1256
     .restart local v16    # "start":I
     :cond_f
     invoke-virtual {v5}, Ljava/lang/StringBuilder;->length()I
@@ -995,7 +920,6 @@
 
     goto :goto_9
 
-    .line 1260
     :cond_11
     invoke-virtual {v12}, Landroid/widget/EditText;->length()I
 
@@ -1003,7 +927,6 @@
 
     goto :goto_8
 
-    .line 1187
     nop
 
     :pswitch_data_0
@@ -1023,25 +946,20 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1139
     if-nez p3, :cond_0
 
     if-ne p4, v0, :cond_0
 
-    .line 1140
     iput v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->characterAction:I
 
-    .line 1151
     :goto_0
     return-void
 
-    .line 1141
     :cond_0
     if-ne p3, v0, :cond_2
 
     if-nez p4, :cond_2
 
-    .line 1142
     invoke-interface {p1, p2}, Ljava/lang/CharSequence;->charAt(I)C
 
     move-result v0
@@ -1052,19 +970,16 @@
 
     if-lez p2, :cond_1
 
-    .line 1143
     const/4 v0, 0x3
 
     iput v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->characterAction:I
 
-    .line 1144
     add-int/lit8 v0, p2, -0x1
 
     iput v0, p0, Lorg/telegram/ui/PaymentFormActivity$11;->actionPosition:I
 
     goto :goto_0
 
-    .line 1146
     :cond_1
     const/4 v0, 0x2
 
@@ -1072,7 +987,6 @@
 
     goto :goto_0
 
-    .line 1149
     :cond_2
     const/4 v0, -0x1
 
@@ -1089,6 +1003,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 1156
     return-void
 .end method

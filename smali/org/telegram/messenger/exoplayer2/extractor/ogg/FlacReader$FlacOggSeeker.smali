@@ -47,15 +47,12 @@
     .prologue
     const-wide/16 v0, -0x1
 
-    .line 125
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 132
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
-    .line 135
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
     return-void
@@ -67,7 +64,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$1;
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;)V
 
     return-void
@@ -79,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 182
     return-object p0
 .end method
 
@@ -87,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 200
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->access$100(Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;)Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
@@ -106,7 +100,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 192
     monitor-enter p0
 
     :try_start_0
@@ -118,7 +111,6 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->queriedGranule:J
 
-    .line 193
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->sampleNumbers:[J
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->queriedGranule:J
@@ -131,7 +123,6 @@
 
     move-result v0
 
-    .line 194
     .local v0, "index":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->sampleNumbers:[J
 
@@ -139,7 +130,6 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->seekedGranule:J
 
-    .line 195
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->offsets:[J
@@ -154,7 +144,6 @@
 
     return-wide v2
 
-    .line 192
     .end local v0    # "index":I
     :catchall_0
     move-exception v1
@@ -168,7 +157,6 @@
     .locals 1
 
     .prologue
-    .line 187
     const/4 v0, 0x1
 
     return v0
@@ -179,39 +167,32 @@
     .param p1, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 151
     const/4 v3, 0x1
 
     invoke-virtual {p1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 152
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
 
     move-result v1
 
-    .line 153
     .local v1, "length":I
     div-int/lit8 v2, v1, 0x12
 
-    .line 155
     .local v2, "numberOfSeekPoints":I
     new-array v3, v2, [J
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->sampleNumbers:[J
 
-    .line 156
     new-array v3, v2, [J
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->offsets:[J
 
-    .line 158
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 159
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->sampleNumbers:[J
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
@@ -220,7 +201,6 @@
 
     aput-wide v4, v3, v0
 
-    .line 160
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->offsets:[J
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
@@ -229,17 +209,14 @@
 
     aput-wide v4, v3, v0
 
-    .line 161
     const/4 v3, 0x2
 
     invoke-virtual {p1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 158
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 163
     :cond_0
     return-void
 .end method
@@ -255,7 +232,6 @@
     .end annotation
 
     .prologue
-    .line 167
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
     const-wide/16 v2, 0x0
@@ -264,7 +240,6 @@
 
     if-ltz v0, :cond_0
 
-    .line 168
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
     neg-long v0, v0
@@ -275,10 +250,8 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
-    .line 169
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
-    .line 171
     :goto_0
     return-wide v0
 
@@ -293,10 +266,8 @@
     .param p1, "firstFrameOffset"    # J
 
     .prologue
-    .line 138
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->firstFrameOffset:J
 
-    .line 139
     return-void
 .end method
 
@@ -304,7 +275,6 @@
     .locals 2
 
     .prologue
-    .line 176
     monitor-enter p0
 
     :try_start_0
@@ -312,7 +282,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->currentGranule:J
 
-    .line 177
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->queriedGranule:J
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
@@ -321,7 +290,6 @@
 
     return-wide v0
 
-    .line 176
     :catchall_0
     move-exception v0
 

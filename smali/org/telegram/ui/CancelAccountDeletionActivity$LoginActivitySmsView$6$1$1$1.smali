@@ -29,7 +29,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1$1;->this$4:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 796
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1$1;->this$4:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1$1;->this$3:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$6$1;
@@ -60,6 +58,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1402(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 797
     return-void
 .end method

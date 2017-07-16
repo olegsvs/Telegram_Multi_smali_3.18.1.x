@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 2143
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 2146
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$9400(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
@@ -75,16 +73,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 2147
     invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 2148
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 2149
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$9200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoCropView;
@@ -108,7 +103,6 @@
     :goto_0
     invoke-virtual {v3, v0, v4, v1}, Lorg/telegram/ui/Components/PhotoCropView;->setBitmap(Landroid/graphics/Bitmap;IZ)V
 
-    .line 2152
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -149,7 +143,6 @@
 
     if-nez v1, :cond_1
 
-    .line 2153
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoViewer;->access$3400(Lorg/telegram/ui/PhotoViewer;)Z
@@ -158,24 +151,20 @@
 
     if-nez v1, :cond_3
 
-    .line 2154
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/PhotoViewer;->access$3502(Lorg/telegram/ui/PhotoViewer;Z)Z
 
-    .line 2159
     :cond_1
     :goto_1
     return-void
 
-    .line 2149
     .restart local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_2
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 2156
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/PhotoViewer$29;->this$0:Lorg/telegram/ui/PhotoViewer;

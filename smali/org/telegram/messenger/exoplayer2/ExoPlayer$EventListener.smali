@@ -27,7 +27,6 @@
 .method public abstract onPositionDiscontinuity()V
 .end method
 
-.method public abstract onTimelineChanged(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
 .end method
 
 .method public abstract onTracksChanged(Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;)V

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoFilterView;
 
     .prologue
-    .line 1734
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$3;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1737
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$3;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1738
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$3;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -61,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->requestRender(Z)V
 
-    .line 1740
     :cond_0
     return-void
 .end method

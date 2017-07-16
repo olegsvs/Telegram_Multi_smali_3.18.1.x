@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate$1;->this$0:Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
     invoke-direct {p0}, Landroid/support/v4/view/AccessibilityDelegateCompat;-><init>()V
@@ -40,10 +39,8 @@
     .param p2, "info"    # Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;
 
     .prologue
-    .line 87
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AccessibilityDelegateCompat;->onInitializeAccessibilityNodeInfo(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate$1;->this$0:Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;->shouldIgnore()Z
@@ -62,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 89
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate$1;->this$0:Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
@@ -71,10 +67,8 @@
 
     move-result-object v0
 
-    .line 90
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->onInitializeAccessibilityNodeInfoForItem(Landroid/view/View;Landroid/support/v4/view/accessibility/AccessibilityNodeInfoCompat;)V
 
-    .line 92
     :cond_0
     return-void
 .end method
@@ -86,21 +80,17 @@
     .param p3, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 96
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/AccessibilityDelegateCompat;->performAccessibilityAction(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 97
     const/4 v0, 0x1
 
-    .line 103
     :goto_0
     return v0
 
-    .line 99
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate$1;->this$0:Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
@@ -120,7 +110,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 100
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate$1;->this$0:Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerViewAccessibilityDelegate;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
@@ -129,14 +118,12 @@
 
     move-result-object v0
 
-    .line 101
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->performAccessibilityActionForItem(Landroid/view/View;ILandroid/os/Bundle;)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 103
     :cond_1
     const/4 v0, 0x0
 

@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Lcom/google/android/gms/gcm/GcmListenerService;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 27
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -57,13 +55,11 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 28
     new-instance v0, Lorg/telegram/messenger/GcmPushListenerService$1;
 
     invoke-direct {v0, p0, p2}, Lorg/telegram/messenger/GcmPushListenerService$1;-><init>(Lorg/telegram/messenger/GcmPushListenerService;Landroid/os/Bundle;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 67
     return-void
 .end method

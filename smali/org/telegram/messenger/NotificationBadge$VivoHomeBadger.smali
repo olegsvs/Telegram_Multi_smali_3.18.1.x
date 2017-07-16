@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 626
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,14 +34,12 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 630
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "launcher.action.CHANGE_APPLICATION_NOTIFICATION_NUM"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 631
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v1, "packageName"
 
@@ -54,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 632
     const-string/jumbo v1, "className"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -67,17 +63,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 633
     const-string/jumbo v1, "notificationNum"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 634
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v1, v0}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 635
     return-void
 .end method
 
@@ -94,7 +87,6 @@
     .end annotation
 
     .prologue
-    .line 639
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;

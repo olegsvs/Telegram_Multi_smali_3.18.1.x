@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 27
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -40,10 +39,8 @@
     .locals 2
 
     .prologue
-    .line 37
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 34
     new-instance v0, Ljava/lang/StringBuilder;
 
     const/4 v1, 0x5
@@ -52,12 +49,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
-    .line 39
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     if-nez v0, :cond_0
 
-    .line 40
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "sharedMedia_linkPlaceholder"
@@ -68,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 41
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -77,7 +71,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
-    .line 42
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "sharedMedia_linkPlaceholderText"
@@ -88,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 44
     :cond_0
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
@@ -102,7 +94,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 45
     return-void
 .end method
 
@@ -115,30 +106,24 @@
     .prologue
     const/high16 v8, 0x40000000    # 2.0f
 
-    .line 80
     invoke-virtual {p0}, Lorg/telegram/ui/Components/LetterDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v6
 
-    .line 81
     .local v6, "bounds":Landroid/graphics/Rect;
     if-nez v6, :cond_0
 
-    .line 92
     :goto_0
     return-void
 
-    .line 84
     :cond_0
     invoke-virtual {v6}, Landroid/graphics/Rect;->width()I
 
     move-result v7
 
-    .line 85
     .local v7, "size":I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 86
     iget v0, v6, Landroid/graphics/Rect;->left:I
 
     int-to-float v1, v0
@@ -161,12 +146,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_1
 
-    .line 88
     iget v0, v6, Landroid/graphics/Rect;->left:I
 
     int-to-float v0, v0
@@ -201,12 +184,10 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 91
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
@@ -217,7 +198,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/4 v0, 0x0
 
     return v0
@@ -227,7 +207,6 @@
     .locals 1
 
     .prologue
-    .line 111
     const/4 v0, 0x0
 
     return v0
@@ -237,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const/4 v0, -0x2
 
     return v0
@@ -248,7 +226,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 97
     return-void
 .end method
 
@@ -257,12 +234,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 48
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 49
     return-void
 .end method
 
@@ -271,12 +246,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 52
     sget-object v0, Lorg/telegram/ui/Components/LetterDrawable;->namePaint:Landroid/text/TextPaint;
 
     invoke-virtual {v0, p1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 53
     return-void
 .end method
 
@@ -285,7 +258,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -296,12 +268,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v3}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 57
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -310,7 +280,6 @@
 
     if-lez v0, :cond_0
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v2, 0x1
@@ -321,7 +290,6 @@
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 61
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
@@ -331,7 +299,6 @@
 
     if-lez v0, :cond_2
 
-    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->stringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -342,7 +309,6 @@
 
     move-result-object v1
 
-    .line 64
     .local v1, "text":Ljava/lang/String;
     :try_start_0
     new-instance v0, Landroid/text/StaticLayout;
@@ -367,7 +333,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getLineCount()I
@@ -376,7 +341,6 @@
 
     if-lez v0, :cond_1
 
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     const/4 v2, 0x0
@@ -387,7 +351,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLeft:F
 
-    .line 67
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     const/4 v2, 0x0
@@ -398,7 +361,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textWidth:F
 
-    .line 68
     iget-object v0, p0, Lorg/telegram/ui/Components/LetterDrawable;->textLayout:Landroid/text/StaticLayout;
 
     const/4 v2, 0x0
@@ -413,24 +375,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 76
     .end local v1    # "text":Ljava/lang/String;
     :cond_1
     :goto_0
     return-void
 
-    .line 70
     .restart local v1    # "text":Ljava/lang/String;
     :catch_0
     move-exception v8
 
-    .line 71
     .local v8, "e":Ljava/lang/Exception;
     invoke-static {v8}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 74
     .end local v1    # "text":Ljava/lang/String;
     .end local v8    # "e":Ljava/lang/Exception;
     :cond_2

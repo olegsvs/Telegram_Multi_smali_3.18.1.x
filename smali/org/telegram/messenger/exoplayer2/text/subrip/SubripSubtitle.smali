@@ -19,16 +19,12 @@
     .param p2, "cueTimesUs"    # [J
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cues:[Lorg/telegram/messenger/exoplayer2/text/Cue;
 
-    .line 40
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
-    .line 41
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 63
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     const/4 v2, 0x1
@@ -59,7 +54,6 @@
 
     move-result v0
 
-    .line 64
     .local v0, "index":I
     const/4 v1, -0x1
 
@@ -71,13 +65,11 @@
 
     if-nez v1, :cond_1
 
-    .line 66
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v1
 
-    .line 68
     :goto_0
     return-object v1
 
@@ -102,7 +94,6 @@
 
     const/4 v2, 0x0
 
-    .line 56
     if-ltz p1, :cond_0
 
     move v0, v1
@@ -110,7 +101,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     array-length v0, v0
@@ -120,7 +110,6 @@
     :goto_1
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     aget-wide v0, v0, p1
@@ -130,13 +119,11 @@
     :cond_0
     move v0, v2
 
-    .line 56
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 57
     goto :goto_1
 .end method
 
@@ -144,7 +131,6 @@
     .locals 1
 
     .prologue
-    .line 51
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     array-length v0, v0
@@ -159,14 +145,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 45
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 
     invoke-static {v1, p1, p2, v2, v2}, Lorg/telegram/messenger/exoplayer2/util/Util;->binarySearchCeil([JJZZ)I
 
     move-result v0
 
-    .line 46
     .local v0, "index":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/subrip/SubripSubtitle;->cueTimesUs:[J
 

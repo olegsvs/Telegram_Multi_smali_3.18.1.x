@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/IdenticonActivity;
 
     .prologue
-    .line 313
     iput-object p1, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v6, 0x1
 
-    .line 316
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/IdenticonActivity;->access$700(Lorg/telegram/ui/IdenticonActivity;)Landroid/view/View;
@@ -54,11 +52,9 @@
 
     if-nez v2, :cond_0
 
-    .line 330
     :goto_0
     return v6
 
-    .line 319
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
@@ -72,7 +68,6 @@
 
     invoke-virtual {v2, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 320
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "window"
@@ -83,7 +78,6 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 321
     .local v0, "manager":Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -93,7 +87,6 @@
 
     move-result v1
 
-    .line 323
     .local v1, "rotation":I
     const/4 v2, 0x3
 
@@ -101,7 +94,6 @@
 
     if-ne v1, v6, :cond_2
 
-    .line 324
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
@@ -111,7 +103,6 @@
 
     invoke-virtual {v2, v7}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 329
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
@@ -153,7 +144,6 @@
 
     goto :goto_0
 
-    .line 326
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$6;->this$0:Lorg/telegram/ui/IdenticonActivity;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersAlert;
 
     .prologue
-    .line 491
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$16;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 494
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$16;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$3400(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/StickersAlert$StickersAlertDelegate;
@@ -57,11 +55,9 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Components/StickersAlert$StickersAlertDelegate;->onStickerSelected(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 495
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$16;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert;->dismiss()V
 
-    .line 496
     return-void
 .end method

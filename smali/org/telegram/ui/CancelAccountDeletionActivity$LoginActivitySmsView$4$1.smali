@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;
 
     .prologue
-    .line 594
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;
 
     iput-object p2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,19 +50,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 597
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;
 
     iget-object v0, v0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1002(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;Z)Z
 
-    .line 598
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 599
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;
 
     iget-object v0, v0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
@@ -80,7 +76,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->access$500(Lorg/telegram/ui/CancelAccountDeletionActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 603
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4;
 
@@ -90,10 +85,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->needHideProgress()V
 
-    .line 604
     return-void
 
-    .line 601
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 

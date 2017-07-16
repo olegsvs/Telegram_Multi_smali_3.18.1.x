@@ -32,7 +32,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     .prologue
-    .line 845
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
     .param p4, "initializationDurationMs"    # J
 
     .prologue
-    .line 936
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 937
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -73,7 +70,6 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioDecoderInitialized(Ljava/lang/String;JJ)V
 
-    .line 940
     :cond_0
     return-void
 .end method
@@ -85,7 +81,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 960
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -94,7 +89,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 961
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -103,25 +97,21 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioDisabled(Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)V
 
-    .line 963
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$802(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/Format;)Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 964
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$502(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
-    .line 965
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$702(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;I)I
 
-    .line 966
     return-void
 .end method
 
@@ -130,12 +120,10 @@
     .param p1, "counters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 919
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$502(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
-    .line 920
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -144,7 +132,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 921
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -153,7 +140,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioEnabled(Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)V
 
-    .line 923
     :cond_0
     return-void
 .end method
@@ -163,12 +149,10 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 944
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$802(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/Format;)Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 945
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -177,7 +161,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 946
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -186,7 +169,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioInputFormatChanged(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 948
     :cond_0
     return-void
 .end method
@@ -196,12 +178,10 @@
     .param p1, "sessionId"    # I
 
     .prologue
-    .line 927
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$702(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;I)I
 
-    .line 928
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -210,7 +190,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 929
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -219,7 +198,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioSessionId(I)V
 
-    .line 931
     :cond_0
     return-void
 .end method
@@ -231,7 +209,6 @@
     .param p4, "elapsedSinceLastFeedMs"    # J
 
     .prologue
-    .line 953
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -240,7 +217,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 954
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$600(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
@@ -255,7 +231,6 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;->onAudioTrackUnderrun(IJJ)V
 
-    .line 956
     :cond_0
     return-void
 .end method
@@ -273,7 +248,6 @@
     .end annotation
 
     .prologue
-    .line 972
     .local p1, "cues":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/Cue;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -283,7 +257,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 973
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$900(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;
@@ -292,7 +265,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;->onCues(Ljava/util/List;)V
 
-    .line 975
     :cond_0
     return-void
 .end method
@@ -303,7 +275,6 @@
     .param p2, "elapsed"    # J
 
     .prologue
-    .line 878
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -312,7 +283,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 879
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -321,7 +291,6 @@
 
     invoke-interface {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onDroppedFrames(IJ)V
 
-    .line 881
     :cond_0
     return-void
 .end method
@@ -331,7 +300,6 @@
     .param p1, "metadata"    # Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
     .prologue
-    .line 981
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1000(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/metadata/MetadataRenderer$Output;
@@ -340,7 +308,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 982
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1000(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/metadata/MetadataRenderer$Output;
@@ -349,7 +316,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/MetadataRenderer$Output;->onMetadata(Lorg/telegram/messenger/exoplayer2/metadata/Metadata;)V
 
-    .line 984
     :cond_0
     return-void
 .end method
@@ -359,7 +325,6 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 898
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -376,7 +341,6 @@
 
     if-ne v0, p1, :cond_0
 
-    .line 899
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -385,7 +349,6 @@
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;->onRenderedFirstFrame()V
 
-    .line 901
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -395,7 +358,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 902
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -404,7 +366,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onRenderedFirstFrame(Landroid/view/Surface;)V
 
-    .line 904
     :cond_1
     return-void
 .end method
@@ -416,7 +377,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 1007
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1200(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Z
@@ -425,7 +385,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1008
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     new-instance v1, Landroid/view/Surface;
@@ -436,14 +395,12 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Landroid/view/Surface;Z)V
 
-    .line 1009
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1202(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Z)Z
 
-    .line 1011
     :cond_0
     return-void
 .end method
@@ -455,7 +412,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1020
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -468,14 +424,11 @@
 
     if-eqz v1, :cond_0
 
-    .line 1021
     const/4 v0, 0x0
 
-    .line 1025
     :goto_0
     return v0
 
-    .line 1023
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -483,7 +436,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Landroid/view/Surface;Z)V
 
-    .line 1024
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v1, v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1202(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Z)Z
@@ -498,7 +450,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 1016
     return-void
 .end method
 
@@ -507,7 +458,6 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 1030
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -516,7 +466,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
-    .line 1031
     return-void
 .end method
 
@@ -527,7 +476,6 @@
     .param p4, "initializationDurationMs"    # J
 
     .prologue
-    .line 862
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -536,7 +484,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 863
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -551,7 +498,6 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onVideoDecoderInitialized(Ljava/lang/String;JJ)V
 
-    .line 866
     :cond_0
     return-void
 .end method
@@ -563,7 +509,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 908
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -572,7 +517,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 909
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -581,18 +525,15 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onVideoDisabled(Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)V
 
-    .line 911
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$202(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/Format;)Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 912
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$002(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
-    .line 913
     return-void
 .end method
 
@@ -601,12 +542,10 @@
     .param p1, "counters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 853
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$002(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
-    .line 854
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -615,7 +554,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 855
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -624,7 +562,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onVideoEnabled(Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;)V
 
-    .line 857
     :cond_0
     return-void
 .end method
@@ -634,12 +571,10 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 870
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$202(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Lorg/telegram/messenger/exoplayer2/Format;)Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 871
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -648,7 +583,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 872
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -657,7 +591,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onVideoInputFormatChanged(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 874
     :cond_0
     return-void
 .end method
@@ -670,7 +603,6 @@
     .param p4, "pixelWidthHeightRatio"    # F
 
     .prologue
-    .line 886
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -679,7 +611,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 887
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$300(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;
@@ -688,7 +619,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;->onVideoSizeChanged(IIIF)V
 
-    .line 890
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -698,7 +628,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 891
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;)Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
@@ -707,7 +636,6 @@
 
     invoke-interface {v0, p1, p2, p3, p4}, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;->onVideoSizeChanged(IIIF)V
 
-    .line 894
     :cond_1
     return-void
 .end method
@@ -720,7 +648,6 @@
     .param p4, "height"    # I
 
     .prologue
-    .line 996
     return-void
 .end method
 
@@ -729,7 +656,6 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 990
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-interface {p1}, Landroid/view/SurfaceHolder;->getSurface()Landroid/view/Surface;
@@ -740,7 +666,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Landroid/view/Surface;Z)V
 
-    .line 991
     return-void
 .end method
 
@@ -749,7 +674,6 @@
     .param p1, "holder"    # Landroid/view/SurfaceHolder;
 
     .prologue
-    .line 1000
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;->this$0:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     const/4 v1, 0x0
@@ -758,6 +682,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->access$1100(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;Landroid/view/Surface;Z)V
 
-    .line 1001
     return-void
 .end method

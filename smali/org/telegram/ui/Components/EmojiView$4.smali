@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 683
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -40,7 +39,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 686
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
     move-result-object v1
@@ -67,7 +65,6 @@
 
     move-result v0
 
-    .line 687
     .local v0, "result":Z
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -94,7 +91,6 @@
     .param p1, "visibility"    # I
 
     .prologue
-    .line 692
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$4;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$2800(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -136,17 +132,14 @@
 
     if-nez v0, :cond_2
 
-    .line 693
     :cond_1
     const/16 v0, 0x8
 
     invoke-super {p0, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 697
     :goto_0
     return-void
 
-    .line 696
     :cond_2
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 

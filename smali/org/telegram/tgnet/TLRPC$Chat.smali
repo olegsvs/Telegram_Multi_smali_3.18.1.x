@@ -83,7 +83,6 @@
     .locals 0
 
     .prologue
-    .line 17115
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -96,20 +95,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17149
     const/4 v0, 0x0
 
-    .line 17150
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Chat;
     sparse-switch p1, :sswitch_data_0
 
-    .line 17188
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 17189
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Chat"
@@ -134,128 +129,105 @@
 
     throw v1
 
-    .line 17152
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chat_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chat_old2;-><init>()V
 
-    .line 17153
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17155
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatForbidden;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatForbidden;-><init>()V
 
-    .line 17156
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17158
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelForbidden;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelForbidden;-><init>()V
 
-    .line 17159
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17161
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channel_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channel_old;-><init>()V
 
-    .line 17162
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17164
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatForbidden_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatForbidden_old;-><init>()V
 
-    .line 17165
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17167
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chat;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chat;-><init>()V
 
-    .line 17168
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17170
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;-><init>()V
 
-    .line 17171
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17173
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channel_layer48;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channel_layer48;-><init>()V
 
-    .line 17174
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17176
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_geoChat;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_geoChat;-><init>()V
 
-    .line 17177
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17179
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelForbidden_layer52;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelForbidden_layer52;-><init>()V
 
-    .line 17180
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17182
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channel;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channel;-><init>()V
 
-    .line 17183
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17185
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chat_old;
 
@@ -265,18 +237,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Chat;
     goto :goto_0
 
-    .line 17191
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 17192
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Chat;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 17194
     :cond_1
     return-object v0
 
-    .line 17150
     nop
 
     :sswitch_data_0

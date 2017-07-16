@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 466
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/AlertDialog$7;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -40,10 +39,8 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 469
     invoke-super {p0, p1}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 470
     if-eqz p1, :cond_0
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -51,10 +48,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$7;->setAlpha(F)V
 
-    .line 471
     return-void
 
-    .line 470
     :cond_0
     const/high16 v0, 0x3f000000    # 0.5f
 

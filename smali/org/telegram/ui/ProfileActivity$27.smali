@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 2594
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$27;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "rhs"    # Ljava/lang/Integer;
 
     .prologue
-    .line 2597
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v5
@@ -88,7 +86,6 @@
 
     move-result-object v2
 
-    .line 2598
     .local v2, "user1":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -124,19 +121,16 @@
 
     move-result-object v3
 
-    .line 2599
     .local v3, "user2":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {v2}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 2600
     .local v0, "name1":Ljava/lang/String;
     invoke-static {v3}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 2601
     .local v1, "name2":Ljava/lang/String;
     invoke-virtual {v1, v0}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
@@ -149,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 2594
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Ljava/lang/Integer;

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$51;
 
     .prologue
-    .line 3286
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$51$2;->this$1:Lorg/telegram/ui/ChatActivity$51;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3289
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51$2;->this$1:Lorg/telegram/ui/ChatActivity$51;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3290
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -79,14 +76,12 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->addUserToChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;ILjava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    .line 3291
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51$2;->this$1:Lorg/telegram/ui/ChatActivity$51;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$4100(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 3293
     :cond_0
     return-void
 .end method

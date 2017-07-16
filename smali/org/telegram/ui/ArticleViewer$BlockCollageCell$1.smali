@@ -27,7 +27,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3449
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$1;->val$this$0:Lorg/telegram/ui/ArticleViewer;
@@ -43,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 3452
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$1;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->access$8100(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;)Z
@@ -52,11 +50,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 3456
     :goto_0
     return-void
 
-    .line 3455
     :cond_0
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 

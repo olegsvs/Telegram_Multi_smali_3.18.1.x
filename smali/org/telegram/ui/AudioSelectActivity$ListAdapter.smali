@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 281
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 282
     iput-object p2, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 283
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 291
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/AudioSelectActivity;->access$300(Lorg/telegram/ui/AudioSelectActivity;)Ljava/util/ArrayList;
@@ -63,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 287
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/AudioSelectActivity;->access$300(Lorg/telegram/ui/AudioSelectActivity;)Ljava/util/ArrayList;
@@ -82,7 +77,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 296
     int-to-long v0, p1
 
     return-wide v0
@@ -93,7 +87,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 324
     const/4 v0, 0x0
 
     return v0
@@ -104,7 +97,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 301
     const/4 v0, 0x1
 
     return v0
@@ -116,7 +108,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 318
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/AudioSelectActivity;->access$300(Lorg/telegram/ui/AudioSelectActivity;)Ljava/util/ArrayList;
@@ -129,7 +120,6 @@
 
     check-cast v0, Lorg/telegram/messenger/MediaController$AudioEntry;
 
-    .line 319
     .local v0, "audioEntry":Lorg/telegram/messenger/MediaController$AudioEntry;
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -182,10 +172,8 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/ui/Cells/AudioCell;->setAudio(Lorg/telegram/messenger/MediaController$AudioEntry;ZZ)V
 
-    .line 320
     return-void
 
-    .line 319
     :cond_0
     const/4 v3, 0x0
 
@@ -198,14 +186,12 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 306
     new-instance v0, Lorg/telegram/ui/Cells/AudioCell;
 
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/AudioCell;-><init>(Landroid/content/Context;)V
 
-    .line 307
     .local v0, "view":Lorg/telegram/ui/Cells/AudioCell;
     new-instance v1, Lorg/telegram/ui/AudioSelectActivity$ListAdapter$1;
 
@@ -213,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/AudioCell;->setDelegate(Lorg/telegram/ui/Cells/AudioCell$AudioCellDelegate;)V
 
-    .line 313
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

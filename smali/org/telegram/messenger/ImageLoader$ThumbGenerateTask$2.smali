@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     .prologue
-    .line 569
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->val$key:Ljava/lang/String;
@@ -49,15 +48,12 @@
     .locals 6
 
     .prologue
-    .line 572
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     invoke-static {v1}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->access$900(Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;)V
 
-    .line 574
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->val$key:Ljava/lang/String;
 
-    .line 575
     .local v0, "kf":Ljava/lang/String;
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
@@ -67,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 576
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -96,7 +91,6 @@
 
     move-result-object v0
 
-    .line 578
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -120,7 +114,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 589
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     iget-object v1, v1, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -133,6 +126,5 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/LruCache;->put(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 590
     return-void
 .end method

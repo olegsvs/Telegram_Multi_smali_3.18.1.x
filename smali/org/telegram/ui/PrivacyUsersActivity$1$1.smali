@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PrivacyUsersActivity$1;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .end annotation
 
     .prologue
-    .line 115
     .local p1, "ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {p1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
 
@@ -70,7 +68,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 116
     .local v0, "id":Ljava/lang/Integer;
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
 
@@ -86,7 +83,6 @@
 
     if-nez v2, :cond_0
 
-    .line 119
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
 
     iget-object v2, v2, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -99,7 +95,6 @@
 
     goto :goto_0
 
-    .line 121
     .end local v0    # "id":Ljava/lang/Integer;
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
@@ -112,7 +107,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 122
     iget-object v1, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
 
     iget-object v1, v1, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -123,7 +117,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 123
     iget-object v1, p0, Lorg/telegram/ui/PrivacyUsersActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyUsersActivity$1;
 
     iget-object v1, v1, Lorg/telegram/ui/PrivacyUsersActivity$1;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -144,7 +137,6 @@
 
     invoke-interface {v1, v2, v3}, Lorg/telegram/ui/PrivacyUsersActivity$PrivacyActivityDelegate;->didUpdatedUserList(Ljava/util/ArrayList;Z)V
 
-    .line 125
     :cond_2
     return-void
 .end method

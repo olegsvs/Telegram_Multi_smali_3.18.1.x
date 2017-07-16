@@ -68,7 +68,6 @@
 
     const/4 v5, 0x1
 
-    .line 15
     const/16 v1, 0x5d
 
     new-array v1, v1, [C
@@ -77,7 +76,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->emojiToFE0F:[C
 
-    .line 29
     const/16 v1, 0xa3
 
     new-array v1, v1, [C
@@ -86,7 +84,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->dataChars:[C
 
-    .line 49
     const/16 v1, 0x14d
 
     new-array v1, v1, [Ljava/lang/String;
@@ -2081,7 +2078,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->emojiSecret:[Ljava/lang/String;
 
-    .line 62
     const/16 v1, 0x98
 
     new-array v1, v1, [Ljava/lang/String;
@@ -2990,7 +2986,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->emojiColored:[Ljava/lang/String;
 
-    .line 66
     const/4 v1, 0x5
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -8399,7 +8394,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->dataColored:[[Ljava/lang/String;
 
-    .line 236
     const/4 v1, 0x5
 
     new-array v1, v1, [[Ljava/lang/String;
@@ -21388,7 +21382,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->data:[[Ljava/lang/String;
 
-    .line 254
     new-instance v1, Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->emojiToFE0F:[C
@@ -21399,7 +21392,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->emojiToFE0FMap:Ljava/util/HashMap;
 
-    .line 255
     new-instance v1, Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->dataChars:[C
@@ -21410,7 +21402,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->dataCharsMap:Ljava/util/HashMap;
 
-    .line 256
     new-instance v1, Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->emojiColored:[Ljava/lang/String;
@@ -21421,7 +21412,6 @@
 
     sput-object v1, Lorg/telegram/messenger/EmojiData;->emojiColoredMap:Ljava/util/HashMap;
 
-    .line 259
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -21432,7 +21422,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 260
     sget-object v1, Lorg/telegram/messenger/EmojiData;->emojiToFE0FMap:Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->emojiToFE0F:[C
@@ -21449,12 +21438,10 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 262
     :cond_0
     const/4 v0, 0x0
 
@@ -21465,7 +21452,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 263
     sget-object v1, Lorg/telegram/messenger/EmojiData;->dataCharsMap:Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->dataChars:[C
@@ -21482,12 +21468,10 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 265
     :cond_1
     const/4 v0, 0x0
 
@@ -21498,7 +21482,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 266
     sget-object v1, Lorg/telegram/messenger/EmojiData;->emojiColoredMap:Ljava/util/HashMap;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->emojiColored:[Ljava/lang/String;
@@ -21511,12 +21494,10 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 268
     :cond_2
     sget-object v1, Lorg/telegram/messenger/EmojiData;->dataColored:[[Ljava/lang/String;
 
@@ -21526,7 +21507,6 @@
 
     aput-object v2, v1, v5
 
-    .line 269
     sget-object v1, Lorg/telegram/messenger/EmojiData;->dataColored:[[Ljava/lang/String;
 
     sget-object v2, Lorg/telegram/messenger/EmojiData;->data:[[Ljava/lang/String;
@@ -21535,10 +21515,8 @@
 
     aput-object v2, v1, v6
 
-    .line 270
     return-void
 
-    .line 15
     nop
 
     :array_0
@@ -21638,7 +21616,6 @@
         0x2764s
     .end array-data
 
-    .line 29
     nop
 
     :array_1
@@ -21813,7 +21790,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

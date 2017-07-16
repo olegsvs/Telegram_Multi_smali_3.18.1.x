@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 17085
     const v0, -0x3dc6297a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 17084
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,15 +52,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17091
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 17092
     if-eqz p2, :cond_0
 
-    .line 17093
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_inputWebFileLocation"
@@ -87,21 +82,17 @@
 
     throw v1
 
-    .line 17095
     :cond_0
     const/4 v0, 0x0
 
-    .line 17100
     :goto_0
     return-object v0
 
-    .line 17098
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;-><init>()V
 
-    .line 17099
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -116,21 +107,18 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17104
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->url:Ljava/lang/String;
 
-    .line 17105
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->access_hash:J
 
-    .line 17106
     return-void
 .end method
 
@@ -139,21 +127,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 17109
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17110
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 17111
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->access_hash:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 17112
     return-void
 .end method

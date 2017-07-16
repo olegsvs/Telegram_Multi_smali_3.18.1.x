@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     .prologue
-    .line 420
     iput-object p1, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$11;->this$1:Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 423
     iget-object v0, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$11;->this$1:Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingDrawerActivity$3;->this$0:Lorg/telegram/ui/ThemingDrawerActivity;
@@ -51,6 +49,5 @@
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingDrawerActivity;->access$300(Lorg/telegram/ui/ThemingDrawerActivity;Ljava/lang/String;I)V
 
-    .line 424
     return-void
 .end method

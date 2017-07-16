@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 5809
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$35;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$35;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
@@ -47,12 +46,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5812
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$35;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ArticleViewer;->access$11602(Lorg/telegram/ui/ArticleViewer;Z)Z
 
-    .line 5813
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$35;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
@@ -61,6 +58,5 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/messenger/ImageReceiver;->setVisible(ZZ)V
 
-    .line 5814
     return-void
 .end method

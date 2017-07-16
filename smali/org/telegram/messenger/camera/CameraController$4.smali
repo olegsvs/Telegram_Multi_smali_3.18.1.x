@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 302
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$4;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$4;->val$path:Ljava/io/File;
@@ -55,10 +54,8 @@
     .param p2, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 305
     const/4 v0, 0x0
 
-    .line 306
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getPhotoSize()I
 
@@ -72,7 +69,6 @@
 
     float-to-int v13, v1
 
-    .line 307
     .local v13, "size":I
     sget-object v1, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -116,27 +112,23 @@
 
     move-result-object v8
 
-    .line 309
     .local v8, "key":Ljava/lang/String;
     :try_start_0
     new-instance v9, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v9}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 310
     .local v9, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v1, 0x1
 
     iput-boolean v1, v9, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 311
     const/4 v1, 0x0
 
     array-length v2, p1
 
     invoke-static {p1, v1, v2, v9}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 312
     iget v1, v9, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     int-to-float v1, v1
@@ -165,7 +157,6 @@
 
     move-result v11
 
-    .line 313
     .local v11, "scaleFactor":F
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -173,26 +164,21 @@
 
     if-gez v1, :cond_0
 
-    .line 314
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 316
     :cond_0
     const/4 v1, 0x0
 
     iput-boolean v1, v9, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 317
     float-to-int v1, v11
 
     iput v1, v9, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 318
     const/4 v1, 0x1
 
     iput-boolean v1, v9, Landroid/graphics/BitmapFactory$Options;->inPurgeable:Z
 
-    .line 319
     const/4 v1, 0x0
 
     array-length v2, p1
@@ -203,7 +189,6 @@
 
     move-result-object v0
 
-    .line 324
     .end local v9    # "options":Landroid/graphics/BitmapFactory$Options;
     .end local v11    # "scaleFactor":F
     :goto_0
@@ -216,13 +201,11 @@
 
     if-eqz v1, :cond_3
 
-    .line 326
     :try_start_2
     new-instance v5, Landroid/graphics/Matrix;
 
     invoke-direct {v5}, Landroid/graphics/Matrix;-><init>()V
 
-    .line 327
     .local v5, "matrix":Landroid/graphics/Matrix;
     invoke-static {p1}, Lorg/telegram/messenger/camera/CameraController;->access$100([B)I
 
@@ -232,14 +215,12 @@
 
     invoke-virtual {v5, v1}, Landroid/graphics/Matrix;->setRotate(F)V
 
-    .line 328
     const/high16 v1, -0x40800000    # -1.0f
 
     const/high16 v2, 0x3f800000    # 1.0f
 
     invoke-virtual {v5, v1, v2}, Landroid/graphics/Matrix;->postScale(FF)Z
 
-    .line 329
     const/4 v1, 0x0
 
     const/4 v2, 0x0
@@ -258,18 +239,15 @@
 
     move-result-object v12
 
-    .line 330
     .local v12, "scaled":Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 331
     new-instance v10, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$4;->val$path:Ljava/io/File;
 
     invoke-direct {v10, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 332
     .local v10, "outputStream":Ljava/io/FileOutputStream;
     sget-object v1, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -277,23 +255,18 @@
 
     invoke-virtual {v12, v1, v2, v10}, Landroid/graphics/Bitmap;->compress(Landroid/graphics/Bitmap$CompressFormat;ILjava/io/OutputStream;)Z
 
-    .line 333
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 334
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 335
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
 
-    .line 336
     if-eqz v12, :cond_1
 
-    .line 337
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
@@ -304,13 +277,11 @@
 
     invoke-virtual {v1, v2, v8}, Lorg/telegram/messenger/ImageLoader;->putImageToCache(Landroid/graphics/drawable/BitmapDrawable;Ljava/lang/String;)V
 
-    .line 339
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$4;->val$callback:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_2
 
-    .line 340
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$4;->val$callback:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
@@ -318,7 +289,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 361
     .end local v5    # "matrix":Landroid/graphics/Matrix;
     .end local v10    # "outputStream":Ljava/io/FileOutputStream;
     .end local v12    # "scaled":Landroid/graphics/Bitmap;
@@ -326,27 +296,22 @@
     :goto_1
     return-void
 
-    .line 320
     :catch_0
     move-exception v7
 
-    .line 321
     .local v7, "e":Ljava/lang/Throwable;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 343
     .end local v7    # "e":Ljava/lang/Throwable;
     :catch_1
     move-exception v7
 
-    .line 344
     .restart local v7    # "e":Ljava/lang/Throwable;
     :try_start_3
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 347
     .end local v7    # "e":Ljava/lang/Throwable;
     :cond_3
     new-instance v10, Ljava/io/FileOutputStream;
@@ -355,27 +320,21 @@
 
     invoke-direct {v10, v1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 348
     .restart local v10    # "outputStream":Ljava/io/FileOutputStream;
     invoke-virtual {v10, p1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 349
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 350
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/io/FileDescriptor;->sync()V
 
-    .line 351
     invoke-virtual {v10}, Ljava/io/FileOutputStream;->close()V
 
-    .line 352
     if-eqz v0, :cond_4
 
-    .line 353
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
@@ -388,7 +347,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
 
-    .line 358
     .end local v10    # "outputStream":Ljava/io/FileOutputStream;
     :cond_4
     :goto_2
@@ -396,18 +354,15 @@
 
     if-eqz v1, :cond_2
 
-    .line 359
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$4;->val$callback:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
     goto :goto_1
 
-    .line 355
     :catch_2
     move-exception v7
 
-    .line 356
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 1216
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$22;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -40,7 +39,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1219
     const/4 v0, 0x1
 
     return v0

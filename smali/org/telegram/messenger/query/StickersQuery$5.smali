@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 297
     iput-boolean p1, p0, Lorg/telegram/messenger/query/StickersQuery$5;->val$gif:Z
 
     iput p2, p0, Lorg/telegram/messenger/query/StickersQuery$5;->val$type:I
@@ -44,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 301
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -93,13 +91,11 @@
 
     move-result-object v1
 
-    .line 302
     .local v1, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 303
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     :cond_0
     :goto_1
@@ -109,7 +105,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 304
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->isNull(I)Z
@@ -118,18 +113,15 @@
 
     if-nez v5, :cond_0
 
-    .line 305
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v2
 
-    .line 306
     .local v2, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v2, :cond_0
 
-    .line 307
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -142,14 +134,11 @@
 
     move-result-object v3
 
-    .line 308
     .local v3, "document":Lorg/telegram/tgnet/TLRPC$Document;
     if-eqz v3, :cond_1
 
-    .line 309
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 311
     :cond_1
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
     :try_end_0
@@ -157,7 +146,6 @@
 
     goto :goto_1
 
-    .line 332
     .end local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     .end local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
@@ -165,16 +153,13 @@
     :catch_0
     move-exception v4
 
-    .line 333
     .local v4, "e":Ljava/lang/Throwable;
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 335
     .end local v4    # "e":Ljava/lang/Throwable;
     :goto_2
     return-void
 
-    .line 301
     :cond_2
     :try_start_1
     iget v5, p0, Lorg/telegram/messenger/query/StickersQuery$5;->val$type:I
@@ -190,13 +175,11 @@
 
     goto :goto_0
 
-    .line 315
     .restart local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     .restart local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_4
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 316
     new-instance v5, Lorg/telegram/messenger/query/StickersQuery$5$1;
 
     invoke-direct {v5, p0, v0}, Lorg/telegram/messenger/query/StickersQuery$5$1;-><init>(Lorg/telegram/messenger/query/StickersQuery$5;Ljava/util/ArrayList;)V

@@ -16,16 +16,12 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;->schemeIdUri:Ljava/lang/String;
 
-    .line 28
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;->value:Ljava/lang/String;
 
-    .line 29
     return-void
 .end method
 
@@ -35,7 +31,6 @@
     .locals 2
 
     .prologue
-    .line 33
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

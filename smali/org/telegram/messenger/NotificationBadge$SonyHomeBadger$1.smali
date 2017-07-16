@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 510
     iput-object p1, p0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$1;->val$intent:Landroid/content/Intent;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 2
 
     .prologue
-    .line 513
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     iget-object v1, p0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$1;->val$intent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 514
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 397
     iput-object p1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$5$1;->this$2:Lorg/telegram/ui/ProfileNotificationsActivity$3$5;
 
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -43,7 +42,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 400
     invoke-static {p1, v2}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v0
@@ -60,6 +58,5 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 401
     return-void
 .end method

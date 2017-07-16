@@ -48,36 +48,28 @@
     .param p12, "streamElements"    # [Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->majorVersion:I
 
-    .line 100
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->minorVersion:I
 
-    .line 101
     move/from16 v0, p9
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->lookAheadCount:I
 
-    .line 102
     move/from16 v0, p10
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->isLive:Z
 
-    .line 103
     move-object/from16 v0, p11
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->protectionElement:Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
-    .line 104
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->streamElements:[Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
-    .line 105
     const-wide/16 v2, 0x0
 
     cmp-long v2, p7, v2
@@ -86,11 +78,9 @@
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 106
     :goto_0
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->dvrWindowLengthUs:J
 
-    .line 107
     const-wide/16 v2, 0x0
 
     cmp-long v2, p5, v2
@@ -99,14 +89,11 @@
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 108
     :goto_1
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest;->durationUs:J
 
-    .line 109
     return-void
 
-    .line 105
     :cond_0
     const-wide/32 v4, 0xf4240
 
@@ -114,14 +101,12 @@
 
     move-wide v6, p3
 
-    .line 106
     invoke-static/range {v2 .. v7}, Lorg/telegram/messenger/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide v2
 
     goto :goto_0
 
-    .line 107
     :cond_1
     const-wide/32 v4, 0xf4240
 
@@ -129,7 +114,6 @@
 
     move-wide v6, p3
 
-    .line 108
     invoke-static/range {v2 .. v7}, Lorg/telegram/messenger/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide v2

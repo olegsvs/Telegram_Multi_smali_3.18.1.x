@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 20
     const-string/jumbo v0, "GcmRegistrationIntentService"
 
     invoke-direct {p0, v0}, Landroid/app/IntentService;-><init>(Ljava/lang/String;)V
 
-    .line 21
     return-void
 .end method
 
@@ -23,7 +21,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 17
     invoke-direct {p0, p1}, Lorg/telegram/messenger/GcmRegistrationIntentService;->sendRegistrationToServer(Ljava/lang/String;)V
 
     return-void
@@ -34,7 +31,6 @@
     .param p1, "token"    # Ljava/lang/String;
 
     .prologue
-    .line 60
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/GcmRegistrationIntentService$3;
@@ -43,7 +39,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 76
     return-void
 .end method
 
@@ -54,13 +49,11 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 26
     :try_start_0
     invoke-static {p0}, Lcom/google/android/gms/iid/InstanceID;->getInstance(Landroid/content/Context;)Lcom/google/android/gms/iid/InstanceID;
 
     move-result-object v2
 
-    .line 28
     .local v2, "instanceID":Lcom/google/android/gms/iid/InstanceID;
     sget-object v4, Lorg/telegram/messenger/BuildVars;->GCM_SENDER_ID:Ljava/lang/String;
 
@@ -72,7 +65,6 @@
 
     move-result-object v3
 
-    .line 29
     .local v3, "token":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -94,7 +86,6 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 30
     new-instance v4, Lorg/telegram/messenger/GcmRegistrationIntentService$1;
 
     invoke-direct {v4, p0, v3}, Lorg/telegram/messenger/GcmRegistrationIntentService$1;-><init>(Lorg/telegram/messenger/GcmRegistrationIntentService;Ljava/lang/String;)V
@@ -103,25 +94,20 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 57
     .end local v2    # "instanceID":Lcom/google/android/gms/iid/InstanceID;
     .end local v3    # "token":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 37
     :catch_0
     move-exception v0
 
-    .line 38
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 39
     if-eqz p1, :cond_0
 
-    .line 40
     const-string/jumbo v4, "failCount"
 
     const/4 v5, 0x0
@@ -130,13 +116,11 @@
 
     move-result v1
 
-    .line 41
     .local v1, "failCount":I
     const/16 v4, 0x3c
 
     if-ge v1, v4, :cond_0
 
-    .line 42
     new-instance v6, Lorg/telegram/messenger/GcmRegistrationIntentService$2;
 
     invoke-direct {v6, p0, v1}, Lorg/telegram/messenger/GcmRegistrationIntentService$2;-><init>(Lorg/telegram/messenger/GcmRegistrationIntentService;I)V

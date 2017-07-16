@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 20
     iput-object p1, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Cells/BaseCell$1;
 
     .prologue
-    .line 20
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;-><init>(Lorg/telegram/ui/Cells/BaseCell;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/BaseCell;->access$000(Lorg/telegram/ui/Cells/BaseCell;)Lorg/telegram/ui/Cells/BaseCell$CheckForLongPress;
@@ -61,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 23
     iget-object v0, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
 
     new-instance v1, Lorg/telegram/ui/Cells/BaseCell$CheckForLongPress;
@@ -72,7 +68,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/BaseCell;->access$002(Lorg/telegram/ui/Cells/BaseCell;Lorg/telegram/ui/Cells/BaseCell$CheckForLongPress;)Lorg/telegram/ui/Cells/BaseCell$CheckForLongPress;
 
-    .line 25
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
 
@@ -88,7 +83,6 @@
 
     iput v1, v0, Lorg/telegram/ui/Cells/BaseCell$CheckForLongPress;->currentPressCount:I
 
-    .line 26
     iget-object v0, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/BaseCell$CheckForTap;->this$0:Lorg/telegram/ui/Cells/BaseCell;
@@ -111,6 +105,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Cells/BaseCell;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 27
     return-void
 .end method

@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 368
     iput-object p1, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 369
     iput-object p2, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 370
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 388
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/SetAdminsActivity;->access$1600(Lorg/telegram/ui/SetAdminsActivity;)I
@@ -59,7 +55,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 453
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/SetAdminsActivity;->access$1400(Lorg/telegram/ui/SetAdminsActivity;)I
@@ -68,14 +63,11 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 454
     const/4 v0, 0x0
 
-    .line 458
     :goto_0
     return v0
 
-    .line 455
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -93,13 +85,11 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 456
     :cond_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 458
     :cond_2
     const/4 v0, 0x2
 
@@ -113,12 +103,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 374
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v1
 
-    .line 375
     .local v1, "position":I
     iget-object v3, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -128,12 +116,10 @@
 
     if-ne v1, v3, :cond_1
 
-    .line 383
     :cond_0
     :goto_0
     return v2
 
-    .line 377
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -151,7 +137,6 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 378
     iget-object v3, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/SetAdminsActivity;->access$1100(Lorg/telegram/ui/SetAdminsActivity;)Ljava/util/ArrayList;
@@ -172,13 +157,11 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 379
     .local v0, "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     instance-of v3, v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantCreator;
 
     if-eqz v3, :cond_0
 
-    .line 383
     .end local v0    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_2
     const/4 v2, 0x0
@@ -200,25 +183,21 @@
 
     const/4 v6, 0x0
 
-    .line 413
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v7
 
     packed-switch v7, :pswitch_data_0
 
-    .line 449
     :cond_0
     :goto_0
     return-void
 
-    .line 415
     :pswitch_0
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    .line 416
     .local v0, "checkCell":Lorg/telegram/ui/Cells/TextCheckCell;
     iget-object v7, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -242,7 +221,6 @@
 
     invoke-static {v7, v8}, Lorg/telegram/ui/SetAdminsActivity;->access$902(Lorg/telegram/ui/SetAdminsActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 417
     const-string/jumbo v7, "SetAdminsAll"
 
     const v8, 0x7f0705ae
@@ -279,14 +257,12 @@
 
     goto :goto_1
 
-    .line 420
     .end local v0    # "checkCell":Lorg/telegram/ui/Cells/TextCheckCell;
     :pswitch_1
     iget-object v2, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v2, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 421
     .local v2, "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -296,7 +272,6 @@
 
     if-ne p2, v5, :cond_4
 
-    .line 422
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/SetAdminsActivity;->access$900(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -307,7 +282,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 423
     const-string/jumbo v5, "SetAdminsNotAllInfo"
 
     const v6, 0x7f0705b0
@@ -318,7 +292,6 @@
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 427
     :goto_2
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -330,7 +303,6 @@
 
     if-eq v5, v6, :cond_3
 
-    .line 428
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v6, 0x7f0200ae
@@ -345,7 +317,6 @@
 
     goto :goto_0
 
-    .line 425
     :cond_2
     const-string/jumbo v5, "SetAdminsAllInfo"
 
@@ -359,7 +330,6 @@
 
     goto :goto_2
 
-    .line 430
     :cond_3
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -373,7 +343,6 @@
 
     goto/16 :goto_0
 
-    .line 432
     :cond_4
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -383,12 +352,10 @@
 
     if-ne p2, v5, :cond_0
 
-    .line 433
     const-string/jumbo v5, ""
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 434
     iget-object v5, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v6, "windowBackgroundGrayShadow"
@@ -401,25 +368,21 @@
 
     goto/16 :goto_0
 
-    .line 438
     .end local v2    # "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     :pswitch_2
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/UserCell;
 
-    .line 439
     .local v4, "userCell":Lorg/telegram/ui/Cells/UserCell;
     sget v7, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/Cells/UserCell;->setBackgroundColor(I)V
 
-    .line 440
     const-string/jumbo v7, "Profile"
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/Cells/UserCell;->setTag(Ljava/lang/Object;)V
 
-    .line 441
     iget-object v7, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v7}, Lorg/telegram/ui/SetAdminsActivity;->access$1100(Lorg/telegram/ui/SetAdminsActivity;)Ljava/util/ArrayList;
@@ -440,7 +403,6 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 442
     .local v1, "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -456,11 +418,9 @@
 
     move-result-object v3
 
-    .line 443
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {v4, v3, v9, v9, v6}, Lorg/telegram/ui/Cells/UserCell;->setData(Lorg/telegram/tgnet/TLObject;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
-    .line 444
     iget-object v7, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -483,7 +443,6 @@
 
     invoke-static {v7, v8}, Lorg/telegram/ui/SetAdminsActivity;->access$902(Lorg/telegram/ui/SetAdminsActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 445
     instance-of v7, v1, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;
 
     if-eqz v7, :cond_5
@@ -512,7 +471,6 @@
     :goto_3
     invoke-virtual {v4, v7, v6}, Lorg/telegram/ui/Cells/UserCell;->setChecked(ZZ)V
 
-    .line 446
     iget-object v7, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v7}, Lorg/telegram/ui/SetAdminsActivity;->access$900(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -550,10 +508,8 @@
     :cond_8
     move v7, v6
 
-    .line 445
     goto :goto_3
 
-    .line 413
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -568,10 +524,8 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 394
     packed-switch p2, :pswitch_data_0
 
-    .line 404
     new-instance v0, Lorg/telegram/ui/Cells/UserCell;
 
     iget-object v1, p0, Lorg/telegram/ui/SetAdminsActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -584,7 +538,6 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Cells/UserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    .line 405
     .local v0, "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -594,7 +547,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 408
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -602,7 +554,6 @@
 
     return-object v1
 
-    .line 396
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/TextCheckCell;
@@ -611,7 +562,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextCheckCell;-><init>(Landroid/content/Context;)V
 
-    .line 397
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -623,7 +573,6 @@
 
     goto :goto_0
 
-    .line 400
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -632,11 +581,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 401
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 394
     nop
 
     :pswitch_data_0

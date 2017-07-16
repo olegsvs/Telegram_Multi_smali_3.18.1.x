@@ -37,12 +37,10 @@
     .param p2, "baseUri"    # Ljava/lang/String;
 
     .prologue
-    .line 404
     const-string/jumbo v0, "Protection"
 
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ElementParser;-><init>(Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ElementParser;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 405
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p0, "uuidString"    # Ljava/lang/String;
 
     .prologue
-    .line 442
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->charAt(I)C
@@ -76,7 +73,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 443
     const/4 v0, 0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -89,7 +85,6 @@
 
     move-result-object p0
 
-    .line 445
     :cond_0
     return-object p0
 .end method
@@ -100,7 +95,6 @@
     .locals 4
 
     .prologue
-    .line 438
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->uuid:Ljava/util/UUID;
@@ -118,12 +112,10 @@
     return-object v0
 .end method
 
-.method public handleChildInline(Ljava/lang/String;)Z
     .locals 1
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 409
     const-string/jumbo v0, "ProtectionHeader"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -138,7 +130,6 @@
     .param p1, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 431
     const-string/jumbo v0, "ProtectionHeader"
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -151,12 +142,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 432
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->inProtectionHeader:Z
 
-    .line 434
     :cond_0
     return-void
 .end method
@@ -166,7 +155,6 @@
     .param p1, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 414
     const-string/jumbo v1, "ProtectionHeader"
 
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getName()Ljava/lang/String;
@@ -179,12 +167,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 415
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->inProtectionHeader:Z
 
-    .line 416
     const/4 v1, 0x0
 
     const-string/jumbo v2, "SystemID"
@@ -193,20 +179,17 @@
 
     move-result-object v0
 
-    .line 417
     .local v0, "uuidString":Ljava/lang/String;
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->stripCurlyBraces(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 418
     invoke-static {v0}, Ljava/util/UUID;->fromString(Ljava/lang/String;)Ljava/util/UUID;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->uuid:Ljava/util/UUID;
 
-    .line 420
     .end local v0    # "uuidString":Ljava/lang/String;
     :cond_0
     return-void
@@ -217,12 +200,10 @@
     .param p1, "parser"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 424
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->inProtectionHeader:Z
 
     if-eqz v0, :cond_0
 
-    .line 425
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v0
@@ -235,7 +216,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ProtectionParser;->initData:[B
 
-    .line 427
     :cond_0
     return-void
 .end method

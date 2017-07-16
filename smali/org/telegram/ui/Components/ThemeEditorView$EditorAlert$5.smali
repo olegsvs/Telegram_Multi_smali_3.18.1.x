@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 646
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 649
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -59,25 +57,21 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->saveCurrentTheme(Ljava/lang/String;Z)V
 
-    .line 650
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 651
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->dismiss()V
 
-    .line 652
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ThemeEditorView;->close()V
 
-    .line 653
     return-void
 .end method

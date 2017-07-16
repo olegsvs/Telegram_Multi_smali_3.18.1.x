@@ -51,19 +51,16 @@
 
     const/4 v3, 0x0
 
-    .line 195
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 189
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
-    .line 192
     const/16 v0, 0xa
 
     new-array v0, v0, [Ljava/lang/String;
@@ -120,7 +117,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->operators:[Ljava/lang/String;
 
-    .line 193
     const/16 v0, 0xb
 
     new-array v0, v0, [Ljava/lang/String;
@@ -183,10 +179,8 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->assign_operators:[Ljava/lang/String;
 
-    .line 196
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->jsCode:Ljava/lang/String;
 
-    .line 197
     return-void
 .end method
 
@@ -201,7 +195,6 @@
     .end annotation
 
     .prologue
-    .line 187
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->extractFunction(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -220,12 +213,10 @@
     .end annotation
 
     .prologue
-    .line 372
     new-instance v2, Ljava/util/HashMap;
 
     invoke-direct {v2}, Ljava/util/HashMap;-><init>()V
 
-    .line 373
     .local v2, "localVars":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v0, 0x0
 
@@ -235,19 +226,16 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 374
     aget-object v4, p1, v0
 
     const-string/jumbo v5, ""
 
     invoke-virtual {v2, v4, v5}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 373
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 376
     :cond_0
     const-string/jumbo v4, ";"
 
@@ -255,13 +243,11 @@
 
     move-result-object v3
 
-    .line 377
     .local v3, "stmts":[Ljava/lang/String;
     const/4 v4, 0x1
 
     new-array v1, v4, [Z
 
-    .line 378
     .local v1, "abort":[Z
     const/4 v0, 0x0
 
@@ -270,25 +256,21 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 379
     aget-object v4, v3, v0
 
     const/16 v5, 0x64
 
     invoke-direct {p0, v4, v2, v1, v5}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretStatement(Ljava/lang/String;Ljava/util/HashMap;[ZI)V
 
-    .line 380
     const/4 v4, 0x0
 
     aget-boolean v4, v1, v4
 
     if-eqz v4, :cond_2
 
-    .line 384
     :cond_1
     return-void
 
-    .line 378
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -305,13 +287,11 @@
     .end annotation
 
     .prologue
-    .line 388
     :try_start_0
     invoke-static {p1}, Ljava/util/regex/Pattern;->quote(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 389
     .local v4, "quote":Ljava/lang/String;
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -341,7 +321,6 @@
 
     move-result-object v1
 
-    .line 390
     .local v1, "funcPattern":Ljava/util/regex/Pattern;
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->jsCode:Ljava/lang/String;
 
@@ -349,7 +328,6 @@
 
     move-result-object v3
 
-    .line 391
     .local v3, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
@@ -357,12 +335,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 392
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v2
 
-    .line 393
     .local v2, "group":Ljava/lang/String;
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
@@ -372,7 +348,6 @@
 
     if-nez v5, :cond_0
 
-    .line 394
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -395,7 +370,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 396
     :cond_0
     const/4 v5, 0x1
 
@@ -419,7 +393,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 402
     .end local v1    # "funcPattern":Ljava/util/regex/Pattern;
     .end local v2    # "group":Ljava/lang/String;
     .end local v3    # "matcher":Ljava/util/regex/Matcher;
@@ -436,17 +409,14 @@
 
     return-object v5
 
-    .line 398
     :catch_0
     move-exception v0
 
-    .line 399
     .local v0, "e":Ljava/lang/Exception;
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 400
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
@@ -477,12 +447,10 @@
     .prologue
     const/4 v10, 0x2
 
-    .line 347
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 349
     .local v4, "obj":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/Object;>;"
     sget-object v5, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -514,11 +482,9 @@
 
     move-result-object v3
 
-    .line 350
     .local v3, "matcher":Ljava/util/regex/Matcher;
     const/4 v2, 0x0
 
-    .line 351
     .local v2, "fields":Ljava/lang/String;
     :cond_0
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
@@ -527,25 +493,21 @@
 
     if-eqz v5, :cond_1
 
-    .line 352
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 353
     .local v1, "code":Ljava/lang/String;
     invoke-virtual {v3, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 354
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v5
 
     if-nez v5, :cond_0
 
-    .line 357
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v1}, Ljava/util/ArrayList;->contains(Ljava/lang/Object;)Z
@@ -554,7 +516,6 @@
 
     if-nez v5, :cond_1
 
-    .line 358
     iget-object v5, p0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->codeLines:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->group()Ljava/lang/String;
@@ -563,7 +524,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 363
     .end local v1    # "code":Ljava/lang/String;
     :cond_1
     const-string/jumbo v5, "([a-zA-Z$0-9]+)\\s*:\\s*function\\(([a-z,]+)\\)\\{([^}]+)\\}"
@@ -576,7 +536,6 @@
 
     move-result-object v3
 
-    .line 364
     :goto_0
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
@@ -584,7 +543,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 365
     invoke-virtual {v3, v10}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
@@ -595,7 +553,6 @@
 
     move-result-object v0
 
-    .line 366
     .local v0, "argnames":[Ljava/lang/String;
     const/4 v5, 0x3
 
@@ -607,7 +564,6 @@
 
     goto :goto_0
 
-    .line 368
     .end local v0    # "argnames":[Ljava/lang/String;
     :cond_2
     return-object v4
@@ -636,25 +592,21 @@
     .end annotation
 
     .prologue
-    .line 200
     .local p2, "localVars":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 201
     invoke-static/range {p1 .. p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v19
 
     if-eqz v19, :cond_1
 
-    .line 296
     :cond_0
     :goto_0
     return-void
 
-    .line 204
     :cond_1
     const/16 v19, 0x0
 
@@ -674,10 +626,8 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 205
     const/4 v14, 0x0
 
-    .line 206
     .local v14, "parens_count":I
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$300()Ljava/util/regex/Pattern;
 
@@ -691,7 +641,6 @@
 
     move-result-object v12
 
-    .line 207
     .local v12, "matcher":Ljava/util/regex/Matcher;
     :cond_2
     :goto_1
@@ -701,7 +650,6 @@
 
     if-eqz v19, :cond_4
 
-    .line 208
     const/16 v19, 0x0
 
     move/from16 v0, v19
@@ -710,7 +658,6 @@
 
     move-result-object v10
 
-    .line 209
     .local v10, "group":Ljava/lang/String;
     const/16 v19, 0x30
 
@@ -728,19 +675,15 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 210
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_1
 
-    .line 212
     :cond_3
     add-int/lit8 v14, v14, -0x1
 
-    .line 213
     if-nez v14, :cond_2
 
-    .line 214
     const/16 v19, 0x1
 
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->start()I
@@ -757,7 +700,6 @@
 
     move-result-object v16
 
-    .line 215
     .local v16, "sub_expr":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -769,7 +711,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretExpression(Ljava/lang/String;Ljava/util/HashMap;I)V
 
-    .line 216
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->end()I
 
     move-result v19
@@ -786,7 +727,6 @@
 
     move-result-object v15
 
-    .line 217
     .local v15, "remaining_expr":Ljava/lang/String;
     invoke-static {v15}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -794,17 +734,14 @@
 
     if-nez v19, :cond_0
 
-    .line 220
     move-object/from16 p1, v15
 
-    .line 226
     .end local v10    # "group":Ljava/lang/String;
     .end local v15    # "remaining_expr":Ljava/lang/String;
     .end local v16    # "sub_expr":Ljava/lang/String;
     :cond_4
     if-eqz v14, :cond_5
 
-    .line 227
     new-instance v19, Ljava/lang/Exception;
 
     const-string/jumbo v20, "Premature end of parens in %s"
@@ -829,7 +766,6 @@
 
     throw v19
 
-    .line 230
     .end local v12    # "matcher":Ljava/util/regex/Matcher;
     .end local v14    # "parens_count":I
     :cond_5
@@ -853,7 +789,6 @@
 
     if-ge v4, v0, :cond_8
 
-    .line 231
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->assign_operators:[Ljava/lang/String;
@@ -862,7 +797,6 @@
 
     aget-object v9, v19, v4
 
-    .line 232
     .local v9, "func":Ljava/lang/String;
     sget-object v19, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -906,7 +840,6 @@
 
     move-result-object v12
 
-    .line 233
     .restart local v12    # "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
@@ -914,12 +847,10 @@
 
     if-nez v19, :cond_6
 
-    .line 230
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 236
     :cond_6
     const/16 v19, 0x3
 
@@ -941,7 +872,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretExpression(Ljava/lang/String;Ljava/util/HashMap;I)V
 
-    .line 237
     const/16 v19, 0x2
 
     move/from16 v0, v19
@@ -950,7 +880,6 @@
 
     move-result-object v11
 
-    .line 238
     .local v11, "index":Ljava/lang/String;
     invoke-static {v11}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -958,7 +887,6 @@
 
     if-nez v19, :cond_7
 
-    .line 239
     move-object/from16 v0, p0
 
     move-object/from16 v1, p2
@@ -969,7 +897,6 @@
 
     goto/16 :goto_0
 
-    .line 241
     :cond_7
     const/16 v19, 0x1
 
@@ -991,7 +918,6 @@
 
     goto/16 :goto_0
 
-    .line 247
     .end local v9    # "func":Ljava/lang/String;
     .end local v11    # "index":Ljava/lang/String;
     .end local v12    # "matcher":Ljava/util/regex/Matcher;
@@ -1003,11 +929,9 @@
 
     goto/16 :goto_0
 
-    .line 249
     :catch_0
     move-exception v19
 
-    .line 253
     sget-object v19, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string/jumbo v20, "(?!if|return|true|false)(%s)$"
@@ -1042,7 +966,6 @@
 
     move-result-object v12
 
-    .line 254
     .restart local v12    # "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1050,7 +973,6 @@
 
     if-nez v19, :cond_0
 
-    .line 258
     const/16 v19, 0x0
 
     move-object/from16 v0, p1
@@ -1091,7 +1013,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 262
     :cond_9
     :try_start_1
     new-instance v19, Lorg/json/JSONObject;
@@ -1108,11 +1029,9 @@
 
     goto/16 :goto_0
 
-    .line 264
     :catch_1
     move-exception v19
 
-    .line 268
     sget-object v19, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string/jumbo v20, "(%s)\\.([^(]+)(?:\\(+([^()]*)\\))?$"
@@ -1147,14 +1066,12 @@
 
     move-result-object v12
 
-    .line 269
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v19
 
     if-eqz v19, :cond_c
 
-    .line 270
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -1163,7 +1080,6 @@
 
     move-result-object v18
 
-    .line 271
     .local v18, "variable":Ljava/lang/String;
     const/16 v19, 0x2
 
@@ -1173,7 +1089,6 @@
 
     move-result-object v13
 
-    .line 272
     .local v13, "member":Ljava/lang/String;
     const/16 v19, 0x3
 
@@ -1183,7 +1098,6 @@
 
     move-result-object v6
 
-    .line 273
     .local v6, "arg_str":Ljava/lang/String;
     move-object/from16 v0, p2
 
@@ -1195,18 +1109,15 @@
 
     if-nez v19, :cond_a
 
-    .line 274
     move-object/from16 v0, p0
 
     move-object/from16 v1, v18
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->extractObject(Ljava/lang/String;)Ljava/util/HashMap;
 
-    .line 276
     :cond_a
     if-eqz v6, :cond_0
 
-    .line 279
     invoke-virtual/range {p1 .. p1}, Ljava/lang/String;->length()I
 
     move-result v19
@@ -1229,7 +1140,6 @@
 
     if-eq v0, v1, :cond_b
 
-    .line 280
     new-instance v19, Ljava/lang/Exception;
 
     const-string/jumbo v20, "last char not \')\'"
@@ -1238,7 +1148,6 @@
 
     throw v19
 
-    .line 283
     :cond_b
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -1246,7 +1155,6 @@
 
     if-eqz v19, :cond_0
 
-    .line 284
     const-string/jumbo v19, ","
 
     move-object/from16 v0, v19
@@ -1255,7 +1163,6 @@
 
     move-result-object v7
 
-    .line 285
     .local v7, "args":[Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -1268,7 +1175,6 @@
 
     if-ge v4, v0, :cond_0
 
-    .line 286
     aget-object v19, v7, v4
 
     move-object/from16 v0, p0
@@ -1281,12 +1187,10 @@
 
     invoke-direct {v0, v1, v2, v3}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretExpression(Ljava/lang/String;Ljava/util/HashMap;I)V
 
-    .line 285
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_3
 
-    .line 292
     .end local v6    # "arg_str":Ljava/lang/String;
     .end local v7    # "args":[Ljava/lang/String;
     .end local v13    # "member":Ljava/lang/String;
@@ -1326,14 +1230,12 @@
 
     move-result-object v12
 
-    .line 293
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v19
 
     if-eqz v19, :cond_d
 
-    .line 294
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -1350,7 +1252,6 @@
 
     move-result-object v17
 
-    .line 295
     .local v17, "val":Ljava/lang/Object;
     const/16 v19, 0x2
 
@@ -1374,7 +1275,6 @@
 
     goto/16 :goto_0
 
-    .line 299
     .end local v17    # "val":Ljava/lang/Object;
     :cond_d
     const/4 v4, 0x0
@@ -1396,7 +1296,6 @@
 
     if-ge v4, v0, :cond_11
 
-    .line 300
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->operators:[Ljava/lang/String;
@@ -1405,7 +1304,6 @@
 
     aget-object v9, v19, v4
 
-    .line 301
     .restart local v9    # "func":Ljava/lang/String;
     sget-object v19, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1443,20 +1341,17 @@
 
     move-result-object v12
 
-    .line 302
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v19
 
     if-nez v19, :cond_f
 
-    .line 299
     :cond_e
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 305
     :cond_f
     const/16 v19, 0x1
 
@@ -1464,7 +1359,6 @@
 
     new-array v5, v0, [Z
 
-    .line 306
     .local v5, "abort":[Z
     const/16 v19, 0x1
 
@@ -1486,14 +1380,12 @@
 
     invoke-direct {v0, v1, v2, v5, v3}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretStatement(Ljava/lang/String;Ljava/util/HashMap;[ZI)V
 
-    .line 307
     const/16 v19, 0x0
 
     aget-boolean v19, v5, v19
 
     if-eqz v19, :cond_10
 
-    .line 308
     new-instance v19, Ljava/lang/Exception;
 
     const-string/jumbo v20, "Premature left-side return of %s in %s"
@@ -1522,7 +1414,6 @@
 
     throw v19
 
-    .line 310
     :cond_10
     const/16 v19, 0x2
 
@@ -1544,14 +1435,12 @@
 
     invoke-direct {v0, v1, v2, v5, v3}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretStatement(Ljava/lang/String;Ljava/util/HashMap;[ZI)V
 
-    .line 311
     const/16 v19, 0x0
 
     aget-boolean v19, v5, v19
 
     if-eqz v19, :cond_e
 
-    .line 312
     new-instance v19, Ljava/lang/Exception;
 
     const-string/jumbo v20, "Premature right-side return of %s in %s"
@@ -1580,7 +1469,6 @@
 
     throw v19
 
-    .line 316
     .end local v5    # "abort":[Z
     .end local v9    # "func":Ljava/lang/String;
     :cond_11
@@ -1618,14 +1506,12 @@
 
     move-result-object v12
 
-    .line 317
     invoke-virtual {v12}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v19
 
     if-eqz v19, :cond_12
 
-    .line 318
     const/16 v19, 0x1
 
     move/from16 v0, v19
@@ -1634,13 +1520,11 @@
 
     move-result-object v8
 
-    .line 319
     .local v8, "fname":Ljava/lang/String;
     move-object/from16 v0, p0
 
     invoke-direct {v0, v8}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->extractFunction(Ljava/lang/String;)Ljava/lang/String;
 
-    .line 321
     .end local v8    # "fname":Ljava/lang/String;
     :cond_12
     new-instance v19, Ljava/lang/Exception;
@@ -1695,10 +1579,8 @@
     .local p2, "localVars":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     const/4 v3, 0x0
 
-    .line 325
     if-gez p4, :cond_0
 
-    .line 326
     new-instance v2, Ljava/lang/Exception;
 
     const-string/jumbo v3, "recursion limit reached"
@@ -1707,16 +1589,13 @@
 
     throw v2
 
-    .line 328
     :cond_0
     aput-boolean v3, p3, v3
 
-    .line 329
     invoke-virtual {p1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 330
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$400()Ljava/util/regex/Pattern;
 
     move-result-object v2
@@ -1725,7 +1604,6 @@
 
     move-result-object v1
 
-    .line 332
     .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -1733,7 +1611,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 333
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1746,15 +1623,12 @@
 
     move-result-object v0
 
-    .line 343
     .local v0, "expr":Ljava/lang/String;
     :goto_0
     invoke-direct {p0, v0, p2, p4}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->interpretExpression(Ljava/lang/String;Ljava/util/HashMap;I)V
 
-    .line 344
     return-void
 
-    .line 335
     .end local v0    # "expr":Ljava/lang/String;
     :cond_1
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$500()Ljava/util/regex/Pattern;
@@ -1765,14 +1639,12 @@
 
     move-result-object v1
 
-    .line 336
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 337
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1785,7 +1657,6 @@
 
     move-result-object v0
 
-    .line 338
     .restart local v0    # "expr":Ljava/lang/String;
     const/4 v2, 0x1
 
@@ -1793,7 +1664,6 @@
 
     goto :goto_0
 
-    .line 340
     .end local v0    # "expr":Ljava/lang/String;
     :cond_2
     move-object v0, p1

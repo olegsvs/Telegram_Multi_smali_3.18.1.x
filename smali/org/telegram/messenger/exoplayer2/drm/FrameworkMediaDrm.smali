@@ -37,10 +37,8 @@
     .end annotation
 
     .prologue
-    .line 56
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     new-instance v1, Landroid/media/MediaDrm;
 
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -53,7 +51,6 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
-    .line 58
     return-void
 .end method
 
@@ -67,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 48
     :try_start_0
     new-instance v1, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;
 
@@ -78,11 +74,9 @@
 
     return-object v1
 
-    .line 49
     :catch_0
     move-exception v0
 
-    .line 50
     .local v0, "e":Landroid/media/UnsupportedSchemeException;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/drm/UnsupportedDrmException;
 
@@ -92,12 +86,10 @@
 
     throw v1
 
-    .line 51
     .end local v0    # "e":Landroid/media/UnsupportedSchemeException;
     :catch_1
     move-exception v0
 
-    .line 52
     .local v0, "e":Ljava/lang/Exception;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/drm/UnsupportedDrmException;
 
@@ -115,12 +107,10 @@
     .param p1, "sessionId"    # [B
 
     .prologue
-    .line 78
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->closeSession([B)V
 
-    .line 79
     return-void
 .end method
 
@@ -133,7 +123,6 @@
     .end annotation
 
     .prologue
-    .line 34
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->createMediaCrypto(Ljava/util/UUID;[B)Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;
 
     move-result-object v0
@@ -152,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 164
     new-instance v0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;
 
     new-instance v1, Landroid/media/MediaCrypto;
@@ -191,7 +179,6 @@
     .end annotation
 
     .prologue
-    .line 84
     .local p5, "optionalParameters":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
@@ -209,7 +196,6 @@
 
     move-result-object v6
 
-    .line 86
     .local v6, "request":Landroid/media/MediaDrm$KeyRequest;
     new-instance v0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$2;
 
@@ -223,7 +209,6 @@
     .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
-    .line 148
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->getPropertyByteArray(Ljava/lang/String;)[B
@@ -238,7 +223,6 @@
     .param p1, "propertyName"    # Ljava/lang/String;
 
     .prologue
-    .line 143
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->getPropertyString(Ljava/lang/String;)Ljava/lang/String;
@@ -252,14 +236,12 @@
     .locals 2
 
     .prologue
-    .line 107
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v1}, Landroid/media/MediaDrm;->getProvisionRequest()Landroid/media/MediaDrm$ProvisionRequest;
 
     move-result-object v0
 
-    .line 108
     .local v0, "provisionRequest":Landroid/media/MediaDrm$ProvisionRequest;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$3;
 
@@ -278,7 +260,6 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0}, Landroid/media/MediaDrm;->openSession()[B
@@ -300,7 +281,6 @@
     .end annotation
 
     .prologue
-    .line 102
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDrm;->provideKeyResponse([B[B)[B
@@ -320,12 +300,10 @@
     .end annotation
 
     .prologue
-    .line 123
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->provideProvisionResponse([B)V
 
-    .line 124
     return-void
 .end method
 
@@ -344,7 +322,6 @@
     .end annotation
 
     .prologue
-    .line 128
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1}, Landroid/media/MediaDrm;->queryKeyStatus([B)Ljava/util/HashMap;
@@ -358,12 +335,10 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0}, Landroid/media/MediaDrm;->release()V
 
-    .line 134
     return-void
 .end method
 
@@ -373,12 +348,10 @@
     .param p2, "keySetId"    # [B
 
     .prologue
-    .line 138
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDrm;->restoreKeys([B[B)V
 
-    .line 139
     return-void
 .end method
 
@@ -395,7 +368,6 @@
     .end annotation
 
     .prologue
-    .line 63
     .local p1, "listener":Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$OnEventListener;, "Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$OnEventListener<-Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;>;"
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
@@ -406,10 +378,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/media/MediaDrm;->setOnEventListener(Landroid/media/MediaDrm$OnEventListener;)V
 
-    .line 69
     return-void
 
-    .line 63
     :cond_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm$1;
 
@@ -424,12 +394,10 @@
     .param p2, "value"    # [B
 
     .prologue
-    .line 158
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDrm;->setPropertyByteArray(Ljava/lang/String;[B)V
 
-    .line 159
     return-void
 .end method
 
@@ -439,11 +407,9 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 153
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaDrm;->mediaDrm:Landroid/media/MediaDrm;
 
     invoke-virtual {v0, p1, p2}, Landroid/media/MediaDrm;->setPropertyString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 154
     return-void
 .end method

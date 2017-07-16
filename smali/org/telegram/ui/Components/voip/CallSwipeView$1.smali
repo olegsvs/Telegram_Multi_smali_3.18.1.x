@@ -30,17 +30,14 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/voip/CallSwipeView;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->this$0:Lorg/telegram/ui/Components/voip/CallSwipeView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 76
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->canceled:Z
 
-    .line 78
     new-instance v0, Lorg/telegram/ui/Components/voip/CallSwipeView$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/voip/CallSwipeView$1$1;-><init>(Lorg/telegram/ui/Components/voip/CallSwipeView$1;)V
@@ -57,12 +54,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 97
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->canceled:Z
 
-    .line 98
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 87
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -92,17 +86,14 @@
 
     if-gez v0, :cond_1
 
-    .line 88
     const-string/jumbo v0, "Not repeating animation because previous loop was too fast"
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->w(Ljava/lang/String;)V
 
-    .line 93
     :cond_0
     :goto_0
     return-void
 
-    .line 91
     :cond_1
     iget-boolean v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->canceled:Z
 
@@ -116,7 +107,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->this$0:Lorg/telegram/ui/Components/voip/CallSwipeView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->restarter:Ljava/lang/Runnable;
@@ -131,13 +121,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 102
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->startTime:J
 
-    .line 103
     return-void
 .end method

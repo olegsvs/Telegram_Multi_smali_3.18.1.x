@@ -76,37 +76,26 @@
     .param p10, "allocator"    # Lorg/telegram/messenger/exoplayer2/upstream/Allocator;
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->id:I
 
-    .line 66
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
-    .line 67
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->index:I
 
-    .line 68
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->chunkSourceFactory:Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource$Factory;
 
-    .line 69
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->minLoadableRetryCount:I
 
-    .line 70
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->eventDispatcher:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
 
-    .line 71
     iput-wide p7, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->elapsedRealtimeOffset:J
 
-    .line 72
     iput-object p9, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->manifestLoaderErrorThrower:Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;
 
-    .line 73
     iput-object p10, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->allocator:Lorg/telegram/messenger/exoplayer2/upstream/Allocator;
 
-    .line 74
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->newSampleStreamArray(I)[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
@@ -115,7 +104,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
-    .line 75
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
@@ -124,14 +112,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sequenceableLoader:Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
-    .line 76
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->getPeriod(I)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->period:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
-    .line 77
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->period:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->buildTrackGroups(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;)Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
@@ -140,7 +126,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->trackGroups:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
-    .line 78
     return-void
 .end method
 
@@ -161,7 +146,6 @@
     .end annotation
 
     .prologue
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->trackGroups:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
@@ -174,7 +158,6 @@
 
     move-result v6
 
-    .line 203
     .local v6, "adaptationSetIndex":I
     move-object/from16 v0, p0
 
@@ -188,7 +171,6 @@
 
     check-cast v16, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
 
-    .line 204
     .local v16, "adaptationSet":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
     move-object/from16 v0, p0
 
@@ -216,7 +198,6 @@
 
     move-result-object v9
 
-    .line 207
     .local v9, "chunkSource":Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;
     new-instance v7, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
@@ -250,7 +231,6 @@
     .param p0, "period"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
     .prologue
-    .line 187
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
     invoke-interface {v6}, Ljava/util/List;->size()I
@@ -259,7 +239,6 @@
 
     new-array v5, v6, [Lorg/telegram/messenger/exoplayer2/source/TrackGroup;
 
-    .line 188
     .local v5, "trackGroupArray":[Lorg/telegram/messenger/exoplayer2/source/TrackGroup;
     const/4 v2, 0x0
 
@@ -273,7 +252,6 @@
 
     if-ge v2, v6, :cond_1
 
-    .line 189
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
 
     invoke-interface {v6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -282,11 +260,9 @@
 
     check-cast v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
 
-    .line 190
     .local v0, "adaptationSet":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;->representations:Ljava/util/List;
 
-    .line 191
     .local v4, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -294,7 +270,6 @@
 
     new-array v1, v6, [Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 192
     .local v1, "formats":[Lorg/telegram/messenger/exoplayer2/Format;
     const/4 v3, 0x0
 
@@ -304,7 +279,6 @@
 
     if-ge v3, v6, :cond_0
 
-    .line 193
     invoke-interface {v4, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -315,12 +289,10 @@
 
     aput-object v6, v1, v3
 
-    .line 192
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 195
     :cond_0
     new-instance v6, Lorg/telegram/messenger/exoplayer2/source/TrackGroup;
 
@@ -328,12 +300,10 @@
 
     aput-object v6, v5, v2
 
-    .line 188
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 197
     .end local v0    # "adaptationSet":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
     .end local v1    # "formats":[Lorg/telegram/messenger/exoplayer2/Format;
     .end local v3    # "j":I
@@ -360,7 +330,6 @@
     .end annotation
 
     .prologue
-    .line 213
     new-array v0, p0, [Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     return-object v0
@@ -373,7 +342,6 @@
     .param p1, "positionUs"    # J
 
     .prologue
-    .line 144
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sequenceableLoader:Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;->continueLoading(J)Z
@@ -389,10 +357,8 @@
     .prologue
     const-wide/high16 v6, -0x8000000000000000L
 
-    .line 159
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 160
     .local v0, "bufferedPositionUs":J
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
@@ -405,30 +371,25 @@
 
     aget-object v4, v8, v5
 
-    .line 161
     .local v4, "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     invoke-virtual {v4}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;->getBufferedPositionUs()J
 
     move-result-wide v2
 
-    .line 162
     .local v2, "rendererBufferedPositionUs":J
     cmp-long v10, v2, v6
 
     if-eqz v10, :cond_0
 
-    .line 163
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v0
 
-    .line 160
     :cond_0
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 166
     .end local v2    # "rendererBufferedPositionUs":J
     .end local v4    # "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_1
@@ -449,7 +410,6 @@
     .locals 2
 
     .prologue
-    .line 149
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sequenceableLoader:Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;->getNextLoadPositionUs()J
@@ -463,7 +423,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->trackGroups:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
     return-object v0
@@ -478,12 +437,10 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->manifestLoaderErrorThrower:Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;->maybeThrowError()V
 
-    .line 107
     return-void
 .end method
 
@@ -491,7 +448,6 @@
     .locals 0
 
     .prologue
-    .line 42
     check-cast p1, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->onContinueLoadingRequested(Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;)V
@@ -512,13 +468,11 @@
     .end annotation
 
     .prologue
-    .line 181
     .local p1, "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->callback:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-interface {v0, p0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;->onContinueLoadingRequested(Lorg/telegram/messenger/exoplayer2/source/SequenceableLoader;)V
 
-    .line 182
     return-void
 .end method
 
@@ -527,13 +481,10 @@
     .param p1, "callback"    # Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;
 
     .prologue
-    .line 100
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->callback:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;
 
-    .line 101
     invoke-interface {p1, p0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;->onPrepared(Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;)V
 
-    .line 102
     return-void
 .end method
 
@@ -541,7 +492,6 @@
     .locals 2
 
     .prologue
-    .line 154
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     return-wide v0
@@ -551,7 +501,6 @@
     .locals 4
 
     .prologue
-    .line 93
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v3, v2
@@ -563,16 +512,13 @@
 
     aget-object v0, v2, v1
 
-    .line 94
     .local v0, "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;->release()V
 
-    .line 93
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 96
     .end local v0    # "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_0
     return-void
@@ -583,7 +529,6 @@
     .param p1, "positionUs"    # J
 
     .prologue
-    .line 171
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v3, v2
@@ -595,16 +540,13 @@
 
     aget-object v0, v2, v1
 
-    .line 172
     .local v0, "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;->seekToUs(J)V
 
-    .line 171
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 174
     .end local v0    # "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_0
     return-wide p1
@@ -619,12 +561,10 @@
     .param p5, "positionUs"    # J
 
     .prologue
-    .line 117
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 118
     .local v1, "sampleStreamsList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;>;"
     const/4 v0, 0x0
 
@@ -634,17 +574,14 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 119
     aget-object v3, p3, v0
 
     if-eqz v3, :cond_1
 
-    .line 121
     aget-object v2, p3, v0
 
     check-cast v2, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
-    .line 122
     .local v2, "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     aget-object v3, p1, v0
 
@@ -654,16 +591,13 @@
 
     if-nez v3, :cond_3
 
-    .line 123
     :cond_0
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;->release()V
 
-    .line 124
     const/4 v3, 0x0
 
     aput-object v3, p3, v0
 
-    .line 129
     .end local v2    # "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_1
     :goto_1
@@ -675,40 +609,33 @@
 
     if-eqz v3, :cond_2
 
-    .line 130
     aget-object v3, p1, v0
 
     invoke-direct {p0, v3, p5, p6}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->buildSampleStream(Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;J)Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     move-result-object v2
 
-    .line 131
     .restart local v2    # "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 132
     aput-object v2, p3, v0
 
-    .line 133
     const/4 v3, 0x1
 
     aput-boolean v3, p4, v0
 
-    .line 118
     .end local v2    # "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 126
     .restart local v2    # "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_3
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 136
     .end local v2    # "stream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_4
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -721,12 +648,10 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
-    .line 137
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 138
     new-instance v3, Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
@@ -735,7 +660,6 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sequenceableLoader:Lorg/telegram/messenger/exoplayer2/source/CompositeSequenceableLoader;
 
-    .line 139
     return-wide p5
 .end method
 
@@ -745,25 +669,20 @@
     .param p2, "index"    # I
 
     .prologue
-    .line 81
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
-    .line 82
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->index:I
 
-    .line 83
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->getPeriod(I)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->period:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
-    .line 84
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     if-eqz v1, :cond_1
 
-    .line 85
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->sampleStreams:[Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;
 
     array-length v4, v3
@@ -777,7 +696,6 @@
 
     aget-object v0, v3, v2
 
-    .line 86
     .local v0, "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;->getChunkSource()Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSource;
 
@@ -787,21 +705,18 @@
 
     invoke-interface {v1, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;->updateManifest(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;I)V
 
-    .line 85
     add-int/lit8 v1, v2, 0x1
 
     move v2, v1
 
     goto :goto_0
 
-    .line 88
     .end local v0    # "sampleStream":Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream;, "Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkSampleStream<Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource;>;"
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaPeriod;->callback:Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;
 
     invoke-interface {v1, p0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;->onContinueLoadingRequested(Lorg/telegram/messenger/exoplayer2/source/SequenceableLoader;)V
 
-    .line 90
     :cond_1
     return-void
 .end method

@@ -18,7 +18,6 @@
     .locals 0
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChannelIntroActivity;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/ChannelIntroActivity;->imageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -40,7 +38,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChannelIntroActivity;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     return-object v0
@@ -51,7 +48,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChannelIntroActivity;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     return-object v0
@@ -62,7 +58,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChannelIntroActivity;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     return-object v0
@@ -81,7 +76,6 @@
 
     const/4 v4, 0x1
 
-    .line 38
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "windowBackgroundWhite"
@@ -92,14 +86,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 39
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 40
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "windowBackgroundWhiteGrayText2"
@@ -110,7 +102,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsColor(IZ)V
 
-    .line 41
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "actionBarWhiteSelector"
@@ -121,24 +112,20 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
 
-    .line 42
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setCastShadows(Z)V
 
-    .line 43
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 44
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBar;->showActionModeTop()V
 
-    .line 46
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -148,14 +135,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 55
     new-instance v1, Lorg/telegram/ui/ChannelIntroActivity$2;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/ChannelIntroActivity$2;-><init>(Lorg/telegram/ui/ChannelIntroActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->fragmentView:Landroid/view/View;
 
-    .line 106
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->fragmentView:Landroid/view/View;
 
     const-string/jumbo v2, "windowBackgroundWhite"
@@ -166,12 +151,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/ChannelIntroActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 108
     .local v0, "viewGroup":Landroid/view/ViewGroup;
     new-instance v1, Lorg/telegram/ui/ChannelIntroActivity$3;
 
@@ -179,40 +162,34 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 115
     new-instance v1, Landroid/widget/ImageView;
 
     invoke-direct {v1, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->imageView:Landroid/widget/ImageView;
 
-    .line 116
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->imageView:Landroid/widget/ImageView;
 
     const v2, 0x7f02004a
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 117
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->imageView:Landroid/widget/ImageView;
 
     sget-object v2, Landroid/widget/ImageView$ScaleType;->FIT_CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 118
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 120
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
-    .line 121
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "windowBackgroundWhiteBlackText"
@@ -223,19 +200,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 122
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 123
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     const/high16 v2, 0x41c00000    # 24.0f
 
     invoke-virtual {v1, v4, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 124
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "ChannelAlertTitle"
@@ -248,19 +222,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 125
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->whatIsChannelText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 127
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
-    .line 128
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "windowBackgroundWhiteGrayText6"
@@ -271,17 +242,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 129
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 130
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 131
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "ChannelAlertText"
@@ -294,19 +262,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 132
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->descriptionText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 134
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
-    .line 135
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "windowBackgroundWhiteBlueText5"
@@ -317,19 +282,16 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 136
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 137
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 138
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "fonts/rmedium.ttf"
@@ -340,7 +302,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 139
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     const-string/jumbo v2, "ChannelAlertCreate"
@@ -353,12 +314,10 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 140
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 141
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->createChannelText:Landroid/widget/TextView;
 
     new-instance v2, Lorg/telegram/ui/ChannelIntroActivity$4;
@@ -367,7 +326,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 150
     iget-object v1, p0, Lorg/telegram/ui/ChannelIntroActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -379,7 +337,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 155
     const/4 v0, 0x7
 
     new-array v8, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;

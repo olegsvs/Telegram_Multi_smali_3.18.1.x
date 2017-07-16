@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/query/SearchQuery$7$1;
 
     .prologue
-    .line 553
     iput-object p1, p0, Lorg/telegram/messenger/query/SearchQuery$7$1$1;->this$1:Lorg/telegram/messenger/query/SearchQuery$7$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 553
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
@@ -69,7 +67,6 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     .prologue
-    .line 556
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
     iget-wide v2, p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
@@ -78,14 +75,11 @@
 
     if-lez v0, :cond_0
 
-    .line 557
     const/4 v0, -0x1
 
-    .line 561
     :goto_0
     return v0
 
-    .line 558
     :cond_0
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
@@ -95,12 +89,10 @@
 
     if-gez v0, :cond_1
 
-    .line 559
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 561
     :cond_1
     const/4 v0, 0x0
 

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 165
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -44,7 +43,6 @@
 
     const/4 v4, 0x0
 
-    .line 168
     const-string/jumbo v5, "android.intent.action.HEADSET_PLUG"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -57,7 +55,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 169
     iget-object v5, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     const-string/jumbo v6, "state"
@@ -71,7 +68,6 @@
     :goto_0
     invoke-static {v5, v3}, Lorg/telegram/messenger/voip/VoIPService;->access$002(Lorg/telegram/messenger/voip/VoIPService;Z)Z
 
-    .line 170
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3}, Lorg/telegram/messenger/voip/VoIPService;->access$000(Lorg/telegram/messenger/voip/VoIPService;)Z
@@ -100,7 +96,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 171
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3}, Lorg/telegram/messenger/voip/VoIPService;->access$100(Lorg/telegram/messenger/voip/VoIPService;)Landroid/os/PowerManager$WakeLock;
@@ -109,13 +104,11 @@
 
     invoke-virtual {v3}, Landroid/os/PowerManager$WakeLock;->release()V
 
-    .line 173
     :cond_0
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/voip/VoIPService;->access$202(Lorg/telegram/messenger/voip/VoIPService;Z)Z
 
-    .line 216
     :cond_1
     :goto_1
     return-void
@@ -123,10 +116,8 @@
     :cond_2
     move v3, v4
 
-    .line 169
     goto :goto_0
 
-    .line 174
     :cond_3
     const-string/jumbo v5, "android.net.conn.CONNECTIVITY_CHANGE"
 
@@ -140,14 +131,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 175
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3}, Lorg/telegram/messenger/voip/VoIPService;->access$300(Lorg/telegram/messenger/voip/VoIPService;)V
 
     goto :goto_1
 
-    .line 176
     :cond_4
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -183,7 +172,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 177
     const-string/jumbo v5, "end_hash"
 
     invoke-virtual {p2, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -198,19 +186,16 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 178
     iget-object v4, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-virtual {v4, v3}, Lorg/telegram/messenger/voip/VoIPService;->stopForeground(Z)V
 
-    .line 179
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/voip/VoIPService;->hangUp()V
 
     goto :goto_1
 
-    .line 181
     :cond_5
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -246,7 +231,6 @@
 
     if-eqz v5, :cond_6
 
-    .line 182
     const-string/jumbo v5, "end_hash"
 
     invoke-virtual {p2, v5, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -261,23 +245,19 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 183
     iget-object v4, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-virtual {v4, v3}, Lorg/telegram/messenger/voip/VoIPService;->stopForeground(Z)V
 
-    .line 184
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     const/4 v4, 0x4
 
     const/4 v5, 0x0
 
-    invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/voip/VoIPService;->declineIncomingCall(ILjava/lang/Runnable;)V
 
     goto/16 :goto_1
 
-    .line 186
     :cond_6
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -313,7 +293,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 187
     const-string/jumbo v3, "end_hash"
 
     invoke-virtual {p2, v3, v4}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
@@ -328,12 +307,10 @@
 
     if-ne v3, v4, :cond_1
 
-    .line 188
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3}, Lorg/telegram/messenger/voip/VoIPService;->access$500(Lorg/telegram/messenger/voip/VoIPService;)V
 
-    .line 189
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x17
@@ -350,7 +327,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 191
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
@@ -382,11 +358,9 @@
 
     goto/16 :goto_1
 
-    .line 192
     :catch_0
     move-exception v2
 
-    .line 193
     .local v2, "x":Ljava/lang/Exception;
     const-string/jumbo v3, "Error starting permission activity"
 
@@ -394,14 +368,12 @@
 
     goto/16 :goto_1
 
-    .line 197
     .end local v2    # "x":Ljava/lang/Exception;
     :cond_7
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/voip/VoIPService;->acceptIncomingCall()V
 
-    .line 199
     :try_start_1
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
@@ -433,11 +405,9 @@
 
     goto/16 :goto_1
 
-    .line 200
     :catch_1
     move-exception v2
 
-    .line 201
     .restart local v2    # "x":Ljava/lang/Exception;
     const-string/jumbo v3, "Error starting incall activity"
 
@@ -445,7 +415,6 @@
 
     goto/16 :goto_1
 
-    .line 204
     .end local v2    # "x":Ljava/lang/Exception;
     :cond_8
     const-string/jumbo v5, "android.bluetooth.headset.profile.action.CONNECTION_STATE_CHANGED"
@@ -460,7 +429,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 206
     iget-object v5, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     const-string/jumbo v6, "android.bluetooth.profile.extra.STATE"
@@ -483,7 +451,6 @@
 
     goto :goto_2
 
-    .line 207
     :cond_a
     const-string/jumbo v3, "android.media.ACTION_SCO_AUDIO_STATE_UPDATED"
 
@@ -497,7 +464,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 208
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v3}, Lorg/telegram/messenger/voip/VoIPService;->access$700(Lorg/telegram/messenger/voip/VoIPService;)Ljava/util/ArrayList;
@@ -521,13 +487,11 @@
 
     check-cast v0, Lorg/telegram/messenger/voip/VoIPService$StateListener;
 
-    .line 209
     .local v0, "l":Lorg/telegram/messenger/voip/VoIPService$StateListener;
     invoke-interface {v0}, Lorg/telegram/messenger/voip/VoIPService$StateListener;->onAudioSettingsChanged()V
 
     goto :goto_3
 
-    .line 210
     .end local v0    # "l":Lorg/telegram/messenger/voip/VoIPService$StateListener;
     :cond_b
     const-string/jumbo v3, "android.intent.action.PHONE_STATE"
@@ -542,14 +506,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 211
     const-string/jumbo v3, "state"
 
     invoke-virtual {p2, v3}, Landroid/content/Intent;->getStringExtra(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 212
     .local v1, "state":Ljava/lang/String;
     sget-object v3, Landroid/telephony/TelephonyManager;->EXTRA_STATE_OFFHOOK:Ljava/lang/String;
 
@@ -559,7 +521,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 213
     iget-object v3, p0, Lorg/telegram/messenger/voip/VoIPService$1;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/voip/VoIPService;->hangUp()V

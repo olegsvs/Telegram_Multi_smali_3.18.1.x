@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 129
     iput-wide p1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1;->val$mergeDialogId:J
 
     iput-object p3, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_search;
@@ -58,13 +57,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 132
     new-instance v0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;-><init>(Lorg/telegram/messenger/query/MessagesSearchQuery$1;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 146
     return-void
 .end method

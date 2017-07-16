@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 283
     iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoView$2;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 286
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView$2;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PipVideoView;->access$600(Lorg/telegram/ui/Components/PipVideoView;)Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -48,6 +46,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmbedBottomSheet;->destroy()V
 
-    .line 287
     return-void
 .end method

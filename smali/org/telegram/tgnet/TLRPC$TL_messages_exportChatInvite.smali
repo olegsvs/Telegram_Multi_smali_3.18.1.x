@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 22711
     const v0, 0x7d885289
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 22710
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22716
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22720
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22721
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->chat_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22722
     return-void
 .end method

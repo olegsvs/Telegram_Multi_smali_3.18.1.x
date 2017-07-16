@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$3;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 2
 
     .prologue
-    .line 191
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$3;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$400(Lorg/telegram/ui/Components/PhotoPaintView;Lorg/telegram/ui/Components/Paint/Views/EntityView;)Z
 
-    .line 192
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$3;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$300(Lorg/telegram/ui/Components/PhotoPaintView;)Lorg/telegram/ui/Components/Paint/Views/EntityView;
@@ -70,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 181
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$3;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$500(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;

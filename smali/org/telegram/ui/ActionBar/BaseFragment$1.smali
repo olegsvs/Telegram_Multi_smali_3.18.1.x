@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/BaseFragment;
 
     .prologue
-    .line 322
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->this$0:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->val$onDismissListener:Landroid/content/DialogInterface$OnDismissListener;
@@ -46,17 +45,14 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 325
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->val$onDismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     if-eqz v0, :cond_0
 
-    .line 326
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->val$onDismissListener:Landroid/content/DialogInterface$OnDismissListener;
 
     invoke-interface {v0, p1}, Landroid/content/DialogInterface$OnDismissListener;->onDismiss(Landroid/content/DialogInterface;)V
 
-    .line 328
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->this$0:Lorg/telegram/ui/ActionBar/BaseFragment;
 
@@ -66,13 +62,11 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->onDialogDismiss(Landroid/app/Dialog;)V
 
-    .line 329
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BaseFragment$1;->this$0:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     const/4 v1, 0x0
 
     iput-object v1, v0, Lorg/telegram/ui/ActionBar/BaseFragment;->visibleDialog:Landroid/app/Dialog;
 
-    .line 330
     return-void
 .end method

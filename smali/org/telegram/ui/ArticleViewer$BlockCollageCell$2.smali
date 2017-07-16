@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     .prologue
-    .line 3459
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;->val$this$0:Lorg/telegram/ui/ArticleViewer;
@@ -46,14 +45,12 @@
     .param p4, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 3462
     const/4 v0, 0x0
 
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 3463
     const/high16 v0, 0x40000000    # 2.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -64,6 +61,5 @@
 
     iput v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 3464
     return-void
 .end method

@@ -39,21 +39,18 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 32
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchCount:[I
 
-    .line 33
     new-array v0, v1, [Z
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
 
-    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -62,7 +59,6 @@
 
     return-void
 
-    .line 32
     nop
 
     :array_0
@@ -71,7 +67,6 @@
         0x0
     .end array-data
 
-    .line 33
     :array_1
     .array-data 1
         0x0t
@@ -83,7 +78,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -93,7 +87,6 @@
     .locals 2
 
     .prologue
-    .line 26
     sget-wide v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastMergeDialogId:J
 
     return-wide v0
@@ -103,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastSearchQuery:Ljava/lang/String;
 
     return-object v0
@@ -114,7 +106,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 26
     sput p0, Lorg/telegram/messenger/query/MessagesSearchQuery;->mergeReqId:I
 
     return p0
@@ -124,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
 
     return-object v0
@@ -134,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchCount:[I
 
     return-object v0
@@ -150,7 +139,6 @@
     .param p7, "x5"    # Z
 
     .prologue
-    .line 26
     invoke-static/range {p0 .. p7}, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchMessagesInChat(Ljava/lang/String;JJIIZ)V
 
     return-void
@@ -160,7 +148,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReqId:I
 
     return v0
@@ -171,7 +158,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 26
     sput p0, Lorg/telegram/messenger/query/MessagesSearchQuery;->reqId:I
 
     return p0
@@ -181,7 +167,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     return v0
@@ -192,7 +177,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 26
     sput p0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     return p0
@@ -202,7 +186,6 @@
     .locals 1
 
     .prologue
-    .line 26
     sget-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     return-object v0
@@ -212,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 26
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->getMask()I
 
     move-result v0
@@ -224,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 216
     sget-object v0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastSearchQuery:Ljava/lang/String;
 
     return-object v0
@@ -234,10 +215,8 @@
     .locals 3
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
-    .line 40
     .local v0, "mask":I
     sget v1, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
@@ -267,20 +246,16 @@
 
     if-nez v1, :cond_1
 
-    .line 41
     :cond_0
     or-int/lit8 v0, v0, 0x1
 
-    .line 43
     :cond_1
     sget v1, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     if-lez v1, :cond_2
 
-    .line 44
     or-int/lit8 v0, v0, 0x2
 
-    .line 46
     :cond_2
     return v0
 .end method
@@ -294,7 +269,6 @@
     .param p6, "direction"    # I
 
     .prologue
-    .line 50
     const/4 v8, 0x0
 
     move-object v1, p0
@@ -309,7 +283,6 @@
 
     invoke-static/range {v1 .. v8}, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchMessagesInChat(Ljava/lang/String;JJIIZ)V
 
-    .line 51
     return-void
 .end method
 
@@ -323,27 +296,22 @@
     .param p7, "internal"    # Z
 
     .prologue
-    .line 54
     const/4 v15, 0x0
 
-    .line 55
     .local v15, "max_id":I
     move-wide/from16 v18, p1
 
-    .line 56
     .local v18, "queryWithDialog":J
     if-nez p7, :cond_3
 
     const/4 v13, 0x1
 
-    .line 57
     .local v13, "firstQuery":Z
     :goto_0
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->reqId:I
 
     if-eqz v2, :cond_0
 
-    .line 58
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v2
@@ -354,18 +322,15 @@
 
     invoke-virtual {v2, v3, v8}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 59
     const/4 v2, 0x0
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->reqId:I
 
-    .line 61
     :cond_0
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->mergeReqId:I
 
     if-eqz v2, :cond_1
 
-    .line 62
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v2
@@ -376,12 +341,10 @@
 
     invoke-virtual {v2, v3, v8}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 63
     const/4 v2, 0x0
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->mergeReqId:I
 
-    .line 65
     :cond_1
     invoke-static/range {p0 .. p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -389,7 +352,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 66
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
@@ -398,19 +360,16 @@
 
     if-eqz v2, :cond_4
 
-    .line 213
     :cond_2
     :goto_1
     return-void
 
-    .line 56
     .end local v13    # "firstQuery":Z
     :cond_3
     const/4 v13, 0x0
 
     goto :goto_0
 
-    .line 69
     .restart local v13    # "firstQuery":Z
     :cond_4
     const/4 v2, 0x1
@@ -419,14 +378,12 @@
 
     if-ne v0, v2, :cond_b
 
-    .line 70
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     add-int/lit8 v2, v2, 0x1
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
-    .line 71
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     sget-object v3, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
@@ -437,7 +394,6 @@
 
     if-ge v2, v3, :cond_5
 
-    .line 72
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     sget v3, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
@@ -448,7 +404,6 @@
 
     check-cast v16, Lorg/telegram/messenger/MessageObject;
 
-    .line 73
     .local v16, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -540,7 +495,6 @@
 
     goto :goto_1
 
-    .line 76
     .end local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_5
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
@@ -565,7 +519,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 77
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     add-int/lit8 v2, v2, -0x1
@@ -574,14 +527,11 @@
 
     goto/16 :goto_1
 
-    .line 80
     :cond_6
     const/4 v13, 0x0
 
-    .line 81
     sget-object p0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastSearchQuery:Ljava/lang/String;
 
-    .line 82
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     sget-object v3, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
@@ -598,7 +548,6 @@
 
     check-cast v16, Lorg/telegram/messenger/MessageObject;
 
-    .line 83
     .restart local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual/range {v16 .. v16}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
@@ -616,15 +565,12 @@
 
     if-nez v2, :cond_9
 
-    .line 84
     invoke-virtual/range {v16 .. v16}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result v15
 
-    .line 85
     move-wide/from16 v18, p1
 
-    .line 114
     .end local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_7
     :goto_2
@@ -650,10 +596,8 @@
 
     if-eqz v2, :cond_8
 
-    .line 115
     move-wide/from16 v18, p3
 
-    .line 117
     :cond_8
     cmp-long v2, v18, p1
 
@@ -661,14 +605,12 @@
 
     if-eqz v13, :cond_10
 
-    .line 118
     const-wide/16 v2, 0x0
 
     cmp-long v2, p3, v2
 
     if-eqz v2, :cond_f
 
-    .line 119
     move-wide/from16 v0, p3
 
     long-to-int v2, v0
@@ -677,40 +619,32 @@
 
     move-result-object v14
 
-    .line 120
     .local v14, "inputPeer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     if-eqz v14, :cond_2
 
-    .line 123
     new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;
 
     invoke-direct {v5}, Lorg/telegram/tgnet/TLRPC$TL_messages_search;-><init>()V
 
-    .line 124
     .local v5, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_search;
     iput-object v14, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 125
     sput-wide p3, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastMergeDialogId:J
 
-    .line 126
     const/4 v2, 0x1
 
     iput v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->limit:I
 
-    .line 127
     move-object/from16 v0, p0
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->q:Ljava/lang/String;
 
-    .line 128
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterEmpty;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterEmpty;-><init>()V
 
     iput-object v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
-    .line 129
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v10
@@ -737,7 +671,6 @@
 
     goto/16 :goto_1
 
-    .line 87
     .end local v5    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_search;
     .end local v14    # "inputPeer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     .restart local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
@@ -750,16 +683,13 @@
 
     if-nez v2, :cond_a
 
-    .line 88
     invoke-virtual/range {v16 .. v16}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result v15
 
-    .line 90
     :cond_a
     move-wide/from16 v18, p3
 
-    .line 91
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
 
     const/4 v3, 0x1
@@ -770,7 +700,6 @@
 
     goto :goto_2
 
-    .line 94
     .end local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_b
     const/4 v2, 0x2
@@ -779,26 +708,22 @@
 
     if-ne v0, v2, :cond_2
 
-    .line 95
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     add-int/lit8 v2, v2, -0x1
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
-    .line 96
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     if-gez v2, :cond_c
 
-    .line 97
     const/4 v2, 0x0
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
     goto/16 :goto_1
 
-    .line 100
     :cond_c
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
@@ -810,7 +735,6 @@
 
     if-lt v2, v3, :cond_d
 
-    .line 101
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -821,7 +745,6 @@
 
     sput v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReturnedNum:I
 
-    .line 103
     :cond_d
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
@@ -833,7 +756,6 @@
 
     check-cast v16, Lorg/telegram/messenger/MessageObject;
 
-    .line 104
     .restart local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -925,12 +847,10 @@
 
     goto/16 :goto_1
 
-    .line 109
     .end local v16    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_e
     if-eqz v13, :cond_7
 
-    .line 110
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
 
     const/4 v3, 0x0
@@ -945,7 +865,6 @@
 
     aput-boolean v10, v2, v3
 
-    .line 111
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchCount:[I
 
     const/4 v3, 0x0
@@ -960,20 +879,17 @@
 
     aput v10, v2, v3
 
-    .line 112
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->searchResultMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
     goto/16 :goto_2
 
-    .line 150
     :cond_f
     const-wide/16 v2, 0x0
 
     sput-wide v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastMergeDialogId:J
 
-    .line 151
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchEndReached:[Z
 
     const/4 v3, 0x1
@@ -982,7 +898,6 @@
 
     aput-boolean v8, v2, v3
 
-    .line 152
     sget-object v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->messagesSearchCount:[I
 
     const/4 v3, 0x1
@@ -991,13 +906,11 @@
 
     aput v8, v2, v3
 
-    .line 155
     :cond_10
     new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;
 
     invoke-direct {v5}, Lorg/telegram/tgnet/TLRPC$TL_messages_search;-><init>()V
 
-    .line 156
     .restart local v5    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_search;
     move-wide/from16 v0, v18
 
@@ -1009,46 +922,37 @@
 
     iput-object v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 157
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     if-eqz v2, :cond_2
 
-    .line 160
     const/16 v2, 0x15
 
     iput v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->limit:I
 
-    .line 161
     move-object/from16 v0, p0
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->q:Ljava/lang/String;
 
-    .line 162
     iput v15, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->max_id:I
 
-    .line 163
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterEmpty;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterEmpty;-><init>()V
 
     iput-object v2, v5, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
-    .line 164
     sget v2, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReqId:I
 
     add-int/lit8 v4, v2, 0x1
 
     sput v4, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastReqId:I
 
-    .line 165
     .local v4, "currentReqId":I
     sput-object p0, Lorg/telegram/messenger/query/MessagesSearchQuery;->lastSearchQuery:Ljava/lang/String;
 
-    .line 166
     move-wide/from16 v6, v18
 
-    .line 167
     .local v6, "queryWithDialogFinal":J
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 

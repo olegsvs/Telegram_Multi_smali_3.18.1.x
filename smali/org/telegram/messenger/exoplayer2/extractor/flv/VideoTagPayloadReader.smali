@@ -33,10 +33,8 @@
     .param p1, "output"    # Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     .prologue
-    .line 56
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/TagPayloadReader;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;)V
 
-    .line 57
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     sget-object v1, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->NAL_START_CODE:[B
@@ -45,7 +43,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalStartCode:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 58
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x4
@@ -54,7 +51,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 59
     return-void
 .end method
 
@@ -70,28 +66,23 @@
     .end annotation
 
     .prologue
-    .line 68
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v1
 
-    .line 69
     .local v1, "header":I
     shr-int/lit8 v3, v1, 0x4
 
     and-int/lit8 v0, v3, 0xf
 
-    .line 70
     .local v0, "frameType":I
     and-int/lit8 v2, v1, 0xf
 
-    .line 72
     .local v2, "videoCodec":I
     const/4 v3, 0x7
 
     if-eq v2, v3, :cond_0
 
-    .line 73
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/flv/TagPayloadReader$UnsupportedFormatException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -116,11 +107,9 @@
 
     throw v3
 
-    .line 75
     :cond_0
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->frameType:I
 
-    .line 76
     const/4 v3, 0x5
 
     if-eq v0, v3, :cond_1
@@ -147,18 +136,15 @@
     .end annotation
 
     .prologue
-    .line 81
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v20
 
-    .line 82
     .local v20, "packetType":I
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
 
     move-result v16
 
-    .line 83
     .local v16, "compositionTimeMs":I
     move/from16 v0, v16
 
@@ -170,7 +156,6 @@
 
     add-long p2, p2, v2
 
-    .line 85
     if-nez v20, :cond_1
 
     move-object/from16 v0, p0
@@ -179,7 +164,6 @@
 
     if-nez v2, :cond_1
 
-    .line 86
     new-instance v21, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -192,7 +176,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;-><init>([B)V
 
-    .line 87
     .local v21, "videoSequence":Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
     move-object/from16 v0, v21
 
@@ -208,12 +191,10 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
-    .line 88
     invoke-static/range {v21 .. v21}, Lorg/telegram/messenger/exoplayer2/video/AvcConfig;->parse(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;)Lorg/telegram/messenger/exoplayer2/video/AvcConfig;
 
     move-result-object v14
 
-    .line 89
     .local v14, "avcConfig":Lorg/telegram/messenger/exoplayer2/video/AvcConfig;
     iget v2, v14, Lorg/telegram/messenger/exoplayer2/video/AvcConfig;->nalUnitLengthFieldLength:I
 
@@ -221,7 +202,6 @@
 
     iput v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalUnitLengthFieldLength:I
 
-    .line 91
     const/4 v2, 0x0
 
     const-string/jumbo v3, "video/avc"
@@ -250,7 +230,6 @@
 
     move-result-object v17
 
-    .line 94
     .local v17, "format":Lorg/telegram/messenger/exoplayer2/Format;
     move-object/from16 v0, p0
 
@@ -260,14 +239,12 @@
 
     invoke-interface {v2, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 95
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->hasOutputFormat:Z
 
-    .line 128
     .end local v14    # "avcConfig":Lorg/telegram/messenger/exoplayer2/video/AvcConfig;
     .end local v17    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     .end local v21    # "videoSequence":Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -275,7 +252,6 @@
     :goto_0
     return-void
 
-    .line 96
     :cond_1
     const/4 v2, 0x1
 
@@ -283,7 +259,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 100
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -292,7 +267,6 @@
 
     move-object/from16 v18, v0
 
-    .line 101
     .local v18, "nalLengthData":[B
     const/4 v2, 0x0
 
@@ -300,32 +274,27 @@
 
     aput-byte v3, v18, v2
 
-    .line 102
     const/4 v2, 0x1
 
     const/4 v3, 0x0
 
     aput-byte v3, v18, v2
 
-    .line 103
     const/4 v2, 0x2
 
     const/4 v3, 0x0
 
     aput-byte v3, v18, v2
 
-    .line 104
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalUnitLengthFieldLength:I
 
     rsub-int/lit8 v19, v2, 0x4
 
-    .line 108
     .local v19, "nalUnitLengthFieldLengthDiff":I
     const/4 v7, 0x0
 
-    .line 110
     .local v7, "bytesWritten":I
     :goto_1
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -334,7 +303,6 @@
 
     if-lez v2, :cond_2
 
-    .line 112
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -351,7 +319,6 @@
 
     invoke-virtual {v0, v2, v1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
-    .line 113
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -360,7 +327,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 114
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -369,7 +335,6 @@
 
     move-result v15
 
-    .line 117
     .local v15, "bytesToWrite":I
     move-object/from16 v0, p0
 
@@ -379,7 +344,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
@@ -392,10 +356,8 @@
 
     invoke-interface {v2, v3, v4}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 119
     add-int/lit8 v7, v7, 0x4
 
-    .line 122
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
@@ -404,12 +366,10 @@
 
     invoke-interface {v2, v0, v15}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 123
     add-int/2addr v7, v15
 
     goto :goto_1
 
-    .line 125
     .end local v15    # "bytesToWrite":I
     :cond_2
     move-object/from16 v0, p0
@@ -447,6 +407,5 @@
     .locals 0
 
     .prologue
-    .line 64
     return-void
 .end method

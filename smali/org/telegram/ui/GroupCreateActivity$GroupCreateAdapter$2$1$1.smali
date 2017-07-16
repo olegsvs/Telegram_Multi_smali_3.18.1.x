@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
     .prologue
-    .line 1004
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1$1;->this$3:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 15
 
     .prologue
-    .line 1007
     iget-object v11, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1$1;->this$3:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
     iget-object v11, v11, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;->this$2:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;
@@ -56,7 +54,6 @@
 
     move-result-object v7
 
-    .line 1008
     .local v7, "search1":Ljava/lang/String;
     invoke-virtual {v7}, Ljava/lang/String;->length()I
 
@@ -64,7 +61,6 @@
 
     if-nez v11, :cond_0
 
-    .line 1009
     iget-object v11, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1$1;->this$3:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
     iget-object v11, v11, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;->this$2:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;
@@ -81,11 +77,9 @@
 
     invoke-static {v11, v12, v13}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->access$2800(Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 1054
     :goto_0
     return-void
 
-    .line 1012
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -95,7 +89,6 @@
 
     move-result-object v8
 
-    .line 1013
     .local v8, "search2":Ljava/lang/String;
     invoke-virtual {v7, v8}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -109,11 +102,9 @@
 
     if-nez v11, :cond_2
 
-    .line 1014
     :cond_1
     const/4 v8, 0x0
 
-    .line 1016
     :cond_2
     if-eqz v8, :cond_8
 
@@ -124,33 +115,27 @@
 
     new-array v6, v11, [Ljava/lang/String;
 
-    .line 1017
     .local v6, "search":[Ljava/lang/String;
     const/4 v11, 0x0
 
     aput-object v7, v6, v11
 
-    .line 1018
     if-eqz v8, :cond_3
 
-    .line 1019
     const/4 v11, 0x1
 
     aput-object v8, v6, v11
 
-    .line 1022
     :cond_3
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1023
     .local v4, "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1025
     .local v5, "resultArrayNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     const/4 v0, 0x0
 
@@ -172,7 +157,6 @@
 
     if-ge v0, v11, :cond_c
 
-    .line 1026
     iget-object v11, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1$1;->this$3:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
     iget-object v11, v11, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;->this$2:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;
@@ -189,7 +173,6 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1028
     .local v10, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v11, v10, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
@@ -203,7 +186,6 @@
 
     move-result-object v2
 
-    .line 1029
     .local v2, "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -213,7 +195,6 @@
 
     move-result-object v9
 
-    .line 1030
     .local v9, "tName":Ljava/lang/String;
     invoke-virtual {v2, v9}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -221,14 +202,11 @@
 
     if-eqz v11, :cond_4
 
-    .line 1031
     const/4 v9, 0x0
 
-    .line 1034
     :cond_4
     const/4 v1, 0x0
 
-    .line 1035
     .local v1, "found":I
     array-length v12, v6
 
@@ -239,7 +217,6 @@
 
     aget-object v3, v6, v11
 
-    .line 1036
     .local v3, "q":Ljava/lang/String;
     invoke-virtual {v2, v3}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -303,21 +280,17 @@
 
     if-eqz v13, :cond_9
 
-    .line 1037
     :cond_5
     const/4 v1, 0x1
 
-    .line 1042
     :cond_6
     :goto_4
     if-eqz v1, :cond_b
 
-    .line 1043
     const/4 v11, 0x1
 
     if-ne v1, v11, :cond_a
 
-    .line 1044
     iget-object v11, v10, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     iget-object v12, v10, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
@@ -328,18 +301,15 @@
 
     invoke-virtual {v5, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1048
     :goto_5
     invoke-virtual {v4, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1025
     .end local v3    # "q":Ljava/lang/String;
     :cond_7
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_2
 
-    .line 1016
     .end local v0    # "a":I
     .end local v1    # "found":I
     .end local v2    # "name":Ljava/lang/String;
@@ -353,7 +323,6 @@
 
     goto/16 :goto_1
 
-    .line 1038
     .restart local v0    # "a":I
     .restart local v1    # "found":I
     .restart local v2    # "name":Ljava/lang/String;
@@ -376,12 +345,10 @@
 
     if-eqz v13, :cond_6
 
-    .line 1039
     const/4 v1, 0x2
 
     goto :goto_4
 
-    .line 1046
     :cond_a
     new-instance v11, Ljava/lang/StringBuilder;
 
@@ -431,13 +398,11 @@
 
     goto :goto_5
 
-    .line 1035
     :cond_b
     add-int/lit8 v11, v11, 0x1
 
     goto/16 :goto_3
 
-    .line 1053
     .end local v1    # "found":I
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "q":Ljava/lang/String;

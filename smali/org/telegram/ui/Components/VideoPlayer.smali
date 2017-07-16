@@ -57,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 77
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;-><init>()V
@@ -71,10 +70,8 @@
     .locals 7
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/DefaultDataSourceFactory;
 
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -93,21 +90,18 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->mediaDataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 82
     new-instance v1, Landroid/os/Handler;
 
     invoke-direct {v1}, Landroid/os/Handler;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->mainHandler:Landroid/os/Handler;
 
-    .line 84
     new-instance v0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;
 
     sget-object v1, Lorg/telegram/ui/Components/VideoPlayer;->BANDWIDTH_METER:Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;
 
     invoke-direct {v0, v1}, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter;)V
 
-    .line 85
     .local v0, "videoTrackSelectionFactory":Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection$Factory;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector;
 
@@ -115,12 +109,10 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->trackSelector:Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector;
 
-    .line 87
     const/4 v1, 0x1
 
     iput v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->lastReportedPlaybackState:I
 
-    .line 88
     return-void
 .end method
 
@@ -128,12 +120,10 @@
     .locals 5
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 92
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->trackSelector:Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector;
@@ -152,31 +142,26 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->addListener(Lorg/telegram/messenger/exoplayer2/ExoPlayer$EventListener;)V
 
-    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->setVideoListener(Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$VideoListener;)V
 
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->textureView:Landroid/view/TextureView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->setVideoTextureView(Landroid/view/TextureView;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$ComponentListener;
 
-    .line 96
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->autoplay:Z
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->setPlayWhenReady(Z)V
 
-    .line 98
     :cond_0
     return-void
 .end method
@@ -185,14 +170,12 @@
     .locals 3
 
     .prologue
-    .line 297
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->getPlayWhenReady()Z
 
     move-result v0
 
-    .line 298
     .local v0, "playWhenReady":Z
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -200,7 +183,6 @@
 
     move-result v1
 
-    .line 299
     .local v1, "playbackState":I
     iget-boolean v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->lastReportedPlayWhenReady:Z
 
@@ -210,19 +192,15 @@
 
     if-eq v2, v1, :cond_1
 
-    .line 300
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v2, v0, v1}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onStateChanged(ZI)V
 
-    .line 301
     iput-boolean v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->lastReportedPlayWhenReady:Z
 
-    .line 302
     iput v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->lastReportedPlaybackState:I
 
-    .line 304
     :cond_1
     return-void
 .end method
@@ -233,7 +211,6 @@
     .locals 1
 
     .prologue
-    .line 231
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -257,7 +234,6 @@
     .locals 2
 
     .prologue
-    .line 235
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -281,7 +257,6 @@
     .locals 2
 
     .prologue
-    .line 205
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -305,7 +280,6 @@
     .locals 2
 
     .prologue
-    .line 201
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -329,7 +303,6 @@
     .locals 2
 
     .prologue
-    .line 243
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -355,7 +328,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -375,7 +347,6 @@
     .locals 1
 
     .prologue
-    .line 239
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
@@ -404,7 +375,6 @@
     .param p1, "isLoading"    # Z
 
     .prologue
-    .line 249
     return-void
 .end method
 
@@ -413,12 +383,10 @@
     .param p1, "error"    # Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;
 
     .prologue
-    .line 263
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onError(Ljava/lang/Exception;)V
 
-    .line 264
     return-void
 .end method
 
@@ -428,10 +396,8 @@
     .param p2, "playbackState"    # I
 
     .prologue
-    .line 253
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoPlayer;->maybeReportPlayerState()V
 
-    .line 254
     return-void
 .end method
 
@@ -439,7 +405,6 @@
     .locals 0
 
     .prologue
-    .line 269
     return-void
 .end method
 
@@ -447,12 +412,10 @@
     .locals 1
 
     .prologue
-    .line 283
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onRenderedFirstFrame()V
 
-    .line 284
     return-void
 .end method
 
@@ -461,7 +424,6 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 288
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onSurfaceDestroyed(Landroid/graphics/SurfaceTexture;)Z
@@ -476,22 +438,17 @@
     .param p1, "surfaceTexture"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 293
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onSurfaceTextureUpdated(Landroid/graphics/SurfaceTexture;)V
 
-    .line 294
     return-void
 .end method
 
-.method public onTimelineChanged(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
     .locals 0
-    .param p1, "timeline"    # Lorg/telegram/messenger/exoplayer2/Timeline;
     .param p2, "manifest"    # Ljava/lang/Object;
 
     .prologue
-    .line 259
     return-void
 .end method
 
@@ -501,7 +458,6 @@
     .param p2, "trackSelections"    # Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelectionArray;
 
     .prologue
-    .line 274
     return-void
 .end method
 
@@ -513,12 +469,10 @@
     .param p4, "pixelWidthHeightRatio"    # F
 
     .prologue
-    .line 278
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     invoke-interface {v0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;->onVideoSizeChanged(IIIF)V
 
-    .line 279
     return-void
 .end method
 
@@ -526,16 +480,13 @@
     .locals 2
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 190
     :goto_0
     return-void
 
-    .line 189
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -550,16 +501,13 @@
     .locals 2
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 183
     :goto_0
     return-void
 
-    .line 182
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -580,10 +528,8 @@
 
     const/4 v5, 0x0
 
-    .line 140
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoPlayer;->ensurePleyaerCreated()V
 
-    .line 142
     const/4 v1, -0x1
 
     invoke-virtual {p2}, Ljava/lang/String;->hashCode()I
@@ -596,7 +542,6 @@
     :goto_0
     packed-switch v1, :pswitch_data_0
 
-    .line 153
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->mediaDataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
@@ -611,17 +556,14 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/extractor/ExtractorsFactory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource$EventListener;)V
 
-    .line 156
     .local v0, "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-virtual {v1, v0, v6, v6}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->prepare(Lorg/telegram/messenger/exoplayer2/source/MediaSource;ZZ)V
 
-    .line 157
     return-void
 
-    .line 142
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :sswitch_0
     const-string/jumbo v2, "dash"
@@ -662,7 +604,6 @@
 
     goto :goto_0
 
-    .line 144
     :pswitch_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
@@ -680,11 +621,9 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 145
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_1
 
-    .line 147
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :pswitch_1
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsMediaSource;
@@ -695,11 +634,9 @@
 
     invoke-direct {v0, p1, v1, v2, v5}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 148
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_1
 
-    .line 150
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :pswitch_2
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsMediaSource;
@@ -718,11 +655,9 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsChunkSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 151
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_1
 
-    .line 142
     :sswitch_data_0
     .sparse-switch
         0xe60 -> :sswitch_2
@@ -746,16 +681,13 @@
     .param p4, "audioType"    # Ljava/lang/String;
 
     .prologue
-    .line 101
     invoke-direct {p0}, Lorg/telegram/ui/Components/VideoPlayer;->ensurePleyaerCreated()V
 
-    .line 102
     const/4 v8, 0x0
 
     .local v8, "mediaSource1":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     const/4 v9, 0x0
 
-    .line 103
     .local v9, "mediaSource2":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     const/4 v6, 0x0
 
@@ -765,17 +697,13 @@
 
     if-ge v6, v2, :cond_3
 
-    .line 107
     if-nez v6, :cond_1
 
-    .line 108
     move-object v10, p2
 
-    .line 109
     .local v10, "type":Ljava/lang/String;
     move-object v1, p1
 
-    .line 114
     .local v1, "uri":Landroid/net/Uri;
     :goto_1
     const/4 v2, -0x1
@@ -790,7 +718,6 @@
     :goto_2
     packed-switch v2, :pswitch_data_0
 
-    .line 125
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->mediaDataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
@@ -805,42 +732,35 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/extractor/ExtractorsFactory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource$EventListener;)V
 
-    .line 128
     .local v0, "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :goto_3
     new-instance v7, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
     invoke-direct {v7, v0}, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;-><init>(Lorg/telegram/messenger/exoplayer2/source/MediaSource;)V
 
-    .line 129
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     .local v7, "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     if-nez v6, :cond_2
 
-    .line 130
     move-object v8, v7
 
-    .line 103
     :goto_4
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 111
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v7    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     .end local v10    # "type":Ljava/lang/String;
     :cond_1
     move-object v10, p4
 
-    .line 112
     .restart local v10    # "type":Ljava/lang/String;
     move-object v1, p3
 
     .restart local v1    # "uri":Landroid/net/Uri;
     goto :goto_1
 
-    .line 114
     :sswitch_0
     const-string/jumbo v3, "dash"
 
@@ -880,7 +800,6 @@
 
     goto :goto_2
 
-    .line 116
     :pswitch_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
@@ -898,11 +817,9 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/source/dash/DashChunkSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 117
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_3
 
-    .line 119
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :pswitch_1
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsMediaSource;
@@ -915,11 +832,9 @@
 
     invoke-direct {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 120
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_3
 
-    .line 122
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :pswitch_2
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsMediaSource;
@@ -938,11 +853,9 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/SsChunkSource$Factory;Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;)V
 
-    .line 123
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     goto :goto_3
 
-    .line 132
     .end local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     .restart local v7    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     :cond_2
@@ -950,7 +863,6 @@
 
     goto :goto_4
 
-    .line 135
     .end local v1    # "uri":Landroid/net/Uri;
     .end local v7    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     .end local v10    # "type":Ljava/lang/String;
@@ -971,7 +883,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/messenger/exoplayer2/source/MergingMediaSource;-><init>([Lorg/telegram/messenger/exoplayer2/source/MediaSource;)V
 
-    .line 136
     .restart local v0    # "mediaSource":Lorg/telegram/messenger/exoplayer2/source/MediaSource;
     iget-object v2, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -981,10 +892,8 @@
 
     invoke-virtual {v2, v8, v3, v4}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->prepare(Lorg/telegram/messenger/exoplayer2/source/MediaSource;ZZ)V
 
-    .line 137
     return-void
 
-    .line 114
     nop
 
     :sswitch_data_0
@@ -1006,22 +915,18 @@
     .locals 1
 
     .prologue
-    .line 164
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-eqz v0, :cond_0
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;->release()V
 
-    .line 166
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
-    .line 168
     :cond_0
     return-void
 .end method
@@ -1031,16 +936,13 @@
     .param p1, "positionMs"    # J
 
     .prologue
-    .line 220
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 224
     :goto_0
     return-void
 
-    .line 223
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -1054,10 +956,8 @@
     .param p1, "videoPlayerDelegate"    # Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
     .prologue
-    .line 227
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoPlayer;->delegate:Lorg/telegram/ui/Components/VideoPlayer$VideoPlayerDelegate;
 
-    .line 228
     return-void
 .end method
 
@@ -1066,20 +966,16 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 209
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 217
     :goto_0
     return-void
 
-    .line 212
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 213
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     const/4 v1, 0x0
@@ -1088,7 +984,6 @@
 
     goto :goto_0
 
-    .line 215
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -1104,19 +999,15 @@
     .param p1, "playWhenReady"    # Z
 
     .prologue
-    .line 193
     iput-boolean p1, p0, Lorg/telegram/ui/Components/VideoPlayer;->autoplay:Z
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 198
     :goto_0
     return-void
 
-    .line 197
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
@@ -1130,19 +1021,15 @@
     .param p1, "texture"    # Landroid/view/TextureView;
 
     .prologue
-    .line 171
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoPlayer;->textureView:Landroid/view/TextureView;
 
-    .line 172
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 
     if-nez v0, :cond_0
 
-    .line 176
     :goto_0
     return-void
 
-    .line 175
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoPlayer;->player:Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 

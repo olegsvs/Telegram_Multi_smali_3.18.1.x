@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     .prologue
-    .line 356
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v5, 0x0
 
-    .line 359
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -62,7 +60,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChangeUsernameActivity;->access$802(Lorg/telegram/ui/ChangeUsernameActivity;I)I
 
-    .line 360
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -97,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 361
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
@@ -108,7 +104,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 362
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -139,7 +134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 363
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -154,7 +148,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 364
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -173,7 +166,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 365
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -182,12 +174,10 @@
 
     invoke-static {v0, v6}, Lorg/telegram/ui/ChangeUsernameActivity;->access$1102(Lorg/telegram/ui/ChangeUsernameActivity;Z)Z
 
-    .line 373
     :cond_0
     :goto_0
     return-void
 
-    .line 367
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
@@ -209,7 +199,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 368
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -224,7 +213,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 369
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;
@@ -243,7 +231,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 370
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$5$1$1;->this$2:Lorg/telegram/ui/ChangeUsernameActivity$5$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangeUsernameActivity$5$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$5;

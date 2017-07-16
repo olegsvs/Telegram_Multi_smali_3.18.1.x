@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/util/DiffUtil$DiffResult;
 
     .prologue
-    .line 659
     iput-object p1, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->this$0:Lorg/telegram/messenger/support/util/DiffUtil$DiffResult;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->val$adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
@@ -48,12 +47,10 @@
     .param p3, "payload"    # Ljava/lang/Object;
 
     .prologue
-    .line 677
     iget-object v0, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->val$adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->notifyItemRangeChanged(IILjava/lang/Object;)V
 
-    .line 678
     return-void
 .end method
 
@@ -63,12 +60,10 @@
     .param p2, "count"    # I
 
     .prologue
-    .line 662
     iget-object v0, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->val$adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->notifyItemRangeInserted(II)V
 
-    .line 663
     return-void
 .end method
 
@@ -78,12 +73,10 @@
     .param p2, "toPosition"    # I
 
     .prologue
-    .line 672
     iget-object v0, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->val$adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->notifyItemMoved(II)V
 
-    .line 673
     return-void
 .end method
 
@@ -93,11 +86,9 @@
     .param p2, "count"    # I
 
     .prologue
-    .line 667
     iget-object v0, p0, Lorg/telegram/messenger/support/util/DiffUtil$DiffResult$1;->val$adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->notifyItemRangeRemoved(II)V
 
-    .line 668
     return-void
 .end method

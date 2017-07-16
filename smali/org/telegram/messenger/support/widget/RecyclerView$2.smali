@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/RecyclerView;
 
     .prologue
-    .line 501
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$2;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,21 +40,18 @@
     .locals 2
 
     .prologue
-    .line 504
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$2;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mItemAnimator:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 505
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$2;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mItemAnimator:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->runPendingAnimations()V
 
-    .line 507
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$2;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
@@ -63,6 +59,5 @@
 
     iput-boolean v1, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mPostedAnimatorRunner:Z
 
-    .line 508
     return-void
 .end method

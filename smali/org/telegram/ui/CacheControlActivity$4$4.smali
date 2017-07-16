@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CacheControlActivity$4;
 
     .prologue
-    .line 540
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$4$4;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 544
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$4$4;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
@@ -54,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 545
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$4$4;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CacheControlActivity$4;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -67,7 +64,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 550
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$4$4;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
@@ -76,14 +72,11 @@
 
     invoke-static {v1}, Lorg/telegram/ui/CacheControlActivity;->access$1900(Lorg/telegram/ui/CacheControlActivity;)V
 
-    .line 551
     return-void
 
-    .line 547
     :catch_0
     move-exception v0
 
-    .line 548
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

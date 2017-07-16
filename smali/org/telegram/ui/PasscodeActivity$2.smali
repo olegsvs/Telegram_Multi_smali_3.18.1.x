@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PasscodeActivity;
 
     .prologue
-    .line 191
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$2;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 194
     iget-object v1, p0, Lorg/telegram/ui/PasscodeActivity$2;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PasscodeActivity;->access$000(Lorg/telegram/ui/PasscodeActivity;)I
@@ -55,16 +53,13 @@
 
     if-nez v1, :cond_0
 
-    .line 195
     iget-object v1, p0, Lorg/telegram/ui/PasscodeActivity$2;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PasscodeActivity;->access$100(Lorg/telegram/ui/PasscodeActivity;)V
 
-    .line 201
     :goto_0
     return v0
 
-    .line 197
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/PasscodeActivity$2;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
@@ -74,14 +69,12 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 198
     iget-object v1, p0, Lorg/telegram/ui/PasscodeActivity$2;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PasscodeActivity;->access$200(Lorg/telegram/ui/PasscodeActivity;)V
 
     goto :goto_0
 
-    .line 201
     :cond_1
     const/4 v0, 0x0
 

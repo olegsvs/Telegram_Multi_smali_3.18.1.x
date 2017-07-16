@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 4845
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$72;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesStorage$72;->val$random_id:J
@@ -61,7 +60,6 @@
     .locals 8
 
     .prologue
-    .line 4848
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$72;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iget-wide v2, p0, Lorg/telegram/messenger/MessagesStorage$72;->val$random_id:J
@@ -76,6 +74,5 @@
 
     invoke-static/range {v1 .. v7}, Lorg/telegram/messenger/MessagesStorage;->access$1400(Lorg/telegram/messenger/MessagesStorage;JLjava/lang/Integer;III)[J
 
-    .line 4849
     return-void
 .end method

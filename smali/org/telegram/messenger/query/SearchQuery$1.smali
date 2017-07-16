@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 88
     iput-object p1, p0, Lorg/telegram/messenger/query/SearchQuery$1;->val$hintsFinal:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 92
     sget-object v31, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-class v32, Landroid/content/pm/ShortcutManager;
@@ -56,31 +54,26 @@
 
     check-cast v26, Landroid/content/pm/ShortcutManager;
 
-    .line 93
     .local v26, "shortcutManager":Landroid/content/pm/ShortcutManager;
     invoke-virtual/range {v26 .. v26}, Landroid/content/pm/ShortcutManager;->getDynamicShortcuts()Ljava/util/List;
 
     move-result-object v11
 
-    .line 94
     .local v11, "currentShortcuts":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ShortcutInfo;>;"
     new-instance v28, Ljava/util/ArrayList;
 
     invoke-direct/range {v28 .. v28}, Ljava/util/ArrayList;-><init>()V
 
-    .line 95
     .local v28, "shortcutsToUpdate":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v19, Ljava/util/ArrayList;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
 
-    .line 96
     .local v19, "newShortcutsIds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v27, Ljava/util/ArrayList;
 
     invoke-direct/range {v27 .. v27}, Ljava/util/ArrayList;-><init>()V
 
-    .line 98
     .local v27, "shortcutsToDelete":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     if-eqz v11, :cond_6
 
@@ -90,7 +83,6 @@
 
     if-nez v31, :cond_6
 
-    .line 99
     const-string/jumbo v31, "compose"
 
     move-object/from16 v0, v19
@@ -99,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
     const/4 v4, 0x0
 
     .local v4, "a":I
@@ -118,7 +109,6 @@
 
     if-ge v4, v0, :cond_2
 
-    .line 101
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/query/SearchQuery$1;->val$hintsFinal:Ljava/util/ArrayList;
@@ -133,7 +123,6 @@
 
     check-cast v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
-    .line 103
     .local v15, "hint":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -147,7 +136,6 @@
 
     if-eqz v31, :cond_1
 
-    .line 104
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v31, v0
@@ -162,7 +150,6 @@
 
     int-to-long v12, v0
 
-    .line 111
     .local v12, "did":J
     :cond_0
     :goto_1
@@ -192,12 +179,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 100
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 106
     .end local v12    # "did":J
     :cond_1
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -220,7 +205,6 @@
 
     int-to-long v12, v0
 
-    .line 107
     .restart local v12    # "did":J
     const-wide/16 v32, 0x0
 
@@ -228,7 +212,6 @@
 
     if-nez v31, :cond_0
 
-    .line 108
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v31, v0
@@ -251,7 +234,6 @@
 
     goto :goto_1
 
-    .line 113
     .end local v12    # "did":J
     .end local v15    # "hint":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     :cond_2
@@ -266,7 +248,6 @@
 
     if-ge v4, v0, :cond_4
 
-    .line 114
     invoke-interface {v11, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v31
@@ -277,7 +258,6 @@
 
     move-result-object v16
 
-    .line 115
     .local v16, "id":Ljava/lang/String;
     move-object/from16 v0, v19
 
@@ -289,14 +269,12 @@
 
     if-nez v31, :cond_3
 
-    .line 116
     move-object/from16 v0, v27
 
     move-object/from16 v1, v16
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 118
     :cond_3
     move-object/from16 v0, v28
 
@@ -304,12 +282,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 113
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 120
     .end local v16    # "id":Ljava/lang/String;
     :cond_4
     invoke-virtual/range {v19 .. v19}, Ljava/util/ArrayList;->isEmpty()Z
@@ -324,11 +300,9 @@
 
     if-eqz v31, :cond_6
 
-    .line 240
     :cond_5
     return-void
 
-    .line 125
     .end local v4    # "a":I
     :cond_6
     new-instance v17, Landroid/content/Intent;
@@ -345,7 +319,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 126
     .local v17, "intent":Landroid/content/Intent;
     const-string/jumbo v31, "new_dialog"
 
@@ -355,12 +328,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 127
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 128
     .local v5, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/content/pm/ShortcutInfo;>;"
     new-instance v31, Landroid/content/pm/ShortcutInfo$Builder;
 
@@ -374,7 +345,6 @@
 
     const v33, 0x7f0703bf
 
-    .line 129
     invoke-static/range {v32 .. v33}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v32
@@ -387,7 +357,6 @@
 
     const v33, 0x7f0703bf
 
-    .line 130
     invoke-static/range {v32 .. v33}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v32
@@ -400,7 +369,6 @@
 
     const v33, 0x7f02024b
 
-    .line 131
     invoke-static/range {v32 .. v33}, Landroid/graphics/drawable/Icon;->createWithResource(Landroid/content/Context;I)Landroid/graphics/drawable/Icon;
 
     move-result-object v32
@@ -409,7 +377,6 @@
 
     move-result-object v31
 
-    .line 132
     move-object/from16 v0, v31
 
     move-object/from16 v1, v17
@@ -418,17 +385,14 @@
 
     move-result-object v31
 
-    .line 133
     invoke-virtual/range {v31 .. v31}, Landroid/content/pm/ShortcutInfo$Builder;->build()Landroid/content/pm/ShortcutInfo;
 
     move-result-object v31
 
-    .line 128
     move-object/from16 v0, v31
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 134
     const-string/jumbo v31, "compose"
 
     move-object/from16 v0, v28
@@ -441,26 +405,21 @@
 
     if-eqz v31, :cond_8
 
-    .line 135
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v5}, Landroid/content/pm/ShortcutManager;->updateShortcuts(Ljava/util/List;)Z
 
-    .line 139
     :goto_3
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 141
     invoke-virtual/range {v27 .. v27}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v31
 
     if-nez v31, :cond_7
 
-    .line 142
     invoke-virtual/range {v26 .. v27}, Landroid/content/pm/ShortcutManager;->removeDynamicShortcuts(Ljava/util/List;)V
 
-    .line 145
     :cond_7
     const/4 v4, 0x0
 
@@ -480,7 +439,6 @@
 
     if-ge v4, v0, :cond_5
 
-    .line 146
     new-instance v25, Landroid/content/Intent;
 
     sget-object v31, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -495,7 +453,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 147
     .local v25, "shortcutIntent":Landroid/content/Intent;
     move-object/from16 v0, p0
 
@@ -511,15 +468,12 @@
 
     check-cast v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
-    .line 149
     .restart local v15    # "hint":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     const/16 v30, 0x0
 
-    .line 150
     .local v30, "user":Lorg/telegram/tgnet/TLRPC$User;
     const/4 v9, 0x0
 
-    .line 152
     .local v9, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -533,7 +487,6 @@
 
     if-eqz v31, :cond_9
 
-    .line 153
     const-string/jumbo v31, "userId"
 
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -554,7 +507,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 154
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v31
@@ -577,7 +529,6 @@
 
     move-result-object v30
 
-    .line 155
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v31, v0
@@ -592,20 +543,17 @@
 
     int-to-long v12, v0
 
-    .line 165
     .restart local v12    # "did":J
     :goto_5
     if-nez v30, :cond_b
 
     if-nez v9, :cond_b
 
-    .line 145
     :goto_6
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_4
 
-    .line 137
     .end local v4    # "a":I
     .end local v9    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v12    # "did":J
@@ -619,7 +567,6 @@
 
     goto/16 :goto_3
 
-    .line 157
     .restart local v4    # "a":I
     .restart local v9    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .restart local v15    # "hint":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
@@ -634,11 +581,9 @@
 
     iget v10, v0, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:I
 
-    .line 158
     .local v10, "chat_id":I
     if-nez v10, :cond_a
 
-    .line 159
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v31, v0
@@ -647,7 +592,6 @@
 
     iget v10, v0, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:I
 
-    .line 161
     :cond_a
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -661,7 +605,6 @@
 
     move-result-object v9
 
-    .line 162
     const-string/jumbo v31, "chatId"
 
     move-object/from16 v0, v25
@@ -670,7 +613,6 @@
 
     invoke-virtual {v0, v1, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 163
     neg-int v0, v10
 
     move/from16 v31, v0
@@ -682,16 +624,13 @@
     .restart local v12    # "did":J
     goto :goto_5
 
-    .line 170
     .end local v10    # "chat_id":I
     :cond_b
     const/16 v21, 0x0
 
-    .line 172
     .local v21, "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     if-eqz v30, :cond_10
 
-    .line 173
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -708,7 +647,6 @@
 
     move-result-object v18
 
-    .line 174
     .local v18, "name":Ljava/lang/String;
     move-object/from16 v0, v30
 
@@ -718,7 +656,6 @@
 
     if-eqz v31, :cond_c
 
-    .line 175
     move-object/from16 v0, v30
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
@@ -731,7 +668,6 @@
 
     move-object/from16 v21, v0
 
-    .line 184
     :cond_c
     :goto_7
     new-instance v31, Ljava/lang/StringBuilder;
@@ -760,7 +696,6 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 185
     const/high16 v31, 0x4000000
 
     move-object/from16 v0, v25
@@ -769,14 +704,11 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 187
     const/4 v6, 0x0
 
-    .line 188
     .local v6, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v21, :cond_e
 
-    .line 190
     const/16 v31, 0x1
 
     :try_start_0
@@ -788,7 +720,6 @@
 
     move-result-object v20
 
-    .line 191
     .local v20, "path":Ljava/io/File;
     invoke-virtual/range {v20 .. v20}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -798,17 +729,14 @@
 
     move-result-object v6
 
-    .line 192
     if-eqz v6, :cond_e
 
-    .line 193
     const/high16 v31, 0x42400000    # 48.0f
 
     invoke-static/range {v31 .. v31}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v29
 
-    .line 194
     .local v29, "size":I
     sget-object v31, Landroid/graphics/Bitmap$Config;->ARGB_8888:Landroid/graphics/Bitmap$Config;
 
@@ -822,7 +750,6 @@
 
     move-result-object v22
 
-    .line 195
     .local v22, "result":Landroid/graphics/Bitmap;
     const/16 v31, 0x0
 
@@ -832,14 +759,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 196
     new-instance v8, Landroid/graphics/Canvas;
 
     move-object/from16 v0, v22
 
     invoke-direct {v8, v0}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 197
     .local v8, "canvas":Landroid/graphics/Canvas;
     new-instance v24, Landroid/graphics/BitmapShader;
 
@@ -855,7 +780,6 @@
 
     invoke-direct {v0, v6, v1, v2}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    .line 198
     .local v24, "shader":Landroid/graphics/BitmapShader;
     invoke-static {}, Lorg/telegram/messenger/query/SearchQuery;->access$000()Landroid/graphics/Paint;
 
@@ -863,7 +787,6 @@
 
     if-nez v31, :cond_d
 
-    .line 199
     new-instance v31, Landroid/graphics/Paint;
 
     const/16 v32, 0x1
@@ -872,14 +795,12 @@
 
     invoke-static/range {v31 .. v31}, Lorg/telegram/messenger/query/SearchQuery;->access$002(Landroid/graphics/Paint;)Landroid/graphics/Paint;
 
-    .line 200
     new-instance v31, Landroid/graphics/RectF;
 
     invoke-direct/range {v31 .. v31}, Landroid/graphics/RectF;-><init>()V
 
     invoke-static/range {v31 .. v31}, Lorg/telegram/messenger/query/SearchQuery;->access$102(Landroid/graphics/RectF;)Landroid/graphics/RectF;
 
-    .line 202
     :cond_d
     move/from16 v0, v29
 
@@ -899,7 +820,6 @@
 
     div-float v23, v31, v32
 
-    .line 203
     .local v23, "scale":F
     move/from16 v0, v23
 
@@ -907,7 +827,6 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 204
     invoke-static {}, Lorg/telegram/messenger/query/SearchQuery;->access$000()Landroid/graphics/Paint;
 
     move-result-object v31
@@ -918,7 +837,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 205
     invoke-static {}, Lorg/telegram/messenger/query/SearchQuery;->access$100()Landroid/graphics/RectF;
 
     move-result-object v31
@@ -973,7 +891,6 @@
 
     invoke-virtual/range {v31 .. v35}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 206
     invoke-static {}, Lorg/telegram/messenger/query/SearchQuery;->access$100()Landroid/graphics/RectF;
 
     move-result-object v31
@@ -1014,7 +931,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 208
     const/16 v31, 0x0
 
     :try_start_1
@@ -1025,11 +941,9 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 212
     :goto_8
     move-object/from16 v6, v22
 
-    .line 219
     .end local v8    # "canvas":Landroid/graphics/Canvas;
     .end local v20    # "path":Ljava/io/File;
     .end local v22    # "result":Landroid/graphics/Bitmap;
@@ -1058,7 +972,6 @@
 
     move-result-object v16
 
-    .line 220
     .restart local v16    # "id":Ljava/lang/String;
     invoke-static/range {v18 .. v18}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1066,10 +979,8 @@
 
     if-eqz v31, :cond_f
 
-    .line 221
     const-string/jumbo v18, " "
 
-    .line 223
     :cond_f
     new-instance v31, Landroid/content/pm/ShortcutInfo$Builder;
 
@@ -1083,7 +994,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/pm/ShortcutInfo$Builder;-><init>(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 224
     move-object/from16 v0, v31
 
     move-object/from16 v1, v18
@@ -1092,7 +1002,6 @@
 
     move-result-object v31
 
-    .line 225
     move-object/from16 v0, v31
 
     move-object/from16 v1, v18
@@ -1101,7 +1010,6 @@
 
     move-result-object v31
 
-    .line 226
     move-object/from16 v0, v31
 
     move-object/from16 v1, v25
@@ -1110,11 +1018,9 @@
 
     move-result-object v7
 
-    .line 227
     .local v7, "builder":Landroid/content/pm/ShortcutInfo$Builder;
     if-eqz v6, :cond_11
 
-    .line 228
     invoke-static {v6}, Landroid/graphics/drawable/Icon;->createWithBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Icon;
 
     move-result-object v31
@@ -1123,7 +1029,6 @@
 
     invoke-virtual {v7, v0}, Landroid/content/pm/ShortcutInfo$Builder;->setIcon(Landroid/graphics/drawable/Icon;)Landroid/content/pm/ShortcutInfo$Builder;
 
-    .line 232
     :goto_a
     invoke-virtual {v7}, Landroid/content/pm/ShortcutInfo$Builder;->build()Landroid/content/pm/ShortcutInfo;
 
@@ -1133,7 +1038,6 @@
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 233
     move-object/from16 v0, v28
 
     move-object/from16 v1, v16
@@ -1144,18 +1048,15 @@
 
     if-eqz v31, :cond_12
 
-    .line 234
     move-object/from16 v0, v26
 
     invoke-virtual {v0, v5}, Landroid/content/pm/ShortcutManager;->updateShortcuts(Ljava/util/List;)Z
 
-    .line 238
     :goto_b
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
     goto/16 :goto_6
 
-    .line 178
     .end local v6    # "bitmap":Landroid/graphics/Bitmap;
     .end local v7    # "builder":Landroid/content/pm/ShortcutInfo$Builder;
     .end local v16    # "id":Ljava/lang/String;
@@ -1165,7 +1066,6 @@
 
     move-object/from16 v18, v0
 
-    .line 179
     .restart local v18    # "name":Ljava/lang/String;
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
@@ -1173,7 +1073,6 @@
 
     if-eqz v31, :cond_c
 
-    .line 180
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
     move-object/from16 v31, v0
@@ -1186,18 +1085,15 @@
 
     goto/16 :goto_7
 
-    .line 214
     .restart local v6    # "bitmap":Landroid/graphics/Bitmap;
     :catch_0
     move-exception v14
 
-    .line 215
     .local v14, "e":Ljava/lang/Throwable;
     invoke-static {v14}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_9
 
-    .line 230
     .end local v14    # "e":Ljava/lang/Throwable;
     .restart local v7    # "builder":Landroid/content/pm/ShortcutInfo$Builder;
     .restart local v16    # "id":Ljava/lang/String;
@@ -1216,7 +1112,6 @@
 
     goto :goto_a
 
-    .line 236
     :cond_12
     move-object/from16 v0, v26
 
@@ -1224,7 +1119,6 @@
 
     goto :goto_b
 
-    .line 209
     .end local v7    # "builder":Landroid/content/pm/ShortcutInfo$Builder;
     .end local v16    # "id":Ljava/lang/String;
     .restart local v8    # "canvas":Landroid/graphics/Canvas;

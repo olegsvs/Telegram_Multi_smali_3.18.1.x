@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 7355
     const v0, 0x200250ba
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 7354
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$User;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 7359
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;->id:I
 
-    .line 7360
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 7363
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7364
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7365
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1866
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$17;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,13 +38,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1869
     new-instance v0, Lorg/telegram/ui/ArticleViewer$17$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ArticleViewer$17$1;-><init>(Lorg/telegram/ui/ArticleViewer$17;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1879
     return-void
 .end method

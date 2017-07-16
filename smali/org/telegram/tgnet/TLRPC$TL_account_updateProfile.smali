@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 20622
     const v0, 0x78515775
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->constructor:I
@@ -45,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 20621
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20630
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$User;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v0
@@ -73,29 +70,24 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20634
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20635
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20636
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 20637
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->first_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 20639
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
@@ -103,12 +95,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 20640
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->last_name:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 20642
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->flags:I
 
@@ -116,12 +106,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 20643
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateProfile;->about:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 20645
     :cond_2
     return-void
 .end method

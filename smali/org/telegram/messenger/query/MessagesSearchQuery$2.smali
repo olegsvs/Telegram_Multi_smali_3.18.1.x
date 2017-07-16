@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iput p1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2;->val$currentReqId:I
 
     iput-object p2, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_search;
@@ -62,13 +61,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 170
     new-instance v0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;-><init>(Lorg/telegram/messenger/query/MessagesSearchQuery$2;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 211
     return-void
 .end method

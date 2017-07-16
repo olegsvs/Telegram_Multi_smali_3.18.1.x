@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 19401
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -38,20 +37,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19406
     const/4 v0, 0x0
 
-    .line 19407
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputPhoto;
     sparse-switch p1, :sswitch_data_0
 
-    .line 19415
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 19416
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputPhoto"
@@ -76,18 +71,15 @@
 
     throw v1
 
-    .line 19409
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhotoEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPhoto;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPhotoEmpty;-><init>()V
 
-    .line 19410
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPhoto;
     goto :goto_0
 
-    .line 19412
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;
 
@@ -97,18 +89,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPhoto;
     goto :goto_0
 
-    .line 19418
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 19419
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputPhoto;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 19421
     :cond_1
     return-object v0
 
-    .line 19407
     nop
 
     :sswitch_data_0

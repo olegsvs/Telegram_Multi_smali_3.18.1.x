@@ -15,17 +15,14 @@
     .prologue
     const/4 v2, -0x2
 
-    .line 24
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 26
     new-instance v0, Lorg/telegram/ui/Components/RadialProgressView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/RadialProgressView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/LoadingCell;->progressBar:Lorg/telegram/ui/Components/RadialProgressView;
 
-    .line 27
     iget-object v0, p0, Lorg/telegram/ui/Cells/LoadingCell;->progressBar:Lorg/telegram/ui/Components/RadialProgressView;
 
     const/16 v1, 0x11
@@ -36,7 +33,6 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Cells/LoadingCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 28
     return-void
 .end method
 
@@ -50,7 +46,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 32
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -71,6 +66,5 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 33
     return-void
 .end method

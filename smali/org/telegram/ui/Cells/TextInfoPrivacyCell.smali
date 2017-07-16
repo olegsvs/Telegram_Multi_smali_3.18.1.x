@@ -23,17 +23,14 @@
 
     const/high16 v3, 0x41880000    # 17.0f
 
-    .line 35
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 37
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
-    .line 38
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText4"
@@ -44,7 +41,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteLinkText"
@@ -55,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    .line 40
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 41
     iget-object v1, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -76,7 +70,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 42
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41200000    # 10.0f
@@ -91,7 +84,6 @@
 
     invoke-virtual {v0, v7, v1, v7, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 43
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     invoke-static {}, Landroid/text/method/LinkMovementMethod;->getInstance()Landroid/text/method/MovementMethod;
@@ -100,7 +92,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 44
     iget-object v7, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -124,19 +115,16 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 45
     return-void
 
     :cond_0
     move v0, v5
 
-    .line 41
     goto :goto_0
 
     :cond_1
     move v2, v5
 
-    .line 44
     goto :goto_1
 .end method
 
@@ -144,14 +132,11 @@
     .locals 4
 
     .prologue
-    .line 67
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->prefSummaryColor:I
 
-    .line 68
     .local v1, "summaryColor":I
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->prefShadowColor:I
 
-    .line 69
     .local v0, "shadowColor":I
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->getTag()Ljava/lang/Object;
 
@@ -167,7 +152,6 @@
 
     move-result-object v2
 
-    .line 70
     .local v2, "tag":Ljava/lang/String;
     :goto_0
     const-string/jumbo v3, "Profile"
@@ -178,38 +162,31 @@
 
     if-eqz v3, :cond_1
 
-    .line 71
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->profileRowStatusColor:I
 
-    .line 79
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v3, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 80
     return-void
 
-    .line 69
     .end local v2    # "tag":Ljava/lang/String;
     :cond_0
     const-string/jumbo v2, ""
 
     goto :goto_0
 
-    .line 73
     .restart local v2    # "tag":Ljava/lang/String;
     :cond_1
     const v3, -0xf0f10
 
     if-eq v0, v3, :cond_2
 
-    .line 74
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBackgroundColor(I)V
 
     goto :goto_1
 
-    .line 76
     :cond_2
     const v3, 0x7f0200ae
 
@@ -224,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     return-object v0
@@ -238,7 +214,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 49
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -255,14 +230,12 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 50
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v0, :cond_0
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTheme()V
 
-    .line 51
     :cond_0
     return-void
 .end method
@@ -286,10 +259,8 @@
 
     const/high16 v1, 0x3f000000    # 0.5f
 
-    .line 91
     if-eqz p2, :cond_1
 
-    .line 92
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v3, "alpha"
@@ -311,17 +282,14 @@
 
     invoke-virtual {p2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 96
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 92
     goto :goto_0
 
-    .line 94
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
@@ -345,10 +313,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 54
     if-nez p1, :cond_0
 
-    .line 55
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -359,16 +325,13 @@
 
     invoke-virtual {v0, v3, v1, v3, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 59
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 60
     return-void
 
-    .line 57
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
@@ -394,12 +357,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 84
     return-void
 .end method
 
@@ -408,7 +369,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -417,6 +377,5 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 64
     return-void
 .end method

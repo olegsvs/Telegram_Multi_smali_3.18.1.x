@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 3171
     iput p1, p0, Lorg/telegram/messenger/MediaController$23;->val$guid:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,32 +39,26 @@
     .locals 38
 
     .prologue
-    .line 3174
     new-instance v21, Ljava/util/ArrayList;
 
     invoke-direct/range {v21 .. v21}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3175
     .local v21, "albumsSorted":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$AlbumEntry;>;"
     new-instance v37, Ljava/util/ArrayList;
 
     invoke-direct/range {v37 .. v37}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3176
     .local v37, "videoAlbumsSorted":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$AlbumEntry;>;"
     new-instance v20, Ljava/util/HashMap;
 
     invoke-direct/range {v20 .. v20}, Ljava/util/HashMap;-><init>()V
 
-    .line 3177
     .local v20, "albums":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/messenger/MediaController$AlbumEntry;>;"
     const/16 v22, 0x0
 
-    .line 3178
     .local v22, "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     const/16 v30, 0x0
 
-    .line 3180
     .local v30, "cameraFolder":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/lang/StringBuilder;
@@ -104,19 +97,15 @@
 
     move-result-object v30
 
-    .line 3184
     :goto_0
     const/16 v28, 0x0
 
-    .line 3185
     .local v28, "cameraAlbumId":Ljava/lang/Integer;
     const/16 v29, 0x0
 
-    .line 3187
     .local v29, "cameraAlbumVideoId":Ljava/lang/Integer;
     const/16 v31, 0x0
 
-    .line 3189
     .local v31, "cursor":Landroid/database/Cursor;
     :try_start_1
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
@@ -141,7 +130,6 @@
 
     if-nez v2, :cond_c
 
-    .line 3190
     :cond_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -165,10 +153,8 @@
 
     move-result-object v31
 
-    .line 3191
     if-eqz v31, :cond_c
 
-    .line 3192
     const-string/jumbo v2, "_id"
 
     move-object/from16 v0, v31
@@ -177,7 +163,6 @@
 
     move-result v35
 
-    .line 3193
     .local v35, "imageIdColumn":I
     const-string/jumbo v2, "bucket_id"
 
@@ -187,7 +172,6 @@
 
     move-result v25
 
-    .line 3194
     .local v25, "bucketIdColumn":I
     const-string/jumbo v2, "bucket_display_name"
 
@@ -197,7 +181,6 @@
 
     move-result v27
 
-    .line 3195
     .local v27, "bucketNameColumn":I
     const-string/jumbo v2, "_data"
 
@@ -207,7 +190,6 @@
 
     move-result v32
 
-    .line 3196
     .local v32, "dataColumn":I
     const-string/jumbo v2, "datetaken"
 
@@ -217,7 +199,6 @@
 
     move-result v33
 
-    .line 3197
     .local v33, "dateColumn":I
     const-string/jumbo v2, "orientation"
 
@@ -233,7 +214,6 @@
     .local v36, "orientationColumn":I
     move-object/from16 v23, v22
 
-    .line 3199
     .end local v22    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     .local v23, "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     :cond_1
@@ -245,7 +225,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 3200
     move-object/from16 v0, v31
 
     move/from16 v1, v35
@@ -254,7 +233,6 @@
 
     move-result v5
 
-    .line 3201
     .local v5, "imageId":I
     move-object/from16 v0, v31
 
@@ -264,7 +242,6 @@
 
     move-result v4
 
-    .line 3202
     .local v4, "bucketId":I
     move-object/from16 v0, v31
 
@@ -274,13 +251,11 @@
 
     move-result-object v26
 
-    .line 3203
     .local v26, "bucketName":Ljava/lang/String;
     invoke-interface/range {v31 .. v32}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 3204
     .local v8, "path":Ljava/lang/String;
     move-object/from16 v0, v31
 
@@ -290,7 +265,6 @@
 
     move-result-wide v6
 
-    .line 3205
     .local v6, "dateTaken":J
     move-object/from16 v0, v31
 
@@ -300,7 +274,6 @@
 
     move-result v9
 
-    .line 3207
     .local v9, "orientation":I
     if-eqz v8, :cond_1
 
@@ -332,7 +305,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3211
     :cond_2
     new-instance v3, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
@@ -340,11 +312,9 @@
 
     invoke-direct/range {v3 .. v10}, Lorg/telegram/messenger/MediaController$PhotoEntry;-><init>(IIJLjava/lang/String;IZ)V
 
-    .line 3213
     .local v3, "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     if-nez v23, :cond_13
 
-    .line 3214
     new-instance v22, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     const/4 v2, 0x0
@@ -366,7 +336,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_a
     .catchall {:try_start_2 .. :try_end_2} :catchall_3
 
-    .line 3215
     .end local v23    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     .restart local v22    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     const/4 v2, 0x0
@@ -378,16 +347,13 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 3217
     :goto_2
     if-eqz v22, :cond_3
 
-    .line 3218
     move-object/from16 v0, v22
 
     invoke-virtual {v0, v3}, Lorg/telegram/messenger/MediaController$AlbumEntry;->addPhoto(Lorg/telegram/messenger/MediaController$PhotoEntry;)V
 
-    .line 3221
     :cond_3
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -401,11 +367,9 @@
 
     check-cast v19, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
-    .line 3222
     .local v19, "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     if-nez v19, :cond_4
 
-    .line 3223
     new-instance v19, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     .end local v19    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
@@ -417,7 +381,6 @@
 
     invoke-direct {v0, v4, v1, v3, v2}, Lorg/telegram/messenger/MediaController$AlbumEntry;-><init>(ILjava/lang/String;Lorg/telegram/messenger/MediaController$PhotoEntry;Z)V
 
-    .line 3224
     .restart local v19    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -429,7 +392,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3225
     if-nez v28, :cond_5
 
     if-eqz v30, :cond_5
@@ -444,7 +406,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 3226
     const/4 v2, 0x0
 
     move-object/from16 v0, v21
@@ -453,12 +414,10 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 3227
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v28
 
-    .line 3233
     :cond_4
     :goto_3
     move-object/from16 v0, v19
@@ -470,12 +429,10 @@
 
     move-object/from16 v23, v22
 
-    .line 3234
     .end local v22    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     .restart local v23    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     goto/16 :goto_1
 
-    .line 3181
     .end local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .end local v4    # "bucketId":I
     .end local v5    # "imageId":I
@@ -498,13 +455,11 @@
     :catch_0
     move-exception v34
 
-    .line 3182
     .local v34, "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 3229
     .end local v34    # "e":Ljava/lang/Exception;
     .restart local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .restart local v4    # "bucketId":I
@@ -536,7 +491,6 @@
 
     goto :goto_3
 
-    .line 3237
     .end local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .end local v4    # "bucketId":I
     .end local v5    # "imageId":I
@@ -554,7 +508,6 @@
     :catch_1
     move-exception v34
 
-    .line 3238
     .local v34, "e":Ljava/lang/Throwable;
     :goto_4
     :try_start_5
@@ -562,16 +515,13 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 3240
     if-eqz v31, :cond_6
 
-    .line 3242
     :try_start_6
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 3250
     .end local v34    # "e":Ljava/lang/Throwable;
     :cond_6
     :goto_5
@@ -598,14 +548,11 @@
 
     if-nez v2, :cond_10
 
-    .line 3251
     :cond_7
     invoke-virtual/range {v20 .. v20}, Ljava/util/HashMap;->clear()V
 
-    .line 3252
     const/16 v24, 0x0
 
-    .line 3253
     .local v24, "allVideosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -629,10 +576,8 @@
 
     move-result-object v31
 
-    .line 3254
     if-eqz v31, :cond_10
 
-    .line 3255
     const-string/jumbo v2, "_id"
 
     move-object/from16 v0, v31
@@ -641,7 +586,6 @@
 
     move-result v35
 
-    .line 3256
     .restart local v35    # "imageIdColumn":I
     const-string/jumbo v2, "bucket_id"
 
@@ -651,7 +595,6 @@
 
     move-result v25
 
-    .line 3257
     .restart local v25    # "bucketIdColumn":I
     const-string/jumbo v2, "bucket_display_name"
 
@@ -661,7 +604,6 @@
 
     move-result v27
 
-    .line 3258
     .restart local v27    # "bucketNameColumn":I
     const-string/jumbo v2, "_data"
 
@@ -671,7 +613,6 @@
 
     move-result v32
 
-    .line 3259
     .restart local v32    # "dataColumn":I
     const-string/jumbo v2, "datetaken"
 
@@ -681,7 +622,6 @@
 
     move-result v33
 
-    .line 3261
     .restart local v33    # "dateColumn":I
     :cond_8
     :goto_6
@@ -691,7 +631,6 @@
 
     if-eqz v2, :cond_10
 
-    .line 3262
     move-object/from16 v0, v31
 
     move/from16 v1, v35
@@ -700,7 +639,6 @@
 
     move-result v5
 
-    .line 3263
     .restart local v5    # "imageId":I
     move-object/from16 v0, v31
 
@@ -710,7 +648,6 @@
 
     move-result v4
 
-    .line 3264
     .restart local v4    # "bucketId":I
     move-object/from16 v0, v31
 
@@ -720,13 +657,11 @@
 
     move-result-object v26
 
-    .line 3265
     .restart local v26    # "bucketName":Ljava/lang/String;
     invoke-interface/range {v31 .. v32}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
 
     move-result-object v8
 
-    .line 3266
     .restart local v8    # "path":Ljava/lang/String;
     move-object/from16 v0, v31
 
@@ -736,7 +671,6 @@
 
     move-result-wide v6
 
-    .line 3268
     .restart local v6    # "dateTaken":J
     if-eqz v8, :cond_8
 
@@ -746,7 +680,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 3272
     new-instance v3, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
     const/16 v17, 0x0
@@ -765,11 +698,9 @@
 
     invoke-direct/range {v11 .. v18}, Lorg/telegram/messenger/MediaController$PhotoEntry;-><init>(IIJLjava/lang/String;IZ)V
 
-    .line 3274
     .restart local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     if-nez v24, :cond_9
 
-    .line 3275
     new-instance v24, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     .end local v24    # "allVideosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
@@ -789,7 +720,6 @@
 
     invoke-direct {v0, v2, v10, v3, v11}, Lorg/telegram/messenger/MediaController$AlbumEntry;-><init>(ILjava/lang/String;Lorg/telegram/messenger/MediaController$PhotoEntry;Z)V
 
-    .line 3276
     .restart local v24    # "allVideosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     const/4 v2, 0x0
 
@@ -799,16 +729,13 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 3278
     :cond_9
     if-eqz v24, :cond_a
 
-    .line 3279
     move-object/from16 v0, v24
 
     invoke-virtual {v0, v3}, Lorg/telegram/messenger/MediaController$AlbumEntry;->addPhoto(Lorg/telegram/messenger/MediaController$PhotoEntry;)V
 
-    .line 3282
     :cond_a
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -822,11 +749,9 @@
 
     check-cast v19, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
-    .line 3283
     .restart local v19    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     if-nez v19, :cond_f
 
-    .line 3284
     new-instance v19, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     .end local v19    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
@@ -838,7 +763,6 @@
 
     invoke-direct {v0, v4, v1, v3, v2}, Lorg/telegram/messenger/MediaController$AlbumEntry;-><init>(ILjava/lang/String;Lorg/telegram/messenger/MediaController$PhotoEntry;Z)V
 
-    .line 3285
     .restart local v19    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -850,7 +774,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3286
     if-nez v29, :cond_e
 
     if-eqz v30, :cond_e
@@ -865,7 +788,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 3287
     const/4 v2, 0x0
 
     move-object/from16 v0, v37
@@ -874,7 +796,6 @@
 
     invoke-virtual {v0, v2, v1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 3288
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
     :try_end_7
     .catch Ljava/lang/Throwable; {:try_start_7 .. :try_end_7} :catch_6
@@ -882,7 +803,6 @@
 
     move-result-object v14
 
-    .line 3294
     .end local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .local v14, "cameraAlbumVideoId":Ljava/lang/Integer;
     :goto_7
@@ -896,7 +816,6 @@
 
     move-object/from16 v29, v14
 
-    .line 3295
     .end local v14    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .restart local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
     goto/16 :goto_6
@@ -915,7 +834,6 @@
     :cond_b
     move-object/from16 v22, v23
 
-    .line 3240
     .end local v23    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     .end local v25    # "bucketIdColumn":I
     .end local v27    # "bucketNameColumn":I
@@ -927,7 +845,6 @@
     :cond_c
     if-eqz v31, :cond_6
 
-    .line 3242
     :try_start_9
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_9
@@ -935,28 +852,23 @@
 
     goto/16 :goto_5
 
-    .line 3243
     :catch_2
     move-exception v34
 
-    .line 3244
     .local v34, "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 3243
     .local v34, "e":Ljava/lang/Throwable;
     :catch_3
     move-exception v34
 
-    .line 3244
     .local v34, "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 3240
     .end local v34    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -964,28 +876,23 @@
     :goto_8
     if-eqz v31, :cond_d
 
-    .line 3242
     :try_start_a
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 3245
     :cond_d
     :goto_9
     throw v2
 
-    .line 3243
     :catch_4
     move-exception v34
 
-    .line 3244
     .restart local v34    # "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_9
 
-    .line 3290
     .end local v34    # "e":Ljava/lang/Exception;
     .restart local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .restart local v4    # "bucketId":I
@@ -1036,18 +943,15 @@
     :cond_10
     move-object/from16 v14, v29
 
-    .line 3301
     .end local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .restart local v14    # "cameraAlbumVideoId":Ljava/lang/Integer;
     if-eqz v31, :cond_11
 
-    .line 3303
     :try_start_c
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_c
     .catch Ljava/lang/Exception; {:try_start_c .. :try_end_c} :catch_5
 
-    .line 3309
     :cond_11
     :goto_a
     move-object/from16 v0, p0
@@ -1066,20 +970,16 @@
 
     invoke-static/range {v10 .. v16}, Lorg/telegram/messenger/MediaController;->access$6000(ILjava/util/ArrayList;Ljava/lang/Integer;Ljava/util/ArrayList;Ljava/lang/Integer;Lorg/telegram/messenger/MediaController$AlbumEntry;I)V
 
-    .line 3310
     return-void
 
-    .line 3304
     :catch_5
     move-exception v34
 
-    .line 3305
     .restart local v34    # "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_a
 
-    .line 3298
     .end local v14    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .end local v34    # "e":Ljava/lang/Exception;
     .restart local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
@@ -1088,7 +988,6 @@
 
     move-object/from16 v14, v29
 
-    .line 3299
     .end local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .restart local v14    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .local v34, "e":Ljava/lang/Throwable;
@@ -1098,10 +997,8 @@
     :try_end_d
     .catchall {:try_start_d .. :try_end_d} :catchall_2
 
-    .line 3301
     if-eqz v31, :cond_11
 
-    .line 3303
     :try_start_e
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_e
@@ -1109,17 +1006,14 @@
 
     goto :goto_a
 
-    .line 3304
     :catch_7
     move-exception v34
 
-    .line 3305
     .local v34, "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_a
 
-    .line 3301
     .end local v14    # "cameraAlbumVideoId":Ljava/lang/Integer;
     .end local v34    # "e":Ljava/lang/Exception;
     .restart local v29    # "cameraAlbumVideoId":Ljava/lang/Integer;
@@ -1133,35 +1027,29 @@
     :goto_c
     if-eqz v31, :cond_12
 
-    .line 3303
     :try_start_f
     invoke-interface/range {v31 .. v31}, Landroid/database/Cursor;->close()V
     :try_end_f
     .catch Ljava/lang/Exception; {:try_start_f .. :try_end_f} :catch_8
 
-    .line 3306
     :cond_12
     :goto_d
     throw v2
 
-    .line 3304
     :catch_8
     move-exception v34
 
-    .line 3305
     .restart local v34    # "e":Ljava/lang/Exception;
     invoke-static/range {v34 .. v34}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_d
 
-    .line 3301
     .end local v34    # "e":Ljava/lang/Exception;
     :catchall_2
     move-exception v2
 
     goto :goto_c
 
-    .line 3298
     .restart local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .restart local v4    # "bucketId":I
     .restart local v5    # "imageId":I
@@ -1180,7 +1068,6 @@
 
     goto :goto_b
 
-    .line 3240
     .end local v3    # "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     .end local v4    # "bucketId":I
     .end local v5    # "imageId":I
@@ -1203,7 +1090,6 @@
     .restart local v22    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     goto :goto_8
 
-    .line 3237
     .end local v22    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     .restart local v23    # "allPhotosAlbum":Lorg/telegram/messenger/MediaController$AlbumEntry;
     :catch_a

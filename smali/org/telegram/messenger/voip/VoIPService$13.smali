@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 875
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$13;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 878
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$13;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v0}, Lorg/telegram/messenger/voip/VoIPService;->access$2400(Lorg/telegram/messenger/voip/VoIPService;)Landroid/media/SoundPool;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0}, Landroid/media/SoundPool;->release()V
 
-    .line 879
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$13;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v0}, Lorg/telegram/messenger/voip/VoIPService;->access$2500(Lorg/telegram/messenger/voip/VoIPService;)Z
@@ -59,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 880
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "audio"
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0}, Landroid/media/AudioManager;->stopBluetoothSco()V
 
-    .line 881
     :cond_0
     return-void
 .end method

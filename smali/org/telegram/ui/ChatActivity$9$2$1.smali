@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChatActivity$9$2;
 
     .prologue
-    .line 1112
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$9$2$1;->this$2:Lorg/telegram/ui/ChatActivity$9$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,24 +42,19 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1115
     if-eqz p1, :cond_0
 
-    .line 1119
     :cond_0
     if-eqz p2, :cond_1
 
-    .line 1136
     :goto_0
     return-void
 
     :cond_1
     move-object v0, p1
 
-    .line 1124
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 1125
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -70,7 +64,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 1126
     new-instance v1, Lorg/telegram/ui/ChatActivity$9$2$1$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/ChatActivity$9$2$1$1;-><init>(Lorg/telegram/ui/ChatActivity$9$2$1;)V

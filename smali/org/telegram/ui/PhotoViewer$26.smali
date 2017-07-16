@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 2103
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$26;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 2106
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$26;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9100(Lorg/telegram/ui/PhotoViewer;)I
@@ -53,7 +51,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2107
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$26;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$9200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoCropView;
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PhotoCropView;->cancelAnimationRunnable()V
 
-    .line 2109
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$26;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -70,6 +66,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$9000(Lorg/telegram/ui/PhotoViewer;I)V
 
-    .line 2110
     return-void
 .end method

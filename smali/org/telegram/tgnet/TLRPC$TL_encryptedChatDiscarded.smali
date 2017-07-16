@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 14589
     const v0, 0x13d6dd27
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 14588
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$EncryptedChat;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 14593
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;->id:I
 
-    .line 14594
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 14597
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14598
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14599
     return-void
 .end method

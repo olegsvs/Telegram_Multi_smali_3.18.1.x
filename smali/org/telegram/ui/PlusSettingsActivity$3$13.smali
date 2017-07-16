@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 1159
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->val$userInput:Landroid/widget/EditText;
@@ -49,7 +48,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1162
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -60,11 +58,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 1183
     :goto_0
     return-void
 
-    .line 1165
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->val$userInput:Landroid/widget/EditText;
 
@@ -76,7 +72,6 @@
 
     move-result-object v0
 
-    .line 1166
     .local v0, "pName":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -84,7 +79,6 @@
 
     if-ge v1, v2, :cond_1
 
-    .line 1167
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -111,7 +105,6 @@
 
     goto :goto_0
 
-    .line 1170
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
@@ -119,7 +112,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/PlusSettingsActivity;->access$6702(Lorg/telegram/ui/PlusSettingsActivity;Z)Z
 
-    .line 1171
     new-instance v1, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;-><init>(Lorg/telegram/ui/PlusSettingsActivity$3$13;Ljava/lang/String;)V

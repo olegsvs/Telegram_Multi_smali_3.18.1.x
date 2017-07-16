@@ -33,12 +33,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 885
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;-><init>(Landroid/content/Context;)V
 
-    .line 890
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/EmojiView$18;->first:Z
@@ -53,14 +51,12 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 894
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$18;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 895
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$18;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -69,7 +65,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 897
     :cond_0
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -89,22 +84,18 @@
 
     const/4 v3, 0x0
 
-    .line 902
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->first:Z
 
     if-eqz v5, :cond_0
 
-    .line 903
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EmojiView$18;->first:Z
 
-    .line 904
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v5
 
     iput v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->lastX:F
 
-    .line 906
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -116,7 +107,6 @@
 
     move-result v2
 
-    .line 907
     .local v2, "newTranslationX":F
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -134,7 +124,6 @@
 
     if-nez v5, :cond_1
 
-    .line 908
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
     if-nez v5, :cond_7
@@ -151,7 +140,6 @@
 
     if-gez v5, :cond_7
 
-    .line 909
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView;->access$1600(Lorg/telegram/ui/Components/EmojiView;)Landroid/support/v4/view/ViewPager;
@@ -164,10 +152,8 @@
 
     if-eqz v5, :cond_1
 
-    .line 910
     iput-boolean v4, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
-    .line 911
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView;->access$4300(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
@@ -180,14 +166,12 @@
 
     iput v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->lastTranslateX:F
 
-    .line 920
     :cond_1
     :goto_0
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
     if-eqz v5, :cond_2
 
-    .line 921
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v5
@@ -204,7 +188,6 @@
 
     float-to-int v0, v5
 
-    .line 923
     .local v0, "dx":I
     :try_start_0
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -217,12 +200,10 @@
 
     invoke-virtual {v5, v6}, Landroid/support/v4/view/ViewPager;->fakeDragBy(F)V
 
-    .line 924
     iput v2, p0, Lorg/telegram/ui/Components/EmojiView$18;->lastTranslateX:F
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 935
     .end local v0    # "dx":I
     :cond_2
     :goto_1
@@ -232,7 +213,6 @@
 
     iput v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->lastX:F
 
-    .line 936
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v5
@@ -247,16 +227,13 @@
 
     if-ne v5, v4, :cond_4
 
-    .line 937
     :cond_3
     iput-boolean v4, p0, Lorg/telegram/ui/Components/EmojiView$18;->first:Z
 
-    .line 938
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
     if-eqz v5, :cond_4
 
-    .line 939
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView;->access$1600(Lorg/telegram/ui/Components/EmojiView;)Landroid/support/v4/view/ViewPager;
@@ -265,10 +242,8 @@
 
     invoke-virtual {v5}, Landroid/support/v4/view/ViewPager;->endFakeDrag()V
 
-    .line 940
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
-    .line 943
     :cond_4
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
@@ -286,7 +261,6 @@
     :cond_6
     return v3
 
-    .line 913
     :cond_7
     iget-boolean v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
@@ -304,7 +278,6 @@
 
     if-lez v5, :cond_1
 
-    .line 914
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView;->access$1600(Lorg/telegram/ui/Components/EmojiView;)Landroid/support/v4/view/ViewPager;
@@ -317,7 +290,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 915
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/EmojiView;->access$1600(Lorg/telegram/ui/Components/EmojiView;)Landroid/support/v4/view/ViewPager;
@@ -326,17 +298,14 @@
 
     invoke-virtual {v5}, Landroid/support/v4/view/ViewPager;->endFakeDrag()V
 
-    .line 916
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
     goto :goto_0
 
-    .line 925
     .restart local v0    # "dx":I
     :catch_0
     move-exception v1
 
-    .line 927
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     iget-object v5, p0, Lorg/telegram/ui/Components/EmojiView$18;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -349,16 +318,13 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 931
     :goto_2
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EmojiView$18;->startedScroll:Z
 
-    .line 932
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 928
     :catch_1
     move-exception v5
 

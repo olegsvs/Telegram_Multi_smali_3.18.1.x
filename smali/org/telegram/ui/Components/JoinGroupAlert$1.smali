@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/JoinGroupAlert;
 
     .prologue
-    .line 143
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$1;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 146
     iget-object v0, p0, Lorg/telegram/ui/Components/JoinGroupAlert$1;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/JoinGroupAlert;->dismiss()V
 
-    .line 147
     return-void
 .end method

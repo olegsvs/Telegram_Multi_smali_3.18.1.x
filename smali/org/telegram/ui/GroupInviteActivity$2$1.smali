@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupInviteActivity$2;
 
     .prologue
-    .line 158
     iput-object p1, p0, Lorg/telegram/ui/GroupInviteActivity$2$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 161
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity$2$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$2;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupInviteActivity$2;->this$0:Lorg/telegram/ui/GroupInviteActivity;
@@ -52,6 +50,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupInviteActivity;->access$500(Lorg/telegram/ui/GroupInviteActivity;Z)V
 
-    .line 162
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 450
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$9;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,25 +41,21 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 453
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x17
 
     if-lt v1, v2, :cond_1
 
-    .line 454
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$9;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 455
     .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_1
 
-    .line 456
     const-string/jumbo v1, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
@@ -69,20 +64,17 @@
 
     if-eqz v1, :cond_1
 
-    .line 457
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$9;->this$0:Lorg/telegram/ui/LocationActivity;
 
     const/4 v2, 0x1
 
     invoke-static {v1, v2}, Lorg/telegram/ui/LocationActivity;->access$1500(Lorg/telegram/ui/LocationActivity;Z)V
 
-    .line 465
     .end local v0    # "activity":Landroid/app/Activity;
     :cond_0
     :goto_0
     return-void
 
-    .line 462
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$9;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -100,7 +92,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 463
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$9;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;

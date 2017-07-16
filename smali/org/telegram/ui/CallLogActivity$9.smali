@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CallLogActivity;
 
     .prologue
-    .line 437
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$9;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/CallLogActivity$9;->val$row:Lorg/telegram/ui/CallLogActivity$CallLogRow;
@@ -51,12 +50,10 @@
 
     const/4 v4, 0x0
 
-    .line 440
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 441
     .local v1, "ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$9;->val$row:Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
@@ -79,7 +76,6 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 442
     .local v6, "msg":Lorg/telegram/tgnet/TLRPC$Message;
     iget v3, v6, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
@@ -91,7 +87,6 @@
 
     goto :goto_0
 
-    .line 444
     .end local v6    # "msg":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -104,6 +99,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesController;->deleteMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$EncryptedChat;IZ)V
 
-    .line 445
     return-void
 .end method

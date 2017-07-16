@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 45
     check-cast p1, Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;
 
     check-cast p2, Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;
@@ -62,7 +60,6 @@
     .param p2, "b"    # Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;
 
     .prologue
-    .line 48
     iget v0, p1, Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;->value:F
 
     iget v1, p2, Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;->value:F

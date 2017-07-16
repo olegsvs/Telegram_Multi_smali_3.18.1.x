@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 11214
     const v0, 0x3b7c62be
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 11213
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputMedia;-><init>()V
 
     return-void
@@ -53,14 +51,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 11219
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;->url:Ljava/lang/String;
 
-    .line 11220
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 11223
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 11224
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;->url:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 11225
     return-void
 .end method

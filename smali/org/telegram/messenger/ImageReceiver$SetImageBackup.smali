@@ -41,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 36
     iput-object p1, p0, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;->this$0:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +54,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/ImageReceiver$1;
 
     .prologue
-    .line 36
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageReceiver$SetImageBackup;-><init>(Lorg/telegram/messenger/ImageReceiver;)V
 
     return-void

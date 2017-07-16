@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/WebPlayerView;
 
     .prologue
-    .line 1323
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$5;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 1326
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$5;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$4900(Lorg/telegram/ui/Components/WebPlayerView;)Landroid/os/AsyncTask;
@@ -63,7 +61,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1327
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$5;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$4900(Lorg/telegram/ui/Components/WebPlayerView;)Landroid/os/AsyncTask;
@@ -74,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1328
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$5;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$4900(Lorg/telegram/ui/Components/WebPlayerView;)Landroid/os/AsyncTask;
@@ -85,7 +81,6 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->access$5000(Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;Ljava/lang/String;)V
 
-    .line 1331
     :cond_0
     return-void
 .end method

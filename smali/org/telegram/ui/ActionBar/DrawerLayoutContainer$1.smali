@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer$1;->this$0:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,12 +47,10 @@
     .end annotation
 
     .prologue
-    .line 83
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
-    .line 84
     .local v0, "drawerLayout":Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
     invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
@@ -61,12 +58,10 @@
 
     sput v1, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
-    .line 85
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer$1;->this$0:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     invoke-static {v1, p2}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->access$002(Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 86
     invoke-virtual {p2}, Landroid/view/WindowInsets;->getSystemWindowInsetTop()I
 
     move-result v1
@@ -86,17 +81,14 @@
     :goto_0
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setWillNotDraw(Z)V
 
-    .line 87
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->requestLayout()V
 
-    .line 88
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object v1
 
     return-object v1
 
-    .line 86
     :cond_0
     const/4 v1, 0x0
 

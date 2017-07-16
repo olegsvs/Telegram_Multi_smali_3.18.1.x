@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 561
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$3;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 564
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$3;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1500(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -51,6 +49,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->toggleSubMenu()V
 
-    .line 565
     return-void
 .end method

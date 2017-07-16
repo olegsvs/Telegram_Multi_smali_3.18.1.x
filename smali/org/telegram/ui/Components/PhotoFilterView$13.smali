@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoFilterView;
 
     .prologue
-    .line 2098
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,17 +45,14 @@
 
     const/4 v1, 0x0
 
-    .line 2101
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/PhotoFilterView;->access$1702(Lorg/telegram/ui/Components/PhotoFilterView;I)I
 
-    .line 2102
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$9100(Lorg/telegram/ui/Components/PhotoFilterView;)V
 
-    .line 2103
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$9200(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterBlurControl;
@@ -65,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PhotoFilterBlurControl;->setVisibility(I)V
 
-    .line 2104
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$9200(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterBlurControl;
@@ -74,7 +69,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/PhotoFilterBlurControl;->setType(I)V
 
-    .line 2105
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -83,7 +77,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2106
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$13;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -92,7 +85,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->requestRender(Z)V
 
-    .line 2108
     :cond_0
     return-void
 .end method

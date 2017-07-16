@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     .prologue
-    .line 2704
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -48,12 +47,10 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 2707
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 2708
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;->access$6800(Lorg/telegram/ui/LoginActivity$LoginActivityRegisterView;)Landroid/widget/EditText;
@@ -62,10 +59,8 @@
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 2709
     const/4 v0, 0x1
 
-    .line 2711
     :goto_0
     return v0
 

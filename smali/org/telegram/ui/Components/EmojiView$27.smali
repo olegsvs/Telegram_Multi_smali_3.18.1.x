@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 1365
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$27;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1365
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -71,7 +69,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1368
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$27;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/EmojiView;->access$1800(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/HashMap;
@@ -84,7 +81,6 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 1369
     .local v0, "count1":Ljava/lang/Integer;
     iget-object v3, p0, Lorg/telegram/ui/Components/EmojiView$27;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -98,25 +94,20 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1370
     .local v1, "count2":Ljava/lang/Integer;
     if-nez v0, :cond_0
 
-    .line 1371
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v0
 
-    .line 1373
     :cond_0
     if-nez v1, :cond_1
 
-    .line 1374
     invoke-static {v2}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v1
 
-    .line 1376
     :cond_1
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -128,15 +119,12 @@
 
     if-le v3, v4, :cond_3
 
-    .line 1377
     const/4 v2, -0x1
 
-    .line 1381
     :cond_2
     :goto_0
     return v2
 
-    .line 1378
     :cond_3
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
@@ -148,7 +136,6 @@
 
     if-ge v3, v4, :cond_2
 
-    .line 1379
     const/4 v2, 0x1
 
     goto :goto_0

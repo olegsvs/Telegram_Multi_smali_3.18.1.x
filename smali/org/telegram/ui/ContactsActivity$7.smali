@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactsActivity;
 
     .prologue
-    .line 680
     iput-object p1, p0, Lorg/telegram/ui/ContactsActivity$7;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 683
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$7;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ContactsActivity;->access$400(Lorg/telegram/ui/ContactsActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -55,7 +53,6 @@
 
     move-result v2
 
-    .line 684
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -63,7 +60,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 685
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$7;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ContactsActivity;->access$400(Lorg/telegram/ui/ContactsActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -74,33 +70,28 @@
 
     move-result-object v1
 
-    .line 686
     .local v1, "child":Landroid/view/View;
     instance-of v3, v1, Lorg/telegram/ui/Cells/UserCell;
 
     if-eqz v3, :cond_1
 
-    .line 687
     check-cast v1, Lorg/telegram/ui/Cells/UserCell;
 
     .end local v1    # "child":Landroid/view/View;
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Cells/UserCell;->update(I)V
 
-    .line 684
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 688
     .restart local v1    # "child":Landroid/view/View;
     :cond_1
     instance-of v3, v1, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     if-eqz v3, :cond_0
 
-    .line 689
     check-cast v1, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     .end local v1    # "child":Landroid/view/View;
@@ -108,7 +99,6 @@
 
     goto :goto_1
 
-    .line 692
     :cond_2
     return-void
 .end method

@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 770
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$3;->val$number:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,18 +39,15 @@
     .locals 2
 
     .prologue
-    .line 773
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->access$102(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 774
     const/4 v0, 0x0
 
     iget-object v1, p0, Lorg/telegram/messenger/AndroidUtilities$3;->val$number:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->access$000(ZLjava/lang/String;)V
 
-    .line 775
     return-void
 .end method

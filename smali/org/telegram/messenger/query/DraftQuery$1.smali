@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 77
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,15 +35,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 80
     if-eqz p2, :cond_0
 
-    .line 92
     .end local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :goto_0
     return-void
 
-    .line 83
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -58,7 +54,6 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 84
     new-instance v0, Lorg/telegram/messenger/query/DraftQuery$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/query/DraftQuery$1$1;-><init>(Lorg/telegram/messenger/query/DraftQuery$1;)V

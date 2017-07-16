@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$78;
 
     .prologue
-    .line 7891
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 7902
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$78;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7903
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$78;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -73,7 +70,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$16202(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 7905
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 7894
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$78;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -108,7 +103,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 7895
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$78;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -121,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 7896
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$78$1;->this$1:Lorg/telegram/ui/ChatActivity$78;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$78;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -130,7 +123,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$16202(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 7898
     :cond_0
     return-void
 .end method

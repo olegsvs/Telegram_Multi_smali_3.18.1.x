@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;
 
     .prologue
-    .line 802
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,19 +50,16 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 805
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     invoke-static {v0, v6}, Lorg/telegram/ui/ChangePhoneActivity$PhoneView;->access$1502(Lorg/telegram/ui/ChangePhoneActivity$PhoneView;Z)Z
 
-    .line 806
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 807
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
@@ -80,7 +76,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/ChangePhoneActivity;->access$1600(Lorg/telegram/ui/ChangePhoneActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 811
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7;
 
@@ -90,10 +85,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity;->needHideProgress()V
 
-    .line 812
     return-void
 
-    .line 809
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 

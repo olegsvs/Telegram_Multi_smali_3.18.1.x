@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 188
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesQuery$5;->val$users:Ljava/util/ArrayList;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/query/MessagesQuery$5;->val$isCache:Z
@@ -62,7 +61,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 191
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -73,7 +71,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 192
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -84,7 +81,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 193
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -109,6 +105,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 194
     return-void
 .end method

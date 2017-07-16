@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;
 
     .prologue
-    .line 946
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1$1;->this$2:Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1$1;->val$toSetFinal:Landroid/graphics/drawable/BitmapDrawable;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 949
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1$1;->this$2:Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheOutTask;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader$CacheImage;->setImageAndClear(Landroid/graphics/drawable/BitmapDrawable;)V
 
-    .line 950
     return-void
 .end method

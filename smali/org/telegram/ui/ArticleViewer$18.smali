@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1882
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$18;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$18;->val$animatorSet:Landroid/animation/AnimatorSet;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1885
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -86,18 +84,15 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/NotificationCenter;->setAllowedNotificationsDutingAnimation([I)V
 
-    .line 1886
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/NotificationCenter;->setAnimationInProgress(Z)V
 
-    .line 1887
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$18;->val$animatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 1888
     return-void
 .end method

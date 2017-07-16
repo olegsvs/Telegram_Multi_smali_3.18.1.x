@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 489
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6;->val$query:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 43
 
     .prologue
-    .line 493
     :try_start_0
     move-object/from16 v0, p0
 
@@ -65,7 +63,6 @@
 
     move-result-object v27
 
-    .line 494
     .local v27, "search1":Ljava/lang/String;
     invoke-virtual/range {v27 .. v27}, Ljava/lang/String;->length()I
 
@@ -73,7 +70,6 @@
 
     if-nez v37, :cond_0
 
-    .line 495
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -84,7 +80,6 @@
 
     invoke-static/range {v37 .. v38}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$902(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;I)I
 
-    .line 496
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -115,12 +110,10 @@
 
     invoke-static/range {v37 .. v41}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1000(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
 
-    .line 780
     .end local v27    # "search1":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 499
     .restart local v27    # "search1":Ljava/lang/String;
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -135,7 +128,6 @@
 
     move-result-object v28
 
-    .line 500
     .local v28, "search2":Ljava/lang/String;
     invoke-virtual/range {v27 .. v28}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -149,11 +141,9 @@
 
     if-nez v37, :cond_2
 
-    .line 501
     :cond_1
     const/16 v28, 0x0
 
-    .line 503
     :cond_2
     if-eqz v28, :cond_5
 
@@ -168,55 +158,45 @@
 
     move-object/from16 v26, v0
 
-    .line 504
     .local v26, "search":[Ljava/lang/String;
     const/16 v37, 0x0
 
     aput-object v27, v26, v37
 
-    .line 505
     if-eqz v28, :cond_3
 
-    .line 506
     const/16 v37, 0x1
 
     aput-object v28, v26, v37
 
-    .line 509
     :cond_3
     new-instance v36, Ljava/util/ArrayList;
 
     invoke-direct/range {v36 .. v36}, Ljava/util/ArrayList;-><init>()V
 
-    .line 510
     .local v36, "usersToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 511
     .local v6, "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 512
     .local v15, "encryptedToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v14, Ljava/util/ArrayList;
 
     invoke-direct {v14}, Ljava/util/ArrayList;-><init>()V
 
-    .line 513
     .local v14, "encUsers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     const/16 v25, 0x0
 
-    .line 515
     .local v25, "resultCount":I
     new-instance v12, Ljava/util/HashMap;
 
     invoke-direct {v12}, Ljava/util/HashMap;-><init>()V
 
-    .line 516
     .local v12, "dialogsResult":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;>;"
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -240,7 +220,6 @@
 
     move-result-object v7
 
-    .line 517
     .local v7, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_4
     :goto_2
@@ -250,7 +229,6 @@
 
     if-eqz v37, :cond_9
 
-    .line 518
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -259,7 +237,6 @@
 
     move-result-wide v18
 
-    .line 519
     .local v18, "id":J
     new-instance v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
@@ -277,7 +254,6 @@
 
     invoke-direct {v9, v0, v1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;-><init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;)V
 
-    .line 520
     .local v9, "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     const/16 v37, 0x1
 
@@ -291,7 +267,6 @@
 
     iput v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->date:I
 
-    .line 521
     invoke-static/range {v18 .. v19}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v37
@@ -300,14 +275,12 @@
 
     invoke-virtual {v12, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 523
     move-wide/from16 v0, v18
 
     long-to-int v0, v0
 
     move/from16 v20, v0
 
-    .line 524
     .local v20, "lower_id":I
     const/16 v37, 0x20
 
@@ -319,11 +292,9 @@
 
     move/from16 v17, v0
 
-    .line 525
     .local v17, "high_id":I
     if-eqz v20, :cond_8
 
-    .line 526
     const/16 v37, 0x1
 
     move/from16 v0, v17
@@ -332,7 +303,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 527
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -357,7 +327,6 @@
 
     if-nez v37, :cond_4
 
-    .line 528
     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v37
@@ -370,7 +339,6 @@
 
     goto :goto_2
 
-    .line 777
     .end local v6    # "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
@@ -388,13 +356,11 @@
     :catch_0
     move-exception v13
 
-    .line 778
     .local v13, "e":Ljava/lang/Exception;
     invoke-static {v13}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 503
     .end local v13    # "e":Ljava/lang/Exception;
     .restart local v27    # "search1":Ljava/lang/String;
     .restart local v28    # "search2":Ljava/lang/String;
@@ -403,7 +369,6 @@
 
     goto/16 :goto_1
 
-    .line 531
     .restart local v6    # "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .restart local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
@@ -419,7 +384,6 @@
     :cond_6
     if-lez v20, :cond_7
 
-    .line 532
     :try_start_1
     move-object/from16 v0, p0
 
@@ -449,7 +413,6 @@
 
     if-nez v37, :cond_4
 
-    .line 533
     invoke-static/range {v20 .. v20}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v37
@@ -458,7 +421,6 @@
 
     goto/16 :goto_2
 
-    .line 536
     :cond_7
     move/from16 v0, v20
 
@@ -478,7 +440,6 @@
 
     if-nez v37, :cond_4
 
-    .line 537
     move/from16 v0, v20
 
     neg-int v0, v0
@@ -495,7 +456,6 @@
 
     goto/16 :goto_2
 
-    .line 541
     :cond_8
     move-object/from16 v0, p0
 
@@ -509,7 +469,6 @@
 
     if-nez v37, :cond_4
 
-    .line 542
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v37
@@ -522,7 +481,6 @@
 
     if-nez v37, :cond_4
 
-    .line 543
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v37
@@ -533,7 +491,6 @@
 
     goto/16 :goto_2
 
-    .line 547
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     .end local v17    # "high_id":I
     .end local v18    # "id":J
@@ -541,14 +498,12 @@
     :cond_9
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 549
     invoke-virtual/range {v36 .. v36}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v37
 
     if-nez v37, :cond_14
 
-    .line 550
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v37
@@ -599,7 +554,6 @@
 
     move-result-object v7
 
-    .line 551
     :cond_a
     :goto_3
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -608,7 +562,6 @@
 
     if-eqz v37, :cond_13
 
-    .line 552
     const/16 v37, 0x2
 
     move/from16 v0, v37
@@ -617,7 +570,6 @@
 
     move-result-object v21
 
-    .line 553
     .local v21, "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -631,7 +583,6 @@
 
     move-result-object v30
 
-    .line 554
     .local v30, "tName":Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -643,14 +594,11 @@
 
     if-eqz v37, :cond_b
 
-    .line 555
     const/16 v30, 0x0
 
-    .line 557
     :cond_b
     const/16 v34, 0x0
 
-    .line 558
     .local v34, "username":Ljava/lang/String;
     const-string/jumbo v37, ";;;"
 
@@ -662,7 +610,6 @@
 
     move-result v35
 
-    .line 559
     .local v35, "usernamePos":I
     const/16 v37, -0x1
 
@@ -672,7 +619,6 @@
 
     if-eq v0, v1, :cond_c
 
-    .line 560
     add-int/lit8 v37, v35, 0x3
 
     move-object/from16 v0, v21
@@ -683,11 +629,9 @@
 
     move-result-object v34
 
-    .line 562
     :cond_c
     const/16 v16, 0x0
 
-    .line 563
     .local v16, "found":I
     move-object/from16 v0, v26
 
@@ -706,7 +650,6 @@
 
     aget-object v22, v26, v37
 
-    .line 564
     .local v22, "q":Ljava/lang/String;
     invoke-virtual/range {v21 .. v22}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -790,16 +733,13 @@
 
     if-eqz v39, :cond_10
 
-    .line 565
     :cond_d
     const/16 v16, 0x1
 
-    .line 569
     :cond_e
     :goto_5
     if-eqz v16, :cond_12
 
-    .line 570
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -808,11 +748,9 @@
 
     move-result-object v8
 
-    .line 571
     .local v8, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_a
 
-    .line 572
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -831,11 +769,9 @@
 
     move-result-object v33
 
-    .line 573
     .local v33, "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 574
     move-object/from16 v0, v33
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$User;->id:I
@@ -860,7 +796,6 @@
 
     check-cast v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
-    .line 575
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     move-object/from16 v0, v33
 
@@ -870,7 +805,6 @@
 
     if-eqz v37, :cond_f
 
-    .line 576
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -891,7 +825,6 @@
 
     iput v0, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 578
     :cond_f
     const/16 v37, 0x1
 
@@ -901,7 +834,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 579
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -928,19 +860,15 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 583
     :goto_6
     move-object/from16 v0, v33
 
     iput-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 584
     add-int/lit8 v25, v25, 0x1
 
-    .line 585
     goto/16 :goto_3
 
-    .line 566
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     .end local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -957,12 +885,10 @@
 
     if-eqz v39, :cond_e
 
-    .line 567
     const/16 v16, 0x2
 
     goto/16 :goto_5
 
-    .line 581
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     .restart local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1025,7 +951,6 @@
 
     goto :goto_6
 
-    .line 563
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     .end local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1034,7 +959,6 @@
 
     goto/16 :goto_4
 
-    .line 590
     .end local v16    # "found":I
     .end local v21    # "name":Ljava/lang/String;
     .end local v22    # "q":Ljava/lang/String;
@@ -1044,7 +968,6 @@
     :cond_13
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 593
     :cond_14
     invoke-virtual {v6}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1052,7 +975,6 @@
 
     if-nez v37, :cond_1c
 
-    .line 594
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v37
@@ -1101,7 +1023,6 @@
 
     move-result-object v7
 
-    .line 595
     :cond_15
     :goto_7
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -1110,7 +1031,6 @@
 
     if-eqz v37, :cond_1b
 
-    .line 596
     const/16 v37, 0x1
 
     move/from16 v0, v37
@@ -1119,7 +1039,6 @@
 
     move-result-object v21
 
-    .line 597
     .restart local v21    # "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -1133,7 +1052,6 @@
 
     move-result-object v30
 
-    .line 598
     .restart local v30    # "tName":Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -1145,10 +1063,8 @@
 
     if-eqz v37, :cond_16
 
-    .line 599
     const/16 v30, 0x0
 
-    .line 601
     :cond_16
     move-object/from16 v0, v26
 
@@ -1167,7 +1083,6 @@
 
     aget-object v22, v26, v37
 
-    .line 602
     .restart local v22    # "q":Ljava/lang/String;
     invoke-virtual/range {v21 .. v22}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1251,7 +1166,6 @@
 
     if-eqz v39, :cond_1a
 
-    .line 603
     :cond_17
     const/16 v37, 0x0
 
@@ -1261,11 +1175,9 @@
 
     move-result-object v8
 
-    .line 604
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_15
 
-    .line 605
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -1284,11 +1196,9 @@
 
     move-result-object v5
 
-    .line 606
     .local v5, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 607
     if-eqz v5, :cond_15
 
     iget-boolean v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->deactivated:Z
@@ -1309,7 +1219,6 @@
 
     if-nez v37, :cond_15
 
-    .line 609
     :cond_18
     iget v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
 
@@ -1317,7 +1226,6 @@
 
     if-lez v37, :cond_19
 
-    .line 610
     iget v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
 
     move/from16 v37, v0
@@ -1332,7 +1240,6 @@
 
     int-to-long v10, v0
 
-    .line 614
     .local v10, "dialog_id":J
     :goto_9
     invoke-static {v10, v11}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1347,7 +1254,6 @@
 
     check-cast v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
-    .line 615
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     iget-object v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
@@ -1369,15 +1275,12 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 616
     iput-object v5, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 617
     add-int/lit8 v25, v25, 0x1
 
     goto/16 :goto_7
 
-    .line 612
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     .end local v10    # "dialog_id":J
     :cond_19
@@ -1392,7 +1295,6 @@
     .restart local v10    # "dialog_id":J
     goto :goto_9
 
-    .line 601
     .end local v5    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v10    # "dialog_id":J
@@ -1401,14 +1303,12 @@
 
     goto/16 :goto_8
 
-    .line 624
     .end local v21    # "name":Ljava/lang/String;
     .end local v22    # "q":Ljava/lang/String;
     .end local v30    # "tName":Ljava/lang/String;
     :cond_1b
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 627
     :cond_1c
     invoke-virtual {v15}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -1416,7 +1316,6 @@
 
     if-nez v37, :cond_29
 
-    .line 628
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v37
@@ -1465,7 +1364,6 @@
 
     move-result-object v7
 
-    .line 629
     :cond_1d
     :goto_a
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -1474,7 +1372,6 @@
 
     if-eqz v37, :cond_28
 
-    .line 630
     const/16 v37, 0x1
 
     move/from16 v0, v37
@@ -1483,7 +1380,6 @@
 
     move-result-object v21
 
-    .line 631
     .restart local v21    # "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -1497,7 +1393,6 @@
 
     move-result-object v30
 
-    .line 632
     .restart local v30    # "tName":Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -1509,14 +1404,11 @@
 
     if-eqz v37, :cond_1e
 
-    .line 633
     const/16 v30, 0x0
 
-    .line 636
     :cond_1e
     const/16 v34, 0x0
 
-    .line 637
     .restart local v34    # "username":Ljava/lang/String;
     const-string/jumbo v37, ";;;"
 
@@ -1528,7 +1420,6 @@
 
     move-result v35
 
-    .line 638
     .restart local v35    # "usernamePos":I
     const/16 v37, -0x1
 
@@ -1538,7 +1429,6 @@
 
     if-eq v0, v1, :cond_1f
 
-    .line 639
     add-int/lit8 v37, v35, 0x2
 
     move-object/from16 v0, v21
@@ -1549,11 +1439,9 @@
 
     move-result-object v34
 
-    .line 641
     :cond_1f
     const/16 v16, 0x0
 
-    .line 642
     .restart local v16    # "found":I
     const/4 v4, 0x0
 
@@ -1569,10 +1457,8 @@
 
     if-ge v4, v0, :cond_1d
 
-    .line 643
     aget-object v22, v26, v4
 
-    .line 644
     .restart local v22    # "q":Ljava/lang/String;
     invoke-virtual/range {v21 .. v22}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1656,23 +1542,18 @@
 
     if-eqz v37, :cond_25
 
-    .line 645
     :cond_20
     const/16 v16, 0x1
 
-    .line 650
     :cond_21
     :goto_c
     if-eqz v16, :cond_27
 
-    .line 651
     const/4 v5, 0x0
 
-    .line 652
     .local v5, "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     const/16 v33, 0x0
 
-    .line 653
     .restart local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
     const/16 v37, 0x0
 
@@ -1682,11 +1563,9 @@
 
     move-result-object v8
 
-    .line 654
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_22
 
-    .line 655
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -1705,10 +1584,8 @@
 
     move-result-object v5
 
-    .line 656
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 658
     :cond_22
     const/16 v37, 0x6
 
@@ -1718,10 +1595,8 @@
 
     move-result-object v8
 
-    .line 659
     if-eqz v8, :cond_23
 
-    .line 660
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -1740,16 +1615,13 @@
 
     move-result-object v33
 
-    .line 661
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 663
     :cond_23
     if-eqz v5, :cond_1d
 
     if-eqz v33, :cond_1d
 
-    .line 664
     iget v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->id:I
 
     move/from16 v37, v0
@@ -1776,7 +1648,6 @@
 
     check-cast v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
-    .line 665
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     const/16 v37, 0x2
 
@@ -1790,7 +1661,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->user_id:I
 
-    .line 666
     const/16 v37, 0x3
 
     move/from16 v0, v37
@@ -1803,7 +1673,6 @@
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->a_or_b:[B
 
-    .line 667
     const/16 v37, 0x4
 
     move/from16 v0, v37
@@ -1816,7 +1685,6 @@
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->auth_key:[B
 
-    .line 668
     const/16 v37, 0x5
 
     move/from16 v0, v37
@@ -1829,7 +1697,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->ttl:I
 
-    .line 669
     const/16 v37, 0x8
 
     move/from16 v0, v37
@@ -1842,7 +1709,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->layer:I
 
-    .line 670
     const/16 v37, 0x9
 
     move/from16 v0, v37
@@ -1855,7 +1721,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->seq_in:I
 
-    .line 671
     const/16 v37, 0xa
 
     move/from16 v0, v37
@@ -1868,7 +1733,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->seq_out:I
 
-    .line 672
     const/16 v37, 0xb
 
     move/from16 v0, v37
@@ -1877,7 +1741,6 @@
 
     move-result v32
 
-    .line 673
     .local v32, "use_count":I
     shr-int/lit8 v37, v32, 0x10
 
@@ -1891,7 +1754,6 @@
 
     iput-short v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_use_count_in:S
 
-    .line 674
     move/from16 v0, v32
 
     int-to-short v0, v0
@@ -1902,7 +1764,6 @@
 
     iput-short v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_use_count_out:S
 
-    .line 675
     const/16 v37, 0xc
 
     move/from16 v0, v37
@@ -1915,7 +1776,6 @@
 
     iput-wide v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->exchange_id:J
 
-    .line 676
     const/16 v37, 0xd
 
     move/from16 v0, v37
@@ -1928,7 +1788,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_create_date:I
 
-    .line 677
     const/16 v37, 0xe
 
     move/from16 v0, v37
@@ -1941,7 +1800,6 @@
 
     iput-wide v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->future_key_fingerprint:J
 
-    .line 678
     const/16 v37, 0xf
 
     move/from16 v0, v37
@@ -1954,7 +1812,6 @@
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->future_auth_key:[B
 
-    .line 679
     const/16 v37, 0x10
 
     move/from16 v0, v37
@@ -1967,7 +1824,6 @@
 
     iput-object v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_hash:[B
 
-    .line 680
     const/16 v37, 0x11
 
     move/from16 v0, v37
@@ -1980,7 +1836,6 @@
 
     iput v0, v5, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->in_seq_no:I
 
-    .line 682
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -1989,7 +1844,6 @@
 
     if-eqz v37, :cond_24
 
-    .line 683
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -2010,7 +1864,6 @@
 
     iput v0, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 685
     :cond_24
     const/16 v37, 0x1
 
@@ -2020,7 +1873,6 @@
 
     if-ne v0, v1, :cond_26
 
-    .line 686
     new-instance v37, Landroid/text/SpannableStringBuilder;
 
     move-object/from16 v0, v33
@@ -2045,7 +1897,6 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 687
     iget-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
     move-object/from16 v37, v0
@@ -2076,22 +1927,17 @@
 
     invoke-virtual/range {v37 .. v41}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 691
     :goto_d
     iput-object v5, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 692
     move-object/from16 v0, v33
 
     invoke-virtual {v14, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 693
     add-int/lit8 v25, v25, 0x1
 
-    .line 694
     goto/16 :goto_a
 
-    .line 646
     .end local v5    # "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
@@ -2110,12 +1956,10 @@
 
     if-eqz v37, :cond_21
 
-    .line 647
     const/16 v16, 0x2
 
     goto/16 :goto_c
 
-    .line 689
     .restart local v5    # "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
@@ -2180,7 +2024,6 @@
 
     goto :goto_d
 
-    .line 642
     .end local v5    # "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
@@ -2191,7 +2034,6 @@
 
     goto/16 :goto_b
 
-    .line 699
     .end local v4    # "a":I
     .end local v16    # "found":I
     .end local v21    # "name":Ljava/lang/String;
@@ -2202,7 +2044,6 @@
     :cond_28
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 702
     :cond_29
     new-instance v29, Ljava/util/ArrayList;
 
@@ -2212,7 +2053,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 703
     .local v29, "searchResults":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;>;"
     invoke-virtual {v12}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -2236,7 +2076,6 @@
 
     check-cast v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
-    .line 704
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     iget-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
@@ -2250,14 +2089,12 @@
 
     if-eqz v38, :cond_2a
 
-    .line 705
     move-object/from16 v0, v29
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_e
 
-    .line 709
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     :cond_2b
     new-instance v37, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$6$1;
@@ -2274,18 +2111,15 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 721
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 722
     .local v23, "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLObject;>;"
     new-instance v24, Ljava/util/ArrayList;
 
     invoke-direct/range {v24 .. v24}, Ljava/util/ArrayList;-><init>()V
 
-    .line 724
     .local v24, "resultArrayNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     const/4 v4, 0x0
 
@@ -2299,7 +2133,6 @@
 
     if-ge v4, v0, :cond_2c
 
-    .line 725
     move-object/from16 v0, v29
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2308,7 +2141,6 @@
 
     check-cast v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
 
-    .line 726
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     iget-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
@@ -2320,7 +2152,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 727
     iget-object v0, v9, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
     move-object/from16 v37, v0
@@ -2331,12 +2162,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 724
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_f
 
-    .line 730
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;
     :cond_2c
     move-object/from16 v0, p0
@@ -2357,7 +2186,6 @@
 
     if-eq v0, v1, :cond_37
 
-    .line 731
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v37
@@ -2380,7 +2208,6 @@
 
     move-result-object v7
 
-    .line 732
     :cond_2d
     :goto_10
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -2389,7 +2216,6 @@
 
     if-eqz v37, :cond_36
 
-    .line 733
     const/16 v37, 0x3
 
     move/from16 v0, v37
@@ -2398,7 +2224,6 @@
 
     move-result v31
 
-    .line 734
     .local v31, "uid":I
     move/from16 v0, v31
 
@@ -2418,7 +2243,6 @@
 
     if-nez v37, :cond_2d
 
-    .line 737
     const/16 v37, 0x2
 
     move/from16 v0, v37
@@ -2427,7 +2251,6 @@
 
     move-result-object v21
 
-    .line 738
     .restart local v21    # "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -2441,7 +2264,6 @@
 
     move-result-object v30
 
-    .line 739
     .restart local v30    # "tName":Ljava/lang/String;
     move-object/from16 v0, v21
 
@@ -2453,14 +2275,11 @@
 
     if-eqz v37, :cond_2e
 
-    .line 740
     const/16 v30, 0x0
 
-    .line 742
     :cond_2e
     const/16 v34, 0x0
 
-    .line 743
     .restart local v34    # "username":Ljava/lang/String;
     const-string/jumbo v37, ";;;"
 
@@ -2472,7 +2291,6 @@
 
     move-result v35
 
-    .line 744
     .restart local v35    # "usernamePos":I
     const/16 v37, -0x1
 
@@ -2482,7 +2300,6 @@
 
     if-eq v0, v1, :cond_2f
 
-    .line 745
     add-int/lit8 v37, v35, 0x3
 
     move-object/from16 v0, v21
@@ -2493,11 +2310,9 @@
 
     move-result-object v34
 
-    .line 747
     :cond_2f
     const/16 v16, 0x0
 
-    .line 748
     .restart local v16    # "found":I
     move-object/from16 v0, v26
 
@@ -2516,7 +2331,6 @@
 
     aget-object v22, v26, v37
 
-    .line 749
     .restart local v22    # "q":Ljava/lang/String;
     invoke-virtual/range {v21 .. v22}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -2600,16 +2414,13 @@
 
     if-eqz v39, :cond_33
 
-    .line 750
     :cond_30
     const/16 v16, 0x1
 
-    .line 754
     :cond_31
     :goto_12
     if-eqz v16, :cond_35
 
-    .line 755
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -2618,11 +2429,9 @@
 
     move-result-object v8
 
-    .line 756
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_2d
 
-    .line 757
     const/16 v37, 0x0
 
     move/from16 v0, v37
@@ -2641,11 +2450,9 @@
 
     move-result-object v33
 
-    .line 758
     .restart local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 759
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -2654,7 +2461,6 @@
 
     if-eqz v37, :cond_32
 
-    .line 760
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -2675,7 +2481,6 @@
 
     iput v0, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 762
     :cond_32
     const/16 v37, 0x1
 
@@ -2685,7 +2490,6 @@
 
     if-ne v0, v1, :cond_34
 
-    .line 763
     move-object/from16 v0, v33
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -2714,7 +2518,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 767
     :goto_13
     move-object/from16 v0, v23
 
@@ -2724,7 +2527,6 @@
 
     goto/16 :goto_10
 
-    .line 751
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_33
@@ -2740,12 +2542,10 @@
 
     if-eqz v39, :cond_31
 
-    .line 752
     const/16 v16, 0x2
 
     goto :goto_12
 
-    .line 765
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_34
@@ -2809,7 +2609,6 @@
 
     goto :goto_13
 
-    .line 748
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v33    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_35
@@ -2817,7 +2616,6 @@
 
     goto/16 :goto_11
 
-    .line 773
     .end local v16    # "found":I
     .end local v21    # "name":Ljava/lang/String;
     .end local v22    # "q":Ljava/lang/String;
@@ -2828,7 +2626,6 @@
     :cond_36
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 776
     :cond_37
     move-object/from16 v0, p0
 

@@ -30,19 +30,14 @@
     .param p4, "availableEndTimeUs"    # J
 
     .prologue
-    .line 600
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 601
     iput-boolean p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$PeriodSeekInfo;->isIndexExplicit:Z
 
-    .line 602
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$PeriodSeekInfo;->availableStartTimeUs:J
 
-    .line 603
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$PeriodSeekInfo;->availableEndTimeUs:J
 
-    .line 604
     return-void
 .end method
 
@@ -52,7 +47,6 @@
     .param p1, "durationUs"    # J
 
     .prologue
-    .line 570
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
@@ -61,19 +55,15 @@
 
     move-result v14
 
-    .line 571
     .local v14, "adaptationSetCount":I
     const-wide/16 v6, 0x0
 
-    .line 572
     .local v6, "availableStartTimeUs":J
     const-wide v8, 0x7fffffffffffffffL
 
-    .line 573
     .local v8, "availableEndTimeUs":J
     const/4 v5, 0x0
 
-    .line 574
     .local v5, "isIndexExplicit":Z
     const/16 v16, 0x0
 
@@ -83,7 +73,6 @@
 
     if-ge v0, v14, :cond_2
 
-    .line 575
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;->adaptationSets:Ljava/util/List;
@@ -112,11 +101,9 @@
 
     move-result-object v17
 
-    .line 576
     .local v17, "index":Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;
     if-nez v17, :cond_0
 
-    .line 577
     new-instance v4, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$PeriodSeekInfo;
 
     const/4 v5, 0x1
@@ -127,7 +114,6 @@
 
     invoke-direct/range {v4 .. v9}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$PeriodSeekInfo;-><init>(ZJJ)V
 
-    .line 592
     .end local v5    # "isIndexExplicit":Z
     .end local v6    # "availableStartTimeUs":J
     .end local v8    # "availableEndTimeUs":J
@@ -135,7 +121,6 @@
     :goto_1
     return-object v4
 
-    .line 579
     .restart local v5    # "isIndexExplicit":Z
     .restart local v6    # "availableStartTimeUs":J
     .restart local v8    # "availableEndTimeUs":J
@@ -145,7 +130,6 @@
 
     move-result v15
 
-    .line 580
     .local v15, "firstSegmentNum":I
     move-object/from16 v0, v17
 
@@ -155,7 +139,6 @@
 
     move-result v18
 
-    .line 581
     .local v18, "lastSegmentNum":I
     invoke-interface/range {v17 .. v17}, Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;->isExplicit()Z
 
@@ -163,32 +146,27 @@
 
     or-int/2addr v5, v4
 
-    .line 582
     move-object/from16 v0, v17
 
     invoke-interface {v0, v15}, Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(I)J
 
     move-result-wide v12
 
-    .line 583
     .local v12, "adaptationSetAvailableStartTimeUs":J
     invoke-static {v6, v7, v12, v13}, Ljava/lang/Math;->max(JJ)J
 
     move-result-wide v6
 
-    .line 584
     const/4 v4, -0x1
 
     move/from16 v0, v18
 
     if-eq v0, v4, :cond_1
 
-    .line 585
     invoke-interface/range {v17 .. v18}, Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;->getTimeUs(I)J
 
     move-result-wide v20
 
-    .line 586
     move-object/from16 v0, v17
 
     move/from16 v1, v18
@@ -201,20 +179,17 @@
 
     add-long v10, v20, v22
 
-    .line 587
     .local v10, "adaptationSetAvailableEndTimeUs":J
     invoke-static {v8, v9, v10, v11}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v8
 
-    .line 574
     .end local v10    # "adaptationSetAvailableEndTimeUs":J
     :cond_1
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_0
 
-    .line 592
     .end local v12    # "adaptationSetAvailableStartTimeUs":J
     .end local v15    # "firstSegmentNum":I
     .end local v17    # "index":Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;

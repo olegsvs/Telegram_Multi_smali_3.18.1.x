@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$5;
 
     .prologue
-    .line 316
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$5$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$5;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$5$1;->val$arrayList:Ljava/util/ArrayList;
@@ -49,25 +48,20 @@
 
     const/4 v4, 0x0
 
-    .line 319
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$5$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$5;
 
     iget-boolean v0, v0, Lorg/telegram/messenger/query/StickersQuery$5;->val$gif:Z
 
     if-eqz v0, :cond_0
 
-    .line 320
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$5$1;->val$arrayList:Ljava/util/ArrayList;
 
     invoke-static {v0}, Lorg/telegram/messenger/query/StickersQuery;->access$002(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 321
     invoke-static {v4}, Lorg/telegram/messenger/query/StickersQuery;->access$102(Z)Z
 
-    .line 322
     invoke-static {v5}, Lorg/telegram/messenger/query/StickersQuery;->access$202(Z)Z
 
-    .line 328
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -101,7 +95,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 329
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$5$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$5;
 
     iget v0, v0, Lorg/telegram/messenger/query/StickersQuery$5;->val$type:I
@@ -112,10 +105,8 @@
 
     invoke-static {v0, v1, v4}, Lorg/telegram/messenger/query/StickersQuery;->loadRecents(IZZ)V
 
-    .line 330
     return-void
 
-    .line 324
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$300()[Ljava/util/ArrayList;
 
@@ -129,7 +120,6 @@
 
     aput-object v2, v0, v1
 
-    .line 325
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$400()[Z
 
     move-result-object v0
@@ -140,7 +130,6 @@
 
     aput-boolean v4, v0, v1
 
-    .line 326
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$500()[Z
 
     move-result-object v0

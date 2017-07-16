@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/SettingsActivity$1$1;
 
     .prologue
-    .line 233
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$1$1$1;->this$2:Lorg/telegram/ui/SettingsActivity$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v4, 0x0
 
-    .line 236
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -64,7 +62,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 237
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -75,9 +72,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 238
     invoke-static {v5}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 239
     return-void
 .end method

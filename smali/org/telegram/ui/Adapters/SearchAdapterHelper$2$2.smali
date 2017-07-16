@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;
 
     .prologue
-    .line 134
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$2$2;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$2$2;->val$arrayList:Ljava/util/ArrayList;
@@ -49,7 +48,6 @@
     .locals 3
 
     .prologue
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$2$2;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;->this$0:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->setHashtags(Ljava/util/ArrayList;Ljava/util/HashMap;)V
 
-    .line 138
     return-void
 .end method

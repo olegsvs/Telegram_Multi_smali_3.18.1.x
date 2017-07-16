@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 1248
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$10;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1251
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$10;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ProfileActivity;->access$700(Lorg/telegram/ui/ProfileActivity;)I
@@ -51,7 +49,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 1252
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -70,7 +67,6 @@
 
     move-result-object v1
 
-    .line 1253
     .local v1, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
@@ -82,7 +78,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1254
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v2
@@ -95,7 +90,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 1255
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v2
@@ -108,13 +102,11 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/PhotoViewer;->openPhoto(Lorg/telegram/tgnet/TLRPC$FileLocation;Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;)Z
 
-    .line 1264
     .end local v1    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     :goto_0
     return-void
 
-    .line 1257
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$10;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -124,7 +116,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1258
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -143,7 +134,6 @@
 
     move-result-object v0
 
-    .line 1259
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
@@ -155,7 +145,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1260
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v2
@@ -168,7 +157,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 1261
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v2

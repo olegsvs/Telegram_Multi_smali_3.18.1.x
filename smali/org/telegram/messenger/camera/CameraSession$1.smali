@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraSession;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraSession$1;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p2, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 50
     if-eqz p1, :cond_0
 
-    .line 55
     :cond_0
     return-void
 .end method

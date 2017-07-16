@@ -41,54 +41,44 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 39
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 23
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 24
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->paintB:Landroid/graphics/Paint;
 
-    .line 25
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->reverseAngle:Z
 
-    .line 32
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->interpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 33
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->color:I
 
-    .line 34
     const v0, -0x8a8a8b
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->rotatedColor:I
 
-    .line 35
     const/high16 v0, 0x43960000    # 300.0f
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->animationTime:F
 
-    .line 36
     iput-boolean v1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->rotated:Z
 
-    .line 40
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -101,10 +91,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 41
     iput-boolean p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->alwaysClose:Z
 
-    .line 42
     return-void
 .end method
 
@@ -115,7 +103,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 86
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
@@ -128,7 +115,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 87
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->lastFrameTime:J
@@ -139,7 +125,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 88
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
@@ -152,7 +137,6 @@
 
     sub-long v10, v6, v18
 
-    .line 90
     .local v10, "dt":J
     move-object/from16 v0, p0
 
@@ -168,7 +152,6 @@
 
     iput v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentAnimationTime:I
 
-    .line 91
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentAnimationTime:I
@@ -183,7 +166,6 @@
 
     if-ltz v2, :cond_2
 
-    .line 92
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->finalRotation:F
@@ -192,7 +174,6 @@
 
     iput v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
-    .line 101
     .end local v10    # "dt":J
     :cond_0
     :goto_0
@@ -204,10 +185,8 @@
 
     iput-wide v6, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->lastFrameTime:J
 
-    .line 102
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BackDrawable;->invalidateSelf()V
 
-    .line 105
     :cond_1
     move-object/from16 v0, p0
 
@@ -243,7 +222,6 @@
 
     float-to-int v13, v2
 
-    .line 106
     .local v13, "rD":I
     :goto_1
     move-object/from16 v0, p0
@@ -280,7 +258,6 @@
 
     float-to-int v14, v2
 
-    .line 107
     .local v14, "rG":I
     :goto_2
     move-object/from16 v0, p0
@@ -317,7 +294,6 @@
 
     float-to-int v12, v2
 
-    .line 108
     .local v12, "rB":I
     :goto_3
     move-object/from16 v0, p0
@@ -354,7 +330,6 @@
 
     move-result v8
 
-    .line 109
     .local v8, "c":I
     move-object/from16 v0, p0
 
@@ -362,10 +337,8 @@
 
     invoke-virtual {v2, v8}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 111
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 112
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ActionBar/BackDrawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -386,12 +359,10 @@
 
     invoke-virtual {v0, v2, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 113
     move-object/from16 v0, p0
 
     iget v15, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
-    .line 114
     .local v15, "rotation":F
     move-object/from16 v0, p0
 
@@ -399,7 +370,6 @@
 
     if-nez v2, :cond_8
 
-    .line 115
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
@@ -421,7 +391,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 120
     :goto_5
     const/high16 v2, 0x40e00000    # 7.0f
 
@@ -465,7 +434,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 121
     const/high16 v2, 0x3f000000    # 0.5f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -478,7 +446,6 @@
 
     move/from16 v16, v0
 
-    .line 122
     .local v16, "startYDiff":F
     const/high16 v2, 0x40e00000    # 7.0f
 
@@ -500,7 +467,6 @@
 
     add-float v9, v2, v4
 
-    .line 123
     .local v9, "endYDiff":F
     const/high16 v2, 0x40e00000    # 7.0f
 
@@ -524,7 +490,6 @@
 
     add-float v3, v2, v4
 
-    .line 124
     .local v3, "startXDiff":F
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -546,7 +511,6 @@
 
     sub-float v5, v2, v4
 
-    .line 125
     .local v5, "endXDiff":F
     move/from16 v0, v16
 
@@ -562,7 +526,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 126
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->paint:Landroid/graphics/Paint;
@@ -575,13 +538,10 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 127
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 128
     return-void
 
-    .line 94
     .end local v3    # "startXDiff":F
     .end local v5    # "endXDiff":F
     .end local v8    # "c":I
@@ -605,7 +565,6 @@
 
     if-gez v2, :cond_3
 
-    .line 95
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ActionBar/BackDrawable;->interpolator:Landroid/view/animation/DecelerateInterpolator;
@@ -638,7 +597,6 @@
 
     goto/16 :goto_0
 
-    .line 97
     :cond_3
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -670,28 +628,24 @@
 
     goto/16 :goto_0
 
-    .line 105
     .end local v10    # "dt":J
     :cond_4
     const/4 v13, 0x0
 
     goto/16 :goto_1
 
-    .line 106
     .restart local v13    # "rD":I
     :cond_5
     const/4 v14, 0x0
 
     goto/16 :goto_2
 
-    .line 107
     .restart local v14    # "rG":I
     :cond_6
     const/4 v12, 0x0
 
     goto/16 :goto_3
 
-    .line 115
     .restart local v8    # "c":I
     .restart local v12    # "rB":I
     .restart local v15    # "rotation":F
@@ -700,7 +654,6 @@
 
     goto/16 :goto_4
 
-    .line 117
     :cond_8
     const/high16 v4, 0x43070000    # 135.0f
 
@@ -727,12 +680,10 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 118
     const/high16 v15, 0x3f800000    # 1.0f
 
     goto/16 :goto_5
 
-    .line 117
     :cond_9
     const/16 v2, 0xb4
 
@@ -743,7 +694,6 @@
     .locals 1
 
     .prologue
-    .line 157
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -757,7 +707,6 @@
     .locals 1
 
     .prologue
-    .line 152
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -771,7 +720,6 @@
     .locals 1
 
     .prologue
-    .line 147
     const/4 v0, -0x2
 
     return v0
@@ -782,7 +730,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 138
     return-void
 .end method
 
@@ -791,10 +738,8 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 77
     iput p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->animationTime:F
 
-    .line 78
     return-void
 .end method
 
@@ -803,13 +748,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->color:I
 
-    .line 46
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BackDrawable;->invalidateSelf()V
 
-    .line 47
     return-void
 .end method
 
@@ -818,7 +760,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 143
     return-void
 .end method
 
@@ -827,10 +768,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 81
     iput-boolean p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->rotated:Z
 
-    .line 82
     return-void
 .end method
 
@@ -839,13 +778,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 50
     iput p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->rotatedColor:I
 
-    .line 51
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BackDrawable;->invalidateSelf()V
 
-    .line 52
     return-void
 .end method
 
@@ -859,37 +795,30 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 55
     iput-wide v4, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->lastFrameTime:J
 
-    .line 56
     iget v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
     cmpl-float v0, v0, v2
 
     if-nez v0, :cond_1
 
-    .line 57
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->reverseAngle:Z
 
-    .line 61
     :cond_0
     :goto_0
     iput-wide v4, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->lastFrameTime:J
 
-    .line 62
     if-eqz p2, :cond_3
 
-    .line 63
     iget v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
     cmpg-float v0, v0, p1
 
     if-gez v0, :cond_2
 
-    .line 64
     iget v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
     iget v1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->animationTime:F
@@ -900,7 +829,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentAnimationTime:I
 
-    .line 68
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -908,17 +836,13 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->lastFrameTime:J
 
-    .line 69
     iput p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->finalRotation:F
 
-    .line 73
     :goto_2
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/BackDrawable;->invalidateSelf()V
 
-    .line 74
     return-void
 
-    .line 58
     :cond_1
     iget v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
@@ -928,14 +852,12 @@
 
     if-nez v0, :cond_0
 
-    .line 59
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->reverseAngle:Z
 
     goto :goto_0
 
-    .line 66
     :cond_2
     iget v0, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 
@@ -951,7 +873,6 @@
 
     goto :goto_1
 
-    .line 71
     :cond_3
     iput p1, p0, Lorg/telegram/ui/ActionBar/BackDrawable;->currentRotation:F
 

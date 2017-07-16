@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     .prologue
-    .line 72
     iput-object p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$1;->this$0:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$1;->val$isWidthGreater:Z
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$1;->this$0:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->access$000(Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$1;->this$0:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->access$000(Lorg/telegram/ui/Components/SizeNotifierFrameLayout;)Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
@@ -71,7 +68,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;->onSizeChanged(IZ)V
 
-    .line 78
     :cond_0
     return-void
 .end method

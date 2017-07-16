@@ -14,7 +14,6 @@
     .locals 0
 
     .prologue
-    .line 21
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;-><init>()V
 
     return-void

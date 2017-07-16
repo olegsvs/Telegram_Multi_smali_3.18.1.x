@@ -75,50 +75,38 @@
 
     const/4 v1, 0x0
 
-    .line 54
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 31
     iput-boolean v2, p0, Lorg/telegram/ui/Components/PhotoCropView;->freeformCrop:Z
 
-    .line 32
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeX:F
 
-    .line 33
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeY:F
 
-    .line 34
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->draggingState:I
 
-    .line 36
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->oldX:F
 
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->oldY:F
 
-    .line 37
     iput v2, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapWidth:I
 
     iput v2, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapHeight:I
 
-    .line 38
     iput v3, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
     iput v3, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
-    .line 39
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalScale:F
 
-    .line 40
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalX:F
 
-    .line 41
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalY:F
 
-    .line 55
     return-void
 .end method
 
@@ -127,7 +115,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoCropView;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->delegate:Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
 
     return-object v0
@@ -138,7 +125,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoCropView;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     return-object v0
@@ -149,7 +135,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoCropView;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     return-object v0
@@ -160,7 +145,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoCropView;
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -172,7 +156,6 @@
     .param p1, "x1"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 22
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     return-object p1
@@ -186,26 +169,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 246
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 247
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 248
     iput-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
-    .line 249
     iput-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
-    .line 250
     iput-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
-    .line 252
     :cond_0
     return-void
 .end method
@@ -214,19 +191,16 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     if-eqz v0, :cond_0
 
-    .line 218
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->getResult()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 220
     :goto_0
     return-object v0
 
@@ -240,7 +214,6 @@
     .locals 2
 
     .prologue
-    .line 190
     iget v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapX:I
 
     const/high16 v1, 0x41600000    # 14.0f
@@ -260,7 +233,6 @@
     .locals 3
 
     .prologue
-    .line 194
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -272,7 +244,6 @@
     :goto_0
     int-to-float v0, v1
 
-    .line 195
     .local v0, "additionalY":F
     iget v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapY:I
 
@@ -290,7 +261,6 @@
 
     return v1
 
-    .line 194
     .end local v0    # "additionalY":F
     :cond_0
     const/4 v1, 0x0
@@ -302,7 +272,6 @@
     .locals 7
 
     .prologue
-    .line 212
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -314,7 +283,6 @@
     :goto_0
     int-to-float v0, v1
 
-    .line 213
     .local v0, "additionalY":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->getHeight()I
 
@@ -390,7 +358,6 @@
 
     return v1
 
-    .line 212
     .end local v0    # "additionalY":F
     :cond_0
     const/4 v1, 0x0
@@ -402,7 +369,6 @@
     .locals 6
 
     .prologue
-    .line 208
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->getWidth()I
 
     move-result v0
@@ -478,7 +444,6 @@
     .locals 5
 
     .prologue
-    .line 199
     iget v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
     const/4 v1, 0x0
@@ -524,7 +489,6 @@
     .locals 6
 
     .prologue
-    .line 203
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -536,7 +500,6 @@
     :goto_0
     int-to-float v0, v1
 
-    .line 204
     .local v0, "additionalY":F
     iget v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
@@ -580,7 +543,6 @@
 
     return v1
 
-    .line 203
     .end local v0    # "additionalY":F
     :cond_0
     const/4 v1, 0x0
@@ -592,7 +554,6 @@
     .locals 1
 
     .prologue
-    .line 182
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->getCropWidth()F
@@ -606,7 +567,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->getCropHeight()F
@@ -620,7 +580,6 @@
     .locals 2
 
     .prologue
-    .line 174
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->getCropLeft()F
@@ -644,7 +603,6 @@
     .locals 3
 
     .prologue
-    .line 178
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->getCropTop()F
@@ -686,7 +644,6 @@
     .locals 1
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->isReady()Z
@@ -701,7 +658,6 @@
     .param p1, "animated"    # Z
 
     .prologue
-    .line 274
     move-object/from16 v0, p0
 
     iget v11, v0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapWidth:I
@@ -714,7 +670,6 @@
 
     div-float v9, v11, v12
 
-    .line 275
     .local v9, "scaleToX":F
     move-object/from16 v0, p0
 
@@ -728,7 +683,6 @@
 
     div-float v10, v11, v12
 
-    .line 276
     .local v10, "scaleToY":F
     cmpl-float v11, v9, v10
 
@@ -736,7 +690,6 @@
 
     move v8, v10
 
-    .line 277
     .local v8, "scaleTo":F
     :goto_0
     const/high16 v11, 0x3f800000    # 1.0f
@@ -757,7 +710,6 @@
 
     if-lez v11, :cond_2
 
-    .line 278
     const/high16 v11, 0x40400000    # 3.0f
 
     move-object/from16 v0, p0
@@ -766,7 +718,6 @@
 
     div-float v8, v11, v12
 
-    .line 282
     :cond_0
     :goto_1
     move-object/from16 v0, p0
@@ -775,7 +726,6 @@
 
     mul-float v4, v11, v8
 
-    .line 283
     .local v4, "newSizeX":F
     move-object/from16 v0, p0
 
@@ -783,7 +733,6 @@
 
     mul-float v5, v11, v8
 
-    .line 284
     .local v5, "newSizeY":F
     sget v11, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -796,7 +745,6 @@
     :goto_2
     int-to-float v1, v11
 
-    .line 285
     .local v1, "additionalY":F
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/PhotoCropView;->getWidth()I
 
@@ -810,7 +758,6 @@
 
     div-float v6, v11, v12
 
-    .line 286
     .local v6, "newX":F
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/PhotoCropView;->getHeight()I
 
@@ -826,7 +773,6 @@
 
     div-float v7, v11, v12
 
-    .line 287
     .local v7, "newY":F
     new-instance v11, Landroid/graphics/RectF;
 
@@ -852,7 +798,6 @@
 
     iput-object v11, v0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
-    .line 288
     new-instance v11, Landroid/graphics/RectF;
 
     invoke-direct {v11, v6, v7, v4, v5}, Landroid/graphics/RectF;-><init>(FFFF)V
@@ -861,7 +806,6 @@
 
     iput-object v11, v0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
-    .line 290
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/PhotoCropView;->getWidth()I
 
     move-result v11
@@ -892,7 +836,6 @@
 
     add-float v2, v11, v12
 
-    .line 291
     .local v2, "newBitmapGlobalX":F
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/PhotoCropView;->getHeight()I
 
@@ -928,7 +871,6 @@
 
     add-float v3, v11, v12
 
-    .line 293
     .local v3, "newBitmapGlobalY":F
     move-object/from16 v0, p0
 
@@ -944,7 +886,6 @@
 
     invoke-interface {v11, v2, v3, v12, v0}, Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;->needMoveImageTo(FFFZ)V
 
-    .line 294
     return-void
 
     .end local v1    # "additionalY":F
@@ -958,10 +899,8 @@
     :cond_1
     move v8, v9
 
-    .line 276
     goto/16 :goto_0
 
-    .line 279
     .restart local v8    # "scaleTo":F
     :cond_2
     const/high16 v11, 0x3f800000    # 1.0f
@@ -982,7 +921,6 @@
 
     if-gez v11, :cond_0
 
-    .line 280
     const/high16 v11, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -993,7 +931,6 @@
 
     goto/16 :goto_1
 
-    .line 284
     .restart local v4    # "newSizeX":F
     .restart local v5    # "newSizeY":F
     :cond_3
@@ -1006,17 +943,14 @@
     .locals 1
 
     .prologue
-    .line 156
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     if-eqz v0, :cond_0
 
-    .line 157
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->willShow()V
 
-    .line 159
     :cond_0
     return-void
 .end method
@@ -1025,21 +959,17 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->show()V
 
-    .line 167
     :goto_0
     return-void
 
-    .line 165
     :cond_0
     const/4 v0, 0x1
 
@@ -1052,12 +982,10 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->hide()V
 
-    .line 171
     return-void
 .end method
 
@@ -1070,35 +998,28 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 302
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 304
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->delegate:Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
 
     invoke-interface {v1}, Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 305
     .local v0, "newBitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 306
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapToEdit:Landroid/graphics/Bitmap;
 
-    .line 309
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     if-eqz v1, :cond_1
 
-    .line 310
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/Crop/CropView;->updateLayout()V
 
-    .line 312
     :cond_1
     return-void
 .end method
@@ -1107,17 +1028,14 @@
     .locals 1
 
     .prologue
-    .line 151
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->reset()V
 
-    .line 152
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->reset()V
 
-    .line 153
     return-void
 .end method
 
@@ -1128,61 +1046,50 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 255
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
     if-eqz v0, :cond_0
 
-    .line 256
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
 
     if-nez v0, :cond_1
 
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->left:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
-    .line 259
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->right:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeX:F
 
-    .line 260
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeY:F
 
-    .line 261
     iput-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
-    .line 262
     iput-object v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationEndValues:Landroid/graphics/RectF;
 
-    .line 269
     :goto_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->invalidate()V
 
-    .line 271
     :cond_0
     return-void
 
-    .line 264
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
@@ -1204,7 +1111,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
-    .line 265
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->top:F
@@ -1225,7 +1131,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
-    .line 266
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->right:F
@@ -1246,7 +1151,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeX:F
 
-    .line 267
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationStartValues:Landroid/graphics/RectF;
 
     iget v0, v0, Landroid/graphics/RectF;->bottom:F
@@ -1287,51 +1191,36 @@
 
     const/4 v3, 0x0
 
-    .line 58
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapToEdit:Landroid/graphics/Bitmap;
 
-    .line 59
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeX:F
 
-    .line 60
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeY:F
 
-    .line 61
     iput v8, p0, Lorg/telegram/ui/Components/PhotoCropView;->draggingState:I
 
-    .line 62
     iput v3, p0, Lorg/telegram/ui/Components/PhotoCropView;->oldX:F
 
-    .line 63
     iput v3, p0, Lorg/telegram/ui/Components/PhotoCropView;->oldY:F
 
-    .line 64
     iput v2, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapWidth:I
 
-    .line 65
     iput v2, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapHeight:I
 
-    .line 66
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
-    .line 67
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
-    .line 68
     iput-boolean p3, p0, Lorg/telegram/ui/Components/PhotoCropView;->freeformCrop:Z
 
-    .line 69
     iput p2, p0, Lorg/telegram/ui/Components/PhotoCropView;->orientation:I
 
-    .line 70
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->requestLayout()V
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     if-nez v0, :cond_0
 
-    .line 73
     new-instance v0, Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->getContext()Landroid/content/Context;
@@ -1342,7 +1231,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     new-instance v1, Lorg/telegram/ui/Components/PhotoCropView$1;
@@ -1351,7 +1239,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/Crop/CropView;->setListener(Lorg/telegram/ui/Components/Crop/CropView$CropViewListener;)V
 
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     const/high16 v1, 0x42800000    # 64.0f
@@ -1364,12 +1251,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/Crop/CropView;->setBottomPadding(F)V
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/PhotoCropView;->addView(Landroid/view/View;)V
 
-    .line 90
     new-instance v0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->getContext()Landroid/content/Context;
@@ -1380,7 +1265,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     new-instance v1, Lorg/telegram/ui/Components/PhotoCropView$2;
@@ -1389,7 +1273,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setListener(Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;)V
 
-    .line 121
     iget-object v7, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     const/4 v0, -0x1
@@ -1410,42 +1293,34 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Components/PhotoCropView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 124
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Components/Crop/CropView;->setVisibility(I)V
 
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/ui/Components/Crop/CropView;->setBitmap(Landroid/graphics/Bitmap;IZ)V
 
-    .line 127
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->showOnSetBitmap:Z
 
     if-eqz v0, :cond_1
 
-    .line 128
     iput-boolean v8, p0, Lorg/telegram/ui/Components/PhotoCropView;->showOnSetBitmap:Z
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->cropView:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->show()V
 
-    .line 132
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-virtual {v0, p3}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setFreeform(Z)V
 
-    .line 133
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->wheelView:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->reset()V
 
-    .line 134
     return-void
 .end method
 
@@ -1456,16 +1331,12 @@
     .param p3, "y"    # F
 
     .prologue
-    .line 224
     iput p1, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalScale:F
 
-    .line 225
     iput p2, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalX:F
 
-    .line 226
     iput p3, p0, Lorg/telegram/ui/Components/PhotoCropView;->bitmapGlobalY:F
 
-    .line 227
     return-void
 .end method
 
@@ -1474,10 +1345,8 @@
     .param p1, "delegate"    # Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
 
     .prologue
-    .line 297
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoCropView;->delegate:Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
 
-    .line 298
     return-void
 .end method
 
@@ -1492,22 +1361,16 @@
 
     const/high16 v0, -0x40800000    # -1.0f
 
-    .line 137
     iput p1, p0, Lorg/telegram/ui/Components/PhotoCropView;->orientation:I
 
-    .line 138
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectX:F
 
-    .line 139
     iput v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectY:F
 
-    .line 140
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeX:F
 
-    .line 141
     iput v1, p0, Lorg/telegram/ui/Components/PhotoCropView;->rectSizeY:F
 
-    .line 142
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->delegate:Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -1516,10 +1379,8 @@
 
     invoke-interface {v0, v3, v3, v1, v2}, Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;->needMoveImageTo(FFFZ)V
 
-    .line 143
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoCropView;->requestLayout()V
 
-    .line 144
     return-void
 .end method
 
@@ -1527,16 +1388,13 @@
     .locals 4
 
     .prologue
-    .line 230
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     if-eqz v0, :cond_0
 
-    .line 243
     :goto_0
     return-void
 
-    .line 233
     :cond_0
     new-instance v0, Lorg/telegram/ui/Components/PhotoCropView$3;
 
@@ -1544,7 +1402,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
-    .line 242
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView;->animationRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v2, 0x5dc

@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 602
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$3;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$3;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -45,11 +44,9 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 605
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$3;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1100(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)V
 
-    .line 606
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     .prologue
-    .line 995
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$13;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,14 +38,12 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1003
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$13;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$1100(Lorg/telegram/ui/ActionBar/ActionBarLayout;Z)V
 
-    .line 1004
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 998
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$13;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -64,6 +60,5 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$602(Lorg/telegram/ui/ActionBar/ActionBarLayout;J)J
 
-    .line 999
     return-void
 .end method

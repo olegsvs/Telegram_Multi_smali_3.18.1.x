@@ -27,7 +27,6 @@
     .param p4, "bufferSize"    # I
 
     .prologue
-    .line 94
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -84,9 +83,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 96
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$InitializationException;->audioTrackState:I
 
-    .line 97
     return-void
 .end method

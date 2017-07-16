@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 31
     iput-object p1, p0, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/FileUploadOperation$1;
 
     .prologue
-    .line 31
     invoke-direct {p0, p1}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;-><init>(Lorg/telegram/messenger/FileUploadOperation;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
 
     .prologue
-    .line 31
     iget-wide v0, p0, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->bytesOffset:J
 
     return-wide v0
@@ -64,7 +61,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 31
     iput-wide p1, p0, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->bytesOffset:J
 
     return-wide p1
@@ -75,7 +71,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
 
     .prologue
-    .line 31
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->iv:[B
 
     return-object v0
@@ -87,7 +82,6 @@
     .param p1, "x1"    # [B
 
     .prologue
-    .line 31
     iput-object p1, p0, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->iv:[B
 
     return-object p1

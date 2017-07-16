@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2670
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 2673
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -58,7 +56,6 @@
 
     move-result-object v14
 
-    .line 2674
     .local v14, "object":Ljava/lang/Object;
     move-object/from16 v0, p0
 
@@ -72,7 +69,6 @@
 
     move-result v17
 
-    .line 2675
     .local v17, "start":I
     move-object/from16 v0, p0
 
@@ -86,7 +82,6 @@
 
     move-result v12
 
-    .line 2676
     .local v12, "len":I
     instance-of v2, v14, Lorg/telegram/tgnet/TLRPC$User;
 
@@ -94,21 +89,17 @@
 
     move-object/from16 v18, v14
 
-    .line 2677
     check-cast v18, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 2678
     .local v18, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v18, :cond_0
 
-    .line 2679
     move-object/from16 v0, v18
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
     if-eqz v2, :cond_1
 
-    .line 2680
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -147,14 +138,12 @@
 
     invoke-virtual {v2, v0, v12, v4}, Lorg/telegram/ui/Components/ChatActivityEnterView;->replaceWithText(IILjava/lang/CharSequence;)V
 
-    .line 2716
     .end local v14    # "object":Ljava/lang/Object;
     .end local v18    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     :goto_0
     return-void
 
-    .line 2682
     .restart local v14    # "object":Ljava/lang/Object;
     .restart local v18    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
@@ -162,7 +151,6 @@
 
     iget-object v13, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 2683
     .local v13, "name":Ljava/lang/String;
     if-eqz v13, :cond_2
 
@@ -172,13 +160,11 @@
 
     if-nez v2, :cond_3
 
-    .line 2684
     :cond_2
     move-object/from16 v0, v18
 
     iget-object v13, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    .line 2686
     :cond_3
     new-instance v16, Landroid/text/SpannableString;
 
@@ -204,7 +190,6 @@
 
     invoke-direct {v0, v2}, Landroid/text/SpannableString;-><init>(Ljava/lang/CharSequence;)V
 
-    .line 2687
     .local v16, "spannable":Landroid/text/Spannable;
     new-instance v2, Lorg/telegram/ui/Components/URLSpanUserMention;
 
@@ -246,7 +231,6 @@
 
     invoke-interface {v0, v2, v4, v5, v6}, Landroid/text/Spannable;->setSpan(Ljava/lang/Object;III)V
 
-    .line 2688
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -261,7 +245,6 @@
 
     goto :goto_0
 
-    .line 2691
     .end local v13    # "name":Ljava/lang/String;
     .end local v16    # "spannable":Landroid/text/Spannable;
     .end local v18    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -270,7 +253,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 2692
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -285,7 +267,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 2693
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v2
@@ -316,7 +297,6 @@
 
     invoke-virtual/range {v2 .. v11}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$WebPage;ZLjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 2694
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -329,7 +309,6 @@
 
     goto/16 :goto_0
 
-    .line 2696
     :cond_5
     move-object/from16 v0, p0
 
@@ -361,13 +340,10 @@
 
     goto/16 :goto_0
 
-    .line 2698
     :cond_6
-    instance-of v2, v14, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v2, :cond_b
 
-    .line 2699
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -382,73 +358,57 @@
 
     move-object v15, v14
 
-    .line 2702
-    check-cast v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    .line 2703
-    .local v15, "result":Lorg/telegram/tgnet/TLRPC$BotInlineResult;
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x10
 
     if-lt v2, v4, :cond_a
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v4, "photo"
 
-    .line 2704
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-nez v2, :cond_9
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     if-nez v2, :cond_9
 
     :cond_7
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v4, "gif"
 
-    .line 2705
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-nez v2, :cond_9
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     if-nez v2, :cond_9
 
     :cond_8
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v4, "video"
 
-    .line 2706
     invoke-virtual {v2, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_a
 
-    iget-object v2, v15, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v2, :cond_a
 
-    .line 2707
     :cond_9
     move-object/from16 v0, p0
 
@@ -474,7 +434,6 @@
 
     move-result-object v3
 
-    .line 2708
     .local v3, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
@@ -490,7 +449,6 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 2709
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v2
@@ -525,33 +483,25 @@
 
     goto/16 :goto_0
 
-    .line 2711
     .end local v3    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Object;>;"
     :cond_a
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    invoke-static {v2, v15}, Lorg/telegram/ui/ChatActivity;->access$600(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$BotInlineResult;)V
 
     goto/16 :goto_0
 
-    .line 2713
-    .end local v15    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineResult;
     :cond_b
-    instance-of v2, v14, Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     if-eqz v2, :cond_0
 
-    .line 2714
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$37;->this$0:Lorg/telegram/ui/ChatActivity;
 
-    check-cast v14, Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     .end local v14    # "object":Ljava/lang/Object;
-    invoke-virtual {v2, v14}, Lorg/telegram/ui/ChatActivity;->processInlineBotContextPM(Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;)V
 
     goto/16 :goto_0
 .end method

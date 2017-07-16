@@ -25,7 +25,6 @@
     .param p2, "maxSize"    # I
 
     .prologue
-    .line 1115
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0, p2}, Lorg/telegram/messenger/LruCache;-><init>(I)V
@@ -43,7 +42,6 @@
     .param p4, "newValue"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 1123
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$2400(Lorg/telegram/messenger/ImageLoader;)Ljava/lang/String;
@@ -66,12 +64,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1133
     :cond_0
     :goto_0
     return-void
 
-    .line 1126
     :cond_1
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$1;->this$0:Lorg/telegram/messenger/ImageLoader;
 
@@ -85,7 +81,6 @@
 
     check-cast v1, Ljava/lang/Integer;
 
-    .line 1127
     .local v1, "count":Ljava/lang/Integer;
     if-eqz v1, :cond_2
 
@@ -95,13 +90,11 @@
 
     if-nez v2, :cond_0
 
-    .line 1128
     :cond_2
     invoke-virtual {p3}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 1129
     .local v0, "b":Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->isRecycled()Z
 
@@ -109,7 +102,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1130
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
     goto :goto_0
@@ -121,7 +113,6 @@
     .param p2, "value"    # Landroid/graphics/drawable/BitmapDrawable;
 
     .prologue
-    .line 1118
     invoke-virtual {p2}, Landroid/graphics/drawable/BitmapDrawable;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0

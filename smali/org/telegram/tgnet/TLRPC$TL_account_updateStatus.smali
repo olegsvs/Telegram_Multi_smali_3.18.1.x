@@ -19,7 +19,6 @@
 
 
 # instance fields
-.field public offline:Z
 
 
 # direct methods
@@ -27,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 20649
     const v0, 0x6628562c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_account_updateStatus;->constructor:I
@@ -39,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 20648
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +51,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20654
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -67,16 +63,12 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20658
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_updateStatus;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20659
-    iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_updateStatus;->offline:Z
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeBool(Z)V
 
-    .line 20660
     return-void
 .end method

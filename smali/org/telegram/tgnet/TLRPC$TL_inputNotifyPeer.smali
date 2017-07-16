@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 6732
     const v0, -0x4743a4f4
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputNotifyPeer;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 6731
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputNotifyPeer;-><init>()V
 
     return-void
@@ -53,7 +51,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6737
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -64,7 +61,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputNotifyPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 6738
     return-void
 .end method
 
@@ -73,16 +69,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 6741
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputNotifyPeer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6742
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputNotifyPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputPeer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 6743
     return-void
 .end method

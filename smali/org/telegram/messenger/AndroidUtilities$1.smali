@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 304
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$1;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 308
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -56,7 +54,6 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 309
     .local v1, "intent":Landroid/content/Intent;
     iget-object v2, p0, Lorg/telegram/messenger/AndroidUtilities$1;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
@@ -70,16 +67,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 313
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 310
     :catch_0
     move-exception v0
 
-    .line 311
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

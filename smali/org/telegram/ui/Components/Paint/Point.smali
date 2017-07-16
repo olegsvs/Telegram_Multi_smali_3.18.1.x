@@ -21,19 +21,14 @@
     .param p5, "z"    # D
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput-wide p1, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
-    .line 15
     iput-wide p3, p0, Lorg/telegram/ui/Components/Paint/Point;->y:D
 
-    .line 16
     iput-wide p5, p0, Lorg/telegram/ui/Components/Paint/Point;->z:D
 
-    .line 17
     return-void
 .end method
 
@@ -42,25 +37,20 @@
     .param p1, "point"    # Lorg/telegram/ui/Components/Paint/Point;
 
     .prologue
-    .line 19
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 20
     iget-wide v0, p1, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
-    .line 21
     iget-wide v0, p1, Lorg/telegram/ui/Components/Paint/Point;->y:D
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->y:D
 
-    .line 22
     iget-wide v0, p1, Lorg/telegram/ui/Components/Paint/Point;->z:D
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->z:D
 
-    .line 23
     return-void
 .end method
 
@@ -68,7 +58,6 @@
     .locals 6
 
     .prologue
-    .line 71
     iget-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -105,7 +94,6 @@
     .param p1, "point"    # Lorg/telegram/ui/Components/Paint/Point;
 
     .prologue
-    .line 55
     new-instance v1, Lorg/telegram/ui/Components/Paint/Point;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -137,7 +125,6 @@
     .param p2, "scalar"    # D
 
     .prologue
-    .line 49
     iget-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
     iget-wide v2, p1, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -148,7 +135,6 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
-    .line 50
     iget-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->y:D
 
     iget-wide v2, p1, Lorg/telegram/ui/Components/Paint/Point;->y:D
@@ -159,7 +145,6 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->y:D
 
-    .line 51
     iget-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->z:D
 
     iget-wide v2, p1, Lorg/telegram/ui/Components/Paint/Point;->z:D
@@ -170,7 +155,6 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->z:D
 
-    .line 52
     return-void
 .end method
 
@@ -183,24 +167,19 @@
 
     const/4 v2, 0x0
 
-    .line 27
     if-nez p1, :cond_1
 
-    .line 37
     :cond_0
     :goto_0
     return v2
 
-    .line 30
     :cond_1
     if-ne p1, p0, :cond_2
 
     move v2, v1
 
-    .line 31
     goto :goto_0
 
-    .line 33
     :cond_2
     instance-of v3, p1, Lorg/telegram/ui/Components/Paint/Point;
 
@@ -208,10 +187,8 @@
 
     move-object v0, p1
 
-    .line 36
     check-cast v0, Lorg/telegram/ui/Components/Paint/Point;
 
-    .line 37
     .local v0, "other":Lorg/telegram/ui/Components/Paint/Point;
     iget-wide v4, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
@@ -255,7 +232,6 @@
     .prologue
     const-wide/high16 v6, 0x4000000000000000L    # 2.0
 
-    .line 75
     iget-wide v0, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
 
     iget-wide v2, p1, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -303,7 +279,6 @@
     .locals 4
 
     .prologue
-    .line 67
     const-wide/high16 v0, 0x3ff0000000000000L    # 1.0
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/Point;->getMagnitude()D
@@ -325,7 +300,6 @@
     .param p3, "point"    # Lorg/telegram/ui/Components/Paint/Point;
 
     .prologue
-    .line 45
     new-instance v1, Lorg/telegram/ui/Components/Paint/Point;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -362,7 +336,6 @@
     .param p1, "scalar"    # D
 
     .prologue
-    .line 63
     new-instance v1, Lorg/telegram/ui/Components/Paint/Point;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -388,7 +361,6 @@
     .param p2, "scalar"    # D
 
     .prologue
-    .line 41
     new-instance v1, Lorg/telegram/ui/Components/Paint/Point;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -425,7 +397,6 @@
     .param p1, "point"    # Lorg/telegram/ui/Components/Paint/Point;
 
     .prologue
-    .line 59
     new-instance v1, Lorg/telegram/ui/Components/Paint/Point;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D
@@ -455,7 +426,6 @@
     .locals 4
 
     .prologue
-    .line 79
     new-instance v0, Landroid/graphics/PointF;
 
     iget-wide v2, p0, Lorg/telegram/ui/Components/Paint/Point;->x:D

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/WebPlayerView;
 
     .prologue
-    .line 153
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$1;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 156
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$1;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$000(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/VideoPlayer;
@@ -64,12 +62,10 @@
 
     if-nez v0, :cond_1
 
-    .line 163
     :cond_0
     :goto_0
     return-void
 
-    .line 159
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$1;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -93,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->setProgress(I)V
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$1;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$100(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$ControlsView;
@@ -126,7 +121,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->setBufferedProgress(II)V
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$1;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$200(Lorg/telegram/ui/Components/WebPlayerView;)Ljava/lang/Runnable;

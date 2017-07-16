@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationsController;
 
     .prologue
-    .line 541
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iput-object p2, p0, Lorg/telegram/messenger/NotificationsController$9;->val$popupArray:Ljava/util/ArrayList;
@@ -53,10 +52,8 @@
     .locals 26
 
     .prologue
-    .line 544
     const/4 v5, 0x0
 
-    .line 546
     .local v5, "added":Z
     move-object/from16 v0, p0
 
@@ -68,13 +65,11 @@
 
     move-result v15
 
-    .line 547
     .local v15, "oldCount":I
     new-instance v21, Ljava/util/HashMap;
 
     invoke-direct/range {v21 .. v21}, Ljava/util/HashMap;-><init>()V
 
-    .line 548
     .local v21, "settingsCache":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Boolean;>;"
     sget-object v23, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -86,7 +81,6 @@
 
     move-result-object v20
 
-    .line 549
     .local v20, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v23, "PinnedMessages"
 
@@ -102,11 +96,9 @@
 
     move-result v6
 
-    .line 550
     .local v6, "allowPinned":Z
     const/16 v18, 0x0
 
-    .line 552
     .local v18, "popup":I
     const/4 v4, 0x0
 
@@ -126,7 +118,6 @@
 
     if-ge v4, v0, :cond_13
 
-    .line 553
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->val$messageObjects:Ljava/util/ArrayList;
@@ -141,7 +132,6 @@
 
     check-cast v11, Lorg/telegram/messenger/MessageObject;
 
-    .line 554
     .local v11, "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -157,7 +147,6 @@
 
     int-to-long v12, v0
 
-    .line 555
     .local v12, "mid":J
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -177,7 +166,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 556
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     move-object/from16 v23, v0
@@ -206,7 +194,6 @@
 
     or-long v12, v12, v24
 
-    .line 558
     :cond_0
     move-object/from16 v0, p0
 
@@ -228,24 +215,20 @@
 
     if-eqz v23, :cond_2
 
-    .line 552
     :cond_1
     :goto_1
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 561
     :cond_2
     invoke-virtual {v11}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
     move-result-wide v8
 
-    .line 562
     .local v8, "dialog_id":J
     move-wide/from16 v16, v8
 
-    .line 563
     .local v16, "original_dialog_id":J
     move-object/from16 v0, p0
 
@@ -265,7 +248,6 @@
 
     if-eqz v23, :cond_3
 
-    .line 564
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -276,7 +258,6 @@
 
     goto :goto_1
 
-    .line 567
     :cond_3
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -290,7 +271,6 @@
 
     if-eqz v23, :cond_5
 
-    .line 568
     if-nez v6, :cond_4
 
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -311,7 +291,6 @@
 
     if-nez v23, :cond_1
 
-    .line 571
     :cond_4
     iget-object v0, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -327,7 +306,6 @@
 
     int-to-long v8, v0
 
-    .line 573
     :cond_5
     move-object/from16 v0, p0
 
@@ -343,7 +321,6 @@
 
     if-eqz v23, :cond_6
 
-    .line 574
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -352,11 +329,9 @@
 
     invoke-static/range {v23 .. v23}, Lorg/telegram/messenger/NotificationsController;->access$508(Lorg/telegram/messenger/NotificationsController;)I
 
-    .line 576
     :cond_6
     const/4 v5, 0x1
 
-    .line 578
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v23
@@ -371,22 +346,18 @@
 
     check-cast v22, Ljava/lang/Boolean;
 
-    .line 579
     .local v22, "value":Ljava/lang/Boolean;
     long-to-int v10, v8
 
-    .line 580
     .local v10, "lower_id":I
     if-gez v10, :cond_d
 
     const/4 v7, 0x1
 
-    .line 581
     .local v7, "isChat":Z
     :goto_2
     if-eqz v10, :cond_7
 
-    .line 582
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -421,7 +392,6 @@
 
     if-eqz v23, :cond_e
 
-    .line 583
     new-instance v23, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v23 .. v23}, Ljava/lang/StringBuilder;-><init>()V
@@ -454,11 +424,9 @@
 
     move-result v18
 
-    .line 587
     :goto_3
     if-nez v18, :cond_10
 
-    .line 588
     long-to-int v0, v8
 
     move/from16 v23, v0
@@ -480,12 +448,10 @@
 
     move-result v18
 
-    .line 595
     :cond_7
     :goto_5
     if-nez v22, :cond_a
 
-    .line 596
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -500,7 +466,6 @@
 
     move-result v14
 
-    .line 597
     .local v14, "notifyOverride":I
     const/16 v23, 0x2
 
@@ -553,7 +518,6 @@
 
     move-result-object v22
 
-    .line 598
     invoke-static {v8, v9}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v23
@@ -566,7 +530,6 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 600
     .end local v14    # "notifyOverride":I
     :cond_a
     if-eqz v18, :cond_b
@@ -595,10 +558,8 @@
 
     if-nez v23, :cond_b
 
-    .line 601
     const/16 v18, 0x0
 
-    .line 603
     :cond_b
     invoke-virtual/range {v22 .. v22}, Ljava/lang/Boolean;->booleanValue()Z
 
@@ -606,10 +567,8 @@
 
     if-eqz v23, :cond_1
 
-    .line 604
     if-eqz v18, :cond_c
 
-    .line 605
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->val$popupArray:Ljava/util/ArrayList;
@@ -624,7 +583,6 @@
 
     invoke-virtual {v0, v1, v11}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 607
     :cond_c
     move-object/from16 v0, p0
 
@@ -640,7 +598,6 @@
 
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 608
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -659,7 +616,6 @@
 
     invoke-virtual {v0, v1, v11}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 609
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -680,12 +636,10 @@
 
     invoke-virtual {v0, v1, v11}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 610
     cmp-long v23, v16, v8
 
     if-eqz v23, :cond_1
 
-    .line 611
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -710,27 +664,23 @@
 
     goto/16 :goto_1
 
-    .line 580
     .end local v7    # "isChat":Z
     :cond_d
     const/4 v7, 0x0
 
     goto/16 :goto_2
 
-    .line 585
     .restart local v7    # "isChat":Z
     :cond_e
     const/16 v18, 0x0
 
     goto/16 :goto_3
 
-    .line 588
     :cond_f
     const-string/jumbo v23, "popupAll"
 
     goto/16 :goto_4
 
-    .line 589
     :cond_10
     const/16 v23, 0x1
 
@@ -740,12 +690,10 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 590
     const/16 v18, 0x3
 
     goto/16 :goto_5
 
-    .line 591
     :cond_11
     const/16 v23, 0x2
 
@@ -755,19 +703,16 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 592
     const/16 v18, 0x0
 
     goto/16 :goto_5
 
-    .line 597
     .restart local v14    # "notifyOverride":I
     :cond_12
     const/16 v23, 0x0
 
     goto/16 :goto_6
 
-    .line 616
     .end local v7    # "isChat":Z
     .end local v8    # "dialog_id":J
     .end local v10    # "lower_id":I
@@ -779,7 +724,6 @@
     :cond_13
     if-eqz v5, :cond_14
 
-    .line 617
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$9;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -794,7 +738,6 @@
 
     invoke-static/range {v23 .. v24}, Lorg/telegram/messenger/NotificationsController;->access$1002(Lorg/telegram/messenger/NotificationsController;Z)Z
 
-    .line 620
     :cond_14
     move-object/from16 v0, p0
 
@@ -830,10 +773,8 @@
 
     if-nez v23, :cond_15
 
-    .line 621
     move/from16 v19, v18
 
-    .line 622
     .local v19, "popupFinal":I
     new-instance v23, Lorg/telegram/messenger/NotificationsController$9$1;
 
@@ -847,7 +788,6 @@
 
     invoke-static/range {v23 .. v23}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 636
     .end local v19    # "popupFinal":I
     :cond_15
     return-void

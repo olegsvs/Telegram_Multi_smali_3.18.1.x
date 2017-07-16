@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     .prologue
-    .line 184
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer$2;->this$0:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,13 +38,11 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 187
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer$2;->this$0:Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->access$100(Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;Z)V
 
-    .line 188
     return-void
 .end method

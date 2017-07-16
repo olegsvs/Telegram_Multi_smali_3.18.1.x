@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
     .prologue
-    .line 1171
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->val$pName:Ljava/lang/String;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 1174
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
@@ -58,7 +56,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/PlusSettingsActivity;->access$6702(Lorg/telegram/ui/PlusSettingsActivity;Z)Z
 
-    .line 1175
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
@@ -71,10 +68,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 1177
     const-string/jumbo v0, "/Telegram"
 
-    .line 1178
     .local v0, "path":Ljava/lang/String;
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
@@ -110,7 +105,6 @@
 
     invoke-static {v1, v0, v2, v3, v5}, Lorg/telegram/messenger/Utilities;->savePreferencesToSD(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1179
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$13$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$3$13;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$3$13;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
@@ -127,7 +121,6 @@
 
     invoke-static {v1, v0, v2, v3, v5}, Lorg/telegram/messenger/Utilities;->saveDBToSD(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1181
     .end local v0    # "path":Ljava/lang/String;
     :cond_0
     return-void

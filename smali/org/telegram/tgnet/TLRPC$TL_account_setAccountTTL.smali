@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 22319
     const v0, 0x2442485e
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_account_setAccountTTL;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 22318
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22324
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22328
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_setAccountTTL;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22329
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_setAccountTTL;->ttl:Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22330
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/GcmRegistrationIntentService;
 
     .prologue
-    .line 42
     iput-object p1, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$2;->this$0:Lorg/telegram/messenger/GcmRegistrationIntentService;
 
     iput p2, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$2;->val$failCount:I
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 46
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -55,7 +53,6 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 47
     .local v1, "intent":Landroid/content/Intent;
     const-string/jumbo v2, "failCount"
 
@@ -65,23 +62,19 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 48
     iget-object v2, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$2;->this$0:Lorg/telegram/messenger/GcmRegistrationIntentService;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/GcmRegistrationIntentService;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 52
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 49
     :catch_0
     move-exception v0
 
-    .line 50
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

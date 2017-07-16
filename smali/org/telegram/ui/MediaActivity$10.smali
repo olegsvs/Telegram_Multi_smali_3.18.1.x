@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 1231
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$10;->this$0:Lorg/telegram/ui/MediaActivity;
 
     iput p2, p0, Lorg/telegram/ui/MediaActivity$10;->val$indx:I
@@ -59,10 +58,8 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1234
     if-nez p2, :cond_1
 
-    .line 1235
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$10;->this$0:Lorg/telegram/ui/MediaActivity;
 
     iget v1, p0, Lorg/telegram/ui/MediaActivity$10;->val$indx:I
@@ -73,18 +70,15 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/MediaActivity;->access$3200(Lorg/telegram/ui/MediaActivity;ILandroid/view/View;Lorg/telegram/messenger/MessageObject;)V
 
-    .line 1239
     :cond_0
     :goto_0
     return-void
 
-    .line 1236
     :cond_1
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 1237
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$10;->this$0:Lorg/telegram/ui/MediaActivity;
 
     iget v1, p0, Lorg/telegram/ui/MediaActivity$10;->val$id:I

@@ -1,4 +1,3 @@
-.class public Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;
 .super Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
 .source "TLRPC.java"
 
@@ -10,7 +9,6 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
-    name = "TL_topPeerCategoryBotsInline"
 .end annotation
 
 
@@ -23,10 +21,8 @@
     .locals 1
 
     .prologue
-    .line 9417
     const v0, 0x148677e2
 
-    sput v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;->constructor:I
 
     return-void
 .end method
@@ -35,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 9416
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TopPeerCategory;-><init>()V
 
     return-void
@@ -48,11 +43,8 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 9421
-    sget v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 9422
     return-void
 .end method

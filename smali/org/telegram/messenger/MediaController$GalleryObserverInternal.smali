@@ -23,15 +23,12 @@
     .locals 1
 
     .prologue
-    .line 473
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->this$0:Lorg/telegram/messenger/MediaController;
 
-    .line 474
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
 
-    .line 475
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/MediaController$GalleryObserverInternal;
 
     .prologue
-    .line 472
     invoke-direct {p0}, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->scheduleReloadRunnable()V
 
     return-void
@@ -50,7 +46,6 @@
     .locals 4
 
     .prologue
-    .line 478
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->this$0:Lorg/telegram/messenger/MediaController;
 
     new-instance v1, Lorg/telegram/messenger/MediaController$GalleryObserverInternal$1;
@@ -65,7 +60,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 489
     return-void
 .end method
 
@@ -76,10 +70,8 @@
     .param p1, "selfChange"    # Z
 
     .prologue
-    .line 493
     invoke-super {p0, p1}, Landroid/database/ContentObserver;->onChange(Z)V
 
-    .line 494
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$1400(Lorg/telegram/messenger/MediaController;)Ljava/lang/Runnable;
@@ -88,7 +80,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 495
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$1400(Lorg/telegram/messenger/MediaController;)Ljava/lang/Runnable;
@@ -97,10 +88,8 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 497
     :cond_0
     invoke-direct {p0}, Lorg/telegram/messenger/MediaController$GalleryObserverInternal;->scheduleReloadRunnable()V
 
-    .line 498
     return-void
 .end method

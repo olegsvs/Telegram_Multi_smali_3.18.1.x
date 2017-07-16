@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileUploadOperation;
 
     .prologue
-    .line 142
     iput-object p1, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     iput-wide p2, p0, Lorg/telegram/messenger/FileUploadOperation$2;->val$finalSize:J
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$200(Lorg/telegram/messenger/FileUploadOperation;)I
@@ -62,21 +60,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 146
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/FileUploadOperation;->access$202(Lorg/telegram/messenger/FileUploadOperation;I)I
 
-    .line 147
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     iget-wide v2, p0, Lorg/telegram/messenger/FileUploadOperation$2;->val$finalSize:J
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/FileUploadOperation;->access$302(Lorg/telegram/messenger/FileUploadOperation;J)J
 
-    .line 148
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     iget-object v1, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -111,7 +106,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/FileUploadOperation;->access$402(Lorg/telegram/messenger/FileUploadOperation;I)I
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$600(Lorg/telegram/messenger/FileUploadOperation;)Z
@@ -120,12 +114,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$700(Lorg/telegram/messenger/FileUploadOperation;)V
 
-    .line 153
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -137,12 +129,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 154
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$2;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$100(Lorg/telegram/messenger/FileUploadOperation;)V
 
-    .line 156
     :cond_1
     return-void
 .end method

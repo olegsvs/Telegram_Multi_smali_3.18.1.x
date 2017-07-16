@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 1159
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iput p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->val$brush:I
@@ -46,14 +45,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1162
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iget v1, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->val$brush:I
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoPaintView;->access$2900(Lorg/telegram/ui/Components/PhotoPaintView;I)V
 
-    .line 1164
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$2500(Lorg/telegram/ui/Components/PhotoPaintView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
@@ -74,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1165
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$20;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$2500(Lorg/telegram/ui/Components/PhotoPaintView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
@@ -85,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->dismiss(Z)V
 
-    .line 1167
     :cond_0
     return-void
 .end method

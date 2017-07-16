@@ -28,7 +28,6 @@
     .param p3, "flags"    # I
 
     .prologue
-    .line 40
     const-wide/32 v4, 0x200000
 
     move-object v0, p0
@@ -41,7 +40,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;IJ)V
 
-    .line 41
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p4, "maxCacheFileSize"    # J
 
     .prologue
-    .line 48
     new-instance v3, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSourceFactory;
 
     invoke-direct {v3}, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSourceFactory;-><init>()V
@@ -74,7 +71,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/upstream/DataSink$Factory;ILorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSource$EventListener;)V
 
-    .line 50
     return-void
 .end method
 
@@ -88,28 +84,20 @@
     .param p6, "eventListener"    # Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSource$EventListener;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
-    .line 60
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->upstreamFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 61
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cacheReadDataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 62
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cacheWriteDataSinkFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSink$Factory;
 
-    .line 63
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->flags:I
 
-    .line 64
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->eventListener:Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSource$EventListener;
 
-    .line 65
     return-void
 .end method
 
@@ -119,7 +107,6 @@
     .locals 7
 
     .prologue
-    .line 69
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSource;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
@@ -132,14 +119,12 @@
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cacheReadDataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 70
     invoke-interface {v3}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;->createDataSource()Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     move-result-object v3
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSourceFactory;->cacheWriteDataSinkFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSink$Factory;
 
-    .line 71
     invoke-interface {v4}, Lorg/telegram/messenger/exoplayer2/upstream/DataSink$Factory;->createDataSink()Lorg/telegram/messenger/exoplayer2/upstream/DataSink;
 
     move-result-object v4

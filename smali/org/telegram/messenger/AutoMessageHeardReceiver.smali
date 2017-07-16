@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 15
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -26,17 +25,14 @@
 
     const/4 v6, 0x0
 
-    .line 19
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->postInitApplication()V
 
-    .line 20
     const-string/jumbo v0, "dialog_id"
 
     invoke-virtual {p2, v0, v8, v9}, Landroid/content/Intent;->getLongExtra(Ljava/lang/String;J)J
 
     move-result-wide v2
 
-    .line 21
     .local v2, "dialog_id":J
     const-string/jumbo v0, "max_id"
 
@@ -44,7 +40,6 @@
 
     move-result v4
 
-    .line 22
     .local v4, "max_id":I
     cmp-long v0, v2, v8
 
@@ -52,12 +47,10 @@
 
     if-nez v4, :cond_1
 
-    .line 26
     :cond_0
     :goto_0
     return-void
 
-    .line 25
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 

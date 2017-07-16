@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 1290
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$25;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 1293
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 1294
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$25;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$2500(Lorg/telegram/ui/Components/PhotoPaintView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
@@ -71,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1295
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$25;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$3400(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/graphics/Rect;
@@ -80,7 +76,6 @@
 
     invoke-virtual {p1, v0}, Landroid/view/View;->getHitRect(Landroid/graphics/Rect;)V
 
-    .line 1296
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$25;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$3400(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/graphics/Rect;
@@ -105,7 +100,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1297
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$25;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$2500(Lorg/telegram/ui/Components/PhotoPaintView;)Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;
@@ -114,7 +108,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow;->dismiss()V
 
-    .line 1301
     :cond_0
     const/4 v0, 0x0
 

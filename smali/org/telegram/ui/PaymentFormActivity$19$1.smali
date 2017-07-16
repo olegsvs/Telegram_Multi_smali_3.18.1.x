@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$19;
 
     .prologue
-    .line 1623
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$19$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,28 +43,24 @@
     .param p3, "saveCard"    # Z
 
     .prologue
-    .line 1626
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$19$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$19;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1627
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$19$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$19;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p3}, Lorg/telegram/ui/PaymentFormActivity;->access$2602(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 1628
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$19$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$19;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$102(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1629
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$19$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$19;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -98,6 +93,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 1630
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 937
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$18;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 940
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$18;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$2700(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/LinearLayout;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setVisibility(I)V
 
-    .line 941
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$18;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$1300(Lorg/telegram/ui/VoIPActivity;)Landroid/view/View;
@@ -59,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 942
     return-void
 .end method

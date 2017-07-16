@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoFilterView;
 
     .prologue
-    .line 2033
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$10;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,16 +43,13 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2036
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$10;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$8702(Lorg/telegram/ui/Components/PhotoFilterView;I)I
 
-    .line 2037
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$10;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$8800(Lorg/telegram/ui/Components/PhotoFilterView;Z)V
 
-    .line 2038
     return-void
 .end method

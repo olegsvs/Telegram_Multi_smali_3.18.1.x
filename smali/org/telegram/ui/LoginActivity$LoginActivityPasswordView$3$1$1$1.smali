@@ -29,7 +29,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     .prologue
-    .line 2059
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,7 +50,6 @@
 
     const/4 v5, 0x0
 
-    .line 2062
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1;
@@ -64,17 +62,14 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 2063
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_0
 
-    .line 2064
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2065
     .local v0, "params":Landroid/os/Bundle;
     const-string/jumbo v1, "phoneFormated"
 
@@ -92,7 +87,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2066
     const-string/jumbo v1, "phoneHash"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
@@ -109,7 +103,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2067
     const-string/jumbo v1, "code"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
@@ -126,7 +119,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2068
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1;
@@ -141,12 +133,10 @@
 
     invoke-virtual {v1, v2, v6, v0, v5}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 2084
     .end local v0    # "params":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 2070
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -160,7 +150,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2071
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1;
@@ -189,7 +178,6 @@
 
     goto :goto_0
 
-    .line 2072
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -203,12 +191,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 2073
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2074
     .restart local v0    # "params":Landroid/os/Bundle;
     const-string/jumbo v1, "phoneFormated"
 
@@ -226,7 +212,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2075
     const-string/jumbo v1, "phoneHash"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
@@ -243,7 +228,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2076
     const-string/jumbo v1, "code"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
@@ -260,7 +244,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2077
     const-string/jumbo v1, "startTime"
 
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -273,7 +256,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2078
     const-string/jumbo v1, "waitTime"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -298,7 +280,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2079
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1;
@@ -315,7 +296,6 @@
 
     goto/16 :goto_0
 
-    .line 2081
     .end local v0    # "params":Landroid/os/Bundle;
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$3$1$1;

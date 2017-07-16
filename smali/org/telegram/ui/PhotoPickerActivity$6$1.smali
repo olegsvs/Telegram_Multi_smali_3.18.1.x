@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoPickerActivity$6;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$6$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 377
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$6$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$6;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 378
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$6$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$6;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -65,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 379
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$6$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$6;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoPickerActivity$6;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -76,7 +72,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoPickerActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 381
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -92,6 +87,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->clearWebRecent(I)V
 
-    .line 382
     return-void
 .end method

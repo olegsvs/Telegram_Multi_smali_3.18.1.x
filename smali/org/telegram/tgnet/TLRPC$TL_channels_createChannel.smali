@@ -35,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 23817
     const v0, -0xb76c281
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->constructor:I
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 23816
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -62,7 +60,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23826
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object v0
@@ -75,12 +72,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23830
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23831
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->broadcast:Z
 
     if-eqz v0, :cond_0
@@ -92,7 +87,6 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->flags:I
 
-    .line 23832
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->megagroup:Z
 
     if-eqz v0, :cond_1
@@ -104,25 +98,20 @@
     :goto_1
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->flags:I
 
-    .line 23833
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23834
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 23835
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->about:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 23836
     return-void
 
-    .line 23831
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->flags:I
 
@@ -130,7 +119,6 @@
 
     goto :goto_0
 
-    .line 23832
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_createChannel;->flags:I
 

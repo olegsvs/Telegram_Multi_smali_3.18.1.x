@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 18956
     const v0, 0x78d4dec1
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updateShort;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 18955
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Updates;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18960
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,13 +57,11 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateShort;->update:Lorg/telegram/tgnet/TLRPC$Update;
 
-    .line 18961
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateShort;->date:I
 
-    .line 18962
     return-void
 .end method

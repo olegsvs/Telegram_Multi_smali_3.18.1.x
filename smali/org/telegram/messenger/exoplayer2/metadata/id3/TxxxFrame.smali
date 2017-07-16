@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 70
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame$1;-><init>()V
@@ -44,26 +43,22 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 39
     const-string/jumbo v0, "TXXX"
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/metadata/id3/Id3Frame;-><init>(Ljava/lang/String;)V
 
-    .line 40
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->description:Ljava/lang/String;
 
-    .line 41
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->value:Ljava/lang/String;
 
-    .line 42
     return-void
 .end method
 
@@ -73,18 +68,14 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     const-string/jumbo v0, "TXXX"
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/metadata/id3/Id3Frame;-><init>(Ljava/lang/String;)V
 
-    .line 34
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->description:Ljava/lang/String;
 
-    .line 35
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->value:Ljava/lang/String;
 
-    .line 36
     return-void
 .end method
 
@@ -99,15 +90,12 @@
 
     const/4 v2, 0x0
 
-    .line 46
     if-ne p0, p1, :cond_1
 
-    .line 53
     :cond_0
     :goto_0
     return v1
 
-    .line 49
     :cond_1
     if-eqz p1, :cond_2
 
@@ -124,16 +112,13 @@
     :cond_2
     move v1, v2
 
-    .line 50
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 52
     check-cast v0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;
 
-    .line 53
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->description:Ljava/lang/String;
 
@@ -167,10 +152,8 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 58
     const/16 v0, 0x11
 
-    .line 59
     .local v0, "result":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->description:Ljava/lang/String;
 
@@ -185,7 +168,6 @@
     :goto_0
     add-int/lit16 v0, v1, 0x20f
 
-    .line 60
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->value:Ljava/lang/String;
@@ -201,13 +183,11 @@
     :cond_0
     add-int v0, v1, v2
 
-    .line 61
     return v0
 
     :cond_1
     move v1, v2
 
-    .line 59
     goto :goto_0
 .end method
 
@@ -217,16 +197,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->description:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 67
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/TxxxFrame;->value:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 68
     return-void
 .end method

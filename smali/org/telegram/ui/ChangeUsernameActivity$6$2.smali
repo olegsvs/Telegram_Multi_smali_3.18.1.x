@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangeUsernameActivity$6;
 
     .prologue
-    .line 433
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$2;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$6;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 5
 
     .prologue
-    .line 437
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$2;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$6;
 
@@ -55,7 +53,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 441
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -73,14 +70,11 @@
 
     invoke-static {v1, v2, v3, v4}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 442
     return-void
 
-    .line 438
     :catch_0
     move-exception v0
 
-    .line 439
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

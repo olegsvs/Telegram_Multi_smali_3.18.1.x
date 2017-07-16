@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2701
     const v0, -0x66f5c3e6
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadPhotoAction_old;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2700
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadPhotoAction;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2705
     return-void
 .end method
 
@@ -58,11 +55,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2708
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadPhotoAction_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2709
     return-void
 .end method

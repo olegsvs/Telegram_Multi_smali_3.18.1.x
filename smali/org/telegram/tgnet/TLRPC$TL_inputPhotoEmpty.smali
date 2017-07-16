@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 19426
     const v0, 0x1cd7bf0d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhotoEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 19425
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$InputPhoto;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 19430
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputPhotoEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19431
     return-void
 .end method

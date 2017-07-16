@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/ContactsController$8$1;
 
     .prologue
-    .line 1172
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$8$1$6;->this$2:Lorg/telegram/messenger/ContactsController$8$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$8$1$6;->val$contactsByPhonesDictFinal:Ljava/util/HashMap;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 1175
     sget-object v0, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/ContactsController$8$1$6$1;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1181
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$8$1$6;->this$2:Lorg/telegram/messenger/ContactsController$8$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -67,11 +64,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1186
     :goto_0
     return-void
 
-    .line 1184
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$8$1$6;->this$2:Lorg/telegram/messenger/ContactsController$8$1;
 
@@ -83,7 +78,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/ContactsController;->access$602(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 1185
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0

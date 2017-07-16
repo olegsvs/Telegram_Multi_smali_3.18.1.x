@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;
 
     .prologue
-    .line 2341
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation$1;->this$1:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation$1;->val$this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
@@ -46,7 +45,6 @@
     .param p1, "animation"    # Landroid/support/v4/animation/ValueAnimatorCompat;
 
     .prologue
-    .line 2344
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation$1;->this$1:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;
 
     invoke-interface {p1}, Landroid/support/v4/animation/ValueAnimatorCompat;->getAnimatedFraction()F
@@ -55,6 +53,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;->setFraction(F)V
 
-    .line 2345
     return-void
 .end method

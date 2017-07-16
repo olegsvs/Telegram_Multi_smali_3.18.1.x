@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 10930
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -63,28 +62,23 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 10933
     if-nez p2, :cond_1
 
-    .line 10934
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->access$20300(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 11001
     :cond_0
     :goto_0
     return-void
 
-    .line 10935
     :cond_1
     const/4 v1, 0x1
 
     if-ne p2, v1, :cond_2
 
-    .line 10936
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -93,13 +87,11 @@
 
     goto :goto_0
 
-    .line 10937
     :cond_2
     const/4 v1, 0x2
 
     if-ne p2, v1, :cond_4
 
-    .line 10938
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
@@ -112,7 +104,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 10939
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -159,7 +150,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 10940
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-static {v1}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
@@ -168,7 +158,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 10941
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -183,7 +172,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 10994
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -196,7 +184,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 10995
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -209,7 +196,6 @@
 
     goto/16 :goto_0
 
-    .line 10939
     :cond_3
     const-string/jumbo v1, "SetAsAdmin"
 
@@ -221,14 +207,12 @@
 
     goto :goto_1
 
-    .line 10996
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_4
     const/4 v1, 0x3
 
     if-ne p2, v1, :cond_5
 
-    .line 10997
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget v2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$fromId:I
@@ -237,13 +221,11 @@
 
     goto/16 :goto_0
 
-    .line 10998
     :cond_5
     const/4 v1, 0x4
 
     if-ne p2, v1, :cond_0
 
-    .line 10999
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget v2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6;->val$fromId:I

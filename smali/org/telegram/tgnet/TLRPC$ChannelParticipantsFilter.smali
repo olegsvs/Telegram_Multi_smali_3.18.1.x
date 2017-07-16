@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 7869
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 7872
     const/4 v0, 0x0
 
-    .line 7873
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     sparse-switch p1, :sswitch_data_0
 
-    .line 7887
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 7888
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ChannelParticipantsFilter"
@@ -70,40 +65,33 @@
 
     throw v1
 
-    .line 7875
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsAdmins;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsAdmins;-><init>()V
 
-    .line 7876
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     goto :goto_0
 
-    .line 7878
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsRecent;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsRecent;-><init>()V
 
-    .line 7879
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     goto :goto_0
 
-    .line 7881
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsKicked;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsKicked;-><init>()V
 
-    .line 7882
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     goto :goto_0
 
-    .line 7884
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsBots;
 
@@ -113,18 +101,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;
     goto :goto_0
 
-    .line 7890
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 7891
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 7893
     :cond_1
     return-object v0
 
-    .line 7873
     nop
 
     :sswitch_data_0

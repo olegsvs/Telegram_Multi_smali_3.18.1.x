@@ -36,25 +36,18 @@
     .param p5, "flags"    # [I
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;->offsets:[J
 
-    .line 39
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;->sizes:[I
 
-    .line 40
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;->maximumSize:I
 
-    .line 41
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;->timestamps:[J
 
-    .line 42
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;->flags:[I
 
-    .line 43
     return-void
 .end method
 
@@ -68,7 +61,6 @@
     .param p6, "x5"    # Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$1;
 
     .prologue
-    .line 29
     invoke-direct/range {p0 .. p5}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FixedSampleSizeRechunker$Results;-><init>([J[II[J[I)V
 
     return-void

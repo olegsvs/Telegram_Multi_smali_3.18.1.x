@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 1702
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$9;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1705
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$9;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$5900(Lorg/telegram/ui/PhotoViewer;)V
 
-    .line 1706
     return-void
 .end method

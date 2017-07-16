@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 926
     new-instance v0, Lorg/telegram/messenger/time/FastDatePrinter$TwoDigitYearField;
 
     invoke-direct {v0}, Lorg/telegram/messenger/time/FastDatePrinter$TwoDigitYearField;-><init>()V
@@ -40,10 +39,8 @@
     .locals 0
 
     .prologue
-    .line 932
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 933
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .param p2, "value"    # I
 
     .prologue
-    .line 956
     div-int/lit8 v0, p2, 0xa
 
     add-int/lit8 v0, v0, 0x30
@@ -64,7 +60,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 957
     rem-int/lit8 v0, p2, 0xa
 
     add-int/lit8 v0, v0, 0x30
@@ -73,7 +68,6 @@
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 958
     return-void
 .end method
 
@@ -83,7 +77,6 @@
     .param p2, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 948
     const/4 v0, 0x1
 
     invoke-virtual {p2, v0}, Ljava/util/Calendar;->get(I)I
@@ -94,7 +87,6 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/telegram/messenger/time/FastDatePrinter$TwoDigitYearField;->appendTo(Ljava/lang/StringBuffer;I)V
 
-    .line 949
     return-void
 .end method
 
@@ -102,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 940
     const/4 v0, 0x2
 
     return v0

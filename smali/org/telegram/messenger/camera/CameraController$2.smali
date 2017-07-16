@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$2;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 143
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$2;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iget-object v2, v2, Lorg/telegram/messenger/camera/CameraController;->cameraInfos:Ljava/util/ArrayList;
@@ -60,12 +58,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 156
     :cond_0
     :goto_0
     return-void
 
-    .line 146
     :cond_1
     const/4 v0, 0x0
 
@@ -81,7 +77,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 147
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$2;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iget-object v2, v2, Lorg/telegram/messenger/camera/CameraController;->cameraInfos:Ljava/util/ArrayList;
@@ -92,37 +87,30 @@
 
     check-cast v1, Lorg/telegram/messenger/camera/CameraInfo;
 
-    .line 148
     .local v1, "info":Lorg/telegram/messenger/camera/CameraInfo;
     iget-object v2, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
     if-eqz v2, :cond_2
 
-    .line 149
     iget-object v2, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v2}, Landroid/hardware/Camera;->stopPreview()V
 
-    .line 150
     iget-object v2, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v2, v3}, Landroid/hardware/Camera;->setPreviewCallbackWithBuffer(Landroid/hardware/Camera$PreviewCallback;)V
 
-    .line 151
     iget-object v2, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
     invoke-virtual {v2}, Landroid/hardware/Camera;->release()V
 
-    .line 152
     iput-object v3, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 146
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 155
     .end local v1    # "info":Lorg/telegram/messenger/camera/CameraInfo;
     :cond_3
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$2;->this$0:Lorg/telegram/messenger/camera/CameraController;

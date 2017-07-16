@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 1308
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     iput p2, p0, Lorg/telegram/ui/Components/EmojiView$26;->val$time:I
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1311
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$5600(Lorg/telegram/ui/Components/EmojiView;)Z
@@ -54,11 +52,9 @@
 
     if-nez v0, :cond_0
 
-    .line 1319
     :goto_0
     return-void
 
-    .line 1314
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -80,7 +76,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1315
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$5900(Lorg/telegram/ui/Components/EmojiView;)Landroid/widget/ImageView;
@@ -91,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->performHapticFeedback(I)Z
 
-    .line 1317
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -99,7 +93,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EmojiView;->access$5702(Lorg/telegram/ui/Components/EmojiView;Z)Z
 
-    .line 1318
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$26;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     const/16 v1, 0x32

@@ -63,88 +63,70 @@
 
     const/4 v0, 0x0
 
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 27
     iput-wide v4, p0, Lorg/telegram/ui/Components/RadialProgress;->lastUpdateTime:J
 
-    .line 28
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->radOffset:F
 
-    .line 29
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
-    .line 30
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->animationProgressStart:F
 
-    .line 31
     iput-wide v4, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
-    .line 32
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
-    .line 33
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressRect:Landroid/graphics/RectF;
 
-    .line 34
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->cicleRect:Landroid/graphics/RectF;
 
-    .line 36
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 43
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressColor:I
 
-    .line 47
     iput-boolean v2, p0, Lorg/telegram/ui/Components/RadialProgress;->alphaForPrevious:Z
 
-    .line 54
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->decelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     if-nez v0, :cond_0
 
-    .line 55
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     sput-object v0, Lorg/telegram/ui/Components/RadialProgress;->decelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 56
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     sput-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
-    .line 57
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 58
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 59
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40400000    # 3.0f
@@ -157,7 +139,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 61
     :cond_0
     new-instance v0, Landroid/graphics/Paint;
 
@@ -165,14 +146,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
-    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x41100000    # 9.0f
@@ -185,22 +164,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 64
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setFakeBoldText(Z)V
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Align;->CENTER:Landroid/graphics/Paint$Align;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setTextAlign(Landroid/graphics/Paint$Align;)V
 
-    .line 66
     iput-object p1, p0, Lorg/telegram/ui/Components/RadialProgress;->parent:Landroid/view/View;
 
-    .line 67
     return-void
 .end method
 
@@ -208,14 +183,12 @@
     .locals 7
 
     .prologue
-    .line 153
     const/high16 v1, 0x40000000    # 2.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    .line 154
     .local v0, "offset":I
     iget-object v1, p0, Lorg/telegram/ui/Components/RadialProgress;->parent:Landroid/view/View;
 
@@ -257,7 +230,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/view/View;->invalidate(IIII)V
 
-    .line 155
     return-void
 .end method
 
@@ -274,32 +246,26 @@
 
     const/4 v10, 0x0
 
-    .line 78
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 79
     .local v2, "newTime":J
     iget-wide v6, p0, Lorg/telegram/ui/Components/RadialProgress;->lastUpdateTime:J
 
     sub-long v0, v2, v6
 
-    .line 80
     .local v0, "dt":J
     iput-wide v2, p0, Lorg/telegram/ui/Components/RadialProgress;->lastUpdateTime:J
 
-    .line 82
     if-eqz p1, :cond_5
 
-    .line 83
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
     cmpl-float v5, v5, v11
 
     if-eqz v5, :cond_1
 
-    .line 84
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->radOffset:F
 
     const-wide/16 v6, 0x168
@@ -316,27 +282,23 @@
 
     iput v5, p0, Lorg/telegram/ui/Components/RadialProgress;->radOffset:F
 
-    .line 85
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
     iget v6, p0, Lorg/telegram/ui/Components/RadialProgress;->animationProgressStart:F
 
     sub-float v4, v5, v6
 
-    .line 86
     .local v4, "progressDiff":F
     cmpl-float v5, v4, v10
 
     if-lez v5, :cond_0
 
-    .line 87
     iget-wide v6, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
     add-long/2addr v6, v0
 
     iput-wide v6, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
-    .line 88
     iget-wide v6, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
     const-wide/16 v8, 0x12c
@@ -345,27 +307,22 @@
 
     if-ltz v5, :cond_4
 
-    .line 89
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
     iput v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
-    .line 90
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
     iput v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animationProgressStart:F
 
-    .line 91
     const-wide/16 v6, 0x0
 
     iput-wide v6, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
-    .line 96
     :cond_0
     :goto_0
     invoke-direct {p0}, Lorg/telegram/ui/Components/RadialProgress;->invalidateParent()V
 
-    .line 98
     .end local v4    # "progressDiff":F
     :cond_1
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
@@ -378,7 +335,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 99
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
     long-to-float v6, v0
@@ -389,29 +345,23 @@
 
     iput v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 100
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
     cmpg-float v5, v5, v10
 
     if-gtz v5, :cond_2
 
-    .line 101
     iput v10, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 102
     iput-object v13, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 104
     :cond_2
     invoke-direct {p0}, Lorg/telegram/ui/Components/RadialProgress;->invalidateParent()V
 
-    .line 116
     :cond_3
     :goto_1
     return-void
 
-    .line 93
     .restart local v4    # "progressDiff":F
     :cond_4
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animationProgressStart:F
@@ -438,14 +388,12 @@
 
     goto :goto_0
 
-    .line 107
     .end local v4    # "progressDiff":F
     :cond_5
     iget-object v5, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v5, :cond_3
 
-    .line 108
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
     long-to-float v6, v0
@@ -456,20 +404,16 @@
 
     iput v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 109
     iget v5, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
     cmpg-float v5, v5, v10
 
     if-gtz v5, :cond_6
 
-    .line 110
     iput v10, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 111
     iput-object v13, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 113
     :cond_6
     invoke-direct {p0}, Lorg/telegram/ui/Components/RadialProgress;->invalidateParent()V
 
@@ -493,17 +437,14 @@
 
     const/high16 v10, 0x3f800000    # 1.0f
 
-    .line 190
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 191
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->alphaForPrevious:Z
 
     if-eqz v0, :cond_7
 
-    .line 192
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
@@ -514,7 +455,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 196
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -544,12 +484,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 197
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 200
     :cond_0
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->hideCurrentDrawable:Z
 
@@ -559,12 +497,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 201
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_8
 
-    .line 202
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
@@ -577,7 +513,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 206
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -607,12 +542,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 207
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 210
     :cond_1
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentWithRound:Z
 
@@ -622,7 +555,6 @@
 
     if-eqz v0, :cond_e
 
-    .line 211
     :cond_2
     const/high16 v0, 0x40800000    # 4.0f
 
@@ -630,7 +562,6 @@
 
     move-result v6
 
-    .line 212
     .local v6, "diff":I
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
@@ -638,12 +569,10 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 213
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousWithRound:Z
 
     if-eqz v0, :cond_9
 
-    .line 214
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
 
     iget v1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
@@ -654,7 +583,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 218
     :goto_2
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->cicleRect:Landroid/graphics/RectF;
 
@@ -692,7 +620,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 219
     iget-object v1, p0, Lorg/telegram/ui/Components/RadialProgress;->cicleRect:Landroid/graphics/RectF;
 
     const/high16 v0, -0x3d4c0000    # -90.0f
@@ -719,7 +646,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_6
@@ -728,7 +654,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 222
     iget v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
     cmpg-float v0, v0, v10
@@ -743,7 +668,6 @@
 
     if-lez v0, :cond_6
 
-    .line 225
     iget v0, p0, Lorg/telegram/ui/Components/RadialProgress;->docType:I
 
     if-eq v0, v11, :cond_3
@@ -760,7 +684,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 226
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
@@ -768,7 +691,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 227
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_timeBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/RadialProgress;->progressRect:Landroid/graphics/RectF;
@@ -829,12 +751,10 @@
 
     invoke-virtual {v0, v1, v2, v3, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 228
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_timeBackgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 230
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -930,7 +850,6 @@
 
     move-result-object v7
 
-    .line 232
     .local v7, "s":Ljava/lang/String;
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressRect:Landroid/graphics/RectF;
 
@@ -990,17 +909,14 @@
 
     invoke-virtual {p1, v7, v1, v0, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 236
     .end local v7    # "s":Ljava/lang/String;
     :cond_6
     invoke-direct {p0, v11}, Lorg/telegram/ui/Components/RadialProgress;->updateAnimation(Z)V
 
-    .line 240
     .end local v6    # "diff":I
     :goto_6
     return-void
 
-    .line 194
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1008,7 +924,6 @@
 
     goto/16 :goto_0
 
-    .line 204
     :cond_8
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1016,7 +931,6 @@
 
     goto/16 :goto_1
 
-    .line 216
     .restart local v6    # "diff":I
     :cond_9
     sget-object v0, Lorg/telegram/ui/Components/RadialProgress;->progressPaint:Landroid/graphics/Paint;
@@ -1025,7 +939,6 @@
 
     goto/16 :goto_2
 
-    .line 230
     :cond_a
     const-string/jumbo v0, "%.0f"
 
@@ -1036,7 +949,6 @@
 
     goto :goto_4
 
-    .line 232
     .restart local v7    # "s":Ljava/lang/String;
     :cond_c
     iget v0, p0, Lorg/telegram/ui/Components/RadialProgress;->docType:I
@@ -1054,7 +966,6 @@
 
     goto :goto_5
 
-    .line 238
     .end local v6    # "diff":I
     .end local v7    # "s":Ljava/lang/String;
     :cond_e
@@ -1067,7 +978,6 @@
     .locals 1
 
     .prologue
-    .line 186
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
@@ -1093,10 +1003,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 74
     iput-boolean p1, p0, Lorg/telegram/ui/Components/RadialProgress;->alphaForPrevious:Z
 
-    .line 75
     return-void
 .end method
 
@@ -1109,69 +1017,55 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 158
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/RadialProgress;->lastUpdateTime:J
 
-    .line 159
     if-eqz p3, :cond_0
 
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 161
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentWithRound:Z
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousWithRound:Z
 
-    .line 162
     iput v2, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 163
     invoke-virtual {p0, v2, p3}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 168
     :goto_0
     iput-boolean p2, p0, Lorg/telegram/ui/Components/RadialProgress;->currentWithRound:Z
 
-    .line 169
     iput-object p1, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 170
     if-nez p3, :cond_1
 
-    .line 171
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->parent:Landroid/view/View;
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 175
     :goto_1
     return-void
 
-    .line 165
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 166
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousWithRound:Z
 
     goto :goto_0
 
-    .line 173
     :cond_1
     invoke-direct {p0}, Lorg/telegram/ui/Components/RadialProgress;->invalidateParent()V
 
@@ -1183,10 +1077,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 124
     iput-boolean p1, p0, Lorg/telegram/ui/Components/RadialProgress;->hideCurrentDrawable:Z
 
-    .line 125
     return-void
 .end method
 
@@ -1198,7 +1090,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 128
     const/high16 v0, 0x3f800000    # 1.0f
 
     cmpl-float v0, p1, v0
@@ -1215,40 +1106,30 @@
 
     if-eqz v0, :cond_0
 
-    .line 129
     iput v1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedAlphaValue:F
 
-    .line 130
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->previousDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 132
     :cond_0
     if-nez p2, :cond_1
 
-    .line 133
     iput p1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
-    .line 134
     iput p1, p0, Lorg/telegram/ui/Components/RadialProgress;->animationProgressStart:F
 
-    .line 141
     :goto_0
     iput p1, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgress:F
 
-    .line 142
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentProgressTime:J
 
-    .line 143
     invoke-direct {p0}, Lorg/telegram/ui/Components/RadialProgress;->invalidateParent()V
 
-    .line 144
     return-void
 
-    .line 136
     :cond_1
     iget v0, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
@@ -1256,10 +1137,8 @@
 
     if-lez v0, :cond_2
 
-    .line 137
     iput p1, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
-    .line 139
     :cond_2
     iget v0, p0, Lorg/telegram/ui/Components/RadialProgress;->animatedProgressValue:F
 
@@ -1273,10 +1152,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 119
     iput p1, p0, Lorg/telegram/ui/Components/RadialProgress;->progressColor:I
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "chat_mediaProgress"
@@ -1293,10 +1170,8 @@
     :goto_0
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 121
     return-void
 
-    .line 120
     .restart local p1    # "color":I
     :cond_0
     const-string/jumbo v1, "chat_outFileProgressSelected"
@@ -1334,7 +1209,6 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->progressRect:Landroid/graphics/RectF;
 
     int-to-float v1, p1
@@ -1347,7 +1221,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 71
     return-void
 .end method
 
@@ -1359,13 +1232,10 @@
     .prologue
     const/high16 v0, 0x41100000    # 9.0f
 
-    .line 147
     iput-wide p1, p0, Lorg/telegram/ui/Components/RadialProgress;->docSize:J
 
-    .line 148
     iput p3, p0, Lorg/telegram/ui/Components/RadialProgress;->docType:I
 
-    .line 149
     iget-object v1, p0, Lorg/telegram/ui/Components/RadialProgress;->progressTextPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/RadialProgress;->docType:I
@@ -1384,10 +1254,8 @@
 
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setTextSize(F)V
 
-    .line 150
     return-void
 
-    .line 149
     :cond_1
     iget v2, p0, Lorg/telegram/ui/Components/RadialProgress;->docType:I
 
@@ -1405,18 +1273,14 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 178
     iget-object v0, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0
 
-    .line 179
     iput-object p1, p0, Lorg/telegram/ui/Components/RadialProgress;->currentDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 180
     const/4 v0, 0x1
 
-    .line 182
     :goto_0
     return v0
 

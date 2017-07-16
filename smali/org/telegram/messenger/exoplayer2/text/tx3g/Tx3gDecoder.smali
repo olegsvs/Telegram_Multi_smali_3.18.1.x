@@ -12,19 +12,16 @@
     .locals 1
 
     .prologue
-    .line 33
     const-string/jumbo v0, "Tx3gDecoder"
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;-><init>(Ljava/lang/String;)V
 
-    .line 34
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 35
     return-void
 .end method
 
@@ -36,30 +33,24 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 39
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, p1, p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
-    .line 40
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v1
 
-    .line 41
     .local v1, "textLength":I
     if-nez v1, :cond_0
 
-    .line 42
     sget-object v2, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;->EMPTY:Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;
 
-    .line 45
     :goto_0
     return-object v2
 
-    .line 44
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gDecoder;->parsableByteArray:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -67,7 +58,6 @@
 
     move-result-object v0
 
-    .line 45
     .local v0, "cueText":Ljava/lang/String;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;
 

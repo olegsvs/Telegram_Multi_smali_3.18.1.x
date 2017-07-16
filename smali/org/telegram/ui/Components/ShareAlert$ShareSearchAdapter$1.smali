@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     .prologue
-    .line 660
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->val$query:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 36
 
     .prologue
-    .line 664
     :try_start_0
     move-object/from16 v0, p0
 
@@ -65,7 +63,6 @@
 
     move-result-object v21
 
-    .line 665
     .local v21, "search1":Ljava/lang/String;
     invoke-virtual/range {v21 .. v21}, Ljava/lang/String;->length()I
 
@@ -73,7 +70,6 @@
 
     if-nez v30, :cond_0
 
-    .line 666
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
@@ -84,7 +80,6 @@
 
     invoke-static/range {v30 .. v31}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$2602(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;I)I
 
-    .line 667
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
@@ -107,12 +102,10 @@
 
     invoke-static/range {v30 .. v32}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$2700(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Ljava/util/ArrayList;I)V
 
-    .line 853
     .end local v21    # "search1":Ljava/lang/String;
     :goto_0
     return-void
 
-    .line 670
     .restart local v21    # "search1":Ljava/lang/String;
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -127,7 +120,6 @@
 
     move-result-object v22
 
-    .line 671
     .local v22, "search2":Ljava/lang/String;
     invoke-virtual/range {v21 .. v22}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -141,11 +133,9 @@
 
     if-nez v30, :cond_2
 
-    .line 672
     :cond_1
     const/16 v22, 0x0
 
-    .line 674
     :cond_2
     if-eqz v22, :cond_5
 
@@ -160,43 +150,35 @@
 
     move-object/from16 v20, v0
 
-    .line 675
     .local v20, "search":[Ljava/lang/String;
     const/16 v30, 0x0
 
     aput-object v21, v20, v30
 
-    .line 676
     if-eqz v22, :cond_3
 
-    .line 677
     const/16 v30, 0x1
 
     aput-object v22, v20, v30
 
-    .line 680
     :cond_3
     new-instance v29, Ljava/util/ArrayList;
 
     invoke-direct/range {v29 .. v29}, Ljava/util/ArrayList;-><init>()V
 
-    .line 681
     .local v29, "usersToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 682
     .local v6, "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/16 v19, 0x0
 
-    .line 684
     .local v19, "resultCount":I
     new-instance v10, Ljava/util/HashMap;
 
     invoke-direct {v10}, Ljava/util/HashMap;-><init>()V
 
-    .line 685
     .local v10, "dialogsResult":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;>;"
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -220,7 +202,6 @@
 
     move-result-object v7
 
-    .line 686
     .local v7, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_4
     :goto_2
@@ -230,7 +211,6 @@
 
     if-eqz v30, :cond_7
 
-    .line 687
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -239,7 +219,6 @@
 
     move-result-wide v14
 
-    .line 688
     .local v14, "id":J
     new-instance v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
 
@@ -257,7 +236,6 @@
 
     invoke-direct {v9, v0, v1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;-><init>(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Lorg/telegram/ui/Components/ShareAlert$1;)V
 
-    .line 689
     .local v9, "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     const/16 v30, 0x1
 
@@ -271,7 +249,6 @@
 
     iput v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->date:I
 
-    .line 690
     invoke-static {v14, v15}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v30
@@ -280,12 +257,10 @@
 
     invoke-virtual {v10, v0, v9}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 692
     long-to-int v0, v14
 
     move/from16 v16, v0
 
-    .line 693
     .local v16, "lower_id":I
     const/16 v30, 0x20
 
@@ -295,7 +270,6 @@
 
     long-to-int v13, v0
 
-    .line 694
     .local v13, "high_id":I
     if-eqz v16, :cond_4
 
@@ -305,10 +279,8 @@
 
     if-eq v13, v0, :cond_4
 
-    .line 695
     if-lez v16, :cond_6
 
-    .line 696
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v30
@@ -319,7 +291,6 @@
 
     if-nez v30, :cond_4
 
-    .line 697
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v30
@@ -330,7 +301,6 @@
 
     goto :goto_2
 
-    .line 850
     .end local v6    # "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
@@ -346,13 +316,11 @@
     :catch_0
     move-exception v11
 
-    .line 851
     .local v11, "e":Ljava/lang/Exception;
     invoke-static {v11}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 674
     .end local v11    # "e":Ljava/lang/Exception;
     .restart local v21    # "search1":Ljava/lang/String;
     .restart local v22    # "search2":Ljava/lang/String;
@@ -361,7 +329,6 @@
 
     goto/16 :goto_1
 
-    .line 700
     .restart local v6    # "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .restart local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
@@ -392,7 +359,6 @@
 
     if-nez v30, :cond_4
 
-    .line 701
     move/from16 v0, v16
 
     neg-int v0, v0
@@ -409,7 +375,6 @@
 
     goto/16 :goto_2
 
-    .line 706
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .end local v13    # "high_id":I
     .end local v14    # "id":J
@@ -417,14 +382,12 @@
     :cond_7
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 708
     invoke-virtual/range {v29 .. v29}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v30
 
     if-nez v30, :cond_12
 
-    .line 709
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v30
@@ -475,7 +438,6 @@
 
     move-result-object v7
 
-    .line 710
     :cond_8
     :goto_3
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -484,7 +446,6 @@
 
     if-eqz v30, :cond_11
 
-    .line 711
     const/16 v30, 0x2
 
     move/from16 v0, v30
@@ -493,7 +454,6 @@
 
     move-result-object v17
 
-    .line 712
     .local v17, "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -507,7 +467,6 @@
 
     move-result-object v24
 
-    .line 713
     .local v24, "tName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -519,14 +478,11 @@
 
     if-eqz v30, :cond_9
 
-    .line 714
     const/16 v24, 0x0
 
-    .line 716
     :cond_9
     const/16 v27, 0x0
 
-    .line 717
     .local v27, "username":Ljava/lang/String;
     const-string/jumbo v30, ";;;"
 
@@ -538,7 +494,6 @@
 
     move-result v28
 
-    .line 718
     .local v28, "usernamePos":I
     const/16 v30, -0x1
 
@@ -548,7 +503,6 @@
 
     if-eq v0, v1, :cond_a
 
-    .line 719
     add-int/lit8 v30, v28, 0x3
 
     move-object/from16 v0, v17
@@ -559,11 +513,9 @@
 
     move-result-object v27
 
-    .line 721
     :cond_a
     const/4 v12, 0x0
 
-    .line 722
     .local v12, "found":I
     move-object/from16 v0, v20
 
@@ -582,7 +534,6 @@
 
     aget-object v18, v20, v30
 
-    .line 723
     .local v18, "q":Ljava/lang/String;
     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -666,16 +617,13 @@
 
     if-eqz v32, :cond_e
 
-    .line 724
     :cond_b
     const/4 v12, 0x1
 
-    .line 728
     :cond_c
     :goto_5
     if-eqz v12, :cond_10
 
-    .line 729
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -684,11 +632,9 @@
 
     move-result-object v8
 
-    .line 730
     .local v8, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_8
 
-    .line 731
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -707,11 +653,9 @@
 
     move-result-object v26
 
-    .line 732
     .local v26, "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 733
     move-object/from16 v0, v26
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$User;->id:I
@@ -736,7 +680,6 @@
 
     check-cast v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
 
-    .line 734
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     move-object/from16 v0, v26
 
@@ -746,7 +689,6 @@
 
     if-eqz v30, :cond_d
 
-    .line 735
     move-object/from16 v0, v26
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -767,7 +709,6 @@
 
     iput v0, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 737
     :cond_d
     const/16 v30, 0x1
 
@@ -775,7 +716,6 @@
 
     if-ne v12, v0, :cond_f
 
-    .line 738
     move-object/from16 v0, v26
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -802,13 +742,11 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 742
     :goto_6
     move-object/from16 v0, v26
 
     iput-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 743
     iget-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->dialog:Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     move-object/from16 v30, v0
@@ -831,13 +769,10 @@
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
-    .line 744
     add-int/lit8 v19, v19, 0x1
 
-    .line 745
     goto/16 :goto_3
 
-    .line 725
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .end local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -854,12 +789,10 @@
 
     if-eqz v32, :cond_c
 
-    .line 726
     const/4 v12, 0x2
 
     goto/16 :goto_5
 
-    .line 740
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .restart local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -922,7 +855,6 @@
 
     goto :goto_6
 
-    .line 722
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .end local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -931,7 +863,6 @@
 
     goto/16 :goto_4
 
-    .line 750
     .end local v12    # "found":I
     .end local v17    # "name":Ljava/lang/String;
     .end local v18    # "q":Ljava/lang/String;
@@ -941,7 +872,6 @@
     :cond_11
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 753
     :cond_12
     invoke-virtual {v6}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -949,7 +879,6 @@
 
     if-nez v30, :cond_19
 
-    .line 754
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v30
@@ -998,7 +927,6 @@
 
     move-result-object v7
 
-    .line 755
     :cond_13
     :goto_7
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -1007,7 +935,6 @@
 
     if-eqz v30, :cond_18
 
-    .line 756
     const/16 v30, 0x1
 
     move/from16 v0, v30
@@ -1016,7 +943,6 @@
 
     move-result-object v17
 
-    .line 757
     .restart local v17    # "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -1030,7 +956,6 @@
 
     move-result-object v24
 
-    .line 758
     .restart local v24    # "tName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -1042,10 +967,8 @@
 
     if-eqz v30, :cond_14
 
-    .line 759
     const/16 v24, 0x0
 
-    .line 761
     :cond_14
     const/4 v4, 0x0
 
@@ -1061,10 +984,8 @@
 
     if-ge v4, v0, :cond_13
 
-    .line 762
     aget-object v18, v20, v4
 
-    .line 763
     .restart local v18    # "q":Ljava/lang/String;
     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1148,7 +1069,6 @@
 
     if-eqz v30, :cond_17
 
-    .line 764
     :cond_15
     const/16 v30, 0x0
 
@@ -1158,11 +1078,9 @@
 
     move-result-object v8
 
-    .line 765
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_13
 
-    .line 766
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1181,11 +1099,9 @@
 
     move-result-object v5
 
-    .line 767
     .local v5, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 768
     if-eqz v5, :cond_13
 
     invoke-static {v5}, Lorg/telegram/messenger/ChatObject;->isNotInChat(Lorg/telegram/tgnet/TLRPC$Chat;)Z
@@ -1218,7 +1134,6 @@
 
     if-eqz v30, :cond_13
 
-    .line 769
     :cond_16
     iget v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
 
@@ -1248,7 +1163,6 @@
 
     check-cast v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
 
-    .line 770
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     iget-object v0, v5, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
@@ -1270,10 +1184,8 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 771
     iput-object v5, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 772
     iget-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->dialog:Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     move-object/from16 v30, v0
@@ -1300,12 +1212,10 @@
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
-    .line 773
     add-int/lit8 v19, v19, 0x1
 
     goto/16 :goto_7
 
-    .line 761
     .end local v5    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
@@ -1314,7 +1224,6 @@
 
     goto/16 :goto_8
 
-    .line 780
     .end local v4    # "a":I
     .end local v17    # "name":Ljava/lang/String;
     .end local v18    # "q":Ljava/lang/String;
@@ -1322,7 +1231,6 @@
     :cond_18
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 783
     :cond_19
     new-instance v23, Ljava/util/ArrayList;
 
@@ -1332,7 +1240,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 784
     .local v23, "searchResults":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;>;"
     invoke-virtual {v10}, Ljava/util/HashMap;->values()Ljava/util/Collection;
 
@@ -1356,7 +1263,6 @@
 
     check-cast v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
 
-    .line 785
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     iget-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
@@ -1370,14 +1276,12 @@
 
     if-eqz v31, :cond_1a
 
-    .line 786
     move-object/from16 v0, v23
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_9
 
-    .line 790
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     :cond_1b
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -1402,7 +1306,6 @@
 
     move-result-object v7
 
-    .line 791
     :cond_1c
     :goto_a
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -1411,7 +1314,6 @@
 
     if-eqz v30, :cond_25
 
-    .line 792
     const/16 v30, 0x3
 
     move/from16 v0, v30
@@ -1420,7 +1322,6 @@
 
     move-result v25
 
-    .line 793
     .local v25, "uid":I
     move/from16 v0, v25
 
@@ -1440,7 +1341,6 @@
 
     if-nez v30, :cond_1c
 
-    .line 796
     const/16 v30, 0x2
 
     move/from16 v0, v30
@@ -1449,7 +1349,6 @@
 
     move-result-object v17
 
-    .line 797
     .restart local v17    # "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -1463,7 +1362,6 @@
 
     move-result-object v24
 
-    .line 798
     .restart local v24    # "tName":Ljava/lang/String;
     move-object/from16 v0, v17
 
@@ -1475,14 +1373,11 @@
 
     if-eqz v30, :cond_1d
 
-    .line 799
     const/16 v24, 0x0
 
-    .line 801
     :cond_1d
     const/16 v27, 0x0
 
-    .line 802
     .restart local v27    # "username":Ljava/lang/String;
     const-string/jumbo v30, ";;;"
 
@@ -1494,7 +1389,6 @@
 
     move-result v28
 
-    .line 803
     .restart local v28    # "usernamePos":I
     const/16 v30, -0x1
 
@@ -1504,7 +1398,6 @@
 
     if-eq v0, v1, :cond_1e
 
-    .line 804
     add-int/lit8 v30, v28, 0x3
 
     move-object/from16 v0, v17
@@ -1515,11 +1408,9 @@
 
     move-result-object v27
 
-    .line 806
     :cond_1e
     const/4 v12, 0x0
 
-    .line 807
     .restart local v12    # "found":I
     move-object/from16 v0, v20
 
@@ -1538,7 +1429,6 @@
 
     aget-object v18, v20, v30
 
-    .line 808
     .restart local v18    # "q":Ljava/lang/String;
     invoke-virtual/range {v17 .. v18}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -1622,16 +1512,13 @@
 
     if-eqz v32, :cond_22
 
-    .line 809
     :cond_1f
     const/4 v12, 0x1
 
-    .line 813
     :cond_20
     :goto_c
     if-eqz v12, :cond_24
 
-    .line 814
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1640,11 +1527,9 @@
 
     move-result-object v8
 
-    .line 815
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v8, :cond_1c
 
-    .line 816
     const/16 v30, 0x0
 
     move/from16 v0, v30
@@ -1663,11 +1548,9 @@
 
     move-result-object v26
 
-    .line 817
     .restart local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {v8}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 818
     new-instance v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
 
     move-object/from16 v0, p0
@@ -1684,7 +1567,6 @@
 
     invoke-direct {v9, v0, v1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;-><init>(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Lorg/telegram/ui/Components/ShareAlert$1;)V
 
-    .line 819
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     move-object/from16 v0, v26
 
@@ -1694,7 +1576,6 @@
 
     if-eqz v30, :cond_21
 
-    .line 820
     move-object/from16 v0, v26
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -1715,7 +1596,6 @@
 
     iput v0, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 822
     :cond_21
     iget-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->dialog:Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
@@ -1739,19 +1619,16 @@
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
-    .line 823
     move-object/from16 v0, v26
 
     iput-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->object:Lorg/telegram/tgnet/TLObject;
 
-    .line 824
     const/16 v30, 0x1
 
     move/from16 v0, v30
 
     if-ne v12, v0, :cond_23
 
-    .line 825
     move-object/from16 v0, v26
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -1778,7 +1655,6 @@
 
     iput-object v0, v9, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->name:Ljava/lang/CharSequence;
 
-    .line 829
     :goto_d
     move-object/from16 v0, v23
 
@@ -1786,7 +1662,6 @@
 
     goto/16 :goto_a
 
-    .line 810
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .end local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1803,12 +1678,10 @@
 
     if-eqz v32, :cond_20
 
-    .line 811
     const/4 v12, 0x2
 
     goto/16 :goto_c
 
-    .line 827
     .restart local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .restart local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1871,7 +1744,6 @@
 
     goto :goto_d
 
-    .line 807
     .end local v8    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v9    # "dialogSearchResult":Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;
     .end local v26    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1880,7 +1752,6 @@
 
     goto/16 :goto_b
 
-    .line 835
     .end local v12    # "found":I
     .end local v17    # "name":Ljava/lang/String;
     .end local v18    # "q":Ljava/lang/String;
@@ -1891,7 +1762,6 @@
     :cond_25
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 837
     new-instance v30, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1$1;
 
     move-object/from16 v0, v30
@@ -1906,7 +1776,6 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 849
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;

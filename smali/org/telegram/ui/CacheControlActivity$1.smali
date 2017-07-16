@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 104
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -70,7 +68,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$002(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 108
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -79,12 +76,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 144
     :cond_0
     :goto_0
     return-void
 
-    .line 111
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -104,7 +99,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$302(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 112
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -113,7 +107,6 @@
 
     if-nez v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -132,7 +125,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$402(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -141,7 +133,6 @@
 
     if-nez v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -160,7 +151,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$502(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -169,7 +159,6 @@
 
     if-nez v0, :cond_0
 
-    .line 123
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -188,7 +177,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$602(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 124
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -197,7 +185,6 @@
 
     if-nez v0, :cond_0
 
-    .line 128
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -218,7 +205,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$702(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$200(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -227,7 +213,6 @@
 
     if-nez v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -246,7 +231,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$802(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -305,7 +289,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/CacheControlActivity;->access$902(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 135
     new-instance v0, Lorg/telegram/ui/CacheControlActivity$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/CacheControlActivity$1$1;-><init>(Lorg/telegram/ui/CacheControlActivity$1;)V

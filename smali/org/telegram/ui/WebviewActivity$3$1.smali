@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/WebviewActivity$3;
 
     .prologue
-    .line 197
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity$3$1;->this$1:Lorg/telegram/ui/WebviewActivity$3;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 200
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$3$1;->this$1:Lorg/telegram/ui/WebviewActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 201
     return-void
 .end method

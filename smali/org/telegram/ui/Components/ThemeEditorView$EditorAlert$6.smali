@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 670
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$6;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$6;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 673
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -65,7 +63,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 674
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$6;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -82,12 +79,10 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ThemeDescription;->setPreviousColor()V
 
-    .line 673
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 676
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$6;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
@@ -95,6 +90,5 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1700(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Z)V
 
-    .line 677
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DialogsActivity$6;
 
     .prologue
-    .line 644
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$6$1;->this$1:Lorg/telegram/ui/DialogsActivity$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 647
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$6$1;->this$1:Lorg/telegram/ui/DialogsActivity$6;
 
     iget-object v0, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -58,7 +56,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 648
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$6$1;->this$1:Lorg/telegram/ui/DialogsActivity$6;
 
     iget-object v0, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -69,11 +66,9 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->clearRecentSearch()V
 
-    .line 652
     :goto_0
     return-void
 
-    .line 650
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$6$1;->this$1:Lorg/telegram/ui/DialogsActivity$6;
 

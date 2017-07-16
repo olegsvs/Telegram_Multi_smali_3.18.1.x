@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SecretChatHelper$14;
 
     .prologue
-    .line 1803
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$14$2;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$14$2;->val$salt:[B
@@ -47,21 +46,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1806
     if-nez p2, :cond_0
 
-    .line 1807
     new-instance v0, Lorg/telegram/messenger/SecretChatHelper$14$2$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/SecretChatHelper$14$2$1;-><init>(Lorg/telegram/messenger/SecretChatHelper$14$2;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1867
     :goto_0
     return-void
 
-    .line 1847
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$14$2;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
@@ -71,7 +66,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1848
     new-instance v0, Lorg/telegram/messenger/SecretChatHelper$14$2$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SecretChatHelper$14$2$2;-><init>(Lorg/telegram/messenger/SecretChatHelper$14$2;)V

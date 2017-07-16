@@ -38,13 +38,10 @@
     .param p1, "phoneCode"    # Z
 
     .prologue
-    .line 66
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 67
     iput-boolean p1, p0, Lorg/telegram/ui/CountrySelectActivity;->needPhoneCode:Z
 
-    .line 68
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-boolean v0, p0, Lorg/telegram/ui/CountrySelectActivity;->searching:Z
 
     return v0
@@ -65,7 +61,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lorg/telegram/ui/CountrySelectActivity;->searching:Z
 
     return p1
@@ -76,7 +71,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->searchListViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountrySearchAdapter;
 
     return-object v0
@@ -87,7 +81,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-boolean v0, p0, Lorg/telegram/ui/CountrySelectActivity;->searchWas:Z
 
     return v0
@@ -99,7 +92,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 48
     iput-boolean p1, p0, Lorg/telegram/ui/CountrySelectActivity;->searchWas:Z
 
     return p1
@@ -110,7 +102,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     return-object v0
@@ -121,7 +112,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -132,7 +122,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object v0
@@ -143,7 +132,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->delegate:Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;
 
     return-object v0
@@ -154,7 +142,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CountrySelectActivity;
 
     .prologue
-    .line 48
     iget-boolean v0, p0, Lorg/telegram/ui/CountrySelectActivity;->needPhoneCode:Z
 
     return v0
@@ -175,19 +162,16 @@
 
     const/4 v3, 0x1
 
-    .line 82
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v5, 0x7f0200b6
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 83
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v4, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 84
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v5, "ChooseCountry"
@@ -200,7 +184,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 86
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v5, Lorg/telegram/ui/CountrySelectActivity$1;
@@ -209,14 +192,12 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 95
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v2
 
-    .line 96
     .local v2, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const v4, 0x7f0200c0
 
@@ -236,7 +217,6 @@
 
     move-result-object v1
 
-    .line 128
     .local v1, "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
 
@@ -252,20 +232,16 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 130
     iput-boolean v7, p0, Lorg/telegram/ui/CountrySelectActivity;->searching:Z
 
-    .line 131
     iput-boolean v7, p0, Lorg/telegram/ui/CountrySelectActivity;->searchWas:Z
 
-    .line 133
     new-instance v4, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     invoke-direct {v4, p0, p1}, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;-><init>(Lorg/telegram/ui/CountrySelectActivity;Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
-    .line 134
     new-instance v4, Lorg/telegram/ui/CountrySelectActivity$CountrySearchAdapter;
 
     iget-object v5, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
@@ -278,19 +254,16 @@
 
     iput-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->searchListViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountrySearchAdapter;
 
-    .line 136
     new-instance v4, Landroid/widget/FrameLayout;
 
     invoke-direct {v4, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->fragmentView:Landroid/view/View;
 
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 139
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v4, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -298,17 +271,14 @@
 
     iput-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 140
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 141
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4, v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setShowAtCenter(Z)V
 
-    .line 142
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const-string/jumbo v5, "NoResult"
@@ -321,7 +291,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 143
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-static {v9, v8}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -330,36 +299,30 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v4, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 146
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setSectionsType(I)V
 
-    .line 147
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v5, p0, Lorg/telegram/ui/CountrySelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 148
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 149
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/RecyclerListView;->setFastScrollEnabled()V
 
-    .line 150
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v5, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -368,14 +331,12 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 151
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v5, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 152
     iget-object v4, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -385,7 +346,6 @@
     :goto_0
     invoke-virtual {v4, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollbarPosition(I)V
 
-    .line 153
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v9, v8}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -394,7 +354,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 155
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/ui/CountrySelectActivity$3;
@@ -403,7 +362,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 179
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/ui/CountrySelectActivity$4;
@@ -412,12 +370,10 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 188
     iget-object v3, p0, Lorg/telegram/ui/CountrySelectActivity;->fragmentView:Landroid/view/View;
 
     return-object v3
 
-    .line 152
     :cond_0
     const/4 v3, 0x2
 
@@ -428,7 +384,6 @@
     .locals 11
 
     .prologue
-    .line 468
     const/16 v0, 0x11
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -876,7 +831,6 @@
     .locals 1
 
     .prologue
-    .line 72
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
     move-result v0
@@ -888,10 +842,8 @@
     .locals 0
 
     .prologue
-    .line 77
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 78
     return-void
 .end method
 
@@ -899,20 +851,16 @@
     .locals 1
 
     .prologue
-    .line 193
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 195
     iget-object v0, p0, Lorg/telegram/ui/CountrySelectActivity;->listViewAdapter:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;->notifyDataSetChanged()V
 
-    .line 197
     :cond_0
     return-void
 .end method
@@ -922,9 +870,7 @@
     .param p1, "delegate"    # Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;
 
     .prologue
-    .line 200
     iput-object p1, p0, Lorg/telegram/ui/CountrySelectActivity;->delegate:Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;
 
-    .line 201
     return-void
 .end method

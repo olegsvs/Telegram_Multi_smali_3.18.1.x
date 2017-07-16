@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PasscodeView;
 
     .prologue
-    .line 916
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-direct {p0}, Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompat$AuthenticationCallback;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "errString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 919
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PasscodeView;->access$1000(Lorg/telegram/ui/Components/PasscodeView;)Z
@@ -49,12 +47,10 @@
 
     if-nez v0, :cond_0
 
-    .line 920
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/Components/PasscodeView;->access$1100(Lorg/telegram/ui/Components/PasscodeView;Ljava/lang/CharSequence;)V
 
-    .line 922
     :cond_0
     return-void
 .end method
@@ -63,7 +59,6 @@
     .locals 3
 
     .prologue
-    .line 931
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     const-string/jumbo v1, "FingerprintNotRecognized"
@@ -76,7 +71,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PasscodeView;->access$1100(Lorg/telegram/ui/Components/PasscodeView;Ljava/lang/CharSequence;)V
 
-    .line 932
     return-void
 .end method
 
@@ -86,12 +80,10 @@
     .param p2, "helpString"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 926
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/Components/PasscodeView;->access$1100(Lorg/telegram/ui/Components/PasscodeView;Ljava/lang/CharSequence;)V
 
-    .line 927
     return-void
 .end method
 
@@ -100,7 +92,6 @@
     .param p1, "result"    # Landroid/support/v4/hardware/fingerprint/FingerprintManagerCompat$AuthenticationResult;
 
     .prologue
-    .line 937
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -114,7 +105,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 938
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PasscodeView;->access$1200(Lorg/telegram/ui/Components/PasscodeView;)Landroid/app/AlertDialog;
@@ -125,7 +115,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 943
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
@@ -134,21 +123,17 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/PasscodeView;->access$1202(Lorg/telegram/ui/Components/PasscodeView;Landroid/app/AlertDialog;)Landroid/app/AlertDialog;
 
-    .line 944
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$11;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     const/4 v2, 0x1
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/PasscodeView;->access$400(Lorg/telegram/ui/Components/PasscodeView;Z)V
 
-    .line 945
     return-void
 
-    .line 940
     :catch_0
     move-exception v0
 
-    .line 941
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

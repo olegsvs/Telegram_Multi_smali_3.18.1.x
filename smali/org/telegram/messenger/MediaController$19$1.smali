@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MediaController$19;
 
     .prologue
-    .line 2722
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 2725
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$19;->val$audioToSend:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -62,7 +60,6 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->date:I
 
-    .line 2726
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$19;->val$audioToSend:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -79,16 +76,13 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->size:I
 
-    .line 2727
     new-instance v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
 
     invoke-direct {v9}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;-><init>()V
 
-    .line 2728
     .local v9, "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
     iput-boolean v12, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->voice:Z
 
-    .line 2729
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$19;->this$0:Lorg/telegram/messenger/MediaController;
@@ -117,19 +111,16 @@
 
     iput-object v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->waveform:[B
 
-    .line 2730
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->waveform:[B
 
     if-eqz v0, :cond_0
 
-    .line 2731
     iget v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
     or-int/lit8 v0, v0, 0x4
 
     iput v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
-    .line 2733
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
@@ -139,7 +130,6 @@
 
     move-result-wide v10
 
-    .line 2734
     .local v10, "duration":J
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
@@ -157,7 +147,6 @@
 
     iput v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->duration:I
 
-    .line 2735
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$19;->val$audioToSend:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -166,21 +155,18 @@
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2736
     const-wide/16 v0, 0x2bc
 
     cmp-long v0, v10, v0
 
     if-lez v0, :cond_4
 
-    .line 2737
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 
     iget v0, v0, Lorg/telegram/messenger/MediaController$19;->val$send:I
 
     if-ne v0, v12, :cond_1
 
-    .line 2738
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v0
@@ -219,7 +205,6 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Lorg/telegram/tgnet/TLRPC$TL_document;Lorg/telegram/messenger/VideoEditedInfo;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 2740
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -263,17 +248,14 @@
 
     invoke-virtual {v1, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2744
     :goto_1
     return-void
 
     :cond_3
     move-object v0, v2
 
-    .line 2740
     goto :goto_0
 
-    .line 2742
     :cond_4
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19$1;->this$1:Lorg/telegram/messenger/MediaController$19;
 

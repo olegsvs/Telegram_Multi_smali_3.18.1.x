@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 297
     iput-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$4;->val$message:Lorg/telegram/tgnet/TLObject;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 300
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -53,6 +51,5 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 301
     return-void
 .end method

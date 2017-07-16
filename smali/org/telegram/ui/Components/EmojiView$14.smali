@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 816
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$14;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -46,21 +45,16 @@
 
     const/4 v1, 0x0
 
-    .line 819
     iput v1, p1, Landroid/graphics/Rect;->left:I
 
-    .line 820
     iput v1, p1, Landroid/graphics/Rect;->top:I
 
-    .line 821
     iput v1, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 822
     invoke-virtual {p3, p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v0
 
-    .line 823
     .local v0, "position":I
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$14;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -74,14 +68,12 @@
 
     if-nez v2, :cond_0
 
-    .line 824
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     iput v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 826
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$14;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -98,10 +90,8 @@
     :goto_0
     iput v1, p1, Landroid/graphics/Rect;->right:I
 
-    .line 827
     return-void
 
-    .line 826
     :cond_1
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 

@@ -36,24 +36,17 @@
     .param p5, "toY"    # I
 
     .prologue
-    .line 57
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 58
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$MoveInfo;->holder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
-    .line 59
     iput p2, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$MoveInfo;->fromX:I
 
-    .line 60
     iput p3, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$MoveInfo;->fromY:I
 
-    .line 61
     iput p4, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$MoveInfo;->toX:I
 
-    .line 62
     iput p5, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$MoveInfo;->toY:I
 
-    .line 63
     return-void
 .end method

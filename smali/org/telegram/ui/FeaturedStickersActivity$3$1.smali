@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/FeaturedStickersActivity$3;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/FeaturedStickersActivity$3$1;->val$view:Landroid/view/View;
@@ -49,18 +48,15 @@
     .locals 4
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity$3$1;->val$view:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
-    .line 126
     .local v0, "cell":Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->setDrawProgress(Z)V
 
-    .line 127
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/FeaturedStickersActivity$3;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
@@ -83,7 +79,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     return-void
 .end method
 
@@ -91,6 +86,5 @@
     .locals 0
 
     .prologue
-    .line 133
     return-void
 .end method

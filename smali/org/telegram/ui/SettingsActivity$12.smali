@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 1209
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$12;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/SettingsActivity$12;->val$setVisible:Z
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1212
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$12;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/SettingsActivity;->access$4500(Lorg/telegram/ui/SettingsActivity;)Landroid/animation/AnimatorSet;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1213
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$12;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/SettingsActivity;->access$4600(Lorg/telegram/ui/SettingsActivity;)Landroid/widget/ImageView;
@@ -80,18 +77,15 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1214
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$12;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/SettingsActivity;->access$4502(Lorg/telegram/ui/SettingsActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1216
     :cond_0
     return-void
 
-    .line 1213
     :cond_1
     const/16 v0, 0x8
 

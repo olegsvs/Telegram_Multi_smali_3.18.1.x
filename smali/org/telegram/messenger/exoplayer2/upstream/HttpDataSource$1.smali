@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 46
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$1;->evaluate(Ljava/lang/String;)Z
@@ -59,12 +57,10 @@
     .param p1, "contentType"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Util;->toLowerInvariant(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 51
     invoke-static {p1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -73,7 +69,6 @@
 
     const-string/jumbo v0, "text"
 
-    .line 52
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0
@@ -91,7 +86,6 @@
     :cond_0
     const-string/jumbo v0, "html"
 
-    .line 53
     invoke-virtual {p1, v0}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 
     move-result v0

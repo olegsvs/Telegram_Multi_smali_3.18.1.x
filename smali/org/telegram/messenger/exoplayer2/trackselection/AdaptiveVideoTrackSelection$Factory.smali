@@ -39,7 +39,6 @@
     .prologue
     const/16 v4, 0x61a8
 
-    .line 48
     const v2, 0xc3500
 
     const/16 v3, 0x2710
@@ -54,7 +53,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter;IIIIF)V
 
-    .line 52
     return-void
 .end method
 
@@ -68,28 +66,20 @@
     .param p6, "bandwidthFraction"    # F
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 73
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->bandwidthMeter:Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter;
 
-    .line 74
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->maxInitialBitrate:I
 
-    .line 75
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->minDurationForQualityIncreaseMs:I
 
-    .line 76
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->maxDurationForQualityDecreaseMs:I
 
-    .line 77
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->minDurationToRetainAfterDiscardMs:I
 
-    .line 78
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->bandwidthFraction:F
 
-    .line 79
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .param p2, "tracks"    # [I
 
     .prologue
-    .line 83
     new-instance v1, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection;
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->bandwidthMeter:Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter;
@@ -135,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 35
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection$Factory;->createTrackSelection(Lorg/telegram/messenger/exoplayer2/source/TrackGroup;[I)Lorg/telegram/messenger/exoplayer2/trackselection/AdaptiveVideoTrackSelection;
 
     move-result-object v0

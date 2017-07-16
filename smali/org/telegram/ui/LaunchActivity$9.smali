@@ -47,7 +47,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 1565
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$9;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$9;->val$progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -83,13 +82,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1568
     new-instance v0, Lorg/telegram/ui/LaunchActivity$9$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/LaunchActivity$9$1;-><init>(Lorg/telegram/ui/LaunchActivity$9;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1627
     return-void
 .end method

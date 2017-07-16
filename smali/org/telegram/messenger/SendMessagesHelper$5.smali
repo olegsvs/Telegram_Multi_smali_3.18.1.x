@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 1010
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$5;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$5;->val$callback:Ljava/lang/Runnable;
@@ -55,17 +54,14 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1013
     new-instance v0, Lorg/telegram/messenger/SendMessagesHelper$5$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SendMessagesHelper$5$1;-><init>(Lorg/telegram/messenger/SendMessagesHelper$5;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1019
     if-nez p2, :cond_0
 
-    .line 1020
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -77,11 +73,9 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 1029
     :goto_0
     return-void
 
-    .line 1022
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_0
     new-instance v0, Lorg/telegram/messenger/SendMessagesHelper$5$2;

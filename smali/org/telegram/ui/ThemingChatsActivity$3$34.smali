@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatsActivity$3;
 
     .prologue
-    .line 840
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$34;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingChatsActivity$3$34;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -53,7 +52,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 843
     iget-object v1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$34;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -64,7 +62,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 844
     iget-object v1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$34;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -75,7 +72,6 @@
 
     sput v1, Lorg/telegram/ui/ActionBar/Theme;->chatsTabsTextSize:I
 
-    .line 845
     iget-object v1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$34;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -86,7 +82,6 @@
 
     invoke-static {v1, v2, v3}, Lorg/telegram/ui/ThemingChatsActivity;->access$300(Lorg/telegram/ui/ThemingChatsActivity;Ljava/lang/String;I)V
 
-    .line 846
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "plusconfig"
@@ -99,7 +94,6 @@
 
     move-result-object v0
 
-    .line 847
     .local v0, "editorPlus":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v1, "tabsTextSize"
 
@@ -107,10 +101,8 @@
 
     invoke-interface {v0, v1, v2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 848
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 849
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -131,7 +123,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 851
     .end local v0    # "editorPlus":Landroid/content/SharedPreferences$Editor;
     :cond_0
     return-void

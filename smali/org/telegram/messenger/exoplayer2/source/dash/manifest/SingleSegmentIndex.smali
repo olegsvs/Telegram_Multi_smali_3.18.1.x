@@ -16,13 +16,10 @@
     .param p1, "uri"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SingleSegmentIndex;->uri:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
-    .line 32
     return-void
 .end method
 
@@ -34,7 +31,6 @@
     .param p2, "periodDurationUs"    # J
 
     .prologue
-    .line 46
     return-wide p2
 .end method
 
@@ -42,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return v0
@@ -53,7 +48,6 @@
     .param p1, "periodDurationUs"    # J
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return v0
@@ -65,7 +59,6 @@
     .param p3, "periodDurationUs"    # J
 
     .prologue
-    .line 36
     const/4 v0, 0x0
 
     return v0
@@ -76,7 +69,6 @@
     .param p1, "segmentNum"    # I
 
     .prologue
-    .line 51
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SingleSegmentIndex;->uri:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object v0
@@ -87,7 +79,6 @@
     .param p1, "segmentNum"    # I
 
     .prologue
-    .line 41
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -97,7 +88,6 @@
     .locals 1
 
     .prologue
-    .line 66
     const/4 v0, 0x1
 
     return v0

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 39
     if-eqz p0, :cond_0
 
     invoke-static {p0}, Lorg/telegram/messenger/UserObject;->isDeleted(Lorg/telegram/tgnet/TLRPC$User;)Z
@@ -28,20 +26,16 @@
 
     if-eqz v1, :cond_2
 
-    .line 40
     :cond_0
     const-string/jumbo v0, "DELETED"
 
-    .line 46
     :cond_1
     :goto_0
     return-object v0
 
-    .line 42
     :cond_2
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 43
     .local v0, "name":Ljava/lang/String;
     if-eqz v0, :cond_3
 
@@ -51,11 +45,9 @@
 
     if-nez v1, :cond_4
 
-    .line 44
     :cond_3
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    .line 46
     :cond_4
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -79,7 +71,6 @@
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 31
     if-eqz p0, :cond_0
 
     invoke-static {p0}, Lorg/telegram/messenger/UserObject;->isDeleted(Lorg/telegram/tgnet/TLRPC$User;)Z
@@ -88,7 +79,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 32
     :cond_0
     const-string/jumbo v1, "HiddenName"
 
@@ -98,12 +88,10 @@
 
     move-result-object v0
 
-    .line 35
     :cond_1
     :goto_0
     return-object v0
 
-    .line 34
     :cond_2
     iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
@@ -113,7 +101,6 @@
 
     move-result-object v0
 
-    .line 35
     .local v0, "name":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -169,7 +156,6 @@
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 23
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_userContact_old2;
 
     if-nez v0, :cond_0
@@ -199,7 +185,6 @@
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 19
     if-eqz p0, :cond_0
 
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old2;
@@ -231,7 +216,6 @@
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 27
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old3;
 
     if-nez v0, :cond_0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     .prologue
-    .line 267
     iput-object p1, p0, Lorg/telegram/messenger/Emoji$EmojiDrawable$1;->this$0:Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 270
     iget-object v0, p0, Lorg/telegram/messenger/Emoji$EmojiDrawable$1;->this$0:Lorg/telegram/messenger/Emoji$EmojiDrawable;
 
     invoke-static {v0}, Lorg/telegram/messenger/Emoji$EmojiDrawable;->access$500(Lorg/telegram/messenger/Emoji$EmojiDrawable;)Lorg/telegram/messenger/Emoji$DrawableInfo;
@@ -60,7 +58,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/Emoji;->access$600(II)V
 
-    .line 271
     invoke-static {}, Lorg/telegram/messenger/Emoji;->access$400()[[Z
 
     move-result-object v0
@@ -87,6 +84,5 @@
 
     aput-boolean v2, v0, v1
 
-    .line 272
     return-void
 .end method

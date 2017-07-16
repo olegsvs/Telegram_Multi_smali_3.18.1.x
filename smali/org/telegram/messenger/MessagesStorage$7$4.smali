@@ -35,7 +35,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$7;
 
     .prologue
-    .line 766
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7$4;->this$1:Lorg/telegram/messenger/MessagesStorage$7;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesStorage$7$4;->val$did:J
@@ -57,7 +56,6 @@
     .locals 8
 
     .prologue
-    .line 769
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -72,6 +70,5 @@
 
     invoke-virtual/range {v1 .. v7}, Lorg/telegram/messenger/MessagesController;->pinDialog(JZLorg/telegram/tgnet/TLRPC$InputPeer;J)Z
 
-    .line 770
     return-void
 .end method

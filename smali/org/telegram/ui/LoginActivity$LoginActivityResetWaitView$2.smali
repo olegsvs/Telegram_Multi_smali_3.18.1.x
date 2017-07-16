@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;
 
     .prologue
-    .line 2406
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 2409
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;->access$6400(Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;)Ljava/lang/Runnable;
@@ -50,17 +48,14 @@
 
     if-eq v0, p0, :cond_0
 
-    .line 2414
     :goto_0
     return-void
 
-    .line 2412
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;->access$6500(Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;)V
 
-    .line 2413
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;->access$6400(Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView;)Ljava/lang/Runnable;

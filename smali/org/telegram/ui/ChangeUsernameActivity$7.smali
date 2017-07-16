@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 449
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$7;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     iput p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$7;->val$reqId:I
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 452
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -58,21 +56,17 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 454
     :try_start_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 458
     :goto_0
     return-void
 
-    .line 455
     :catch_0
     move-exception v0
 
-    .line 456
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

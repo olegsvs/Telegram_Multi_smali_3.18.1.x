@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersAlert;
 
     .prologue
-    .line 325
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$6;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 328
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$6;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$300(Lorg/telegram/ui/Components/StickersAlert;)Ljava/util/ArrayList;
@@ -83,7 +81,6 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 329
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$6;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
@@ -95,7 +92,6 @@
 
     move-result v0
 
-    .line 331
     :goto_0
     return v0
 

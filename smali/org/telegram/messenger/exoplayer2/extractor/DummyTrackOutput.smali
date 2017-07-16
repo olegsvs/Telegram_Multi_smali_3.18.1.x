@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 27
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 32
     return-void
 .end method
 
@@ -43,26 +41,21 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 37
     invoke-interface {p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->skip(I)I
 
     move-result v0
 
-    .line 38
     .local v0, "bytesSkipped":I
     if-ne v0, v1, :cond_0
 
-    .line 39
     if-eqz p3, :cond_1
 
     move v0, v1
 
-    .line 44
     .end local v0    # "bytesSkipped":I
     :cond_0
     return v0
 
-    .line 42
     .restart local v0    # "bytesSkipped":I
     :cond_1
     new-instance v1, Ljava/io/EOFException;
@@ -78,10 +71,8 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 49
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 50
     return-void
 .end method
 
@@ -94,6 +85,5 @@
     .param p6, "encryptionKey"    # [B
 
     .prologue
-    .line 56
     return-void
 .end method

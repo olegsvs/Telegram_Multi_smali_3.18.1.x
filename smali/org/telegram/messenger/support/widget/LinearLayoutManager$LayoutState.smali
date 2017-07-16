@@ -72,21 +72,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2021
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2040
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mRecycle:Z
 
-    .line 2081
     iput v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mExtra:I
 
-    .line 2088
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mIsPreLayout:Z
 
-    .line 2100
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
@@ -98,14 +93,12 @@
     .locals 6
 
     .prologue
-    .line 2137
     iget-object v4, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v4}, Ljava/util/List;->size()I
 
     move-result v2
 
-    .line 2138
     .local v2, "size":I
     const/4 v0, 0x0
 
@@ -113,7 +106,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 2139
     iget-object v4, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v4, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -124,7 +116,6 @@
 
     iget-object v3, v4, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2140
     .local v3, "view":Landroid/view/View;
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -132,7 +123,6 @@
 
     check-cast v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 2141
     .local v1, "lp":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;->isItemRemoved()Z
 
@@ -140,13 +130,11 @@
 
     if-eqz v4, :cond_1
 
-    .line 2138
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2144
     :cond_1
     iget v4, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
@@ -156,10 +144,8 @@
 
     if-ne v4, v5, :cond_0
 
-    .line 2145
     invoke-virtual {p0, v3}, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->assignPositionFromScrapList(Landroid/view/View;)V
 
-    .line 2149
     .end local v1    # "lp":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     .end local v3    # "view":Landroid/view/View;
     :goto_1
@@ -177,12 +163,10 @@
     .locals 1
 
     .prologue
-    .line 2153
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->assignPositionFromScrapList(Landroid/view/View;)V
 
-    .line 2154
     return-void
 .end method
 
@@ -191,25 +175,20 @@
     .param p1, "ignore"    # Landroid/view/View;
 
     .prologue
-    .line 2157
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->nextViewInLimitedList(Landroid/view/View;)Landroid/view/View;
 
     move-result-object v0
 
-    .line 2158
     .local v0, "closest":Landroid/view/View;
     if-nez v0, :cond_0
 
-    .line 2159
     const/4 v1, -0x1
 
     iput v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
-    .line 2164
     :goto_0
     return-void
 
-    .line 2161
     :cond_0
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -217,7 +196,6 @@
 
     check-cast v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 2162
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
     move-result v1
@@ -232,7 +210,6 @@
     .param p1, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 2111
     iget v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
     if-ltz v0, :cond_0
@@ -260,7 +237,6 @@
     .locals 3
 
     .prologue
-    .line 2196
     const-string/jumbo v0, "LLM#LayoutState"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -333,7 +309,6 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 2198
     return-void
 .end method
 
@@ -342,21 +317,17 @@
     .param p1, "recycler"    # Lorg/telegram/messenger/support/widget/RecyclerView$Recycler;
 
     .prologue
-    .line 2121
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     if-eqz v1, :cond_0
 
-    .line 2122
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->nextViewFromScrapList()Landroid/view/View;
 
     move-result-object v0
 
-    .line 2126
     :goto_0
     return-object v0
 
-    .line 2124
     :cond_0
     iget v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
@@ -364,7 +335,6 @@
 
     move-result-object v0
 
-    .line 2125
     .local v0, "view":Landroid/view/View;
     iget v1, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mCurrentPosition:I
 
@@ -382,22 +352,18 @@
     .param p1, "ignore"    # Landroid/view/View;
 
     .prologue
-    .line 2167
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v7}, Ljava/util/List;->size()I
 
     move-result v5
 
-    .line 2168
     .local v5, "size":I
     const/4 v0, 0x0
 
-    .line 2169
     .local v0, "closest":Landroid/view/View;
     const v1, 0x7fffffff
 
-    .line 2173
     .local v1, "closestDistance":I
     const/4 v3, 0x0
 
@@ -405,7 +371,6 @@
     :goto_0
     if-ge v3, v5, :cond_2
 
-    .line 2174
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutState;->mScrapList:Ljava/util/List;
 
     invoke-interface {v7, v3}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -416,7 +381,6 @@
 
     iget-object v6, v7, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
-    .line 2175
     .local v6, "view":Landroid/view/View;
     invoke-virtual {v6}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
@@ -424,7 +388,6 @@
 
     check-cast v4, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 2176
     .local v4, "lp":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     if-eq v6, p1, :cond_0
 
@@ -434,13 +397,11 @@
 
     if-eqz v7, :cond_1
 
-    .line 2173
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 2179
     :cond_1
     invoke-virtual {v4}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;->getViewLayoutPosition()I
 
@@ -454,23 +415,17 @@
 
     mul-int v2, v7, v8
 
-    .line 2181
     .local v2, "distance":I
     if-ltz v2, :cond_0
 
-    .line 2184
     if-ge v2, v1, :cond_0
 
-    .line 2185
     move-object v0, v6
 
-    .line 2186
     move v1, v2
 
-    .line 2187
     if-nez v2, :cond_0
 
-    .line 2192
     .end local v2    # "distance":I
     .end local v4    # "lp":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     .end local v6    # "view":Landroid/view/View;

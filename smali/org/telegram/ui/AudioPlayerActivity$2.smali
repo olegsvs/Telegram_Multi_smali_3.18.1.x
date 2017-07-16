@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/AudioPlayerActivity;
 
     .prologue
-    .line 207
     iput-object p1, p0, Lorg/telegram/ui/AudioPlayerActivity$2;->this$0:Lorg/telegram/ui/AudioPlayerActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 210
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 211
     iget-object v0, p0, Lorg/telegram/ui/AudioPlayerActivity$2;->this$0:Lorg/telegram/ui/AudioPlayerActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/AudioPlayerActivity;->finishFragment()V
 
-    .line 213
     :cond_0
     return-void
 .end method

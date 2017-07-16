@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/tgnet/ConnectionsManager$1;
 
     .prologue
-    .line 136
     iput-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1;->this$1:Lorg/telegram/tgnet/ConnectionsManager$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,30 +44,24 @@
     .param p4, "networkType"    # I
 
     .prologue
-    .line 140
     const/4 v6, 0x0
 
-    .line 141
     .local v6, "resp":Lorg/telegram/tgnet/TLObject;
     const/4 v2, 0x0
 
-    .line 142
     .local v2, "error":Lorg/telegram/tgnet/TLRPC$TL_error;
     if-eqz p1, :cond_2
 
-    .line 143
     :try_start_0
     invoke-static {p1}, Lorg/telegram/tgnet/NativeByteBuffer;->wrap(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v0
 
-    .line 144
     .local v0, "buff":Lorg/telegram/tgnet/NativeByteBuffer;
     const/4 v7, 0x1
 
     iput-boolean v7, v0, Lorg/telegram/tgnet/NativeByteBuffer;->reused:Z
 
-    .line 145
     iget-object v7, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1;->this$1:Lorg/telegram/tgnet/ConnectionsManager$1;
 
     iget-object v7, v7, Lorg/telegram/tgnet/ConnectionsManager$1;->val$object:Lorg/telegram/tgnet/TLObject;
@@ -85,16 +78,13 @@
 
     move-result-object v6
 
-    .line 152
     .end local v0    # "buff":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
     :goto_0
     if-eqz v6, :cond_1
 
-    .line 153
     iput p4, v6, Lorg/telegram/tgnet/TLObject;->networkType:I
 
-    .line 155
     :cond_1
     new-instance v7, Ljava/lang/StringBuilder;
 
@@ -126,14 +116,11 @@
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 156
     move-object v5, v6
 
-    .line 157
     .local v5, "finalResponse":Lorg/telegram/tgnet/TLObject;
     move-object v4, v2
 
-    .line 158
     .local v4, "finalError":Lorg/telegram/tgnet/TLRPC$TL_error;
     sget-object v7, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -143,33 +130,27 @@
 
     invoke-virtual {v7, v8}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 170
     .end local v4    # "finalError":Lorg/telegram/tgnet/TLRPC$TL_error;
     .end local v5    # "finalResponse":Lorg/telegram/tgnet/TLObject;
     :goto_1
     return-void
 
-    .line 146
     :cond_2
     if-eqz p3, :cond_0
 
-    .line 147
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_error;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_error;-><init>()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 148
     .end local v2    # "error":Lorg/telegram/tgnet/TLRPC$TL_error;
     .local v3, "error":Lorg/telegram/tgnet/TLRPC$TL_error;
     :try_start_1
     iput p2, v3, Lorg/telegram/tgnet/TLRPC$TL_error;->code:I
 
-    .line 149
     iput-object p3, v3, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
 
-    .line 150
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
@@ -220,18 +201,15 @@
     .restart local v2    # "error":Lorg/telegram/tgnet/TLRPC$TL_error;
     goto :goto_0
 
-    .line 167
     :catch_0
     move-exception v1
 
-    .line 168
     .local v1, "e":Ljava/lang/Exception;
     :goto_2
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 167
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v2    # "error":Lorg/telegram/tgnet/TLRPC$TL_error;
     .restart local v3    # "error":Lorg/telegram/tgnet/TLRPC$TL_error;

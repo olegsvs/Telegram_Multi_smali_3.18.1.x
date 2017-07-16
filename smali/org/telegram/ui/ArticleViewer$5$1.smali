@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$5;
 
     .prologue
-    .line 1342
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$5$1;->this$1:Lorg/telegram/ui/ArticleViewer$5;
 
     iput-wide p2, p0, Lorg/telegram/ui/ArticleViewer$5$1;->val$pageId:J
@@ -47,13 +46,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1345
     new-instance v0, Lorg/telegram/ui/ArticleViewer$5$1$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/ArticleViewer$5$1$1;-><init>(Lorg/telegram/ui/ArticleViewer$5$1;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1363
     return-void
 .end method

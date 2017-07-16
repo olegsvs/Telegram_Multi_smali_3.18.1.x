@@ -26,7 +26,6 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 36
     new-instance v0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
     const/4 v1, 0x1
@@ -50,13 +49,10 @@
     .param p2, "maxChannelCount"    # I
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 72
     if-eqz p1, :cond_0
 
-    .line 73
     array-length v0, p1
 
     invoke-static {p1, v0}, Ljava/util/Arrays;->copyOf([II)[I
@@ -65,19 +61,15 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
 
     invoke-static {v0}, Ljava/util/Arrays;->sort([I)V
 
-    .line 78
     :goto_0
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->maxChannelCount:I
 
-    .line 79
     return-void
 
-    .line 76
     :cond_0
     const/4 v0, 0x0
 
@@ -93,7 +85,6 @@
     .param p0, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     new-instance v1, Landroid/content/IntentFilter;
@@ -102,12 +93,10 @@
 
     invoke-direct {v1, v2}, Landroid/content/IntentFilter;-><init>(Ljava/lang/String;)V
 
-    .line 48
     invoke-virtual {p0, v0, v1}, Landroid/content/Context;->registerReceiver(Landroid/content/BroadcastReceiver;Landroid/content/IntentFilter;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 47
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->getCapabilities(Landroid/content/Intent;)Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
     move-result-object v0
@@ -120,14 +109,12 @@
     .param p0, "intent"    # Landroid/content/Intent;
     .annotation build Landroid/annotation/SuppressLint;
         value = {
-            "InlinedApi"
         }
     .end annotation
 
     .prologue
     const/4 v3, 0x0
 
-    .line 53
     if-eqz p0, :cond_0
 
     const-string/jumbo v0, "android.media.extra.AUDIO_PLUG_STATE"
@@ -138,15 +125,12 @@
 
     if-nez v0, :cond_1
 
-    .line 54
     :cond_0
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->DEFAULT_AUDIO_CAPABILITIES:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
-    .line 57
     :goto_0
     return-object v0
 
-    .line 56
     :cond_1
     new-instance v0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
@@ -158,7 +142,6 @@
 
     const-string/jumbo v2, "android.media.extra.MAX_CHANNEL_COUNT"
 
-    .line 57
     invoke-virtual {p0, v2, v3}, Landroid/content/Intent;->getIntExtra(Ljava/lang/String;I)I
 
     move-result v2
@@ -179,15 +162,12 @@
 
     const/4 v2, 0x0
 
-    .line 100
     if-ne p0, p1, :cond_1
 
-    .line 107
     :cond_0
     :goto_0
     return v1
 
-    .line 103
     :cond_1
     instance-of v3, p1, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
@@ -195,16 +175,13 @@
 
     move v1, v2
 
-    .line 104
     goto :goto_0
 
     :cond_2
     move-object v0, p1
 
-    .line 106
     check-cast v0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
-    .line 107
     .local v0, "audioCapabilities":Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
 
@@ -232,7 +209,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->maxChannelCount:I
 
     return v0
@@ -242,7 +218,6 @@
     .locals 2
 
     .prologue
-    .line 113
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->maxChannelCount:I
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
@@ -263,7 +238,6 @@
     .param p1, "encoding"    # I
 
     .prologue
-    .line 88
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
 
     invoke-static {v0, p1}, Ljava/util/Arrays;->binarySearch([II)I
@@ -287,7 +261,6 @@
     .locals 2
 
     .prologue
-    .line 118
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -312,7 +285,6 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->supportedEncodings:[I
 
-    .line 119
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1

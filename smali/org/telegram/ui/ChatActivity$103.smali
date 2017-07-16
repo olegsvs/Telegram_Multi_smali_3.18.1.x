@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 10122
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$103;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$103;->val$url:Ljava/lang/String;
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 10125
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$103;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->getParentActivity()Landroid/app/Activity;
@@ -73,10 +71,8 @@
     :goto_0
     invoke-static {v1, v2, v0}, Lorg/telegram/messenger/browser/Browser;->openUrl(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 10126
     return-void
 
-    .line 10125
     :cond_0
     const/4 v0, 0x0
 

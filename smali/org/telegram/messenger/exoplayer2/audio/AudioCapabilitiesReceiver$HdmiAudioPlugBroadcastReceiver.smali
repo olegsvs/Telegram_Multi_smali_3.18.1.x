@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 87
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$1;
 
     .prologue
-    .line 87
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;-><init>(Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;)V
 
     return-void
@@ -51,19 +49,16 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 91
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;->isInitialStickyBroadcast()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 92
     invoke-static {p2}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;->getCapabilities(Landroid/content/Intent;)Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
     move-result-object v0
 
-    .line 93
     .local v0, "newAudioCapabilities":Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;
 
@@ -75,12 +70,10 @@
 
     if-nez v1, :cond_0
 
-    .line 94
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;
 
     iput-object v0, v1, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;->audioCapabilities:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
 
-    .line 95
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$HdmiAudioPlugBroadcastReceiver;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;
 
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;->access$100(Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver;)Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$Listener;
@@ -89,7 +82,6 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilitiesReceiver$Listener;->onAudioCapabilitiesChanged(Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;)V
 
-    .line 98
     .end local v0    # "newAudioCapabilities":Lorg/telegram/messenger/exoplayer2/audio/AudioCapabilities;
     :cond_0
     return-void

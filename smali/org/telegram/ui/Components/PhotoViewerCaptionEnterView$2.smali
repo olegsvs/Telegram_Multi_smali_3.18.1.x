@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0, p2}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
@@ -41,21 +40,17 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 121
     :try_start_0
     invoke-super {p0, p1, p2}, Landroid/widget/EditText;->onMeasure(II)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 126
     :goto_0
     return-void
 
-    .line 122
     :catch_0
     move-exception v0
 
-    .line 123
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
@@ -69,7 +64,6 @@
 
     invoke-virtual {p0, v1, v2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$2;->setMeasuredDimension(II)V
 
-    .line 124
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0

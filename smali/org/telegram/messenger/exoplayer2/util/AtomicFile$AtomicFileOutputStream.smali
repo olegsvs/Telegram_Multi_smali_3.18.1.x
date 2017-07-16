@@ -31,22 +31,18 @@
     .end annotation
 
     .prologue
-    .line 158
     invoke-direct {p0}, Ljava/io/OutputStream;-><init>()V
 
-    .line 156
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
-    .line 159
     new-instance v0, Ljava/io/FileOutputStream;
 
     invoke-direct {v0, p1}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 160
     return-void
 .end method
 
@@ -61,25 +57,20 @@
     .end annotation
 
     .prologue
-    .line 164
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
     if-eqz v1, :cond_0
 
-    .line 175
     :goto_0
     return-void
 
-    .line 167
     :cond_0
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->closed:Z
 
-    .line 168
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->flush()V
 
-    .line 170
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
@@ -91,7 +82,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 174
     :goto_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
@@ -99,11 +89,9 @@
 
     goto :goto_0
 
-    .line 171
     :catch_0
     move-exception v0
 
-    .line 172
     .local v0, "e":Ljava/io/IOException;
     const-string/jumbo v1, "AtomicFile"
 
@@ -123,12 +111,10 @@
     .end annotation
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0}, Ljava/io/FileOutputStream;->flush()V
 
-    .line 180
     return-void
 .end method
 
@@ -142,12 +128,10 @@
     .end annotation
 
     .prologue
-    .line 184
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write(I)V
 
-    .line 185
     return-void
 .end method
 
@@ -161,12 +145,10 @@
     .end annotation
 
     .prologue
-    .line 189
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0, p1}, Ljava/io/FileOutputStream;->write([B)V
 
-    .line 190
     return-void
 .end method
 
@@ -182,11 +164,9 @@
     .end annotation
 
     .prologue
-    .line 194
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;->fileOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/FileOutputStream;->write([BII)V
 
-    .line 195
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 4176
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$67;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$67;->val$channelViews:Landroid/util/SparseArray;
@@ -49,7 +48,6 @@
     .locals 12
 
     .prologue
-    .line 4180
     :try_start_0
     iget-object v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -59,7 +57,6 @@
 
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 4181
     iget-object v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v9}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -72,7 +69,6 @@
 
     move-result-object v7
 
-    .line 4182
     .local v7, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v0, 0x0
 
@@ -86,14 +82,12 @@
 
     if-ge v0, v9, :cond_2
 
-    .line 4183
     iget-object v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->val$channelViews:Landroid/util/SparseArray;
 
     invoke-virtual {v9, v0}, Landroid/util/SparseArray;->keyAt(I)I
 
     move-result v6
 
-    .line 4184
     .local v6, "peer":I
     iget-object v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->val$channelViews:Landroid/util/SparseArray;
 
@@ -103,7 +97,6 @@
 
     check-cast v3, Landroid/util/SparseIntArray;
 
-    .line 4185
     .local v3, "messages":Landroid/util/SparseIntArray;
     const/4 v1, 0x0
 
@@ -115,7 +108,6 @@
 
     if-ge v1, v9, :cond_1
 
-    .line 4186
     invoke-virtual {v3, v1}, Landroid/util/SparseIntArray;->keyAt(I)I
 
     move-result v9
@@ -124,7 +116,6 @@
 
     move-result v8
 
-    .line 4187
     .local v8, "views":I
     invoke-virtual {v3, v1}, Landroid/util/SparseIntArray;->keyAt(I)I
 
@@ -132,13 +123,11 @@
 
     int-to-long v4, v9
 
-    .line 4188
     .local v4, "messageId":J
     iget-boolean v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->val$isChannel:Z
 
     if-eqz v9, :cond_0
 
-    .line 4189
     neg-int v9, v6
 
     int-to-long v10, v9
@@ -149,34 +138,27 @@
 
     or-long/2addr v4, v10
 
-    .line 4191
     :cond_0
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 4192
     const/4 v9, 0x1
 
     invoke-virtual {v7, v9, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 4193
     const/4 v9, 0x2
 
     invoke-virtual {v7, v9, v8}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 4194
     const/4 v9, 0x3
 
     invoke-virtual {v7, v9, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 4195
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 4185
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 4182
     .end local v4    # "messageId":J
     .end local v8    # "views":I
     :cond_1
@@ -184,14 +166,12 @@
 
     goto :goto_0
 
-    .line 4198
     .end local v1    # "b":I
     .end local v3    # "messages":Landroid/util/SparseIntArray;
     .end local v6    # "peer":I
     :cond_2
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 4199
     iget-object v9, p0, Lorg/telegram/messenger/MessagesStorage$67;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v9}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -202,17 +182,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4203
     .end local v0    # "a":I
     .end local v7    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_2
     return-void
 
-    .line 4200
     :catch_0
     move-exception v2
 
-    .line 4201
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

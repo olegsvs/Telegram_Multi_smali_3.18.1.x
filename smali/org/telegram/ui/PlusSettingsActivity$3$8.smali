@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 854
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$8;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 857
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -66,7 +64,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 858
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$3$8;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -77,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 859
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$3$8;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -88,7 +84,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 861
     :cond_0
     return-void
 .end method

@@ -57,7 +57,6 @@
 
 .field private drawLinkImageView:Z
 
-.field private inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
 .field private lastUpdateTime:J
 
@@ -93,7 +92,6 @@
     .locals 2
 
     .prologue
-    .line 90
     new-instance v0, Landroid/view/animation/AccelerateInterpolator;
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -110,10 +108,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 95
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 70
     const/high16 v0, 0x40e00000    # 7.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -122,7 +118,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->titleY:I
 
-    .line 73
     const/high16 v0, 0x41d80000    # 27.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -131,33 +126,28 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionY:I
 
-    .line 89
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->time:J
 
-    .line 97
     new-instance v0, Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ImageReceiver;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
-    .line 98
     new-instance v0, Lorg/telegram/ui/Components/LetterDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/LetterDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->letterDrawable:Lorg/telegram/ui/Components/LetterDrawable;
 
-    .line 99
     new-instance v0, Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/RadialProgress;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
-    .line 100
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -168,7 +158,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->TAG:I
 
-    .line 101
     return-void
 .end method
 
@@ -186,7 +175,6 @@
 
     const/4 v4, 0x0
 
-    .line 518
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v2, 0x3
@@ -197,13 +185,11 @@
 
     if-ne v1, v7, :cond_1
 
-    .line 519
     :cond_0
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
     if-nez v1, :cond_2
 
-    .line 520
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -216,10 +202,8 @@
 
     if-eqz v1, :cond_1
 
-    .line 521
     iput v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 522
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -228,21 +212,17 @@
 
     invoke-virtual {v1, v2, v4, v4}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 523
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
-    .line 553
     :cond_1
     :goto_0
     return-void
 
-    .line 525
     :cond_2
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
     if-ne v1, v5, :cond_3
 
-    .line 526
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -253,14 +233,11 @@
 
     move-result v0
 
-    .line 527
     .local v0, "result":Z
     if-eqz v0, :cond_1
 
-    .line 528
     iput v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 529
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -269,31 +246,26 @@
 
     invoke-virtual {v1, v2, v4, v4}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 530
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto :goto_0
 
-    .line 532
     .end local v0    # "result":Z
     :cond_3
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
     if-ne v1, v3, :cond_6
 
-    .line 533
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v2, v4}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 534
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v1, :cond_4
 
-    .line 535
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v1
@@ -302,11 +274,9 @@
 
     invoke-virtual {v1, v2, v5, v4}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;ZZ)V
 
-    .line 539
     :goto_1
     iput v6, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 540
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -315,20 +285,16 @@
 
     invoke-virtual {v1, v2, v5, v4}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 541
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto :goto_0
 
-    .line 537
     :cond_4
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v2
 
-    iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -346,18 +312,15 @@
 
     goto :goto_2
 
-    .line 542
     :cond_6
     iget v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
     if-ne v1, v6, :cond_1
 
-    .line 543
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v1, :cond_7
 
-    .line 544
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v1
@@ -366,11 +329,9 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/FileLoader;->cancelLoadFile(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 548
     :goto_3
     iput v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 549
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -379,20 +340,16 @@
 
     invoke-virtual {v1, v2, v4, v4}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 550
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto :goto_0
 
-    .line 546
     :cond_7
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
 
-    iget-object v2, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/ImageLoader;->cancelLoadHttpFile(Ljava/lang/String;)V
 
@@ -411,7 +368,6 @@
 
     const/4 v1, 0x0
 
-    .line 663
     iget v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v4, 0x3
@@ -422,7 +378,6 @@
 
     if-ne v3, v5, :cond_3
 
-    .line 664
     :cond_0
     iget v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
@@ -432,17 +387,14 @@
 
     move-object v0, v2
 
-    .line 670
     :goto_0
     return-object v0
 
-    .line 667
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/RadialProgress;->setAlphaForPrevious(Z)V
 
-    .line 668
     sget-object v2, Lorg/telegram/ui/ActionBar/Theme;->chat_fileStatesDrawable:[[Landroid/graphics/drawable/Drawable;
 
     iget v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
@@ -465,7 +417,6 @@
 
     goto :goto_1
 
-    .line 670
     :cond_3
     iget v3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
@@ -499,18 +450,14 @@
 
     const/4 v9, 0x5
 
-    .line 311
     iput-object v12, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 312
     iput v10, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
-    .line 313
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v4, :cond_6
 
-    .line 314
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v4}, Lorg/telegram/messenger/MessageObject;->isGifDocument(Lorg/telegram/tgnet/TLRPC$Document;)Z
@@ -519,12 +466,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 315
     const/4 v4, 0x2
 
     iput v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
-    .line 332
     :cond_0
     :goto_0
     iget v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
@@ -535,17 +480,14 @@
 
     if-ne v4, v9, :cond_2
 
-    .line 333
     :cond_1
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_message;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_message;-><init>()V
 
-    .line 334
     .local v3, "message":Lorg/telegram/tgnet/TLRPC$TL_message;
     iput-boolean v11, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->out:Z
 
-    .line 335
     sget-object v4, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v4}, Ljava/security/SecureRandom;->nextInt()I
@@ -556,14 +498,12 @@
 
     iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->id:I
 
-    .line 336
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_peerUser;-><init>()V
 
     iput-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 337
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -574,7 +514,6 @@
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:I
 
-    .line 338
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -587,19 +526,16 @@
 
     iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->date:I
 
-    .line 339
     const-string/jumbo v4, "-1"
 
     iput-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->message:Ljava/lang/String;
 
-    .line 340
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument;-><init>()V
 
     iput-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
-    .line 341
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     new-instance v5, Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -608,31 +544,26 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 342
     iget v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->flags:I
 
     or-int/lit16 v4, v4, 0x300
 
     iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->flags:I
 
-    .line 344
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v4, :cond_9
 
-    .line 345
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 346
     const-string/jumbo v4, ""
 
     iput-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->attachPath:Ljava/lang/String;
 
-    .line 375
     :goto_1
     new-instance v4, Lorg/telegram/messenger/MessageObject;
 
@@ -640,12 +571,10 @@
 
     iput-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 377
     .end local v3    # "message":Lorg/telegram/tgnet/TLRPC$TL_message;
     :cond_2
     return-void
 
-    .line 316
     :cond_3
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -655,14 +584,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 317
     const/4 v4, 0x6
 
     iput v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto :goto_0
 
-    .line 318
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -672,12 +599,10 @@
 
     if-eqz v4, :cond_5
 
-    .line 319
     iput v9, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto :goto_0
 
-    .line 320
     :cond_5
     iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
@@ -687,36 +612,26 @@
 
     if-eqz v4, :cond_0
 
-    .line 321
     iput v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto/16 :goto_0
 
-    .line 323
     :cond_6
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_0
 
-    .line 324
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-eqz v4, :cond_7
 
-    .line 325
     const/4 v4, 0x7
 
     iput v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto/16 :goto_0
 
-    .line 326
     :cond_7
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v5, "audio"
 
@@ -726,16 +641,12 @@
 
     if-eqz v4, :cond_8
 
-    .line 327
     iput v9, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto/16 :goto_0
 
-    .line 328
     :cond_8
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v5, "voice"
 
@@ -745,17 +656,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 329
     iput v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     goto/16 :goto_0
 
-    .line 348
     .restart local v3    # "message":Lorg/telegram/tgnet/TLRPC$TL_message;
     :cond_9
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -768,7 +675,6 @@
 
     move-result-object v1
 
-    .line 349
     .local v1, "ext":Ljava/lang/String;
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
@@ -778,7 +684,6 @@
 
     iput-wide v6, v4, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
-    .line 350
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -787,7 +692,6 @@
 
     iput-wide v6, v4, Lorg/telegram/tgnet/TLRPC$Document;->access_hash:J
 
-    .line 351
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -796,7 +700,6 @@
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$Document;->date:I
 
-    .line 352
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -821,14 +724,12 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
-    .line 353
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iput v10, v4, Lorg/telegram/tgnet/TLRPC$Document;->size:I
 
-    .line 354
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -839,7 +740,6 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$Document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 355
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -850,70 +750,51 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
-    .line 356
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iput v10, v4, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
 
-    .line 358
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;-><init>()V
 
-    .line 359
     .local v0, "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->duration:I
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->duration:I
 
-    .line 360
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     if-eqz v4, :cond_c
 
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     :goto_3
     iput-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->title:Ljava/lang/String;
 
-    .line 361
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->description:Ljava/lang/String;
 
     if-eqz v4, :cond_d
 
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->description:Ljava/lang/String;
 
     :goto_4
     iput-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->performer:Ljava/lang/String;
 
-    .line 362
     iget v4, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
     or-int/lit8 v4, v4, 0x3
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
-    .line 363
     iget v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     if-ne v4, v8, :cond_a
 
-    .line 364
     iput-boolean v11, v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->voice:Z
 
-    .line 366
     :cond_a
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
@@ -923,20 +804,16 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 368
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;-><init>()V
 
-    .line 369
     .local v2, "fileName":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-static {v5}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
@@ -952,9 +829,7 @@
 
     move-result-object v5
 
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -977,7 +852,6 @@
 
     iput-object v4, v2, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;->file_name:Ljava/lang/String;
 
-    .line 370
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -986,7 +860,6 @@
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 372
     new-instance v5, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
@@ -1003,9 +876,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-static {v7}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
@@ -1021,9 +892,7 @@
 
     move-result-object v7
 
-    iget-object v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v8, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget v4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -1054,7 +923,6 @@
 
     goto/16 :goto_1
 
-    .line 348
     .end local v0    # "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
     .end local v1    # "ext":Ljava/lang/String;
     .end local v2    # "fileName":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
@@ -1063,7 +931,6 @@
 
     goto/16 :goto_2
 
-    .line 360
     .restart local v0    # "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
     .restart local v1    # "ext":Ljava/lang/String;
     :cond_c
@@ -1071,20 +938,17 @@
 
     goto/16 :goto_3
 
-    .line 361
     :cond_d
     const-string/jumbo v4, ""
 
     goto/16 :goto_4
 
-    .line 369
     .restart local v2    # "fileName":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
     :cond_e
     const-string/jumbo v4, "ogg"
 
     goto :goto_5
 
-    .line 372
     :cond_f
     const-string/jumbo v4, "ogg"
 
@@ -1097,7 +961,6 @@
     .locals 1
 
     .prologue
-    .line 414
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     return-object v0
@@ -1107,7 +970,6 @@
     .locals 1
 
     .prologue
-    .line 447
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -1117,7 +979,6 @@
     .locals 1
 
     .prologue
-    .line 800
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->TAG:I
 
     return v0
@@ -1127,18 +988,14 @@
     .locals 1
 
     .prologue
-    .line 418
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
     return-object v0
 .end method
 
-.method public getResult()Lorg/telegram/tgnet/TLRPC$BotInlineResult;
     .locals 1
 
     .prologue
-    .line 765
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     return-object v0
 .end method
@@ -1147,7 +1004,6 @@
     .locals 2
 
     .prologue
-    .line 406
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v1, 0x6
@@ -1169,15 +1025,12 @@
     .locals 1
 
     .prologue
-    .line 438
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    .line 439
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->drawLinkImageView:Z
 
     if-eqz v0, :cond_0
 
-    .line 440
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->onAttachedToWindow()Z
@@ -1186,12 +1039,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 441
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 444
     :cond_0
     return-void
 .end method
@@ -1200,20 +1051,16 @@
     .locals 1
 
     .prologue
-    .line 429
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 430
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->drawLinkImageView:Z
 
     if-eqz v0, :cond_0
 
-    .line 431
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->onDetachedFromWindow()V
 
-    .line 433
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -1221,7 +1068,6 @@
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/MediaController;->removeLoadingFileObserver(Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 434
     return-void
 .end method
 
@@ -1230,15 +1076,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 557
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->titleLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_0
 
-    .line 558
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 559
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_e
@@ -1258,21 +1101,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 560
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->titleLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 561
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 564
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_1
 
-    .line 565
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_descriptionTextPaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText2"
@@ -1283,10 +1122,8 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 566
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 567
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_f
@@ -1306,21 +1143,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 568
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 569
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 572
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_2
 
-    .line 573
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_descriptionTextPaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "windowBackgroundWhiteLinkText"
@@ -1331,10 +1164,8 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 574
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 575
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_10
@@ -1354,21 +1185,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 576
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 577
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 580
     :cond_2
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
     if-nez v0, :cond_18
 
-    .line 581
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v1, 0x3
@@ -1381,7 +1208,6 @@
 
     if-ne v0, v1, :cond_12
 
-    .line 582
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
@@ -1398,22 +1224,18 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/RadialProgress;->setProgressColor(I)V
 
-    .line 583
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RadialProgress;->draw(Landroid/graphics/Canvas;)V
 
-    .line 622
     :cond_4
     :goto_4
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->drawLinkImageView:Z
 
     if-eqz v0, :cond_9
 
-    .line 623
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 624
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scaled:Z
 
     if-eqz v0, :cond_5
@@ -1439,23 +1261,19 @@
 
     if-eqz v0, :cond_8
 
-    .line 625
     :cond_6
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 626
     .local v10, "newTime":J
     iget-wide v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->lastUpdateTime:J
 
     sub-long v6, v10, v0
 
-    .line 627
     .local v6, "dt":J
     iput-wide v10, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->lastUpdateTime:J
 
-    .line 628
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scaled:Z
 
     if-eqz v0, :cond_1a
@@ -1468,7 +1286,6 @@
 
     if-eqz v0, :cond_1a
 
-    .line 629
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
     long-to-float v1, v6
@@ -1481,7 +1298,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
-    .line 630
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
     const v1, 0x3f4ccccd    # 0.8f
@@ -1490,17 +1306,14 @@
 
     if-gez v0, :cond_7
 
-    .line 631
     const v0, 0x3f4ccccd    # 0.8f
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
-    .line 639
     :cond_7
     :goto_5
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
-    .line 641
     .end local v6    # "dt":J
     .end local v10    # "newTime":J
     :cond_8
@@ -1526,15 +1339,12 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 642
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
 
-    .line 643
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 645
     :cond_9
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
@@ -1552,13 +1362,11 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 646
     :cond_a
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RadialProgress;->draw(Landroid/graphics/Canvas;)V
 
-    .line 649
     :cond_b
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needDivider:Z
 
@@ -1568,12 +1376,10 @@
 
     if-nez v0, :cond_c
 
-    .line 650
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_1b
 
-    .line 651
     const/4 v1, 0x0
 
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getMeasuredHeight()I
@@ -1588,7 +1394,6 @@
 
     move-result v0
 
-    sget v3, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v3, v3
 
@@ -1614,14 +1419,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 656
     :cond_c
     :goto_6
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needShadow:Z
 
     if-eqz v0, :cond_d
 
-    .line 657
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_shadowUnderSwitchDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
@@ -1640,54 +1443,41 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 658
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_shadowUnderSwitchDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 660
     :cond_d
     return-void
 
-    .line 559
     :cond_e
-    sget v0, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v0, v0
 
     goto/16 :goto_0
 
-    .line 567
     :cond_f
-    sget v0, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v0, v0
 
     goto/16 :goto_1
 
-    .line 575
     :cond_10
-    sget v0, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v0, v0
 
     goto/16 :goto_2
 
-    .line 582
     :cond_11
     const-string/jumbo v0, "chat_inAudioProgress"
 
     goto/16 :goto_3
 
-    .line 584
     :cond_12
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_13
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v1, "file"
 
@@ -1697,22 +1487,17 @@
 
     if-eqz v0, :cond_13
 
-    .line 585
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultFile:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    .line 586
     .local v9, "w":I
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultFile:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 587
     .local v8, "h":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1732,7 +1517,6 @@
 
     add-int v12, v0, v1
 
-    .line 588
     .local v12, "x":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1752,7 +1536,6 @@
 
     add-int v13, v0, v1
 
-    .line 589
     .local v13, "y":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1808,8 +1591,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 590
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultFile:Landroid/graphics/drawable/Drawable;
 
     add-int v1, v12, v9
 
@@ -1817,26 +1598,20 @@
 
     invoke-virtual {v0, v12, v13, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 591
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultFile:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_4
 
-    .line 592
     .end local v8    # "h":I
     .end local v9    # "w":I
     .end local v12    # "x":I
     .end local v13    # "y":I
     :cond_13
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_15
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v1, "audio"
 
@@ -1846,9 +1621,7 @@
 
     if-nez v0, :cond_14
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v1, "voice"
 
@@ -1858,23 +1631,18 @@
 
     if-eqz v0, :cond_15
 
-    .line 593
     :cond_14
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultAudio:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    .line 594
     .restart local v9    # "w":I
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultAudio:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 595
     .restart local v8    # "h":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1894,7 +1662,6 @@
 
     add-int v12, v0, v1
 
-    .line 596
     .restart local v12    # "x":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1914,7 +1681,6 @@
 
     add-int v13, v0, v1
 
-    .line 597
     .restart local v13    # "y":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -1970,8 +1736,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 598
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultAudio:Landroid/graphics/drawable/Drawable;
 
     add-int v1, v12, v9
 
@@ -1979,26 +1743,20 @@
 
     invoke-virtual {v0, v12, v13, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 599
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultAudio:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_4
 
-    .line 600
     .end local v8    # "h":I
     .end local v9    # "w":I
     .end local v12    # "x":I
     .end local v13    # "y":I
     :cond_15
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_17
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v1, "venue"
 
@@ -2008,9 +1766,7 @@
 
     if-nez v0, :cond_16
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v1, "geo"
 
@@ -2020,23 +1776,18 @@
 
     if-eqz v0, :cond_17
 
-    .line 601
     :cond_16
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    .line 602
     .restart local v9    # "w":I
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 603
     .restart local v8    # "h":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2056,7 +1807,6 @@
 
     add-int v12, v0, v1
 
-    .line 604
     .restart local v12    # "x":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2076,7 +1826,6 @@
 
     add-int v13, v0, v1
 
-    .line 605
     .restart local v13    # "y":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2132,8 +1881,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 606
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     add-int v1, v12, v9
 
@@ -2141,14 +1888,11 @@
 
     invoke-virtual {v0, v12, v13, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 607
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_4
 
-    .line 609
     .end local v8    # "h":I
     .end local v9    # "w":I
     .end local v12    # "x":I
@@ -2160,45 +1904,32 @@
 
     goto/16 :goto_4
 
-    .line 612
     :cond_18
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_4
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaGeo;
 
     if-nez v0, :cond_19
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaVenue;
 
     if-eqz v0, :cond_4
 
-    .line 613
     :cond_19
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v9
 
-    .line 614
     .restart local v9    # "w":I
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v8
 
-    .line 615
     .restart local v8    # "h":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2218,7 +1949,6 @@
 
     add-int v12, v0, v1
 
-    .line 616
     .restart local v12    # "x":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2238,7 +1968,6 @@
 
     add-int v13, v0, v1
 
-    .line 617
     .restart local v13    # "y":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -2294,8 +2023,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 618
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     add-int v1, v12, v9
 
@@ -2303,14 +2030,11 @@
 
     invoke-virtual {v0, v12, v13, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 619
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_inlineResultLocation:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
     goto/16 :goto_4
 
-    .line 634
     .end local v8    # "h":I
     .end local v9    # "w":I
     .end local v12    # "x":I
@@ -2330,7 +2054,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
-    .line 635
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -2339,18 +2062,15 @@
 
     if-lez v0, :cond_7
 
-    .line 636
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scale:F
 
     goto/16 :goto_5
 
-    .line 653
     .end local v6    # "dt":J
     .end local v10    # "newTime":J
     :cond_1b
-    sget v0, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v0, v0
 
@@ -2396,12 +2116,10 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 770
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 771
     return-void
 .end method
 
@@ -2416,35 +2134,30 @@
     .end annotation
 
     .prologue
-    .line 106
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->drawLinkImageView:Z
 
-    .line 107
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
 
-    .line 108
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->titleLayout:Landroid/text/StaticLayout;
 
-    .line 109
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkLayout:Landroid/text/StaticLayout;
 
-    .line 110
     const/high16 v4, 0x41d80000    # 27.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2455,10 +2168,8 @@
 
     iput v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkY:I
 
-    .line 112
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-nez v4, :cond_1
 
@@ -2468,7 +2179,6 @@
 
     if-nez v4, :cond_1
 
-    .line 113
     const/high16 v4, 0x42c80000    # 100.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2485,20 +2195,16 @@
 
     invoke-virtual {v0, v4, v6}, Lorg/telegram/ui/Cells/ContextLinkCell;->setMeasuredDimension(II)V
 
-    .line 308
     :cond_0
     :goto_0
     return-void
 
-    .line 117
     :cond_1
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v47
 
-    .line 118
     .local v47, "viewWidth":I
-    sget v4, Lorg/telegram/messenger/AndroidUtilities;->leftBaseline:I
 
     int-to-float v4, v4
 
@@ -2516,23 +2222,18 @@
 
     sub-int v45, v4, v6
 
-    .line 120
     .local v45, "maxWidth":I
     const/16 v35, 0x0
 
-    .line 121
     .local v35, "currentPhotoObject":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     const/16 v36, 0x0
 
-    .line 122
     .local v36, "currentPhotoObjectThumb":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     const/16 v46, 0x0
 
-    .line 123
     .local v46, "photoThumbs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     const/16 v17, 0x0
 
-    .line 125
     .local v17, "url":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2540,13 +2241,11 @@
 
     if-eqz v4, :cond_15
 
-    .line 126
     new-instance v46, Ljava/util/ArrayList;
 
     .end local v46    # "photoThumbs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     invoke-direct/range {v46 .. v46}, Ljava/util/ArrayList;-><init>()V
 
-    .line 127
     .restart local v46    # "photoThumbs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     move-object/from16 v0, p0
 
@@ -2558,7 +2257,6 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 132
     :cond_2
     :goto_1
     move-object/from16 v0, p0
@@ -2569,28 +2267,21 @@
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_5
 
-    .line 133
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     if-eqz v4, :cond_3
 
-    .line 135
     :try_start_0
     sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_titleTextPaint:Landroid/text/TextPaint;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
@@ -2606,13 +2297,10 @@
 
     move/from16 v49, v0
 
-    .line 136
     .local v49, "width":I
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     const/16 v6, 0xa
 
@@ -2658,7 +2346,6 @@
 
     move-result-object v5
 
-    .line 137
     .local v5, "titleFinal":Ljava/lang/CharSequence;
     new-instance v4, Landroid/text/StaticLayout;
 
@@ -2688,7 +2375,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 141
     .end local v5    # "titleFinal":Ljava/lang/CharSequence;
     .end local v49    # "width":I
     :goto_2
@@ -2698,29 +2384,21 @@
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->title:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/LetterDrawable;->setTitle(Ljava/lang/String;)V
 
-    .line 144
     :cond_3
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->description:Ljava/lang/String;
 
     if-eqz v4, :cond_4
 
-    .line 146
     :try_start_1
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->description:Ljava/lang/String;
 
     sget-object v6, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_descriptionTextPaint:Landroid/text/TextPaint;
 
@@ -2758,7 +2436,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
@@ -2769,7 +2446,6 @@
 
     if-lez v4, :cond_4
 
-    .line 148
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionY:I
@@ -2808,26 +2484,20 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 155
     :cond_4
     :goto_3
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->url:Ljava/lang/String;
 
     if-eqz v4, :cond_5
 
-    .line 157
     :try_start_2
     sget-object v4, Lorg/telegram/ui/ActionBar/Theme;->chat_contextResult_descriptionTextPaint:Landroid/text/TextPaint;
 
     move-object/from16 v0, p0
 
-    iget-object v6, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->url:Ljava/lang/String;
 
     invoke-virtual {v4, v6}, Landroid/text/TextPaint;->measureText(Ljava/lang/String;)F
 
@@ -2843,13 +2513,10 @@
 
     move/from16 v49, v0
 
-    .line 158
     .restart local v49    # "width":I
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->url:Ljava/lang/String;
 
     const/16 v6, 0xa
 
@@ -2877,7 +2544,6 @@
 
     move-result-object v7
 
-    .line 159
     .local v7, "linkFinal":Ljava/lang/CharSequence;
     new-instance v6, Landroid/text/StaticLayout;
 
@@ -2901,14 +2567,12 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 166
     .end local v7    # "linkFinal":Ljava/lang/CharSequence;
     .end local v49    # "width":I
     :cond_5
     :goto_4
     const/4 v14, 0x0
 
-    .line 167
     .local v14, "ext":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2916,7 +2580,6 @@
 
     if-eqz v4, :cond_18
 
-    .line 168
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
@@ -2927,7 +2590,6 @@
 
     if-eqz v4, :cond_16
 
-    .line 169
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
@@ -2936,39 +2598,28 @@
 
     move-object/from16 v35, v0
 
-    .line 185
     :cond_6
     :goto_5
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_8
 
-    .line 186
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     if-eqz v4, :cond_7
 
-    .line 187
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     if-eqz v4, :cond_7
 
-    .line 188
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v6, "gif"
 
@@ -2978,7 +2629,6 @@
 
     if-eqz v4, :cond_19
 
-    .line 189
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
@@ -2987,45 +2637,34 @@
 
     if-eq v4, v6, :cond_7
 
-    .line 190
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
-    .line 191
     const/4 v4, 0x2
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
-    .line 201
     :cond_7
     :goto_6
     if-nez v17, :cond_8
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     if-eqz v4, :cond_8
 
-    .line 202
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
-    .line 205
     :cond_8
     if-nez v17, :cond_a
 
@@ -3033,56 +2672,40 @@
 
     if-nez v36, :cond_a
 
-    .line 206
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    instance-of v4, v4, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaVenue;
 
     if-nez v4, :cond_9
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    instance-of v4, v4, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaGeo;
 
     if-eqz v4, :cond_a
 
-    .line 207
     :cond_9
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     iget-wide v0, v4, Lorg/telegram/tgnet/TLRPC$GeoPoint;->lat:D
 
     move-wide/from16 v40, v0
 
-    .line 208
     .local v40, "lat":D
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     iget-wide v0, v4, Lorg/telegram/tgnet/TLRPC$GeoPoint;->_long:D
 
     move-wide/from16 v42, v0
 
-    .line 209
     .local v42, "lon":D
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -3156,17 +2779,14 @@
 
     move-result-object v17
 
-    .line 214
     .end local v40    # "lat":D
     .end local v42    # "lon":D
     :cond_a
     const/16 v48, 0x0
 
-    .line 215
     .local v48, "w":I
     const/16 v38, 0x0
 
-    .line 217
     .local v38, "h":I
     move-object/from16 v0, p0
 
@@ -3174,7 +2794,6 @@
 
     if-eqz v4, :cond_c
 
-    .line 218
     const/16 v34, 0x0
 
     .local v34, "b":I
@@ -3193,7 +2812,6 @@
 
     if-ge v0, v4, :cond_c
 
-    .line 219
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
@@ -3208,7 +2826,6 @@
 
     check-cast v33, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 220
     .local v33, "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     move-object/from16 v0, v33
 
@@ -3222,7 +2839,6 @@
 
     if-eqz v4, :cond_1a
 
-    .line 221
     :cond_b
     move-object/from16 v0, v33
 
@@ -3230,14 +2846,12 @@
 
     move/from16 v48, v0
 
-    .line 222
     move-object/from16 v0, v33
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->h:I
 
     move/from16 v38, v0
 
-    .line 227
     .end local v33    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     .end local v34    # "b":I
     :cond_c
@@ -3245,21 +2859,17 @@
 
     if-nez v38, :cond_f
 
-    .line 228
     :cond_d
     if-eqz v35, :cond_1b
 
-    .line 229
     if-eqz v36, :cond_e
 
-    .line 230
     const/4 v4, -0x1
 
     move-object/from16 v0, v36
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->size:I
 
-    .line 232
     :cond_e
     move-object/from16 v0, v35
 
@@ -3267,21 +2877,18 @@
 
     move/from16 v48, v0
 
-    .line 233
     move-object/from16 v0, v35
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->h:I
 
     move/from16 v38, v0
 
-    .line 239
     :cond_f
     :goto_8
     if-eqz v48, :cond_10
 
     if-nez v38, :cond_11
 
-    .line 240
     :cond_10
     const/high16 v4, 0x42a00000    # 80.0f
 
@@ -3291,7 +2898,6 @@
 
     move/from16 v48, v38
 
-    .line 242
     :cond_11
     move-object/from16 v0, p0
 
@@ -3303,11 +2909,9 @@
 
     if-eqz v17, :cond_13
 
-    .line 244
     :cond_12
     const-string/jumbo v22, "52_52_b"
 
-    .line 246
     .local v22, "currentPhotoFilterThumb":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -3315,7 +2919,6 @@
 
     if-eqz v4, :cond_1d
 
-    .line 247
     move/from16 v0, v48
 
     int-to-float v4, v0
@@ -3340,7 +2943,6 @@
 
     move/from16 v49, v0
 
-    .line 248
     .restart local v49    # "width":I
     move-object/from16 v0, p0
 
@@ -3350,7 +2952,6 @@
 
     if-ne v4, v6, :cond_1c
 
-    .line 249
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
     const-string/jumbo v6, "%d_%d_b"
@@ -3394,7 +2995,6 @@
     .local v12, "currentPhotoFilter":Ljava/lang/String;
     move-object/from16 v22, v12
 
-    .line 257
     .end local v49    # "width":I
     :goto_9
     move-object/from16 v0, p0
@@ -3414,7 +3014,6 @@
     :goto_a
     invoke-virtual {v6, v4}, Lorg/telegram/messenger/ImageReceiver;->setAspectFit(Z)V
 
-    .line 259
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
@@ -3423,14 +3022,12 @@
 
     if-ne v4, v6, :cond_22
 
-    .line 260
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v4, :cond_20
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
@@ -3458,7 +3055,6 @@
 
     invoke-virtual/range {v8 .. v15}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$FileLocation;Ljava/lang/String;ILjava/lang/String;Z)V
 
-    .line 272
     .end local v22    # "currentPhotoFilterThumb":Ljava/lang/String;
     :goto_c
     const/4 v4, 0x1
@@ -3467,7 +3063,6 @@
 
     iput-boolean v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->drawLinkImageView:Z
 
-    .line 275
     .end local v12    # "currentPhotoFilter":Ljava/lang/String;
     :cond_13
     move-object/from16 v0, p0
@@ -3476,27 +3071,22 @@
 
     if-eqz v4, :cond_26
 
-    .line 276
     move/from16 v49, v47
 
-    .line 277
     .restart local v49    # "width":I
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v39
 
-    .line 278
     .local v39, "height":I
     if-nez v39, :cond_14
 
-    .line 279
     const/high16 v4, 0x42c80000    # 100.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v39
 
-    .line 281
     :cond_14
     move-object/from16 v0, p0
 
@@ -3506,7 +3096,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/ContextLinkCell;->setMeasuredDimension(II)V
 
-    .line 282
     const/high16 v4, 0x41c00000    # 24.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -3517,7 +3106,6 @@
 
     div-int/lit8 v50, v4, 0x2
 
-    .line 283
     .local v50, "x":I
     const/high16 v4, 0x41c00000    # 24.0f
 
@@ -3529,7 +3117,6 @@
 
     div-int/lit8 v51, v4, 0x2
 
-    .line 284
     .local v51, "y":I
     move-object/from16 v0, p0
 
@@ -3557,7 +3144,6 @@
 
     invoke-virtual {v4, v0, v1, v6, v8}, Lorg/telegram/ui/Components/RadialProgress;->setProgressRect(IIII)V
 
-    .line 285
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
@@ -3574,7 +3160,6 @@
 
     goto/16 :goto_0
 
-    .line 128
     .end local v14    # "ext":Ljava/lang/String;
     .end local v38    # "h":I
     .end local v39    # "height":I
@@ -3585,27 +3170,21 @@
     :cond_15
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_2
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-eqz v4, :cond_2
 
-    .line 129
     new-instance v46, Ljava/util/ArrayList;
 
     .end local v46    # "photoThumbs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
@@ -3616,39 +3195,32 @@
     .restart local v46    # "photoThumbs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     goto/16 :goto_1
 
-    .line 138
     :catch_0
     move-exception v37
 
-    .line 139
     .local v37, "e":Ljava/lang/Exception;
     invoke-static/range {v37 .. v37}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_2
 
-    .line 150
     .end local v37    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v37
 
-    .line 151
     .restart local v37    # "e":Ljava/lang/Exception;
     invoke-static/range {v37 .. v37}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_3
 
-    .line 160
     .end local v37    # "e":Ljava/lang/Exception;
     :catch_2
     move-exception v37
 
-    .line 161
     .restart local v37    # "e":Ljava/lang/Exception;
     invoke-static/range {v37 .. v37}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_4
 
-    .line 170
     .end local v37    # "e":Ljava/lang/Exception;
     .restart local v14    # "ext":Ljava/lang/String;
     :cond_16
@@ -3662,7 +3234,6 @@
 
     if-eqz v4, :cond_17
 
-    .line 171
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
@@ -3671,12 +3242,10 @@
 
     move-object/from16 v35, v0
 
-    .line 172
     const-string/jumbo v14, "webp"
 
     goto/16 :goto_5
 
-    .line 174
     :cond_17
     move-object/from16 v0, p0
 
@@ -3694,7 +3263,6 @@
 
     if-eq v4, v6, :cond_6
 
-    .line 175
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
@@ -3705,23 +3273,18 @@
 
     goto/16 :goto_5
 
-    .line 178
     :cond_18
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_6
 
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     if-eqz v4, :cond_6
 
-    .line 179
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->getPhotoSize()I
 
     move-result v4
@@ -3734,7 +3297,6 @@
 
     move-result-object v35
 
-    .line 180
     const/16 v4, 0x50
 
     move-object/from16 v0, v46
@@ -3743,25 +3305,20 @@
 
     move-result-object v36
 
-    .line 181
     move-object/from16 v0, v36
 
     move-object/from16 v1, v35
 
     if-ne v0, v1, :cond_6
 
-    .line 182
     const/16 v36, 0x0
 
     goto/16 :goto_5
 
-    .line 193
     :cond_19
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->type:Ljava/lang/String;
 
     const-string/jumbo v6, "photo"
 
@@ -3771,30 +3328,22 @@
 
     if-eqz v4, :cond_7
 
-    .line 194
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
-    .line 195
     if-nez v17, :cond_7
 
-    .line 196
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     move-object/from16 v17, v0
 
     goto/16 :goto_6
 
-    .line 218
     .restart local v33    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     .restart local v34    # "b":I
     .restart local v38    # "h":I
@@ -3804,37 +3353,28 @@
 
     goto/16 :goto_7
 
-    .line 234
     .end local v33    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     .end local v34    # "b":I
     :cond_1b
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v4, :cond_f
 
-    .line 235
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->w:I
 
     move/from16 v48, v0
 
-    .line 236
     move-object/from16 v0, p0
 
-    iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget v0, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->h:I
 
     move/from16 v38, v0
 
     goto/16 :goto_8
 
-    .line 251
     .restart local v22    # "currentPhotoFilterThumb":Ljava/lang/String;
     .restart local v49    # "width":I
     :cond_1c
@@ -3878,7 +3418,6 @@
 
     move-result-object v12
 
-    .line 252
     .restart local v12    # "currentPhotoFilter":Ljava/lang/String;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -3900,7 +3439,6 @@
 
     goto/16 :goto_9
 
-    .line 255
     .end local v12    # "currentPhotoFilter":Ljava/lang/String;
     .end local v49    # "width":I
     :cond_1d
@@ -3909,19 +3447,16 @@
     .restart local v12    # "currentPhotoFilter":Ljava/lang/String;
     goto/16 :goto_9
 
-    .line 257
     :cond_1e
     const/4 v4, 0x0
 
     goto/16 :goto_a
 
-    .line 261
     :cond_1f
     const/4 v11, 0x0
 
     goto/16 :goto_b
 
-    .line 263
     :cond_20
     move-object/from16 v0, p0
 
@@ -3959,11 +3494,9 @@
 
     goto :goto_d
 
-    .line 266
     :cond_22
     if-eqz v35, :cond_24
 
-    .line 267
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
@@ -4006,7 +3539,6 @@
 
     goto :goto_e
 
-    .line 269
     :cond_24
     move-object/from16 v0, p0
 
@@ -4048,13 +3580,11 @@
 
     goto :goto_f
 
-    .line 287
     .end local v12    # "currentPhotoFilter":Ljava/lang/String;
     .end local v22    # "currentPhotoFilterThumb":Ljava/lang/String;
     :cond_26
     const/16 v39, 0x0
 
-    .line 288
     .restart local v39    # "height":I
     move-object/from16 v0, p0
 
@@ -4072,7 +3602,6 @@
 
     if-eqz v4, :cond_27
 
-    .line 289
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->titleLayout:Landroid/text/StaticLayout;
@@ -4093,7 +3622,6 @@
 
     add-int v39, v39, v4
 
-    .line 291
     :cond_27
     move-object/from16 v0, p0
 
@@ -4111,7 +3639,6 @@
 
     if-eqz v4, :cond_28
 
-    .line 292
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->descriptionLayout:Landroid/text/StaticLayout;
@@ -4132,7 +3659,6 @@
 
     add-int v39, v39, v4
 
-    .line 294
     :cond_28
     move-object/from16 v0, p0
 
@@ -4150,7 +3676,6 @@
 
     if-lez v4, :cond_29
 
-    .line 295
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkLayout:Landroid/text/StaticLayout;
@@ -4171,7 +3696,6 @@
 
     add-int v39, v39, v4
 
-    .line 297
     :cond_29
     const/high16 v4, 0x42500000    # 52.0f
 
@@ -4185,7 +3709,6 @@
 
     move-result v39
 
-    .line 298
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v6
@@ -4223,14 +3746,12 @@
 
     invoke-virtual {v0, v6, v4}, Lorg/telegram/ui/Cells/ContextLinkCell;->setMeasuredDimension(II)V
 
-    .line 300
     const/high16 v4, 0x42500000    # 52.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v44
 
-    .line 301
     .local v44, "maxPhotoWidth":I
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -4250,7 +3771,6 @@
 
     sub-int v50, v4, v44
 
-    .line 302
     .restart local v50    # "x":I
     :goto_11
     move-object/from16 v0, p0
@@ -4275,7 +3795,6 @@
 
     invoke-virtual {v4, v0, v6, v8, v9}, Lorg/telegram/ui/Components/LetterDrawable;->setBounds(IIII)V
 
-    .line 303
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
@@ -4294,7 +3813,6 @@
 
     invoke-virtual {v4, v0, v6, v1, v2}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(IIII)V
 
-    .line 304
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
@@ -4311,7 +3829,6 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 305
     :cond_2a
     move-object/from16 v0, p0
 
@@ -4349,7 +3866,6 @@
 
     goto/16 :goto_0
 
-    .line 298
     .end local v44    # "maxPhotoWidth":I
     .end local v50    # "x":I
     :cond_2b
@@ -4357,7 +3873,6 @@
 
     goto :goto_10
 
-    .line 301
     .restart local v44    # "maxPhotoWidth":I
     :cond_2c
     const/high16 v4, 0x41000000    # 8.0f
@@ -4379,12 +3894,10 @@
 
     const/4 v2, 0x0
 
-    .line 781
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-virtual {v0, p2, v3}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 782
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v1, 0x3
@@ -4397,7 +3910,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 783
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
@@ -4405,21 +3917,17 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 784
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 791
     :cond_1
     :goto_0
     return-void
 
-    .line 787
     :cond_2
     iget v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
     if-eq v0, v3, :cond_1
 
-    .line 788
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
     goto :goto_0
@@ -4432,7 +3940,6 @@
     .param p3, "isEncrypted"    # Z
 
     .prologue
-    .line 796
     return-void
 .end method
 
@@ -4443,17 +3950,14 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 775
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 776
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 777
     return-void
 .end method
 
@@ -4470,7 +3974,6 @@
 
     const/4 v7, 0x0
 
-    .line 452
     iget-boolean v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
     if-nez v5, :cond_0
@@ -4479,22 +3982,18 @@
 
     if-eqz v5, :cond_0
 
-    iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-nez v5, :cond_2
 
-    .line 453
     :cond_0
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
-    .line 514
     :cond_1
     :goto_0
     return v1
 
-    .line 455
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
@@ -4502,7 +4001,6 @@
 
     float-to-int v3, v5
 
-    .line 456
     .local v3, "x":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -4510,11 +4008,9 @@
 
     float-to-int v4, v5
 
-    .line 458
     .local v4, "y":I
     const/4 v1, 0x0
 
-    .line 459
     .local v1, "result":Z
     const/high16 v5, 0x42400000    # 48.0f
 
@@ -4522,7 +4018,6 @@
 
     move-result v2
 
-    .line 460
     .local v2, "side":I
     iget v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -4534,7 +4029,6 @@
 
     if-ne v5, v6, :cond_9
 
-    .line 461
     :cond_3
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->letterDrawable:Lorg/telegram/ui/Components/LetterDrawable;
 
@@ -4546,7 +4040,6 @@
 
     move-result v0
 
-    .line 462
     .local v0, "area":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4554,19 +4047,14 @@
 
     if-nez v5, :cond_5
 
-    .line 463
     if-eqz v0, :cond_4
 
-    .line 464
     iput-boolean v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 465
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
-    .line 466
     const/4 v1, 0x1
 
-    .line 467
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -4575,46 +4063,37 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RadialProgress;->swapBackground(Landroid/graphics/drawable/Drawable;)Z
 
-    .line 510
     .end local v0    # "area":Z
     :cond_4
     :goto_1
     if-nez v1, :cond_1
 
-    .line 511
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v1
 
     goto :goto_0
 
-    .line 469
     .restart local v0    # "area":Z
     :cond_5
     iget-boolean v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
     if-eqz v5, :cond_4
 
-    .line 470
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v5
 
     if-ne v5, v8, :cond_7
 
-    .line 471
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 472
     invoke-virtual {p0, v7}, Lorg/telegram/ui/Cells/ContextLinkCell;->playSoundEffect(I)V
 
-    .line 473
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->didPressedButton()V
 
-    .line 474
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
-    .line 484
     :cond_6
     :goto_2
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
@@ -4627,7 +4106,6 @@
 
     goto :goto_1
 
-    .line 475
     :cond_7
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4635,15 +4113,12 @@
 
     if-ne v5, v9, :cond_8
 
-    .line 476
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 477
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto :goto_2
 
-    .line 478
     :cond_8
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4651,33 +4126,24 @@
 
     if-ne v5, v10, :cond_6
 
-    .line 479
     if-nez v0, :cond_6
 
-    .line 480
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 481
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto :goto_2
 
-    .line 487
     .end local v0    # "area":Z
     :cond_9
-    iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v5, :cond_4
 
-    iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     if-eqz v5, :cond_4
 
-    iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
@@ -4685,14 +4151,12 @@
 
     if-lez v5, :cond_4
 
-    .line 488
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v5
 
     if-nez v5, :cond_a
 
-    .line 489
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->letterDrawable:Lorg/telegram/ui/Components/LetterDrawable;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/LetterDrawable;->getBounds()Landroid/graphics/Rect;
@@ -4705,41 +4169,33 @@
 
     if-eqz v5, :cond_4
 
-    .line 490
     iput-boolean v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 491
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 494
     :cond_a
     iget-boolean v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
     if-eqz v5, :cond_4
 
-    .line 495
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v5
 
     if-ne v5, v8, :cond_b
 
-    .line 496
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
-    .line 497
     invoke-virtual {p0, v7}, Lorg/telegram/ui/Cells/ContextLinkCell;->playSoundEffect(I)V
 
-    .line 498
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->delegate:Lorg/telegram/ui/Cells/ContextLinkCell$ContextLinkCellDelegate;
 
     invoke-interface {v5, p0}, Lorg/telegram/ui/Cells/ContextLinkCell$ContextLinkCellDelegate;->didPressedImage(Lorg/telegram/ui/Cells/ContextLinkCell;)V
 
     goto :goto_1
 
-    .line 499
     :cond_b
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4747,12 +4203,10 @@
 
     if-ne v5, v9, :cond_c
 
-    .line 500
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
     goto/16 :goto_1
 
-    .line 501
     :cond_c
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -4760,7 +4214,6 @@
 
     if-ne v5, v10, :cond_4
 
-    .line 502
     iget-object v5, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->letterDrawable:Lorg/telegram/ui/Components/LetterDrawable;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/LetterDrawable;->getBounds()Landroid/graphics/Rect;
@@ -4773,7 +4226,6 @@
 
     if-nez v5, :cond_4
 
-    .line 503
     iput-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonPressed:Z
 
     goto/16 :goto_1
@@ -4784,10 +4236,8 @@
     .param p1, "contextLinkCellDelegate"    # Lorg/telegram/ui/Cells/ContextLinkCell$ContextLinkCellDelegate;
 
     .prologue
-    .line 761
     iput-object p1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->delegate:Lorg/telegram/ui/Cells/ContextLinkCell$ContextLinkCellDelegate;
 
-    .line 762
     return-void
 .end method
 
@@ -4799,92 +4249,63 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 395
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needDivider:Z
 
-    .line 396
     iput-boolean v1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needShadow:Z
 
-    .line 397
     const/4 v0, 0x0
 
-    iput-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    .line 398
     iput-object p1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 399
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
-    .line 400
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->setAttachType()V
 
-    .line 401
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->requestLayout()V
 
-    .line 402
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 403
     return-void
 .end method
 
-.method public setLink(Lorg/telegram/tgnet/TLRPC$BotInlineResult;ZZZ)V
     .locals 1
-    .param p1, "contextResult"    # Lorg/telegram/tgnet/TLRPC$BotInlineResult;
     .param p2, "media"    # Z
     .param p3, "divider"    # Z
     .param p4, "shadow"    # Z
 
     .prologue
-    .line 380
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needDivider:Z
 
-    .line 381
     iput-boolean p4, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->needShadow:Z
 
-    .line 382
-    iput-object p1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    .line 383
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v0, :cond_0
 
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v0, :cond_0
 
-    .line 384
-    iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 388
     :goto_0
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
-    .line 389
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->setAttachType()V
 
-    .line 390
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->requestLayout()V
 
-    .line 391
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ContextLinkCell;->updateButtonState(Z)V
 
-    .line 392
     return-void
 
-    .line 386
     :cond_0
     const/4 v0, 0x0
 
@@ -4898,20 +4319,16 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 422
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->scaled:Z
 
-    .line 423
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->lastUpdateTime:J
 
-    .line 424
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
-    .line 425
     return-void
 .end method
 
@@ -4919,7 +4336,6 @@
     .locals 1
 
     .prologue
-    .line 410
     iget-object v0, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->linkImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
@@ -4944,14 +4360,11 @@
     .param p1, "animated"    # Z
 
     .prologue
-    .line 674
     const/4 v2, 0x0
 
-    .line 675
     .local v2, "fileName":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 676
     .local v0, "cacheFile":Ljava/io/File;
     iget v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -4965,27 +4378,23 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 677
     :cond_0
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v7, :cond_2
 
-    .line 678
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 679
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getPathToAttach(Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 705
     :cond_1
     :goto_0
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -4994,7 +4403,6 @@
 
     if-eqz v7, :cond_9
 
-    .line 706
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     const/4 v8, 0x0
@@ -5005,17 +4413,12 @@
 
     invoke-virtual {v7, v8, v9, v10}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 758
     :goto_1
     return-void
 
-    .line 681
     :cond_2
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v2, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
-    .line 682
     new-instance v0, Ljava/io/File;
 
     .end local v0    # "cacheFile":Ljava/io/File;
@@ -5033,9 +4436,7 @@
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v9, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v9, v9, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-static {v9}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
@@ -5051,9 +4452,7 @@
 
     move-result-object v9
 
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v10, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
@@ -5087,40 +4486,28 @@
 
     goto :goto_2
 
-    .line 684
     .restart local v0    # "cacheFile":Ljava/io/File;
     :cond_4
     iget-boolean v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->mediaWebpage:Z
 
     if-eqz v7, :cond_1
 
-    .line 685
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     if-eqz v7, :cond_8
 
-    .line 686
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     instance-of v7, v7, Lorg/telegram/tgnet/TLRPC$TL_document;
 
     if-eqz v7, :cond_5
 
-    .line 687
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 688
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getPathToAttach(Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
 
@@ -5128,20 +4515,14 @@
 
     goto :goto_0
 
-    .line 689
     :cond_5
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     instance-of v7, v7, Lorg/telegram/tgnet/TLRPC$TL_photo;
 
     if-eqz v7, :cond_6
 
-    .line 690
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
@@ -5155,36 +4536,28 @@
 
     move-result-object v1
 
-    .line 691
     .local v1, "currentPhotoObject":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 692
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->getPathToAttach(Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
 
     move-result-object v0
 
-    .line 693
     goto/16 :goto_0
 
     .end local v1    # "currentPhotoObject":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     :cond_6
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     if-eqz v7, :cond_7
 
-    .line 694
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     invoke-static {v8}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
@@ -5200,9 +4573,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     const-string/jumbo v9, "jpg"
 
@@ -5218,7 +4589,6 @@
 
     move-result-object v2
 
-    .line 695
     new-instance v0, Ljava/io/File;
 
     .end local v0    # "cacheFile":Ljava/io/File;
@@ -5237,22 +4607,16 @@
     .restart local v0    # "cacheFile":Ljava/io/File;
     goto/16 :goto_0
 
-    .line 696
     :cond_7
-    iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     if-eqz v7, :cond_1
 
-    .line 697
     new-instance v7, Ljava/lang/StringBuilder;
 
     invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
 
-    iget-object v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     invoke-static {v8}, Lorg/telegram/messenger/Utilities;->MD5(Ljava/lang/String;)Ljava/lang/String;
 
@@ -5268,9 +4632,7 @@
 
     move-result-object v7
 
-    iget-object v8, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->inlineResult:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v8, v8, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->thumb_url:Ljava/lang/String;
 
     const-string/jumbo v9, "jpg"
 
@@ -5286,7 +4648,6 @@
 
     move-result-object v2
 
-    .line 698
     new-instance v0, Ljava/io/File;
 
     .end local v0    # "cacheFile":Ljava/io/File;
@@ -5305,20 +4666,17 @@
     .restart local v0    # "cacheFile":Ljava/io/File;
     goto/16 :goto_0
 
-    .line 700
     :cond_8
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v7, :cond_1
 
-    .line 701
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 702
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v7}, Lorg/telegram/messenger/FileLoader;->getPathToAttach(Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
@@ -5327,7 +4685,6 @@
 
     goto/16 :goto_0
 
-    .line 709
     :cond_9
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -5345,10 +4702,8 @@
 
     if-nez v7, :cond_a
 
-    .line 710
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 712
     :cond_a
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -5356,14 +4711,12 @@
 
     if-nez v7, :cond_11
 
-    .line 713
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v7
 
     invoke-virtual {v7, v2, p0}, Lorg/telegram/messenger/MediaController;->addLoadingFileObserver(Ljava/lang/String;Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 714
     iget v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v8, 0x5
@@ -5376,13 +4729,11 @@
 
     if-ne v7, v8, :cond_f
 
-    .line 716
     :cond_b
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttach:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v7, :cond_c
 
-    .line 717
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v7
@@ -5391,24 +4742,20 @@
 
     move-result v3
 
-    .line 721
     .local v3, "isLoading":Z
     :goto_3
     if-nez v3, :cond_d
 
-    .line 722
     const/4 v7, 0x2
 
     iput v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 723
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     const/4 v8, 0x0
 
     invoke-virtual {v7, v8, p1}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 724
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -5419,14 +4766,12 @@
 
     invoke-virtual {v7, v8, v9, p1}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 742
     .end local v3    # "isLoading":Z
     :goto_4
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto/16 :goto_1
 
-    .line 719
     :cond_c
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
@@ -5439,13 +4784,11 @@
     .restart local v3    # "isLoading":Z
     goto :goto_3
 
-    .line 726
     :cond_d
     const/4 v7, 0x4
 
     iput v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 727
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v7
@@ -5454,11 +4797,9 @@
 
     move-result-object v5
 
-    .line 728
     .local v5, "progress":Ljava/lang/Float;
     if-eqz v5, :cond_e
 
-    .line 729
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-virtual {v5}, Ljava/lang/Float;->floatValue()F
@@ -5467,7 +4808,6 @@
 
     invoke-virtual {v7, v8, p1}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 733
     :goto_5
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
@@ -5481,7 +4821,6 @@
 
     goto :goto_4
 
-    .line 731
     :cond_e
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
@@ -5491,7 +4830,6 @@
 
     goto :goto_5
 
-    .line 736
     .end local v3    # "isLoading":Z
     .end local v5    # "progress":Ljava/lang/Float;
     :cond_f
@@ -5499,7 +4837,6 @@
 
     iput v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 737
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v7
@@ -5508,7 +4845,6 @@
 
     move-result-object v5
 
-    .line 738
     .restart local v5    # "progress":Ljava/lang/Float;
     if-eqz v5, :cond_10
 
@@ -5516,7 +4852,6 @@
 
     move-result v6
 
-    .line 739
     .local v6, "setProgress":F
     :goto_6
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
@@ -5525,7 +4860,6 @@
 
     invoke-virtual {v7, v6, v8}, Lorg/telegram/ui/Components/RadialProgress;->setProgress(FZ)V
 
-    .line 740
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->getDrawableForCurrentState()Landroid/graphics/drawable/Drawable;
@@ -5538,14 +4872,12 @@
 
     goto :goto_4
 
-    .line 738
     .end local v6    # "setProgress":F
     :cond_10
     const/4 v6, 0x0
 
     goto :goto_6
 
-    .line 744
     .end local v5    # "progress":Ljava/lang/Float;
     :cond_11
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
@@ -5554,7 +4886,6 @@
 
     invoke-virtual {v7, p0}, Lorg/telegram/messenger/MediaController;->removeLoadingFileObserver(Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 745
     iget v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->documentAttachType:I
 
     const/4 v8, 0x5
@@ -5567,7 +4898,6 @@
 
     if-ne v7, v8, :cond_15
 
-    .line 746
     :cond_12
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -5579,7 +4909,6 @@
 
     move-result v4
 
-    .line 747
     .local v4, "playing":Z
     if-eqz v4, :cond_13
 
@@ -5595,13 +4924,11 @@
 
     if-eqz v7, :cond_14
 
-    .line 748
     :cond_13
     const/4 v7, 0x0
 
     iput v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->buttonState:I
 
-    .line 755
     .end local v4    # "playing":Z
     :goto_7
     iget-object v7, p0, Lorg/telegram/ui/Cells/ContextLinkCell;->radialProgress:Lorg/telegram/ui/Components/RadialProgress;
@@ -5614,12 +4941,10 @@
 
     invoke-virtual {v7, v8, v9, p1}, Lorg/telegram/ui/Components/RadialProgress;->setBackground(Landroid/graphics/drawable/Drawable;ZZ)V
 
-    .line 756
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ContextLinkCell;->invalidate()V
 
     goto/16 :goto_1
 
-    .line 750
     .restart local v4    # "playing":Z
     :cond_14
     const/4 v7, 0x1
@@ -5628,7 +4953,6 @@
 
     goto :goto_7
 
-    .line 753
     .end local v4    # "playing":Z
     :cond_15
     const/4 v7, -0x1

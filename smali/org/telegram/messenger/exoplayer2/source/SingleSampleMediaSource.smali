@@ -31,7 +31,6 @@
 
 .field private final minLoadableRetryCount:I
 
-.field private final timeline:Lorg/telegram/messenger/exoplayer2/Timeline;
 
 .field private final uri:Landroid/net/Uri;
 
@@ -45,7 +44,6 @@
     .param p4, "durationUs"    # J
 
     .prologue
-    .line 63
     const/4 v6, 0x3
 
     move-object v0, p0
@@ -60,7 +58,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/Format;JI)V
 
-    .line 64
     return-void
 .end method
 
@@ -73,7 +70,6 @@
     .param p6, "minLoadableRetryCount"    # I
 
     .prologue
-    .line 68
     const/4 v7, 0x0
 
     const/4 v8, 0x0
@@ -94,7 +90,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;-><init>(Landroid/net/Uri;Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;Lorg/telegram/messenger/exoplayer2/Format;JILandroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;I)V
 
-    .line 69
     return-void
 .end method
 
@@ -110,40 +105,27 @@
     .param p9, "eventSourceId"    # I
 
     .prologue
-    .line 73
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->uri:Landroid/net/Uri;
 
-    .line 75
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 76
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 77
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->minLoadableRetryCount:I
 
-    .line 78
     iput-object p7, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->eventHandler:Landroid/os/Handler;
 
-    .line 79
     iput-object p8, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->eventListener:Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;
 
-    .line 80
     iput p9, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->eventSourceId:I
 
-    .line 81
-    new-instance v0, Lorg/telegram/messenger/exoplayer2/source/SinglePeriodTimeline;
 
     const/4 v1, 0x1
 
-    invoke-direct {v0, p4, p5, v1}, Lorg/telegram/messenger/exoplayer2/source/SinglePeriodTimeline;-><init>(JZ)V
 
-    iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->timeline:Lorg/telegram/messenger/exoplayer2/Timeline;
 
-    .line 82
     return-void
 .end method
 
@@ -156,7 +138,6 @@
     .param p3, "positionUs"    # J
 
     .prologue
-    .line 98
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -164,7 +145,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 99
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->uri:Landroid/net/Uri;
@@ -185,7 +165,6 @@
 
     return-object v0
 
-    .line 98
     :cond_0
     const/4 v0, 0x0
 
@@ -201,7 +180,6 @@
     .end annotation
 
     .prologue
-    .line 94
     return-void
 .end method
 
@@ -210,14 +188,10 @@
     .param p1, "listener"    # Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;
 
     .prologue
-    .line 88
-    iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource;->timeline:Lorg/telegram/messenger/exoplayer2/Timeline;
 
     const/4 v1, 0x0
 
-    invoke-interface {p1, v0, v1}, Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;->onSourceInfoRefreshed(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
 
-    .line 89
     return-void
 .end method
 
@@ -226,13 +200,11 @@
     .param p1, "mediaPeriod"    # Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
     .prologue
-    .line 105
     check-cast p1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     .end local p1    # "mediaPeriod":Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->release()V
 
-    .line 106
     return-void
 .end method
 
@@ -240,6 +212,5 @@
     .locals 0
 
     .prologue
-    .line 111
     return-void
 .end method

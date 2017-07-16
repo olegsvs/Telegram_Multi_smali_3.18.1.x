@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/ImageLoader$2$2;
 
     .prologue
-    .line 1158
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$2$2$1;->this$2:Lorg/telegram/messenger/ImageLoader$2$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 1161
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -106,6 +104,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1162
     return-void
 .end method

@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 14
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -22,7 +21,6 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 17
     const-string/jumbo v1, "android.intent.action.MEDIA_BUTTON"
 
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
@@ -35,19 +33,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 18
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v1
 
     if-nez v1, :cond_1
 
-    .line 23
     :cond_0
     :goto_0
     return-void
 
-    .line 20
     :cond_1
     const-string/jumbo v1, "android.intent.extra.KEY_EVENT"
 
@@ -57,7 +52,6 @@
 
     check-cast v0, Landroid/view/KeyEvent;
 
-    .line 21
     .local v0, "ev":Landroid/view/KeyEvent;
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 

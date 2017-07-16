@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 498
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 501
     const/4 v2, 0x1
 
     if-ne p2, v2, :cond_1
 
-    .line 502
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LocationActivity;->access$2000(Lorg/telegram/ui/LocationActivity;)Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
@@ -65,12 +62,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 503
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;-><init>()V
 
-    .line 504
     .local v0, "location":Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_geoPoint;
 
@@ -78,7 +73,6 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
-    .line 505
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -93,7 +87,6 @@
 
     iput-wide v4, v2, Lorg/telegram/tgnet/TLRPC$GeoPoint;->lat:D
 
-    .line 506
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -108,7 +101,6 @@
 
     iput-wide v4, v2, Lorg/telegram/tgnet/TLRPC$GeoPoint;->_long:D
 
-    .line 507
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LocationActivity;->access$2000(Lorg/telegram/ui/LocationActivity;)Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
@@ -117,18 +109,15 @@
 
     invoke-interface {v2, v0}, Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;->didSelectLocation(Lorg/telegram/tgnet/TLRPC$MessageMedia;)V
 
-    .line 509
     .end local v0    # "location":Lorg/telegram/tgnet/TLRPC$TL_messageMediaGeo;
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/LocationActivity;->finishFragment()V
 
-    .line 517
     :goto_0
     return-void
 
-    .line 511
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -140,7 +129,6 @@
 
     move-result-object v1
 
-    .line 512
     .local v1, "object":Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;
     if-eqz v1, :cond_2
 
@@ -152,7 +140,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 513
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/LocationActivity;->access$2000(Lorg/telegram/ui/LocationActivity;)Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
@@ -161,7 +148,6 @@
 
     invoke-interface {v2, v1}, Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;->didSelectLocation(Lorg/telegram/tgnet/TLRPC$MessageMedia;)V
 
-    .line 515
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$11;->this$0:Lorg/telegram/ui/LocationActivity;
 

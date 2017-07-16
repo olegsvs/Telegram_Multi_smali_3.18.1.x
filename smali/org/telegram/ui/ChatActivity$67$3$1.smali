@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChatActivity$67$3;
 
     .prologue
-    .line 4440
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$67$3$1;->this$2:Lorg/telegram/ui/ChatActivity$67$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 4443
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -52,7 +50,6 @@
 
     iput v1, v0, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
-    .line 4444
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "mainconfig"
@@ -81,7 +78,6 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 4445
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$3$1;->this$2:Lorg/telegram/ui/ChatActivity$67$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$3;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -92,7 +88,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$14902(Lorg/telegram/ui/ChatActivity;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 4446
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$3$1;->this$2:Lorg/telegram/ui/ChatActivity$67$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$3;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -113,6 +108,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/ChatActivity;->access$11500(Lorg/telegram/ui/ChatActivity;Ljava/lang/CharSequence;Z)V
 
-    .line 4447
     return-void
 .end method

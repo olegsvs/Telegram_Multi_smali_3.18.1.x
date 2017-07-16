@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 186
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -49,26 +48,21 @@
 
     const/4 v10, 0x1
 
-    .line 189
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 190
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChannelCreateActivity;->finishFragment()V
 
-    .line 274
     :cond_0
     :goto_0
     return-void
 
-    .line 191
     :cond_1
     if-ne p1, v10, :cond_0
 
-    .line 192
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$100(Lorg/telegram/ui/ChannelCreateActivity;)I
@@ -77,7 +71,6 @@
 
     if-nez v0, :cond_5
 
-    .line 193
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$200(Lorg/telegram/ui/ChannelCreateActivity;)Z
@@ -86,7 +79,6 @@
 
     if-nez v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/widget/EditText;
@@ -99,7 +91,6 @@
 
     if-nez v0, :cond_3
 
-    .line 197
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChannelCreateActivity;->getParentActivity()Landroid/app/Activity;
@@ -114,16 +105,13 @@
 
     check-cast v9, Landroid/os/Vibrator;
 
-    .line 198
     .local v9, "v":Landroid/os/Vibrator;
     if-eqz v9, :cond_2
 
-    .line 199
     const-wide/16 v0, 0xc8
 
     invoke-virtual {v9, v0, v1}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 201
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
@@ -135,14 +123,12 @@
 
     goto :goto_0
 
-    .line 204
     .end local v9    # "v":Landroid/os/Vibrator;
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0, v10}, Lorg/telegram/ui/ChannelCreateActivity;->access$202(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 205
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$400(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/AvatarUpdater;
@@ -153,12 +139,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 206
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0, v10}, Lorg/telegram/ui/ChannelCreateActivity;->access$502(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 207
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     new-instance v1, Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -173,7 +157,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$602(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/ui/ActionBar/AlertDialog;)Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 208
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -190,7 +173,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 209
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -199,7 +181,6 @@
 
     invoke-virtual {v0, v11}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 210
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -208,7 +189,6 @@
 
     invoke-virtual {v0, v11}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 211
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -229,7 +209,6 @@
 
     invoke-virtual {v0, v12, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 224
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -240,7 +219,6 @@
 
     goto/16 :goto_0
 
-    .line 227
     :cond_4
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -284,7 +262,6 @@
 
     move-result v8
 
-    .line 228
     .local v8, "reqId":I
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
@@ -300,7 +277,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$602(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/ui/ActionBar/AlertDialog;)Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 229
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -317,7 +293,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 230
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -326,7 +301,6 @@
 
     invoke-virtual {v0, v11}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 231
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -335,7 +309,6 @@
 
     invoke-virtual {v0, v11}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 232
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -356,7 +329,6 @@
 
     invoke-virtual {v0, v12, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 244
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -367,7 +339,6 @@
 
     goto/16 :goto_0
 
-    .line 245
     .end local v8    # "reqId":I
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -378,7 +349,6 @@
 
     if-ne v0, v10, :cond_0
 
-    .line 246
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$800(Lorg/telegram/ui/ChannelCreateActivity;)Z
@@ -387,7 +357,6 @@
 
     if-nez v0, :cond_9
 
-    .line 247
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$300(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/widget/EditText;
@@ -400,7 +369,6 @@
 
     if-nez v0, :cond_6
 
-    .line 248
     new-instance v7, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -411,7 +379,6 @@
 
     invoke-direct {v7, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 249
     .local v7, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v0, "AppName"
 
@@ -423,7 +390,6 @@
 
     invoke-virtual {v7, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 250
     const-string/jumbo v0, "ChannelPublicEmptyUsername"
 
     const v1, 0x7f070148
@@ -434,7 +400,6 @@
 
     invoke-virtual {v7, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 251
     const-string/jumbo v0, "Close"
 
     const v1, 0x7f070183
@@ -447,7 +412,6 @@
 
     invoke-virtual {v7, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 252
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-virtual {v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -458,7 +422,6 @@
 
     goto/16 :goto_0
 
-    .line 255
     .end local v7    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -469,7 +432,6 @@
 
     if-nez v0, :cond_8
 
-    .line 256
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChannelCreateActivity;->getParentActivity()Landroid/app/Activity;
@@ -484,16 +446,13 @@
 
     check-cast v9, Landroid/os/Vibrator;
 
-    .line 257
     .restart local v9    # "v":Landroid/os/Vibrator;
     if-eqz v9, :cond_7
 
-    .line 258
     const-wide/16 v0, 0xc8
 
     invoke-virtual {v9, v0, v1}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 260
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
@@ -505,7 +464,6 @@
 
     goto/16 :goto_0
 
-    .line 263
     .end local v9    # "v":Landroid/os/Vibrator;
     :cond_8
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -526,19 +484,16 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->updateChannelUserName(ILjava/lang/String;)V
 
-    .line 267
     :cond_9
     new-instance v6, Landroid/os/Bundle;
 
     invoke-direct {v6}, Landroid/os/Bundle;-><init>()V
 
-    .line 268
     .local v6, "args":Landroid/os/Bundle;
     const-string/jumbo v0, "step"
 
     invoke-virtual {v6, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 269
     const-string/jumbo v0, "chatId"
 
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -549,12 +504,10 @@
 
     invoke-virtual {v6, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 270
     const-string/jumbo v0, "chatType"
 
     invoke-virtual {v6, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 271
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$2;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity;

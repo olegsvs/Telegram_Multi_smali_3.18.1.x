@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingActivity$3;
 
     .prologue
-    .line 203
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$1;->this$1:Lorg/telegram/ui/ThemingActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +43,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 206
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$3$1;->this$1:Lorg/telegram/ui/ThemingActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingActivity$3;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ThemingActivity;->access$300(Lorg/telegram/ui/ThemingActivity;I)V
 
-    .line 207
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->updateAllColors()V
 
-    .line 208
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -73,6 +69,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 209
     return-void
 .end method

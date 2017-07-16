@@ -66,43 +66,36 @@
     .param p2, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 803
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;-><init>()V
 
-    .line 796
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
-    .line 797
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResultNames:Ljava/util/ArrayList;
 
-    .line 801
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->contacts:Ljava/util/ArrayList;
 
-    .line 804
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->context:Landroid/content/Context;
 
-    .line 806
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v3
 
     iget-object v1, v3, Lorg/telegram/messenger/ContactsController;->contacts:Ljava/util/ArrayList;
 
-    .line 807
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     const/4 v0, 0x0
 
@@ -114,7 +107,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 808
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -135,7 +127,6 @@
 
     move-result-object v2
 
-    .line 809
     .local v2, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v2, :cond_0
 
@@ -147,14 +138,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 807
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 812
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->contacts:Ljava/util/ArrayList;
 
@@ -162,7 +151,6 @@
 
     goto :goto_1
 
-    .line 815
     .end local v2    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_2
     new-instance v3, Lorg/telegram/ui/Adapters/SearchAdapterHelper;
@@ -171,7 +159,6 @@
 
     iput-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
-    .line 816
     iget-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     new-instance v4, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$1;
@@ -180,7 +167,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->setDelegate(Lorg/telegram/ui/Adapters/SearchAdapterHelper$SearchAdapterHelperDelegate;)V
 
-    .line 827
     return-void
 .end method
 
@@ -189,7 +175,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 793
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
     return-object v0
@@ -201,7 +186,6 @@
     .param p1, "x1"    # Ljava/util/Timer;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
     return-object p1
@@ -212,7 +196,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 793
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     return-object v0
@@ -225,7 +208,6 @@
     .param p2, "x2"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 793
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->updateSearchResults(Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
     return-void
@@ -236,7 +218,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 793
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->contacts:Ljava/util/ArrayList;
 
     return-object v0
@@ -248,7 +229,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     return-object p1
@@ -260,7 +240,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 793
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResultNames:Ljava/util/ArrayList;
 
     return-object p1
@@ -283,7 +262,6 @@
     .end annotation
 
     .prologue
-    .line 1065
     .local p1, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     .local p2, "names":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     new-instance v0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;
@@ -292,7 +270,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1073
     return-void
 .end method
 
@@ -302,19 +279,16 @@
     .locals 3
 
     .prologue
-    .line 864
     iget-boolean v2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
     if-eqz v2, :cond_1
 
-    .line 865
     iget-object v2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 866
     .local v0, "count":I
     iget-object v2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
@@ -326,16 +300,13 @@
 
     move-result v1
 
-    .line 867
     .local v1, "globalCount":I
     if-eqz v1, :cond_0
 
-    .line 868
     add-int/lit8 v2, v1, 0x1
 
     add-int/2addr v0, v2
 
-    .line 872
     .end local v0    # "count":I
     .end local v1    # "globalCount":I
     :cond_0
@@ -359,12 +330,10 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 948
     iget-boolean v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
     if-eqz v1, :cond_0
 
-    .line 949
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
@@ -373,10 +342,8 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 950
     const/4 v0, 0x0
 
-    .line 954
     :cond_0
     return v0
 .end method
@@ -392,7 +359,6 @@
 
     const/4 v3, 0x1
 
-    .line 839
     if-ltz p1, :cond_0
 
     iget-object v2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->contacts:Ljava/util/ArrayList;
@@ -403,12 +369,10 @@
 
     if-lt p1, v2, :cond_1
 
-    .line 859
     :cond_0
     :goto_0
     return-object v1
 
-    .line 842
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->contacts:Ljava/util/ArrayList;
 
@@ -418,16 +382,13 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 843
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v0, :cond_0
 
-    .line 846
     sget v1, Lorg/telegram/messenger/LocaleController;->nameDisplayOrder:I
 
     if-ne v1, v3, :cond_3
 
-    .line 847
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
@@ -436,7 +397,6 @@
 
     if-nez v1, :cond_2
 
-    .line 848
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -449,7 +409,6 @@
 
     goto :goto_0
 
-    .line 849
     :cond_2
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
@@ -459,7 +418,6 @@
 
     if-nez v1, :cond_5
 
-    .line 850
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -472,7 +430,6 @@
 
     goto :goto_0
 
-    .line 853
     :cond_3
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
@@ -482,7 +439,6 @@
 
     if-nez v1, :cond_4
 
-    .line 854
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -495,7 +451,6 @@
 
     goto :goto_0
 
-    .line 855
     :cond_4
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
@@ -505,7 +460,6 @@
 
     if-nez v1, :cond_5
 
-    .line 856
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     invoke-virtual {v1, v4, v3}, Ljava/lang/String;->substring(II)Ljava/lang/String;
@@ -518,7 +472,6 @@
 
     goto :goto_0
 
-    .line 859
     :cond_5
     const-string/jumbo v1, ""
 
@@ -530,7 +483,6 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 960
     invoke-virtual {p0}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->getItemCount()I
 
     move-result v0
@@ -549,7 +501,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 972
     const/4 v0, 0x1
 
     return v0
@@ -561,42 +512,35 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 891
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v10
 
     packed-switch v10, :pswitch_data_0
 
-    .line 900
     move-object/from16 v0, p1
 
     iget-object v1, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
-    .line 902
     .local v1, "cell":Lorg/telegram/ui/Cells/GroupCreateUserCell;
     const/4 v8, 0x0
 
-    .line 903
     .local v8, "username":Ljava/lang/CharSequence;
     const/4 v6, 0x0
 
-    .line 904
     .local v6, "name":Ljava/lang/CharSequence;
     iget-boolean v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
     if-eqz v10, :cond_6
 
-    .line 905
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v10}, Ljava/util/ArrayList;->size()I
 
     move-result v5
 
-    .line 906
     .local v5, "localCount":I
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
@@ -608,7 +552,6 @@
 
     move-result v4
 
-    .line 907
     .local v4, "globalCount":I
     if-ltz p2, :cond_2
 
@@ -616,7 +559,6 @@
 
     if-ge v0, v5, :cond_2
 
-    .line 908
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     move/from16 v0, p2
@@ -627,17 +569,14 @@
 
     check-cast v7, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 914
     .local v7, "user":Lorg/telegram/tgnet/TLRPC$User;
     :goto_0
     if-eqz v7, :cond_0
 
-    .line 915
     move/from16 v0, p2
 
     if-ge v0, v5, :cond_4
 
-    .line 916
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResultNames:Ljava/util/ArrayList;
 
     move/from16 v0, p2
@@ -649,7 +588,6 @@
     .end local v6    # "name":Ljava/lang/CharSequence;
     check-cast v6, Ljava/lang/CharSequence;
 
-    .line 917
     .restart local v6    # "name":Ljava/lang/CharSequence;
     if-eqz v6, :cond_0
 
@@ -661,7 +599,6 @@
 
     if-nez v10, :cond_0
 
-    .line 918
     invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
     move-result-object v10
@@ -692,20 +629,16 @@
 
     if-eqz v10, :cond_0
 
-    .line 919
     move-object v8, v6
 
-    .line 920
     const/4 v6, 0x0
 
-    .line 939
     .end local v4    # "globalCount":I
     .end local v5    # "localCount":I
     :cond_0
     :goto_1
     invoke-virtual {v1, v7, v6, v8}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->setUser(Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/CharSequence;Ljava/lang/CharSequence;)V
 
-    .line 940
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v10}, Lorg/telegram/ui/GroupCreateActivity;->access$500(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/HashMap;
@@ -726,7 +659,6 @@
 
     invoke-virtual {v1, v10, v11}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->setChecked(ZZ)V
 
-    .line 944
     .end local v1    # "cell":Lorg/telegram/ui/Cells/GroupCreateUserCell;
     .end local v6    # "name":Ljava/lang/CharSequence;
     .end local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -735,7 +667,6 @@
     :goto_2
     return-void
 
-    .line 893
     :pswitch_0
     move-object/from16 v0, p1
 
@@ -743,13 +674,11 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/GroupCreateSectionCell;
 
-    .line 894
     .local v1, "cell":Lorg/telegram/ui/Cells/GroupCreateSectionCell;
     iget-boolean v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
     if-eqz v10, :cond_1
 
-    .line 895
     const-string/jumbo v10, "GlobalSearch"
 
     const v11, 0x7f0702a4
@@ -762,7 +691,6 @@
 
     goto :goto_2
 
-    .line 909
     .local v1, "cell":Lorg/telegram/ui/Cells/GroupCreateUserCell;
     .restart local v4    # "globalCount":I
     .restart local v5    # "localCount":I
@@ -779,7 +707,6 @@
 
     if-gt v0, v10, :cond_3
 
-    .line 910
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     invoke-virtual {v10}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->getGlobalSearch()Ljava/util/ArrayList;
@@ -799,7 +726,6 @@
     .restart local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
     goto/16 :goto_0
 
-    .line 912
     .end local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_3
     const/4 v7, 0x0
@@ -807,7 +733,6 @@
     .restart local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
     goto/16 :goto_0
 
-    .line 923
     :cond_4
     move/from16 v0, p2
 
@@ -821,14 +746,12 @@
 
     if-nez v10, :cond_0
 
-    .line 924
     iget-object v10, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     invoke-virtual {v10}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->getLastFoundUsername()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 925
     .local v3, "foundUserName":Ljava/lang/String;
     const-string/jumbo v10, "@"
 
@@ -838,14 +761,12 @@
 
     if-eqz v10, :cond_5
 
-    .line 926
     const/4 v10, 0x1
 
     invoke-virtual {v3, v10}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 929
     :cond_5
     :try_start_0
     new-instance v9, Landroid/text/SpannableStringBuilder;
@@ -854,7 +775,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 930
     .end local v8    # "username":Ljava/lang/CharSequence;
     .local v9, "username":Ljava/lang/CharSequence;
     :try_start_1
@@ -888,23 +808,19 @@
 
     move-object v8, v9
 
-    .line 933
     .end local v9    # "username":Ljava/lang/CharSequence;
     .restart local v8    # "username":Ljava/lang/CharSequence;
     goto/16 :goto_1
 
-    .line 931
     :catch_0
     move-exception v2
 
-    .line 932
     .local v2, "e":Ljava/lang/Exception;
     :goto_3
     iget-object v8, v7, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
     goto/16 :goto_1
 
-    .line 937
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "foundUserName":Ljava/lang/String;
     .end local v4    # "globalCount":I
@@ -924,7 +840,6 @@
     .restart local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
     goto/16 :goto_1
 
-    .line 931
     .end local v8    # "username":Ljava/lang/CharSequence;
     .restart local v3    # "foundUserName":Ljava/lang/String;
     .restart local v4    # "globalCount":I
@@ -939,7 +854,6 @@
     .restart local v8    # "username":Ljava/lang/CharSequence;
     goto :goto_3
 
-    .line 891
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -952,10 +866,8 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 878
     packed-switch p2, :pswitch_data_0
 
-    .line 883
     new-instance v0, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->context:Landroid/content/Context;
@@ -964,7 +876,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Cells/GroupCreateUserCell;-><init>(Landroid/content/Context;Z)V
 
-    .line 886
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -973,7 +884,6 @@
 
     return-object v1
 
-    .line 880
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/GroupCreateSectionCell;
@@ -982,11 +892,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/GroupCreateSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 881
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 878
     nop
 
     :pswitch_data_0
@@ -1000,7 +908,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 965
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -1009,14 +916,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 966
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->recycle()V
 
-    .line 968
     :cond_0
     return-void
 .end method
@@ -1028,59 +933,48 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 977
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_0
 
-    .line 978
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 983
     :cond_0
     :goto_0
     if-nez p1, :cond_1
 
-    .line 984
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 985
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchResultNames:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 986
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchAdapterHelper:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->queryServerSearch(Ljava/lang/String;ZZZ)V
 
-    .line 987
     invoke-virtual {p0}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->notifyDataSetChanged()V
 
-    .line 1062
     :goto_1
     return-void
 
-    .line 980
     :catch_0
     move-exception v6
 
-    .line 981
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 989
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_1
     new-instance v0, Ljava/util/Timer;
@@ -1089,7 +983,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
-    .line 990
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searchTimer:Ljava/util/Timer;
 
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;
@@ -1110,20 +1003,16 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 830
     iget-boolean v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 835
     :goto_0
     return-void
 
-    .line 833
     :cond_0
     iput-boolean p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->searching:Z
 
-    .line 834
     invoke-virtual {p0}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->notifyDataSetChanged()V
 
     goto :goto_0

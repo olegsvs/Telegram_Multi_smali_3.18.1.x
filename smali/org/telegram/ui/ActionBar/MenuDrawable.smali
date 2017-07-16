@@ -26,10 +26,8 @@
     .locals 2
 
     .prologue
-    .line 32
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -38,19 +36,16 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 23
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->reverseAngle:Z
 
-    .line 29
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->interpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 33
     iget-object v1, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->paint:Landroid/graphics/Paint;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -62,7 +57,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -75,10 +69,8 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 35
     return-void
 
-    .line 33
     :cond_0
     const/4 v0, -0x1
 
@@ -92,7 +84,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 61
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
     iget v2, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->finalRotation:F
@@ -101,7 +92,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 62
     iget-wide v4, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->lastFrameTime:J
 
     const-wide/16 v10, 0x0
@@ -110,7 +100,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 63
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -119,7 +108,6 @@
 
     sub-long v6, v4, v10
 
-    .line 65
     .local v6, "dt":J
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentAnimationTime:I
 
@@ -131,19 +119,16 @@
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentAnimationTime:I
 
-    .line 66
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentAnimationTime:I
 
     const/16 v2, 0x12c
 
     if-lt v0, v2, :cond_2
 
-    .line 67
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->finalRotation:F
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
-    .line 76
     .end local v6    # "dt":J
     :cond_0
     :goto_0
@@ -153,14 +138,11 @@
 
     iput-wide v4, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->lastFrameTime:J
 
-    .line 77
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/MenuDrawable;->invalidateSelf()V
 
-    .line 80
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 81
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/MenuDrawable;->getIntrinsicWidth()I
 
     move-result v0
@@ -179,7 +161,6 @@
 
     invoke-virtual {p1, v0, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 82
     iget v2, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->reverseAngle:Z
@@ -195,7 +176,6 @@
 
     invoke-virtual {p1, v0}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 83
     const/high16 v0, 0x41100000    # 9.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -238,7 +218,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 84
     const/high16 v0, 0x40a00000    # 5.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -277,7 +256,6 @@
 
     sub-float v8, v0, v2
 
-    .line 85
     .local v8, "endYDiff":F
     const/high16 v0, 0x41100000    # 9.0f
 
@@ -305,7 +283,6 @@
 
     sub-float v3, v0, v2
 
-    .line 86
     .local v3, "endXDiff":F
     const/high16 v0, 0x40a00000    # 5.0f
 
@@ -333,7 +310,6 @@
 
     add-float v9, v0, v2
 
-    .line 87
     .local v9, "startYDiff":F
     const/high16 v0, 0x41100000    # 9.0f
 
@@ -363,7 +339,6 @@
 
     add-float v1, v0, v2
 
-    .line 88
     .local v1, "startXDiff":F
     neg-float v2, v9
 
@@ -375,7 +350,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 89
     iget-object v5, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->paint:Landroid/graphics/Paint;
 
     move-object v0, p1
@@ -386,13 +360,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 90
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 92
     return-void
 
-    .line 69
     .end local v1    # "startXDiff":F
     .end local v3    # "endXDiff":F
     .end local v8    # "endYDiff":F
@@ -407,7 +378,6 @@
 
     if-gez v0, :cond_3
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->interpolator:Landroid/view/animation/DecelerateInterpolator;
 
     iget v2, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentAnimationTime:I
@@ -430,7 +400,6 @@
 
     goto/16 :goto_0
 
-    .line 72
     :cond_3
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -454,7 +423,6 @@
 
     goto/16 :goto_0
 
-    .line 82
     .end local v6    # "dt":J
     :cond_4
     const/16 v0, 0xb4
@@ -466,7 +434,6 @@
     .locals 1
 
     .prologue
-    .line 116
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -480,7 +447,6 @@
     .locals 1
 
     .prologue
-    .line 111
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -494,7 +460,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const/4 v0, -0x2
 
     return v0
@@ -505,7 +470,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 97
     return-void
 .end method
 
@@ -514,12 +478,10 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 102
     return-void
 .end method
 
@@ -535,37 +497,30 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 38
     iput-wide v4, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->lastFrameTime:J
 
-    .line 39
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
     cmpl-float v0, v0, v2
 
     if-nez v0, :cond_1
 
-    .line 40
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->reverseAngle:Z
 
-    .line 44
     :cond_0
     :goto_0
     iput-wide v4, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->lastFrameTime:J
 
-    .line 45
     if-eqz p2, :cond_3
 
-    .line 46
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
     cmpg-float v0, v0, p1
 
     if-gez v0, :cond_2
 
-    .line 47
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
     mul-float/2addr v0, v3
@@ -574,7 +529,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentAnimationTime:I
 
-    .line 51
     :goto_1
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -582,17 +536,13 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->lastFrameTime:J
 
-    .line 52
     iput p1, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->finalRotation:F
 
-    .line 56
     :goto_2
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/MenuDrawable;->invalidateSelf()V
 
-    .line 57
     return-void
 
-    .line 41
     :cond_1
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
@@ -602,14 +552,12 @@
 
     if-nez v0, :cond_0
 
-    .line 42
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->reverseAngle:Z
 
     goto :goto_0
 
-    .line 49
     :cond_2
     iget v0, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 
@@ -623,7 +571,6 @@
 
     goto :goto_1
 
-    .line 54
     :cond_3
     iput p1, p0, Lorg/telegram/ui/ActionBar/MenuDrawable;->currentRotation:F
 

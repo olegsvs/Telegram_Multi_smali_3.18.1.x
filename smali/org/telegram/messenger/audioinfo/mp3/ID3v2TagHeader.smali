@@ -33,14 +33,12 @@
     .end annotation
 
     .prologue
-    .line 35
     new-instance v0, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;
 
     invoke-direct {v0, p1}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;-><init>(Ljava/io/InputStream;)V
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;-><init>(Lorg/telegram/messenger/audioinfo/util/PositionInputStream;)V
 
-    .line 36
     return-void
 .end method
 
@@ -65,39 +63,29 @@
 
     const/4 v8, 0x0
 
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
-    .line 26
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->revision:I
 
-    .line 27
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->headerSize:I
 
-    .line 28
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->totalTagSize:I
 
-    .line 29
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->paddingSize:I
 
-    .line 30
     iput v8, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->footerSize:I
 
-    .line 39
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;->getPosition()J
 
     move-result-wide v4
 
-    .line 41
     .local v4, "startPosition":J
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
     invoke-direct {v0, p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;-><init>(Ljava/io/InputStream;)V
 
-    .line 46
     .local v0, "data":Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
     new-instance v3, Ljava/lang/String;
 
@@ -109,7 +97,6 @@
 
     invoke-direct {v3, v6, v9}, Ljava/lang/String;-><init>([BLjava/lang/String;)V
 
-    .line 47
     .local v3, "id":Ljava/lang/String;
     const-string/jumbo v6, "ID3"
 
@@ -119,7 +106,6 @@
 
     if-nez v6, :cond_0
 
-    .line 48
     new-instance v6, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -144,7 +130,6 @@
 
     throw v6
 
-    .line 54
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readByte()B
 
@@ -152,7 +137,6 @@
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
-    .line 55
     iget v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
     if-eq v6, v11, :cond_1
@@ -165,7 +149,6 @@
 
     if-eq v6, v12, :cond_1
 
-    .line 56
     new-instance v6, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -192,7 +175,6 @@
 
     throw v6
 
-    .line 62
     :cond_1
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readByte()B
 
@@ -200,12 +182,10 @@
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->revision:I
 
-    .line 67
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readByte()B
 
     move-result v2
 
-    .line 72
     .local v2, "flags":B
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readSyncsafeInt()I
 
@@ -215,12 +195,10 @@
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->totalTagSize:I
 
-    .line 77
     iget v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
     if-ne v6, v11, :cond_5
 
-    .line 78
     and-int/lit16 v6, v2, 0x80
 
     if-eqz v6, :cond_3
@@ -230,7 +208,6 @@
     :goto_0
     iput-boolean v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->unsynchronization:Z
 
-    .line 79
     and-int/lit8 v6, v2, 0x40
 
     if-eqz v6, :cond_4
@@ -238,7 +215,6 @@
     :goto_1
     iput-boolean v7, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->compression:Z
 
-    .line 132
     :cond_2
     :goto_2
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;->getPosition()J
@@ -251,22 +227,18 @@
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->headerSize:I
 
-    .line 133
     return-void
 
     :cond_3
     move v6, v8
 
-    .line 78
     goto :goto_0
 
     :cond_4
     move v7, v8
 
-    .line 79
     goto :goto_1
 
-    .line 81
     :cond_5
     and-int/lit16 v6, v2, 0x80
 
@@ -275,43 +247,35 @@
     :goto_3
     iput-boolean v7, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->unsynchronization:Z
 
-    .line 86
     and-int/lit8 v6, v2, 0x40
 
     if-eqz v6, :cond_6
 
-    .line 87
     iget v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
     if-ne v6, v10, :cond_8
 
-    .line 92
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readInt()I
 
     move-result v1
 
-    .line 97
     .local v1, "extendedHeaderSize":I
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readByte()B
 
-    .line 98
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readByte()B
 
-    .line 103
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readInt()I
 
     move-result v6
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->paddingSize:I
 
-    .line 108
     add-int/lit8 v6, v1, -0x6
 
     int-to-long v6, v6
 
     invoke-virtual {v0, v6, v7}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->skipFully(J)V
 
-    .line 126
     .end local v1    # "extendedHeaderSize":I
     :cond_6
     :goto_4
@@ -323,12 +287,10 @@
 
     if-eqz v6, :cond_2
 
-    .line 127
     const/16 v6, 0xa
 
     iput v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->footerSize:I
 
-    .line 128
     iget v6, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->totalTagSize:I
 
     add-int/lit8 v6, v6, 0xa
@@ -340,16 +302,13 @@
     :cond_7
     move v7, v8
 
-    .line 81
     goto :goto_3
 
-    .line 114
     :cond_8
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->readSyncsafeInt()I
 
     move-result v1
 
-    .line 119
     .restart local v1    # "extendedHeaderSize":I
     add-int/lit8 v6, v1, -0x4
 
@@ -366,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 180
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->footerSize:I
 
     return v0
@@ -376,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 176
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->headerSize:I
 
     return v0
@@ -386,7 +343,6 @@
     .locals 1
 
     .prologue
-    .line 184
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->paddingSize:I
 
     return v0
@@ -396,7 +352,6 @@
     .locals 1
 
     .prologue
-    .line 160
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->revision:I
 
     return v0
@@ -406,7 +361,6 @@
     .locals 1
 
     .prologue
-    .line 164
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->totalTagSize:I
 
     return v0
@@ -416,7 +370,6 @@
     .locals 1
 
     .prologue
-    .line 156
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->version:I
 
     return v0
@@ -426,7 +379,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-boolean v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->compression:Z
 
     return v0
@@ -436,7 +388,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-boolean v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->unsynchronization:Z
 
     return v0
@@ -453,14 +404,12 @@
     .end annotation
 
     .prologue
-    .line 136
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->compression:Z
 
     if-eqz v2, :cond_0
 
-    .line 137
     new-instance v2, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
 
     const-string/jumbo v3, "Tag compression is not supported"
@@ -469,7 +418,6 @@
 
     throw v2
 
-    .line 139
     :cond_0
     move-object/from16 v0, p0
 
@@ -485,7 +433,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 140
     new-instance v2, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
     move-object/from16 v0, p1
@@ -506,15 +453,12 @@
 
     move-result-object v15
 
-    .line 141
     .local v15, "bytes":[B
     const/16 v16, 0x0
 
-    .line 142
     .local v16, "ff":Z
     const/4 v6, 0x0
 
-    .line 143
     .local v6, "len":I
     array-length v3, v15
 
@@ -525,13 +469,11 @@
 
     aget-byte v14, v15, v2
 
-    .line 144
     .local v14, "b":B
     if-eqz v16, :cond_1
 
     if-eqz v14, :cond_2
 
-    .line 145
     :cond_1
     add-int/lit8 v17, v6, 0x1
 
@@ -541,7 +483,6 @@
 
     move/from16 v6, v17
 
-    .line 147
     .end local v17    # "len":I
     .restart local v6    # "len":I
     :cond_2
@@ -551,19 +492,16 @@
 
     const/16 v16, 0x1
 
-    .line 143
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 147
     :cond_3
     const/16 v16, 0x0
 
     goto :goto_1
 
-    .line 149
     .end local v14    # "b":B
     :cond_4
     new-instance v2, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;
@@ -584,7 +522,6 @@
 
     invoke-direct/range {v2 .. v7}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;-><init>(Ljava/io/InputStream;JILorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;)V
 
-    .line 151
     .end local v6    # "len":I
     .end local v15    # "bytes":[B
     .end local v16    # "ff":Z
@@ -631,7 +568,6 @@
     .locals 4
 
     .prologue
-    .line 189
     const-string/jumbo v0, "%s[version=%s, totalTagSize=%d]"
 
     const/4 v1, 0x3

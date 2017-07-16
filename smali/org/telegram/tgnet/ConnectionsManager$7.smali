@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 328
     iput p1, p0, Lorg/telegram/tgnet/ConnectionsManager$7;->val$state:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 331
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/tgnet/ConnectionsManager;->access$202(Lorg/telegram/tgnet/ConnectionsManager;I)I
 
-    .line 332
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -62,6 +59,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 333
     return-void
 .end method

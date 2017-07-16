@@ -49,14 +49,12 @@
     .locals 3
 
     .prologue
-    .line 41
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->PLAYREADY_KEY_REQUEST_PROPERTIES:Ljava/util/Map;
 
-    .line 42
     sget-object v0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->PLAYREADY_KEY_REQUEST_PROPERTIES:Ljava/util/Map;
 
     const-string/jumbo v1, "Content-Type"
@@ -65,7 +63,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 43
     sget-object v0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->PLAYREADY_KEY_REQUEST_PROPERTIES:Ljava/util/Map;
 
     const-string/jumbo v1, "SOAPAction"
@@ -74,7 +71,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     return-void
 .end method
 
@@ -84,12 +80,10 @@
     .param p2, "dataSourceFactory"    # Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$Factory;
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$Factory;Ljava/util/Map;)V
 
-    .line 57
     return-void
 .end method
 
@@ -111,20 +105,15 @@
     .end annotation
 
     .prologue
-    .line 65
     .local p3, "keyRequestProperties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$Factory;
 
-    .line 67
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->defaultUrl:Ljava/lang/String;
 
-    .line 68
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->keyRequestProperties:Ljava/util/Map;
 
-    .line 69
     return-void
 .end method
 
@@ -152,7 +141,6 @@
     .end annotation
 
     .prologue
-    .line 96
     .local p3, "requestProperties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$Factory;
 
@@ -160,11 +148,9 @@
 
     move-result-object v0
 
-    .line 97
     .local v0, "dataSource":Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource;
     if-eqz p3, :cond_0
 
-    .line 98
     invoke-interface/range {p3 .. p3}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
     move-result-object v2
@@ -186,7 +172,6 @@
 
     check-cast v13, Ljava/util/Map$Entry;
 
-    .line 99
     .local v13, "requestProperty":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v13}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -204,7 +189,6 @@
 
     goto :goto_0
 
-    .line 102
     .end local v13    # "requestProperty":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :cond_0
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
@@ -227,13 +211,11 @@
 
     invoke-direct/range {v1 .. v11}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;[BJJJLjava/lang/String;I)V
 
-    .line 104
     .local v1, "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     new-instance v12, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;
 
     invoke-direct {v12, v0, v1}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
-    .line 106
     .local v12, "inputStream":Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;
     :try_start_0
     invoke-static {v12}, Lorg/telegram/messenger/exoplayer2/util/Util;->toByteArray(Ljava/io/InputStream;)[B
@@ -242,7 +224,6 @@
 
     move-result-object v2
 
-    .line 108
     invoke-virtual {v12}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;->close()V
 
     return-object v2
@@ -268,12 +249,10 @@
     .end annotation
 
     .prologue
-    .line 79
     invoke-interface {p2}, Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$KeyRequest;->getDefaultUrl()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 80
     .local v1, "url":Ljava/lang/String;
     invoke-static {v1}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -281,16 +260,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 81
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->defaultUrl:Ljava/lang/String;
 
-    .line 83
     :cond_0
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 84
     .local v0, "requestProperties":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/lang/String;>;"
     const-string/jumbo v2, "Content-Type"
 
@@ -298,7 +274,6 @@
 
     invoke-interface {v0, v2, v3}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 85
     sget-object v2, Lorg/telegram/messenger/exoplayer2/C;->PLAYREADY_UUID:Ljava/util/UUID;
 
     invoke-virtual {v2, p1}, Ljava/util/UUID;->equals(Ljava/lang/Object;)Z
@@ -307,23 +282,19 @@
 
     if-eqz v2, :cond_1
 
-    .line 86
     sget-object v2, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->PLAYREADY_KEY_REQUEST_PROPERTIES:Ljava/util/Map;
 
     invoke-interface {v0, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 88
     :cond_1
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->keyRequestProperties:Ljava/util/Map;
 
     if-eqz v2, :cond_2
 
-    .line 89
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/drm/HttpMediaDrmCallback;->keyRequestProperties:Ljava/util/Map;
 
     invoke-interface {v0, v2}, Ljava/util/Map;->putAll(Ljava/util/Map;)V
 
-    .line 91
     :cond_2
     invoke-interface {p2}, Lorg/telegram/messenger/exoplayer2/drm/ExoMediaDrm$KeyRequest;->getData()[B
 
@@ -347,7 +318,6 @@
     .end annotation
 
     .prologue
-    .line 73
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -382,7 +352,6 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "url":Ljava/lang/String;
     const/4 v1, 0x0
 

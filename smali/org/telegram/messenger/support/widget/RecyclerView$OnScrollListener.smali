@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 9827
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "newState"    # I
 
     .prologue
-    .line 9835
     return-void
 .end method
 
@@ -44,6 +42,5 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 9848
     return-void
 .end method

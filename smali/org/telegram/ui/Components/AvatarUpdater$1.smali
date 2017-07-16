@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/AvatarUpdater;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lorg/telegram/ui/Components/AvatarUpdater$1;->this$0:Lorg/telegram/ui/Components/AvatarUpdater;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -70,14 +69,12 @@
     .local p4, "webPhotos":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$SearchImage;>;"
     const/high16 v4, 0x44480000    # 800.0f
 
-    .line 99
     invoke-virtual {p1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 100
     const/4 v1, 0x0
 
     invoke-virtual {p1, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -94,13 +91,11 @@
 
     move-result-object v0
 
-    .line 101
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v1, p0, Lorg/telegram/ui/Components/AvatarUpdater$1;->this$0:Lorg/telegram/ui/Components/AvatarUpdater;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/Components/AvatarUpdater;->access$000(Lorg/telegram/ui/Components/AvatarUpdater;Landroid/graphics/Bitmap;)V
 
-    .line 103
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_0
     return-void
@@ -115,7 +110,6 @@
     .param p7, "caption"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     return-void
 .end method
 
@@ -123,7 +117,6 @@
     .locals 4
 
     .prologue
-    .line 108
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -131,13 +124,11 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 109
     .local v1, "photoPickerIntent":Landroid/content/Intent;
     const-string/jumbo v2, "image/*"
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 110
     iget-object v2, p0, Lorg/telegram/ui/Components/AvatarUpdater$1;->this$0:Lorg/telegram/ui/Components/AvatarUpdater;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/AvatarUpdater;->parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -148,16 +139,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 114
     .end local v1    # "photoPickerIntent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 111
     :catch_0
     move-exception v0
 
-    .line 112
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

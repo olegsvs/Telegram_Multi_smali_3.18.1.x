@@ -31,12 +31,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 446
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$10;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
-    .line 447
     invoke-virtual {p0}, Lorg/telegram/ui/VoIPActivity$10;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -49,7 +47,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->topGradient:Landroid/graphics/drawable/Drawable;
 
-    .line 448
     invoke-virtual {p0}, Lorg/telegram/ui/VoIPActivity$10;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->bottomGradient:Landroid/graphics/drawable/Drawable;
 
-    .line 449
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
@@ -83,17 +79,14 @@
 
     const/4 v6, 0x0
 
-    .line 453
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/BackupImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 454
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->paint:Landroid/graphics/Paint;
 
     const/high16 v2, 0x4c000000    # 3.3554432E7f
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 455
     invoke-virtual {p0}, Lorg/telegram/ui/VoIPActivity$10;->getWidth()I
 
     move-result v0
@@ -114,7 +107,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 456
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->topGradient:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lorg/telegram/ui/VoIPActivity$10;->getWidth()I
@@ -129,19 +121,16 @@
 
     invoke-virtual {v0, v6, v6, v1, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 457
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->topGradient:Landroid/graphics/drawable/Drawable;
 
     const/16 v1, 0x80
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 458
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->topGradient:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 459
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->bottomGradient:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0}, Lorg/telegram/ui/VoIPActivity$10;->getHeight()I
@@ -166,18 +155,15 @@
 
     invoke-virtual {v0, v6, v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 460
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->bottomGradient:Landroid/graphics/drawable/Drawable;
 
     const/16 v1, 0xb2
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setAlpha(I)V
 
-    .line 461
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$10;->bottomGradient:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 462
     return-void
 .end method

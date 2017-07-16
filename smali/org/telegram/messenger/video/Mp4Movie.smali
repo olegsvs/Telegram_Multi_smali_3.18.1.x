@@ -35,15 +35,12 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     sget-object v0, Lcom/googlecode/mp4parser/util/Matrix;->ROTATE_0:Lcom/googlecode/mp4parser/util/Matrix;
 
     iput-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
 
-    .line 23
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -67,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 70
     if-ltz p1, :cond_0
 
     iget-object v1, p0, Lorg/telegram/messenger/video/Mp4Movie;->tracks:Ljava/util/ArrayList;
@@ -78,12 +74,10 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 75
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/video/Mp4Movie;->tracks:Ljava/util/ArrayList;
 
@@ -93,7 +87,6 @@
 
     check-cast v0, Lorg/telegram/messenger/video/Track;
 
-    .line 74
     .local v0, "track":Lorg/telegram/messenger/video/Track;
     invoke-virtual {v0, p2, p3, p4}, Lorg/telegram/messenger/video/Track;->addSample(JLandroid/media/MediaCodec$BufferInfo;)V
 
@@ -111,7 +104,6 @@
     .end annotation
 
     .prologue
-    .line 78
     iget-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->tracks:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/messenger/video/Track;
@@ -126,7 +118,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 79
     iget-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->tracks:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -142,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->cacheFile:Ljava/io/File;
 
     return-object v0
@@ -152,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->height:I
 
     return v0
@@ -162,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
 
     return-object v0
@@ -181,7 +169,6 @@
     .end annotation
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->tracks:Ljava/util/ArrayList;
 
     return-object v0
@@ -191,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->width:I
 
     return v0
@@ -202,10 +188,8 @@
     .param p1, "file"    # Ljava/io/File;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lorg/telegram/messenger/video/Mp4Movie;->cacheFile:Ljava/io/File;
 
-    .line 42
     return-void
 .end method
 
@@ -214,52 +198,43 @@
     .param p1, "angle"    # I
 
     .prologue
-    .line 45
     if-nez p1, :cond_1
 
-    .line 46
     sget-object v0, Lcom/googlecode/mp4parser/util/Matrix;->ROTATE_0:Lcom/googlecode/mp4parser/util/Matrix;
 
     iput-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
 
-    .line 54
     :cond_0
     :goto_0
     return-void
 
-    .line 47
     :cond_1
     const/16 v0, 0x5a
 
     if-ne p1, v0, :cond_2
 
-    .line 48
     sget-object v0, Lcom/googlecode/mp4parser/util/Matrix;->ROTATE_90:Lcom/googlecode/mp4parser/util/Matrix;
 
     iput-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
 
     goto :goto_0
 
-    .line 49
     :cond_2
     const/16 v0, 0xb4
 
     if-ne p1, v0, :cond_3
 
-    .line 50
     sget-object v0, Lcom/googlecode/mp4parser/util/Matrix;->ROTATE_180:Lcom/googlecode/mp4parser/util/Matrix;
 
     iput-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
 
     goto :goto_0
 
-    .line 51
     :cond_3
     const/16 v0, 0x10e
 
     if-ne p1, v0, :cond_0
 
-    .line 52
     sget-object v0, Lcom/googlecode/mp4parser/util/Matrix;->ROTATE_270:Lcom/googlecode/mp4parser/util/Matrix;
 
     iput-object v0, p0, Lorg/telegram/messenger/video/Mp4Movie;->matrix:Lcom/googlecode/mp4parser/util/Matrix;
@@ -273,12 +248,9 @@
     .param p2, "h"    # I
 
     .prologue
-    .line 57
     iput p1, p0, Lorg/telegram/messenger/video/Mp4Movie;->width:I
 
-    .line 58
     iput p2, p0, Lorg/telegram/messenger/video/Mp4Movie;->height:I
 
-    .line 59
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 95
     iput-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-direct {p0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
@@ -40,10 +39,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 98
     invoke-super {p0, p1}, Landroid/widget/TextView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$000(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Z
@@ -72,7 +69,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 100
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
@@ -100,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 101
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->getMeasuredWidth()I
 
     move-result v0
@@ -113,7 +108,6 @@
 
     sub-int v9, v0, v1
 
-    .line 102
     .local v9, "x":I
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
@@ -151,7 +145,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$300(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Landroid/graphics/RectF;
@@ -180,7 +173,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 104
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$300(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Landroid/graphics/RectF;
@@ -255,12 +247,10 @@
 
     invoke-virtual {p0, v0, v1, v2, v3}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->invalidate(IIII)V
 
-    .line 105
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v10
 
-    .line 106
     .local v10, "newTime":J
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
@@ -284,7 +274,6 @@
 
     if-gez v0, :cond_1
 
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$500(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)J
@@ -293,7 +282,6 @@
 
     sub-long v6, v10, v0
 
-    .line 108
     .local v6, "delta":J
     const-wide/16 v0, 0x168
 
@@ -305,7 +293,6 @@
 
     div-float v8, v0, v1
 
-    .line 109
     .local v8, "dt":F
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
@@ -323,7 +310,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$402(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;I)I
 
-    .line 110
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
@@ -346,7 +332,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$402(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;I)I
 
-    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$000(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Z
@@ -355,7 +340,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 112
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$100(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)F
@@ -368,7 +352,6 @@
 
     if-gez v0, :cond_1
 
-    .line 113
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
@@ -387,7 +370,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$102(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;F)F
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$100(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)F
@@ -400,14 +382,12 @@
 
     if-lez v0, :cond_1
 
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$102(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;F)F
 
-    .line 127
     .end local v6    # "delta":J
     .end local v8    # "dt":F
     :cond_1
@@ -416,16 +396,13 @@
 
     invoke-static {v0, v10, v11}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$502(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;J)J
 
-    .line 128
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->invalidate()V
 
-    .line 130
     .end local v9    # "x":I
     .end local v10    # "newTime":J
     :cond_2
     return-void
 
-    .line 119
     .restart local v6    # "delta":J
     .restart local v8    # "dt":F
     .restart local v9    # "x":I
@@ -443,7 +420,6 @@
 
     if-lez v0, :cond_1
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
@@ -462,7 +438,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$102(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;F)F
 
-    .line 121
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$100(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)F
@@ -475,7 +450,6 @@
 
     if-gez v0, :cond_1
 
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     const/4 v1, 0x0

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$4;
 
     .prologue
-    .line 963
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
@@ -45,14 +44,12 @@
     .locals 5
 
     .prologue
-    .line 966
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
 
     const/4 v1, 0x2
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$Message;->send_state:I
 
-    .line 967
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -77,7 +74,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 968
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$4;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -88,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper;->processSentMessage(I)V
 
-    .line 969
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessageObject;->isVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
@@ -105,7 +100,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 970
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
@@ -117,7 +111,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper;->stopVideoService(Ljava/lang/String;)V
 
-    .line 972
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$3;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
@@ -129,6 +122,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper;->removeFromSendingMessages(I)V
 
-    .line 973
     return-void
 .end method

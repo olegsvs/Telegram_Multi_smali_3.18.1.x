@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$4;
 
     .prologue
-    .line 567
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$4$3;->this$1:Lorg/telegram/ui/ProfileActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$4$3;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -54,18 +53,15 @@
 
     const/4 v4, 0x0
 
-    .line 570
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 571
     .local v7, "args":Landroid/os/Bundle;
     const-string/jumbo v0, "scrollToTopOnResume"
 
     invoke-virtual {v7, v0, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 572
     const-string/jumbo v0, "chat_id"
 
     long-to-int v1, p2
@@ -74,18 +70,15 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 573
     invoke-static {v7, p1}, Lorg/telegram/messenger/MessagesController;->checkCanOpenChat(Landroid/os/Bundle;Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 582
     :goto_0
     return-void
 
-    .line 577
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -99,7 +92,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 578
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -110,7 +102,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 579
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -129,7 +120,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->addUserToChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;ILjava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    .line 580
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$4$3;->this$1:Lorg/telegram/ui/ProfileActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -140,7 +130,6 @@
 
     invoke-virtual {v0, v1, v8}, Lorg/telegram/ui/ProfileActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
-    .line 581
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$4$3;->this$1:Lorg/telegram/ui/ProfileActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$4;->this$0:Lorg/telegram/ui/ProfileActivity;

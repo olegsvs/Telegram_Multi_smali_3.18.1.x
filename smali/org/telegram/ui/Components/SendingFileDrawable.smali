@@ -20,18 +20,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 18
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 20
     iput-boolean v2, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->isChat:Z
 
-    .line 21
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->lastUpdateTime:J
 
-    .line 22
     iput-boolean v2, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->started:Z
 
     return-void
@@ -43,32 +39,26 @@
     .prologue
     const/high16 v7, 0x3f800000    # 1.0f
 
-    .line 30
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
-    .line 31
     .local v2, "newTime":J
     iget-wide v4, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->lastUpdateTime:J
 
     sub-long v0, v2, v4
 
-    .line 32
     .local v0, "dt":J
     iput-wide v2, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->lastUpdateTime:J
 
-    .line 33
     const-wide/16 v4, 0x32
 
     cmp-long v4, v0, v4
 
     if-lez v4, :cond_0
 
-    .line 34
     const-wide/16 v0, 0x32
 
-    .line 36
     :cond_0
     iget v4, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->progress:F
 
@@ -82,7 +72,6 @@
 
     iput v4, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->progress:F
 
-    .line 37
     :goto_0
     iget v4, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->progress:F
 
@@ -90,7 +79,6 @@
 
     if-lez v4, :cond_1
 
-    .line 38
     iget v4, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->progress:F
 
     sub-float/2addr v4, v7
@@ -99,11 +87,9 @@
 
     goto :goto_0
 
-    .line 40
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SendingFileDrawable;->invalidateSelf()V
 
-    .line 41
     return-void
 .end method
 
@@ -124,7 +110,6 @@
 
     const/high16 v7, 0x40800000    # 4.0f
 
-    .line 55
     const/4 v6, 0x0
 
     .local v6, "a":I
@@ -133,10 +118,8 @@
 
     if-ge v6, v0, :cond_6
 
-    .line 56
     if-nez v6, :cond_0
 
-    .line 57
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_statusRecordPaint:Landroid/graphics/Paint;
 
     iget v2, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->progress:F
@@ -147,7 +130,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 63
     :goto_1
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -169,7 +151,6 @@
 
     add-float v1, v0, v2
 
-    .line 64
     .local v1, "side":F
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->isChat:Z
 
@@ -211,7 +192,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 65
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->isChat:Z
 
     if-eqz v0, :cond_4
@@ -252,19 +232,16 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 55
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 58
     .end local v1    # "side":F
     :cond_0
     const/4 v0, 0x2
 
     if-ne v6, v0, :cond_1
 
-    .line 59
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_statusRecordPaint:Landroid/graphics/Paint;
 
     const/high16 v2, 0x3f800000    # 1.0f
@@ -281,7 +258,6 @@
 
     goto :goto_1
 
-    .line 61
     :cond_1
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_statusRecordPaint:Landroid/graphics/Paint;
 
@@ -295,7 +271,6 @@
     :cond_2
     move v0, v7
 
-    .line 64
     goto :goto_2
 
     :cond_3
@@ -303,7 +278,6 @@
 
     goto :goto_3
 
-    .line 65
     :cond_4
     const/high16 v0, 0x41400000    # 12.0f
 
@@ -314,17 +288,14 @@
 
     goto :goto_5
 
-    .line 68
     .end local v1    # "side":F
     :cond_6
     iget-boolean v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->started:Z
 
     if-eqz v0, :cond_7
 
-    .line 69
     invoke-direct {p0}, Lorg/telegram/ui/Components/SendingFileDrawable;->update()V
 
-    .line 71
     :cond_7
     return-void
 .end method
@@ -333,7 +304,6 @@
     .locals 1
 
     .prologue
-    .line 95
     const/high16 v0, 0x41600000    # 14.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -347,7 +317,6 @@
     .locals 1
 
     .prologue
-    .line 90
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -361,7 +330,6 @@
     .locals 1
 
     .prologue
-    .line 85
     const/4 v0, 0x0
 
     return v0
@@ -372,7 +340,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 76
     return-void
 .end method
 
@@ -381,7 +348,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 81
     return-void
 .end method
 
@@ -390,10 +356,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 26
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->isChat:Z
 
-    .line 27
     return-void
 .end method
 
@@ -401,22 +365,18 @@
     .locals 2
 
     .prologue
-    .line 44
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->lastUpdateTime:J
 
-    .line 45
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->started:Z
 
-    .line 46
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SendingFileDrawable;->invalidateSelf()V
 
-    .line 47
     return-void
 .end method
 
@@ -424,11 +384,9 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/SendingFileDrawable;->started:Z
 
-    .line 51
     return-void
 .end method

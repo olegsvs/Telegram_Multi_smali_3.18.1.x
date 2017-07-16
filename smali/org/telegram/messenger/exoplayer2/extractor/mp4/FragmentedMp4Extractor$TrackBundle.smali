@@ -36,20 +36,16 @@
     .param p1, "output"    # Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     .prologue
-    .line 1157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1158
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackFragment;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackFragment;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->fragment:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackFragment;
 
-    .line 1159
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 1160
     return-void
 .end method
 
@@ -61,7 +57,6 @@
     .param p2, "defaultSampleValues"    # Lorg/telegram/messenger/exoplayer2/extractor/mp4/DefaultSampleValues;
 
     .prologue
-    .line 1163
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -70,7 +65,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
-    .line 1164
     invoke-static {p2}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -79,17 +73,14 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->defaultSampleValues:Lorg/telegram/messenger/exoplayer2/extractor/mp4/DefaultSampleValues;
 
-    .line 1165
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     iget-object v1, p1, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 1166
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->reset()V
 
-    .line 1167
     return-void
 .end method
 
@@ -99,21 +90,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1170
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->fragment:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackFragment;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackFragment;->reset()V
 
-    .line 1171
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->currentSampleIndex:I
 
-    .line 1172
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->currentTrackRunIndex:I
 
-    .line 1173
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->currentSampleInTrackRun:I
 
-    .line 1174
     return-void
 .end method
 
@@ -122,7 +108,6 @@
     .param p1, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 1177
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/FragmentedMp4Extractor$TrackBundle;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
@@ -135,6 +120,5 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 1178
     return-void
 .end method

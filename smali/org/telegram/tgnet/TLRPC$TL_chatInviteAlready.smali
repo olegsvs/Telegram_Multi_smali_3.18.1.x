@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2438
     const v0, 0x5a686d7c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteAlready;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2437
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChatInvite;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2442
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteAlready;->chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 2443
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2446
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteAlready;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2447
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteAlready;->chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$Chat;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 2448
     return-void
 .end method

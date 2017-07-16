@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 555
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 608
     const/4 v0, 0x1
 
     return v0
@@ -44,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 588
     const/4 v0, 0x1
 
     return v0
@@ -57,7 +54,6 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 558
     const/4 v0, 0x0
 
     return-object v0
@@ -67,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 598
     const/4 v0, 0x0
 
     return v0
@@ -80,7 +75,6 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 563
     const/4 v0, 0x0
 
     return-object v0
@@ -91,7 +85,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 578
     const/4 v0, 0x0
 
     return v0
@@ -101,7 +94,6 @@
     .locals 1
 
     .prologue
-    .line 613
     const/4 v0, 0x0
 
     return v0
@@ -113,7 +105,6 @@
     .param p2, "videoEditedInfo"    # Lorg/telegram/messenger/VideoEditedInfo;
 
     .prologue
-    .line 594
     return-void
 .end method
 
@@ -122,7 +113,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 584
     return-void
 .end method
 
@@ -131,7 +121,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 604
     return-void
 .end method
 
@@ -139,7 +128,6 @@
     .locals 0
 
     .prologue
-    .line 574
     return-void
 .end method
 
@@ -150,6 +138,5 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 569
     return-void
 .end method

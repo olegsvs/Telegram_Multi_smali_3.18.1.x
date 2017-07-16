@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1284
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$7;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput p2, p0, Lorg/telegram/messenger/SecretChatHelper$7;->val$startSeq:I
@@ -53,7 +52,6 @@
     .locals 31
 
     .prologue
-    .line 1288
     :try_start_0
     move-object/from16 v0, p0
 
@@ -61,7 +59,6 @@
 
     move/from16 v29, v0
 
-    .line 1289
     .local v29, "sSeq":I
     move-object/from16 v0, p0
 
@@ -79,10 +76,8 @@
 
     if-nez v4, :cond_0
 
-    .line 1290
     add-int/lit8 v29, v29, 0x1
 
-    .line 1293
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -166,27 +161,22 @@
 
     move-result-object v18
 
-    .line 1294
     .local v18, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v25
 
-    .line 1295
     .local v25, "exists":Z
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1296
     if-eqz v25, :cond_1
 
-    .line 1365
     .end local v18    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v25    # "exists":Z
     .end local v29    # "sSeq":I
     :goto_0
     return-void
 
-    .line 1300
     .restart local v18    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v25    # "exists":Z
     .restart local v29    # "sSeq":I
@@ -203,19 +193,16 @@
 
     shl-long v20, v10, v4
 
-    .line 1301
     .local v20, "dialog_id":J
     new-instance v28, Ljava/util/HashMap;
 
     invoke-direct/range {v28 .. v28}, Ljava/util/HashMap;-><init>()V
 
-    .line 1302
     .local v28, "messagesToResend":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$Message;>;"
     new-instance v27, Ljava/util/ArrayList;
 
     invoke-direct/range {v27 .. v27}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1303
     .local v27, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     move/from16 v17, v29
 
@@ -229,7 +216,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1304
     invoke-static/range {v17 .. v17}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -240,12 +226,10 @@
 
     invoke-virtual {v0, v4, v10}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1303
     add-int/lit8 v17, v17, 0x2
 
     goto :goto_1
 
-    .line 1306
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -303,7 +287,6 @@
 
     move-result-object v18
 
-    .line 1307
     :goto_2
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -311,7 +294,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1309
     const/4 v4, 0x1
 
     move-object/from16 v0, v18
@@ -320,7 +302,6 @@
 
     move-result-wide v8
 
-    .line 1310
     .local v8, "random_id":J
     const-wide/16 v10, 0x0
 
@@ -328,14 +309,12 @@
 
     if-nez v4, :cond_3
 
-    .line 1311
     sget-object v4, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v4}, Ljava/security/SecureRandom;->nextLong()J
 
     move-result-wide v8
 
-    .line 1313
     :cond_3
     const/4 v4, 0x2
 
@@ -345,7 +324,6 @@
 
     move-result v7
 
-    .line 1314
     .local v7, "seq_in":I
     const/4 v4, 0x3
 
@@ -355,7 +333,6 @@
 
     move-result v6
 
-    .line 1315
     .local v6, "seq_out":I
     const/4 v4, 0x5
 
@@ -365,7 +342,6 @@
 
     move-result v5
 
-    .line 1317
     .local v5, "mid":I
     const/4 v4, 0x0
 
@@ -375,11 +351,9 @@
 
     move-result-object v19
 
-    .line 1318
     .local v19, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v19, :cond_4
 
-    .line 1319
     const/4 v4, 0x0
 
     move-object/from16 v0, v19
@@ -396,33 +370,27 @@
 
     move-result-object v26
 
-    .line 1320
     .local v26, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual/range {v19 .. v19}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1321
     move-object/from16 v0, v26
 
     iput-wide v8, v0, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
 
-    .line 1322
     move-wide/from16 v0, v20
 
     move-object/from16 v2, v26
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$Message;->dialog_id:J
 
-    .line 1323
     move-object/from16 v0, v26
 
     iput v7, v0, Lorg/telegram/tgnet/TLRPC$Message;->seq_in:I
 
-    .line 1324
     move-object/from16 v0, v26
 
     iput v6, v0, Lorg/telegram/tgnet/TLRPC$Message;->seq_out:I
 
-    .line 1325
     const/4 v4, 0x4
 
     move-object/from16 v0, v18
@@ -435,7 +403,6 @@
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$Message;->ttl:I
 
-    .line 1329
     :goto_3
     move-object/from16 v0, v27
 
@@ -443,7 +410,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1330
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v4
@@ -456,7 +422,6 @@
 
     goto :goto_2
 
-    .line 1362
     .end local v5    # "mid":I
     .end local v6    # "seq_out":I
     .end local v7    # "seq_in":I
@@ -473,13 +438,11 @@
     :catch_0
     move-exception v22
 
-    .line 1363
     .local v22, "e":Ljava/lang/Exception;
     invoke-static/range {v22 .. v22}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 1327
     .end local v22    # "e":Ljava/lang/Exception;
     .restart local v5    # "mid":I
     .restart local v6    # "seq_out":I
@@ -510,7 +473,6 @@
     .restart local v26    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_3
 
-    .line 1332
     .end local v5    # "mid":I
     .end local v6    # "seq_out":I
     .end local v7    # "seq_in":I
@@ -520,14 +482,12 @@
     :cond_5
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1333
     invoke-virtual/range {v28 .. v28}, Ljava/util/HashMap;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_7
 
-    .line 1334
     invoke-virtual/range {v28 .. v28}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
     move-result-object v4
@@ -549,7 +509,6 @@
 
     check-cast v24, Ljava/util/Map$Entry;
 
-    .line 1335
     .local v24, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$Message;>;"
     move-object/from16 v0, p0
 
@@ -593,14 +552,12 @@
 
     goto :goto_4
 
-    .line 1337
     .end local v24    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$Message;>;"
     :cond_6
     const/4 v4, 0x0
 
     invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 1339
     :cond_7
     new-instance v4, Lorg/telegram/messenger/SecretChatHelper$7$1;
 
@@ -612,12 +569,10 @@
 
     invoke-static {v0, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1345
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1346
     .local v23, "encryptedChats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$EncryptedChat;>;"
     move-object/from16 v0, p0
 
@@ -627,7 +582,6 @@
 
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1348
     new-instance v4, Lorg/telegram/messenger/SecretChatHelper$7$2;
 
     move-object/from16 v0, p0
@@ -638,7 +592,6 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1360
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v4
@@ -657,7 +610,6 @@
 
     invoke-virtual {v4, v0, v10, v11, v1}, Lorg/telegram/messenger/SendMessagesHelper;->processUnsentMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 1361
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4

@@ -47,7 +47,6 @@
 
     const v5, 0x7fffffff
 
-    .line 75
     const/4 v3, 0x0
 
     move-object v0, p0
@@ -66,7 +65,6 @@
 
     invoke-direct/range {v0 .. v10}, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;-><init>(Ljava/lang/String;Ljava/lang/String;ZZIIZIIZ)V
 
-    .line 77
     return-void
 .end method
 
@@ -84,40 +82,28 @@
     .param p10, "orientationMayChange"    # Z
 
     .prologue
-    .line 98
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 99
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredAudioLanguage:Ljava/lang/String;
 
-    .line 100
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredTextLanguage:Ljava/lang/String;
 
-    .line 101
     iput-boolean p3, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMixedMimeAdaptiveness:Z
 
-    .line 102
     iput-boolean p4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowNonSeamlessAdaptiveness:Z
 
-    .line 103
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->maxVideoWidth:I
 
-    .line 104
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->maxVideoHeight:I
 
-    .line 105
     iput-boolean p7, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedVideoConstraintsIfNecessary:Z
 
-    .line 106
     iput p8, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->viewportWidth:I
 
-    .line 107
     iput p9, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->viewportHeight:I
 
-    .line 108
     iput-boolean p10, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->orientationMayChange:Z
 
-    .line 109
     return-void
 .end method
 
@@ -132,15 +118,12 @@
 
     const/4 v2, 0x0
 
-    .line 281
     if-ne p0, p1, :cond_1
 
-    .line 295
     :cond_0
     :goto_0
     return v1
 
-    .line 284
     :cond_1
     if-eqz p1, :cond_2
 
@@ -157,16 +140,13 @@
     :cond_2
     move v1, v2
 
-    .line 285
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 287
     check-cast v0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
-    .line 288
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     iget-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMixedMimeAdaptiveness:Z
 
@@ -220,7 +200,6 @@
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredAudioLanguage:Ljava/lang/String;
 
-    .line 294
     invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -231,7 +210,6 @@
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredTextLanguage:Ljava/lang/String;
 
-    .line 295
     invoke-static {v3, v4}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
 
     move-result v3
@@ -252,14 +230,12 @@
 
     const/4 v3, 0x0
 
-    .line 300
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredAudioLanguage:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->hashCode()I
 
     move-result v0
 
-    .line 301
     .local v0, "result":I
     mul-int/lit8 v1, v0, 0x1f
 
@@ -271,7 +247,6 @@
 
     add-int v0, v1, v4
 
-    .line 302
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMixedMimeAdaptiveness:Z
@@ -283,7 +258,6 @@
     :goto_0
     add-int v0, v4, v1
 
-    .line 303
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowNonSeamlessAdaptiveness:Z
@@ -295,21 +269,18 @@
     :goto_1
     add-int v0, v4, v1
 
-    .line 304
     mul-int/lit8 v1, v0, 0x1f
 
     iget v4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->maxVideoWidth:I
 
     add-int v0, v1, v4
 
-    .line 305
     mul-int/lit8 v1, v0, 0x1f
 
     iget v4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->maxVideoHeight:I
 
     add-int v0, v1, v4
 
-    .line 306
     mul-int/lit8 v4, v0, 0x1f
 
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedVideoConstraintsIfNecessary:Z
@@ -321,7 +292,6 @@
     :goto_2
     add-int v0, v4, v1
 
-    .line 307
     mul-int/lit8 v1, v0, 0x1f
 
     iget-boolean v4, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->orientationMayChange:Z
@@ -331,45 +301,38 @@
     :goto_3
     add-int v0, v1, v2
 
-    .line 308
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->viewportWidth:I
 
     add-int v0, v1, v2
 
-    .line 309
     mul-int/lit8 v1, v0, 0x1f
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->viewportHeight:I
 
     add-int v0, v1, v2
 
-    .line 310
     return v0
 
     :cond_0
     move v1, v3
 
-    .line 302
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 303
     goto :goto_1
 
     :cond_2
     move v1, v3
 
-    .line 306
     goto :goto_2
 
     :cond_3
     move v2, v3
 
-    .line 307
     goto :goto_3
 .end method
 
@@ -378,12 +341,10 @@
     .param p1, "allowMixedMimeAdaptiveness"    # Z
 
     .prologue
-    .line 155
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowMixedMimeAdaptiveness:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 158
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -424,12 +385,10 @@
     .param p1, "allowNonSeamlessAdaptiveness"    # Z
 
     .prologue
-    .line 171
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->allowNonSeamlessAdaptiveness:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 174
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -470,12 +429,10 @@
     .param p1, "exceedVideoConstraintsIfNecessary"    # Z
 
     .prologue
-    .line 226
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->exceedVideoConstraintsIfNecessary:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 229
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -517,7 +474,6 @@
     .param p2, "maxVideoHeight"    # I
 
     .prologue
-    .line 188
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->maxVideoWidth:I
 
     if-ne p1, v0, :cond_0
@@ -526,7 +482,6 @@
 
     if-ne p2, v0, :cond_0
 
-    .line 191
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -566,7 +521,6 @@
     .locals 2
 
     .prologue
-    .line 203
     const/16 v0, 0x4ff
 
     const/16 v1, 0x2cf
@@ -583,12 +537,10 @@
     .param p1, "preferredAudioLanguage"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Util;->normalizeLanguageCode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 122
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredAudioLanguage:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -597,7 +549,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 125
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -638,12 +589,10 @@
     .param p1, "preferredTextLanguage"    # Ljava/lang/String;
 
     .prologue
-    .line 138
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Util;->normalizeLanguageCode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p1
 
-    .line 139
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->preferredTextLanguage:Ljava/lang/String;
 
     invoke-static {p1, v0}, Landroid/text/TextUtils;->equals(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)Z
@@ -652,7 +601,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 142
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -695,7 +643,6 @@
     .param p3, "orientationMayChange"    # Z
 
     .prologue
-    .line 245
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->viewportWidth:I
 
     if-ne p1, v0, :cond_0
@@ -708,7 +655,6 @@
 
     if-ne p3, v0, :cond_0
 
-    .line 249
     .end local p0    # "this":Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
     :goto_0
     return-object p0
@@ -750,12 +696,10 @@
     .param p2, "orientationMayChange"    # Z
 
     .prologue
-    .line 266
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Util;->getPhysicalDisplaySize(Landroid/content/Context;)Landroid/graphics/Point;
 
     move-result-object v0
 
-    .line 267
     .local v0, "viewportSize":Landroid/graphics/Point;
     iget v1, v0, Landroid/graphics/Point;->x:I
 
@@ -774,7 +718,6 @@
     .prologue
     const v0, 0x7fffffff
 
-    .line 212
     invoke-virtual {p0, v0, v0}, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->withMaxVideoSize(II)Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;
 
     move-result-object v0
@@ -788,7 +731,6 @@
     .prologue
     const v1, 0x7fffffff
 
-    .line 276
     const/4 v0, 0x1
 
     invoke-virtual {p0, v1, v1, v0}, Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;->withViewportSize(IIZ)Lorg/telegram/messenger/exoplayer2/trackselection/DefaultTrackSelector$Parameters;

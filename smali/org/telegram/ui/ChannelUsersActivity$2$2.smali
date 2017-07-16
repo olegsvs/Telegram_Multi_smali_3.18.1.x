@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelUsersActivity$2;
 
     .prologue
-    .line 216
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$2$2;->this$1:Lorg/telegram/ui/ChannelUsersActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "param"    # Ljava/lang/String;
 
     .prologue
-    .line 219
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$2$2;->this$1:Lorg/telegram/ui/ChannelUsersActivity$2;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelUsersActivity$2;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/ChannelUsersActivity;->setUserChannelRole(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChannelParticipantRole;)V
 
-    .line 220
     return-void
 .end method

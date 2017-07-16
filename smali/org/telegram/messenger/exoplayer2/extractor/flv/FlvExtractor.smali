@@ -64,14 +64,12 @@
     .locals 1
 
     .prologue
-    .line 36
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor$1;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->FACTORY:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorsFactory;
 
-    .line 61
     const-string/jumbo v0, "FLV"
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Util;->getIntegerCodeForString(Ljava/lang/String;)I
@@ -87,10 +85,8 @@
     .locals 2
 
     .prologue
-    .line 84
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 85
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x4
@@ -99,7 +95,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 86
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x9
@@ -108,7 +103,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 87
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0xb
@@ -117,19 +111,16 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 88
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 89
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
-    .line 90
     return-void
 .end method
 
@@ -146,7 +137,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 267
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagDataSize:I
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -157,7 +147,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 268
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -178,7 +167,6 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
-    .line 272
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -186,7 +174,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setLimit(I)V
 
-    .line 273
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -195,12 +182,10 @@
 
     invoke-interface {p1, v0, v3, v1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
-    .line 274
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     return-object v0
 
-    .line 270
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -226,7 +211,6 @@
 
     const/4 v3, 0x0
 
-    .line 175
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v5, v5, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -237,31 +221,26 @@
 
     if-nez v5, :cond_0
 
-    .line 200
     :goto_0
     return v3
 
-    .line 180
     :cond_0
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v5, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 181
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v6, 0x4
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 182
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 183
     .local v0, "flags":I
     and-int/lit8 v5, v0, 0x4
 
@@ -269,7 +248,6 @@
 
     move v1, v4
 
-    .line 184
     .local v1, "hasAudio":Z
     :goto_1
     and-int/lit8 v5, v0, 0x1
@@ -278,7 +256,6 @@
 
     move v2, v4
 
-    .line 185
     .local v2, "hasVideo":Z
     :goto_2
     if-eqz v1, :cond_1
@@ -287,7 +264,6 @@
 
     if-nez v3, :cond_1
 
-    .line 186
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/flv/AudioTagPayloadReader;
 
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
@@ -302,7 +278,6 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->audioReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/AudioTagPayloadReader;
 
-    .line 188
     :cond_1
     if-eqz v2, :cond_2
 
@@ -310,7 +285,6 @@
 
     if-nez v3, :cond_2
 
-    .line 189
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;
 
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
@@ -323,13 +297,11 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->videoReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;
 
-    .line 191
     :cond_2
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->metadataReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;
 
     if-nez v3, :cond_3
 
-    .line 192
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;
 
     const/4 v5, 0x0
@@ -338,18 +310,15 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->metadataReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;
 
-    .line 194
     :cond_3
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v3}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
-    .line 195
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v3, p0}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;->seekMap(Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;)V
 
-    .line 198
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->headerBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -362,14 +331,12 @@
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->bytesToNextTagHeader:I
 
-    .line 199
     const/4 v3, 0x2
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
     move v3, v4
 
-    .line 200
     goto :goto_0
 
     .end local v1    # "hasAudio":Z
@@ -377,14 +344,12 @@
     :cond_4
     move v1, v3
 
-    .line 183
     goto :goto_1
 
     .restart local v1    # "hasAudio":Z
     :cond_5
     move v2, v3
 
-    .line 184
     goto :goto_2
 .end method
 
@@ -399,10 +364,8 @@
     .end annotation
 
     .prologue
-    .line 249
     const/4 v0, 0x1
 
-    .line 250
     .local v0, "wasConsumed":Z
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagType:I
 
@@ -414,7 +377,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 251
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->audioReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/AudioTagPayloadReader;
 
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->prepareTagData(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -425,21 +387,17 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/messenger/exoplayer2/extractor/flv/AudioTagPayloadReader;->consume(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;J)V
 
-    .line 260
     :goto_0
     const/4 v1, 0x4
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->bytesToNextTagHeader:I
 
-    .line 261
     const/4 v1, 0x2
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
-    .line 262
     return v0
 
-    .line 252
     :cond_0
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagType:I
 
@@ -451,7 +409,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 253
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->videoReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/VideoTagPayloadReader;
 
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->prepareTagData(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -464,7 +421,6 @@
 
     goto :goto_0
 
-    .line 254
     :cond_1
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagType:I
 
@@ -476,7 +432,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 255
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->metadataReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;
 
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->prepareTagData(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -489,13 +444,11 @@
 
     goto :goto_0
 
-    .line 257
     :cond_2
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagDataSize:I
 
     invoke-interface {p1, v1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
-    .line 258
     const/4 v0, 0x0
 
     goto :goto_0
@@ -516,7 +469,6 @@
 
     const/4 v0, 0x0
 
-    .line 225
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v2, v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -529,17 +481,14 @@
 
     if-nez v2, :cond_0
 
-    .line 237
     :goto_0
     return v0
 
-    .line 230
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 231
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -548,7 +497,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagType:I
 
-    .line 232
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
@@ -557,7 +505,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagDataSize:I
 
-    .line 233
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
@@ -568,7 +515,6 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagTimestampUs:J
 
-    .line 234
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -589,21 +535,18 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagTimestampUs:J
 
-    .line 235
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->tagHeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v2, 0x3
 
     invoke-virtual {v0, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 236
     const/4 v0, 0x4
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
     move v0, v1
 
-    .line 237
     goto :goto_0
 .end method
 
@@ -618,22 +561,18 @@
     .end annotation
 
     .prologue
-    .line 211
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->bytesToNextTagHeader:I
 
     invoke-interface {p1, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
-    .line 212
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->bytesToNextTagHeader:I
 
-    .line 213
     const/4 v0, 0x3
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
-    .line 214
     return-void
 .end method
 
@@ -643,7 +582,6 @@
     .locals 2
 
     .prologue
-    .line 286
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->metadataReader:Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/extractor/flv/ScriptTagPayloadReader;->getDurationUs()J
@@ -658,7 +596,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 291
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -669,10 +606,8 @@
     .param p1, "output"    # Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
-    .line 126
     return-void
 .end method
 
@@ -680,7 +615,6 @@
     .locals 1
 
     .prologue
-    .line 281
     const/4 v0, 0x0
 
     return v0
@@ -700,7 +634,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 143
     :cond_0
     :goto_0
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
@@ -709,7 +642,6 @@
 
     goto :goto_0
 
-    .line 145
     :pswitch_0
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->readFlvHeader(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -717,17 +649,14 @@
 
     if-nez v1, :cond_0
 
-    .line 159
     :goto_1
     return v0
 
-    .line 150
     :pswitch_1
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->skipToTagHeader(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)V
 
     goto :goto_0
 
-    .line 153
     :pswitch_2
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->readTagHeader(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -737,7 +666,6 @@
 
     goto :goto_1
 
-    .line 158
     :pswitch_3
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->readTagData(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -745,12 +673,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 159
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 143
     nop
 
     :pswitch_data_0
@@ -766,7 +692,6 @@
     .locals 0
 
     .prologue
-    .line 137
     return-void
 .end method
 
@@ -775,17 +700,14 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 130
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->parserState:I
 
-    .line 131
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->bytesToNextTagHeader:I
 
-    .line 132
     return-void
 .end method
 
@@ -804,7 +726,6 @@
 
     const/4 v1, 0x0
 
-    .line 95
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v2, v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -813,12 +734,10 @@
 
     invoke-interface {p1, v2, v1, v3}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    .line 96
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 97
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt24()I
@@ -829,12 +748,10 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 120
     :cond_0
     :goto_0
     return v1
 
-    .line 102
     :cond_1
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -844,12 +761,10 @@
 
     invoke-interface {p1, v2, v1, v3}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    .line 103
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 104
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
@@ -860,45 +775,37 @@
 
     if-nez v2, :cond_0
 
-    .line 109
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v2, v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     invoke-interface {p1, v2, v1, v4}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    .line 110
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 111
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
-    .line 113
     .local v0, "dataOffset":I
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
-    .line 114
     invoke-interface {p1, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->advancePeekPosition(I)V
 
-    .line 117
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v2, v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     invoke-interface {p1, v2, v1, v4}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    .line 118
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 120
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/flv/FlvExtractor;->scratch:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I

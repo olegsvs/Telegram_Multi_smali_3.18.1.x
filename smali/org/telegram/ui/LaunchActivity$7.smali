@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 1180
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$7;->val$args:Landroid/os/Bundle;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1183
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$7;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     new-instance v1, Lorg/telegram/ui/CancelAccountDeletionActivity;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/LaunchActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    .line 1184
     return-void
 .end method

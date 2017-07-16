@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->val$checked:Z
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->access$000(Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;)Landroid/animation/AnimatorSet;
@@ -64,14 +62,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->access$002(Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 85
     :cond_0
     return-void
 .end method
@@ -81,7 +77,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->access$000(Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;)Landroid/animation/AnimatorSet;
@@ -102,26 +97,22 @@
 
     if-eqz v0, :cond_0
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->access$002(Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 74
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->val$checked:Z
 
     if-nez v0, :cond_0
 
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/PhotoPickerPhotoCell;->setBackgroundColor(I)V
 
-    .line 78
     :cond_0
     return-void
 .end method

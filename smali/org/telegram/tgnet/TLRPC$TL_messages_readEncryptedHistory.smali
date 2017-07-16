@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 22122
     const v0, 0x7f4b690a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_readEncryptedHistory;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 22121
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22128
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22132
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_readEncryptedHistory;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22133
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_readEncryptedHistory;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22134
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_readEncryptedHistory;->max_date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22135
     return-void
 .end method

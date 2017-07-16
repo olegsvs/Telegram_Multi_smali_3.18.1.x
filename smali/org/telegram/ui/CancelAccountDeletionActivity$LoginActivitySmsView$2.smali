@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     .prologue
-    .line 518
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$2;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$2;->val$this$0:Lorg/telegram/ui/CancelAccountDeletionActivity;
@@ -48,20 +47,16 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 521
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 522
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$2;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->onNextPressed()V
 
-    .line 523
     const/4 v0, 0x1
 
-    .line 525
     :goto_0
     return v0
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SetAdminsActivity;
 
     .prologue
-    .line 164
     iput-object p1, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v8, 0x1
 
-    .line 167
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$200(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -87,10 +85,8 @@
     :cond_0
     move-object v5, p1
 
-    .line 168
     check-cast v5, Lorg/telegram/ui/Cells/UserCell;
 
-    .line 169
     .local v5, "userCell":Lorg/telegram/ui/Cells/UserCell;
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -114,10 +110,8 @@
 
     invoke-static {v6, v9}, Lorg/telegram/ui/SetAdminsActivity;->access$902(Lorg/telegram/ui/SetAdminsActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 171
     const/4 v1, -0x1
 
-    .line 172
     .local v1, "index":I
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -137,7 +131,6 @@
 
     if-ne v6, v9, :cond_7
 
-    .line 173
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$500(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
@@ -148,7 +141,6 @@
 
     move-result-object v4
 
-    .line 174
     .local v4, "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     const/4 v0, 0x0
 
@@ -166,7 +158,6 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 175
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$1100(Lorg/telegram/ui/SetAdminsActivity;)Ljava/util/ArrayList;
@@ -179,7 +170,6 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 176
     .local v3, "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     iget v6, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
@@ -187,10 +177,8 @@
 
     if-ne v6, v9, :cond_6
 
-    .line 177
     move v1, v0
 
-    .line 184
     .end local v0    # "a":I
     .end local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_1
@@ -201,33 +189,27 @@
 
     if-nez v6, :cond_5
 
-    .line 186
     instance-of v6, v4, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;
 
     if-eqz v6, :cond_8
 
-    .line 187
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;-><init>()V
 
-    .line 188
     .local v2, "newParticipant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
-    .line 189
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
-    .line 190
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:I
 
-    .line 197
     :goto_2
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -237,7 +219,6 @@
 
     invoke-virtual {v6, v1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$1200(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -252,10 +233,8 @@
 
     move-result v1
 
-    .line 199
     if-eq v1, v11, :cond_2
 
-    .line 200
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$1200(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -268,7 +247,6 @@
 
     invoke-virtual {v6, v1, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     :cond_2
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
@@ -288,7 +266,6 @@
 
     if-ne v6, v9, :cond_3
 
-    .line 203
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$500(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
@@ -301,11 +278,9 @@
 
     invoke-virtual {v6, p2, v2}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     :cond_3
     move-object v4, v2
 
-    .line 206
     instance-of v6, v4, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;
 
     if-eqz v6, :cond_4
@@ -334,7 +309,6 @@
     :goto_3
     invoke-virtual {v5, v6, v8}, Lorg/telegram/ui/Cells/UserCell;->setChecked(ZZ)V
 
-    .line 207
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$900(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -353,7 +327,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 208
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -373,7 +346,6 @@
     :goto_4
     invoke-virtual {v6, v9, v10, v8}, Lorg/telegram/messenger/MessagesController;->toggleUserAdmin(IIZ)V
 
-    .line 221
     .end local v1    # "index":I
     .end local v2    # "newParticipant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .end local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
@@ -383,7 +355,6 @@
     :goto_5
     return-void
 
-    .line 174
     .restart local v0    # "a":I
     .restart local v1    # "index":I
     .restart local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
@@ -395,7 +366,6 @@
 
     goto/16 :goto_0
 
-    .line 182
     .end local v0    # "a":I
     .end local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .end local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
@@ -423,24 +393,20 @@
     .restart local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     goto/16 :goto_1
 
-    .line 192
     :cond_8
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipant;-><init>()V
 
-    .line 193
     .restart local v2    # "newParticipant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
-    .line 194
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->date:I
 
-    .line 195
     iget v6, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:I
 
     iput v6, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->inviter_id:I
@@ -450,16 +416,13 @@
     :cond_9
     move v6, v7
 
-    .line 206
     goto :goto_3
 
     :cond_a
     move v8, v7
 
-    .line 208
     goto :goto_4
 
-    .line 212
     .end local v1    # "index":I
     .end local v2    # "newParticipant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .end local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
@@ -473,7 +436,6 @@
 
     if-ne p2, v6, :cond_5
 
-    .line 213
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -496,7 +458,6 @@
 
     invoke-static {v6, v9}, Lorg/telegram/ui/SetAdminsActivity;->access$902(Lorg/telegram/ui/SetAdminsActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 214
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$900(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -505,7 +466,6 @@
 
     if-eqz v6, :cond_5
 
-    .line 215
     iget-object v6, p0, Lorg/telegram/ui/SetAdminsActivity$3;->this$0:Lorg/telegram/ui/SetAdminsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/SetAdminsActivity;->access$900(Lorg/telegram/ui/SetAdminsActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -527,7 +487,6 @@
     :goto_6
     iput-boolean v6, v9, Lorg/telegram/tgnet/TLRPC$Chat;->admins_enabled:Z
 
-    .line 216
     check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
 
     .end local p1    # "view":Landroid/view/View;
@@ -544,7 +503,6 @@
     :goto_7
     invoke-virtual {p1, v8}, Lorg/telegram/ui/Cells/TextCheckCell;->setChecked(Z)V
 
-    .line 217
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -571,13 +529,11 @@
     :cond_c
     move v6, v7
 
-    .line 215
     goto :goto_6
 
     .end local p1    # "view":Landroid/view/View;
     :cond_d
     move v8, v7
 
-    .line 216
     goto :goto_7
 .end method

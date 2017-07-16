@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerMasksView$3;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 94
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
     move-result-object v0

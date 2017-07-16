@@ -58,10 +58,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 42
     new-instance v0, Ljava/util/ArrayList;
 
     const/16 v1, 0xb
@@ -70,10 +68,8 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
-    .line 60
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->mContext:Landroid/content/Context;
 
-    .line 62
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "theme"
@@ -86,13 +82,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->themePrefs:Landroid/content/SharedPreferences;
 
-    .line 64
     invoke-static {p1}, Lorg/telegram/ui/ActionBar/Theme;->createDialogsResources(Landroid/content/Context;)V
 
-    .line 65
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->resetItems()V
 
-    .line 66
     return-void
 .end method
 
@@ -104,34 +97,28 @@
 
     const/4 v5, 0x0
 
-    .line 182
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 183
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->isClientActivated()Z
 
     move-result v0
 
     if-nez v0, :cond_0
 
-    .line 210
     :goto_0
     return-void
 
-    .line 186
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 187
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 188
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -152,7 +139,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 189
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -173,7 +159,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 190
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -192,12 +177,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 191
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 192
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -218,7 +201,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 193
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -227,7 +209,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -248,7 +229,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 197
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
@@ -270,7 +250,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -291,7 +270,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 201
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -312,7 +290,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 203
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -333,7 +310,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 204
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -352,7 +328,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 205
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -373,7 +348,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 206
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
@@ -394,7 +368,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 207
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -411,12 +384,10 @@
 
     const/4 v10, 0x0
 
-    .line 237
     sget-boolean v8, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v8, :cond_0
 
-    .line 238
     sget-object v8, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v9, "theme"
@@ -425,7 +396,6 @@
 
     move-result-object v6
 
-    .line 239
     .local v6, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v8, "drawerListColor"
 
@@ -433,7 +403,6 @@
 
     move-result v5
 
-    .line 240
     .local v5, "mainColor":I
     const-string/jumbo v8, "drawerRowGradient"
 
@@ -441,23 +410,18 @@
 
     move-result v7
 
-    .line 241
     .local v7, "value":I
     const/4 v0, 0x1
 
-    .line 242
     .local v0, "b":Z
     if-lez v7, :cond_0
 
     if-nez v0, :cond_0
 
-    .line 244
     packed-switch v7, :pswitch_data_0
 
-    .line 255
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 258
     .local v3, "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :goto_0
     const-string/jumbo v8, "drawerRowGradientColor"
@@ -466,7 +430,6 @@
 
     move-result v4
 
-    .line 259
     .local v4, "gradColor":I
     const/4 v8, 0x2
 
@@ -478,17 +441,14 @@
 
     aput v4, v1, v8
 
-    .line 260
     .local v1, "colors":[I
     new-instance v2, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v2, v3, v1}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
-    .line 261
     .local v2, "gd":Landroid/graphics/drawable/GradientDrawable;
     invoke-virtual {p1, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 264
     .end local v0    # "b":Z
     .end local v1    # "colors":[I
     .end local v2    # "gd":Landroid/graphics/drawable/GradientDrawable;
@@ -500,7 +460,6 @@
     :cond_0
     return-void
 
-    .line 246
     .restart local v0    # "b":Z
     .restart local v5    # "mainColor":I
     .restart local v6    # "themePrefs":Landroid/content/SharedPreferences;
@@ -508,29 +467,23 @@
     :pswitch_0
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 247
     .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 249
     .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_1
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->TL_BR:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 250
     .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 252
     .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_2
     sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->BL_TR:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 253
     .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 244
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -548,7 +501,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 213
     if-ltz p1, :cond_0
 
     iget-object v2, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
@@ -559,12 +511,10 @@
 
     if-lt p1, v2, :cond_1
 
-    .line 217
     :cond_0
     :goto_0
     return v1
 
-    .line 216
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
@@ -574,7 +524,6 @@
 
     check-cast v0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
 
-    .line 217
     .local v0, "item":Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
     if-eqz v0, :cond_0
 
@@ -587,7 +536,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -604,32 +552,25 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 166
     if-nez p1, :cond_1
 
-    .line 167
     const/4 v0, 0x0
 
-    .line 178
     :cond_0
     :goto_0
     return v0
 
-    .line 168
     :cond_1
     if-eq p1, v0, :cond_0
 
-    .line 170
     const/4 v0, 0x5
 
     if-ne p1, v0, :cond_2
 
-    .line 171
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 174
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
@@ -641,12 +582,10 @@
 
     if-ne p1, v0, :cond_3
 
-    .line 175
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 178
     :cond_3
     const/4 v0, 0x3
 
@@ -658,7 +597,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 81
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -682,13 +620,10 @@
     .locals 0
 
     .prologue
-    .line 75
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->resetItems()V
 
-    .line 76
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;->notifyDataSetChanged()V
 
-    .line 77
     return-void
 .end method
 
@@ -698,19 +633,16 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 111
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v4
 
     packed-switch v4, :pswitch_data_0
 
-    .line 161
     :cond_0
     :goto_0
     return-void
 
-    .line 113
     :pswitch_0
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -734,7 +666,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Cells/DrawerProfileCell;->setUser(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 114
     iget-object v5, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -746,7 +677,6 @@
     :goto_1
     invoke-virtual {v5, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 116
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
@@ -779,7 +709,6 @@
 
     goto :goto_0
 
-    .line 114
     :cond_1
     const-string/jumbo v4, "avatar_backgroundActionBarBlue"
 
@@ -789,7 +718,6 @@
 
     goto :goto_1
 
-    .line 121
     :pswitch_1
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -797,7 +725,6 @@
 
     goto :goto_0
 
-    .line 124
     :pswitch_2
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -805,14 +732,12 @@
 
     invoke-virtual {v4, v5}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 125
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v4}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->updateViewColor(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 129
     :pswitch_3
     iget-object v4, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
@@ -828,20 +753,17 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->bind(Lorg/telegram/ui/Cells/DrawerActionCell;)V
 
-    .line 130
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v4}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->updateViewColor(Landroid/view/View;)V
 
     goto :goto_0
 
-    .line 133
     :pswitch_4
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     invoke-direct {p0, v4}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->updateViewColor(Landroid/view/View;)V
 
-    .line 135
     :try_start_0
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -861,17 +783,14 @@
 
     move-result-object v3
 
-    .line 136
     .local v3, "pInfo":Landroid/content/pm/PackageInfo;
     iget v4, v3, Landroid/content/pm/PackageInfo;->versionCode:I
 
     div-int/lit8 v1, v4, 0xa
 
-    .line 137
     .local v1, "code":I
     const-string/jumbo v0, ""
 
-    .line 138
     .local v0, "abi":Ljava/lang/String;
     iget v4, v3, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -879,7 +798,6 @@
 
     packed-switch v4, :pswitch_data_1
 
-    .line 152
     :goto_2
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -941,7 +859,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Cells/TextInfoCell;->setText(Ljava/lang/String;)V
 
-    .line 153
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/TextInfoCell;
@@ -958,7 +875,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Cells/TextInfoCell;->setTextColor(I)V
 
-    .line 154
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/TextInfoCell;
@@ -979,14 +895,12 @@
 
     goto/16 :goto_0
 
-    .line 155
     .end local v0    # "abi":Ljava/lang/String;
     .end local v1    # "code":I
     .end local v3    # "pInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v2
 
-    .line 156
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v4, "tmessages"
 
@@ -994,7 +908,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "abi":Ljava/lang/String;
     .restart local v1    # "code":I
@@ -1003,24 +916,18 @@
     :try_start_1
     const-string/jumbo v0, "arm"
 
-    .line 141
     goto :goto_2
 
-    .line 143
     :pswitch_6
     const-string/jumbo v0, "arm-v7a"
 
-    .line 144
     goto :goto_2
 
-    .line 146
     :pswitch_7
     const-string/jumbo v0, "x86"
 
-    .line 147
     goto :goto_2
 
-    .line 149
     :pswitch_8
     const-string/jumbo v0, "universal"
     :try_end_1
@@ -1028,7 +935,6 @@
 
     goto :goto_2
 
-    .line 111
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1038,7 +944,6 @@
         :pswitch_4
     .end packed-switch
 
-    .line 138
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_5
@@ -1054,10 +959,8 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 87
     packed-switch p2, :pswitch_data_0
 
-    .line 93
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/EmptyCell;
 
@@ -1071,7 +974,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Cells/EmptyCell;-><init>(Landroid/content/Context;I)V
 
-    .line 105
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
@@ -1084,14 +986,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 106
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
 
     return-object v1
 
-    .line 89
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/DrawerProfileCell;
@@ -1100,11 +1000,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/DrawerProfileCell;-><init>(Landroid/content/Context;)V
 
-    .line 90
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 96
     .end local v0    # "view":Landroid/view/View;
     :pswitch_2
     new-instance v0, Lorg/telegram/ui/Cells/DividerCell;
@@ -1113,11 +1011,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/DividerCell;-><init>(Landroid/content/Context;)V
 
-    .line 97
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 99
     .end local v0    # "view":Landroid/view/View;
     :pswitch_3
     new-instance v0, Lorg/telegram/ui/Cells/DrawerActionCell;
@@ -1126,11 +1022,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/DrawerActionCell;-><init>(Landroid/content/Context;)V
 
-    .line 100
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 102
     .end local v0    # "view":Landroid/view/View;
     :pswitch_4
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoCell;
@@ -1142,7 +1036,6 @@
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 87
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1

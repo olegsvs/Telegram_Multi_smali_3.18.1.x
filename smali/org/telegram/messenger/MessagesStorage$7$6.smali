@@ -33,7 +33,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$7;
 
     .prologue
-    .line 797
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7$6;->this$1:Lorg/telegram/messenger/MessagesStorage$7;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$7$6;->val$channelId:I
@@ -55,7 +54,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 800
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -74,6 +72,5 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/MessagesController;->deleteMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$EncryptedChat;IZJLorg/telegram/tgnet/TLObject;)V
 
-    .line 801
     return-void
 .end method

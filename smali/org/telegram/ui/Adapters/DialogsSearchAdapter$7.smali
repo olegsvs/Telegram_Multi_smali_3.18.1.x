@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 785
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->val$searchId:I
@@ -59,7 +58,6 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 788
     iget v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->val$searchId:I
 
     iget-object v5, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -70,11 +68,9 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 808
     :goto_0
     return-void
 
-    .line 791
     :cond_0
     const/4 v0, 0x0
 
@@ -88,7 +84,6 @@
 
     if-ge v0, v4, :cond_4
 
-    .line 792
     iget-object v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->val$result:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -97,7 +92,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLObject;
 
-    .line 793
     .local v2, "obj":Lorg/telegram/tgnet/TLObject;
     instance-of v4, v2, Lorg/telegram/tgnet/TLRPC$User;
 
@@ -105,10 +99,8 @@
 
     move-object v3, v2
 
-    .line 794
     check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 795
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -116,7 +108,6 @@
 
     invoke-virtual {v4, v3, v6}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 791
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
     :goto_2
@@ -124,7 +115,6 @@
 
     goto :goto_1
 
-    .line 796
     :cond_2
     instance-of v4, v2, Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -132,10 +122,8 @@
 
     move-object v1, v2
 
-    .line 797
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 798
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -145,7 +133,6 @@
 
     goto :goto_2
 
-    .line 799
     .end local v1    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_3
     instance-of v4, v2, Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -154,10 +141,8 @@
 
     move-object v1, v2
 
-    .line 800
     check-cast v1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
-    .line 801
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -167,7 +152,6 @@
 
     goto :goto_2
 
-    .line 804
     .end local v1    # "chat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v2    # "obj":Lorg/telegram/tgnet/TLObject;
     :cond_4
@@ -179,21 +163,18 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 805
     iget-object v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iget-object v5, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->val$result:Ljava/util/ArrayList;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1202(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 806
     iget-object v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iget-object v5, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->val$names:Ljava/util/ArrayList;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1302(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 807
     iget-object v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$7;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->notifyDataSetChanged()V

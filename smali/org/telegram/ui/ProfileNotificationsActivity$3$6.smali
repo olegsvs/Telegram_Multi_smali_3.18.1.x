@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     .prologue
-    .line 424
     iput-object p1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$6;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,31 +42,26 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 427
     if-ltz p2, :cond_0
 
     const/16 v3, 0x64
 
     if-lt p2, v3, :cond_1
 
-    .line 439
     :cond_0
     :goto_0
     return-void
 
-    .line 430
     :cond_1
     rem-int/lit8 v3, p2, 0xa
 
     add-int/lit8 v1, v3, 0x1
 
-    .line 431
     .local v1, "notifyMaxCount":I
     div-int/lit8 v3, p2, 0xa
 
     add-int/lit8 v0, v3, 0x1
 
-    .line 432
     .local v0, "notifyDelay":I
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -79,7 +73,6 @@
 
     move-result-object v2
 
-    .line 433
     .local v2, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -117,7 +110,6 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 434
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v3
@@ -156,7 +148,6 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 435
     iget-object v3, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$6;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v3, v3, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -167,7 +158,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 436
     iget-object v3, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$6;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v3, v3, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -186,7 +176,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ProfileNotificationsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 438
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$6;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 

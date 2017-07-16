@@ -25,10 +25,8 @@
 
     const/4 v11, 0x0
 
-    .line 34
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 35
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "theme"
@@ -37,7 +35,6 @@
 
     move-result-object v8
 
-    .line 36
     .local v8, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v1, "chatDateBubbleColor"
 
@@ -45,7 +42,6 @@
 
     move-result v7
 
-    .line 38
     .local v7, "bgColor":I
     new-instance v1, Landroid/widget/FrameLayout;
 
@@ -53,14 +49,12 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
-    .line 39
     iget-object v1, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
     const v2, 0x7f0201ec
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->setBackgroundResource(I)V
 
-    .line 40
     iget-object v1, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1}, Landroid/widget/FrameLayout;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -81,7 +75,6 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 42
     iget-object v9, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
     const/high16 v1, 0x41d80000    # 27.0f
@@ -100,21 +93,18 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/ChatUnreadCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 44
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
     const v1, 0x7f0200bc
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -131,7 +121,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -142,7 +131,6 @@
 
     invoke-virtual {v0, v11, v1, v11, v11}, Landroid/widget/ImageView;->setPadding(IIII)V
 
-    .line 53
     iget-object v9, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
     iget-object v10, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
@@ -165,14 +153,12 @@
 
     invoke-virtual {v9, v10, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 55
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -183,7 +169,6 @@
 
     invoke-virtual {v0, v11, v11, v11, v1}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -192,7 +177,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 58
     iget-object v1, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -210,7 +194,6 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -221,7 +204,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     const/16 v1, 0x11
@@ -232,10 +214,8 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Cells/ChatUnreadCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     return-void
 
-    .line 40
     .restart local v7    # "bgColor":I
     :cond_0
     const-string/jumbo v4, "chat_unreadMessagesStartBackground"
@@ -246,7 +226,6 @@
 
     goto/16 :goto_0
 
-    .line 58
     .end local v7    # "bgColor":I
     :cond_1
     const-string/jumbo v0, "chat_unreadMessagesStartText"
@@ -264,7 +243,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->backgroundLayout:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -274,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->imageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -284,7 +261,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     return-object v0
@@ -298,7 +274,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 83
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -319,7 +294,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 84
     return-void
 .end method
 
@@ -328,11 +302,9 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatUnreadCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 67
     return-void
 .end method

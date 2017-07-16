@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 281
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$3;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v3, 0x0
 
-    .line 284
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$3;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-static {v0}, Lorg/telegram/messenger/ContactsController;->access$200(Lorg/telegram/messenger/ContactsController;)Z
@@ -54,12 +52,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 285
     const-string/jumbo v0, "detected contacts change"
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 286
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v0
@@ -84,7 +80,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/ContactsController;->performSyncPhoneBook(Ljava/util/HashMap;ZZZZ)V
 
-    .line 288
     :cond_0
     return-void
 .end method

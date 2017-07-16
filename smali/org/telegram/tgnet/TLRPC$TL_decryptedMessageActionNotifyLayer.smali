@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 13599
     const v0, -0xcfb777d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 13598
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13603
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;->layer:I
 
-    .line 13604
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 13607
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13608
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;->layer:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13609
     return-void
 .end method

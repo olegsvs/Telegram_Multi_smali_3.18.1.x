@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4398
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$76;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$76;->val$chat_id:I
@@ -49,10 +48,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 4401
     if-nez p2, :cond_0
 
-    .line 4402
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$76;->this$0:Lorg/telegram/messenger/MessagesController;
 
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Updates;
@@ -60,7 +57,6 @@
     .end local p1    # "response":Lorg/telegram/tgnet/TLObject;
     invoke-virtual {v0, p1, v3}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 4403
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$76;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget v1, p0, Lorg/telegram/messenger/MessagesController$76;->val$chat_id:I
@@ -69,7 +65,6 @@
 
     invoke-virtual {v0, v1, v3, v2}, Lorg/telegram/messenger/MessagesController;->loadFullChat(IIZ)V
 
-    .line 4405
     :cond_0
     return-void
 .end method

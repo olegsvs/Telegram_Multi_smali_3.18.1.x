@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     .prologue
-    .line 241
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$5;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$5;->val$buttonClicked:[Z
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 244
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$5;->val$buttonClicked:[Z
 
     const/4 v1, 0x0
@@ -56,11 +54,9 @@
 
     aput-boolean v2, v0, v1
 
-    .line 245
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$5;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->access$400(Lorg/telegram/ui/Adapters/MentionsAdapter;)V
 
-    .line 246
     return-void
 .end method

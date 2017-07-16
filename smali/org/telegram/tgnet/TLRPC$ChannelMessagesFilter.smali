@@ -36,10 +36,8 @@
     .locals 1
 
     .prologue
-    .line 15674
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 15677
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -56,20 +54,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 15680
     const/4 v0, 0x0
 
-    .line 15681
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ChannelMessagesFilter;
     sparse-switch p1, :sswitch_data_0
 
-    .line 15689
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 15690
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ChannelMessagesFilter"
@@ -94,18 +88,15 @@
 
     throw v1
 
-    .line 15683
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelMessagesFilterEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelMessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelMessagesFilterEmpty;-><init>()V
 
-    .line 15684
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelMessagesFilter;
     goto :goto_0
 
-    .line 15686
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelMessagesFilter;
 
@@ -115,18 +106,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChannelMessagesFilter;
     goto :goto_0
 
-    .line 15692
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 15693
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ChannelMessagesFilter;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 15695
     :cond_1
     return-object v0
 
-    .line 15681
     nop
 
     :sswitch_data_0

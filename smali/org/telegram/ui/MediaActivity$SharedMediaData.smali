@@ -82,19 +82,16 @@
     .prologue
     const/4 v3, 0x2
 
-    .line 140
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 141
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messages:Ljava/util/ArrayList;
 
-    .line 142
     new-array v0, v3, [Ljava/util/HashMap;
 
     const/4 v1, 0x0
@@ -115,28 +112,24 @@
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
-    .line 143
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sections:Ljava/util/ArrayList;
 
-    .line 144
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
-    .line 147
     new-array v0, v3, [Z
 
     fill-array-data v0, :array_0
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->endReached:[Z
 
-    .line 148
     new-array v0, v3, [I
 
     fill-array-data v0, :array_1
@@ -145,14 +138,12 @@
 
     return-void
 
-    .line 147
     :array_0
     .array-data 1
         0x0t
         0x1t
     .end array-data
 
-    .line 148
     nop
 
     :array_1
@@ -168,7 +159,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/MediaActivity$1;
 
     .prologue
-    .line 140
     invoke-direct {p0, p1}, Lorg/telegram/ui/MediaActivity$SharedMediaData;-><init>(Lorg/telegram/ui/MediaActivity;)V
 
     return-void
@@ -179,7 +169,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->max_id:[I
 
     return-object v0
@@ -191,7 +180,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 140
     iput p1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->totalCount:I
 
     return p1
@@ -202,7 +190,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->endReached:[Z
 
     return-object v0
@@ -213,7 +200,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     return-object v0
@@ -224,7 +210,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sections:Ljava/util/ArrayList;
 
     return-object v0
@@ -235,7 +220,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
     return-object v0
@@ -246,7 +230,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$SharedMediaData;
 
     .prologue
-    .line 140
     iget-boolean v0, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->loading:Z
 
     return v0
@@ -258,7 +241,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 140
     iput-boolean p1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->loading:Z
 
     return p1
@@ -277,7 +259,6 @@
 
     const/4 v2, 0x0
 
-    .line 151
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
     move-result-wide v4
@@ -294,7 +275,6 @@
 
     move v0, v2
 
-    .line 152
     .local v0, "loadIndex":I
     :goto_0
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
@@ -315,7 +295,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 180
     :goto_1
     return v2
 
@@ -323,10 +302,8 @@
     :cond_0
     move v0, v3
 
-    .line 151
     goto :goto_0
 
-    .line 155
     .restart local v0    # "loadIndex":I
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
@@ -339,17 +316,14 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 156
     .local v1, "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-nez v1, :cond_2
 
-    .line 157
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 158
     .restart local v1    # "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
@@ -357,30 +331,24 @@
 
     invoke-virtual {v4, v5, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     if-eqz p2, :cond_4
 
-    .line 160
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sections:Ljava/util/ArrayList;
 
     iget-object v5, p1, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
 
     invoke-virtual {v4, v2, v5}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 165
     :cond_2
     :goto_2
     if-eqz p2, :cond_5
 
-    .line 166
     invoke-virtual {v1, v2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 167
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v2, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 172
     :goto_3
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
@@ -396,17 +364,14 @@
 
     invoke-virtual {v2, v4, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     if-nez p3, :cond_6
 
-    .line 174
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result v2
 
     if-lez v2, :cond_3
 
-    .line 175
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->max_id:[I
 
     invoke-virtual {p1}, Lorg/telegram/messenger/MessageObject;->getId()I
@@ -427,10 +392,8 @@
     :goto_4
     move v2, v3
 
-    .line 180
     goto :goto_1
 
-    .line 162
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sections:Ljava/util/ArrayList;
 
@@ -440,18 +403,15 @@
 
     goto :goto_2
 
-    .line 169
     :cond_5
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 170
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v2, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 178
     :cond_6
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->max_id:[I
 
@@ -480,7 +440,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 184
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
     aget-object v3, v3, p2
@@ -495,16 +454,13 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject;
 
-    .line 185
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     if-nez v0, :cond_1
 
-    .line 200
     :cond_0
     :goto_0
     return v2
 
-    .line 188
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
@@ -516,19 +472,15 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 189
     .local v1, "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-eqz v1, :cond_0
 
-    .line 192
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 193
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 194
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
     aget-object v2, v2, p2
@@ -543,28 +495,24 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v2
 
     if-eqz v2, :cond_2
 
-    .line 196
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sectionArrays:Ljava/util/HashMap;
 
     iget-object v3, v0, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->sections:Ljava/util/ArrayList;
 
     iget-object v3, v0, Lorg/telegram/messenger/MessageObject;->monthKey:Ljava/lang/String;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 199
     :cond_2
     iget v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->totalCount:I
 
@@ -572,7 +520,6 @@
 
     iput v2, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->totalCount:I
 
-    .line 200
     const/4 v2, 0x1
 
     goto :goto_0
@@ -586,7 +533,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 204
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
     aget-object v1, v1, v3
@@ -601,11 +547,9 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject;
 
-    .line 205
     .local v0, "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v0, :cond_0
 
-    .line 206
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
     aget-object v1, v1, v3
@@ -616,7 +560,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$SharedMediaData;->messagesDict:[Ljava/util/HashMap;
 
     aget-object v1, v1, v3
@@ -627,12 +570,10 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     iget-object v1, v0, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iput p2, v1, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 210
     :cond_0
     return-void
 .end method

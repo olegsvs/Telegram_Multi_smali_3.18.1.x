@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$94;
 
     .prologue
-    .line 5471
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$94$1;->this$1:Lorg/telegram/messenger/MessagesController$94;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$94$1;->val$res:Lorg/telegram/tgnet/TLRPC$updates_Difference;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 5474
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$94$1;->this$1:Lorg/telegram/messenger/MessagesController$94;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$94;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 5475
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$94$1;->this$1:Lorg/telegram/messenger/MessagesController$94;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$94;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -69,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 5476
     return-void
 .end method

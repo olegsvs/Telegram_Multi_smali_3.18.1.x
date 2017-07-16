@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 447
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback;, "Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -54,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 507
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback;, "Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback<TT;>;"
     const/16 v0, 0xa
 
@@ -74,7 +72,6 @@
     .end annotation
 
     .prologue
-    .line 485
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback;, "Lorg/telegram/messenger/support/util/AsyncListUtil$DataCallback<TT;>;"
     .local p1, "data":[Ljava/lang/Object;, "[TT;"
     return-void

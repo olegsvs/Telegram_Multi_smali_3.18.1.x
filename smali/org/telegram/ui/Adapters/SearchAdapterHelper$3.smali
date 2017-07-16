@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     .prologue
-    .line 188
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$3;->this$0:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$3;->val$arrayList:Ljava/util/ArrayList;
@@ -47,7 +46,6 @@
     .prologue
     const/16 v6, 0x64
 
-    .line 192
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -59,7 +57,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 193
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -74,7 +71,6 @@
 
     move-result-object v3
 
-    .line 194
     .local v3, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v0, 0x0
 
@@ -88,14 +84,11 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 195
     if-ne v0, v6, :cond_1
 
-    .line 204
     :cond_0
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 205
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -106,7 +99,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLiteDatabase;->commitTransaction()V
 
-    .line 206
     iget-object v4, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$3;->val$arrayList:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -115,7 +107,6 @@
 
     if-lt v4, v6, :cond_3
 
-    .line 207
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -126,7 +117,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 208
     const/16 v0, 0x64
 
     :goto_1
@@ -138,7 +128,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 209
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -191,12 +180,10 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 208
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 198
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$3;->val$arrayList:Ljava/util/ArrayList;
 
@@ -206,33 +193,27 @@
 
     check-cast v2, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
 
-    .line 199
     .local v2, "hashtagObject":Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 200
     const/4 v4, 0x1
 
     iget-object v5, v2, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;->hashtag:Ljava/lang/String;
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindString(ILjava/lang/String;)V
 
-    .line 201
     const/4 v4, 0x2
 
     iget v5, v2, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;->date:I
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 202
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 194
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0
 
-    .line 211
     .end local v2    # "hashtagObject":Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -247,18 +228,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 216
     .end local v0    # "a":I
     .end local v3    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :cond_3
     :goto_2
     return-void
 
-    .line 213
     :catch_0
     move-exception v1
 
-    .line 214
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

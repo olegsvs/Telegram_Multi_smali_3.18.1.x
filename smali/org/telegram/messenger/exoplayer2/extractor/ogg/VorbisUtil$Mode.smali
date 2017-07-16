@@ -33,21 +33,15 @@
     .param p4, "mapping"    # I
 
     .prologue
-    .line 484
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 485
     iput-boolean p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$Mode;->blockFlag:Z
 
-    .line 486
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$Mode;->windowType:I
 
-    .line 487
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$Mode;->transformType:I
 
-    .line 488
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$Mode;->mapping:I
 
-    .line 489
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 277
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$8;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$8;->val$arrCounties:Ljava/util/ArrayList;
@@ -45,14 +44,12 @@
     .locals 2
 
     .prologue
-    .line 280
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$8;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$8;->val$arrCounties:Ljava/util/ArrayList;
 
     iput-object v1, v0, Lorg/telegram/ui/LanguageSelectActivity;->searchResult:Ljava/util/ArrayList;
 
-    .line 281
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$8;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LanguageSelectActivity;->access$500(Lorg/telegram/ui/LanguageSelectActivity;)Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
@@ -61,6 +58,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 282
     return-void
 .end method

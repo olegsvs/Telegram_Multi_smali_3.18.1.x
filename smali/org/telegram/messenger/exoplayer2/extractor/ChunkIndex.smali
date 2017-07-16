@@ -29,27 +29,20 @@
     .param p4, "timesUs"    # [J
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->sizes:[I
 
-    .line 60
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->offsets:[J
 
-    .line 61
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->durationsUs:[J
 
-    .line 62
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->timesUs:[J
 
-    .line 63
     array-length v0, p1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->length:I
 
-    .line 64
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->length:I
 
     add-int/lit8 v0, v0, -0x1
@@ -66,7 +59,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->durationUs:J
 
-    .line 65
     return-void
 .end method
 
@@ -79,7 +71,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->timesUs:[J
 
     invoke-static {v0, p1, p2, v1, v1}, Lorg/telegram/messenger/exoplayer2/util/Util;->binarySearchFloor([JJZZ)I
@@ -93,7 +84,6 @@
     .locals 2
 
     .prologue
-    .line 86
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->durationUs:J
 
     return-wide v0
@@ -104,7 +94,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->offsets:[J
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->getChunkIndex(J)I
@@ -120,7 +109,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x1
 
     return v0

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$18;
 
     .prologue
-    .line 1775
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$18$1;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1778
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$18$1;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     iget-object v1, v1, Lorg/telegram/messenger/ContactsController$18;->val$users:Ljava/util/ArrayList;
@@ -63,7 +61,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1779
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v2, p0, Lorg/telegram/messenger/ContactsController$18$1;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
@@ -75,7 +72,6 @@
 
     goto :goto_0
 
-    .line 1781
     .end local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     return-void

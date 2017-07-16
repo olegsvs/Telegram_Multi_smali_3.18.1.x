@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EditTextCaption;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->val$callback:Landroid/view/ActionMode$Callback;
@@ -49,7 +48,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 121
     invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v1
@@ -58,19 +56,15 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 122
     iget-object v1, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EditTextCaption;->access$100(Lorg/telegram/ui/Components/EditTextCaption;)V
 
-    .line 123
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V
 
-    .line 134
     :goto_0
     return v0
 
-    .line 125
     :cond_0
     invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
@@ -80,17 +74,14 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 126
     iget-object v1, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EditTextCaption;->access$200(Lorg/telegram/ui/Components/EditTextCaption;)V
 
-    .line 127
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V
 
     goto :goto_0
 
-    .line 129
     :cond_1
     invoke-interface {p2}, Landroid/view/MenuItem;->getItemId()I
 
@@ -100,17 +91,14 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 130
     iget-object v1, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EditTextCaption;->access$300(Lorg/telegram/ui/Components/EditTextCaption;)V
 
-    .line 131
     invoke-virtual {p1}, Landroid/view/ActionMode;->finish()V
 
     goto :goto_0
 
-    .line 134
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->val$callback:Landroid/view/ActionMode$Callback;
 
@@ -127,14 +115,12 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 110
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EditTextCaption;->access$002(Lorg/telegram/ui/Components/EditTextCaption;Z)Z
 
-    .line 111
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->val$callback:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onCreateActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z
@@ -149,19 +135,16 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 139
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->this$0:Lorg/telegram/ui/Components/EditTextCaption;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EditTextCaption;->access$002(Lorg/telegram/ui/Components/EditTextCaption;Z)Z
 
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->val$callback:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1}, Landroid/view/ActionMode$Callback;->onDestroyActionMode(Landroid/view/ActionMode;)V
 
-    .line 141
     return-void
 .end method
 
@@ -171,7 +154,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextCaption$1;->val$callback:Landroid/view/ActionMode$Callback;
 
     invoke-interface {v0, p1, p2}, Landroid/view/ActionMode$Callback;->onPrepareActionMode(Landroid/view/ActionMode;Landroid/view/Menu;)Z

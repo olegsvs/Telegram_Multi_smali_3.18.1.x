@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 751
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$9;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 754
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$9;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$3300(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
@@ -74,7 +72,6 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 755
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$9;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -86,7 +83,6 @@
 
     move-result v0
 
-    .line 757
     :goto_0
     return v0
 

@@ -33,7 +33,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$7;
 
     .prologue
-    .line 747
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7$3;->this$1:Lorg/telegram/messenger/MessagesStorage$7;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$7$3;->val$dialog:Lorg/telegram/tgnet/TLRPC$TL_dialog;
@@ -53,7 +52,6 @@
     .locals 6
 
     .prologue
-    .line 750
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -66,6 +64,5 @@
 
     invoke-virtual {v0, v1, v2, v4, v5}, Lorg/telegram/messenger/MessagesController;->checkLastDialogMessage(Lorg/telegram/tgnet/TLRPC$TL_dialog;Lorg/telegram/tgnet/TLRPC$InputPeer;J)V
 
-    .line 751
     return-void
 .end method

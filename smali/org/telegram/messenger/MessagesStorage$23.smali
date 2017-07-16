@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1522
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$23;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesStorage$23;->val$max_id:J
@@ -61,7 +60,6 @@
     .locals 12
 
     .prologue
-    .line 1528
     :try_start_0
     iget-wide v6, p0, Lorg/telegram/messenger/MessagesStorage$23;->val$max_id:J
 
@@ -71,7 +69,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 1529
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$23;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v5}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -128,14 +125,12 @@
 
     move-result-object v0
 
-    .line 1534
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :goto_0
     new-instance v4, Lorg/telegram/tgnet/TLRPC$photos_Photos;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$photos_Photos;-><init>()V
 
-    .line 1536
     .local v4, "res":Lorg/telegram/tgnet/TLRPC$photos_Photos;
     :cond_0
     :goto_1
@@ -145,18 +140,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 1537
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 1538
     .local v1, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v1, :cond_0
 
-    .line 1539
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -169,11 +161,9 @@
 
     move-result-object v3
 
-    .line 1540
     .local v3, "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1541
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$photos_Photos;->photos:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
@@ -182,7 +172,6 @@
 
     goto :goto_1
 
-    .line 1552
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v3    # "photo":Lorg/telegram/tgnet/TLRPC$Photo;
@@ -190,16 +179,13 @@
     :catch_0
     move-exception v2
 
-    .line 1553
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1555
     .end local v2    # "e":Ljava/lang/Exception;
     :goto_2
     return-void
 
-    .line 1531
     :cond_1
     :try_start_1
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$23;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -261,12 +247,10 @@
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     goto :goto_0
 
-    .line 1544
     .restart local v4    # "res":Lorg/telegram/tgnet/TLRPC$photos_Photos;
     :cond_2
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1546
     sget-object v5, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v6, Lorg/telegram/messenger/MessagesStorage$23$1;

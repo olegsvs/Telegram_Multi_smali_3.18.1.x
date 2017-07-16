@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 2973
     new-instance v0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem$1;-><init>()V
@@ -59,10 +58,8 @@
     .locals 0
 
     .prologue
-    .line 2938
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2939
     return-void
 .end method
 
@@ -73,24 +70,20 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2927
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 2928
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mPosition:I
 
-    .line 2929
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
     iput v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapDir:I
 
-    .line 2930
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
@@ -100,30 +93,24 @@
     :goto_0
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mHasUnwantedGapAfter:Z
 
-    .line 2931
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v0
 
-    .line 2932
     .local v0, "spanCount":I
     if-lez v0, :cond_0
 
-    .line 2933
     new-array v1, v0, [I
 
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
-    .line 2934
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->readIntArray([I)V
 
-    .line 2936
     :cond_0
     return-void
 
-    .line 2930
     .end local v0    # "spanCount":I
     :cond_1
     const/4 v1, 0x0
@@ -137,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 2947
     const/4 v0, 0x0
 
     return v0
@@ -148,7 +134,6 @@
     .param p1, "spanIndex"    # I
 
     .prologue
-    .line 2942
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
     if-nez v0, :cond_0
@@ -170,7 +155,6 @@
     .locals 2
 
     .prologue
-    .line 2965
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -219,7 +203,6 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
-    .line 2969
     invoke-static {v1}, Ljava/util/Arrays;->toString([I)Ljava/lang/String;
 
     move-result-object v1
@@ -249,17 +232,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2952
     iget v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mPosition:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2953
     iget v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapDir:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2954
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mHasUnwantedGapAfter:Z
 
     if-eqz v0, :cond_0
@@ -269,7 +249,6 @@
     :goto_0
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2955
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
     if-eqz v0, :cond_1
@@ -280,29 +259,24 @@
 
     if-lez v0, :cond_1
 
-    .line 2956
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
     array-length v0, v0
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 2957
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LazySpanLookup$FullSpanItem;->mGapPerSpan:[I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeIntArray([I)V
 
-    .line 2961
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 2954
     goto :goto_0
 
-    .line 2959
     :cond_1
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 

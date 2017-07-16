@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/AppStartReceiver;
 
     .prologue
-    .line 17
     iput-object p1, p0, Lorg/telegram/messenger/AppStartReceiver$1;->this$0:Lorg/telegram/messenger/AppStartReceiver;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,9 +40,7 @@
     .locals 0
 
     .prologue
-    .line 20
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->startPushService()V
 
-    .line 21
     return-void
 .end method

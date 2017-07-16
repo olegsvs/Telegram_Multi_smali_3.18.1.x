@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 9367
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 9370
     const/4 v0, 0x0
 
-    .line 9371
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     sparse-switch p1, :sswitch_data_0
 
-    .line 9388
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 9389
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TopPeerCategory"
@@ -70,51 +65,40 @@
 
     throw v1
 
-    .line 9373
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryCorrespondents;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryCorrespondents;-><init>()V
 
-    .line 9374
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     goto :goto_0
 
-    .line 9376
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryGroups;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryGroups;-><init>()V
 
-    .line 9377
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     goto :goto_0
 
-    .line 9379
     :sswitch_2
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;-><init>()V
 
-    .line 9380
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     goto :goto_0
 
-    .line 9382
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryChannels;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryChannels;-><init>()V
 
-    .line 9383
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     goto :goto_0
 
-    .line 9385
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsPM;
 
@@ -124,18 +108,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
     goto :goto_0
 
-    .line 9391
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 9392
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TopPeerCategory;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 9394
     :cond_1
     return-object v0
 
-    .line 9371
     nop
 
     :sswitch_data_0

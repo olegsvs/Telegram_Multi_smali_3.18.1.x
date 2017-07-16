@@ -27,7 +27,6 @@
     .param p1, "this$5"    # Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
     .prologue
-    .line 814
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1$1;->this$5:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 817
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1$1;->this$5:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;->this$4:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1;
@@ -58,7 +56,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$002(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 818
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1$1;->this$5:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;->this$4:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1;
@@ -81,7 +78,6 @@
 
     if-lez v0, :cond_0
 
-    .line 819
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1$1;->this$5:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;->this$4:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1;
@@ -120,7 +116,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$1900(Lorg/telegram/ui/ChannelCreateActivity;Ljava/lang/String;)Z
 
-    .line 821
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1$1;->this$5:Lorg/telegram/ui/ChannelCreateActivity$13$1$1$1$1;
 
@@ -136,6 +131,5 @@
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1800(Lorg/telegram/ui/ChannelCreateActivity;)V
 
-    .line 822
     return-void
 .end method

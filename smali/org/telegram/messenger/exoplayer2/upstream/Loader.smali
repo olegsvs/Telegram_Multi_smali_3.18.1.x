@@ -60,17 +60,14 @@
     .param p1, "threadName"    # Ljava/lang/String;
 
     .prologue
-    .line 141
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 142
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Util;->newSingleThreadExecutor(Ljava/lang/String;)Ljava/util/concurrent/ExecutorService;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->downloadExecutorService:Ljava/util/concurrent/ExecutorService;
 
-    .line 143
     return-void
 .end method
 
@@ -79,7 +76,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     return-object v0
@@ -91,7 +87,6 @@
     .param p1, "x1"    # Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     return-object p1
@@ -103,7 +98,6 @@
     .param p1, "x1"    # Ljava/io/IOException;
 
     .prologue
-    .line 33
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->fatalError:Ljava/io/IOException;
 
     return-object p1
@@ -114,7 +108,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->downloadExecutorService:Ljava/util/concurrent/ExecutorService;
 
     return-object v0
@@ -126,14 +119,12 @@
     .locals 2
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;->cancel(Z)V
 
-    .line 180
     return-void
 .end method
 
@@ -141,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 172
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     if-eqz v0, :cond_0
@@ -166,12 +156,10 @@
     .end annotation
 
     .prologue
-    .line 211
     const/high16 v0, -0x80000000
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->maybeThrowError(I)V
 
-    .line 212
     return-void
 .end method
 
@@ -185,23 +173,19 @@
     .end annotation
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->fatalError:Ljava/io/IOException;
 
     if-eqz v0, :cond_0
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->fatalError:Ljava/io/IOException;
 
     throw v0
 
-    .line 218
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     if-eqz v0, :cond_2
 
-    .line 219
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     const/high16 v1, -0x80000000
@@ -216,7 +200,6 @@
     :cond_1
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;->maybeThrowError(I)V
 
-    .line 222
     :cond_2
     return-void
 .end method
@@ -225,12 +208,10 @@
     .locals 1
 
     .prologue
-    .line 187
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->release(Ljava/lang/Runnable;)V
 
-    .line 188
     return-void
 .end method
 
@@ -239,34 +220,28 @@
     .param p1, "postLoadAction"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 198
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     if-eqz v0, :cond_0
 
-    .line 199
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->currentTask:Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;->cancel(Z)V
 
-    .line 201
     :cond_0
     if-eqz p1, :cond_1
 
-    .line 202
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->downloadExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0, p1}, Ljava/util/concurrent/ExecutorService;->submit(Ljava/lang/Runnable;)Ljava/util/concurrent/Future;
 
-    .line 204
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->downloadExecutorService:Ljava/util/concurrent/ExecutorService;
 
     invoke-interface {v0}, Ljava/util/concurrent/ExecutorService;->shutdown()V
 
-    .line 205
     return-void
 .end method
 
@@ -284,14 +259,12 @@
     .end annotation
 
     .prologue
-    .line 161
     .local p1, "loadable":Lorg/telegram/messenger/exoplayer2/upstream/Loader$Loadable;, "TT;"
     .local p2, "callback":Lorg/telegram/messenger/exoplayer2/upstream/Loader$Callback;, "Lorg/telegram/messenger/exoplayer2/upstream/Loader$Callback<TT;>;"
     invoke-static {}, Landroid/os/Looper;->myLooper()Landroid/os/Looper;
 
     move-result-object v2
 
-    .line 162
     .local v2, "looper":Landroid/os/Looper;
     if-eqz v2, :cond_0
 
@@ -300,12 +273,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 163
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v6
 
-    .line 164
     .local v6, "startTimeMs":J
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;
 
@@ -323,10 +294,8 @@
 
     invoke-virtual {v0, v4, v5}, Lorg/telegram/messenger/exoplayer2/upstream/Loader$LoadTask;->start(J)V
 
-    .line 165
     return-wide v6
 
-    .line 162
     .end local v6    # "startTimeMs":J
     :cond_0
     const/4 v0, 0x0

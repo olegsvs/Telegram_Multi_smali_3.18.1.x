@@ -40,32 +40,26 @@
     .param p2, "info"    # Landroid/hardware/Camera$CameraInfo;
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->pictureSizes:Ljava/util/ArrayList;
 
-    .line 20
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->previewSizes:Ljava/util/ArrayList;
 
-    .line 24
     iput p1, p0, Lorg/telegram/messenger/camera/CameraInfo;->cameraId:I
 
-    .line 25
     iget v0, p2, Landroid/hardware/Camera$CameraInfo;->facing:I
 
     iput v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->frontCamera:I
 
-    .line 26
     return-void
 .end method
 
@@ -73,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 33
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
     return-object v0
@@ -85,7 +78,6 @@
     .locals 1
 
     .prologue
-    .line 29
     iget v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->cameraId:I
 
     return v0
@@ -104,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 41
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->pictureSizes:Ljava/util/ArrayList;
 
     return-object v0
@@ -123,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 37
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraInfo;->previewSizes:Ljava/util/ArrayList;
 
     return-object v0

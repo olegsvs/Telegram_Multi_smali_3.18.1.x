@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 14139
     const v0, 0x352dca58
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 14138
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$MessageEntity;-><init>()V
 
     return-void
@@ -53,28 +51,24 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 14144
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->offset:I
 
-    .line 14145
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->length:I
 
-    .line 14146
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->user_id:I
 
-    .line 14147
     return-void
 .end method
 
@@ -83,26 +77,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 14150
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14151
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14152
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->length:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14153
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;->user_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 14154
     return-void
 .end method

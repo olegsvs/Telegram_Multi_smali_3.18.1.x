@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationsController;
 
     .prologue
-    .line 181
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$3;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/NotificationsController$3;->val$dialog_id:J
@@ -45,13 +44,11 @@
     .locals 4
 
     .prologue
-    .line 184
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$3;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iget-wide v2, p0, Lorg/telegram/messenger/NotificationsController$3;->val$dialog_id:J
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/NotificationsController;->access$302(Lorg/telegram/messenger/NotificationsController;J)J
 
-    .line 185
     return-void
 .end method

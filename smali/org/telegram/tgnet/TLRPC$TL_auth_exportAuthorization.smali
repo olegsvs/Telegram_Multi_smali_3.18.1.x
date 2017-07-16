@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 20490
     const v0, -0x1a400033
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_exportAuthorization;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 20489
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20495
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_auth_exportedAuthorization;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_auth_exportedAuthorization;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20499
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_exportAuthorization;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20500
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_exportAuthorization;->dc_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20501
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 1356
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$18;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v6, 0x0
 
-    .line 1359
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "plusconfig"
@@ -56,25 +54,20 @@
 
     move-result-object v1
 
-    .line 1360
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 1361
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "toastNotificationPosition"
 
     invoke-interface {v0, v2, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1362
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1363
     sput p2, Lorg/telegram/ui/ActionBar/Theme;->plusToastNotificationPosition:I
 
-    .line 1364
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$18;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -85,7 +78,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1365
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$18;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -96,7 +88,6 @@
 
     invoke-virtual {v2}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 1368
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -120,6 +111,5 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1369
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$100;
 
     .prologue
-    .line 9648
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$100$1;->this$1:Lorg/telegram/ui/ChatActivity$100;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$100$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,17 +44,14 @@
     .locals 7
 
     .prologue
-    .line 9651
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$100$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v4, :cond_0
 
-    .line 9652
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$100$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;
 
-    .line 9654
     .local v3, "exportedMessageLink":Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;
     :try_start_0
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -68,7 +64,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 9655
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v4, "label"
 
@@ -78,11 +73,9 @@
 
     move-result-object v0
 
-    .line 9656
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 9657
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$100$1;->this$1:Lorg/telegram/ui/ChatActivity$100;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity$100;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -109,7 +102,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 9663
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     .end local v3    # "exportedMessageLink":Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;
@@ -117,12 +109,10 @@
     :goto_0
     return-void
 
-    .line 9658
     .restart local v3    # "exportedMessageLink":Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;
     :catch_0
     move-exception v2
 
-    .line 9659
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v4, "tmessages"
 

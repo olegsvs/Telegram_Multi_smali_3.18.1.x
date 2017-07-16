@@ -44,27 +44,22 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3446
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 3447
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 3449
     new-instance v0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$1;-><init>(Lorg/telegram/ui/ArticleViewer$BlockCollageCell;Landroid/content/Context;Lorg/telegram/ui/ArticleViewer;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 3458
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const v1, -0xa0909
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setGlowColor(I)V
 
-    .line 3459
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$2;
@@ -73,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->addItemDecoration(Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;)V
 
-    .line 3466
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 3467
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/ArticleViewer$BlockCollageCell$3;
@@ -97,7 +90,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 3520
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, -0x1
@@ -110,12 +102,10 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3521
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->setWillNotDraw(Z)V
 
-    .line 3522
     return-void
 .end method
 
@@ -124,7 +114,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     .prologue
-    .line 3431
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -135,7 +124,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     .prologue
-    .line 3431
     iget-boolean v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->inLayout:Z
 
     return v0
@@ -146,7 +134,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArticleViewer$BlockCollageCell;
 
     .prologue
-    .line 3431
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
     return-object v0
@@ -159,26 +146,21 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 3589
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
     if-nez v0, :cond_1
 
-    .line 3602
     :cond_0
     :goto_0
     return-void
 
-    .line 3592
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_2
 
-    .line 3593
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 3594
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textX:I
 
     int-to-float v0, v0
@@ -189,22 +171,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 3595
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 3596
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3597
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 3599
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
@@ -212,7 +190,6 @@
 
     if-lez v0, :cond_0
 
-    .line 3600
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -277,7 +254,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 3584
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget v1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->listX:I
@@ -302,7 +278,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->layout(IIII)V
 
-    .line 3585
     return-void
 .end method
 
@@ -312,26 +287,21 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 3538
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->inLayout:Z
 
-    .line 3539
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v6
 
-    .line 3542
     .local v6, "width":I
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
     if-eqz v7, :cond_3
 
-    .line 3543
     move v3, v6
 
-    .line 3545
     .local v3, "listWidth":I
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
@@ -339,7 +309,6 @@
 
     if-lez v7, :cond_2
 
-    .line 3546
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
     iget v7, v7, Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;->level:I
@@ -364,7 +333,6 @@
 
     iput v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textX:I
 
-    .line 3547
     iget v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->listX:I
 
     const/high16 v8, 0x41900000    # 18.0f
@@ -377,10 +345,8 @@
 
     sub-int/2addr v3, v7
 
-    .line 3548
     move v5, v3
 
-    .line 3555
     .local v5, "textWidth":I
     :goto_0
     const/high16 v7, 0x42c80000    # 100.0f
@@ -391,7 +357,6 @@
 
     div-int v0, v3, v7
 
-    .line 3556
     .local v0, "countPerRow":I
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
@@ -415,17 +380,14 @@
 
     double-to-int v4, v8
 
-    .line 3557
     .local v4, "rowCount":I
     div-int v2, v3, v0
 
-    .line 3558
     .local v2, "itemSize":I
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->gridLayoutManager:Lorg/telegram/messenger/support/widget/GridLayoutManager;
 
     invoke-virtual {v7, v0}, Lorg/telegram/messenger/support/widget/GridLayoutManager;->setSpanCount(I)V
 
-    .line 3559
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->innerListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     mul-int v8, v2, v0
@@ -454,7 +416,6 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/ui/Components/RecyclerListView;->measure(II)V
 
-    .line 3560
     mul-int v7, v4, v2
 
     const/high16 v8, 0x40000000    # 2.0f
@@ -465,13 +426,11 @@
 
     sub-int v1, v7, v8
 
-    .line 3562
     .local v1, "height":I
     iget v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->lastCreatedWidth:I
 
     if-eq v7, v6, :cond_0
 
-    .line 3563
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v8, 0x0
@@ -488,12 +447,10 @@
 
     iput-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 3564
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v7, :cond_0
 
-    .line 3565
     const/high16 v7, 0x41000000    # 8.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -504,7 +461,6 @@
 
     iput v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textY:I
 
-    .line 3566
     const/high16 v7, 0x41000000    # 8.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -521,7 +477,6 @@
 
     add-int/2addr v1, v7
 
-    .line 3571
     :cond_0
     iget-object v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
@@ -535,7 +490,6 @@
 
     if-nez v7, :cond_1
 
-    .line 3572
     const/high16 v7, 0x41000000    # 8.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -544,7 +498,6 @@
 
     add-int/2addr v1, v7
 
-    .line 3578
     .end local v0    # "countPerRow":I
     .end local v2    # "itemSize":I
     .end local v3    # "listWidth":I
@@ -554,15 +507,12 @@
     :goto_1
     invoke-virtual {p0, v6, v1}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->setMeasuredDimension(II)V
 
-    .line 3579
     const/4 v7, 0x0
 
     iput-boolean v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->inLayout:Z
 
-    .line 3580
     return-void
 
-    .line 3550
     .end local v1    # "height":I
     .restart local v3    # "listWidth":I
     :cond_2
@@ -570,7 +520,6 @@
 
     iput v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->listX:I
 
-    .line 3551
     const/high16 v7, 0x41900000    # 18.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -579,7 +528,6 @@
 
     iput v7, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textX:I
 
-    .line 3552
     const/high16 v7, 0x42100000    # 36.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -591,7 +539,6 @@
     .restart local v5    # "textWidth":I
     goto/16 :goto_0
 
-    .line 3575
     .end local v3    # "listWidth":I
     .end local v5    # "textWidth":I
     :cond_3
@@ -606,7 +553,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3533
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->textLayout:Landroid/text/StaticLayout;
@@ -648,22 +594,17 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
     .prologue
-    .line 3525
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockCollage;
 
-    .line 3526
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->lastCreatedWidth:I
 
-    .line 3527
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->adapter:Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->notifyDataSetChanged()V
 
-    .line 3528
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockCollageCell;->requestLayout()V
 
-    .line 3529
     return-void
 .end method

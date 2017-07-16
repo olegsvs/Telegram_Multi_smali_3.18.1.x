@@ -22,10 +22,8 @@
     .locals 0
 
     .prologue
-    .line 660
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 661
     return-void
 .end method
 
@@ -36,7 +34,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 670
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 667
     return-void
 .end method
 
@@ -54,6 +50,5 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 664
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 353
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 357
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v2, v4}, Lorg/telegram/ui/ThemePreviewActivity;->access$1802(Lorg/telegram/ui/ThemePreviewActivity;Z)Z
 
-    .line 359
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "theme"
@@ -58,29 +55,24 @@
 
     move-result-object v1
 
-    .line 360
     .local v1, "themePrefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 361
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "usePlusTheme"
 
     invoke-interface {v0, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 362
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 364
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     const/4 v3, 0x1
 
     invoke-static {v2, v3}, Lorg/telegram/ui/ThemePreviewActivity;->access$1902(Lorg/telegram/ui/ThemePreviewActivity;Z)Z
 
-    .line 365
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ThemePreviewActivity;->access$2000(Lorg/telegram/ui/ThemePreviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -89,7 +81,6 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->rebuildAllFragmentViews(Z)V
 
-    .line 366
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ThemePreviewActivity;->access$2100(Lorg/telegram/ui/ThemePreviewActivity;)Ljava/io/File;
@@ -106,11 +97,9 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/ui/ActionBar/Theme;->applyThemeFile(Ljava/io/File;Ljava/lang/String;Z)Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 367
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$9;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemePreviewActivity;->finishFragment()V
 
-    .line 368
     return-void
 .end method

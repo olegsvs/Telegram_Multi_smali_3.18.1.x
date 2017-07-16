@@ -24,9 +24,7 @@
 
 .field final synthetic val$hintsNew:Ljava/util/ArrayList;
 
-.field final synthetic val$inlineBotsNew:Ljava/util/ArrayList;
 
-.field final synthetic val$inlineDatesNew:Ljava/util/HashMap;
 
 .field final synthetic val$users:Ljava/util/ArrayList;
 
@@ -37,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/SearchQuery$2;
 
     .prologue
-    .line 294
     iput-object p1, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->this$0:Lorg/telegram/messenger/query/SearchQuery$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$users:Ljava/util/ArrayList;
@@ -46,9 +43,7 @@
 
     iput-object p4, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$hintsNew:Ljava/util/ArrayList;
 
-    iput-object p5, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$inlineBotsNew:Ljava/util/ArrayList;
 
-    iput-object p6, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$inlineDatesNew:Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -65,7 +60,6 @@
 
     const/4 v6, 0x0
 
-    .line 297
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -74,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 298
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -83,31 +76,21 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 299
     invoke-static {v6}, Lorg/telegram/messenger/query/SearchQuery;->access$202(Z)Z
 
-    .line 300
     invoke-static {v2}, Lorg/telegram/messenger/query/SearchQuery;->access$302(Z)Z
 
-    .line 301
     iget-object v0, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$hintsNew:Ljava/util/ArrayList;
 
     sput-object v0, Lorg/telegram/messenger/query/SearchQuery;->hints:Ljava/util/ArrayList;
 
-    .line 302
-    iget-object v0, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$inlineBotsNew:Ljava/util/ArrayList;
 
-    sput-object v0, Lorg/telegram/messenger/query/SearchQuery;->inlineBots:Ljava/util/ArrayList;
 
-    .line 303
-    iget-object v0, p0, Lorg/telegram/messenger/query/SearchQuery$2$1;->val$inlineDatesNew:Ljava/util/HashMap;
 
     invoke-static {v0}, Lorg/telegram/messenger/query/SearchQuery;->access$402(Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 304
     invoke-static {}, Lorg/telegram/messenger/query/SearchQuery;->buildShortcuts()V
 
-    .line 305
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -118,18 +101,15 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 306
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
 
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->reloadInlineHints:I
 
     new-array v2, v6, [Ljava/lang/Object;
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 307
     sget v0, Lorg/telegram/messenger/UserConfig;->lastHintsSyncTime:I
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -152,10 +132,8 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 308
     invoke-static {v6}, Lorg/telegram/messenger/query/SearchQuery;->loadHints(Z)V
 
-    .line 310
     :cond_0
     return-void
 .end method

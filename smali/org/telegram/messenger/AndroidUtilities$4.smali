@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 1160
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$4;->val$view:Landroid/view/View;
 
     iput p2, p0, Lorg/telegram/messenger/AndroidUtilities$4;->val$num:I
@@ -46,7 +45,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1163
     iget-object v1, p0, Lorg/telegram/messenger/AndroidUtilities$4;->val$view:Landroid/view/View;
 
     iget v0, p0, Lorg/telegram/messenger/AndroidUtilities$4;->val$num:I
@@ -64,10 +62,8 @@
 
     invoke-static {v1, v0, v2}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
 
-    .line 1164
     return-void
 
-    .line 1163
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/AndroidUtilities$4;->val$x:F
 

@@ -105,31 +105,26 @@
     .locals 1
 
     .prologue
-    .line 18760
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 18761
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Updates;->updates:Ljava/util/ArrayList;
 
-    .line 18762
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Updates;->users:Ljava/util/ArrayList;
 
-    .line 18763
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Updates;->chats:Ljava/util/ArrayList;
 
-    .line 18779
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -146,20 +141,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18787
     const/4 v0, 0x0
 
-    .line 18788
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Updates;
     sparse-switch p1, :sswitch_data_0
 
-    .line 18811
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 18812
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Updates"
@@ -184,73 +175,60 @@
 
     throw v1
 
-    .line 18790
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updates;-><init>()V
 
-    .line 18791
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18793
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateShortMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateShortMessage;-><init>()V
 
-    .line 18794
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18796
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateShortSentMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateShortSentMessage;-><init>()V
 
-    .line 18797
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18799
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateShort;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateShort;-><init>()V
 
-    .line 18800
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18802
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateShortChatMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateShortChatMessage;-><init>()V
 
-    .line 18803
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18805
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatesCombined;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updatesCombined;-><init>()V
 
-    .line 18806
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18808
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatesTooLong;
 
@@ -260,18 +238,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Updates;
     goto :goto_0
 
-    .line 18814
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 18815
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Updates;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 18817
     :cond_1
     return-object v0
 
-    .line 18788
     nop
 
     :sswitch_data_0

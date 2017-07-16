@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 167
     iput-wide p1, p0, Lorg/telegram/messenger/query/BotQuery$4;->val$did:J
 
     iput-object p3, p0, Lorg/telegram/messenger/query/BotQuery$4;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
@@ -44,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 170
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$100()Ljava/util/HashMap;
 
     move-result-object v1
@@ -63,11 +61,9 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 171
     .local v0, "old":Lorg/telegram/tgnet/TLRPC$Message;
     if-eqz v0, :cond_0
 
-    .line 172
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$000()Ljava/util/HashMap;
 
     move-result-object v1
@@ -80,7 +76,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$000()Ljava/util/HashMap;
 
@@ -102,7 +97,6 @@
 
     invoke-virtual {v1, v2, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -131,6 +125,5 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 176
     return-void
 .end method

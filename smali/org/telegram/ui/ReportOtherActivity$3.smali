@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ReportOtherActivity;
 
     .prologue
-    .line 111
     iput-object p1, p0, Lorg/telegram/ui/ReportOtherActivity$3;->this$0:Lorg/telegram/ui/ReportOtherActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 114
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/ReportOtherActivity$3;->this$0:Lorg/telegram/ui/ReportOtherActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ReportOtherActivity;->access$200(Lorg/telegram/ui/ReportOtherActivity;)Landroid/view/View;
@@ -66,10 +63,8 @@
 
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 
-    .line 116
     const/4 v0, 0x1
 
-    .line 118
     :goto_0
     return v0
 

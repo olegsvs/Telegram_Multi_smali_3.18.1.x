@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     .prologue
-    .line 1036
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$16;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 1039
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$16;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$100(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/EditTextCaption;
@@ -57,7 +55,6 @@
 
     move-result-object v1
 
-    .line 1040
     .local v1, "text":Ljava/lang/String;
     const/16 v2, 0x20
 
@@ -65,7 +62,6 @@
 
     move-result v0
 
-    .line 1041
     .local v0, "idx":I
     const/4 v2, -0x1
 
@@ -79,7 +75,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 1042
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$16;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -87,11 +82,9 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setFieldText(Ljava/lang/CharSequence;)V
 
-    .line 1046
     :goto_0
     return-void
 
-    .line 1044
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$16;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 

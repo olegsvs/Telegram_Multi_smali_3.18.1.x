@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 482
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$3;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -41,12 +40,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 485
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 486
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$3;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VideoEditorActivity;->access$1600(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
@@ -59,19 +56,16 @@
 
     if-eqz v0, :cond_1
 
-    .line 487
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$3;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VideoEditorActivity;->access$1700(Lorg/telegram/ui/VideoEditorActivity;Z)V
 
-    .line 494
     :cond_0
     :goto_0
     return-void
 
-    .line 490
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$3;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -79,11 +73,9 @@
 
     goto :goto_0
 
-    .line 491
     :cond_2
     if-ne p1, v1, :cond_0
 
-    .line 492
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$3;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VideoEditorActivity;->access$1700(Lorg/telegram/ui/VideoEditorActivity;Z)V

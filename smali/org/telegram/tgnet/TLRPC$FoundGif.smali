@@ -37,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 2917
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -50,20 +49,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2928
     const/4 v0, 0x0
 
-    .line 2929
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$FoundGif;
     sparse-switch p1, :sswitch_data_0
 
-    .line 2937
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 2938
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in FoundGif"
@@ -88,18 +83,15 @@
 
     throw v1
 
-    .line 2931
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_foundGifCached;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$FoundGif;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_foundGifCached;-><init>()V
 
-    .line 2932
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$FoundGif;
     goto :goto_0
 
-    .line 2934
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_foundGif;
 
@@ -109,18 +101,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$FoundGif;
     goto :goto_0
 
-    .line 2940
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2941
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$FoundGif;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 2943
     :cond_1
     return-object v0
 
-    .line 2929
     nop
 
     :sswitch_data_0

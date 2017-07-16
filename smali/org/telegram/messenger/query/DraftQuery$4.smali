@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 275
     iput-wide p1, p0, Lorg/telegram/messenger/query/DraftQuery$4;->val$did:J
 
     iput-object p3, p0, Lorg/telegram/messenger/query/DraftQuery$4;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
@@ -44,7 +43,6 @@
     .locals 8
 
     .prologue
-    .line 278
     invoke-static {}, Lorg/telegram/messenger/query/DraftQuery;->access$200()Ljava/util/HashMap;
 
     move-result-object v2
@@ -61,7 +59,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$DraftMessage;
 
-    .line 279
     .local v0, "draftMessage":Lorg/telegram/tgnet/TLRPC$DraftMessage;
     if-eqz v0, :cond_0
 
@@ -73,7 +70,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 280
     invoke-static {}, Lorg/telegram/messenger/query/DraftQuery;->access$300()Ljava/util/HashMap;
 
     move-result-object v2
@@ -88,7 +84,6 @@
 
     invoke-virtual {v2, v3, v4}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 281
     new-instance v1, Lorg/telegram/tgnet/SerializedData;
 
     iget-object v2, p0, Lorg/telegram/messenger/query/DraftQuery$4;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
@@ -99,13 +94,11 @@
 
     invoke-direct {v1, v2}, Lorg/telegram/tgnet/SerializedData;-><init>(I)V
 
-    .line 282
     .local v1, "serializedData":Lorg/telegram/tgnet/SerializedData;
     iget-object v2, p0, Lorg/telegram/messenger/query/DraftQuery$4;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
 
     invoke-virtual {v2, v1}, Lorg/telegram/tgnet/TLRPC$Message;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 283
     invoke-static {}, Lorg/telegram/messenger/query/DraftQuery;->access$400()Landroid/content/SharedPreferences;
 
     move-result-object v2
@@ -148,7 +141,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 284
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -171,7 +163,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 286
     .end local v1    # "serializedData":Lorg/telegram/tgnet/SerializedData;
     :cond_0
     return-void

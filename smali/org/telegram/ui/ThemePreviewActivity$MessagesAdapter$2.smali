@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     .prologue
-    .line 833
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter$2;->this$1:Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatActionCell;
 
     .prologue
-    .line 837
     return-void
 .end method
 
@@ -51,7 +49,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatActionCell;
 
     .prologue
-    .line 842
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .param p2, "button"    # Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     .prologue
-    .line 857
     return-void
 .end method
 
@@ -71,7 +67,6 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 852
     return-void
 .end method
 
@@ -80,6 +75,5 @@
     .param p1, "uid"    # I
 
     .prologue
-    .line 847
     return-void
 .end method

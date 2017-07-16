@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 172
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$1;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 2
 
     .prologue
-    .line 175
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$1;->this$0:Lorg/telegram/messenger/ContactsController;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/ContactsController;->access$002(Lorg/telegram/messenger/ContactsController;I)I
 
-    .line 176
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/HsvSelectorView;
 
     .prologue
-    .line 73
     iput-object p1, p0, Lorg/telegram/ui/Components/HsvSelectorView$2;->this$0:Lorg/telegram/ui/Components/HsvSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .param p4, "up"    # Z
 
     .prologue
-    .line 77
     iget-object v0, p0, Lorg/telegram/ui/Components/HsvSelectorView$2;->this$0:Lorg/telegram/ui/Components/HsvSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/HsvSelectorView;->access$200(Lorg/telegram/ui/Components/HsvSelectorView;)Lorg/telegram/ui/Components/HsvAlphaSelectorView;
@@ -62,7 +60,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setColor(I)V
 
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/HsvSelectorView$2;->this$0:Lorg/telegram/ui/Components/HsvSelectorView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvSelectorView$2;->this$0:Lorg/telegram/ui/Components/HsvSelectorView;
@@ -75,6 +72,5 @@
 
     invoke-static {v0, v1, p4}, Lorg/telegram/ui/Components/HsvSelectorView;->access$100(Lorg/telegram/ui/Components/HsvSelectorView;IZ)V
 
-    .line 79
     return-void
 .end method

@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 36
     const-string/jumbo v0, "[0-9]+"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -47,10 +46,8 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -74,7 +71,6 @@
 
     const/4 v8, 0x0
 
-    .line 39
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -83,18 +79,15 @@
 
     if-lt v6, v7, :cond_5
 
-    .line 40
     iget v6, p0, Lorg/telegram/PhoneFormat/RuleSet;->matchLen:I
 
     invoke-virtual {p1, v8, v6}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 42
     .local v0, "begin":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 43
     .local v4, "val":I
     sget-object v6, Lorg/telegram/PhoneFormat/RuleSet;->pattern:Ljava/util/regex/Pattern;
 
@@ -102,7 +95,6 @@
 
     move-result-object v1
 
-    .line 44
     .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -110,18 +102,15 @@
 
     if-eqz v6, :cond_0
 
-    .line 45
     invoke-virtual {v1, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 46
     .local v2, "num":Ljava/lang/String;
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 49
     .end local v2    # "num":Ljava/lang/String;
     :cond_0
     iget-object v6, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
@@ -143,7 +132,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 50
     .local v3, "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -161,10 +149,8 @@
 
     if-gt v7, v8, :cond_1
 
-    .line 51
     if-eqz p4, :cond_6
 
-    .line 52
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
 
     and-int/lit8 v7, v7, 0x3
@@ -193,13 +179,11 @@
 
     if-eqz v7, :cond_1
 
-    .line 53
     :cond_4
     invoke-virtual {v3, p1, p2, p3}, Lorg/telegram/PhoneFormat/PhoneRule;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 85
     .end local v0    # "begin":Ljava/lang/String;
     .end local v1    # "matcher":Ljava/util/regex/Matcher;
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
@@ -208,7 +192,6 @@
     :goto_0
     return-object v5
 
-    .line 56
     .restart local v0    # "begin":Ljava/lang/String;
     .restart local v1    # "matcher":Ljava/util/regex/Matcher;
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
@@ -236,7 +219,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 57
     :cond_9
     invoke-virtual {v3, p1, p2, p3}, Lorg/telegram/PhoneFormat/PhoneRule;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -244,15 +226,12 @@
 
     goto :goto_0
 
-    .line 63
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     :cond_a
     if-nez p4, :cond_5
 
-    .line 64
     if-eqz p2, :cond_d
 
-    .line 65
     iget-object v6, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -272,7 +251,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 66
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -290,7 +268,6 @@
 
     if-gt v7, v8, :cond_b
 
-    .line 67
     if-eqz p3, :cond_c
 
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
@@ -299,7 +276,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 68
     :cond_c
     invoke-virtual {v3, p1, p2, p3}, Lorg/telegram/PhoneFormat/PhoneRule;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -307,12 +283,10 @@
 
     goto :goto_0
 
-    .line 72
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     :cond_d
     if-eqz p3, :cond_5
 
-    .line 73
     iget-object v6, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v6}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -332,7 +306,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 74
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -350,7 +323,6 @@
 
     if-gt v7, v8, :cond_e
 
-    .line 75
     if-eqz p2, :cond_f
 
     iget v7, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
@@ -359,7 +331,6 @@
 
     if-eqz v7, :cond_e
 
-    .line 76
     :cond_f
     invoke-virtual {v3, p1, p2, p3}, Lorg/telegram/PhoneFormat/PhoneRule;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
@@ -380,7 +351,6 @@
 
     const/4 v6, 0x0
 
-    .line 90
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
     move-result v7
@@ -389,18 +359,15 @@
 
     if-lt v7, v8, :cond_d
 
-    .line 91
     iget v7, p0, Lorg/telegram/PhoneFormat/RuleSet;->matchLen:I
 
     invoke-virtual {p1, v6, v7}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 92
     .local v0, "begin":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 93
     .local v4, "val":I
     sget-object v7, Lorg/telegram/PhoneFormat/RuleSet;->pattern:Ljava/util/regex/Pattern;
 
@@ -408,7 +375,6 @@
 
     move-result-object v1
 
-    .line 94
     .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->find()Z
 
@@ -416,18 +382,15 @@
 
     if-eqz v7, :cond_0
 
-    .line 95
     invoke-virtual {v1, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 96
     .local v2, "num":Ljava/lang/String;
     invoke-static {v2}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
     move-result v4
 
-    .line 99
     .end local v2    # "num":Ljava/lang/String;
     :cond_0
     iget-object v7, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
@@ -449,7 +412,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 100
     .local v3, "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -467,10 +429,8 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 101
     if-eqz p4, :cond_5
 
-    .line 102
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
 
     and-int/lit8 v8, v8, 0x3
@@ -499,7 +459,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 135
     .end local v0    # "begin":Ljava/lang/String;
     .end local v1    # "matcher":Ljava/util/regex/Matcher;
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
@@ -508,7 +467,6 @@
     :goto_0
     return v5
 
-    .line 106
     .restart local v0    # "begin":Ljava/lang/String;
     .restart local v1    # "matcher":Ljava/util/regex/Matcher;
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
@@ -538,19 +496,16 @@
 
     goto :goto_0
 
-    .line 113
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     :cond_8
     if-nez p4, :cond_c
 
-    .line 114
     if-eqz p2, :cond_a
 
     iget-boolean v7, p0, Lorg/telegram/PhoneFormat/RuleSet;->hasRuleWithIntlPrefix:Z
 
     if-nez v7, :cond_a
 
-    .line 115
     iget-object v7, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -570,7 +525,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 116
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -588,7 +542,6 @@
 
     if-ne v8, v9, :cond_9
 
-    .line 117
     if-eqz p3, :cond_4
 
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
@@ -599,7 +552,6 @@
 
     goto :goto_0
 
-    .line 122
     .end local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     :cond_a
     if-eqz p3, :cond_c
@@ -608,7 +560,6 @@
 
     if-nez v7, :cond_c
 
-    .line 123
     iget-object v7, p0, Lorg/telegram/PhoneFormat/RuleSet;->rules:Ljava/util/ArrayList;
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -628,7 +579,6 @@
 
     check-cast v3, Lorg/telegram/PhoneFormat/PhoneRule;
 
-    .line 124
     .restart local v3    # "rule":Lorg/telegram/PhoneFormat/PhoneRule;
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->minVal:I
 
@@ -646,7 +596,6 @@
 
     if-ne v8, v9, :cond_b
 
-    .line 125
     if-eqz p2, :cond_4
 
     iget v8, v3, Lorg/telegram/PhoneFormat/PhoneRule;->flag12:I
@@ -661,7 +610,6 @@
     :cond_c
     move v5, v6
 
-    .line 133
     goto :goto_0
 
     .end local v0    # "begin":Ljava/lang/String;
@@ -670,6 +618,5 @@
     :cond_d
     move v5, v6
 
-    .line 135
     goto :goto_0
 .end method

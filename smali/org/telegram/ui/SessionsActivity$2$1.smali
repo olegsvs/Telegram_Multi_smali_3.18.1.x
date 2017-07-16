@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SessionsActivity$2;
 
     .prologue
-    .line 175
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity$2$1;->this$1:Lorg/telegram/ui/SessionsActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,12 +42,10 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 178
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_resetAuthorizations;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_auth_resetAuthorizations;-><init>()V
 
-    .line 179
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_resetAuthorizations;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -60,6 +57,5 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 204
     return-void
 .end method

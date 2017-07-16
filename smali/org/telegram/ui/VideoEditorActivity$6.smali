@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 677
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$6;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 680
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$6;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VideoEditorActivity;->finishFragment()V
 
-    .line 681
     return-void
 .end method

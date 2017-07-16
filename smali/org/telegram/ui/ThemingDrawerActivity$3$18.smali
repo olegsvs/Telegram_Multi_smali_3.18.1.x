@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     .prologue
-    .line 556
     iput-object p1, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$18;->this$1:Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$18;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 559
     iget-object v0, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$18;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -62,7 +60,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 560
     iget-object v0, p0, Lorg/telegram/ui/ThemingDrawerActivity$3$18;->this$1:Lorg/telegram/ui/ThemingDrawerActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingDrawerActivity$3;->this$0:Lorg/telegram/ui/ThemingDrawerActivity;
@@ -77,7 +74,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/ThemingDrawerActivity;->access$300(Lorg/telegram/ui/ThemingDrawerActivity;Ljava/lang/String;I)V
 
-    .line 562
     :cond_0
     return-void
 .end method

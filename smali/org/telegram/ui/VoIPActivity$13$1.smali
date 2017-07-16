@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VoIPActivity$13;
 
     .prologue
-    .line 682
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$13$1;->this$1:Lorg/telegram/ui/VoIPActivity$13;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 685
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$13$1;->this$1:Lorg/telegram/ui/VoIPActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$13;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -52,7 +50,6 @@
 
     if-nez v0, :cond_0
 
-    .line 686
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$13$1;->this$1:Lorg/telegram/ui/VoIPActivity$13;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$13;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 687
     :cond_0
     return-void
 .end method

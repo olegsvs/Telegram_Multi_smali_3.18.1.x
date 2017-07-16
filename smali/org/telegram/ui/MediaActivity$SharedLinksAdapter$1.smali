@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;
 
     .prologue
-    .line 1592
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 1600
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -72,13 +70,11 @@
     .param p1, "webPage"    # Lorg/telegram/tgnet/TLRPC$WebPage;
 
     .prologue
-    .line 1595
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/MediaActivity;->access$3600(Lorg/telegram/ui/MediaActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)V
 
-    .line 1596
     return-void
 .end method

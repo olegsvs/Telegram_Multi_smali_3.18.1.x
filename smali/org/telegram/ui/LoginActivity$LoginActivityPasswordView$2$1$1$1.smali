@@ -29,7 +29,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1;
 
     .prologue
-    .line 1994
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1$1;->val$res:Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
@@ -47,12 +46,10 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1997
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1998
     .local v0, "bundle":Landroid/os/Bundle;
     const-string/jumbo v1, "email_unconfirmed_pattern"
 
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1999
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2$1;
@@ -81,6 +77,5 @@
 
     invoke-virtual {v1, v2, v3, v0, v4}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 2000
     return-void
 .end method

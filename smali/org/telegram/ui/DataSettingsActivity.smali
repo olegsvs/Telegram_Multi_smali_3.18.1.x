@@ -52,10 +52,8 @@
     .locals 0
 
     .prologue
-    .line 46
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 296
     return-void
 .end method
 
@@ -64,7 +62,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->wifiDownloadRow:I
 
     return v0
@@ -75,7 +72,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mobileDownloadRow:I
 
     return v0
@@ -86,7 +82,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->wifiUsageRow:I
 
     return v0
@@ -97,7 +92,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     return v0
@@ -108,7 +102,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->callsSection2Row:I
 
     return v0
@@ -119,7 +112,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->usageSection2Row:I
 
     return v0
@@ -130,7 +122,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mediaDownloadSectionRow:I
 
     return v0
@@ -141,7 +132,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->usageSectionRow:I
 
     return v0
@@ -152,7 +142,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->callsSectionRow:I
 
     return v0
@@ -163,7 +152,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mediaDownloadSection2Row:I
 
     return v0
@@ -174,7 +162,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->roamingDownloadRow:I
 
     return v0
@@ -185,7 +172,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->visibleDialog:Landroid/app/Dialog;
 
     return-object v0
@@ -196,7 +182,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->visibleDialog:Landroid/app/Dialog;
 
     return-object v0
@@ -207,7 +192,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->listAdapter:Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
     return-object v0
@@ -218,7 +202,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->storageUsageRow:I
 
     return v0
@@ -229,7 +212,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->useLessDataForCallsRow:I
 
     return v0
@@ -240,7 +222,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mobileUsageRow:I
 
     return v0
@@ -251,7 +232,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/DataSettingsActivity;
 
     .prologue
-    .line 46
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->roamingUsageRow:I
 
     return v0
@@ -268,14 +248,12 @@
 
     const/4 v4, 0x0
 
-    .line 98
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 99
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "DataSettings"
@@ -288,19 +266,16 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 100
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 101
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setOccupyStatusBar(Z)V
 
-    .line 103
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -310,21 +285,18 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 112
     new-instance v1, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;-><init>(Lorg/telegram/ui/DataSettingsActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listAdapter:Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
-    .line 114
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->fragmentView:Landroid/view/View;
 
-    .line 115
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->fragmentView:Landroid/view/View;
 
     const-string/jumbo v2, "windowBackgroundGray"
@@ -335,12 +307,10 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 118
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -348,12 +318,10 @@
 
     iput-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 119
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 120
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -364,7 +332,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 121
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/16 v2, 0x33
@@ -375,14 +342,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 122
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/DataSettingsActivity;->listAdapter:Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 123
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/DataSettingsActivity$2;
@@ -391,12 +356,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 278
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;)V
 
-    .line 280
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -406,7 +369,6 @@
     .locals 11
 
     .prologue
-    .line 469
     const/16 v0, 0xf
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -875,14 +837,12 @@
     .param p1, "dialog"    # Landroid/app/Dialog;
 
     .prologue
-    .line 285
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->checkAutodownloadSettings()V
 
-    .line 286
     return-void
 .end method
 
@@ -892,15 +852,12 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 69
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 71
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
-    .line 72
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -909,7 +866,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mediaDownloadSectionRow:I
 
-    .line 73
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -918,7 +874,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mobileDownloadRow:I
 
-    .line 74
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -927,7 +882,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->wifiDownloadRow:I
 
-    .line 75
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -936,7 +890,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->roamingDownloadRow:I
 
-    .line 76
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -945,7 +898,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mediaDownloadSection2Row:I
 
-    .line 77
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -954,7 +906,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->usageSectionRow:I
 
-    .line 78
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -963,7 +914,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->storageUsageRow:I
 
-    .line 79
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -972,7 +922,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->mobileUsageRow:I
 
-    .line 80
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -981,7 +930,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->wifiUsageRow:I
 
-    .line 81
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -990,7 +938,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->roamingUsageRow:I
 
-    .line 82
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -999,7 +946,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1008,7 +954,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->usageSection2Row:I
 
-    .line 84
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1017,7 +962,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->callsSectionRow:I
 
-    .line 85
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1026,7 +970,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->useLessDataForCallsRow:I
 
-    .line 91
     :goto_0
     iget v0, p0, Lorg/telegram/ui/DataSettingsActivity;->rowCount:I
 
@@ -1036,19 +979,15 @@
 
     iput v0, p0, Lorg/telegram/ui/DataSettingsActivity;->callsSection2Row:I
 
-    .line 93
     const/4 v0, 0x1
 
     return v0
 
-    .line 87
     :cond_0
     iput v2, p0, Lorg/telegram/ui/DataSettingsActivity;->usageSection2Row:I
 
-    .line 88
     iput v2, p0, Lorg/telegram/ui/DataSettingsActivity;->callsSectionRow:I
 
-    .line 89
     iput v2, p0, Lorg/telegram/ui/DataSettingsActivity;->useLessDataForCallsRow:I
 
     goto :goto_0
@@ -1058,20 +997,16 @@
     .locals 1
 
     .prologue
-    .line 290
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 291
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->listAdapter:Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 292
     iget-object v0, p0, Lorg/telegram/ui/DataSettingsActivity;->listAdapter:Lorg/telegram/ui/DataSettingsActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 294
     :cond_0
     return-void
 .end method

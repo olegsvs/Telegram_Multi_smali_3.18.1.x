@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/video/Track;
 
     .prologue
-    .line 272
     iput-object p1, p0, Lorg/telegram/messenger/video/Track$1;->this$0:Lorg/telegram/messenger/video/Track;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 272
     check-cast p1, Lorg/telegram/messenger/video/Track$SamplePresentationTime;
 
     check-cast p2, Lorg/telegram/messenger/video/Track$SamplePresentationTime;
@@ -69,7 +67,6 @@
     .param p2, "o2"    # Lorg/telegram/messenger/video/Track$SamplePresentationTime;
 
     .prologue
-    .line 275
     invoke-static {p1}, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->access$000(Lorg/telegram/messenger/video/Track$SamplePresentationTime;)J
 
     move-result-wide v0
@@ -82,14 +79,11 @@
 
     if-lez v0, :cond_0
 
-    .line 276
     const/4 v0, 0x1
 
-    .line 280
     :goto_0
     return v0
 
-    .line 277
     :cond_0
     invoke-static {p1}, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->access$000(Lorg/telegram/messenger/video/Track$SamplePresentationTime;)J
 
@@ -103,12 +97,10 @@
 
     if-gez v0, :cond_1
 
-    .line 278
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 280
     :cond_1
     const/4 v0, 0x0
 

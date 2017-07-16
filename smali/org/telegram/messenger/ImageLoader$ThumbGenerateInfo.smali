@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/ImageLoader$1;
 
     .prologue
-    .line 90
     invoke-direct {p0, p1}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;-><init>(Lorg/telegram/messenger/ImageLoader;)V
 
     return-void
@@ -54,7 +52,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;
 
     .prologue
-    .line 90
     iget v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->count:I
 
     return v0
@@ -65,7 +62,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;
 
     .prologue
-    .line 90
     iget v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->count:I
 
     add-int/lit8 v1, v0, 0x1
@@ -80,7 +76,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;
 
     .prologue
-    .line 90
     iget v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->count:I
 
     add-int/lit8 v1, v0, -0x1
@@ -95,7 +90,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;
 
     .prologue
-    .line 90
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->fileLocation:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     return-object v0
@@ -107,7 +101,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->fileLocation:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     return-object p1
@@ -118,7 +111,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;
 
     .prologue
-    .line 90
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->filter:Ljava/lang/String;
 
     return-object v0
@@ -130,7 +122,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateInfo;->filter:Ljava/lang/String;
 
     return-object p1

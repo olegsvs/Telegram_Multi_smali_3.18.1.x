@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$4;
 
     .prologue
-    .line 561
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$4$4;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iput p2, p0, Lorg/telegram/ui/SettingsActivity$4$4;->val$position:I
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 564
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "mainconfig"
@@ -58,22 +56,18 @@
 
     move-result-object v1
 
-    .line 565
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 566
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "sortContactsBy"
 
     invoke-interface {v0, v2, p2}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 567
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 568
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$4;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iget-object v2, v2, Lorg/telegram/ui/SettingsActivity$4;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -84,7 +78,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 569
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$4;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iget-object v2, v2, Lorg/telegram/ui/SettingsActivity$4;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -97,7 +90,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/SettingsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 571
     :cond_0
     return-void
 .end method

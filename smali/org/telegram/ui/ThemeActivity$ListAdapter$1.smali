@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     .prologue
-    .line 248
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
 
     const/4 v4, 0x0
 
-    .line 251
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v3
@@ -59,7 +57,6 @@
 
     move-result-object v2
 
-    .line 252
     .local v2, "themeInfo":Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
     iget-object v3, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
@@ -71,11 +68,9 @@
 
     if-nez v3, :cond_0
 
-    .line 343
     :goto_0
     return-void
 
-    .line 256
     :cond_0
     new-instance v0, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
@@ -89,25 +84,21 @@
 
     invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 258
     .local v0, "builder":Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
     iget-object v3, v2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->pathToFile:Ljava/lang/String;
 
     if-nez v3, :cond_1
 
-    .line 259
     new-array v1, v5, [Ljava/lang/CharSequence;
 
     const-string/jumbo v3, "ShareFile"
 
-    .line 260
     invoke-static {v3, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
 
     aput-object v3, v1, v4
 
-    .line 268
     .local v1, "items":[Ljava/lang/CharSequence;
     :goto_1
     new-instance v3, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;
@@ -116,7 +107,6 @@
 
     invoke-virtual {v0, v1, v3}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 342
     iget-object v3, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     iget-object v3, v3, Lorg/telegram/ui/ThemeActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemeActivity;
@@ -129,7 +119,6 @@
 
     goto :goto_0
 
-    .line 263
     .end local v1    # "items":[Ljava/lang/CharSequence;
     :cond_1
     const/4 v3, 0x3
@@ -138,7 +127,6 @@
 
     const-string/jumbo v3, "ShareFile"
 
-    .line 264
     invoke-static {v3, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -149,7 +137,6 @@
 
     const v4, 0x7f07020b
 
-    .line 265
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v3
@@ -162,7 +149,6 @@
 
     const v5, 0x7f0701d9
 
-    .line 266
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 174
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$3;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 177
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 178
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity$3;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeUsernameActivity;->access$100(Lorg/telegram/ui/ChangeUsernameActivity;)Landroid/view/View;
@@ -66,10 +63,8 @@
 
     invoke-virtual {v0}, Landroid/view/View;->performClick()Z
 
-    .line 179
     const/4 v0, 0x1
 
-    .line 181
     :goto_0
     return v0
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/StickerPreviewViewer;
 
     .prologue
-    .line 561
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$5;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 564
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$5;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$800(Lorg/telegram/ui/StickerPreviewViewer;)Lorg/telegram/messenger/ImageReceiver;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 565
     return-void
 .end method

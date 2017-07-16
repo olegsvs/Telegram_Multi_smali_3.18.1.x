@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 6779
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,20 +43,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6787
     const/4 v0, 0x0
 
-    .line 6788
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     sparse-switch p1, :sswitch_data_0
 
-    .line 6799
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 6800
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputFileLocation"
@@ -82,29 +77,24 @@
 
     throw v1
 
-    .line 6790
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileLocation;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileLocation;-><init>()V
 
-    .line 6791
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     goto :goto_0
 
-    .line 6793
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputDocumentFileLocation;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputDocumentFileLocation;-><init>()V
 
-    .line 6794
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     goto :goto_0
 
-    .line 6796
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputFileLocation;
 
@@ -114,18 +104,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputFileLocation;
     goto :goto_0
 
-    .line 6802
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6803
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputFileLocation;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 6805
     :cond_1
     return-object v0
 
-    .line 6788
     nop
 
     :sswitch_data_0

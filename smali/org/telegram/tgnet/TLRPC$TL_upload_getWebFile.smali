@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 26125
     const v0, 0x24e6818d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_upload_getWebFile;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 26124
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 26132
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_upload_webFile;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_upload_webFile;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 26136
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_upload_getWebFile;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26137
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_getWebFile;->location:Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputWebFileLocation;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 26138
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_getWebFile;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26139
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_getWebFile;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26140
     return-void
 .end method

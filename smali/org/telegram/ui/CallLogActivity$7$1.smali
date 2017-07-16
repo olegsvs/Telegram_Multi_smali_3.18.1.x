@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CallLogActivity$7;
 
     .prologue
-    .line 331
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$7$1;->this$1:Lorg/telegram/ui/CallLogActivity$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "param"    # Ljava/lang/String;
 
     .prologue
-    .line 334
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$7$1;->this$1:Lorg/telegram/ui/CallLogActivity$7;
 
     iget-object v0, v0, Lorg/telegram/ui/CallLogActivity$7;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -56,6 +54,5 @@
 
     invoke-static {p1, v0, v1}, Lorg/telegram/ui/Components/voip/VoIPHelper;->startCall(Lorg/telegram/tgnet/TLRPC$User;Landroid/app/Activity;Lorg/telegram/tgnet/TLRPC$TL_userFull;)V
 
-    .line 335
     return-void
 .end method

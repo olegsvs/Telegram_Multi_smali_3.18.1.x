@@ -439,7 +439,6 @@
 
 .field public static final CallMessageIncoming:I = 0x7f0700e3
 
-.field public static final CallMessageIncomingDeclined:I = 0x7f0700e4
 
 .field public static final CallMessageIncomingMissed:I = 0x7f0700e5
 
@@ -2213,25 +2212,15 @@
 
 .field public static final OfficialChannel:I = 0x7f070454
 
-.field public static final Offline:I = 0x7f070455
 
-.field public static final Online:I = 0x7f070456
 
-.field public static final OnlineColor:I = 0x7f070457
 
-.field public static final OnlineToastHelp:I = 0x7f070458
 
-.field public static final Online_few:I = 0x7f070459
 
-.field public static final Online_many:I = 0x7f07045a
 
-.field public static final Online_one:I = 0x7f07045b
 
-.field public static final Online_other:I = 0x7f07045c
 
-.field public static final Online_two:I = 0x7f07045d
 
-.field public static final Online_zero:I = 0x7f07045e
 
 .field public static final OnlyIfSilent:I = 0x7f07045f
 
@@ -2299,7 +2288,6 @@
 
 .field public static final PaintEdit:I = 0x7f07047f
 
-.field public static final PaintOutlined:I = 0x7f070480
 
 .field public static final PaintRegular:I = 0x7f070481
 
@@ -2947,7 +2935,6 @@
 
 .field public static final ShareYouLocationInfo:I = 0x7f0705c2
 
-.field public static final ShareYouLocationInline:I = 0x7f0705c3
 
 .field public static final ShareYouLocationTitle:I = 0x7f0705c4
 
@@ -2991,9 +2978,7 @@
 
 .field public static final ShowMySettings:I = 0x7f07073b
 
-.field public static final ShowOfflineToast:I = 0x7f0705d7
 
-.field public static final ShowOnlineToast:I = 0x7f0705d8
 
 .field public static final ShowOnlyIfContactFav:I = 0x7f0705d9
 
@@ -3329,7 +3314,6 @@
 
 .field public static final VoipConnecting:I = 0x7f07067d
 
-.field public static final VoipDeclineCall:I = 0x7f07067e
 
 .field public static final VoipEndCall:I = 0x7f07067f
 
@@ -3351,15 +3335,10 @@
 
 .field public static final VoipNotificationSettings:I = 0x7f070688
 
-.field public static final VoipOffline:I = 0x7f070689
 
-.field public static final VoipOfflineAirplane:I = 0x7f07068a
 
-.field public static final VoipOfflineAirplaneTitle:I = 0x7f07068b
 
-.field public static final VoipOfflineOpenSettings:I = 0x7f07068c
 
-.field public static final VoipOfflineTitle:I = 0x7f07068d
 
 .field public static final VoipOngoingAlert:I = 0x7f07068e
 
@@ -3649,9 +3628,7 @@
 
 .field public static final hockeyapp_login_email_hint:I = 0x7f07071f
 
-.field public static final hockeyapp_login_headline_text:I = 0x7f070720
 
-.field public static final hockeyapp_login_headline_text_email_only:I = 0x7f070721
 
 .field public static final hockeyapp_login_login_button_text:I = 0x7f070722
 
@@ -3735,7 +3712,6 @@
     .locals 0
 
     .prologue
-    .line 1105
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

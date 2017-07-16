@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 11499
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,20 +43,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 11507
     const/4 v0, 0x0
 
-    .line 11508
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$EncryptedMessage;
     sparse-switch p1, :sswitch_data_0
 
-    .line 11516
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 11517
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in EncryptedMessage"
@@ -82,18 +77,15 @@
 
     throw v1
 
-    .line 11510
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedMessageService;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedMessage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedMessageService;-><init>()V
 
-    .line 11511
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedMessage;
     goto :goto_0
 
-    .line 11513
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedMessage;
 
@@ -103,18 +95,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedMessage;
     goto :goto_0
 
-    .line 11519
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 11520
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$EncryptedMessage;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 11522
     :cond_1
     return-object v0
 
-    .line 11508
     nop
 
     :sswitch_data_0

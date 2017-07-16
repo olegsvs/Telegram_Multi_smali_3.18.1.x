@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 17861
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -38,20 +37,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17866
     const/4 v0, 0x0
 
-    .line 17867
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     sparse-switch p1, :sswitch_data_0
 
-    .line 17905
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 17906
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in MessagesFilter"
@@ -76,128 +71,105 @@
 
     throw v1
 
-    .line 17869
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterGif;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterGif;-><init>()V
 
-    .line 17870
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17872
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;-><init>()V
 
-    .line 17873
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17875
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterChatPhotos;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterChatPhotos;-><init>()V
 
-    .line 17876
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17878
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotos;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotos;-><init>()V
 
-    .line 17879
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17881
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;-><init>()V
 
-    .line 17882
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17884
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;-><init>()V
 
-    .line 17885
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17887
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideo;-><init>()V
 
-    .line 17888
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17890
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideoDocuments;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhotoVideoDocuments;-><init>()V
 
-    .line 17891
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17893
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterVoice;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterVoice;-><init>()V
 
-    .line 17894
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17896
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterVideo;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterVideo;-><init>()V
 
-    .line 17897
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17899
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhoneCalls;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterPhoneCalls;-><init>()V
 
-    .line 17900
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17902
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterEmpty;
 
@@ -207,18 +179,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessagesFilter;
     goto :goto_0
 
-    .line 17908
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 17909
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$MessagesFilter;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 17911
     :cond_1
     return-object v0
 
-    .line 17867
     nop
 
     :sswitch_data_0

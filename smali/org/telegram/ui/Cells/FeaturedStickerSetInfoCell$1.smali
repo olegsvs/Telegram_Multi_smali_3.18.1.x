@@ -26,12 +26,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$1;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 54
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -50,7 +48,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$1;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "featuredStickers_unread"
@@ -61,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 59
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -84,7 +80,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 60
     return-void
 .end method
 
@@ -92,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 84
     const/high16 v0, 0x41d00000    # 26.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -106,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/high16 v0, 0x41400000    # 12.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -120,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return v0
@@ -131,7 +123,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 65
     return-void
 .end method
 
@@ -140,6 +131,5 @@
     .param p1, "colorFilter"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 70
     return-void
 .end method

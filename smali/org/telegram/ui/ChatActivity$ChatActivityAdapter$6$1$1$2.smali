@@ -29,7 +29,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1;
 
     .prologue
-    .line 10963
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$2;->this$4:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 10966
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -64,6 +62,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/AlertsCreator;->showAddUserAlert(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;Z)V
 
-    .line 10967
     return-void
 .end method

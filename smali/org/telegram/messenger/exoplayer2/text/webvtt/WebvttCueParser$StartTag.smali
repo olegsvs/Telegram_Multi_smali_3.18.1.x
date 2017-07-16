@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 481
     const/4 v0, 0x0
 
     new-array v0, v0, [Ljava/lang/String;
@@ -51,22 +50,16 @@
     .param p4, "classes"    # [Ljava/lang/String;
 
     .prologue
-    .line 488
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 489
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->position:I
 
-    .line 490
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
-    .line 491
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->voice:Ljava/lang/String;
 
-    .line 492
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->classes:[Ljava/lang/String;
 
-    .line 493
     return-void
 .end method
 
@@ -80,26 +73,21 @@
 
     const/4 v6, 0x0
 
-    .line 496
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 497
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 498
     const/4 v5, 0x0
 
-    .line 516
     :goto_0
     return-object v5
 
-    .line 500
     :cond_0
     const-string/jumbo v5, " "
 
@@ -107,16 +95,13 @@
 
     move-result v4
 
-    .line 502
     .local v4, "voiceStartIndex":I
     const/4 v5, -0x1
 
     if-ne v4, v5, :cond_1
 
-    .line 503
     const-string/jumbo v3, ""
 
-    .line 508
     .local v3, "voice":Ljava/lang/String;
     :goto_1
     const-string/jumbo v5, "\\."
@@ -125,17 +110,14 @@
 
     move-result-object v2
 
-    .line 509
     .local v2, "nameAndClasses":[Ljava/lang/String;
     aget-object v1, v2, v6
 
-    .line 511
     .local v1, "name":Ljava/lang/String;
     array-length v5, v2
 
     if-le v5, v7, :cond_2
 
-    .line 512
     array-length v5, v2
 
     invoke-static {v2, v7, v5}, Ljava/util/Arrays;->copyOfRange([Ljava/lang/Object;II)[Ljava/lang/Object;
@@ -144,7 +126,6 @@
 
     check-cast v0, [Ljava/lang/String;
 
-    .line 516
     .local v0, "classes":[Ljava/lang/String;
     :goto_2
     new-instance v5, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
@@ -153,7 +134,6 @@
 
     goto :goto_0
 
-    .line 505
     .end local v0    # "classes":[Ljava/lang/String;
     .end local v1    # "name":Ljava/lang/String;
     .end local v2    # "nameAndClasses":[Ljava/lang/String;
@@ -167,7 +147,6 @@
 
     move-result-object v3
 
-    .line 506
     .restart local v3    # "voice":Ljava/lang/String;
     invoke-virtual {p0, v6, v4}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
@@ -175,7 +154,6 @@
 
     goto :goto_1
 
-    .line 514
     .restart local v1    # "name":Ljava/lang/String;
     .restart local v2    # "nameAndClasses":[Ljava/lang/String;
     :cond_2
@@ -191,7 +169,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 520
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
     const-string/jumbo v1, ""

@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1;
 
     .prologue
-    .line 1730
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +42,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1733
     new-instance v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;-><init>(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1753
     return-void
 .end method

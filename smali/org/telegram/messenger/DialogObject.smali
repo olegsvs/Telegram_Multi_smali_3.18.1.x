@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -19,7 +18,6 @@
     .param p0, "dialog"    # Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     .prologue
-    .line 16
     if-eqz p0, :cond_0
 
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->flags:I

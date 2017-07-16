@@ -23,10 +23,8 @@
     .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 34
     invoke-direct {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>(Landroid/os/Bundle;)V
 
-    .line 35
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ImageListActivity;
 
     .prologue
-    .line 29
     iget v0, p0, Lorg/telegram/ui/ImageListActivity;->arrayId:I
 
     return v0
@@ -46,7 +43,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ImageListActivity;
 
     .prologue
-    .line 29
     iget-object v0, p0, Lorg/telegram/ui/ImageListActivity;->listAdapter:Lorg/telegram/ui/ImageListActivity$CustomListAdapter;
 
     return-object v0
@@ -61,21 +57,18 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 61
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 62
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 63
     iget-object v2, p0, Lorg/telegram/ui/ImageListActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget v1, p0, Lorg/telegram/ui/ImageListActivity;->arrayId:I
@@ -93,7 +86,6 @@
     :goto_0
     invoke-virtual {v2, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 64
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/ImageListActivity$1;
@@ -102,7 +94,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 73
     invoke-virtual {p0}, Lorg/telegram/ui/ImageListActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -121,7 +112,6 @@
 
     iput-object v1, p0, Lorg/telegram/ui/ImageListActivity;->fragmentView:Landroid/view/View;
 
-    .line 75
     new-instance v3, Lorg/telegram/ui/ImageListActivity$CustomListAdapter;
 
     iget v1, p0, Lorg/telegram/ui/ImageListActivity;->arrayId:I
@@ -142,7 +132,6 @@
 
     iput-object v3, p0, Lorg/telegram/ui/ImageListActivity;->listAdapter:Lorg/telegram/ui/ImageListActivity$CustomListAdapter;
 
-    .line 76
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->fragmentView:Landroid/view/View;
 
     const v2, 0x7f0c004a
@@ -153,28 +142,23 @@
 
     check-cast v0, Landroid/widget/ListView;
 
-    .line 77
     .local v0, "list":Landroid/widget/ListView;
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->listAdapter:Lorg/telegram/ui/ImageListActivity$CustomListAdapter;
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 78
     invoke-virtual {v0, v4}, Landroid/widget/ListView;->setDivider(Landroid/graphics/drawable/Drawable;)V
 
-    .line 80
     new-instance v1, Lorg/telegram/ui/ImageListActivity$2;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/ImageListActivity$2;-><init>(Lorg/telegram/ui/ImageListActivity;)V
 
     invoke-virtual {v0, v1}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 106
     iget-object v1, p0, Lorg/telegram/ui/ImageListActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
 
-    .line 63
     .end local v0    # "list":Landroid/widget/ListView;
     :cond_0
     const-string/jumbo v1, "CheckStyle"
@@ -187,7 +171,6 @@
 
     goto :goto_0
 
-    .line 75
     :cond_1
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->checksNamesArray:[Ljava/lang/String;
 
@@ -203,7 +186,6 @@
     .locals 3
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/ImageListActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v1, "array_id"
@@ -216,16 +198,13 @@
 
     iput v0, p0, Lorg/telegram/ui/ImageListActivity;->arrayId:I
 
-    .line 41
     iget v0, p0, Lorg/telegram/ui/ImageListActivity;->arrayId:I
 
     if-eqz v0, :cond_0
 
-    .line 45
     :cond_0
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 46
     const/4 v0, 0x1
 
     return v0

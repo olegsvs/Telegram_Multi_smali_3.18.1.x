@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     .prologue
-    .line 1976
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -48,7 +47,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1979
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     invoke-static {v1}, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->access$5000(Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;)Z
@@ -57,19 +55,16 @@
 
     if-eqz v1, :cond_0
 
-    .line 1980
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LoginActivity;->access$1700(Lorg/telegram/ui/LoginActivity;)V
 
-    .line 1981
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;-><init>()V
 
-    .line 1982
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -83,12 +78,10 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 2031
     .end local v0    # "req":Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
     :goto_0
     return-void
 
-    .line 2026
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
@@ -98,7 +91,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2027
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     invoke-static {v1}, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->access$5200(Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;)Landroid/widget/TextView;
@@ -107,7 +99,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2028
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     invoke-static {v1}, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->access$5300(Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;)Landroid/widget/EditText;
@@ -116,7 +107,6 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 2029
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->this$0:Lorg/telegram/ui/LoginActivity;

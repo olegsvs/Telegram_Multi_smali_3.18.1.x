@@ -24,7 +24,6 @@
     .param p1, "errorCode"    # I
 
     .prologue
-    .line 116
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -45,9 +44,7 @@
 
     invoke-direct {p0, v0}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 117
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$WriteException;->errorCode:I
 
-    .line 118
     return-void
 .end method

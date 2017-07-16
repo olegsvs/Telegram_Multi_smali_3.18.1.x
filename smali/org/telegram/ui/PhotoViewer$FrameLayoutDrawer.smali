@@ -26,32 +26,26 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 647
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 648
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;-><init>(Landroid/content/Context;)V
 
-    .line 645
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->paint:Landroid/graphics/Paint;
 
-    .line 649
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->setWillNotDraw(Z)V
 
-    .line 650
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x33000000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 651
     return-void
 .end method
 
@@ -68,7 +62,6 @@
 
     const/4 v1, 0x0
 
-    .line 766
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v3}, Lorg/telegram/ui/PhotoViewer;->access$2000(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -85,7 +78,6 @@
 
     if-ne p2, v3, :cond_3
 
-    .line 767
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -128,12 +120,10 @@
 
     if-nez v3, :cond_9
 
-    .line 779
     :cond_2
     :goto_0
     return v1
 
-    .line 770
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -195,7 +185,6 @@
 
     if-ne p2, v3, :cond_9
 
-    .line 771
     :cond_4
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getKeyboardHeight()I
 
@@ -223,7 +212,6 @@
 
     move-result v0
 
-    .line 772
     .local v0, "paddingBottom":I
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -257,7 +245,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 773
     :cond_6
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -269,17 +256,14 @@
     :cond_7
     move v0, v1
 
-    .line 771
     goto :goto_1
 
-    .line 776
     .restart local v0    # "paddingBottom":I
     :cond_8
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v3, v2}, Lorg/telegram/ui/PhotoViewer;->access$2802(Lorg/telegram/ui/PhotoViewer;Z)Z
 
-    .line 779
     .end local v0    # "paddingBottom":I
     :cond_9
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -308,12 +292,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 757
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/PhotoViewer;->access$2100(Lorg/telegram/ui/PhotoViewer;Landroid/graphics/Canvas;)V
 
-    .line 759
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v2, 0x15
@@ -324,7 +306,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 760
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getMeasuredWidth()I
 
     move-result v0
@@ -343,7 +324,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 762
     :cond_0
     return-void
 .end method
@@ -357,12 +337,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 690
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getChildCount()I
 
     move-result v4
 
-    .line 691
     .local v4, "count":I
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getKeyboardHeight()I
 
@@ -390,7 +368,6 @@
 
     move-result v9
 
-    .line 693
     .local v9, "paddingBottom":I
     :goto_0
     const/4 v7, 0x0
@@ -399,12 +376,10 @@
     :goto_1
     if-ge v7, v4, :cond_6
 
-    .line 694
     invoke-virtual {p0, v7}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 695
     .local v1, "child":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -414,13 +389,11 @@
 
     if-ne v12, v13, :cond_1
 
-    .line 693
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 691
     .end local v1    # "child":Landroid/view/View;
     .end local v7    # "i":I
     .end local v9    # "paddingBottom":I
@@ -429,7 +402,6 @@
 
     goto :goto_0
 
-    .line 698
     .restart local v1    # "child":Landroid/view/View;
     .restart local v7    # "i":I
     .restart local v9    # "paddingBottom":I
@@ -440,57 +412,45 @@
 
     check-cast v8, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 700
     .local v8, "lp":Landroid/widget/FrameLayout$LayoutParams;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v11
 
-    .line 701
     .local v11, "width":I
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 706
     .local v6, "height":I
     iget v5, v8, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 707
     .local v5, "gravity":I
     const/4 v12, -0x1
 
     if-ne v5, v12, :cond_2
 
-    .line 708
     const/16 v5, 0x33
 
-    .line 711
     :cond_2
     and-int/lit8 v0, v5, 0x7
 
-    .line 712
     .local v0, "absoluteGravity":I
     and-int/lit8 v10, v5, 0x70
 
-    .line 714
     .local v10, "verticalGravity":I
     and-int/lit8 v12, v0, 0x7
 
     sparse-switch v12, :sswitch_data_0
 
-    .line 723
     iget v2, v8, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 726
     .local v2, "childLeft":I
     :goto_3
     sparse-switch v10, :sswitch_data_1
 
-    .line 737
     iget v3, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 740
     .local v3, "childTop":I
     :goto_4
     iget-object v12, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -501,7 +461,6 @@
 
     if-ne v1, v12, :cond_4
 
-    .line 741
     iget-object v12, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v12}, Lorg/telegram/ui/PhotoViewer;->access$1800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -514,7 +473,6 @@
 
     sub-int/2addr v3, v12
 
-    .line 749
     :cond_3
     :goto_5
     add-int v12, v2, v11
@@ -525,7 +483,6 @@
 
     goto :goto_2
 
-    .line 716
     .end local v2    # "childLeft":I
     .end local v3    # "childTop":I
     :sswitch_0
@@ -543,11 +500,9 @@
 
     sub-int v2, v12, v13
 
-    .line 717
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 719
     .end local v2    # "childLeft":I
     :sswitch_1
     sub-int v12, p4, p2
@@ -558,19 +513,15 @@
 
     sub-int v2, v12, v13
 
-    .line 720
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 728
     :sswitch_2
     iget v3, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 729
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 731
     .end local v3    # "childTop":I
     :sswitch_3
     sub-int v12, p5, v9
@@ -589,11 +540,9 @@
 
     sub-int v3, v12, v13
 
-    .line 732
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 734
     .end local v3    # "childTop":I
     :sswitch_4
     sub-int v12, p5, v9
@@ -606,11 +555,9 @@
 
     sub-int v3, v12, v13
 
-    .line 735
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 742
     :cond_4
     iget-object v12, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -624,12 +571,10 @@
 
     if-eqz v12, :cond_3
 
-    .line 743
     sget-boolean v12, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-eqz v12, :cond_5
 
-    .line 744
     iget-object v12, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v12}, Lorg/telegram/ui/PhotoViewer;->access$1800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -656,7 +601,6 @@
 
     goto :goto_5
 
-    .line 746
     :cond_5
     iget-object v12, p0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -670,7 +614,6 @@
 
     goto :goto_5
 
-    .line 752
     .end local v0    # "absoluteGravity":I
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childLeft":I
@@ -683,17 +626,14 @@
     :cond_6
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->notifyHeightChanged()V
 
-    .line 753
     return-void
 
-    .line 714
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
         0x5 -> :sswitch_1
     .end sparse-switch
 
-    .line 726
     :sswitch_data_1
     .sparse-switch
         0x10 -> :sswitch_3
@@ -708,18 +648,15 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 655
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v17
 
-    .line 656
     .local v17, "widthSize":I
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v14
 
-    .line 658
     .local v14, "heightSize":I
     move-object/from16 v0, p0
 
@@ -727,7 +664,6 @@
 
     invoke-virtual {v0, v1, v14}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->setMeasuredDimension(II)V
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -748,7 +684,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 661
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -761,13 +696,11 @@
 
     move-result v16
 
-    .line 663
     .local v16, "inputFieldHeight":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getChildCount()I
 
     move-result v13
 
-    .line 664
     .local v13, "childCount":I
     const/4 v15, 0x0
 
@@ -775,14 +708,12 @@
     :goto_0
     if-ge v15, v13, :cond_7
 
-    .line 665
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v15}, Lorg/telegram/ui/PhotoViewer$FrameLayoutDrawer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 666
     .local v3, "child":Landroid/view/View;
     invoke-virtual {v3}, Landroid/view/View;->getVisibility()I
 
@@ -802,14 +733,12 @@
 
     if-ne v3, v2, :cond_1
 
-    .line 664
     :cond_0
     :goto_1
     add-int/lit8 v15, v15, 0x1
 
     goto :goto_0
 
-    .line 669
     :cond_1
     move-object/from16 v0, p0
 
@@ -821,7 +750,6 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 670
     sget-object v2, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v4, v2, Landroid/graphics/Point;->y:I
@@ -843,7 +771,6 @@
 
     move-result v6
 
-    .line 671
     .local v6, "heightSpec":I
     const/4 v5, 0x0
 
@@ -857,14 +784,12 @@
 
     goto :goto_1
 
-    .line 670
     .end local v6    # "heightSpec":I
     :cond_2
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 672
     :cond_3
     move-object/from16 v0, p0
 
@@ -880,19 +805,16 @@
 
     if-eqz v2, :cond_6
 
-    .line 673
     sget-boolean v2, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-eqz v2, :cond_5
 
-    .line 674
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v2
 
     if-eqz v2, :cond_4
 
-    .line 675
     const/high16 v2, 0x40000000    # 2.0f
 
     move/from16 v0, v17
@@ -927,7 +849,6 @@
 
     goto :goto_1
 
-    .line 677
     :cond_4
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -953,7 +874,6 @@
 
     goto :goto_1
 
-    .line 680
     :cond_5
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -979,7 +899,6 @@
 
     goto/16 :goto_1
 
-    .line 683
     :cond_6
     const/4 v10, 0x0
 
@@ -997,7 +916,6 @@
 
     goto/16 :goto_1
 
-    .line 686
     .end local v3    # "child":Landroid/view/View;
     :cond_7
     return-void

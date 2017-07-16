@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     .prologue
-    .line 712
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$3;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$3;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 715
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$3;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     const/4 v1, 0x1
@@ -54,11 +52,9 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->onTransitionAnimationEnd(ZZ)V
 
-    .line 716
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$3;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onBecomeFullyVisible()V
 
-    .line 717
     return-void
 .end method

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 11170
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 11170
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState$1;->createFromParcel(Landroid/os/Parcel;Ljava/lang/ClassLoader;)Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;
 
     move-result-object v0
@@ -58,7 +56,6 @@
     .param p2, "loader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 11173
     new-instance v0, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;
 
     invoke-direct {v0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
@@ -70,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 11170
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState$1;->newArray(I)[Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;
 
     move-result-object v0
@@ -83,7 +79,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 11178
     new-array v0, p1, [Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;
 
     return-object v0

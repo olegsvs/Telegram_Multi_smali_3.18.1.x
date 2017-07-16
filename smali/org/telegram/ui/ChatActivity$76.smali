@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 6625
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$76;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$76;->val$lastFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -53,20 +52,17 @@
     .locals 4
 
     .prologue
-    .line 6628
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$76;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$16100(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     move-result-object v0
 
-    .line 6629
     .local v0, "parentLayout":Lorg/telegram/ui/ActionBar/ActionBarLayout;
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$76;->val$lastFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v1, :cond_0
 
-    .line 6630
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -77,7 +73,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 6632
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -91,7 +86,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 6633
     new-instance v1, Lorg/telegram/ui/ChatActivity;
 
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$76;->val$bundle:Landroid/os/Bundle;
@@ -102,7 +96,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
-    .line 6634
     new-instance v1, Lorg/telegram/ui/ChatActivity$76$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/ChatActivity$76$1;-><init>(Lorg/telegram/ui/ChatActivity$76;)V
@@ -111,6 +104,5 @@
 
     invoke-static {v1, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 6640
     return-void
 .end method

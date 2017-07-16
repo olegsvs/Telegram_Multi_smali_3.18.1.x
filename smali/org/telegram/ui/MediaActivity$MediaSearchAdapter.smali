@@ -58,37 +58,30 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 1929
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 1922
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
-    .line 1924
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->globalSearch:Ljava/util/ArrayList;
 
-    .line 1925
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->reqId:I
 
-    .line 1930
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->mContext:Landroid/content/Context;
 
-    .line 1931
     iput p3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
-    .line 1932
     return-void
 .end method
 
@@ -97,7 +90,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 1920
     iget v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->lastReqId:I
 
     return v0
@@ -109,7 +101,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 1920
     iput p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->reqId:I
 
     return p1
@@ -120,7 +111,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 1920
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
     return-object v0
@@ -132,7 +122,6 @@
     .param p1, "x1"    # Ljava/util/Timer;
 
     .prologue
-    .line 1920
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
     return-object p1
@@ -144,7 +133,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 1920
     invoke-direct {p0, p1}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->processSearch(Ljava/lang/String;)V
 
     return-void
@@ -155,7 +143,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 1920
     iget v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
     return v0
@@ -167,7 +154,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 1920
     invoke-direct {p0, p1}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->updateSearchResults(Ljava/util/ArrayList;)V
 
     return-void
@@ -179,7 +165,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 1920
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     return-object p1
@@ -190,14 +175,12 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 2024
     new-instance v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$3;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$3;-><init>(Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;Ljava/lang/String;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2105
     return-void
 .end method
 
@@ -214,7 +197,6 @@
     .end annotation
 
     .prologue
-    .line 2108
     .local p1, "documents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     new-instance v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;
 
@@ -222,7 +204,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2115
     return-void
 .end method
 
@@ -233,7 +214,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 2144
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -242,7 +222,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 2145
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -251,7 +230,6 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject;
 
-    .line 2147
     :goto_0
     return-object v0
 
@@ -279,14 +257,12 @@
     .locals 3
 
     .prologue
-    .line 2124
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 2125
     .local v0, "count":I
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->globalSearch:Ljava/util/ArrayList;
 
@@ -294,14 +270,11 @@
 
     move-result v1
 
-    .line 2126
     .local v1, "globalCount":I
     if-eqz v1, :cond_0
 
-    .line 2127
     add-int/2addr v0, v1
 
-    .line 2129
     :cond_0
     return v0
 .end method
@@ -311,7 +284,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 2198
     const/4 v0, 0x0
 
     return v0
@@ -322,7 +294,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 2119
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -361,14 +332,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2133
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 2134
     .local v1, "localCount":I
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->globalSearch:Ljava/util/ArrayList;
 
@@ -376,18 +345,15 @@
 
     move-result v0
 
-    .line 2135
     .local v0, "globalCount":I
     if-ltz p1, :cond_1
 
     if-ge p1, v1, :cond_1
 
-    .line 2140
     :cond_0
     :goto_0
     return v2
 
-    .line 2137
     :cond_1
     if-le p1, v1, :cond_0
 
@@ -395,7 +361,6 @@
 
     if-gt p1, v3, :cond_0
 
-    .line 2138
     const/4 v2, 0x1
 
     goto :goto_0
@@ -411,7 +376,6 @@
 
     const/4 v5, 0x0
 
-    .line 2175
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
     if-eq v3, v4, :cond_0
@@ -422,19 +386,16 @@
 
     if-ne v3, v6, :cond_7
 
-    .line 2176
     :cond_0
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
-    .line 2177
     .local v1, "sharedDocumentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     invoke-virtual {p0, p2}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->getItem(I)Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    .line 2178
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {p0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->getItemCount()I
 
@@ -449,7 +410,6 @@
     :goto_0
     invoke-virtual {v1, v0, v3}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setDocument(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 2179
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$5200(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -462,7 +422,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 2180
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$600(Lorg/telegram/ui/MediaActivity;)[Ljava/util/HashMap;
@@ -511,7 +470,6 @@
     :goto_2
     invoke-virtual {v1, v3, v4}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setChecked(ZZ)V
 
-    .line 2194
     .end local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     .end local v1    # "sharedDocumentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     :cond_1
@@ -523,13 +481,11 @@
     :cond_2
     move v3, v5
 
-    .line 2178
     goto :goto_0
 
     :cond_3
     move v3, v4
 
-    .line 2180
     goto :goto_1
 
     :cond_4
@@ -537,7 +493,6 @@
 
     goto :goto_2
 
-    .line 2182
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -557,7 +512,6 @@
 
     goto :goto_4
 
-    .line 2184
     .end local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     .end local v1    # "sharedDocumentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     :cond_7
@@ -567,18 +521,15 @@
 
     if-ne v3, v6, :cond_1
 
-    .line 2185
     iget-object v2, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v2, Lorg/telegram/ui/Cells/SharedLinkCell;
 
-    .line 2186
     .local v2, "sharedLinkCell":Lorg/telegram/ui/Cells/SharedLinkCell;
     invoke-virtual {p0, p2}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->getItem(I)Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    .line 2187
     .restart local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {p0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->getItemCount()I
 
@@ -593,7 +544,6 @@
     :goto_5
     invoke-virtual {v2, v0, v3}, Lorg/telegram/ui/Cells/SharedLinkCell;->setLink(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 2188
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$5300(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -606,7 +556,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 2189
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$600(Lorg/telegram/ui/MediaActivity;)[Ljava/util/HashMap;
@@ -660,13 +609,11 @@
     :cond_8
     move v3, v5
 
-    .line 2187
     goto :goto_5
 
     :cond_9
     move v3, v4
 
-    .line 2189
     goto :goto_6
 
     :cond_a
@@ -674,7 +621,6 @@
 
     goto :goto_7
 
-    .line 2191
     :cond_b
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -701,7 +647,6 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 2154
     iget v1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
     const/4 v2, 0x1
@@ -714,7 +659,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 2155
     :cond_0
     new-instance v0, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
@@ -722,7 +666,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/SharedDocumentCell;-><init>(Landroid/content/Context;)V
 
-    .line 2170
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -731,7 +674,6 @@
 
     return-object v1
 
-    .line 2157
     .end local v0    # "view":Landroid/view/View;
     :cond_1
     new-instance v0, Lorg/telegram/ui/Cells/SharedLinkCell;
@@ -743,7 +685,6 @@
     .restart local v0    # "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 2158
     check-cast v1, Lorg/telegram/ui/Cells/SharedLinkCell;
 
     new-instance v2, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$5;
@@ -766,25 +707,20 @@
 
     const/4 v5, 0x0
 
-    .line 1935
     long-to-int v2, p3
 
-    .line 1936
     .local v2, "uid":I
     if-nez v2, :cond_1
 
-    .line 1993
     :cond_0
     :goto_0
     return-void
 
-    .line 1939
     :cond_1
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->reqId:I
 
     if-eqz v3, :cond_2
 
-    .line 1940
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -793,10 +729,8 @@
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 1941
     iput v5, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->reqId:I
 
-    .line 1943
     :cond_2
     if-eqz p1, :cond_3
 
@@ -806,75 +740,61 @@
 
     if-nez v3, :cond_4
 
-    .line 1944
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->globalSearch:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 1945
     iput v5, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->lastReqId:I
 
-    .line 1946
     invoke-virtual {p0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->notifyDataSetChanged()V
 
     goto :goto_0
 
-    .line 1949
     :cond_4
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_search;-><init>()V
 
-    .line 1950
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_search;
     iput v5, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->offset:I
 
-    .line 1951
     const/16 v3, 0x32
 
     iput v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->limit:I
 
-    .line 1952
     iput p2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->max_id:I
 
-    .line 1953
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
     if-ne v3, v6, :cond_6
 
-    .line 1954
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterDocument;-><init>()V
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->filter:Lorg/telegram/tgnet/TLRPC$MessagesFilter;
 
-    .line 1960
     :cond_5
     :goto_1
     iput-object p1, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->q:Ljava/lang/String;
 
-    .line 1961
     invoke-static {v2}, Lorg/telegram/messenger/MessagesController;->getInputPeer(I)Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     move-result-object v3
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 1962
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_search;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     if-eqz v3, :cond_0
 
-    .line 1965
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->lastReqId:I
 
     add-int/lit8 v0, v3, 0x1
 
     iput v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->lastReqId:I
 
-    .line 1966
     .local v0, "currentReqId":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -892,7 +812,6 @@
 
     iput v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->reqId:I
 
-    .line 1992
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -909,7 +828,6 @@
 
     goto :goto_0
 
-    .line 1955
     .end local v0    # "currentReqId":I
     :cond_6
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
@@ -918,7 +836,6 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 1956
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterUrl;-><init>()V
@@ -927,7 +844,6 @@
 
     goto :goto_1
 
-    .line 1957
     :cond_7
     iget v3, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->currentType:I
 
@@ -935,7 +851,6 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 1958
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputMessagesFilterMusic;-><init>()V
@@ -950,47 +865,38 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 1997
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_0
 
-    .line 1998
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2003
     :cond_0
     :goto_0
     if-nez p1, :cond_1
 
-    .line 2004
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchResult:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 2005
     invoke-virtual {p0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->notifyDataSetChanged()V
 
-    .line 2021
     :goto_1
     return-void
 
-    .line 2000
     :catch_0
     move-exception v6
 
-    .line 2001
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 2007
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_1
     new-instance v0, Ljava/util/Timer;
@@ -999,7 +905,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
-    .line 2008
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->searchTimer:Ljava/util/Timer;
 
     new-instance v1, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;

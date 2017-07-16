@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 1677
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$19;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$19;->val$req:Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipants;
@@ -51,7 +50,6 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1680
     new-instance v0, Lorg/telegram/ui/ProfileActivity$19$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/ProfileActivity$19$1;-><init>(Lorg/telegram/ui/ProfileActivity$19;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
@@ -62,6 +60,5 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 1715
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Components/StickersAlert$17$1;
 
     .prologue
-    .line 550
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,13 +52,11 @@
 
     const/4 v4, 0x0
 
-    .line 554
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_2
 
-    .line 555
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/StickersAlert$17$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$17;
@@ -76,7 +73,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 556
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/StickersAlert$17$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$17;
@@ -103,7 +99,6 @@
 
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 560
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
@@ -111,7 +106,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 561
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -124,7 +118,6 @@
 
     invoke-virtual {v2, v5, v6}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 562
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/StickersAlert$17$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$17;
@@ -153,7 +146,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 563
     new-instance v0, Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
@@ -188,7 +180,6 @@
 
     invoke-direct {v0, v5, v6, v2}, Lorg/telegram/ui/Components/StickersArchiveAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Ljava/util/ArrayList;)V
 
-    .line 564
     .local v0, "alert":Lorg/telegram/ui/Components/StickersArchiveAlert;
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
 
@@ -208,7 +199,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 573
     .end local v0    # "alert":Lorg/telegram/ui/Components/StickersArchiveAlert;
     :cond_0
     :goto_1
@@ -233,10 +223,8 @@
     :goto_2
     invoke-static {v2, v4, v3}, Lorg/telegram/messenger/query/StickersQuery;->loadStickers(IZZ)V
 
-    .line 574
     return-void
 
-    .line 558
     :cond_1
     :try_start_1
     iget-object v2, p0, Lorg/telegram/ui/Components/StickersAlert$17$1$1;->this$2:Lorg/telegram/ui/Components/StickersAlert$17$1;
@@ -269,17 +257,14 @@
 
     goto/16 :goto_0
 
-    .line 570
     :catch_0
     move-exception v1
 
-    .line 571
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 568
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_2
@@ -316,6 +301,5 @@
     :cond_3
     move v2, v4
 
-    .line 573
     goto :goto_2
 .end method

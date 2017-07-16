@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatDialogsView;
 
     .prologue
-    .line 513
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$11;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 516
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$11;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$1900(Lorg/telegram/ui/Components/ChatDialogsView;)Landroid/widget/TextView;
@@ -53,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 517
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 523
     return-void
 .end method
 
@@ -71,6 +67,5 @@
     .param p1, "arg0"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 529
     return-void
 .end method

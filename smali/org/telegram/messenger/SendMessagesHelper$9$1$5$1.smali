@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     .prologue
-    .line 2441
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,12 @@
 
     const/4 v8, 0x0
 
-    .line 2444
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     iget-boolean v4, v4, Lorg/telegram/messenger/SendMessagesHelper$9$1$5;->val$isBroadcast:Z
 
     if-eqz v4, :cond_1
 
-    .line 2445
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -67,7 +64,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 2446
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     iget-object v4, v4, Lorg/telegram/messenger/SendMessagesHelper$9$1$5;->val$sentMessages:Ljava/util/ArrayList;
@@ -78,13 +74,11 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 2447
     .local v2, "message":Lorg/telegram/tgnet/TLRPC$Message;
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2448
     .local v1, "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     new-instance v3, Lorg/telegram/messenger/MessageObject;
 
@@ -92,11 +86,9 @@
 
     invoke-direct {v3, v2, v4, v8}, Lorg/telegram/messenger/MessageObject;-><init>(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/AbstractMap;Z)V
 
-    .line 2449
     .local v3, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2450
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -107,12 +99,10 @@
 
     invoke-virtual {v4, v6, v7, v1, v9}, Lorg/telegram/messenger/MessagesController;->updateInterfaceWithMessages(JLjava/util/ArrayList;Z)V
 
-    .line 2445
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2452
     .end local v1    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v2    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     .end local v3    # "messageObject":Lorg/telegram/messenger/MessageObject;
@@ -127,7 +117,6 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2454
     .end local v0    # "a":I
     :cond_1
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
@@ -142,7 +131,6 @@
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/query/SearchQuery;->increasePeerRaiting(J)V
 
-    .line 2455
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v5
@@ -212,7 +200,6 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2456
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     iget-object v4, v4, Lorg/telegram/messenger/SendMessagesHelper$9$1$5;->this$2:Lorg/telegram/messenger/SendMessagesHelper$9$1;
@@ -227,7 +214,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/SendMessagesHelper;->processSentMessage(I)V
 
-    .line 2457
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 
     iget-object v4, v4, Lorg/telegram/messenger/SendMessagesHelper$9$1$5;->this$2:Lorg/telegram/messenger/SendMessagesHelper$9$1;
@@ -242,10 +228,8 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/SendMessagesHelper;->removeFromSendingMessages(I)V
 
-    .line 2458
     return-void
 
-    .line 2455
     :cond_2
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$5$1;->this$3:Lorg/telegram/messenger/SendMessagesHelper$9$1$5;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel$2;->this$0:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel$2;->this$0:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->access$000(Lorg/telegram/ui/Components/Crop/CropRotationWheel;)Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 85
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel$2;->this$0:Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->access$000(Lorg/telegram/ui/Components/Crop/CropRotationWheel;)Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;->rotate90Pressed()V
 
-    .line 86
     :cond_0
     return-void
 .end method

@@ -36,12 +36,9 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
-    .line 67
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/MergingMediaSource$IllegalMergeException;->reason:I
 
-    .line 68
     return-void
 .end method

@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/SecretChatHelper;->declineSecretChat(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1630
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$12;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +41,5 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1634
     return-void
 .end method

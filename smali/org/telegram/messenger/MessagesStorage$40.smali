@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 2350
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$40;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesStorage$40;->val$deleteAll:Z
@@ -51,13 +50,11 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 2354
     :try_start_0
     iget-boolean v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->val$deleteAll:Z
 
     if-eqz v4, :cond_0
 
-    .line 2355
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v4}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -76,7 +73,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 2357
     :cond_0
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -86,7 +82,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 2358
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v4}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -99,7 +94,6 @@
 
     move-result-object v3
 
-    .line 2359
     .local v3, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v0, 0x0
 
@@ -113,7 +107,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 2360
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->val$contactsCopy:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -122,18 +115,15 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 2361
     .local v1, "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 2362
     const/4 v4, 0x1
 
     iget v6, v1, Lorg/telegram/tgnet/TLRPC$TL_contact;->user_id:I
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2363
     const/4 v6, 0x2
 
     iget-boolean v4, v1, Lorg/telegram/tgnet/TLRPC$TL_contact;->mutual:Z
@@ -145,26 +135,21 @@
     :goto_1
     invoke-virtual {v3, v6, v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2364
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 2359
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2363
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 2366
     .end local v1    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     :cond_2
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 2367
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$40;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v4}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -175,17 +160,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2371
     .end local v0    # "a":I
     .end local v3    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_2
     return-void
 
-    .line 2368
     :catch_0
     move-exception v2
 
-    .line 2369
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

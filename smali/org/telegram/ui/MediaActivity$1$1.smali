@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$1;
 
     .prologue
-    .line 382
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$1$1;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$1$1;->val$deleteForAll:[Z
@@ -50,12 +49,10 @@
 
     const/4 v3, 0x0
 
-    .line 385
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/CheckBoxCell;
 
-    .line 386
     .local v0, "cell":Lorg/telegram/ui/Cells/CheckBoxCell;
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$1$1;->val$deleteForAll:[Z
 
@@ -70,19 +67,16 @@
     :goto_0
     aput-boolean v1, v4, v3
 
-    .line 387
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$1$1;->val$deleteForAll:[Z
 
     aget-boolean v1, v1, v3
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/CheckBoxCell;->setChecked(ZZ)V
 
-    .line 388
     return-void
 
     :cond_0
     move v1, v3
 
-    .line 386
     goto :goto_0
 .end method

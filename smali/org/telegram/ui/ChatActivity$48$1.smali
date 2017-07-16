@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$48;
 
     .prologue
-    .line 3154
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$48$1;->this$1:Lorg/telegram/ui/ChatActivity$48;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,16 +44,13 @@
     .param p4, "dayOfMonth"    # I
 
     .prologue
-    .line 3157
     invoke-static {}, Ljava/util/Calendar;->getInstance()Ljava/util/Calendar;
 
     move-result-object v4
 
-    .line 3158
     .local v4, "calendar":Ljava/util/Calendar;
     invoke-virtual {v4}, Ljava/util/Calendar;->clear()V
 
-    .line 3159
     move/from16 v0, p2
 
     move/from16 v1, p3
@@ -63,7 +59,6 @@
 
     invoke-virtual {v4, v0, v1, v2}, Ljava/util/Calendar;->set(III)V
 
-    .line 3160
     invoke-virtual {v4}, Ljava/util/Calendar;->getTime()Ljava/util/Date;
 
     move-result-object v5
@@ -78,7 +73,6 @@
 
     long-to-int v10, v6
 
-    .line 3161
     .local v10, "date":I
     move-object/from16 v0, p0
 
@@ -88,7 +82,6 @@
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$13300(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 3162
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/ui/ChatActivity$48$1;->this$1:Lorg/telegram/ui/ChatActivity$48;
@@ -115,7 +108,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3163
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v5
@@ -192,6 +184,5 @@
 
     invoke-virtual/range {v5 .. v17}, Lorg/telegram/messenger/MessagesController;->loadMessages(JIIIZIIIIZI)V
 
-    .line 3164
     return-void
 .end method

@@ -30,18 +30,13 @@
     .param p3, "tickRate"    # I
 
     .prologue
-    .line 540
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 541
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlDecoder$FrameAndTickRate;->effectiveFrameRate:F
 
-    .line 542
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlDecoder$FrameAndTickRate;->subFrameRate:I
 
-    .line 543
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlDecoder$FrameAndTickRate;->tickRate:I
 
-    .line 544
     return-void
 .end method

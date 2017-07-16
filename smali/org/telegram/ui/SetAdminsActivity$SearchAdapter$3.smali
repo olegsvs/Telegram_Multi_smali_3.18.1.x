@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
 
     .prologue
-    .line 571
     iput-object p1, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->this$1:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->val$users:Ljava/util/ArrayList;
@@ -49,25 +48,21 @@
     .locals 2
 
     .prologue
-    .line 574
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->this$1:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->val$users:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;->access$1302(Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 575
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->this$1:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->val$names:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;->access$2102(Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 576
     iget-object v0, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$3;->this$1:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;->notifyDataSetChanged()V
 
-    .line 577
     return-void
 .end method

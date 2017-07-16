@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SessionsActivity$2;
 
     .prologue
-    .line 212
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity$2$2;->this$1:Lorg/telegram/ui/SessionsActivity$2;
 
     iput p2, p0, Lorg/telegram/ui/SessionsActivity$2$2;->val$position:I
@@ -49,7 +48,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 215
     iget-object v3, p0, Lorg/telegram/ui/SessionsActivity$2$2;->this$1:Lorg/telegram/ui/SessionsActivity$2;
 
     iget-object v3, v3, Lorg/telegram/ui/SessionsActivity$2;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -60,11 +58,9 @@
 
     if-nez v3, :cond_0
 
-    .line 249
     :goto_0
     return-void
 
-    .line 218
     :cond_0
     new-instance v1, Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -80,7 +76,6 @@
 
     invoke-direct {v1, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 219
     .local v1, "progressDialog":Lorg/telegram/ui/ActionBar/AlertDialog;
     const-string/jumbo v3, "Loading"
 
@@ -92,16 +87,12 @@
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 220
     invoke-virtual {v1, v5}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 221
     invoke-virtual {v1, v5}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 222
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->show()V
 
-    .line 224
     iget-object v3, p0, Lorg/telegram/ui/SessionsActivity$2$2;->this$1:Lorg/telegram/ui/SessionsActivity$2;
 
     iget-object v3, v3, Lorg/telegram/ui/SessionsActivity$2;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -128,19 +119,16 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
-    .line 225
     .local v0, "authorization":Lorg/telegram/tgnet/TLRPC$TL_authorization;
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_account_resetAuthorization;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_account_resetAuthorization;-><init>()V
 
-    .line 226
     .local v2, "req":Lorg/telegram/tgnet/TLRPC$TL_account_resetAuthorization;
     iget-wide v4, v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->hash:J
 
     iput-wide v4, v2, Lorg/telegram/tgnet/TLRPC$TL_account_resetAuthorization;->hash:J
 
-    .line 227
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3

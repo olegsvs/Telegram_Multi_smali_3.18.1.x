@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$25;
 
     .prologue
-    .line 2327
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,47 +50,39 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2330
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v5, :cond_1
 
-    .line 2331
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v5, v5, Lorg/telegram/tgnet/TLRPC$TL_account_noPassword;
 
     if-eqz v5, :cond_0
 
-    .line 2332
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
 
     iget-object v5, v5, Lorg/telegram/ui/PaymentFormActivity$25;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v5, v9}, Lorg/telegram/ui/PaymentFormActivity;->access$2902(Lorg/telegram/ui/PaymentFormActivity;Z)Z
 
-    .line 2333
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
 
     iget-object v5, v5, Lorg/telegram/ui/PaymentFormActivity$25;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/PaymentFormActivity;->access$200(Lorg/telegram/ui/PaymentFormActivity;)V
 
-    .line 2387
     :goto_0
     return-void
 
-    .line 2335
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_account_password;
 
-    .line 2336
     .local v0, "currentPassword":Lorg/telegram/tgnet/TLRPC$TL_account_password;
     const/4 v3, 0x0
 
-    .line 2338
     .local v3, "passwordBytes":[B
     :try_start_0
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
@@ -106,7 +97,6 @@
 
     move-result-object v3
 
-    .line 2343
     :goto_1
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_password;->current_salt:[B
 
@@ -120,7 +110,6 @@
 
     new-array v2, v5, [B
 
-    .line 2344
     .local v2, "hash":[B
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_password;->current_salt:[B
 
@@ -130,7 +119,6 @@
 
     invoke-static {v5, v9, v2, v9, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2345
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_password;->current_salt:[B
 
     array-length v5, v5
@@ -139,7 +127,6 @@
 
     invoke-static {v3, v9, v2, v5, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2346
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$TL_account_password;->current_salt:[B
 
     array-length v6, v2
@@ -156,12 +143,10 @@
 
     invoke-static {v5, v9, v2, v6, v7}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 2348
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;-><init>()V
 
-    .line 2349
     .local v4, "req":Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;
     array-length v5, v2
 
@@ -171,12 +156,10 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;->password_hash:[B
 
-    .line 2350
     const/16 v5, 0x708
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;->period:I
 
-    .line 2351
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -191,19 +174,16 @@
 
     goto :goto_0
 
-    .line 2339
     .end local v2    # "hash":[B
     .end local v4    # "req":Lorg/telegram/tgnet/TLRPC$TL_account_getTmpPassword;
     :catch_0
     move-exception v1
 
-    .line 2340
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 2383
     .end local v0    # "currentPassword":Lorg/telegram/tgnet/TLRPC$TL_account_password;
     .end local v1    # "e":Ljava/lang/Exception;
     .end local v3    # "passwordBytes":[B
@@ -222,14 +202,12 @@
 
     invoke-static {v5, v6, v7, v8}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 2384
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
 
     iget-object v5, v5, Lorg/telegram/ui/PaymentFormActivity$25;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v5, v9}, Lorg/telegram/ui/PaymentFormActivity;->access$2400(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2385
     iget-object v5, p0, Lorg/telegram/ui/PaymentFormActivity$25$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$25;
 
     iget-object v5, v5, Lorg/telegram/ui/PaymentFormActivity$25;->this$0:Lorg/telegram/ui/PaymentFormActivity;

@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
     return-void
@@ -29,7 +28,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 47
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -38,7 +36,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 48
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -47,12 +44,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 50
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v14
 
-    .line 52
     .local v14, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v14, :cond_0
 
@@ -68,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 53
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
 
     move-result-object v1
@@ -97,7 +91,6 @@
 
     move-result-object v15
 
-    .line 58
     .local v15, "value":Ljava/lang/String;
     :goto_0
     move-object/from16 v0, p0
@@ -106,7 +99,6 @@
 
     invoke-virtual {v1, v15}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 59
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -119,7 +111,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 68
     new-instance v1, Landroid/widget/RelativeLayout;
 
     move-object/from16 v0, p1
@@ -130,7 +121,6 @@
 
     iput-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->fragmentView:Landroid/view/View;
 
-    .line 69
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->fragmentView:Landroid/view/View;
@@ -143,14 +133,12 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 76
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->fragmentView:Landroid/view/View;
 
     check-cast v12, Landroid/widget/RelativeLayout;
 
-    .line 78
     .local v12, "relativeLayout":Landroid/widget/RelativeLayout;
     new-instance v13, Landroid/widget/ScrollView;
 
@@ -158,52 +146,42 @@
 
     invoke-direct {v13, v0}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 79
     .local v13, "scrollView":Landroid/widget/ScrollView;
     invoke-virtual {v12, v13}, Landroid/widget/RelativeLayout;->addView(Landroid/view/View;)V
 
-    .line 80
     invoke-virtual {v13}, Landroid/widget/ScrollView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v10
 
     check-cast v10, Landroid/widget/RelativeLayout$LayoutParams;
 
-    .line 81
     .local v10, "layoutParams3":Landroid/widget/RelativeLayout$LayoutParams;
     const/4 v1, -0x1
 
     iput v1, v10, Landroid/widget/RelativeLayout$LayoutParams;->width:I
 
-    .line 82
     const/4 v1, -0x2
 
     iput v1, v10, Landroid/widget/RelativeLayout$LayoutParams;->height:I
 
-    .line 83
     const/16 v1, 0xf
 
     const/4 v2, -0x1
 
     invoke-virtual {v10, v1, v2}, Landroid/widget/RelativeLayout$LayoutParams;->addRule(II)V
 
-    .line 84
     invoke-virtual {v13, v10}, Landroid/widget/ScrollView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 86
     new-instance v11, Landroid/widget/LinearLayout;
 
     move-object/from16 v0, p1
 
     invoke-direct {v11, v0}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 87
-    .local v11, "linearLayout":Landroid/widget/LinearLayout;
     const/4 v1, 0x1
 
     invoke-virtual {v11, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 88
     const/4 v1, 0x0
 
     const/high16 v2, 0x41a00000    # 20.0f
@@ -222,31 +200,25 @@
 
     invoke-virtual {v11, v1, v2, v3, v4}, Landroid/widget/LinearLayout;->setPadding(IIII)V
 
-    .line 89
     invoke-virtual {v13, v11}, Landroid/widget/ScrollView;->addView(Landroid/view/View;)V
 
-    .line 90
     invoke-virtual {v11}, Landroid/widget/LinearLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v9
 
     check-cast v9, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 91
     .local v9, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     const/4 v1, -0x1
 
     iput v1, v9, Landroid/widget/FrameLayout$LayoutParams;->width:I
 
-    .line 92
     const/4 v1, -0x2
 
     iput v1, v9, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 93
     invoke-virtual {v11, v9}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 95
     new-instance v1, Landroid/widget/ImageView;
 
     move-object/from16 v0, p1
@@ -257,7 +229,6 @@
 
     iput-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->imageView:Landroid/widget/ImageView;
 
-    .line 96
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->imageView:Landroid/widget/ImageView;
@@ -266,7 +237,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 97
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->imageView:Landroid/widget/ImageView;
@@ -285,7 +255,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 98
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->imageView:Landroid/widget/ImageView;
@@ -302,7 +271,6 @@
 
     invoke-virtual {v11, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 100
     new-instance v1, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
@@ -313,7 +281,6 @@
 
     iput-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView1:Landroid/widget/TextView;
 
-    .line 101
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView1:Landroid/widget/TextView;
@@ -324,7 +291,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 102
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView1:Landroid/widget/TextView;
@@ -333,7 +299,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 103
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView1:Landroid/widget/TextView;
@@ -346,7 +311,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 106
     :try_start_0
     move-object/from16 v0, p0
 
@@ -368,7 +332,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 111
     :goto_1
     move-object/from16 v0, p0
 
@@ -398,7 +361,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 113
     new-instance v1, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
@@ -409,7 +371,6 @@
 
     iput-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
 
-    .line 114
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -420,7 +381,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 115
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -429,7 +389,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 116
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -442,7 +401,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 117
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -457,7 +415,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -470,7 +427,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 119
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -493,7 +449,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 120
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -522,7 +477,6 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 122
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView2:Landroid/widget/TextView;
@@ -535,17 +489,14 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 142
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
 
-    .line 55
     .end local v9    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     .end local v10    # "layoutParams3":Landroid/widget/RelativeLayout$LayoutParams;
-    .end local v11    # "linearLayout":Landroid/widget/LinearLayout;
     .end local v12    # "relativeLayout":Landroid/widget/RelativeLayout;
     .end local v13    # "scrollView":Landroid/widget/ScrollView;
     .end local v15    # "value":Ljava/lang/String;
@@ -561,20 +512,16 @@
     .restart local v15    # "value":Ljava/lang/String;
     goto/16 :goto_0
 
-    .line 107
     .restart local v9    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     .restart local v10    # "layoutParams3":Landroid/widget/RelativeLayout$LayoutParams;
-    .restart local v11    # "linearLayout":Landroid/widget/LinearLayout;
     .restart local v12    # "relativeLayout":Landroid/widget/RelativeLayout;
     .restart local v13    # "scrollView":Landroid/widget/ScrollView;
     :catch_0
     move-exception v8
 
-    .line 108
     .local v8, "e":Ljava/lang/Exception;
     invoke-static {v8}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/ChangePhoneHelpActivity;->textView1:Landroid/widget/TextView;
@@ -598,7 +545,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 147
     const/16 v0, 0x8
 
     new-array v8, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;

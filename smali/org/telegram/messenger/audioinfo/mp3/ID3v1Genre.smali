@@ -289,7 +289,6 @@
 
     const/4 v4, 0x0
 
-    .line 22
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Blues"
@@ -300,7 +299,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Blues:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 23
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "ClassicRock"
@@ -311,7 +309,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ClassicRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 24
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Country"
@@ -322,7 +319,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Country:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 25
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Dance"
@@ -333,7 +329,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Dance:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 26
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Disco"
@@ -344,7 +339,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Disco:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 27
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Funk"
@@ -357,7 +351,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Funk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 28
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Grunge"
@@ -370,7 +363,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Grunge:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 29
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "HipHop"
@@ -383,7 +375,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->HipHop:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 30
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Jazz"
@@ -396,7 +387,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Jazz:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 31
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Metal"
@@ -409,7 +399,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Metal:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 32
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "NewAge"
@@ -422,7 +411,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->NewAge:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 33
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Oldies"
@@ -435,7 +423,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Oldies:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 34
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Other"
@@ -448,7 +435,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Other:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 35
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Pop"
@@ -461,7 +447,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Pop:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 36
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "RnB"
@@ -474,7 +459,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->RnB:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 37
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Rap"
@@ -487,7 +471,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Rap:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 38
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Reggae"
@@ -500,7 +483,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Reggae:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 39
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Rock"
@@ -513,7 +495,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Rock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 40
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Techno"
@@ -526,7 +507,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Techno:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 41
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Industrial"
@@ -539,7 +519,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Industrial:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 42
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Alternative"
@@ -552,7 +531,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Alternative:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 43
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Ska"
@@ -565,7 +543,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Ska:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 44
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "DeathMetal"
@@ -578,7 +555,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->DeathMetal:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 45
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Pranks"
@@ -591,7 +567,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Pranks:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 46
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Soundtrack"
@@ -604,7 +579,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Soundtrack:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 47
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "EuroTechno"
@@ -617,7 +591,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->EuroTechno:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 48
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Ambient"
@@ -630,7 +603,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Ambient:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 49
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "TripHop"
@@ -643,7 +615,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->TripHop:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 50
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Vocal"
@@ -656,7 +627,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Vocal:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 51
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "JazzFunk"
@@ -669,7 +639,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->JazzFunk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 52
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Fusion"
@@ -682,7 +651,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Fusion:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 53
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Trance"
@@ -695,7 +663,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Trance:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 54
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Classical"
@@ -708,7 +675,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Classical:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 55
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Instrumental"
@@ -721,7 +687,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Instrumental:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 56
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Acid"
@@ -734,7 +699,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Acid:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 57
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "House"
@@ -747,7 +711,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->House:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 58
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Game"
@@ -760,7 +723,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Game:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 59
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "SoundClip"
@@ -773,7 +735,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->SoundClip:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 60
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Gospel"
@@ -786,7 +747,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Gospel:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 61
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Noise"
@@ -799,7 +759,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Noise:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 62
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "AlternRock"
@@ -812,7 +771,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->AlternRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 63
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Bass"
@@ -825,7 +783,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Bass:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 64
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Soul"
@@ -838,7 +795,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Soul:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 65
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Punk"
@@ -851,7 +807,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Punk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 66
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Space"
@@ -864,7 +819,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Space:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 67
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Meditative"
@@ -877,7 +831,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Meditative:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 68
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "InstrumentalPop"
@@ -890,7 +843,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->InstrumentalPop:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 69
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "InstrumentalRock"
@@ -903,7 +855,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->InstrumentalRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 70
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Ethnic"
@@ -916,7 +867,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Ethnic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 71
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Gothic"
@@ -929,7 +879,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Gothic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 72
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Darkwave"
@@ -942,7 +891,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Darkwave:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 73
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "TechnoIndustrial"
@@ -955,7 +903,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->TechnoIndustrial:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 74
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Electronic"
@@ -968,7 +915,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Electronic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 75
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PopFolk"
@@ -981,7 +927,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PopFolk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 76
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Eurodance"
@@ -994,7 +939,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Eurodance:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 77
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Dream"
@@ -1007,7 +951,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Dream:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 78
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "SouthernRock"
@@ -1020,7 +963,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->SouthernRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 79
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Comedy"
@@ -1033,7 +975,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Comedy:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 80
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Cult"
@@ -1046,7 +987,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Cult:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 81
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Gangsta"
@@ -1059,7 +999,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Gangsta:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 82
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Top40"
@@ -1072,7 +1011,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Top40:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 83
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "ChristianRap"
@@ -1085,7 +1023,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ChristianRap:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 84
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PopFunk"
@@ -1098,7 +1035,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PopFunk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 85
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Jungle"
@@ -1111,7 +1047,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Jungle:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 86
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "NativeAmerican"
@@ -1124,7 +1059,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->NativeAmerican:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 87
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Cabaret"
@@ -1137,7 +1071,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Cabaret:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 88
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "NewWave"
@@ -1150,7 +1083,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->NewWave:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 89
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Psychadelic"
@@ -1163,7 +1095,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Psychadelic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 90
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Rave"
@@ -1176,7 +1107,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Rave:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 91
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Showtunes"
@@ -1189,7 +1119,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Showtunes:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 92
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Trailer"
@@ -1202,7 +1131,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Trailer:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 93
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "LoFi"
@@ -1215,7 +1143,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->LoFi:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 94
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Tribal"
@@ -1228,7 +1155,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Tribal:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 95
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "AcidPunk"
@@ -1241,7 +1167,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->AcidPunk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 96
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "AcidJazz"
@@ -1254,7 +1179,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->AcidJazz:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 97
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Polka"
@@ -1267,7 +1191,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Polka:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 98
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Retro"
@@ -1280,7 +1203,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Retro:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 99
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Musical"
@@ -1293,7 +1215,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Musical:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 100
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "RockAndRoll"
@@ -1306,7 +1227,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->RockAndRoll:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 101
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "HardRock"
@@ -1319,7 +1239,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->HardRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 106
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Folk"
@@ -1332,7 +1251,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Folk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 107
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "FolkRock"
@@ -1345,7 +1263,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->FolkRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 108
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "NationalFolk"
@@ -1358,7 +1275,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->NationalFolk:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 109
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Swing"
@@ -1371,7 +1287,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Swing:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 110
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "FastFusion"
@@ -1384,7 +1299,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->FastFusion:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 111
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Bebop"
@@ -1397,7 +1311,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Bebop:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 112
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Latin"
@@ -1410,7 +1323,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Latin:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 113
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Revival"
@@ -1423,7 +1335,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Revival:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 114
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Celtic"
@@ -1436,7 +1347,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Celtic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 115
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Bluegrass"
@@ -1449,7 +1359,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Bluegrass:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 116
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Avantgarde"
@@ -1462,7 +1371,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Avantgarde:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 117
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "GothicRock"
@@ -1475,7 +1383,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->GothicRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 118
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "ProgressiveRock"
@@ -1488,7 +1395,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ProgressiveRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 119
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PsychedelicRock"
@@ -1501,7 +1407,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PsychedelicRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 120
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "SymphonicRock"
@@ -1514,7 +1419,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->SymphonicRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 121
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "SlowRock"
@@ -1527,7 +1431,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->SlowRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 122
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "BigBand"
@@ -1540,7 +1443,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->BigBand:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 123
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Chorus"
@@ -1553,7 +1455,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Chorus:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 124
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "EasyListening"
@@ -1566,7 +1467,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->EasyListening:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 125
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Acoustic"
@@ -1579,7 +1479,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Acoustic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 126
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Humour"
@@ -1592,7 +1491,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Humour:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 127
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Speech"
@@ -1605,7 +1503,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Speech:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 128
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Chanson"
@@ -1618,7 +1515,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Chanson:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 129
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Opera"
@@ -1631,7 +1527,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Opera:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 130
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "ChamberMusic"
@@ -1644,7 +1539,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ChamberMusic:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 131
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Sonata"
@@ -1657,7 +1551,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Sonata:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 132
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Symphony"
@@ -1670,7 +1563,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Symphony:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 133
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "BootyBass"
@@ -1683,7 +1575,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->BootyBass:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 134
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Primus"
@@ -1696,7 +1587,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Primus:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 135
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PornGroove"
@@ -1709,7 +1599,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PornGroove:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 136
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Satire"
@@ -1722,7 +1611,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Satire:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 137
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "SlowJam"
@@ -1735,7 +1623,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->SlowJam:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 138
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Club"
@@ -1748,7 +1635,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Club:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 139
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Tango"
@@ -1761,7 +1647,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Tango:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 140
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Samba"
@@ -1774,7 +1659,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Samba:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 141
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Folklore"
@@ -1787,7 +1671,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Folklore:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 142
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Ballad"
@@ -1800,7 +1683,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Ballad:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 143
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PowerBallad"
@@ -1813,7 +1695,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PowerBallad:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 144
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "RhytmicSoul"
@@ -1826,7 +1707,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->RhytmicSoul:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 145
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Freestyle"
@@ -1839,7 +1719,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Freestyle:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 146
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "Duet"
@@ -1852,7 +1731,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->Duet:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 147
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "PunkRock"
@@ -1865,7 +1743,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->PunkRock:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 148
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "DrumSolo"
@@ -1878,7 +1755,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->DrumSolo:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 149
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "ACapella"
@@ -1891,7 +1767,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ACapella:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 150
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "EuroHouse"
@@ -1904,7 +1779,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->EuroHouse:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 151
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     const-string/jumbo v1, "DanceHall"
@@ -1917,7 +1791,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->DanceHall:Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
-    .line 18
     const/16 v0, 0x7e
 
     new-array v0, v0, [Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
@@ -2685,13 +2558,10 @@
     .end annotation
 
     .prologue
-    .line 160
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
-    .line 161
     iput-object p3, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->description:Ljava/lang/String;
 
-    .line 162
     return-void
 .end method
 
@@ -2700,12 +2570,10 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 154
     invoke-static {}, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->values()[Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     move-result-object v0
 
-    .line 155
     .local v0, "values":[Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
     if-ltz p0, :cond_0
 
@@ -2729,7 +2597,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 18
     const-class v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -2745,7 +2612,6 @@
     .locals 1
 
     .prologue
-    .line 18
     sget-object v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->$VALUES:[Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
 
     invoke-virtual {v0}, [Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->clone()Ljava/lang/Object;
@@ -2763,7 +2629,6 @@
     .locals 1
 
     .prologue
-    .line 165
     iget-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->description:Ljava/lang/String;
 
     return-object v0
@@ -2773,7 +2638,6 @@
     .locals 1
 
     .prologue
-    .line 169
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->ordinal()I
 
     move-result v0

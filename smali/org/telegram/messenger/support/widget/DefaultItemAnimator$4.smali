@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     .prologue
-    .line 199
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->val$holder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
@@ -47,26 +46,22 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 207
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->val$animation:Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPropertyAnimatorCompat;->setListener(Landroid/support/v4/view/ViewPropertyAnimatorListener;)Landroid/support/v4/view/ViewPropertyAnimatorCompat;
 
-    .line 208
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {p1, v0}, Landroid/support/v4/view/ViewCompat;->setAlpha(Landroid/view/View;F)V
 
-    .line 209
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->val$holder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/DefaultItemAnimator;->dispatchRemoveFinished(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
-    .line 210
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator;->mRemoveAnimations:Ljava/util/ArrayList;
@@ -75,12 +70,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 211
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/DefaultItemAnimator;->dispatchFinishedWhenDone()V
 
-    .line 212
     return-void
 .end method
 
@@ -89,13 +82,11 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 202
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$4;->val$holder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/DefaultItemAnimator;->dispatchRemoveStarting(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
-    .line 203
     return-void
 .end method

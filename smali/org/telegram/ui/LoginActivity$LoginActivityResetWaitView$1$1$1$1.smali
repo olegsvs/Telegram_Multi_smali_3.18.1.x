@@ -29,7 +29,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 
     .prologue
-    .line 2339
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -47,7 +46,6 @@
     .prologue
     const v3, 0x7f070078
 
-    .line 2342
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1;
@@ -60,17 +58,14 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 2343
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_0
 
-    .line 2344
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2345
     .local v0, "params":Landroid/os/Bundle;
     const-string/jumbo v1, "phoneFormated"
 
@@ -88,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2346
     const-string/jumbo v1, "phoneHash"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
@@ -105,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2347
     const-string/jumbo v1, "code"
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
@@ -122,7 +115,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 2348
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1;
@@ -141,12 +133,10 @@
 
     invoke-virtual {v1, v2, v3, v0, v4}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 2356
     .end local v0    # "params":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 2350
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -160,7 +150,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2351
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1;
@@ -189,7 +178,6 @@
 
     goto :goto_0
 
-    .line 2353
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivityResetWaitView$1$1$1;
 

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 390
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$1;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 393
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "plusconfig"
@@ -58,13 +56,11 @@
 
     move-result-object v1
 
-    .line 394
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 395
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "emojiPopupSize"
 
@@ -76,10 +72,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 396
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 397
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -90,7 +84,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 398
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -101,7 +94,6 @@
 
     invoke-virtual {v2}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 400
     :cond_0
     return-void
 .end method

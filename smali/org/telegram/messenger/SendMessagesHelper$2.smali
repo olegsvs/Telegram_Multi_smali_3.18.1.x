@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 433
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$2;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$cacheFile:Ljava/io/File;
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 436
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v1
@@ -66,7 +64,6 @@
 
     move-result-object v0
 
-    .line 437
     .local v0, "photo":Lorg/telegram/tgnet/TLRPC$TL_photo;
     new-instance v1, Lorg/telegram/messenger/SendMessagesHelper$2$1;
 
@@ -74,6 +71,5 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 459
     return-void
 .end method

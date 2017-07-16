@@ -58,10 +58,8 @@
     .locals 1
 
     .prologue
-    .line 9708
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 9722
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -78,20 +76,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 9725
     const/4 v0, 0x0
 
-    .line 9726
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Document;
     sparse-switch p1, :sswitch_data_0
 
-    .line 9746
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 9747
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Document"
@@ -116,62 +110,51 @@
 
     throw v1
 
-    .line 9728
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_document;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_document;-><init>()V
 
-    .line 9729
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9731
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentEncrypted_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentEncrypted_old;-><init>()V
 
-    .line 9732
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9734
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_document_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_document_old;-><init>()V
 
-    .line 9735
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9737
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentEmpty;-><init>()V
 
-    .line 9738
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9740
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentEncrypted;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentEncrypted;-><init>()V
 
-    .line 9741
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9743
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_document_layer53;
 
@@ -181,18 +164,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Document;
     goto :goto_0
 
-    .line 9749
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 9750
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Document;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 9752
     :cond_1
     return-object v0
 
-    .line 9726
     nop
 
     :sswitch_data_0

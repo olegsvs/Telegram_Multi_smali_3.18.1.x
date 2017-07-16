@@ -1,4 +1,3 @@
-.class public Lorg/telegram/tgnet/TLRPC$TL_textUnderline;
 .super Lorg/telegram/tgnet/TLRPC$RichText;
 .source "TLRPC.java"
 
@@ -10,7 +9,6 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
-    name = "TL_textUnderline"
 .end annotation
 
 
@@ -27,10 +25,8 @@
     .locals 1
 
     .prologue
-    .line 1016
     const v0, -0x3ed9dd3c
 
-    sput v0, Lorg/telegram/tgnet/TLRPC$TL_textUnderline;->constructor:I
 
     return-void
 .end method
@@ -39,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 1015
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$RichText;-><init>()V
 
     return-void
@@ -53,7 +48,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1021
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -62,9 +56,7 @@
 
     move-result-object v0
 
-    iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_textUnderline;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
-    .line 1022
     return-void
 .end method
 
@@ -73,16 +65,11 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 1025
-    sget v0, Lorg/telegram/tgnet/TLRPC$TL_textUnderline;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1026
-    iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_textUnderline;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$RichText;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1027
     return-void
 .end method

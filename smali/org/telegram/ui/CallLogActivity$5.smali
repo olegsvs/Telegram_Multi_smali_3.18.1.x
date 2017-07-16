@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CallLogActivity;
 
     .prologue
-    .line 249
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,7 +40,6 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 252
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/CallLogActivity;->access$400(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -52,7 +50,6 @@
 
     move-result v2
 
-    .line 253
     .local v2, "firstVisibleItem":I
     const/4 v9, -0x1
 
@@ -60,12 +57,10 @@
 
     const/4 v8, 0x0
 
-    .line 254
     .local v8, "visibleItemCount":I
     :goto_0
     if-lez v8, :cond_0
 
-    .line 255
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/CallLogActivity;->access$500(Lorg/telegram/ui/CallLogActivity;)Lorg/telegram/ui/CallLogActivity$ListAdapter;
@@ -76,7 +71,6 @@
 
     move-result v7
 
-    .line 256
     .local v7, "totalItemCount":I
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -112,7 +106,6 @@
 
     if-lt v9, v10, :cond_0
 
-    .line 257
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/CallLogActivity;->access$200(Lorg/telegram/ui/CallLogActivity;)Ljava/util/ArrayList;
@@ -137,7 +130,6 @@
 
     check-cast v4, Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
-    .line 258
     .local v4, "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -163,7 +155,6 @@
 
     invoke-static {v10, v9, v11}, Lorg/telegram/ui/CallLogActivity;->access$800(Lorg/telegram/ui/CallLogActivity;II)V
 
-    .line 262
     .end local v4    # "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     .end local v7    # "totalItemCount":I
     :cond_0
@@ -181,31 +172,25 @@
 
     if-eq v9, v10, :cond_3
 
-    .line 263
     const/4 v9, 0x0
 
     invoke-virtual {p1, v9}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 264
     .local v5, "topChild":Landroid/view/View;
     const/4 v1, 0x0
 
-    .line 265
     .local v1, "firstViewTop":I
     if-eqz v5, :cond_1
 
-    .line 266
     invoke-virtual {v5}, Landroid/view/View;->getTop()I
 
     move-result v1
 
-    .line 269
     :cond_1
     const/4 v0, 0x1
 
-    .line 270
     .local v0, "changed":Z
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -215,7 +200,6 @@
 
     if-ne v9, v2, :cond_7
 
-    .line 271
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9}, Lorg/telegram/ui/CallLogActivity;->access$1100(Lorg/telegram/ui/CallLogActivity;)I
@@ -224,7 +208,6 @@
 
     sub-int v6, v9, v1
 
-    .line 272
     .local v6, "topDelta":I
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -236,7 +219,6 @@
 
     const/4 v3, 0x1
 
-    .line 273
     .local v3, "goingDown":Z
     :goto_1
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
@@ -249,7 +231,6 @@
 
     const/4 v0, 0x1
 
-    .line 277
     .end local v6    # "topDelta":I
     :goto_2
     if-eqz v0, :cond_2
@@ -262,30 +243,25 @@
 
     if-eqz v9, :cond_2
 
-    .line 278
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9, v3}, Lorg/telegram/ui/CallLogActivity;->access$1300(Lorg/telegram/ui/CallLogActivity;Z)V
 
-    .line 280
     :cond_2
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9, v2}, Lorg/telegram/ui/CallLogActivity;->access$1002(Lorg/telegram/ui/CallLogActivity;I)I
 
-    .line 281
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v9, v1}, Lorg/telegram/ui/CallLogActivity;->access$1102(Lorg/telegram/ui/CallLogActivity;I)I
 
-    .line 282
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     const/4 v10, 0x1
 
     invoke-static {v9, v10}, Lorg/telegram/ui/CallLogActivity;->access$1202(Lorg/telegram/ui/CallLogActivity;Z)Z
 
-    .line 284
     .end local v0    # "changed":Z
     .end local v1    # "firstViewTop":I
     .end local v3    # "goingDown":Z
@@ -293,7 +269,6 @@
     :cond_3
     return-void
 
-    .line 253
     .end local v8    # "visibleItemCount":I
     :cond_4
     iget-object v9, p0, Lorg/telegram/ui/CallLogActivity$5;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -316,7 +291,6 @@
 
     goto/16 :goto_0
 
-    .line 272
     .restart local v0    # "changed":Z
     .restart local v1    # "firstViewTop":I
     .restart local v5    # "topChild":Landroid/view/View;
@@ -327,14 +301,12 @@
 
     goto :goto_1
 
-    .line 273
     .restart local v3    # "goingDown":Z
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_2
 
-    .line 275
     .end local v3    # "goingDown":Z
     .end local v6    # "topDelta":I
     :cond_7

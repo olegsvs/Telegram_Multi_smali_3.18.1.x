@@ -59,20 +59,16 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 49
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
 
-    .line 65
     iput p1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->currentType:I
 
-    .line 66
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersStartRow:I
 
     return v0
@@ -92,7 +87,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersEndRow:I
 
     return v0
@@ -103,7 +97,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->updateRows()V
 
     return-void
@@ -114,7 +107,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
     return v0
@@ -125,7 +117,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersShadowRow:I
 
     return v0
@@ -136,7 +127,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
 
     return-object v0
@@ -147,7 +137,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget-boolean v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->loadingStickers:Z
 
     return v0
@@ -159,7 +148,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 42
     iput-boolean p1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->loadingStickers:Z
 
     return p1
@@ -170,7 +158,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget-boolean v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->endReached:Z
 
     return v0
@@ -182,7 +169,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 42
     iput-boolean p1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->endReached:Z
 
     return p1
@@ -193,7 +179,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     return-object v0
@@ -204,7 +189,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersLoadingRow:I
 
     return v0
@@ -215,7 +199,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->getStickers()V
 
     return-void
@@ -227,7 +210,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 42
     iput-boolean p1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->firstLoaded:Z
 
     return p1
@@ -238,7 +220,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArchivedStickersActivity;
 
     .prologue
-    .line 42
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object v0
@@ -250,7 +231,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 196
     iget-boolean v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->loadingStickers:Z
 
     if-nez v2, :cond_0
@@ -259,16 +239,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 232
     :cond_0
     :goto_0
     return-void
 
-    .line 199
     :cond_1
     iput-boolean v4, p0, Lorg/telegram/ui/ArchivedStickersActivity;->loadingStickers:Z
 
-    .line 200
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     if-eqz v2, :cond_2
@@ -277,29 +254,24 @@
 
     if-nez v2, :cond_2
 
-    .line 201
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 203
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     if-eqz v2, :cond_3
 
-    .line 204
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 206
     :cond_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;-><init>()V
 
-    .line 207
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
 
@@ -314,12 +286,10 @@
     :goto_1
     iput-wide v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;->offset_id:J
 
-    .line 208
     const/16 v2, 0xf
 
     iput v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;->limit:I
 
-    .line 209
     iget v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->currentType:I
 
     if-ne v2, v4, :cond_5
@@ -329,7 +299,6 @@
     :goto_2
     iput-boolean v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;->masks:Z
 
-    .line 210
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v2
@@ -342,7 +311,6 @@
 
     move-result v1
 
-    .line 231
     .local v1, "reqId":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -354,7 +322,6 @@
 
     goto :goto_0
 
-    .line 207
     .end local v1    # "reqId":I
     :cond_4
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
@@ -379,7 +346,6 @@
 
     goto :goto_1
 
-    .line 209
     :cond_5
     const/4 v2, 0x0
 
@@ -392,12 +358,10 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 172
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -406,12 +370,10 @@
 
     if-nez v0, :cond_2
 
-    .line 174
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersStartRow:I
 
-    .line 175
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
@@ -424,7 +386,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersEndRow:I
 
-    .line 176
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
@@ -437,12 +398,10 @@
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
-    .line 177
     iget-boolean v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->endReached:Z
 
     if-nez v0, :cond_1
 
-    .line 178
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -451,25 +410,20 @@
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersLoadingRow:I
 
-    .line 179
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersShadowRow:I
 
-    .line 190
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 191
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 193
     :cond_0
     return-void
 
-    .line 181
     :cond_1
     iget v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->rowCount:I
 
@@ -479,22 +433,17 @@
 
     iput v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersShadowRow:I
 
-    .line 182
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersLoadingRow:I
 
     goto :goto_0
 
-    .line 185
     :cond_2
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersStartRow:I
 
-    .line 186
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersEndRow:I
 
-    .line 187
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersLoadingRow:I
 
-    .line 188
     iput v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->stickersShadowRow:I
 
     goto :goto_0
@@ -513,24 +462,20 @@
 
     const/4 v4, 0x1
 
-    .line 85
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 86
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 87
     iget v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->currentType:I
 
     if-nez v1, :cond_0
 
-    .line 88
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "ArchivedStickers"
@@ -543,7 +488,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 92
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -553,26 +497,22 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 101
     new-instance v1, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;-><init>(Lorg/telegram/ui/ArchivedStickersActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
-    .line 103
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->fragmentView:Landroid/view/View;
 
-    .line 104
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 105
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     const-string/jumbo v1, "windowBackgroundGray"
 
@@ -582,19 +522,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 107
     new-instance v1, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-direct {v1, p1}, Lorg/telegram/ui/Components/EmptyTextProgressView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 108
     iget v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->currentType:I
 
     if-nez v1, :cond_1
 
-    .line 109
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const-string/jumbo v2, "ArchivedStickersEmpty"
@@ -607,7 +544,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 113
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -617,17 +553,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 114
     iget-boolean v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->loadingStickers:Z
 
     if-eqz v1, :cond_2
 
-    .line 115
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 120
     :goto_2
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -635,19 +568,16 @@
 
     iput-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 121
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setFocusable(Z)V
 
-    .line 122
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 123
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -660,7 +590,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 125
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v6, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -669,14 +598,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 126
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 127
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/ArchivedStickersActivity$2;
@@ -685,7 +612,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 159
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/ArchivedStickersActivity$3;
@@ -694,12 +620,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 168
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
 
-    .line 90
     .end local v0    # "frameLayout":Landroid/widget/FrameLayout;
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -716,7 +640,6 @@
 
     goto/16 :goto_0
 
-    .line 111
     .restart local v0    # "frameLayout":Landroid/widget/FrameLayout;
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -733,7 +656,6 @@
 
     goto :goto_1
 
-    .line 117
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -750,40 +672,31 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 244
     sget v0, Lorg/telegram/messenger/NotificationCenter;->needReloadArchivedStickers:I
 
     if-ne p1, v0, :cond_1
 
-    .line 245
     iput-boolean v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->firstLoaded:Z
 
-    .line 246
     iput-boolean v1, p0, Lorg/telegram/ui/ArchivedStickersActivity;->endReached:Z
 
-    .line 247
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->sets:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 248
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->updateRows()V
 
-    .line 249
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     if-eqz v0, :cond_0
 
-    .line 250
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 252
     :cond_0
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->getStickers()V
 
-    .line 254
     :cond_1
     return-void
 .end method
@@ -792,7 +705,6 @@
     .locals 11
 
     .prologue
-    .line 333
     const/16 v0, 0x13
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1378,16 +1290,12 @@
     .locals 2
 
     .prologue
-    .line 70
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 71
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->getStickers()V
 
-    .line 72
     invoke-direct {p0}, Lorg/telegram/ui/ArchivedStickersActivity;->updateRows()V
 
-    .line 73
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1396,7 +1304,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 74
     const/4 v0, 0x1
 
     return v0
@@ -1406,10 +1313,8 @@
     .locals 2
 
     .prologue
-    .line 79
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 80
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1418,7 +1323,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 81
     return-void
 .end method
 
@@ -1426,20 +1330,16 @@
     .locals 1
 
     .prologue
-    .line 236
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 237
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 238
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity;->listAdapter:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 240
     :cond_0
     return-void
 .end method

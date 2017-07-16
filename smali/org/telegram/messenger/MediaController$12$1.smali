@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MediaController$12;
 
     .prologue
-    .line 1968
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1971
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
@@ -52,7 +50,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1972
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
@@ -61,7 +58,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$2602(Lorg/telegram/messenger/MediaController;I)I
 
-    .line 1973
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
@@ -86,7 +82,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$2802(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 1974
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
@@ -97,7 +92,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1975
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
@@ -108,7 +102,6 @@
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->play()V
 
-    .line 1977
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
@@ -138,14 +131,12 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$2702(Lorg/telegram/messenger/MediaController;I)I
 
-    .line 1978
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$12$1;->this$1:Lorg/telegram/messenger/MediaController$12;
 
     iget-object v0, v0, Lorg/telegram/messenger/MediaController$12;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$3300(Lorg/telegram/messenger/MediaController;)V
 
-    .line 1980
     :cond_1
     return-void
 .end method

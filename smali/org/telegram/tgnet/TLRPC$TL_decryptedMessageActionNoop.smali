@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 13803
     const v0, -0x57d0229d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNoop;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 13802
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 13807
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNoop;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13808
     return-void
 .end method

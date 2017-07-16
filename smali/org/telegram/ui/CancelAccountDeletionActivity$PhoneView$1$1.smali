@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;
 
     .prologue
-    .line 400
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;
 
     iput-object p2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,19 +50,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 403
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;->access$402(Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;Z)Z
 
-    .line 404
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 405
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;
@@ -80,11 +76,9 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->access$500(Lorg/telegram/ui/CancelAccountDeletionActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 409
     :goto_0
     return-void
 
-    .line 407
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView$1;
 

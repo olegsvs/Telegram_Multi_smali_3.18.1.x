@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LocationActivity$14$1;
 
     .prologue
-    .line 588
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$14$1$1;->this$2:Lorg/telegram/ui/LocationActivity$14$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 591
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$14$1$1;->this$2:Lorg/telegram/ui/LocationActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
@@ -53,7 +51,6 @@
 
     invoke-static {v0, p1}, Lorg/telegram/ui/LocationActivity;->access$002(Lorg/telegram/ui/LocationActivity;Lcom/google/android/gms/maps/GoogleMap;)Lcom/google/android/gms/maps/GoogleMap;
 
-    .line 592
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$14$1$1;->this$2:Lorg/telegram/ui/LocationActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
@@ -72,7 +69,6 @@
 
     invoke-virtual {v0, v2, v2, v2, v1}, Lcom/google/android/gms/maps/GoogleMap;->setPadding(IIII)V
 
-    .line 593
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$14$1$1;->this$2:Lorg/telegram/ui/LocationActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
@@ -81,6 +77,5 @@
 
     invoke-static {v0}, Lorg/telegram/ui/LocationActivity;->access$1200(Lorg/telegram/ui/LocationActivity;)V
 
-    .line 594
     return-void
 .end method

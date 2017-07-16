@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$113;
 
     .prologue
-    .line 7530
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$113$2;->this$1:Lorg/telegram/messenger/MessagesController$113;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$113$2;->val$update:Lorg/telegram/tgnet/TLRPC$Update;
@@ -45,7 +44,6 @@
     .locals 7
 
     .prologue
-    .line 7533
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$113$2;->this$1:Lorg/telegram/messenger/MessagesController$113;
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesController$113;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -62,6 +60,5 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/messenger/MessagesController;->getChannelDifference(IIJLorg/telegram/tgnet/TLRPC$InputChannel;)V
 
-    .line 7534
     return-void
 .end method

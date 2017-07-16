@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemeActivity$2;
 
     .prologue
-    .line 139
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$2$3;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemeActivity$2$3;->val$editText:Landroid/widget/EditText;
@@ -46,13 +45,11 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 142
     new-instance v0, Lorg/telegram/ui/ThemeActivity$2$3$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ThemeActivity$2$3$1;-><init>(Lorg/telegram/ui/ThemeActivity$2$3;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 149
     return-void
 .end method

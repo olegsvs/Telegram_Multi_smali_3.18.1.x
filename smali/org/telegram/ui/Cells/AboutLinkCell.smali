@@ -41,31 +41,26 @@
 
     const/4 v6, 0x0
 
-    .line 63
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 54
     new-instance v0, Lorg/telegram/ui/Components/LinkPath;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/LinkPath;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->urlPath:Lorg/telegram/ui/Components/LinkPath;
 
-    .line 73
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -82,7 +77,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 76
     iget-object v7, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     const/4 v0, -0x2
@@ -118,15 +112,12 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 77
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->setWillNotDraw(Z)V
 
-    .line 78
     return-void
 
-    .line 76
     :cond_0
     const/4 v2, 0x3
 
@@ -147,21 +138,17 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->pressedLink:Landroid/text/style/ClickableSpan;
 
     if-eqz v0, :cond_0
 
-    .line 90
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->pressedLink:Landroid/text/style/ClickableSpan;
 
-    .line 92
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->invalidate()V
 
-    .line 93
     return-void
 .end method
 
@@ -171,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -182,10 +168,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 207
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 208
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v1, :cond_2
@@ -213,51 +197,42 @@
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 209
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->pressedLink:Landroid/text/style/ClickableSpan;
 
     if-eqz v1, :cond_0
 
-    .line 210
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->urlPath:Lorg/telegram/ui/Components/LinkPath;
 
     sget-object v2, Lorg/telegram/ui/ActionBar/Theme;->linkSelectionPaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v1, v2}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 213
     :cond_0
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v1, :cond_1
 
-    .line 214
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v1, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 219
     :cond_1
     :goto_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 220
     return-void
 
-    .line 208
     :cond_2
     const/high16 v1, 0x428e0000    # 71.0f
 
     goto :goto_0
 
-    .line 216
     :catch_0
     move-exception v0
 
-    .line 217
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -277,7 +252,6 @@
     .prologue
     const/high16 v8, 0x40000000    # 2.0f
 
-    .line 201
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->stringBuilder:Landroid/text/SpannableStringBuilder;
@@ -308,7 +282,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 202
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -337,7 +310,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 203
     return-void
 .end method
 
@@ -346,22 +318,18 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 130
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v10
 
-    .line 131
     .local v10, "x":F
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v12
 
-    .line 133
     .local v12, "y":F
     const/4 v7, 0x0
 
-    .line 134
     .local v7, "result":Z
     move-object/from16 v0, p0
 
@@ -369,7 +337,6 @@
 
     if-eqz v14, :cond_1
 
-    .line 135
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v14
@@ -390,7 +357,6 @@
 
     if-ne v14, v15, :cond_a
 
-    .line 136
     :cond_0
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -398,10 +364,8 @@
 
     if-nez v14, :cond_5
 
-    .line 137
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->resetPressedLink()V
 
-    .line 139
     :try_start_0
     move-object/from16 v0, p0
 
@@ -413,7 +377,6 @@
 
     float-to-int v11, v14
 
-    .line 140
     .local v11, "x2":I
     move-object/from16 v0, p0
 
@@ -425,7 +388,6 @@
 
     float-to-int v13, v14
 
-    .line 141
     .local v13, "y2":I
     move-object/from16 v0, p0
 
@@ -435,8 +397,6 @@
 
     move-result v4
 
-    .line 142
-    .local v4, "line":I
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
@@ -447,7 +407,6 @@
 
     move-result v6
 
-    .line 144
     .local v6, "off":I
     move-object/from16 v0, p0
 
@@ -457,7 +416,6 @@
 
     move-result v3
 
-    .line 145
     .local v3, "left":F
     int-to-float v14, v11
 
@@ -481,7 +439,6 @@
 
     if-ltz v14, :cond_4
 
-    .line 146
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
@@ -492,7 +449,6 @@
 
     check-cast v1, Landroid/text/Spannable;
 
-    .line 147
     .local v1, "buffer":Landroid/text/Spannable;
     const-class v14, Landroid/text/style/ClickableSpan;
 
@@ -502,16 +458,13 @@
 
     check-cast v5, [Landroid/text/style/ClickableSpan;
 
-    .line 148
     .local v5, "link":[Landroid/text/style/ClickableSpan;
     array-length v14, v5
 
     if-eqz v14, :cond_3
 
-    .line 149
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->resetPressedLink()V
 
-    .line 150
     const/4 v14, 0x0
 
     aget-object v14, v5, v14
@@ -522,10 +475,8 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 151
     const/4 v7, 0x1
 
-    .line 153
     :try_start_1
     move-object/from16 v0, p0
 
@@ -535,7 +486,6 @@
 
     move-result v8
 
-    .line 154
     .local v8, "start":I
     move-object/from16 v0, p0
 
@@ -551,7 +501,6 @@
 
     invoke-virtual {v14, v15, v8, v0}, Lorg/telegram/ui/Components/LinkPath;->setCurrentLayout(Landroid/text/StaticLayout;IF)V
 
-    .line 155
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->textLayout:Landroid/text/StaticLayout;
@@ -576,10 +525,8 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 195
     .end local v1    # "buffer":Landroid/text/Spannable;
     .end local v3    # "left":F
-    .end local v4    # "line":I
     .end local v5    # "link":[Landroid/text/style/ClickableSpan;
     .end local v6    # "off":I
     .end local v8    # "start":I
@@ -601,10 +548,8 @@
     :goto_1
     return v14
 
-    .line 156
     .restart local v1    # "buffer":Landroid/text/Spannable;
     .restart local v3    # "left":F
-    .restart local v4    # "line":I
     .restart local v5    # "link":[Landroid/text/style/ClickableSpan;
     .restart local v6    # "off":I
     .restart local v11    # "x2":I
@@ -612,7 +557,6 @@
     :catch_0
     move-exception v2
 
-    .line 157
     .local v2, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -621,11 +565,9 @@
 
     goto :goto_0
 
-    .line 165
     .end local v1    # "buffer":Landroid/text/Spannable;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v3    # "left":F
-    .end local v4    # "line":I
     .end local v5    # "link":[Landroid/text/style/ClickableSpan;
     .end local v6    # "off":I
     .end local v11    # "x2":I
@@ -633,20 +575,16 @@
     :catch_1
     move-exception v2
 
-    .line 166
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->resetPressedLink()V
 
-    .line 167
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 160
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v1    # "buffer":Landroid/text/Spannable;
     .restart local v3    # "left":F
-    .restart local v4    # "line":I
     .restart local v5    # "link":[Landroid/text/style/ClickableSpan;
     .restart local v6    # "off":I
     .restart local v11    # "x2":I
@@ -657,7 +595,6 @@
 
     goto :goto_0
 
-    .line 163
     .end local v1    # "buffer":Landroid/text/Spannable;
     .end local v5    # "link":[Landroid/text/style/ClickableSpan;
     :cond_4
@@ -667,9 +604,7 @@
 
     goto :goto_0
 
-    .line 169
     .end local v3    # "left":F
-    .end local v4    # "line":I
     .end local v6    # "off":I
     .end local v11    # "x2":I
     .end local v13    # "y2":I
@@ -680,28 +615,22 @@
 
     if-eqz v14, :cond_1
 
-    .line 171
     :try_start_4
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->pressedLink:Landroid/text/style/ClickableSpan;
 
-    instance-of v14, v14, Lorg/telegram/ui/Components/URLSpanNoUnderline;
 
     if-eqz v14, :cond_8
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->pressedLink:Landroid/text/style/ClickableSpan;
 
-    check-cast v14, Lorg/telegram/ui/Components/URLSpanNoUnderline;
 
-    invoke-virtual {v14}, Lorg/telegram/ui/Components/URLSpanNoUnderline;->getURL()Ljava/lang/String;
 
     move-result-object v9
 
-    .line 173
     .local v9, "url":Ljava/lang/String;
     const-string/jumbo v14, "@"
 
@@ -727,7 +656,6 @@
 
     if-eqz v14, :cond_7
 
-    .line 174
     :cond_6
     move-object/from16 v0, p0
 
@@ -735,7 +663,6 @@
 
     if-eqz v14, :cond_7
 
-    .line 175
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Cells/AboutLinkCell;->delegate:Lorg/telegram/ui/Cells/AboutLinkCell$AboutLinkCellDelegate;
@@ -744,18 +671,15 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
 
-    .line 188
     .end local v9    # "url":Ljava/lang/String;
     :cond_7
     :goto_2
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->resetPressedLink()V
 
-    .line 189
     const/4 v7, 0x1
 
     goto :goto_0
 
-    .line 179
     :cond_8
     :try_start_5
     move-object/from16 v0, p0
@@ -766,7 +690,6 @@
 
     if-eqz v14, :cond_9
 
-    .line 180
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->getContext()Landroid/content/Context;
 
     move-result-object v15
@@ -787,17 +710,14 @@
 
     goto :goto_2
 
-    .line 185
     :catch_2
     move-exception v2
 
-    .line 186
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 182
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_9
     :try_start_6
@@ -813,7 +733,6 @@
 
     goto :goto_2
 
-    .line 191
     :cond_a
     invoke-virtual/range {p1 .. p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -823,12 +742,10 @@
 
     if-ne v14, v15, :cond_1
 
-    .line 192
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->resetPressedLink()V
 
     goto/16 :goto_0
 
-    .line 195
     :cond_b
     const/4 v14, 0x0
 
@@ -840,10 +757,8 @@
     .param p1, "botHelpCellDelegate"    # Lorg/telegram/ui/Cells/AboutLinkCell$AboutLinkCellDelegate;
 
     .prologue
-    .line 85
     iput-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->delegate:Lorg/telegram/ui/Cells/AboutLinkCell$AboutLinkCellDelegate;
 
-    .line 86
     return-void
 .end method
 
@@ -852,14 +767,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v0, p1, v1}, Landroid/widget/ImageView;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 117
     return-void
 .end method
 
@@ -868,7 +781,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -880,7 +792,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 96
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -889,18 +800,15 @@
 
     if-nez v0, :cond_2
 
-    .line 97
     :cond_0
     const/16 v0, 0x8
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->setVisibility(I)V
 
-    .line 113
     :cond_1
     :goto_0
     return-void
 
-    .line 100
     :cond_2
     if-eqz p1, :cond_3
 
@@ -916,11 +824,9 @@
 
     if-nez v0, :cond_1
 
-    .line 103
     :cond_3
     iput-object p1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->oldText:Ljava/lang/String;
 
-    .line 104
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     iget-object v1, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->oldText:Ljava/lang/String;
@@ -929,12 +835,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->stringBuilder:Landroid/text/SpannableStringBuilder;
 
-    .line 105
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->stringBuilder:Landroid/text/SpannableStringBuilder;
 
     invoke-static {v3, v0, v3}, Lorg/telegram/messenger/MessageObject;->addLinks(ZLjava/lang/CharSequence;Z)V
 
-    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->stringBuilder:Landroid/text/SpannableStringBuilder;
 
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->profile_aboutTextPaint:Landroid/text/TextPaint;
@@ -951,13 +855,10 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ)Ljava/lang/CharSequence;
 
-    .line 107
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/AboutLinkCell;->requestLayout()V
 
-    .line 108
     if-nez p2, :cond_4
 
-    .line 109
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
@@ -966,7 +867,6 @@
 
     goto :goto_0
 
-    .line 111
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/Cells/AboutLinkCell;->imageView:Landroid/widget/ImageView;
 
@@ -980,6 +880,5 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 121
     return-void
 .end method

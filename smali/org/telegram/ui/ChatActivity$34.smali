@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2495
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 2498
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$6300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -50,20 +48,15 @@
 
     move-result-object v0
 
-    .line 2499
     .local v0, "object":Ljava/lang/Object;
-    instance-of v1, v0, Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     if-eqz v1, :cond_0
 
-    .line 2500
     const/16 v1, 0x64
 
-    .line 2505
     :goto_0
     return v1
 
-    .line 2502
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -71,16 +64,13 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lorg/telegram/ui/Adapters/MentionsAdapter;->getBotContextSwitch()Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     move-result-object v1
 
     if-eqz v1, :cond_1
 
-    .line 2503
     add-int/lit8 p1, p1, -0x1
 
-    .line 2505
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$34;->this$0:Lorg/telegram/ui/ChatActivity;
 

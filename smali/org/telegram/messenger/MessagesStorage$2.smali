@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 563
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$2;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesStorage$2;->val$isLogin:Z
@@ -45,24 +44,20 @@
     .locals 2
 
     .prologue
-    .line 566
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$2;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesStorage;->access$200(Lorg/telegram/messenger/MessagesStorage;)V
 
-    .line 567
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$2;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->openDatabase(Z)V
 
-    .line 568
     iget-boolean v0, p0, Lorg/telegram/messenger/MessagesStorage$2;->val$isLogin:Z
 
     if-eqz v0, :cond_0
 
-    .line 569
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/MessagesStorage$2$1;
@@ -71,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 576
     :cond_0
     return-void
 .end method

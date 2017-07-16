@@ -193,7 +193,6 @@
 
 .field public static final terrain:I = 0x7f0c000a
 
-.field public static final text_headline:I = 0x7f0c003b
 
 .field public static final view_header:I = 0x7f0c003e
 
@@ -217,7 +216,6 @@
     .locals 0
 
     .prologue
-    .line 968
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

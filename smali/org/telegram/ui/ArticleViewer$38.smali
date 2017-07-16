@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 5986
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$38;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
@@ -51,7 +50,6 @@
 
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 5989
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;
@@ -60,11 +58,9 @@
 
     if-nez v0, :cond_0
 
-    .line 6001
     :goto_0
     return-void
 
-    .line 5992
     :cond_0
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -72,7 +68,6 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 5993
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;
@@ -83,7 +78,6 @@
 
     invoke-virtual {v0, v3, v1}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 5995
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -93,7 +87,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->setVisibility(I)V
 
-    .line 5996
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$1000(Lorg/telegram/ui/ArticleViewer;)Landroid/view/View;
@@ -102,19 +95,16 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5997
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/ArticleViewer;->access$10902(Lorg/telegram/ui/ArticleViewer;I)I
 
-    .line 5998
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$38;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$11700(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;)V
 
-    .line 5999
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;
@@ -123,7 +113,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->setScaleX(F)V
 
-    .line 6000
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$38;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;

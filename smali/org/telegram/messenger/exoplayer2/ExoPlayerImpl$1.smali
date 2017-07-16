@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl$1;->this$0:Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;
 
     invoke-direct {p0}, Landroid/os/Handler;-><init>()V
@@ -39,11 +38,9 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl$1;->this$0:Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;->handleEvent(Landroid/os/Message;)V
 
-    .line 94
     return-void
 .end method

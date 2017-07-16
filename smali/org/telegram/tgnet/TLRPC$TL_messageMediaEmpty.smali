@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 3300
     const v0, 0x3ded6320
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3299
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$MessageMedia;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 3304
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3305
     return-void
 .end method

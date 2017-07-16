@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 18463
     const v0, 0xe17e23c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 18462
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PhotoSize;-><init>()V
 
     return-void
@@ -51,12 +49,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 18467
     invoke-virtual {p1}, Lorg/telegram/tgnet/AbstractSerializedData;->getPosition()I
 
     move-result v2
 
-    .line 18469
     .local v2, "startReadPosiition":I
     const/4 v3, 0x1
 
@@ -67,7 +63,6 @@
 
     iput-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->type:Ljava/lang/String;
 
-    .line 18470
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->type:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->length()I
@@ -136,18 +131,15 @@
 
     if-nez v3, :cond_1
 
-    .line 18471
     :cond_0
     const-string/jumbo v3, "s"
 
     iput-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->type:Ljava/lang/String;
 
-    .line 18472
     instance-of v3, p1, Lorg/telegram/tgnet/NativeByteBuffer;
 
     if-eqz v3, :cond_1
 
-    .line 18473
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/tgnet/NativeByteBuffer;
@@ -158,29 +150,24 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 18482
     .end local p1    # "stream":Lorg/telegram/tgnet/AbstractSerializedData;
     :cond_1
     :goto_0
     return-void
 
-    .line 18476
     .restart local p1    # "stream":Lorg/telegram/tgnet/AbstractSerializedData;
     :catch_0
     move-exception v1
 
-    .line 18477
     .local v1, "e":Ljava/lang/Exception;
     const-string/jumbo v3, "s"
 
     iput-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->type:Ljava/lang/String;
 
-    .line 18478
     instance-of v3, p1, Lorg/telegram/tgnet/NativeByteBuffer;
 
     if-eqz v3, :cond_1
 
-    .line 18479
     check-cast p1, Lorg/telegram/tgnet/NativeByteBuffer;
 
     .end local p1    # "stream":Lorg/telegram/tgnet/AbstractSerializedData;
@@ -194,16 +181,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 18485
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18486
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_photoSizeEmpty;->type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 18487
     return-void
 .end method

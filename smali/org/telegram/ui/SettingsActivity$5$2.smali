@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$5;
 
     .prologue
-    .line 693
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$5$2;->this$1:Lorg/telegram/ui/SettingsActivity$5;
 
     iput-boolean p2, p0, Lorg/telegram/ui/SettingsActivity$5$2;->val$showEmojiBtn:Z
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 696
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$5$2;->this$1:Lorg/telegram/ui/SettingsActivity$5;
 
     iget-object v1, v1, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -56,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 697
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$5$2;->this$1:Lorg/telegram/ui/SettingsActivity$5;
 
     iget-object v1, v1, Lorg/telegram/ui/SettingsActivity$5;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -91,11 +88,9 @@
 
     move-result-object v0
 
-    .line 698
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 700
     .end local v0    # "toast":Landroid/widget/Toast;
     :cond_0
     return-void

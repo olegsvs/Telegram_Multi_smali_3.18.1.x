@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 19068
     const v0, -0x1ce85082
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updatesTooLong;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 19067
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Updates;-><init>()V
 
     return-void

@@ -53,95 +53,80 @@
 
     const/4 v4, 0x0
 
-    .line 48
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 50
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0, v4, v4, v4, v4}, Landroid/graphics/RectF;-><init>(FFFF)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
-    .line 52
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
-    .line 53
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 54
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v6}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 55
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
     const/16 v1, 0xff
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 58
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
     const v1, -0xae420d
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 61
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
     const/16 v1, 0xff
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 62
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 64
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     const v1, 0x7f020275
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     const v1, 0x40ffffff    # 7.9999995f
@@ -152,14 +137,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 67
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 68
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     new-instance v1, Lorg/telegram/ui/Components/Crop/CropRotationWheel$1;
@@ -168,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     const/16 v1, 0x46
@@ -183,21 +165,18 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 77
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
     const v1, 0x7f02027d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 79
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
     const v1, 0x40ffffff    # 7.9999995f
@@ -208,14 +187,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 80
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
     new-instance v1, Lorg/telegram/ui/Components/Crop/CropRotationWheel$2;
@@ -224,7 +201,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation90Button:Landroid/widget/ImageView;
 
     const/16 v1, 0x46
@@ -239,19 +215,16 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 90
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->degreesLabel:Landroid/widget/TextView;
 
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->degreesLabel:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->degreesLabel:Landroid/widget/TextView;
 
     const/16 v1, 0x31
@@ -262,13 +235,10 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 94
     invoke-virtual {p0, v7}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setWillNotDraw(Z)V
 
-    .line 96
     invoke-virtual {p0, v4, v7}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setRotation(FZ)V
 
-    .line 97
     return-void
 .end method
 
@@ -277,7 +247,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Crop/CropRotationWheel;
 
     .prologue
-    .line 20
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     return-object v0
@@ -296,7 +265,6 @@
     .param p7, "paint"    # Landroid/graphics/Paint;
 
     .prologue
-    .line 202
     move/from16 v0, p4
 
     int-to-float v2, v0
@@ -317,7 +285,6 @@
 
     float-to-int v12, v2
 
-    .line 204
     .local v12, "radius":I
     const/high16 v2, 0x42b40000    # 90.0f
 
@@ -329,7 +296,6 @@
 
     sub-float v9, v2, v3
 
-    .line 205
     .local v9, "angle":F
     int-to-double v2, v12
 
@@ -347,13 +313,11 @@
 
     double-to-int v13, v2
 
-    .line 206
     .local v13, "val":I
     div-int/lit8 v2, p4, 0x2
 
     add-int v15, v2, v13
 
-    .line 208
     .local v15, "x":I
     invoke-static {v13}, Ljava/lang/Math;->abs(I)I
 
@@ -365,7 +329,6 @@
 
     div-float v10, v2, v3
 
-    .line 209
     .local v10, "f":F
     const/16 v2, 0xff
 
@@ -391,29 +354,24 @@
 
     move-result v8
 
-    .line 211
     .local v8, "alpha":I
     if-eqz p6, :cond_0
 
-    .line 212
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
     move-object/from16 p7, v0
 
-    .line 214
     :cond_0
     move-object/from16 v0, p7
 
     invoke-virtual {v0, v8}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 216
     if-eqz p6, :cond_1
 
     const/4 v14, 0x4
 
-    .line 217
     .local v14, "w":I
     :goto_0
     if-eqz p6, :cond_2
@@ -424,7 +382,6 @@
 
     move-result v11
 
-    .line 219
     .local v11, "h":I
     :goto_1
     div-int/lit8 v2, v14, 0x2
@@ -457,10 +414,8 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 220
     return-void
 
-    .line 216
     .end local v11    # "h":I
     .end local v14    # "w":I
     :cond_1
@@ -468,7 +423,6 @@
 
     goto :goto_0
 
-    .line 217
     .restart local v14    # "w":I
     :cond_2
     const/high16 v2, 0x41400000    # 12.0f
@@ -485,21 +439,17 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 168
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 170
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->getWidth()I
 
     move-result v4
 
-    .line 171
     .local v4, "width":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->getHeight()I
 
     move-result v5
 
-    .line 173
     .local v5, "height":I
     iget v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
@@ -509,13 +459,11 @@
 
     mul-float v8, v0, v1
 
-    .line 174
     .local v8, "angle":F
     const/high16 v0, 0x40a00000    # 5.0f
 
     rem-float v3, v8, v0
 
-    .line 175
     .local v3, "delta":F
     const/high16 v0, 0x40a00000    # 5.0f
 
@@ -529,7 +477,6 @@
 
     double-to-int v10, v0
 
-    .line 177
     .local v10, "segments":I
     const/4 v9, 0x0
 
@@ -539,14 +486,11 @@
 
     if-ge v9, v0, :cond_7
 
-    .line 178
     iget-object v7, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
-    .line 179
     .local v7, "paint":Landroid/graphics/Paint;
     move v2, v9
 
-    .line 180
     .local v2, "a":I
     if-lt v2, v10, :cond_0
 
@@ -558,11 +502,9 @@
 
     if-gez v0, :cond_1
 
-    .line 181
     :cond_0
     iget-object v7, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
-    .line 183
     :cond_1
     if-eq v2, v10, :cond_2
 
@@ -582,18 +524,14 @@
 
     invoke-virtual/range {v0 .. v7}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->drawLine(Landroid/graphics/Canvas;IFIIZLandroid/graphics/Paint;)V
 
-    .line 185
     if-eqz v9, :cond_3
 
-    .line 186
     neg-int v2, v9
 
-    .line 187
     if-le v2, v10, :cond_5
 
     iget-object v7, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->bluePaint:Landroid/graphics/Paint;
 
-    .line 188
     :goto_2
     add-int/lit8 v0, v10, 0x1
 
@@ -608,31 +546,26 @@
 
     invoke-virtual/range {v0 .. v7}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->drawLine(Landroid/graphics/Canvas;IFIIZLandroid/graphics/Paint;)V
 
-    .line 177
     :cond_3
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 183
     :cond_4
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 187
     :cond_5
     iget-object v7, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->whitePaint:Landroid/graphics/Paint;
 
     goto :goto_2
 
-    .line 188
     :cond_6
     const/4 v6, 0x0
 
     goto :goto_3
 
-    .line 192
     .end local v2    # "a":I
     .end local v7    # "paint":Landroid/graphics/Paint;
     :cond_7
@@ -642,7 +575,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x40200000    # 2.5f
@@ -659,7 +591,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->left:F
 
-    .line 195
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x41b00000    # 22.0f
@@ -676,7 +607,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->top:F
 
-    .line 196
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x40200000    # 2.5f
@@ -693,7 +623,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->right:F
 
-    .line 197
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x41b00000    # 22.0f
@@ -710,7 +639,6 @@
 
     iput v1, v0, Landroid/graphics/RectF;->bottom:F
 
-    .line 198
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->tempRect:Landroid/graphics/RectF;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -733,7 +661,6 @@
 
     invoke-virtual {p1, v0, v1, v6, v11}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 199
     return-void
 .end method
 
@@ -743,12 +670,10 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 105
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 106
     .local v0, "width":I
     const/high16 v1, 0x43c80000    # 400.0f
 
@@ -768,7 +693,6 @@
 
     invoke-super {p0, v1, p2}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 107
     return-void
 .end method
 
@@ -779,40 +703,32 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 133
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 134
     .local v0, "action":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
-    .line 136
     .local v3, "x":F
     if-nez v0, :cond_1
 
-    .line 137
     iput v3, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->prevX:F
 
-    .line 139
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     if-eqz v4, :cond_0
 
-    .line 140
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     invoke-interface {v4}, Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;->onStart()V
 
-    .line 163
     :cond_0
     :goto_0
     return v10
 
-    .line 141
     :cond_1
     if-eq v0, v10, :cond_2
 
@@ -820,13 +736,11 @@
 
     if-ne v0, v4, :cond_3
 
-    .line 142
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     if-eqz v4, :cond_0
 
-    .line 143
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     iget v5, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
@@ -835,18 +749,15 @@
 
     goto :goto_0
 
-    .line 144
     :cond_3
     const/4 v4, 0x2
 
     if-ne v0, v4, :cond_0
 
-    .line 145
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->prevX:F
 
     sub-float v1, v4, v3
 
-    .line 147
     .local v1, "delta":F
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
@@ -868,7 +779,6 @@
 
     add-float v2, v4, v5
 
-    .line 148
     .local v2, "newAngle":F
     const/high16 v4, -0x3dcc0000    # -45.0f
 
@@ -882,7 +792,6 @@
 
     move-result v2
 
-    .line 150
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
     sub-float v4, v2, v4
@@ -899,7 +808,6 @@
 
     if-lez v4, :cond_0
 
-    .line 151
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
     move-result v4
@@ -912,28 +820,23 @@
 
     if-gez v4, :cond_4
 
-    .line 152
     const/4 v2, 0x0
 
-    .line 154
     :cond_4
     const/4 v4, 0x0
 
     invoke-virtual {p0, v2, v4}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setRotation(FZ)V
 
-    .line 156
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     if-eqz v4, :cond_5
 
-    .line 157
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     iget v5, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
     invoke-interface {v4, v5}, Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;->onChange(F)V
 
-    .line 159
     :cond_5
     iput v3, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->prevX:F
 
@@ -944,14 +847,12 @@
     .locals 2
 
     .prologue
-    .line 110
     const/4 v0, 0x0
 
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->setRotation(FZ)V
 
-    .line 111
     return-void
 .end method
 
@@ -960,7 +861,6 @@
     .param p1, "enabled"    # Z
 
     .prologue
-    .line 128
     iget-object v1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
@@ -970,10 +870,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 129
     return-void
 
-    .line 128
     :cond_0
     const v0, 0x7f020275
 
@@ -985,7 +883,6 @@
     .param p1, "freeform"    # Z
 
     .prologue
-    .line 100
     iget-object v1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->aspectRatioButton:Landroid/widget/ImageView;
 
     if-eqz p1, :cond_0
@@ -995,10 +892,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 101
     return-void
 
-    .line 100
     :cond_0
     const/16 v0, 0x8
 
@@ -1010,10 +905,8 @@
     .param p1, "listener"    # Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotationListener:Lorg/telegram/ui/Components/Crop/CropRotationWheel$RotationWheelListener;
 
-    .line 115
     return-void
 .end method
 
@@ -1023,13 +916,10 @@
     .param p2, "animated"    # Z
 
     .prologue
-    .line 118
     iput p1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
-    .line 119
     iget v0, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->rotation:F
 
-    .line 120
     .local v0, "value":F
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
@@ -1043,12 +933,10 @@
 
     if-gez v1, :cond_0
 
-    .line 121
     invoke-static {v0}, Ljava/lang/Math;->abs(F)F
 
     move-result v0
 
-    .line 122
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->degreesLabel:Landroid/widget/TextView;
 
@@ -1072,9 +960,7 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 124
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->invalidate()V
 
-    .line 125
     return-void
 .end method

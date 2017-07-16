@@ -18,21 +18,18 @@
     .prologue
     const/16 v1, 0x10
 
-    .line 32
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->CHANNELS_BY_AMODE:[I
 
-    .line 38
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->SAMPLE_RATE_BY_SFREQ:[I
 
-    .line 44
     const/16 v0, 0x1d
 
     new-array v0, v0, [I
@@ -43,7 +40,6 @@
 
     return-void
 
-    .line 32
     :array_0
     .array-data 4
         0x1
@@ -64,7 +60,6 @@
         0x8
     .end array-data
 
-    .line 38
     :array_1
     .array-data 4
         -0x1
@@ -85,7 +80,6 @@
         -0x1
     .end array-data
 
-    .line 44
     :array_2
     .array-data 4
         0x40
@@ -124,7 +118,6 @@
     .locals 0
 
     .prologue
-    .line 114
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -135,7 +128,6 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 109
     const/4 v0, 0x5
 
     aget-byte v0, p0, v0
@@ -174,12 +166,10 @@
     .param p0, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 96
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
-    .line 97
     .local v1, "position":I
     add-int/lit8 v2, v1, 0x4
 
@@ -193,7 +183,6 @@
 
     add-int/lit8 v3, v1, 0x5
 
-    .line 98
     invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v3
@@ -204,7 +193,6 @@
 
     or-int v0, v2, v3
 
-    .line 99
     .local v0, "nblks":I
     add-int/lit8 v2, v0, 0x1
 
@@ -218,7 +206,6 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 83
     const/4 v1, 0x4
 
     aget-byte v1, p0, v1
@@ -237,7 +224,6 @@
 
     or-int v0, v1, v2
 
-    .line 84
     .local v0, "nblks":I
     add-int/lit8 v1, v0, 0x1
 
@@ -254,31 +240,26 @@
     .param p3, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 60
     new-instance v12, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     invoke-direct {v12, p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;-><init>([B)V
 
-    .line 61
     .local v12, "frameBits":Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
     const/16 v0, 0x3c
 
     invoke-virtual {v12, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 62
     const/4 v0, 0x6
 
     invoke-virtual {v12, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v11
 
-    .line 63
     .local v11, "amode":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->CHANNELS_BY_AMODE:[I
 
     aget v5, v0, v11
 
-    .line 64
     .local v5, "channelCount":I
     const/4 v0, 0x4
 
@@ -286,13 +267,11 @@
 
     move-result v14
 
-    .line 65
     .local v14, "sfreq":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->SAMPLE_RATE_BY_SFREQ:[I
 
     aget v6, v0, v14
 
-    .line 66
     .local v6, "sampleRate":I
     const/4 v0, 0x5
 
@@ -300,7 +279,6 @@
 
     move-result v13
 
-    .line 67
     .local v13, "rate":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->TWICE_BITRATE_KBPS_BY_RATE:[I
 
@@ -310,14 +288,12 @@
 
     const/4 v3, -0x1
 
-    .line 69
     .local v3, "bitrate":I
     :goto_0
     const/16 v0, 0xa
 
     invoke-virtual {v12, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 70
     const/4 v0, 0x2
 
     invoke-virtual {v12, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBits(I)I
@@ -331,7 +307,6 @@
     :goto_1
     add-int/2addr v5, v0
 
-    .line 71
     const-string/jumbo v1, "audio/vnd.dts"
 
     const/4 v2, 0x0
@@ -354,7 +329,6 @@
 
     return-object v0
 
-    .line 67
     .end local v3    # "bitrate":I
     :cond_0
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/DtsUtil;->TWICE_BITRATE_KBPS_BY_RATE:[I
@@ -367,7 +341,6 @@
 
     goto :goto_0
 
-    .line 70
     .restart local v3    # "bitrate":I
     :cond_1
     const/4 v0, 0x0

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     .prologue
-    .line 307
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .param p1, "messageObject"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 310
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/AudioSelectActivity;->access$602(Lorg/telegram/ui/AudioSelectActivity;Lorg/telegram/messenger/MessageObject;)Lorg/telegram/messenger/MessageObject;
 
-    .line 311
     return-void
 .end method

@@ -70,22 +70,18 @@
     .locals 1
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 67
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->sessions:Ljava/util/ArrayList;
 
-    .line 68
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSession:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
-    .line 354
     return-void
 .end method
 
@@ -94,7 +90,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsRow:I
 
     return v0
@@ -105,7 +100,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsStartRow:I
 
     return v0
@@ -116,7 +110,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsDetailRow:I
 
     return v0
@@ -127,7 +120,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsTerminateDetail:I
 
     return v0
@@ -138,7 +130,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionSectionRow:I
 
     return v0
@@ -149,7 +140,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsSectionRow:I
 
     return v0
@@ -160,7 +150,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionRow:I
 
     return v0
@@ -171,7 +160,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->noOtherSessionsRow:I
 
     return v0
@@ -182,7 +170,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsEndRow:I
 
     return v0
@@ -193,7 +180,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->sessions:Ljava/util/ArrayList;
 
     return-object v0
@@ -204,7 +190,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity;->updateRows()V
 
     return-void
@@ -215,7 +200,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listAdapter:Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
     return-object v0
@@ -226,7 +210,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget-boolean v0, p0, Lorg/telegram/ui/SessionsActivity;->loading:Z
 
     return v0
@@ -238,7 +221,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 58
     iput-boolean p1, p0, Lorg/telegram/ui/SessionsActivity;->loading:Z
 
     return p1
@@ -249,7 +231,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSession:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     return-object v0
@@ -261,7 +242,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     .prologue
-    .line 58
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity;->currentSession:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     return-object p1
@@ -272,7 +252,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     return v0
@@ -283,7 +262,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/SessionsActivity;
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -294,31 +272,25 @@
     .param p1, "silent"    # Z
 
     .prologue
-    .line 285
     iget-boolean v2, p0, Lorg/telegram/ui/SessionsActivity;->loading:Z
 
     if-eqz v2, :cond_0
 
-    .line 319
     :goto_0
     return-void
 
-    .line 288
     :cond_0
     if-nez p1, :cond_1
 
-    .line 289
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lorg/telegram/ui/SessionsActivity;->loading:Z
 
-    .line 291
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_getAuthorizations;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_account_getAuthorizations;-><init>()V
 
-    .line 292
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_account_getAuthorizations;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -332,7 +304,6 @@
 
     move-result v1
 
-    .line 318
     .local v1, "reqId":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -351,17 +322,14 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 322
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
-    .line 323
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSession:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     if-eqz v0, :cond_0
 
-    .line 324
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -370,7 +338,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionSectionRow:I
 
-    .line 325
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -379,7 +346,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionRow:I
 
-    .line 330
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->sessions:Ljava/util/ArrayList;
 
@@ -389,12 +355,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 331
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->currentSession:Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
     if-eqz v0, :cond_1
 
-    .line 332
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -403,49 +367,37 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->noOtherSessionsRow:I
 
-    .line 336
     :goto_1
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsRow:I
 
-    .line 337
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsDetailRow:I
 
-    .line 338
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsSectionRow:I
 
-    .line 339
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsStartRow:I
 
-    .line 340
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsEndRow:I
 
-    .line 341
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsTerminateDetail:I
 
-    .line 352
     :goto_2
     return-void
 
-    .line 327
     :cond_0
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionRow:I
 
-    .line 328
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->currentSessionSectionRow:I
 
     goto :goto_0
 
-    .line 334
     :cond_1
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->noOtherSessionsRow:I
 
     goto :goto_1
 
-    .line 343
     :cond_2
     iput v2, p0, Lorg/telegram/ui/SessionsActivity;->noOtherSessionsRow:I
 
-    .line 344
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -454,7 +406,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsRow:I
 
-    .line 345
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -463,7 +414,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->terminateAllSessionsDetailRow:I
 
-    .line 346
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -472,14 +422,12 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsSectionRow:I
 
-    .line 347
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsSectionRow:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsStartRow:I
 
-    .line 348
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsStartRow:I
 
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->sessions:Ljava/util/ArrayList;
@@ -492,7 +440,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->otherSessionsEndRow:I
 
-    .line 349
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->sessions:Ljava/util/ArrayList;
@@ -505,7 +452,6 @@
 
     iput v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
-    .line 350
     iget v0, p0, Lorg/telegram/ui/SessionsActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -521,21 +467,18 @@
     .locals 3
 
     .prologue
-    .line 270
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarColor:I
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 271
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarTitleColor:I
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitleColor(I)V
 
-    .line 272
     invoke-virtual {p0}, Lorg/telegram/ui/SessionsActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -550,7 +493,6 @@
 
     move-result-object v0
 
-    .line 273
     .local v0, "back":Landroid/graphics/drawable/Drawable;
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -558,12 +500,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 274
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 275
     return-void
 .end method
 
@@ -574,21 +514,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 100
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v1, 0x7f0200b6
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 101
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 102
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v1, "SessionsTitle"
@@ -601,7 +538,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v1, Lorg/telegram/ui/SessionsActivity$1;
@@ -610,26 +546,22 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 112
     new-instance v0, Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/SessionsActivity$ListAdapter;-><init>(Lorg/telegram/ui/SessionsActivity;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listAdapter:Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
-    .line 114
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->fragmentView:Landroid/view/View;
 
-    .line 115
     iget-object v9, p0, Lorg/telegram/ui/SessionsActivity;->fragmentView:Landroid/view/View;
 
     check-cast v9, Landroid/widget/FrameLayout;
 
-    .line 116
     .local v9, "frameLayout":Landroid/widget/FrameLayout;
     const-string/jumbo v0, "windowBackgroundGray"
 
@@ -639,7 +571,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 117
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "theme"
@@ -650,7 +581,6 @@
 
     move-result-object v10
 
-    .line 118
     .local v10, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v0, "prefBGColor"
 
@@ -660,7 +590,6 @@
 
     move-result v7
 
-    .line 119
     .local v7, "bgColor":I
     const-string/jumbo v0, "prefSummaryColor"
 
@@ -670,7 +599,6 @@
 
     move-result v11
 
-    .line 120
     .local v11, "summaryColor":I
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -678,21 +606,18 @@
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
-    .line 121
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setGravity(I)V
 
-    .line 123
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     const v1, 0x7f0200af
@@ -705,7 +630,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 124
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     new-instance v1, Landroid/widget/AbsListView$LayoutParams;
@@ -726,7 +650,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 125
     const/4 v0, -0x1
 
     if-eq v7, v0, :cond_0
@@ -735,7 +658,6 @@
 
     invoke-virtual {v0, v7}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 126
     :cond_0
     new-instance v0, Landroid/widget/ImageView;
 
@@ -743,19 +665,16 @@
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->imageView:Landroid/widget/ImageView;
 
-    .line 127
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->imageView:Landroid/widget/ImageView;
 
     const v1, 0x7f02007d
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 128
     const v0, -0x757576
 
     if-eq v11, v0, :cond_1
 
-    .line 129
     invoke-virtual {p0}, Lorg/telegram/ui/SessionsActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -770,18 +689,15 @@
 
     move-result-object v8
 
-    .line 130
     .local v8, "devices":Landroid/graphics/drawable/Drawable;
     sget-object v0, Landroid/graphics/PorterDuff$Mode;->SRC_IN:Landroid/graphics/PorterDuff$Mode;
 
     invoke-virtual {v8, v11, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 131
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v8}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 133
     .end local v8    # "devices":Landroid/graphics/drawable/Drawable;
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->imageView:Landroid/widget/ImageView;
@@ -800,7 +716,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->imageView:Landroid/widget/ImageView;
@@ -815,14 +730,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 136
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText2"
@@ -833,19 +746,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 139
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -854,7 +764,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 141
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -865,7 +774,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 142
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
 
     const-string/jumbo v1, "NoOtherSessions"
@@ -878,7 +786,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 143
     iget-object v12, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     iget-object v13, p0, Lorg/telegram/ui/SessionsActivity;->textView1:Landroid/widget/TextView;
@@ -903,14 +810,12 @@
 
     invoke-virtual {v12, v13, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 145
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
-    .line 146
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText2"
@@ -921,19 +826,16 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 147
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 148
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -942,7 +844,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     const/high16 v1, 0x41a00000    # 20.0f
@@ -963,7 +864,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 151
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
 
     const-string/jumbo v1, "NoOtherSessionsInfo"
@@ -976,7 +876,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 152
     iget-object v12, p0, Lorg/telegram/ui/SessionsActivity;->emptyLayout:Landroid/widget/LinearLayout;
 
     iget-object v13, p0, Lorg/telegram/ui/SessionsActivity;->textView2:Landroid/widget/TextView;
@@ -1001,19 +900,16 @@
 
     invoke-virtual {v12, v13, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 154
     new-instance v0, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/EmptyTextProgressView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 155
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 156
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const/4 v1, -0x1
@@ -1028,19 +924,16 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 158
     new-instance v0, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 159
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Components/RecyclerListView;->setBackgroundColor(I)V
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -1053,21 +946,18 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 161
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 163
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, -0x1
@@ -1080,14 +970,12 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity;->listAdapter:Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/SessionsActivity$2;
@@ -1096,7 +984,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->fragmentView:Landroid/view/View;
 
     return-object v0
@@ -1108,17 +995,14 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 279
     sget v0, Lorg/telegram/messenger/NotificationCenter;->newSessionReceived:I
 
     if-ne p1, v0, :cond_0
 
-    .line 280
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lorg/telegram/ui/SessionsActivity;->loadSessions(Z)V
 
-    .line 282
     :cond_0
     return-void
 .end method
@@ -1127,7 +1011,6 @@
     .locals 11
 
     .prologue
-    .line 464
     const/16 v0, 0x16
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1660,7 +1543,6 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "onlineTextView"
 
     aput-object v6, v4, v5
 
@@ -1700,7 +1582,6 @@
 
     const/4 v5, 0x0
 
-    const-string/jumbo v6, "onlineTextView"
 
     aput-object v6, v4, v5
 
@@ -1803,18 +1684,14 @@
     .locals 2
 
     .prologue
-    .line 85
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 86
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity;->updateRows()V
 
-    .line 87
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/ui/SessionsActivity;->loadSessions(Z)V
 
-    .line 88
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1823,7 +1700,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 89
     const/4 v0, 0x1
 
     return v0
@@ -1833,10 +1709,8 @@
     .locals 2
 
     .prologue
-    .line 94
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 95
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1845,7 +1719,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 96
     return-void
 .end method
 
@@ -1853,20 +1726,16 @@
     .locals 1
 
     .prologue
-    .line 262
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 263
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listAdapter:Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 264
     iget-object v0, p0, Lorg/telegram/ui/SessionsActivity;->listAdapter:Lorg/telegram/ui/SessionsActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/SessionsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 266
     :cond_0
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -1874,7 +1743,6 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/SessionsActivity;->updateTheme()V
 
-    .line 267
     :cond_1
     return-void
 .end method

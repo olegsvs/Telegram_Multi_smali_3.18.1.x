@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationRepeat;
 
     .prologue
-    .line 22
     iput-object p1, p0, Lorg/telegram/messenger/NotificationRepeat$1;->this$0:Lorg/telegram/messenger/NotificationRepeat;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 25
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/NotificationsController;->repeatNotificationMaybe()V
 
-    .line 26
     return-void
 .end method

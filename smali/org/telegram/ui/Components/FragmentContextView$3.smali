@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/FragmentContextView;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 116
     iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/FragmentContextView;->access$000(Lorg/telegram/ui/Components/FragmentContextView;)I
@@ -51,7 +49,6 @@
 
     if-nez v2, :cond_1
 
-    .line 117
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v2
@@ -60,7 +57,6 @@
 
     move-result-object v1
 
-    .line 118
     .local v1, "messageObject":Lorg/telegram/messenger/MessageObject;
     if-eqz v1, :cond_0
 
@@ -78,7 +74,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 119
     iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/FragmentContextView;->access$100(Lorg/telegram/ui/Components/FragmentContextView;)Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -91,13 +86,11 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 126
     .end local v1    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_0
     :goto_0
     return-void
 
-    .line 121
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
@@ -109,7 +102,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 122
     new-instance v0, Landroid/content/Intent;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
@@ -122,13 +114,11 @@
 
     invoke-direct {v0, v2, v3}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 123
     .local v0, "intent":Landroid/content/Intent;
     const/high16 v2, 0x30000000
 
     invoke-virtual {v0, v2}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 124
     iget-object v2, p0, Lorg/telegram/ui/Components/FragmentContextView$3;->this$0:Lorg/telegram/ui/Components/FragmentContextView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/FragmentContextView;->getContext()Landroid/content/Context;

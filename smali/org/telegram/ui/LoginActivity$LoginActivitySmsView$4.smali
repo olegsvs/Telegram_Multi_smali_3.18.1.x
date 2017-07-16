@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     .prologue
-    .line 1366
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -48,12 +47,10 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1369
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_cancelCode;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_auth_cancelCode;-><init>()V
 
-    .line 1370
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_cancelCode;
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
@@ -63,7 +60,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_cancelCode;->phone_number:Ljava/lang/String;
 
-    .line 1371
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$3300(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Ljava/lang/String;
@@ -72,7 +68,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_cancelCode;->phone_code_hash:Ljava/lang/String;
 
-    .line 1372
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -85,12 +80,10 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 1378
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->onBackPressed()V
 
-    .line 1379
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     iget-object v1, v1, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->this$0:Lorg/telegram/ui/LoginActivity;
@@ -101,6 +94,5 @@
 
     invoke-virtual {v1, v2, v4, v3, v4}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 1380
     return-void
 .end method

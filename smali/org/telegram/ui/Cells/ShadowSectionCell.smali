@@ -15,15 +15,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 20
     const/16 v0, 0xc
 
     iput v0, p0, Lorg/telegram/ui/Cells/ShadowSectionCell;->size:I
 
-    .line 25
     const v0, 0x7f0200ae
 
     const-string/jumbo v1, "windowBackgroundGrayShadow"
@@ -34,12 +31,10 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ShadowSectionCell;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 26
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/ShadowSectionCell;->bTheme:Z
 
-    .line 27
     return-void
 .end method
 
@@ -49,15 +44,12 @@
     .param p2, "theme"    # Z
 
     .prologue
-    .line 37
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 20
     const/16 v0, 0xc
 
     iput v0, p0, Lorg/telegram/ui/Cells/ShadowSectionCell;->size:I
 
-    .line 38
     const v0, 0x7f0200ae
 
     const-string/jumbo v1, "windowBackgroundGrayShadow"
@@ -68,10 +60,8 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ShadowSectionCell;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 39
     iput-boolean p2, p0, Lorg/telegram/ui/Cells/ShadowSectionCell;->bTheme:Z
 
-    .line 40
     return-void
 .end method
 
@@ -79,23 +69,19 @@
     .locals 2
 
     .prologue
-    .line 49
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->prefShadowColor:I
 
     const v1, -0xf0f10
 
     if-ne v0, v1, :cond_0
 
-    .line 50
     const v0, 0x7f0200ae
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/ShadowSectionCell;->setBackgroundResource(I)V
 
-    .line 54
     :goto_0
     return-void
 
-    .line 52
     :cond_0
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->prefShadowColor:I
 
@@ -114,7 +100,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 44
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -137,7 +122,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/view/View;->onMeasure(II)V
 
-    .line 45
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v0, :cond_0
@@ -148,7 +132,6 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/Cells/ShadowSectionCell;->setTheme()V
 
-    .line 46
     :cond_0
     return-void
 .end method
@@ -158,9 +141,7 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 30
     iput p1, p0, Lorg/telegram/ui/Cells/ShadowSectionCell;->size:I
 
-    .line 34
     return-void
 .end method

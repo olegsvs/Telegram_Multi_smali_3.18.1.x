@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 44
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$1;->initialValue()Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;
 
     move-result-object v0
@@ -52,7 +50,6 @@
     .locals 2
 
     .prologue
-    .line 47
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;
 
     const/16 v1, 0x1000

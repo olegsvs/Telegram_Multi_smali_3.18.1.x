@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/TwoStepVerificationActivity$7$1;
 
     .prologue
-    .line 427
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$7$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 430
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$7$1;
 
     iget-object v0, v0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$7;
@@ -54,11 +52,9 @@
 
     if-nez v0, :cond_0
 
-    .line 435
     :goto_0
     return-void
 
-    .line 433
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$7$1;
 
@@ -70,7 +66,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$2300(Lorg/telegram/ui/TwoStepVerificationActivity;Z)V
 
-    .line 434
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$7$1;
 
     iget-object v0, v0, Lorg/telegram/ui/TwoStepVerificationActivity$7$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$7;

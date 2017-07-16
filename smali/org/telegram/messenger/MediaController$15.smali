@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2339
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$15;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$15;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -48,7 +47,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2342
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$15;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$4900(Lorg/telegram/messenger/MediaController;)Ljava/util/ArrayList;
@@ -73,16 +71,13 @@
 
     if-le v0, v1, :cond_0
 
-    .line 2343
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$15;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$5000(Lorg/telegram/messenger/MediaController;Z)V
 
-    .line 2347
     :goto_0
     return-void
 
-    .line 2345
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/MediaController$15;->this$0:Lorg/telegram/messenger/MediaController;
 

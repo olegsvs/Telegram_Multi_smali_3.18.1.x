@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 1659
     const v0, -0x42221ace
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 1658
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Peer;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1663
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;->channel_id:I
 
-    .line 1664
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 1667
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1668
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;->channel_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1669
     return-void
 .end method

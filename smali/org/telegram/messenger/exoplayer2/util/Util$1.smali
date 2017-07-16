@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 198
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/Util$1;->val$threadName:Ljava/lang/String;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p1, "r"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 201
     new-instance v0, Ljava/lang/Thread;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/Util$1;->val$threadName:Ljava/lang/String;

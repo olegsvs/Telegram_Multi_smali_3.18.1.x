@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/ActionBar;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBar$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,24 +41,20 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBar$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-boolean v0, v0, Lorg/telegram/ui/ActionBar/ActionBar;->isSearchFieldVisible:Z
 
     if-eqz v0, :cond_1
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBar$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->closeSearchField()V
 
-    .line 98
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBar$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -67,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 96
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBar$1;->this$0:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/ActionBar;->actionBarMenuOnItemClick:Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;

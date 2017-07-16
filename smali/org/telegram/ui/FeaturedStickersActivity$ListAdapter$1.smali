@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     .prologue
-    .line 239
     iput-object p1, p0, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,17 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 242
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
-    .line 243
     .local v1, "parent":Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->getStickerSet()Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
     move-result-object v0
 
-    .line 244
     .local v0, "pack":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
@@ -79,11 +75,9 @@
 
     if-eqz v2, :cond_0
 
-    .line 250
     :goto_0
     return-void
 
-    .line 247
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
@@ -103,7 +97,6 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     iget-object v2, p0, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/FeaturedStickersActivity$ListAdapter;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
@@ -124,7 +117,6 @@
 
     invoke-static {v2, v3, v4, v5, v6}, Lorg/telegram/messenger/query/StickersQuery;->removeStickersSet(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$StickerSet;ILorg/telegram/ui/ActionBar/BaseFragment;Z)V
 
-    .line 249
     const/4 v2, 0x1
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->setDrawProgress(Z)V

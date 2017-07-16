@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$4;
 
     .prologue
-    .line 607
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$4$5;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/SettingsActivity$4$5;->val$maskValues:[Z
@@ -48,12 +47,10 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 610
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/CheckBoxCell;
 
-    .line 611
     .local v0, "cell":Lorg/telegram/ui/Cells/CheckBoxCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/CheckBoxCell;->getTag()Ljava/lang/Object;
 
@@ -65,7 +62,6 @@
 
     move-result v1
 
-    .line 612
     .local v1, "num":I
     iget-object v4, p0, Lorg/telegram/ui/SettingsActivity$4$5;->val$maskValues:[Z
 
@@ -80,17 +76,14 @@
     :goto_0
     aput-boolean v2, v4, v1
 
-    .line 613
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$5;->val$maskValues:[Z
 
     aget-boolean v2, v2, v1
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/Cells/CheckBoxCell;->setChecked(ZZ)V
 
-    .line 614
     return-void
 
-    .line 612
     :cond_0
     const/4 v2, 0x0
 

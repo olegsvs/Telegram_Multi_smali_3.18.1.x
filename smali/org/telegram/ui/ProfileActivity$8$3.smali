@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$8;
 
     .prologue
-    .line 910
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$8$3;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$8$3;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -49,10 +48,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 913
     if-nez p2, :cond_1
 
-    .line 915
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
@@ -86,13 +83,11 @@
 
     invoke-direct {v3, v4, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 916
     .local v3, "intent":Landroid/content/Intent;
     const/high16 v4, 0x10000000
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
 
-    .line 917
     iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$8$3;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     iget-object v4, v4, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -107,17 +102,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 936
     .end local v3    # "intent":Landroid/content/Intent;
     :cond_0
     :goto_0
     return-void
 
-    .line 918
     :catch_0
     move-exception v2
 
-    .line 919
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v4, "tmessages"
 
@@ -125,12 +117,10 @@
 
     goto :goto_0
 
-    .line 921
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_1
     if-ne p2, v4, :cond_0
 
-    .line 923
     :try_start_1
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -138,7 +128,6 @@
 
     if-ge v4, v5, :cond_2
 
-    .line 924
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "clipboard"
@@ -149,7 +138,6 @@
 
     check-cast v1, Landroid/text/ClipboardManager;
 
-    .line 925
     .local v1, "clipboard":Landroid/text/ClipboardManager;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -175,7 +163,6 @@
 
     invoke-virtual {v1, v4}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    .line 931
     .end local v1    # "clipboard":Landroid/text/ClipboardManager;
     :goto_1
     iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$8$3;->this$1:Lorg/telegram/ui/ProfileActivity$8;
@@ -236,11 +223,9 @@
 
     goto :goto_0
 
-    .line 932
     :catch_1
     move-exception v2
 
-    .line 933
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string/jumbo v4, "tmessages"
 
@@ -248,7 +233,6 @@
 
     goto :goto_0
 
-    .line 927
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_2
     :try_start_2
@@ -262,7 +246,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 928
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v4, "label"
 
@@ -292,7 +275,6 @@
 
     move-result-object v0
 
-    .line 929
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_2

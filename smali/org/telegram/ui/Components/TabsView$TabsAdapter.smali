@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 555
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-direct {p0}, Landroid/support/v4/view/PagerAdapter;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Components/TabsView$1;
 
     .prologue
-    .line 555
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/TabsView$TabsAdapter;-><init>(Lorg/telegram/ui/Components/TabsView;)V
 
     return-void
@@ -55,13 +53,11 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 585
     check-cast p3, Landroid/view/View;
 
     .end local p3    # "object":Ljava/lang/Object;
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 586
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .locals 1
 
     .prologue
-    .line 565
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$200(Lorg/telegram/ui/Components/TabsView;)Ljava/util/ArrayList;
@@ -88,7 +83,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 602
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$200(Lorg/telegram/ui/Components/TabsView;)Ljava/util/ArrayList;
@@ -112,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 555
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->getPageTitle(I)Ljava/lang/String;
 
     move-result-object v0
@@ -125,7 +118,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 607
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$200(Lorg/telegram/ui/Components/TabsView;)Ljava/util/ArrayList;
@@ -151,7 +143,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 578
     new-instance v0, Landroid/view/View;
 
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
@@ -160,11 +151,9 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 579
     .local v0, "view":Landroid/view/View;
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 580
     return-object v0
 .end method
 
@@ -174,7 +163,6 @@
     .param p2, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 590
     if-ne p1, p2, :cond_0
 
     const/4 v0, 0x1
@@ -192,10 +180,8 @@
     .locals 1
 
     .prologue
-    .line 570
     invoke-super {p0}, Landroid/support/v4/view/PagerAdapter;->notifyDataSetChanged()V
 
-    .line 571
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$700(Lorg/telegram/ui/Components/TabsView;)Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
@@ -204,7 +190,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 572
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$TabsAdapter;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$700(Lorg/telegram/ui/Components/TabsView;)Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
@@ -213,7 +198,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->notifyDataSetChanged()V
 
-    .line 574
     :cond_0
     return-void
 .end method
@@ -223,13 +207,10 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 595
     if-eqz p1, :cond_0
 
-    .line 596
     invoke-super {p0, p1}, Landroid/support/v4/view/PagerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 598
     :cond_0
     return-void
 .end method

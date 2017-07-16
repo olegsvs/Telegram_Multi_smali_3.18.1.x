@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$2;
 
     .prologue
-    .line 437
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->val$photo:Lorg/telegram/tgnet/TLRPC$TL_photo;
@@ -49,12 +48,10 @@
 
     const/4 v2, 0x0
 
-    .line 440
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->val$photo:Lorg/telegram/tgnet/TLRPC$TL_photo;
 
     if-eqz v0, :cond_0
 
-    .line 441
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -63,7 +60,6 @@
 
     iput-object v4, v0, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->httpLocation:Ljava/lang/String;
 
-    .line 442
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -78,7 +74,6 @@
 
     iput-object v4, v0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    .line 443
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -97,7 +92,6 @@
 
     iput-object v4, v0, Lorg/telegram/tgnet/TLRPC$Message;->attachPath:Ljava/lang/String;
 
-    .line 444
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v4, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -126,12 +120,10 @@
 
     iput-object v0, v4, Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 445
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 446
     .local v1, "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
@@ -143,7 +135,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 447
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -154,7 +145,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesStorage;->putMessages(Ljava/util/ArrayList;ZZZI)V
 
-    .line 448
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -165,7 +155,6 @@
 
     invoke-static {v0, v4}, Lorg/telegram/messenger/SendMessagesHelper;->access$700(Lorg/telegram/messenger/SendMessagesHelper;Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;)V
 
-    .line 449
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -184,12 +173,10 @@
 
     invoke-virtual {v0, v4, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 457
     .end local v1    # "messages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     :goto_0
     return-void
 
-    .line 451
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -235,7 +222,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 452
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -250,7 +236,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/MessagesStorage;->markMessageAsSendError(Lorg/telegram/tgnet/TLRPC$Message;)V
 
-    .line 453
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->val$message:Lorg/telegram/messenger/SendMessagesHelper$DelayedMessage;
@@ -263,7 +248,6 @@
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$Message;->send_state:I
 
-    .line 454
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -290,7 +274,6 @@
 
     invoke-virtual {v0, v4, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 455
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$2$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$2;->this$0:Lorg/telegram/messenger/SendMessagesHelper;

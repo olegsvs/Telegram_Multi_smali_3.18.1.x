@@ -23,9 +23,7 @@
 
 .field public bot_info_version:I
 
-.field public bot_inline_geo:Z
 
-.field public bot_inline_placeholder:Ljava/lang/String;
 
 .field public bot_nochats:Z
 
@@ -71,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 7145
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -84,20 +81,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 7173
     const/4 v0, 0x0
 
-    .line 7174
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$User;
     sparse-switch p1, :sswitch_data_0
 
-    .line 7218
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 7219
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in User"
@@ -122,150 +115,123 @@
 
     throw v1
 
-    .line 7176
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userContact_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userContact_old2;-><init>()V
 
-    .line 7177
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7179
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userContact_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userContact_old;-><init>()V
 
-    .line 7180
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7182
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old;-><init>()V
 
-    .line 7183
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7185
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old3;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old3;-><init>()V
 
-    .line 7186
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7188
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old2;-><init>()V
 
-    .line 7189
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7191
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userEmpty;-><init>()V
 
-    .line 7192
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7194
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old;-><init>()V
 
-    .line 7195
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7197
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old;-><init>()V
 
-    .line 7198
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7200
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old2;-><init>()V
 
-    .line 7201
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7203
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userRequest_old2;-><init>()V
 
-    .line 7204
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7206
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userDeleted_old;-><init>()V
 
-    .line 7207
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7209
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userSelf_old2;-><init>()V
 
-    .line 7210
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7212
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_user_old;-><init>()V
 
-    .line 7213
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7215
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_user;
 
@@ -275,18 +241,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$User;
     goto :goto_0
 
-    .line 7221
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 7222
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$User;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 7224
     :cond_1
     return-object v0
 
-    .line 7174
     nop
 
     :sswitch_data_0

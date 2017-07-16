@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MediaController$1;
 
     .prologue
-    .line 434
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$1$2;->this$1:Lorg/telegram/messenger/MediaController$1;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MediaController$1$2;->val$amplitude:D
@@ -45,7 +44,6 @@
     .locals 8
 
     .prologue
-    .line 437
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -90,6 +88,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 438
     return-void
 .end method

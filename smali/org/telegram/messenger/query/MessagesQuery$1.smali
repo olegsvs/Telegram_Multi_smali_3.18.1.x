@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 40
     check-cast p1, Lorg/telegram/tgnet/TLRPC$MessageEntity;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$MessageEntity;
@@ -62,21 +60,17 @@
     .param p2, "entity2"    # Lorg/telegram/tgnet/TLRPC$MessageEntity;
 
     .prologue
-    .line 43
     iget v0, p1, Lorg/telegram/tgnet/TLRPC$MessageEntity;->offset:I
 
     iget v1, p2, Lorg/telegram/tgnet/TLRPC$MessageEntity;->offset:I
 
     if-le v0, v1, :cond_0
 
-    .line 44
     const/4 v0, 0x1
 
-    .line 48
     :goto_0
     return v0
 
-    .line 45
     :cond_0
     iget v0, p1, Lorg/telegram/tgnet/TLRPC$MessageEntity;->offset:I
 
@@ -84,12 +78,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 46
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 48
     :cond_1
     const/4 v0, 0x0
 

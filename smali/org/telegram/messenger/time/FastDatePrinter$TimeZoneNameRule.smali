@@ -35,16 +35,12 @@
     .param p3, "style"    # I
 
     .prologue
-    .line 1134
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1135
     iput-object p2, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mLocale:Ljava/util/Locale;
 
-    .line 1136
     iput p3, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mStyle:I
 
-    .line 1138
     const/4 v0, 0x0
 
     invoke-static {p1, v0, p3, p2}, Lorg/telegram/messenger/time/FastDatePrinter;->getTimeZoneDisplay(Ljava/util/TimeZone;ZILjava/util/Locale;)Ljava/lang/String;
@@ -53,7 +49,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mStandard:Ljava/lang/String;
 
-    .line 1139
     const/4 v0, 0x1
 
     invoke-static {p1, v0, p3, p2}, Lorg/telegram/messenger/time/FastDatePrinter;->getTimeZoneDisplay(Ljava/util/TimeZone;ZILjava/util/Locale;)Ljava/lang/String;
@@ -62,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mDaylight:Ljava/lang/String;
 
-    .line 1140
     return-void
 .end method
 
@@ -74,12 +68,10 @@
     .param p2, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 1158
     invoke-virtual {p2}, Ljava/util/Calendar;->getTimeZone()Ljava/util/TimeZone;
 
     move-result-object v0
 
-    .line 1159
     .local v0, "zone":Ljava/util/TimeZone;
     invoke-virtual {v0}, Ljava/util/TimeZone;->useDaylightTime()Z
 
@@ -89,14 +81,12 @@
 
     const/16 v1, 0x10
 
-    .line 1160
     invoke-virtual {p2, v1}, Ljava/util/Calendar;->get(I)I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 1161
     const/4 v1, 0x1
 
     iget v2, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mStyle:I
@@ -109,11 +99,9 @@
 
     invoke-virtual {p1, v1}, Ljava/lang/StringBuffer;->append(Ljava/lang/String;)Ljava/lang/StringBuffer;
 
-    .line 1165
     :goto_0
     return-void
 
-    .line 1163
     :cond_0
     const/4 v1, 0x0
 
@@ -134,7 +122,6 @@
     .locals 2
 
     .prologue
-    .line 1150
     iget-object v0, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNameRule;->mStandard:Ljava/lang/String;
 
     invoke-virtual {v0}, Ljava/lang/String;->length()I

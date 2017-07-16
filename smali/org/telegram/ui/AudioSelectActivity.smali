@@ -61,24 +61,20 @@
     .locals 1
 
     .prologue
-    .line 47
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 57
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->audioEntries:Ljava/util/ArrayList;
 
-    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->selectedAudios:Ljava/util/HashMap;
 
-    .line 277
     return-void
 .end method
 
@@ -87,7 +83,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->selectedAudios:Ljava/util/HashMap;
 
     return-object v0
@@ -98,7 +93,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Lorg/telegram/ui/AudioSelectActivity;->updateBottomLayoutCount()V
 
     return-void
@@ -109,7 +103,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->delegate:Lorg/telegram/ui/AudioSelectActivity$AudioSelectActivityDelegate;
 
     return-object v0
@@ -120,7 +113,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->audioEntries:Ljava/util/ArrayList;
 
     return-object v0
@@ -132,7 +124,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity;->audioEntries:Ljava/util/ArrayList;
 
     return-object p1
@@ -143,7 +134,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object v0
@@ -154,7 +144,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->listViewAdapter:Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     return-object v0
@@ -166,7 +155,6 @@
     .param p1, "x1"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity;->playingAudio:Lorg/telegram/messenger/MessageObject;
 
     return-object p1
@@ -176,22 +164,18 @@
     .locals 2
 
     .prologue
-    .line 187
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/AudioSelectActivity;->loadingAudio:Z
 
-    .line 188
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     if-eqz v0, :cond_0
 
-    .line 189
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 191
     :cond_0
     sget-object v0, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -201,7 +185,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 275
     return-void
 .end method
 
@@ -209,7 +192,6 @@
     .locals 3
 
     .prologue
-    .line 179
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->bottomLayout:Lorg/telegram/ui/Components/PickerBottomLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->selectedAudios:Ljava/util/HashMap;
@@ -222,7 +204,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/PickerBottomLayout;->updateSelectedCount(IZ)V
 
-    .line 180
     return-void
 .end method
 
@@ -243,19 +224,16 @@
 
     const/4 v3, 0x0
 
-    .line 89
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v5, 0x7f0200b6
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 90
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 91
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v5, "AttachMusic"
@@ -268,7 +246,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 92
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v5, Lorg/telegram/ui/AudioSelectActivity$1;
@@ -277,19 +254,16 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 101
     new-instance v4, Landroid/widget/FrameLayout;
 
     invoke-direct {v4, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->fragmentView:Landroid/view/View;
 
-    .line 102
     iget-object v7, p0, Lorg/telegram/ui/AudioSelectActivity;->fragmentView:Landroid/view/View;
 
     check-cast v7, Landroid/widget/FrameLayout;
 
-    .line 104
     .local v7, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v4, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -297,7 +271,6 @@
 
     iput-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 105
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const-string/jumbo v5, "NoAudio"
@@ -310,7 +283,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 106
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -319,26 +291,22 @@
 
     invoke-virtual {v7, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 108
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v4, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 109
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v5, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 110
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4, v10}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 111
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v5, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -347,7 +315,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 112
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v5, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
@@ -358,7 +325,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 113
     iget-object v4, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     sget-boolean v5, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -368,7 +334,6 @@
     :goto_0
     invoke-virtual {v4, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollbarPosition(I)V
 
-    .line 114
     iget-object v9, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/16 v2, 0x33
@@ -385,7 +350,6 @@
 
     invoke-virtual {v7, v9, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 116
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/AudioSelectActivity$2;
@@ -394,14 +358,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 132
     new-instance v1, Lorg/telegram/ui/Components/PickerBottomLayout;
 
     invoke-direct {v1, p1, v10}, Lorg/telegram/ui/Components/PickerBottomLayout;-><init>(Landroid/content/Context;Z)V
 
     iput-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->bottomLayout:Lorg/telegram/ui/Components/PickerBottomLayout;
 
-    .line 133
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->bottomLayout:Lorg/telegram/ui/Components/PickerBottomLayout;
 
     const/16 v2, 0x30
@@ -414,7 +376,6 @@
 
     invoke-virtual {v7, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 134
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->bottomLayout:Lorg/telegram/ui/Components/PickerBottomLayout;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/PickerBottomLayout;->cancelButton:Landroid/widget/TextView;
@@ -425,7 +386,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 140
     iget-object v1, p0, Lorg/telegram/ui/AudioSelectActivity;->bottomLayout:Lorg/telegram/ui/Components/PickerBottomLayout;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/PickerBottomLayout;->doneButton:Landroid/widget/LinearLayout;
@@ -436,18 +396,15 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/LinearLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 154
     new-instance v8, Landroid/view/View;
 
     invoke-direct {v8, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 155
     .local v8, "shadow":Landroid/view/View;
     const v1, 0x7f0200b2
 
     invoke-virtual {v8, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 156
     const/high16 v1, 0x40400000    # 3.0f
 
     const/16 v2, 0x53
@@ -464,33 +421,27 @@
 
     invoke-virtual {v7, v8, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 158
     iget-boolean v0, p0, Lorg/telegram/ui/AudioSelectActivity;->loadingAudio:Z
 
     if-eqz v0, :cond_1
 
-    .line 159
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 163
     :goto_1
     invoke-direct {p0}, Lorg/telegram/ui/AudioSelectActivity;->updateBottomLayoutCount()V
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->fragmentView:Landroid/view/View;
 
     return-object v0
 
-    .line 113
     .end local v8    # "shadow":Landroid/view/View;
     :cond_0
     const/4 v2, 0x2
 
     goto :goto_0
 
-    .line 161
     .restart local v8    # "shadow":Landroid/view/View;
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->progressView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -506,31 +457,25 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 169
     sget v0, Lorg/telegram/messenger/NotificationCenter;->closeChats:I
 
     if-ne p1, v0, :cond_1
 
-    .line 170
     invoke-virtual {p0}, Lorg/telegram/ui/AudioSelectActivity;->removeSelfFromStack()V
 
-    .line 176
     :cond_0
     :goto_0
     return-void
 
-    .line 171
     :cond_1
     sget v0, Lorg/telegram/messenger/NotificationCenter;->audioDidReset:I
 
     if-ne p1, v0, :cond_0
 
-    .line 172
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->listViewAdapter:Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->listViewAdapter:Lorg/telegram/ui/AudioSelectActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->notifyDataSetChanged()V
@@ -542,7 +487,6 @@
     .locals 11
 
     .prologue
-    .line 330
     const/16 v0, 0x18
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1336,10 +1280,8 @@
     .locals 2
 
     .prologue
-    .line 70
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 71
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1348,7 +1290,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 72
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1357,10 +1298,8 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 73
     invoke-direct {p0}, Lorg/telegram/ui/AudioSelectActivity;->loadAudio()V
 
-    .line 74
     const/4 v0, 0x1
 
     return v0
@@ -1372,10 +1311,8 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 79
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 80
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1384,7 +1321,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 81
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1393,7 +1329,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity;->playingAudio:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v0, :cond_0
@@ -1410,14 +1345,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 83
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/messenger/MediaController;->cleanupPlayer(ZZ)V
 
-    .line 85
     :cond_0
     return-void
 .end method
@@ -1427,9 +1360,7 @@
     .param p1, "audioSelectActivityDelegate"    # Lorg/telegram/ui/AudioSelectActivity$AudioSelectActivityDelegate;
 
     .prologue
-    .line 183
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity;->delegate:Lorg/telegram/ui/AudioSelectActivity$AudioSelectActivityDelegate;
 
-    .line 184
     return-void
 .end method

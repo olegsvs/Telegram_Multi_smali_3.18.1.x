@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 497
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;-><init>()V
@@ -42,7 +41,6 @@
 
     const/4 v2, 0x0
 
-    .line 506
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1500(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -51,7 +49,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setVisibility(I)V
 
-    .line 507
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1000(Lorg/telegram/ui/MediaActivity;)I
@@ -62,7 +59,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 508
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1700(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -71,27 +67,22 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->search(Ljava/lang/String;)V
 
-    .line 514
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/MediaActivity;->access$1602(Lorg/telegram/ui/MediaActivity;Z)Z
 
-    .line 515
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/MediaActivity;->access$2002(Lorg/telegram/ui/MediaActivity;Z)Z
 
-    .line 516
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1100(Lorg/telegram/ui/MediaActivity;)V
 
-    .line 517
     return-void
 
-    .line 509
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -103,7 +94,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 510
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1800(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -114,7 +104,6 @@
 
     goto :goto_0
 
-    .line 511
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -126,7 +115,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 512
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1900(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -142,7 +130,6 @@
     .locals 2
 
     .prologue
-    .line 500
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1500(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -153,14 +140,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setVisibility(I)V
 
-    .line 501
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/MediaActivity;->access$1602(Lorg/telegram/ui/MediaActivity;Z)Z
 
-    .line 502
     return-void
 .end method
 
@@ -171,7 +156,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 521
     invoke-virtual {p1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
 
     move-result-object v1
@@ -180,7 +164,6 @@
 
     move-result-object v0
 
-    .line 522
     .local v0, "text":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -188,17 +171,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 523
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/MediaActivity;->access$2002(Lorg/telegram/ui/MediaActivity;Z)Z
 
-    .line 524
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1100(Lorg/telegram/ui/MediaActivity;)V
 
-    .line 526
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -208,7 +188,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 527
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1700(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -217,12 +196,10 @@
 
     if-nez v1, :cond_2
 
-    .line 542
     :cond_1
     :goto_0
     return-void
 
-    .line 530
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -234,7 +211,6 @@
 
     goto :goto_0
 
-    .line 531
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -246,7 +222,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 532
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1800(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -255,7 +230,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 535
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1800(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -266,7 +240,6 @@
 
     goto :goto_0
 
-    .line 536
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -278,7 +251,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 537
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1900(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -287,7 +259,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 540
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$2;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/MediaActivity;->access$1900(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;

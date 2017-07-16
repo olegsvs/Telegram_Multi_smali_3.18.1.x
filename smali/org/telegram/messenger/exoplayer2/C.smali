@@ -198,7 +198,6 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 160
     sget v0, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x17
@@ -210,14 +209,12 @@
     :goto_0
     sput v0, Lorg/telegram/messenger/exoplayer2/C;->CHANNEL_OUT_7POINT1_SURROUND:I
 
-    .line 435
     new-instance v0, Ljava/util/UUID;
 
     invoke-direct {v0, v2, v3, v2, v3}, Ljava/util/UUID;-><init>(JJ)V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
-    .line 442
     new-instance v0, Ljava/util/UUID;
 
     const-wide v2, -0x121074568629b532L    # -3.563403477674908E221
@@ -228,7 +225,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/C;->WIDEVINE_UUID:Ljava/util/UUID;
 
-    .line 450
     new-instance v0, Ljava/util/UUID;
 
     const-wide v2, -0x65fb0f8667bfbd7aL
@@ -241,7 +237,6 @@
 
     return-void
 
-    .line 160
     :cond_0
     const/16 v0, 0x18fc
 
@@ -252,7 +247,6 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -265,7 +259,6 @@
     .prologue
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 543
     cmp-long v2, p0, v0
 
     if-nez v2, :cond_0
@@ -288,7 +281,6 @@
     .prologue
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 532
     cmp-long v2, p0, v0
 
     if-nez v2, :cond_0

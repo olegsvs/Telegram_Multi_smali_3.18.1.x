@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DataSettingsActivity$2;
 
     .prologue
-    .line 243
     iput-object p1, p0, Lorg/telegram/ui/DataSettingsActivity$2$3;->this$1:Lorg/telegram/ui/DataSettingsActivity$2;
 
     iput-object p2, p0, Lorg/telegram/ui/DataSettingsActivity$2$3;->val$preferences:Landroid/content/SharedPreferences;
@@ -51,20 +50,16 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 246
     const/4 v0, -0x1
 
-    .line 247
     .local v0, "val":I
     packed-switch p2, :pswitch_data_0
 
-    .line 258
     :goto_0
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 259
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity$2$3;->val$preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -79,7 +74,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 261
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity$2$3;->this$1:Lorg/telegram/ui/DataSettingsActivity$2;
 
@@ -91,7 +85,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 262
     iget-object v1, p0, Lorg/telegram/ui/DataSettingsActivity$2$3;->this$1:Lorg/telegram/ui/DataSettingsActivity$2;
 
     iget-object v1, v1, Lorg/telegram/ui/DataSettingsActivity$2;->this$0:Lorg/telegram/ui/DataSettingsActivity;
@@ -104,31 +97,24 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/DataSettingsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 264
     :cond_1
     return-void
 
-    .line 249
     :pswitch_0
     const/4 v0, 0x0
 
-    .line 250
     goto :goto_0
 
-    .line 252
     :pswitch_1
     const/4 v0, 0x1
 
-    .line 253
     goto :goto_0
 
-    .line 255
     :pswitch_2
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 247
     nop
 
     :pswitch_data_0

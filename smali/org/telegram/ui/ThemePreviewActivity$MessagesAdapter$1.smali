@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     .prologue
-    .line 750
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter$1;->this$1:Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 798
     const/4 v0, 0x0
 
     return v0
@@ -52,7 +50,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 789
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p2, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 794
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .param p2, "button"    # Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     .prologue
-    .line 779
     return-void
 .end method
 
@@ -81,7 +76,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 784
     return-void
 .end method
 
@@ -92,7 +86,6 @@
     .param p3, "postId"    # I
 
     .prologue
-    .line 764
     return-void
 .end method
 
@@ -101,7 +94,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 824
     return-void
 .end method
 
@@ -110,7 +102,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 829
     return-void
 .end method
 
@@ -119,7 +110,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 769
     return-void
 .end method
 
@@ -129,7 +119,6 @@
     .param p2, "id"    # I
 
     .prologue
-    .line 814
     return-void
 .end method
 
@@ -138,7 +127,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 754
     return-void
 .end method
 
@@ -149,7 +137,6 @@
     .param p3, "longPress"    # Z
 
     .prologue
-    .line 804
     return-void
 .end method
 
@@ -159,7 +146,6 @@
     .param p2, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 774
     return-void
 .end method
 
@@ -169,7 +155,6 @@
     .param p2, "username"    # Ljava/lang/String;
 
     .prologue
-    .line 819
     return-void
 .end method
 
@@ -183,7 +168,6 @@
     .param p6, "h"    # I
 
     .prologue
-    .line 809
     return-void
 .end method
 
@@ -192,7 +176,6 @@
     .param p1, "messageObject"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 758
     const/4 v0, 0x0
 
     return v0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/InstantCameraView;
 
     .prologue
-    .line 179
     iput-object p1, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 183
     return-void
 .end method
 
@@ -52,14 +50,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 187
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
 
     if-lt v0, v1, :cond_0
 
-    .line 188
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/InstantCameraView;->access$300(Lorg/telegram/ui/Components/InstantCameraView;)Lorg/telegram/ui/ChatActivity;
@@ -78,12 +74,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 189
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-static {v0, v5}, Lorg/telegram/ui/Components/InstantCameraView;->access$402(Lorg/telegram/ui/Components/InstantCameraView;Z)Z
 
-    .line 190
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/InstantCameraView;->access$300(Lorg/telegram/ui/Components/InstantCameraView;)Lorg/telegram/ui/ChatActivity;
@@ -106,11 +100,9 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
 
-    .line 228
     :goto_0
     return-void
 
-    .line 195
     :cond_0
     :try_start_0
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -123,7 +115,6 @@
 
     check-cast v7, Landroid/os/Vibrator;
 
-    .line 196
     .local v7, "v":Landroid/os/Vibrator;
     const-wide/16 v0, 0x32
 
@@ -131,7 +122,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     .end local v7    # "v":Landroid/os/Vibrator;
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -146,7 +136,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->lockOrientation(Landroid/app/Activity;)V
 
-    .line 201
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->generateVideoPath()Ljava/io/File;
@@ -155,7 +144,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/InstantCameraView;->access$502(Lorg/telegram/ui/Components/InstantCameraView;Ljava/io/File;)Ljava/io/File;
 
-    .line 202
     invoke-static {}, Lorg/telegram/messenger/camera/CameraController;->getInstance()Lorg/telegram/messenger/camera/CameraController;
 
     move-result-object v0
@@ -188,11 +176,9 @@
 
     goto :goto_0
 
-    .line 197
     :catch_0
     move-exception v6
 
-    .line 198
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 54
     iput p1, p0, Lorg/telegram/messenger/query/MessagesQuery$2;->val$channelId:I
 
     iput p2, p0, Lorg/telegram/messenger/query/MessagesQuery$2;->val$mid:I
@@ -44,7 +43,6 @@
     .locals 3
 
     .prologue
-    .line 57
     iget v0, p0, Lorg/telegram/messenger/query/MessagesQuery$2;->val$channelId:I
 
     iget v1, p0, Lorg/telegram/messenger/query/MessagesQuery$2;->val$mid:I
@@ -53,6 +51,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/query/MessagesQuery;->access$000(IIZ)Lorg/telegram/messenger/MessageObject;
 
-    .line 58
     return-void
 .end method

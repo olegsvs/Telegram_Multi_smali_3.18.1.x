@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1596
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$10;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$10;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1599
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/telegram/messenger/MessagesController;->putEncryptedChat(Lorg/telegram/tgnet/TLRPC$EncryptedChat;Z)V
 
-    .line 1600
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1601
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$10;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iget-object v1, p0, Lorg/telegram/messenger/SecretChatHelper$10;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -82,6 +78,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/SecretChatHelper;->sendNotifyLayerMessage(Lorg/telegram/tgnet/TLRPC$EncryptedChat;Lorg/telegram/tgnet/TLRPC$Message;)V
 
-    .line 1602
     return-void
 .end method

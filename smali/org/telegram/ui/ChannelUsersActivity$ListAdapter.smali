@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 497
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 498
     iput-object p2, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 499
     return-void
 .end method
 
@@ -48,7 +45,6 @@
 
     const/4 v1, 0x0
 
-    .line 534
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChannelUsersActivity;->access$700(Lorg/telegram/ui/ChannelUsersActivity;)Ljava/util/ArrayList;
@@ -86,12 +82,10 @@
 
     if-nez v2, :cond_2
 
-    .line 539
     :cond_1
     :goto_0
     return v1
 
-    .line 536
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -101,7 +95,6 @@
 
     if-ne v2, v0, :cond_5
 
-    .line 537
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChannelUsersActivity;->access$700(Lorg/telegram/ui/ChannelUsersActivity;)Ljava/util/ArrayList;
@@ -153,7 +146,6 @@
 
     goto :goto_1
 
-    .line 539
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -189,7 +181,6 @@
 
     const/4 v1, 0x1
 
-    .line 682
     iget-object v3, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$000(Lorg/telegram/ui/ChannelUsersActivity;)I
@@ -198,7 +189,6 @@
 
     if-ne v3, v1, :cond_6
 
-    .line 683
     iget-object v3, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$100(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -207,7 +197,6 @@
 
     if-eqz v3, :cond_b
 
-    .line 684
     iget-object v3, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$400(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -216,34 +205,27 @@
 
     if-eqz v3, :cond_4
 
-    .line 685
     if-nez p1, :cond_1
 
-    .line 686
     const/4 v0, 0x5
 
-    .line 719
     :cond_0
     :goto_0
     return v0
 
-    .line 687
     :cond_1
     if-eq p1, v1, :cond_2
 
     if-ne p1, v2, :cond_3
 
-    .line 688
     :cond_2
     const/4 v0, 0x6
 
     goto :goto_0
 
-    .line 689
     :cond_3
     if-eq p1, v0, :cond_0
 
-    .line 693
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -265,12 +247,10 @@
 
     if-ne p1, v0, :cond_5
 
-    .line 694
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 695
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -296,10 +276,8 @@
 
     move v0, v1
 
-    .line 696
     goto :goto_0
 
-    .line 699
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -309,7 +287,6 @@
 
     if-ne v0, v2, :cond_b
 
-    .line 700
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelUsersActivity;->access$100(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -318,7 +295,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 701
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelUsersActivity;->access$300(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -327,7 +303,6 @@
 
     if-nez v0, :cond_9
 
-    .line 702
     if-eqz p1, :cond_7
 
     if-ne p1, v1, :cond_8
@@ -335,37 +310,29 @@
     :cond_7
     move v0, v2
 
-    .line 703
     goto :goto_0
 
-    .line 704
     :cond_8
     if-ne p1, v2, :cond_b
 
     move v0, v1
 
-    .line 705
     goto :goto_0
 
-    .line 708
     :cond_9
     if-nez p1, :cond_a
 
     move v0, v2
 
-    .line 709
     goto :goto_0
 
-    .line 710
     :cond_a
     if-ne p1, v1, :cond_b
 
     move v0, v1
 
-    .line 711
     goto :goto_0
 
-    .line 716
     :cond_b
     iget-object v0, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -389,10 +356,8 @@
 
     move v0, v1
 
-    .line 717
     goto :goto_0
 
-    .line 719
     :cond_c
     const/4 v0, 0x0
 
@@ -410,12 +375,10 @@
 
     const/4 v3, 0x1
 
-    .line 503
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 504
     .local v0, "postion":I
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -425,7 +388,6 @@
 
     if-ne v1, v5, :cond_6
 
-    .line 505
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelUsersActivity;->access$100(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -434,7 +396,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 506
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelUsersActivity;->access$300(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -443,7 +404,6 @@
 
     if-nez v1, :cond_4
 
-    .line 507
     if-eqz v0, :cond_0
 
     if-ne v0, v3, :cond_2
@@ -451,16 +411,13 @@
     :cond_0
     move v2, v3
 
-    .line 529
     :cond_1
     :goto_0
     return v2
 
-    .line 509
     :cond_2
     if-eq v0, v5, :cond_1
 
-    .line 529
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -515,22 +472,18 @@
 
     goto :goto_0
 
-    .line 513
     :cond_4
     if-nez v0, :cond_5
 
     move v2, v3
 
-    .line 514
     goto :goto_0
 
-    .line 515
     :cond_5
     if-ne v0, v3, :cond_3
 
     goto :goto_0
 
-    .line 520
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -540,7 +493,6 @@
 
     if-ne v1, v3, :cond_3
 
-    .line 521
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelUsersActivity;->access$600(Lorg/telegram/ui/ChannelUsersActivity;)I
@@ -561,7 +513,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 522
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelUsersActivity;->access$100(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -570,7 +521,6 @@
 
     goto :goto_0
 
-    .line 523
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -594,7 +544,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 525
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelUsersActivity;->access$400(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -615,7 +564,6 @@
 
     if-ge v0, v1, :cond_3
 
-    .line 526
     if-eq v0, v3, :cond_8
 
     if-ne v0, v5, :cond_9
@@ -636,7 +584,6 @@
     :cond_a
     move v3, v2
 
-    .line 529
     goto :goto_1
 .end method
 
@@ -646,26 +593,22 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 579
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v8
 
     packed-switch v8, :pswitch_data_0
 
-    .line 678
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 581
     :pswitch_1
     iget-object v7, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v7, Lorg/telegram/ui/Cells/UserCell;
 
-    .line 582
     .local v7, "userCell":Lorg/telegram/ui/Cells/UserCell;
     iget-object v8, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -673,24 +616,20 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 583
     iget-object v8, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string/jumbo v9, "Profile"
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 584
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
 
     invoke-virtual {v7, v8}, Lorg/telegram/ui/Cells/UserCell;->setNameColor(I)V
 
-    .line 585
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowStatusColor:I
 
     invoke-virtual {v7, v8}, Lorg/telegram/ui/Cells/UserCell;->setStatusColor(I)V
 
-    .line 586
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$700(Lorg/telegram/ui/ChannelUsersActivity;)Ljava/util/ArrayList;
@@ -711,7 +650,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 587
     .local v2, "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -727,11 +665,9 @@
 
     move-result-object v6
 
-    .line 588
     .local v6, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v6, :cond_0
 
-    .line 589
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$000(Lorg/telegram/ui/ChannelUsersActivity;)I
@@ -740,7 +676,6 @@
 
     if-nez v8, :cond_2
 
-    .line 590
     const/4 v9, 0x0
 
     iget-object v8, v6, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
@@ -801,7 +736,6 @@
 
     goto :goto_1
 
-    .line 591
     :cond_2
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -813,10 +747,8 @@
 
     if-ne v8, v9, :cond_7
 
-    .line 592
     const/4 v5, 0x0
 
-    .line 593
     .local v5, "role":Ljava/lang/String;
     instance-of v8, v2, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator;
 
@@ -826,7 +758,6 @@
 
     if-eqz v8, :cond_5
 
-    .line 594
     :cond_3
     const-string/jumbo v8, "ChannelCreator"
 
@@ -836,7 +767,6 @@
 
     move-result-object v5
 
-    .line 600
     :cond_4
     :goto_2
     const/4 v8, 0x0
@@ -847,13 +777,11 @@
 
     goto/16 :goto_0
 
-    .line 595
     :cond_5
     instance-of v8, v2, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantModerator;
 
     if-eqz v8, :cond_6
 
-    .line 596
     const-string/jumbo v8, "ChannelModerator"
 
     const v9, 0x7f07013f
@@ -864,13 +792,11 @@
 
     goto :goto_2
 
-    .line 597
     :cond_6
     instance-of v8, v2, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantEditor;
 
     if-eqz v8, :cond_4
 
-    .line 598
     const-string/jumbo v8, "ChannelEditor"
 
     const v9, 0x7f07011c
@@ -881,7 +807,6 @@
 
     goto :goto_2
 
-    .line 601
     .end local v5    # "role":Ljava/lang/String;
     :cond_7
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -894,7 +819,6 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 602
     const/4 v8, 0x0
 
     const/4 v9, 0x0
@@ -905,7 +829,6 @@
 
     goto/16 :goto_0
 
-    .line 607
     .end local v2    # "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     .end local v6    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .end local v7    # "userCell":Lorg/telegram/ui/Cells/UserCell;
@@ -914,7 +837,6 @@
 
     check-cast v3, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 608
     .local v3, "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -924,7 +846,6 @@
 
     if-nez v8, :cond_9
 
-    .line 609
     const-string/jumbo v8, "%1$s\n\n%2$s"
 
     const/4 v9, 0x2
@@ -961,7 +882,6 @@
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 610
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0200af
@@ -974,19 +894,16 @@
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 636
     :cond_8
     :goto_3
     const-string/jumbo v8, "Profile"
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTag(Ljava/lang/Object;)V
 
-    .line 637
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowStatusColor:I
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(I)V
 
-    .line 638
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     const/4 v9, -0x1
@@ -999,7 +916,6 @@
 
     goto/16 :goto_0
 
-    .line 611
     :cond_9
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -1011,7 +927,6 @@
 
     if-ne v8, v9, :cond_c
 
-    .line 612
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$100(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -1020,7 +935,6 @@
 
     if-eqz v8, :cond_b
 
-    .line 613
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$400(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -1029,7 +943,6 @@
 
     if-eqz v8, :cond_a
 
-    .line 614
     const-string/jumbo v8, "MegaAdminsInfo"
 
     const v9, 0x7f070370
@@ -1040,7 +953,6 @@
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 618
     :goto_4
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -1056,7 +968,6 @@
 
     goto :goto_3
 
-    .line 616
     :cond_a
     const-string/jumbo v8, "ChannelAdminsInfo"
 
@@ -1070,13 +981,11 @@
 
     goto :goto_4
 
-    .line 620
     :cond_b
     const-string/jumbo v8, ""
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 621
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0200af
@@ -1091,7 +1000,6 @@
 
     goto :goto_3
 
-    .line 623
     :cond_c
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -1103,7 +1011,6 @@
 
     if-ne v8, v9, :cond_8
 
-    .line 624
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$300(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -1130,7 +1037,6 @@
 
     if-eqz v8, :cond_10
 
-    .line 625
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$400(Lorg/telegram/ui/ChannelUsersActivity;)Z
@@ -1139,12 +1045,10 @@
 
     if-eqz v8, :cond_f
 
-    .line 626
     const-string/jumbo v8, ""
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 630
     :goto_5
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -1160,7 +1064,6 @@
 
     goto/16 :goto_3
 
-    .line 628
     :cond_f
     const-string/jumbo v8, "ChannelMembersInfo"
 
@@ -1174,13 +1077,11 @@
 
     goto :goto_5
 
-    .line 632
     :cond_10
     const-string/jumbo v8, ""
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 633
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v9, 0x7f0200af
@@ -1195,30 +1096,25 @@
 
     goto/16 :goto_3
 
-    .line 641
     .end local v3    # "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     :pswitch_3
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 642
     .local v0, "actionCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setBackgroundColor(I)V
 
-    .line 643
     const-string/jumbo v8, "Profile"
 
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTag(Ljava/lang/Object;)V
 
-    .line 644
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
 
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Cells/TextSettingsCell;->setTextColor(I)V
 
-    .line 645
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChannelUsersActivity;->access$000(Lorg/telegram/ui/ChannelUsersActivity;)I
@@ -1229,10 +1125,8 @@
 
     if-ne v8, v9, :cond_12
 
-    .line 646
     if-nez p2, :cond_11
 
-    .line 647
     const-string/jumbo v8, "AddMember"
 
     const v9, 0x7f07004c
@@ -1247,13 +1141,11 @@
 
     goto/16 :goto_0
 
-    .line 648
     :cond_11
     const/4 v8, 0x1
 
     if-ne p2, v8, :cond_0
 
-    .line 649
     const-string/jumbo v8, "ChannelInviteViaLink"
 
     const v9, 0x7f07011e
@@ -1268,7 +1160,6 @@
 
     goto/16 :goto_0
 
-    .line 651
     :cond_12
     iget-object v8, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -1280,7 +1171,6 @@
 
     if-ne v8, v9, :cond_0
 
-    .line 652
     const-string/jumbo v8, "ChannelAddAdmin"
 
     const v9, 0x7f070104
@@ -1297,7 +1187,6 @@
 
     goto/16 :goto_0
 
-    .line 656
     .end local v0    # "actionCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     :pswitch_4
     iget-object v8, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1316,7 +1205,6 @@
 
     invoke-virtual {v8, v9, v10}, Lorg/telegram/ui/Cells/TextCell;->setTextAndIcon(Ljava/lang/String;I)V
 
-    .line 657
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     const/4 v9, -0x1
@@ -1329,7 +1217,6 @@
 
     invoke-virtual {v8, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 658
     :cond_13
     iget-object v8, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -1341,7 +1228,6 @@
 
     goto/16 :goto_0
 
-    .line 661
     :pswitch_5
     iget-object v8, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -1357,7 +1243,6 @@
 
     invoke-virtual {v8, v9}, Lorg/telegram/ui/Cells/HeaderCell;->setText(Ljava/lang/String;)V
 
-    .line 662
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     const/4 v9, -0x1
@@ -1372,19 +1257,16 @@
 
     goto/16 :goto_0
 
-    .line 665
     :pswitch_6
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Lorg/telegram/ui/Cells/RadioCell;
 
-    .line 666
     .local v4, "radioCell":Lorg/telegram/ui/Cells/RadioCell;
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Cells/RadioCell;->setTextColor(I)V
 
-    .line 667
     sget v8, Lorg/telegram/ui/ActionBar/Theme;->profileRowColor:I
 
     const/4 v9, -0x1
@@ -1395,7 +1277,6 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Cells/RadioCell;->setBackgroundColor(I)V
 
-    .line 668
     :cond_14
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -1415,13 +1296,11 @@
 
     move-result-object v1
 
-    .line 669
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     const/4 v8, 0x1
 
     if-ne p2, v8, :cond_16
 
-    .line 670
     const/4 v8, 0x0
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1430,7 +1309,6 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Cells/RadioCell;->setTag(Ljava/lang/Object;)V
 
-    .line 671
     const-string/jumbo v8, "WhoCanAddMembersAllMembers"
 
     const v9, 0x7f0706a9
@@ -1459,13 +1337,11 @@
 
     goto :goto_6
 
-    .line 672
     :cond_16
     const/4 v8, 0x2
 
     if-ne p2, v8, :cond_0
 
-    .line 673
     const/4 v8, 0x1
 
     invoke-static {v8}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -1474,7 +1350,6 @@
 
     invoke-virtual {v4, v8}, Lorg/telegram/ui/Cells/RadioCell;->setTag(Ljava/lang/Object;)V
 
-    .line 674
     const-string/jumbo v8, "WhoCanAddMembersAdmins"
 
     const v9, 0x7f0706a8
@@ -1503,7 +1378,6 @@
 
     goto :goto_7
 
-    .line 579
     nop
 
     :pswitch_data_0
@@ -1526,17 +1400,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 545
     packed-switch p2, :pswitch_data_0
 
-    .line 570
     new-instance v0, Lorg/telegram/ui/Cells/RadioCell;
 
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/RadioCell;-><init>(Landroid/content/Context;)V
 
-    .line 571
     .local v0, "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -1546,7 +1417,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 574
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -1554,7 +1424,6 @@
 
     return-object v1
 
-    .line 547
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/UserCell;
@@ -1565,7 +1434,6 @@
 
     invoke-direct {v0, v1, v2, v3, v3}, Lorg/telegram/ui/Cells/UserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    .line 548
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -1577,7 +1445,6 @@
 
     goto :goto_0
 
-    .line 551
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -1586,11 +1453,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 552
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 554
     .end local v0    # "view":Landroid/view/View;
     :pswitch_2
     new-instance v0, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -1599,7 +1464,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 555
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -1611,7 +1475,6 @@
 
     goto :goto_0
 
-    .line 558
     .end local v0    # "view":Landroid/view/View;
     :pswitch_3
     new-instance v0, Lorg/telegram/ui/Cells/ShadowSectionCell;
@@ -1620,11 +1483,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 559
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 561
     .end local v0    # "view":Landroid/view/View;
     :pswitch_4
     new-instance v0, Lorg/telegram/ui/Cells/TextCell;
@@ -1633,7 +1494,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextCell;-><init>(Landroid/content/Context;)V
 
-    .line 562
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -1645,7 +1505,6 @@
 
     goto :goto_0
 
-    .line 565
     .end local v0    # "view":Landroid/view/View;
     :pswitch_5
     new-instance v0, Lorg/telegram/ui/Cells/HeaderCell;
@@ -1654,7 +1513,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;)V
 
-    .line 566
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -1666,7 +1524,6 @@
 
     goto :goto_0
 
-    .line 545
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

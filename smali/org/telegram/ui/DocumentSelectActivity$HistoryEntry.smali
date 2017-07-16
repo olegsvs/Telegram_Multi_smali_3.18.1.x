@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 101
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/DocumentSelectActivity$1;
 
     .prologue
-    .line 101
     invoke-direct {p0, p1}, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;-><init>(Lorg/telegram/ui/DocumentSelectActivity;)V
 
     return-void

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 457
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$3;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,46 +38,38 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 460
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 461
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$3;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PopupNotificationActivity;->onFinish()V
 
-    .line 462
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$3;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PopupNotificationActivity;->finish()V
 
-    .line 468
     :cond_0
     :goto_0
     return-void
 
-    .line 463
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 464
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$3;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$800(Lorg/telegram/ui/PopupNotificationActivity;)V
 
     goto :goto_0
 
-    .line 465
     :cond_2
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 466
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$3;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$900(Lorg/telegram/ui/PopupNotificationActivity;)V

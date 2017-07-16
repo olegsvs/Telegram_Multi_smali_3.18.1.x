@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$73;
 
     .prologue
-    .line 4332
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$73$1;->this$1:Lorg/telegram/messenger/MessagesController$73;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4335
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$73$1;->this$1:Lorg/telegram/messenger/MessagesController$73;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$73;->val$info:Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -54,7 +52,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->about:Ljava/lang/String;
 
-    .line 4336
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0, v1, v5}, Lorg/telegram/messenger/MessagesStorage;->updateChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;Z)V
 
-    .line 4337
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -106,6 +102,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 4338
     return-void
 .end method

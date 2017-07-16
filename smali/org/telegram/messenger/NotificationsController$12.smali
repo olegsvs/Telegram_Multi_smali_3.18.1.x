@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationsController;
 
     .prologue
-    .line 825
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$12;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iput p2, p0, Lorg/telegram/messenger/NotificationsController$12;->val$count:I
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 828
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$12;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationsController;->access$1100(Lorg/telegram/messenger/NotificationsController;)I
@@ -56,11 +54,9 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 833
     :goto_0
     return-void
 
-    .line 831
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$12;->this$0:Lorg/telegram/messenger/NotificationsController;
 
@@ -68,7 +64,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/NotificationsController;->access$1102(Lorg/telegram/messenger/NotificationsController;I)I
 
-    .line 832
     iget v0, p0, Lorg/telegram/messenger/NotificationsController$12;->val$count:I
 
     invoke-static {v0}, Lorg/telegram/messenger/NotificationBadge;->applyCount(I)Z

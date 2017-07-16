@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LanguageSelectActivity$4;
 
     .prologue
-    .line 172
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->val$finalLocaleInfo:Lorg/telegram/messenger/LocaleController$LocaleInfo;
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 175
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -60,7 +58,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 176
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/LanguageSelectActivity$4;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
@@ -69,7 +66,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 177
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/LanguageSelectActivity$4;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
@@ -80,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 179
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
@@ -92,7 +87,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 180
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/LanguageSelectActivity$4;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 182
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
@@ -115,7 +108,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 183
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$4$1;->this$1:Lorg/telegram/ui/LanguageSelectActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/LanguageSelectActivity$4;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
@@ -126,7 +118,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 186
     :cond_2
     return-void
 .end method

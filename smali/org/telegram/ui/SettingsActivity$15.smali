@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 1310
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$15;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1313
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$15;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/SettingsActivity;->getParentActivity()Landroid/app/Activity;
@@ -50,7 +48,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1314
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$15;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/SettingsActivity;->getParentActivity()Landroid/app/Activity;
@@ -71,11 +68,9 @@
 
     move-result-object v0
 
-    .line 1315
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 1317
     .end local v0    # "toast":Landroid/widget/Toast;
     :cond_0
     return-void

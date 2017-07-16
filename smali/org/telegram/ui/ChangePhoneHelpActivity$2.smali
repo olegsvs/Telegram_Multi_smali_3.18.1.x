@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$2;->this$0:Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 72
     const/4 v0, 0x1
 
     return v0

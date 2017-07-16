@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/query/SearchQuery;->increaseInlineRaiting(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -32,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 435
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 435
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
@@ -62,7 +59,6 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     .prologue
-    .line 438
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
     iget-wide v2, p2, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
@@ -71,14 +67,11 @@
 
     if-lez v0, :cond_0
 
-    .line 439
     const/4 v0, -0x1
 
-    .line 443
     :goto_0
     return v0
 
-    .line 440
     :cond_0
     iget-wide v0, p1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
@@ -88,12 +81,10 @@
 
     if-gez v0, :cond_1
 
-    .line 441
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 443
     :cond_1
     const/4 v0, 0x0
 

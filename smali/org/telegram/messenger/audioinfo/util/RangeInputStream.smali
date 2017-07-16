@@ -20,15 +20,12 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;-><init>(Ljava/io/InputStream;J)V
 
-    .line 30
     add-long v0, p2, p4
 
     iput-wide v0, p0, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->endPosition:J
 
-    .line 31
     return-void
 .end method
 
@@ -38,7 +35,6 @@
     .locals 4
 
     .prologue
-    .line 34
     iget-wide v0, p0, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->endPosition:J
 
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
@@ -59,7 +55,6 @@
     .end annotation
 
     .prologue
-    .line 39
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
 
     move-result-wide v0
@@ -70,10 +65,8 @@
 
     if-nez v0, :cond_0
 
-    .line 40
     const/4 v0, -0x1
 
-    .line 42
     :goto_0
     return v0
 
@@ -97,7 +90,6 @@
     .end annotation
 
     .prologue
-    .line 47
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
 
     move-result-wide v0
@@ -112,7 +104,6 @@
 
     if-lez v0, :cond_0
 
-    .line 48
     iget-wide v0, p0, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->endPosition:J
 
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
@@ -123,13 +114,10 @@
 
     long-to-int p3, v0
 
-    .line 49
     if-nez p3, :cond_0
 
-    .line 50
     const/4 v0, -0x1
 
-    .line 53
     :goto_0
     return v0
 
@@ -151,7 +139,6 @@
     .end annotation
 
     .prologue
-    .line 58
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
 
     move-result-wide v0
@@ -164,7 +151,6 @@
 
     if-lez v0, :cond_0
 
-    .line 59
     iget-wide v0, p0, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->endPosition:J
 
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
@@ -177,7 +163,6 @@
 
     int-to-long p1, v0
 
-    .line 61
     :cond_0
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;->skip(J)J
 

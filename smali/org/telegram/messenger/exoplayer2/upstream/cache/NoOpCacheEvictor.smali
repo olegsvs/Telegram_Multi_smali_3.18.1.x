@@ -11,7 +11,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -23,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 30
     return-void
 .end method
 
@@ -33,7 +31,6 @@
     .param p2, "span"    # Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;
 
     .prologue
-    .line 40
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p2, "span"    # Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;
 
     .prologue
-    .line 45
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .param p3, "newSpan"    # Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;
 
     .prologue
-    .line 50
     return-void
 .end method
 
@@ -66,6 +61,5 @@
     .param p5, "maxLength"    # J
 
     .prologue
-    .line 35
     return-void
 .end method

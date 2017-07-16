@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 79
     const/4 v0, 0x0
 
     sput-object v0, Lorg/telegram/messenger/AuthenticatorService;->authenticator:Lorg/telegram/messenger/AuthenticatorService$Authenticator;
@@ -32,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 24
     return-void
 .end method
 
@@ -45,19 +42,16 @@
     .locals 1
 
     .prologue
-    .line 82
     sget-object v0, Lorg/telegram/messenger/AuthenticatorService;->authenticator:Lorg/telegram/messenger/AuthenticatorService$Authenticator;
 
     if-nez v0, :cond_0
 
-    .line 83
     new-instance v0, Lorg/telegram/messenger/AuthenticatorService$Authenticator;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/AuthenticatorService$Authenticator;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lorg/telegram/messenger/AuthenticatorService;->authenticator:Lorg/telegram/messenger/AuthenticatorService$Authenticator;
 
-    .line 85
     :cond_0
     sget-object v0, Lorg/telegram/messenger/AuthenticatorService;->authenticator:Lorg/telegram/messenger/AuthenticatorService$Authenticator;
 
@@ -69,7 +63,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 91
     invoke-virtual {p1}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -82,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 92
     invoke-virtual {p0}, Lorg/telegram/messenger/AuthenticatorService;->getAuthenticator()Lorg/telegram/messenger/AuthenticatorService$Authenticator;
 
     move-result-object v0
@@ -91,7 +83,6 @@
 
     move-result-object v0
 
-    .line 94
     :goto_0
     return-object v0
 

@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 506
     iput-wide p1, p0, Lorg/telegram/messenger/query/SearchQuery$7;->val$did:J
 
     iput p3, p0, Lorg/telegram/messenger/query/SearchQuery$7;->val$lower_id:I
@@ -44,18 +43,14 @@
     .locals 18
 
     .prologue
-    .line 509
     const-wide/16 v4, 0x0
 
-    .line 511
     .local v4, "dt":D
     const/4 v9, 0x0
 
-    .line 512
     .local v9, "lastTime":I
     const/4 v8, 0x0
 
-    .line 513
     .local v8, "lastMid":I
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -100,7 +95,6 @@
 
     move-result-object v2
 
-    .line 514
     .local v2, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -108,28 +102,23 @@
 
     if-eqz v10, :cond_0
 
-    .line 515
     const/4 v10, 0x0
 
     invoke-virtual {v2, v10}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v8
 
-    .line 516
     const/4 v10, 0x1
 
     invoke-virtual {v2, v10}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v9
 
-    .line 518
     :cond_0
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 519
     if-lez v8, :cond_2
 
-    .line 520
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v10
@@ -180,14 +169,12 @@
 
     move-result-object v2
 
-    .line 521
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v10
 
     if-eqz v10, :cond_1
 
-    .line 522
     const/4 v10, 0x0
 
     invoke-virtual {v2, v10}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -198,19 +185,16 @@
 
     int-to-double v4, v10
 
-    .line 524
     :cond_1
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 529
     .end local v2    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_2
     :goto_0
     move-wide v6, v4
 
-    .line 530
     .local v6, "dtFinal":D
     new-instance v10, Lorg/telegram/messenger/query/SearchQuery$7$1;
 
@@ -220,15 +204,12 @@
 
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 570
     return-void
 
-    .line 526
     .end local v6    # "dtFinal":D
     :catch_0
     move-exception v3
 
-    .line 527
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

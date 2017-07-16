@@ -26,12 +26,10 @@
     .locals 0
 
     .prologue
-    .line 11495
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11496
     return-void
 .end method
 
@@ -44,12 +42,10 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 11500
     const/4 v0, 0x1
 
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->setIsRecyclable(Z)V
 
-    .line 11501
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->mShadowedHolder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     if-eqz v0, :cond_0
@@ -58,21 +54,17 @@
 
     if-nez v0, :cond_0
 
-    .line 11502
     iput-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->mShadowedHolder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
-    .line 11506
     :cond_0
     iput-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->mShadowingHolder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
-    .line 11507
     invoke-static {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->access$1300(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)Z
 
     move-result v0
 
     if-nez v0, :cond_1
 
-    .line 11508
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -89,7 +81,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 11509
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimatorRestoreListener;->this$0:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -98,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/support/widget/RecyclerView;->removeDetachedView(Landroid/view/View;Z)V
 
-    .line 11512
     :cond_1
     return-void
 .end method

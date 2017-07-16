@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/SecretChatHelper$6$1;
 
     .prologue
-    .line 1064
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$6$1$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$6$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1067
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
@@ -62,12 +60,10 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/NotificationsController;->processReadMessages(Landroid/util/SparseArray;JIIZ)V
 
-    .line 1068
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 1069
     .local v7, "dialogsToUpdate":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Integer;>;"
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$6$1$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$6$1;
 
@@ -85,13 +81,11 @@
 
     invoke-virtual {v7, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1070
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
 
     invoke-virtual {v0, v7}, Lorg/telegram/messenger/NotificationsController;->processDialogsUpdateRead(Ljava/util/HashMap;)V
 
-    .line 1071
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 5942
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$36;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
@@ -49,14 +48,12 @@
 
     const/4 v2, 0x0
 
-    .line 5945
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x12
 
     if-lt v0, v1, :cond_0
 
-    .line 5946
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$900(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;
@@ -67,7 +64,6 @@
 
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->setLayerType(ILandroid/graphics/Paint;)V
 
-    .line 5948
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -77,7 +73,6 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->setVisibility(I)V
 
-    .line 5949
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$1000(Lorg/telegram/ui/ArticleViewer;)Landroid/view/View;
@@ -86,18 +81,15 @@
 
     invoke-virtual {v0, v3}, Landroid/view/View;->setVisibility(I)V
 
-    .line 5950
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ArticleViewer;->access$10902(Lorg/telegram/ui/ArticleViewer;I)I
 
-    .line 5951
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$36;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$36;->val$object:Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$11700(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;)V
 
-    .line 5952
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 430
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$8;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$8;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$300(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -54,12 +52,10 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 434
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$8;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2500(Lorg/telegram/ui/DocumentSelectActivity;)V
 
-    .line 435
     const/4 v0, 0x1
 
     return v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyControlActivity;
 
     .prologue
-    .line 132
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -43,26 +42,21 @@
 
     const/4 v5, 0x0
 
-    .line 135
     const/4 v3, -0x1
 
     if-ne p1, v3, :cond_1
 
-    .line 136
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/PrivacyControlActivity;->finishFragment()V
 
-    .line 167
     :cond_0
     :goto_0
     return-void
 
-    .line 137
     :cond_1
     if-ne p1, v6, :cond_0
 
-    .line 138
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/PrivacyControlActivity;->getParentActivity()Landroid/app/Activity;
@@ -71,7 +65,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 142
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/PrivacyControlActivity;->access$000(Lorg/telegram/ui/PrivacyControlActivity;)I
@@ -88,7 +81,6 @@
 
     if-nez v3, :cond_3
 
-    .line 143
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "mainconfig"
@@ -97,7 +89,6 @@
 
     move-result-object v1
 
-    .line 144
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "privacyAlertShowed"
 
@@ -105,11 +96,9 @@
 
     move-result v2
 
-    .line 145
     .local v2, "showed":Z
     if-nez v2, :cond_3
 
-    .line 146
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -120,7 +109,6 @@
 
     invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 147
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -130,7 +118,6 @@
 
     if-ne v3, v6, :cond_2
 
-    .line 148
     const-string/jumbo v3, "WhoCanAddMeInfo"
 
     const v4, 0x7f0706a6
@@ -141,7 +128,6 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 152
     :goto_1
     const-string/jumbo v3, "AppName"
 
@@ -153,7 +139,6 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 153
     const-string/jumbo v3, "OK"
 
     const v4, 0x7f070452
@@ -168,7 +153,6 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 160
     const-string/jumbo v3, "Cancel"
 
     const v4, 0x7f0700f0
@@ -181,7 +165,6 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 161
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -192,7 +175,6 @@
 
     goto/16 :goto_0
 
-    .line 150
     :cond_2
     const-string/jumbo v3, "CustomHelp"
 
@@ -206,7 +188,6 @@
 
     goto :goto_1
 
-    .line 165
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v2    # "showed":Z

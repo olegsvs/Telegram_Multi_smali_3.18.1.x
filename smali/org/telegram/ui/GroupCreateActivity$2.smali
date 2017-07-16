@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 393
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
@@ -42,12 +41,10 @@
     .param p3, "drawingTime"    # J
 
     .prologue
-    .line 420
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/ViewGroup;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v0
 
-    .line 421
     .local v0, "result":Z
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -65,7 +62,6 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 422
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -85,7 +81,6 @@
 
     invoke-virtual {v1, p1, v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->drawHeaderShadow(Landroid/graphics/Canvas;I)V
 
-    .line 424
     :cond_1
     return v0
 .end method
@@ -101,7 +96,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 413
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1100(Lorg/telegram/ui/GroupCreateActivity;)Landroid/widget/ScrollView;
@@ -130,7 +124,6 @@
 
     invoke-virtual {v0, v5, v5, v1, v2}, Landroid/widget/ScrollView;->layout(IIII)V
 
-    .line 414
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1200(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -181,7 +174,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->layout(IIII)V
 
-    .line 415
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1300(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -232,7 +224,6 @@
 
     invoke-virtual {v0, v5, v1, v2, v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->layout(IIII)V
 
-    .line 416
     return-void
 .end method
 
@@ -244,22 +235,18 @@
     .prologue
     const/high16 v6, 0x40000000    # 2.0f
 
-    .line 396
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
 
-    .line 397
     .local v2, "width":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 398
     .local v0, "height":I
     invoke-virtual {p0, v2, v0}, Lorg/telegram/ui/GroupCreateActivity$2;->setMeasuredDimension(II)V
 
-    .line 400
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v3
@@ -268,7 +255,6 @@
 
     if-le v0, v2, :cond_1
 
-    .line 401
     :cond_0
     const/high16 v3, 0x43100000    # 144.0f
 
@@ -276,7 +262,6 @@
 
     move-result v1
 
-    .line 406
     .local v1, "maxSize":I
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -297,7 +282,6 @@
 
     invoke-virtual {v3, v4, v5}, Landroid/widget/ScrollView;->measure(II)V
 
-    .line 407
     iget-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/GroupCreateActivity;->access$1200(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -326,7 +310,6 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->measure(II)V
 
-    .line 408
     iget-object v3, p0, Lorg/telegram/ui/GroupCreateActivity$2;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/GroupCreateActivity;->access$1300(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -355,10 +338,8 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->measure(II)V
 
-    .line 409
     return-void
 
-    .line 403
     .end local v1    # "maxSize":I
     :cond_1
     const/high16 v3, 0x42600000    # 56.0f

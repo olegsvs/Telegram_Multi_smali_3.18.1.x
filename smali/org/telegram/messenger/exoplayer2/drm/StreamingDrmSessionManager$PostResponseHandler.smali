@@ -30,14 +30,11 @@
     .param p2, "looper"    # Landroid/os/Looper;
 
     .prologue
-    .line 477
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$PostResponseHandler;, "Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager<TT;>.PostResponseHandler;"
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$PostResponseHandler;->this$0:Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
-    .line 478
     invoke-direct {p0, p2}, Landroid/os/Handler;-><init>(Landroid/os/Looper;)V
 
-    .line 479
     return-void
 .end method
 
@@ -48,17 +45,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 483
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$PostResponseHandler;, "Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager<TT;>.PostResponseHandler;"
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 491
     :goto_0
     return-void
 
-    .line 485
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$PostResponseHandler;->this$0:Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
@@ -68,7 +62,6 @@
 
     goto :goto_0
 
-    .line 488
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$PostResponseHandler;->this$0:Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
@@ -78,7 +71,6 @@
 
     goto :goto_0
 
-    .line 483
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

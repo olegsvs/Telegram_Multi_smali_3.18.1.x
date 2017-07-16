@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/NewContactActivity;
 
     .prologue
-    .line 743
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$14;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 746
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$14;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$800(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 747
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$14;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$700(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -92,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 748
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$14;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$800(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -101,7 +97,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->invalidate()V
 
-    .line 750
     :cond_0
     return-void
 .end method

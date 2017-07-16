@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 188
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -45,26 +44,21 @@
 
     const/4 v6, 0x1
 
-    .line 191
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 192
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/LocationActivity;->finishFragment()V
 
-    .line 214
     :cond_0
     :goto_0
     return-void
 
-    .line 193
     :cond_1
     if-ne p1, v7, :cond_2
 
-    .line 194
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -73,7 +67,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -84,13 +77,11 @@
 
     goto :goto_0
 
-    .line 197
     :cond_2
     const/4 v1, 0x3
 
     if-ne p1, v1, :cond_3
 
-    .line 198
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -99,7 +90,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 199
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -110,11 +100,9 @@
 
     goto :goto_0
 
-    .line 201
     :cond_3
     if-ne p1, v8, :cond_4
 
-    .line 202
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -123,7 +111,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 203
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$000(Lorg/telegram/ui/LocationActivity;)Lcom/google/android/gms/maps/GoogleMap;
@@ -134,11 +121,9 @@
 
     goto :goto_0
 
-    .line 205
     :cond_4
     if-ne p1, v6, :cond_0
 
-    .line 207
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -154,7 +139,6 @@
 
     iget-wide v2, v1, Lorg/telegram/tgnet/TLRPC$GeoPoint;->lat:D
 
-    .line 208
     .local v2, "lat":D
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -170,7 +154,6 @@
 
     iget-wide v4, v1, Lorg/telegram/tgnet/TLRPC$GeoPoint;->_long:D
 
-    .line 209
     .local v4, "lon":D
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$1;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -242,13 +225,11 @@
 
     goto/16 :goto_0
 
-    .line 210
     .end local v2    # "lat":D
     .end local v4    # "lon":D
     :catch_0
     move-exception v0
 
-    .line 211
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

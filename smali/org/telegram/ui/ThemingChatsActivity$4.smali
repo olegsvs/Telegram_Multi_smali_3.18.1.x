@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingChatsActivity;
 
     .prologue
-    .line 1112
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$4;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 1115
     .local p1, "adapterView":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$4;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
@@ -63,14 +61,11 @@
 
     if-nez v0, :cond_0
 
-    .line 1116
     const/4 v0, 0x0
 
-    .line 1131
     :goto_0
     return v0
 
-    .line 1130
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$4;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
@@ -84,7 +79,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ThemingChatsActivity;->access$5300(Lorg/telegram/ui/ThemingChatsActivity;Ljava/lang/String;)V
 
-    .line 1131
     const/4 v0, 0x1
 
     goto :goto_0

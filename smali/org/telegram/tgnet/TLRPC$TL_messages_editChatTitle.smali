@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 21435
     const v0, -0x23bad7ab
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_editChatTitle;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 21434
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 21441
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 21445
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_editChatTitle;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21446
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_editChatTitle;->chat_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21447
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_editChatTitle;->title:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 21448
     return-void
 .end method

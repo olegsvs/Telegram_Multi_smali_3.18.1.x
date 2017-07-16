@@ -84,10 +84,8 @@
     .locals 1
 
     .prologue
-    .line 16464
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 16478
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -104,20 +102,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 16494
     const/4 v0, 0x0
 
-    .line 16495
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     sparse-switch p1, :sswitch_data_0
 
-    .line 16542
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 16543
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in DecryptedMessageMedia"
@@ -142,161 +136,132 @@
 
     throw v1
 
-    .line 16497
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaAudio;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaAudio;-><init>()V
 
-    .line 16498
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16500
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaGeoPoint;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaGeoPoint;-><init>()V
 
-    .line 16501
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16503
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaContact;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaContact;-><init>()V
 
-    .line 16504
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16506
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaEmpty;-><init>()V
 
-    .line 16507
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16509
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaDocument;-><init>()V
 
-    .line 16510
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16512
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaWebPage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaWebPage;-><init>()V
 
-    .line 16513
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16515
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaPhoto;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaPhoto;-><init>()V
 
-    .line 16516
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16518
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo;-><init>()V
 
-    .line 16519
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16521
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaDocument_layer8;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaDocument_layer8;-><init>()V
 
-    .line 16522
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16524
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo_layer8;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo_layer8;-><init>()V
 
-    .line 16525
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16527
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVenue;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVenue;-><init>()V
 
-    .line 16528
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16530
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaExternalDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaExternalDocument;-><init>()V
 
-    .line 16531
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16533
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo_layer17;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaVideo_layer17;-><init>()V
 
-    .line 16534
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16536
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaAudio_layer8;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaAudio_layer8;-><init>()V
 
-    .line 16537
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16539
     :sswitch_e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageMediaPhoto_layer8;
 
@@ -306,18 +271,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;
     goto :goto_0
 
-    .line 16545
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 16546
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$DecryptedMessageMedia;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 16548
     :cond_1
     return-object v0
 
-    .line 16495
     nop
 
     :sswitch_data_0

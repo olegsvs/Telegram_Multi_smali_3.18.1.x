@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     .prologue
-    .line 1487
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 1490
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$2200(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)Z
@@ -58,11 +56,9 @@
 
     if-nez v0, :cond_0
 
-    .line 1522
     :goto_0
     return-void
 
-    .line 1494
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
@@ -110,7 +106,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1495
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
@@ -148,7 +143,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1496
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -185,7 +179,6 @@
 
     goto :goto_0
 
-    .line 1501
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
@@ -201,22 +194,18 @@
 
     invoke-static {v3, v3, v0, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 1502
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$2900(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)V
 
-    .line 1503
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3000(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)V
 
-    .line 1504
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3100(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)V
 
-    .line 1505
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -227,7 +216,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3202(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;Z)Z
 
-    .line 1508
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3400(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -242,15 +230,12 @@
 
     invoke-static {v3, v3, v0, v5}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 1509
     const v0, 0x8d40
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 1510
     invoke-static {v3}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 1512
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3600(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -259,12 +244,10 @@
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 1513
     const v0, 0x84c0
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 1514
     const/16 v5, 0xde1
 
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -288,7 +271,6 @@
 
     invoke-static {v5, v0}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 1515
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3800(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -297,7 +279,6 @@
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 1516
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3900(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -306,7 +287,6 @@
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 1517
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$3900(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -321,7 +301,6 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 1518
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4100(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -330,7 +309,6 @@
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 1519
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4100(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)I
@@ -345,14 +323,12 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 1520
     const/4 v0, 0x5
 
     const/4 v1, 0x4
 
     invoke-static {v0, v3, v1}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 1521
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$2300(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)Ljavax/microedition/khronos/egl/EGL10;
@@ -375,7 +351,6 @@
 
     goto/16 :goto_0
 
-    .line 1514
     :cond_3
     const/4 v0, 0x1
 

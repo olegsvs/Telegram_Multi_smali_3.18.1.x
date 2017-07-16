@@ -1,5 +1,4 @@
 .class Lorg/telegram/ui/Components/EmojiView$3;
-.super Landroid/view/ViewOutlineProvider;
 .source "EmojiView.java"
 
 
@@ -24,26 +23,21 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 650
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$3;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    invoke-direct {p0}, Landroid/view/ViewOutlineProvider;-><init>()V
 
     return-void
 .end method
 
 
 # virtual methods
-.method public getOutline(Landroid/view/View;Landroid/graphics/Outline;)V
     .locals 6
     .param p1, "view"    # Landroid/view/View;
-    .param p2, "outline"    # Landroid/graphics/Outline;
     .annotation build Landroid/annotation/TargetApi;
         value = 0x15
     .end annotation
 
     .prologue
-    .line 654
     invoke-virtual {p1}, Landroid/view/View;->getPaddingLeft()I
 
     move-result v1
@@ -82,8 +76,6 @@
 
     move-object v0, p2
 
-    invoke-virtual/range {v0 .. v5}, Landroid/graphics/Outline;->setRoundRect(IIIIF)V
 
-    .line 655
     return-void
 .end method

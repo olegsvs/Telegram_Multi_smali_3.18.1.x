@@ -100,54 +100,44 @@
 
     const/4 v2, 0x0
 
-    .line 243
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 244
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 245
     iput-boolean p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->allowNonIdrKeyframes:Z
 
-    .line 246
     iput-boolean p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->detectAccessUnits:Z
 
-    .line 247
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sps:Landroid/util/SparseArray;
 
-    .line 248
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->pps:Landroid/util/SparseArray;
 
-    .line 249
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     invoke-direct {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$1;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->previousSliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 250
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     invoke-direct {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$1;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 251
     const/16 v0, 0x80
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->buffer:[B
 
-    .line 252
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->buffer:[B
@@ -156,10 +146,8 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
 
-    .line 253
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->reset()V
 
-    .line 254
     return-void
 .end method
 
@@ -168,14 +156,12 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 431
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sampleIsKeyframe:Z
 
     if-eqz v0, :cond_0
 
     const/4 v4, 0x1
 
-    .line 432
     .local v4, "flags":I
     :goto_0
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitStartPosition:J
@@ -186,7 +172,6 @@
 
     long-to-int v5, v0
 
-    .line 433
     .local v5, "size":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
@@ -198,10 +183,8 @@
 
     invoke-interface/range {v1 .. v7}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIII[B)V
 
-    .line 434
     return-void
 
-    .line 431
     .end local v4    # "flags":I
     .end local v5    # "size":I
     :cond_0
@@ -219,23 +202,19 @@
     .param p3, "limit"    # I
 
     .prologue
-    .line 300
     move-object/from16 v0, p0
 
     iget-boolean v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->isFilling:Z
 
     if-nez v4, :cond_1
 
-    .line 411
     :cond_0
     :goto_0
     return-void
 
-    .line 303
     :cond_1
     sub-int v20, p3, p2
 
-    .line 304
     .local v20, "readLength":I
     move-object/from16 v0, p0
 
@@ -255,7 +234,6 @@
 
     if-ge v4, v0, :cond_2
 
-    .line 305
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->buffer:[B
@@ -280,7 +258,6 @@
 
     iput-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->buffer:[B
 
-    .line 307
     :cond_2
     move-object/from16 v0, p0
 
@@ -302,7 +279,6 @@
 
     invoke-static {v0, v1, v4, v2, v3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 308
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bufferLength:I
@@ -313,7 +289,6 @@
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bufferLength:I
 
-    .line 310
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -340,7 +315,6 @@
 
     invoke-virtual {v4, v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->reset([BII)V
 
-    .line 311
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -355,7 +329,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -366,7 +339,6 @@
 
     invoke-virtual {v4, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 315
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -379,7 +351,6 @@
 
     move-result v6
 
-    .line 316
     .local v6, "nalRefIdc":I
     move-object/from16 v0, p0
 
@@ -391,7 +362,6 @@
 
     invoke-virtual {v4, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 320
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -402,14 +372,12 @@
 
     if-eqz v4, :cond_0
 
-    .line 323
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
-    .line 324
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -420,7 +388,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 327
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -429,7 +396,6 @@
 
     move-result v7
 
-    .line 328
     .local v7, "sliceType":I
     move-object/from16 v0, p0
 
@@ -437,14 +403,12 @@
 
     if-nez v4, :cond_3
 
-    .line 330
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->isFilling:Z
 
-    .line 331
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
@@ -453,7 +417,6 @@
 
     goto/16 :goto_0
 
-    .line 334
     :cond_3
     move-object/from16 v0, p0
 
@@ -465,7 +428,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 337
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -474,7 +436,6 @@
 
     move-result v9
 
-    .line 338
     .local v9, "picParameterSetId":I
     move-object/from16 v0, p0
 
@@ -486,7 +447,6 @@
 
     if-gez v4, :cond_4
 
-    .line 340
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -495,7 +455,6 @@
 
     goto/16 :goto_0
 
-    .line 343
     :cond_4
     move-object/from16 v0, p0
 
@@ -507,7 +466,6 @@
 
     check-cast v19, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;
 
-    .line 344
     .local v19, "ppsData":Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;
     move-object/from16 v0, p0
 
@@ -527,13 +485,11 @@
 
     check-cast v5, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;
 
-    .line 345
     .local v5, "spsData":Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;
     iget-boolean v4, v5, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;->separateColorPlaneFlag:Z
 
     if-eqz v4, :cond_5
 
-    .line 346
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -548,7 +504,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 349
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -559,7 +514,6 @@
 
     invoke-virtual {v4, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 351
     :cond_5
     move-object/from16 v0, p0
 
@@ -577,18 +531,14 @@
 
     if-eqz v4, :cond_0
 
-    .line 354
     const/4 v10, 0x0
 
-    .line 355
     .local v10, "fieldPicFlag":Z
     const/4 v11, 0x0
 
-    .line 356
     .local v11, "bottomFieldFlagPresent":Z
     const/4 v12, 0x0
 
-    .line 357
     .local v12, "bottomFieldFlag":Z
     move-object/from16 v0, p0
 
@@ -604,13 +554,11 @@
 
     move-result v8
 
-    .line 358
     .local v8, "frameNum":I
     iget-boolean v4, v5, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;->frameMbsOnlyFlag:Z
 
     if-nez v4, :cond_6
 
-    .line 359
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -625,7 +573,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -634,10 +581,8 @@
 
     move-result v10
 
-    .line 363
     if-eqz v10, :cond_6
 
-    .line 364
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -652,7 +597,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 367
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -661,10 +605,8 @@
 
     move-result v12
 
-    .line 368
     const/4 v11, 0x1
 
-    .line 371
     :cond_6
     move-object/from16 v0, p0
 
@@ -678,16 +620,13 @@
 
     const/4 v13, 0x1
 
-    .line 372
     .local v13, "idrPicFlag":Z
     :goto_1
     const/4 v14, 0x0
 
-    .line 373
     .local v14, "idrPicId":I
     if-eqz v13, :cond_7
 
-    .line 374
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -698,7 +637,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -707,29 +645,23 @@
 
     move-result v14
 
-    .line 379
     :cond_7
     const/4 v15, 0x0
 
-    .line 380
     .local v15, "picOrderCntLsb":I
     const/16 v16, 0x0
 
-    .line 381
     .local v16, "deltaPicOrderCntBottom":I
     const/16 v17, 0x0
 
-    .line 382
     .local v17, "deltaPicOrderCnt0":I
     const/16 v18, 0x0
 
-    .line 383
     .local v18, "deltaPicOrderCnt1":I
     iget v4, v5, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;->picOrderCountType:I
 
     if-nez v4, :cond_a
 
-    .line 384
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -746,7 +678,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 387
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -761,7 +692,6 @@
 
     move-result v15
 
-    .line 388
     move-object/from16 v0, v19
 
     iget-boolean v4, v0, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;->bottomFieldPicOrderInFramePresentFlag:Z
@@ -770,7 +700,6 @@
 
     if-nez v10, :cond_8
 
-    .line 389
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -781,7 +710,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 392
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -790,7 +718,6 @@
 
     move-result v16
 
-    .line 407
     :cond_8
     :goto_2
     move-object/from16 v0, p0
@@ -799,7 +726,6 @@
 
     invoke-virtual/range {v4 .. v18}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->setAll(Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;IIIIZZZZIIIII)V
 
-    .line 410
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
@@ -808,7 +734,6 @@
 
     goto/16 :goto_0
 
-    .line 371
     .end local v13    # "idrPicFlag":Z
     .end local v14    # "idrPicId":I
     .end local v15    # "picOrderCntLsb":I
@@ -820,7 +745,6 @@
 
     goto :goto_1
 
-    .line 394
     .restart local v13    # "idrPicFlag":Z
     .restart local v14    # "idrPicId":I
     .restart local v15    # "picOrderCntLsb":I
@@ -840,7 +764,6 @@
 
     if-nez v4, :cond_8
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -851,7 +774,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -860,7 +782,6 @@
 
     move-result v17
 
-    .line 400
     move-object/from16 v0, v19
 
     iget-boolean v4, v0, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;->bottomFieldPicOrderInFramePresentFlag:Z
@@ -869,7 +790,6 @@
 
     if-nez v10, :cond_8
 
-    .line 401
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -880,7 +800,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 404
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bitArray:Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
@@ -902,7 +821,6 @@
 
     const/4 v2, 0x1
 
-    .line 414
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitType:I
 
     const/16 v4, 0x9
@@ -917,51 +835,42 @@
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->previousSliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 415
     invoke-static {v3, v4}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->access$100(Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;)Z
 
     move-result v3
 
     if-eqz v3, :cond_2
 
-    .line 417
     :cond_0
     iget-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->readingSample:Z
 
     if-eqz v3, :cond_1
 
-    .line 418
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitStartPosition:J
 
     sub-long v4, p1, v4
 
     long-to-int v0, v4
 
-    .line 419
     .local v0, "nalUnitLength":I
     add-int v3, p3, v0
 
     invoke-direct {p0, v3}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->outputSample(I)V
 
-    .line 421
     .end local v0    # "nalUnitLength":I
     :cond_1
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitStartPosition:J
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->samplePosition:J
 
-    .line 422
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitTimeUs:J
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sampleTimeUs:J
 
-    .line 423
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sampleIsKeyframe:Z
 
-    .line 424
     iput-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->readingSample:Z
 
-    .line 426
     :cond_2
     iget-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sampleIsKeyframe:Z
 
@@ -981,7 +890,6 @@
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 427
     invoke-virtual {v4}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->isISlice()Z
 
     move-result v4
@@ -996,7 +904,6 @@
 
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sampleIsKeyframe:Z
 
-    .line 428
     return-void
 .end method
 
@@ -1004,7 +911,6 @@
     .locals 1
 
     .prologue
-    .line 257
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->detectAccessUnits:Z
 
     return v0
@@ -1015,14 +921,12 @@
     .param p1, "ppsData"    # Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;
 
     .prologue
-    .line 265
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->pps:Landroid/util/SparseArray;
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;->picParameterSetId:I
 
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 266
     return-void
 .end method
 
@@ -1031,14 +935,12 @@
     .param p1, "spsData"    # Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;
 
     .prologue
-    .line 261
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sps:Landroid/util/SparseArray;
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;->seqParameterSetId:I
 
     invoke-virtual {v0, v1, p1}, Landroid/util/SparseArray;->append(ILjava/lang/Object;)V
 
-    .line 262
     return-void
 .end method
 
@@ -1048,18 +950,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 269
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->isFilling:Z
 
-    .line 270
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->readingSample:Z
 
-    .line 271
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->clear()V
 
-    .line 272
     return-void
 .end method
 
@@ -1072,16 +970,12 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 275
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitType:I
 
-    .line 276
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitTimeUs:J
 
-    .line 277
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->nalUnitStartPosition:J
 
-    .line 278
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->allowNonIdrKeyframes:Z
 
     if-eqz v1, :cond_0
@@ -1111,33 +1005,26 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 283
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->previousSliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 284
     .local v0, "newSliceHeader":Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->previousSliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 285
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
-    .line 286
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->sliceHeader:Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->clear()V
 
-    .line 287
     const/4 v1, 0x0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->bufferLength:I
 
-    .line 288
     iput-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader;->isFilling:Z
 
-    .line 290
     .end local v0    # "newSliceHeader":Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
     :cond_2
     return-void

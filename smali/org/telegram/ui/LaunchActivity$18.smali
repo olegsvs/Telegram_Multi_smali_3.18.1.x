@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 2241
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$18;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$18;->val$waitingForLocation:Ljava/util/HashMap;
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2244
     invoke-static {}, Lorg/telegram/ui/LaunchActivity;->access$1400()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -58,12 +56,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 2262
     :cond_0
     :goto_0
     return-void
 
-    .line 2247
     :cond_1
     invoke-static {}, Lorg/telegram/ui/LaunchActivity;->access$1400()Ljava/util/ArrayList;
 
@@ -85,7 +81,6 @@
 
     check-cast v1, Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    .line 2248
     .local v1, "lastFragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->isGoogleMapsInstalled(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
@@ -93,12 +88,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 2251
     new-instance v0, Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {v0}, Lorg/telegram/ui/LocationActivity;-><init>()V
 
-    .line 2252
     .local v0, "fragment":Lorg/telegram/ui/LocationActivity;
     new-instance v2, Lorg/telegram/ui/LaunchActivity$18$1;
 
@@ -106,7 +99,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/LocationActivity;->setDelegate(Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;)V
 
-    .line 2261
     iget-object v2, p0, Lorg/telegram/ui/LaunchActivity$18;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/LaunchActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)V

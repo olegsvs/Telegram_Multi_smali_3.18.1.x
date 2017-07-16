@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     .prologue
-    .line 465
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$3;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,14 +40,12 @@
     .locals 2
 
     .prologue
-    .line 468
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$3;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$1802(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 469
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$3;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$1700(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Ljava/lang/Runnable;
@@ -57,6 +54,5 @@
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 470
     return-void
 .end method

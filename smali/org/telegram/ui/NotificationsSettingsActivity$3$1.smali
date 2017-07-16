@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     .prologue
-    .line 293
     iput-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$1;->this$1:Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,13 +42,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 296
     new-instance v0, Lorg/telegram/ui/NotificationsSettingsActivity$3$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/NotificationsSettingsActivity$3$1$1;-><init>(Lorg/telegram/ui/NotificationsSettingsActivity$3$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 312
     return-void
 .end method

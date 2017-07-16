@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/query/StickersQuery$21$1;
 
     .prologue
-    .line 902
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$21$1$1;->this$1:Lorg/telegram/messenger/query/StickersQuery$21$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$21$1$1;->val$newStickerArray:Ljava/util/ArrayList;
@@ -63,13 +62,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 905
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$21$1$1$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/query/StickersQuery$21$1$1$1;-><init>(Lorg/telegram/messenger/query/StickersQuery$21$1$1;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 921
     return-void
 .end method

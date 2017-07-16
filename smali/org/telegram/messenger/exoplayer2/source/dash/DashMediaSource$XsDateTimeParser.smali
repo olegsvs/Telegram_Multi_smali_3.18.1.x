@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 762
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$1;
 
     .prologue
-    .line 762
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$XsDateTimeParser;-><init>()V
 
     return-void
@@ -62,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 766
     new-instance v1, Ljava/io/BufferedReader;
 
     new-instance v2, Ljava/io/InputStreamReader;
@@ -75,7 +72,6 @@
 
     move-result-object v0
 
-    .line 767
     .local v0, "firstLine":Ljava/lang/String;
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Util;->parseXsDateTime(Ljava/lang/String;)J
 
@@ -97,7 +93,6 @@
     .end annotation
 
     .prologue
-    .line 762
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$XsDateTimeParser;->parse(Landroid/net/Uri;Ljava/io/InputStream;)Ljava/lang/Long;
 
     move-result-object v0

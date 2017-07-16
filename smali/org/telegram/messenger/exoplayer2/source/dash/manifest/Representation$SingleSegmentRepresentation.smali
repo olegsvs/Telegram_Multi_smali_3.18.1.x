@@ -38,7 +38,6 @@
     .param p8, "contentLength"    # J
 
     .prologue
-    .line 195
     const/4 v9, 0x0
 
     move-object v2, p0
@@ -55,21 +54,18 @@
 
     invoke-direct/range {v2 .. v9}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;-><init>(Ljava/lang/String;JLorg/telegram/messenger/exoplayer2/Format;Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$1;)V
 
-    .line 196
     invoke-static {p5}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
     move-result-object v2
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->uri:Landroid/net/Uri;
 
-    .line 197
     invoke-virtual/range {p6 .. p6}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->getIndex()Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v2
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->indexUri:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
-    .line 198
     if-eqz p7, :cond_0
 
     .end local p7    # "customCacheKey":Ljava/lang/String;
@@ -78,12 +74,10 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->cacheKey:Ljava/lang/String;
 
-    .line 200
     move-wide/from16 v0, p8
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->contentLength:J
 
-    .line 203
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->indexUri:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     if-eqz v2, :cond_2
@@ -93,10 +87,8 @@
     :goto_1
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->segmentIndex:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SingleSegmentIndex;
 
-    .line 205
     return-void
 
-    .line 198
     .restart local p7    # "customCacheKey":Ljava/lang/String;
     :cond_0
     if-eqz p1, :cond_1
@@ -142,7 +134,6 @@
 
     goto :goto_0
 
-    .line 203
     .end local p7    # "customCacheKey":Ljava/lang/String;
     :cond_2
     new-instance v8, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SingleSegmentIndex;
@@ -178,7 +169,6 @@
     .param p14, "contentLength"    # J
 
     .prologue
-    .line 176
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     const/4 v1, 0x0
@@ -193,7 +183,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;-><init>(Ljava/lang/String;JJ)V
 
-    .line 178
     .local v0, "rangedUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
 
@@ -213,7 +202,6 @@
 
     invoke-direct/range {v2 .. v11}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;-><init>(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJJJ)V
 
-    .line 180
     .local v2, "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
     new-instance v4, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;
 
@@ -242,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 219
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->cacheKey:Ljava/lang/String;
 
     return-object v0
@@ -252,7 +239,6 @@
     .locals 1
 
     .prologue
-    .line 214
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->segmentIndex:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SingleSegmentIndex;
 
     return-object v0
@@ -262,7 +248,6 @@
     .locals 1
 
     .prologue
-    .line 209
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$SingleSegmentRepresentation;->indexUri:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object v0

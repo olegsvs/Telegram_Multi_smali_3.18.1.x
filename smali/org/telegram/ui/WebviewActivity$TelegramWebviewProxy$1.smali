@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
     .prologue
-    .line 71
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
     iput-object p2, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->val$eventName:Ljava/lang/String;
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
     iget-object v0, v0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/WebviewActivity;
@@ -60,17 +58,14 @@
 
     if-nez v0, :cond_0
 
-    .line 87
     :goto_0
     return-void
 
-    .line 77
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->val$eventName:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 78
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->val$eventName:Ljava/lang/String;
 
     const/4 v0, -0x1
@@ -85,7 +80,6 @@
     :goto_1
     packed-switch v0, :pswitch_data_0
 
-    .line 86
     :goto_2
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
@@ -127,7 +121,6 @@
 
     goto :goto_0
 
-    .line 78
     :sswitch_0
     const-string/jumbo v3, "share_game"
 
@@ -154,7 +147,6 @@
 
     goto :goto_1
 
-    .line 80
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
@@ -170,7 +162,6 @@
 
     goto :goto_2
 
-    .line 83
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
 
@@ -186,7 +177,6 @@
 
     goto :goto_2
 
-    .line 78
     :sswitch_data_0
     .sparse-switch
         -0x6a9837ae -> :sswitch_0

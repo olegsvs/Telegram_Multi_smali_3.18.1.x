@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 2084
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$23;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$23;->val$args:[Ljava/lang/Object;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2087
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -58,7 +56,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 2088
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -69,20 +66,17 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2089
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$23;->val$args:[Ljava/lang/Object;
 
     aget-object v1, v2, v5
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
-    .line 2090
     .local v1, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 2091
     .local v0, "args2":Landroid/os/Bundle;
     const-string/jumbo v2, "enc_id"
 
@@ -90,7 +84,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 2092
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$23;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     new-instance v3, Lorg/telegram/ui/ChatActivity;
@@ -101,6 +94,5 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ProfileActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
-    .line 2093
     return-void
 .end method

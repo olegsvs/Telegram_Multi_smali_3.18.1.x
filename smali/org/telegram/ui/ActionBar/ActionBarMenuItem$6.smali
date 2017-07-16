@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     .prologue
-    .line 454
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$6;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 468
     const/4 v0, 0x0
 
     return v0
@@ -55,7 +53,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 464
     const/4 v0, 0x0
 
     return v0
@@ -66,7 +63,6 @@
     .param p1, "mode"    # Landroid/view/ActionMode;
 
     .prologue
-    .line 461
     return-void
 .end method
 
@@ -76,7 +72,6 @@
     .param p2, "menu"    # Landroid/view/Menu;
 
     .prologue
-    .line 456
     const/4 v0, 0x0
 
     return v0

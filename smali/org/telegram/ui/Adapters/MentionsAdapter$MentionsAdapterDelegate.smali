@@ -18,7 +18,6 @@
 .method public abstract needChangePanelVisibility(Z)V
 .end method
 
-.method public abstract onContextClick(Lorg/telegram/tgnet/TLRPC$BotInlineResult;)V
 .end method
 
 .method public abstract onContextSearch(Z)V

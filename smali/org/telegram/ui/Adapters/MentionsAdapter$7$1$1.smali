@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Adapters/MentionsAdapter$7$1;
 
     .prologue
-    .line 352
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->this$2:Lorg/telegram/ui/Adapters/MentionsAdapter$7$1;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 355
     iget-object v2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->this$2:Lorg/telegram/ui/Adapters/MentionsAdapter$7$1;
 
     iget-object v2, v2, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1;->this$1:Lorg/telegram/ui/Adapters/MentionsAdapter$7;
@@ -88,27 +86,22 @@
 
     if-nez v2, :cond_1
 
-    .line 369
     :cond_0
     :goto_0
     return-void
 
-    .line 358
     :cond_1
     const/4 v1, 0x0
 
-    .line 359
     .local v1, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_2
 
-    .line 360
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
 
-    .line 361
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
 
@@ -118,7 +111,6 @@
 
     if-nez v2, :cond_2
 
-    .line 362
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -128,7 +120,6 @@
     .end local v1    # "user":Lorg/telegram/tgnet/TLRPC$User;
     check-cast v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 363
     .restart local v1    # "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -136,7 +127,6 @@
 
     invoke-virtual {v2, v1, v4}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 364
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -147,7 +137,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v5}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 368
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$7$1$1;->this$2:Lorg/telegram/ui/Adapters/MentionsAdapter$7$1;

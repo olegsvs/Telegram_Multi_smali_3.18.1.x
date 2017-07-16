@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PasscodeView;
 
     .prologue
-    .line 519
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$2;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 532
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$2;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PasscodeView;->access$500(Lorg/telegram/ui/Components/PasscodeView;)Landroid/widget/EditText;
@@ -61,14 +59,12 @@
 
     if-nez v0, :cond_0
 
-    .line 533
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$2;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PasscodeView;->access$400(Lorg/telegram/ui/Components/PasscodeView;Z)V
 
-    .line 535
     :cond_0
     return-void
 .end method
@@ -81,7 +77,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 523
     return-void
 .end method
 
@@ -93,6 +88,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 528
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangeUsernameActivity$6;
 
     .prologue
-    .line 416
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$6;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$1;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -49,7 +48,6 @@
 
     const/4 v4, 0x0
 
-    .line 420
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$6;
 
@@ -59,26 +57,22 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 424
     :goto_0
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 425
     .local v1, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$1;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 426
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
 
     invoke-virtual {v2, v1, v4}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 427
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -87,25 +81,20 @@
 
     invoke-virtual {v2, v1, v3, v4, v5}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 428
     invoke-static {v5}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 429
     iget-object v2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6$1;->this$1:Lorg/telegram/ui/ChangeUsernameActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChangeUsernameActivity$6;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ChangeUsernameActivity;->finishFragment()V
 
-    .line 430
     return-void
 
-    .line 421
     .end local v1    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :catch_0
     move-exception v0
 
-    .line 422
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ManageSpaceActivity;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/ManageSpaceActivity$2;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 126
     return-void
 .end method

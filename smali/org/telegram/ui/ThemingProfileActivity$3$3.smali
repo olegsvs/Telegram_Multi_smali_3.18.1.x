@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingProfileActivity$3;
 
     .prologue
-    .line 245
     iput-object p1, p0, Lorg/telegram/ui/ThemingProfileActivity$3$3;->this$1:Lorg/telegram/ui/ThemingProfileActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 248
     iget-object v0, p0, Lorg/telegram/ui/ThemingProfileActivity$3$3;->this$1:Lorg/telegram/ui/ThemingProfileActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -52,10 +50,8 @@
 
     invoke-static {v0, v1, p2}, Lorg/telegram/ui/ThemingProfileActivity;->access$300(Lorg/telegram/ui/ThemingProfileActivity;Ljava/lang/String;I)V
 
-    .line 249
     sput p2, Lorg/telegram/ui/ActionBar/Theme;->profileRowGradientList:I
 
-    .line 250
     iget-object v0, p0, Lorg/telegram/ui/ThemingProfileActivity$3$3;->this$1:Lorg/telegram/ui/ThemingProfileActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -66,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/ThemingProfileActivity$3$3;->this$1:Lorg/telegram/ui/ThemingProfileActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v0}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 253
     :cond_0
     return-void
 .end method

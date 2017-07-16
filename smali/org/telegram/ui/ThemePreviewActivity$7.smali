@@ -29,14 +29,12 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 311
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$7;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     iput-object p3, p0, Lorg/telegram/ui/ThemePreviewActivity$7;->val$viewPager:Landroid/support/v4/view/ViewPager;
 
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 313
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -55,14 +53,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 317
     iget-object v2, p0, Lorg/telegram/ui/ThemePreviewActivity$7;->val$viewPager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v2}, Landroid/support/v4/view/ViewPager;->getCurrentItem()I
 
     move-result v1
 
-    .line 318
     .local v1, "selected":I
     const/4 v0, 0x0
 
@@ -72,7 +68,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 319
     iget-object v3, p0, Lorg/telegram/ui/ThemePreviewActivity$7;->paint:Landroid/graphics/Paint;
 
     if-ne v0, v1, :cond_0
@@ -82,7 +77,6 @@
     :goto_1
     invoke-virtual {v3, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 320
     mul-int/lit8 v2, v0, 0xf
 
     add-int/lit8 v2, v2, 0x3
@@ -115,18 +109,15 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 318
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 319
     :cond_0
     const v2, -0x333334
 
     goto :goto_1
 
-    .line 322
     :cond_1
     return-void
 .end method

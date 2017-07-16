@@ -15,7 +15,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -32,12 +31,10 @@
     .end annotation
 
     .prologue
-    .line 42
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSink;->stream:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {v0}, Ljava/io/ByteArrayOutputStream;->close()V
 
-    .line 43
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 55
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSink;->stream:Ljava/io/ByteArrayOutputStream;
 
     if-nez v0, :cond_0
@@ -75,7 +71,6 @@
     .end annotation
 
     .prologue
-    .line 32
     iget-wide v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     const-wide/16 v2, -0x1
@@ -84,18 +79,15 @@
 
     if-nez v0, :cond_0
 
-    .line 33
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     invoke-direct {v0}, Ljava/io/ByteArrayOutputStream;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSink;->stream:Ljava/io/ByteArrayOutputStream;
 
-    .line 38
     :goto_0
     return-void
 
-    .line 35
     :cond_0
     iget-wide v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
@@ -110,7 +102,6 @@
     :goto_1
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 36
     new-instance v0, Ljava/io/ByteArrayOutputStream;
 
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
@@ -123,7 +114,6 @@
 
     goto :goto_0
 
-    .line 35
     :cond_1
     const/4 v0, 0x0
 
@@ -142,11 +132,9 @@
     .end annotation
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSink;->stream:Ljava/io/ByteArrayOutputStream;
 
     invoke-virtual {v0, p1, p2, p3}, Ljava/io/ByteArrayOutputStream;->write([BII)V
 
-    .line 48
     return-void
 .end method

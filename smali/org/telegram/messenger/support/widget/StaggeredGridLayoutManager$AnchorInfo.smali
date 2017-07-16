@@ -36,15 +36,12 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     .prologue
-    .line 3109
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3110
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->reset()V
 
-    .line 3111
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 3136
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mLayoutFromEnd:Z
 
     if-eqz v0, :cond_0
@@ -67,20 +63,16 @@
 
     move-result v0
 
-    .line 3137
     :goto_0
     iput v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mOffset:I
 
-    .line 3138
     return-void
 
-    .line 3136
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Lorg/telegram/messenger/support/widget/OrientationHelper;
 
-    .line 3137
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getStartAfterPadding()I
 
     move-result v0
@@ -93,12 +85,10 @@
     .param p1, "addedDistance"    # I
 
     .prologue
-    .line 3141
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mLayoutFromEnd:Z
 
     if-eqz v0, :cond_0
 
-    .line 3142
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;->mPrimaryOrientation:Lorg/telegram/messenger/support/widget/OrientationHelper;
@@ -111,11 +101,9 @@
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mOffset:I
 
-    .line 3146
     :goto_0
     return-void
 
-    .line 3144
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
@@ -140,34 +128,26 @@
 
     const/4 v1, 0x0
 
-    .line 3114
     iput v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mPosition:I
 
-    .line 3115
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mOffset:I
 
-    .line 3116
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mLayoutFromEnd:Z
 
-    .line 3117
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mInvalidateOffsets:Z
 
-    .line 3118
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mValid:Z
 
-    .line 3119
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mSpanReferenceLines:[I
 
     if-eqz v0, :cond_0
 
-    .line 3120
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mSpanReferenceLines:[I
 
     invoke-static {v0, v2}, Ljava/util/Arrays;->fill([II)V
 
-    .line 3122
     :cond_0
     return-void
 .end method
@@ -177,10 +157,8 @@
     .param p1, "spans"    # [Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$Span;
 
     .prologue
-    .line 3125
     array-length v1, p1
 
-    .line 3126
     .local v1, "spanCount":I
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mSpanReferenceLines:[I
 
@@ -192,7 +170,6 @@
 
     if-ge v2, v1, :cond_1
 
-    .line 3127
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
@@ -204,7 +181,6 @@
 
     iput-object v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mSpanReferenceLines:[I
 
-    .line 3129
     :cond_1
     const/4 v0, 0x0
 
@@ -212,7 +188,6 @@
     :goto_0
     if-ge v0, v1, :cond_2
 
-    .line 3131
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$AnchorInfo;->mSpanReferenceLines:[I
 
     aget-object v3, p1, v0
@@ -225,12 +200,10 @@
 
     aput v3, v2, v0
 
-    .line 3129
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3133
     :cond_2
     return-void
 .end method

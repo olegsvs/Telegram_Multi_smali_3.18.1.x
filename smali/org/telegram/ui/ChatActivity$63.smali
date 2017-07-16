@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 4198
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -72,7 +71,6 @@
 
     const/4 v1, 0x0
 
-    .line 4201
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$100(Lorg/telegram/ui/ChatActivity;)J
@@ -95,7 +93,6 @@
 
     invoke-static/range {v0 .. v7}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingPhotos(Ljava/util/ArrayList;Ljava/util/ArrayList;JLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Ljava/util/ArrayList;Landroid/support/v13/view/inputmethod/InputContentInfoCompat;)V
 
-    .line 4202
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$100(Lorg/telegram/ui/ChatActivity;)J
@@ -110,7 +107,6 @@
 
     invoke-static {p4, v2, v3, v0}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingPhotosSearch(Ljava/util/ArrayList;JLorg/telegram/messenger/MessageObject;)V
 
-    .line 4203
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     move v3, v8
@@ -125,7 +121,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4204
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$100(Lorg/telegram/ui/ChatActivity;)J
@@ -136,7 +131,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/query/DraftQuery;->cleanDraft(JZ)V
 
-    .line 4205
     return-void
 .end method
 
@@ -149,10 +143,8 @@
     .param p7, "caption"    # Ljava/lang/String;
 
     .prologue
-    .line 4228
     if-eqz p2, :cond_0
 
-    .line 4229
     iget v6, p2, Lorg/telegram/messenger/VideoEditedInfo;->resultWidth:I
 
     iget v7, p2, Lorg/telegram/messenger/VideoEditedInfo;->resultHeight:I
@@ -181,7 +173,6 @@
 
     invoke-static/range {v1 .. v12}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingVideo(Ljava/lang/String;JJIILorg/telegram/messenger/VideoEditedInfo;JLorg/telegram/messenger/MessageObject;Ljava/lang/String;)V
 
-    .line 4233
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -197,7 +188,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4234
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$100(Lorg/telegram/ui/ChatActivity;)J
@@ -208,10 +198,8 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/query/DraftQuery;->cleanDraft(JZ)V
 
-    .line 4235
     return-void
 
-    .line 4231
     :cond_0
     const-wide/16 v2, 0x0
 
@@ -248,51 +236,43 @@
     .locals 8
 
     .prologue
-    .line 4210
     :try_start_0
     new-instance v3, Landroid/content/Intent;
 
     invoke-direct {v3}, Landroid/content/Intent;-><init>()V
 
-    .line 4211
     .local v3, "videoPickerIntent":Landroid/content/Intent;
     const-string/jumbo v4, "video/*"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4212
     const-string/jumbo v4, "android.intent.action.GET_CONTENT"
 
     invoke-virtual {v3, v4}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4213
     const-string/jumbo v4, "android.intent.extra.sizeLimit"
 
     const-wide/32 v6, 0x60000000
 
     invoke-virtual {v3, v4, v6, v7}, Landroid/content/Intent;->putExtra(Ljava/lang/String;J)Landroid/content/Intent;
 
-    .line 4215
     new-instance v2, Landroid/content/Intent;
 
     const-string/jumbo v4, "android.intent.action.PICK"
 
     invoke-direct {v2, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 4216
     .local v2, "photoPickerIntent":Landroid/content/Intent;
     const-string/jumbo v4, "image/*"
 
     invoke-virtual {v2, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 4217
     const/4 v4, 0x0
 
     invoke-static {v2, v4}, Landroid/content/Intent;->createChooser(Landroid/content/Intent;Ljava/lang/CharSequence;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 4218
     .local v0, "chooserIntent":Landroid/content/Intent;
     const-string/jumbo v4, "android.intent.extra.INITIAL_INTENTS"
 
@@ -306,7 +286,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 4220
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$63;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v5, 0x1
@@ -315,18 +294,15 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4224
     .end local v0    # "chooserIntent":Landroid/content/Intent;
     .end local v2    # "photoPickerIntent":Landroid/content/Intent;
     .end local v3    # "videoPickerIntent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 4221
     :catch_0
     move-exception v1
 
-    .line 4222
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

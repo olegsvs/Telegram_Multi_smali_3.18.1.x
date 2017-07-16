@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 679
     iput-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$selected:[I
 
     iput-wide p2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$dialog_id:J
@@ -59,7 +58,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 682
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$selected:[I
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -74,7 +72,6 @@
 
     aput v2, v3, v6
 
-    .line 684
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -83,13 +80,11 @@
 
     move-result-object v1
 
-    .line 685
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 686
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-wide v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$dialog_id:J
 
@@ -99,21 +94,18 @@
 
     if-eqz v2, :cond_3
 
-    .line 687
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$selected:[I
 
     aget v2, v2, v6
 
     if-nez v2, :cond_2
 
-    .line 688
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$selected:[I
 
     const/4 v3, 0x3
 
     aput v3, v2, v6
 
-    .line 692
     :goto_0
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -141,36 +133,29 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 696
     :goto_1
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 697
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v2, :cond_0
 
-    .line 698
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->dismissCurrentDialig()V
 
-    .line 700
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_1
 
-    .line 701
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 703
     :cond_1
     return-void
 
-    .line 690
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$selected:[I
 
@@ -182,7 +167,6 @@
 
     goto :goto_0
 
-    .line 694
     :cond_3
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$9;->val$globalGroup:Z
 

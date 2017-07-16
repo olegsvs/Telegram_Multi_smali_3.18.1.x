@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VoIPActivity$12;
 
     .prologue
-    .line 643
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$12$1;->this$1:Lorg/telegram/ui/VoIPActivity$12;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 646
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$12$1;->this$1:Lorg/telegram/ui/VoIPActivity$12;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$12;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -50,7 +48,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$1702(Lorg/telegram/ui/VoIPActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 647
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$12$1;->this$1:Lorg/telegram/ui/VoIPActivity$12;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$12;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -59,6 +56,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$1600(Lorg/telegram/ui/VoIPActivity;Z)V
 
-    .line 648
     return-void
 .end method

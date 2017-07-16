@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 9989
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 9992
     const/4 v0, 0x0
 
-    .line 9993
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     sparse-switch p1, :sswitch_data_0
 
-    .line 10007
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 10008
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ContactLink"
@@ -70,40 +65,33 @@
 
     throw v1
 
-    .line 9995
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkNone;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contactLinkNone;-><init>()V
 
-    .line 9996
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     goto :goto_0
 
-    .line 9998
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkContact;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contactLinkContact;-><init>()V
 
-    .line 9999
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     goto :goto_0
 
-    .line 10001
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkHasPhone;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contactLinkHasPhone;-><init>()V
 
-    .line 10002
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     goto :goto_0
 
-    .line 10004
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contactLinkUnknown;
 
@@ -113,18 +101,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ContactLink;
     goto :goto_0
 
-    .line 10010
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 10011
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ContactLink;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 10013
     :cond_1
     return-object v0
 
-    .line 9993
     nop
 
     :sswitch_data_0

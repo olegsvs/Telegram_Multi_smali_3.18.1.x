@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropView;
 
     .prologue
-    .line 317
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     iput p2, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->val$targetScale:F
@@ -62,7 +61,6 @@
 
     const/high16 v3, 0x3f800000    # 1.0f
 
-    .line 320
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -73,7 +71,6 @@
 
     move-result v1
 
-    .line 321
     .local v1, "value":F
     iget v2, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->val$targetScale:F
 
@@ -89,7 +86,6 @@
 
     div-float v0, v2, v3
 
-    .line 322
     .local v0, "deltaScale":F
     iget-object v2, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->val$currentScale:[F
 
@@ -99,7 +95,6 @@
 
     aput v3, v2, v4
 
-    .line 323
     iget-object v2, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/Crop/CropView;->access$1100(Lorg/telegram/ui/Components/Crop/CropView;)Lorg/telegram/ui/Components/Crop/CropView$CropState;
@@ -112,11 +107,9 @@
 
     invoke-static {v2, v0, v3, v4}, Lorg/telegram/ui/Components/Crop/CropView$CropState;->access$1200(Lorg/telegram/ui/Components/Crop/CropView$CropState;FFF)V
 
-    .line 324
     iget-object v2, p0, Lorg/telegram/ui/Components/Crop/CropView$2;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/Crop/CropView;->updateMatrix()V
 
-    .line 325
     return-void
 .end method

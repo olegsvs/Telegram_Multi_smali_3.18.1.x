@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2407
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$45;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$45;->val$key:I
@@ -51,21 +50,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2410
     if-nez p2, :cond_2
 
     move-object v3, p1
 
-    .line 2411
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 2412
     .local v3, "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     new-instance v2, Landroid/util/SparseArray;
 
     invoke-direct {v2}, Landroid/util/SparseArray;-><init>()V
 
-    .line 2413
     .local v2, "channelViews":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/util/SparseIntArray;>;"
     iget v4, p0, Lorg/telegram/messenger/MessagesController$45;->val$key:I
 
@@ -75,23 +70,19 @@
 
     check-cast v1, Landroid/util/SparseIntArray;
 
-    .line 2414
     .local v1, "array":Landroid/util/SparseIntArray;
     if-nez v1, :cond_0
 
-    .line 2415
     new-instance v1, Landroid/util/SparseIntArray;
 
     .end local v1    # "array":Landroid/util/SparseIntArray;
     invoke-direct {v1}, Landroid/util/SparseIntArray;-><init>()V
 
-    .line 2416
     .restart local v1    # "array":Landroid/util/SparseIntArray;
     iget v4, p0, Lorg/telegram/messenger/MessagesController$45;->val$key:I
 
     invoke-virtual {v2, v4, v1}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 2418
     :cond_0
     const/4 v0, 0x0
 
@@ -107,7 +98,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 2419
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->size()I
@@ -116,7 +106,6 @@
 
     if-lt v0, v4, :cond_3
 
-    .line 2424
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -130,14 +119,12 @@
 
     invoke-virtual {v4, v2, v5}, Lorg/telegram/messenger/MessagesStorage;->putChannelViews(Landroid/util/SparseArray;Z)V
 
-    .line 2425
     new-instance v4, Lorg/telegram/messenger/MessagesController$45$1;
 
     invoke-direct {v4, p0, v2}, Lorg/telegram/messenger/MessagesController$45$1;-><init>(Lorg/telegram/messenger/MessagesController$45;Landroid/util/SparseArray;)V
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2432
     .end local v0    # "a":I
     .end local v1    # "array":Landroid/util/SparseIntArray;
     .end local v2    # "channelViews":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/util/SparseIntArray;>;"
@@ -145,7 +132,6 @@
     :cond_2
     return-void
 
-    .line 2422
     .restart local v0    # "a":I
     .restart local v1    # "array":Landroid/util/SparseIntArray;
     .restart local v2    # "channelViews":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Landroid/util/SparseIntArray;>;"
@@ -179,7 +165,6 @@
 
     invoke-virtual {v1, v5, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 2418
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0

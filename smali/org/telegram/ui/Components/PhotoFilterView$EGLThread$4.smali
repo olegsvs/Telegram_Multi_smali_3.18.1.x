@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     .prologue
-    .line 1649
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->val$updateBlur:Z
@@ -49,7 +48,6 @@
     .locals 6
 
     .prologue
-    .line 1652
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4700(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)Z
@@ -58,20 +56,17 @@
 
     if-nez v2, :cond_0
 
-    .line 1653
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     iget-boolean v3, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->val$updateBlur:Z
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4702(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;Z)Z
 
-    .line 1655
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1656
     .local v0, "newTime":J
     iget-boolean v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->val$force:Z
 
@@ -95,13 +90,11 @@
 
     if-lez v2, :cond_2
 
-    .line 1657
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v2, v0, v1}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4802(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;J)J
 
-    .line 1658
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$4;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4900(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)Ljava/lang/Runnable;
@@ -110,7 +103,6 @@
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 1662
     :cond_2
     return-void
 .end method

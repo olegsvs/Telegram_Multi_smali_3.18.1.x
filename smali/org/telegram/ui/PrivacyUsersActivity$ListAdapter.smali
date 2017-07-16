@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 230
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 231
     iput-object p2, p0, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 232
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 241
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacyUsersActivity;->access$200(Lorg/telegram/ui/PrivacyUsersActivity;)Ljava/util/ArrayList;
@@ -57,10 +53,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 242
     const/4 v0, 0x0
 
-    .line 244
     :goto_0
     return v0
 
@@ -85,7 +79,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 275
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacyUsersActivity;->access$200(Lorg/telegram/ui/PrivacyUsersActivity;)Ljava/util/ArrayList;
@@ -98,10 +91,8 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 276
     const/4 v0, 0x1
 
-    .line 278
     :goto_0
     return v0
 
@@ -116,7 +107,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 236
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
@@ -150,14 +140,12 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 267
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 268
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -178,7 +166,6 @@
 
     move-result-object v0
 
-    .line 269
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -231,12 +218,10 @@
 
     invoke-virtual {v1, v0, v3, v2, v4}, Lorg/telegram/ui/Cells/UserCell;->setData(Lorg/telegram/tgnet/TLObject;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
-    .line 271
     .end local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     return-void
 
-    .line 269
     .restart local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
     const-string/jumbo v2, "NumberUnknown"
@@ -258,10 +243,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 250
     packed-switch p2, :pswitch_data_0
 
-    .line 256
     new-instance v1, Lorg/telegram/ui/Cells/TextInfoCell;
 
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -271,7 +254,6 @@
     .local v1, "view":Landroid/view/View;
     move-object v2, v1
 
-    .line 257
     check-cast v2, Lorg/telegram/ui/Cells/TextInfoCell;
 
     const-string/jumbo v3, "RemoveFromListText"
@@ -284,7 +266,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Cells/TextInfoCell;->setText(Ljava/lang/String;)V
 
-    .line 258
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "theme"
@@ -293,7 +274,6 @@
 
     move-result-object v0
 
-    .line 259
     .local v0, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v2, "prefBGColor"
 
@@ -305,7 +285,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 262
     .end local v0    # "themePrefs":Landroid/content/SharedPreferences;
     :goto_0
     new-instance v2, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -314,7 +293,6 @@
 
     return-object v2
 
-    .line 252
     .end local v1    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v1, Lorg/telegram/ui/Cells/UserCell;
@@ -325,11 +303,9 @@
 
     invoke-direct {v1, v2, v3, v5, v5}, Lorg/telegram/ui/Cells/UserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    .line 253
     .restart local v1    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 250
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

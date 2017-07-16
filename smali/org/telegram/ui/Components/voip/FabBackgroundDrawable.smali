@@ -16,10 +16,8 @@
     .locals 2
 
     .prologue
-    .line 22
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 23
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -28,21 +26,18 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->bgPaint:Landroid/graphics/Paint;
 
-    .line 24
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowPaint:Landroid/graphics/Paint;
 
-    .line 25
     iget-object v0, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x4c000000    # 3.3554432E7f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 26
     return-void
 .end method
 
@@ -53,19 +48,16 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 30
     iget-object v1, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
     if-nez v1, :cond_0
 
-    .line 31
     invoke-virtual {p0}, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v1
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->onBoundsChange(Landroid/graphics/Rect;)V
 
-    .line 32
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -87,13 +79,11 @@
 
     move-result v0
 
-    .line 33
     .local v0, "size":I
     iget-object v1, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
     if-eqz v1, :cond_1
 
-    .line 34
     iget-object v1, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->getBounds()Landroid/graphics/Rect;
@@ -140,7 +130,6 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawBitmap(Landroid/graphics/Bitmap;FFLandroid/graphics/Paint;)V
 
-    .line 35
     :cond_1
     div-int/lit8 v1, v0, 0x2
 
@@ -166,7 +155,6 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 36
     return-void
 .end method
 
@@ -174,7 +162,6 @@
     .locals 1
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return v0
@@ -185,18 +172,15 @@
     .param p1, "padding"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 74
     const/high16 v1, 0x40800000    # 4.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    .line 75
     .local v0, "pad":I
     invoke-virtual {p1, v0, v0, v0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 76
     const/4 v1, 0x1
 
     return v1
@@ -207,7 +191,6 @@
     .param p1, "bounds"    # Landroid/graphics/Rect;
 
     .prologue
-    .line 55
     invoke-virtual {p1}, Landroid/graphics/Rect;->width()I
 
     move-result v3
@@ -220,20 +203,16 @@
 
     move-result v2
 
-    .line 56
     .local v2, "size":I
     if-gtz v2, :cond_0
 
-    .line 57
     const/4 v3, 0x0
 
     iput-object v3, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
-    .line 65
     :goto_0
     return-void
 
-    .line 60
     :cond_0
     sget-object v3, Landroid/graphics/Bitmap$Config;->ALPHA_8:Landroid/graphics/Bitmap$Config;
 
@@ -243,14 +222,12 @@
 
     iput-object v3, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
-    .line 61
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->shadowBitmap:Landroid/graphics/Bitmap;
 
     invoke-direct {v0, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 62
     .local v0, "c":Landroid/graphics/Canvas;
     new-instance v1, Landroid/graphics/Paint;
 
@@ -258,7 +235,6 @@
 
     invoke-direct {v1, v3}, Landroid/graphics/Paint;-><init>(I)V
 
-    .line 63
     .local v1, "p":Landroid/graphics/Paint;
     const v3, 0x40555547
 
@@ -282,7 +258,6 @@
 
     invoke-virtual {v1, v3, v4, v5, v6}, Landroid/graphics/Paint;->setShadowLayer(FFFI)V
 
-    .line 64
     div-int/lit8 v3, v2, 0x2
 
     int-to-float v3, v3
@@ -313,7 +288,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 41
     return-void
 .end method
 
@@ -322,15 +296,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 68
     iget-object v0, p0, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->bgPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 69
     invoke-virtual {p0}, Lorg/telegram/ui/Components/voip/FabBackgroundDrawable;->invalidateSelf()V
 
-    .line 70
     return-void
 .end method
 
@@ -339,6 +310,5 @@
     .param p1, "colorFilter"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 46
     return-void
 .end method

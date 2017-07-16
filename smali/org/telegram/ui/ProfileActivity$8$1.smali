@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$8;
 
     .prologue
-    .line 792
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$8$1;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     iput-wide p2, p0, Lorg/telegram/ui/ProfileActivity$8$1;->val$did:J
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 795
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v8
@@ -57,11 +55,9 @@
 
     move-result v3
 
-    .line 796
     .local v3, "i":I
     if-nez v3, :cond_1
 
-    .line 797
     sget-object v8, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v9, "Notifications"
@@ -72,13 +68,11 @@
 
     move-result-object v6
 
-    .line 798
     .local v6, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    .line 799
     .local v2, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -104,7 +98,6 @@
 
     invoke-interface {v2, v8, v9}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 800
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v8
@@ -115,10 +108,8 @@
 
     invoke-virtual {v8, v10, v11, v12, v13}, Lorg/telegram/messenger/MessagesStorage;->setDialogFlags(JJ)V
 
-    .line 801
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 802
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v8
@@ -137,24 +128,20 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 803
     .local v1, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v1, :cond_0
 
-    .line 804
     new-instance v8, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     invoke-direct {v8}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
 
     iput-object v8, v1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
-    .line 806
     :cond_0
     iget-wide v8, p0, Lorg/telegram/ui/ProfileActivity$8$1;->val$did:J
 
     invoke-static {v8, v9}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(J)V
 
-    .line 841
     .end local v1    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v2    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v6    # "preferences":Landroid/content/SharedPreferences;
@@ -177,28 +164,23 @@
 
     invoke-virtual {v8, v9}, Lorg/telegram/ui/ProfileActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 842
     iget-object v8, p0, Lorg/telegram/ui/ProfileActivity$8$1;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     iget-object v8, v8, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-virtual {v8}, Lorg/telegram/ui/ProfileActivity;->dismissCurrentDialig()V
 
-    .line 843
     return-void
 
-    .line 807
     :cond_1
     const/4 v8, 0x3
 
     if-ne v3, v8, :cond_2
 
-    .line 808
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 809
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v8, "dialog_id"
 
@@ -206,7 +188,6 @@
 
     invoke-virtual {v0, v8, v10, v11}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 810
     iget-object v8, p0, Lorg/telegram/ui/ProfileActivity$8$1;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     iget-object v8, v8, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -219,7 +200,6 @@
 
     goto :goto_0
 
-    .line 812
     .end local v0    # "args":Landroid/os/Bundle;
     :cond_2
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -230,16 +210,13 @@
 
     move-result v7
 
-    .line 813
     .local v7, "untilTime":I
     const/4 v8, 0x1
 
     if-ne v3, v8, :cond_5
 
-    .line 814
     add-int/lit16 v7, v7, 0xe10
 
-    .line 820
     :cond_3
     :goto_1
     sget-object v8, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -252,19 +229,16 @@
 
     move-result-object v6
 
-    .line 821
     .restart local v6    # "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v6}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    .line 823
     .restart local v2    # "editor":Landroid/content/SharedPreferences$Editor;
     const/4 v8, 0x4
 
     if-ne v3, v8, :cond_7
 
-    .line 824
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -289,10 +263,8 @@
 
     invoke-interface {v2, v8, v9}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 825
     const-wide/16 v4, 0x1
 
-    .line 831
     .local v4, "flags":J
     :goto_2
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
@@ -303,7 +275,6 @@
 
     invoke-virtual {v8, v10, v11}, Lorg/telegram/messenger/NotificationsController;->removeNotificationsForDialog(J)V
 
-    .line 832
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v8
@@ -312,10 +283,8 @@
 
     invoke-virtual {v8, v10, v11, v4, v5}, Lorg/telegram/messenger/MessagesStorage;->setDialogFlags(JJ)V
 
-    .line 833
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 834
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v8
@@ -334,23 +303,19 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 835
     .restart local v1    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v1, :cond_4
 
-    .line 836
     new-instance v8, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     invoke-direct {v8}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
 
     iput-object v8, v1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
-    .line 837
     iget-object v8, v1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
     iput v7, v8, Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;->mute_until:I
 
-    .line 839
     :cond_4
     iget-wide v8, p0, Lorg/telegram/ui/ProfileActivity$8$1;->val$did:J
 
@@ -358,7 +323,6 @@
 
     goto/16 :goto_0
 
-    .line 815
     .end local v1    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v2    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v4    # "flags":J
@@ -368,25 +332,21 @@
 
     if-ne v3, v8, :cond_6
 
-    .line 816
     const v8, 0x2a300
 
     add-int/2addr v7, v8
 
     goto :goto_1
 
-    .line 817
     :cond_6
     const/4 v8, 0x4
 
     if-ne v3, v8, :cond_3
 
-    .line 818
     const v7, 0x7fffffff
 
     goto :goto_1
 
-    .line 827
     .restart local v2    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v6    # "preferences":Landroid/content/SharedPreferences;
     :cond_7
@@ -414,7 +374,6 @@
 
     invoke-interface {v2, v8, v9}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 828
     new-instance v8, Ljava/lang/StringBuilder;
 
     invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
@@ -437,7 +396,6 @@
 
     invoke-interface {v2, v8, v7}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 829
     int-to-long v8, v7
 
     const/16 v10, 0x20

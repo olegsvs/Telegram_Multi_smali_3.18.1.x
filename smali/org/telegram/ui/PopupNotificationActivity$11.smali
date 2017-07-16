@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 955
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$11;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 958
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$11;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1300(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/widget/FrameLayout;
@@ -50,7 +48,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 959
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$11;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1300(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/widget/FrameLayout;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 961
     :cond_0
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
 
@@ -79,7 +75,6 @@
 
     div-int/lit8 v0, v1, 0x2
 
-    .line 962
     .local v0, "padding":I
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$11;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
@@ -109,7 +104,6 @@
 
     invoke-virtual {v1, v2, v0, v3, v0}, Landroid/widget/FrameLayout;->setPadding(IIII)V
 
-    .line 963
     const/4 v1, 0x1
 
     return v1

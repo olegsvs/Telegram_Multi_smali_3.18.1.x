@@ -40,21 +40,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 370
     invoke-direct {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>(Landroid/os/Bundle;)V
 
-    .line 361
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->delegate:Lorg/telegram/ui/PhotoCropActivity$PhotoEditActivityDelegate;
 
-    .line 363
     iput-boolean v1, p0, Lorg/telegram/ui/PhotoCropActivity;->sameBitmap:Z
 
-    .line 364
     iput-boolean v1, p0, Lorg/telegram/ui/PhotoCropActivity;->doneButtonPressed:Z
 
-    .line 371
     return-void
 .end method
 
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PhotoCropActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
     return-object v0
@@ -74,7 +68,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PhotoCropActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->drawable:Landroid/graphics/drawable/BitmapDrawable;
 
     return-object v0
@@ -85,7 +78,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PhotoCropActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->delegate:Lorg/telegram/ui/PhotoCropActivity$PhotoEditActivityDelegate;
 
     return-object v0
@@ -96,7 +88,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PhotoCropActivity;
 
     .prologue
-    .line 36
     iget-boolean v0, p0, Lorg/telegram/ui/PhotoCropActivity;->doneButtonPressed:Z
 
     return v0
@@ -108,7 +99,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 36
     iput-boolean p1, p0, Lorg/telegram/ui/PhotoCropActivity;->doneButtonPressed:Z
 
     return p1
@@ -119,7 +109,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PhotoCropActivity;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->view:Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;
 
     return-object v0
@@ -131,7 +120,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 36
     iput-boolean p1, p0, Lorg/telegram/ui/PhotoCropActivity;->sameBitmap:Z
 
     return p1
@@ -150,38 +138,32 @@
 
     const/4 v4, -0x1
 
-    .line 421
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, -0xcccccd
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 422
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, -0xc2c2c3
 
     invoke-virtual {v1, v2, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setItemsBackgroundColor(IZ)V
 
-    .line 423
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitleColor(I)V
 
-    .line 424
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 425
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 426
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "CropImage"
@@ -194,7 +176,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 427
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/PhotoCropActivity$1;
@@ -203,14 +184,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 446
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v0
 
-    .line 447
     .local v0, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const v1, 0x7f0200d9
 
@@ -222,7 +201,6 @@
 
     invoke-virtual {v0, v6, v1, v2}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItemWithWidth(III)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 449
     new-instance v1, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;-><init>(Lorg/telegram/ui/PhotoCropActivity;Landroid/content/Context;)V
@@ -231,7 +209,6 @@
 
     iput-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->fragmentView:Landroid/view/View;
 
-    .line 450
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->fragmentView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;
@@ -248,7 +225,6 @@
 
     iput-boolean v2, v1, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->freeform:Z
 
-    .line 451
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->fragmentView:Landroid/view/View;
 
     new-instance v2, Landroid/widget/FrameLayout$LayoutParams;
@@ -257,7 +233,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 453
     iget-object v1, p0, Lorg/telegram/ui/PhotoCropActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -271,15 +246,12 @@
 
     const/4 v4, 0x0
 
-    .line 375
     iput-boolean v4, p0, Lorg/telegram/ui/PhotoCropActivity;->swipeBackEnabled:Z
 
-    .line 376
     iget-object v6, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
     if-nez v6, :cond_3
 
-    .line 377
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoCropActivity;->getArguments()Landroid/os/Bundle;
 
     move-result-object v6
@@ -290,7 +262,6 @@
 
     move-result-object v1
 
-    .line 378
     .local v1, "photoPath":Ljava/lang/String;
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoCropActivity;->getArguments()Landroid/os/Bundle;
 
@@ -304,31 +275,26 @@
 
     check-cast v2, Landroid/net/Uri;
 
-    .line 379
     .local v2, "photoUri":Landroid/net/Uri;
     if-nez v1, :cond_1
 
     if-nez v2, :cond_1
 
-    .line 401
     .end local v1    # "photoPath":Ljava/lang/String;
     .end local v2    # "photoUri":Landroid/net/Uri;
     :cond_0
     :goto_0
     return v4
 
-    .line 382
     .restart local v1    # "photoPath":Ljava/lang/String;
     .restart local v2    # "photoUri":Landroid/net/Uri;
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 383
     new-instance v0, Ljava/io/File;
 
     invoke-direct {v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 384
     .local v0, "f":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -336,7 +302,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 389
     .end local v0    # "f":Ljava/io/File;
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -345,14 +310,12 @@
 
     if-eqz v6, :cond_4
 
-    .line 390
     const/high16 v6, 0x44020000    # 520.0f
 
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v3
 
-    .line 394
     .local v3, "size":I
     :goto_1
     int-to-float v6, v3
@@ -365,12 +328,10 @@
 
     iput-object v6, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
-    .line 395
     iget-object v6, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
     if-eqz v6, :cond_0
 
-    .line 399
     .end local v1    # "photoPath":Ljava/lang/String;
     .end local v2    # "photoUri":Landroid/net/Uri;
     .end local v3    # "size":I
@@ -383,15 +344,12 @@
 
     iput-object v4, p0, Lorg/telegram/ui/PhotoCropActivity;->drawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 400
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
     move v4, v5
 
-    .line 401
     goto :goto_0
 
-    .line 392
     .restart local v1    # "photoPath":Ljava/lang/String;
     .restart local v2    # "photoUri":Landroid/net/Uri;
     :cond_4
@@ -417,15 +375,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 406
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 407
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->bitmapKey:Ljava/lang/String;
 
     if-eqz v0, :cond_0
 
-    .line 408
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v0
@@ -450,10 +405,8 @@
 
     if-nez v0, :cond_0
 
-    .line 409
     iput-object v2, p0, Lorg/telegram/ui/PhotoCropActivity;->bitmapKey:Ljava/lang/String;
 
-    .line 412
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->bitmapKey:Ljava/lang/String;
 
@@ -467,19 +420,15 @@
 
     if-nez v0, :cond_1
 
-    .line 413
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 414
     iput-object v2, p0, Lorg/telegram/ui/PhotoCropActivity;->imageToCrop:Landroid/graphics/Bitmap;
 
-    .line 416
     :cond_1
     iput-object v2, p0, Lorg/telegram/ui/PhotoCropActivity;->drawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 417
     return-void
 .end method
 
@@ -488,9 +437,7 @@
     .param p1, "delegate"    # Lorg/telegram/ui/PhotoCropActivity$PhotoEditActivityDelegate;
 
     .prologue
-    .line 457
     iput-object p1, p0, Lorg/telegram/ui/PhotoCropActivity;->delegate:Lorg/telegram/ui/PhotoCropActivity$PhotoEditActivityDelegate;
 
-    .line 458
     return-void
 .end method

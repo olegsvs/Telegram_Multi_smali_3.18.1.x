@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ShareActivity;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lorg/telegram/ui/ShareActivity$1;->this$0:Lorg/telegram/ui/ShareActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/ShareActivity$1;->this$0:Lorg/telegram/ui/ShareActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ShareActivity;->isFinishing()Z
@@ -51,12 +49,10 @@
 
     if-nez v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/ShareActivity$1;->this$0:Lorg/telegram/ui/ShareActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ShareActivity;->finish()V
 
-    .line 85
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ShareActivity$1;->this$0:Lorg/telegram/ui/ShareActivity;
 
@@ -64,6 +60,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ShareActivity;->access$002(Lorg/telegram/ui/ShareActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 86
     return-void
 .end method

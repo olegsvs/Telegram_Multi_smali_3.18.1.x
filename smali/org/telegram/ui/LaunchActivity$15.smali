@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 2008
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$15;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,16 +40,13 @@
     .locals 2
 
     .prologue
-    .line 2011
     const/4 v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/ApplicationLoader;->mainInterfacePausedStageQueue:Z
 
-    .line 2012
     const-wide/16 v0, 0x0
 
     sput-wide v0, Lorg/telegram/messenger/ApplicationLoader;->mainInterfacePausedStageQueueTime:J
 
-    .line 2013
     return-void
 .end method

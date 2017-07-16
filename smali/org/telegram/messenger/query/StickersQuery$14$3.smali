@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$14;
 
     .prologue
-    .line 641
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$14$3;->this$0:Lorg/telegram/messenger/query/StickersQuery$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 644
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$14$3;->this$0:Lorg/telegram/messenger/query/StickersQuery$14;
 
     iget v0, v0, Lorg/telegram/messenger/query/StickersQuery$14;->val$date:I
 
     invoke-static {v0}, Lorg/telegram/messenger/query/StickersQuery;->access$1602(I)I
 
-    .line 645
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ThemeActivity$2$3;
 
     .prologue
-    .line 142
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$2$3$1;->this$2:Lorg/telegram/ui/ThemeActivity$2$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,20 +40,17 @@
     .locals 1
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$2$3$1;->this$2:Lorg/telegram/ui/ThemeActivity$2$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemeActivity$2$3;->val$editText:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 146
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity$2$3$1;->this$2:Lorg/telegram/ui/ThemeActivity$2$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemeActivity$2$3;->val$editText:Landroid/widget/EditText;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 147
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p6, "segmentBase"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     .prologue
-    .line 241
     const/4 v7, 0x0
 
     move-object v0, p0
@@ -48,10 +47,8 @@
 
     invoke-direct/range {v0 .. v7}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;-><init>(Ljava/lang/String;JLorg/telegram/messenger/exoplayer2/Format;Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$1;)V
 
-    .line 242
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
-    .line 243
     return-void
 .end method
 
@@ -61,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 257
     const/4 v0, 0x0
 
     return-object v0
@@ -73,7 +69,6 @@
     .param p2, "periodDurationUs"    # J
 
     .prologue
-    .line 279
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getSegmentDurationUs(IJ)J
@@ -87,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 284
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getFirstSegmentNum()I
@@ -101,7 +95,6 @@
     .locals 0
 
     .prologue
-    .line 252
     return-object p0
 .end method
 
@@ -109,7 +102,6 @@
     .locals 1
 
     .prologue
-    .line 247
     const/4 v0, 0x0
 
     return-object v0
@@ -120,7 +112,6 @@
     .param p1, "periodDurationUs"    # J
 
     .prologue
-    .line 289
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getLastSegmentNum(J)I
@@ -136,7 +127,6 @@
     .param p3, "periodDurationUs"    # J
 
     .prologue
-    .line 269
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1, p2, p3, p4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getSegmentNum(JJ)I
@@ -151,7 +141,6 @@
     .param p1, "segmentIndex"    # I
 
     .prologue
-    .line 264
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p0, p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getSegmentUrl(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;I)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
@@ -166,7 +155,6 @@
     .param p1, "segmentIndex"    # I
 
     .prologue
-    .line 274
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->getSegmentTimeUs(I)J
@@ -180,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 294
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation$MultiSegmentRepresentation;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;->isExplicit()Z

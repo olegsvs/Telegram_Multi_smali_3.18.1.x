@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/messenger/SecretChatHelper$14$2$1;
 
     .prologue
-    .line 1835
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$1$1;->this$3:Lorg/telegram/messenger/SecretChatHelper$14$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1838
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$1$1;->this$3:Lorg/telegram/messenger/SecretChatHelper$14$2$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/SecretChatHelper$14$2$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
@@ -60,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 1839
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -79,7 +76,6 @@
 
     invoke-virtual {v0, v1, v3, v3, v2}, Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
 
-    .line 1840
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$1$1;->this$3:Lorg/telegram/messenger/SecretChatHelper$14$2$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/SecretChatHelper$14$2$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
@@ -92,7 +88,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 1842
     :cond_0
     return-void
 .end method

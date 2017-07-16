@@ -37,7 +37,6 @@
             "JJIJ",
             "Ljava/util/List",
             "<",
-            "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;",
             ">;",
             "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;",
             "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;",
@@ -46,17 +45,12 @@
     .end annotation
 
     .prologue
-    .line 294
-    .local p9, "segmentTimeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     invoke-direct/range {p0 .. p9}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;-><init>(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJIJLjava/util/List;)V
 
-    .line 296
     iput-object p10, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->initializationTemplate:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
-    .line 297
     iput-object p11, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->mediaTemplate:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
-    .line 298
     return-void
 .end method
 
@@ -69,12 +63,10 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 302
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->initializationTemplate:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
     if-eqz v0, :cond_0
 
-    .line 303
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->initializationTemplate:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
     iget-object v1, p1, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->format:Lorg/telegram/messenger/exoplayer2/Format;
@@ -91,7 +83,6 @@
 
     move-result-object v3
 
-    .line 305
     .local v3, "urlString":Ljava/lang/String;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
@@ -99,7 +90,6 @@
 
     invoke-direct/range {v2 .. v7}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;-><init>(Ljava/lang/String;JJ)V
 
-    .line 307
     .end local v3    # "urlString":Ljava/lang/String;
     :goto_0
     return-object v2
@@ -117,13 +107,9 @@
     .param p1, "periodDurationUs"    # J
 
     .prologue
-    .line 326
-    iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     if-eqz v2, :cond_0
 
-    .line 327
-    iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
@@ -135,11 +121,9 @@
 
     add-int/lit8 v2, v2, -0x1
 
-    .line 332
     :goto_0
     return v2
 
-    .line 328
     :cond_0
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -147,12 +131,10 @@
 
     if-nez v2, :cond_1
 
-    .line 329
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 331
     :cond_1
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->duration:J
 
@@ -164,7 +146,6 @@
 
     div-long v0, v2, v4
 
-    .line 332
     .local v0, "durationUs":J
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->startNumber:I
 
@@ -187,13 +168,9 @@
     .param p2, "sequenceNumber"    # I
 
     .prologue
-    .line 314
-    iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     if-eqz v0, :cond_0
 
-    .line 315
-    iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->startNumber:I
 
@@ -203,11 +180,8 @@
 
     move-result-object v0
 
-    check-cast v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;
 
-    iget-wide v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;->startTime:J
 
-    .line 319
     .local v4, "time":J
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->mediaTemplate:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
@@ -226,7 +200,6 @@
 
     move-result-object v7
 
-    .line 321
     .local v7, "uriString":Ljava/lang/String;
     new-instance v6, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
@@ -238,7 +211,6 @@
 
     return-object v6
 
-    .line 317
     .end local v4    # "time":J
     .end local v7    # "uriString":Ljava/lang/String;
     :cond_0

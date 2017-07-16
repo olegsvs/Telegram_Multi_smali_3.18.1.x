@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2153
     const v0, 0x4afe8f6d    # 8341430.5f
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2152
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$updates_Difference;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2157
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;->pts:I
 
-    .line 2158
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2161
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2162
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;->pts:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2163
     return-void
 .end method

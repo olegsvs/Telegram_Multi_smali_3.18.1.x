@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 969
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$8;->this$0:Lorg/telegram/messenger/ContactsController;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$8;->val$usersArr:Ljava/util/ArrayList;
@@ -55,7 +54,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 972
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -69,12 +67,10 @@
     :goto_0
     invoke-virtual {v6, v7, v5}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 974
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
-    .line 976
     .local v4, "usersDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$8;->val$contactsArr:Ljava/util/ArrayList;
 
@@ -82,7 +78,6 @@
 
     move-result v2
 
-    .line 978
     .local v2, "isEmpty":Z
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$8;->this$0:Lorg/telegram/messenger/ContactsController;
 
@@ -94,7 +89,6 @@
 
     if-nez v5, :cond_3
 
-    .line 979
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -107,7 +101,6 @@
 
     if-ge v0, v5, :cond_2
 
-    .line 980
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$8;->val$contactsArr:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -116,7 +109,6 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 981
     .local v1, "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$8;->this$0:Lorg/telegram/messenger/ContactsController;
 
@@ -130,21 +122,17 @@
 
     if-eqz v5, :cond_0
 
-    .line 982
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$8;->val$contactsArr:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 983
     add-int/lit8 v0, v0, -0x1
 
-    .line 979
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 972
     .end local v0    # "a":I
     .end local v1    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v2    # "isEmpty":Z
@@ -154,7 +142,6 @@
 
     goto :goto_0
 
-    .line 986
     .restart local v0    # "a":I
     .restart local v2    # "isEmpty":Z
     .restart local v4    # "usersDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$User;>;"
@@ -167,7 +154,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 989
     .end local v0    # "a":I
     :cond_3
     const/4 v0, 0x0
@@ -182,7 +168,6 @@
 
     if-ge v0, v5, :cond_5
 
-    .line 990
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -205,11 +190,9 @@
 
     move-result-object v3
 
-    .line 991
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v3, :cond_4
 
-    .line 992
     iget v5, v3, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-static {v5}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -218,13 +201,11 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 989
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 999
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_5
     sget-object v5, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
@@ -235,6 +216,5 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1193
     return-void
 .end method

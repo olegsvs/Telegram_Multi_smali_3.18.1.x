@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$23;
 
     .prologue
-    .line 1546
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$23$1;->this$1:Lorg/telegram/messenger/MessagesStorage$23;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$23$1;->val$res:Lorg/telegram/tgnet/TLRPC$photos_Photos;
@@ -45,7 +44,6 @@
     .locals 10
 
     .prologue
-    .line 1549
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -76,6 +74,5 @@
 
     invoke-virtual/range {v1 .. v9}, Lorg/telegram/messenger/MessagesController;->processLoadedUserPhotos(Lorg/telegram/tgnet/TLRPC$photos_Photos;IIIJZI)V
 
-    .line 1550
     return-void
 .end method

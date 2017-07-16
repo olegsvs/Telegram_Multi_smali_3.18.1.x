@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 507
     iput-object p1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 508
     iput-object p2, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 509
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 518
     iget-object v1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1200(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Z
@@ -63,7 +59,6 @@
 
     if-nez v1, :cond_4
 
-    .line 519
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -73,7 +68,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 520
     iget-object v1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1300(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Ljava/util/ArrayList;
@@ -112,12 +106,10 @@
 
     double-to-int v0, v0
 
-    .line 524
     :cond_1
     :goto_0
     return v0
 
-    .line 522
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -162,7 +154,6 @@
 
     goto :goto_0
 
-    .line 524
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -214,7 +205,6 @@
 
     const/4 v1, 0x0
 
-    .line 593
     iget-object v2, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1200(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Z
@@ -234,18 +224,15 @@
     :cond_0
     move v0, v1
 
-    .line 599
     :cond_1
     :goto_0
     return v0
 
-    .line 596
     :cond_2
     if-eqz p1, :cond_1
 
     move v0, v1
 
-    .line 599
     goto :goto_0
 .end method
 
@@ -254,7 +241,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 513
     const/4 v0, 0x1
 
     return v0
@@ -268,19 +254,16 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 561
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v4
 
     if-nez v4, :cond_7
 
-    .line 562
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v3, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
 
-    .line 563
     .local v3, "photoPickerAlbumsCell":Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -290,7 +273,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setAlbumsCount(I)V
 
-    .line 564
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -303,7 +285,6 @@
 
     if-ge v0, v4, :cond_6
 
-    .line 566
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1200(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Z
@@ -322,7 +303,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 567
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -334,7 +314,6 @@
 
     add-int v2, v4, v0
 
-    .line 571
     .local v2, "index":I
     :goto_1
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
@@ -353,7 +332,6 @@
 
     if-nez v4, :cond_4
 
-    .line 572
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -367,7 +345,6 @@
 
     if-ge v2, v4, :cond_3
 
-    .line 573
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1300(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Ljava/util/ArrayList;
@@ -380,18 +357,15 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
-    .line 574
     .local v1, "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     invoke-virtual {v3, v0, v1}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setAlbum(ILorg/telegram/messenger/MediaController$AlbumEntry;)V
 
-    .line 564
     .end local v1    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 569
     .end local v2    # "index":I
     :cond_2
     add-int/lit8 v4, p2, -0x1
@@ -409,13 +383,11 @@
     .restart local v2    # "index":I
     goto :goto_1
 
-    .line 576
     :cond_3
     invoke-virtual {v3, v0, v6}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setAlbum(ILorg/telegram/messenger/MediaController$AlbumEntry;)V
 
     goto :goto_2
 
-    .line 579
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
@@ -429,7 +401,6 @@
 
     if-ge v2, v4, :cond_5
 
-    .line 580
     iget-object v4, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1500(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Ljava/util/ArrayList;
@@ -442,25 +413,21 @@
 
     check-cast v1, Lorg/telegram/messenger/MediaController$AlbumEntry;
 
-    .line 581
     .restart local v1    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     invoke-virtual {v3, v0, v1}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setAlbum(ILorg/telegram/messenger/MediaController$AlbumEntry;)V
 
     goto :goto_2
 
-    .line 583
     .end local v1    # "albumEntry":Lorg/telegram/messenger/MediaController$AlbumEntry;
     :cond_5
     invoke-virtual {v3, v0, v6}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setAlbum(ILorg/telegram/messenger/MediaController$AlbumEntry;)V
 
     goto :goto_2
 
-    .line 587
     .end local v2    # "index":I
     :cond_6
     invoke-virtual {v3}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->requestLayout()V
 
-    .line 589
     .end local v0    # "a":I
     .end local v3    # "photoPickerAlbumsCell":Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
     :cond_7
@@ -473,10 +440,8 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 531
     packed-switch p2, :pswitch_data_0
 
-    .line 545
     new-instance v0, Lorg/telegram/ui/Cells/PhotoPickerSearchCell;
 
     iget-object v2, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -489,7 +454,6 @@
 
     invoke-direct {v0, v2, v3}, Lorg/telegram/ui/Cells/PhotoPickerSearchCell;-><init>(Landroid/content/Context;Z)V
 
-    .line 546
     .local v0, "cell":Lorg/telegram/ui/Cells/PhotoPickerSearchCell;
     new-instance v2, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter$2;
 
@@ -497,10 +461,8 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/PhotoPickerSearchCell;->setDelegate(Lorg/telegram/ui/Cells/PhotoPickerSearchCell$PhotoPickerSearchCellDelegate;)V
 
-    .line 552
     move-object v1, v0
 
-    .line 556
     .end local v0    # "cell":Lorg/telegram/ui/Cells/PhotoPickerSearchCell;
     .local v1, "view":Landroid/view/View;
     :goto_0
@@ -510,7 +472,6 @@
 
     return-object v2
 
-    .line 533
     .end local v1    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
@@ -519,7 +480,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;-><init>(Landroid/content/Context;)V
 
-    .line 534
     .local v0, "cell":Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
     new-instance v2, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter$1;
 
@@ -527,14 +487,11 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->setDelegate(Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$PhotoPickerAlbumsCellDelegate;)V
 
-    .line 540
     move-object v1, v0
 
-    .line 541
     .restart local v1    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 531
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

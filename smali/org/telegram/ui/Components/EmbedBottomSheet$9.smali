@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     .prologue
-    .line 609
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$9;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 613
     :try_start_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -54,7 +52,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 614
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -68,13 +65,11 @@
 
     move-result-object v0
 
-    .line 615
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 619
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :goto_0
@@ -100,19 +95,15 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 620
     iget-object v3, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$9;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/EmbedBottomSheet;->dismiss()V
 
-    .line 621
     return-void
 
-    .line 616
     :catch_0
     move-exception v2
 
-    .line 617
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

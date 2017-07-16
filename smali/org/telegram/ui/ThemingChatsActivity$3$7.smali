@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatsActivity$3;
 
     .prologue
-    .line 364
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$7;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingChatsActivity$3$7;->val$key:Ljava/lang/String;
@@ -48,10 +47,8 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 367
     sput p1, Lorg/telegram/ui/ActionBar/Theme;->chatsTabCounterColor:I
 
-    .line 368
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$3$7;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -60,7 +57,6 @@
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingChatsActivity;->access$300(Lorg/telegram/ui/ThemingChatsActivity;Ljava/lang/String;I)V
 
-    .line 369
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -79,6 +75,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 370
     return-void
 .end method

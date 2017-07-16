@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 26093
     const v0, -0x218498c3
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->constructor:I
@@ -45,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 26092
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 26101
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -72,28 +69,23 @@
     .locals 1
 
     .prologue
-    .line 26114
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->disableFree:Z
 
     if-eqz v0, :cond_1
 
-    .line 26121
     :cond_0
     :goto_0
     return-void
 
-    .line 26117
     :cond_1
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->bytes:Lorg/telegram/tgnet/NativeByteBuffer;
 
     if-eqz v0, :cond_0
 
-    .line 26118
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->bytes:Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {v0}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 26119
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->bytes:Lorg/telegram/tgnet/NativeByteBuffer;
@@ -106,31 +98,25 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 26105
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26106
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->file_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 26107
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->file_part:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26108
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->file_total_parts:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26109
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_upload_saveBigFilePart;->bytes:Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteBuffer(Lorg/telegram/tgnet/NativeByteBuffer;)V
 
-    .line 26110
     return-void
 .end method

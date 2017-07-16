@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 6104
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$82;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$82;->val$pinned:I
@@ -49,7 +48,6 @@
     .locals 10
 
     .prologue
-    .line 6108
     :try_start_0
     iget v5, p0, Lorg/telegram/messenger/MessagesStorage$82;->val$pinned:I
 
@@ -61,14 +59,11 @@
 
     if-eqz v5, :cond_2
 
-    .line 6109
     const/4 v1, 0x0
 
-    .line 6110
     .local v1, "dialogDate":I
     const/4 v3, 0x0
 
-    .line 6111
     .local v3, "minDate":I
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$82;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -104,7 +99,6 @@
 
     move-result-object v0
 
-    .line 6112
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -112,18 +106,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 6113
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v1
 
-    .line 6115
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 6116
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$82;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v5}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -140,28 +131,23 @@
 
     move-result-object v0
 
-    .line 6117
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 6118
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v3
 
-    .line 6120
     :cond_1
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 6121
     if-gt v1, v3, :cond_2
 
-    .line 6122
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$82;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v5}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -198,14 +184,12 @@
 
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 6134
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v1    # "dialogDate":I
     .end local v3    # "minDate":I
     :goto_0
     return-void
 
-    .line 6126
     :cond_2
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$82;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -219,7 +203,6 @@
 
     move-result-object v4
 
-    .line 6127
     .local v4, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v5, 0x1
 
@@ -227,29 +210,24 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 6128
     const/4 v5, 0x2
 
     iget-wide v6, p0, Lorg/telegram/messenger/MessagesStorage$82;->val$did:J
 
     invoke-virtual {v4, v5, v6, v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 6129
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 6130
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 6131
     .end local v4    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :catch_0
     move-exception v2
 
-    .line 6132
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

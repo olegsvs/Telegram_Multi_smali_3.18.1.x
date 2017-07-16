@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-byte v0, p0, Lorg/telegram/messenger/MessageObject$TextLayoutBlock;->directionFlags:B
 
     and-int/lit8 v0, v0, 0x1

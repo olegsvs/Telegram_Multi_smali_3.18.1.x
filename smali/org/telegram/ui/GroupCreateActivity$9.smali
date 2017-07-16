@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateActivity;
 
     .prologue
-    .line 579
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,12 +48,10 @@
 
     const/4 v6, 0x1
 
-    .line 582
     instance-of v5, p1, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
     if-nez v5, :cond_1
 
-    .line 620
     :cond_0
     :goto_0
     return-void
@@ -62,20 +59,16 @@
     :cond_1
     move-object v1, p1
 
-    .line 585
     check-cast v1, Lorg/telegram/ui/Cells/GroupCreateUserCell;
 
-    .line 586
     .local v1, "cell":Lorg/telegram/ui/Cells/GroupCreateUserCell;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->getUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v4
 
-    .line 587
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v4, :cond_0
 
-    .line 591
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/GroupCreateActivity;->access$500(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/HashMap;
@@ -95,7 +88,6 @@
     .local v2, "exists":Z
     if-eqz v2, :cond_3
 
-    .line 592
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/GroupCreateActivity;->access$500(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/HashMap;
@@ -114,7 +106,6 @@
 
     check-cast v3, Lorg/telegram/ui/Components/GroupCreateSpan;
 
-    .line 593
     .local v3, "span":Lorg/telegram/ui/Components/GroupCreateSpan;
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -124,13 +115,11 @@
 
     invoke-virtual {v5, v3}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removeSpan(Lorg/telegram/ui/Components/GroupCreateSpan;)V
 
-    .line 611
     :goto_1
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/GroupCreateActivity;->access$1700(Lorg/telegram/ui/GroupCreateActivity;)V
 
-    .line 612
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/GroupCreateActivity;->access$1900(Lorg/telegram/ui/GroupCreateActivity;)Z
@@ -147,7 +136,6 @@
 
     if-eqz v5, :cond_7
 
-    .line 613
     :cond_2
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -157,7 +145,6 @@
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 617
     :goto_2
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -171,7 +158,6 @@
 
     if-lez v5, :cond_0
 
-    .line 618
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/GroupCreateActivity;->access$000(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -182,7 +168,6 @@
 
     goto :goto_0
 
-    .line 595
     .end local v3    # "span":Lorg/telegram/ui/Components/GroupCreateSpan;
     :cond_3
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -211,7 +196,6 @@
 
     if-eq v5, v8, :cond_0
 
-    .line 598
     :cond_4
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -239,7 +223,6 @@
 
     if-ne v5, v8, :cond_5
 
-    .line 599
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -250,7 +233,6 @@
 
     invoke-direct {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 600
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v5, "AppName"
 
@@ -262,7 +244,6 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 601
     const-string/jumbo v5, "SoftUserLimitAlert"
 
     const v6, 0x7f0705ee
@@ -273,7 +254,6 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 602
     const-string/jumbo v5, "OK"
 
     const v6, 0x7f070452
@@ -284,7 +264,6 @@
 
     invoke-virtual {v0, v5, v9}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 603
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -295,7 +274,6 @@
 
     goto/16 :goto_0
 
-    .line 606
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_5
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -315,7 +293,6 @@
     :goto_3
     invoke-virtual {v8, v4, v5}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 607
     new-instance v3, Lorg/telegram/ui/Components/GroupCreateSpan;
 
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -330,7 +307,6 @@
 
     invoke-direct {v3, v5, v4}, Lorg/telegram/ui/Components/GroupCreateSpan;-><init>(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 608
     .restart local v3    # "span":Lorg/telegram/ui/Components/GroupCreateSpan;
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
@@ -340,7 +316,6 @@
 
     invoke-virtual {v5, v3}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addSpan(Lorg/telegram/ui/Components/GroupCreateSpan;)V
 
-    .line 609
     iget-object v5, p0, Lorg/telegram/ui/GroupCreateActivity$9;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-virtual {v3, v5}, Lorg/telegram/ui/Components/GroupCreateSpan;->setOnClickListener(Landroid/view/View$OnClickListener;)V
@@ -351,10 +326,8 @@
     :cond_6
     move v5, v7
 
-    .line 606
     goto :goto_3
 
-    .line 615
     .restart local v3    # "span":Lorg/telegram/ui/Components/GroupCreateSpan;
     :cond_7
     if-nez v2, :cond_8

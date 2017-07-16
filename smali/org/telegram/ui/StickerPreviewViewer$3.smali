@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/StickerPreviewViewer;
 
     .prologue
-    .line 309
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
@@ -55,7 +54,6 @@
 
     const/4 v3, 0x1
 
-    .line 312
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$600(Lorg/telegram/ui/StickerPreviewViewer;)Ljava/lang/Runnable;
@@ -64,12 +62,10 @@
 
     if-nez v0, :cond_1
 
-    .line 335
     :cond_0
     :goto_0
     return-void
 
-    .line 315
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
@@ -77,28 +73,24 @@
 
     if-eqz v0, :cond_3
 
-    .line 316
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/AbsListView;
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 317
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/AbsListView;
 
     invoke-virtual {v0, v3}, Landroid/widget/AbsListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 322
     :cond_2
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/StickerPreviewViewer;->access$602(Lorg/telegram/ui/StickerPreviewViewer;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 323
     iget-object v1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
@@ -111,14 +103,12 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/StickerPreviewViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 324
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iget v1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$height:I
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/StickerPreviewViewer;->setKeyboardHeight(I)V
 
-    .line 325
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$700(Lorg/telegram/ui/StickerPreviewViewer;)Landroid/view/View;
@@ -129,7 +119,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 326
     iget-object v1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -158,7 +147,6 @@
 
     invoke-virtual {v1, v2, v0}, Lorg/telegram/ui/StickerPreviewViewer;->open(Lorg/telegram/tgnet/TLRPC$Document;Z)V
 
-    .line 327
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$700(Lorg/telegram/ui/StickerPreviewViewer;)Landroid/view/View;
@@ -171,7 +159,6 @@
 
     goto :goto_0
 
-    .line 318
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
@@ -179,14 +166,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 319
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 320
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->val$listView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Components/RecyclerListView;
@@ -195,7 +180,6 @@
 
     goto :goto_1
 
-    .line 328
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -207,7 +191,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 329
     iget-object v1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -224,7 +207,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/ui/StickerPreviewViewer;->open(Lorg/telegram/tgnet/TLRPC$Document;Z)V
 
-    .line 330
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$700(Lorg/telegram/ui/StickerPreviewViewer;)Landroid/view/View;
@@ -237,7 +219,6 @@
 
     goto/16 :goto_0
 
-    .line 331
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -249,7 +230,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 332
     iget-object v1, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -266,7 +246,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/ui/StickerPreviewViewer;->open(Lorg/telegram/tgnet/TLRPC$Document;Z)V
 
-    .line 333
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$3;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/StickerPreviewViewer;->access$700(Lorg/telegram/ui/StickerPreviewViewer;)Landroid/view/View;

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$7;
 
     .prologue
-    .line 948
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$7$1;->this$1:Lorg/telegram/messenger/ContactsController$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 951
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->access$300()Ljava/lang/Object;
 
     move-result-object v1
 
     monitor-enter v1
 
-    .line 952
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$7$1;->this$1:Lorg/telegram/messenger/ContactsController$7;
 
@@ -60,12 +57,10 @@
 
     invoke-static {v0, v2}, Lorg/telegram/messenger/ContactsController;->access$402(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 953
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 954
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -76,10 +71,8 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 955
     return-void
 
-    .line 953
     :catchall_0
     move-exception v0
 

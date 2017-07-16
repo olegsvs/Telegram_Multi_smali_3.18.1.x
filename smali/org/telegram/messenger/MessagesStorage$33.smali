@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1933
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$33;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$33;->val$currentDate:I
@@ -55,10 +54,8 @@
     .prologue
     const/4 v11, 0x0
 
-    .line 1936
     const/4 v4, 0x0
 
-    .line 1938
     .local v4, "result":Lorg/telegram/tgnet/TLObject;
     :try_start_0
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$33;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -97,7 +94,6 @@
 
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 1939
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$33;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v5}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -130,7 +126,6 @@
 
     move-result-object v1
 
-    .line 1940
     .local v1, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
     :try_end_0
@@ -141,7 +136,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 1942
     const/4 v5, 0x0
 
     :try_start_1
@@ -149,38 +143,32 @@
 
     move-result-object v2
 
-    .line 1943
     .local v2, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v2, :cond_0
 
-    .line 1944
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
 
     move-result v0
 
-    .line 1945
     .local v0, "constructor":I
     sget v5, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;->constructor:I
 
     if-ne v0, v5, :cond_1
 
-    .line 1946
     const/4 v5, 0x0
 
     invoke-static {v2, v0, v5}, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;
 
     move-result-object v4
 
-    .line 1950
     :goto_0
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 1956
     .end local v0    # "constructor":I
     .end local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
@@ -191,17 +179,14 @@
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 1960
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$33;->val$requestDelegate:Lorg/telegram/tgnet/RequestDelegate;
 
     invoke-interface {v5, v4, v11}, Lorg/telegram/tgnet/RequestDelegate;->run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
-    .line 1962
     .end local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :goto_2
     return-void
 
-    .line 1948
     .restart local v0    # "constructor":I
     .restart local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
@@ -218,13 +203,11 @@
 
     goto :goto_0
 
-    .line 1952
     .end local v0    # "constructor":I
     .end local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :catch_0
     move-exception v3
 
-    .line 1953
     .local v3, "e":Ljava/lang/Exception;
     :try_start_4
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -234,20 +217,17 @@
 
     goto :goto_1
 
-    .line 1957
     .end local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v3    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v3
 
-    .line 1958
     .restart local v3    # "e":Ljava/lang/Exception;
     :try_start_5
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 1960
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$33;->val$requestDelegate:Lorg/telegram/tgnet/RequestDelegate;
 
     invoke-interface {v5, v4, v11}, Lorg/telegram/tgnet/RequestDelegate;->run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V

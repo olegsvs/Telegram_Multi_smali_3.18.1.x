@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoPickerActivity;
 
     .prologue
-    .line 409
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -40,12 +39,10 @@
     .param p2, "newState"    # I
 
     .prologue
-    .line 412
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 413
     iget-object v0, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoPickerActivity;->getParentActivity()Landroid/app/Activity;
@@ -58,7 +55,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 415
     :cond_0
     return-void
 .end method
@@ -70,7 +66,6 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 419
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -81,7 +76,6 @@
 
     move-result v0
 
-    .line 420
     .local v0, "firstVisibleItem":I
     const/4 v3, -0x1
 
@@ -89,12 +83,10 @@
 
     const/4 v2, 0x0
 
-    .line 421
     .local v2, "visibleItemCount":I
     :goto_0
     if-lez v2, :cond_0
 
-    .line 422
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$1400(Lorg/telegram/ui/PhotoPickerActivity;)Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -105,7 +97,6 @@
 
     move-result v1
 
-    .line 423
     .local v1, "totalItemCount":I
     if-eqz v2, :cond_0
 
@@ -123,7 +114,6 @@
 
     if-nez v3, :cond_0
 
-    .line 424
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/PhotoPickerActivity;->access$800(Lorg/telegram/ui/PhotoPickerActivity;)I
@@ -140,7 +130,6 @@
 
     if-nez v3, :cond_2
 
-    .line 425
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -163,13 +152,11 @@
 
     invoke-static {v3, v4, v5, v6}, Lorg/telegram/ui/PhotoPickerActivity;->access$1100(Lorg/telegram/ui/PhotoPickerActivity;Ljava/lang/String;II)V
 
-    .line 431
     .end local v1    # "totalItemCount":I
     :cond_0
     :goto_1
     return-void
 
-    .line 420
     .end local v2    # "visibleItemCount":I
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -192,7 +179,6 @@
 
     goto :goto_0
 
-    .line 426
     .restart local v1    # "totalItemCount":I
     .restart local v2    # "visibleItemCount":I
     :cond_2
@@ -214,7 +200,6 @@
 
     if-nez v3, :cond_0
 
-    .line 427
     iget-object v3, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     iget-object v4, p0, Lorg/telegram/ui/PhotoPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoPickerActivity;

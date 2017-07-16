@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 1996
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$19;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$19;->val$tvQuality:Landroid/widget/TextView;
@@ -48,7 +47,6 @@
     .param p3, "fromUser"    # Z
 
     .prologue
-    .line 2017
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$19;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     mul-int/lit8 v1, p2, 0x1
@@ -57,7 +55,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$8902(Lorg/telegram/ui/PhotoViewer;I)I
 
-    .line 2018
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$19;->val$tvQuality:Landroid/widget/TextView;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -90,7 +87,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 2019
     return-void
 .end method
 
@@ -99,7 +95,6 @@
     .param p1, "seekBar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 2013
     return-void
 .end method
 
@@ -112,7 +107,6 @@
 
     const/4 v9, 0x0
 
-    .line 1999
     invoke-virtual {p1}, Landroid/widget/SeekBar;->getContext()Landroid/content/Context;
 
     move-result-object v4
@@ -145,7 +139,6 @@
 
     move-result-object v2
 
-    .line 2000
     .local v2, "toast":Landroid/widget/Toast;
     const/16 v4, 0x50
 
@@ -157,17 +150,14 @@
 
     invoke-virtual {v2, v4, v9, v5}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 2001
     invoke-virtual {v2}, Landroid/widget/Toast;->getView()Landroid/view/View;
 
     move-result-object v4
 
     invoke-virtual {v4, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 2002
     invoke-virtual {v2}, Landroid/widget/Toast;->show()V
 
-    .line 2003
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "plusconfig"
@@ -176,13 +166,11 @@
 
     move-result-object v1
 
-    .line 2004
     .local v1, "plusPrefs":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 2005
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$19;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -195,20 +183,16 @@
     :goto_0
     sput v3, Lorg/telegram/ui/ActionBar/Theme;->plusPhotoQuality:I
 
-    .line 2006
     const-string/jumbo v3, "photoQuality"
 
     sget v4, Lorg/telegram/ui/ActionBar/Theme;->plusPhotoQuality:I
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 2007
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 2008
     return-void
 
-    .line 2005
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$19;->this$0:Lorg/telegram/ui/PhotoViewer;
 

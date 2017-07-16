@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 63
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory$1;-><init>()V

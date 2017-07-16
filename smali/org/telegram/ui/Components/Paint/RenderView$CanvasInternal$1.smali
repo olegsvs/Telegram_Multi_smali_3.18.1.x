@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     .prologue
-    .line 413
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 416
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$600(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Z
@@ -64,23 +62,19 @@
 
     if-eqz v0, :cond_1
 
-    .line 442
     :cond_0
     :goto_0
     return-void
 
-    .line 420
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$1300(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Z
 
-    .line 422
     const v0, 0x8d40
 
     invoke-static {v0, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 423
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$800(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)I
@@ -95,17 +89,14 @@
 
     invoke-static {v3, v3, v0, v1}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 425
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {v2, v2, v2, v0}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 426
     const/16 v0, 0x4000
 
     invoke-static {v0}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 428
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
@@ -116,14 +107,12 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/Painting;->render()V
 
-    .line 430
     const/4 v0, 0x1
 
     const/16 v1, 0x303
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 432
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$1600(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Ljavax/microedition/khronos/egl/EGL10;
@@ -144,7 +133,6 @@
 
     invoke-interface {v0, v1, v2}, Ljavax/microedition/khronos/egl/EGL10;->eglSwapBuffers(Ljavax/microedition/khronos/egl/EGLDisplay;Ljavax/microedition/khronos/egl/EGLSurface;)Z
 
-    .line 434
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$700(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Z
@@ -153,7 +141,6 @@
 
     if-nez v0, :cond_0
 
-    .line 435
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$1;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VoIPActivity$4;
 
     .prologue
-    .line 238
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$4$1;->this$1:Lorg/telegram/ui/VoIPActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v3, 0x0
 
-    .line 241
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$4$1;->this$1:Lorg/telegram/ui/VoIPActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -60,7 +58,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 242
     .local v0, "am":Landroid/media/AudioManager;
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -68,15 +65,12 @@
 
     if-nez v1, :cond_0
 
-    .line 259
     :goto_0
     return-void
 
-    .line 244
     :cond_0
     packed-switch p2, :pswitch_data_0
 
-    .line 258
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$4$1;->this$1:Lorg/telegram/ui/VoIPActivity$4;
 
@@ -86,34 +80,27 @@
 
     goto :goto_0
 
-    .line 246
     :pswitch_0
     invoke-virtual {v0, v4}, Landroid/media/AudioManager;->setBluetoothScoOn(Z)V
 
-    .line 247
     invoke-virtual {v0, v3}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
     goto :goto_1
 
-    .line 250
     :pswitch_1
     invoke-virtual {v0, v3}, Landroid/media/AudioManager;->setBluetoothScoOn(Z)V
 
-    .line 251
     invoke-virtual {v0, v3}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
     goto :goto_1
 
-    .line 254
     :pswitch_2
     invoke-virtual {v0, v3}, Landroid/media/AudioManager;->setBluetoothScoOn(Z)V
 
-    .line 255
     invoke-virtual {v0, v4}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
     goto :goto_1
 
-    .line 244
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

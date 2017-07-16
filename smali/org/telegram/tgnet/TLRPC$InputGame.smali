@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 4383
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -42,20 +41,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4390
     const/4 v0, 0x0
 
-    .line 4391
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputGame;
     sparse-switch p1, :sswitch_data_0
 
-    .line 4399
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 4400
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputGame"
@@ -80,18 +75,15 @@
 
     throw v1
 
-    .line 4393
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputGameShortName;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputGame;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputGameShortName;-><init>()V
 
-    .line 4394
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputGame;
     goto :goto_0
 
-    .line 4396
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputGameID;
 
@@ -101,18 +93,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputGame;
     goto :goto_0
 
-    .line 4402
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4403
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputGame;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 4405
     :cond_1
     return-object v0
 
-    .line 4391
     nop
 
     :sswitch_data_0

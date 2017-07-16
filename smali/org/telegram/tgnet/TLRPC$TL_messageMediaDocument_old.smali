@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 3345
     const v0, 0x2fda2204
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument_old;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3344
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3349
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument_old;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 3350
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 3353
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3354
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument_old;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$Document;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 3355
     return-void
 .end method

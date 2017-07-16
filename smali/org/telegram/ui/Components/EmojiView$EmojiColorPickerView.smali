@@ -38,13 +38,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 494
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
-    .line 495
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 468
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -53,14 +50,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->rectPaint:Landroid/graphics/Paint;
 
-    .line 469
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->rect:Landroid/graphics/RectF;
 
-    .line 497
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -73,7 +68,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 498
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -86,7 +80,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->arrowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 499
     return-void
 .end method
 
@@ -96,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 479
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->currentEmoji:Ljava/lang/String;
 
     return-object v0
@@ -106,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 491
     iget v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->selection:I
 
     return v0
@@ -117,7 +108,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 503
     iget-object v7, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v8, 0x0
@@ -143,12 +133,10 @@
 
     invoke-virtual {v7, v8, v9, v10, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 504
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 506
     iget-object v7, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->arrowDrawable:Landroid/graphics/drawable/Drawable;
 
     iget v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->arrowX:I
@@ -203,17 +191,14 @@
 
     invoke-virtual {v7, v8, v9, v10, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 507
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->arrowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 509
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->currentEmoji:Ljava/lang/String;
 
     if-eqz v6, :cond_6
 
-    .line 511
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -222,7 +207,6 @@
 
     if-ge v0, v6, :cond_6
 
-    .line 512
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView;->access$1200(Lorg/telegram/ui/Components/EmojiView;)I
@@ -243,7 +227,6 @@
 
     add-int v4, v6, v7
 
-    .line 513
     .local v4, "x":I
     const/high16 v6, 0x41100000    # 9.0f
 
@@ -251,13 +234,11 @@
 
     move-result v5
 
-    .line 514
     .local v5, "y":I
     iget v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->selection:I
 
     if-ne v6, v0, :cond_0
 
-    .line 515
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->rect:Landroid/graphics/RectF;
 
     int-to-float v7, v4
@@ -304,7 +285,6 @@
 
     invoke-virtual {v6, v7, v8, v9, v10}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 516
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->rect:Landroid/graphics/RectF;
 
     const/high16 v7, 0x40800000    # 4.0f
@@ -327,39 +307,31 @@
 
     invoke-virtual {p1, v6, v7, v8, v9}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 518
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->currentEmoji:Ljava/lang/String;
 
-    .line 519
     .local v1, "code":Ljava/lang/String;
     if-eqz v0, :cond_1
 
-    .line 521
     packed-switch v0, :pswitch_data_0
 
-    .line 538
     const-string/jumbo v2, ""
 
-    .line 540
     .local v2, "color":Ljava/lang/String;
     :goto_4
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/EmojiView;->access$1700(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 542
     .end local v2    # "color":Ljava/lang/String;
     :cond_1
     invoke-static {v1}, Lorg/telegram/messenger/Emoji;->getEmojiBigDrawable(Ljava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    .line 543
     .local v3, "drawable":Landroid/graphics/drawable/Drawable;
     if-eqz v3, :cond_2
 
-    .line 544
     iget-object v6, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/EmojiView;->access$1200(Lorg/telegram/ui/Components/EmojiView;)I
@@ -378,16 +350,13 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 545
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 511
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_3
 
-    .line 503
     .end local v0    # "a":I
     .end local v1    # "code":Ljava/lang/String;
     .end local v3    # "drawable":Landroid/graphics/drawable/Drawable;
@@ -398,7 +367,6 @@
 
     goto/16 :goto_0
 
-    .line 506
     :cond_4
     const/high16 v6, 0x423e0000    # 47.5f
 
@@ -409,7 +377,6 @@
 
     goto/16 :goto_2
 
-    .line 523
     .restart local v0    # "a":I
     .restart local v1    # "code":Ljava/lang/String;
     .restart local v4    # "x":I
@@ -417,47 +384,37 @@
     :pswitch_0
     const-string/jumbo v2, "\ud83c\udffb"
 
-    .line 524
     .restart local v2    # "color":Ljava/lang/String;
     goto :goto_4
 
-    .line 526
     .end local v2    # "color":Ljava/lang/String;
     :pswitch_1
     const-string/jumbo v2, "\ud83c\udffc"
 
-    .line 527
     .restart local v2    # "color":Ljava/lang/String;
     goto :goto_4
 
-    .line 529
     .end local v2    # "color":Ljava/lang/String;
     :pswitch_2
     const-string/jumbo v2, "\ud83c\udffd"
 
-    .line 530
     .restart local v2    # "color":Ljava/lang/String;
     goto :goto_4
 
-    .line 532
     .end local v2    # "color":Ljava/lang/String;
     :pswitch_3
     const-string/jumbo v2, "\ud83c\udffe"
 
-    .line 533
     .restart local v2    # "color":Ljava/lang/String;
     goto :goto_4
 
-    .line 535
     .end local v2    # "color":Ljava/lang/String;
     :pswitch_4
     const-string/jumbo v2, "\ud83c\udfff"
 
-    .line 536
     .restart local v2    # "color":Ljava/lang/String;
     goto :goto_4
 
-    .line 549
     .end local v0    # "a":I
     .end local v1    # "code":Ljava/lang/String;
     .end local v2    # "color":Ljava/lang/String;
@@ -466,7 +423,6 @@
     :cond_6
     return-void
 
-    .line 521
     nop
 
     :pswitch_data_0
@@ -485,23 +441,18 @@
     .param p2, "arrowPosition"    # I
 
     .prologue
-    .line 472
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->currentEmoji:Ljava/lang/String;
 
-    .line 473
     iput p2, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->arrowX:I
 
-    .line 474
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->rectPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x2f000000
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 475
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->invalidate()V
 
-    .line 476
     return-void
 .end method
 
@@ -510,20 +461,16 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 483
     iget v0, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->selection:I
 
     if-ne v0, p1, :cond_0
 
-    .line 488
     :goto_0
     return-void
 
-    .line 486
     :cond_0
     iput p1, p0, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->selection:I
 
-    .line 487
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EmojiView$EmojiColorPickerView;->invalidate()V
 
     goto :goto_0

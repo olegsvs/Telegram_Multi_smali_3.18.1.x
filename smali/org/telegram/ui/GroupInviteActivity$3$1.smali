@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupInviteActivity$3;
 
     .prologue
-    .line 215
     iput-object p1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,12 +48,10 @@
     .locals 3
 
     .prologue
-    .line 218
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_1
 
-    .line 219
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iget-object v2, v1, Lorg/telegram/ui/GroupInviteActivity$3;->this$0:Lorg/telegram/ui/GroupInviteActivity;
@@ -65,14 +62,12 @@
 
     invoke-static {v2, v1}, Lorg/telegram/ui/GroupInviteActivity;->access$202(Lorg/telegram/ui/GroupInviteActivity;Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;)Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
-    .line 220
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iget-boolean v1, v1, Lorg/telegram/ui/GroupInviteActivity$3;->val$newRequest:Z
 
     if-eqz v1, :cond_1
 
-    .line 221
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/GroupInviteActivity$3;->this$0:Lorg/telegram/ui/GroupInviteActivity;
@@ -83,11 +78,9 @@
 
     if-nez v1, :cond_0
 
-    .line 233
     :goto_0
     return-void
 
-    .line 224
     :cond_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -101,7 +94,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 225
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "RevokeAlertNewLink"
 
@@ -113,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 226
     const-string/jumbo v1, "RevokeLink"
 
     const v2, 0x7f070547
@@ -124,7 +115,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 227
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -137,7 +127,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 228
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/GroupInviteActivity$3;->this$0:Lorg/telegram/ui/GroupInviteActivity;
@@ -148,7 +137,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/GroupInviteActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 231
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
@@ -159,7 +147,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/GroupInviteActivity;->access$602(Lorg/telegram/ui/GroupInviteActivity;Z)Z
 
-    .line 232
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$3$1;->this$1:Lorg/telegram/ui/GroupInviteActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/GroupInviteActivity$3;->this$0:Lorg/telegram/ui/GroupInviteActivity;

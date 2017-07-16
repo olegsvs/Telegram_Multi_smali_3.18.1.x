@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeChatNameActivity;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lorg/telegram/ui/ChangeChatNameActivity$1;->this$0:Lorg/telegram/ui/ChangeChatNameActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,28 +38,23 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 70
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/ChangeChatNameActivity$1;->this$0:Lorg/telegram/ui/ChangeChatNameActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangeChatNameActivity;->finishFragment()V
 
-    .line 78
     :cond_0
     :goto_0
     return-void
 
-    .line 72
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/ui/ChangeChatNameActivity$1;->this$0:Lorg/telegram/ui/ChangeChatNameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeChatNameActivity;->access$000(Lorg/telegram/ui/ChangeChatNameActivity;)Landroid/widget/EditText;
@@ -77,12 +71,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/ChangeChatNameActivity$1;->this$0:Lorg/telegram/ui/ChangeChatNameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeChatNameActivity;->access$100(Lorg/telegram/ui/ChangeChatNameActivity;)V
 
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/ChangeChatNameActivity$1;->this$0:Lorg/telegram/ui/ChangeChatNameActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangeChatNameActivity;->finishFragment()V

@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const-string/jumbo v0, "^NOTE(( |\t).*)?$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -23,7 +22,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->COMMENT:Ljava/util/regex/Pattern;
 
-    .line 29
     const-string/jumbo v0, "^\ufeff?WEBVTT(( |\t).*)?$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -39,7 +37,6 @@
     .locals 0
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,16 +47,13 @@
     .param p0, "input"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 88
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
-    .local v1, "line":Ljava/lang/String;
     if-eqz v1, :cond_2
 
-    .line 89
     sget-object v2, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->COMMENT:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, v1}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
@@ -72,7 +66,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 91
     :goto_0
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
@@ -88,7 +81,6 @@
 
     goto :goto_0
 
-    .line 93
     :cond_1
     sget-object v2, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->CUE_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
@@ -96,7 +88,6 @@
 
     move-result-object v0
 
-    .line 94
     .local v0, "cueHeaderMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -104,7 +95,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 99
     .end local v0    # "cueHeaderMatcher":Ljava/util/regex/Matcher;
     :goto_1
     return-object v0
@@ -125,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 72
     const-string/jumbo v0, "%"
 
     invoke-virtual {p0, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z
@@ -134,7 +123,6 @@
 
     if-nez v0, :cond_0
 
-    .line 73
     new-instance v0, Ljava/lang/NumberFormatException;
 
     const-string/jumbo v1, "Percentages must end with %"
@@ -143,7 +131,6 @@
 
     throw v0
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 
@@ -182,10 +169,8 @@
 
     const/4 v3, 0x0
 
-    .line 55
     const-wide/16 v4, 0x0
 
-    .line 56
     .local v4, "value":J
     const-string/jumbo v6, "\\."
 
@@ -195,7 +180,6 @@
 
     move-result-object v0
 
-    .line 57
     .local v0, "parts":[Ljava/lang/String;
     aget-object v6, v0, v3
 
@@ -205,7 +189,6 @@
 
     move-result-object v2
 
-    .line 58
     .local v2, "subparts":[Ljava/lang/String;
     array-length v6, v2
 
@@ -214,7 +197,6 @@
 
     aget-object v1, v2, v3
 
-    .line 59
     .local v1, "subpart":Ljava/lang/String;
     const-wide/16 v8, 0x3c
 
@@ -226,12 +208,10 @@
 
     add-long v4, v8, v10
 
-    .line 58
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 61
     .end local v1    # "subpart":Ljava/lang/String;
     :cond_0
     mul-long v6, v4, v12
@@ -261,13 +241,10 @@
     .end annotation
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 42
-    .local v0, "line":Ljava/lang/String;
     if-eqz v0, :cond_0
 
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->HEADER:Ljava/util/regex/Pattern;
@@ -282,7 +259,6 @@
 
     if-nez v1, :cond_1
 
-    .line 43
     :cond_0
     new-instance v1, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
 
@@ -308,7 +284,6 @@
 
     throw v1
 
-    .line 45
     :cond_1
     return-void
 .end method

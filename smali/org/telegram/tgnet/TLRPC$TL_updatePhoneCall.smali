@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 12910
     const v0, -0x54f094e2
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 12909
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 12914
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;->phone_call:Lorg/telegram/tgnet/TLRPC$PhoneCall;
 
-    .line 12915
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 12918
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12919
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;->phone_call:Lorg/telegram/tgnet/TLRPC$PhoneCall;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$PhoneCall;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 12920
     return-void
 .end method

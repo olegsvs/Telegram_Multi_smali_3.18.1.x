@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 310
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,13 +33,11 @@
     .locals 1
 
     .prologue
-    .line 313
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MessagesController;->updateTimerProc()V
 
-    .line 314
     return-void
 .end method

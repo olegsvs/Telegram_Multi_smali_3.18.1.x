@@ -38,29 +38,22 @@
     .param p5, "position"    # I
 
     .prologue
-    .line 56
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView$Tab;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 57
     iput-object p2, p0, Lorg/telegram/ui/Components/TabsView$Tab;->title:Ljava/lang/String;
 
-    .line 58
     iput p3, p0, Lorg/telegram/ui/Components/TabsView$Tab;->res:I
 
-    .line 59
     iput p4, p0, Lorg/telegram/ui/Components/TabsView$Tab;->type:I
 
-    .line 60
     iput p5, p0, Lorg/telegram/ui/Components/TabsView$Tab;->position:I
 
-    .line 61
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->unread:I
 
-    .line 62
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 78
     iget v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->position:I
 
     return v0
@@ -80,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->res:I
 
     return v0
@@ -90,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->title:Ljava/lang/String;
 
     return-object v0
@@ -100,7 +90,6 @@
     .locals 1
 
     .prologue
-    .line 74
     iget v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->type:I
 
     return v0
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget v0, p0, Lorg/telegram/ui/Components/TabsView$Tab;->unread:I
 
     return v0
@@ -121,9 +109,7 @@
     .param p1, "unread"    # I
 
     .prologue
-    .line 86
     iput p1, p0, Lorg/telegram/ui/Components/TabsView$Tab;->unread:I
 
-    .line 87
     return-void
 .end method

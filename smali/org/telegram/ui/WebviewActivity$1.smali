@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 92
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity$1;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$1;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/WebviewActivity;->access$000(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/messenger/MessageObject;
@@ -64,12 +62,10 @@
 
     if-nez v0, :cond_1
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -91,7 +87,6 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Lorg/telegram/messenger/MessagesController;->sendTyping(JII)V
 
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$1;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;

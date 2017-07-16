@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1053
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$6;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput-wide p2, p0, Lorg/telegram/messenger/SecretChatHelper$6;->val$did:J
@@ -49,7 +48,6 @@
 
     const/4 v6, 0x0
 
-    .line 1056
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -68,14 +66,11 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 1057
     .local v0, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v0, :cond_0
 
-    .line 1058
     iput v6, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 1059
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1061
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -106,7 +100,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1075
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -115,7 +108,6 @@
 
     invoke-virtual {v1, v2, v3, v7}, Lorg/telegram/messenger/MessagesStorage;->deleteDialog(JI)V
 
-    .line 1076
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -126,7 +118,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1077
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -153,6 +144,5 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1078
     return-void
 .end method

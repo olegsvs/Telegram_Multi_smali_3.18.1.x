@@ -28,12 +28,9 @@
     .param p1, "params"    # Landroid/media/PlaybackParams;
 
     .prologue
-    .line 1040
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1041
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer$PlaybackParamsHolder;->params:Landroid/media/PlaybackParams;
 
-    .line 1042
     return-void
 .end method

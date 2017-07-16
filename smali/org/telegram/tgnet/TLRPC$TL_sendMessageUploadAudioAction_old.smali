@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2599
     const v0, -0x19537591
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction_old;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2598
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2603
     return-void
 .end method
 
@@ -58,11 +55,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2606
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadAudioAction_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2607
     return-void
 .end method

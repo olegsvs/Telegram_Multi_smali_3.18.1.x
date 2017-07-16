@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusSettingsActivity;
 
     .prologue
-    .line 1449
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$4;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$4;->val$name:Ljava/lang/String;
@@ -59,13 +58,11 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1452
     new-instance v0, Lorg/telegram/ui/PlusSettingsActivity$4$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PlusSettingsActivity$4$1;-><init>(Lorg/telegram/ui/PlusSettingsActivity$4;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1473
     return-void
 .end method

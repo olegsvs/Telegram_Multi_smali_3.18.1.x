@@ -59,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 92
     .local p0, "this":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     .local p1, "klass":Ljava/lang/Class;, "Ljava/lang/Class<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     invoke-static {p1, p2}, Ljava/lang/reflect/Array;->newInstance(Ljava/lang/Class;I)Ljava/lang/Object;
 
     move-result-object v0
@@ -75,7 +73,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/TileList$Tile;->mItems:[Ljava/lang/Object;
 
-    .line 95
     return-void
 .end method
 
@@ -86,7 +83,6 @@
     .param p1, "pos"    # I
 
     .prologue
-    .line 98
     .local p0, "this":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     iget v0, p0, Lorg/telegram/messenger/support/util/TileList$Tile;->mStartPosition:I
 
@@ -121,7 +117,6 @@
     .end annotation
 
     .prologue
-    .line 102
     .local p0, "this":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/TileList$Tile;->mItems:[Ljava/lang/Object;
 

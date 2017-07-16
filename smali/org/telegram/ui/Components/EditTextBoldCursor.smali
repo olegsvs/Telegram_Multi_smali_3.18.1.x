@@ -40,7 +40,6 @@
 
 .field private lastUpdateTime:J
 
-.field private lineSpacingExtra:F
 
 .field private mCursorDrawable:[Landroid/graphics/drawable/Drawable;
 
@@ -57,33 +56,26 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 56
     invoke-direct {p0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
-    .line 47
     new-instance v2, Landroid/graphics/Rect;
 
     invoke-direct {v2}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
 
-    .line 50
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintVisible:Z
 
-    .line 51
     const/high16 v2, 0x3f800000    # 1.0f
 
     iput v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
 
-    .line 53
     iput-boolean v3, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->allowDrawCursor:Z
 
-    .line 58
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableField:Ljava/lang/reflect/Field;
 
     if-nez v2, :cond_0
 
-    .line 60
     :try_start_0
     const-class v2, Landroid/view/View;
 
@@ -95,14 +87,12 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mScrollYField:Ljava/lang/reflect/Field;
 
-    .line 61
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mScrollYField:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 62
     const-class v2, Landroid/widget/TextView;
 
     const-string/jumbo v3, "mCursorDrawableRes"
@@ -113,14 +103,12 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableResField:Ljava/lang/reflect/Field;
 
-    .line 63
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableResField:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 64
     const-class v2, Landroid/widget/TextView;
 
     const-string/jumbo v3, "mEditor"
@@ -131,21 +119,18 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mEditor:Ljava/lang/reflect/Field;
 
-    .line 65
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mEditor:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 66
     const-string/jumbo v2, "android.widget.Editor"
 
     invoke-static {v2}, Ljava/lang/Class;->forName(Ljava/lang/String;)Ljava/lang/Class;
 
     move-result-object v1
 
-    .line 67
     .local v1, "editorClass":Ljava/lang/Class;
     const-string/jumbo v2, "mShowCursor"
 
@@ -155,14 +140,12 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mShowCursorField:Ljava/lang/reflect/Field;
 
-    .line 68
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mShowCursorField:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 69
     const-string/jumbo v2, "mCursorDrawable"
 
     invoke-virtual {v1, v2}, Ljava/lang/Class;->getDeclaredField(Ljava/lang/String;)Ljava/lang/reflect/Field;
@@ -171,14 +154,12 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableField:Ljava/lang/reflect/Field;
 
-    .line 70
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableField:Ljava/lang/reflect/Field;
 
     const/4 v3, 0x1
 
     invoke-virtual {v2, v3}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 71
     const-class v2, Landroid/widget/TextView;
 
     const-string/jumbo v3, "getVerticalOffset"
@@ -199,7 +180,6 @@
 
     sput-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->getVerticalOffsetMethod:Ljava/lang/reflect/Method;
 
-    .line 72
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->getVerticalOffsetMethod:Ljava/lang/reflect/Method;
 
     const/4 v3, 0x1
@@ -208,7 +188,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 78
     .end local v1    # "editorClass":Ljava/lang/Class;
     :cond_0
     :goto_0
@@ -227,7 +206,6 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
-    .line 79
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mEditor:Ljava/lang/reflect/Field;
 
     invoke-virtual {v2, p0}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -236,7 +214,6 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->editor:Ljava/lang/Object;
 
-    .line 80
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableField:Ljava/lang/reflect/Field;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->editor:Ljava/lang/Object;
@@ -251,7 +228,6 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawable:[Landroid/graphics/drawable/Drawable;
 
-    .line 81
     sget-object v2, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawableResField:Ljava/lang/reflect/Field;
 
     const v3, 0x7f02009f
@@ -264,7 +240,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 85
     :goto_1
     const/high16 v2, 0x41c00000    # 24.0f
 
@@ -274,27 +249,22 @@
 
     iput v2, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->cursorSize:I
 
-    .line 86
     return-void
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 73
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
     goto :goto_0
 
-    .line 78
     nop
 
     :array_0
@@ -310,19 +280,16 @@
     .locals 2
 
     .prologue
-    .line 136
     iget v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreBottomCount:I
 
     if-eqz v0, :cond_1
 
-    .line 137
     iget v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreBottomCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreBottomCount:I
 
-    .line 138
     iget v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->scrollY:I
 
     const v1, 0x7fffffff
@@ -333,17 +300,14 @@
 
     neg-int v0, v0
 
-    .line 140
     :goto_0
     return v0
 
-    .line 138
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 140
     :cond_1
     invoke-super {p0}, Landroid/widget/EditText;->getExtendedPaddingBottom()I
 
@@ -356,22 +320,18 @@
     .locals 1
 
     .prologue
-    .line 127
     iget v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreTopCount:I
 
     if-eqz v0, :cond_0
 
-    .line 128
     iget v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreTopCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreTopCount:I
 
-    .line 129
     const/4 v0, 0x0
 
-    .line 131
     :goto_0
     return v0
 
@@ -388,12 +348,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 145
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getExtendedPaddingTop()I
 
     move-result v16
 
-    .line 146
     .local v16, "topPadding":I
     const v18, 0x7fffffff
 
@@ -403,7 +361,6 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->scrollY:I
 
-    .line 148
     :try_start_0
     sget-object v18, Lorg/telegram/ui/Components/EditTextBoldCursor;->mScrollYField:Ljava/lang/reflect/Field;
 
@@ -421,7 +378,6 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->scrollY:I
 
-    .line 149
     sget-object v18, Lorg/telegram/ui/Components/EditTextBoldCursor;->mScrollYField:Ljava/lang/reflect/Field;
 
     const/16 v19, 0x0
@@ -440,7 +396,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_3
 
-    .line 153
     :goto_0
     const/16 v18, 0x1
 
@@ -450,7 +405,6 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreTopCount:I
 
-    .line 154
     const/16 v18, 0x1
 
     move/from16 v0, v18
@@ -459,10 +413,8 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->ignoreBottomCount:I
 
-    .line 155
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 156
     const/16 v18, 0x0
 
     move/from16 v0, v16
@@ -479,13 +431,11 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 158
     :try_start_1
     invoke-super/range {p0 .. p1}, Landroid/widget/EditText;->onDraw(Landroid/graphics/Canvas;)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 162
     :goto_1
     move-object/from16 v0, p0
 
@@ -501,7 +451,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 164
     :try_start_2
     sget-object v18, Lorg/telegram/ui/Components/EditTextBoldCursor;->mScrollYField:Ljava/lang/reflect/Field;
 
@@ -525,12 +474,10 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 169
     :cond_0
     :goto_2
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 170
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->length()I
 
     move-result v18
@@ -565,7 +512,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 171
     :cond_1
     move-object/from16 v0, p0
 
@@ -608,13 +554,11 @@
 
     if-eqz v18, :cond_7
 
-    .line 172
     :cond_3
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v12
 
-    .line 173
     .local v12, "newTime":J
     move-object/from16 v0, p0
 
@@ -624,7 +568,6 @@
 
     sub-long v6, v12, v18
 
-    .line 174
     .local v6, "dt":J
     const-wide/16 v18, 0x0
 
@@ -638,17 +581,14 @@
 
     if-lez v18, :cond_5
 
-    .line 175
     :cond_4
     const-wide/16 v6, 0x11
 
-    .line 177
     :cond_5
     move-object/from16 v0, p0
 
     iput-wide v12, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->lastUpdateTime:J
 
-    .line 178
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintVisible:Z
@@ -657,7 +597,6 @@
 
     if-eqz v18, :cond_c
 
-    .line 179
     move-object/from16 v0, p0
 
     iget v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
@@ -680,7 +619,6 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
 
-    .line 180
     move-object/from16 v0, p0
 
     iget v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
@@ -693,7 +631,6 @@
 
     if-lez v18, :cond_6
 
-    .line 181
     const/high16 v18, 0x3f800000    # 1.0f
 
     move/from16 v0, v18
@@ -702,12 +639,10 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
 
-    .line 189
     :cond_6
     :goto_3
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->invalidate()V
 
-    .line 191
     .end local v6    # "dt":J
     .end local v12    # "newTime":J
     :cond_7
@@ -719,7 +654,6 @@
 
     move-result v14
 
-    .line 192
     .local v14, "oldColor":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getPaint()Landroid/text/TextPaint;
 
@@ -733,7 +667,6 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 193
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v18
@@ -756,10 +689,8 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/text/TextPaint;->setAlpha(I)V
 
-    .line 194
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 195
     const/16 v18, 0x0
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getMeasuredHeight()I
@@ -796,7 +727,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 196
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintLayout:Landroid/text/StaticLayout;
@@ -809,7 +739,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 197
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v18
@@ -818,10 +747,8 @@
 
     invoke-virtual {v0, v14}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 198
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 201
     .end local v14    # "oldColor":I
     :cond_8
     :try_start_3
@@ -857,7 +784,6 @@
 
     if-eqz v18, :cond_b
 
-    .line 202
     sget-object v18, Lorg/telegram/ui/Components/EditTextBoldCursor;->mShowCursorField:Ljava/lang/reflect/Field;
 
     move-object/from16 v0, p0
@@ -870,7 +796,6 @@
 
     move-result-wide v10
 
-    .line 203
     .local v10, "mShowCursor":J
     invoke-static {}, Landroid/os/SystemClock;->uptimeMillis()J
 
@@ -890,18 +815,14 @@
 
     const/4 v15, 0x1
 
-    .line 204
     .local v15, "showCursor":Z
     :goto_4
     if-eqz v15, :cond_b
 
-    .line 205
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 206
     const/16 v17, 0x0
 
-    .line 207
     .local v17, "voffsetCursor":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getGravity()I
 
@@ -917,7 +838,6 @@
 
     if-eq v0, v1, :cond_9
 
-    .line 208
     sget-object v18, Lorg/telegram/ui/Components/EditTextBoldCursor;->getVerticalOffsetMethod:Ljava/lang/reflect/Method;
 
     const/16 v19, 0x1
@@ -954,7 +874,6 @@
 
     move-result v17
 
-    .line 210
     :cond_9
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getPaddingLeft()I
 
@@ -986,12 +905,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 211
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getLayout()Landroid/text/Layout;
 
     move-result-object v5
 
-    .line 212
     .local v5, "layout":Landroid/text/Layout;
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getSelectionStart()I
 
@@ -1003,14 +920,10 @@
 
     move-result v8
 
-    .line 213
-    .local v8, "line":I
     invoke-virtual {v5}, Landroid/text/Layout;->getLineCount()I
 
     move-result v9
 
-    .line 214
-    .local v9, "lineCount":I
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->mCursorDrawable:[Landroid/graphics/drawable/Drawable;
@@ -1025,7 +938,6 @@
 
     move-result-object v4
 
-    .line 215
     .local v4, "bounds":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
@@ -1043,7 +955,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->left:I
 
-    .line 216
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
@@ -1068,7 +979,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->right:I
 
-    .line 217
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
@@ -1085,7 +995,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 218
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
@@ -1102,10 +1011,8 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 219
     move-object/from16 v0, p0
 
-    iget v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->lineSpacingExtra:F
 
     move/from16 v18, v0
 
@@ -1121,7 +1028,6 @@
 
     if-ge v8, v0, :cond_a
 
-    .line 220
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
@@ -1142,7 +1048,6 @@
 
     move-object/from16 v0, p0
 
-    iget v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->lineSpacingExtra:F
 
     move/from16 v20, v0
 
@@ -1160,7 +1065,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 222
     :cond_a
     move-object/from16 v0, p0
 
@@ -1194,7 +1098,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->top:I
 
-    .line 223
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->rect:Landroid/graphics/Rect;
@@ -1227,7 +1130,6 @@
 
     iput v0, v1, Landroid/graphics/Rect;->bottom:I
 
-    .line 224
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
@@ -1242,7 +1144,6 @@
 
     invoke-virtual/range {v18 .. v19}, Landroid/graphics/drawable/GradientDrawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 225
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
@@ -1255,16 +1156,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/GradientDrawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 226
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
     :try_end_3
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 232
     .end local v4    # "bounds":Landroid/graphics/Rect;
     .end local v5    # "layout":Landroid/text/Layout;
-    .end local v8    # "line":I
-    .end local v9    # "lineCount":I
     .end local v10    # "mShowCursor":J
     .end local v15    # "showCursor":Z
     .end local v17    # "voffsetCursor":I
@@ -1272,7 +1169,6 @@
     :goto_5
     return-void
 
-    .line 184
     .restart local v6    # "dt":J
     .restart local v12    # "newTime":J
     :cond_c
@@ -1298,7 +1194,6 @@
 
     iput v0, v1, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
 
-    .line 185
     move-object/from16 v0, p0
 
     iget v0, v0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintAlpha:F
@@ -1311,7 +1206,6 @@
 
     if-gez v18, :cond_6
 
-    .line 186
     const/16 v18, 0x0
 
     move/from16 v0, v18
@@ -1322,7 +1216,6 @@
 
     goto/16 :goto_3
 
-    .line 203
     .end local v6    # "dt":J
     .end local v12    # "newTime":J
     .restart local v10    # "mShowCursor":J
@@ -1331,26 +1224,22 @@
 
     goto/16 :goto_4
 
-    .line 159
     .end local v10    # "mShowCursor":J
     :catch_0
     move-exception v18
 
     goto/16 :goto_1
 
-    .line 229
     :catch_1
     move-exception v18
 
     goto :goto_5
 
-    .line 165
     :catch_2
     move-exception v18
 
     goto/16 :goto_2
 
-    .line 150
     :catch_3
     move-exception v18
 
@@ -1362,10 +1251,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 89
     iput-boolean p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->allowDrawCursor:Z
 
-    .line 90
     return-void
 .end method
 
@@ -1374,15 +1261,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->gradientDrawable:Landroid/graphics/drawable/GradientDrawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/GradientDrawable;->setColor(I)V
 
-    .line 94
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->invalidate()V
 
-    .line 95
     return-void
 .end method
 
@@ -1391,10 +1275,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 98
     iput p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->cursorSize:I
 
-    .line 99
     return-void
 .end method
 
@@ -1403,13 +1285,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 111
     iput p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintColor:I
 
-    .line 112
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->invalidate()V
 
-    .line 113
     return-void
 .end method
 
@@ -1418,7 +1297,6 @@
     .param p1, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 116
     new-instance v0, Landroid/text/StaticLayout;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->getPaint()Landroid/text/TextPaint;
@@ -1445,7 +1323,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintLayout:Landroid/text/StaticLayout;
 
-    .line 117
     return-void
 .end method
 
@@ -1454,16 +1331,13 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 102
     iget-boolean v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintVisible:Z
 
     if-ne v0, p1, :cond_0
 
-    .line 108
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
@@ -1471,10 +1345,8 @@
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->lastUpdateTime:J
 
-    .line 106
     iput-boolean p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->hintVisible:Z
 
-    .line 107
     invoke-virtual {p0}, Lorg/telegram/ui/Components/EditTextBoldCursor;->invalidate()V
 
     goto :goto_0
@@ -1486,12 +1358,8 @@
     .param p2, "mult"    # F
 
     .prologue
-    .line 121
     invoke-super {p0, p1, p2}, Landroid/widget/EditText;->setLineSpacing(FF)V
 
-    .line 122
-    iput p1, p0, Lorg/telegram/ui/Components/EditTextBoldCursor;->lineSpacingExtra:F
 
-    .line 123
     return-void
 .end method

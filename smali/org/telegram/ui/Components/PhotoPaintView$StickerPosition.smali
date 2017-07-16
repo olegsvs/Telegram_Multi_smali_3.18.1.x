@@ -32,21 +32,16 @@
     .param p4, "angle"    # F
 
     .prologue
-    .line 1505
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1506
     iput-object p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->position:Lorg/telegram/ui/Components/Point;
 
-    .line 1507
     iput p3, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->scale:F
 
-    .line 1508
     iput p4, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->angle:F
 
-    .line 1509
     return-void
 .end method
 
@@ -55,7 +50,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;
 
     .prologue
-    .line 1500
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->position:Lorg/telegram/ui/Components/Point;
 
     return-object v0
@@ -66,7 +60,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;
 
     .prologue
-    .line 1500
     iget v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->angle:F
 
     return v0
@@ -77,7 +70,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;
 
     .prologue
-    .line 1500
     iget v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$StickerPosition;->scale:F
 
     return v0

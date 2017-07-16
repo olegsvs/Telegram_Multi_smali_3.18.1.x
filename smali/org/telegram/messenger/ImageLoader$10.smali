@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ImageLoader;
 
     .prologue
-    .line 1984
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$10;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$10;->val$location:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1987
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$10;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/ImageLoader;->access$2200(Lorg/telegram/messenger/ImageLoader;)Ljava/util/HashMap;
@@ -60,16 +58,13 @@
 
     check-cast v0, Lorg/telegram/messenger/ImageLoader$CacheImage;
 
-    .line 1988
     .local v0, "img":Lorg/telegram/messenger/ImageLoader$CacheImage;
     if-eqz v0, :cond_0
 
-    .line 1989
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageLoader$CacheImage;->setImageAndClear(Landroid/graphics/drawable/BitmapDrawable;)V
 
-    .line 1991
     :cond_0
     return-void
 .end method

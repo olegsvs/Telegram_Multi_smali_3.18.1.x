@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
     .prologue
-    .line 59
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil$1.1;"
     iput-object p1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -42,7 +41,6 @@
     .locals 4
 
     .prologue
-    .line 62
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil$1.1;"
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -52,17 +50,14 @@
 
     move-result-object v0
 
-    .line 63
     .local v0, "msg":Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;
     :goto_0
     if-eqz v0, :cond_0
 
-    .line 64
     iget v1, v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;->what:I
 
     packed-switch v1, :pswitch_data_0
 
-    .line 76
     const-string/jumbo v1, "ThreadUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -87,7 +82,6 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 78
     :goto_1
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -99,7 +93,6 @@
 
     goto :goto_0
 
-    .line 66
     :pswitch_0
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -113,7 +106,6 @@
 
     goto :goto_1
 
-    .line 70
     :pswitch_1
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -129,7 +121,6 @@
 
     goto :goto_1
 
-    .line 73
     :pswitch_2
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$1;
 
@@ -143,11 +134,9 @@
 
     goto :goto_1
 
-    .line 80
     :cond_0
     return-void
 
-    .line 64
     nop
 
     :pswitch_data_0

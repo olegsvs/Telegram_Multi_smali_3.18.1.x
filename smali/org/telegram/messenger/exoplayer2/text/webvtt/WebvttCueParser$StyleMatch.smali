@@ -40,16 +40,12 @@
     .param p2, "style"    # Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;
 
     .prologue
-    .line 467
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 468
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->score:I
 
-    .line 469
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->style:Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;
 
-    .line 470
     return-void
 .end method
 
@@ -59,7 +55,6 @@
     .locals 1
 
     .prologue
-    .line 462
     check-cast p1, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->compareTo(Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;)I
@@ -74,7 +69,6 @@
     .param p1, "another"    # Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
 
     .prologue
-    .line 474
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->score:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;->score:I

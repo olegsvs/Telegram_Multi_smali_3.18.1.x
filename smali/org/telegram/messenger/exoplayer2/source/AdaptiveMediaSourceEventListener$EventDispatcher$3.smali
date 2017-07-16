@@ -49,7 +49,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
 
     .prologue
-    .line 245
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$3;->this$0:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$3;->val$dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
@@ -89,7 +88,6 @@
     .locals 20
 
     .prologue
-    .line 248
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$3;->this$0:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
@@ -130,7 +128,6 @@
 
     iget-wide v10, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$3;->val$mediaStartTimeUs:J
 
-    .line 249
     invoke-static {v2, v10, v11}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->access$000(Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;J)J
 
     move-result-wide v10
@@ -143,7 +140,6 @@
 
     iget-wide v12, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$3;->val$mediaEndTimeUs:J
 
-    .line 250
     invoke-static {v2, v12, v13}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->access$000(Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;J)J
 
     move-result-wide v12
@@ -164,9 +160,7 @@
 
     move-wide/from16 v18, v0
 
-    .line 248
     invoke-interface/range {v3 .. v19}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;->onLoadCanceled(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;IILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJJJJ)V
 
-    .line 251
     return-void
 .end method

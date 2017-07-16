@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 616
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,19 +43,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 619
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     iget-boolean v1, v1, Lorg/telegram/ui/VoIPActivity;->emojiTooltipVisible:Z
 
     if-eqz v1, :cond_0
 
-    .line 620
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/VoIPActivity;->access$1600(Lorg/telegram/ui/VoIPActivity;Z)V
 
-    .line 621
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VoIPActivity;->access$1700(Lorg/telegram/ui/VoIPActivity;)Ljava/lang/Runnable;
@@ -65,7 +61,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 622
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VoIPActivity;->access$1800(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -80,14 +75,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 623
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lorg/telegram/ui/VoIPActivity;->access$1702(Lorg/telegram/ui/VoIPActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 626
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$11;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -102,6 +95,5 @@
     :cond_1
     invoke-static {v1, v0}, Lorg/telegram/ui/VoIPActivity;->access$1900(Lorg/telegram/ui/VoIPActivity;Z)V
 
-    .line 627
     return-void
 .end method

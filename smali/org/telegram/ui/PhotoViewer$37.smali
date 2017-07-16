@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 2380
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 2383
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoViewer;->access$9800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -54,7 +52,6 @@
 
     move-result-object v1
 
-    .line 2384
     .local v1, "object":Ljava/lang/Object;
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -66,7 +63,6 @@
 
     move-result v2
 
-    .line 2385
     .local v2, "start":I
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -78,7 +74,6 @@
 
     move-result v0
 
-    .line 2386
     .local v0, "len":I
     instance-of v4, v1, Lorg/telegram/tgnet/TLRPC$User;
 
@@ -86,14 +81,11 @@
 
     move-object v3, v1
 
-    .line 2387
     check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 2388
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v3, :cond_0
 
-    .line 2389
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoViewer;->access$1800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -128,19 +120,16 @@
 
     invoke-virtual {v4, v2, v0, v5}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->replaceWithText(IILjava/lang/String;)V
 
-    .line 2394
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     :goto_0
     return-void
 
-    .line 2391
     :cond_1
     instance-of v4, v1, Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 2392
     iget-object v4, p0, Lorg/telegram/ui/PhotoViewer$37;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v4}, Lorg/telegram/ui/PhotoViewer;->access$1800(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;

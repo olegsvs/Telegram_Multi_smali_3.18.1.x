@@ -30,7 +30,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 5433
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$70;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$70;->val$newVisibility:I
@@ -51,7 +50,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 5446
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$70;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$15400(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
@@ -72,14 +70,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 5447
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$70;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$15402(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 5449
     :cond_0
     return-void
 .end method
@@ -91,7 +87,6 @@
     .prologue
     const/16 v0, 0x8
 
-    .line 5436
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$70;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$15400(Lorg/telegram/ui/ChatActivity;)Landroid/animation/AnimatorSet;
@@ -112,17 +107,14 @@
 
     if-eqz v1, :cond_2
 
-    .line 5437
     iget v1, p0, Lorg/telegram/ui/ChatActivity$70;->val$newVisibility:I
 
     if-ne v1, v0, :cond_0
 
-    .line 5438
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$70;->val$replyItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setVisibility(I)V
 
-    .line 5440
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$70;->val$backupItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -150,11 +142,9 @@
     :goto_0
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setVisibility(I)V
 
-    .line 5442
     :cond_2
     return-void
 
-    .line 5440
     :cond_3
     iget v2, p0, Lorg/telegram/ui/ChatActivity$70;->val$newVisibility:I
 

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 162
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$3;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$beforeDestroyRunnable:Ljava/lang/Runnable;
@@ -55,17 +54,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 165
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$beforeDestroyRunnable:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_0
 
-    .line 166
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$beforeDestroyRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 168
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -75,12 +71,10 @@
 
     if-nez v1, :cond_2
 
-    .line 186
     :cond_1
     :goto_0
     return-void
 
-    .line 172
     :cond_2
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$session:Lorg/telegram/messenger/camera/CameraSession;
@@ -91,7 +85,6 @@
 
     invoke-virtual {v1}, Landroid/hardware/Camera;->stopPreview()V
 
-    .line 173
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
     iget-object v1, v1, Lorg/telegram/messenger/camera/CameraSession;->cameraInfo:Lorg/telegram/messenger/camera/CameraInfo;
@@ -104,7 +97,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 178
     :goto_1
     :try_start_1
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$session:Lorg/telegram/messenger/camera/CameraSession;
@@ -117,7 +109,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 182
     :goto_2
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -125,34 +116,28 @@
 
     iput-object v3, v1, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 183
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     if-eqz v1, :cond_1
 
-    .line 184
     iget-object v1, p0, Lorg/telegram/messenger/camera/CameraController$3;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
     goto :goto_0
 
-    .line 174
     :catch_0
     move-exception v0
 
-    .line 175
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 179
     .end local v0    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 180
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

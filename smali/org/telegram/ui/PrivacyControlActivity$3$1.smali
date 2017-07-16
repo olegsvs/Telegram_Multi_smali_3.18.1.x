@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PrivacyControlActivity$3;
 
     .prologue
-    .line 377
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 381
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$3;
 
@@ -57,7 +55,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 382
     iget-object v2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PrivacyControlActivity$3;->val$progressDialogFinal:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -66,26 +63,22 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 387
     :cond_0
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_1
 
-    .line 388
     iget-object v2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PrivacyControlActivity$3;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/PrivacyControlActivity;->finishFragment()V
 
-    .line 389
     iget-object v1, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
 
-    .line 390
     .local v1, "rules":Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -97,7 +90,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 391
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v2
@@ -114,22 +106,18 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/ContactsController;->setPrivacyRules(Ljava/util/ArrayList;I)V
 
-    .line 395
     .end local v1    # "rules":Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
     :goto_1
     return-void
 
-    .line 384
     :catch_0
     move-exception v0
 
-    .line 385
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 393
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/PrivacyControlActivity$3$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$3;

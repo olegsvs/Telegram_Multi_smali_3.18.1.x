@@ -34,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iput-wide p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$uid:J
 
     iput-boolean p3, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$fromCache:Z
@@ -60,12 +59,10 @@
 
     const/4 v1, 0x0
 
-    .line 227
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$uid:J
 
     long-to-int v0, v2
 
-    .line 228
     .local v0, "lower_part":I
     iget-boolean v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$fromCache:Z
 
@@ -77,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 229
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$uid:J
 
     iget v4, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$type:I
@@ -86,17 +82,14 @@
 
     invoke-static {v2, v3, v4, v5, v1}, Lorg/telegram/messenger/query/SharedMediaQuery;->getMediaCount(JIIZ)V
 
-    .line 236
     :goto_0
     return-void
 
-    .line 231
     :cond_0
     iget-boolean v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$fromCache:Z
 
     if-nez v2, :cond_1
 
-    .line 232
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$uid:J
 
     iget v4, p0, Lorg/telegram/messenger/query/SharedMediaQuery$4;->val$type:I
@@ -105,7 +98,6 @@
 
     invoke-static {v2, v3, v4, v5}, Lorg/telegram/messenger/query/SharedMediaQuery;->access$200(JII)V
 
-    .line 234
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 

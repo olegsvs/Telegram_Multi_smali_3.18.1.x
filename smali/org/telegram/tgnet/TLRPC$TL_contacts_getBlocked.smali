@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 20871
     const v0, -0xa83caf1
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getBlocked;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 20870
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20877
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20881
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getBlocked;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20882
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getBlocked;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20883
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_getBlocked;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20884
     return-void
 .end method

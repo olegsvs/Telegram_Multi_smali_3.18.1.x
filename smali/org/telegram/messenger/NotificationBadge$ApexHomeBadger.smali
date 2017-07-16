@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,14 +44,12 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 90
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.anddoes.launcher.COUNTER_CHANGED"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 91
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v1, "package"
 
@@ -66,12 +63,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 92
     const-string/jumbo v1, "count"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 93
     const-string/jumbo v1, "class"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -84,21 +79,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 94
     invoke-static {v0}, Lorg/telegram/messenger/NotificationBadge;->access$100(Landroid/content/Intent;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 95
     new-instance v1, Lorg/telegram/messenger/NotificationBadge$ApexHomeBadger$1;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/messenger/NotificationBadge$ApexHomeBadger$1;-><init>(Lorg/telegram/messenger/NotificationBadge$ApexHomeBadger;Landroid/content/Intent;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 102
     :cond_0
     return-void
 .end method
@@ -116,7 +108,6 @@
     .end annotation
 
     .prologue
-    .line 106
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 140
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$4;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 143
     iget-object v2, p0, Lorg/telegram/ui/AudioSelectActivity$4;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/AudioSelectActivity;->access$200(Lorg/telegram/ui/AudioSelectActivity;)Lorg/telegram/ui/AudioSelectActivity$AudioSelectActivityDelegate;
@@ -51,12 +49,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 144
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 145
     .local v0, "audios":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     iget-object v2, p0, Lorg/telegram/ui/AudioSelectActivity$4;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
@@ -85,7 +81,6 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 146
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lorg/telegram/messenger/MediaController$AudioEntry;>;"
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -99,7 +94,6 @@
 
     goto :goto_0
 
-    .line 148
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lorg/telegram/messenger/MediaController$AudioEntry;>;"
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/AudioSelectActivity$4;->this$0:Lorg/telegram/ui/AudioSelectActivity;
@@ -110,13 +104,11 @@
 
     invoke-interface {v2, v0}, Lorg/telegram/ui/AudioSelectActivity$AudioSelectActivityDelegate;->didSelectAudio(Ljava/util/ArrayList;)V
 
-    .line 150
     .end local v0    # "audios":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/AudioSelectActivity$4;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/AudioSelectActivity;->finishFragment()V
 
-    .line 151
     return-void
 .end method

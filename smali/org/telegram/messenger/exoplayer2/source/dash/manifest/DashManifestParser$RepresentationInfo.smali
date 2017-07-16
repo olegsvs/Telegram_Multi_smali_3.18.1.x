@@ -53,22 +53,16 @@
     .end annotation
 
     .prologue
-    .line 855
     .local p4, "drmSchemeDatas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 856
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 857
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->baseUrl:Ljava/lang/String;
 
-    .line 858
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->segmentBase:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
 
-    .line 859
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->drmSchemeDatas:Ljava/util/ArrayList;
 
-    .line 860
     return-void
 .end method

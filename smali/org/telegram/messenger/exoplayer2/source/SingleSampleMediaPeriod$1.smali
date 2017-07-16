@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     .prologue
-    .line 173
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$1;->val$e:Ljava/io/IOException;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 176
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->access$400(Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;)Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;
@@ -62,6 +60,5 @@
 
     invoke-interface {v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;->onLoadError(ILjava/io/IOException;)V
 
-    .line 177
     return-void
 .end method

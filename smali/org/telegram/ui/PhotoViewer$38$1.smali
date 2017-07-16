@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoViewer$38;
 
     .prologue
-    .line 2405
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$38$1;->this$1:Lorg/telegram/ui/PhotoViewer$38;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2408
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$38$1;->this$1:Lorg/telegram/ui/PhotoViewer$38;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$38;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->clearRecentHashtags()V
 
-    .line 2409
     return-void
 .end method

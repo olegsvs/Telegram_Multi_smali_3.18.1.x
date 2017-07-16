@@ -29,7 +29,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 373
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -44,7 +43,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 474
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2200(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
@@ -59,10 +57,8 @@
 
     if-gt v0, v1, :cond_1
 
-    .line 475
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 476
     invoke-static {}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2300()I
 
     move-result v0
@@ -89,7 +85,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 477
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2500(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
@@ -98,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 478
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2600(Lorg/telegram/ui/Components/ChatAttachAlert;)I
@@ -129,15 +123,12 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 482
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 487
     :goto_1
     return-void
 
-    .line 480
     :cond_0
     invoke-static {}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3000()I
 
@@ -183,7 +174,6 @@
 
     goto :goto_0
 
-    .line 484
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -215,7 +205,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 485
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3300(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/graphics/drawable/Drawable;
@@ -234,7 +223,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 388
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1000(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
@@ -243,11 +231,9 @@
 
     if-eqz v1, :cond_0
 
-    .line 396
     :goto_0
     return v0
 
-    .line 390
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -257,7 +243,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 391
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1200(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/view/MotionEvent;)Z
@@ -266,7 +251,6 @@
 
     goto :goto_0
 
-    .line 392
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -298,14 +282,12 @@
 
     if-gez v1, :cond_2
 
-    .line 393
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->dismiss()V
 
     goto :goto_0
 
-    .line 396
     :cond_2
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -323,22 +305,17 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 433
     sub-int v14, p4, p2
 
-    .line 434
     .local v14, "width":I
     sub-int v8, p5, p3
 
-    .line 436
     .local v8, "height":I
     const/4 v12, -0x1
 
-    .line 437
     .local v12, "newPosition":I
     const/4 v13, 0x0
 
-    .line 439
     .local v13, "newTop":I
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -350,19 +327,15 @@
 
     move-result v7
 
-    .line 440
     .local v7, "count":I
     const/4 v10, -0x1
 
-    .line 441
     .local v10, "lastVisibleItemPosition":I
     const/4 v11, 0x0
 
-    .line 442
     .local v11, "lastVisibleItemPositionTop":I
     if-lez v7, :cond_0
 
-    .line 443
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1800(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -385,7 +358,6 @@
 
     move-result-object v6
 
-    .line 444
     .local v6, "child":Landroid/view/View;
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -399,21 +371,17 @@
 
     check-cast v9, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 445
     .local v9, "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     if-eqz v9, :cond_0
 
-    .line 446
     invoke-virtual {v9}, Lorg/telegram/ui/Components/RecyclerListView$Holder;->getAdapterPosition()I
 
     move-result v10
 
-    .line 447
     invoke-virtual {v6}, Landroid/view/View;->getTop()I
 
     move-result v11
 
-    .line 451
     .end local v6    # "child":Landroid/view/View;
     .end local v9    # "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     :cond_0
@@ -425,10 +393,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 452
     move v12, v10
 
-    .line 453
     add-int v0, v11, v8
 
     iget v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->lastHeight:I
@@ -441,23 +407,19 @@
 
     sub-int v13, v0, v1
 
-    .line 456
     :cond_1
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 458
     const/4 v0, -0x1
 
     if-eq v12, v0, :cond_2
 
-    .line 459
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$902(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 460
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1900(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -466,7 +428,6 @@
 
     invoke-virtual {v0, v12, v13}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 461
     const/4 v1, 0x0
 
     move-object v0, p0
@@ -481,31 +442,25 @@
 
     invoke-super/range {v0 .. v5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 462
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$902(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 465
     :cond_2
     iput v8, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->lastHeight:I
 
-    .line 466
     iput v14, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->lastWidth:I
 
-    .line 468
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2000(Lorg/telegram/ui/Components/ChatAttachAlert;)V
 
-    .line 469
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2100(Lorg/telegram/ui/Components/ChatAttachAlert;)V
 
-    .line 470
     return-void
 .end method
 
@@ -519,12 +474,10 @@
 
     const/4 v4, 0x0
 
-    .line 411
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 412
     .local v1, "height":I
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -532,12 +485,10 @@
 
     if-lt v3, v5, :cond_0
 
-    .line 413
     sget v3, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     sub-int/2addr v1, v3
 
-    .line 415
     :cond_0
     invoke-static {}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1400()I
 
@@ -549,7 +500,6 @@
 
     add-int/2addr v5, v3
 
-    sget-object v3, Lorg/telegram/messenger/query/SearchQuery;->inlineBots:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -562,7 +512,6 @@
     :goto_0
     add-int v0, v5, v3
 
-    .line 416
     .local v0, "contentSize":I
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -572,28 +521,23 @@
 
     move v2, v4
 
-    .line 417
     .local v2, "padding":I
     :goto_1
     if-eqz v2, :cond_1
 
     if-ge v0, v1, :cond_1
 
-    .line 418
     sub-int v3, v1, v0
 
     sub-int/2addr v2, v3
 
-    .line 420
     :cond_1
     if-nez v2, :cond_2
 
-    .line 421
     invoke-static {}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1500()I
 
     move-result v2
 
-    .line 423
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$1;->getPaddingTop()I
 
@@ -601,14 +545,12 @@
 
     if-eq v3, v2, :cond_3
 
-    .line 424
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     const/4 v5, 0x1
 
     invoke-static {v3, v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$902(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 425
     invoke-static {}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1600()I
 
     move-result v3
@@ -619,12 +561,10 @@
 
     invoke-virtual {p0, v3, v2, v5, v4}, Lorg/telegram/ui/Components/ChatAttachAlert$1;->setPadding(IIII)V
 
-    .line 426
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$902(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 428
     :cond_3
     invoke-static {v0, v1}, Ljava/lang/Math;->min(II)I
 
@@ -638,14 +578,11 @@
 
     invoke-super {p0, p1, v3}, Lorg/telegram/ui/Components/RecyclerListView;->onMeasure(II)V
 
-    .line 429
     return-void
 
-    .line 415
     .end local v0    # "contentSize":I
     .end local v2    # "padding":I
     :cond_4
-    sget-object v3, Lorg/telegram/messenger/query/SearchQuery;->inlineBots:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
@@ -683,7 +620,6 @@
 
     goto :goto_0
 
-    .line 416
     .restart local v0    # "contentSize":I
     :cond_5
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -706,7 +642,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 401
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1000(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
@@ -715,12 +650,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 406
     :cond_0
     :goto_0
     return v0
 
-    .line 403
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -730,7 +663,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 404
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$1200(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/view/MotionEvent;)Z
@@ -739,7 +671,6 @@
 
     goto :goto_0
 
-    .line 406
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -765,7 +696,6 @@
     .locals 1
 
     .prologue
-    .line 380
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$900(Lorg/telegram/ui/Components/ChatAttachAlert;)Z
@@ -774,11 +704,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 384
     :goto_0
     return-void
 
-    .line 383
     :cond_0
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 
@@ -790,14 +718,11 @@
     .param p1, "translationY"    # F
 
     .prologue
-    .line 491
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->setTranslationY(F)V
 
-    .line 492
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$1;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$2100(Lorg/telegram/ui/Components/ChatAttachAlert;)V
 
-    .line 493
     return-void
 .end method

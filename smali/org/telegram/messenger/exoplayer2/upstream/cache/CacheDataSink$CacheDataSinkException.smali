@@ -20,9 +20,7 @@
     .param p1, "cause"    # Ljava/io/IOException;
 
     .prologue
-    .line 53
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache$CacheException;-><init>(Ljava/io/IOException;)V
 
-    .line 54
     return-void
 .end method

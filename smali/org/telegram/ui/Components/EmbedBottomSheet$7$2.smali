@@ -5,7 +5,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/EmbedBottomSheet$7;->onSwitchInlineMode(Landroid/view/View;ZFIZ)Landroid/view/TextureView;
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -24,7 +23,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     .prologue
-    .line 478
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$2;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +37,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 481
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$2;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -48,6 +45,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$3002(Lorg/telegram/ui/Components/EmbedBottomSheet;Z)Z
 
-    .line 482
     return-void
 .end method

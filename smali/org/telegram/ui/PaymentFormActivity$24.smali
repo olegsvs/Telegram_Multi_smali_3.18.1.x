@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 2249
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$24;->val$req:Lorg/telegram/tgnet/TLRPC$TL_payments_sendPaymentForm;
@@ -47,15 +46,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2252
     if-eqz p1, :cond_2
 
-    .line 2253
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentResult;
 
     if-eqz v0, :cond_1
 
-    .line 2254
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -69,26 +65,22 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 2255
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$24$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PaymentFormActivity$24$1;-><init>(Lorg/telegram/ui/PaymentFormActivity$24;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2280
     :cond_0
     :goto_0
     return-void
 
-    .line 2261
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_1
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentVerficationNeeded;
 
     if-eqz v0, :cond_0
 
-    .line 2262
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$24$2;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/PaymentFormActivity$24$2;-><init>(Lorg/telegram/ui/PaymentFormActivity$24;Lorg/telegram/tgnet/TLObject;)V
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 2271
     :cond_2
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$24$3;
 

@@ -26,7 +26,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
 
     .prologue
-    .line 10683
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->val$cameraContainer:Landroid/view/View;
@@ -47,12 +46,10 @@
 
     const/4 v6, 0x0
 
-    .line 10687
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 10688
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     const/4 v1, 0x2
 
@@ -68,7 +65,6 @@
 
     aput v5, v4, v6
 
-    .line 10689
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -87,38 +83,31 @@
 
     aput v5, v4, v6
 
-    .line 10690
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
 
     aput-object v2, v1, v7
 
-    .line 10688
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 10692
     const-wide/16 v2, 0x64
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 10693
     new-instance v1, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 10694
     new-instance v1, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;-><init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 10701
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 10702
     return-void
 .end method

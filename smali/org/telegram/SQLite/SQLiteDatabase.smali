@@ -24,16 +24,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->isOpen:Z
 
-    .line 19
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->inTransaction:Z
 
-    .line 26
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -68,12 +64,10 @@
 
     iput v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->sqliteHandle:I
 
-    .line 27
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->isOpen:Z
 
-    .line 28
     return-void
 .end method
 
@@ -88,12 +82,10 @@
     .end annotation
 
     .prologue
-    .line 82
     iget-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->inTransaction:Z
 
     if-eqz v0, :cond_0
 
-    .line 83
     new-instance v0, Lorg/telegram/SQLite/SQLiteException;
 
     const-string/jumbo v1, "database already in transaction"
@@ -102,18 +94,15 @@
 
     throw v0
 
-    .line 85
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->inTransaction:Z
 
-    .line 86
     iget v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->sqliteHandle:I
 
     invoke-virtual {p0, v0}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction(I)V
 
-    .line 87
     return-void
 .end method
 
@@ -129,12 +118,10 @@
     .end annotation
 
     .prologue
-    .line 71
     iget-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->isOpen:Z
 
     if-nez v0, :cond_0
 
-    .line 72
     new-instance v0, Lorg/telegram/SQLite/SQLiteException;
 
     const-string/jumbo v1, "Database closed"
@@ -143,7 +130,6 @@
 
     throw v0
 
-    .line 74
     :cond_0
     return-void
 .end method
@@ -152,37 +138,30 @@
     .locals 2
 
     .prologue
-    .line 59
     iget-boolean v1, p0, Lorg/telegram/SQLite/SQLiteDatabase;->isOpen:Z
 
     if-eqz v1, :cond_0
 
-    .line 61
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteDatabase;->commitTransaction()V
 
-    .line 62
     iget v1, p0, Lorg/telegram/SQLite/SQLiteDatabase;->sqliteHandle:I
 
     invoke-virtual {p0, v1}, Lorg/telegram/SQLite/SQLiteDatabase;->closedb(I)V
     :try_end_0
     .catch Lorg/telegram/SQLite/SQLiteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 66
     :goto_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lorg/telegram/SQLite/SQLiteDatabase;->isOpen:Z
 
-    .line 68
     :cond_0
     return-void
 
-    .line 63
     :catch_0
     move-exception v0
 
-    .line 64
     .local v0, "e":Lorg/telegram/SQLite/SQLiteException;
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteException;->getMessage()Ljava/lang/String;
 
@@ -205,22 +184,18 @@
     .locals 1
 
     .prologue
-    .line 90
     iget-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->inTransaction:Z
 
     if-nez v0, :cond_0
 
-    .line 95
     :goto_0
     return-void
 
-    .line 93
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->inTransaction:Z
 
-    .line 94
     iget v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->sqliteHandle:I
 
     invoke-virtual {p0, v0}, Lorg/telegram/SQLite/SQLiteDatabase;->commitTransaction(I)V
@@ -241,7 +216,6 @@
     .end annotation
 
     .prologue
-    .line 37
     new-instance v0, Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     const/4 v1, 0x1
@@ -262,15 +236,12 @@
     .end annotation
 
     .prologue
-    .line 41
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteDatabase;->checkOpened()V
 
-    .line 42
     invoke-virtual {p0, p1, p2}, Lorg/telegram/SQLite/SQLiteDatabase;->queryFinalized(Ljava/lang/String;[Ljava/lang/Object;)Lorg/telegram/SQLite/SQLiteCursor;
 
     move-result-object v0
 
-    .line 44
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :try_start_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -281,13 +252,10 @@
 
     if-nez v1, :cond_0
 
-    .line 45
     const/4 v1, 0x0
 
-    .line 49
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 47
     :goto_0
     return-object v1
 
@@ -305,7 +273,6 @@
 
     move-result-object v1
 
-    .line 49
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
     goto :goto_0
@@ -327,13 +294,10 @@
     .end annotation
 
     .prologue
-    .line 77
     invoke-super {p0}, Ljava/lang/Object;->finalize()V
 
-    .line 78
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteDatabase;->close()V
 
-    .line 79
     return-void
 .end method
 
@@ -341,7 +305,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget v0, p0, Lorg/telegram/SQLite/SQLiteDatabase;->sqliteHandle:I
 
     return v0
@@ -366,10 +329,8 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteDatabase;->checkOpened()V
 
-    .line 55
     new-instance v0, Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     const/4 v1, 0x1
@@ -397,13 +358,10 @@
 
     const/4 v2, 0x0
 
-    .line 31
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteDatabase;->checkOpened()V
 
-    .line 32
     const-string/jumbo v0, "SELECT rowid FROM sqlite_master WHERE type=\'table\' AND name=?;"
 
-    .line 33
     .local v0, "s":Ljava/lang/String;
     new-array v3, v1, [Ljava/lang/Object;
 

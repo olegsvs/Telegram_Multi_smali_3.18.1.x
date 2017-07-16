@@ -29,12 +29,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     .prologue
-    .line 225
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->processChange:Z
@@ -51,7 +49,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 250
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$600(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Z
@@ -60,18 +57,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 261
     :cond_0
     :goto_0
     return-void
 
-    .line 253
     :cond_1
     iget-boolean v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->processChange:Z
 
     if-eqz v2, :cond_0
 
-    .line 254
     invoke-interface {p1}, Landroid/text/Editable;->length()I
 
     move-result v2
@@ -84,7 +78,6 @@
 
     check-cast v1, [Landroid/text/style/ImageSpan;
 
-    .line 255
     .local v1, "spans":[Landroid/text/style/ImageSpan;
     const/4 v0, 0x0
 
@@ -94,17 +87,14 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 256
     aget-object v2, v1, v0
 
     invoke-interface {p1, v2}, Landroid/text/Editable;->removeSpan(Ljava/lang/Object;)V
 
-    .line 255
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 258
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -128,7 +118,6 @@
 
     invoke-static {p1, v2, v3, v4}, Lorg/telegram/messenger/Emoji;->replaceEmoji(Ljava/lang/CharSequence;Landroid/graphics/Paint$FontMetricsInt;IZ)Ljava/lang/CharSequence;
 
-    .line 259
     iput-boolean v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->processChange:Z
 
     goto :goto_0
@@ -142,7 +131,6 @@
     .param p4, "i3"    # I
 
     .prologue
-    .line 231
     return-void
 .end method
 
@@ -156,7 +144,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 235
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$600(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Z
@@ -165,12 +152,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 246
     :cond_0
     :goto_0
     return-void
 
-    .line 239
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -180,7 +165,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 240
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$700(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$PhotoViewerCaptionEnterViewDelegate;
@@ -189,7 +173,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$PhotoViewerCaptionEnterViewDelegate;->onTextChanged(Ljava/lang/CharSequence;)V
 
-    .line 243
     :cond_2
     if-eq p3, p4, :cond_0
 
@@ -197,7 +180,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 244
     iput-boolean v1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$7;->processChange:Z
 
     goto :goto_0

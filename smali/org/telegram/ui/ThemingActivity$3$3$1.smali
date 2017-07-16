@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ThemingActivity$3$3;
 
     .prologue
-    .line 252
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->val$pName:Ljava/lang/String;
@@ -49,7 +48,6 @@
 
     const/4 v3, 0x0
 
-    .line 255
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -58,7 +56,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/ThemingActivity;->access$702(Lorg/telegram/ui/ThemingActivity;Z)Z
 
-    .line 256
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -71,7 +68,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 258
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -88,7 +84,6 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/AndroidUtilities;->setStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 260
     :try_start_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -108,7 +103,6 @@
 
     move-result-object v1
 
-    .line 261
     .local v1, "pInfo":Landroid/content/pm/PackageInfo;
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
@@ -128,7 +122,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 265
     .end local v1    # "pInfo":Landroid/content/pm/PackageInfo;
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
@@ -171,7 +164,6 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/AndroidUtilities;->setStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 266
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -208,7 +200,6 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/AndroidUtilities;->setStringPref(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 267
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -245,7 +236,6 @@
 
     invoke-static {v2, v3, v4, v5, v8}, Lorg/telegram/messenger/Utilities;->savePreferencesToSD(Landroid/content/Context;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)V
 
-    .line 268
     iget-object v2, p0, Lorg/telegram/ui/ThemingActivity$3$3$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingActivity$3$3;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -260,15 +250,12 @@
 
     invoke-static {v2, v3, v8}, Lorg/telegram/messenger/Utilities;->copyWallpaperToSD(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 272
     :cond_0
     return-void
 
-    .line 262
     :catch_0
     move-exception v0
 
-    .line 263
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

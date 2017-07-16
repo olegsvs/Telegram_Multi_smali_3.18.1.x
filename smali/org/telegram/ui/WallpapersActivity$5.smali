@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/WallpapersActivity;
 
     .prologue
-    .line 423
     iput-object p1, p0, Lorg/telegram/ui/WallpapersActivity$5;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 426
     if-eqz p2, :cond_0
 
-    .line 448
     :goto_0
     return-void
 
-    .line 429
     :cond_0
     new-instance v0, Lorg/telegram/ui/WallpapersActivity$5$1;
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 8202
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 8206
     :try_start_0
     iget-object v6, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -55,17 +53,14 @@
 
     move-result v1
 
-    .line 8207
     .local v1, "firstVisPos":I
     const/4 v4, 0x0
 
-    .line 8208
     .local v4, "top":I
     const/4 v6, -0x1
 
     if-eq v1, v6, :cond_0
 
-    .line 8209
     iget-object v6, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ChatActivity;->access$8300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -76,7 +71,6 @@
 
     move-result-object v2
 
-    .line 8210
     .local v2, "firstVisView":Landroid/view/View;
     if-nez v2, :cond_4
 
@@ -93,7 +87,6 @@
 
     sub-int v4, v5, v6
 
-    .line 8212
     .end local v2    # "firstVisView":Landroid/view/View;
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -155,7 +148,6 @@
 
     if-nez v5, :cond_5
 
-    .line 8213
     :cond_2
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -181,7 +173,6 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 8214
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$8000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Cells/ChatActionCell;
@@ -194,7 +185,6 @@
 
     check-cast v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 8215
     .local v3, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     const/high16 v5, 0x42500000    # 52.0f
 
@@ -204,7 +194,6 @@
 
     iput v5, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 8216
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$8000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Cells/ChatActionCell;
@@ -213,7 +202,6 @@
 
     invoke-virtual {v5, v3}, Lorg/telegram/ui/Cells/ChatActionCell;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 8217
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$5800(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -228,7 +216,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setTopGlowOffset(I)V
 
-    .line 8218
     const/high16 v5, 0x42400000    # 48.0f
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -237,14 +224,12 @@
 
     sub-int/2addr v4, v5
 
-    .line 8229
     .end local v3    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     :goto_1
     const/4 v5, -0x1
 
     if-eq v1, v5, :cond_3
 
-    .line 8230
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$8300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -253,14 +238,12 @@
 
     invoke-virtual {v5, v1, v4}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 8235
     .end local v1    # "firstVisPos":I
     .end local v4    # "top":I
     :cond_3
     :goto_2
     return-void
 
-    .line 8210
     .restart local v1    # "firstVisPos":I
     .restart local v2    # "firstVisView":Landroid/view/View;
     .restart local v4    # "top":I
@@ -271,7 +254,6 @@
 
     goto/16 :goto_0
 
-    .line 8219
     .end local v2    # "firstVisView":Landroid/view/View;
     :cond_5
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -333,7 +315,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 8220
     :cond_7
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -359,7 +340,6 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 8221
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$8000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Cells/ChatActionCell;
@@ -372,7 +352,6 @@
 
     check-cast v3, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 8222
     .restart local v3    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     const/high16 v5, 0x40800000    # 4.0f
 
@@ -382,7 +361,6 @@
 
     iput v5, v3, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 8223
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$8000(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Cells/ChatActionCell;
@@ -391,7 +369,6 @@
 
     invoke-virtual {v5, v3}, Lorg/telegram/ui/Cells/ChatActionCell;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 8224
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$86;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ChatActivity;->access$5800(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -402,7 +379,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setTopGlowOffset(I)V
 
-    .line 8225
     const/high16 v5, 0x42400000    # 48.0f
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -413,23 +389,19 @@
 
     add-int/2addr v4, v5
 
-    .line 8226
     goto/16 :goto_1
 
-    .line 8227
     .end local v3    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     :cond_8
     const/4 v1, -0x1
 
     goto/16 :goto_1
 
-    .line 8232
     .end local v1    # "firstVisPos":I
     .end local v4    # "top":I
     :catch_0
     move-exception v0
 
-    .line 8233
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 105
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$1;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$1;->val$pendingEncMessagesToDeleteCopy:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 108
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -58,7 +56,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 109
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -77,22 +74,18 @@
 
     check-cast v1, Lorg/telegram/messenger/MessageObject;
 
-    .line 110
     .local v1, "messageObject":Lorg/telegram/messenger/MessageObject;
     if-eqz v1, :cond_0
 
-    .line 111
     const/4 v2, 0x1
 
     iput-boolean v2, v1, Lorg/telegram/messenger/MessageObject;->deleted:Z
 
-    .line 108
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 114
     .end local v1    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_1
     return-void

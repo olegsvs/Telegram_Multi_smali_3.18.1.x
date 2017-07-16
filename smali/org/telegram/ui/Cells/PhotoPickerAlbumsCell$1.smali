@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->access$000(Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;)Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$PhotoPickerAlbumsCellDelegate;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$1;->this$0:Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;->access$000(Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell;)Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$PhotoPickerAlbumsCellDelegate;
@@ -78,7 +75,6 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/ui/Cells/PhotoPickerAlbumsCell$PhotoPickerAlbumsCellDelegate;->didSelectAlbum(Lorg/telegram/messenger/MediaController$AlbumEntry;)V
 
-    .line 105
     :cond_0
     return-void
 .end method

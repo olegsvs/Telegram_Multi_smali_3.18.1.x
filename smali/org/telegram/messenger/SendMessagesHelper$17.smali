@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 3438
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$17;->val$text:Ljava/lang/String;
 
     iput-wide p2, p0, Lorg/telegram/messenger/SendMessagesHelper$17;->val$dialog_id:J
@@ -44,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 3441
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/SendMessagesHelper$17$1;
@@ -53,6 +51,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 3459
     return-void
 .end method

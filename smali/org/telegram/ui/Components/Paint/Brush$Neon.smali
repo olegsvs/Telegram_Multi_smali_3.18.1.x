@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -34,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const v0, 0x3f333333    # 0.7f
 
     return v0
@@ -44,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 102
     const/4 v0, 0x0
 
     return v0
@@ -54,7 +51,6 @@
     .locals 1
 
     .prologue
-    .line 107
     const v0, 0x3fb9999a    # 1.45f
 
     return v0
@@ -64,7 +60,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const v0, 0x3d8f5c29    # 0.07f
 
     return v0
@@ -74,18 +69,15 @@
     .locals 3
 
     .prologue
-    .line 117
     new-instance v0, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v0}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 118
     .local v0, "options":Landroid/graphics/BitmapFactory$Options;
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Landroid/graphics/BitmapFactory$Options;->inScaled:Z
 
-    .line 119
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
@@ -105,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 112
     const/4 v0, 0x1
 
     return v0

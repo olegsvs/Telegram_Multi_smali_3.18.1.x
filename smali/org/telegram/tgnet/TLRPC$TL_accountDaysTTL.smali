@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 19550
     const v0, -0x472f5021
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 19549
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -52,15 +50,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19555
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 19556
     if-eqz p2, :cond_0
 
-    .line 19557
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_accountDaysTTL"
@@ -85,21 +80,17 @@
 
     throw v1
 
-    .line 19559
     :cond_0
     const/4 v0, 0x0
 
-    .line 19564
     :goto_0
     return-object v0
 
-    .line 19562
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;-><init>()V
 
-    .line 19563
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -114,14 +105,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19568
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->days:I
 
-    .line 19569
     return-void
 .end method
 
@@ -130,16 +119,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 19572
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19573
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;->days:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19574
     return-void
 .end method

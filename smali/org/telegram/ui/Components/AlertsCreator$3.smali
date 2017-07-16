@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 364
     iput-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$3;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 367
     const-string/jumbo v0, "spambot"
 
     iget-object v1, p0, Lorg/telegram/ui/Components/AlertsCreator$3;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -51,6 +49,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->openByUserName(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;I)V
 
-    .line 368
     return-void
 .end method

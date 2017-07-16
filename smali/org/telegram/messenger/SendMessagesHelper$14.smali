@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 2948
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$paths:Ljava/util/ArrayList;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$originalPaths:Ljava/util/ArrayList;
@@ -66,16 +65,13 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2951
     const/4 v11, 0x0
 
-    .line 2952
     .local v11, "error":Z
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$paths:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_1
 
-    .line 2953
     const/4 v10, 0x0
 
     .local v10, "a":I
@@ -88,7 +84,6 @@
 
     if-ge v10, v0, :cond_1
 
-    .line 2954
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$paths:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -119,23 +114,19 @@
 
     if-nez v0, :cond_0
 
-    .line 2955
     const/4 v11, 0x1
 
-    .line 2953
     :cond_0
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 2959
     .end local v10    # "a":I
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$uris:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_3
 
-    .line 2960
     const/4 v10, 0x0
 
     .restart local v10    # "a":I
@@ -148,7 +139,6 @@
 
     if-ge v10, v0, :cond_3
 
-    .line 2961
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$uris:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v10}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -173,39 +163,32 @@
 
     if-nez v0, :cond_2
 
-    .line 2962
     const/4 v11, 0x1
 
-    .line 2960
     :cond_2
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_1
 
-    .line 2966
     .end local v10    # "a":I
     :cond_3
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$inputContent:Landroid/support/v13/view/inputmethod/InputContentInfoCompat;
 
     if-eqz v0, :cond_4
 
-    .line 2967
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$14;->val$inputContent:Landroid/support/v13/view/inputmethod/InputContentInfoCompat;
 
     invoke-virtual {v0}, Landroid/support/v13/view/inputmethod/InputContentInfoCompat;->releasePermission()V
 
-    .line 2969
     :cond_4
     if-eqz v11, :cond_5
 
-    .line 2970
     new-instance v0, Lorg/telegram/messenger/SendMessagesHelper$14$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SendMessagesHelper$14$1;-><init>(Lorg/telegram/messenger/SendMessagesHelper$14;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2982
     :cond_5
     return-void
 .end method

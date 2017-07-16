@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CallLogActivity;
 
     .prologue
-    .line 214
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$3;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 217
     if-ltz p2, :cond_0
 
     iget-object v2, p0, Lorg/telegram/ui/CallLogActivity$3;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -60,12 +58,10 @@
 
     if-lt p2, v2, :cond_1
 
-    .line 226
     :cond_0
     :goto_0
     return-void
 
-    .line 220
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/CallLogActivity$3;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -79,13 +75,11 @@
 
     check-cast v1, Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
-    .line 221
     .local v1, "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 222
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v2, "user_id"
 
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 223
     const-string/jumbo v3, "message_id"
 
     iget-object v2, v1, Lorg/telegram/ui/CallLogActivity$CallLogRow;->calls:Ljava/util/List;
@@ -110,7 +103,6 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 224
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -121,7 +113,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 225
     iget-object v2, p0, Lorg/telegram/ui/CallLogActivity$3;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     new-instance v3, Lorg/telegram/ui/ChatActivity;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/BlockedUsersActivity;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lorg/telegram/ui/BlockedUsersActivity$3;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 128
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -66,12 +64,10 @@
 
     if-nez v2, :cond_1
 
-    .line 145
     :cond_0
     :goto_0
     return v5
 
-    .line 131
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/BlockedUsersActivity$3;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
@@ -93,7 +89,6 @@
 
     invoke-static {v3, v2}, Lorg/telegram/ui/BlockedUsersActivity;->access$002(Lorg/telegram/ui/BlockedUsersActivity;I)I
 
-    .line 133
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/BlockedUsersActivity$3;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
@@ -104,7 +99,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 134
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     new-array v1, v5, [Ljava/lang/CharSequence;
 
@@ -120,7 +114,6 @@
 
     aput-object v3, v1, v2
 
-    .line 135
     .local v1, "items":[Ljava/lang/CharSequence;
     new-instance v2, Lorg/telegram/ui/BlockedUsersActivity$3$1;
 
@@ -128,7 +121,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 143
     iget-object v2, p0, Lorg/telegram/ui/BlockedUsersActivity$3;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;

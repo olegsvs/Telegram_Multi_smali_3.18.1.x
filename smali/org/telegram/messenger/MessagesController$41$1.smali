@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$41;
 
     .prologue
-    .line 2283
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$41$1;->this$1:Lorg/telegram/messenger/MessagesController$41;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$41$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,17 +50,14 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 2286
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$41$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_0
 
-    .line 2287
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$41$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
 
-    .line 2288
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$41$1;->this$1:Lorg/telegram/messenger/MessagesController$41;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 2289
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -84,7 +79,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v4}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 2290
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -101,7 +95,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->updateChannelUsers(ILjava/util/ArrayList;)V
 
-    .line 2291
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$41$1;->this$1:Lorg/telegram/messenger/MessagesController$41;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessagesController$41;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -116,7 +109,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2293
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$41$1;->this$1:Lorg/telegram/messenger/MessagesController$41;
@@ -133,6 +125,5 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 2294
     return-void
 .end method

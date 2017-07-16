@@ -17,13 +17,10 @@
     .param p1, "tf"    # Landroid/graphics/Typeface;
 
     .prologue
-    .line 24
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 25
     iput-object p1, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
-    .line 26
     return-void
 .end method
 
@@ -33,16 +30,12 @@
     .param p2, "size"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 29
     iput-object p1, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
-    .line 30
     iput p2, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
-    .line 31
     return-void
 .end method
 
@@ -53,19 +46,14 @@
     .param p3, "textColor"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
-    .line 35
     iput p2, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
-    .line 36
     iput p3, p0, Lorg/telegram/ui/Components/TypefaceSpan;->color:I
 
-    .line 37
     return-void
 .end method
 
@@ -75,7 +63,6 @@
     .locals 1
 
     .prologue
-    .line 40
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     return-object v0
@@ -85,7 +72,6 @@
     .locals 2
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -111,7 +97,6 @@
     .locals 2
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     const-string/jumbo v1, "fonts/ritalic.ttf"
@@ -138,41 +123,34 @@
     .param p1, "tp"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 64
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     if-eqz v0, :cond_0
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 67
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
     if-eqz v0, :cond_1
 
-    .line 68
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
     int-to-float v0, v0
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 70
     :cond_1
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->color:I
 
     if-eqz v0, :cond_2
 
-    .line 71
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->color:I
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 73
     :cond_2
     invoke-virtual {p1}, Landroid/text/TextPaint;->getFlags()I
 
@@ -182,7 +160,6 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setFlags(I)V
 
-    .line 74
     return-void
 .end method
 
@@ -191,30 +168,25 @@
     .param p1, "p"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     if-eqz v0, :cond_0
 
-    .line 54
     iget-object v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->typeface:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 56
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
     if-eqz v0, :cond_1
 
-    .line 57
     iget v0, p0, Lorg/telegram/ui/Components/TypefaceSpan;->textSize:I
 
     int-to-float v0, v0
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 59
     :cond_1
     invoke-virtual {p1}, Landroid/text/TextPaint;->getFlags()I
 
@@ -224,6 +196,5 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setFlags(I)V
 
-    .line 60
     return-void
 .end method

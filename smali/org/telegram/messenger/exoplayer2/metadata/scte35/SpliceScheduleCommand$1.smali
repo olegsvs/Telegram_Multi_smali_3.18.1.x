@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 212
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 212
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand$1;->createFromParcel(Landroid/os/Parcel;)Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
     move-result-object v0
@@ -57,7 +55,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 216
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
     const/4 v1, 0x0
@@ -71,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 212
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand$1;->newArray(I)[Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
     move-result-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 221
     new-array v0, p1, [Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceScheduleCommand;
 
     return-object v0

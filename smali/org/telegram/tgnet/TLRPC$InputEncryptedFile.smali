@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 13352
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,20 +43,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13360
     const/4 v0, 0x0
 
-    .line 13361
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     sparse-switch p1, :sswitch_data_0
 
-    .line 13375
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 13376
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputEncryptedFile"
@@ -82,40 +77,33 @@
 
     throw v1
 
-    .line 13363
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFile;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFile;-><init>()V
 
-    .line 13364
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     goto :goto_0
 
-    .line 13366
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileBigUploaded;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileBigUploaded;-><init>()V
 
-    .line 13367
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     goto :goto_0
 
-    .line 13369
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileEmpty;-><init>()V
 
-    .line 13370
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     goto :goto_0
 
-    .line 13372
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileUploaded;
 
@@ -125,18 +113,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     goto :goto_0
 
-    .line 13378
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 13379
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 13381
     :cond_1
     return-object v0
 
-    .line 13361
     nop
 
     :sswitch_data_0

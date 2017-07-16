@@ -77,14 +77,12 @@
     .locals 1
 
     .prologue
-    .line 48
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$1;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->FACTORY:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorsFactory;
 
-    .line 64
     const-string/jumbo v0, "qt  "
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Util;->getIntegerCodeForString(Ljava/lang/String;)I
@@ -100,10 +98,8 @@
     .locals 2
 
     .prologue
-    .line 94
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 95
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0x10
@@ -112,14 +108,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 96
     new-instance v0, Ljava/util/Stack;
 
     invoke-direct {v0}, Ljava/util/Stack;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
-    .line 97
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     sget-object v1, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->NAL_START_CODE:[B
@@ -128,7 +122,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalStartCode:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 98
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x4
@@ -137,10 +130,8 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 99
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
-    .line 100
     return-void
 .end method
 
@@ -148,17 +139,14 @@
     .locals 1
 
     .prologue
-    .line 189
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
-    .line 190
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
-    .line 191
     return-void
 .end method
 
@@ -166,14 +154,11 @@
     .locals 9
 
     .prologue
-    .line 462
     const/4 v2, -0x1
 
-    .line 463
     .local v2, "earliestSampleTrackIndex":I
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 464
     .local v0, "earliestSampleOffset":J
     const/4 v5, 0x0
 
@@ -185,16 +170,13 @@
 
     if-ge v5, v8, :cond_2
 
-    .line 465
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
     aget-object v4, v8, v5
 
-    .line 466
     .local v4, "track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
     iget v3, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
-    .line 467
     .local v3, "sampleIndex":I
     iget-object v8, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
@@ -202,14 +184,12 @@
 
     if-ne v3, v8, :cond_1
 
-    .line 464
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 471
     :cond_1
     iget-object v8, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
@@ -217,21 +197,17 @@
 
     aget-wide v6, v8, v3
 
-    .line 472
     .local v6, "trackSampleOffset":J
     cmp-long v8, v6, v0
 
     if-gez v8, :cond_0
 
-    .line 473
     move-wide v0, v6
 
-    .line 474
     move v2, v5
 
     goto :goto_1
 
-    .line 478
     .end local v3    # "sampleIndex":I
     .end local v4    # "track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
     .end local v6    # "trackSampleOffset":J
@@ -251,7 +227,6 @@
     .prologue
     const/4 v4, 0x3
 
-    .line 269
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
@@ -276,7 +251,6 @@
 
     if-nez v1, :cond_2
 
-    .line 270
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
     invoke-virtual {v1}, Ljava/util/Stack;->pop()Ljava/lang/Object;
@@ -285,7 +259,6 @@
 
     check-cast v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
 
-    .line 271
     .local v0, "containerAtom":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
     iget v1, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;->type:I
 
@@ -293,20 +266,16 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 273
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->processMoovAtom(Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;)V
 
-    .line 274
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
     invoke-virtual {v1}, Ljava/util/Stack;->clear()V
 
-    .line 275
     iput v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     goto :goto_0
 
-    .line 276
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
@@ -316,7 +285,6 @@
 
     if-nez v1, :cond_0
 
-    .line 277
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
     invoke-virtual {v1}, Ljava/util/Stack;->peek()Ljava/lang/Object;
@@ -329,17 +297,14 @@
 
     goto :goto_0
 
-    .line 280
     .end local v0    # "containerAtom":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
     :cond_2
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     if-eq v1, v4, :cond_3
 
-    .line 281
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
-    .line 283
     :cond_3
     return-void
 .end method
@@ -351,33 +316,27 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 292
     const/16 v2, 0x8
 
     invoke-virtual {p0, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 293
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
-    .line 294
     .local v0, "majorBrand":I
     sget v2, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->BRAND_QUICKTIME:I
 
     if-ne v0, v2, :cond_0
 
-    .line 303
     :goto_0
     return v1
 
-    .line 297
     :cond_0
     const/4 v2, 0x4
 
     invoke-virtual {p0, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 298
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
@@ -385,7 +344,6 @@
 
     if-lez v2, :cond_2
 
-    .line 299
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v2
@@ -396,7 +354,6 @@
 
     goto :goto_0
 
-    .line 303
     :cond_2
     const/4 v1, 0x0
 
@@ -413,30 +370,24 @@
     .end annotation
 
     .prologue
-    .line 310
     const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 311
     .local v10, "durationUs":J
     new-instance v25, Ljava/util/ArrayList;
 
     invoke-direct/range {v25 .. v25}, Ljava/util/ArrayList;-><init>()V
 
-    .line 312
     .local v25, "tracks":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;>;"
     const-wide v12, 0x7fffffffffffffffL
 
-    .line 314
     .local v12, "earliestSampleOffset":J
     const/16 v20, 0x0
 
-    .line 315
     .local v20, "metadata":Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
     new-instance v17, Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;
 
     invoke-direct/range {v17 .. v17}, Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;-><init>()V
 
-    .line 316
     .local v17, "gaplessInfoHolder":Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;
     sget v5, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_udta:I
 
@@ -446,11 +397,9 @@
 
     move-result-object v26
 
-    .line 317
     .local v26, "udta":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$LeafAtom;
     if-eqz v26, :cond_0
 
-    .line 318
     move-object/from16 v0, p0
 
     iget-boolean v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->isQuickTime:Z
@@ -461,17 +410,14 @@
 
     move-result-object v20
 
-    .line 319
     if-eqz v20, :cond_0
 
-    .line 320
     move-object/from16 v0, v17
 
     move-object/from16 v1, v20
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;->setFromMetadata(Lorg/telegram/messenger/exoplayer2/metadata/Metadata;)Z
 
-    .line 324
     :cond_0
     const/16 v18, 0x0
 
@@ -489,7 +435,6 @@
 
     if-ge v0, v5, :cond_5
 
-    .line 325
     move-object/from16 v0, p1
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;->containerChildren:Ljava/util/List;
@@ -502,7 +447,6 @@
 
     check-cast v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
 
-    .line 326
     .local v4, "atom":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
     iget v5, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;->type:I
 
@@ -510,14 +454,12 @@
 
     if-eq v5, v6, :cond_2
 
-    .line 324
     :cond_1
     :goto_1
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_0
 
-    .line 330
     :cond_2
     sget v5, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_mvhd:I
 
@@ -539,11 +481,9 @@
 
     move-result-object v23
 
-    .line 332
     .local v23, "track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
     if-eqz v23, :cond_1
 
-    .line 336
     sget v5, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_mdia:I
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;->getContainerAtomOfType(I)Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
@@ -552,7 +492,6 @@
 
     sget v6, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_minf:I
 
-    .line 337
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;->getContainerAtomOfType(I)Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
 
     move-result-object v5
@@ -563,7 +502,6 @@
 
     move-result-object v22
 
-    .line 338
     .local v22, "stblAtom":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
     move-object/from16 v0, v23
 
@@ -575,7 +513,6 @@
 
     move-result-object v24
 
-    .line 339
     .local v24, "trackSampleTable":Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
     move-object/from16 v0, v24
 
@@ -583,7 +520,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 343
     new-instance v21, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
     move-object/from16 v0, p0
@@ -604,7 +540,6 @@
 
     invoke-direct {v0, v1, v2, v5}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;)V
 
-    .line 346
     .local v21, "mp4Track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
     move-object/from16 v0, v24
 
@@ -612,7 +547,6 @@
 
     add-int/lit8 v19, v5, 0x1e
 
-    .line 347
     .local v19, "maxInputSize":I
     move-object/from16 v0, v23
 
@@ -624,7 +558,6 @@
 
     move-result-object v16
 
-    .line 348
     .local v16, "format":Lorg/telegram/messenger/exoplayer2/Format;
     move-object/from16 v0, v23
 
@@ -634,14 +567,12 @@
 
     if-ne v5, v6, :cond_4
 
-    .line 349
     invoke-virtual/range {v17 .. v17}, Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;->hasGaplessInfo()Z
 
     move-result v5
 
     if-eqz v5, :cond_3
 
-    .line 350
     move-object/from16 v0, v17
 
     iget v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/GaplessInfoHolder;->encoderDelay:I
@@ -656,11 +587,9 @@
 
     move-result-object v16
 
-    .line 353
     :cond_3
     if-eqz v20, :cond_4
 
-    .line 354
     move-object/from16 v0, v16
 
     move-object/from16 v1, v20
@@ -669,7 +598,6 @@
 
     move-result-object v16
 
-    .line 357
     :cond_4
     move-object/from16 v0, v21
 
@@ -679,7 +607,6 @@
 
     invoke-interface {v5, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 359
     move-object/from16 v0, v23
 
     iget-wide v6, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;->durationUs:J
@@ -688,14 +615,12 @@
 
     move-result-wide v10
 
-    .line 360
     move-object/from16 v0, v25
 
     move-object/from16 v1, v21
 
     invoke-interface {v0, v1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 362
     move-object/from16 v0, v24
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
@@ -704,18 +629,15 @@
 
     aget-wide v14, v5, v6
 
-    .line 363
     .local v14, "firstSampleOffset":J
     cmp-long v5, v14, v12
 
     if-gez v5, :cond_1
 
-    .line 364
     move-wide v12, v14
 
     goto/16 :goto_1
 
-    .line 367
     .end local v4    # "atom":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$ContainerAtom;
     .end local v14    # "firstSampleOffset":J
     .end local v16    # "format":Lorg/telegram/messenger/exoplayer2/Format;
@@ -729,7 +651,6 @@
 
     iput-wide v10, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->durationUs:J
 
-    .line 368
     invoke-interface/range {v25 .. v25}, Ljava/util/List;->size()I
 
     move-result v5
@@ -748,14 +669,12 @@
 
     iput-object v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
-    .line 369
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     invoke-interface {v5}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
-    .line 370
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
@@ -764,7 +683,6 @@
 
     invoke-interface {v5, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;->seekMap(Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;)V
 
-    .line 371
     return-void
 .end method
 
@@ -787,12 +705,10 @@
 
     const/4 v5, 0x0
 
-    .line 194
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     if-nez v3, :cond_1
 
-    .line 196
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v3, v3, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -803,20 +719,16 @@
 
     if-nez v3, :cond_0
 
-    .line 235
     :goto_0
     return v5
 
-    .line 199
     :cond_0
     iput v10, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
-    .line 200
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v3, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 201
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
@@ -825,7 +737,6 @@
 
     iput-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
-    .line 202
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
@@ -834,7 +745,6 @@
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
-    .line 205
     :cond_1
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
@@ -844,10 +754,8 @@
 
     if-nez v3, :cond_2
 
-    .line 207
     const/16 v2, 0x8
 
-    .line 208
     .local v2, "headerBytesRemaining":I
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -855,14 +763,12 @@
 
     invoke-interface {p1, v3, v10, v2}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
-    .line 209
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     add-int/2addr v3, v2
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
-    .line 210
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedLongToLong()J
@@ -871,7 +777,6 @@
 
     iput-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
-    .line 213
     .end local v2    # "headerBytesRemaining":I
     :cond_2
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
@@ -882,7 +787,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 214
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
     move-result-wide v6
@@ -897,7 +801,6 @@
 
     sub-long v0, v6, v8
 
-    .line 215
     .local v0, "endPosition":J
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
@@ -909,7 +812,6 @@
 
     invoke-virtual {v3, v5}, Ljava/util/Stack;->add(Ljava/lang/Object;)Z
 
-    .line 216
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
@@ -920,24 +822,20 @@
 
     if-nez v3, :cond_3
 
-    .line 217
     invoke-direct {p0, v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->processAtomEnded(J)V
 
     .end local v0    # "endPosition":J
     :goto_1
     move v5, v4
 
-    .line 235
     goto :goto_0
 
-    .line 220
     .restart local v0    # "endPosition":J
     :cond_3
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     goto :goto_1
 
-    .line 222
     .end local v0    # "endPosition":J
     :cond_4
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
@@ -948,7 +846,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 225
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
     if-ne v3, v10, :cond_5
@@ -958,7 +855,6 @@
     :goto_2
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 226
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     const-wide/32 v8, 0x7fffffff
@@ -972,7 +868,6 @@
     :goto_3
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 227
     new-instance v3, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
@@ -983,7 +878,6 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 228
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeader:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v3, v3, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -994,7 +888,6 @@
 
     invoke-static {v3, v5, v6, v5, v10}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 229
     iput v11, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     goto :goto_1
@@ -1002,22 +895,18 @@
     :cond_5
     move v3, v5
 
-    .line 225
     goto :goto_2
 
     :cond_6
     move v3, v5
 
-    .line 226
     goto :goto_3
 
-    .line 231
     :cond_7
     const/4 v3, 0x0
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 232
     iput v11, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     goto :goto_1
@@ -1035,7 +924,6 @@
     .end annotation
 
     .prologue
-    .line 245
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomSize:J
 
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
@@ -1044,7 +932,6 @@
 
     sub-long v2, v6, v8
 
-    .line 246
     .local v2, "atomPayloadSize":J
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1052,17 +939,14 @@
 
     add-long v0, v6, v2
 
-    .line 247
     .local v0, "atomEndPosition":J
     const/4 v4, 0x0
 
-    .line 248
     .local v4, "seekRequired":Z
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     if-eqz v5, :cond_2
 
-    .line 249
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v5, v5, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -1073,14 +957,12 @@
 
     invoke-interface {p1, v5, v6, v7}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
-    .line 250
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomType:I
 
     sget v6, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_ftyp:I
 
     if-ne v5, v6, :cond_1
 
-    .line 251
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-static {v5}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->processFtypAtom(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;)Z
@@ -1089,12 +971,10 @@
 
     iput-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->isQuickTime:Z
 
-    .line 264
     :cond_0
     :goto_0
     invoke-direct {p0, v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->processAtomEnded(J)V
 
-    .line 265
     if-eqz v4, :cond_4
 
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
@@ -1108,7 +988,6 @@
     :goto_1
     return v5
 
-    .line 252
     :cond_1
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
@@ -1118,7 +997,6 @@
 
     if-nez v5, :cond_0
 
-    .line 253
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
     invoke-virtual {v5}, Ljava/util/Stack;->peek()Ljava/lang/Object;
@@ -1139,7 +1017,6 @@
 
     goto :goto_0
 
-    .line 257
     :cond_2
     const-wide/32 v6, 0x40000
 
@@ -1147,14 +1024,12 @@
 
     if-gez v5, :cond_3
 
-    .line 258
     long-to-int v5, v2
 
     invoke-interface {p1, v5}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
     goto :goto_0
 
-    .line 260
     :cond_3
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1164,12 +1039,10 @@
 
     iput-wide v6, p2, Lorg/telegram/messenger/exoplayer2/extractor/PositionHolder;->position:J
 
-    .line 261
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 265
     :cond_4
     const/4 v5, 0x0
 
@@ -1188,12 +1061,10 @@
     .end annotation
 
     .prologue
-    .line 391
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->getTrackIndexOfEarliestCurrentSample()I
 
     move-result v18
 
-    .line 392
     .local v18, "trackIndex":I
     const/4 v4, -0x1
 
@@ -1201,14 +1072,11 @@
 
     if-ne v0, v4, :cond_0
 
-    .line 393
     const/4 v4, -0x1
 
-    .line 454
     :goto_0
     return v4
 
-    .line 395
     :cond_0
     move-object/from16 v0, p0
 
@@ -1216,15 +1084,12 @@
 
     aget-object v15, v4, v18
 
-    .line 396
     .local v15, "track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
     iget-object v3, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 397
     .local v3, "trackOutput":Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
     iget v14, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
-    .line 398
     .local v14, "sampleIndex":I
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
@@ -1232,7 +1097,6 @@
 
     aget-wide v12, v4, v14
 
-    .line 399
     .local v12, "position":J
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
@@ -1240,7 +1104,6 @@
 
     aget v7, v4, v14
 
-    .line 400
     .local v7, "sampleSize":I
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
@@ -1250,15 +1113,12 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 403
     const-wide/16 v4, 0x8
 
     add-long/2addr v12, v4
 
-    .line 404
     add-int/lit8 v7, v7, -0x8
 
-    .line 406
     :cond_1
     invoke-interface/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1274,7 +1134,6 @@
 
     add-long v16, v4, v8
 
-    .line 407
     .local v16, "skipAmount":J
     const-wide/16 v4, 0x0
 
@@ -1288,18 +1147,15 @@
 
     if-ltz v4, :cond_3
 
-    .line 408
     :cond_2
     move-object/from16 v0, p2
 
     iput-wide v12, v0, Lorg/telegram/messenger/exoplayer2/extractor/PositionHolder;->position:J
 
-    .line 409
     const/4 v4, 0x1
 
     goto :goto_0
 
-    .line 411
     :cond_3
     move-wide/from16 v0, v16
 
@@ -1309,21 +1165,18 @@
 
     invoke-interface {v0, v4}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->skipFully(I)V
 
-    .line 412
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
     iget v4, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;->nalUnitLengthFieldLength:I
 
     if-eqz v4, :cond_5
 
-    .line 415
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v2, v4, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 416
     .local v2, "nalLengthData":[B
     const/4 v4, 0x0
 
@@ -1331,26 +1184,22 @@
 
     aput-byte v5, v2, v4
 
-    .line 417
     const/4 v4, 0x1
 
     const/4 v5, 0x0
 
     aput-byte v5, v2, v4
 
-    .line 418
     const/4 v4, 0x2
 
     const/4 v5, 0x0
 
     aput-byte v5, v2, v4
 
-    .line 419
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
     iget v10, v4, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;->nalUnitLengthFieldLength:I
 
-    .line 420
     .local v10, "nalUnitLengthFieldLength":I
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
@@ -1358,7 +1207,6 @@
 
     rsub-int/lit8 v11, v4, 0x4
 
-    .line 424
     .local v11, "nalUnitLengthFieldLengthDiff":I
     :goto_1
     move-object/from16 v0, p0
@@ -1367,14 +1215,12 @@
 
     if-ge v4, v7, :cond_6
 
-    .line 425
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
     if-nez v4, :cond_4
 
-    .line 427
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -1385,7 +1231,6 @@
 
     invoke-interface {v0, v4, v11, v10}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->readFully([BII)V
 
-    .line 428
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -1394,7 +1239,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 429
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalLength:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -1407,7 +1251,6 @@
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
-    .line 431
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalStartCode:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -1416,7 +1259,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 432
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->nalStartCode:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
@@ -1425,7 +1267,6 @@
 
     invoke-interface {v3, v4, v5}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 433
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
@@ -1436,12 +1277,10 @@
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
-    .line 434
     add-int/2addr v7, v11
 
     goto :goto_1
 
-    .line 437
     :cond_4
     move-object/from16 v0, p0
 
@@ -1455,7 +1294,6 @@
 
     move-result v19
 
-    .line 438
     .local v19, "writtenBytes":I
     move-object/from16 v0, p0
 
@@ -1467,7 +1305,6 @@
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
-    .line 439
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
@@ -1480,7 +1317,6 @@
 
     goto :goto_1
 
-    .line 443
     .end local v2    # "nalLengthData":[B
     .end local v10    # "nalUnitLengthFieldLength":I
     .end local v11    # "nalUnitLengthFieldLengthDiff":I
@@ -1493,7 +1329,6 @@
 
     if-ge v4, v7, :cond_6
 
-    .line 444
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
@@ -1508,7 +1343,6 @@
 
     move-result v19
 
-    .line 445
     .restart local v19    # "writtenBytes":I
     move-object/from16 v0, p0
 
@@ -1520,7 +1354,6 @@
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
-    .line 446
     move-object/from16 v0, p0
 
     iget v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
@@ -1533,7 +1366,6 @@
 
     goto :goto_2
 
-    .line 449
     .end local v19    # "writtenBytes":I
     :cond_6
     iget-object v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
@@ -1554,28 +1386,24 @@
 
     invoke-interface/range {v3 .. v9}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIII[B)V
 
-    .line 451
     iget v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
     add-int/lit8 v4, v4, 0x1
 
     iput v4, v15, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
-    .line 452
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
-    .line 453
     const/4 v4, 0x0
 
     move-object/from16 v0, p0
 
     iput v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
-    .line 454
     const/4 v4, 0x0
 
     goto/16 :goto_0
@@ -1586,7 +1414,6 @@
     .param p0, "atom"    # I
 
     .prologue
-    .line 497
     sget v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_moov:I
 
     if-eq p0, v0, :cond_0
@@ -1628,7 +1455,6 @@
     .param p0, "atom"    # I
 
     .prologue
-    .line 485
     sget v0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;->TYPE_mdhd:I
 
     if-eq p0, v0, :cond_0
@@ -1711,7 +1537,6 @@
     .locals 2
 
     .prologue
-    .line 163
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->durationUs:J
 
     return-wide v0
@@ -1722,10 +1547,8 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 168
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 169
     .local v0, "earliestSamplePosition":J
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->tracks:[Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
 
@@ -1738,52 +1561,42 @@
 
     aget-object v6, v8, v7
 
-    .line 170
     .local v6, "track":Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;
     iget-object v5, v6, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
-    .line 171
     .local v5, "sampleTable":Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
     invoke-virtual {v5, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfEarlierOrEqualSynchronizationSample(J)I
 
     move-result v4
 
-    .line 172
     .local v4, "sampleIndex":I
     const/4 v10, -0x1
 
     if-ne v4, v10, :cond_0
 
-    .line 174
     invoke-virtual {v5, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;->getIndexOfLaterOrEqualSynchronizationSample(J)I
 
     move-result v4
 
-    .line 176
     :cond_0
     iput v4, v6, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleIndex:I
 
-    .line 178
     iget-object v10, v5, Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;->offsets:[J
 
     aget-wide v2, v10, v4
 
-    .line 179
     .local v2, "offset":J
     cmp-long v10, v2, v0
 
     if-gez v10, :cond_1
 
-    .line 180
     move-wide v0, v2
 
-    .line 169
     :cond_1
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 183
     .end local v2    # "offset":J
     .end local v4    # "sampleIndex":I
     .end local v5    # "sampleTable":Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
@@ -1797,10 +1610,8 @@
     .param p1, "output"    # Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     .prologue
-    .line 109
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
-    .line 110
     return-void
 .end method
 
@@ -1808,7 +1619,6 @@
     .locals 1
 
     .prologue
-    .line 158
     const/4 v0, 0x1
 
     return v0
@@ -1826,14 +1636,12 @@
     .end annotation
 
     .prologue
-    .line 130
     :cond_0
     :goto_0
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 149
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->readSample(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;Lorg/telegram/messenger/exoplayer2/extractor/PositionHolder;)I
 
     move-result v0
@@ -1841,7 +1649,6 @@
     :goto_1
     return v0
 
-    .line 132
     :pswitch_0
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->getPosition()J
 
@@ -1853,12 +1660,10 @@
 
     if-nez v0, :cond_1
 
-    .line 133
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->enterReadingAtomHeaderState()V
 
     goto :goto_0
 
-    .line 135
     :cond_1
     const/4 v0, 0x3
 
@@ -1866,7 +1671,6 @@
 
     goto :goto_0
 
-    .line 139
     :pswitch_1
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->readAtomHeader(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
 
@@ -1874,12 +1678,10 @@
 
     if-nez v0, :cond_0
 
-    .line 140
     const/4 v0, -0x1
 
     goto :goto_1
 
-    .line 144
     :pswitch_2
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->readAtomPayload(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;Lorg/telegram/messenger/exoplayer2/extractor/PositionHolder;)Z
 
@@ -1887,12 +1689,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 145
     const/4 v0, 0x1
 
     goto :goto_1
 
-    .line 130
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -1905,7 +1705,6 @@
     .locals 0
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -1916,24 +1715,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->containerAtoms:Ljava/util/Stack;
 
     invoke-virtual {v0}, Ljava/util/Stack;->clear()V
 
-    .line 115
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->atomHeaderBytesRead:I
 
-    .line 116
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleBytesWritten:I
 
-    .line 117
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->sampleCurrentNalBytesRemaining:I
 
-    .line 118
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor;->parserState:I
 
-    .line 119
     return-void
 .end method
 
@@ -1948,7 +1741,6 @@
     .end annotation
 
     .prologue
-    .line 104
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Sniffer;->sniffUnfragmented(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
 
     move-result v0

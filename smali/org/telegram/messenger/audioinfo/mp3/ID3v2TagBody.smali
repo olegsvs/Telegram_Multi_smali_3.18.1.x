@@ -25,10 +25,8 @@
     .end annotation
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 31
     new-instance v0, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
 
     int-to-long v4, p4
@@ -41,7 +39,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->input:Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
 
-    .line 32
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
     iget-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->input:Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
@@ -50,10 +47,8 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->data:Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
-    .line 33
     iput-object p5, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->tagHeader:Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
 
-    .line 34
     return-void
 .end method
 
@@ -72,16 +67,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 53
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->getBodySize()I
 
     move-result v4
 
-    .line 54
     .local v4, "dataLength":I
     iget-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->input:Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
 
-    .line 55
     .local v1, "input":Ljava/io/InputStream;
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->isUnsynchronization()Z
 
@@ -89,7 +81,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 56
     iget-object v2, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->data:Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->getBodySize()I
@@ -100,15 +91,12 @@
 
     move-result-object v8
 
-    .line 57
     .local v8, "bytes":[B
     const/4 v9, 0x0
 
-    .line 58
     .local v9, "ff":Z
     const/4 v11, 0x0
 
-    .line 59
     .local v11, "len":I
     array-length v3, v8
 
@@ -123,13 +111,11 @@
 
     aget-byte v7, v8, v2
 
-    .line 60
     .local v7, "b":B
     if-eqz v9, :cond_0
 
     if-eqz v7, :cond_6
 
-    .line 61
     :cond_0
     add-int/lit8 v11, v12, 0x1
 
@@ -137,7 +123,6 @@
     .restart local v11    # "len":I
     aput-byte v7, v8, v12
 
-    .line 63
     :goto_1
     const/16 v5, 0xff
 
@@ -145,7 +130,6 @@
 
     const/4 v9, 0x1
 
-    .line 59
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
@@ -160,23 +144,19 @@
     :cond_1
     move v9, v0
 
-    .line 63
     goto :goto_2
 
-    .line 65
     .end local v7    # "b":B
     .end local v11    # "len":I
     .restart local v12    # "len":I
     :cond_2
     move v4, v12
 
-    .line 66
     new-instance v1, Ljava/io/ByteArrayInputStream;
 
     .end local v1    # "input":Ljava/io/InputStream;
     invoke-direct {v1, v8, v0, v12}, Ljava/io/ByteArrayInputStream;-><init>([BII)V
 
-    .line 68
     .end local v8    # "bytes":[B
     .end local v9    # "ff":Z
     .end local v12    # "len":I
@@ -188,7 +168,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 69
     new-instance v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
 
     const-string/jumbo v2, "Frame encryption is not supported"
@@ -197,7 +176,6 @@
 
     throw v0
 
-    .line 71
     :cond_4
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->isCompression()Z
 
@@ -205,12 +183,10 @@
 
     if-eqz v0, :cond_5
 
-    .line 72
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->getDataLengthIndicator()I
 
     move-result v4
 
-    .line 73
     new-instance v10, Ljava/util/zip/InflaterInputStream;
 
     invoke-direct {v10, v1}, Ljava/util/zip/InflaterInputStream;-><init>(Ljava/io/InputStream;)V
@@ -219,7 +195,6 @@
     .local v10, "input":Ljava/io/InputStream;
     move-object v1, v10
 
-    .line 75
     .end local v10    # "input":Ljava/io/InputStream;
     .restart local v1    # "input":Ljava/io/InputStream;
     :cond_5
@@ -255,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 37
     iget-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->data:Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
     return-object v0
@@ -265,7 +239,6 @@
     .locals 2
 
     .prologue
-    .line 41
     iget-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->input:Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getPosition()J
@@ -279,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->input:Lorg/telegram/messenger/audioinfo/util/RangeInputStream;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/util/RangeInputStream;->getRemainingLength()J
@@ -293,7 +265,6 @@
     .locals 1
 
     .prologue
-    .line 49
     iget-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->tagHeader:Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
 
     return-object v0
@@ -303,7 +274,6 @@
     .locals 4
 
     .prologue
-    .line 79
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

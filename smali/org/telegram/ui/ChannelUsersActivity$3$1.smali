@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelUsersActivity$3;
 
     .prologue
-    .line 264
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->val$finalParticipant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
@@ -47,10 +46,8 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 267
     if-nez p2, :cond_0
 
-    .line 268
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -61,7 +58,6 @@
 
     if-nez v1, :cond_1
 
-    .line 269
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -74,7 +70,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 270
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -85,18 +80,15 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 271
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;-><init>()V
 
-    .line 272
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;->kicked:Z
 
-    .line 273
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->val$finalParticipant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     iget v1, v1, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->user_id:I
@@ -107,7 +99,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 274
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -122,7 +113,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 275
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -133,13 +123,11 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 299
     .end local v0    # "req":Lorg/telegram/tgnet/TLRPC$TL_channels_kickFromChannel;
     :cond_0
     :goto_0
     return-void
 
-    .line 293
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
@@ -153,7 +141,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 294
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -182,7 +169,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$3;
 
@@ -196,7 +182,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 296
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1

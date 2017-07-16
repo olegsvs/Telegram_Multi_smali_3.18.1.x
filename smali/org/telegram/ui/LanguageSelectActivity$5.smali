@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 194
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$5;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "newState"    # I
 
     .prologue
-    .line 197
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
@@ -61,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 198
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$5;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LanguageSelectActivity;->getParentActivity()Landroid/app/Activity;
@@ -74,7 +71,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 200
     :cond_0
     return-void
 .end method

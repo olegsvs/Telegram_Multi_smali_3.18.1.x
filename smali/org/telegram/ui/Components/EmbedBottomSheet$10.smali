@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     .prologue
-    .line 633
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$10;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 636
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$10;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$1400(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/app/Activity;
@@ -57,11 +55,9 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/browser/Browser;->openUrl(Landroid/content/Context;Ljava/lang/String;)V
 
-    .line 637
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$10;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmbedBottomSheet;->dismiss()V
 
-    .line 638
     return-void
 .end method

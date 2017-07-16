@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 13225
     const v0, 0xbb2d201
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->constructor:I
@@ -48,10 +47,8 @@
     .locals 1
 
     .prologue
-    .line 13224
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
-    .line 13227
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -73,14 +70,12 @@
 
     const/4 v5, 0x0
 
-    .line 13230
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->flags:I
 
-    .line 13231
     iget v3, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->flags:I
 
     and-int/lit8 v3, v3, 0x1
@@ -92,21 +87,17 @@
     :goto_0
     iput-boolean v3, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->masks:Z
 
-    .line 13232
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 13233
     .local v2, "magic":I
     const v3, 0x1cb5c415
 
     if-eq v2, v3, :cond_1
 
-    .line 13234
     if-eqz p2, :cond_2
 
-    .line 13235
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string/jumbo v6, "wrong Vector magic, got %x"
@@ -131,17 +122,14 @@
     :cond_0
     move v3, v5
 
-    .line 13231
     goto :goto_0
 
-    .line 13239
     .restart local v2    # "magic":I
     :cond_1
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 13240
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -149,7 +137,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 13241
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->order:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
@@ -162,12 +149,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 13240
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 13243
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_2
@@ -179,12 +164,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 13246
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13247
     iget-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->masks:Z
 
     if-eqz v2, :cond_0
@@ -196,35 +179,29 @@
     :goto_0
     iput v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->flags:I
 
-    .line 13248
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->flags:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13249
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13250
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 13251
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 13252
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 13253
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -239,12 +216,10 @@
 
     invoke-virtual {p1, v2, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 13252
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 13247
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_0
@@ -254,7 +229,6 @@
 
     goto :goto_0
 
-    .line 13255
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     :cond_1

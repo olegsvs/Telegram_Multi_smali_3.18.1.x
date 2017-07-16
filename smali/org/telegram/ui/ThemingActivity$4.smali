@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingActivity;
 
     .prologue
-    .line 460
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 463
     .local p1, "adapterView":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
@@ -63,14 +61,11 @@
 
     if-nez v0, :cond_0
 
-    .line 464
     const/4 v0, 0x0
 
-    .line 471
     :goto_0
     return v0
 
-    .line 466
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
@@ -80,21 +75,18 @@
 
     if-ne p3, v0, :cond_2
 
-    .line 467
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     const v1, -0xff6978
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ThemingActivity;->access$300(Lorg/telegram/ui/ThemingActivity;I)V
 
-    .line 471
     :cond_1
     :goto_1
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 468
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
@@ -104,7 +96,6 @@
 
     if-ne p3, v0, :cond_1
 
-    .line 469
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     const-string/jumbo v1, "dialogColor"

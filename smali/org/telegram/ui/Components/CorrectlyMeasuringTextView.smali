@@ -9,10 +9,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 11
     invoke-direct {p0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 12
     return-void
 .end method
 
@@ -22,10 +20,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 15
     invoke-direct {p0, p1, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 16
     return-void
 .end method
 
@@ -36,10 +32,8 @@
     .param p3, "defStyle"    # I
 
     .prologue
-    .line 19
     invoke-direct {p0, p1, p2, p3}, Landroid/widget/TextView;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;I)V
 
-    .line 20
     return-void
 .end method
 
@@ -53,16 +47,13 @@
     .prologue
     const/high16 v7, 0x40000000    # 2.0f
 
-    .line 23
     invoke-super {p0, p1, p2}, Landroid/widget/TextView;->onMeasure(II)V
 
-    .line 25
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/CorrectlyMeasuringTextView;->getLayout()Landroid/text/Layout;
 
     move-result-object v1
 
-    .line 26
     .local v1, "l":Landroid/text/Layout;
     invoke-virtual {v1}, Landroid/text/Layout;->getLineCount()I
 
@@ -72,17 +63,14 @@
 
     if-gt v3, v4, :cond_0
 
-    .line 34
     .end local v1    # "l":Landroid/text/Layout;
     :goto_0
     return-void
 
-    .line 27
     .restart local v1    # "l":Landroid/text/Layout;
     :cond_0
     const/4 v2, 0x0
 
-    .line 28
     .local v2, "maxw":I
     invoke-virtual {v1}, Landroid/text/Layout;->getLineCount()I
 
@@ -94,7 +82,6 @@
     :goto_1
     if-ltz v0, :cond_1
 
-    .line 29
     invoke-virtual {v1}, Landroid/text/Layout;->getPaint()Landroid/text/TextPaint;
 
     move-result-object v3
@@ -123,12 +110,10 @@
 
     move-result v2
 
-    .line 28
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 31
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/CorrectlyMeasuringTextView;->getPaddingLeft()I
 
@@ -164,7 +149,6 @@
 
     goto :goto_0
 
-    .line 32
     .end local v0    # "i":I
     .end local v1    # "l":Landroid/text/Layout;
     .end local v2    # "maxw":I

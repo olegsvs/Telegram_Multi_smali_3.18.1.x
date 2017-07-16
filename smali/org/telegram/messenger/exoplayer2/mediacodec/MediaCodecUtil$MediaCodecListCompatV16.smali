@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 501
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$1;
 
     .prologue
-    .line 501
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV16;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 505
     invoke-static {}, Landroid/media/MediaCodecList;->getCodecCount()I
 
     move-result v0
@@ -58,7 +55,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 510
     invoke-static {p1}, Landroid/media/MediaCodecList;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v0
@@ -72,7 +68,6 @@
     .param p2, "capabilities"    # Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     .prologue
-    .line 522
     const-string/jumbo v0, "video/avc"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -86,7 +81,6 @@
     .locals 1
 
     .prologue
-    .line 515
     const/4 v0, 0x0
 
     return v0

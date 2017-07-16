@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     .prologue
-    .line 431
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$8;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$8;->val$query:Ljava/lang/String;
@@ -63,13 +62,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 434
     new-instance v0, Lorg/telegram/ui/Adapters/MentionsAdapter$8$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Adapters/MentionsAdapter$8$1;-><init>(Lorg/telegram/ui/Adapters/MentionsAdapter$8;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 493
     return-void
 .end method

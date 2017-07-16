@@ -35,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 5265
     const v0, 0x38935eb2
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->constructor:I
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 5264
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,15 +58,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 5274
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 5275
     if-eqz p2, :cond_0
 
-    .line 5276
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_inputPeerNotifySettings"
@@ -93,21 +88,17 @@
 
     throw v1
 
-    .line 5278
     :cond_0
     const/4 v0, 0x0
 
-    .line 5283
     :goto_0
     return-object v0
 
-    .line 5281
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;-><init>()V
 
-    .line 5282
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -126,14 +117,12 @@
 
     const/4 v2, 0x0
 
-    .line 5287
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
-    .line 5288
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -145,7 +134,6 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->show_previews:Z
 
-    .line 5289
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -155,33 +143,28 @@
     :goto_1
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->silent:Z
 
-    .line 5290
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->mute_until:I
 
-    .line 5291
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->sound:Ljava/lang/String;
 
-    .line 5292
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 5288
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 5289
     goto :goto_1
 .end method
 
@@ -190,12 +173,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 5295
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5296
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->show_previews:Z
 
     if-eqz v0, :cond_0
@@ -207,7 +188,6 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
-    .line 5297
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->silent:Z
 
     if-eqz v0, :cond_1
@@ -219,25 +199,20 @@
     :goto_1
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
-    .line 5298
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5299
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->mute_until:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5300
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->sound:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 5301
     return-void
 
-    .line 5296
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 
@@ -245,7 +220,6 @@
 
     goto :goto_0
 
-    .line 5297
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_inputPeerNotifySettings;->flags:I
 

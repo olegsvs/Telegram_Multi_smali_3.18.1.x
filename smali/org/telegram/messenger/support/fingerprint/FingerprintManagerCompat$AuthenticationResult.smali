@@ -24,13 +24,10 @@
     .param p1, "crypto"    # Lorg/telegram/messenger/support/fingerprint/FingerprintManagerCompat$CryptoObject;
 
     .prologue
-    .line 153
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 154
     iput-object p1, p0, Lorg/telegram/messenger/support/fingerprint/FingerprintManagerCompat$AuthenticationResult;->mCryptoObject:Lorg/telegram/messenger/support/fingerprint/FingerprintManagerCompat$CryptoObject;
 
-    .line 155
     return-void
 .end method
 
@@ -40,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 162
     iget-object v0, p0, Lorg/telegram/messenger/support/fingerprint/FingerprintManagerCompat$AuthenticationResult;->mCryptoObject:Lorg/telegram/messenger/support/fingerprint/FingerprintManagerCompat$CryptoObject;
 
     return-object v0

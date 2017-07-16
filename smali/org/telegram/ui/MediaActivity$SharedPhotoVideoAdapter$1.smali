@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;
 
     .prologue
-    .line 1840
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,12 @@
     .param p4, "a"    # I
 
     .prologue
-    .line 1843
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0, p2, p1, p3, p4}, Lorg/telegram/ui/MediaActivity;->access$2100(Lorg/telegram/ui/MediaActivity;ILandroid/view/View;Lorg/telegram/messenger/MessageObject;I)V
 
-    .line 1844
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .param p4, "a"    # I
 
     .prologue
-    .line 1848
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$SharedPhotoVideoAdapter;->this$0:Lorg/telegram/ui/MediaActivity;

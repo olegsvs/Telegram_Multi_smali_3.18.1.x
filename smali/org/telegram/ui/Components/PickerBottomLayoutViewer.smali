@@ -19,12 +19,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;-><init>(Landroid/content/Context;Z)V
 
-    .line 34
     return-void
 .end method
 
@@ -44,13 +42,10 @@
 
     const/4 v6, 0x0
 
-    .line 37
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 38
     iput-boolean p2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
 
-    .line 40
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
 
     if-eqz v1, :cond_0
@@ -60,14 +55,12 @@
     :goto_0
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->setBackgroundColor(I)V
 
-    .line 42
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
-    .line 43
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     const/4 v4, 0x1
@@ -76,7 +69,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 44
     iget-object v4, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -88,14 +80,12 @@
     :goto_1
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 45
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     const/16 v4, 0x11
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 46
     iget-object v4, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -111,7 +101,6 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 47
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -124,7 +113,6 @@
 
     invoke-virtual {v1, v4, v6, v5, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 48
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     const-string/jumbo v4, "Cancel"
@@ -141,7 +129,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 49
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     const-string/jumbo v4, "fonts/rmedium.ttf"
@@ -152,7 +139,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 50
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->cancelButton:Landroid/widget/TextView;
 
     const/16 v4, 0x33
@@ -163,14 +149,12 @@
 
     invoke-virtual {p0, v1, v4}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 52
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
-    .line 53
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const/4 v4, 0x1
@@ -179,7 +163,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 54
     iget-object v4, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -191,14 +174,12 @@
     :goto_3
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 55
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const/16 v4, 0x11
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 56
     iget-object v4, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -214,7 +195,6 @@
 
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 57
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -227,7 +207,6 @@
 
     invoke-virtual {v1, v4, v6, v5, v6}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 58
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const-string/jumbo v4, "Send"
@@ -244,7 +223,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 59
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const-string/jumbo v4, "fonts/rmedium.ttf"
@@ -255,7 +233,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 60
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const/16 v4, 0x35
@@ -266,14 +243,12 @@
 
     invoke-virtual {p0, v1, v4}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 62
     new-instance v1, Landroid/widget/TextView;
 
     invoke-direct {v1, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
-    .line 63
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const-string/jumbo v4, "fonts/rmedium.ttf"
@@ -284,7 +259,6 @@
 
     invoke-virtual {v1, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 64
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/4 v4, 0x1
@@ -293,19 +267,16 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 65
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 66
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 67
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -317,7 +288,6 @@
     :goto_5
     invoke-virtual {v2, v1}, Landroid/widget/TextView;->setBackgroundResource(I)V
 
-    .line 69
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1}, Landroid/widget/TextView;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -330,7 +300,6 @@
 
     invoke-virtual {v1, v2, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 71
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/high16 v2, 0x41b80000    # 23.0f
@@ -341,7 +310,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setMinWidth(I)V
 
-    .line 72
     iget-object v1, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/high16 v2, 0x41000000    # 8.0f
@@ -364,7 +332,6 @@
 
     invoke-virtual {v1, v2, v6, v4, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 73
     iget-object v7, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41b80000    # 23.0f
@@ -383,40 +350,33 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 74
     return-void
 
     :cond_0
     move v1, v2
 
-    .line 40
     goto/16 :goto_0
 
-    .line 44
     :cond_1
     const v1, -0xe65818
 
     goto/16 :goto_1
 
-    .line 46
     :cond_2
     const/high16 v1, 0x2f000000
 
     goto/16 :goto_2
 
-    .line 54
     :cond_3
     const v1, -0xe65818
 
     goto/16 :goto_3
 
-    .line 56
     :cond_4
     const/high16 v1, 0x2f000000
 
     goto/16 :goto_4
 
-    .line 67
     :cond_5
     const v1, 0x7f020029
 
@@ -439,37 +399,30 @@
 
     const/4 v6, 0x0
 
-    .line 77
     if-nez p1, :cond_3
 
-    .line 78
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const/16 v3, 0x8
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 80
     if-eqz p2, :cond_1
 
-    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     const v1, -0x666667
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v6}, Landroid/widget/TextView;->setEnabled(Z)V
 
-    .line 95
     :cond_0
     :goto_0
     return-void
 
-    .line 84
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
@@ -487,13 +440,11 @@
 
     goto :goto_1
 
-    .line 87
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v6}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 88
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButtonBadgeTextView:Landroid/widget/TextView;
 
     const-string/jumbo v3, "%d"
@@ -512,7 +463,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 90
     iget-object v2, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     iget-boolean v3, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->isDarkTheme:Z
@@ -522,10 +472,8 @@
     :goto_2
     invoke-virtual {v2, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 91
     if-eqz p2, :cond_0
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->doneButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, v7}, Landroid/widget/TextView;->setEnabled(Z)V
@@ -535,6 +483,5 @@
     :cond_4
     move v0, v1
 
-    .line 90
     goto :goto_2
 .end method

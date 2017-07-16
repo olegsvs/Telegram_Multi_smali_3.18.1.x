@@ -43,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 106
     return-void
 .end method
 
@@ -55,7 +53,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     invoke-direct {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->saveName()V
 
     return-void
@@ -66,7 +63,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->doneButton:Landroid/view/View;
 
     return-object v0
@@ -77,7 +73,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -89,7 +84,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 63
     iput-boolean p1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->lastNameAvailable:Z
 
     return p1
@@ -100,7 +94,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-boolean v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->ignoreCheck:Z
 
     return v0
@@ -111,7 +104,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     return-object v0
@@ -124,7 +116,6 @@
     .param p2, "x2"    # Z
 
     .prologue
-    .line 63
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ChangeUsernameActivity;->checkUserName(Ljava/lang/String;Z)Z
 
     move-result v0
@@ -137,7 +128,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->infoText:Ljava/lang/CharSequence;
 
     return-object v0
@@ -148,7 +138,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -160,7 +149,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 63
     iput p1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkReqId:I
 
     return p1
@@ -171,7 +159,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->lastCheckName:Ljava/lang/String;
 
     return-object v0
@@ -193,7 +180,6 @@
 
     const/4 v4, 0x0
 
-    .line 263
     if-eqz p1, :cond_1
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -202,12 +188,10 @@
 
     if-lez v5, :cond_1
 
-    .line 264
     iget-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     invoke-virtual {v5, v4}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 268
     :goto_0
     if-eqz p2, :cond_2
 
@@ -217,12 +201,10 @@
 
     if-nez v5, :cond_2
 
-    .line 381
     :cond_0
     :goto_1
     return v3
 
-    .line 266
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -232,33 +214,27 @@
 
     goto :goto_0
 
-    .line 271
     :cond_2
     iget-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkRunnable:Ljava/lang/Runnable;
 
     if-eqz v5, :cond_3
 
-    .line 272
     iget-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkRunnable:Ljava/lang/Runnable;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 273
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkRunnable:Ljava/lang/Runnable;
 
-    .line 274
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->lastCheckName:Ljava/lang/String;
 
-    .line 275
     iget v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkReqId:I
 
     if-eqz v5, :cond_3
 
-    .line 276
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -267,14 +243,11 @@
 
     invoke-virtual {v5, v6, v3}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 279
     :cond_3
     iput-boolean v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->lastNameAvailable:Z
 
-    .line 280
     if-eqz p1, :cond_d
 
-    .line 281
     const-string/jumbo v5, "_"
 
     invoke-virtual {p1, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -291,7 +264,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 282
     :cond_4
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -303,14 +275,12 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 283
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 284
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
@@ -323,10 +293,8 @@
 
     move v3, v4
 
-    .line 285
     goto :goto_1
 
-    .line 287
     :cond_5
     const/4 v0, 0x0
 
@@ -338,12 +306,10 @@
 
     if-ge v0, v5, :cond_d
 
-    .line 288
     invoke-virtual {p1, v0}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 289
     .local v1, "ch":C
     if-nez v0, :cond_7
 
@@ -351,10 +317,8 @@
 
     if-gt v1, v9, :cond_7
 
-    .line 290
     if-eqz p2, :cond_6
 
-    .line 291
     const-string/jumbo v3, "UsernameInvalidStartNumber"
 
     const v5, 0x7f070665
@@ -368,10 +332,8 @@
     :goto_3
     move v3, v4
 
-    .line 297
     goto :goto_1
 
-    .line 293
     :cond_6
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -385,14 +347,12 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 294
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 295
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
@@ -405,7 +365,6 @@
 
     goto :goto_3
 
-    .line 299
     :cond_7
     if-lt v1, v8, :cond_8
 
@@ -434,10 +393,8 @@
 
     if-eq v1, v5, :cond_c
 
-    .line 300
     if-eqz p2, :cond_b
 
-    .line 301
     const-string/jumbo v3, "UsernameInvalid"
 
     invoke-static {v3, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -449,10 +406,8 @@
     :goto_4
     move v3, v4
 
-    .line 307
     goto/16 :goto_1
 
-    .line 303
     :cond_b
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -464,14 +419,12 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 304
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 305
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
@@ -484,13 +437,11 @@
 
     goto :goto_4
 
-    .line 287
     :cond_c
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_2
 
-    .line 311
     .end local v0    # "a":I
     .end local v1    # "ch":C
     :cond_d
@@ -504,11 +455,9 @@
 
     if-ge v5, v6, :cond_10
 
-    .line 312
     :cond_e
     if-eqz p2, :cond_f
 
-    .line 313
     const-string/jumbo v3, "UsernameInvalidShort"
 
     const v5, 0x7f070664
@@ -522,10 +471,8 @@
     :goto_5
     move v3, v4
 
-    .line 319
     goto/16 :goto_1
 
-    .line 315
     :cond_f
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -539,14 +486,12 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 316
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 317
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
@@ -559,7 +504,6 @@
 
     goto :goto_5
 
-    .line 321
     :cond_10
     invoke-virtual {p1}, Ljava/lang/String;->length()I
 
@@ -569,10 +513,8 @@
 
     if-le v5, v6, :cond_12
 
-    .line 322
     if-eqz p2, :cond_11
 
-    .line 323
     const-string/jumbo v3, "UsernameInvalidLong"
 
     const v5, 0x7f070663
@@ -586,10 +528,8 @@
     :goto_6
     move v3, v4
 
-    .line 329
     goto/16 :goto_1
 
-    .line 325
     :cond_11
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -603,14 +543,12 @@
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 326
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
 
     invoke-virtual {v3, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 327
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteRedText4"
@@ -623,25 +561,20 @@
 
     goto :goto_6
 
-    .line 332
     :cond_12
     if-nez p2, :cond_0
 
-    .line 333
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v5
 
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
-    .line 334
     .local v2, "currentName":Ljava/lang/String;
     if-nez v2, :cond_13
 
-    .line 335
     const-string/jumbo v2, ""
 
-    .line 337
     :cond_13
     invoke-virtual {p1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -649,7 +582,6 @@
 
     if-eqz v5, :cond_14
 
-    .line 338
     iget-object v5, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v6, "UsernameAvailable"
@@ -666,14 +598,12 @@
 
     invoke-virtual {v5, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 339
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteGreenText"
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 340
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteGreenText"
@@ -686,7 +616,6 @@
 
     goto/16 :goto_1
 
-    .line 344
     :cond_14
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
@@ -700,14 +629,12 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 345
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteGrayText8"
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 346
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const-string/jumbo v5, "windowBackgroundWhiteGrayText8"
@@ -718,17 +645,14 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 347
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->lastCheckName:Ljava/lang/String;
 
-    .line 348
     new-instance v4, Lorg/telegram/ui/ChangeUsernameActivity$5;
 
     invoke-direct {v4, p0, p1}, Lorg/telegram/ui/ChangeUsernameActivity$5;-><init>(Lorg/telegram/ui/ChangeUsernameActivity;Ljava/lang/String;)V
 
     iput-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkRunnable:Ljava/lang/Runnable;
 
-    .line 379
     iget-object v4, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkRunnable:Ljava/lang/Runnable;
 
     const-wide/16 v6, 0x12c
@@ -746,7 +670,6 @@
 
     const/4 v9, 0x1
 
-    .line 385
     iget-object v6, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-virtual {v6}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -763,18 +686,15 @@
 
     if-nez v6, :cond_1
 
-    .line 461
     :cond_0
     :goto_0
     return-void
 
-    .line 388
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v5
 
-    .line 389
     .local v5, "user":Lorg/telegram/tgnet/TLRPC$User;
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->getParentActivity()Landroid/app/Activity;
 
@@ -784,17 +704,13 @@
 
     if-eqz v5, :cond_0
 
-    .line 392
     iget-object v0, v5, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
-    .line 393
     .local v0, "currentName":Ljava/lang/String;
     if-nez v0, :cond_2
 
-    .line 394
     const-string/jumbo v0, ""
 
-    .line 396
     :cond_2
     iget-object v6, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
@@ -806,7 +722,6 @@
 
     move-result-object v1
 
-    .line 397
     .local v1, "newName":Ljava/lang/String;
     invoke-virtual {v0, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -814,12 +729,10 @@
 
     if-eqz v6, :cond_3
 
-    .line 398
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->finishFragment()V
 
     goto :goto_0
 
-    .line 402
     :cond_3
     new-instance v2, Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -829,7 +742,6 @@
 
     invoke-direct {v2, v6, v9}, Lorg/telegram/ui/ActionBar/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 403
     .local v2, "progressDialog":Lorg/telegram/ui/ActionBar/AlertDialog;
     const-string/jumbo v6, "Loading"
 
@@ -841,22 +753,17 @@
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 404
     invoke-virtual {v2, v10}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 405
     invoke-virtual {v2, v10}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 407
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateUsername;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_account_updateUsername;-><init>()V
 
-    .line 408
     .local v3, "req":Lorg/telegram/tgnet/TLRPC$TL_account_updateUsername;
     iput-object v1, v3, Lorg/telegram/tgnet/TLRPC$TL_account_updateUsername;->username:Ljava/lang/String;
 
-    .line 410
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v6
@@ -873,7 +780,6 @@
 
     invoke-virtual {v6, v7, v8}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 411
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v6
@@ -888,7 +794,6 @@
 
     move-result v4
 
-    .line 447
     .local v4, "reqId":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -898,7 +803,6 @@
 
     invoke-virtual {v6, v4, v7}, Lorg/telegram/tgnet/ConnectionsManager;->bindRequestToGuid(II)V
 
-    .line 449
     const/4 v6, -0x2
 
     const-string/jumbo v7, "Cancel"
@@ -915,7 +819,6 @@
 
     invoke-virtual {v2, v6, v7, v8}, Lorg/telegram/ui/ActionBar/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 460
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->show()V
 
     goto/16 :goto_0
@@ -925,21 +828,18 @@
     .locals 3
 
     .prologue
-    .line 255
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarColor:I
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 256
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarTitleColor:I
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitleColor(I)V
 
-    .line 257
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -954,7 +854,6 @@
 
     move-result-object v0
 
-    .line 258
     .local v0, "back":Landroid/graphics/drawable/Drawable;
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -962,12 +861,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 259
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 260
     return-void
 .end method
 
@@ -978,21 +875,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 124
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v1, 0x7f0200b6
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 126
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v1, "Username"
@@ -1005,7 +899,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 127
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$1;
@@ -1014,14 +907,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v9
 
-    .line 140
     .local v9, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1033,7 +924,6 @@
 
     move-result-object v10
 
-    .line 141
     .local v10, "themePrefs":Landroid/content/SharedPreferences;
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->getParentActivity()Landroid/app/Activity;
 
@@ -1049,7 +939,6 @@
 
     move-result-object v7
 
-    .line 142
     .local v7, "done":Landroid/graphics/drawable/Drawable;
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -1057,7 +946,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 143
     const/4 v0, 0x1
 
     const/high16 v1, 0x42600000    # 56.0f
@@ -1072,7 +960,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->doneButton:Landroid/view/View;
 
-    .line 144
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -1089,16 +976,13 @@
 
     move-result-object v11
 
-    .line 145
     .local v11, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v11, :cond_0
 
-    .line 146
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v11
 
-    .line 149
     :cond_0
     new-instance v0, Landroid/widget/LinearLayout;
 
@@ -1106,18 +990,14 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->fragmentView:Landroid/view/View;
 
-    .line 150
     iget-object v8, p0, Lorg/telegram/ui/ChangeUsernameActivity;->fragmentView:Landroid/view/View;
 
     check-cast v8, Landroid/widget/LinearLayout;
 
-    .line 151
-    .local v8, "linearLayout":Landroid/widget/LinearLayout;
     const/4 v0, 0x1
 
     invoke-virtual {v8, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 152
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->fragmentView:Landroid/view/View;
 
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$2;
@@ -1126,14 +1006,12 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 159
     new-instance v0, Landroid/widget/EditText;
 
     invoke-direct {v0, p1}, Landroid/widget/EditText;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x1
@@ -1142,7 +1020,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/EditText;->setTextSize(IF)V
 
-    .line 161
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const-string/jumbo v1, "windowBackgroundWhiteHintText"
@@ -1153,7 +1030,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHintTextColor(I)V
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const-string/jumbo v1, "windowBackgroundWhiteBlackText"
@@ -1164,7 +1040,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setTextColor(I)V
 
-    .line 163
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x0
@@ -1175,7 +1050,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getBackground()Landroid/graphics/drawable/Drawable;
@@ -1188,21 +1062,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setMaxLines(I)V
 
-    .line 166
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setLines(I)V
 
-    .line 167
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x0
@@ -1215,14 +1086,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/EditText;->setPadding(IIII)V
 
-    .line 168
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSingleLine(Z)V
 
-    .line 169
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -1234,21 +1103,18 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/EditText;->setGravity(I)V
 
-    .line 170
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const v1, 0x2c000
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setInputType(I)V
 
-    .line 171
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setImeOptions(I)V
 
-    .line 172
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const-string/jumbo v1, "UsernamePlaceholder"
@@ -1261,12 +1127,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->clearCursorDrawable(Landroid/widget/EditText;)V
 
-    .line 174
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$3;
@@ -1275,7 +1139,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setOnEditorActionListener(Landroid/widget/TextView$OnEditorActionListener;)V
 
-    .line 184
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$4;
@@ -1284,7 +1147,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->addTextChangedListener(Landroid/text/TextWatcher;)V
 
-    .line 213
     iget-object v6, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     const/4 v0, -0x1
@@ -1305,14 +1167,12 @@
 
     invoke-virtual {v8, v6, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 215
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
-    .line 216
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -1321,7 +1181,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 217
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -1333,7 +1192,6 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 218
     iget-object v12, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -1361,14 +1219,12 @@
 
     invoke-virtual {v8, v12, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 220
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -1377,7 +1233,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText8"
@@ -1388,7 +1243,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 223
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -1400,7 +1254,6 @@
     :goto_3
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 224
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "UsernameHelp"
@@ -1419,7 +1272,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 225
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteLinkText"
@@ -1430,7 +1282,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLinkTextColor(I)V
 
-    .line 226
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteLinkSelection"
@@ -1441,7 +1292,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setHighlightColor(I)V
 
-    .line 227
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$LinkMovementMethodMy;
@@ -1452,7 +1302,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMovementMethod(Landroid/text/method/MovementMethod;)V
 
-    .line 228
     iget-object v12, p0, Lorg/telegram/ui/ChangeUsernameActivity;->helpTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -1480,14 +1329,12 @@
 
     invoke-virtual {v8, v12, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 230
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->checkTextView:Landroid/widget/TextView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 232
     if-eqz v11, :cond_1
 
     iget-object v0, v11, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
@@ -1502,19 +1349,16 @@
 
     if-lez v0, :cond_1
 
-    .line 233
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->ignoreCheck:Z
 
-    .line 234
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     iget-object v1, v11, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 235
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
@@ -1525,42 +1369,35 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/EditText;->setSelection(I)V
 
-    .line 236
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->ignoreCheck:Z
 
-    .line 239
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->fragmentView:Landroid/view/View;
 
     return-object v0
 
-    .line 169
     :cond_2
     const/4 v0, 0x3
 
     goto/16 :goto_0
 
-    .line 217
     :cond_3
     const/4 v0, 0x3
 
     goto/16 :goto_1
 
-    .line 218
     :cond_4
     const/4 v2, 0x3
 
     goto/16 :goto_2
 
-    .line 223
     :cond_5
     const/4 v0, 0x3
 
     goto/16 :goto_3
 
-    .line 228
     :cond_6
     const/4 v2, 0x3
 
@@ -1573,7 +1410,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 473
     const/16 v0, 0xd
 
     new-array v8, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1861,10 +1697,8 @@
     .locals 5
 
     .prologue
-    .line 244
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 245
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "mainconfig"
@@ -1875,7 +1709,6 @@
 
     move-result-object v1
 
-    .line 246
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v2, "view_animations"
 
@@ -1885,21 +1718,17 @@
 
     move-result v0
 
-    .line 247
     .local v0, "animations":Z
     if-nez v0, :cond_0
 
-    .line 248
     iget-object v2, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-virtual {v2}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 249
     iget-object v2, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 251
     :cond_0
     sget-boolean v2, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -1907,7 +1736,6 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/ChangeUsernameActivity;->updateTheme()V
 
-    .line 252
     :cond_1
     return-void
 .end method
@@ -1918,20 +1746,16 @@
     .param p2, "backward"    # Z
 
     .prologue
-    .line 465
     if-eqz p1, :cond_0
 
-    .line 466
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 467
     iget-object v0, p0, Lorg/telegram/ui/ChangeUsernameActivity;->firstNameField:Landroid/widget/EditText;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 469
     :cond_0
     return-void
 .end method

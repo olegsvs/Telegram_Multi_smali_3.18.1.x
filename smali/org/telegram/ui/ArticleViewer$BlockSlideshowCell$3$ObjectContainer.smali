@@ -28,7 +28,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;
 
     .prologue
-    .line 3655
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->this$2:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
     .prologue
-    .line 3655
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->view:Landroid/view/View;
 
     return-object v0
@@ -53,7 +51,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 3655
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->view:Landroid/view/View;
 
     return-object p1
@@ -64,7 +61,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;
 
     .prologue
-    .line 3655
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->block:Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     return-object v0
@@ -76,7 +72,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     .prologue
-    .line 3655
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$3$ObjectContainer;->block:Lorg/telegram/tgnet/TLRPC$PageBlock;
 
     return-object p1

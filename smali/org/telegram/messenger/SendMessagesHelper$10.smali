@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 2483
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$10;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$10;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
@@ -45,12 +44,10 @@
     .locals 2
 
     .prologue
-    .line 2486
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$10;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget v0, v1, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 2487
     .local v0, "msg_id":I
     new-instance v1, Lorg/telegram/messenger/SendMessagesHelper$10$1;
 
@@ -58,6 +55,5 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2494
     return-void
 .end method

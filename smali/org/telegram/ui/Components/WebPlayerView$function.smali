@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 183
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$function;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V

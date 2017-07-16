@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$19;
 
     .prologue
-    .line 797
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$19$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$19;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$19$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,17 +50,14 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 800
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$19$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_0
 
-    .line 801
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$19$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
 
-    .line 802
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$1800()[I
 
@@ -75,7 +71,6 @@
 
     aput v4, v2, v3
 
-    .line 803
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -84,7 +79,6 @@
 
     move-result-object v0
 
-    .line 804
     .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -120,7 +114,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 805
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -143,7 +136,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 807
     .end local v0    # "preferences":Landroid/content/SharedPreferences;
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
     :cond_0

@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .param p0, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
 
     .prologue
-    .line 48
     invoke-static {p0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
     move-result v0
@@ -67,10 +65,8 @@
     .param p0, "did"    # J
 
     .prologue
-    .line 52
     long-to-int v1, p0
 
-    .line 53
     .local v1, "lower_id":I
     const/16 v2, 0x20
 
@@ -78,11 +74,9 @@
 
     long-to-int v0, v2
 
-    .line 54
     .local v0, "high_id":I
     if-gez v1, :cond_0
 
-    .line 55
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -97,7 +91,6 @@
 
     move-result-object v2
 
-    .line 57
     :goto_0
     return-object v2
 
@@ -112,7 +105,6 @@
     .param p0, "chatId"    # I
 
     .prologue
-    .line 43
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -125,7 +117,6 @@
 
     move-result-object v0
 
-    .line 44
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v0, :cond_1
 
@@ -158,7 +149,6 @@
     .param p0, "chatId"    # I
 
     .prologue
-    .line 38
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -171,7 +161,6 @@
 
     move-result-object v0
 
-    .line 39
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     instance-of v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channel;
 
@@ -198,7 +187,6 @@
     .param p0, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
 
     .prologue
-    .line 34
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channel;
 
     if-nez v0, :cond_0
@@ -224,7 +212,6 @@
     .param p0, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
 
     .prologue
-    .line 26
     if-eqz p0, :cond_0
 
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;
@@ -264,7 +251,6 @@
     .param p0, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
 
     .prologue
-    .line 22
     if-eqz p0, :cond_0
 
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;
@@ -304,7 +290,6 @@
     .param p0, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
 
     .prologue
-    .line 30
     if-eqz p0, :cond_0
 
     instance-of v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;

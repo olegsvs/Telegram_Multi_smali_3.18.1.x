@@ -50,10 +50,8 @@
     .locals 1
 
     .prologue
-    .line 473
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 486
     const-string/jumbo v0, "content://com.sonymobile.home.resourceprovider/badge"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
@@ -70,14 +68,12 @@
     .param p0, "badgeCount"    # I
 
     .prologue
-    .line 505
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "com.sonyericsson.home.action.UPDATE_BADGE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 506
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v1, "com.sonyericsson.home.intent.extra.badge.PACKAGE_NAME"
 
@@ -91,7 +87,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 507
     const-string/jumbo v1, "com.sonyericsson.home.intent.extra.badge.ACTIVITY_NAME"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -104,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 508
     const-string/jumbo v1, "com.sonyericsson.home.intent.extra.badge.MESSAGE"
 
     invoke-static {p0}, Ljava/lang/String;->valueOf(I)Ljava/lang/String;
@@ -113,7 +107,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 509
     const-string/jumbo v2, "com.sonyericsson.home.intent.extra.badge.SHOW_MESSAGE"
 
     if-lez p0, :cond_0
@@ -123,17 +116,14 @@
     :goto_0
     invoke-virtual {v0, v2, v1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
 
-    .line 510
     new-instance v1, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$1;
 
     invoke-direct {v1, v0}, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$1;-><init>(Landroid/content/Intent;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 516
     return-void
 
-    .line 509
     :cond_0
     const/4 v1, 0x0
 
@@ -145,20 +135,16 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 519
     if-gez p1, :cond_0
 
-    .line 537
     :goto_0
     return-void
 
-    .line 523
     :cond_0
     sget-object v0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->mQueryHandler:Landroid/content/AsyncQueryHandler;
 
     if-nez v0, :cond_1
 
-    .line 524
     new-instance v0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$2;
 
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -175,7 +161,6 @@
 
     sput-object v0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->mQueryHandler:Landroid/content/AsyncQueryHandler;
 
-    .line 536
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
 
@@ -205,12 +190,10 @@
     .param p3, "activityName"    # Ljava/lang/String;
 
     .prologue
-    .line 540
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 541
     .local v0, "contentValues":Landroid/content/ContentValues;
     const-string/jumbo v1, "badge_count"
 
@@ -220,17 +203,14 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 542
     const-string/jumbo v1, "package_name"
 
     invoke-virtual {v0, v1, p2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 543
     const-string/jumbo v1, "activity_name"
 
     invoke-virtual {v0, v1, p3}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 544
     sget-object v1, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->mQueryHandler:Landroid/content/AsyncQueryHandler;
 
     const/4 v2, 0x0
@@ -241,7 +221,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v0}, Landroid/content/AsyncQueryHandler;->startInsert(ILjava/lang/Object;Landroid/net/Uri;Landroid/content/ContentValues;)V
 
-    .line 545
     return-void
 .end method
 
@@ -249,10 +228,8 @@
     .locals 5
 
     .prologue
-    .line 548
     const/4 v0, 0x0
 
-    .line 549
     .local v0, "exists":Z
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -268,14 +245,11 @@
 
     move-result-object v1
 
-    .line 550
     .local v1, "info":Landroid/content/pm/ProviderInfo;
     if-eqz v1, :cond_0
 
-    .line 551
     const/4 v0, 0x1
 
-    .line 553
     :cond_0
     return v0
 .end method
@@ -287,21 +261,17 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 492
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->sonyBadgeContentProviderExists()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 493
     invoke-direct {p0, p1}, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->executeBadgeByContentProvider(I)V
 
-    .line 497
     :goto_0
     return-void
 
-    .line 495
     :cond_0
     invoke-static {p1}, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;->executeBadgeByBroadcast(I)V
 
@@ -321,7 +291,6 @@
     .end annotation
 
     .prologue
-    .line 501
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;

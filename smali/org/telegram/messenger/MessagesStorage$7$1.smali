@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$7;
 
     .prologue
-    .line 711
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7$1;->this$1:Lorg/telegram/messenger/MessagesStorage$7;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$7$1;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 714
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->loadUnknownChannel(Lorg/telegram/tgnet/TLRPC$Chat;J)V
 
-    .line 715
     return-void
 .end method

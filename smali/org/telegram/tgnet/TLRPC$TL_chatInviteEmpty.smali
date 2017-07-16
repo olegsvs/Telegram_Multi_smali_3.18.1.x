@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 18578
     const v0, 0x69df3769
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 18577
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 18582
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18583
     return-void
 .end method

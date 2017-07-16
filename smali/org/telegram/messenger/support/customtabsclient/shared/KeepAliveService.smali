@@ -12,7 +12,6 @@
     .locals 1
 
     .prologue
-    .line 23
     new-instance v0, Landroid/os/Binder;
 
     invoke-direct {v0}, Landroid/os/Binder;-><init>()V
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 22
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
     return-void
@@ -39,7 +37,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 27
     sget-object v0, Lorg/telegram/messenger/support/customtabsclient/shared/KeepAliveService;->sBinder:Landroid/os/Binder;
 
     return-object v0

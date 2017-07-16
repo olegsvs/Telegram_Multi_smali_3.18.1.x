@@ -27,13 +27,10 @@
     .locals 0
 
     .prologue
-    .line 53
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 54
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$HlsChunkHolder;->clear()V
 
-    .line 55
     return-void
 .end method
 
@@ -45,17 +42,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 76
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$HlsChunkHolder;->chunk:Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
 
-    .line 77
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$HlsChunkHolder;->endOfStream:Z
 
-    .line 78
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$HlsChunkHolder;->playlist:Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;
 
-    .line 79
     return-void
 .end method

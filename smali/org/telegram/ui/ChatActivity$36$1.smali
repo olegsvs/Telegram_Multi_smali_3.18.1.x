@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$36;
 
     .prologue
-    .line 2581
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2591
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2592
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -73,7 +70,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$10702(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2594
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2584
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -108,7 +103,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2585
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$1;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -117,7 +111,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$10702(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2587
     :cond_0
     return-void
 .end method

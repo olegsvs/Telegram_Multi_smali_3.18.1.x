@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 693
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$4;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-direct {p0}, Landroid/telephony/PhoneStateListener;-><init>()V
@@ -40,13 +39,11 @@
     .param p2, "incomingNumber"    # Ljava/lang/String;
 
     .prologue
-    .line 696
     new-instance v0, Lorg/telegram/messenger/MediaController$4$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/MediaController$4$1;-><init>(Lorg/telegram/messenger/MediaController$4;I)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 721
     return-void
 .end method

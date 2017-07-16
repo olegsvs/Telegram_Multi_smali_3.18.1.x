@@ -53,45 +53,34 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 30
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasPanned:Z
 
-    .line 31
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasReleased:Z
 
-    .line 32
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasTransformed:Z
 
-    .line 33
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedSelection:Z
 
-    .line 34
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
-    .line 35
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->recognizedLongPress:Z
 
-    .line 39
     new-instance v0, Lorg/telegram/ui/Components/Point;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/Point;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
-    .line 52
     invoke-static {}, Ljava/util/UUID;->randomUUID()Ljava/util/UUID;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->uuid:Ljava/util/UUID;
 
-    .line 53
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
-    .line 55
     new-instance v0, Landroid/view/GestureDetector;
 
     new-instance v1, Lorg/telegram/ui/Components/Paint/Views/EntityView$1;
@@ -102,7 +91,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->gestureDetector:Landroid/view/GestureDetector;
 
-    .line 68
     return-void
 .end method
 
@@ -111,7 +99,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasPanned:Z
 
     return v0
@@ -122,7 +109,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasTransformed:Z
 
     return v0
@@ -133,7 +119,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
     return v0
@@ -145,7 +130,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 18
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
     return p1
@@ -157,7 +141,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 18
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasTransformed:Z
 
     return p1
@@ -168,7 +151,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->onTouchUp()V
 
     return-void
@@ -179,7 +161,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->gestureDetector:Landroid/view/GestureDetector;
 
     return-object v0
@@ -190,7 +171,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasReleased:Z
 
     return v0
@@ -202,7 +182,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 18
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasReleased:Z
 
     return p1
@@ -214,7 +193,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 18
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->recognizedLongPress:Z
 
     return p1
@@ -225,7 +203,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     return-object v0
@@ -236,7 +213,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->offsetX:I
 
     return v0
@@ -247,7 +223,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->offsetY:I
 
     return v0
@@ -258,7 +233,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationX:F
 
     return v0
@@ -270,7 +244,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 18
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationX:F
 
     return p1
@@ -281,7 +254,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/Views/EntityView;
 
     .prologue
-    .line 18
     iget v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationY:F
 
     return v0
@@ -293,7 +265,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 18
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationY:F
 
     return p1
@@ -306,7 +277,6 @@
     .param p2, "x2"    # F
 
     .prologue
-    .line 18
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->onTouchMove(FF)Z
 
     move-result v0
@@ -322,7 +292,6 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 107
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
@@ -333,7 +302,6 @@
 
     move-result v2
 
-    .line 108
     .local v2, "scale":F
     new-instance v3, Lorg/telegram/ui/Components/Point;
 
@@ -351,7 +319,6 @@
 
     invoke-direct {v3, v4, v6}, Lorg/telegram/ui/Components/Point;-><init>(FF)V
 
-    .line 109
     .local v3, "translation":Lorg/telegram/ui/Components/Point;
     iget v4, v3, Lorg/telegram/ui/Components/Point;->x:F
 
@@ -367,7 +334,6 @@
 
     double-to-float v0, v6
 
-    .line 110
     .local v0, "distance":F
     iget-boolean v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasPanned:Z
 
@@ -375,58 +341,46 @@
 
     const/high16 v1, 0x40c00000    # 6.0f
 
-    .line 111
     .local v1, "minDistance":F
     :goto_0
     cmpl-float v4, v0, v1
 
     if-lez v4, :cond_2
 
-    .line 112
     invoke-virtual {p0, v3}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->pan(Lorg/telegram/ui/Components/Point;)V
 
-    .line 113
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationX:F
 
-    .line 114
     iput p2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationY:F
 
-    .line 115
     iget-boolean v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
     if-nez v4, :cond_0
 
-    .line 116
     iput-boolean v5, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
-    .line 117
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     if-eqz v4, :cond_0
 
-    .line 118
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     invoke-interface {v4, p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;->onBeganEntityDragging(Lorg/telegram/ui/Components/Paint/Views/EntityView;)V
 
-    .line 121
     :cond_0
     iput-boolean v5, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasPanned:Z
 
     move v4, v5
 
-    .line 124
     :goto_1
     return v4
 
-    .line 110
     .end local v1    # "minDistance":F
     :cond_1
     const/high16 v1, 0x41800000    # 16.0f
 
     goto :goto_0
 
-    .line 124
     .restart local v1    # "minDistance":F
     :cond_2
     const/4 v4, 0x0
@@ -440,7 +394,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 128
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->recognizedLongPress:Z
 
     if-nez v0, :cond_0
@@ -461,12 +414,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     invoke-interface {v0, p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;->onEntitySelected(Lorg/telegram/ui/Components/Paint/Views/EntityView;)Z
 
-    .line 131
     :cond_0
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
@@ -476,33 +427,25 @@
 
     if-eqz v0, :cond_1
 
-    .line 132
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     invoke-interface {v0, p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;->onFinishedEntityDragging(Lorg/telegram/ui/Components/Paint/Views/EntityView;)V
 
-    .line 134
     :cond_1
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->recognizedLongPress:Z
 
-    .line 135
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasPanned:Z
 
-    .line 136
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasTransformed:Z
 
-    .line 137
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasReleased:Z
 
-    .line 138
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedSelection:Z
 
-    .line 139
     iput-boolean v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedDragging:Z
 
-    .line 140
     return-void
 .end method
 
@@ -512,7 +455,6 @@
     .locals 1
 
     .prologue
-    .line 221
     const/4 v0, 0x0
 
     return-object v0
@@ -522,16 +464,13 @@
     .locals 2
 
     .prologue
-    .line 238
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     if-nez v0, :cond_0
 
-    .line 245
     :goto_0
     return-void
 
-    .line 241
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
@@ -541,7 +480,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 242
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;->getParent()Landroid/view/ViewParent;
@@ -554,7 +492,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 244
     :cond_1
     const/4 v0, 0x0
 
@@ -567,7 +504,6 @@
     .locals 1
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
     return-object v0
@@ -577,7 +513,6 @@
     .locals 1
 
     .prologue
-    .line 84
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->getScaleX()F
 
     move-result v0
@@ -591,7 +526,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 213
     new-instance v0, Lorg/telegram/ui/Components/Rect;
 
     invoke-direct {v0, v1, v1, v1, v1}, Lorg/telegram/ui/Components/Rect;-><init>(FFFF)V
@@ -603,7 +537,6 @@
     .locals 1
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->uuid:Ljava/util/UUID;
 
     return-object v0
@@ -613,7 +546,6 @@
     .locals 1
 
     .prologue
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     if-eqz v0, :cond_0
@@ -634,7 +566,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     invoke-interface {v0, p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;->allowInteraction(Lorg/telegram/ui/Components/Paint/Views/EntityView;)Z
@@ -653,7 +584,6 @@
 
     const/4 v4, 0x0
 
-    .line 144
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getPointerCount()I
 
     move-result v5
@@ -671,37 +601,30 @@
     :cond_0
     move v1, v4
 
-    .line 183
     :goto_0
     return v1
 
-    .line 148
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v2
 
-    .line 149
     .local v2, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v3
 
-    .line 150
     .local v3, "y":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 151
     .local v0, "action":I
     const/4 v1, 0x0
 
-    .line 153
     .local v1, "handled":Z
     packed-switch v0, :pswitch_data_0
 
-    .line 181
     :goto_1
     :pswitch_0
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->gestureDetector:Landroid/view/GestureDetector;
@@ -710,7 +633,6 @@
 
     goto :goto_0
 
-    .line 156
     :pswitch_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->isSelected()Z
 
@@ -722,48 +644,37 @@
 
     if-eqz v5, :cond_2
 
-    .line 157
     iget-object v5, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     invoke-interface {v5, p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;->onEntitySelected(Lorg/telegram/ui/Components/Paint/Views/EntityView;)Z
 
-    .line 158
     iput-boolean v6, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->announcedSelection:Z
 
-    .line 160
     :cond_2
     iput v2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationX:F
 
-    .line 161
     iput v3, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->previousLocationY:F
 
-    .line 162
     const/4 v1, 0x1
 
-    .line 163
     iput-boolean v4, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->hasReleased:Z
 
     goto :goto_1
 
-    .line 168
     :pswitch_2
     invoke-direct {p0, v2, v3}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->onTouchMove(FF)Z
 
     move-result v1
 
-    .line 170
     goto :goto_1
 
-    .line 175
     :pswitch_3
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->onTouchUp()V
 
-    .line 176
     const/4 v1, 0x1
 
     goto :goto_1
 
-    .line 153
     nop
 
     :pswitch_data_0
@@ -783,7 +694,6 @@
     .param p1, "translation"    # Lorg/telegram/ui/Components/Point;
 
     .prologue
-    .line 187
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
     iget v1, v0, Lorg/telegram/ui/Components/Point;->x:F
@@ -794,7 +704,6 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/Point;->x:F
 
-    .line 188
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
     iget v1, v0, Lorg/telegram/ui/Components/Point;->y:F
@@ -805,10 +714,8 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/Point;->y:F
 
-    .line 189
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->updatePosition()V
 
-    .line 190
     return-void
 .end method
 
@@ -817,13 +724,10 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 208
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setRotation(F)V
 
-    .line 209
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->updateSelectionView()V
 
-    .line 210
     return-void
 .end method
 
@@ -832,7 +736,6 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 202
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->getScale()F
 
     move-result v1
@@ -845,14 +748,11 @@
 
     move-result v0
 
-    .line 203
     .local v0, "newScale":F
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setScale(F)V
 
-    .line 204
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->updateSelectionView()V
 
-    .line 205
     return-void
 .end method
 
@@ -861,22 +761,17 @@
     .param p1, "selectionContainer"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 231
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->createSelectionView()Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     move-result-object v0
 
-    .line 232
     .local v0, "selectionView":Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
-    .line 233
     invoke-virtual {p1, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 234
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;->updatePosition()V
 
-    .line 235
     return-void
 .end method
 
@@ -885,10 +780,8 @@
     .param p1, "entityViewDelegate"    # Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->delegate:Lorg/telegram/ui/Components/Paint/Views/EntityView$EntityViewDelegate;
 
-    .line 94
     return-void
 .end method
 
@@ -898,13 +791,10 @@
     .param p2, "y"    # I
 
     .prologue
-    .line 97
     iput p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->offsetX:I
 
-    .line 98
     iput p2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->offsetY:I
 
-    .line 99
     return-void
 .end method
 
@@ -913,13 +803,10 @@
     .param p1, "value"    # Lorg/telegram/ui/Components/Point;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
-    .line 80
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->updatePosition()V
 
-    .line 81
     return-void
 .end method
 
@@ -928,13 +815,10 @@
     .param p1, "scale"    # F
 
     .prologue
-    .line 88
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setScaleX(F)V
 
-    .line 89
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setScaleY(F)V
 
-    .line 90
     return-void
 .end method
 
@@ -943,16 +827,13 @@
     .param p1, "visible"    # Z
 
     .prologue
-    .line 248
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     if-nez v0, :cond_0
 
-    .line 252
     :goto_0
     return-void
 
-    .line 251
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
@@ -977,7 +858,6 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 193
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->getWidth()I
 
     move-result v2
@@ -986,7 +866,6 @@
 
     div-float v1, v2, v3
 
-    .line 194
     .local v1, "halfWidth":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->getHeight()I
 
@@ -996,7 +875,6 @@
 
     div-float v0, v2, v3
 
-    .line 195
     .local v0, "halfHeight":F
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
@@ -1006,7 +884,6 @@
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setX(F)V
 
-    .line 196
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->position:Lorg/telegram/ui/Components/Point;
 
     iget v2, v2, Lorg/telegram/ui/Components/Point;->y:F
@@ -1015,10 +892,8 @@
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->setY(F)V
 
-    .line 197
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/EntityView;->updateSelectionView()V
 
-    .line 198
     return-void
 .end method
 
@@ -1026,17 +901,14 @@
     .locals 1
 
     .prologue
-    .line 225
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     if-eqz v0, :cond_0
 
-    .line 226
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/EntityView;->selectionView:Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;->updatePosition()V
 
-    .line 228
     :cond_0
     return-void
 .end method

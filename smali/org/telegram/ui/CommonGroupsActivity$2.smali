@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CommonGroupsActivity;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lorg/telegram/ui/CommonGroupsActivity$2;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 99
     if-ltz p2, :cond_0
 
     iget-object v2, p0, Lorg/telegram/ui/CommonGroupsActivity$2;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -58,12 +56,10 @@
 
     if-lt p2, v2, :cond_1
 
-    .line 110
     :cond_0
     :goto_0
     return-void
 
-    .line 102
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/CommonGroupsActivity$2;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
@@ -77,13 +73,11 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 103
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 104
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v2, "chat_id"
 
@@ -91,7 +85,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 105
     iget-object v2, p0, Lorg/telegram/ui/CommonGroupsActivity$2;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/messenger/MessagesController;->checkCanOpenChat(Landroid/os/Bundle;Lorg/telegram/ui/ActionBar/BaseFragment;)Z
@@ -100,7 +93,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 108
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -113,7 +105,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 109
     iget-object v2, p0, Lorg/telegram/ui/CommonGroupsActivity$2;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     new-instance v3, Lorg/telegram/ui/ChatActivity;

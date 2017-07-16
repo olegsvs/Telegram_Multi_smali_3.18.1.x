@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoViewer$4;
 
     .prologue
-    .line 1498
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
 
     iput-object p2, p0, Lorg/telegram/ui/PhotoViewer$4$2;->val$deleteForAll:[Z
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1501
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -64,7 +62,6 @@
 
     if-nez v2, :cond_3
 
-    .line 1502
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -103,12 +100,10 @@
 
     if-lt v2, v6, :cond_1
 
-    .line 1567
     :cond_0
     :goto_0
     return-void
 
-    .line 1505
     :cond_1
     move-object/from16 v0, p0
 
@@ -136,7 +131,6 @@
 
     check-cast v12, Lorg/telegram/messenger/MessageObject;
 
-    .line 1506
     .local v12, "obj":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {v12}, Lorg/telegram/messenger/MessageObject;->isSent()Z
 
@@ -144,7 +138,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1507
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -157,12 +150,10 @@
 
     invoke-virtual {v2, v6, v7}, Lorg/telegram/ui/PhotoViewer;->closePhoto(ZZ)V
 
-    .line 1508
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1509
     .local v3, "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-virtual {v12}, Lorg/telegram/messenger/MessageObject;->getId()I
 
@@ -174,14 +165,11 @@
 
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1511
     const/4 v4, 0x0
 
-    .line 1512
     .local v4, "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v5, 0x0
 
-    .line 1513
     .local v5, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-virtual {v12}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
@@ -201,13 +189,11 @@
 
     if-eqz v2, :cond_2
 
-    .line 1514
     new-instance v4, Ljava/util/ArrayList;
 
     .end local v4    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1515
     .restart local v4    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v2, v12, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -219,7 +205,6 @@
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1516
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -242,7 +227,6 @@
 
     move-result-object v5
 
-    .line 1519
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -266,7 +250,6 @@
 
     goto/16 :goto_0
 
-    .line 1521
     .end local v3    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v4    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     .end local v5    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -288,7 +271,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1522
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -327,7 +309,6 @@
 
     if-ge v2, v6, :cond_0
 
-    .line 1525
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -354,7 +335,6 @@
 
     check-cast v13, Lorg/telegram/tgnet/TLRPC$Photo;
 
-    .line 1526
     .local v13, "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     move-object/from16 v0, p0
 
@@ -382,20 +362,16 @@
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 1527
     .local v9, "currentLocation":Lorg/telegram/tgnet/TLRPC$FileLocation;
     instance-of v2, v13, Lorg/telegram/tgnet/TLRPC$TL_photoEmpty;
 
     if-eqz v2, :cond_4
 
-    .line 1528
     const/4 v13, 0x0
 
-    .line 1530
     :cond_4
     const/4 v8, 0x0
 
-    .line 1531
     .local v8, "current":Z
     move-object/from16 v0, p0
 
@@ -409,10 +385,8 @@
 
     if-eqz v2, :cond_6
 
-    .line 1532
     if-eqz v13, :cond_7
 
-    .line 1533
     iget-object v2, v13, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -432,7 +406,6 @@
 
     check-cast v14, Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 1534
     .local v14, "size":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     iget-object v6, v14, Lorg/telegram/tgnet/TLRPC$PhotoSize;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
@@ -474,16 +447,13 @@
 
     if-nez v6, :cond_5
 
-    .line 1535
     const/4 v8, 0x1
 
-    .line 1543
     .end local v14    # "size":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     :cond_6
     :goto_1
     if-eqz v8, :cond_8
 
-    .line 1544
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -492,7 +462,6 @@
 
     invoke-virtual {v2, v6}, Lorg/telegram/messenger/MessagesController;->deleteUserPhoto(Lorg/telegram/tgnet/TLRPC$InputPhoto;)V
 
-    .line 1545
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -507,7 +476,6 @@
 
     goto/16 :goto_0
 
-    .line 1539
     :cond_7
     iget v2, v9, Lorg/telegram/tgnet/TLRPC$FileLocation;->local_id:I
 
@@ -545,39 +513,32 @@
 
     if-nez v2, :cond_6
 
-    .line 1540
     const/4 v8, 0x1
 
     goto :goto_1
 
-    .line 1546
     :cond_8
     if-eqz v13, :cond_0
 
-    .line 1547
     new-instance v11, Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;
 
     invoke-direct {v11}, Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;-><init>()V
 
-    .line 1548
     .local v11, "inputPhoto":Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;
     iget-wide v6, v13, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
     iput-wide v6, v11, Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;->id:J
 
-    .line 1549
     iget-wide v6, v13, Lorg/telegram/tgnet/TLRPC$Photo;->access_hash:J
 
     iput-wide v6, v11, Lorg/telegram/tgnet/TLRPC$TL_inputPhoto;->access_hash:J
 
-    .line 1550
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
 
     invoke-virtual {v2, v11}, Lorg/telegram/messenger/MessagesController;->deleteUserPhoto(Lorg/telegram/tgnet/TLRPC$InputPhoto;)V
 
-    .line 1551
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -600,7 +561,6 @@
 
     invoke-virtual {v2, v6, v0, v1}, Lorg/telegram/messenger/MessagesStorage;->clearUserPhoto(IJ)V
 
-    .line 1552
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -623,7 +583,6 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1553
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -646,7 +605,6 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1554
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -669,7 +627,6 @@
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1555
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -686,7 +643,6 @@
 
     if-eqz v2, :cond_9
 
-    .line 1556
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -701,7 +657,6 @@
 
     goto/16 :goto_0
 
-    .line 1558
     :cond_9
     move-object/from16 v0, p0
 
@@ -713,7 +668,6 @@
 
     move-result v10
 
-    .line 1559
     .local v10, "index":I
     move-object/from16 v0, p0
 
@@ -731,7 +685,6 @@
 
     if-lt v10, v2, :cond_a
 
-    .line 1560
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;
@@ -748,7 +701,6 @@
 
     add-int/lit8 v10, v2, -0x1
 
-    .line 1562
     :cond_a
     move-object/from16 v0, p0
 
@@ -760,7 +712,6 @@
 
     invoke-static {v2, v6}, Lorg/telegram/ui/PhotoViewer;->access$5302(Lorg/telegram/ui/PhotoViewer;I)I
 
-    .line 1563
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/PhotoViewer$4$2;->this$1:Lorg/telegram/ui/PhotoViewer$4;

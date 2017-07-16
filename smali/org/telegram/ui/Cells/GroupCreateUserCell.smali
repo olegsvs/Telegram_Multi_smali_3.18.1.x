@@ -26,7 +26,6 @@
 
 .field private nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-.field private onlineColor:I
 
 .field private statusColor:I
 
@@ -52,17 +51,14 @@
 
     const/4 v6, 0x0
 
-    .line 55
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 56
     new-instance v0, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 57
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "theme"
@@ -75,7 +71,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->themePrefs:Landroid/content/SharedPreferences;
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->themePrefs:Landroid/content/SharedPreferences;
 
     const-string/jumbo v1, "contactsNameColor"
@@ -88,7 +83,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameColor:I
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->themePrefs:Landroid/content/SharedPreferences;
 
     const-string/jumbo v1, "contactsStatusColor"
@@ -101,10 +95,8 @@
 
     iput v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusColor:I
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->themePrefs:Landroid/content/SharedPreferences;
 
-    const-string/jumbo v1, "contactsOnlineColor"
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->darkColor:I
 
@@ -112,16 +104,13 @@
 
     move-result v0
 
-    iput v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->onlineColor:I
 
-    .line 62
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 63
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -147,7 +136,6 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 64
     iget-object v11, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/16 v0, 0x32
@@ -185,14 +173,12 @@
 
     invoke-virtual {p0, v11, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 66
     new-instance v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    .line 67
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -204,7 +190,6 @@
     :goto_4
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 68
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -215,7 +200,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 69
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -235,7 +219,6 @@
     :goto_5
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 70
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -249,7 +232,6 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
 
-    .line 71
     iget-object v11, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/4 v0, -0x1
@@ -287,14 +269,12 @@
 
     invoke-virtual {p0, v11, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 73
     new-instance v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -314,7 +294,6 @@
     :goto_a
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -328,7 +307,6 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
 
-    .line 76
     iget-object v11, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/4 v0, -0x1
@@ -366,24 +344,20 @@
 
     invoke-virtual {p0, v11, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 78
     if-eqz p2, :cond_0
 
-    .line 79
     new-instance v0, Lorg/telegram/ui/Components/GroupCreateCheckBox;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/GroupCreateCheckBox;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/GroupCreateCheckBox;
 
-    .line 80
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/GroupCreateCheckBox;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/GroupCreateCheckBox;->setVisibility(I)V
 
-    .line 81
     iget-object v9, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/GroupCreateCheckBox;
 
     const/16 v0, 0x18
@@ -419,11 +393,9 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 83
     :cond_0
     return-void
 
-    .line 63
     :cond_1
     const/high16 v0, 0x41c00000    # 24.0f
 
@@ -432,7 +404,6 @@
     :cond_2
     move v2, v8
 
-    .line 64
     goto/16 :goto_1
 
     :cond_3
@@ -445,7 +416,6 @@
 
     goto/16 :goto_3
 
-    .line 67
     :cond_5
     const-string/jumbo v0, "windowBackgroundWhiteBlackText"
 
@@ -455,7 +425,6 @@
 
     goto/16 :goto_4
 
-    .line 69
     :cond_6
     const/16 v0, 0x11
 
@@ -464,13 +433,11 @@
     :cond_7
     move v0, v8
 
-    .line 70
     goto/16 :goto_6
 
     :cond_8
     move v2, v8
 
-    .line 71
     goto/16 :goto_7
 
     :cond_9
@@ -483,7 +450,6 @@
 
     goto/16 :goto_9
 
-    .line 74
     :cond_b
     const/16 v0, 0x10
 
@@ -492,13 +458,11 @@
     :cond_c
     move v0, v8
 
-    .line 75
     goto :goto_b
 
     :cond_d
     move v2, v8
 
-    .line 76
     goto :goto_c
 
     :cond_e
@@ -514,7 +478,6 @@
     :cond_10
     move v7, v8
 
-    .line 81
     goto :goto_f
 
     :cond_11
@@ -534,7 +497,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     return-object v0
@@ -544,7 +506,6 @@
     .locals 1
 
     .prologue
-    .line 184
     const/4 v0, 0x0
 
     return v0
@@ -558,7 +519,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 102
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -579,7 +539,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 103
     return-void
 .end method
 
@@ -587,7 +546,6 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -596,7 +554,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageReceiver;->cancelLoadImage()V
 
-    .line 107
     return-void
 .end method
 
@@ -606,12 +563,10 @@
     .param p2, "animated"    # Z
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->checkBox:Lorg/telegram/ui/Components/GroupCreateCheckBox;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/GroupCreateCheckBox;->setChecked(ZZ)V
 
-    .line 94
     return-void
 .end method
 
@@ -622,21 +577,16 @@
     .param p3, "status"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 86
     iput-object p1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 87
     iput-object p3, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
-    .line 88
     iput-object p2, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
-    .line 89
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/GroupCreateUserCell;->update(I)V
 
-    .line 90
     return-void
 .end method
 
@@ -647,25 +597,20 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 110
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     if-nez v4, :cond_1
 
-    .line 180
     :cond_0
     :goto_0
     return-void
 
-    .line 113
     :cond_1
     const/4 v3, 0x0
 
-    .line 114
     .local v3, "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     const/4 v1, 0x0
 
-    .line 115
     .local v1, "newName":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -673,27 +618,22 @@
 
     if-eqz v4, :cond_2
 
-    .line 116
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v3, v4, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 119
     :cond_2
     if-eqz p1, :cond_9
 
-    .line 120
     const/4 v0, 0x0
 
-    .line 121
     .local v0, "continueUpdate":Z
     and-int/lit8 v4, p1, 0x2
 
     if-eqz v4, :cond_5
 
-    .line 122
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastAvatar:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     if-eqz v4, :cond_3
@@ -731,11 +671,9 @@
 
     if-eq v4, v5, :cond_5
 
-    .line 123
     :cond_4
     const/4 v0, 0x1
 
-    .line 126
     :cond_5
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -751,10 +689,8 @@
 
     if-eqz v4, :cond_7
 
-    .line 127
     const/4 v2, 0x0
 
-    .line 128
     .local v2, "newStatus":I
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -762,23 +698,19 @@
 
     if-eqz v4, :cond_6
 
-    .line 129
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     iget v2, v4, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 131
     :cond_6
     iget v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastStatus:I
 
     if-eq v2, v4, :cond_7
 
-    .line 132
     const/4 v0, 0x1
 
-    .line 135
     .end local v2    # "newStatus":I
     :cond_7
     if-nez v0, :cond_8
@@ -795,14 +727,12 @@
 
     if-eqz v4, :cond_8
 
-    .line 136
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-static {v4}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 137
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
     invoke-virtual {v1, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -811,14 +741,11 @@
 
     if-nez v4, :cond_8
 
-    .line 138
     const/4 v0, 0x1
 
-    .line 141
     :cond_8
     if-eqz v0, :cond_0
 
-    .line 146
     .end local v0    # "continueUpdate":Z
     :cond_9
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
@@ -827,7 +754,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 147
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -843,45 +769,37 @@
     :goto_1
     iput v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastStatus:I
 
-    .line 149
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
     if-eqz v4, :cond_b
 
-    .line 150
     const/4 v4, 0x0
 
     iput-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
-    .line 151
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentName:Ljava/lang/CharSequence;
 
     invoke-virtual {v4, v5, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;Z)V
 
-    .line 157
     .end local v1    # "newName":Ljava/lang/String;
     :goto_2
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
     if-eqz v4, :cond_e
 
-    .line 158
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentStatus:Ljava/lang/CharSequence;
 
     invoke-virtual {v4, v5, v8}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;Z)V
 
-    .line 159
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string/jumbo v5, "groupcreate_offlineText"
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTag(Ljava/lang/Object;)V
 
-    .line 160
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -893,7 +811,6 @@
     :goto_3
     invoke-virtual {v5, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 179
     :goto_4
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
@@ -905,14 +822,12 @@
 
     goto/16 :goto_0
 
-    .line 147
     .restart local v1    # "newName":Ljava/lang/String;
     :cond_a
     const/4 v4, 0x0
 
     goto :goto_1
 
-    .line 153
     :cond_b
     if-nez v1, :cond_c
 
@@ -926,7 +841,6 @@
     :cond_c
     iput-object v1, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
 
-    .line 154
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->nameTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->lastName:Ljava/lang/String;
@@ -935,9 +849,7 @@
 
     goto :goto_2
 
-    .line 160
     :cond_d
-    const-string/jumbo v4, "groupcreate_offlineText"
 
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
@@ -945,7 +857,6 @@
 
     goto :goto_3
 
-    .line 162
     :cond_e
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -953,14 +864,11 @@
 
     if-eqz v4, :cond_10
 
-    .line 163
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string/jumbo v5, "groupcreate_offlineText"
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTag(Ljava/lang/Object;)V
 
-    .line 164
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -972,7 +880,6 @@
     :goto_5
     invoke-virtual {v5, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 165
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string/jumbo v5, "Bot"
@@ -987,9 +894,7 @@
 
     goto :goto_4
 
-    .line 164
     :cond_f
-    const-string/jumbo v4, "groupcreate_offlineText"
 
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
@@ -997,7 +902,6 @@
 
     goto :goto_5
 
-    .line 167
     :cond_10
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -1036,7 +940,6 @@
 
     move-result-object v4
 
-    iget-object v4, v4, Lorg/telegram/messenger/MessagesController;->onlinePrivacy:Ljava/util/concurrent/ConcurrentHashMap;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
@@ -1052,30 +955,24 @@
 
     if-eqz v4, :cond_14
 
-    .line 168
     :cond_12
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string/jumbo v5, "groupcreate_offlineText"
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTag(Ljava/lang/Object;)V
 
-    .line 169
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_13
 
-    iget v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->onlineColor:I
 
     :goto_6
     invoke-virtual {v5, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 170
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string/jumbo v5, "Online"
 
     const v6, 0x7f070456
 
@@ -1087,9 +984,7 @@
 
     goto/16 :goto_4
 
-    .line 169
     :cond_13
-    const-string/jumbo v4, "groupcreate_onlineText"
 
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
@@ -1097,15 +992,12 @@
 
     goto :goto_6
 
-    .line 172
     :cond_14
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    const-string/jumbo v5, "groupcreate_offlineText"
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTag(Ljava/lang/Object;)V
 
-    .line 173
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -1117,7 +1009,6 @@
     :goto_7
     invoke-virtual {v5, v4}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 174
     iget-object v4, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->statusTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     iget-object v5, p0, Lorg/telegram/ui/Cells/GroupCreateUserCell;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
@@ -1130,9 +1021,7 @@
 
     goto/16 :goto_4
 
-    .line 173
     :cond_15
-    const-string/jumbo v4, "groupcreate_offlineText"
 
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 

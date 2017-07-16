@@ -79,10 +79,8 @@
 
     const/4 v5, 0x0
 
-    .line 64
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 46
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/util/ArrayList;
@@ -101,7 +99,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickerSets:[Ljava/util/ArrayList;
 
-    .line 47
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/util/ArrayList;
@@ -120,36 +117,28 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
-    .line 48
     iput v8, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
-    .line 59
     const/4 v0, -0x2
 
     iput v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentTabBum:I
 
-    .line 65
     const v0, -0xddddde
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/StickerMasksView;->setBackgroundColor(I)V
 
-    .line 66
     invoke-virtual {p0, v8}, Lorg/telegram/ui/Components/StickerMasksView;->setClickable(Z)V
 
-    .line 68
     invoke-static {v5}, Lorg/telegram/messenger/query/StickersQuery;->checkStickers(I)V
 
-    .line 69
     invoke-static {v8}, Lorg/telegram/messenger/query/StickersQuery;->checkStickers(I)V
 
-    .line 70
     new-instance v0, Lorg/telegram/ui/Components/StickerMasksView$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/StickerMasksView$1;-><init>(Lorg/telegram/ui/Components/StickerMasksView;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -162,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 79
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersLayoutManager:Lorg/telegram/messenger/support/widget/GridLayoutManager;
 
     new-instance v1, Lorg/telegram/ui/Components/StickerMasksView$2;
@@ -171,7 +159,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/GridLayoutManager;->setSpanSizeLookup(Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;)V
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/high16 v1, 0x40800000    # 4.0f
@@ -182,12 +169,10 @@
 
     invoke-virtual {v0, v5, v1, v5, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setClipToPadding(Z)V
 
-    .line 90
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
@@ -198,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/StickerMasksView$3;
@@ -207,28 +191,24 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 97
     new-instance v0, Lorg/telegram/ui/Components/StickerMasksView$4;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/StickerMasksView$4;-><init>(Lorg/telegram/ui/Components/StickerMasksView;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersOnItemClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersOnItemClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const v1, -0xa0909
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setGlowColor(I)V
 
-    .line 116
     iget-object v7, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v0, -0x1
@@ -247,28 +227,24 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Components/StickerMasksView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 118
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
-    .line 119
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41900000    # 18.0f
 
     invoke-virtual {v0, v8, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     const v1, -0x777778
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 121
     iget-object v7, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -287,51 +263,42 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Components/StickerMasksView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 124
     new-instance v0, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     const/high16 v1, -0x1000000
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setBackgroundColor(I)V
 
-    .line 126
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setUnderlineHeight(I)V
 
-    .line 127
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     const v1, -0x9d4018
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setIndicatorColor(I)V
 
-    .line 128
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     const v1, -0xe5e5e6
 
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setUnderlineColor(I)V
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -342,7 +309,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setIndicatorHeight(I)V
 
-    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     const/4 v1, -0x1
@@ -357,10 +323,8 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/StickerMasksView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 131
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
-    .line 132
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     new-instance v1, Lorg/telegram/ui/Components/StickerMasksView$5;
@@ -369,7 +333,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->setDelegate(Lorg/telegram/ui/Components/ScrollSlidingTabStrip$ScrollSlidingTabStripDelegate;)V
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/StickerMasksView$6;
@@ -378,7 +341,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 171
     return-void
 .end method
 
@@ -387,7 +349,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -398,7 +359,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     return-object v0
@@ -409,7 +369,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->reloadStickersAdapter()V
 
     return-void
@@ -420,7 +379,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkDocuments()V
 
     return-void
@@ -431,7 +389,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkPanels()V
 
     return-void
@@ -442,7 +399,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentTabBum:I
 
     return v0
@@ -453,7 +409,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersTabOffset:I
 
     return v0
@@ -464,7 +419,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickerSets:[Ljava/util/ArrayList;
 
     return-object v0
@@ -475,7 +429,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkScroll()V
 
     return-void
@@ -486,7 +439,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersOnItemClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
     return-object v0
@@ -497,7 +449,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->listener:Lorg/telegram/ui/Components/StickerMasksView$Listener;
 
     return-object v0
@@ -508,7 +459,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
     return v0
@@ -520,7 +470,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 39
     iput p1, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
     return p1
@@ -531,7 +480,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
     return-object v0
@@ -542,7 +490,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersLayoutManager:Lorg/telegram/messenger/support/widget/GridLayoutManager;
 
     return-object v0
@@ -553,7 +500,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
     return-void
@@ -563,7 +509,6 @@
     .locals 4
 
     .prologue
-    .line 322
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
     iget v2, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
@@ -574,7 +519,6 @@
 
     move-result v0
 
-    .line 323
     .local v0, "previousCount":I
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
@@ -588,17 +532,14 @@
 
     aput-object v3, v1, v2
 
-    .line 324
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     if-eqz v1, :cond_0
 
-    .line 325
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;->notifyDataSetChanged()V
 
-    .line 327
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
@@ -612,10 +553,8 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 328
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
-    .line 330
     :cond_1
     return-void
 .end method
@@ -624,17 +563,14 @@
     .locals 4
 
     .prologue
-    .line 239
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     if-nez v1, :cond_1
 
-    .line 246
     :cond_0
     :goto_0
     return-void
 
-    .line 242
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersLayoutManager:Lorg/telegram/messenger/support/widget/GridLayoutManager;
 
@@ -642,13 +578,11 @@
 
     move-result v0
 
-    .line 243
     .local v0, "position":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 244
     iget-object v2, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
@@ -682,24 +616,20 @@
     .locals 2
 
     .prologue
-    .line 174
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersLayoutManager:Lorg/telegram/messenger/support/widget/GridLayoutManager;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/GridLayoutManager;->findFirstVisibleItemPosition()I
 
     move-result v0
 
-    .line 175
     .local v0, "firstVisibleItem":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 179
     :goto_0
     return-void
 
-    .line 178
     :cond_0
     invoke-direct {p0, v0}, Lorg/telegram/ui/Components/StickerMasksView;->checkStickersScroll(I)V
 
@@ -711,16 +641,13 @@
     .param p1, "firstVisibleItem"    # I
 
     .prologue
-    .line 182
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-nez v0, :cond_0
 
-    .line 186
     :goto_0
     return-void
 
-    .line 185
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
@@ -755,17 +682,14 @@
     .locals 1
 
     .prologue
-    .line 273
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 274
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;->notifyDataSetChanged()V
 
-    .line 276
     :cond_0
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -777,14 +701,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 277
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickerPreviewViewer;->close()V
 
-    .line 279
     :cond_1
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -792,7 +714,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickerPreviewViewer;->reset()V
 
-    .line 280
     return-void
 .end method
 
@@ -802,43 +723,35 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 193
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     if-nez v5, :cond_0
 
-    .line 236
     :goto_0
     return-void
 
-    .line 196
     :cond_0
     const/4 v5, -0x2
 
     iput v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentTabBum:I
 
-    .line 198
     iput v10, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersTabOffset:I
 
-    .line 199
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->getCurrentPosition()I
 
     move-result v2
 
-    .line 200
     .local v2, "lastPosition":I
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->removeTabs()V
 
-    .line 201
     iget v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
     if-nez v5, :cond_3
 
-    .line 202
     invoke-virtual {p0}, Lorg/telegram/ui/Components/StickerMasksView;->getContext()Landroid/content/Context;
 
     move-result-object v5
@@ -853,18 +766,15 @@
 
     move-result-object v1
 
-    .line 203
     .local v1, "drawable":Landroid/graphics/drawable/Drawable;
     const-string/jumbo v5, "chat_emojiPanelIcon"
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ActionBar/Theme;->setDrawableColorByKey(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
-    .line 204
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->addIconTab(Landroid/graphics/drawable/Drawable;)V
 
-    .line 205
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     const-string/jumbo v6, "NoStickers"
@@ -877,7 +787,6 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 213
     :goto_1
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
@@ -891,19 +800,16 @@
 
     if-nez v5, :cond_1
 
-    .line 214
     iget v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersTabOffset:I
 
     iput v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentTabBum:I
 
-    .line 215
     iget v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersTabOffset:I
 
     add-int/lit8 v5, v5, 0x1
 
     iput v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersTabOffset:I
 
-    .line 216
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/StickerMasksView;->getContext()Landroid/content/Context;
@@ -930,7 +836,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->addIconTab(Landroid/graphics/drawable/Drawable;)V
 
-    .line 219
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickerSets:[Ljava/util/ArrayList;
 
@@ -940,14 +845,12 @@
 
     invoke-virtual {v5}, Ljava/util/ArrayList;->clear()V
 
-    .line 220
     iget v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
     invoke-static {v5}, Lorg/telegram/messenger/query/StickersQuery;->getStickerSets(I)Ljava/util/ArrayList;
 
     move-result-object v4
 
-    .line 221
     .local v4, "packs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     const/4 v0, 0x0
 
@@ -959,14 +862,12 @@
 
     if-ge v0, v5, :cond_5
 
-    .line 222
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v3
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 223
     .local v3, "pack":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     iget-object v5, v3, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -986,14 +887,12 @@
 
     if-eqz v5, :cond_4
 
-    .line 221
     :cond_2
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 207
     .end local v0    # "a":I
     .end local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     .end local v3    # "pack":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
@@ -1013,18 +912,15 @@
 
     move-result-object v1
 
-    .line 208
     .restart local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     const-string/jumbo v5, "chat_emojiPanelIcon"
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ActionBar/Theme;->setDrawableColorByKey(Landroid/graphics/drawable/Drawable;Ljava/lang/String;)V
 
-    .line 209
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5, v1}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->addIconTab(Landroid/graphics/drawable/Drawable;)V
 
-    .line 210
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersEmptyView:Landroid/widget/TextView;
 
     const-string/jumbo v6, "NoMasks"
@@ -1039,7 +935,6 @@
 
     goto/16 :goto_1
 
-    .line 226
     .restart local v0    # "a":I
     .restart local v3    # "pack":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     .restart local v4    # "packs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
@@ -1054,7 +949,6 @@
 
     goto :goto_3
 
-    .line 228
     .end local v3    # "pack":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :cond_5
     const/4 v0, 0x0
@@ -1072,7 +966,6 @@
 
     if-ge v0, v5, :cond_6
 
-    .line 229
     iget-object v6, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickerSets:[Ljava/util/ArrayList;
@@ -1097,26 +990,21 @@
 
     invoke-virtual {v6, v5}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->addStickerTab(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 228
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_4
 
-    .line 231
     :cond_6
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->updateTabStyles()V
 
-    .line 232
     if-eqz v2, :cond_7
 
-    .line 233
     iget-object v5, p0, Lorg/telegram/ui/Components/StickerMasksView;->scrollSlidingTabStrip:Lorg/telegram/ui/Components/ScrollSlidingTabStrip;
 
     invoke-virtual {v5, v2, v2}, Lorg/telegram/ui/Components/ScrollSlidingTabStrip;->onPageScrolled(II)V
 
-    .line 235
     :cond_7
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkPanels()V
 
@@ -1130,15 +1018,12 @@
     .param p1, "document"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 249
     if-nez p1, :cond_1
 
-    .line 261
     :cond_0
     :goto_0
     return-void
 
-    .line 252
     :cond_1
     iget v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
@@ -1154,7 +1039,6 @@
 
     invoke-static {v1, p1, v2}, Lorg/telegram/messenger/query/StickersQuery;->addRecentSticker(ILorg/telegram/tgnet/TLRPC$Document;I)V
 
-    .line 253
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
     iget v2, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
@@ -1165,7 +1049,6 @@
 
     move-result v0
 
-    .line 254
     .local v0, "wasEmpty":Z
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->recentStickers:[Ljava/util/ArrayList;
 
@@ -1179,21 +1062,17 @@
 
     aput-object v3, v1, v2
 
-    .line 255
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     if-eqz v1, :cond_2
 
-    .line 256
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;->notifyDataSetChanged()V
 
-    .line 258
     :cond_2
     if-eqz v0, :cond_0
 
-    .line 259
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
     goto :goto_0
@@ -1207,12 +1086,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 335
     sget v1, Lorg/telegram/messenger/NotificationCenter;->stickersDidLoaded:I
 
     if-ne p1, v1, :cond_1
 
-    .line 336
     aget-object v1, p2, v2
 
     check-cast v1, Ljava/lang/Integer;
@@ -1225,27 +1102,21 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 337
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
-    .line 338
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->reloadStickersAdapter()V
 
-    .line 339
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkPanels()V
 
-    .line 347
     :cond_0
     :goto_0
     return-void
 
-    .line 341
     :cond_1
     sget v1, Lorg/telegram/messenger/NotificationCenter;->recentDocumentsDidLoaded:I
 
     if-ne p1, v1, :cond_0
 
-    .line 342
     aget-object v1, p2, v2
 
     check-cast v1, Ljava/lang/Boolean;
@@ -1254,7 +1125,6 @@
 
     move-result v0
 
-    .line 343
     .local v0, "isGif":Z
     if-nez v0, :cond_0
 
@@ -1272,7 +1142,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 344
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkDocuments()V
 
     goto :goto_0
@@ -1282,7 +1151,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->currentType:I
 
     return v0
@@ -1292,10 +1160,8 @@
     .locals 2
 
     .prologue
-    .line 288
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 289
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1304,7 +1170,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 290
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1313,14 +1178,12 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 291
     new-instance v0, Lorg/telegram/ui/Components/StickerMasksView$7;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/StickerMasksView$7;-><init>(Lorg/telegram/ui/Components/StickerMasksView;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 298
     return-void
 .end method
 
@@ -1328,12 +1191,10 @@
     .locals 2
 
     .prologue
-    .line 315
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->stickersGridAdapter:Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 316
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1342,7 +1203,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 317
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1351,7 +1211,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 319
     :cond_0
     return-void
 .end method
@@ -1365,26 +1224,21 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 265
     iget v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->lastNotifyWidth:I
 
     sub-int v1, p4, p2
 
     if-eq v0, v1, :cond_0
 
-    .line 266
     sub-int v0, p4, p2
 
     iput v0, p0, Lorg/telegram/ui/Components/StickerMasksView;->lastNotifyWidth:I
 
-    .line 267
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->reloadStickersAdapter()V
 
-    .line 269
     :cond_0
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 270
     return-void
 .end method
 
@@ -1393,10 +1247,8 @@
     .param p1, "value"    # Lorg/telegram/ui/Components/StickerMasksView$Listener;
 
     .prologue
-    .line 283
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerMasksView;->listener:Lorg/telegram/ui/Components/StickerMasksView$Listener;
 
-    .line 284
     return-void
 .end method
 
@@ -1409,15 +1261,12 @@
 
     const/4 v2, 0x0
 
-    .line 302
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 303
     const/16 v0, 0x8
 
     if-eq p1, v0, :cond_0
 
-    .line 304
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1426,7 +1275,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 305
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1435,22 +1283,16 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 306
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->updateStickerTabs()V
 
-    .line 307
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->reloadStickersAdapter()V
 
-    .line 308
     invoke-direct {p0}, Lorg/telegram/ui/Components/StickerMasksView;->checkDocuments()V
 
-    .line 309
     invoke-static {v2, v2, v3}, Lorg/telegram/messenger/query/StickersQuery;->loadRecents(IZZ)V
 
-    .line 310
     invoke-static {v3, v2, v3}, Lorg/telegram/messenger/query/StickersQuery;->loadRecents(IZZ)V
 
-    .line 312
     :cond_0
     return-void
 .end method

@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 23414
     const v0, 0xd0a48c4
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 23413
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23421
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$messages_Chats;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$messages_Chats;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23425
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23426
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputUser;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23427
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->max_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23428
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getCommonChats;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23429
     return-void
 .end method

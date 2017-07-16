@@ -41,7 +41,6 @@
     .param p4, "errorCode"    # I
 
     .prologue
-    .line 84
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -72,27 +71,22 @@
 
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 85
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->mimeType:Ljava/lang/String;
 
-    .line 86
     iput-boolean p3, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->secureDecoderRequired:Z
 
-    .line 87
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->decoderName:Ljava/lang/String;
 
-    .line 88
     invoke-static {p4}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->buildCustomDiagnosticInfo(I)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->diagnosticInfo:Ljava/lang/String;
 
-    .line 89
     return-void
 .end method
 
@@ -104,7 +98,6 @@
     .param p4, "decoderName"    # Ljava/lang/String;
 
     .prologue
-    .line 93
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -135,18 +128,14 @@
 
     invoke-direct {p0, v0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 94
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->mimeType:Ljava/lang/String;
 
-    .line 95
     iput-boolean p3, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->secureDecoderRequired:Z
 
-    .line 96
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->decoderName:Ljava/lang/String;
 
-    .line 97
     sget v0, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -160,10 +149,8 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecRenderer$DecoderInitializationException;->diagnosticInfo:Ljava/lang/String;
 
-    .line 98
     return-void
 
-    .line 97
     :cond_0
     const/4 v0, 0x0
 
@@ -175,12 +162,10 @@
     .param p0, "errorCode"    # I
 
     .prologue
-    .line 109
     if-gez p0, :cond_0
 
     const-string/jumbo v0, "neg_"
 
-    .line 110
     .local v0, "sign":Ljava/lang/String;
     :goto_0
     new-instance v1, Ljava/lang/StringBuilder;
@@ -211,7 +196,6 @@
 
     return-object v1
 
-    .line 109
     .end local v0    # "sign":Ljava/lang/String;
     :cond_0
     const-string/jumbo v0, ""
@@ -227,12 +211,10 @@
     .end annotation
 
     .prologue
-    .line 102
     instance-of v0, p0, Landroid/media/MediaCodec$CodecException;
 
     if-eqz v0, :cond_0
 
-    .line 103
     check-cast p0, Landroid/media/MediaCodec$CodecException;
 
     .end local p0    # "cause":Ljava/lang/Throwable;
@@ -240,7 +222,6 @@
 
     move-result-object v0
 
-    .line 105
     :goto_0
     return-object v0
 

@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateFinalActivity;
 
     .prologue
-    .line 444
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->val$show:Z
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 458
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1500(Lorg/telegram/ui/GroupCreateFinalActivity;)Landroid/animation/AnimatorSet;
@@ -64,14 +62,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 459
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1502(Lorg/telegram/ui/GroupCreateFinalActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 461
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 447
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1500(Lorg/telegram/ui/GroupCreateFinalActivity;)Landroid/animation/AnimatorSet;
@@ -104,12 +99,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 448
     iget-boolean v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->val$show:Z
 
     if-nez v0, :cond_1
 
-    .line 449
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1600(Lorg/telegram/ui/GroupCreateFinalActivity;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -118,12 +111,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 454
     :cond_0
     :goto_0
     return-void
 
-    .line 451
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$8;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 4669
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4672
     const/4 v0, 0x0
 
-    .line 4673
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     sparse-switch p1, :sswitch_data_0
 
-    .line 4684
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 4685
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputPrivacyKey"
@@ -70,29 +65,24 @@
 
     throw v1
 
-    .line 4675
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPrivacyKeyChatInvite;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPrivacyKeyChatInvite;-><init>()V
 
-    .line 4676
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     goto :goto_0
 
-    .line 4678
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPrivacyKeyStatusTimestamp;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPrivacyKeyStatusTimestamp;-><init>()V
 
-    .line 4679
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     goto :goto_0
 
-    .line 4681
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPrivacyKeyPhoneCall;
 
@@ -102,18 +92,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;
     goto :goto_0
 
-    .line 4687
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4688
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputPrivacyKey;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 4690
     :cond_1
     return-object v0
 
-    .line 4673
     nop
 
     :sswitch_data_0

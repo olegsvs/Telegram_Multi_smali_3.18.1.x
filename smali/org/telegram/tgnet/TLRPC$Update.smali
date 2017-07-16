@@ -161,31 +161,26 @@
     .locals 1
 
     .prologue
-    .line 11914
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 11915
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Update;->messages:Ljava/util/ArrayList;
 
-    .line 11947
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Update;->entities:Ljava/util/ArrayList;
 
-    .line 11951
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Update;->rules:Ljava/util/ArrayList;
 
-    .line 11961
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -202,20 +197,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 11969
     const/4 v0, 0x0
 
-    .line 11970
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Update;
     sparse-switch p1, :sswitch_data_0
 
-    .line 12143
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 12144
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Update"
@@ -240,623 +231,504 @@
 
     throw v1
 
-    .line 11972
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateDeleteMessages;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateDeleteMessages;-><init>()V
 
-    .line 11973
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11975
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadFeaturedStickers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadFeaturedStickers;-><init>()V
 
-    .line 11976
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11978
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatAdmins;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChatAdmins;-><init>()V
 
-    .line 11979
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11981
     :sswitch_3
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateInlineBotCallbackQuery;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateInlineBotCallbackQuery;-><init>()V
 
-    .line 11982
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11984
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryptedChatTyping;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateEncryptedChatTyping;-><init>()V
 
-    .line 11985
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11987
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateBotCallbackQuery;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateBotCallbackQuery;-><init>()V
 
-    .line 11988
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11990
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNewChannelMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNewChannelMessage;-><init>()V
 
-    .line 11991
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11993
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadHistoryOutbox;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadHistoryOutbox;-><init>()V
 
-    .line 11994
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11996
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateDialogPinned;-><init>()V
 
-    .line 11997
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 11999
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserPhone;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserPhone;-><init>()V
 
-    .line 12000
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12002
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;-><init>()V
 
-    .line 12003
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12005
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;-><init>()V
 
-    .line 12006
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12008
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSets;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSets;-><init>()V
 
-    .line 12009
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12011
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNewMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNewMessage;-><init>()V
 
-    .line 12012
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12014
     :sswitch_e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNewEncryptedMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNewEncryptedMessage;-><init>()V
 
-    .line 12015
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12017
     :sswitch_f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserStatus;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserStatus;-><init>()V
 
-    .line 12018
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12020
     :sswitch_10
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelMessageViews;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChannelMessageViews;-><init>()V
 
-    .line 12021
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto :goto_0
 
-    .line 12023
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatePtsChanged;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updatePtsChanged;-><init>()V
 
-    .line 12024
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12026
     :sswitch_12
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNotifySettings;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNotifySettings;-><init>()V
 
-    .line 12027
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12029
     :sswitch_13
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateContactRegistered;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateContactRegistered;-><init>()V
 
-    .line 12030
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12032
     :sswitch_14
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantDelete;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantDelete;-><init>()V
 
-    .line 12033
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12035
     :sswitch_15
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateEditMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateEditMessage;-><init>()V
 
-    .line 12036
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12038
     :sswitch_16
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateBotInlineSend;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateBotInlineSend;-><init>()V
 
-    .line 12039
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12041
     :sswitch_17
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateWebPage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateWebPage;-><init>()V
 
-    .line 12042
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12044
     :sswitch_18
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantAdd;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantAdd;-><init>()V
 
-    .line 12045
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12047
     :sswitch_19
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatUserTyping;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChatUserTyping;-><init>()V
 
-    .line 12048
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12050
     :sswitch_1a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;-><init>()V
 
-    .line 12051
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12053
     :sswitch_1b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelTooLong;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChannelTooLong;-><init>()V
 
-    .line 12054
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12056
     :sswitch_1c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserTyping;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserTyping;-><init>()V
 
-    .line 12057
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12059
     :sswitch_1d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;-><init>()V
 
-    .line 12060
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12062
     :sswitch_1e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelPinnedMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChannelPinnedMessage;-><init>()V
 
-    .line 12063
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12065
     :sswitch_1f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantAdmin;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipantAdmin;-><init>()V
 
-    .line 12066
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12068
     :sswitch_20
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateBotInlineQuery;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateBotInlineQuery;-><init>()V
 
-    .line 12069
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12071
     :sswitch_21
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatePrivacy;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updatePrivacy;-><init>()V
 
-    .line 12072
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12074
     :sswitch_22
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateConfig;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateConfig;-><init>()V
 
-    .line 12075
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12077
     :sswitch_23
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateDraftMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateDraftMessage;-><init>()V
 
-    .line 12078
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12080
     :sswitch_24
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserName;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserName;-><init>()V
 
-    .line 12081
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12083
     :sswitch_25
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updatePhoneCall;-><init>()V
 
-    .line 12084
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12086
     :sswitch_26
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;-><init>()V
 
-    .line 12087
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12089
     :sswitch_27
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateRecentStickers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateRecentStickers;-><init>()V
 
-    .line 12090
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12092
     :sswitch_28
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNewGeoChatMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNewGeoChatMessage;-><init>()V
 
-    .line 12093
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12095
     :sswitch_29
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadHistoryInbox;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadHistoryInbox;-><init>()V
 
-    .line 12096
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12098
     :sswitch_2a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateContactLink;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateContactLink;-><init>()V
 
-    .line 12099
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12101
     :sswitch_2b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateSavedGifs;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateSavedGifs;-><init>()V
 
-    .line 12102
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12104
     :sswitch_2c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannel;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChannel;-><init>()V
 
-    .line 12105
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12107
     :sswitch_2d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChannelWebPage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateChannelWebPage;-><init>()V
 
-    .line 12108
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12110
     :sswitch_2e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateDeleteChannelMessages;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateDeleteChannelMessages;-><init>()V
 
-    .line 12111
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12113
     :sswitch_2f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserPhoto;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserPhoto;-><init>()V
 
-    .line 12114
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12116
     :sswitch_30
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateDcOptions;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateDcOptions;-><init>()V
 
-    .line 12117
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12119
     :sswitch_31
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateEditChannelMessage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateEditChannelMessage;-><init>()V
 
-    .line 12120
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12122
     :sswitch_32
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;-><init>()V
 
-    .line 12123
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12125
     :sswitch_33
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateNewStickerSet;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateNewStickerSet;-><init>()V
 
-    .line 12126
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12128
     :sswitch_34
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryptedMessagesRead;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateEncryptedMessagesRead;-><init>()V
 
-    .line 12129
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12131
     :sswitch_35
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateStickerSetsOrder;-><init>()V
 
-    .line 12132
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12134
     :sswitch_36
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;-><init>()V
 
-    .line 12135
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12137
     :sswitch_37
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateReadMessagesContents;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateReadMessagesContents;-><init>()V
 
-    .line 12138
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12140
     :sswitch_38
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateChatParticipants;
 
@@ -866,18 +738,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Update;
     goto/16 :goto_0
 
-    .line 12146
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 12147
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Update;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 12149
     :cond_1
     return-object v0
 
-    .line 11970
     nop
 
     :sswitch_data_0

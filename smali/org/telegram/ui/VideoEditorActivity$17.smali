@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 1060
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,10 +51,8 @@
 
     const/4 v3, 0x0
 
-    .line 1063
     if-eqz p1, :cond_5
 
-    .line 1064
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -68,7 +65,6 @@
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 1065
     .local v1, "layoutParams3":Landroid/widget/FrameLayout$LayoutParams;
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -103,7 +99,6 @@
     :goto_0
     add-int v0, v4, v2
 
-    .line 1066
     .local v0, "height":I
     int-to-float v2, v0
 
@@ -113,7 +108,6 @@
 
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 1067
     int-to-float v2, v0
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -124,7 +118,6 @@
 
     iput v2, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 1068
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -133,7 +126,6 @@
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1070
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -142,7 +134,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1071
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -151,14 +142,12 @@
 
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 1072
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     const/4 v4, 0x0
 
     invoke-static {v2, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$5202(Lorg/telegram/ui/VideoEditorActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1075
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -172,7 +161,6 @@
 
     if-nez v2, :cond_3
 
-    .line 1076
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -181,7 +169,6 @@
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAlpha(F)V
 
-    .line 1130
     .end local v0    # "height":I
     .end local v1    # "layoutParams3":Landroid/widget/FrameLayout$LayoutParams;
     :cond_1
@@ -192,10 +179,8 @@
     :cond_2
     move v2, v3
 
-    .line 1065
     goto :goto_0
 
-    .line 1079
     .restart local v0    # "height":I
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -208,7 +193,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 1081
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$4900(Lorg/telegram/ui/VideoEditorActivity;)Z
@@ -217,7 +201,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 1082
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -226,7 +209,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 1083
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     new-instance v4, Landroid/animation/AnimatorSet;
@@ -235,7 +217,6 @@
 
     invoke-static {v2, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$5202(Lorg/telegram/ui/VideoEditorActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1084
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -246,7 +227,6 @@
 
     iget-object v5, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1085
     invoke-static {v5}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v5
@@ -265,10 +245,8 @@
 
     aput-object v5, v4, v3
 
-    .line 1084
     invoke-virtual {v2, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1087
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -281,7 +259,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1095
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -292,7 +269,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1096
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -303,7 +279,6 @@
 
     goto :goto_1
 
-    .line 1098
     :cond_4
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -313,7 +288,6 @@
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAlpha(F)V
 
-    .line 1099
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -326,7 +300,6 @@
 
     goto :goto_1
 
-    .line 1102
     .end local v0    # "height":I
     .end local v1    # "layoutParams3":Landroid/widget/FrameLayout$LayoutParams;
     :cond_5
@@ -338,7 +311,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 1103
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -347,14 +319,12 @@
 
     invoke-virtual {v2}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 1104
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     const/4 v4, 0x0
 
     invoke-static {v2, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$5202(Lorg/telegram/ui/VideoEditorActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1107
     :cond_6
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -368,7 +338,6 @@
 
     if-eq v2, v8, :cond_1
 
-    .line 1110
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$4900(Lorg/telegram/ui/VideoEditorActivity;)Z
@@ -377,7 +346,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 1111
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     new-instance v4, Landroid/animation/AnimatorSet;
@@ -386,7 +354,6 @@
 
     invoke-static {v2, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$5202(Lorg/telegram/ui/VideoEditorActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1112
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -397,7 +364,6 @@
 
     iget-object v5, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1113
     invoke-static {v5}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
 
     move-result-object v5
@@ -416,10 +382,8 @@
 
     aput-object v5, v4, v3
 
-    .line 1112
     invoke-virtual {v2, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1115
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -432,7 +396,6 @@
 
     invoke-virtual {v2, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 1124
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -443,7 +406,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1125
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5200(Lorg/telegram/ui/VideoEditorActivity;)Landroid/animation/AnimatorSet;
@@ -454,7 +416,6 @@
 
     goto/16 :goto_1
 
-    .line 1127
     :cond_7
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -466,7 +427,6 @@
 
     goto/16 :goto_1
 
-    .line 1085
     :array_0
     .array-data 4
         0x0
@@ -474,12 +434,9 @@
     .end array-data
 .end method
 
-.method public onContextClick(Lorg/telegram/tgnet/TLRPC$BotInlineResult;)V
     .locals 0
-    .param p1, "result"    # Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     .prologue
-    .line 1140
     return-void
 .end method
 
@@ -488,6 +445,5 @@
     .param p1, "searching"    # Z
 
     .prologue
-    .line 1135
     return-void
 .end method

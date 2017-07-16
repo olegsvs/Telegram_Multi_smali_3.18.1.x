@@ -27,18 +27,14 @@
     .param p1, "stmt"    # Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 23
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->inRow:Z
 
-    .line 26
     iput-object p1, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
-    .line 27
     return-void
 .end method
 
@@ -54,10 +50,8 @@
     .end annotation
 
     .prologue
-    .line 55
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -81,10 +75,8 @@
     .end annotation
 
     .prologue
-    .line 60
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 61
     iget-object v1, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -95,16 +87,13 @@
 
     move-result v0
 
-    .line 62
     .local v0, "ptr":I
     if-eqz v0, :cond_0
 
-    .line 63
     invoke-static {v0}, Lorg/telegram/tgnet/NativeByteBuffer;->wrap(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 65
     :goto_0
     return-object v1
 
@@ -123,12 +112,10 @@
     .end annotation
 
     .prologue
-    .line 106
     iget-boolean v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->inRow:Z
 
     if-nez v0, :cond_0
 
-    .line 107
     new-instance v0, Lorg/telegram/SQLite/SQLiteException;
 
     const-string/jumbo v1, "You must call next before"
@@ -137,7 +124,6 @@
 
     throw v0
 
-    .line 109
     :cond_0
     return-void
 .end method
@@ -170,12 +156,10 @@
     .locals 1
 
     .prologue
-    .line 102
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 103
     return-void
 .end method
 
@@ -189,10 +173,8 @@
     .end annotation
 
     .prologue
-    .line 40
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 41
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -210,7 +192,6 @@
     .locals 1
 
     .prologue
-    .line 98
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -230,10 +211,8 @@
     .end annotation
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -257,10 +236,8 @@
     .end annotation
 
     .prologue
-    .line 35
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 36
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -286,10 +263,8 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 30
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 31
     iget-object v1, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -321,10 +296,8 @@
     .end annotation
 
     .prologue
-    .line 45
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 46
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I
@@ -349,7 +322,6 @@
     .prologue
     const/4 v6, -0x1
 
-    .line 74
     iget-object v4, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     iget-object v5, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
@@ -362,17 +334,14 @@
 
     move-result v3
 
-    .line 75
     .local v3, "res":I
     if-ne v3, v6, :cond_2
 
-    .line 76
     const/4 v1, 0x6
 
     .local v1, "repeatCount":I
     move v2, v1
 
-    .line 77
     .end local v1    # "repeatCount":I
     .local v2, "repeatCount":I
     :goto_0
@@ -382,18 +351,15 @@
     .restart local v1    # "repeatCount":I
     if-eqz v2, :cond_0
 
-    .line 79
     :try_start_0
     const-string/jumbo v4, "sqlite busy, waiting..."
 
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 80
     const-wide/16 v4, 0x1f4
 
     invoke-static {v4, v5}, Ljava/lang/Thread;->sleep(J)V
 
-    .line 81
     iget-object v4, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
@@ -402,14 +368,11 @@
 
     move-result v3
 
-    .line 82
     if-nez v3, :cond_1
 
-    .line 89
     :cond_0
     if-ne v3, v6, :cond_2
 
-    .line 90
     new-instance v4, Lorg/telegram/SQLite/SQLiteException;
 
     const-string/jumbo v5, "sqlite busy"
@@ -421,29 +384,24 @@
     :cond_1
     move v2, v1
 
-    .line 87
     .end local v1    # "repeatCount":I
     .restart local v2    # "repeatCount":I
     goto :goto_0
 
-    .line 85
     .end local v2    # "repeatCount":I
     .restart local v1    # "repeatCount":I
     :catch_0
     move-exception v0
 
-    .line 86
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     move v2, v1
 
-    .line 87
     .end local v1    # "repeatCount":I
     .restart local v2    # "repeatCount":I
     goto :goto_0
 
-    .line 93
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v2    # "repeatCount":I
     :cond_2
@@ -454,12 +412,10 @@
     :goto_1
     iput-boolean v4, p0, Lorg/telegram/SQLite/SQLiteCursor;->inRow:Z
 
-    .line 94
     iget-boolean v4, p0, Lorg/telegram/SQLite/SQLiteCursor;->inRow:Z
 
     return v4
 
-    .line 93
     :cond_3
     const/4 v4, 0x0
 
@@ -476,10 +432,8 @@
     .end annotation
 
     .prologue
-    .line 50
     invoke-virtual {p0}, Lorg/telegram/SQLite/SQLiteCursor;->checkRow()V
 
-    .line 51
     iget-object v0, p0, Lorg/telegram/SQLite/SQLiteCursor;->preparedStatement:Lorg/telegram/SQLite/SQLitePreparedStatement;
 
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->getStatementHandle()I

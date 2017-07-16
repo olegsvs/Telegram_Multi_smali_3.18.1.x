@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 584
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$CallLogRow;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/CallLogActivity$1;
 
     .prologue
-    .line 584
     invoke-direct {p0, p1}, Lorg/telegram/ui/CallLogActivity$CallLogRow;-><init>(Lorg/telegram/ui/CallLogActivity;)V
 
     return-void

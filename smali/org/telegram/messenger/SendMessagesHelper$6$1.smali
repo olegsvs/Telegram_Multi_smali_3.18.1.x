@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$6;
 
     .prologue
-    .line 1084
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,7 +44,6 @@
     .locals 15
 
     .prologue
-    .line 1087
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1088
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-boolean v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$cacheFinal:Z
@@ -71,7 +68,6 @@
 
     if-nez v0, :cond_1
 
-    .line 1089
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -92,18 +88,15 @@
 
     invoke-virtual {v0, v2, v3, v4, v13}, Lorg/telegram/messenger/SendMessagesHelper;->sendCallback(ZLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$KeyboardButton;Lorg/telegram/ui/ChatActivity;)V
 
-    .line 1158
     :cond_0
     :goto_0
     return-void
 
-    .line 1090
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v0, :cond_0
 
-    .line 1091
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$button:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
@@ -112,19 +105,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 1092
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
 
     if-eqz v0, :cond_2
 
-    .line 1093
     iget-object v8, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v8, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
 
-    .line 1094
     .local v8, "form":Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -136,7 +126,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1095
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -153,7 +142,6 @@
 
     goto :goto_0
 
-    .line 1096
     .end local v8    # "form":Lorg/telegram/tgnet/TLRPC$TL_payments_paymentForm;
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -162,7 +150,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1097
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v2, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -183,13 +170,11 @@
 
     goto :goto_0
 
-    .line 1100
     :cond_3
     iget-object v10, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;
 
-    .line 1101
     .local v10, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
@@ -201,7 +186,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1102
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -212,18 +196,15 @@
 
     invoke-virtual {v0, v2, v10}, Lorg/telegram/messenger/MessagesStorage;->saveBotCache(Ljava/lang/String;Lorg/telegram/tgnet/TLObject;)V
 
-    .line 1104
     :cond_4
     iget-object v0, v10, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;->message:Ljava/lang/String;
 
     if-eqz v0, :cond_a
 
-    .line 1105
     iget-boolean v0, v10, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;->alert:Z
 
     if-eqz v0, :cond_5
 
-    .line 1106
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -234,7 +215,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1109
     new-instance v6, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
@@ -247,7 +227,6 @@
 
     invoke-direct {v6, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1110
     .local v6, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v0, "AppName"
 
@@ -259,7 +238,6 @@
 
     invoke-virtual {v6, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1111
     const-string/jumbo v0, "OK"
 
     const v2, 0x7f070452
@@ -272,12 +250,10 @@
 
     invoke-virtual {v6, v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1112
     iget-object v0, v10, Lorg/telegram/tgnet/TLRPC$TL_messages_botCallbackAnswer;->message:Ljava/lang/String;
 
     invoke-virtual {v6, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1113
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -290,7 +266,6 @@
 
     goto/16 :goto_0
 
-    .line 1115
     .end local v6    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_5
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
@@ -301,7 +276,6 @@
 
     iget v5, v0, Lorg/telegram/tgnet/TLRPC$Message;->from_id:I
 
-    .line 1116
     .local v5, "uid":I
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
@@ -313,7 +287,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1117
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -322,15 +295,12 @@
 
     iget v5, v0, Lorg/telegram/tgnet/TLRPC$Message;->via_bot_id:I
 
-    .line 1119
     :cond_6
     const/4 v9, 0x0
 
-    .line 1120
     .local v9, "name":Ljava/lang/String;
     if-lez v5, :cond_9
 
-    .line 1121
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -343,11 +313,9 @@
 
     move-result-object v11
 
-    .line 1122
     .local v11, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v11, :cond_7
 
-    .line 1123
     iget-object v0, v11, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     iget-object v2, v11, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
@@ -356,16 +324,13 @@
 
     move-result-object v9
 
-    .line 1131
     .end local v11    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_7
     :goto_1
     if-nez v9, :cond_8
 
-    .line 1132
     const-string/jumbo v9, "bot"
 
-    .line 1134
     :cond_8
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
@@ -377,7 +342,6 @@
 
     goto/16 :goto_0
 
-    .line 1126
     :cond_9
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -393,16 +357,13 @@
 
     move-result-object v7
 
-    .line 1127
     .local v7, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v7, :cond_7
 
-    .line 1128
     iget-object v9, v7, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 1136
     .end local v5    # "uid":I
     .end local v7    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v9    # "name":Ljava/lang/String;
@@ -411,7 +372,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1137
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -422,7 +382,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1140
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -431,7 +390,6 @@
 
     iget v5, v0, Lorg/telegram/tgnet/TLRPC$Message;->from_id:I
 
-    .line 1141
     .restart local v5    # "uid":I
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
@@ -443,7 +401,6 @@
 
     if-eqz v0, :cond_b
 
-    .line 1142
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -452,7 +409,6 @@
 
     iget v5, v0, Lorg/telegram/tgnet/TLRPC$Message;->via_bot_id:I
 
-    .line 1144
     :cond_b
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -466,7 +422,6 @@
 
     move-result-object v11
 
-    .line 1145
     .restart local v11    # "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v11, :cond_c
 
@@ -476,7 +431,6 @@
 
     const/4 v12, 0x1
 
-    .line 1146
     .local v12, "verified":Z
     :goto_2
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
@@ -487,7 +441,6 @@
 
     if-eqz v0, :cond_f
 
-    .line 1147
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -510,12 +463,10 @@
 
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->game:Lorg/telegram/tgnet/TLRPC$TL_game;
 
-    .line 1148
     .local v1, "game":Lorg/telegram/tgnet/TLRPC$TL_game;
     :goto_3
     if-eqz v1, :cond_0
 
-    .line 1151
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$6;->val$parentFragment:Lorg/telegram/ui/ChatActivity;
@@ -571,7 +522,6 @@
 
     goto/16 :goto_0
 
-    .line 1145
     .end local v1    # "game":Lorg/telegram/tgnet/TLRPC$TL_game;
     .end local v12    # "verified":Z
     :cond_c
@@ -579,21 +529,18 @@
 
     goto :goto_2
 
-    .line 1147
     .restart local v12    # "verified":Z
     :cond_d
     const/4 v1, 0x0
 
     goto :goto_3
 
-    .line 1151
     .restart local v1    # "game":Lorg/telegram/tgnet/TLRPC$TL_game;
     :cond_e
     const/4 v4, 0x0
 
     goto :goto_4
 
-    .line 1153
     .end local v1    # "game":Lorg/telegram/tgnet/TLRPC$TL_game;
     :cond_f
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$6$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$6;

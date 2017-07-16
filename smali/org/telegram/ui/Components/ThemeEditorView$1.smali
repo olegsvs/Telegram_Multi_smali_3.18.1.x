@@ -31,7 +31,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 897
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -46,7 +45,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 905
     const/4 v0, 0x1
 
     return v0
@@ -57,18 +55,15 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 910
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v8
 
-    .line 911
     .local v8, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v9
 
-    .line 912
     .local v9, "y":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -76,20 +71,16 @@
 
     if-nez v10, :cond_6
 
-    .line 913
     iput v8, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startX:F
 
-    .line 914
     iput v9, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startY:F
 
-    .line 951
     :cond_0
     :goto_0
     iget-boolean v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->dragging:Z
 
     if-eqz v10, :cond_5
 
-    .line 952
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v10
@@ -98,18 +89,15 @@
 
     if-ne v10, v11, :cond_c
 
-    .line 953
     iget v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startX:F
 
     sub-float v2, v8, v10
 
-    .line 954
     .local v2, "dx":F
     iget v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startY:F
 
     sub-float v3, v9, v10
 
-    .line 955
     .local v3, "dy":F
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
@@ -127,7 +115,6 @@
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 956
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -144,7 +131,6 @@
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 957
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2800(Lorg/telegram/ui/Components/ThemeEditorView;)I
@@ -153,7 +139,6 @@
 
     div-int/lit8 v7, v10, 0x2
 
-    .line 958
     .local v7, "maxDiff":I
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
@@ -167,7 +152,6 @@
 
     if-ge v10, v11, :cond_9
 
-    .line 959
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -178,12 +162,10 @@
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 963
     :cond_1
     :goto_1
     const/high16 v1, 0x3f800000    # 1.0f
 
-    .line 964
     .local v1, "alpha":F
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
@@ -195,7 +177,6 @@
 
     if-gez v10, :cond_a
 
-    .line 965
     const/high16 v10, 0x3f800000    # 1.0f
 
     iget-object v11, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -218,7 +199,6 @@
 
     add-float v1, v10, v11
 
-    .line 969
     :cond_2
     :goto_2
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -235,7 +215,6 @@
 
     if-eqz v10, :cond_3
 
-    .line 970
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2900(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/widget/FrameLayout;
@@ -244,11 +223,9 @@
 
     invoke-virtual {v10, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 972
     :cond_3
     const/4 v7, 0x0
 
-    .line 973
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -261,7 +238,6 @@
 
     if-ge v10, v11, :cond_b
 
-    .line 974
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -272,7 +248,6 @@
 
     iput v11, v10, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 978
     :cond_4
     :goto_3
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -295,13 +270,10 @@
 
     invoke-interface {v10, v11, v12}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 979
     iput v8, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startX:F
 
-    .line 980
     iput v9, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startY:F
 
-    .line 986
     .end local v1    # "alpha":F
     .end local v2    # "dx":F
     .end local v3    # "dy":F
@@ -312,7 +284,6 @@
 
     return v10
 
-    .line 915
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -326,7 +297,6 @@
 
     if-nez v10, :cond_8
 
-    .line 916
     iget v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startX:F
 
     sub-float/2addr v10, v8
@@ -367,21 +337,17 @@
 
     if-ltz v10, :cond_0
 
-    .line 917
     :cond_7
     const/4 v10, 0x1
 
     iput-boolean v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->dragging:Z
 
-    .line 918
     iput v8, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startX:F
 
-    .line 919
     iput v9, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->startY:F
 
     goto/16 :goto_0
 
-    .line 921
     :cond_8
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -391,12 +357,10 @@
 
     if-ne v10, v11, :cond_0
 
-    .line 922
     iget-boolean v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->dragging:Z
 
     if-nez v10, :cond_0
 
-    .line 923
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2400(Lorg/telegram/ui/Components/ThemeEditorView;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -405,7 +369,6 @@
 
     if-nez v10, :cond_0
 
-    .line 924
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2200(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/app/Activity;
@@ -414,13 +377,11 @@
 
     check-cast v6, Lorg/telegram/ui/LaunchActivity;
 
-    .line 925
     .local v6, "launchActivity":Lorg/telegram/ui/LaunchActivity;
     invoke-virtual {v6}, Lorg/telegram/ui/LaunchActivity;->getActionBarLayout()Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     move-result-object v0
 
-    .line 926
     .local v0, "actionBarLayout":Lorg/telegram/ui/ActionBar/ActionBarLayout;
     iget-object v10, v0, Lorg/telegram/ui/ActionBar/ActionBarLayout;->fragmentsStack:Ljava/util/ArrayList;
 
@@ -430,7 +391,6 @@
 
     if-nez v10, :cond_0
 
-    .line 927
     iget-object v10, v0, Lorg/telegram/ui/ActionBar/ActionBarLayout;->fragmentsStack:Ljava/util/ArrayList;
 
     iget-object v11, v0, Lorg/telegram/ui/ActionBar/ActionBarLayout;->fragmentsStack:Ljava/util/ArrayList;
@@ -447,17 +407,14 @@
 
     check-cast v4, Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    .line 928
     .local v4, "fragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/BaseFragment;->getThemeDescriptions()[Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     move-result-object v5
 
-    .line 929
     .local v5, "items":[Lorg/telegram/ui/ActionBar/ThemeDescription;
     if-eqz v5, :cond_0
 
-    .line 930
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     new-instance v11, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -474,7 +431,6 @@
 
     invoke-static {v10, v11}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2402(Lorg/telegram/ui/Components/ThemeEditorView;Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
-    .line 931
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2400(Lorg/telegram/ui/Components/ThemeEditorView;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -487,7 +443,6 @@
 
     invoke-virtual {v10, v11}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 937
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2400(Lorg/telegram/ui/Components/ThemeEditorView;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -500,7 +455,6 @@
 
     invoke-virtual {v10, v11}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->setOnDismissListener(Landroid/content/DialogInterface$OnDismissListener;)V
 
-    .line 944
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2400(Lorg/telegram/ui/Components/ThemeEditorView;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -509,14 +463,12 @@
 
     invoke-virtual {v10}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->show()V
 
-    .line 945
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2600(Lorg/telegram/ui/Components/ThemeEditorView;)V
 
     goto/16 :goto_0
 
-    .line 960
     .end local v0    # "actionBarLayout":Lorg/telegram/ui/ActionBar/ActionBarLayout;
     .end local v4    # "fragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     .end local v5    # "items":[Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -551,7 +503,6 @@
 
     if-le v10, v11, :cond_1
 
-    .line 961
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -578,7 +529,6 @@
 
     goto/16 :goto_1
 
-    .line 966
     .restart local v1    # "alpha":F
     :cond_a
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -605,7 +555,6 @@
 
     if-le v10, v11, :cond_2
 
-    .line 967
     const/high16 v10, 0x3f800000    # 1.0f
 
     iget-object v11, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -646,7 +595,6 @@
 
     goto/16 :goto_2
 
-    .line 975
     :cond_b
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
@@ -674,7 +622,6 @@
 
     if-le v10, v11, :cond_4
 
-    .line 976
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2700(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/WindowManager$LayoutParams;
@@ -701,7 +648,6 @@
 
     goto/16 :goto_3
 
-    .line 981
     .end local v1    # "alpha":F
     .end local v2    # "dx":F
     .end local v3    # "dy":F
@@ -715,12 +661,10 @@
 
     if-ne v10, v11, :cond_5
 
-    .line 982
     const/4 v10, 0x0
 
     iput-boolean v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->dragging:Z
 
-    .line 983
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$1;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v10}, Lorg/telegram/ui/Components/ThemeEditorView;->access$3100(Lorg/telegram/ui/Components/ThemeEditorView;)V

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 4978
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$74;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$74;->val$mids:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 8
 
     .prologue
-    .line 4982
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$74;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -89,15 +87,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4986
     :goto_0
     return-void
 
-    .line 4983
     :catch_0
     move-exception v0
 
-    .line 4984
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

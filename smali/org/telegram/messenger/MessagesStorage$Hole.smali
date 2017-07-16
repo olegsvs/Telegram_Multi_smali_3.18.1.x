@@ -31,18 +31,14 @@
     .param p3, "e"    # I
 
     .prologue
-    .line 5363
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5364
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->start:I
 
-    .line 5365
     iput p3, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->end:I
 
-    .line 5366
     return-void
 .end method
 
@@ -53,20 +49,15 @@
     .param p4, "e"    # I
 
     .prologue
-    .line 5368
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 5369
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->type:I
 
-    .line 5370
     iput p3, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->start:I
 
-    .line 5371
     iput p4, p0, Lorg/telegram/messenger/MessagesStorage$Hole;->end:I
 
-    .line 5372
     return-void
 .end method

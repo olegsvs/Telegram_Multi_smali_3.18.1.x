@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
 
     .prologue
-    .line 111
     iput-object p1, p0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell$1;->this$0:Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 115
     return-void
 .end method

@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     .prologue
-    .line 168
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$1;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 168
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;
@@ -77,7 +75,6 @@
 
     const/4 v5, -0x1
 
-    .line 171
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -94,7 +91,6 @@
 
     move-result-object v2
 
-    .line 172
     .local v2, "user1":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -112,15 +108,12 @@
 
     move-result-object v3
 
-    .line 173
     .local v3, "user2":Lorg/telegram/tgnet/TLRPC$User;
     const/4 v0, 0x0
 
-    .line 174
     .local v0, "status1":I
     const/4 v1, 0x0
 
-    .line 175
     .local v1, "status2":I
     if-eqz v2, :cond_0
 
@@ -128,7 +121,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 176
     iget v7, v2, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -137,7 +129,6 @@
 
     if-ne v7, v8, :cond_3
 
-    .line 177
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v7
@@ -148,7 +139,6 @@
 
     add-int v0, v7, v10
 
-    .line 182
     :cond_0
     :goto_0
     if-eqz v3, :cond_1
@@ -157,7 +147,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 183
     iget v7, v3, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -166,7 +155,6 @@
 
     if-ne v7, v8, :cond_4
 
-    .line 184
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v7
@@ -177,22 +165,18 @@
 
     add-int v1, v7, v10
 
-    .line 189
     :cond_1
     :goto_1
     if-lez v0, :cond_7
 
     if-lez v1, :cond_7
 
-    .line 190
     if-le v0, v1, :cond_5
 
-    .line 208
     :cond_2
     :goto_2
     return v4
 
-    .line 179
     :cond_3
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
@@ -200,7 +184,6 @@
 
     goto :goto_0
 
-    .line 186
     :cond_4
     iget-object v7, v3, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
@@ -208,45 +191,36 @@
 
     goto :goto_1
 
-    .line 192
     :cond_5
     if-ge v0, v1, :cond_6
 
     move v4, v5
 
-    .line 193
     goto :goto_2
 
     :cond_6
     move v4, v6
 
-    .line 195
     goto :goto_2
 
-    .line 196
     :cond_7
     if-gez v0, :cond_9
 
     if-gez v1, :cond_9
 
-    .line 197
     if-gt v0, v1, :cond_2
 
-    .line 199
     if-ge v0, v1, :cond_8
 
     move v4, v5
 
-    .line 200
     goto :goto_2
 
     :cond_8
     move v4, v6
 
-    .line 202
     goto :goto_2
 
-    .line 203
     :cond_9
     if-gez v0, :cond_a
 
@@ -260,10 +234,8 @@
     :cond_b
     move v4, v5
 
-    .line 204
     goto :goto_2
 
-    .line 205
     :cond_c
     if-gez v1, :cond_d
 
@@ -277,6 +249,5 @@
     :cond_e
     move v4, v6
 
-    .line 208
     goto :goto_2
 .end method

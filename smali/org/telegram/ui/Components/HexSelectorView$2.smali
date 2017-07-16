@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/HexSelectorView;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lorg/telegram/ui/Components/HexSelectorView$2;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 84
     const-string/jumbo v0, "HexSelector"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -77,12 +75,10 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 85
     iget-object v0, p0, Lorg/telegram/ui/Components/HexSelectorView$2;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/HexSelectorView;->validateColorInTextView()V
 
-    .line 86
     const/4 v0, 0x0
 
     return v0

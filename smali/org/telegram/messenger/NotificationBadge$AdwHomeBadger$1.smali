@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationBadge$AdwHomeBadger;
 
     .prologue
-    .line 62
     iput-object p1, p0, Lorg/telegram/messenger/NotificationBadge$AdwHomeBadger$1;->this$0:Lorg/telegram/messenger/NotificationBadge$AdwHomeBadger;
 
     iput-object p2, p0, Lorg/telegram/messenger/NotificationBadge$AdwHomeBadger$1;->val$intent:Landroid/content/Intent;
@@ -45,13 +44,11 @@
     .locals 2
 
     .prologue
-    .line 65
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     iget-object v1, p0, Lorg/telegram/messenger/NotificationBadge$AdwHomeBadger$1;->val$intent:Landroid/content/Intent;
 
     invoke-virtual {v0, v1}, Landroid/content/Context;->sendBroadcast(Landroid/content/Intent;)V
 
-    .line 66
     return-void
 .end method

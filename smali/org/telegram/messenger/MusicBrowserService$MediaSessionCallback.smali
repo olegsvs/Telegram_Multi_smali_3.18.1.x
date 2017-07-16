@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 359
     iput-object p1, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-direct {p0}, Landroid/media/session/MediaSession$Callback;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/MusicBrowserService$1;
 
     .prologue
-    .line 359
     invoke-direct {p0, p1}, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;-><init>(Lorg/telegram/messenger/MusicBrowserService;)V
 
     return-void
@@ -49,12 +47,10 @@
     .locals 1
 
     .prologue
-    .line 425
     iget-object v0, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v0}, Lorg/telegram/messenger/MusicBrowserService;->access$1400(Lorg/telegram/messenger/MusicBrowserService;)V
 
-    .line 426
     return-void
 .end method
 
@@ -62,7 +58,6 @@
     .locals 3
 
     .prologue
-    .line 362
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -71,11 +66,9 @@
 
     move-result-object v0
 
-    .line 363
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     if-nez v0, :cond_0
 
-    .line 364
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -110,11 +103,9 @@
 
     invoke-virtual {p0, v1, v2}, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->onPlayFromMediaId(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 368
     :goto_0
     return-void
 
-    .line 366
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -131,14 +122,12 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 386
     const-string/jumbo v8, "_"
 
     invoke-virtual {p1, v8}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 387
     .local v0, "args":[Ljava/lang/String;
     array-length v8, v0
 
@@ -146,12 +135,10 @@
 
     if-eq v8, v9, :cond_1
 
-    .line 421
     :cond_0
     :goto_0
     return-void
 
-    .line 391
     :cond_1
     const/4 v8, 0x0
 
@@ -162,7 +149,6 @@
 
     move-result v4
 
-    .line 392
     .local v4, "did":I
     const/4 v8, 0x1
 
@@ -172,7 +158,6 @@
 
     move-result v6
 
-    .line 393
     .local v6, "id":I
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
@@ -190,7 +175,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 394
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
@@ -208,7 +192,6 @@
 
     check-cast v2, Ljava/util/ArrayList;
 
-    .line 395
     .local v2, "arrayList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$QueueItem;>;"
     if-eqz v1, :cond_0
 
@@ -220,12 +203,10 @@
 
     if-ge v6, v8, :cond_0
 
-    .line 398
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v8, v4}, Lorg/telegram/messenger/MusicBrowserService;->access$1002(Lorg/telegram/messenger/MusicBrowserService;I)I
 
-    .line 399
     sget-object v8, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v9, "Notifications"
@@ -248,7 +229,6 @@
 
     invoke-interface {v8}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 400
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v9
@@ -263,7 +243,6 @@
 
     invoke-virtual {v9, v1, v8, v10}, Lorg/telegram/messenger/MediaController;->setPlaylist(Ljava/util/ArrayList;Lorg/telegram/messenger/MessageObject;Z)Z
 
-    .line 401
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v8}, Lorg/telegram/messenger/MusicBrowserService;->access$1100(Lorg/telegram/messenger/MusicBrowserService;)Landroid/media/session/MediaSession;
@@ -272,10 +251,8 @@
 
     invoke-virtual {v8, v2}, Landroid/media/session/MediaSession;->setQueue(Ljava/util/List;)V
 
-    .line 402
     if-lez v4, :cond_3
 
-    .line 403
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v8}, Lorg/telegram/messenger/MusicBrowserService;->access$500(Lorg/telegram/messenger/MusicBrowserService;)Ljava/util/HashMap;
@@ -292,11 +269,9 @@
 
     check-cast v7, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 404
     .local v7, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v7, :cond_2
 
-    .line 405
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v8}, Lorg/telegram/messenger/MusicBrowserService;->access$1100(Lorg/telegram/messenger/MusicBrowserService;)Landroid/media/session/MediaSession;
@@ -315,7 +290,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 420
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v2    # "arrayList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$QueueItem;>;"
     .end local v4    # "did":I
@@ -328,7 +302,6 @@
 
     goto/16 :goto_0
 
-    .line 407
     .restart local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .restart local v2    # "arrayList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$QueueItem;>;"
     .restart local v4    # "did":I
@@ -350,7 +323,6 @@
 
     goto :goto_1
 
-    .line 417
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v2    # "arrayList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$QueueItem;>;"
     .end local v4    # "did":I
@@ -359,13 +331,11 @@
     :catch_0
     move-exception v5
 
-    .line 418
     .local v5, "e":Ljava/lang/Exception;
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 410
     .end local v5    # "e":Ljava/lang/Exception;
     .restart local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .restart local v2    # "arrayList1":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/media/session/MediaSession$QueueItem;>;"
@@ -391,11 +361,9 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 411
     .local v3, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v3, :cond_4
 
-    .line 412
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v8}, Lorg/telegram/messenger/MusicBrowserService;->access$1100(Lorg/telegram/messenger/MusicBrowserService;)Landroid/media/session/MediaSession;
@@ -408,7 +376,6 @@
 
     goto :goto_1
 
-    .line 414
     :cond_4
     iget-object v8, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
@@ -435,7 +402,6 @@
 
     const/4 v6, 0x0
 
-    .line 445
     if-eqz p1, :cond_0
 
     invoke-virtual {p1}, Ljava/lang/String;->length()I
@@ -444,18 +410,15 @@
 
     if-nez v4, :cond_1
 
-    .line 471
     :cond_0
     :goto_0
     return-void
 
-    .line 448
     :cond_1
     invoke-virtual {p1}, Ljava/lang/String;->toLowerCase()Ljava/lang/String;
 
     move-result-object p1
 
-    .line 449
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -472,7 +435,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 450
     iget-object v4, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v4}, Lorg/telegram/messenger/MusicBrowserService;->access$200(Lorg/telegram/messenger/MusicBrowserService;)Ljava/util/ArrayList;
@@ -489,11 +451,9 @@
 
     move-result v2
 
-    .line 451
     .local v2, "did":I
     if-lez v2, :cond_6
 
-    .line 452
     iget-object v4, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v4}, Lorg/telegram/messenger/MusicBrowserService;->access$500(Lorg/telegram/messenger/MusicBrowserService;)Ljava/util/HashMap;
@@ -510,18 +470,15 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 453
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v3, :cond_3
 
-    .line 449
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 456
     .restart local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_3
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -549,7 +506,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 457
     :cond_5
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -577,7 +533,6 @@
 
     goto :goto_0
 
-    .line 461
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_6
     iget-object v4, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
@@ -598,11 +553,9 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 462
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v1, :cond_2
 
-    .line 465
     iget-object v4, v1, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     if-eqz v4, :cond_2
@@ -619,7 +572,6 @@
 
     if-eqz v4, :cond_2
 
-    .line 466
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
@@ -652,7 +604,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 378
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -661,11 +612,9 @@
 
     move-result-object v0
 
-    .line 379
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     if-eqz v0, :cond_0
 
-    .line 380
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -686,7 +635,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MediaController;->seekToProgress(Lorg/telegram/messenger/MessageObject;F)Z
 
-    .line 382
     :cond_0
     return-void
 .end method
@@ -695,14 +643,12 @@
     .locals 1
 
     .prologue
-    .line 435
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->playNextMessage()V
 
-    .line 436
     return-void
 .end method
 
@@ -710,14 +656,12 @@
     .locals 1
 
     .prologue
-    .line 440
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->playPreviousMessage()V
 
-    .line 441
     return-void
 .end method
 
@@ -726,7 +670,6 @@
     .param p1, "queueId"    # J
 
     .prologue
-    .line 372
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -735,12 +678,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MediaController;->playMessageAtIndex(I)V
 
-    .line 373
     iget-object v0, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     invoke-static {v0}, Lorg/telegram/messenger/MusicBrowserService;->access$1300(Lorg/telegram/messenger/MusicBrowserService;)V
 
-    .line 374
     return-void
 .end method
 
@@ -748,13 +689,11 @@
     .locals 2
 
     .prologue
-    .line 430
     iget-object v0, p0, Lorg/telegram/messenger/MusicBrowserService$MediaSessionCallback;->this$0:Lorg/telegram/messenger/MusicBrowserService;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MusicBrowserService;->access$1500(Lorg/telegram/messenger/MusicBrowserService;Ljava/lang/String;)V
 
-    .line 431
     return-void
 .end method

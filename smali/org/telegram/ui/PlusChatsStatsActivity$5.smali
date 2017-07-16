@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusChatsStatsActivity;
 
     .prologue
-    .line 507
     iput-object p1, p0, Lorg/telegram/ui/PlusChatsStatsActivity$5;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 511
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$5;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$2600(Lorg/telegram/ui/PlusChatsStatsActivity;)Landroid/app/ProgressDialog;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 512
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$5;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$2600(Lorg/telegram/ui/PlusChatsStatsActivity;)Landroid/app/ProgressDialog;
@@ -69,7 +66,6 @@
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 513
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -84,9 +80,7 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
 
-    .line 514
     invoke-static {v3}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$2802(Z)Z
 
-    .line 516
     return-void
 .end method

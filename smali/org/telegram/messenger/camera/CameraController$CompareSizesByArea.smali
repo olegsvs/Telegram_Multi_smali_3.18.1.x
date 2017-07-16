@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 622
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 622
     check-cast p1, Lorg/telegram/messenger/camera/Size;
 
     check-cast p2, Lorg/telegram/messenger/camera/Size;
@@ -62,7 +60,6 @@
     .param p2, "rhs"    # Lorg/telegram/messenger/camera/Size;
 
     .prologue
-    .line 625
     invoke-virtual {p1}, Lorg/telegram/messenger/camera/Size;->getWidth()I
 
     move-result v0

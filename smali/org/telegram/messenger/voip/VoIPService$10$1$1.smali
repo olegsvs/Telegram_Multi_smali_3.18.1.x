@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     .prologue
-    .line 728
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,12 +48,10 @@
     .locals 2
 
     .prologue
-    .line 731
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
 
-    .line 732
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -77,7 +74,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->w(Ljava/lang/String;)V
 
-    .line 733
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/voip/VoIPService$10$1;->this$1:Lorg/telegram/messenger/voip/VoIPService$10;
@@ -92,7 +88,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/messenger/voip/VoIPService;->access$1202(Lorg/telegram/messenger/voip/VoIPService;Lorg/telegram/tgnet/TLRPC$PhoneCall;)Lorg/telegram/tgnet/TLRPC$PhoneCall;
 
-    .line 734
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/voip/VoIPService$10$1;->this$1:Lorg/telegram/messenger/voip/VoIPService$10;
@@ -107,7 +102,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 735
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/voip/VoIPService$10$1;->this$1:Lorg/telegram/messenger/voip/VoIPService$10;
@@ -126,12 +120,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/voip/VoIPService;->onCallUpdated(Lorg/telegram/tgnet/TLRPC$PhoneCall;)V
 
-    .line 743
     :cond_0
     :goto_0
     return-void
 
-    .line 740
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -155,7 +147,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 741
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$10$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$10$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/voip/VoIPService$10$1;->this$1:Lorg/telegram/messenger/voip/VoIPService$10;

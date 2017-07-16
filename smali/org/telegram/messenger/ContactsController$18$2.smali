@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$18;
 
     .prologue
-    .line 1800
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
 
     const/4 v7, 0x0
 
-    .line 1803
     const/4 v1, 0x0
 
-    .line 1804
     .local v1, "remove":Z
     iget-object v3, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
@@ -72,7 +69,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1805
     .local v2, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v4, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
@@ -88,14 +84,11 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 1806
     .local v0, "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     if-eqz v0, :cond_0
 
-    .line 1807
     const/4 v1, 0x1
 
-    .line 1808
     iget-object v4, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     iget-object v4, v4, Lorg/telegram/messenger/ContactsController$18;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -104,7 +97,6 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1809
     iget-object v4, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     iget-object v4, v4, Lorg/telegram/messenger/ContactsController$18;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -117,20 +109,17 @@
 
     goto :goto_0
 
-    .line 1812
     .end local v0    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v2    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
     if-eqz v1, :cond_2
 
-    .line 1813
     iget-object v3, p0, Lorg/telegram/messenger/ContactsController$18$2;->this$1:Lorg/telegram/messenger/ContactsController$18;
 
     iget-object v3, v3, Lorg/telegram/messenger/ContactsController$18;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-static {v3, v7}, Lorg/telegram/messenger/ContactsController;->access$1700(Lorg/telegram/messenger/ContactsController;Z)V
 
-    .line 1815
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -148,7 +137,6 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1816
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -159,6 +147,5 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1817
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$58;
 
     .prologue
-    .line 3684
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$58$1;->this$1:Lorg/telegram/messenger/MessagesController$58;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 3687
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$58$1;->this$1:Lorg/telegram/messenger/MessagesController$58;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessagesController$58;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -64,7 +62,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 3688
     .local v0, "currentDialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v0, :cond_0
 
@@ -72,7 +69,6 @@
 
     if-nez v1, :cond_0
 
-    .line 3689
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$58$1;->this$1:Lorg/telegram/messenger/MessagesController$58;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessagesController$58;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -87,7 +83,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->deleteDialog(JI)V
 
-    .line 3691
     :cond_0
     return-void
 .end method

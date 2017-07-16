@@ -42,16 +42,12 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 92
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 93
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->type:I
 
-    .line 94
     return-void
 .end method
 
@@ -63,16 +59,12 @@
     .param p4, "type"    # I
 
     .prologue
-    .line 98
     invoke-direct {p0, p1, p2}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 99
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 100
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->type:I
 
-    .line 101
     return-void
 .end method
 
@@ -83,16 +75,12 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 85
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 86
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 87
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->type:I
 
-    .line 88
     return-void
 .end method
 
@@ -102,15 +90,11 @@
     .param p2, "type"    # I
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/io/IOException;-><init>()V
 
-    .line 80
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 81
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;->type:I
 
-    .line 82
     return-void
 .end method

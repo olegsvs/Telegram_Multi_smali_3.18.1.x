@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DataUsageActivity$2;
 
     .prologue
-    .line 217
     iput-object p1, p0, Lorg/telegram/ui/DataUsageActivity$2$1;->this$1:Lorg/telegram/ui/DataUsageActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 220
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/StatsController;->resetStats(I)V
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/DataUsageActivity$2$1;->this$1:Lorg/telegram/ui/DataUsageActivity$2;
 
     iget-object v0, v0, Lorg/telegram/ui/DataUsageActivity$2;->this$0:Lorg/telegram/ui/DataUsageActivity;
@@ -69,6 +66,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/DataUsageActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 222
     return-void
 .end method

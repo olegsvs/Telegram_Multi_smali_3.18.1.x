@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/CacheControlActivity$4$2;
 
     .prologue
-    .line 377
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1;->this$2:Lorg/telegram/ui/CacheControlActivity$4$2;
 
     iput-object p2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1;->val$progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -45,7 +44,6 @@
     .locals 30
 
     .prologue
-    .line 381
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -55,13 +53,11 @@
 
     move-result-object v10
 
-    .line 382
     .local v10, "database":Lorg/telegram/SQLite/SQLiteDatabase;
     new-instance v11, Ljava/util/ArrayList;
 
     invoke-direct {v11}, Ljava/util/ArrayList;-><init>()V
 
-    .line 383
     .local v11, "dialogsToCleanup":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const-string/jumbo v27, "SELECT did FROM dialogs WHERE 1"
 
@@ -81,13 +77,11 @@
 
     move-result-object v7
 
-    .line 384
     .local v7, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v16, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v16 .. v16}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 385
     .local v16, "ids":Ljava/lang/StringBuilder;
     :cond_0
     :goto_0
@@ -97,7 +91,6 @@
 
     if-eqz v27, :cond_1
 
-    .line 386
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -106,13 +99,11 @@
 
     move-result-wide v12
 
-    .line 387
     .local v12, "did":J
     long-to-int v0, v12
 
     move/from16 v17, v0
 
-    .line 388
     .local v17, "lower_id":I
     const/16 v27, 0x20
 
@@ -122,7 +113,6 @@
 
     long-to-int v15, v0
 
-    .line 389
     .local v15, "high_id":I
     if-eqz v17, :cond_0
 
@@ -132,7 +122,6 @@
 
     if-eq v15, v0, :cond_0
 
-    .line 390
     invoke-static {v12, v13}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
     move-result-object v27
@@ -146,7 +135,6 @@
 
     goto :goto_0
 
-    .line 450
     .end local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v10    # "database":Lorg/telegram/SQLite/SQLiteDatabase;
     .end local v11    # "dialogsToCleanup":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
@@ -157,14 +145,12 @@
     :catch_0
     move-exception v14
 
-    .line 451
     .local v14, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v14}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 453
     new-instance v27, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;
 
     move-object/from16 v0, v27
@@ -175,12 +161,10 @@
 
     invoke-static/range {v27 .. v27}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 469
     .end local v14    # "e":Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 393
     .restart local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v10    # "database":Lorg/telegram/SQLite/SQLiteDatabase;
     .restart local v11    # "dialogsToCleanup":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
@@ -189,7 +173,6 @@
     :try_start_2
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 395
     const-string/jumbo v27, "REPLACE INTO messages_holes VALUES(?, ?, ?)"
 
     move-object/from16 v0, v27
@@ -198,7 +181,6 @@
 
     move-result-object v25
 
-    .line 396
     .local v25, "state5":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const-string/jumbo v27, "REPLACE INTO media_holes_v2 VALUES(?, ?, ?, ?)"
 
@@ -208,11 +190,9 @@
 
     move-result-object v26
 
-    .line 398
     .local v26, "state6":Lorg/telegram/SQLite/SQLitePreparedStatement;
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 399
     const/4 v6, 0x0
 
     .local v6, "a":I
@@ -225,18 +205,15 @@
 
     if-ge v6, v0, :cond_7
 
-    .line 400
     invoke-virtual {v11, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
 
     check-cast v12, Ljava/lang/Long;
 
-    .line 401
     .local v12, "did":Ljava/lang/Long;
     const/16 v24, 0x0
 
-    .line 402
     .local v24, "messagesCount":I
     new-instance v27, Ljava/lang/StringBuilder;
 
@@ -274,14 +251,12 @@
 
     move-result-object v7
 
-    .line 403
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v27
 
     if-eqz v27, :cond_2
 
-    .line 404
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -290,11 +265,9 @@
 
     move-result v24
 
-    .line 406
     :cond_2
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 407
     const/16 v27, 0x2
 
     move/from16 v0, v24
@@ -303,13 +276,11 @@
 
     if-gt v0, v1, :cond_3
 
-    .line 399
     :goto_3
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_2
 
-    .line 411
     :cond_3
     new-instance v27, Ljava/lang/StringBuilder;
 
@@ -347,10 +318,8 @@
 
     move-result-object v7
 
-    .line 412
     const/16 v23, -0x1
 
-    .line 413
     .local v23, "messageId":I
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -358,7 +327,6 @@
 
     if-eqz v27, :cond_6
 
-    .line 414
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -367,7 +335,6 @@
 
     move-result-wide v20
 
-    .line 415
     .local v20, "last_mid_i":J
     const/16 v27, 0x1
 
@@ -377,7 +344,6 @@
 
     move-result-wide v18
 
-    .line 416
     .local v18, "last_mid":J
     new-instance v27, Ljava/lang/StringBuilder;
 
@@ -452,7 +418,6 @@
 
     move-result-object v8
 
-    .line 418
     .local v8, "cursor2":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_4
     :goto_4
@@ -463,7 +428,6 @@
 
     if-eqz v27, :cond_5
 
-    .line 419
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -472,11 +436,9 @@
 
     move-result-object v9
 
-    .line 420
     .local v9, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v9, :cond_4
 
-    .line 421
     const/16 v27, 0x0
 
     move/from16 v0, v27
@@ -495,14 +457,11 @@
 
     move-result-object v22
 
-    .line 422
     .local v22, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual {v9}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 423
     if-eqz v22, :cond_4
 
-    .line 424
     move-object/from16 v0, v22
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->id:I
@@ -514,23 +473,19 @@
 
     goto :goto_4
 
-    .line 428
     .end local v9    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v22    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :catch_1
     move-exception v14
 
-    .line 429
     .restart local v14    # "e":Ljava/lang/Exception;
     :try_start_4
     invoke-static {v14}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 431
     .end local v14    # "e":Ljava/lang/Exception;
     :cond_5
     invoke-virtual {v8}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 433
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -591,7 +546,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 434
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -624,7 +578,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 435
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -657,7 +610,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 436
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -690,7 +642,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 437
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -723,7 +674,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 438
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -756,7 +706,6 @@
 
     invoke-virtual/range {v27 .. v27}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 439
     invoke-virtual {v12}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v28
@@ -769,7 +718,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/query/BotQuery;->clearBotKeyboard(JLjava/util/ArrayList;)V
 
-    .line 440
     const/16 v27, -0x1
 
     move/from16 v0, v23
@@ -778,7 +726,6 @@
 
     if-eq v0, v1, :cond_6
 
-    .line 441
     invoke-virtual {v12}, Ljava/lang/Long;->longValue()J
 
     move-result-wide v28
@@ -793,7 +740,6 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesStorage;->createFirstHoles(JLorg/telegram/SQLite/SQLitePreparedStatement;Lorg/telegram/SQLite/SQLitePreparedStatement;I)V
 
-    .line 444
     .end local v8    # "cursor2":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v18    # "last_mid":J
     .end local v20    # "last_mid_i":J
@@ -805,7 +751,6 @@
 
     goto/16 :goto_3
 
-    .line 453
     .end local v6    # "a":I
     .end local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v10    # "database":Lorg/telegram/SQLite/SQLiteDatabase;
@@ -831,7 +776,6 @@
 
     throw v27
 
-    .line 446
     .restart local v6    # "a":I
     .restart local v7    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v10    # "database":Lorg/telegram/SQLite/SQLiteDatabase;
@@ -843,13 +787,10 @@
     :try_start_5
     invoke-virtual/range {v25 .. v25}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 447
     invoke-virtual/range {v26 .. v26}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 448
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLiteDatabase;->commitTransaction()V
 
-    .line 449
     const-string/jumbo v27, "VACUUM"
 
     move-object/from16 v0, v27
@@ -867,7 +808,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_0
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 453
     new-instance v27, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;
 
     move-object/from16 v0, v27

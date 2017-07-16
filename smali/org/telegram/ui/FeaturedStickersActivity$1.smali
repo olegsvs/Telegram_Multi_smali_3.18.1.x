@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 76
     iput-object p1, p0, Lorg/telegram/ui/FeaturedStickersActivity$1;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 79
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 80
     iget-object v0, p0, Lorg/telegram/ui/FeaturedStickersActivity$1;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/FeaturedStickersActivity;->finishFragment()V
 
-    .line 82
     :cond_0
     return-void
 .end method

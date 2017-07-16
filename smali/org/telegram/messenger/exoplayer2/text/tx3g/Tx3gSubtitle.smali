@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 30
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;-><init>()V
@@ -42,17 +41,14 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;->cues:Ljava/util/List;
 
-    .line 40
     return-void
 .end method
 
@@ -61,17 +57,14 @@
     .param p1, "cue"    # Lorg/telegram/messenger/exoplayer2/text/Cue;
 
     .prologue
-    .line 34
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     invoke-static {p1}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/tx3g/Tx3gSubtitle;->cues:Ljava/util/List;
 
-    .line 36
     return-void
 .end method
 
@@ -91,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 60
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -116,7 +108,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 54
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -124,12 +115,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 55
     const-wide/16 v0, 0x0
 
     return-wide v0
 
-    .line 54
     :cond_0
     const/4 v0, 0x0
 
@@ -140,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 49
     const/4 v0, 0x1
 
     return v0
@@ -151,7 +139,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 44
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0

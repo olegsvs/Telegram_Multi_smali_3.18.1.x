@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1589
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$26;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$26;->val$photos:Lorg/telegram/tgnet/TLRPC$photos_Photos;
@@ -49,7 +48,6 @@
     .locals 8
 
     .prologue
-    .line 1593
     :try_start_0
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$26;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -63,7 +61,6 @@
 
     move-result-object v3
 
-    .line 1594
     .local v3, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$26;->val$photos:Lorg/telegram/tgnet/TLRPC$photos_Photos;
 
@@ -87,16 +84,13 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Photo;
 
-    .line 1595
     .local v2, "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     instance-of v5, v2, Lorg/telegram/tgnet/TLRPC$TL_photoEmpty;
 
     if-nez v5, :cond_0
 
-    .line 1598
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 1599
     new-instance v0, Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {v2}, Lorg/telegram/tgnet/TLRPC$Photo;->getObjectSize()I
@@ -105,56 +99,46 @@
 
     invoke-direct {v0, v5}, Lorg/telegram/tgnet/NativeByteBuffer;-><init>(I)V
 
-    .line 1600
     .local v0, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     invoke-virtual {v2, v0}, Lorg/telegram/tgnet/TLRPC$Photo;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1601
     const/4 v5, 0x1
 
     iget v6, p0, Lorg/telegram/messenger/MessagesStorage$26;->val$did:I
 
     invoke-virtual {v3, v5, v6}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 1602
     const/4 v5, 0x2
 
     iget-wide v6, v2, Lorg/telegram/tgnet/TLRPC$Photo;->id:J
 
     invoke-virtual {v3, v5, v6, v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 1603
     const/4 v5, 0x3
 
     invoke-virtual {v3, v5, v0}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindByteBuffer(ILorg/telegram/tgnet/NativeByteBuffer;)V
 
-    .line 1604
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 1605
     invoke-virtual {v0}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 1608
     .end local v0    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v2    # "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     .end local v3    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :catch_0
     move-exception v1
 
-    .line 1609
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1611
     .end local v1    # "e":Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 1607
     .restart local v3    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :cond_1
     :try_start_1

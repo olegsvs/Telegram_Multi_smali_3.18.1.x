@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p1, "trackSelector"    # Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelector;
 
     .prologue
-    .line 117
     new-instance v0, Lorg/telegram/messenger/exoplayer2/DefaultLoadControl;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/DefaultLoadControl;-><init>()V
@@ -43,7 +41,6 @@
     .param p2, "loadControl"    # Lorg/telegram/messenger/exoplayer2/LoadControl;
 
     .prologue
-    .line 130
     new-instance v0, Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/ExoPlayerImpl;-><init>([Lorg/telegram/messenger/exoplayer2/Renderer;Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelector;Lorg/telegram/messenger/exoplayer2/LoadControl;)V
@@ -58,7 +55,6 @@
     .param p2, "loadControl"    # Lorg/telegram/messenger/exoplayer2/LoadControl;
 
     .prologue
-    .line 47
     const/4 v0, 0x0
 
     invoke-static {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/ExoPlayerFactory;->newSimpleInstance(Landroid/content/Context;Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelector;Lorg/telegram/messenger/exoplayer2/LoadControl;Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager;)Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
@@ -88,7 +84,6 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p3, "drmSessionManager":Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager;, "Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager<Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;>;"
     const/4 v0, 0x0
 
@@ -120,7 +115,6 @@
     .end annotation
 
     .prologue
-    .line 82
     .local p3, "drmSessionManager":Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager;, "Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager<Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;>;"
     const-wide/16 v6, 0x1388
 
@@ -163,7 +157,6 @@
     .end annotation
 
     .prologue
-    .line 105
     .local p3, "drmSessionManager":Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager;, "Lorg/telegram/messenger/exoplayer2/drm/DrmSessionManager<Lorg/telegram/messenger/exoplayer2/drm/FrameworkMediaCrypto;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/SimpleExoPlayer;
 

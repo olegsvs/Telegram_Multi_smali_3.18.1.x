@@ -19,16 +19,12 @@
     .param p2, "maxCacheFileSize"    # J
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSinkFactory;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
-    .line 33
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSinkFactory;->maxCacheFileSize:J
 
-    .line 34
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .locals 4
 
     .prologue
-    .line 38
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSinkFactory;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;

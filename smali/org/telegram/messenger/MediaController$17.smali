@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2592
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MediaController$17;->val$dialog_id:J
@@ -51,7 +50,6 @@
     .prologue
     const/4 v9, 0x0
 
-    .line 2595
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$000(Lorg/telegram/messenger/MediaController;)Landroid/media/AudioRecord;
@@ -60,18 +58,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 2596
     new-instance v0, Lorg/telegram/messenger/MediaController$17$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MediaController$17$1;-><init>(Lorg/telegram/messenger/MediaController$17;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2670
     :goto_0
     return-void
 
-    .line 2606
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
@@ -81,7 +76,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$2002(Lorg/telegram/messenger/MediaController;Lorg/telegram/tgnet/TLRPC$TL_document;)Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    .line 2607
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -92,7 +86,6 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->dc_id:I
 
-    .line 2608
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -105,7 +98,6 @@
 
     iput-wide v2, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->id:J
 
-    .line 2609
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -118,7 +110,6 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->user_id:I
 
-    .line 2610
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -129,7 +120,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->mime_type:Ljava/lang/String;
 
-    .line 2611
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -142,7 +132,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 2612
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$2000(Lorg/telegram/messenger/MediaController;)Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -155,19 +144,16 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
-    .line 2613
     sget v0, Lorg/telegram/messenger/UserConfig;->lastLocalId:I
 
     add-int/lit8 v0, v0, -0x1
 
     sput v0, Lorg/telegram/messenger/UserConfig;->lastLocalId:I
 
-    .line 2614
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 2616
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     new-instance v1, Ljava/io/File;
@@ -196,7 +182,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$5202(Lorg/telegram/messenger/MediaController;Ljava/io/File;)Ljava/io/File;
 
-    .line 2619
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
@@ -216,7 +201,6 @@
 
     if-nez v0, :cond_1
 
-    .line 2620
     new-instance v0, Lorg/telegram/messenger/MediaController$17$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MediaController$17$2;-><init>(Lorg/telegram/messenger/MediaController$17;)V
@@ -227,25 +211,20 @@
 
     goto/16 :goto_0
 
-    .line 2639
     :catch_0
     move-exception v6
 
-    .line 2640
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 2641
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0, v9}, Lorg/telegram/messenger/MediaController;->access$2002(Lorg/telegram/messenger/MediaController;Lorg/telegram/tgnet/TLRPC$TL_document;)Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    .line 2642
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$5600(Lorg/telegram/messenger/MediaController;)V
 
-    .line 2643
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$5200(Lorg/telegram/messenger/MediaController;)Ljava/io/File;
@@ -254,12 +233,10 @@
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 2644
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0, v9}, Lorg/telegram/messenger/MediaController;->access$5202(Lorg/telegram/messenger/MediaController;Ljava/io/File;)Ljava/io/File;
 
-    .line 2646
     :try_start_1
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
@@ -269,7 +246,6 @@
 
     invoke-virtual {v0}, Landroid/media/AudioRecord;->release()V
 
-    .line 2647
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     const/4 v1, 0x0
@@ -278,7 +254,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 2652
     :goto_1
     new-instance v0, Lorg/telegram/messenger/MediaController$17$3;
 
@@ -288,7 +263,6 @@
 
     goto/16 :goto_0
 
-    .line 2630
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_2
@@ -316,7 +290,6 @@
 
     invoke-static {v8, v0}, Lorg/telegram/messenger/MediaController;->access$002(Lorg/telegram/messenger/MediaController;Landroid/media/AudioRecord;)Landroid/media/AudioRecord;
 
-    .line 2631
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -325,35 +298,30 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$1102(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 2632
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     const-wide/16 v2, 0x0
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$702(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 2633
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     const-wide/16 v2, 0x0
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$302(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 2634
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     iget-wide v2, p0, Lorg/telegram/messenger/MediaController$17;->val$dialog_id:J
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MediaController;->access$5402(Lorg/telegram/messenger/MediaController;J)J
 
-    .line 2635
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MediaController$17;->val$reply_to_msg:Lorg/telegram/messenger/MessageObject;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$5502(Lorg/telegram/messenger/MediaController;Lorg/telegram/messenger/MessageObject;)Lorg/telegram/messenger/MessageObject;
 
-    .line 2636
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$500(Lorg/telegram/messenger/MediaController;)Ljava/nio/ByteBuffer;
@@ -362,7 +330,6 @@
 
     invoke-virtual {v0}, Ljava/nio/ByteBuffer;->rewind()Ljava/nio/Buffer;
 
-    .line 2638
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$000(Lorg/telegram/messenger/MediaController;)Landroid/media/AudioRecord;
@@ -373,7 +340,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 2662
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$17;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$800(Lorg/telegram/messenger/MediaController;)Lorg/telegram/messenger/DispatchQueue;
@@ -388,7 +354,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 2663
     new-instance v0, Lorg/telegram/messenger/MediaController$17$4;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MediaController$17$4;-><init>(Lorg/telegram/messenger/MediaController$17;)V
@@ -397,12 +362,10 @@
 
     goto/16 :goto_0
 
-    .line 2648
     .restart local v6    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v7
 
-    .line 2649
     .local v7, "e2":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

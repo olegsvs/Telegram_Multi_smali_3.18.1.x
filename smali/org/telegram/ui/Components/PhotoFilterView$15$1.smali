@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/PhotoFilterView$15;
 
     .prologue
-    .line 2336
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$15$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$15;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2339
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$15$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$15;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/PhotoFilterView$15;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
@@ -58,14 +56,12 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 2340
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$15$1;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$15;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/PhotoFilterView$15;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$9300(Lorg/telegram/ui/Components/PhotoFilterView;)V
 
-    .line 2342
     :cond_0
     return-void
 .end method

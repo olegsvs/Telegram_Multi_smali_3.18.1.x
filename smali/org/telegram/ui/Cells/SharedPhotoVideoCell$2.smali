@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/SharedPhotoVideoCell;
 
     .prologue
-    .line 181
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedPhotoVideoCell$2;->this$0:Lorg/telegram/ui/Cells/SharedPhotoVideoCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 184
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedPhotoVideoCell$2;->this$0:Lorg/telegram/ui/Cells/SharedPhotoVideoCell;
 
     invoke-static {v1}, Lorg/telegram/ui/Cells/SharedPhotoVideoCell;->access$100(Lorg/telegram/ui/Cells/SharedPhotoVideoCell;)Lorg/telegram/ui/Cells/SharedPhotoVideoCell$SharedPhotoVideoCellDelegate;
@@ -51,7 +49,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 185
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -62,7 +59,6 @@
 
     move-result v0
 
-    .line 186
     .local v0, "a":I
     iget-object v1, p0, Lorg/telegram/ui/Cells/SharedPhotoVideoCell$2;->this$0:Lorg/telegram/ui/Cells/SharedPhotoVideoCell;
 
@@ -92,7 +88,6 @@
 
     move-result v1
 
-    .line 188
     .end local v0    # "a":I
     :goto_0
     return v1

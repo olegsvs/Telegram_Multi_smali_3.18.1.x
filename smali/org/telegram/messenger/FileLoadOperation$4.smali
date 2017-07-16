@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoadOperation;
 
     .prologue
-    .line 562
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$4;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     iput p2, p0, Lorg/telegram/messenger/FileLoadOperation$4;->val$reason:I
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 565
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$4;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoadOperation;->access$1100(Lorg/telegram/messenger/FileLoadOperation;)Lorg/telegram/messenger/FileLoadOperation$FileLoadOperationDelegate;
@@ -58,6 +56,5 @@
 
     invoke-interface {v0, v1, v2}, Lorg/telegram/messenger/FileLoadOperation$FileLoadOperationDelegate;->didFailedLoadingFile(Lorg/telegram/messenger/FileLoadOperation;I)V
 
-    .line 566
     return-void
 .end method

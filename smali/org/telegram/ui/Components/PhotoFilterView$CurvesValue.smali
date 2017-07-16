@@ -53,37 +53,26 @@
 
     const/4 v0, 0x0
 
-    .line 166
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 168
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->blacksLevel:F
 
-    .line 169
     iput v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->shadowsLevel:F
 
-    .line 170
     iput v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->midtonesLevel:F
 
-    .line 171
     iput v3, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->highlightsLevel:F
 
-    .line 172
     iput v4, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->whitesLevel:F
 
-    .line 174
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousBlacksLevel:F
 
-    .line 175
     iput v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousShadowsLevel:F
 
-    .line 176
     iput v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousMidtonesLevel:F
 
-    .line 177
     iput v3, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousHighlightsLevel:F
 
-    .line 178
     iput v4, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousWhitesLevel:F
 
     return-void
@@ -95,15 +84,12 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->cachedDataPoints:[F
 
     if-nez v0, :cond_0
 
-    .line 184
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->interpolateCurve()[F
 
-    .line 186
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->cachedDataPoints:[F
 
@@ -114,7 +100,6 @@
     .locals 26
 
     .prologue
-    .line 207
     const/16 v22, 0xe
 
     move/from16 v0, v22
@@ -263,7 +248,6 @@
 
     aput v23, v17, v22
 
-    .line 217
     .local v17, "points":[F
     new-instance v3, Ljava/util/ArrayList;
 
@@ -273,7 +257,6 @@
 
     invoke-direct {v3, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 218
     .local v3, "dataPoints":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Float;>;"
     new-instance v6, Ljava/util/ArrayList;
 
@@ -283,7 +266,6 @@
 
     invoke-direct {v6, v0}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 220
     .local v6, "interpolatedPoints":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Float;>;"
     const/16 v22, 0x0
 
@@ -297,7 +279,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 221
     const/16 v22, 0x1
 
     aget v22, v17, v22
@@ -310,7 +291,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 223
     const/4 v5, 0x1
 
     .local v5, "index":I
@@ -329,14 +309,12 @@
 
     if-ge v5, v0, :cond_3
 
-    .line 224
     add-int/lit8 v22, v5, -0x1
 
     mul-int/lit8 v22, v22, 0x2
 
     aget v9, v17, v22
 
-    .line 225
     .local v9, "point0x":F
     add-int/lit8 v22, v5, -0x1
 
@@ -346,13 +324,11 @@
 
     aget v10, v17, v22
 
-    .line 226
     .local v10, "point0y":F
     mul-int/lit8 v22, v5, 0x2
 
     aget v11, v17, v22
 
-    .line 227
     .local v11, "point1x":F
     mul-int/lit8 v22, v5, 0x2
 
@@ -360,7 +336,6 @@
 
     aget v12, v17, v22
 
-    .line 228
     .local v12, "point1y":F
     add-int/lit8 v22, v5, 0x1
 
@@ -368,7 +343,6 @@
 
     aget v13, v17, v22
 
-    .line 229
     .local v13, "point2x":F
     add-int/lit8 v22, v5, 0x1
 
@@ -378,7 +352,6 @@
 
     aget v14, v17, v22
 
-    .line 230
     .local v14, "point2y":F
     add-int/lit8 v22, v5, 0x2
 
@@ -386,7 +359,6 @@
 
     aget v15, v17, v22
 
-    .line 231
     .local v15, "point3x":F
     add-int/lit8 v22, v5, 0x2
 
@@ -396,7 +368,6 @@
 
     aget v16, v17, v22
 
-    .line 234
     .local v16, "point3y":F
     const/4 v4, 0x1
 
@@ -408,7 +379,6 @@
 
     if-ge v4, v0, :cond_2
 
-    .line 235
     int-to-float v0, v4
 
     move/from16 v22, v0
@@ -417,15 +387,12 @@
 
     mul-float v19, v22, v23
 
-    .line 236
     .local v19, "t":F
     mul-float v20, v19, v19
 
-    .line 237
     .local v20, "tt":F
     mul-float v21, v20, v19
 
-    .line 239
     .local v21, "ttt":F
     const/high16 v22, 0x3f000000    # 0.5f
 
@@ -481,7 +448,6 @@
 
     mul-float v7, v22, v23
 
-    .line 240
     .local v7, "pix":F
     const/high16 v22, 0x3f000000    # 0.5f
 
@@ -537,7 +503,6 @@
 
     mul-float v8, v22, v23
 
-    .line 242
     .local v8, "piy":F
     const/16 v22, 0x0
 
@@ -553,12 +518,10 @@
 
     move-result v8
 
-    .line 244
     cmpl-float v22, v7, v9
 
     if-lez v22, :cond_0
 
-    .line 245
     invoke-static {v7}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v22
@@ -567,7 +530,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 246
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v22
@@ -576,7 +538,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 249
     :cond_0
     add-int/lit8 v22, v4, -0x1
 
@@ -584,7 +545,6 @@
 
     if-nez v22, :cond_1
 
-    .line 250
     invoke-static {v8}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v22
@@ -593,13 +553,11 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 234
     :cond_1
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_1
 
-    .line 253
     .end local v7    # "pix":F
     .end local v8    # "piy":F
     .end local v19    # "t":F
@@ -614,7 +572,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 254
     invoke-static {v14}, Ljava/lang/Float;->valueOf(F)Ljava/lang/Float;
 
     move-result-object v22
@@ -623,12 +580,10 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 223
     add-int/lit8 v5, v5, 0x1
 
     goto/16 :goto_0
 
-    .line 256
     .end local v4    # "i":I
     .end local v9    # "point0x":F
     .end local v10    # "point0y":F
@@ -651,7 +606,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 257
     const/16 v22, 0xd
 
     aget v22, v17, v22
@@ -664,7 +618,6 @@
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 259
     invoke-virtual {v3}, Ljava/util/ArrayList;->size()I
 
     move-result v22
@@ -681,7 +634,6 @@
 
     iput-object v0, v1, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->cachedDataPoints:[F
 
-    .line 260
     const/4 v2, 0x0
 
     .local v2, "a":I
@@ -702,7 +654,6 @@
 
     if-ge v2, v0, :cond_4
 
-    .line 261
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->cachedDataPoints:[F
@@ -721,12 +672,10 @@
 
     aput v22, v23, v2
 
-    .line 260
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_2
 
-    .line 263
     :cond_4
     invoke-virtual {v6}, Ljava/util/ArrayList;->size()I
 
@@ -738,7 +687,6 @@
 
     move-object/from16 v18, v0
 
-    .line 264
     .local v18, "retValue":[F
     const/4 v2, 0x0
 
@@ -753,7 +701,6 @@
 
     if-ge v2, v0, :cond_5
 
-    .line 265
     invoke-virtual {v6, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v22
@@ -766,12 +713,10 @@
 
     aput v22, v18, v2
 
-    .line 264
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 267
     :cond_5
     return-object v18
 .end method
@@ -782,7 +727,6 @@
     .prologue
     const-wide v2, 0x3ee4f8b588e368f1L    # 1.0E-5
 
-    .line 271
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->blacksLevel:F
 
     const/4 v1, 0x0
@@ -878,35 +822,28 @@
     .locals 1
 
     .prologue
-    .line 198
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousBlacksLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->blacksLevel:F
 
-    .line 199
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousShadowsLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->shadowsLevel:F
 
-    .line 200
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousMidtonesLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->midtonesLevel:F
 
-    .line 201
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousHighlightsLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->highlightsLevel:F
 
-    .line 202
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousWhitesLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->whitesLevel:F
 
-    .line 203
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->interpolateCurve()[F
 
-    .line 204
     return-void
 .end method
 
@@ -914,31 +851,25 @@
     .locals 1
 
     .prologue
-    .line 190
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->blacksLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousBlacksLevel:F
 
-    .line 191
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->shadowsLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousShadowsLevel:F
 
-    .line 192
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->midtonesLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousMidtonesLevel:F
 
-    .line 193
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->highlightsLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousHighlightsLevel:F
 
-    .line 194
     iget v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->whitesLevel:F
 
     iput v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->previousWhitesLevel:F
 
-    .line 195
     return-void
 .end method

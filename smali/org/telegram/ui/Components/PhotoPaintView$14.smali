@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 578
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$14;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$14;->val$visible:Z
@@ -43,12 +42,10 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 581
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$14;->val$visible:Z
 
     if-nez v0, :cond_0
 
-    .line 582
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$14;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoPaintView;->access$1600(Lorg/telegram/ui/Components/PhotoPaintView;)Landroid/widget/FrameLayout;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 584
     :cond_0
     return-void
 .end method

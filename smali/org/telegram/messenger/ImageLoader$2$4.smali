@@ -33,7 +33,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$2;
 
     .prologue
-    .line 1188
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$2$4;->this$1:Lorg/telegram/messenger/ImageLoader$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$2$4;->val$finalFile:Ljava/io/File;
@@ -53,7 +52,6 @@
     .locals 5
 
     .prologue
-    .line 1191
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -98,7 +96,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1192
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$2$4;->val$finalFile:Ljava/io/File;
 
@@ -124,7 +121,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1193
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$2$4;->val$finalFile:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -133,7 +129,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->addMediaToGallery(Ljava/lang/String;)V
 
-    .line 1196
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -153,7 +148,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1197
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$2$4;->this$1:Lorg/telegram/messenger/ImageLoader$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -166,6 +160,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/ImageLoader;->access$400(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;Ljava/io/File;I)V
 
-    .line 1198
     return-void
 .end method

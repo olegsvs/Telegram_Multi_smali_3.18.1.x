@@ -24,12 +24,9 @@
     .param p2, "itemView"    # Landroid/view/View;
 
     .prologue
-    .line 610
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter$Holder;->this$1:Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;
 
-    .line 611
     invoke-direct {p0, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;-><init>(Landroid/view/View;)V
 
-    .line 612
     return-void
 .end method

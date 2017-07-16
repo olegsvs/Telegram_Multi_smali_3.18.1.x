@@ -38,24 +38,18 @@
     .param p5, "f"    # Ljava/lang/String;
 
     .prologue
-    .line 497
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 498
     iput p2, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->mediaType:I
 
-    .line 499
     iput-object p3, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->originalPath:Ljava/io/File;
 
-    .line 500
     iput-object p4, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->thumbLocation:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 501
     iput-object p5, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->filter:Ljava/lang/String;
 
-    .line 502
     return-void
 .end method
 
@@ -64,7 +58,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     .prologue
-    .line 490
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->filter:Ljava/lang/String;
 
     return-object v0
@@ -75,7 +68,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     .prologue
-    .line 490
     invoke-direct {p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
     return-void
@@ -85,16 +77,13 @@
     .locals 3
 
     .prologue
-    .line 505
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->thumbLocation:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     if-nez v1, :cond_0
 
-    .line 515
     :goto_0
     return-void
 
-    .line 508
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->thumbLocation:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
@@ -102,7 +91,6 @@
 
     move-result-object v0
 
-    .line 509
     .local v0, "name":Ljava/lang/String;
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->this$0:Lorg/telegram/messenger/ImageLoader;
 
@@ -125,7 +113,6 @@
     .locals 19
 
     .prologue
-    .line 520
     :try_start_0
     move-object/from16 v0, p0
 
@@ -133,14 +120,11 @@
 
     if-nez v14, :cond_0
 
-    .line 521
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
-    .line 596
     :goto_0
     return-void
 
-    .line 524
     :cond_0
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -180,7 +164,6 @@
 
     move-result-object v5
 
-    .line 525
     .local v5, "key":Ljava/lang/String;
     new-instance v12, Ljava/io/File;
 
@@ -220,7 +203,6 @@
 
     invoke-direct {v12, v14, v15}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 526
     .local v12, "thumbFile":Ljava/io/File;
     invoke-virtual {v12}, Ljava/io/File;->exists()Z
 
@@ -238,7 +220,6 @@
 
     if-nez v14, :cond_2
 
-    .line 527
     :cond_1
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
     :try_end_0
@@ -246,22 +227,18 @@
 
     goto :goto_0
 
-    .line 592
     .end local v5    # "key":Ljava/lang/String;
     .end local v12    # "thumbFile":Ljava/io/File;
     :catch_0
     move-exception v3
 
-    .line 593
     .local v3, "e":Ljava/lang/Throwable;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 594
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
     goto :goto_0
 
-    .line 530
     .end local v3    # "e":Ljava/lang/Throwable;
     .restart local v5    # "key":Ljava/lang/String;
     .restart local v12    # "thumbFile":Ljava/io/File;
@@ -291,11 +268,9 @@
 
     move-result v10
 
-    .line 531
     .local v10, "size":I
     const/4 v6, 0x0
 
-    .line 532
     .local v6, "originalBitmap":Landroid/graphics/Bitmap;
     move-object/from16 v0, p0
 
@@ -303,7 +278,6 @@
 
     if-nez v14, :cond_4
 
-    .line 533
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->originalPath:Ljava/io/File;
@@ -328,17 +302,14 @@
 
     move-result-object v6
 
-    .line 544
     :cond_3
     :goto_1
     if-nez v6, :cond_7
 
-    .line 545
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
     goto/16 :goto_0
 
-    .line 534
     :cond_4
     move-object/from16 v0, p0
 
@@ -348,7 +319,6 @@
 
     if-ne v14, v15, :cond_5
 
-    .line 535
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->originalPath:Ljava/io/File;
@@ -365,7 +335,6 @@
 
     goto :goto_1
 
-    .line 536
     :cond_5
     move-object/from16 v0, p0
 
@@ -375,7 +344,6 @@
 
     if-ne v14, v15, :cond_3
 
-    .line 537
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->originalPath:Ljava/io/File;
@@ -388,7 +356,6 @@
 
     move-result-object v7
 
-    .line 538
     .local v7, "path":Ljava/lang/String;
     const-string/jumbo v14, ".jpg"
 
@@ -422,12 +389,10 @@
 
     if-nez v14, :cond_6
 
-    .line 539
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
     goto/16 :goto_0
 
-    .line 542
     :cond_6
     const/4 v14, 0x0
 
@@ -449,32 +414,27 @@
 
     goto :goto_1
 
-    .line 549
     .end local v7    # "path":Ljava/lang/String;
     :cond_7
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v13
 
-    .line 550
     .local v13, "w":I
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->getHeight()I
 
     move-result v4
 
-    .line 551
     .local v4, "h":I
     if-eqz v13, :cond_8
 
     if-nez v4, :cond_9
 
-    .line 552
     :cond_8
     invoke-direct/range {p0 .. p0}, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->removeTask()V
 
     goto/16 :goto_0
 
-    .line 555
     :cond_9
     int-to-float v14, v13
 
@@ -494,7 +454,6 @@
 
     move-result v8
 
-    .line 556
     .local v8, "scaleFactor":F
     int-to-float v14, v13
 
@@ -516,23 +475,18 @@
 
     move-result-object v9
 
-    .line 557
     .local v9, "scaledBitmap":Landroid/graphics/Bitmap;
     if-eq v9, v6, :cond_a
 
-    .line 558
     invoke-virtual {v6}, Landroid/graphics/Bitmap;->recycle()V
 
-    .line 560
     :cond_a
     move-object v6, v9
 
-    .line 561
     new-instance v11, Ljava/io/FileOutputStream;
 
     invoke-direct {v11, v12}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 562
     .local v11, "stream":Ljava/io/FileOutputStream;
     sget-object v14, Landroid/graphics/Bitmap$CompressFormat;->JPEG:Landroid/graphics/Bitmap$CompressFormat;
 
@@ -542,21 +496,18 @@
     :try_end_1
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 564
     :try_start_2
     invoke-virtual {v11}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_0
 
-    .line 568
     :goto_2
     :try_start_3
     new-instance v2, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-direct {v2, v6}, Landroid/graphics/drawable/BitmapDrawable;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 569
     .local v2, "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     new-instance v14, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$2;
 
@@ -568,12 +519,10 @@
 
     goto/16 :goto_0
 
-    .line 565
     .end local v2    # "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     :catch_1
     move-exception v3
 
-    .line 566
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_3

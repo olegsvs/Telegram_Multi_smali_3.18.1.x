@@ -49,12 +49,10 @@
     .param p2, "outputLooper"    # Landroid/os/Looper;
 
     .prologue
-    .line 79
     sget-object v0, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;
 
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;-><init>(Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;Landroid/os/Looper;Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;)V
 
-    .line 80
     return-void
 .end method
 
@@ -65,12 +63,10 @@
     .param p3, "decoderFactory"    # Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;
 
     .prologue
-    .line 92
     const/4 v0, 0x3
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/BaseRenderer;-><init>(I)V
 
-    .line 93
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -79,7 +75,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->output:Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;
 
-    .line 94
     if-nez p2, :cond_0
 
     const/4 v0, 0x0
@@ -87,20 +82,16 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputHandler:Landroid/os/Handler;
 
-    .line 95
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoderFactory:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;
 
-    .line 96
     new-instance v0, Lorg/telegram/messenger/exoplayer2/FormatHolder;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/FormatHolder;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->formatHolder:Lorg/telegram/messenger/exoplayer2/FormatHolder;
 
-    .line 97
     return-void
 
-    .line 94
     :cond_0
     new-instance v0, Landroid/os/Handler;
 
@@ -113,14 +104,12 @@
     .locals 1
 
     .prologue
-    .line 262
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->updateOutput(Ljava/util/List;)V
 
-    .line 263
     return-void
 .end method
 
@@ -128,7 +117,6 @@
     .locals 2
 
     .prologue
-    .line 248
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
     const/4 v1, -0x1
@@ -139,7 +127,6 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 249
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->getEventTimeCount()I
 
     move-result v1
@@ -149,17 +136,14 @@
     :cond_0
     const-wide v0, 0x7fffffffffffffffL
 
-    .line 250
     :goto_0
     return-wide v0
 
-    .line 249
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    .line 250
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->getEventTime(I)J
 
     move-result-wide v0
@@ -180,13 +164,11 @@
     .end annotation
 
     .prologue
-    .line 277
     .local p1, "cues":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/Cue;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->output:Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer$Output;->onCues(Ljava/util/List;)V
 
-    .line 278
     return-void
 .end method
 
@@ -196,42 +178,33 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 235
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
-    .line 236
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    .line 237
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v0, :cond_0
 
-    .line 238
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->release()V
 
-    .line 239
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 241
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v0, :cond_1
 
-    .line 242
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->release()V
 
-    .line 243
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 245
     :cond_1
     return-void
 .end method
@@ -249,13 +222,11 @@
     .end annotation
 
     .prologue
-    .line 254
     .local p1, "cues":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/Cue;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
 
-    .line 255
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputHandler:Landroid/os/Handler;
 
     const/4 v1, 0x0
@@ -266,11 +237,9 @@
 
     invoke-virtual {v0}, Landroid/os/Message;->sendToTarget()V
 
-    .line 259
     :goto_0
     return-void
 
-    .line 257
     :cond_0
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->invokeUpdateOutputInternal(Ljava/util/List;)V
 
@@ -284,18 +253,15 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 268
     iget v0, p1, Landroid/os/Message;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 273
     const/4 v0, 0x0
 
     :goto_0
     return v0
 
-    .line 270
     :pswitch_0
     iget-object v0, p1, Landroid/os/Message;->obj:Ljava/lang/Object;
 
@@ -303,12 +269,10 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->invokeUpdateOutputInternal(Ljava/util/List;)V
 
-    .line 271
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 268
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -319,7 +283,6 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
     return v0
@@ -329,7 +292,6 @@
     .locals 1
 
     .prologue
-    .line 231
     const/4 v0, 0x1
 
     return v0
@@ -339,26 +301,20 @@
     .locals 1
 
     .prologue
-    .line 215
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->clearOutput()V
 
-    .line 216
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->resetBuffers()V
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->release()V
 
-    .line 218
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
-    .line 219
     invoke-super {p0}, Lorg/telegram/messenger/exoplayer2/BaseRenderer;->onDisabled()V
 
-    .line 220
     return-void
 .end method
 
@@ -370,24 +326,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 117
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->clearOutput()V
 
-    .line 118
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->resetBuffers()V
 
-    .line 119
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->flush()V
 
-    .line 120
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->inputStreamEnded:Z
 
-    .line 121
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
-    .line 122
     return-void
 .end method
 
@@ -401,22 +351,18 @@
     .end annotation
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     if-eqz v0, :cond_0
 
-    .line 109
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->release()V
 
-    .line 110
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
-    .line 112
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoderFactory:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;
 
@@ -430,7 +376,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
-    .line 113
     return-void
 .end method
 
@@ -445,28 +390,23 @@
     .end annotation
 
     .prologue
-    .line 126
     iget-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
     if-eqz v5, :cond_1
 
-    .line 211
     :cond_0
     :goto_0
     return-void
 
-    .line 130
     :cond_1
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-nez v5, :cond_2
 
-    .line 131
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-interface {v5, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->setPositionUs(J)V
 
-    .line 133
     :try_start_0
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
@@ -480,7 +420,6 @@
     :try_end_0
     .catch Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 139
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getState()I
 
@@ -490,51 +429,42 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 143
     const/4 v4, 0x0
 
-    .line 144
     .local v4, "textRendererNeedsUpdate":Z
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v5, :cond_3
 
-    .line 147
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getNextEventTime()J
 
     move-result-wide v2
 
-    .line 148
     .local v2, "subtitleNextEventTimeUs":J
     :goto_1
     cmp-long v5, v2, p1
 
     if-gtz v5, :cond_3
 
-    .line 149
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
     add-int/lit8 v5, v5, 0x1
 
     iput v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    .line 150
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getNextEventTime()J
 
     move-result-wide v2
 
-    .line 151
     const/4 v4, 0x1
 
     goto :goto_1
 
-    .line 134
     .end local v2    # "subtitleNextEventTimeUs":J
     .end local v4    # "textRendererNeedsUpdate":Z
     :catch_0
     move-exception v0
 
-    .line 135
     .local v0, "e":Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getIndex()I
 
@@ -546,7 +476,6 @@
 
     throw v5
 
-    .line 155
     .end local v0    # "e":Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
     .restart local v4    # "textRendererNeedsUpdate":Z
     :cond_3
@@ -554,7 +483,6 @@
 
     if-eqz v5, :cond_5
 
-    .line 156
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->isEndOfStream()Z
@@ -563,7 +491,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 157
     if-nez v4, :cond_5
 
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getNextEventTime()J
@@ -576,43 +503,35 @@
 
     if-nez v5, :cond_5
 
-    .line 158
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v5, :cond_4
 
-    .line 159
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->release()V
 
-    .line 160
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 162
     :cond_4
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->release()V
 
-    .line 163
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 164
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->outputStreamEnded:Z
 
-    .line 178
     :cond_5
     :goto_2
     if-eqz v4, :cond_6
 
-    .line 180
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->getCues(J)Ljava/util/List;
@@ -621,7 +540,6 @@
 
     invoke-direct {p0, v5}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->updateOutput(Ljava/util/List;)V
 
-    .line 184
     :cond_6
     :goto_3
     :try_start_1
@@ -629,12 +547,10 @@
 
     if-nez v5, :cond_0
 
-    .line 185
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     if-nez v5, :cond_7
 
-    .line 186
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-interface {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->dequeueInputBuffer()Ljava/lang/Object;
@@ -645,12 +561,10 @@
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
-    .line 187
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     if-eqz v5, :cond_0
 
-    .line 192
     :cond_7
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->formatHolder:Lorg/telegram/messenger/exoplayer2/FormatHolder;
 
@@ -660,20 +574,17 @@
 
     move-result v1
 
-    .line 193
     .local v1, "result":I
     const/4 v5, -0x4
 
     if-ne v1, v5, :cond_b
 
-    .line 195
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     const/high16 v6, -0x80000000
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->clearFlag(I)V
 
-    .line 196
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->isEndOfStream()Z
@@ -682,12 +593,10 @@
 
     if-eqz v5, :cond_a
 
-    .line 197
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->inputStreamEnded:Z
 
-    .line 202
     :goto_4
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoder:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
@@ -695,7 +604,6 @@
 
     invoke-interface {v5, v6}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;->queueInputBuffer(Ljava/lang/Object;)V
 
-    .line 203
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
@@ -704,12 +612,10 @@
 
     goto :goto_3
 
-    .line 208
     .end local v1    # "result":I
     :catch_1
     move-exception v0
 
-    .line 209
     .restart local v0    # "e":Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->getIndex()I
 
@@ -721,7 +627,6 @@
 
     throw v5
 
-    .line 166
     .end local v0    # "e":Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
     :cond_8
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
@@ -732,28 +637,23 @@
 
     if-gtz v5, :cond_5
 
-    .line 168
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     if-eqz v5, :cond_9
 
-    .line 169
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->release()V
 
-    .line 171
     :cond_9
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 172
     const/4 v5, 0x0
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
-    .line 173
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {v5, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->getNextEventTimeIndex(J)I
@@ -762,12 +662,10 @@
 
     iput v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextSubtitleEventIndex:I
 
-    .line 174
     const/4 v4, 0x1
 
     goto :goto_2
 
-    .line 199
     .restart local v1    # "result":I
     :cond_a
     :try_start_2
@@ -781,7 +679,6 @@
 
     iput-wide v6, v5, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->subsampleOffsetUs:J
 
-    .line 200
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->nextInputBuffer:Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->flip()V
@@ -790,7 +687,6 @@
 
     goto :goto_4
 
-    .line 204
     :cond_b
     const/4 v5, -0x3
 
@@ -804,7 +700,6 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/TextRenderer;->decoderFactory:Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory;->supportsFormat(Lorg/telegram/messenger/exoplayer2/Format;)Z
@@ -815,15 +710,12 @@
 
     const/4 v0, 0x3
 
-    .line 102
     :goto_0
     return v0
 
-    .line 101
     :cond_0
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    .line 102
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
     move-result v0

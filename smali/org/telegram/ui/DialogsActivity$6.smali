@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DialogsActivity;
 
     .prologue
-    .line 632
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 635
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -85,7 +83,6 @@
 
     if-nez v4, :cond_6
 
-    .line 636
     :cond_1
     move-object/from16 v0, p0
 
@@ -122,7 +119,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 637
     :cond_3
     move-object/from16 v0, p0
 
@@ -136,7 +132,6 @@
 
     move-result-object v20
 
-    .line 638
     .local v20, "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     move-object/from16 v0, p0
 
@@ -150,7 +145,6 @@
 
     if-ne v0, v4, :cond_5
 
-    .line 639
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -165,7 +159,6 @@
 
     move-result-object v30
 
-    .line 640
     .local v30, "item":Ljava/lang/Object;
     move-object/from16 v0, v30
 
@@ -187,7 +180,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 641
     :cond_4
     new-instance v21, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -203,7 +195,6 @@
 
     invoke-direct {v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 642
     .local v21, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v4, "AppName"
 
@@ -217,7 +208,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 643
     const-string/jumbo v4, "ClearSearch"
 
     const v5, 0x7f07017f
@@ -230,7 +220,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 644
     const-string/jumbo v4, "ClearButton"
 
     const v5, 0x7f070177
@@ -253,7 +242,6 @@
 
     invoke-virtual {v0, v4, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 654
     const-string/jumbo v4, "Cancel"
 
     const v5, 0x7f0700f0
@@ -268,7 +256,6 @@
 
     invoke-virtual {v0, v4, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 655
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -279,23 +266,19 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/DialogsActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 656
     const/4 v4, 0x1
 
-    .line 994
     .end local v20    # "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     .end local v21    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v30    # "item":Ljava/lang/Object;
     :goto_0
     return v4
 
-    .line 660
     :cond_5
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 663
     :cond_6
     move-object/from16 v0, p0
 
@@ -305,7 +288,6 @@
 
     move-result-object v25
 
-    .line 664
     .local v25, "dialogs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     if-ltz p2, :cond_7
 
@@ -317,13 +299,11 @@
 
     if-lt v0, v4, :cond_8
 
-    .line 665
     :cond_7
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 667
     :cond_8
     move-object/from16 v0, v25
 
@@ -335,7 +315,6 @@
 
     check-cast v24, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 668
     .local v24, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     move-object/from16 v0, p0
 
@@ -347,12 +326,10 @@
 
     invoke-static {v4, v14, v15}, Lorg/telegram/ui/DialogsActivity;->access$2802(Lorg/telegram/ui/DialogsActivity;J)J
 
-    .line 669
     move-object/from16 v0, v24
 
     iget-boolean v10, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinned:Z
 
-    .line 671
     .local v10, "pinned":Z
     new-instance v21, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
@@ -368,7 +345,6 @@
 
     invoke-direct {v0, v4}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 672
     .local v21, "builder":Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
     move-object/from16 v0, p0
 
@@ -382,7 +358,6 @@
 
     move/from16 v32, v0
 
-    .line 673
     .local v32, "lower_id":I
     move-object/from16 v0, p0
 
@@ -400,7 +375,6 @@
 
     move/from16 v27, v0
 
-    .line 675
     .local v27, "high_id":I
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -426,7 +400,6 @@
 
     move-result-object v22
 
-    .line 676
     .local v22, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -450,7 +423,6 @@
 
     move-result-object v23
 
-    .line 677
     .local v23, "currentUser":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v22, :cond_c
 
@@ -460,7 +432,6 @@
 
     move-object/from16 v35, v0
 
-    .line 678
     .local v35, "title":Ljava/lang/String;
     :goto_1
     if-eqz v35, :cond_9
@@ -471,7 +442,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 680
     :cond_9
     invoke-static/range {v24 .. v24}, Lorg/telegram/messenger/DialogObject;->isChannel(Lorg/telegram/tgnet/TLRPC$TL_dialog;)Z
 
@@ -479,7 +449,6 @@
 
     if-eqz v4, :cond_23
 
-    .line 681
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -496,7 +465,6 @@
 
     move-result-object v9
 
-    .line 684
     .local v9, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {}, Lorg/telegram/ui/Components/Favorite;->getInstance()Lorg/telegram/ui/Components/Favorite;
 
@@ -514,13 +482,11 @@
 
     move-result v6
 
-    .line 685
     .local v6, "isFav":Z
     move-object/from16 v0, v24
 
     iget v7, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 686
     .local v7, "unread":I
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -532,7 +498,6 @@
 
     move-result-object v34
 
-    .line 687
     .local v34, "plusPreferences":Landroid/content/SharedPreferences;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -570,7 +535,6 @@
 
     const/4 v8, 0x1
 
-    .line 689
     .local v8, "markedAsUnread":Z
     :goto_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -589,7 +553,6 @@
 
     move-result v29
 
-    .line 690
     .local v29, "isMuted":Z
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -611,7 +574,6 @@
 
     const v33, 0x7f02004f
 
-    .line 694
     .local v33, "muted":I
     :goto_3
     const/4 v4, 0x7
@@ -680,7 +642,6 @@
 
     aput v5, v28, v4
 
-    .line 703
     .local v28, "icons":[I
     if-eqz v9, :cond_1a
 
@@ -688,7 +649,6 @@
 
     if-eqz v4, :cond_1a
 
-    .line 704
     const/4 v4, 0x7
 
     new-array v0, v4, [Ljava/lang/CharSequence;
@@ -703,7 +663,6 @@
 
     if-nez v4, :cond_a
 
-    .line 705
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -740,7 +699,6 @@
 
     const v11, 0x7f070179
 
-    .line 706
     invoke-static {v5, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -760,7 +718,6 @@
 
     const v11, 0x7f070340
 
-    .line 707
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -776,7 +733,6 @@
 
     const v11, 0x7f07064b
 
-    .line 708
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -792,7 +748,6 @@
 
     const v11, 0x7f0701e7
 
-    .line 709
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -810,7 +765,6 @@
 
     const v11, 0x7f070369
 
-    .line 710
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -824,14 +778,12 @@
 
     const v11, 0x7f07004f
 
-    .line 711
     invoke-static {v5, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v31, v4
 
-    .line 724
     .local v31, "items":[Ljava/lang/CharSequence;
     :goto_d
     new-instance v4, Lorg/telegram/ui/DialogsActivity$6$2;
@@ -848,7 +800,6 @@
 
     invoke-virtual {v0, v1, v2, v4}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setItems([Ljava/lang/CharSequence;[ILandroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 830
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -859,7 +810,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/DialogsActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 994
     .end local v9    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v28    # "icons":[I
     .end local v31    # "items":[Ljava/lang/CharSequence;
@@ -868,7 +818,6 @@
 
     goto/16 :goto_0
 
-    .line 677
     .end local v6    # "isFav":Z
     .end local v7    # "unread":I
     .end local v8    # "markedAsUnread":Z
@@ -890,7 +839,6 @@
 
     goto/16 :goto_1
 
-    .line 687
     .restart local v6    # "isFav":Z
     .restart local v7    # "unread":I
     .restart local v9    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
@@ -901,7 +849,6 @@
 
     goto/16 :goto_2
 
-    .line 690
     .restart local v8    # "markedAsUnread":Z
     .restart local v29    # "isMuted":Z
     :cond_f
@@ -909,7 +856,6 @@
 
     goto/16 :goto_3
 
-    .line 694
     .restart local v33    # "muted":I
     :cond_10
     const v4, 0x7f020051
@@ -931,7 +877,6 @@
 
     goto/16 :goto_7
 
-    .line 705
     .restart local v28    # "icons":[I
     :cond_14
     const-string/jumbo v4, "PinToTop"
@@ -949,7 +894,6 @@
 
     goto/16 :goto_8
 
-    .line 707
     :cond_16
     const-string/jumbo v4, "DeleteMegaMenu"
 
@@ -961,7 +905,6 @@
 
     goto/16 :goto_9
 
-    .line 708
     :cond_17
     const-string/jumbo v4, "MuteNotifications"
 
@@ -973,7 +916,6 @@
 
     goto/16 :goto_a
 
-    .line 709
     :cond_18
     const-string/jumbo v4, "AddToFavorites"
 
@@ -985,7 +927,6 @@
 
     goto/16 :goto_b
 
-    .line 710
     :cond_19
     const-string/jumbo v4, "MarkAsRead"
 
@@ -997,7 +938,6 @@
 
     goto/16 :goto_c
 
-    .line 713
     :cond_1a
     const/4 v4, 0x7
 
@@ -1013,7 +953,6 @@
 
     if-nez v4, :cond_1b
 
-    .line 714
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -1050,7 +989,6 @@
 
     const v11, 0x7f070179
 
-    .line 715
     invoke-static {v5, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -1070,7 +1008,6 @@
 
     const v11, 0x7f07033e
 
-    .line 716
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1086,7 +1023,6 @@
 
     const v11, 0x7f07064b
 
-    .line 717
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1102,7 +1038,6 @@
 
     const v11, 0x7f0701e7
 
-    .line 718
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1120,7 +1055,6 @@
 
     const v11, 0x7f070369
 
-    .line 719
     invoke-static {v4, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1134,7 +1068,6 @@
 
     const v11, 0x7f07004f
 
-    .line 720
     invoke-static {v5, v11}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -1144,7 +1077,6 @@
     .restart local v31    # "items":[Ljava/lang/CharSequence;
     goto/16 :goto_d
 
-    .line 714
     .end local v31    # "items":[Ljava/lang/CharSequence;
     :cond_1d
     const-string/jumbo v4, "PinToTop"
@@ -1162,7 +1094,6 @@
 
     goto :goto_f
 
-    .line 716
     :cond_1f
     const-string/jumbo v4, "ChannelDeleteMenu"
 
@@ -1174,7 +1105,6 @@
 
     goto :goto_10
 
-    .line 717
     :cond_20
     const-string/jumbo v4, "MuteNotifications"
 
@@ -1186,7 +1116,6 @@
 
     goto :goto_11
 
-    .line 718
     :cond_21
     const-string/jumbo v4, "AddToFavorites"
 
@@ -1198,7 +1127,6 @@
 
     goto :goto_12
 
-    .line 719
     :cond_22
     const-string/jumbo v4, "MarkAsRead"
 
@@ -1210,7 +1138,6 @@
 
     goto :goto_13
 
-    .line 832
     .end local v6    # "isFav":Z
     .end local v7    # "unread":I
     .end local v8    # "markedAsUnread":Z
@@ -1230,7 +1157,6 @@
 
     const/16 v18, 0x1
 
-    .line 833
     .local v18, "isChat":Z
     :goto_14
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -1249,7 +1175,6 @@
 
     move-result v29
 
-    .line 834
     .restart local v29    # "isMuted":Z
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -1271,12 +1196,10 @@
 
     const v33, 0x7f020127
 
-    .line 835
     .restart local v33    # "muted":I
     :goto_15
     const/16 v36, 0x0
 
-    .line 836
     .local v36, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v18, :cond_24
 
@@ -1288,7 +1211,6 @@
 
     if-eq v0, v4, :cond_24
 
-    .line 837
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -1301,15 +1223,12 @@
 
     move-result-object v36
 
-    .line 839
     :cond_24
     const/16 v26, 0x0
 
-    .line 840
     .local v26, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     if-nez v32, :cond_25
 
-    .line 841
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -1322,13 +1241,11 @@
 
     move-result-object v26
 
-    .line 843
     :cond_25
     if-eqz v26, :cond_29
 
     const/4 v13, 0x1
 
-    .line 844
     .local v13, "isEncrypted":Z
     :goto_16
     if-eqz v36, :cond_2a
@@ -1341,7 +1258,6 @@
 
     const/16 v19, 0x1
 
-    .line 845
     .local v19, "isBot":Z
     :goto_17
     invoke-static {}, Lorg/telegram/ui/Components/Favorite;->getInstance()Lorg/telegram/ui/Components/Favorite;
@@ -1360,13 +1276,11 @@
 
     move-result v6
 
-    .line 846
     .restart local v6    # "isFav":Z
     move-object/from16 v0, v24
 
     iget v7, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 847
     .restart local v7    # "unread":I
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1378,7 +1292,6 @@
 
     move-result-object v34
 
-    .line 848
     .restart local v34    # "plusPreferences":Landroid/content/SharedPreferences;
     new-instance v4, Ljava/lang/StringBuilder;
 
@@ -1416,7 +1329,6 @@
 
     const/4 v8, 0x1
 
-    .line 859
     .restart local v8    # "markedAsUnread":Z
     :goto_18
     const/4 v4, 0x7
@@ -1431,7 +1343,6 @@
 
     if-nez v4, :cond_26
 
-    .line 860
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v12
@@ -1471,7 +1382,6 @@
 
     const v12, 0x7f070178
 
-    .line 861
     invoke-static {v11, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v11
@@ -1486,7 +1396,6 @@
 
     const v12, 0x7f0701e2
 
-    .line 862
     invoke-static {v4, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1502,7 +1411,6 @@
 
     const v12, 0x7f07064b
 
-    .line 863
     invoke-static {v4, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1518,7 +1426,6 @@
 
     const v12, 0x7f0701e7
 
-    .line 864
     invoke-static {v4, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1536,7 +1443,6 @@
 
     const v12, 0x7f070369
 
-    .line 865
     invoke-static {v4, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -1550,7 +1456,6 @@
 
     const v12, 0x7f07004f
 
-    .line 866
     invoke-static {v11, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v11
@@ -1640,14 +1545,12 @@
 
     invoke-direct/range {v11 .. v19}, Lorg/telegram/ui/DialogsActivity$6$3;-><init>(Lorg/telegram/ui/DialogsActivity$6;ZZIZZZZ)V
 
-    .line 859
     move-object/from16 v0, v21
 
     move-object/from16 v1, v37
 
     invoke-virtual {v0, v5, v1, v11}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setItems([Ljava/lang/CharSequence;[ILandroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
-    .line 992
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/DialogsActivity$6;->this$0:Lorg/telegram/ui/DialogsActivity;
@@ -1660,7 +1563,6 @@
 
     goto/16 :goto_e
 
-    .line 832
     .end local v6    # "isFav":Z
     .end local v7    # "unread":I
     .end local v8    # "markedAsUnread":Z
@@ -1677,7 +1579,6 @@
 
     goto/16 :goto_14
 
-    .line 834
     .restart local v18    # "isChat":Z
     .restart local v29    # "isMuted":Z
     :cond_28
@@ -1685,7 +1586,6 @@
 
     goto/16 :goto_15
 
-    .line 843
     .restart local v26    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .restart local v33    # "muted":I
     .restart local v36    # "user":Lorg/telegram/tgnet/TLRPC$User;
@@ -1694,14 +1594,12 @@
 
     goto/16 :goto_16
 
-    .line 844
     .restart local v13    # "isEncrypted":Z
     :cond_2a
     const/16 v19, 0x0
 
     goto/16 :goto_17
 
-    .line 848
     .restart local v6    # "isFav":Z
     .restart local v7    # "unread":I
     .restart local v19    # "isBot":Z
@@ -1711,7 +1609,6 @@
 
     goto/16 :goto_18
 
-    .line 860
     .restart local v8    # "markedAsUnread":Z
     :cond_2c
     const/4 v4, 0x0
@@ -1734,7 +1631,6 @@
 
     goto/16 :goto_1a
 
-    .line 862
     :cond_2f
     if-eqz v19, :cond_30
 
@@ -1759,7 +1655,6 @@
 
     goto/16 :goto_1b
 
-    .line 863
     :cond_31
     const-string/jumbo v4, "MuteNotifications"
 
@@ -1771,7 +1666,6 @@
 
     goto/16 :goto_1c
 
-    .line 864
     :cond_32
     const-string/jumbo v4, "AddToFavorites"
 
@@ -1783,7 +1677,6 @@
 
     goto/16 :goto_1d
 
-    .line 865
     :cond_33
     const-string/jumbo v4, "MarkAsRead"
 
@@ -1795,7 +1688,6 @@
 
     goto/16 :goto_1e
 
-    .line 866
     :cond_34
     const v4, 0x7f020051
 

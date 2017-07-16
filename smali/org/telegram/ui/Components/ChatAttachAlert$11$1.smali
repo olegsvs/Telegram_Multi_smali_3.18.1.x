@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     .prologue
-    .line 768
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 771
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -52,11 +50,9 @@
 
     if-nez v0, :cond_0
 
-    .line 777
     :goto_0
     return-void
 
-    .line 774
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
@@ -64,7 +60,6 @@
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$5308(Lorg/telegram/ui/Components/ChatAttachAlert;)I
 
-    .line 775
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -121,7 +116,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 776
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;

@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 4508
     const v0, -0x5fc1a47b
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 4507
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ReplyMarkup;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4512
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->flags:I
 
-    .line 4513
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->flags:I
 
     and-int/lit8 v0, v0, 0x4
@@ -68,10 +64,8 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->selective:Z
 
-    .line 4514
     return-void
 
-    .line 4513
     :cond_0
     const/4 v0, 0x0
 
@@ -83,12 +77,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 4517
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4518
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->selective:Z
 
     if-eqz v0, :cond_0
@@ -100,15 +92,12 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->flags:I
 
-    .line 4519
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4520
     return-void
 
-    .line 4518
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_replyKeyboardHide;->flags:I
 

@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     .prologue
-    .line 1162
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-direct {p0}, Ljava/util/TimerTask;-><init>()V
@@ -38,14 +37,12 @@
     .locals 8
 
     .prologue
-    .line 1165
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
     long-to-double v0, v4
 
-    .line 1166
     .local v0, "currentTime":D
     iget-object v4, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
@@ -55,7 +52,6 @@
 
     sub-double v2, v0, v4
 
-    .line 1167
     .local v2, "diff":D
     iget-object v4, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
@@ -73,18 +69,15 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$2802(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;I)I
 
-    .line 1168
     iget-object v4, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v4, v0, v1}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$2702(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;D)D
 
-    .line 1169
     new-instance v4, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6$1;
 
     invoke-direct {v4, p0}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6$1;-><init>(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$6;)V
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1178
     return-void
 .end method

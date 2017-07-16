@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ManageSpaceActivity;
 
     .prologue
-    .line 94
     iput-object p1, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v8, 0x0
 
-    .line 97
     iget-object v6, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ManageSpaceActivity;->access$000(Lorg/telegram/ui/ManageSpaceActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -68,24 +66,20 @@
 
     if-ne v6, v7, :cond_4
 
-    .line 98
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
     move-result v4
 
-    .line 99
     .local v4, "x":F
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getY()F
 
     move-result v5
 
-    .line 100
     .local v5, "y":F
     const/4 v6, 0x2
 
     new-array v1, v6, [I
 
-    .line 101
     .local v1, "location":[I
     iget-object v6, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
@@ -95,14 +89,11 @@
 
     invoke-virtual {v6, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->getLocationOnScreen([I)V
 
-    .line 102
     aget v2, v1, v8
 
-    .line 103
     .local v2, "viewX":I
     aget v3, v1, v7
 
-    .line 105
     .local v3, "viewY":I
     iget-object v6, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
@@ -167,7 +158,6 @@
     :cond_0
     move v6, v8
 
-    .line 118
     .end local v1    # "location":[I
     .end local v2    # "viewX":I
     .end local v3    # "viewY":I
@@ -176,7 +166,6 @@
     :goto_0
     return v6
 
-    .line 108
     .restart local v1    # "location":[I
     .restart local v2    # "viewX":I
     .restart local v3    # "viewY":I
@@ -197,7 +186,6 @@
 
     if-nez v6, :cond_3
 
-    .line 109
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -218,7 +206,6 @@
 
     if-lez v6, :cond_2
 
-    .line 110
     iget-object v6, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ManageSpaceActivity;->access$100(Lorg/telegram/ui/ManageSpaceActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -241,15 +228,12 @@
 
     invoke-virtual {v9, v6}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->removeFragmentFromStack(Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    .line 111
     add-int/lit8 v0, v0, -0x1
 
-    .line 109
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 113
     :cond_2
     iget-object v6, p0, Lorg/telegram/ui/ManageSpaceActivity$1;->this$0:Lorg/telegram/ui/ManageSpaceActivity;
 
@@ -263,7 +247,6 @@
     :cond_3
     move v6, v7
 
-    .line 115
     goto :goto_0
 
     .end local v1    # "location":[I
@@ -274,6 +257,5 @@
     :cond_4
     move v6, v8
 
-    .line 118
     goto :goto_0
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 845
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 848
     iget-object v3, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/SettingsActivity;->access$3800(Lorg/telegram/ui/SettingsActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -56,26 +54,21 @@
 
     if-nez v3, :cond_1
 
-    .line 862
     :cond_0
     :goto_0
     return-void
 
-    .line 851
     :cond_1
     const/4 v1, 0x0
 
-    .line 852
     .local v1, "height":I
     invoke-virtual {p1, v2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 853
     .local v0, "child":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 854
     iget-object v3, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/SettingsActivity;->access$3800(Lorg/telegram/ui/SettingsActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -88,7 +81,6 @@
 
     if-nez v3, :cond_3
 
-    .line 855
     const/high16 v3, 0x42b00000    # 88.0f
 
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -108,7 +100,6 @@
     :cond_2
     add-int v1, v3, v2
 
-    .line 857
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -118,12 +109,10 @@
 
     if-eq v2, v1, :cond_0
 
-    .line 858
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v2, v1}, Lorg/telegram/ui/SettingsActivity;->access$3902(Lorg/telegram/ui/SettingsActivity;I)I
 
-    .line 859
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$9;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/SettingsActivity;->access$4000(Lorg/telegram/ui/SettingsActivity;)V

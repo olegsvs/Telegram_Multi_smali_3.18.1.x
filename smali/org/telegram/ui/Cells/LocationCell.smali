@@ -29,24 +29,20 @@
 
     const/4 v11, 0x1
 
-    .line 37
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 39
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 40
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const v1, 0x7f020236
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setBackgroundResource(I)V
 
-    .line 41
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/high16 v1, 0x41f00000    # 30.0f
@@ -63,7 +59,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/BackupImageView;->setSize(II)V
 
-    .line 42
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->getImageReceiver()Lorg/telegram/messenger/ImageReceiver;
@@ -84,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageReceiver;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 43
     iget-object v10, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/16 v0, 0x28
@@ -122,38 +116,32 @@
 
     invoke-virtual {p0, v10, v0}, Lorg/telegram/ui/Cells/LocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 45
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41800000    # 16.0f
 
     invoke-virtual {v0, v11, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 49
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 50
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteBlackText"
@@ -164,7 +152,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 51
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -175,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 52
     iget-object v1, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -187,7 +173,6 @@
     :goto_3
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 53
     iget-object v10, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -229,38 +214,32 @@
 
     invoke-virtual {p0, v10, v0}, Lorg/telegram/ui/Cells/LocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 55
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41600000    # 14.0f
 
     invoke-virtual {v0, v11, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText3"
@@ -271,7 +250,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 61
     iget-object v1, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -283,7 +261,6 @@
     :goto_7
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 62
     iget-object v10, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -323,13 +300,11 @@
 
     invoke-virtual {p0, v10, v0}, Lorg/telegram/ui/Cells/LocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     return-void
 
     :cond_1
     move v2, v8
 
-    .line 43
     goto/16 :goto_0
 
     :cond_2
@@ -345,13 +320,11 @@
     :cond_4
     move v0, v8
 
-    .line 52
     goto/16 :goto_3
 
     :cond_5
     move v2, v8
 
-    .line 53
     goto :goto_4
 
     :cond_6
@@ -367,13 +340,11 @@
     :cond_8
     move v0, v8
 
-    .line 61
     goto :goto_7
 
     :cond_9
     move v7, v8
 
-    .line 62
     goto :goto_8
 
     :cond_a
@@ -389,12 +360,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 80
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/LocationCell;->needDivider:Z
 
     if-eqz v0, :cond_0
 
-    .line 81
     const/high16 v0, 0x42900000    # 72.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -431,7 +400,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 83
     :cond_0
     return-void
 .end method
@@ -444,7 +412,6 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 67
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -474,10 +441,8 @@
 
     invoke-super {p0, v1, v0}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 68
     return-void
 
-    .line 67
     :cond_0
     const/4 v0, 0x0
 
@@ -493,29 +458,24 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 71
     iput-boolean p3, p0, Lorg/telegram/ui/Cells/LocationCell;->needDivider:Z
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->nameTextView:Landroid/widget/TextView;
 
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->title:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->addressTextView:Landroid/widget/TextView;
 
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->address:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Cells/LocationCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-virtual {v0, p2, v2, v2}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Ljava/lang/String;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 75
     if-nez p3, :cond_0
 
     const/4 v0, 0x1
@@ -523,10 +483,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/LocationCell;->setWillNotDraw(Z)V
 
-    .line 76
     return-void
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 

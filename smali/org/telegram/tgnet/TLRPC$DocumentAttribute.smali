@@ -47,7 +47,6 @@
     .locals 0
 
     .prologue
-    .line 595
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,20 +59,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 611
     const/4 v0, 0x0
 
-    .line 612
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     sparse-switch p1, :sswitch_data_0
 
-    .line 650
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 651
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in DocumentAttribute"
@@ -98,128 +93,105 @@
 
     throw v1
 
-    .line 614
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_layer55;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_layer55;-><init>()V
 
-    .line 615
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 617
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio_old;-><init>()V
 
-    .line 618
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 620
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker;-><init>()V
 
-    .line 621
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 623
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAnimated;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAnimated;-><init>()V
 
-    .line 624
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 626
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;-><init>()V
 
-    .line 627
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 629
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeVideo;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeVideo;-><init>()V
 
-    .line 630
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 632
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio_layer45;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio_layer45;-><init>()V
 
-    .line 633
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 635
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_old;-><init>()V
 
-    .line 636
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 638
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeHasStickers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeHasStickers;-><init>()V
 
-    .line 639
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 641
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker_old2;-><init>()V
 
-    .line 642
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 644
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;-><init>()V
 
-    .line 645
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 647
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
 
@@ -229,18 +201,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     goto :goto_0
 
-    .line 653
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 654
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 656
     :cond_1
     return-object v0
 
-    .line 612
     nop
 
     :sswitch_data_0

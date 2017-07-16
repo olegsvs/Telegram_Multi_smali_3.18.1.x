@@ -27,12 +27,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1518
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 1520
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ChatActivity$14;->inputFieldHeight:I
@@ -49,12 +47,10 @@
     .param p3, "drawingTime"    # J
 
     .prologue
-    .line 1524
     invoke-super {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v0
 
-    .line 1525
     .local v0, "result":Z
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -72,7 +68,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1526
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChatActivity;->access$5200(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -104,11 +99,9 @@
     :goto_0
     invoke-virtual {v2, p1, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->drawHeaderShadow(Landroid/graphics/Canvas;I)V
 
-    .line 1528
     :cond_0
     return v0
 
-    .line 1526
     :cond_1
     const/4 v1, 0x0
 
@@ -119,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 1533
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$5300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -152,12 +144,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 1628
     invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$14;->getChildCount()I
 
     move-result v4
 
-    .line 1630
     .local v4, "count":I
     invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$14;->getKeyboardHeight()I
 
@@ -183,24 +173,20 @@
 
     move-result v9
 
-    .line 1631
     .local v9, "paddingBottom":I
     :goto_0
     invoke-virtual {p0, v9}, Lorg/telegram/ui/ChatActivity$14;->setBottomClip(I)V
 
-    .line 1633
     const/4 v7, 0x0
 
     .local v7, "i":I
     :goto_1
     if-ge v7, v4, :cond_e
 
-    .line 1634
     invoke-virtual {p0, v7}, Lorg/telegram/ui/ChatActivity$14;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1635
     .local v1, "child":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -210,13 +196,11 @@
 
     if-ne v12, v13, :cond_1
 
-    .line 1633
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 1630
     .end local v1    # "child":Landroid/view/View;
     .end local v7    # "i":I
     .end local v9    # "paddingBottom":I
@@ -225,7 +209,6 @@
 
     goto :goto_0
 
-    .line 1638
     .restart local v1    # "child":Landroid/view/View;
     .restart local v7    # "i":I
     .restart local v9    # "paddingBottom":I
@@ -236,57 +219,45 @@
 
     check-cast v8, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 1640
     .local v8, "lp":Landroid/widget/FrameLayout$LayoutParams;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v11
 
-    .line 1641
     .local v11, "width":I
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 1646
     .local v6, "height":I
     iget v5, v8, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 1647
     .local v5, "gravity":I
     const/4 v12, -0x1
 
     if-ne v5, v12, :cond_2
 
-    .line 1648
     const/16 v5, 0x33
 
-    .line 1651
     :cond_2
     and-int/lit8 v0, v5, 0x7
 
-    .line 1652
     .local v0, "absoluteGravity":I
     and-int/lit8 v10, v5, 0x70
 
-    .line 1654
     .local v10, "verticalGravity":I
     and-int/lit8 v12, v0, 0x7
 
     sparse-switch v12, :sswitch_data_0
 
-    .line 1663
     iget v2, v8, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 1666
     .local v2, "childLeft":I
     :goto_3
     sparse-switch v10, :sswitch_data_1
 
-    .line 1680
     iget v3, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 1683
     .local v3, "childTop":I
     :cond_3
     :goto_4
@@ -298,7 +269,6 @@
 
     if-ne v1, v12, :cond_5
 
-    .line 1684
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v12, v12, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -317,7 +287,6 @@
 
     sub-int/2addr v3, v12
 
-    .line 1704
     :cond_4
     :goto_5
     add-int v12, v2, v11
@@ -328,7 +297,6 @@
 
     goto :goto_2
 
-    .line 1656
     .end local v2    # "childLeft":I
     .end local v3    # "childTop":I
     :sswitch_0
@@ -346,11 +314,9 @@
 
     sub-int v2, v12, v13
 
-    .line 1657
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 1659
     .end local v2    # "childLeft":I
     :sswitch_1
     sub-int v12, p4, v11
@@ -359,11 +325,9 @@
 
     sub-int v2, v12, v13
 
-    .line 1660
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 1668
     :sswitch_2
     iget v12, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
@@ -373,7 +337,6 @@
 
     add-int v3, v12, v13
 
-    .line 1669
     .restart local v3    # "childTop":I
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -395,7 +358,6 @@
 
     if-nez v12, :cond_3
 
-    .line 1670
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v12}, Lorg/telegram/ui/ChatActivity;->access$6700(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -410,7 +372,6 @@
 
     goto :goto_4
 
-    .line 1674
     .end local v3    # "childTop":I
     :sswitch_3
     sub-int v12, p5, v9
@@ -429,11 +390,9 @@
 
     sub-int v3, v12, v13
 
-    .line 1675
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 1677
     .end local v3    # "childTop":I
     :sswitch_4
     sub-int v12, p5, v9
@@ -446,11 +405,9 @@
 
     sub-int v3, v12, v13
 
-    .line 1678
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 1685
     :cond_5
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -460,7 +417,6 @@
 
     if-ne v1, v12, :cond_6
 
-    .line 1686
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v12, v12, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -473,7 +429,6 @@
 
     goto :goto_5
 
-    .line 1687
     :cond_6
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -483,7 +438,6 @@
 
     if-ne v1, v12, :cond_8
 
-    .line 1688
     iget v12, p0, Lorg/telegram/ui/ChatActivity$14;->inputFieldHeight:I
 
     div-int/lit8 v13, v12, 0x2
@@ -524,7 +478,6 @@
 
     goto :goto_6
 
-    .line 1689
     :cond_8
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -536,12 +489,10 @@
 
     if-eqz v12, :cond_a
 
-    .line 1690
     sget-boolean v12, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-eqz v12, :cond_9
 
-    .line 1691
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v12, v12, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -566,7 +517,6 @@
 
     goto/16 :goto_5
 
-    .line 1693
     :cond_9
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -578,7 +528,6 @@
 
     goto/16 :goto_5
 
-    .line 1695
     :cond_a
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -588,14 +537,12 @@
 
     if-ne v1, v12, :cond_b
 
-    .line 1696
     iget v12, p0, Lorg/telegram/ui/ChatActivity$14;->inputFieldHeight:I
 
     sub-int/2addr v3, v12
 
     goto/16 :goto_5
 
-    .line 1697
     :cond_b
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -613,7 +560,6 @@
 
     if-ne v1, v12, :cond_d
 
-    .line 1698
     :cond_c
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -625,7 +571,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 1699
     const/high16 v12, 0x42400000    # 48.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -636,7 +581,6 @@
 
     goto/16 :goto_5
 
-    .line 1701
     :cond_d
     iget-object v12, p0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -646,7 +590,6 @@
 
     if-ne v1, v12, :cond_4
 
-    .line 1702
     invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$14;->getPaddingTop()I
 
     move-result v12
@@ -655,7 +598,6 @@
 
     goto/16 :goto_5
 
-    .line 1707
     .end local v0    # "absoluteGravity":I
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childLeft":I
@@ -670,13 +612,10 @@
 
     invoke-static {v12}, Lorg/telegram/ui/ChatActivity;->access$7300(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 1708
     invoke-virtual {p0}, Lorg/telegram/ui/ChatActivity$14;->notifyHeightChanged()V
 
-    .line 1709
     return-void
 
-    .line 1654
     nop
 
     :sswitch_data_0
@@ -685,7 +624,6 @@
         0x5 -> :sswitch_1
     .end sparse-switch
 
-    .line 1666
     :sswitch_data_1
     .sparse-switch
         0x10 -> :sswitch_3
@@ -700,18 +638,15 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 1538
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v19
 
-    .line 1539
     .local v19, "widthSize":I
     invoke-static/range {p2 .. p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v13
 
-    .line 1541
     .local v13, "heightSize":I
     move-object/from16 v0, p0
 
@@ -719,14 +654,12 @@
 
     invoke-virtual {v0, v1, v13}, Lorg/telegram/ui/ChatActivity$14;->setMeasuredDimension(II)V
 
-    .line 1542
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ChatActivity$14;->getPaddingTop()I
 
     move-result v2
 
     sub-int/2addr v13, v2
 
-    .line 1544
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -747,7 +680,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/ChatActivity$14;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1545
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -760,7 +692,6 @@
 
     move-result v8
 
-    .line 1546
     .local v8, "actionBarHeight":I
     move-object/from16 v0, p0
 
@@ -776,16 +707,13 @@
 
     if-nez v2, :cond_0
 
-    .line 1547
     sub-int/2addr v13, v8
 
-    .line 1550
     :cond_0
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ChatActivity$14;->getKeyboardHeight()I
 
     move-result v15
 
-    .line 1552
     .local v15, "keyboardSize":I
     const/high16 v2, 0x41a00000    # 20.0f
 
@@ -799,7 +727,6 @@
 
     if-nez v2, :cond_1
 
-    .line 1553
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -812,13 +739,11 @@
 
     sub-int/2addr v13, v2
 
-    .line 1556
     :cond_1
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/ChatActivity$14;->getChildCount()I
 
     move-result v9
 
-    .line 1558
     .local v9, "childCount":I
     move-object/from16 v0, p0
 
@@ -838,7 +763,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/ChatActivity$14;->measureChildWithMargins(Landroid/view/View;IIII)V
 
-    .line 1559
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -853,21 +777,18 @@
 
     iput v2, v0, Lorg/telegram/ui/ChatActivity$14;->inputFieldHeight:I
 
-    .line 1561
     const/4 v14, 0x0
 
     .local v14, "i":I
     :goto_0
     if-ge v14, v9, :cond_12
 
-    .line 1562
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v14}, Lorg/telegram/ui/ChatActivity$14;->getChildAt(I)Landroid/view/View;
 
     move-result-object v3
 
-    .line 1563
     .local v3, "child":Landroid/view/View;
     if-eqz v3, :cond_2
 
@@ -897,14 +818,12 @@
 
     if-ne v3, v2, :cond_3
 
-    .line 1561
     :cond_2
     :goto_1
     add-int/lit8 v14, v14, 0x1
 
     goto :goto_0
 
-    .line 1566
     :cond_3
     move-object/from16 v0, p0
 
@@ -926,7 +845,6 @@
 
     if-ne v3, v2, :cond_6
 
-    .line 1567
     :cond_4
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -936,7 +854,6 @@
 
     move-result v11
 
-    .line 1568
     .local v11, "contentWidthSpec":I
     const/high16 v2, 0x41200000    # 10.0f
 
@@ -985,20 +902,17 @@
 
     move-result v10
 
-    .line 1569
     .local v10, "contentHeightSpec":I
     invoke-virtual {v3, v11, v10}, Landroid/view/View;->measure(II)V
 
     goto :goto_1
 
-    .line 1568
     .end local v10    # "contentHeightSpec":I
     :cond_5
     const/4 v2, 0x0
 
     goto :goto_2
 
-    .line 1570
     .end local v11    # "contentWidthSpec":I
     :cond_6
     move-object/from16 v0, p0
@@ -1011,7 +925,6 @@
 
     if-ne v3, v2, :cond_7
 
-    .line 1571
     const/high16 v2, 0x40000000    # 2.0f
 
     move/from16 v0, v19
@@ -1020,7 +933,6 @@
 
     move-result v11
 
-    .line 1572
     .restart local v11    # "contentWidthSpec":I
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -1028,13 +940,11 @@
 
     move-result v10
 
-    .line 1573
     .restart local v10    # "contentHeightSpec":I
     invoke-virtual {v3, v11, v10}, Landroid/view/View;->measure(II)V
 
     goto :goto_1
 
-    .line 1574
     .end local v10    # "contentHeightSpec":I
     .end local v11    # "contentWidthSpec":I
     :cond_7
@@ -1050,19 +960,16 @@
 
     if-eqz v2, :cond_a
 
-    .line 1575
     sget-boolean v2, Lorg/telegram/messenger/AndroidUtilities;->isInMultiwindow:Z
 
     if-eqz v2, :cond_9
 
-    .line 1576
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v2
 
     if-eqz v2, :cond_8
 
-    .line 1577
     const/high16 v2, 0x40000000    # 2.0f
 
     move/from16 v0, v19
@@ -1109,7 +1016,6 @@
 
     goto/16 :goto_1
 
-    .line 1579
     :cond_8
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -1147,7 +1053,6 @@
 
     goto/16 :goto_1
 
-    .line 1582
     :cond_9
     const/high16 v2, 0x40000000    # 2.0f
 
@@ -1173,7 +1078,6 @@
 
     goto/16 :goto_1
 
-    .line 1584
     :cond_a
     move-object/from16 v0, p0
 
@@ -1185,7 +1089,6 @@
 
     if-ne v3, v2, :cond_11
 
-    .line 1585
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1200,7 +1103,6 @@
 
     check-cast v16, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 1587
     .local v16, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     move-object/from16 v0, p0
 
@@ -1210,7 +1112,6 @@
 
     invoke-static {v2, v4}, Lorg/telegram/ui/ChatActivity;->access$6202(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 1589
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1239,7 +1140,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 1590
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1254,11 +1154,9 @@
 
     move-result v18
 
-    .line 1591
     .local v18, "size":I
     mul-int/lit8 v17, v18, 0x66
 
-    .line 1592
     .local v17, "maxHeight":I
     move-object/from16 v0, p0
 
@@ -1274,7 +1172,6 @@
 
     if-eqz v2, :cond_b
 
-    .line 1593
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1283,16 +1180,13 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lorg/telegram/ui/Adapters/MentionsAdapter;->getBotContextSwitch()Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     move-result-object v2
 
     if-eqz v2, :cond_b
 
-    .line 1594
     add-int/lit8 v17, v17, 0x22
 
-    .line 1597
     :cond_b
     move-object/from16 v0, p0
 
@@ -1317,7 +1211,6 @@
     :goto_3
     add-int v12, v4, v2
 
-    .line 1598
     .local v12, "height":I
     move-object/from16 v0, p0
 
@@ -1357,20 +1250,17 @@
 
     invoke-virtual {v2, v4, v5, v6, v7}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 1615
     :goto_4
     move-object/from16 v0, v16
 
     iput v12, v0, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 1616
     const/4 v2, 0x0
 
     move-object/from16 v0, v16
 
     iput v2, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 1618
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1379,7 +1269,6 @@
 
     invoke-static {v2, v4}, Lorg/telegram/ui/ChatActivity;->access$6202(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 1619
     const/high16 v2, 0x40000000    # 2.0f
 
     move/from16 v0, v19
@@ -1402,14 +1291,12 @@
 
     goto/16 :goto_1
 
-    .line 1597
     .end local v12    # "height":I
     :cond_c
     const/4 v2, 0x0
 
     goto :goto_3
 
-    .line 1600
     .end local v17    # "maxHeight":I
     .end local v18    # "size":I
     :cond_d
@@ -1425,11 +1312,9 @@
 
     move-result v18
 
-    .line 1601
     .restart local v18    # "size":I
     const/16 v17, 0x0
 
-    .line 1602
     .restart local v17    # "maxHeight":I
     move-object/from16 v0, p0
 
@@ -1445,7 +1330,6 @@
 
     if-eqz v2, :cond_f
 
-    .line 1603
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$14;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -1454,25 +1338,20 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lorg/telegram/ui/Adapters/MentionsAdapter;->getBotContextSwitch()Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     move-result-object v2
 
     if-eqz v2, :cond_e
 
-    .line 1604
     add-int/lit8 v17, v17, 0x24
 
-    .line 1605
     add-int/lit8 v18, v18, -0x1
 
-    .line 1607
     :cond_e
     mul-int/lit8 v2, v18, 0x44
 
     add-int v17, v17, v2
 
-    .line 1611
     :goto_5
     move-object/from16 v0, p0
 
@@ -1497,7 +1376,6 @@
     :goto_6
     add-int v12, v4, v2
 
-    .line 1612
     .restart local v12    # "height":I
     move-object/from16 v0, p0
 
@@ -1539,7 +1417,6 @@
 
     goto/16 :goto_4
 
-    .line 1609
     .end local v12    # "height":I
     :cond_f
     mul-int/lit8 v2, v18, 0x24
@@ -1548,13 +1425,11 @@
 
     goto :goto_5
 
-    .line 1611
     :cond_10
     const/4 v2, 0x0
 
     goto :goto_6
 
-    .line 1621
     .end local v16    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     .end local v17    # "maxHeight":I
     .end local v18    # "size":I
@@ -1573,7 +1448,6 @@
 
     goto/16 :goto_1
 
-    .line 1624
     .end local v3    # "child":Landroid/view/View;
     :cond_12
     return-void

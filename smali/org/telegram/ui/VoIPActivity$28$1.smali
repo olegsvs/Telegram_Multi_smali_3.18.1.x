@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VoIPActivity$28;
 
     .prologue
-    .line 1397
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$28$1;->this$1:Lorg/telegram/ui/VoIPActivity$28;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1400
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$28$1;->this$1:Lorg/telegram/ui/VoIPActivity$28;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$28;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -60,7 +58,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1401
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$28$1;->this$1:Lorg/telegram/ui/VoIPActivity$28;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$28;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -79,6 +76,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 1402
     return-void
 .end method

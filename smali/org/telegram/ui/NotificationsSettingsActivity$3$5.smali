@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     .prologue
-    .line 432
     iput-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$5;->this$1:Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     iput p2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$5;->val$position:I
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 435
     iget-object v0, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$5;->this$1:Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/NotificationsSettingsActivity$3;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 436
     return-void
 .end method

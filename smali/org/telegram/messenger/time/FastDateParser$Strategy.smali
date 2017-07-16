@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 452
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/time/FastDateParser$1;
 
     .prologue
-    .line 452
     invoke-direct {p0}, Lorg/telegram/messenger/time/FastDateParser$Strategy;-><init>()V
 
     return-void
@@ -45,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 460
     const/4 v0, 0x0
 
     return v0
@@ -58,6 +55,5 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 474
     return-void
 .end method

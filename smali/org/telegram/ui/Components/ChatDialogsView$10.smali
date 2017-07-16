@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatDialogsView;
 
     .prologue
-    .line 412
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$10;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,7 +40,6 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 415
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$10;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$600(Lorg/telegram/ui/Components/ChatDialogsView;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -88,14 +86,12 @@
 
     if-le v0, v1, :cond_0
 
-    .line 416
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$10;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatDialogsView;->access$1600(Lorg/telegram/ui/Components/ChatDialogsView;Z)V
 
-    .line 418
     :cond_0
     return-void
 .end method

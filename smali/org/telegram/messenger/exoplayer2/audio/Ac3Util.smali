@@ -30,7 +30,6 @@
 
     const/4 v1, 0x3
 
-    .line 42
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -39,21 +38,18 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->BLOCKS_PER_SYNCFRAME_BY_NUMBLKSCOD:[I
 
-    .line 46
     new-array v0, v1, [I
 
     fill-array-data v0, :array_1
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
-    .line 50
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD2:[I
 
-    .line 54
     const/16 v0, 0x8
 
     new-array v0, v0, [I
@@ -62,14 +58,12 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
-    .line 58
     new-array v0, v2, [I
 
     fill-array-data v0, :array_4
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->BITRATE_BY_HALF_FRMSIZECOD:[I
 
-    .line 63
     new-array v0, v2, [I
 
     fill-array-data v0, :array_5
@@ -78,7 +72,6 @@
 
     return-void
 
-    .line 42
     nop
 
     :array_0
@@ -89,7 +82,6 @@
         0x6
     .end array-data
 
-    .line 46
     :array_1
     .array-data 4
         0xbb80
@@ -97,7 +89,6 @@
         0x7d00
     .end array-data
 
-    .line 50
     :array_2
     .array-data 4
         0x5dc0
@@ -105,7 +96,6 @@
         0x3e80
     .end array-data
 
-    .line 54
     :array_3
     .array-data 4
         0x2
@@ -118,7 +108,6 @@
         0x5
     .end array-data
 
-    .line 58
     :array_4
     .array-data 4
         0x20
@@ -142,7 +131,6 @@
         0x280
     .end array-data
 
-    .line 63
     :array_5
     .array-data 4
         0x45
@@ -171,7 +159,6 @@
     .locals 0
 
     .prologue
-    .line 252
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -181,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 204
     const/16 v0, 0x600
 
     return v0
@@ -193,10 +179,8 @@
     .param p1, "frmsizecod"    # I
 
     .prologue
-    .line 234
     div-int/lit8 v1, p1, 0x2
 
-    .line 235
     .local v1, "halfFrmsizecod":I
     if-ltz p0, :cond_0
 
@@ -214,27 +198,22 @@
 
     if-lt v1, v3, :cond_1
 
-    .line 238
     :cond_0
     const/4 v3, -0x1
 
-    .line 248
     :goto_0
     return v3
 
-    .line 240
     :cond_1
     sget-object v3, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v2, v3, p0
 
-    .line 241
     .local v2, "sampleRate":I
     const v3, 0xac44
 
     if-ne v2, v3, :cond_2
 
-    .line 242
     sget-object v3, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SYNCFRAME_SIZE_WORDS_BY_HALF_FRMSIZECOD_44_1:[I
 
     aget v3, v3, v1
@@ -247,24 +226,20 @@
 
     goto :goto_0
 
-    .line 244
     :cond_2
     sget-object v3, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->BITRATE_BY_HALF_FRMSIZECOD:[I
 
     aget v0, v3, v1
 
-    .line 245
     .local v0, "bitrate":I
     const/16 v3, 0x7d00
 
     if-ne v2, v3, :cond_3
 
-    .line 246
     mul-int/lit8 v3, v0, 0x6
 
     goto :goto_0
 
-    .line 248
     :cond_3
     mul-int/lit8 v3, v0, 0x4
 
@@ -279,7 +254,6 @@
     .param p3, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 78
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -288,19 +262,16 @@
 
     shr-int/lit8 v11, v0, 0x6
 
-    .line 79
     .local v11, "fscod":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v6, v0, v11
 
-    .line 80
     .local v6, "sampleRate":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v12
 
-    .line 81
     .local v12, "nextByte":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
@@ -310,16 +281,13 @@
 
     aget v5, v0, v1
 
-    .line 82
     .local v5, "channelCount":I
     and-int/lit8 v0, v12, 0x4
 
     if-eqz v0, :cond_0
 
-    .line 83
     add-int/lit8 v5, v5, 0x1
 
-    .line 85
     :cond_0
     const-string/jumbo v1, "audio/ac3"
 
@@ -354,32 +322,27 @@
     .param p3, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 128
     const/16 v0, 0x20
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 129
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v12
 
-    .line 130
     .local v12, "fscod":I
     const/16 v0, 0xe
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 131
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v11
 
-    .line 132
     .local v11, "acmod":I
     and-int/lit8 v0, v11, 0x1
 
@@ -389,40 +352,33 @@
 
     if-eq v11, v0, :cond_0
 
-    .line 133
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 135
     :cond_0
     and-int/lit8 v0, v11, 0x4
 
     if-eqz v0, :cond_1
 
-    .line 136
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 138
     :cond_1
     const/4 v0, 0x2
 
     if-ne v11, v0, :cond_2
 
-    .line 139
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 141
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v13
 
-    .line 142
     .local v13, "lfeon":Z
     const-string/jumbo v1, "audio/ac3"
 
@@ -476,21 +432,17 @@
     .prologue
     const/4 v4, 0x4
 
-    .line 182
     array-length v2, p0
 
     const/4 v3, 0x5
 
     if-ge v2, v3, :cond_0
 
-    .line 183
     const/4 v2, -0x1
 
-    .line 187
     :goto_0
     return v2
 
-    .line 185
     :cond_0
     aget-byte v2, p0, v4
 
@@ -498,13 +450,11 @@
 
     shr-int/lit8 v1, v2, 0x6
 
-    .line 186
     .local v1, "fscod":I
     aget-byte v2, p0, v4
 
     and-int/lit8 v0, v2, 0x3f
 
-    .line 187
     .local v0, "frmsizecod":I
     invoke-static {v1, v0}, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->getAc3SyncframeSize(II)I
 
@@ -521,12 +471,10 @@
     .param p3, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 101
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 105
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
@@ -535,19 +483,16 @@
 
     shr-int/lit8 v11, v0, 0x6
 
-    .line 106
     .local v11, "fscod":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v6, v0, v11
 
-    .line 107
     .local v6, "sampleRate":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v12
 
-    .line 108
     .local v12, "nextByte":I
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->CHANNEL_COUNT_BY_ACMOD:[I
 
@@ -557,16 +502,13 @@
 
     aget v5, v0, v1
 
-    .line 109
     .local v5, "channelCount":I
     and-int/lit8 v0, v12, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 110
     add-int/lit8 v5, v5, 0x1
 
-    .line 112
     :cond_0
     const-string/jumbo v1, "audio/eac3"
 
@@ -598,7 +540,6 @@
     .param p0, "buffer"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 228
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
@@ -613,7 +554,6 @@
 
     shr-int/lit8 v0, v1, 0x6
 
-    .line 229
     .local v0, "fscod":I
     const/4 v1, 0x3
 
@@ -621,17 +561,14 @@
 
     const/4 v1, 0x6
 
-    .line 230
     :goto_0
     mul-int/lit16 v1, v1, 0x100
 
     return v1
 
-    .line 229
     :cond_0
     sget-object v1, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->BLOCKS_PER_SYNCFRAME_BY_NUMBLKSCOD:[I
 
-    .line 230
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v2
@@ -658,7 +595,6 @@
     .prologue
     const/4 v2, 0x4
 
-    .line 215
     aget-byte v0, p0, v2
 
     and-int/lit16 v0, v0, 0xc0
@@ -695,7 +631,6 @@
     .param p0, "data"    # [B
 
     .prologue
-    .line 197
     const/4 v0, 0x2
 
     aget-byte v0, p0, v0
@@ -727,25 +662,21 @@
     .param p3, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 159
     const/16 v0, 0x20
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 161
     const/4 v0, 0x2
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBits(I)I
 
     move-result v12
 
-    .line 162
     .local v12, "fscod":I
     const/4 v0, 0x3
 
     if-ne v12, v0, :cond_0
 
-    .line 163
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD2:[I
 
     const/4 v1, 0x2
@@ -756,7 +687,6 @@
 
     aget v6, v0, v1
 
-    .line 168
     .local v6, "sampleRate":I
     :goto_0
     const/4 v0, 0x3
@@ -765,13 +695,11 @@
 
     move-result v11
 
-    .line 169
     .local v11, "acmod":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->readBit()Z
 
     move-result v13
 
-    .line 170
     .local v13, "lfeon":Z
     const-string/jumbo v1, "audio/eac3"
 
@@ -808,7 +736,6 @@
 
     return-object v0
 
-    .line 165
     .end local v6    # "sampleRate":I
     .end local v11    # "acmod":I
     .end local v13    # "lfeon":Z
@@ -817,7 +744,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 166
     sget-object v0, Lorg/telegram/messenger/exoplayer2/audio/Ac3Util;->SAMPLE_RATE_BY_FSCOD:[I
 
     aget v6, v0, v12
@@ -825,7 +751,6 @@
     .restart local v6    # "sampleRate":I
     goto :goto_0
 
-    .line 170
     .restart local v11    # "acmod":I
     .restart local v13    # "lfeon":Z
     :cond_1

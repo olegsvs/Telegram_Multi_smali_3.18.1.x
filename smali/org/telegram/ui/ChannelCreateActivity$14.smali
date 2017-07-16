@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 899
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$14;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$14;->val$name:Ljava/lang/String;
@@ -45,18 +44,15 @@
     .locals 5
 
     .prologue
-    .line 902
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;-><init>()V
 
-    .line 903
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$14;->val$name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->username:Ljava/lang/String;
 
-    .line 904
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$14;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$1100(Lorg/telegram/ui/ChannelCreateActivity;)I
@@ -69,7 +65,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_checkUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 905
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$14;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -88,6 +83,5 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$2702(Lorg/telegram/ui/ChannelCreateActivity;I)I
 
-    .line 934
     return-void
 .end method

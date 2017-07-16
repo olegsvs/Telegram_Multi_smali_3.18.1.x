@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$9;
 
     .prologue
-    .line 1747
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$9$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 1751
     const/4 v0, 0x1
 
     invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 1752
     return-void
 .end method

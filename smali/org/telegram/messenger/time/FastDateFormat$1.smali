@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 88
     invoke-direct {p0}, Lorg/telegram/messenger/time/FormatCache;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 88
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/time/FastDateFormat$1;->createInstance(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)Lorg/telegram/messenger/time/FastDateFormat;
 
     move-result-object v0
@@ -55,7 +53,6 @@
     .param p3, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 91
     new-instance v0, Lorg/telegram/messenger/time/FastDateFormat;
 
     invoke-direct {v0, p1, p2, p3}, Lorg/telegram/messenger/time/FastDateFormat;-><init>(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)V

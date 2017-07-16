@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/StickerPreviewViewer$1;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$1$2;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$2;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/StickerPreviewViewer$1;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -51,13 +49,11 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/StickerPreviewViewer;->access$502(Lorg/telegram/ui/StickerPreviewViewer;Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$2;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/StickerPreviewViewer$1;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickerPreviewViewer;->close()V
 
-    .line 117
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 366
     iput p1, p0, Lorg/telegram/messenger/query/StickersQuery$7;->val$type:I
 
     iput-boolean p2, p0, Lorg/telegram/messenger/query/StickersQuery$7;->val$gif:Z
@@ -46,10 +45,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 369
     const/4 v0, 0x0
 
-    .line 370
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     instance-of v2, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;
 
@@ -57,14 +54,11 @@
 
     move-object v1, p1
 
-    .line 371
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;
 
-    .line 372
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;->stickers:Ljava/util/ArrayList;
 
-    .line 374
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;
     :cond_0
     iget v2, p0, Lorg/telegram/messenger/query/StickersQuery$7;->val$type:I
@@ -75,6 +69,5 @@
 
     invoke-static {v2, v0, v3, v4}, Lorg/telegram/messenger/query/StickersQuery;->access$600(ILjava/util/ArrayList;ZI)V
 
-    .line 375
     return-void
 .end method

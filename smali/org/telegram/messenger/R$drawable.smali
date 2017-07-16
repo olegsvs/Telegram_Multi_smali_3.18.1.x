@@ -99,9 +99,7 @@
 
 .field public static final bluecounter:I = 0x7f020029
 
-.field public static final blur_linear:I = 0x7f02002a
 
-.field public static final blur_linear_active:I = 0x7f02002b
 
 .field public static final blur_off:I = 0x7f02002c
 
@@ -129,7 +127,6 @@
 
 .field public static final bot_keyboard2:I = 0x7f020038
 
-.field public static final bot_lines:I = 0x7f020039
 
 .field public static final bot_link:I = 0x7f02003a
 
@@ -411,7 +408,6 @@
 
 .field public static final ic_again:I = 0x7f0200c5
 
-.field public static final ic_againinline:I = 0x7f0200c6
 
 .field public static final ic_arrow_drop_down:I = 0x7f0200c7
 
@@ -461,7 +457,6 @@
 
 .field public static final ic_gofullscreen:I = 0x7f0200de
 
-.field public static final ic_goinline:I = 0x7f0200df
 
 .field public static final ic_keyboard_w:I = 0x7f0200e0
 
@@ -503,11 +498,9 @@
 
 .field public static final ic_outfullscreen:I = 0x7f0200f3
 
-.field public static final ic_outinline:I = 0x7f0200f4
 
 .field public static final ic_pause:I = 0x7f0200f5
 
-.field public static final ic_pauseinline:I = 0x7f0200f6
 
 .field public static final ic_phone_in_talk_white_24dp:I = 0x7f0200f7
 
@@ -515,7 +508,6 @@
 
 .field public static final ic_player:I = 0x7f0200f9
 
-.field public static final ic_playinline:I = 0x7f0200fa
 
 .field public static final ic_rating_star:I = 0x7f0200fb
 
@@ -567,9 +559,7 @@
 
 .field public static final ic_vpn_key_white_24dp:I = 0x7f020113
 
-.field public static final inline_video_pause:I = 0x7f020114
 
-.field public static final inline_video_play:I = 0x7f020115
 
 .field public static final instant_camera:I = 0x7f020116
 
@@ -1059,7 +1049,6 @@
 
 .field public static final photo_flip:I = 0x7f020209
 
-.field public static final photo_outline:I = 0x7f02020a
 
 .field public static final photo_paint:I = 0x7f02020b
 
@@ -1343,7 +1332,6 @@
     .locals 0
 
     .prologue
-    .line 305
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

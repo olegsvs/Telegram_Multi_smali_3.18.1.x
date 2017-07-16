@@ -31,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 33
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/StreamReader;-><init>()V
 
-    .line 125
     return-void
 .end method
 
@@ -43,7 +41,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;
 
     .prologue
-    .line 33
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->streamInfo:Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
 
     return-object v0
@@ -54,7 +51,6 @@
     .param p1, "packet"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 95
     iget-object v2, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     const/4 v3, 0x2
@@ -65,23 +61,19 @@
 
     shr-int/lit8 v0, v2, 0x4
 
-    .line 96
     .local v0, "blockSizeCode":I
     packed-switch v0, :pswitch_data_0
 
-    .line 122
     const/4 v2, -0x1
 
     :goto_0
     return v2
 
-    .line 98
     :pswitch_0
     const/16 v2, 0xc0
 
     goto :goto_0
 
-    .line 103
     :pswitch_1
     const/16 v2, 0x240
 
@@ -91,16 +83,13 @@
 
     goto :goto_0
 
-    .line 107
     :pswitch_2
     const/4 v2, 0x4
 
     invoke-virtual {p1, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 108
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUtf8EncodedLong()J
 
-    .line 109
     const/4 v2, 0x6
 
     if-ne v0, v2, :cond_0
@@ -109,19 +98,16 @@
 
     move-result v1
 
-    .line 110
     .local v1, "value":I
     :goto_1
     const/4 v2, 0x0
 
     invoke-virtual {p1, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 111
     add-int/lit8 v2, v1, 0x1
 
     goto :goto_0
 
-    .line 109
     .end local v1    # "value":I
     :cond_0
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
@@ -130,7 +116,6 @@
 
     goto :goto_1
 
-    .line 120
     :pswitch_3
     const/16 v2, 0x100
 
@@ -140,7 +125,6 @@
 
     goto :goto_0
 
-    .line 96
     nop
 
     :pswitch_data_0
@@ -170,7 +154,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 58
     aget-byte v1, p0, v0
 
     const/4 v2, -0x1
@@ -188,7 +171,6 @@
     .param p0, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 44
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v0
@@ -205,7 +187,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 45
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
     move-result-wide v0
@@ -234,7 +215,6 @@
     .param p1, "packet"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 63
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->isAudioPacket([B)Z
@@ -243,10 +223,8 @@
 
     if-nez v0, :cond_0
 
-    .line 64
     const-wide/16 v0, -0x1
 
-    .line 66
     :goto_0
     return-wide v0
 
@@ -273,12 +251,10 @@
     .end annotation
 
     .prologue
-    .line 72
     move-object/from16 v0, p1
 
     iget-object v13, v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 73
     .local v13, "data":[B
     move-object/from16 v0, p0
 
@@ -286,7 +262,6 @@
 
     if-nez v2, :cond_1
 
-    .line 74
     new-instance v2, Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
 
     const/16 v3, 0x11
@@ -297,7 +272,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->streamInfo:Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
 
-    .line 75
     const/16 v2, 0x9
 
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit()I
@@ -308,7 +282,6 @@
 
     move-result-object v14
 
-    .line 76
     .local v14, "metadata":[B
     const/4 v2, 0x4
 
@@ -316,12 +289,10 @@
 
     aput-byte v3, v14, v2
 
-    .line 77
     invoke-static {v14}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v9
 
-    .line 78
     .local v9, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v2, 0x0
 
@@ -335,7 +306,6 @@
 
     iget-object v6, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->streamInfo:Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
 
-    .line 79
     invoke-virtual {v6}, Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;->bitRate()I
 
     move-result v6
@@ -358,7 +328,6 @@
 
     const/4 v12, 0x0
 
-    .line 78
     invoke-static/range {v2 .. v12}, Lorg/telegram/messenger/exoplayer2/Format;->createAudioSampleFormat(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIILjava/util/List;Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;ILjava/lang/String;)Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v2
@@ -367,7 +336,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/StreamReader$SetupData;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 91
     .end local v9    # "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     .end local v14    # "metadata":[B
     :cond_0
@@ -377,7 +345,6 @@
     :goto_1
     return v2
 
-    .line 81
     :cond_1
     const/4 v2, 0x0
 
@@ -389,7 +356,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 82
     new-instance v2, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     const/4 v3, 0x0
@@ -402,7 +368,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
-    .line 83
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
@@ -413,7 +378,6 @@
 
     goto :goto_0
 
-    .line 84
     :cond_2
     invoke-static {v13}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->isAudioPacket([B)Z
 
@@ -421,14 +385,12 @@
 
     if-eqz v2, :cond_0
 
-    .line 85
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
     if-eqz v2, :cond_3
 
-    .line 86
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
@@ -437,7 +399,6 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;->setFirstFrameOffset(J)V
 
-    .line 87
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
@@ -446,7 +407,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/StreamReader$SetupData;->oggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/OggSeeker;
 
-    .line 89
     :cond_3
     const/4 v2, 0x0
 
@@ -460,19 +420,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 50
     invoke-super {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/ogg/StreamReader;->reset(Z)V
 
-    .line 51
     if-eqz p1, :cond_0
 
-    .line 52
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->streamInfo:Lorg/telegram/messenger/exoplayer2/util/FlacStreamInfo;
 
-    .line 53
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader;->flacOggSeeker:Lorg/telegram/messenger/exoplayer2/extractor/ogg/FlacReader$FlacOggSeeker;
 
-    .line 55
     :cond_0
     return-void
 .end method

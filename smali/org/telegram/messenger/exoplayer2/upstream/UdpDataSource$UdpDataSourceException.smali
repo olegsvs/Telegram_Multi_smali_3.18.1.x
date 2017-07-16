@@ -20,9 +20,7 @@
     .param p1, "cause"    # Ljava/io/IOException;
 
     .prologue
-    .line 39
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 40
     return-void
 .end method

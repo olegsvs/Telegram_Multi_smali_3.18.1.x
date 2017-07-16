@@ -27,13 +27,10 @@
     .param p1, "message"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 3590
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 3591
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$VideoConvertRunnable;->messageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 3592
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/MediaController$1;
 
     .prologue
-    .line 3586
     invoke-direct {p0, p1}, Lorg/telegram/messenger/MediaController$VideoConvertRunnable;-><init>(Lorg/telegram/messenger/MessageObject;)V
 
     return-void
@@ -54,7 +50,6 @@
     .param p0, "obj"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 3600
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lorg/telegram/messenger/MediaController$VideoConvertRunnable$1;
@@ -63,10 +58,8 @@
 
     invoke-direct {v0, v1}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 3612
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 3613
     return-void
 .end method
 
@@ -76,7 +69,6 @@
     .locals 2
 
     .prologue
-    .line 3596
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -85,6 +77,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$6600(Lorg/telegram/messenger/MediaController;Lorg/telegram/messenger/MessageObject;)Z
 
-    .line 3597
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource;
 
     .prologue
-    .line 61
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource;
 
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource$1;->val$index:I
@@ -41,19 +40,14 @@
 
 
 # virtual methods
-.method public onSourceInfoRefreshed(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
     .locals 2
-    .param p1, "timeline"    # Lorg/telegram/messenger/exoplayer2/Timeline;
     .param p2, "manifest"    # Ljava/lang/Object;
 
     .prologue
-    .line 64
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource$1;->val$index:I
 
-    invoke-static {v0, v1, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource;->access$000(Lorg/telegram/messenger/exoplayer2/source/ConcatenatingMediaSource;ILorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
 
-    .line 65
     return-void
 .end method

@@ -84,31 +84,22 @@
 
     const/4 v4, 0x0
 
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->uri:Landroid/net/Uri;
 
-    .line 65
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 66
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 67
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->minLoadableRetryCount:I
 
-    .line 68
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventHandler:Landroid/os/Handler;
 
-    .line 69
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventListener:Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;
 
-    .line 70
     iput p7, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventSourceId:I
 
-    .line 71
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
     new-array v1, v3, [Lorg/telegram/messenger/exoplayer2/source/TrackGroup;
@@ -127,14 +118,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->tracks:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
-    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleStreams:Ljava/util/ArrayList;
 
-    .line 73
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
     const-string/jumbo v1, "Loader:SingleSampleMediaPeriod"
@@ -143,7 +132,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loader:Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
-    .line 74
     return-void
 .end method
 
@@ -152,7 +140,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     .prologue
-    .line 38
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventSourceId:I
 
     return v0
@@ -163,7 +150,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;
 
     .prologue
-    .line 38
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventListener:Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaSource$EventListener;
 
     return-object v0
@@ -174,7 +160,6 @@
     .param p1, "e"    # Ljava/io/IOException;
 
     .prologue
-    .line 172
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventHandler:Landroid/os/Handler;
 
     if-eqz v0, :cond_0
@@ -183,7 +168,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->eventHandler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$1;
@@ -192,7 +176,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 180
     :cond_0
     return-void
 .end method
@@ -204,7 +187,6 @@
     .param p1, "positionUs"    # J
 
     .prologue
-    .line 115
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
 
     if-nez v0, :cond_0
@@ -217,15 +199,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 116
     :cond_0
     const/4 v0, 0x0
 
-    .line 120
     :goto_0
     return v0
 
-    .line 118
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loader:Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
@@ -245,7 +224,6 @@
 
     invoke-virtual {v0, v1, p0, v2}, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->startLoading(Lorg/telegram/messenger/exoplayer2/upstream/Loader$Loadable;Lorg/telegram/messenger/exoplayer2/upstream/Loader$Callback;I)J
 
-    .line 120
     const/4 v0, 0x1
 
     goto :goto_0
@@ -255,7 +233,6 @@
     .locals 2
 
     .prologue
-    .line 135
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
 
     if-eqz v0, :cond_0
@@ -275,7 +252,6 @@
     .locals 2
 
     .prologue
-    .line 130
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
 
     if-nez v0, :cond_0
@@ -304,7 +280,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->tracks:Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
     return-object v0
@@ -319,12 +294,10 @@
     .end annotation
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loader:Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->maybeThrowError()V
 
-    .line 88
     return-void
 .end method
 
@@ -336,7 +309,6 @@
     .param p6, "released"    # Z
 
     .prologue
-    .line 160
     return-void
 .end method
 
@@ -344,7 +316,6 @@
     .locals 8
 
     .prologue
-    .line 38
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;
@@ -369,26 +340,22 @@
     .param p4, "loadDurationMs"    # J
 
     .prologue
-    .line 151
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->access$100(Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleSize:I
 
-    .line 152
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->access$200(Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleData:[B
 
-    .line 153
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loadingFinished:Z
 
-    .line 154
     return-void
 .end method
 
@@ -396,7 +363,6 @@
     .locals 6
 
     .prologue
-    .line 38
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;
@@ -420,10 +386,8 @@
     .param p6, "error"    # Ljava/io/IOException;
 
     .prologue
-    .line 165
     invoke-direct {p0, p6}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->notifyLoadError(Ljava/io/IOException;)V
 
-    .line 166
     const/4 v0, 0x0
 
     return v0
@@ -433,7 +397,6 @@
     .locals 8
 
     .prologue
-    .line 38
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;
@@ -458,10 +421,8 @@
     .param p1, "callback"    # Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;
 
     .prologue
-    .line 82
     invoke-interface {p1, p0}, Lorg/telegram/messenger/exoplayer2/source/MediaPeriod$Callback;->onPrepared(Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;)V
 
-    .line 83
     return-void
 .end method
 
@@ -469,7 +430,6 @@
     .locals 2
 
     .prologue
-    .line 125
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     return-wide v0
@@ -479,12 +439,10 @@
     .locals 1
 
     .prologue
-    .line 77
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->loader:Lorg/telegram/messenger/exoplayer2/upstream/Loader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/Loader;->release()V
 
-    .line 78
     return-void
 .end method
 
@@ -493,7 +451,6 @@
     .param p1, "positionUs"    # J
 
     .prologue
-    .line 140
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -506,7 +463,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 141
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -517,12 +473,10 @@
 
     invoke-virtual {v1, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;->seekToUs(J)V
 
-    .line 140
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 143
     :cond_0
     return-wide p1
 .end method
@@ -538,7 +492,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 98
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -547,7 +500,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 99
     aget-object v2, p3, v0
 
     if-eqz v2, :cond_1
@@ -560,7 +512,6 @@
 
     if-nez v2, :cond_1
 
-    .line 100
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleStreams:Ljava/util/ArrayList;
 
@@ -568,10 +519,8 @@
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 101
     aput-object v4, p3, v0
 
-    .line 103
     :cond_1
     aget-object v2, p3, v0
 
@@ -581,33 +530,27 @@
 
     if-eqz v2, :cond_2
 
-    .line 104
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;
 
     invoke-direct {v1, p0, v4}, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;-><init>(Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$1;)V
 
-    .line 105
     .local v1, "stream":Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod;->sampleStreams:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 106
     aput-object v1, p3, v0
 
-    .line 107
     const/4 v2, 0x1
 
     aput-boolean v2, p4, v0
 
-    .line 98
     .end local v1    # "stream":Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SampleStreamImpl;
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 110
     :cond_3
     return-wide p5
 .end method

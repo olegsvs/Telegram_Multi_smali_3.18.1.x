@@ -44,18 +44,14 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 42
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mRecycle:Z
 
-    .line 69
     iput v1, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mStartLine:I
 
-    .line 74
     iput v1, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mEndLine:I
 
     return-void
@@ -68,7 +64,6 @@
     .param p1, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 90
     iget v0, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mCurrentPosition:I
 
     if-ltz v0, :cond_0
@@ -97,14 +92,12 @@
     .param p1, "recycler"    # Lorg/telegram/messenger/support/widget/RecyclerView$Recycler;
 
     .prologue
-    .line 100
     iget v1, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mCurrentPosition:I
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$Recycler;->getViewForPosition(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 101
     .local v0, "view":Landroid/view/View;
     iget v1, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mCurrentPosition:I
 
@@ -114,7 +107,6 @@
 
     iput v1, p0, Lorg/telegram/messenger/support/widget/LayoutState;->mCurrentPosition:I
 
-    .line 102
     return-object v0
 .end method
 
@@ -122,7 +114,6 @@
     .locals 2
 
     .prologue
-    .line 107
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

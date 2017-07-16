@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ImageLoader;
 
     .prologue
-    .line 1919
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$8;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$8;->val$location:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 1922
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$8;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$2200(Lorg/telegram/messenger/ImageLoader;)Ljava/util/HashMap;
@@ -60,19 +58,15 @@
 
     check-cast v0, Lorg/telegram/messenger/ImageLoader$CacheImage;
 
-    .line 1923
     .local v0, "img":Lorg/telegram/messenger/ImageLoader$CacheImage;
     if-nez v0, :cond_0
 
-    .line 1930
     :goto_0
     return-void
 
-    .line 1926
     :cond_0
     iget-object v1, v0, Lorg/telegram/messenger/ImageLoader$CacheImage;->httpTask:Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
-    .line 1927
     .local v1, "oldTask":Lorg/telegram/messenger/ImageLoader$HttpImageTask;
     new-instance v2, Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
@@ -90,7 +84,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/ImageLoader$CacheImage;->httpTask:Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
-    .line 1928
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$8;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$2100(Lorg/telegram/messenger/ImageLoader;)Ljava/util/LinkedList;
@@ -101,7 +94,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 1929
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$8;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     const/4 v3, 0x0

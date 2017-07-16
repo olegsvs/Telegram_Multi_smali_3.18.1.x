@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 2309
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$8;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$8;->val$path:Ljava/lang/String;
@@ -45,13 +44,11 @@
     .locals 1
 
     .prologue
-    .line 2312
     new-instance v0, Lorg/telegram/messenger/SendMessagesHelper$8$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SendMessagesHelper$8$1;-><init>(Lorg/telegram/messenger/SendMessagesHelper$8;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2318
     return-void
 .end method

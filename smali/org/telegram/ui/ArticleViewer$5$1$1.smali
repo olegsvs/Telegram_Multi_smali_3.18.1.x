@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ArticleViewer$5$1;
 
     .prologue
-    .line 1345
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->this$2:Lorg/telegram/ui/ArticleViewer$5$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1348
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->this$2:Lorg/telegram/ui/ArticleViewer$5$1;
 
     iget-object v1, v1, Lorg/telegram/ui/ArticleViewer$5$1;->this$1:Lorg/telegram/ui/ArticleViewer$5;
@@ -60,12 +58,10 @@
 
     if-nez v1, :cond_1
 
-    .line 1361
     :cond_0
     :goto_0
     return-void
 
-    .line 1351
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->this$2:Lorg/telegram/ui/ArticleViewer$5$1;
 
@@ -75,7 +71,6 @@
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ArticleViewer;->access$3702(Lorg/telegram/ui/ArticleViewer;I)I
 
-    .line 1352
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->this$2:Lorg/telegram/ui/ArticleViewer$5$1;
 
     iget-object v1, v1, Lorg/telegram/ui/ArticleViewer$5$1;->this$1:Lorg/telegram/ui/ArticleViewer$5;
@@ -84,17 +79,14 @@
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;Z)V
 
-    .line 1353
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v1, :cond_0
 
-    .line 1354
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
 
-    .line 1355
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -104,7 +96,6 @@
 
     invoke-virtual {v1, v2, v5}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1356
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -117,7 +108,6 @@
 
     invoke-virtual {v1, v2, v3, v5, v4}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1357
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -126,7 +116,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1358
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$5$1$1;->this$2:Lorg/telegram/ui/ArticleViewer$5$1;
 
     iget-object v1, v1, Lorg/telegram/ui/ArticleViewer$5$1;->this$1:Lorg/telegram/ui/ArticleViewer$5;

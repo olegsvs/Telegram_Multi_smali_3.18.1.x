@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1256
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$2;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 1260
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$2;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$600(Lorg/telegram/ui/ArticleViewer;)Ljava/lang/Object;
@@ -57,13 +55,11 @@
 
     check-cast v0, Landroid/view/WindowInsets;
 
-    .line 1261
     .local v0, "oldInsets":Landroid/view/WindowInsets;
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$2;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1, p2}, Lorg/telegram/ui/ArticleViewer;->access$602(Lorg/telegram/ui/ArticleViewer;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1262
     if-eqz v0, :cond_0
 
     invoke-virtual {v0}, Landroid/view/WindowInsets;->toString()Ljava/lang/String;
@@ -80,7 +76,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1263
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$2;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/ArticleViewer$WindowView;->requestLayout()V
 
-    .line 1265
     :cond_1
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 

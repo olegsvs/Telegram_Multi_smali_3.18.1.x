@@ -45,9 +45,7 @@
 
 .field private tabsContainer:Landroid/widget/LinearLayout;
 
-.field private underlineColor:I
 
-.field private underlineHeight:I
 
 
 # direct methods
@@ -62,10 +60,8 @@
 
     const/4 v2, 0x0
 
-    .line 70
     invoke-direct {p0, p1}, Landroid/widget/HorizontalScrollView;-><init>(Landroid/content/Context;)V
 
-    .line 43
     new-instance v0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$PageListener;
 
     const/4 v1, 0x0
@@ -74,28 +70,21 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pageListener:Lorg/telegram/ui/Components/PagerSlidingTabStrip$PageListener;
 
-    .line 51
     iput v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
 
-    .line 52
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPositionOffset:F
 
-    .line 56
     const v0, -0x99999a
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorColor:I
 
-    .line 57
     const/high16 v0, 0x1a000000
 
-    iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineColor:I
 
-    .line 59
     iput-boolean v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
-    .line 61
     const/high16 v0, 0x42500000    # 52.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -104,7 +93,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollOffset:I
 
-    .line 62
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -113,16 +101,13 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorHeight:I
 
-    .line 63
     const/high16 v0, 0x40000000    # 2.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineHeight:I
 
-    .line 64
     const/high16 v0, 0x41400000    # 12.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -131,7 +116,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->dividerPadding:I
 
-    .line 65
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -140,28 +124,22 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabPadding:I
 
-    .line 67
     iput v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->lastScrollX:I
 
-    .line 72
     invoke-virtual {p0, v4}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->setFillViewport(Z)V
 
-    .line 73
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->setWillNotDraw(Z)V
 
-    .line 75
     new-instance v0, Landroid/widget/LinearLayout;
 
     invoke-direct {v0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
-    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v2}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 77
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
@@ -170,31 +148,26 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->addView(Landroid/view/View;)V
 
-    .line 80
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->rectPaint:Landroid/graphics/Paint;
 
-    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->rectPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v4}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->rectPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->FILL:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 84
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     const/4 v1, -0x2
@@ -203,7 +176,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->defaultTabLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 85
     return-void
 .end method
 
@@ -212,7 +184,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     .prologue
-    .line 34
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
 
     return v0
@@ -224,7 +195,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 34
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
 
     return p1
@@ -235,7 +205,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pager:Landroid/support/v4/view/ViewPager;
 
     return-object v0
@@ -248,7 +217,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 34
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollToChild(II)V
 
     return-void
@@ -260,7 +228,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 34
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPositionOffset:F
 
     return p1
@@ -271,7 +238,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     return-object v0
@@ -285,7 +251,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 124
     new-instance v0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$2;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getContext()Landroid/content/Context;
@@ -294,31 +259,25 @@
 
     invoke-direct {v0, p0, v2, p1}, Lorg/telegram/ui/Components/PagerSlidingTabStrip$2;-><init>(Lorg/telegram/ui/Components/PagerSlidingTabStrip;Landroid/content/Context;I)V
 
-    .line 133
     .local v0, "tab":Landroid/widget/ImageView;
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 134
     invoke-virtual {v0, p2}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 136
     sget-object v2, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 137
     new-instance v2, Lorg/telegram/ui/Components/PagerSlidingTabStrip$3;
 
     invoke-direct {v2, p0, p1}, Lorg/telegram/ui/Components/PagerSlidingTabStrip$3;-><init>(Lorg/telegram/ui/Components/PagerSlidingTabStrip;I)V
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 143
     iget-object v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;)V
 
-    .line 144
     iget v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
 
     if-ne p1, v2, :cond_0
@@ -326,10 +285,8 @@
     :goto_0
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setSelected(Z)V
 
-    .line 145
     return-void
 
-    .line 144
     :cond_0
     const/4 v1, 0x0
 
@@ -342,17 +299,14 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 269
     iget v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabCount:I
 
     if-nez v1, :cond_1
 
-    .line 280
     :cond_0
     :goto_0
     return-void
 
-    .line 272
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
@@ -366,28 +320,23 @@
 
     add-int v0, v1, p2
 
-    .line 273
     .local v0, "newScrollX":I
     if-gtz p1, :cond_2
 
     if-lez p2, :cond_3
 
-    .line 274
     :cond_2
     iget v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollOffset:I
 
     sub-int/2addr v0, v1
 
-    .line 276
     :cond_3
     iget v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->lastScrollX:I
 
     if-eq v0, v1, :cond_0
 
-    .line 277
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->lastScrollX:I
 
-    .line 278
     const/4 v1, 0x0
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollTo(II)V
@@ -403,7 +352,6 @@
 
     const/4 v4, 0x0
 
-    .line 246
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -412,28 +360,23 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 247
     iget-object v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v2, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 248
     .local v1, "v":Landroid/view/View;
     iget-object v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->defaultTabLayoutParams:Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 249
     iget-boolean v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
     if-eqz v2, :cond_0
 
-    .line 250
     invoke-virtual {v1, v4, v4, v4, v4}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 251
     new-instance v2, Landroid/widget/LinearLayout$LayoutParams;
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -442,13 +385,11 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 246
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 253
     :cond_0
     iget v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabPadding:I
 
@@ -458,7 +399,6 @@
 
     goto :goto_1
 
-    .line 256
     .end local v1    # "v":Landroid/view/View;
     :cond_1
     return-void
@@ -470,7 +410,6 @@
     .locals 1
 
     .prologue
-    .line 413
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->dividerPadding:I
 
     return v0
@@ -480,7 +419,6 @@
     .locals 1
 
     .prologue
-    .line 372
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorColor:I
 
     return v0
@@ -490,7 +428,6 @@
     .locals 1
 
     .prologue
-    .line 381
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorHeight:I
 
     return v0
@@ -500,7 +437,6 @@
     .locals 1
 
     .prologue
-    .line 422
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollOffset:I
 
     return v0
@@ -510,7 +446,6 @@
     .locals 1
 
     .prologue
-    .line 433
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
     return v0
@@ -520,28 +455,21 @@
     .locals 1
 
     .prologue
-    .line 442
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabPadding:I
 
     return v0
 .end method
 
-.method public getUnderlineColor()I
     .locals 1
 
     .prologue
-    .line 395
-    iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineColor:I
 
     return v0
 .end method
 
-.method public getUnderlineHeight()I
     .locals 1
 
     .prologue
-    .line 404
-    iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineHeight:I
 
     return v0
 .end method
@@ -550,12 +478,10 @@
     .locals 3
 
     .prologue
-    .line 101
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v1}, Landroid/widget/LinearLayout;->removeAllViews()V
 
-    .line 102
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
@@ -568,7 +494,6 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabCount:I
 
-    .line 103
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -577,7 +502,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 104
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
@@ -588,7 +512,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 105
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
@@ -603,17 +526,14 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->addIconTab(ILandroid/graphics/drawable/Drawable;)V
 
-    .line 103
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 108
     :cond_1
     invoke-direct {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->updateTabStyles()V
 
-    .line 109
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
 
     move-result-object v1
@@ -624,7 +544,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/ViewTreeObserver;->addOnGlobalLayoutListener(Landroid/view/ViewTreeObserver$OnGlobalLayoutListener;)V
 
-    .line 121
     return-void
 .end method
 
@@ -637,10 +556,8 @@
 
     const/4 v1, 0x0
 
-    .line 284
     invoke-super {p0, p1}, Landroid/widget/HorizontalScrollView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 286
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->isInEditMode()Z
 
     move-result v0
@@ -651,27 +568,21 @@
 
     if-nez v0, :cond_1
 
-    .line 315
     :cond_0
     :goto_0
     return-void
 
-    .line 290
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getHeight()I
 
     move-result v7
 
-    .line 293
     .local v7, "height":I
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->rectPaint:Landroid/graphics/Paint;
 
-    iget v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineColor:I
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 294
-    iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineHeight:I
 
     sub-int v0, v7, v0
 
@@ -693,7 +604,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 297
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     iget v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
@@ -702,7 +612,6 @@
 
     move-result-object v6
 
-    .line 298
     .local v6, "currentTab":Landroid/view/View;
     invoke-virtual {v6}, Landroid/view/View;->getLeft()I
 
@@ -710,16 +619,12 @@
 
     int-to-float v8, v0
 
-    .line 299
-    .local v8, "lineLeft":F
     invoke-virtual {v6}, Landroid/view/View;->getRight()I
 
     move-result v0
 
     int-to-float v3, v0
 
-    .line 302
-    .local v3, "lineRight":F
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPositionOffset:F
 
     cmpl-float v0, v0, v1
@@ -734,7 +639,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 304
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     iget v2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPosition:I
@@ -745,7 +649,6 @@
 
     move-result-object v9
 
-    .line 305
     .local v9, "nextTab":Landroid/view/View;
     invoke-virtual {v9}, Landroid/view/View;->getLeft()I
 
@@ -753,7 +656,6 @@
 
     int-to-float v10, v0
 
-    .line 306
     .local v10, "nextTabLeft":F
     invoke-virtual {v9}, Landroid/view/View;->getRight()I
 
@@ -761,7 +663,6 @@
 
     int-to-float v11, v0
 
-    .line 308
     .local v11, "nextTabRight":F
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPositionOffset:F
 
@@ -775,9 +676,6 @@
 
     add-float v1, v0, v2
 
-    .line 309
-    .end local v8    # "lineLeft":F
-    .local v1, "lineLeft":F
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->currentPositionOffset:F
 
     mul-float/2addr v0, v11
@@ -790,7 +688,6 @@
 
     add-float v3, v0, v2
 
-    .line 313
     .end local v9    # "nextTab":Landroid/view/View;
     .end local v10    # "nextTabLeft":F
     .end local v11    # "nextTabRight":F
@@ -801,7 +698,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 314
     iget v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorHeight:I
 
     sub-int v0, v7, v0
@@ -818,13 +714,9 @@
 
     goto :goto_0
 
-    .end local v1    # "lineLeft":F
-    .restart local v8    # "lineLeft":F
     :cond_2
     move v1, v8
 
-    .end local v8    # "lineLeft":F
-    .restart local v1    # "lineLeft":F
     goto :goto_1
 .end method
 
@@ -834,10 +726,8 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 260
     invoke-super {p0, p1, p2}, Landroid/widget/HorizontalScrollView;->onMeasure(II)V
 
-    .line 261
     iget-boolean v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
     if-eqz v1, :cond_0
@@ -848,18 +738,15 @@
 
     if-nez v1, :cond_1
 
-    .line 266
     :cond_0
     :goto_0
     return-void
 
-    .line 264
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getMeasuredWidth()I
 
     move-result v0
 
-    .line 265
     .local v0, "myWidth":I
     iget-object v1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
@@ -880,19 +767,16 @@
     .param p4, "paramInt4"    # I
 
     .prologue
-    .line 352
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
     if-nez v0, :cond_0
 
-    .line 353
     new-instance v0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$4;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip$4;-><init>(Lorg/telegram/ui/Components/PagerSlidingTabStrip;)V
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->post(Ljava/lang/Runnable;)Z
 
-    .line 359
     :cond_0
     return-void
 .end method
@@ -902,13 +786,10 @@
     .param p1, "dividerPaddingPx"    # I
 
     .prologue
-    .line 408
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->dividerPadding:I
 
-    .line 409
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 410
     return-void
 .end method
 
@@ -917,13 +798,10 @@
     .param p1, "indicatorColor"    # I
 
     .prologue
-    .line 362
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorColor:I
 
-    .line 363
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 364
     return-void
 .end method
 
@@ -932,7 +810,6 @@
     .param p1, "resId"    # I
 
     .prologue
-    .line 367
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -943,10 +820,8 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorColor:I
 
-    .line 368
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 369
     return-void
 .end method
 
@@ -955,13 +830,10 @@
     .param p1, "indicatorLineHeightPx"    # I
 
     .prologue
-    .line 376
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->indicatorHeight:I
 
-    .line 377
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 378
     return-void
 .end method
 
@@ -970,10 +842,8 @@
     .param p1, "listener"    # Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
     .prologue
-    .line 97
     iput-object p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->delegatePageListener:Landroid/support/v4/view/ViewPager$OnPageChangeListener;
 
-    .line 98
     return-void
 .end method
 
@@ -982,13 +852,10 @@
     .param p1, "scrollOffsetPx"    # I
 
     .prologue
-    .line 417
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->scrollOffset:I
 
-    .line 418
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 419
     return-void
 .end method
 
@@ -999,10 +866,8 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 426
     iput-boolean p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->shouldExpand:Z
 
-    .line 427
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabsContainer:Landroid/widget/LinearLayout;
 
     new-instance v1, Landroid/widget/FrameLayout$LayoutParams;
@@ -1011,13 +876,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 428
     invoke-direct {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->updateTabStyles()V
 
-    .line 429
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->requestLayout()V
 
-    .line 430
     return-void
 .end method
 
@@ -1026,37 +888,26 @@
     .param p1, "paddingPx"    # I
 
     .prologue
-    .line 437
     iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->tabPadding:I
 
-    .line 438
     invoke-direct {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->updateTabStyles()V
 
-    .line 439
     return-void
 .end method
 
-.method public setUnderlineColor(I)V
     .locals 0
-    .param p1, "underlineColor"    # I
 
     .prologue
-    .line 385
-    iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineColor:I
 
-    .line 386
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 387
     return-void
 .end method
 
-.method public setUnderlineColorResource(I)V
     .locals 1
     .param p1, "resId"    # I
 
     .prologue
-    .line 390
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -1065,27 +916,18 @@
 
     move-result v0
 
-    iput v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineColor:I
 
-    .line 391
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 392
     return-void
 .end method
 
-.method public setUnderlineHeight(I)V
     .locals 0
-    .param p1, "underlineHeightPx"    # I
 
     .prologue
-    .line 399
-    iput p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->underlineHeight:I
 
-    .line 400
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->invalidate()V
 
-    .line 401
     return-void
 .end method
 
@@ -1094,17 +936,14 @@
     .param p1, "pager"    # Landroid/support/v4/view/ViewPager;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pager:Landroid/support/v4/view/ViewPager;
 
-    .line 89
     invoke-virtual {p1}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 90
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "ViewPager does not have adapter instance."
@@ -1113,15 +952,12 @@
 
     throw v0
 
-    .line 92
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->pageListener:Lorg/telegram/ui/Components/PagerSlidingTabStrip$PageListener;
 
     invoke-virtual {p1, v0}, Landroid/support/v4/view/ViewPager;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
-    .line 93
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->notifyDataSetChanged()V
 
-    .line 94
     return-void
 .end method

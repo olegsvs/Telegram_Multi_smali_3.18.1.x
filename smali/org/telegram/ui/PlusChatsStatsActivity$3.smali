@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusChatsStatsActivity;
 
     .prologue
-    .line 426
     iput-object p1, p0, Lorg/telegram/ui/PlusChatsStatsActivity$3;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 429
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 430
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$3;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->finishFragment()V
 
-    .line 432
     :cond_0
     return-void
 .end method

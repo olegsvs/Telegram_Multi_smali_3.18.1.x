@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     .prologue
-    .line 908
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v5, 0x0
 
-    .line 911
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -62,7 +60,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChannelCreateActivity;->access$2702(Lorg/telegram/ui/ChannelCreateActivity;I)I
 
-    .line 912
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -97,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 913
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
@@ -108,7 +104,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 914
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -139,7 +134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 915
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -154,7 +148,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 916
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -173,7 +166,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 917
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -182,12 +174,10 @@
 
     invoke-static {v0, v6}, Lorg/telegram/ui/ChannelCreateActivity;->access$902(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 930
     :cond_0
     :goto_0
     return-void
 
-    .line 919
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -205,7 +195,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 920
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -214,7 +203,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChannelCreateActivity;->access$002(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 921
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -223,7 +211,6 @@
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2800(Lorg/telegram/ui/ChannelCreateActivity;)V
 
-    .line 925
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
@@ -239,7 +226,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 926
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -258,7 +244,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 927
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$14$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$14;
@@ -269,7 +254,6 @@
 
     goto :goto_0
 
-    .line 923
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$14$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$14$1;
 

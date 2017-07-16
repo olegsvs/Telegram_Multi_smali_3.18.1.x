@@ -87,14 +87,12 @@
     .prologue
     const/4 v1, 0x3
 
-    .line 3009
     new-array v0, v1, [I
 
     fill-array-data v0, :array_0
 
     sput-object v0, Lorg/telegram/messenger/R$styleable;->LoadingImageView:[I
 
-    .line 3112
     const/16 v0, 0x17
 
     new-array v0, v0, [I
@@ -103,7 +101,6 @@
 
     sput-object v0, Lorg/telegram/messenger/R$styleable;->MapAttrs:[I
 
-    .line 3462
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
@@ -112,7 +109,6 @@
 
     return-void
 
-    .line 3009
     nop
 
     :array_0
@@ -122,7 +118,6 @@
         0x7f010002
     .end array-data
 
-    .line 3112
     :array_1
     .array-data 4
         0x7f010003
@@ -150,7 +145,6 @@
         0x7f010019
     .end array-data
 
-    .line 3462
     :array_2
     .array-data 4
         0x7f01001a
@@ -163,7 +157,6 @@
     .locals 0
 
     .prologue
-    .line 2994
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void

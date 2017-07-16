@@ -29,7 +29,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChannelEditTypeActivity$8$1$1;
 
     .prologue
-    .line 431
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$8$1$1$1;->this$3:Lorg/telegram/ui/ChannelEditTypeActivity$8$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelEditTypeActivity$8$1$1$1;->val$channel:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -47,12 +46,10 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 434
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;-><init>()V
 
-    .line 435
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$8$1$1$1;->val$channel:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -62,12 +59,10 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 436
     const-string/jumbo v1, ""
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_updateUsername;->username:Ljava/lang/String;
 
-    .line 437
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -80,6 +75,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 454
     return-void
 .end method

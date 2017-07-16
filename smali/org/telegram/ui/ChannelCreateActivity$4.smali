@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 365
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 378
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1500(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -84,7 +82,6 @@
 
     invoke-virtual {v2, v3, v0, v1, v4}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 379
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1500(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -95,7 +92,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/AvatarDrawable;->setColor(I)V
 
-    .line 380
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$4;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$1600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -104,13 +100,11 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->invalidate()V
 
-    .line 381
     return-void
 
     :cond_0
     move-object v0, v1
 
-    .line 378
     goto :goto_0
 .end method
 
@@ -122,7 +116,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 369
     return-void
 .end method
 
@@ -134,6 +127,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 374
     return-void
 .end method

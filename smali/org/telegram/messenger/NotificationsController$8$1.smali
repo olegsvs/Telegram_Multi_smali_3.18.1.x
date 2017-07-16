@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/NotificationsController$8;
 
     .prologue
-    .line 524
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$8$1;->this$1:Lorg/telegram/messenger/NotificationsController$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 527
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$8$1;->this$1:Lorg/telegram/messenger/NotificationsController$8;
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$8;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -52,7 +50,6 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/NotificationsController;->popupMessages:Ljava/util/ArrayList;
 
-    .line 528
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -65,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 529
     return-void
 .end method

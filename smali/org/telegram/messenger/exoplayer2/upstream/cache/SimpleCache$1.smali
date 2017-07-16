@@ -27,7 +27,6 @@
     .param p2, "x0"    # Ljava/lang/String;
 
     .prologue
-    .line 71
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache;
 
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->val$conditionVariable:Landroid/os/ConditionVariable;
@@ -43,12 +42,10 @@
     .locals 3
 
     .prologue
-    .line 74
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache;
 
     monitor-enter v2
 
-    .line 75
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->val$conditionVariable:Landroid/os/ConditionVariable;
 
@@ -56,7 +53,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 77
     :try_start_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache;
 
@@ -65,7 +61,6 @@
     .catch Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache$CacheException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 81
     :goto_0
     :try_start_2
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache;
@@ -76,17 +71,13 @@
 
     invoke-interface {v1}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheEvictor;->onCacheInitialized()V
 
-    .line 82
     monitor-exit v2
 
-    .line 83
     return-void
 
-    .line 78
     :catch_0
     move-exception v0
 
-    .line 79
     .local v0, "e":Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache$CacheException;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCache;
 
@@ -94,7 +85,6 @@
 
     goto :goto_0
 
-    .line 82
     .end local v0    # "e":Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache$CacheException;
     :catchall_0
     move-exception v1

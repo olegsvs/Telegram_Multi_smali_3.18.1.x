@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     .prologue
-    .line 119
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;->access$000(Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;)V
 
-    .line 123
     return-void
 .end method

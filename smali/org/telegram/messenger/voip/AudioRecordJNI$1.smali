@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     .prologue
-    .line 148
     iput-object p1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 151
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
 
@@ -51,7 +49,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 153
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
 
@@ -69,7 +66,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/media/AudioRecord;->read(Ljava/nio/ByteBuffer;I)I
 
-    .line 154
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     invoke-static {v1}, Lorg/telegram/messenger/voip/AudioRecordJNI;->access$000(Lorg/telegram/messenger/voip/AudioRecordJNI;)Z
@@ -78,7 +74,6 @@
 
     if-nez v1, :cond_1
 
-    .line 155
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     invoke-static {v1}, Lorg/telegram/messenger/voip/AudioRecordJNI;->access$200(Lorg/telegram/messenger/voip/AudioRecordJNI;)Landroid/media/AudioRecord;
@@ -89,7 +84,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 163
     :cond_0
     const-string/jumbo v1, "tg-voip"
 
@@ -97,10 +91,8 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 164
     return-void
 
-    .line 158
     :cond_1
     :try_start_1
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioRecordJNI;
@@ -117,11 +109,9 @@
 
     goto :goto_0
 
-    .line 159
     :catch_0
     move-exception v0
 
-    .line 160
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

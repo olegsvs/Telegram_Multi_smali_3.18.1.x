@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 1173
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 1176
     const/16 v1, 0x52
 
     if-ne p2, v1, :cond_0
@@ -83,7 +81,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1177
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$25;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView;->access$1400(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$EmojiPopupWindow;
@@ -92,7 +89,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmojiView$EmojiPopupWindow;->dismiss()V
 
-    .line 1180
     :goto_0
     return v0
 

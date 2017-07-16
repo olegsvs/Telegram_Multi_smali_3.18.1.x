@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$24;
 
     .prologue
-    .line 1091
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$24$2;->this$0:Lorg/telegram/messenger/query/StickersQuery$24;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$24$2;->val$stickerSetsByIdNew:Ljava/util/HashMap;
@@ -61,7 +60,6 @@
     .locals 7
 
     .prologue
-    .line 1094
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -82,7 +80,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1095
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2600()[Ljava/util/ArrayList;
 
     move-result-object v2
@@ -101,7 +98,6 @@
 
     iget-object v1, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 1096
     .local v1, "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2100()Ljava/util/HashMap;
 
@@ -115,7 +111,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1097
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2700()Ljava/util/HashMap;
 
     move-result-object v2
@@ -124,12 +119,10 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1094
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1099
     .end local v1    # "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2100()Ljava/util/HashMap;
@@ -140,7 +133,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 1100
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2700()Ljava/util/HashMap;
 
     move-result-object v2
@@ -149,7 +141,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->putAll(Ljava/util/Map;)V
 
-    .line 1101
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2600()[Ljava/util/ArrayList;
 
     move-result-object v2
@@ -162,7 +153,6 @@
 
     aput-object v4, v2, v3
 
-    .line 1102
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2400()[I
 
     move-result-object v2
@@ -177,7 +167,6 @@
 
     aput v4, v2, v3
 
-    .line 1103
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$2800()[I
 
     move-result-object v2
@@ -192,24 +181,20 @@
 
     aput v4, v2, v3
 
-    .line 1104
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$24$2;->this$0:Lorg/telegram/messenger/query/StickersQuery$24;
 
     iget v2, v2, Lorg/telegram/messenger/query/StickersQuery$24;->val$type:I
 
     if-nez v2, :cond_1
 
-    .line 1105
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$24$2;->val$allStickersNew:Ljava/util/HashMap;
 
     invoke-static {v2}, Lorg/telegram/messenger/query/StickersQuery;->access$2902(Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 1106
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$24$2;->val$stickersByEmojiNew:Ljava/util/HashMap;
 
     invoke-static {v2}, Lorg/telegram/messenger/query/StickersQuery;->access$3002(Ljava/util/HashMap;)Ljava/util/HashMap;
 
-    .line 1108
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -235,6 +220,5 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1109
     return-void
 .end method

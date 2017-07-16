@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/NewContactActivity$1$1$1;
 
     .prologue
-    .line 172
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$1$1$1$1;->this$3:Lorg/telegram/ui/NewContactActivity$1$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 176
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -67,7 +65,6 @@
 
     invoke-direct {v1, v2, v3}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 177
     .local v1, "intent":Landroid/content/Intent;
     const-string/jumbo v2, "sms_body"
 
@@ -81,7 +78,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 178
     iget-object v2, p0, Lorg/telegram/ui/NewContactActivity$1$1$1$1;->this$3:Lorg/telegram/ui/NewContactActivity$1$1$1;
 
     iget-object v2, v2, Lorg/telegram/ui/NewContactActivity$1$1$1;->this$2:Lorg/telegram/ui/NewContactActivity$1$1;
@@ -100,16 +96,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 182
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 179
     :catch_0
     move-exception v0
 
-    .line 180
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

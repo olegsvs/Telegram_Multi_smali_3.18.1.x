@@ -29,7 +29,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
 
     iput-object p3, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$path:Landroid/graphics/Path;
@@ -48,17 +47,14 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 101
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$path:Landroid/graphics/Path;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$paint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 103
     return-void
 .end method
 
@@ -70,15 +66,12 @@
     .param p4, "oldh"    # I
 
     .prologue
-    .line 93
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->onSizeChanged(IIII)V
 
-    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$path:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->reset()V
 
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$path:Landroid/graphics/Path;
 
     div-int/lit8 v1, p1, 0x2
@@ -97,11 +90,9 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/Path;->addCircle(FFFLandroid/graphics/Path$Direction;)V
 
-    .line 96
     iget-object v0, p0, Lorg/telegram/ui/Components/InstantCameraView$2;->val$path:Landroid/graphics/Path;
 
     invoke-virtual {v0}, Landroid/graphics/Path;->toggleInverseFillType()V
 
-    .line 97
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     .prologue
-    .line 1540
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->val$object:[Landroid/graphics/Bitmap;
@@ -55,7 +54,6 @@
 
     const/4 v1, 0x0
 
-    .line 1543
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->access$4300(Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;)[I
@@ -66,7 +64,6 @@
 
     invoke-static {v6, v2}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 1544
     const v2, 0x8ce0
 
     const/16 v3, 0xde1
@@ -92,10 +89,8 @@
 
     invoke-static {v6, v2, v3, v0, v1}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
-    .line 1545
     invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 1546
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->val$object:[Landroid/graphics/Bitmap;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->this$1:Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -106,17 +101,13 @@
 
     aput-object v2, v0, v1
 
-    .line 1547
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread$2;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 1548
     invoke-static {v6, v1}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 1549
     invoke-static {v1}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 1550
     return-void
 .end method

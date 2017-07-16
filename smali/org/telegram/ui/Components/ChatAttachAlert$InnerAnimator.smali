@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Components/ChatAttachAlert$1;
 
     .prologue
-    .line 89
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;-><init>(Lorg/telegram/ui/Components/ChatAttachAlert;)V
 
     return-void
@@ -52,7 +50,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;
 
     .prologue
-    .line 89
     iget v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;->startRadius:F
 
     return v0
@@ -64,7 +61,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 89
     iput p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;->startRadius:F
 
     return p1
@@ -75,7 +71,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;
 
     .prologue
-    .line 89
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object v0
@@ -87,7 +82,6 @@
     .param p1, "x1"    # Landroid/animation/AnimatorSet;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$InnerAnimator;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object p1

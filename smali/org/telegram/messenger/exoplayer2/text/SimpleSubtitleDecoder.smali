@@ -32,22 +32,18 @@
     .prologue
     const/4 v1, 0x2
 
-    .line 34
     new-array v0, v1, [Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     new-array v1, v1, [Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/messenger/exoplayer2/decoder/SimpleDecoder;-><init>([Lorg/telegram/messenger/exoplayer2/decoder/DecoderInputBuffer;[Lorg/telegram/messenger/exoplayer2/decoder/OutputBuffer;)V
 
-    .line 35
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->name:Ljava/lang/String;
 
-    .line 36
     const/16 v0, 0x400
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->setInitialInputBufferSize(I)V
 
-    .line 37
     return-void
 .end method
 
@@ -57,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 24
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->createInputBuffer()Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     move-result-object v0
@@ -69,7 +64,6 @@
     .locals 1
 
     .prologue
-    .line 51
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;-><init>()V
@@ -81,7 +75,6 @@
     .locals 1
 
     .prologue
-    .line 24
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->createOutputBuffer()Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     move-result-object v0
@@ -93,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 56
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleOutputBuffer;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleOutputBuffer;-><init>(Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;)V
@@ -105,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 24
     check-cast p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     check-cast p2, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
@@ -132,11 +123,9 @@
     .param p3, "reset"    # Z
 
     .prologue
-    .line 68
     :try_start_0
     iget-object v7, p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->data:Ljava/nio/ByteBuffer;
 
-    .line 69
     .local v7, "inputData":Ljava/nio/ByteBuffer;
     invoke-virtual {v7}, Ljava/nio/ByteBuffer;->array()[B
 
@@ -150,7 +139,6 @@
 
     move-result-object v3
 
-    .line 70
     .local v3, "subtitle":Lorg/telegram/messenger/exoplayer2/text/Subtitle;
     iget-wide v1, p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->timeUs:J
 
@@ -162,20 +150,16 @@
     :try_end_0
     .catch Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     const/4 v6, 0x0
 
-    .line 73
     .end local v3    # "subtitle":Lorg/telegram/messenger/exoplayer2/text/Subtitle;
     .end local v7    # "inputData":Ljava/nio/ByteBuffer;
     :goto_0
     return-object v6
 
-    .line 72
     :catch_0
     move-exception v6
 
-    .line 73
     .local v6, "e":Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderException;
     goto :goto_0
 .end method
@@ -184,7 +168,6 @@
     .locals 1
 
     .prologue
-    .line 41
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->name:Ljava/lang/String;
 
     return-object v0
@@ -194,7 +177,6 @@
     .locals 0
 
     .prologue
-    .line 24
     check-cast p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->releaseOutputBuffer(Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;)V
@@ -207,10 +189,8 @@
     .param p1, "buffer"    # Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     .prologue
-    .line 61
     invoke-super {p0, p1}, Lorg/telegram/messenger/exoplayer2/decoder/SimpleDecoder;->releaseOutputBuffer(Lorg/telegram/messenger/exoplayer2/decoder/OutputBuffer;)V
 
-    .line 62
     return-void
 .end method
 
@@ -219,6 +199,5 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 47
     return-void
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -39,7 +38,6 @@
     .end annotation
 
     .prologue
-    .line 54
     return-void
 .end method
 
@@ -53,6 +51,5 @@
     .end annotation
 
     .prologue
-    .line 59
     return-void
 .end method

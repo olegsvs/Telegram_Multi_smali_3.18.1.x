@@ -27,13 +27,10 @@
     .param p1, "durationUs"    # J
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/SeekMap$Unseekable;->durationUs:J
 
-    .line 38
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 47
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/SeekMap$Unseekable;->durationUs:J
 
     return-wide v0
@@ -54,7 +50,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 52
     const-wide/16 v0, 0x0
 
     return-wide v0
@@ -64,7 +59,6 @@
     .locals 1
 
     .prologue
-    .line 42
     const/4 v0, 0x0
 
     return v0

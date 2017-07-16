@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;
 
     .prologue
-    .line 2510
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 2513
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
@@ -60,6 +58,5 @@
 
     invoke-virtual {v0, v1, v3, v2, v3}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 2514
     return-void
 .end method

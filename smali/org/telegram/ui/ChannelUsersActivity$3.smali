@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelUsersActivity;
 
     .prologue
-    .line 240
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v4, 0x0
 
-    .line 243
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-virtual {v6}, Lorg/telegram/ui/ChannelUsersActivity;->getParentActivity()Landroid/app/Activity;
@@ -56,16 +54,13 @@
 
     if-nez v6, :cond_1
 
-    .line 304
     :cond_0
     :goto_0
     return v4
 
-    .line 246
     :cond_1
     const/4 v3, 0x0
 
-    .line 247
     .local v3, "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -95,7 +90,6 @@
 
     if-ge p2, v6, :cond_2
 
-    .line 248
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ChannelUsersActivity;->access$700(Lorg/telegram/ui/ChannelUsersActivity;)Ljava/util/ArrayList;
@@ -117,12 +111,10 @@
     .end local v3    # "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     check-cast v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 250
     .restart local v3    # "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :cond_2
     if-eqz v3, :cond_0
 
-    .line 251
     iget v6, v3, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->user_id:I
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -131,10 +123,8 @@
 
     if-eq v6, v7, :cond_0
 
-    .line 254
     move-object v1, v3
 
-    .line 255
     .local v1, "finalParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -146,11 +136,9 @@
 
     invoke-direct {v0, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 256
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const/4 v2, 0x0
 
-    .line 257
     .local v2, "items":[Ljava/lang/CharSequence;
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -160,7 +148,6 @@
 
     if-nez v6, :cond_4
 
-    .line 258
     new-array v2, v5, [Ljava/lang/CharSequence;
 
     .end local v2    # "items":[Ljava/lang/CharSequence;
@@ -174,7 +161,6 @@
 
     aput-object v6, v2, v4
 
-    .line 264
     .restart local v2    # "items":[Ljava/lang/CharSequence;
     :cond_3
     :goto_1
@@ -184,7 +170,6 @@
 
     invoke-virtual {v0, v2, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 301
     iget-object v4, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -195,10 +180,8 @@
 
     move v4, v5
 
-    .line 302
     goto :goto_0
 
-    .line 259
     :cond_4
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -208,7 +191,6 @@
 
     if-ne v6, v5, :cond_5
 
-    .line 260
     new-array v2, v5, [Ljava/lang/CharSequence;
 
     .end local v2    # "items":[Ljava/lang/CharSequence;
@@ -225,7 +207,6 @@
     .restart local v2    # "items":[Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 261
     :cond_5
     iget-object v6, p0, Lorg/telegram/ui/ChannelUsersActivity$3;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
@@ -237,7 +218,6 @@
 
     if-ne v6, v7, :cond_3
 
-    .line 262
     new-array v2, v5, [Ljava/lang/CharSequence;
 
     .end local v2    # "items":[Ljava/lang/CharSequence;

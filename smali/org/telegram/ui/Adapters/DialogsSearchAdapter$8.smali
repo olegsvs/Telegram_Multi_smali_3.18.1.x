@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 870
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->val$query:Ljava/lang/String;
@@ -46,11 +45,9 @@
     .locals 4
 
     .prologue
-    .line 874
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->cancel()Z
 
-    .line 875
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1400(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Ljava/util/Timer;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 876
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     const/4 v2, 0x0
@@ -68,7 +64,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 880
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
@@ -78,21 +73,17 @@
 
     invoke-static {v1, v2, v3}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1500(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Ljava/lang/String;I)V
 
-    .line 881
     new-instance v1, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;-><init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 890
     return-void
 
-    .line 877
     :catch_0
     move-exception v0
 
-    .line 878
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

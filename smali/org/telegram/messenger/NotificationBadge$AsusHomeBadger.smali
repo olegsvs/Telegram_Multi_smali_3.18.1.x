@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 110
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,20 +44,17 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 119
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "android.intent.action.BADGE_COUNT_UPDATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 120
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v1, "badge_count"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 121
     const-string/jumbo v1, "badge_count_package_name"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 122
     const-string/jumbo v1, "badge_count_class_name"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -84,28 +79,24 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 123
     const-string/jumbo v1, "badge_vip_count"
 
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 124
     invoke-static {v0}, Lorg/telegram/messenger/NotificationBadge;->access$100(Landroid/content/Intent;)Z
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 125
     new-instance v1, Lorg/telegram/messenger/NotificationBadge$AsusHomeBadger$1;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/messenger/NotificationBadge$AsusHomeBadger$1;-><init>(Lorg/telegram/messenger/NotificationBadge$AsusHomeBadger;Landroid/content/Intent;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 132
     :cond_0
     return-void
 .end method
@@ -123,7 +114,6 @@
     .end annotation
 
     .prologue
-    .line 136
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;

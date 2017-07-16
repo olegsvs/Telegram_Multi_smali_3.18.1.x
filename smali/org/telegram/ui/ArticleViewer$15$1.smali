@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$15;
 
     .prologue
-    .line 1748
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$15$1;->val$webPage:Lorg/telegram/tgnet/TLRPC$TL_webPage;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1751
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -92,7 +90,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1752
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -105,7 +102,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->webpage:Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 1753
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -118,7 +114,6 @@
 
     invoke-virtual {v0, v4, v1}, Ljava/util/ArrayList;->set(ILjava/lang/Object;)Ljava/lang/Object;
 
-    .line 1754
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -135,7 +130,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1755
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -144,7 +138,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$3602(Lorg/telegram/ui/ArticleViewer;Lorg/telegram/tgnet/TLRPC$WebPage;)Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 1756
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "articles"
@@ -191,14 +184,12 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1757
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$15$1;->this$1:Lorg/telegram/ui/ArticleViewer$15;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/ArticleViewer;->access$5600(Lorg/telegram/ui/ArticleViewer;Z)V
 
-    .line 1760
     :cond_0
     return-void
 .end method

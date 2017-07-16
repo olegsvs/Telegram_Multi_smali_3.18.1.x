@@ -29,25 +29,20 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
-    .line 58
     invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 54
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->rect:Landroid/graphics/Rect;
 
-    .line 59
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->setOrientation(I)V
 
-    .line 60
     return-void
 .end method
 
@@ -56,7 +51,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;
 
     .prologue
-    .line 52
     iget-boolean v0, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->isKeyboardVisible:Z
 
     return v0
@@ -71,32 +65,26 @@
     .param p3, "drawingTime"    # J
 
     .prologue
-    .line 64
     instance-of v5, p2, Lorg/telegram/ui/ActionBar/ActionBar;
 
     if-eqz v5, :cond_1
 
-    .line 65
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v3
 
-    .line 86
     :cond_0
     :goto_0
     return v3
 
-    .line 67
     :cond_1
     const/4 v1, 0x0
 
-    .line 68
     .local v1, "actionBarHeight":I
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->getChildCount()I
 
     move-result v2
 
-    .line 69
     .local v2, "childCount":I
     const/4 v0, 0x0
 
@@ -104,22 +92,18 @@
     :goto_1
     if-ge v0, v2, :cond_4
 
-    .line 70
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v4
 
-    .line 71
     .local v4, "view":Landroid/view/View;
     if-ne v4, p2, :cond_3
 
-    .line 69
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 74
     :cond_3
     instance-of v5, v4, Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -133,7 +117,6 @@
 
     move-object v5, v4
 
-    .line 75
     check-cast v5, Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v5}, Lorg/telegram/ui/ActionBar/ActionBar;->getCastShadows()Z
@@ -142,19 +125,16 @@
 
     if-eqz v5, :cond_4
 
-    .line 76
     invoke-virtual {v4}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 81
     .end local v4    # "view":Landroid/view/View;
     :cond_4
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/LinearLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v3
 
-    .line 82
     .local v3, "result":Z
     if-eqz v1, :cond_0
 
@@ -164,7 +144,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 83
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$000()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
@@ -187,7 +166,6 @@
 
     invoke-virtual {v5, v6, v1, v7, v8}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 84
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$000()Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
@@ -201,7 +179,6 @@
     .locals 1
 
     .prologue
-    .line 92
     const/4 v0, 0x0
 
     return v0
@@ -218,21 +195,17 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 97
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    .line 99
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 100
     .local v0, "rootView":Landroid/view/View;
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 101
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v4
@@ -254,7 +227,6 @@
 
     sub-int v1, v2, v4
 
-    .line 102
     .local v1, "usableViewHeight":I
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->rect:Landroid/graphics/Rect;
 
@@ -275,7 +247,6 @@
     :cond_0
     iput-boolean v3, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->isKeyboardVisible:Z
 
-    .line 103
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$100(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
@@ -304,7 +275,6 @@
 
     if-nez v2, :cond_1
 
-    .line 104
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$100(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
@@ -313,7 +283,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 105
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$100(Lorg/telegram/ui/ActionBar/ActionBarLayout;)Ljava/lang/Runnable;
@@ -322,14 +291,12 @@
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 106
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/ActionBarLayout$LinearLayoutContainer;->this$0:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v3, 0x0
 
     invoke-static {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->access$102(Lorg/telegram/ui/ActionBar/ActionBarLayout;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 108
     :cond_1
     return-void
 
@@ -337,6 +304,5 @@
     :cond_2
     move v2, v3
 
-    .line 101
     goto :goto_0
 .end method

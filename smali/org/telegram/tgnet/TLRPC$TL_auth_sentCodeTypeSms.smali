@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2808
     const v0, -0x3fff445e
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeSms;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2807
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2812
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeSms;->length:I
 
-    .line 2813
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2816
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeSms;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2817
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeSms;->length:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2818
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     .prologue
-    .line 229
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$1;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 232
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$1;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     iget-object v4, v4, Lorg/telegram/ui/ActionBar/AlertDialog$1;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -52,7 +50,6 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$1002(Lorg/telegram/ui/ActionBar/AlertDialog;I)I
 
-    .line 233
     sget-object v4, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v4, v4, Landroid/graphics/Point;->x:I
@@ -65,7 +62,6 @@
 
     sub-int v0, v4, v5
 
-    .line 235
     .local v0, "calculatedWidth":I
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
@@ -73,21 +69,18 @@
 
     if-eqz v4, :cond_1
 
-    .line 236
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isSmallTablet()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 237
     const/high16 v4, 0x43df0000    # 446.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v1
 
-    .line 245
     .local v1, "maxWidth":I
     :goto_0
     iget-object v4, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$1;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
@@ -98,13 +91,11 @@
 
     move-result-object v3
 
-    .line 246
     .local v3, "window":Landroid/view/Window;
     new-instance v2, Landroid/view/WindowManager$LayoutParams;
 
     invoke-direct {v2}, Landroid/view/WindowManager$LayoutParams;-><init>()V
 
-    .line 247
     .local v2, "params":Landroid/view/WindowManager$LayoutParams;
     invoke-virtual {v3}, Landroid/view/Window;->getAttributes()Landroid/view/WindowManager$LayoutParams;
 
@@ -112,7 +103,6 @@
 
     invoke-virtual {v2, v4}, Landroid/view/WindowManager$LayoutParams;->copyFrom(Landroid/view/WindowManager$LayoutParams;)I
 
-    .line 248
     invoke-static {v1, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v4
@@ -143,13 +133,10 @@
 
     iput v4, v2, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 249
     invoke-virtual {v3, v2}, Landroid/view/Window;->setAttributes(Landroid/view/WindowManager$LayoutParams;)V
 
-    .line 250
     return-void
 
-    .line 239
     .end local v1    # "maxWidth":I
     .end local v2    # "params":Landroid/view/WindowManager$LayoutParams;
     .end local v3    # "window":Landroid/view/Window;
@@ -163,7 +150,6 @@
     .restart local v1    # "maxWidth":I
     goto :goto_0
 
-    .line 242
     .end local v1    # "maxWidth":I
     :cond_1
     const/high16 v4, 0x43b20000    # 356.0f

@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 663
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$6;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -39,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 666
     const/4 v0, 0x0
 
     return v0

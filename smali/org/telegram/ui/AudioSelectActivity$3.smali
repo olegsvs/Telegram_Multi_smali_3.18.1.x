@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 134
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$3;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$3;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/AudioSelectActivity;->finishFragment()V
 
-    .line 138
     return-void
 .end method

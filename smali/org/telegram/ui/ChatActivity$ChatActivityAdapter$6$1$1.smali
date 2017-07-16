@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1;
 
     .prologue
-    .line 10950
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 10953
     if-nez p2, :cond_0
 
-    .line 10954
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -58,7 +55,6 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 10955
     new-instance v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$1;-><init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1;)V
@@ -67,11 +63,9 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 10970
     :goto_0
     return-void
 
-    .line 10963
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_0
     new-instance v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$6$1$1$2;

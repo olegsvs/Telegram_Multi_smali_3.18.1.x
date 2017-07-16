@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ImageListActivity;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lorg/telegram/ui/ImageListActivity$1;->this$0:Lorg/telegram/ui/ImageListActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 67
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 68
     iget-object v0, p0, Lorg/telegram/ui/ImageListActivity$1;->this$0:Lorg/telegram/ui/ImageListActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ImageListActivity;->finishFragment()V
 
-    .line 70
     :cond_0
     return-void
 .end method

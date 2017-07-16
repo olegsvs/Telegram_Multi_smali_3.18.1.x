@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 12660
     const v0, -0x4b5d1773
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 12659
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 12664
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,14 +57,12 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
-    .line 12665
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->date:I
 
-    .line 12666
     return-void
 .end method
 
@@ -76,21 +71,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 12669
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12670
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 12671
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updateEncryption;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12672
     return-void
 .end method

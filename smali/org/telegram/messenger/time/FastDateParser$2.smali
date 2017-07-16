@@ -20,7 +20,6 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 844
     invoke-direct {p0, p1}, Lorg/telegram/messenger/time/FastDateParser$NumberStrategy;-><init>(I)V
 
     return-void
@@ -33,7 +32,6 @@
     .param p1, "iValue"    # I
 
     .prologue
-    .line 847
     add-int/lit8 v0, p1, -0x1
 
     return v0

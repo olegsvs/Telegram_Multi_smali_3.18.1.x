@@ -8,12 +8,10 @@
     .locals 1
 
     .prologue
-    .line 25
     const-string/jumbo v0, "ClearCacheService"
 
     invoke-direct {p0, v0}, Landroid/app/IntentService;-><init>(Ljava/lang/String;)V
 
-    .line 26
     return-void
 .end method
 
@@ -26,10 +24,8 @@
     .prologue
     const/4 v5, 0x2
 
-    .line 30
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->postInitApplication()V
 
-    .line 32
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -60,7 +56,6 @@
 
     move-result-object v1
 
-    .line 33
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v2, "keep_media"
 
@@ -68,15 +63,12 @@
 
     move-result v0
 
-    .line 34
     .local v0, "keepMedia":I
     if-ne v0, v5, :cond_0
 
-    .line 81
     :goto_0
     return-void
 
-    .line 37
     :cond_0
     sget-object v2, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 

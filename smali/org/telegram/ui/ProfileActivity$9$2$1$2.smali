@@ -29,7 +29,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ProfileActivity$9$2$1;
 
     .prologue
-    .line 1179
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$9$2$1$2;->this$3:Lorg/telegram/ui/ProfileActivity$9$2$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$9$2$1$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1182
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$9$2$1$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$9$2$1$2;->this$3:Lorg/telegram/ui/ProfileActivity$9$2$1;
@@ -74,6 +72,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 1183
     return-void
 .end method

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -42,7 +41,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 100
     if-eqz p0, :cond_0
 
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -51,12 +49,10 @@
 
     if-nez v2, :cond_1
 
-    .line 112
     :cond_0
     :goto_0
     return-object v1
 
-    .line 103
     :cond_1
     const-string/jumbo v2, "\\|"
 
@@ -64,7 +60,6 @@
 
     move-result-object v0
 
-    .line 104
     .local v0, "args":[Ljava/lang/String;
     array-length v2, v0
 
@@ -72,12 +67,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 107
     new-instance v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     invoke-direct {v1}, Lorg/telegram/messenger/LocaleController$LocaleInfo;-><init>()V
 
-    .line 108
     .local v1, "localeInfo":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     const/4 v2, 0x0
 
@@ -85,21 +78,18 @@
 
     iput-object v2, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
-    .line 109
     const/4 v2, 0x1
 
     aget-object v2, v0, v2
 
     iput-object v2, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->nameEnglish:Ljava/lang/String;
 
-    .line 110
     const/4 v2, 0x2
 
     aget-object v2, v0, v2
 
     iput-object v2, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
-    .line 111
     const/4 v2, 0x3
 
     aget-object v2, v0, v2
@@ -115,7 +105,6 @@
     .locals 2
 
     .prologue
-    .line 96
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

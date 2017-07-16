@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$93;
 
     .prologue
-    .line 8841
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$93$1;->this$1:Lorg/telegram/ui/ChatActivity$93;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +42,5 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 8845
     return-void
 .end method

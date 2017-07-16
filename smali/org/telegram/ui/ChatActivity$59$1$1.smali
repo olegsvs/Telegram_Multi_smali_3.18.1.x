@@ -24,7 +24,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChatActivity$59$1;
 
     .prologue
-    .line 3971
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$59$1$1;->this$2:Lorg/telegram/ui/ChatActivity$59$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3974
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$59$1$1;->this$2:Lorg/telegram/ui/ChatActivity$59$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$59$1;->this$1:Lorg/telegram/ui/ChatActivity$59;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3975
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$59$1$1;->this$2:Lorg/telegram/ui/ChatActivity$59$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$59$1;->this$1:Lorg/telegram/ui/ChatActivity$59;
@@ -67,7 +64,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 3977
     :cond_0
     return-void
 .end method

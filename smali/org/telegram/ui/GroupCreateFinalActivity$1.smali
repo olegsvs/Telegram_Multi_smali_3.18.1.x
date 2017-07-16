@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateFinalActivity;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$1;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateFinalActivity$1;->val$users:Ljava/util/ArrayList;
@@ -53,7 +52,6 @@
     .locals 3
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$1;->val$users:Ljava/util/ArrayList;
 
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -68,11 +66,9 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 121
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$1;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 122
     return-void
 .end method

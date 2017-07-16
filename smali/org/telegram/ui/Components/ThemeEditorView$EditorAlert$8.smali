@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 712
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$8;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$8;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -46,13 +45,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 715
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$8;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1700(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Z)V
 
-    .line 716
     return-void
 .end method

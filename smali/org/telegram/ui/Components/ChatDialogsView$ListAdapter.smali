@@ -32,15 +32,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 979
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 980
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 981
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;
 
     .prologue
-    .line 970
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->getTitleRes()I
 
     move-result v0
@@ -61,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 1041
     const v0, 0x7f070127
 
     return v0
@@ -73,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 1028
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$2600(Lorg/telegram/ui/Components/ChatDialogsView;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -84,7 +78,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1029
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$100(Lorg/telegram/ui/Components/ChatDialogsView;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -133,17 +126,14 @@
 
     move-result v0
 
-    .line 1031
     :goto_0
     return v0
 
-    .line 1029
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 1031
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
@@ -163,7 +153,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 1037
     const/4 v0, 0x0
 
     return v0
@@ -181,7 +170,6 @@
 
     const/4 v7, 0x1
 
-    .line 993
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatDialogsView;->access$2500(Lorg/telegram/ui/Components/ChatDialogsView;)Ljava/util/ArrayList;
@@ -194,7 +182,6 @@
 
     if-nez v5, :cond_1
 
-    .line 994
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatDialogsView;->access$100(Lorg/telegram/ui/Components/ChatDialogsView;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -227,17 +214,14 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 998
     .local v4, "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :goto_0
     if-eqz v4, :cond_0
 
-    .line 999
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
 
-    .line 1000
     .local v0, "cell":Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
 
@@ -245,28 +229,23 @@
 
     move-object v5, v4
 
-    .line 1001
     check-cast v5, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
 
     iget-object v1, v5, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->channelParticipant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 1002
     .local v1, "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     instance-of v5, v1, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator;
 
     if-eqz v5, :cond_2
 
-    .line 1003
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
-    .line 1018
     .end local v1    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :goto_1
     iget v5, v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
     int-to-long v2, v5
 
-    .line 1020
     .local v2, "did":J
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -274,19 +253,15 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setTag(Ljava/lang/Object;)V
 
-    .line 1021
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->hideCounter(Z)V
 
-    .line 1022
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setDialog(J)V
 
-    .line 1024
     .end local v0    # "cell":Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
     .end local v2    # "did":J
     :cond_0
     return-void
 
-    .line 996
     .end local v4    # "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
@@ -308,7 +283,6 @@
     .restart local v4    # "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     goto :goto_0
 
-    .line 1004
     .restart local v0    # "cell":Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
     .restart local v1    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :cond_2
@@ -320,31 +294,26 @@
 
     if-eqz v5, :cond_4
 
-    .line 1005
     :cond_3
     invoke-virtual {v0, v9}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
     goto :goto_1
 
-    .line 1007
     :cond_4
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
     goto :goto_1
 
-    .line 1010
     .end local v1    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :cond_5
     instance-of v5, v4, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantCreator;
 
     if-eqz v5, :cond_6
 
-    .line 1011
     invoke-virtual {v0, v7}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
     goto :goto_1
 
-    .line 1012
     :cond_6
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
@@ -360,12 +329,10 @@
 
     if-eqz v5, :cond_7
 
-    .line 1013
     invoke-virtual {v0, v9}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
     goto :goto_1
 
-    .line 1015
     :cond_7
     invoke-virtual {v0, v8}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setIsAdmin(I)V
 
@@ -378,7 +345,6 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 985
     new-instance v0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
@@ -387,7 +353,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;-><init>(Lorg/telegram/ui/Components/ChatDialogsView;Landroid/content/Context;)V
 
-    .line 986
     .local v0, "view":Landroid/view/View;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -419,7 +384,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 987
     new-instance v1, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter$Holder;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter$Holder;-><init>(Lorg/telegram/ui/Components/ChatDialogsView$ListAdapter;Landroid/view/View;)V

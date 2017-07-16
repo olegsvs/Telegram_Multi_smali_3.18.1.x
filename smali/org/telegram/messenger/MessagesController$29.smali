@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1812
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$29;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1815
     if-nez p2, :cond_0
 
-    .line 1816
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$29;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -63,32 +60,26 @@
 
     move-result-object v0
 
-    .line 1817
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v0, :cond_1
 
-    .line 1818
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v0
 
-    .line 1819
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$29;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v2, v0, v5}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 1823
     :goto_0
     if-nez v0, :cond_2
 
-    .line 1840
     .end local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .end local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_0
     :goto_1
     return-void
 
-    .line 1821
     .restart local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_1
@@ -96,7 +87,6 @@
 
     goto :goto_0
 
-    .line 1826
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -106,16 +96,13 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/MessagesStorage;->clearUserPhotos(I)V
 
-    .line 1827
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1828
     .local v1, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1829
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -126,13 +113,11 @@
 
     invoke-virtual {v2, v1, v3, v5, v4}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1830
     check-cast p1, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     .end local p1    # "response":Lorg/telegram/tgnet/TLObject;
     iput-object p1, v0, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
-    .line 1831
     new-instance v2, Lorg/telegram/messenger/MessagesController$29$1;
 
     invoke-direct {v2, p0}, Lorg/telegram/messenger/MessagesController$29$1;-><init>(Lorg/telegram/messenger/MessagesController$29;)V

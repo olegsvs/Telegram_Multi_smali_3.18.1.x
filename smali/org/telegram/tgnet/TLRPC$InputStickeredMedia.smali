@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 16050
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 16053
     const/4 v0, 0x0
 
-    .line 16054
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;
     sparse-switch p1, :sswitch_data_0
 
-    .line 16062
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 16063
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputStickeredMedia"
@@ -70,18 +65,15 @@
 
     throw v1
 
-    .line 16056
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickeredMediaDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputStickeredMediaDocument;-><init>()V
 
-    .line 16057
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;
     goto :goto_0
 
-    .line 16059
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputStickeredMediaPhoto;
 
@@ -91,18 +83,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;
     goto :goto_0
 
-    .line 16065
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 16066
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputStickeredMedia;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 16068
     :cond_1
     return-object v0
 
-    .line 16054
     nop
 
     :sswitch_data_0

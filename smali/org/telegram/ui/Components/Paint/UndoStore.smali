@@ -43,17 +43,14 @@
     .locals 1
 
     .prologue
-    .line 11
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 18
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
-    .line 19
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -68,7 +65,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/Paint/UndoStore;
 
     .prologue
-    .line 11
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->delegate:Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;
 
     return-object v0
@@ -78,14 +74,12 @@
     .locals 1
 
     .prologue
-    .line 66
     new-instance v0, Lorg/telegram/ui/Components/Paint/UndoStore$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/Paint/UndoStore$1;-><init>(Lorg/telegram/ui/Components/Paint/UndoStore;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 74
     return-void
 .end method
 
@@ -95,7 +89,6 @@
     .locals 1
 
     .prologue
-    .line 22
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -121,20 +114,16 @@
     .param p2, "undoRunnable"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 30
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
     invoke-interface {v0, p1, p2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 31
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 33
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/UndoStore;->notifyOfHistoryChanges()V
 
-    .line 34
     return-void
 .end method
 
@@ -142,20 +131,16 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->clear()V
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
     invoke-interface {v0}, Ljava/util/Map;->clear()V
 
-    .line 62
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/UndoStore;->notifyOfHistoryChanges()V
 
-    .line 63
     return-void
 .end method
 
@@ -164,10 +149,8 @@
     .param p1, "undoStoreDelegate"    # Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;
 
     .prologue
-    .line 26
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->delegate:Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;
 
-    .line 27
     return-void
 .end method
 
@@ -175,7 +158,6 @@
     .locals 4
 
     .prologue
-    .line 44
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v3}, Ljava/util/List;->size()I
@@ -184,11 +166,9 @@
 
     if-nez v3, :cond_0
 
-    .line 56
     :goto_0
     return-void
 
-    .line 48
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
@@ -198,7 +178,6 @@
 
     add-int/lit8 v0, v3, -0x1
 
-    .line 49
     .local v0, "lastIndex":I
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
@@ -208,7 +187,6 @@
 
     check-cast v2, Ljava/util/UUID;
 
-    .line 50
     .local v2, "uuid":Ljava/util/UUID;
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
@@ -218,21 +196,17 @@
 
     check-cast v1, Ljava/lang/Runnable;
 
-    .line 51
     .local v1, "undoRunnable":Ljava/lang/Runnable;
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
     invoke-interface {v3, v2}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 52
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v3, v0}, Ljava/util/List;->remove(I)Ljava/lang/Object;
 
-    .line 54
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 55
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/UndoStore;->notifyOfHistoryChanges()V
 
     goto :goto_0
@@ -243,19 +217,15 @@
     .param p1, "uuid"    # Ljava/util/UUID;
 
     .prologue
-    .line 37
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->uuidToOperationMap:Ljava/util/Map;
 
     invoke-interface {v0, p1}, Ljava/util/Map;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 38
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore;->operations:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->remove(Ljava/lang/Object;)Z
 
-    .line 40
     invoke-direct {p0}, Lorg/telegram/ui/Components/Paint/UndoStore;->notifyOfHistoryChanges()V
 
-    .line 41
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     .prologue
-    .line 866
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$4;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$4;->val$sameTakePictureOrientation:Z
@@ -47,14 +46,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 869
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$4;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4802(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 870
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$4;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -75,12 +72,10 @@
 
     if-nez v0, :cond_1
 
-    .line 938
     :cond_0
     :goto_0
     return-void
 
-    .line 873
     :cond_1
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
@@ -100,7 +95,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 874
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v0
@@ -111,7 +105,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PhotoViewer;->setParentAlert(Lorg/telegram/ui/Components/ChatAttachAlert;)V
 
-    .line 875
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$4;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -122,10 +115,8 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$5502(Lorg/telegram/ui/Components/ChatAttachAlert;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 876
     const/4 v7, 0x0
 
-    .line 878
     .local v7, "orientation":I
     :try_start_0
     new-instance v10, Landroid/media/ExifInterface;
@@ -144,7 +135,6 @@
 
     invoke-direct {v10, v0}, Landroid/media/ExifInterface;-><init>(Ljava/lang/String;)V
 
-    .line 879
     .local v10, "ei":Landroid/media/ExifInterface;
     const-string/jumbo v0, "Orientation"
 
@@ -156,11 +146,9 @@
 
     move-result v11
 
-    .line 880
     .local v11, "exif":I
     packed-switch v11, :pswitch_data_0
 
-    .line 894
     .end local v10    # "ei":Landroid/media/ExifInterface;
     .end local v11    # "exif":I
     :goto_1
@@ -197,7 +185,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 895
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v0
@@ -220,51 +207,41 @@
 
     iget-object v5, v5, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    .line 937
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$400(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/ChatActivity;
 
     move-result-object v5
 
-    .line 895
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/PhotoViewer;->openPhotoForSelect(Ljava/util/ArrayList;IILorg/telegram/ui/PhotoViewer$PhotoViewerProvider;Lorg/telegram/ui/ChatActivity;)Z
 
     goto/16 :goto_0
 
-    .line 882
     .restart local v10    # "ei":Landroid/media/ExifInterface;
     .restart local v11    # "exif":I
     :pswitch_1
     const/16 v7, 0x5a
 
-    .line 883
     goto :goto_1
 
-    .line 885
     :pswitch_2
     const/16 v7, 0xb4
 
-    .line 886
     goto :goto_1
 
-    .line 888
     :pswitch_3
     const/16 v7, 0x10e
 
     goto :goto_1
 
-    .line 891
     .end local v10    # "ei":Landroid/media/ExifInterface;
     .end local v11    # "exif":I
     :catch_0
     move-exception v9
 
-    .line 892
     .local v9, "e":Ljava/lang/Exception;
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 880
     nop
 
     :pswitch_data_0

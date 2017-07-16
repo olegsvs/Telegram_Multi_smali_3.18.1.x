@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Painting;
 
     .prologue
-    .line 282
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$3;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Painting$3;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
@@ -45,13 +44,11 @@
     .locals 2
 
     .prologue
-    .line 285
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$3;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$3;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/Paint/Painting;->access$1800(Lorg/telegram/ui/Components/Paint/Painting;Lorg/telegram/ui/Components/Paint/Slice;)V
 
-    .line 286
     return-void
 .end method

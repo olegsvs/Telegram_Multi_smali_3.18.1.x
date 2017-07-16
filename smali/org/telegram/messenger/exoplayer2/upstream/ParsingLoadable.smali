@@ -71,15 +71,12 @@
     .end annotation
 
     .prologue
-    .line 73
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     .local p4, "parser":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable$Parser;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable$Parser<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 74
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
-    .line 75
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
     const/4 v1, 0x1
@@ -88,13 +85,10 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 76
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->type:I
 
-    .line 77
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->parser:Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable$Parser;
 
-    .line 78
     return-void
 .end method
 
@@ -104,7 +98,6 @@
     .locals 2
 
     .prologue
-    .line 94
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->bytesLoaded:J
 
@@ -115,13 +108,11 @@
     .locals 1
 
     .prologue
-    .line 101
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->isCanceled:Z
 
-    .line 102
     return-void
 .end method
 
@@ -134,7 +125,6 @@
     .end annotation
 
     .prologue
-    .line 84
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->result:Ljava/lang/Object;
 
@@ -145,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 106
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->isCanceled:Z
 
@@ -162,7 +151,6 @@
     .end annotation
 
     .prologue
-    .line 111
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<TT;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;
 
@@ -172,12 +160,10 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
-    .line 113
     .local v0, "inputStream":Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;
     :try_start_0
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;->open()V
 
-    .line 114
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->parser:Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable$Parser;
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
@@ -194,20 +180,16 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 116
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;->bytesRead()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->bytesLoaded:J
 
-    .line 117
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;->close()V
 
-    .line 119
     return-void
 
-    .line 116
     :catchall_0
     move-exception v1
 
@@ -217,7 +199,6 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;->bytesLoaded:J
 
-    .line 117
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceInputStream;->close()V
 
     throw v1

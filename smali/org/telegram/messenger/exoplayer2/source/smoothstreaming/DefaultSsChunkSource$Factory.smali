@@ -27,13 +27,10 @@
     .param p1, "dataSourceFactory"    # Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$Factory;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 51
     return-void
 .end method
 
@@ -48,14 +45,12 @@
     .param p5, "trackEncryptionBoxes"    # [Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackEncryptionBox;
 
     .prologue
-    .line 57
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/DefaultSsChunkSource$Factory;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;->createDataSource()Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     move-result-object v5
 
-    .line 58
     .local v5, "dataSource":Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/DefaultSsChunkSource;
 

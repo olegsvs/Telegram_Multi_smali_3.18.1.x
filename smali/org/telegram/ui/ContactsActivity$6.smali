@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactsActivity;
 
     .prologue
-    .line 489
     iput-object p1, p0, Lorg/telegram/ui/ContactsActivity$6;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ContactsActivity$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -51,7 +50,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 492
     iget-object v1, p0, Lorg/telegram/ui/ContactsActivity$6;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     iget-object v2, p0, Lorg/telegram/ui/ContactsActivity$6;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -75,10 +73,8 @@
     :goto_0
     invoke-static {v1, v2, v3, v0}, Lorg/telegram/ui/ContactsActivity;->access$800(Lorg/telegram/ui/ContactsActivity;Lorg/telegram/tgnet/TLRPC$User;ZLjava/lang/String;)V
 
-    .line 493
     return-void
 
-    .line 492
     :cond_0
     const-string/jumbo v0, "0"
 

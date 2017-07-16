@@ -59,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 6095
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -72,20 +71,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6117
     const/4 v0, 0x0
 
-    .line 6118
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     sparse-switch p1, :sswitch_data_0
 
-    .line 6141
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 6142
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in WebPage"
@@ -110,73 +105,60 @@
 
     throw v1
 
-    .line 6120
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPage;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPage;-><init>()V
 
-    .line 6121
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6123
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPage_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPage_old;-><init>()V
 
-    .line 6124
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6126
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPageEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPageEmpty;-><init>()V
 
-    .line 6127
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6129
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPageUrlPending;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPageUrlPending;-><init>()V
 
-    .line 6130
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6132
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPagePending;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPagePending;-><init>()V
 
-    .line 6133
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6135
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPageNotModified;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_webPageNotModified;-><init>()V
 
-    .line 6136
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6138
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_webPage_layer58;
 
@@ -186,18 +168,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WebPage;
     goto :goto_0
 
-    .line 6144
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6145
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$WebPage;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 6147
     :cond_1
     return-object v0
 
-    .line 6118
     nop
 
     :sswitch_data_0

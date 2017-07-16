@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 1960
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$ListAdapter$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$ListAdapter;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -44,7 +43,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 1963
     sub-int v4, p4, p2
 
     const/high16 v5, 0x43b40000    # 360.0f
@@ -57,7 +55,6 @@
 
     div-int/lit8 v2, v4, 0x3
 
-    .line 1964
     .local v2, "diff":I
     const/4 v0, 0x0
 
@@ -67,7 +64,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 1965
     const/high16 v4, 0x41200000    # 10.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -88,13 +84,11 @@
 
     add-int v3, v4, v5
 
-    .line 1966
     .local v3, "x":I
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ChatAttachAlert$ListAdapter$1;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 1967
     .local v1, "child":Landroid/view/View;
     const/4 v4, 0x0
 
@@ -110,12 +104,10 @@
 
     invoke-virtual {v1, v3, v4, v5, v6}, Landroid/view/View;->layout(IIII)V
 
-    .line 1964
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1969
     .end local v1    # "child":Landroid/view/View;
     .end local v3    # "x":I
     :cond_0

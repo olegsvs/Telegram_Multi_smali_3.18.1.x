@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactsActivity;
 
     .prologue
-    .line 451
     iput-object p1, p0, Lorg/telegram/ui/ContactsActivity$5;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
@@ -46,13 +45,11 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 465
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Object;->toString()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 466
     .local v1, "str":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -60,7 +57,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 467
     invoke-static {v1}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/String;)Ljava/lang/Integer;
 
     move-result-object v3
@@ -69,18 +65,15 @@
 
     move-result v2
 
-    .line 468
     .local v2, "value":I
     if-gez v2, :cond_1
 
-    .line 469
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     const-string/jumbo v4, "0"
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 470
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     iget-object v4, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
@@ -91,14 +84,12 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->setSelection(I)V
 
-    .line 482
     .end local v1    # "str":Ljava/lang/String;
     .end local v2    # "value":I
     :cond_0
     :goto_0
     return-void
 
-    .line 471
     .restart local v1    # "str":Ljava/lang/String;
     .restart local v2    # "value":I
     :cond_1
@@ -106,14 +97,12 @@
 
     if-le v2, v3, :cond_2
 
-    .line 472
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     const-string/jumbo v4, "300"
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 473
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     iget-object v4, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
@@ -128,19 +117,16 @@
 
     goto :goto_0
 
-    .line 479
     .end local v1    # "str":Ljava/lang/String;
     .end local v2    # "value":I
     :catch_0
     move-exception v0
 
-    .line 480
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 474
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "str":Ljava/lang/String;
     .restart local v2    # "value":I
@@ -170,7 +156,6 @@
 
     if-nez v3, :cond_0
 
-    .line 475
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -193,7 +178,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 476
     iget-object v3, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
 
     iget-object v4, p0, Lorg/telegram/ui/ContactsActivity$5;->val$editTextFinal:Landroid/widget/EditText;
@@ -217,7 +201,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 455
     return-void
 .end method
 
@@ -229,6 +212,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 460
     return-void
 .end method

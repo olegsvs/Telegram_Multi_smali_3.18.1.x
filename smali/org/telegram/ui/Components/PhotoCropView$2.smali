@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoCropView;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 112
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$200(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropView;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->showAspectRatioDialog()V
 
-    .line 113
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$200(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropView;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/Crop/CropView;->setRotation(F)V
 
-    .line 100
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$000(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
@@ -77,7 +72,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 101
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$000(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;
@@ -88,7 +82,6 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Components/PhotoCropView$PhotoCropViewDelegate;->onChange(Z)V
 
-    .line 103
     :cond_0
     return-void
 .end method
@@ -98,7 +91,6 @@
     .param p1, "angle"    # F
 
     .prologue
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$200(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropView;
@@ -107,7 +99,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->onRotationEnded()V
 
-    .line 108
     return-void
 .end method
 
@@ -115,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$200(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropView;
@@ -124,7 +114,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->onRotationBegan()V
 
-    .line 95
     return-void
 .end method
 
@@ -132,7 +121,6 @@
     .locals 1
 
     .prologue
-    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$100(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropRotationWheel;
@@ -141,7 +129,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropRotationWheel;->reset()V
 
-    .line 118
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoCropView$2;->this$0:Lorg/telegram/ui/Components/PhotoCropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoCropView;->access$200(Lorg/telegram/ui/Components/PhotoCropView;)Lorg/telegram/ui/Components/Crop/CropView;
@@ -150,6 +137,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->rotate90Degrees()V
 
-    .line 119
     return-void
 .end method

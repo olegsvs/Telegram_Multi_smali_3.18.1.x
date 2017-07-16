@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 229
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$3;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$3;->val$exist:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -51,12 +50,10 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 232
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$3;->val$exist:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
     if-eqz v0, :cond_0
 
-    .line 233
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/telegram/messenger/MessagesController;->putEncryptedChat(Lorg/telegram/tgnet/TLRPC$EncryptedChat;Z)V
 
-    .line 235
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -75,7 +71,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->updateEncryptedChat(Lorg/telegram/tgnet/TLRPC$EncryptedChat;)V
 
-    .line 236
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -92,6 +87,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 237
     return-void
 .end method

@@ -34,10 +34,8 @@
     .locals 1
 
     .prologue
-    .line 15040
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 15041
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,20 +52,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 15045
     const/4 v0, 0x0
 
-    .line 15046
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     sparse-switch p1, :sswitch_data_0
 
-    .line 15054
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 15055
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_Chats"
@@ -92,18 +86,15 @@
 
     throw v1
 
-    .line 15048
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_chats;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_chats;-><init>()V
 
-    .line 15049
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     goto :goto_0
 
-    .line 15051
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_chatsSlice;
 
@@ -113,18 +104,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     goto :goto_0
 
-    .line 15057
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 15058
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_Chats;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 15060
     :cond_1
     return-object v0
 
-    .line 15046
     nop
 
     :sswitch_data_0

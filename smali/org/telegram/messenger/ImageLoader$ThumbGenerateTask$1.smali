@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     .prologue
-    .line 509
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$1;->val$name:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 512
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$ThumbGenerateTask;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 513
     return-void
 .end method

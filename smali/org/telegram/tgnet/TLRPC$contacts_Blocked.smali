@@ -45,17 +45,14 @@
     .locals 1
 
     .prologue
-    .line 3758
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 3759
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;->blocked:Ljava/util/ArrayList;
 
-    .line 3760
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,20 +69,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3764
     const/4 v0, 0x0
 
-    .line 3765
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     sparse-switch p1, :sswitch_data_0
 
-    .line 3773
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 3774
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in contacts_Blocked"
@@ -110,18 +103,15 @@
 
     throw v1
 
-    .line 3767
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_blocked;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contacts_blocked;-><init>()V
 
-    .line 3768
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     goto :goto_0
 
-    .line 3770
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_blockedSlice;
 
@@ -131,18 +121,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     goto :goto_0
 
-    .line 3776
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3777
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 3779
     :cond_1
     return-object v0
 
-    .line 3765
     nop
 
     :sswitch_data_0

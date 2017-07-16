@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     .prologue
-    .line 271
     iput-object p1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$1;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 274
     iget-object v0, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$1;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 275
     iget-object v0, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$1;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -63,7 +60,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ProfileNotificationsActivity;->access$502(Lorg/telegram/ui/ProfileNotificationsActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 277
     :cond_0
     return-void
 .end method

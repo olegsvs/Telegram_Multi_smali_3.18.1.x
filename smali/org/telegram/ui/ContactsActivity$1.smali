@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactsActivity;
 
     .prologue
-    .line 181
     iput-object p1, p0, Lorg/telegram/ui/ContactsActivity$1;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,28 +38,23 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 184
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 185
     iget-object v0, p0, Lorg/telegram/ui/ContactsActivity$1;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ContactsActivity;->finishFragment()V
 
-    .line 189
     :cond_0
     :goto_0
     return-void
 
-    .line 186
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 187
     iget-object v0, p0, Lorg/telegram/ui/ContactsActivity$1;->this$0:Lorg/telegram/ui/ContactsActivity;
 
     new-instance v1, Lorg/telegram/ui/NewContactActivity;

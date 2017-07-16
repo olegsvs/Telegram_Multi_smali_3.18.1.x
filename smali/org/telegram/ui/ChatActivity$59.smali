@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 3958
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$59;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3961
     new-instance v0, Lorg/telegram/ui/ChatActivity$59$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ChatActivity$59$1;-><init>(Lorg/telegram/ui/ChatActivity$59;)V
@@ -48,6 +46,5 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 3983
     return-void
 .end method

@@ -27,10 +27,8 @@
     .param p2, "listener"    # Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     .prologue
-    .line 95
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 96
     if-eqz p2, :cond_0
 
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -42,13 +40,10 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
-    .line 97
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
-    .line 98
     return-void
 
-    .line 96
     :cond_0
     const/4 v0, 0x0
 
@@ -60,7 +55,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;
 
     .prologue
-    .line 85
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     return-object v0
@@ -73,12 +67,10 @@
     .param p1, "audioSessionId"    # I
 
     .prologue
-    .line 178
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 179
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$6;
@@ -87,7 +79,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 186
     :cond_0
     return-void
 .end method
@@ -99,12 +90,10 @@
     .param p4, "elapsedSinceLastFeedMs"    # J
 
     .prologue
-    .line 149
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$4;
@@ -121,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 157
     :cond_0
     return-void
 .end method
@@ -133,12 +121,10 @@
     .param p4, "initializationDurationMs"    # J
 
     .prologue
-    .line 119
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$2;
@@ -155,7 +141,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 128
     :cond_0
     return-void
 .end method
@@ -165,12 +150,10 @@
     .param p1, "counters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 163
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$5;
@@ -179,7 +162,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 172
     :cond_0
     return-void
 .end method
@@ -189,12 +171,10 @@
     .param p1, "decoderCounters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 104
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 105
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$1;
@@ -203,7 +183,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 112
     :cond_0
     return-void
 .end method
@@ -213,12 +192,10 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 134
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/audio/AudioRendererEventListener$EventDispatcher$3;
@@ -227,7 +204,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 142
     :cond_0
     return-void
 .end method

@@ -61,37 +61,26 @@
     .param p12, "byterangeLength"    # J
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->url:Ljava/lang/String;
 
-    .line 51
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->durationUs:J
 
-    .line 52
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->discontinuitySequenceNumber:I
 
-    .line 53
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->startTimeUs:J
 
-    .line 54
     iput-boolean p7, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->isEncrypted:Z
 
-    .line 55
     iput-object p8, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->encryptionKeyUri:Ljava/lang/String;
 
-    .line 56
     iput-object p9, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->encryptionIV:Ljava/lang/String;
 
-    .line 57
     iput-wide p10, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->byterangeOffset:J
 
-    .line 58
     iput-wide p12, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->byterangeLength:J
 
-    .line 59
     return-void
 .end method
 
@@ -102,7 +91,6 @@
     .param p4, "byterangeLength"    # J
 
     .prologue
-    .line 44
     const-wide/16 v2, 0x0
 
     const/4 v4, -0x1
@@ -125,7 +113,6 @@
 
     invoke-direct/range {v0 .. v13}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;-><init>(Ljava/lang/String;JIJZLjava/lang/String;Ljava/lang/String;JJ)V
 
-    .line 45
     return-void
 .end method
 
@@ -136,7 +123,6 @@
     .param p1, "startTimeUs"    # Ljava/lang/Long;
 
     .prologue
-    .line 63
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->startTimeUs:J
 
     invoke-virtual {p1}, Ljava/lang/Long;->longValue()J
@@ -177,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 31
     check-cast p1, Ljava/lang/Long;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->compareTo(Ljava/lang/Long;)I
@@ -192,7 +177,6 @@
     .param p1, "startTimeUs"    # J
 
     .prologue
-    .line 67
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->url:Ljava/lang/String;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/FeaturedStickersActivity;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 110
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/FeaturedStickersActivity;->access$000(Lorg/telegram/ui/FeaturedStickersActivity;)I
@@ -70,7 +68,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 111
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->getFeaturedStickerSets()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -81,7 +78,6 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 113
     .local v6, "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     iget-object v1, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -93,12 +89,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 114
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;-><init>()V
 
-    .line 115
     .local v3, "inputStickerSet":Lorg/telegram/tgnet/TLRPC$InputStickerSet;
     iget-object v1, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -106,7 +100,6 @@
 
     iput-wide v8, v3, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
-    .line 120
     :goto_0
     iget-object v1, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -114,7 +107,6 @@
 
     iput-wide v8, v3, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->access_hash:J
 
-    .line 121
     new-instance v0, Lorg/telegram/ui/Components/StickersAlert;
 
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
@@ -129,7 +121,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/Components/StickersAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLRPC$InputStickerSet;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;Lorg/telegram/ui/Components/StickersAlert$StickersAlertDelegate;)V
 
-    .line 122
     .local v0, "stickersAlert":Lorg/telegram/ui/Components/StickersAlert;
     new-instance v1, Lorg/telegram/ui/FeaturedStickersActivity$3$1;
 
@@ -137,26 +128,22 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/StickersAlert;->setInstallDelegate(Lorg/telegram/ui/Components/StickersAlert$StickersAlertInstallDelegate;)V
 
-    .line 135
     iget-object v1, p0, Lorg/telegram/ui/FeaturedStickersActivity$3;->this$0:Lorg/telegram/ui/FeaturedStickersActivity;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/FeaturedStickersActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 137
     .end local v0    # "stickersAlert":Lorg/telegram/ui/Components/StickersAlert;
     .end local v3    # "inputStickerSet":Lorg/telegram/tgnet/TLRPC$InputStickerSet;
     .end local v6    # "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     :cond_0
     return-void
 
-    .line 117
     .restart local v6    # "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     :cond_1
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetShortName;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetShortName;-><init>()V
 
-    .line 118
     .restart local v3    # "inputStickerSet":Lorg/telegram/tgnet/TLRPC$InputStickerSet;
     iget-object v1, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 

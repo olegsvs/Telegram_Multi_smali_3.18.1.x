@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
 
     .prologue
-    .line 246
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
 
     iput-object p2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,7 +54,6 @@
 
     const/4 v10, 0x0
 
-    .line 249
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
 
     iget-object v5, v5, Lorg/telegram/ui/TwoStepVerificationActivity$4$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$4;
@@ -64,17 +62,14 @@
 
     invoke-static {v5}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$400(Lorg/telegram/ui/TwoStepVerificationActivity;)V
 
-    .line 250
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v5, :cond_1
 
-    .line 251
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
 
-    .line 252
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -90,7 +85,6 @@
 
     invoke-direct {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 253
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v5, "RestoreEmailSent"
 
@@ -108,7 +102,6 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 254
     const-string/jumbo v5, "AppName"
 
     invoke-static {v5, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -117,7 +110,6 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 255
     const-string/jumbo v5, "OK"
 
     const v6, 0x7f070452
@@ -132,7 +124,6 @@
 
     invoke-virtual {v0, v5, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 265
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
 
     iget-object v5, v5, Lorg/telegram/ui/TwoStepVerificationActivity$4$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$4;
@@ -147,17 +138,13 @@
 
     move-result-object v1
 
-    .line 266
     .local v1, "dialog":Landroid/app/Dialog;
     if-eqz v1, :cond_0
 
-    .line 267
     invoke-virtual {v1, v10}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 268
     invoke-virtual {v1, v10}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 284
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v1    # "dialog":Landroid/app/Dialog;
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
@@ -165,7 +152,6 @@
     :goto_0
     return-void
 
-    .line 271
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -179,7 +165,6 @@
 
     if-eqz v5, :cond_3
 
-    .line 272
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v5, v5, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -192,20 +177,17 @@
 
     move-result v3
 
-    .line 274
     .local v3, "time":I
     const/16 v5, 0x3c
 
     if-ge v3, v5, :cond_2
 
-    .line 275
     const-string/jumbo v5, "Seconds"
 
     invoke-static {v5, v3}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 279
     .local v4, "timeString":Ljava/lang/String;
     :goto_1
     iget-object v5, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
@@ -236,7 +218,6 @@
 
     goto :goto_0
 
-    .line 277
     .end local v4    # "timeString":Ljava/lang/String;
     :cond_2
     const-string/jumbo v5, "Minutes"
@@ -250,7 +231,6 @@
     .restart local v4    # "timeString":Ljava/lang/String;
     goto :goto_1
 
-    .line 281
     .end local v3    # "time":I
     .end local v4    # "timeString":Ljava/lang/String;
     :cond_3

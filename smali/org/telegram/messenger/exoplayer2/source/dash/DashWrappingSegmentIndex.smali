@@ -17,13 +17,10 @@
     .param p2, "uri"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 34
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;->chunkIndex:Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
 
-    .line 35
     return-void
 .end method
 
@@ -35,7 +32,6 @@
     .param p2, "periodDurationUs"    # J
 
     .prologue
-    .line 54
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;->chunkIndex:Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->durationsUs:[J
@@ -49,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const/4 v0, 0x0
 
     return v0
@@ -60,7 +55,6 @@
     .param p1, "periodDurationUs"    # J
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;->chunkIndex:Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
 
     iget v0, v0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->length:I
@@ -76,7 +70,6 @@
     .param p3, "periodDurationUs"    # J
 
     .prologue
-    .line 64
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;->chunkIndex:Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->getChunkIndex(J)I
@@ -91,7 +84,6 @@
     .param p1, "segmentNum"    # I
 
     .prologue
-    .line 59
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     const/4 v1, 0x0
@@ -120,7 +112,6 @@
     .param p1, "segmentNum"    # I
 
     .prologue
-    .line 49
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;->chunkIndex:Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;->timesUs:[J
@@ -134,7 +125,6 @@
     .locals 1
 
     .prologue
-    .line 69
     const/4 v0, 0x1
 
     return v0

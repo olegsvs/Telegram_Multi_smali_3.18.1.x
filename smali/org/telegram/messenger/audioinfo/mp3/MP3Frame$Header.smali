@@ -85,7 +85,6 @@
 
     const/4 v3, 0x4
 
-    .line 56
     new-array v0, v3, [[I
 
     new-array v1, v3, [I
@@ -116,7 +115,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->FREQUENCIES:[[I
 
-    .line 65
     const/16 v0, 0x10
 
     new-array v0, v0, [[I
@@ -241,7 +239,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->BITRATES:[[I
 
-    .line 85
     new-array v0, v3, [[I
 
     new-array v1, v3, [I
@@ -272,7 +269,6 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->BITRATES_COLUMN:[[I
 
-    .line 94
     new-array v0, v3, [[I
 
     new-array v1, v3, [I
@@ -303,14 +299,12 @@
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->SIZE_COEFFICIENTS:[[I
 
-    .line 103
     new-array v0, v3, [I
 
     fill-array-data v0, :array_1c
 
     sput-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->SLOT_SIZES:[I
 
-    .line 109
     new-array v0, v3, [[I
 
     new-array v1, v3, [I
@@ -343,7 +337,6 @@
 
     return-void
 
-    .line 56
     :array_0
     .array-data 4
         0x2b11
@@ -376,7 +369,6 @@
         -0x1
     .end array-data
 
-    .line 65
     :array_4
     .array-data 4
         0x0
@@ -521,7 +513,6 @@
         -0x1
     .end array-data
 
-    .line 85
     :array_14
     .array-data 4
         -0x1
@@ -554,7 +545,6 @@
         0x0
     .end array-data
 
-    .line 94
     :array_18
     .array-data 4
         -0x1
@@ -587,7 +577,6 @@
         0xc
     .end array-data
 
-    .line 103
     :array_1c
     .array-data 4
         -0x1
@@ -596,7 +585,6 @@
         0x4
     .end array-data
 
-    .line 109
     :array_1d
     .array-data 4
         0x11
@@ -644,22 +632,18 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 136
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 137
     shr-int/lit8 v1, p1, 0x3
 
     and-int/lit8 v1, v1, 0x3
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->version:I
 
-    .line 138
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->version:I
 
     if-ne v1, v3, :cond_0
 
-    .line 139
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     const-string/jumbo v2, "Reserved version"
@@ -668,7 +652,6 @@
 
     throw v1
 
-    .line 141
     :cond_0
     shr-int/lit8 v1, p1, 0x1
 
@@ -676,12 +659,10 @@
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
-    .line 142
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
     if-nez v1, :cond_1
 
-    .line 143
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     const-string/jumbo v2, "Reserved layer"
@@ -690,7 +671,6 @@
 
     throw v1
 
-    .line 145
     :cond_1
     shr-int/lit8 v1, p2, 0x4
 
@@ -698,14 +678,12 @@
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->bitrate:I
 
-    .line 146
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->bitrate:I
 
     const/16 v2, 0xf
 
     if-ne v1, v2, :cond_2
 
-    .line 147
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     const-string/jumbo v2, "Reserved bitrate"
@@ -714,13 +692,11 @@
 
     throw v1
 
-    .line 149
     :cond_2
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->bitrate:I
 
     if-nez v1, :cond_3
 
-    .line 150
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     const-string/jumbo v2, "Free bitrate"
@@ -729,7 +705,6 @@
 
     throw v1
 
-    .line 152
     :cond_3
     shr-int/lit8 v1, p2, 0x2
 
@@ -737,14 +712,12 @@
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->frequency:I
 
-    .line 153
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->frequency:I
 
     const/4 v2, 0x3
 
     if-ne v1, v2, :cond_4
 
-    .line 154
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     const-string/jumbo v2, "Reserved frequency"
@@ -753,7 +726,6 @@
 
     throw v1
 
-    .line 156
     :cond_4
     shr-int/lit8 v1, p3, 0x6
 
@@ -761,44 +733,36 @@
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->channelMode:I
 
-    .line 157
     shr-int/lit8 v1, p2, 0x1
 
     and-int/lit8 v1, v1, 0x1
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->padding:I
 
-    .line 158
     and-int/lit8 v1, p1, 0x1
 
     iput v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->protection:I
 
-    .line 160
     const/4 v0, 0x4
 
-    .line 161
     .local v0, "minFrameSize":I
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->protection:I
 
     if-nez v1, :cond_5
 
-    .line 162
     add-int/lit8 v0, v0, 0x2
 
-    .line 164
     :cond_5
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
     if-ne v1, v3, :cond_6
 
-    .line 165
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getSideInfoSize()I
 
     move-result v1
 
     add-int/2addr v0, v1
 
-    .line 167
     :cond_6
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getFrameSize()I
 
@@ -806,7 +770,6 @@
 
     if-ge v1, v0, :cond_7
 
-    .line 168
     new-instance v1, Lorg/telegram/messenger/audioinfo/mp3/MP3Exception;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -831,7 +794,6 @@
 
     throw v1
 
-    .line 170
     :cond_7
     return-void
 .end method
@@ -842,7 +804,6 @@
     .locals 3
 
     .prologue
-    .line 205
     sget-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->BITRATES:[[I
 
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->bitrate:I
@@ -868,7 +829,6 @@
     .locals 1
 
     .prologue
-    .line 185
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->channelMode:I
 
     return v0
@@ -878,7 +838,6 @@
     .locals 2
 
     .prologue
-    .line 209
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getFrameSize()I
 
     move-result v0
@@ -898,7 +857,6 @@
     .locals 3
 
     .prologue
-    .line 201
     sget-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->SIZE_COEFFICIENTS:[[I
 
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->version:I
@@ -940,7 +898,6 @@
     .locals 2
 
     .prologue
-    .line 181
     sget-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->FREQUENCIES:[[I
 
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->frequency:I
@@ -958,7 +915,6 @@
     .locals 1
 
     .prologue
-    .line 177
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
     return v0
@@ -968,7 +924,6 @@
     .locals 1
 
     .prologue
-    .line 189
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->protection:I
 
     return v0
@@ -978,17 +933,14 @@
     .locals 2
 
     .prologue
-    .line 193
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
     const/4 v1, 0x3
 
     if-ne v0, v1, :cond_0
 
-    .line 194
     const/16 v0, 0x180
 
-    .line 196
     :goto_0
     return v0
 
@@ -1002,7 +954,6 @@
     .locals 2
 
     .prologue
-    .line 225
     sget-object v0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->SIDE_INFO_SIZES:[[I
 
     iget v1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->channelMode:I
@@ -1023,7 +974,6 @@
     .prologue
     const/4 v6, 0x3
 
-    .line 213
     const-wide/16 v2, 0x3e8
 
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getSampleCount()I
@@ -1050,7 +1000,6 @@
 
     div-long v0, v2, v4
 
-    .line 214
     .local v0, "duration":J
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getVersion()I
 
@@ -1064,12 +1013,10 @@
 
     if-ne v2, v6, :cond_0
 
-    .line 215
     const-wide/16 v2, 0x2
 
     div-long/2addr v0, v2
 
-    .line 217
     :cond_0
     return-wide v0
 .end method
@@ -1078,7 +1025,6 @@
     .locals 1
 
     .prologue
-    .line 233
     const/16 v0, 0x24
 
     return v0
@@ -1088,7 +1034,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->version:I
 
     return v0
@@ -1098,7 +1043,6 @@
     .locals 1
 
     .prologue
-    .line 229
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->getSideInfoSize()I
 
     move-result v0
@@ -1113,7 +1057,6 @@
     .param p1, "header"    # Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;
 
     .prologue
-    .line 221
     iget v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I
 
     iget v1, p1, Lorg/telegram/messenger/audioinfo/mp3/MP3Frame$Header;->layer:I

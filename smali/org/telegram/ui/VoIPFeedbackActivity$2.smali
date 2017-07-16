@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPFeedbackActivity;
 
     .prologue
-    .line 66
     iput-object p1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->val$bar:Lorg/telegram/ui/Components/BetterRatingView;
@@ -53,12 +52,10 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 69
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;-><init>()V
 
-    .line 70
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;
     iget-object v1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->val$bar:Lorg/telegram/ui/Components/BetterRatingView;
 
@@ -68,14 +65,12 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->rating:I
 
-    .line 71
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->rating:I
 
     const/4 v2, 0x5
 
     if-ge v1, v2, :cond_0
 
-    .line 72
     iget-object v1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->val$commentBox:Landroid/widget/EditText;
 
     invoke-virtual {v1}, Landroid/widget/EditText;->getText()Landroid/text/Editable;
@@ -88,7 +83,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->comment:Ljava/lang/String;
 
-    .line 75
     :goto_0
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
@@ -96,7 +90,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
-    .line 76
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
     iget-object v2, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
@@ -113,7 +106,6 @@
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;->access_hash:J
 
-    .line 77
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_setCallRating;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
     iget-object v2, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
@@ -130,7 +122,6 @@
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;->id:J
 
-    .line 78
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -141,15 +132,12 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 87
     iget-object v1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$2;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/VoIPFeedbackActivity;->finish()V
 
-    .line 88
     return-void
 
-    .line 74
     :cond_0
     const-string/jumbo v1, ""
 

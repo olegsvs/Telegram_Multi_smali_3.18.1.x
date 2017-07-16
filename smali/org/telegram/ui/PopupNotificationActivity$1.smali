@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 195
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;-><init>(Landroid/content/Context;)V
@@ -44,12 +43,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 229
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getChildCount()I
 
     move-result v4
 
-    .line 231
     .local v4, "count":I
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getKeyboardHeight()I
 
@@ -73,7 +70,6 @@
 
     move-result v9
 
-    .line 233
     .local v9, "paddingBottom":I
     :goto_0
     const/4 v7, 0x0
@@ -82,12 +78,10 @@
     :goto_1
     if-ge v7, v4, :cond_6
 
-    .line 234
     invoke-virtual {p0, v7}, Lorg/telegram/ui/PopupNotificationActivity$1;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 235
     .local v1, "child":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -97,13 +91,11 @@
 
     if-ne v12, v13, :cond_1
 
-    .line 233
     :goto_2
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 231
     .end local v1    # "child":Landroid/view/View;
     .end local v7    # "i":I
     .end local v9    # "paddingBottom":I
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 238
     .restart local v1    # "child":Landroid/view/View;
     .restart local v7    # "i":I
     .restart local v9    # "paddingBottom":I
@@ -123,57 +114,45 @@
 
     check-cast v8, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 240
     .local v8, "lp":Landroid/widget/FrameLayout$LayoutParams;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v11
 
-    .line 241
     .local v11, "width":I
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v6
 
-    .line 246
     .local v6, "height":I
     iget v5, v8, Landroid/widget/FrameLayout$LayoutParams;->gravity:I
 
-    .line 247
     .local v5, "gravity":I
     const/4 v12, -0x1
 
     if-ne v5, v12, :cond_2
 
-    .line 248
     const/16 v5, 0x33
 
-    .line 251
     :cond_2
     and-int/lit8 v0, v5, 0x7
 
-    .line 252
     .local v0, "absoluteGravity":I
     and-int/lit8 v10, v5, 0x70
 
-    .line 254
     .local v10, "verticalGravity":I
     and-int/lit8 v12, v0, 0x7
 
     sparse-switch v12, :sswitch_data_0
 
-    .line 263
     iget v2, v8, Landroid/widget/FrameLayout$LayoutParams;->leftMargin:I
 
-    .line 266
     .local v2, "childLeft":I
     :goto_3
     sparse-switch v10, :sswitch_data_1
 
-    .line 277
     iget v3, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 279
     .local v3, "childTop":I
     :goto_4
     iget-object v12, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
@@ -188,7 +167,6 @@
 
     if-eqz v12, :cond_5
 
-    .line 280
     if-eqz v9, :cond_4
 
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getMeasuredHeight()I
@@ -197,7 +175,6 @@
 
     sub-int v3, v12, v9
 
-    .line 285
     :cond_3
     :goto_5
     add-int v12, v2, v11
@@ -208,7 +185,6 @@
 
     goto :goto_2
 
-    .line 256
     .end local v2    # "childLeft":I
     .end local v3    # "childTop":I
     :sswitch_0
@@ -226,11 +202,9 @@
 
     sub-int v2, v12, v13
 
-    .line 257
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 259
     .end local v2    # "childLeft":I
     :sswitch_1
     sub-int v12, p4, v11
@@ -239,19 +213,15 @@
 
     sub-int v2, v12, v13
 
-    .line 260
     .restart local v2    # "childLeft":I
     goto :goto_3
 
-    .line 268
     :sswitch_2
     iget v3, v8, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 269
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 271
     .end local v3    # "childTop":I
     :sswitch_3
     sub-int v12, p5, v9
@@ -270,11 +240,9 @@
 
     sub-int v3, v12, v13
 
-    .line 272
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 274
     .end local v3    # "childTop":I
     :sswitch_4
     sub-int v12, p5, v9
@@ -287,11 +255,9 @@
 
     sub-int v3, v12, v13
 
-    .line 275
     .restart local v3    # "childTop":I
     goto :goto_4
 
-    .line 280
     :cond_4
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getMeasuredHeight()I
 
@@ -299,7 +265,6 @@
 
     goto :goto_5
 
-    .line 281
     :cond_5
     iget-object v12, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
@@ -313,7 +278,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 282
     iget-object v12, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v12}, Lorg/telegram/ui/PopupNotificationActivity;->access$200(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/widget/RelativeLayout;
@@ -346,7 +310,6 @@
 
     sub-int v3, v12, v13
 
-    .line 283
     iget-object v12, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v12}, Lorg/telegram/ui/PopupNotificationActivity;->access$200(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/widget/RelativeLayout;
@@ -381,7 +344,6 @@
 
     goto/16 :goto_5
 
-    .line 288
     .end local v0    # "absoluteGravity":I
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childLeft":I
@@ -394,17 +356,14 @@
     :cond_6
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->notifyHeightChanged()V
 
-    .line 289
     return-void
 
-    .line 254
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
         0x5 -> :sswitch_1
     .end sparse-switch
 
-    .line 266
     :sswitch_data_1
     .sparse-switch
         0x10 -> :sswitch_3
@@ -419,39 +378,32 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 198
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v11
 
-    .line 199
     .local v11, "widthMode":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getMode(I)I
 
     move-result v7
 
-    .line 200
     .local v7, "heightMode":I
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v12
 
-    .line 201
     .local v12, "widthSize":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v8
 
-    .line 203
     .local v8, "heightSize":I
     invoke-virtual {p0, v12, v8}, Lorg/telegram/ui/PopupNotificationActivity$1;->setMeasuredDimension(II)V
 
-    .line 205
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getKeyboardHeight()I
 
     move-result v10
 
-    .line 207
     .local v10, "keyboardSize":I
     const/high16 v0, 0x41a00000    # 20.0f
 
@@ -461,7 +413,6 @@
 
     if-gt v10, v0, :cond_0
 
-    .line 208
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$100(Lorg/telegram/ui/PopupNotificationActivity;)Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -474,13 +425,11 @@
 
     sub-int/2addr v8, v0
 
-    .line 211
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/PopupNotificationActivity$1;->getChildCount()I
 
     move-result v6
 
-    .line 212
     .local v6, "childCount":I
     const/4 v9, 0x0
 
@@ -488,12 +437,10 @@
     :goto_0
     if-ge v9, v6, :cond_4
 
-    .line 213
     invoke-virtual {p0, v9}, Lorg/telegram/ui/PopupNotificationActivity$1;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 214
     .local v1, "child":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getVisibility()I
 
@@ -503,13 +450,11 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 212
     :goto_1
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 217
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
@@ -523,7 +468,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 218
     const/high16 v0, 0x40000000    # 2.0f
 
     invoke-static {v12, v0}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
@@ -546,7 +490,6 @@
 
     goto :goto_1
 
-    .line 219
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$1;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
@@ -560,7 +503,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 220
     const/4 v3, 0x0
 
     const/4 v5, 0x0
@@ -575,7 +517,6 @@
 
     goto :goto_1
 
-    .line 222
     :cond_3
     const/high16 v0, 0x40000000    # 2.0f
 
@@ -611,7 +552,6 @@
 
     goto :goto_1
 
-    .line 225
     .end local v1    # "child":Landroid/view/View;
     :cond_4
     return-void

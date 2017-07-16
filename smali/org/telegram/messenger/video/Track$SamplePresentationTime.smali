@@ -31,18 +31,14 @@
     .param p3, "time"    # J
 
     .prologue
-    .line 47
     iput-object p1, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->this$0:Lorg/telegram/messenger/video/Track;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 48
     iput p2, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->index:I
 
-    .line 49
     iput-wide p3, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->presentationTime:J
 
-    .line 50
     return-void
 .end method
 
@@ -51,7 +47,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/video/Track$SamplePresentationTime;
 
     .prologue
-    .line 41
     iget-wide v0, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->presentationTime:J
 
     return-wide v0
@@ -62,7 +57,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/video/Track$SamplePresentationTime;
 
     .prologue
-    .line 41
     iget v0, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->index:I
 
     return v0
@@ -73,7 +67,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/video/Track$SamplePresentationTime;
 
     .prologue
-    .line 41
     iget-wide v0, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->dt:J
 
     return-wide v0
@@ -85,7 +78,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 41
     iput-wide p1, p0, Lorg/telegram/messenger/video/Track$SamplePresentationTime;->dt:J
 
     return-wide p1

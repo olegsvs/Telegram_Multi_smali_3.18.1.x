@@ -35,22 +35,18 @@
     .param p1, "stz2Atom"    # Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$LeafAtom;
 
     .prologue
-    .line 1248
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1249
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$LeafAtom;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 1250
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 1251
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
@@ -61,7 +57,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->fieldSize:I
 
-    .line 1252
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
@@ -70,7 +65,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->sampleCount:I
 
-    .line 1253
     return-void
 .end method
 
@@ -80,7 +74,6 @@
     .locals 1
 
     .prologue
-    .line 1257
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->sampleCount:I
 
     return v0
@@ -90,7 +83,6 @@
     .locals 1
 
     .prologue
-    .line 1282
     const/4 v0, 0x0
 
     return v0
@@ -100,25 +92,21 @@
     .locals 2
 
     .prologue
-    .line 1262
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->fieldSize:I
 
     const/16 v1, 0x8
 
     if-ne v0, v1, :cond_0
 
-    .line 1263
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 1275
     :goto_0
     return v0
 
-    .line 1264
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->fieldSize:I
 
@@ -126,7 +114,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 1265
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
@@ -135,7 +122,6 @@
 
     goto :goto_0
 
-    .line 1268
     :cond_1
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->sampleIndex:I
 
@@ -147,7 +133,6 @@
 
     if-nez v0, :cond_2
 
-    .line 1270
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -156,7 +141,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->currentByte:I
 
-    .line 1272
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->currentByte:I
 
     and-int/lit16 v0, v0, 0xf0
@@ -165,7 +149,6 @@
 
     goto :goto_0
 
-    .line 1275
     :cond_2
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$Stz2SampleSizeBox;->currentByte:I
 

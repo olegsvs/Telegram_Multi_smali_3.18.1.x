@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 4607
     const v0, -0x48b4562e
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_contactsNotModified;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 4606
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$contacts_Contacts;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 4611
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_contactsNotModified;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4612
     return-void
 .end method

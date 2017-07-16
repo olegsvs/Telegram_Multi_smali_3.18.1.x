@@ -116,28 +116,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 24675
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 24690
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Message;->entities:Ljava/util/ArrayList;
 
-    .line 24699
     iput v1, p0, Lorg/telegram/tgnet/TLRPC$Message;->send_state:I
 
-    .line 24700
     iput v1, p0, Lorg/telegram/tgnet/TLRPC$Message;->fwd_msg_id:I
 
-    .line 24701
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$Message;->attachPath:Ljava/lang/String;
 
-    .line 24704
     iput v1, p0, Lorg/telegram/tgnet/TLRPC$Message;->local_id:I
 
     return-void
@@ -150,20 +144,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 24715
     const/4 v0, 0x0
 
-    .line 24716
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Message;
     sparse-switch p1, :sswitch_data_0
 
-    .line 24772
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 24773
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Message"
@@ -188,194 +178,159 @@
 
     throw v1
 
-    .line 24718
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageService_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageService_old2;-><init>()V
 
-    .line 24719
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24721
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old3;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old3;-><init>()V
 
-    .line 24722
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24724
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old4;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old4;-><init>()V
 
-    .line 24725
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24727
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_secret;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_secret;-><init>()V
 
-    .line 24728
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24730
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message;-><init>()V
 
-    .line 24731
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24733
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_layer47;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_layer47;-><init>()V
 
-    .line 24734
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24736
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old7;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old7;-><init>()V
 
-    .line 24737
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24739
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageService_layer48;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageService_layer48;-><init>()V
 
-    .line 24740
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24742
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEmpty;-><init>()V
 
-    .line 24743
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24745
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old6;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old6;-><init>()V
 
-    .line 24746
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24748
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageForwarded_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageForwarded_old2;-><init>()V
 
-    .line 24749
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24751
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageForwarded_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageForwarded_old;-><init>()V
 
-    .line 24752
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24754
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old2;-><init>()V
 
-    .line 24755
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24757
     :sswitch_d
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageService_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageService_old;-><init>()V
 
-    .line 24758
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24760
     :sswitch_e
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_old;-><init>()V
 
-    .line 24761
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24763
     :sswitch_f
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_secret_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_message_secret_old;-><init>()V
 
-    .line 24764
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24766
     :sswitch_10
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageService;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageService;-><init>()V
 
-    .line 24767
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto :goto_0
 
-    .line 24769
     :sswitch_11
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_message_old5;
 
@@ -385,18 +340,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Message;
     goto/16 :goto_0
 
-    .line 24775
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 24776
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Message;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 24778
     :cond_1
     return-object v0
 
-    .line 24716
     :sswitch_data_0
     .sparse-switch
         -0x7c1a21ac -> :sswitch_8

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$1;
 
     .prologue
-    .line 931
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$1$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,6 +41,5 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 935
     return-void
 .end method

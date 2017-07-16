@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 501
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$4;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 506
     :try_start_0
     new-instance v1, Landroid/content/Intent;
 
@@ -54,7 +52,6 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 507
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -86,23 +83,19 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 508
     iget-object v2, p0, Lorg/telegram/ui/PopupNotificationActivity$4;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/PopupNotificationActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 512
     .end local v1    # "intent":Landroid/content/Intent;
     :goto_0
     return-void
 
-    .line 509
     :catch_0
     move-exception v0
 
-    .line 510
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

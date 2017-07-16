@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/tgnet/ConnectionsManager$1$1;
 
     .prologue
-    .line 158
     iput-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1$1;->this$2:Lorg/telegram/tgnet/ConnectionsManager$1$1;
 
     iput-object p2, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1$1;->val$finalResponse:Lorg/telegram/tgnet/TLObject;
@@ -49,7 +48,6 @@
     .locals 3
 
     .prologue
-    .line 161
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1$1;->this$2:Lorg/telegram/tgnet/ConnectionsManager$1$1;
 
     iget-object v0, v0, Lorg/telegram/tgnet/ConnectionsManager$1$1;->this$1:Lorg/telegram/tgnet/ConnectionsManager$1;
@@ -62,17 +60,14 @@
 
     invoke-interface {v0, v1, v2}, Lorg/telegram/tgnet/RequestDelegate;->run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1$1;->val$finalResponse:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v0, :cond_0
 
-    .line 163
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$1$1$1;->val$finalResponse:Lorg/telegram/tgnet/TLObject;
 
     invoke-virtual {v0}, Lorg/telegram/tgnet/TLObject;->freeResources()V
 
-    .line 165
     :cond_0
     return-void
 .end method

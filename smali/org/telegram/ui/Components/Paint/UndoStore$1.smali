@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/UndoStore;
 
     .prologue
-    .line 66
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/UndoStore$1;->this$0:Lorg/telegram/ui/Components/Paint/UndoStore;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore$1;->this$0:Lorg/telegram/ui/Components/Paint/UndoStore;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/UndoStore;->access$000(Lorg/telegram/ui/Components/Paint/UndoStore;)Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/UndoStore$1;->this$0:Lorg/telegram/ui/Components/Paint/UndoStore;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/UndoStore;->access$000(Lorg/telegram/ui/Components/Paint/UndoStore;)Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;
@@ -59,7 +56,6 @@
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/Paint/UndoStore$UndoStoreDelegate;->historyChanged()V
 
-    .line 72
     :cond_0
     return-void
 .end method

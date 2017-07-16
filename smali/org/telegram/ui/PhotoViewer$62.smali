@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 4850
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$62;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$62;->val$count:I
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 4853
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$62;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iget v1, p0, Lorg/telegram/ui/PhotoViewer$62;->val$count:I
@@ -54,6 +52,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$13500(Lorg/telegram/ui/PhotoViewer;I)V
 
-    .line 4854
     return-void
 .end method

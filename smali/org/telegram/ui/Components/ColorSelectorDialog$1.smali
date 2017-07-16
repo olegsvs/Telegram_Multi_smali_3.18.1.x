@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     .prologue
-    .line 105
     iput-object p1, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$1;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$1;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ColorSelectorDialog;->dismiss()V
 
-    .line 109
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/StickersActivity$ListAdapter$2;
 
     .prologue
-    .line 470
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2$1;->this$2:Lorg/telegram/ui/StickersActivity$ListAdapter$2;
 
     iput-object p2, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2$1;->val$options:[I
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 473
     iget-object v0, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2$1;->this$2:Lorg/telegram/ui/StickersActivity$ListAdapter$2;
 
     iget-object v0, v0, Lorg/telegram/ui/StickersActivity$ListAdapter$2;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
@@ -64,6 +62,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/StickersActivity$ListAdapter;->access$1300(Lorg/telegram/ui/StickersActivity$ListAdapter;ILorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;)V
 
-    .line 474
     return-void
 .end method

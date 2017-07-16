@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
     .prologue
-    .line 152
     iput-object p1, p0, Lorg/telegram/messenger/NotificationBadge$DefaultBadger$1;->this$0:Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
     iput-object p2, p0, Lorg/telegram/messenger/NotificationBadge$DefaultBadger$1;->val$intent:Landroid/content/Intent;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 156
     :try_start_0
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -55,11 +53,9 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 160
     :goto_0
     return-void
 
-    .line 157
     :catch_0
     move-exception v0
 

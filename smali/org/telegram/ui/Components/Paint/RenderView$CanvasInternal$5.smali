@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     .prologue
-    .line 512
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$5;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$5;->val$object:[Landroid/graphics/Bitmap;
@@ -53,7 +52,6 @@
 
     const/4 v5, 0x0
 
-    .line 515
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$5;->this$1:Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
@@ -98,7 +96,6 @@
 
     move-result-object v0
 
-    .line 516
     .local v0, "data":Lorg/telegram/ui/Components/Paint/Painting$PaintingData;
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$5;->val$object:[Landroid/graphics/Bitmap;
 
@@ -106,11 +103,9 @@
 
     aput-object v2, v1, v6
 
-    .line 517
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal$5;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 518
     return-void
 .end method

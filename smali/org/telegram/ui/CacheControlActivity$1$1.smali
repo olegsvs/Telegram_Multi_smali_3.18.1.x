@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CacheControlActivity$1;
 
     .prologue
-    .line 135
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$1$1;->this$1:Lorg/telegram/ui/CacheControlActivity$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1$1;->this$1:Lorg/telegram/ui/CacheControlActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -50,7 +48,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/CacheControlActivity;->access$1002(Lorg/telegram/ui/CacheControlActivity;Z)Z
 
-    .line 139
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1$1;->this$1:Lorg/telegram/ui/CacheControlActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -61,7 +58,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$1$1;->this$1:Lorg/telegram/ui/CacheControlActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/CacheControlActivity$1;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 142
     :cond_0
     return-void
 .end method

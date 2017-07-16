@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/EmbedBottomSheet$7;->checkInlinePermissons()Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     .prologue
-    .line 523
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$3;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +44,6 @@
     .end annotation
 
     .prologue
-    .line 527
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$3;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -57,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 528
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$3;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -108,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 530
     :cond_0
     return-void
 .end method

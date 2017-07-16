@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 592
     iput-object p1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
     invoke-direct {p0}, Landroid/widget/BaseAdapter;-><init>()V
 
-    .line 593
     iput-object p2, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 594
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 598
     const/4 v0, 0x0
 
     return v0
@@ -54,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 610
     iget-object v0, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemingContactsActivity;->access$2400(Lorg/telegram/ui/ThemingContactsActivity;)I
@@ -69,7 +64,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 615
     const/4 v0, 0x0
 
     return-object v0
@@ -80,7 +74,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 620
     int-to-long v0, p1
 
     return-wide v0
@@ -93,7 +86,6 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 762
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ThemingContactsActivity;->access$2700(Lorg/telegram/ui/ThemingContactsActivity;)I
@@ -102,15 +94,12 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 763
     const/4 v0, 0x0
 
-    .line 781
     :cond_0
     :goto_0
     return v0
 
-    .line 765
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -128,13 +117,11 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 766
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 768
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -160,7 +147,6 @@
 
     if-eq p1, v1, :cond_0
 
-    .line 771
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ThemingContactsActivity;->access$200(Lorg/telegram/ui/ThemingContactsActivity;)I
@@ -241,13 +227,11 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 772
     :cond_4
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 774
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -257,12 +241,10 @@
 
     if-ne p1, v1, :cond_6
 
-    .line 775
     const/4 v0, 0x4
 
     goto/16 :goto_0
 
-    .line 777
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -280,7 +262,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 778
     :cond_7
     const/4 v0, 0x5
 
@@ -294,16 +275,13 @@
     .param p3, "viewGroup"    # Landroid/view/ViewGroup;
 
     .prologue
-    .line 630
     invoke-virtual {p0, p1}, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->getItemViewType(I)I
 
     move-result v4
 
-    .line 631
     .local v4, "type":I
     const-string/jumbo v0, ""
 
-    .line 632
     .local v0, "prefix":Ljava/lang/String;
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -313,10 +291,8 @@
 
     if-eqz v6, :cond_0
 
-    .line 633
     const-string/jumbo v0, "3."
 
-    .line 634
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/ThemingContactsActivity;->access$2500(Lorg/telegram/ui/ThemingContactsActivity;)I
@@ -325,7 +301,6 @@
 
     if-ne p1, v6, :cond_3
 
-    .line 635
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -344,7 +319,6 @@
 
     move-result-object v0
 
-    .line 644
     :cond_0
     :goto_0
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -357,14 +331,11 @@
 
     move-result-object v3
 
-    .line 645
     .local v3, "themePrefs":Landroid/content/SharedPreferences;
     if-nez v4, :cond_6
 
-    .line 646
     if-nez p2, :cond_1
 
-    .line 647
     new-instance p2, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -372,13 +343,11 @@
 
     invoke-direct {p2, v6}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 754
     .restart local p2    # "view":Landroid/view/View;
     :cond_1
     :goto_1
     if-eqz p2, :cond_2
 
-    .line 755
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v6, :cond_2b
@@ -388,11 +357,9 @@
     :goto_2
     invoke-virtual {p2, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 757
     :cond_2
     return-object p2
 
-    .line 636
     .end local v3    # "themePrefs":Landroid/content/SharedPreferences;
     :cond_3
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
@@ -403,7 +370,6 @@
 
     if-ne p1, v6, :cond_4
 
-    .line 637
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -424,7 +390,6 @@
 
     goto :goto_0
 
-    .line 638
     :cond_4
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -434,7 +399,6 @@
 
     if-ge p1, v6, :cond_5
 
-    .line 639
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -465,7 +429,6 @@
 
     goto :goto_0
 
-    .line 641
     :cond_5
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -505,17 +468,14 @@
 
     goto/16 :goto_0
 
-    .line 650
     .restart local v3    # "themePrefs":Landroid/content/SharedPreferences;
     :cond_6
     const/4 v6, 0x1
 
     if-ne v4, v6, :cond_9
 
-    .line 651
     if-nez p2, :cond_7
 
-    .line 652
     new-instance p2, Lorg/telegram/ui/Cells/HeaderCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -523,13 +483,11 @@
 
     invoke-direct {p2, v6}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;)V
 
-    .line 653
     .restart local p2    # "view":Landroid/view/View;
     const/4 v6, -0x1
 
     invoke-virtual {p2, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 655
     :cond_7
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -541,7 +499,6 @@
 
     move-object v6, p2
 
-    .line 656
     check-cast v6, Lorg/telegram/ui/Cells/HeaderCell;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -572,7 +529,6 @@
 
     goto/16 :goto_1
 
-    .line 657
     :cond_8
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -584,7 +540,6 @@
 
     move-object v6, p2
 
-    .line 658
     check-cast v6, Lorg/telegram/ui/Cells/HeaderCell;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -615,16 +570,13 @@
 
     goto/16 :goto_1
 
-    .line 661
     :cond_9
     const/4 v6, 0x2
 
     if-ne v4, v6, :cond_10
 
-    .line 662
     if-nez p2, :cond_a
 
-    .line 663
     new-instance p2, Lorg/telegram/ui/Cells/TextSettingsCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -636,10 +588,8 @@
     :cond_a
     move-object v2, p2
 
-    .line 665
     check-cast v2, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 666
     .local v2, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -649,7 +599,6 @@
 
     if-ne p1, v6, :cond_c
 
-    .line 667
     const-string/jumbo v7, "contactsAvatarRadius"
 
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -665,7 +614,6 @@
 
     move-result v1
 
-    .line 668
     .local v1, "size":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -715,14 +663,12 @@
 
     goto/16 :goto_1
 
-    .line 667
     .end local v1    # "size":I
     :cond_b
     const/16 v6, 0x20
 
     goto :goto_3
 
-    .line 669
     :cond_c
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -732,7 +678,6 @@
 
     if-ne p1, v6, :cond_e
 
-    .line 670
     const-string/jumbo v7, "contactsNameSize"
 
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -748,7 +693,6 @@
 
     move-result v1
 
-    .line 671
     .restart local v1    # "size":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -798,14 +742,12 @@
 
     goto/16 :goto_1
 
-    .line 670
     .end local v1    # "size":I
     :cond_d
     const/16 v6, 0x11
 
     goto :goto_4
 
-    .line 672
     :cond_e
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -815,7 +757,6 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 673
     const-string/jumbo v7, "contactsStatusSize"
 
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
@@ -831,7 +772,6 @@
 
     move-result v1
 
-    .line 674
     .restart local v1    # "size":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -881,24 +821,20 @@
 
     goto/16 :goto_1
 
-    .line 673
     .end local v1    # "size":I
     :cond_f
     const/16 v6, 0xe
 
     goto :goto_5
 
-    .line 678
     .end local v2    # "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     :cond_10
     const/4 v6, 0x3
 
     if-ne v4, v6, :cond_1d
 
-    .line 679
     if-nez p2, :cond_11
 
-    .line 680
     new-instance p2, Lorg/telegram/ui/Cells/TextColorCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -910,10 +846,8 @@
     :cond_11
     move-object v2, p2
 
-    .line 683
     check-cast v2, Lorg/telegram/ui/Cells/TextColorCell;
 
-    .line 685
     .local v2, "textCell":Lorg/telegram/ui/Cells/TextColorCell;
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -923,7 +857,6 @@
 
     if-ne p1, v6, :cond_12
 
-    .line 686
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -962,7 +895,6 @@
 
     goto/16 :goto_1
 
-    .line 687
     :cond_12
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -972,7 +904,6 @@
 
     if-ne p1, v6, :cond_14
 
-    .line 688
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1027,7 +958,6 @@
 
     goto :goto_6
 
-    .line 689
     :cond_14
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1037,7 +967,6 @@
 
     if-ne p1, v6, :cond_15
 
-    .line 690
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1076,7 +1005,6 @@
 
     goto/16 :goto_1
 
-    .line 691
     :cond_15
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1086,7 +1014,6 @@
 
     if-ne p1, v6, :cond_16
 
-    .line 692
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1125,7 +1052,6 @@
 
     goto/16 :goto_1
 
-    .line 693
     :cond_16
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1135,7 +1061,6 @@
 
     if-ne p1, v6, :cond_17
 
-    .line 694
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1174,7 +1099,6 @@
 
     goto/16 :goto_1
 
-    .line 695
     :cond_17
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1184,7 +1108,6 @@
 
     if-ne p1, v6, :cond_18
 
-    .line 696
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1223,7 +1146,6 @@
 
     goto/16 :goto_1
 
-    .line 697
     :cond_18
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1233,7 +1155,6 @@
 
     if-ne p1, v6, :cond_1a
 
-    .line 698
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1288,7 +1209,6 @@
 
     goto :goto_7
 
-    .line 699
     :cond_1a
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1298,7 +1218,6 @@
 
     if-ne p1, v6, :cond_1b
 
-    .line 700
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1337,7 +1256,6 @@
 
     goto/16 :goto_1
 
-    .line 701
     :cond_1b
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1347,7 +1265,6 @@
 
     if-ne p1, v6, :cond_1c
 
-    .line 702
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1386,7 +1303,6 @@
 
     goto/16 :goto_1
 
-    .line 703
     :cond_1c
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1396,7 +1312,6 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 704
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1405,7 +1320,6 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "OnlineColor"
 
     const v8, 0x7f070457
 
@@ -1421,7 +1335,6 @@
 
     move-result-object v6
 
-    const-string/jumbo v7, "contactsOnlineColor"
 
     const-string/jumbo v8, "themeColor"
 
@@ -1441,17 +1354,14 @@
 
     goto/16 :goto_1
 
-    .line 706
     .end local v2    # "textCell":Lorg/telegram/ui/Cells/TextColorCell;
     :cond_1d
     const/4 v6, 0x4
 
     if-ne v4, v6, :cond_20
 
-    .line 707
     if-nez p2, :cond_1e
 
-    .line 708
     new-instance p2, Lorg/telegram/ui/Cells/TextCheckCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -1463,10 +1373,8 @@
     :cond_1e
     move-object v2, p2
 
-    .line 710
     check-cast v2, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    .line 711
     .local v2, "textCell":Lorg/telegram/ui/Cells/TextCheckCell;
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1476,12 +1384,10 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 712
     const-string/jumbo v6, "contactsRowGradientListCheck"
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/Cells/TextCheckCell;->setTag(Ljava/lang/Object;)V
 
-    .line 713
     const-string/jumbo v6, "contactsRowGradient"
 
     const/4 v7, 0x0
@@ -1490,7 +1396,6 @@
 
     move-result v5
 
-    .line 714
     .local v5, "value":I
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -1538,7 +1443,6 @@
 
     goto :goto_8
 
-    .line 716
     .end local v2    # "textCell":Lorg/telegram/ui/Cells/TextCheckCell;
     .end local v5    # "value":I
     :cond_20
@@ -1546,10 +1450,8 @@
 
     if-ne v4, v6, :cond_1
 
-    .line 717
     if-nez p2, :cond_21
 
-    .line 718
     new-instance p2, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -1561,10 +1463,8 @@
     :cond_21
     move-object v2, p2
 
-    .line 721
     check-cast v2, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    .line 722
     .local v2, "textCell":Lorg/telegram/ui/Cells/TextDetailSettingsCell;
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -1574,17 +1474,13 @@
 
     if-ne p1, v6, :cond_26
 
-    .line 723
     const-string/jumbo v6, "contactsHeaderGradient"
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTag(Ljava/lang/Object;)V
 
-    .line 724
     const/4 v6, 0x0
 
-    invoke-virtual {v2, v6}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setMultilineDetail(Z)V
 
-    .line 725
     const-string/jumbo v6, "contactsHeaderGradient"
 
     const/4 v7, 0x0
@@ -1593,11 +1489,9 @@
 
     move-result v5
 
-    .line 726
     .restart local v5    # "value":I
     if-nez v5, :cond_22
 
-    .line 727
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1636,13 +1530,11 @@
 
     goto/16 :goto_1
 
-    .line 728
     :cond_22
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_23
 
-    .line 729
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1681,13 +1573,11 @@
 
     goto/16 :goto_1
 
-    .line 730
     :cond_23
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_24
 
-    .line 731
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1726,13 +1616,11 @@
 
     goto/16 :goto_1
 
-    .line 732
     :cond_24
     const/4 v6, 0x3
 
     if-ne v5, v6, :cond_25
 
-    .line 733
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1771,13 +1659,11 @@
 
     goto/16 :goto_1
 
-    .line 734
     :cond_25
     const/4 v6, 0x4
 
     if-ne v5, v6, :cond_1
 
-    .line 735
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1816,7 +1702,6 @@
 
     goto/16 :goto_1
 
-    .line 737
     .end local v5    # "value":I
     :cond_26
     iget-object v6, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
@@ -1827,17 +1712,13 @@
 
     if-ne p1, v6, :cond_1
 
-    .line 738
     const-string/jumbo v6, "contactsRowGradient"
 
     invoke-virtual {v2, v6}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setTag(Ljava/lang/Object;)V
 
-    .line 739
     const/4 v6, 0x0
 
-    invoke-virtual {v2, v6}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setMultilineDetail(Z)V
 
-    .line 740
     const-string/jumbo v6, "contactsRowGradient"
 
     const/4 v7, 0x0
@@ -1846,11 +1727,9 @@
 
     move-result v5
 
-    .line 741
     .restart local v5    # "value":I
     if-nez v5, :cond_27
 
-    .line 742
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1889,13 +1768,11 @@
 
     goto/16 :goto_1
 
-    .line 743
     :cond_27
     const/4 v6, 0x1
 
     if-ne v5, v6, :cond_28
 
-    .line 744
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1934,13 +1811,11 @@
 
     goto/16 :goto_1
 
-    .line 745
     :cond_28
     const/4 v6, 0x2
 
     if-ne v5, v6, :cond_29
 
-    .line 746
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -1979,13 +1854,11 @@
 
     goto/16 :goto_1
 
-    .line 747
     :cond_29
     const/4 v6, 0x3
 
     if-ne v5, v6, :cond_2a
 
-    .line 748
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2024,13 +1897,11 @@
 
     goto/16 :goto_1
 
-    .line 749
     :cond_2a
     const/4 v6, 0x4
 
     if-ne v5, v6, :cond_1
 
-    .line 750
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -2069,7 +1940,6 @@
 
     goto/16 :goto_1
 
-    .line 755
     .end local v2    # "textCell":Lorg/telegram/ui/Cells/TextDetailSettingsCell;
     .end local v5    # "value":I
     :cond_2b
@@ -2086,7 +1956,6 @@
     .locals 1
 
     .prologue
-    .line 787
     const/4 v0, 0x6
 
     return v0
@@ -2096,7 +1965,6 @@
     .locals 1
 
     .prologue
-    .line 625
     const/4 v0, 0x0
 
     return v0
@@ -2106,7 +1974,6 @@
     .locals 1
 
     .prologue
-    .line 792
     const/4 v0, 0x0
 
     return v0
@@ -2119,14 +1986,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 603
     const-string/jumbo v2, "contactsRowGradient"
 
     invoke-static {v2, v1}, Lorg/telegram/messenger/AndroidUtilities;->getIntDef(Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 604
     .local v0, "g":I
     iget-object v2, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
@@ -2265,7 +2130,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingContactsActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
-    .line 605
     invoke-static {v2}, Lorg/telegram/ui/ThemingContactsActivity;->access$1600(Lorg/telegram/ui/ThemingContactsActivity;)I
 
     move-result v2

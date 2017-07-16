@@ -24,18 +24,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
-    .line 52
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 53
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/StickerPreviewViewer$FrameLayoutDrawer;->setWillNotDraw(Z)V
 
-    .line 54
     return-void
 .end method
 
@@ -46,13 +42,11 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 58
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lorg/telegram/ui/StickerPreviewViewer;->access$000(Lorg/telegram/ui/StickerPreviewViewer;Landroid/graphics/Canvas;)V
 
-    .line 59
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/IdenticonActivity;
 
     .prologue
-    .line 289
     iput-object p1, p0, Lorg/telegram/ui/IdenticonActivity$5;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 292
     iget-object v0, p0, Lorg/telegram/ui/IdenticonActivity$5;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/IdenticonActivity;->access$600(Lorg/telegram/ui/IdenticonActivity;)Landroid/animation/AnimatorSet;
@@ -52,14 +50,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 293
     iget-object v0, p0, Lorg/telegram/ui/IdenticonActivity$5;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/IdenticonActivity;->access$602(Lorg/telegram/ui/IdenticonActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 295
     :cond_0
     return-void
 .end method

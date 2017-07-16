@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .param p5, "smoothScrollbarEnabled"    # Z
 
     .prologue
-    .line 63
     invoke-virtual {p4}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v1
@@ -41,19 +39,15 @@
 
     if-nez p3, :cond_1
 
-    .line 65
     :cond_0
     const/4 v1, 0x0
 
-    .line 72
     :goto_0
     return v1
 
-    .line 67
     :cond_1
     if-nez p5, :cond_2
 
-    .line 68
     invoke-virtual {p4, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v1
@@ -72,20 +66,17 @@
 
     goto :goto_0
 
-    .line 70
     :cond_2
     invoke-virtual {p1, p3}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v1
 
-    .line 71
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v2
 
     sub-int v0, v1, v2
 
-    .line 72
     .local v0, "extend":I
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getTotalSpace()I
 
@@ -111,7 +102,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 32
     invoke-virtual {p4}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v6
@@ -128,48 +118,39 @@
 
     if-nez p3, :cond_1
 
-    .line 52
     :cond_0
     :goto_0
     return v2
 
-    .line 36
     :cond_1
     invoke-virtual {p4, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v6
 
-    .line 37
     invoke-virtual {p4, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v7
 
-    .line 36
     invoke-static {v6, v7}, Ljava/lang/Math;->min(II)I
 
     move-result v5
 
-    .line 38
     .local v5, "minPosition":I
     invoke-virtual {p4, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v6
 
-    .line 39
     invoke-virtual {p4, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v7
 
-    .line 38
     invoke-static {v6, v7}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 40
     .local v4, "maxPosition":I
     if-eqz p6, :cond_2
 
-    .line 41
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$State;->getItemCount()I
 
     move-result v6
@@ -182,49 +163,41 @@
 
     move-result v2
 
-    .line 43
     .local v2, "itemsBefore":I
     :goto_1
     if-eqz p5, :cond_0
 
-    .line 46
     invoke-virtual {p1, p3}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v6
 
-    .line 47
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v7
 
     sub-int/2addr v6, v7
 
-    .line 46
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
 
     move-result v3
 
-    .line 48
     .local v3, "laidOutArea":I
     invoke-virtual {p4, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v6
 
-    .line 49
     invoke-virtual {p4, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v7
 
     sub-int/2addr v6, v7
 
-    .line 48
     invoke-static {v6}, Ljava/lang/Math;->abs(I)I
 
     move-result v6
 
     add-int/lit8 v1, v6, 0x1
 
-    .line 50
     .local v1, "itemRange":I
     int-to-float v6, v3
 
@@ -232,7 +205,6 @@
 
     div-float v0, v6, v7
 
-    .line 52
     .local v0, "avgSizePerRow":F
     int-to-float v6, v2
 
@@ -242,7 +214,6 @@
 
     move-result v7
 
-    .line 53
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v8
@@ -253,14 +224,12 @@
 
     add-float/2addr v6, v7
 
-    .line 52
     invoke-static {v6}, Ljava/lang/Math;->round(F)I
 
     move-result v2
 
     goto :goto_0
 
-    .line 42
     .end local v0    # "avgSizePerRow":F
     .end local v1    # "itemRange":I
     .end local v2    # "itemsBefore":I
@@ -283,7 +252,6 @@
     .param p5, "smoothScrollbarEnabled"    # Z
 
     .prologue
-    .line 82
     invoke-virtual {p4}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getChildCount()I
 
     move-result v2
@@ -300,59 +268,49 @@
 
     if-nez p3, :cond_1
 
-    .line 84
     :cond_0
     const/4 v2, 0x0
 
-    .line 96
     :goto_0
     return v2
 
-    .line 86
     :cond_1
     if-nez p5, :cond_2
 
-    .line 87
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$State;->getItemCount()I
 
     move-result v2
 
     goto :goto_0
 
-    .line 90
     :cond_2
     invoke-virtual {p1, p3}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedEnd(Landroid/view/View;)I
 
     move-result v2
 
-    .line 91
     invoke-virtual {p1, p2}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getDecoratedStart(Landroid/view/View;)I
 
     move-result v3
 
     sub-int v0, v2, v3
 
-    .line 92
     .local v0, "laidOutArea":I
     invoke-virtual {p4, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v2
 
-    .line 93
     invoke-virtual {p4, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPosition(Landroid/view/View;)I
 
     move-result v3
 
     sub-int/2addr v2, v3
 
-    .line 92
     invoke-static {v2}, Ljava/lang/Math;->abs(I)I
 
     move-result v2
 
     add-int/lit8 v1, v2, 0x1
 
-    .line 96
     .local v1, "laidOutRange":I
     int-to-float v2, v0
 

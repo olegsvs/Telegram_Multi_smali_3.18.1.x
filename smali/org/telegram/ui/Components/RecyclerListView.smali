@@ -117,30 +117,24 @@
 
     const/4 v4, 0x0
 
-    .line 689
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;-><init>(Landroid/content/Context;)V
 
-    .line 59
     iput v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentFirst:I
 
-    .line 60
     iput v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentVisible:I
 
-    .line 67
     new-instance v3, Landroid/graphics/Rect;
 
     invoke-direct {v3}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
-    .line 657
     new-instance v3, Lorg/telegram/ui/Components/RecyclerListView$1;
 
     invoke-direct {v3, p0}, Lorg/telegram/ui/Components/RecyclerListView$1;-><init>(Lorg/telegram/ui/Components/RecyclerListView;)V
 
     iput-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->observer:Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;
 
-    .line 691
     const-string/jumbo v3, "actionBarDefault"
 
     invoke-static {v3}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -149,25 +143,21 @@
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setGlowColor(I)V
 
-    .line 692
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 693
     iget-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v3, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 696
     :try_start_0
     sget-boolean v3, Lorg/telegram/ui/Components/RecyclerListView;->gotAttributes:Z
 
     if-nez v3, :cond_0
 
-    .line 697
     const-string/jumbo v3, "com.android.internal"
 
     const-string/jumbo v4, "View"
@@ -178,12 +168,10 @@
 
     sput-object v3, Lorg/telegram/ui/Components/RecyclerListView;->attributes:[I
 
-    .line 698
     const/4 v3, 0x1
 
     sput-boolean v3, Lorg/telegram/ui/Components/RecyclerListView;->gotAttributes:Z
 
-    .line 700
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getTheme()Landroid/content/res/Resources$Theme;
 
@@ -195,7 +183,6 @@
 
     move-result-object v0
 
-    .line 701
     .local v0, "a":Landroid/content/res/TypedArray;
     const-class v3, Landroid/view/View;
 
@@ -215,7 +202,6 @@
 
     move-result-object v2
 
-    .line 702
     .local v2, "initializeScrollbars":Ljava/lang/reflect/Method;
     const/4 v3, 0x1
 
@@ -227,12 +213,10 @@
 
     invoke-virtual {v2, p0, v3}, Ljava/lang/reflect/Method;->invoke(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 703
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 707
     .end local v0    # "a":Landroid/content/res/TypedArray;
     .end local v2    # "initializeScrollbars":Ljava/lang/reflect/Method;
     :goto_0
@@ -242,21 +226,17 @@
 
     invoke-super {p0, v3}, Lorg/telegram/messenger/support/widget/RecyclerView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 872
     new-instance v3, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     invoke-direct {v3, p0, p1}, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;-><init>(Lorg/telegram/ui/Components/RecyclerListView;Landroid/content/Context;)V
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/Components/RecyclerListView;->addOnItemTouchListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnItemTouchListener;)V
 
-    .line 873
     return-void
 
-    .line 704
     :catch_0
     move-exception v1
 
-    .line 705
     .local v1, "e":Ljava/lang/Throwable;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -268,7 +248,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selfOnLayout:Z
 
     return v0
@@ -279,7 +258,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->gestureDetector:Landroid/view/GestureDetector;
 
     return-object v0
@@ -290,7 +268,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->onItemLongClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
 
     return-object v0
@@ -302,7 +279,6 @@
     .param p1, "x1"    # Landroid/view/GestureDetector;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->gestureDetector:Landroid/view/GestureDetector;
 
     return-object p1
@@ -315,7 +291,6 @@
     .param p2, "x2"    # Landroid/view/View;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->positionSelector(ILandroid/view/View;)V
 
     return-void
@@ -326,7 +301,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -337,7 +311,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->updateSelectorState()V
 
     return-void
@@ -348,7 +321,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
     return-object v0
@@ -359,7 +331,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->checkIfEmpty()V
 
     return-void
@@ -370,7 +341,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->onScrollListener:Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;
 
     return-object v0
@@ -381,7 +351,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorPosition:I
 
     return v0
@@ -392,7 +361,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     return-object v0
@@ -403,7 +371,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
     return v0
@@ -414,7 +381,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
     return-object v0
@@ -425,7 +391,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     return-object v0
@@ -437,7 +402,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
     return-object p1
@@ -448,7 +412,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     return-object v0
@@ -459,7 +422,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headersCache:Ljava/util/ArrayList;
 
     return-object v0
@@ -470,7 +432,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentFirst:I
 
     return v0
@@ -482,7 +443,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentFirst:I
 
     return p1
@@ -493,7 +453,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentVisible:I
 
     return v0
@@ -505,7 +464,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentVisible:I
 
     return p1
@@ -516,7 +474,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsCount:I
 
     return v0
@@ -528,7 +485,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsCount:I
 
     return p1
@@ -539,7 +495,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -554,7 +509,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->startSection:I
 
     return v0
@@ -566,7 +520,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->startSection:I
 
     return p1
@@ -579,7 +532,6 @@
     .param p2, "x2"    # Landroid/view/View;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->getSectionHeaderView(ILandroid/view/View;)Landroid/view/View;
 
     move-result-object v0
@@ -592,7 +544,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
     return-object v0
@@ -604,7 +555,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
     return-object p1
@@ -615,7 +565,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->onItemClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
     return-object v0
@@ -626,7 +575,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildPosition:I
 
     return v0
@@ -638,7 +586,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 45
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildPosition:I
 
     return p1
@@ -649,7 +596,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->instantClick:Z
 
     return v0
@@ -660,7 +606,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->clickRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -672,7 +617,6 @@
     .param p1, "x1"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->clickRunnable:Ljava/lang/Runnable;
 
     return-object p1
@@ -683,7 +627,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectChildRunnable:Ljava/lang/Runnable;
 
     return-object v0
@@ -695,7 +638,6 @@
     .param p1, "x1"    # Ljava/lang/Runnable;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectChildRunnable:Ljava/lang/Runnable;
 
     return-object p1
@@ -706,7 +648,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->interceptedByChild:Z
 
     return v0
@@ -718,7 +659,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 45
     iput-boolean p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->interceptedByChild:Z
 
     return p1
@@ -731,7 +671,6 @@
     .param p2, "x2"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/RecyclerListView;->removeSelection(Landroid/view/View;Landroid/view/MotionEvent;)V
 
     return-void
@@ -743,7 +682,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 951
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->emptyView:Landroid/view/View;
 
     if-eqz v2, :cond_0
@@ -754,12 +692,10 @@
 
     if-nez v2, :cond_1
 
-    .line 957
     :cond_0
     :goto_0
     return-void
 
-    .line 954
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getAdapter()Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
@@ -773,7 +709,6 @@
 
     const/4 v0, 0x1
 
-    .line 955
     .local v0, "emptyViewVisible":Z
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->emptyView:Landroid/view/View;
@@ -785,7 +720,6 @@
     :goto_2
     invoke-virtual {v3, v2}, Landroid/view/View;->setVisibility(I)V
 
-    .line 956
     if-eqz v0, :cond_2
 
     const/4 v1, 0x4
@@ -799,10 +733,8 @@
     :cond_3
     move v0, v1
 
-    .line 954
     goto :goto_1
 
-    .line 955
     .restart local v0    # "emptyViewVisible":Z
     :cond_4
     const/16 v2, 0x8
@@ -820,7 +752,6 @@
 
     const/4 v6, 0x0
 
-    .line 1145
     invoke-virtual {p1}, Landroid/view/View;->isLayoutRequested()Z
 
     move-result v4
@@ -829,7 +760,6 @@
 
     if-eqz p2, :cond_2
 
-    .line 1146
     :cond_0
     iget v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
@@ -837,12 +767,10 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 1147
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v2
 
-    .line 1148
     .local v2, "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     iget v4, v2, Landroid/view/ViewGroup$LayoutParams;->height:I
 
@@ -850,7 +778,6 @@
 
     move-result v1
 
-    .line 1149
     .local v1, "heightSpec":I
     iget v4, v2, Landroid/view/ViewGroup$LayoutParams;->width:I
 
@@ -858,14 +785,12 @@
 
     move-result v3
 
-    .line 1151
     .local v3, "widthSpec":I
     :try_start_0
     invoke-virtual {p1, v3, v1}, Landroid/view/View;->measure(II)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1164
     .end local v1    # "heightSpec":I
     .end local v2    # "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     .end local v3    # "widthSpec":I
@@ -881,24 +806,20 @@
 
     invoke-virtual {p1, v6, v6, v4, v5}, Landroid/view/View;->layout(IIII)V
 
-    .line 1166
     :cond_2
     return-void
 
-    .line 1152
     .restart local v1    # "heightSpec":I
     .restart local v2    # "layoutParams":Landroid/view/ViewGroup$LayoutParams;
     .restart local v3    # "widthSpec":I
     :catch_0
     move-exception v0
 
-    .line 1153
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 1155
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "heightSpec":I
     .end local v2    # "layoutParams":Landroid/view/ViewGroup$LayoutParams;
@@ -910,7 +831,6 @@
 
     if-ne v4, v5, :cond_1
 
-    .line 1156
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getMeasuredWidth()I
 
     move-result v4
@@ -919,13 +839,11 @@
 
     move-result v3
 
-    .line 1157
     .restart local v3    # "widthSpec":I
     invoke-static {v6, v6}, Landroid/view/View$MeasureSpec;->makeMeasureSpec(II)I
 
     move-result v1
 
-    .line 1159
     .restart local v1    # "heightSpec":I
     :try_start_1
     invoke-virtual {p1, v3, v1}, Landroid/view/View;->measure(II)V
@@ -934,11 +852,9 @@
 
     goto :goto_0
 
-    .line 1160
     :catch_1
     move-exception v0
 
-    .line 1161
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -949,14 +865,12 @@
     .locals 3
 
     .prologue
-    .line 1046
     const/4 v1, 0x1
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->onCreateDrawableState(I)[I
 
     move-result-object v0
 
-    .line 1047
     .local v0, "state":[I
     array-length v1, v0
 
@@ -966,7 +880,6 @@
 
     aput v2, v0, v1
 
-    .line 1048
     return-object v0
 .end method
 
@@ -978,12 +891,10 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1136
     if-nez p2, :cond_1
 
     const/4 v0, 0x1
 
-    .line 1137
     .local v0, "shouldLayout":Z
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
@@ -992,14 +903,11 @@
 
     move-result-object v1
 
-    .line 1138
     .local v1, "view":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 1139
     invoke-direct {p0, v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->ensurePinnedHeaderLayout(Landroid/view/View;Z)V
 
-    .line 1141
     :cond_0
     return-object v1
 
@@ -1008,7 +916,6 @@
     :cond_1
     move v0, v2
 
-    .line 1136
     goto :goto_0
 .end method
 
@@ -1020,7 +927,6 @@
     .prologue
     const/high16 v4, -0x40800000    # -1.0f
 
-    .line 999
     const/4 v3, 0x0
 
     move-object v0, p0
@@ -1033,7 +939,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/ui/Components/RecyclerListView;->positionSelector(ILandroid/view/View;ZFF)V
 
-    .line 1000
     return-void
 .end method
 
@@ -1050,17 +955,14 @@
 
     const/4 v3, 0x0
 
-    .line 1003
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v4, :cond_1
 
-    .line 1031
     :cond_0
     :goto_0
     return-void
 
-    .line 1006
     :cond_1
     iget v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorPosition:I
 
@@ -1068,17 +970,14 @@
 
     move v1, v2
 
-    .line 1007
     .local v1, "positionChanged":Z
     :goto_1
     const/4 v4, -0x1
 
     if-eq p1, v4, :cond_2
 
-    .line 1008
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorPosition:I
 
-    .line 1011
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
@@ -1100,37 +999,30 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 1013
     invoke-virtual {p2}, Landroid/view/View;->isEnabled()Z
 
     move-result v0
 
-    .line 1014
     .local v0, "enabled":Z
     iget-boolean v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->isChildViewEnabled:Z
 
     if-eq v4, v0, :cond_3
 
-    .line 1015
     iput-boolean v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->isChildViewEnabled:Z
 
-    .line 1018
     :cond_3
     if-eqz v1, :cond_4
 
-    .line 1019
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v3, v3}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 1020
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     sget-object v5, Landroid/util/StateSet;->NOTHING:[I
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 1022
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1138,22 +1030,18 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1023
     if-eqz v1, :cond_5
 
-    .line 1024
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getVisibility()I
 
     move-result v4
 
     if-nez v4, :cond_5
 
-    .line 1025
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, v2, v3}, Landroid/graphics/drawable/Drawable;->setVisible(ZZ)Z
 
-    .line 1028
     :cond_5
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1163,7 +1051,6 @@
 
     if-eqz p3, :cond_0
 
-    .line 1029
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, p4, p5}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
@@ -1175,7 +1062,6 @@
     :cond_6
     move v1, v3
 
-    .line 1006
     goto :goto_1
 .end method
 
@@ -1185,14 +1071,11 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 617
     if-nez p1, :cond_0
 
-    .line 635
     :goto_0
     return-void
 
-    .line 620
     :cond_0
     if-eqz p1, :cond_3
 
@@ -1202,24 +1085,20 @@
 
     if-eqz v1, :cond_3
 
-    .line 621
     iget v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildPosition:I
 
     invoke-direct {p0, v1, p1}, Lorg/telegram/ui/Components/RecyclerListView;->positionSelector(ILandroid/view/View;)V
 
-    .line 622
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_2
 
-    .line 623
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v0
 
-    .line 624
     .local v0, "d":Landroid/graphics/drawable/Drawable;
     if-eqz v0, :cond_1
 
@@ -1227,13 +1106,11 @@
 
     if-eqz v1, :cond_1
 
-    .line 625
     check-cast v0, Landroid/graphics/drawable/TransitionDrawable;
 
     .end local v0    # "d":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v0}, Landroid/graphics/drawable/TransitionDrawable;->resetTransition()V
 
-    .line 627
     :cond_1
     if-eqz p2, :cond_2
 
@@ -1243,7 +1120,6 @@
 
     if-lt v1, v2, :cond_2
 
-    .line 628
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -1256,14 +1132,12 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 634
     :cond_2
     :goto_1
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->updateSelectorState()V
 
     goto :goto_0
 
-    .line 632
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
@@ -1276,7 +1150,6 @@
     .locals 2
 
     .prologue
-    .line 1034
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
@@ -1289,12 +1162,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1035
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
     if-eqz v0, :cond_1
 
-    .line 1036
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getDrawableStateForSelector()[I
@@ -1307,17 +1178,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 1037
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/RecyclerListView;->invalidateDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 1043
     :cond_0
     :goto_0
     return-void
 
-    .line 1040
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1339,64 +1207,50 @@
 
     const/4 v2, 0x0
 
-    .line 638
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectChildRunnable:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_0
 
-    .line 639
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectChildRunnable:Ljava/lang/Runnable;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 640
     iput-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectChildRunnable:Ljava/lang/Runnable;
 
-    .line 642
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
     if-eqz v1, :cond_2
 
-    .line 643
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
-    .line 644
     .local v0, "child":Landroid/view/View;
     if-eqz p1, :cond_1
 
-    .line 645
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setPressed(Z)V
 
-    .line 647
     :cond_1
     iput-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->currentChildView:Landroid/view/View;
 
-    .line 648
     invoke-direct {p0, v0, v2}, Lorg/telegram/ui/Components/RecyclerListView;->removeSelection(Landroid/view/View;Landroid/view/MotionEvent;)V
 
-    .line 650
     .end local v0    # "child":Landroid/view/View;
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->clickRunnable:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_3
 
-    .line 651
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->clickRunnable:Ljava/lang/Runnable;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 652
     iput-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->clickRunnable:Ljava/lang/Runnable;
 
-    .line 654
     :cond_3
     iput-boolean v3, p0, Lorg/telegram/ui/Components/RecyclerListView;->interceptedByChild:Z
 
-    .line 655
     return-void
 .end method
 
@@ -1409,17 +1263,14 @@
 
     const/4 v7, 0x0
 
-    .line 1189
     invoke-super {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->dispatchDraw(Landroid/graphics/Canvas;)V
 
-    .line 1190
     iget v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
     const/4 v6, 0x1
 
     if-ne v4, v6, :cond_3
 
-    .line 1191
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     if-eqz v4, :cond_0
@@ -1432,12 +1283,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 1219
     :cond_0
     :goto_0
     return-void
 
-    .line 1194
     :cond_1
     const/4 v0, 0x0
 
@@ -1451,7 +1300,6 @@
 
     if-ge v0, v4, :cond_5
 
-    .line 1195
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1460,13 +1308,11 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 1196
     .local v1, "header":Landroid/view/View;
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
-    .line 1197
     .local v2, "saveCount":I
     invoke-virtual {v1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -1478,7 +1324,6 @@
 
     move-result v3
 
-    .line 1198
     .local v3, "top":I
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -1501,7 +1346,6 @@
 
     invoke-virtual {p1, v4, v6}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1199
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getWidth()I
 
     move-result v4
@@ -1512,13 +1356,10 @@
 
     invoke-virtual {p1, v7, v7, v4, v6}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 1200
     invoke-virtual {v1, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1201
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 1194
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -1526,10 +1367,8 @@
     :cond_2
     move v4, v5
 
-    .line 1198
     goto :goto_2
 
-    .line 1203
     .end local v0    # "a":I
     .end local v1    # "header":Landroid/view/View;
     .end local v2    # "saveCount":I
@@ -1541,7 +1380,6 @@
 
     if-ne v4, v6, :cond_5
 
-    .line 1204
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     if-eqz v4, :cond_0
@@ -1550,12 +1388,10 @@
 
     if-eqz v4, :cond_0
 
-    .line 1207
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
-    .line 1208
     .restart local v2    # "saveCount":I
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
@@ -1569,7 +1405,6 @@
 
     move-result v3
 
-    .line 1209
     .restart local v3    # "top":I
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -1594,7 +1429,6 @@
 
     invoke-virtual {p1, v5, v4}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 1210
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getWidth()I
 
     move-result v4
@@ -1607,15 +1441,12 @@
 
     invoke-virtual {p1, v7, v7, v4, v5}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 1211
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
     invoke-virtual {v4, p1}, Landroid/view/View;->draw(Landroid/graphics/Canvas;)V
 
-    .line 1212
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 1215
     .end local v2    # "saveCount":I
     .end local v3    # "top":I
     :cond_5
@@ -1627,14 +1458,12 @@
 
     if-nez v4, :cond_0
 
-    .line 1216
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(Landroid/graphics/Rect;)V
 
-    .line 1217
     iget-object v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -1646,13 +1475,10 @@
     .locals 0
 
     .prologue
-    .line 1066
     invoke-super {p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->drawableStateChanged()V
 
-    .line 1067
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->updateSelectorState()V
 
-    .line 1068
     return-void
 .end method
 
@@ -1660,7 +1486,6 @@
     .locals 1
 
     .prologue
-    .line 926
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->emptyView:Landroid/view/View;
 
     return-object v0
@@ -1679,7 +1504,6 @@
     .end annotation
 
     .prologue
-    .line 1229
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     return-object v0
@@ -1698,7 +1522,6 @@
     .end annotation
 
     .prologue
-    .line 1233
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headersCache:Ljava/util/ArrayList;
 
     return-object v0
@@ -1708,7 +1531,6 @@
     .locals 1
 
     .prologue
-    .line 1237
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
     return-object v0
@@ -1722,7 +1544,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 678
     :try_start_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -1750,11 +1571,9 @@
 
     move-result-object v0
 
-    .line 679
     .local v0, "f":Ljava/lang/reflect/Field;
     if-eqz v0, :cond_0
 
-    .line 680
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/reflect/Field;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -1767,19 +1586,16 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 685
     .end local v0    # "f":Ljava/lang/reflect/Field;
     :goto_0
     return-object v1
 
-    .line 682
     :catch_0
     move-exception v1
 
     :cond_0
     move-object v1, v2
 
-    .line 685
     goto :goto_0
 .end method
 
@@ -1787,7 +1603,6 @@
     .locals 1
 
     .prologue
-    .line 1132
     const/4 v0, 0x0
 
     return v0
@@ -1797,12 +1612,10 @@
     .locals 3
 
     .prologue
-    .line 930
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getChildCount()I
 
     move-result v1
 
-    .line 931
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -1810,19 +1623,16 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 932
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/RecyclerListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
     invoke-virtual {v2}, Landroid/view/View;->invalidate()V
 
-    .line 931
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 934
     :cond_0
     return-void
 .end method
@@ -1831,20 +1641,16 @@
     .locals 1
 
     .prologue
-    .line 1077
     invoke-super {p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->jumpDrawablesToCurrentState()V
 
-    .line 1078
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 1079
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 1081
     :cond_0
     return-void
 .end method
@@ -1853,10 +1659,8 @@
     .locals 3
 
     .prologue
-    .line 1085
     invoke-super {p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->onAttachedToWindow()V
 
-    .line 1086
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     if-eqz v1, :cond_1
@@ -1873,7 +1677,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 1087
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getParent()Landroid/view/ViewParent;
@@ -1882,16 +1685,13 @@
 
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 1088
     .local v0, "parent":Landroid/view/ViewGroup;
     if-eqz v0, :cond_0
 
-    .line 1089
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 1091
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getParent()Landroid/view/ViewParent;
 
@@ -1900,13 +1700,11 @@
     .end local v0    # "parent":Landroid/view/ViewGroup;
     check-cast v0, Landroid/view/ViewGroup;
 
-    .line 1092
     .restart local v0    # "parent":Landroid/view/ViewGroup;
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 1094
     .end local v0    # "parent":Landroid/view/ViewGroup;
     :cond_1
     return-void
@@ -1917,7 +1715,6 @@
     .param p1, "child"    # Landroid/view/View;
 
     .prologue
-    .line 1053
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getAdapter()Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     move-result-object v1
@@ -1926,16 +1723,13 @@
 
     if-eqz v1, :cond_1
 
-    .line 1054
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->findContainingViewHolder(Landroid/view/View;)Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     move-result-object v0
 
-    .line 1055
     .local v0, "holder":Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
     if-eqz v0, :cond_0
 
-    .line 1056
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getAdapter()Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     move-result-object v1
@@ -1948,16 +1742,13 @@
 
     invoke-virtual {p1, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 1061
     .end local v0    # "holder":Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->onChildAttachedToWindow(Landroid/view/View;)V
 
-    .line 1062
     return-void
 
-    .line 1059
     :cond_1
     const/4 v1, 0x0
 
@@ -1970,20 +1761,16 @@
     .locals 1
 
     .prologue
-    .line 1223
     invoke-super {p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->onDetachedFromWindow()V
 
-    .line 1224
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorPosition:I
 
-    .line 1225
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
     invoke-virtual {v0}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 1226
     return-void
 .end method
 
@@ -1994,15 +1781,12 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 944
     iget-boolean v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->disallowInterceptTouchEvents:Z
 
     if-eqz v1, :cond_0
 
-    .line 945
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/RecyclerListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 947
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchListener:Lorg/telegram/ui/Components/RecyclerListView$OnInterceptTouchListener;
 
@@ -2044,25 +1828,20 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 892
     invoke-super/range {p0 .. p5}, Lorg/telegram/messenger/support/widget/RecyclerView;->onLayout(ZIIII)V
 
-    .line 893
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     if-eqz v1, :cond_0
 
-    .line 894
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selfOnLayout:Z
 
-    .line 895
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v1, :cond_1
 
-    .line 896
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
@@ -2081,15 +1860,12 @@
 
     invoke-virtual {v1, v4, p3, v2, v3}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->layout(IIII)V
 
-    .line 901
     :goto_0
     iput-boolean v4, p0, Lorg/telegram/ui/Components/RecyclerListView;->selfOnLayout:Z
 
-    .line 903
     :cond_0
     return-void
 
-    .line 898
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getMeasuredWidth()I
 
@@ -2103,7 +1879,6 @@
 
     sub-int v0, v1, v2
 
-    .line 899
     .local v0, "x":I
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
@@ -2136,15 +1911,12 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 884
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->onMeasure(II)V
 
-    .line 885
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     if-eqz v0, :cond_0
 
-    .line 886
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     const/high16 v1, 0x43040000    # 132.0f
@@ -2167,7 +1939,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->measure(II)V
 
-    .line 888
     :cond_0
     return-void
 .end method
@@ -2182,15 +1953,12 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 1170
     invoke-super {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/support/widget/RecyclerView;->onSizeChanged(IIII)V
 
-    .line 1171
     iget v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
     if-ne v2, v4, :cond_2
 
-    .line 1172
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     if-eqz v2, :cond_0
@@ -2203,12 +1971,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1185
     :cond_0
     :goto_0
     return-void
 
-    .line 1175
     :cond_1
     const/4 v0, 0x0
 
@@ -2222,7 +1988,6 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 1176
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2231,16 +1996,13 @@
 
     check-cast v1, Landroid/view/View;
 
-    .line 1177
     .local v1, "header":Landroid/view/View;
     invoke-direct {p0, v1, v4}, Lorg/telegram/ui/Components/RecyclerListView;->ensurePinnedHeaderLayout(Landroid/view/View;Z)V
 
-    .line 1175
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1179
     .end local v0    # "a":I
     .end local v1    # "header":Landroid/view/View;
     :cond_2
@@ -2250,7 +2012,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 1180
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     if-eqz v2, :cond_0
@@ -2259,7 +2020,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1183
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
     invoke-direct {p0, v2, v4}, Lorg/telegram/ui/Components/RecyclerListView;->ensurePinnedHeaderLayout(Landroid/view/View;Z)V
@@ -2274,82 +2034,65 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 1098
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getAdapter()Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     move-result-object v0
 
-    .line 1099
     .local v0, "oldAdapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     if-eqz v0, :cond_0
 
-    .line 1100
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->observer:Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->unregisterAdapterDataObserver(Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;)V
 
-    .line 1102
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_1
 
-    .line 1103
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1104
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->headersCache:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 1106
     :cond_1
     const/4 v1, -0x1
 
     iput v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorPosition:I
 
-    .line 1107
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorRect:Landroid/graphics/Rect;
 
     invoke-virtual {v1}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 1108
     iput-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->pinnedHeader:Landroid/view/View;
 
-    .line 1109
     instance-of v1, p1, Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     if-eqz v1, :cond_3
 
     move-object v1, p1
 
-    .line 1110
     check-cast v1, Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
-    .line 1114
     :goto_0
     invoke-super {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 1115
     if-eqz p1, :cond_2
 
-    .line 1116
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->observer:Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;->registerAdapterDataObserver(Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;)V
 
-    .line 1118
     :cond_2
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->checkIfEmpty()V
 
-    .line 1119
     return-void
 
-    .line 1112
     :cond_3
     iput-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsAdapter:Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;
 
@@ -2361,10 +2104,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 973
     iput-boolean p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->disallowInterceptTouchEvents:Z
 
-    .line 974
     return-void
 .end method
 
@@ -2373,20 +2114,16 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 918
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->emptyView:Landroid/view/View;
 
     if-ne v0, p1, :cond_0
 
-    .line 923
     :goto_0
     return-void
 
-    .line 921
     :cond_0
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->emptyView:Landroid/view/View;
 
-    .line 922
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView;->checkIfEmpty()V
 
     goto :goto_0
@@ -2396,7 +2133,6 @@
     .locals 2
 
     .prologue
-    .line 977
     new-instance v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getContext()Landroid/content/Context;
@@ -2407,14 +2143,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
-    .line 978
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 979
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -2425,7 +2159,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->addView(Landroid/view/View;)V
 
-    .line 981
     :cond_0
     return-void
 .end method
@@ -2435,16 +2168,13 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 984
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     if-nez v0, :cond_0
 
-    .line 988
     :goto_0
     return-void
 
-    .line 987
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
@@ -2468,10 +2198,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 969
     iput-boolean p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->instantClick:Z
 
-    .line 970
     return-void
 .end method
 
@@ -2480,14 +2208,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 906
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x1
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ActionBar/Theme;->setSelectorDrawableColor(Landroid/graphics/drawable/Drawable;IZ)V
 
-    .line 907
     return-void
 .end method
 
@@ -2496,10 +2222,8 @@
     .param p1, "listener"    # Lorg/telegram/ui/Components/RecyclerListView$OnInterceptTouchListener;
 
     .prologue
-    .line 965
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchListener:Lorg/telegram/ui/Components/RecyclerListView$OnInterceptTouchListener;
 
-    .line 966
     return-void
 .end method
 
@@ -2508,10 +2232,8 @@
     .param p1, "listener"    # Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
     .prologue
-    .line 910
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->onItemClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;
 
-    .line 911
     return-void
 .end method
 
@@ -2520,10 +2242,8 @@
     .param p1, "listener"    # Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
 
     .prologue
-    .line 914
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->onItemLongClickListener:Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;
 
-    .line 915
     return-void
 .end method
 
@@ -2532,10 +2252,8 @@
     .param p1, "listener"    # Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;
 
     .prologue
-    .line 961
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->onScrollListener:Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;
 
-    .line 962
     return-void
 .end method
 
@@ -2544,31 +2262,26 @@
     .param p1, "type"    # I
 
     .prologue
-    .line 991
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
-    .line 992
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->sectionsType:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 993
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headers:Ljava/util/ArrayList;
 
-    .line 994
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->headersCache:Ljava/util/ArrayList;
 
-    .line 996
     :cond_0
     return-void
 .end method
@@ -2578,15 +2291,12 @@
     .param p1, "verticalScrollBarEnabled"    # Z
 
     .prologue
-    .line 877
     sget-object v0, Lorg/telegram/ui/Components/RecyclerListView;->attributes:[I
 
     if-eqz v0, :cond_0
 
-    .line 878
     invoke-super {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 880
     :cond_0
     return-void
 .end method
@@ -2595,17 +2305,14 @@
     .locals 1
 
     .prologue
-    .line 1124
     :try_start_0
     invoke-super {p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->stopScroll()V
     :try_end_0
     .catch Ljava/lang/NullPointerException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1128
     :goto_0
     return-void
 
-    .line 1125
     :catch_0
     move-exception v0
 
@@ -2616,17 +2323,14 @@
     .locals 1
 
     .prologue
-    .line 937
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     if-eqz v0, :cond_0
 
-    .line 938
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->fastScroll:Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->access$3000(Lorg/telegram/ui/Components/RecyclerListView$FastScroll;)V
 
-    .line 940
     :cond_0
     return-void
 .end method
@@ -2636,7 +2340,6 @@
     .param p1, "drawable"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 1072
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView;->selectorDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eq v0, p1, :cond_0

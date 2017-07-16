@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     .prologue
-    .line 353
     iput-object p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$4;->this$0:Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 355
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$4;->this$0:Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->notifyDataSetChanged()V
 
-    .line 356
     return-void
 .end method

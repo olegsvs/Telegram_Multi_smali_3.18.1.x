@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 515
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$12;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/PhotoPaintView$12;->val$okRunnable:Ljava/lang/Runnable;
@@ -47,11 +46,9 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 518
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$12;->val$okRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 519
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 2349
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$29;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -40,7 +39,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 2353
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$29;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -53,11 +51,9 @@
 
     if-gtz v0, :cond_0
 
-    .line 2367
     :goto_0
     return-void
 
-    .line 2357
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$29;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -89,13 +85,11 @@
 
     move-result-object v0
 
-    invoke-virtual {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->getBotContextSwitch()Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     move-result-object v0
 
     if-nez v0, :cond_1
 
-    .line 2358
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$29;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$10000(Lorg/telegram/ui/ChatActivity;)I
@@ -110,7 +104,6 @@
 
     sub-int v7, v0, v1
 
-    .line 2363
     .local v7, "top":I
     :goto_1
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
@@ -121,7 +114,6 @@
 
     add-int v6, v7, v0
 
-    .line 2364
     .local v6, "bottom":I
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -133,12 +125,10 @@
 
     invoke-virtual {v0, v1, v7, v2, v6}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 2365
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_composeShadowDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2366
     const/4 v1, 0x0
 
     int-to-float v2, v6
@@ -163,7 +153,6 @@
 
     goto :goto_0
 
-    .line 2360
     .end local v6    # "bottom":I
     .end local v7    # "top":I
     :cond_1
@@ -189,7 +178,6 @@
     .locals 1
 
     .prologue
-    .line 2371
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$29;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$6200(Lorg/telegram/ui/ChatActivity;)Z
@@ -198,11 +186,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 2375
     :goto_0
     return-void
 
-    .line 2374
     :cond_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

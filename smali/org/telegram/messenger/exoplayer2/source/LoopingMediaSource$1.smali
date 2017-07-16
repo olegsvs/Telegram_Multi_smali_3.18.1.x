@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;->val$listener:Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;
@@ -41,25 +40,19 @@
 
 
 # virtual methods
-.method public onSourceInfoRefreshed(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
     .locals 3
-    .param p1, "timeline"    # Lorg/telegram/messenger/exoplayer2/Timeline;
     .param p2, "manifest"    # Ljava/lang/Object;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
-    invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/Timeline;->getPeriodCount()I
 
     move-result v1
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->access$002(Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;I)I
 
-    .line 67
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;->val$listener:Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;
 
-    new-instance v1, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$LoopingTimeline;
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
@@ -67,10 +60,7 @@
 
     move-result v2
 
-    invoke-direct {v1, p1, v2}, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$LoopingTimeline;-><init>(Lorg/telegram/messenger/exoplayer2/Timeline;I)V
 
-    invoke-interface {v0, v1, p2}, Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;->onSourceInfoRefreshed(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
 
-    .line 68
     return-void
 .end method

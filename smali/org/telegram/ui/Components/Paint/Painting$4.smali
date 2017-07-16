@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Painting;
 
     .prologue
-    .line 291
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
@@ -47,14 +46,12 @@
     .prologue
     const/16 v0, 0xde1
 
-    .line 294
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/Paint/Slice;->getData()Ljava/nio/ByteBuffer;
 
     move-result-object v8
 
-    .line 296
     .local v8, "buffer":Ljava/nio/ByteBuffer;
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -64,7 +61,6 @@
 
     invoke-static {v0, v1}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 297
     const/4 v1, 0x0
 
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
@@ -97,7 +93,6 @@
 
     invoke-static/range {v0 .. v8}, Landroid/opengl/GLES20;->glTexSubImage2D(IIIIIIIILjava/nio/Buffer;)V
 
-    .line 298
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Painting;->access$1900(Lorg/telegram/ui/Components/Paint/Painting;)Z
@@ -114,7 +109,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 299
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Painting;->access$900(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/Painting$PaintingDelegate;
@@ -129,12 +123,10 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Components/Paint/Painting$PaintingDelegate;->contentChanged(Landroid/graphics/RectF;)V
 
-    .line 302
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$4;->val$slice:Lorg/telegram/ui/Components/Paint/Slice;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/Slice;->cleanResources()V
 
-    .line 303
     return-void
 .end method

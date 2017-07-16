@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 2296
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 2296
     check-cast p1, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     check-cast p2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
@@ -62,7 +60,6 @@
     .param p2, "o2"    # Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     .prologue
-    .line 2299
     iget-object v0, p1, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->pathToFile:Ljava/lang/String;
 
     if-nez v0, :cond_0
@@ -71,14 +68,11 @@
 
     if-nez v0, :cond_0
 
-    .line 2300
     const/4 v0, -0x1
 
-    .line 2304
     :goto_0
     return v0
 
-    .line 2301
     :cond_0
     iget-object v0, p2, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->pathToFile:Ljava/lang/String;
 
@@ -88,12 +82,10 @@
 
     if-nez v0, :cond_1
 
-    .line 2302
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 2304
     :cond_1
     iget-object v0, p1, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->name:Ljava/lang/String;
 

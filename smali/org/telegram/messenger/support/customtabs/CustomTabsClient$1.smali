@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->val$callback:Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;
@@ -49,17 +48,14 @@
     .end annotation
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->val$callback:Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;
 
     if-eqz v0, :cond_0
 
-    .line 63
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->val$callback:Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;->extraCallback(Ljava/lang/String;Landroid/os/Bundle;)V
 
-    .line 66
     :cond_0
     return-void
 .end method
@@ -70,17 +66,14 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 55
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->val$callback:Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;
 
     if-eqz v0, :cond_0
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsClient$1;->val$callback:Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;->onNavigationEvent(ILandroid/os/Bundle;)V
 
-    .line 59
     :cond_0
     return-void
 .end method

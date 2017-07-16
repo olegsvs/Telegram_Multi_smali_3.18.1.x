@@ -29,11 +29,8 @@
 
 
 # instance fields
-.field public final line:F
 
-.field public final lineAnchor:I
 
-.field public final lineType:I
 
 .field public final position:F
 
@@ -56,7 +53,6 @@
 
     const/4 v3, 0x1
 
-    .line 147
     const/4 v2, 0x0
 
     move-object v0, p0
@@ -73,7 +69,6 @@
 
     invoke-direct/range {v0 .. v8}, Lorg/telegram/messenger/exoplayer2/text/Cue;-><init>(Ljava/lang/CharSequence;Landroid/text/Layout$Alignment;FIIFIF)V
 
-    .line 148
     return-void
 .end method
 
@@ -81,41 +76,25 @@
     .locals 0
     .param p1, "text"    # Ljava/lang/CharSequence;
     .param p2, "textAlignment"    # Landroid/text/Layout$Alignment;
-    .param p3, "line"    # F
-    .param p4, "lineType"    # I
-    .param p5, "lineAnchor"    # I
     .param p6, "position"    # F
     .param p7, "positionAnchor"    # I
     .param p8, "size"    # F
 
     .prologue
-    .line 161
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 162
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->text:Ljava/lang/CharSequence;
 
-    .line 163
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->textAlignment:Landroid/text/Layout$Alignment;
 
-    .line 164
-    iput p3, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->line:F
 
-    .line 165
-    iput p4, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->lineType:I
 
-    .line 166
-    iput p5, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->lineAnchor:I
 
-    .line 167
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->position:F
 
-    .line 168
     iput p7, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->positionAnchor:I
 
-    .line 169
     iput p8, p0, Lorg/telegram/messenger/exoplayer2/text/Cue;->size:F
 
-    .line 170
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/RgbSelectorView;
 
     .prologue
-    .line 57
     iput-object p1, p0, Lorg/telegram/ui/Components/RgbSelectorView$1;->this$0:Lorg/telegram/ui/Components/RgbSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,17 +43,14 @@
     .param p3, "fromUser"    # Z
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Components/RgbSelectorView$1;->this$0:Lorg/telegram/ui/Components/RgbSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/RgbSelectorView;->access$000(Lorg/telegram/ui/Components/RgbSelectorView;)V
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/RgbSelectorView$1;->this$0:Lorg/telegram/ui/Components/RgbSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/RgbSelectorView;->access$100(Lorg/telegram/ui/Components/RgbSelectorView;)V
 
-    .line 71
     return-void
 .end method
 
@@ -63,7 +59,6 @@
     .param p1, "seekBar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 64
     return-void
 .end method
 
@@ -72,6 +67,5 @@
     .param p1, "seekBar"    # Landroid/widget/SeekBar;
 
     .prologue
-    .line 60
     return-void
 .end method

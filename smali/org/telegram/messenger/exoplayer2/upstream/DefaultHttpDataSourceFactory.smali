@@ -33,12 +33,10 @@
     .param p1, "userAgent"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;)V
 
-    .line 39
     return-void
 .end method
 
@@ -60,7 +58,6 @@
     .local p2, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/DataSource;>;"
     const/16 v3, 0x1f40
 
-    .line 53
     const/4 v5, 0x0
 
     move-object v0, p0
@@ -73,7 +70,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;IIZ)V
 
-    .line 55
     return-void
 .end method
 
@@ -95,26 +91,19 @@
     .end annotation
 
     .prologue
-    .line 69
     .local p2, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/DataSource;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 70
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->userAgent:Ljava/lang/String;
 
-    .line 71
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
-    .line 72
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->connectTimeoutMillis:I
 
-    .line 73
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->readTimeoutMillis:I
 
-    .line 74
     iput-boolean p5, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->allowCrossProtocolRedirects:Z
 
-    .line 75
     return-void
 .end method
 
@@ -124,7 +113,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->createDataSource()Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;
 
     move-result-object v0
@@ -136,7 +124,6 @@
     .locals 7
 
     .prologue
-    .line 79
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->userAgent:Ljava/lang/String;
@@ -160,7 +147,6 @@
     .locals 1
 
     .prologue
-    .line 21
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSourceFactory;->createDataSource()Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;
 
     move-result-object v0

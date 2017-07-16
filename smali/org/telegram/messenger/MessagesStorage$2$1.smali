@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$2;
 
     .prologue
-    .line 569
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$2$1;->this$1:Lorg/telegram/messenger/MessagesStorage$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 572
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MessagesController;->getDifference()V
 
-    .line 573
     return-void
 .end method

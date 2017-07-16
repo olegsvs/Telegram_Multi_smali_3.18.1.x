@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelCreateActivity$11;
 
     .prologue
-    .line 609
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$11;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,12 +50,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 612
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 613
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$11;
 
     iget-object v1, v0, Lorg/telegram/ui/ChannelCreateActivity$11;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -67,7 +64,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$2002(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;)Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
-    .line 615
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$11;
 
@@ -75,7 +71,6 @@
 
     invoke-static {v0, v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$2102(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 616
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$11$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$11;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelCreateActivity$11;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -107,10 +102,8 @@
     :goto_0
     invoke-virtual {v1, v0, v3}, Lorg/telegram/ui/Cells/TextBlockCell;->setText(Ljava/lang/String;Z)V
 
-    .line 617
     return-void
 
-    .line 616
     :cond_1
     const-string/jumbo v0, "Loading"
 

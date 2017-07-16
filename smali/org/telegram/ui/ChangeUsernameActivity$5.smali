@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 348
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$5;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$5;->val$name:Ljava/lang/String;
@@ -45,18 +44,15 @@
     .locals 5
 
     .prologue
-    .line 351
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_checkUsername;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_account_checkUsername;-><init>()V
 
-    .line 352
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_account_checkUsername;
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity$5;->val$name:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_account_checkUsername;->username:Ljava/lang/String;
 
-    .line 353
     iget-object v1, p0, Lorg/telegram/ui/ChangeUsernameActivity$5;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -75,6 +71,5 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChangeUsernameActivity;->access$802(Lorg/telegram/ui/ChangeUsernameActivity;I)I
 
-    .line 377
     return-void
 .end method

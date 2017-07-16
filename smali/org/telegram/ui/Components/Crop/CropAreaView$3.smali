@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 517
     invoke-static {}, Lorg/telegram/ui/Components/Crop/CropAreaView$Control;->values()[Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
 
     move-result-object v0

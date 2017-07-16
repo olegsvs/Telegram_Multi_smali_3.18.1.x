@@ -20,10 +20,8 @@
     .param p1, "e"    # Ljava/io/IOException;
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/Throwable;)V
 
-    .line 48
     return-void
 .end method
 
@@ -32,9 +30,7 @@
     .param p1, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;)V
 
-    .line 44
     return-void
 .end method

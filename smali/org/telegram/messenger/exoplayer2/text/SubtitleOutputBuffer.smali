@@ -17,7 +17,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/decoder/OutputBuffer;-><init>()V
 
     return-void
@@ -29,15 +28,12 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-super {p0}, Lorg/telegram/messenger/exoplayer2/decoder/OutputBuffer;->clear()V
 
-    .line 72
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
-    .line 73
     return-void
 .end method
 
@@ -55,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subsampleOffsetUs:J
@@ -74,7 +69,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 53
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/text/Subtitle;->getEventTime(I)J
@@ -92,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/text/Subtitle;->getEventTimeCount()I
@@ -107,7 +100,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subsampleOffsetUs:J
@@ -131,13 +123,10 @@
     .param p4, "subsampleOffsetUs"    # J
 
     .prologue
-    .line 40
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->timeUs:J
 
-    .line 41
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subtitle:Lorg/telegram/messenger/exoplayer2/text/Subtitle;
 
-    .line 42
     const-wide v0, 0x7fffffffffffffffL
 
     cmp-long v0, p4, v0
@@ -150,6 +139,5 @@
     :cond_0
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;->subsampleOffsetUs:J
 
-    .line 44
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 609
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$5;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,23 +40,19 @@
     .locals 2
 
     .prologue
-    .line 612
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$5;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1002(Lorg/telegram/ui/PopupNotificationActivity;Z)Z
 
-    .line 613
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$5;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$1100(Lorg/telegram/ui/PopupNotificationActivity;)V
 
-    .line 614
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$5;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->unlockOrientation(Landroid/app/Activity;)V
 
-    .line 615
     return-void
 .end method

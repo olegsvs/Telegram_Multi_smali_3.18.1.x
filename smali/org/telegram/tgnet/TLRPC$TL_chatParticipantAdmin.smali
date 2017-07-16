@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 17024
     const v0, -0x1d291bca
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 17023
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChatParticipant;-><init>()V
 
     return-void
@@ -49,28 +47,24 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17028
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->user_id:I
 
-    .line 17029
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->inviter_id:I
 
-    .line 17030
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->date:I
 
-    .line 17031
     return-void
 .end method
 
@@ -79,26 +73,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 17034
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17035
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->user_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17036
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->inviter_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17037
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatParticipantAdmin;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 17038
     return-void
 .end method

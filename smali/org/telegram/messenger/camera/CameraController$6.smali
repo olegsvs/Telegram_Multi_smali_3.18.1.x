@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 399
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$6;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
@@ -62,18 +61,15 @@
     .end annotation
 
     .prologue
-    .line 403
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
     iget-object v7, v7, Lorg/telegram/messenger/camera/CameraSession;->cameraInfo:Lorg/telegram/messenger/camera/CameraInfo;
 
     iget-object v1, v7, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 405
     .local v1, "camera":Landroid/hardware/Camera;
     if-nez v1, :cond_0
 
-    .line 406
     :try_start_0
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -95,7 +91,6 @@
     .local v2, "camera":Landroid/hardware/Camera;
     move-object v1, v2
 
-    .line 408
     .end local v2    # "camera":Landroid/hardware/Camera;
     .restart local v1    # "camera":Landroid/hardware/Camera;
     :cond_0
@@ -103,13 +98,11 @@
 
     move-result-object v4
 
-    .line 409
     .local v4, "params":Landroid/hardware/Camera$Parameters;
     invoke-virtual {v4}, Landroid/hardware/Camera$Parameters;->getSupportedFlashModes()Ljava/util/List;
 
     move-result-object v6
 
-    .line 411
     .local v6, "rawFlashModes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
@@ -117,10 +110,8 @@
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->clear()V
 
-    .line 412
     if-eqz v6, :cond_4
 
-    .line 413
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -131,14 +122,12 @@
 
     if-ge v0, v7, :cond_3
 
-    .line 414
     invoke-interface {v6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v5
 
     check-cast v5, Ljava/lang/String;
 
-    .line 415
     .local v5, "rawFlashMode":Ljava/lang/String;
     const-string/jumbo v7, "off"
 
@@ -164,7 +153,6 @@
 
     if-eqz v7, :cond_2
 
-    .line 416
     :cond_1
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
@@ -172,13 +160,11 @@
 
     invoke-virtual {v7, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 413
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 419
     .end local v5    # "rawFlashMode":Ljava/lang/String;
     :cond_3
     iget-object v8, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
@@ -197,56 +183,46 @@
 
     invoke-virtual {v8, v7}, Lorg/telegram/messenger/camera/CameraSession;->checkFlashMode(Ljava/lang/String;)V
 
-    .line 422
     .end local v0    # "a":I
     :cond_4
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$prestartCallback:Ljava/lang/Runnable;
 
     if-eqz v7, :cond_5
 
-    .line 423
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$prestartCallback:Ljava/lang/Runnable;
 
     invoke-interface {v7}, Ljava/lang/Runnable;->run()V
 
-    .line 426
     :cond_5
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-virtual {v7}, Lorg/telegram/messenger/camera/CameraSession;->configurePhotoCamera()V
 
-    .line 427
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$texture:Landroid/graphics/SurfaceTexture;
 
     invoke-virtual {v1, v7}, Landroid/hardware/Camera;->setPreviewTexture(Landroid/graphics/SurfaceTexture;)V
 
-    .line 428
     invoke-virtual {v1}, Landroid/hardware/Camera;->startPreview()V
 
-    .line 429
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$callback:Ljava/lang/Runnable;
 
     if-eqz v7, :cond_6
 
-    .line 430
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$callback:Ljava/lang/Runnable;
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 439
     .end local v4    # "params":Landroid/hardware/Camera$Parameters;
     .end local v6    # "rawFlashModes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     :cond_6
     :goto_1
     return-void
 
-    .line 432
     :catch_0
     move-exception v3
 
-    .line 433
     .local v3, "e":Ljava/lang/Exception;
     iget-object v7, p0, Lorg/telegram/messenger/camera/CameraController$6;->val$session:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -256,13 +232,10 @@
 
     iput-object v8, v7, Lorg/telegram/messenger/camera/CameraInfo;->camera:Landroid/hardware/Camera;
 
-    .line 434
     if-eqz v1, :cond_7
 
-    .line 435
     invoke-virtual {v1}, Landroid/hardware/Camera;->release()V
 
-    .line 437
     :cond_7
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

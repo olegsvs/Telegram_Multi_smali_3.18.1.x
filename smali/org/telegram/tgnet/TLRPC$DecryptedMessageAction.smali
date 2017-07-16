@@ -50,10 +50,8 @@
     .locals 1
 
     .prologue
-    .line 13519
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 13522
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,20 +68,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13532
     const/4 v0, 0x0
 
-    .line 13533
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     sparse-switch p1, :sswitch_data_0
 
-    .line 13574
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 13575
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in DecryptedMessageAction"
@@ -108,139 +102,114 @@
 
     throw v1
 
-    .line 13535
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionSetMessageTTL;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionSetMessageTTL;-><init>()V
 
-    .line 13536
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13538
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNotifyLayer;-><init>()V
 
-    .line 13539
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13541
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionDeleteMessages;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionDeleteMessages;-><init>()V
 
-    .line 13542
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13544
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionCommitKey;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionCommitKey;-><init>()V
 
-    .line 13545
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13547
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionAbortKey;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionAbortKey;-><init>()V
 
-    .line 13548
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13550
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionFlushHistory;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionFlushHistory;-><init>()V
 
-    .line 13551
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13553
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionTyping;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionTyping;-><init>()V
 
-    .line 13554
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13556
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionAcceptKey;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionAcceptKey;-><init>()V
 
-    .line 13557
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13559
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionReadMessages;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionReadMessages;-><init>()V
 
-    .line 13560
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13562
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionResend;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionResend;-><init>()V
 
-    .line 13563
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13565
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionRequestKey;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionRequestKey;-><init>()V
 
-    .line 13566
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13568
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionScreenshotMessages;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionScreenshotMessages;-><init>()V
 
-    .line 13569
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13571
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageActionNoop;
 
@@ -250,18 +219,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;
     goto :goto_0
 
-    .line 13577
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 13578
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$DecryptedMessageAction;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 13580
     :cond_1
     return-object v0
 
-    .line 13533
     nop
 
     :sswitch_data_0

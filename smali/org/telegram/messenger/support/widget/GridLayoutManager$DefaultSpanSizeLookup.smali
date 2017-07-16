@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1057
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
 
     return-void
@@ -33,7 +32,6 @@
     .param p2, "spanCount"    # I
 
     .prologue
-    .line 1066
     rem-int v0, p1, p2
 
     return v0
@@ -44,7 +42,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1061
     const/4 v0, 0x1
 
     return v0

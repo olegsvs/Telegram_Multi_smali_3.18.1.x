@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoadOperation;
 
     .prologue
-    .line 411
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$3;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/FileLoadOperation$3;->val$increment:Z
@@ -47,7 +46,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 415
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$3;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -57,15 +55,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 419
     :goto_0
     return-void
 
-    .line 416
     :catch_0
     move-exception v0
 
-    .line 417
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$3;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 

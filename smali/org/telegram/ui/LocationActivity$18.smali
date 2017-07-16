@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 713
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$18;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 716
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$18;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/LocationActivity;->access$2800(Lorg/telegram/ui/LocationActivity;Landroid/location/Location;)V
 
-    .line 717
     return-void
 .end method

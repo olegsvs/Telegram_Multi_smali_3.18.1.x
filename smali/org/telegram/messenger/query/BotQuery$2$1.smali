@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/BotQuery$2;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lorg/telegram/messenger/query/BotQuery$2$1;->this$0:Lorg/telegram/messenger/query/BotQuery$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/BotQuery$2$1;->val$botKeyboardFinal:Lorg/telegram/tgnet/TLRPC$Message;
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 87
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -76,6 +74,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 88
     return-void
 .end method

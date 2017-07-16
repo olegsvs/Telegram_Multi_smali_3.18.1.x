@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingProfileActivity;
 
     .prologue
-    .line 625
     iput-object p1, p0, Lorg/telegram/ui/ThemingProfileActivity$5;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 628
     iget-object v0, p0, Lorg/telegram/ui/ThemingProfileActivity$5;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemingProfileActivity;->access$2400(Lorg/telegram/ui/ThemingProfileActivity;)Landroid/view/View;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 630
     iget-object v0, p0, Lorg/telegram/ui/ThemingProfileActivity$5;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemingProfileActivity;->access$2500(Lorg/telegram/ui/ThemingProfileActivity;)Landroid/view/View;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 632
     :cond_0
     const/4 v0, 0x0
 

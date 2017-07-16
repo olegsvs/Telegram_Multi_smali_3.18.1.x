@@ -101,21 +101,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 93
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 116
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->checkPermission:Z
 
-    .line 130
     iput-boolean v1, p0, Lorg/telegram/ui/LocationActivity;->userLocationMoved:Z
 
-    .line 131
     iput-boolean v1, p0, Lorg/telegram/ui/LocationActivity;->firstWas:Z
 
-    .line 135
     sget-object v0, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v0, v0, Landroid/graphics/Point;->x:I
@@ -136,7 +131,6 @@
 
     iput v0, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
-    .line 142
     return-void
 .end method
 
@@ -145,7 +139,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     return-object v0
@@ -157,7 +150,6 @@
     .param p1, "x1"    # Lcom/google/android/gms/maps/GoogleMap;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     return-object p1
@@ -168,7 +160,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -180,7 +171,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lorg/telegram/ui/LocationActivity;->fixLayoutInternal(Z)V
 
     return-void
@@ -191,7 +181,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     return-object v0
@@ -202,7 +191,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     invoke-direct {p0}, Lorg/telegram/ui/LocationActivity;->onMapInit()V
 
     return-void
@@ -214,7 +202,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     iput-boolean p1, p0, Lorg/telegram/ui/LocationActivity;->mapsInitialized:Z
 
     return p1
@@ -225,7 +212,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->onResumeCalled:Z
 
     return v0
@@ -237,7 +223,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lorg/telegram/ui/LocationActivity;->showPermissionAlert(Z)V
 
     return-void
@@ -248,7 +233,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->myLocation:Landroid/location/Location;
 
     return-object v0
@@ -259,7 +243,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     return-object v0
@@ -270,7 +253,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     return-object v0
@@ -282,7 +264,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lorg/telegram/ui/LocationActivity;->updateClipView(I)V
 
     return-void
@@ -293,7 +274,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->searching:Z
 
     return v0
@@ -304,7 +284,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->delegate:Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
 
     return-object v0
@@ -316,7 +295,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     iput-boolean p1, p0, Lorg/telegram/ui/LocationActivity;->searching:Z
 
     return p1
@@ -327,7 +305,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->wasResults:Z
 
     return v0
@@ -339,7 +316,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     iput-boolean p1, p0, Lorg/telegram/ui/LocationActivity;->wasResults:Z
 
     return p1
@@ -350,7 +326,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object v0
@@ -362,7 +337,6 @@
     .param p1, "x1"    # Landroid/animation/AnimatorSet;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity;->animatorSet:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -373,7 +347,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->markerImageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -384,7 +357,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget v0, p0, Lorg/telegram/ui/LocationActivity;->markerTop:I
 
     return v0
@@ -395,7 +367,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -406,7 +377,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->userLocationMoved:Z
 
     return v0
@@ -418,7 +388,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     iput-boolean p1, p0, Lorg/telegram/ui/LocationActivity;->userLocationMoved:Z
 
     return p1
@@ -429,7 +398,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
 
     return-object v0
@@ -441,7 +409,6 @@
     .param p1, "x1"    # Landroid/location/Location;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lorg/telegram/ui/LocationActivity;->positionMarker(Landroid/location/Location;)V
 
     return-void
@@ -452,7 +419,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     invoke-direct {p0}, Lorg/telegram/ui/LocationActivity;->updateUserData()V
 
     return-void
@@ -463,7 +429,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -474,7 +439,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -485,7 +449,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -496,7 +459,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object v0
@@ -507,7 +469,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->searchWas:Z
 
     return v0
@@ -519,7 +480,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 93
     iput-boolean p1, p0, Lorg/telegram/ui/LocationActivity;->searchWas:Z
 
     return p1
@@ -530,7 +490,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->searchAdapter:Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;
 
     return-object v0
@@ -541,7 +500,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
     return-object v0
@@ -556,12 +514,10 @@
 
     const/4 v4, 0x0
 
-    .line 816
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-eqz v3, :cond_0
 
-    .line 817
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBar;->getOccupyStatusBar()Z
@@ -579,7 +535,6 @@
 
     add-int v0, v3, v5
 
-    .line 818
     .local v0, "height":I
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->fragmentView:Landroid/view/View;
 
@@ -587,11 +542,9 @@
 
     move-result v2
 
-    .line 819
     .local v2, "viewHeight":I
     if-nez v2, :cond_2
 
-    .line 860
     .end local v0    # "height":I
     .end local v2    # "viewHeight":I
     :cond_0
@@ -601,10 +554,8 @@
     :cond_1
     move v3, v4
 
-    .line 817
     goto :goto_0
 
-    .line 822
     .restart local v0    # "height":I
     .restart local v2    # "viewHeight":I
     :cond_2
@@ -620,7 +571,6 @@
 
     iput v3, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
-    .line 824
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/RecyclerListView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -629,16 +579,13 @@
 
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 825
     .local v1, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 826
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 827
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3}, Landroid/widget/FrameLayout;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -648,21 +595,17 @@
     .end local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 828
     .restart local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 829
     iget v3, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
     iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 830
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     invoke-virtual {v3, v1}, Landroid/widget/FrameLayout;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 831
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/RecyclerListView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -672,23 +615,19 @@
     .end local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 832
     .restart local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     iput v0, v1, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 833
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 835
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     iget v5, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
     invoke-virtual {v3, v5}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->setOverScrollHeight(I)V
 
-    .line 836
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v3}, Lcom/google/android/gms/maps/MapView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -698,11 +637,9 @@
     .end local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     check-cast v1, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 837
     .restart local v1    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     if-eqz v1, :cond_4
 
-    .line 838
     iget v3, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -713,12 +650,10 @@
 
     iput v3, v1, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 839
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v3, :cond_3
 
-    .line 840
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -727,22 +662,18 @@
 
     invoke-virtual {v3, v4, v4, v4, v5}, Lcom/google/android/gms/maps/GoogleMap;->setPadding(IIII)V
 
-    .line 842
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v3, v1}, Lcom/google/android/gms/maps/MapView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 844
     :cond_4
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->notifyDataSetChanged()V
 
-    .line 846
     if-eqz p1, :cond_5
 
-    .line 847
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     const/high16 v5, 0x42600000    # 56.0f
@@ -773,7 +704,6 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 848
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     invoke-virtual {v3}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
@@ -782,7 +712,6 @@
 
     invoke-direct {p0, v3}, Lorg/telegram/ui/LocationActivity;->updateClipView(I)V
 
-    .line 849
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/ui/LocationActivity$20;
@@ -793,7 +722,6 @@
 
     goto/16 :goto_1
 
-    .line 857
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
@@ -810,7 +738,6 @@
     .locals 6
 
     .prologue
-    .line 863
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "location"
@@ -821,7 +748,6 @@
 
     check-cast v2, Landroid/location/LocationManager;
 
-    .line 864
     .local v2, "lm":Landroid/location/LocationManager;
     const/4 v4, 0x1
 
@@ -829,11 +755,9 @@
 
     move-result-object v3
 
-    .line 865
     .local v3, "providers":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     const/4 v1, 0x0
 
-    .line 866
     .local v1, "l":Landroid/location/Location;
     invoke-interface {v3}, Ljava/util/List;->size()I
 
@@ -845,7 +769,6 @@
     :goto_0
     if-ltz v0, :cond_0
 
-    .line 867
     invoke-interface {v3, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -856,14 +779,11 @@
 
     move-result-object v1
 
-    .line 868
     if-eqz v1, :cond_1
 
-    .line 872
     :cond_0
     return-object v1
 
-    .line 866
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
@@ -876,22 +796,18 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 686
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-nez v3, :cond_0
 
-    .line 720
     :goto_0
     return-void
 
-    .line 690
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v3, :cond_1
 
-    .line 691
     new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
@@ -908,7 +824,6 @@
 
     invoke-direct {v1, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    .line 693
     .local v1, "latLng":Lcom/google/android/gms/maps/model/LatLng;
     :try_start_0
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
@@ -935,7 +850,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 697
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -951,13 +865,11 @@
 
     move-result-object v2
 
-    .line 698
     .local v2, "position":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v3, v2}, Lcom/google/android/gms/maps/GoogleMap;->moveCamera(Lcom/google/android/gms/maps/CameraUpdate;)V
 
-    .line 706
     .end local v1    # "latLng":Lcom/google/android/gms/maps/model/LatLng;
     .end local v2    # "position":Lcom/google/android/gms/maps/CameraUpdate;
     :goto_2
@@ -970,7 +882,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 710
     :goto_3
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -980,7 +891,6 @@
 
     invoke-virtual {v3, v8}, Lcom/google/android/gms/maps/UiSettings;->setMyLocationButtonEnabled(Z)V
 
-    .line 711
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v3}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
@@ -989,7 +899,6 @@
 
     invoke-virtual {v3, v8}, Lcom/google/android/gms/maps/UiSettings;->setZoomControlsEnabled(Z)V
 
-    .line 712
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v3}, Lcom/google/android/gms/maps/GoogleMap;->getUiSettings()Lcom/google/android/gms/maps/UiSettings;
@@ -998,7 +907,6 @@
 
     invoke-virtual {v3, v8}, Lcom/google/android/gms/maps/UiSettings;->setCompassEnabled(Z)V
 
-    .line 713
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     new-instance v4, Lorg/telegram/ui/LocationActivity$18;
@@ -1007,7 +915,6 @@
 
     invoke-virtual {v3, v4}, Lcom/google/android/gms/maps/GoogleMap;->setOnMyLocationChangeListener(Lcom/google/android/gms/maps/GoogleMap$OnMyLocationChangeListener;)V
 
-    .line 719
     invoke-direct {p0}, Lorg/telegram/ui/LocationActivity;->getLastLocation()Landroid/location/Location;
 
     move-result-object v3
@@ -1018,18 +925,15 @@
 
     goto :goto_0
 
-    .line 694
     .restart local v1    # "latLng":Lcom/google/android/gms/maps/model/LatLng;
     :catch_0
     move-exception v0
 
-    .line 695
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 700
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "latLng":Lcom/google/android/gms/maps/model/LatLng;
     :cond_1
@@ -1041,14 +945,12 @@
 
     iput-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
-    .line 701
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
     const-wide v4, 0x4034a8c9539b8887L    # 20.659322
 
     invoke-virtual {v3, v4, v5}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 702
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
     const-wide v4, -0x3fd9300000000000L    # -11.40625
@@ -1057,11 +959,9 @@
 
     goto :goto_2
 
-    .line 707
     :catch_1
     move-exception v0
 
-    .line 708
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -1081,15 +981,12 @@
 
     const/4 v8, 0x1
 
-    .line 917
     if-nez p1, :cond_1
 
-    .line 948
     :cond_0
     :goto_0
     return-void
 
-    .line 920
     :cond_1
     new-instance v3, Landroid/location/Location;
 
@@ -1097,12 +994,10 @@
 
     iput-object v3, p0, Lorg/telegram/ui/LocationActivity;->myLocation:Landroid/location/Location;
 
-    .line 921
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v3, :cond_3
 
-    .line 922
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
     if-eqz v3, :cond_0
@@ -1111,20 +1006,17 @@
 
     if-eqz v3, :cond_0
 
-    .line 923
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
     invoke-virtual {p1, v3}, Landroid/location/Location;->distanceTo(Landroid/location/Location;)F
 
     move-result v0
 
-    .line 924
     .local v0, "distance":F
     cmpg-float v3, v0, v6
 
     if-gez v3, :cond_2
 
-    .line 925
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
 
     const-string/jumbo v4, "%d %s"
@@ -1157,7 +1049,6 @@
 
     goto :goto_0
 
-    .line 927
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
 
@@ -1191,14 +1082,12 @@
 
     goto :goto_0
 
-    .line 930
     .end local v0    # "distance":F
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v3, :cond_0
 
-    .line 931
     new-instance v1, Lcom/google/android/gms/maps/model/LatLng;
 
     invoke-virtual {p1}, Landroid/location/Location;->getLatitude()D
@@ -1211,13 +1100,11 @@
 
     invoke-direct {v1, v4, v5, v6, v7}, Lcom/google/android/gms/maps/model/LatLng;-><init>(DD)V
 
-    .line 932
     .local v1, "latLng":Lcom/google/android/gms/maps/model/LatLng;
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     if-eqz v3, :cond_4
 
-    .line 933
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     const/4 v4, 0x0
@@ -1226,37 +1113,31 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->searchGooglePlacesWithQuery(Ljava/lang/String;Landroid/location/Location;)V
 
-    .line 934
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->myLocation:Landroid/location/Location;
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->setGpsLocation(Landroid/location/Location;)V
 
-    .line 936
     :cond_4
     iget-boolean v3, p0, Lorg/telegram/ui/LocationActivity;->userLocationMoved:Z
 
     if-nez v3, :cond_0
 
-    .line 937
     new-instance v3, Landroid/location/Location;
 
     invoke-direct {v3, p1}, Landroid/location/Location;-><init>(Landroid/location/Location;)V
 
     iput-object v3, p0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
-    .line 938
     iget-boolean v3, p0, Lorg/telegram/ui/LocationActivity;->firstWas:Z
 
     if-eqz v3, :cond_5
 
-    .line 939
     invoke-static {v1}, Lcom/google/android/gms/maps/CameraUpdateFactory;->newLatLng(Lcom/google/android/gms/maps/model/LatLng;)Lcom/google/android/gms/maps/CameraUpdate;
 
     move-result-object v2
 
-    .line 940
     .local v2, "position":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1264,12 +1145,10 @@
 
     goto/16 :goto_0
 
-    .line 942
     .end local v2    # "position":Lcom/google/android/gms/maps/CameraUpdate;
     :cond_5
     iput-boolean v8, p0, Lorg/telegram/ui/LocationActivity;->firstWas:Z
 
-    .line 943
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-virtual {v3}, Lcom/google/android/gms/maps/GoogleMap;->getMaxZoomLevel()F
@@ -1284,7 +1163,6 @@
 
     move-result-object v2
 
-    .line 944
     .restart local v2    # "position":Lcom/google/android/gms/maps/CameraUpdate;
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -1298,18 +1176,15 @@
     .param p1, "byButton"    # Z
 
     .prologue
-    .line 723
     invoke-virtual {p0}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 751
     :goto_0
     return-void
 
-    .line 726
     :cond_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -1319,7 +1194,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 727
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "AppName"
 
@@ -1331,10 +1205,8 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 728
     if-eqz p1, :cond_1
 
-    .line 729
     const-string/jumbo v1, "PermissionNoLocationPosition"
 
     const v2, 0x7f0704c6
@@ -1345,7 +1217,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 733
     :goto_1
     const-string/jumbo v1, "PermissionOpenSettings"
 
@@ -1361,7 +1232,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 749
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -1374,7 +1244,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 750
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object v1
@@ -1383,7 +1252,6 @@
 
     goto :goto_0
 
-    .line 731
     :cond_1
     const-string/jumbo v1, "PermissionNoLocation"
 
@@ -1409,25 +1277,20 @@
 
     const/4 v5, 0x0
 
-    .line 774
     const/4 v4, -0x1
 
     if-ne p1, v4, :cond_1
 
-    .line 813
     :cond_0
     :goto_0
     return-void
 
-    .line 777
     :cond_1
     const/4 v1, 0x0
 
-    .line 778
     .local v1, "height":I
     const/4 v3, 0x0
 
-    .line 779
     .local v3, "top":I
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1435,19 +1298,15 @@
 
     move-result-object v0
 
-    .line 780
     .local v0, "child":Landroid/view/View;
     if-eqz v0, :cond_0
 
-    .line 781
     if-nez p1, :cond_2
 
-    .line 782
     invoke-virtual {v0}, Landroid/view/View;->getTop()I
 
     move-result v3
 
-    .line 783
     iget v6, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
     if-gez v3, :cond_5
@@ -1457,7 +1316,6 @@
     :goto_1
     add-int v1, v6, v4
 
-    .line 785
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
@@ -1467,14 +1325,11 @@
 
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 786
     .local v2, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     if-eqz v2, :cond_0
 
-    .line 787
     if-gtz v1, :cond_6
 
-    .line 788
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v4}, Lcom/google/android/gms/maps/MapView;->getVisibility()I
@@ -1483,17 +1338,14 @@
 
     if-nez v4, :cond_3
 
-    .line 789
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v4, v7}, Lcom/google/android/gms/maps/MapView;->setVisibility(I)V
 
-    .line 790
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     invoke-virtual {v4, v7}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 799
     :cond_3
     :goto_2
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -1506,7 +1358,6 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/FrameLayout;->setTranslationY(F)V
 
-    .line 800
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     neg-int v6, v3
@@ -1521,7 +1372,6 @@
 
     invoke-virtual {v4, v6}, Lcom/google/android/gms/maps/MapView;->setTranslationY(F)V
 
-    .line 801
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->markerImageView:Landroid/widget/ImageView;
 
     neg-int v6, v3
@@ -1544,7 +1394,6 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setTranslationY(F)V
 
-    .line 802
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
 
     neg-int v6, v3
@@ -1565,7 +1414,6 @@
 
     invoke-virtual {v4, v6}, Landroid/widget/ImageView;->setTranslationY(F)V
 
-    .line 803
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v4}, Lcom/google/android/gms/maps/MapView;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
@@ -1575,7 +1423,6 @@
     .end local v2    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     check-cast v2, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 804
     .restart local v2    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     if-eqz v2, :cond_0
 
@@ -1591,7 +1438,6 @@
 
     if-eq v4, v6, :cond_0
 
-    .line 805
     iget v4, p0, Lorg/telegram/ui/LocationActivity;->overScrollHeight:I
 
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1602,12 +1448,10 @@
 
     iput v4, v2, Landroid/widget/FrameLayout$LayoutParams;->height:I
 
-    .line 806
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v4, :cond_4
 
-    .line 807
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1616,7 +1460,6 @@
 
     invoke-virtual {v4, v5, v5, v5, v6}, Lcom/google/android/gms/maps/GoogleMap;->setPadding(IIII)V
 
-    .line 809
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
@@ -1628,10 +1471,8 @@
     :cond_5
     move v4, v5
 
-    .line 783
     goto/16 :goto_1
 
-    .line 793
     .restart local v2    # "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     :cond_6
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
@@ -1642,12 +1483,10 @@
 
     if-ne v4, v7, :cond_3
 
-    .line 794
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v4, v5}, Lcom/google/android/gms/maps/MapView;->setVisibility(I)V
 
-    .line 795
     iget-object v4, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     invoke-virtual {v4, v5}, Landroid/widget/FrameLayout;->setVisibility(I)V
@@ -1659,17 +1498,14 @@
     .locals 1
 
     .prologue
-    .line 1032
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 1033
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->notifyDataSetChanged()V
 
-    .line 1035
     :cond_0
     return-void
 .end method
@@ -1680,7 +1516,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 876
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v5, :cond_3
@@ -1689,14 +1524,12 @@
 
     if-eqz v5, :cond_3
 
-    .line 877
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v5, v5, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget v1, v5, Lorg/telegram/tgnet/TLRPC$Message;->from_id:I
 
-    .line 878
     .local v1, "fromId":I
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1706,7 +1539,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 879
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v5, v5, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -1717,7 +1549,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 880
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v5, v5, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -1728,23 +1559,18 @@
 
     neg-int v1, v5
 
-    .line 885
     :cond_0
     :goto_0
     const-string/jumbo v2, ""
 
-    .line 886
     .local v2, "name":Ljava/lang/String;
     const/4 v3, 0x0
 
-    .line 887
     .local v3, "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     iput-object v7, p0, Lorg/telegram/ui/LocationActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 888
     if-lez v1, :cond_5
 
-    .line 889
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v5
@@ -1757,21 +1583,17 @@
 
     move-result-object v4
 
-    .line 890
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v4, :cond_2
 
-    .line 891
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     if-eqz v5, :cond_1
 
-    .line 892
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v3, v5, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 894
     :cond_1
     new-instance v5, Lorg/telegram/ui/Components/AvatarDrawable;
 
@@ -1779,12 +1601,10 @@
 
     iput-object v5, p0, Lorg/telegram/ui/LocationActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 895
     invoke-static {v4}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 907
     .end local v4    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_2
     :goto_1
@@ -1792,19 +1612,16 @@
 
     if-eqz v5, :cond_7
 
-    .line 908
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
     iget-object v6, p0, Lorg/telegram/ui/LocationActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v5, v3, v7, v6}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 909
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v5, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 914
     .end local v1    # "fromId":I
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
@@ -1812,7 +1629,6 @@
     :goto_2
     return-void
 
-    .line 882
     .restart local v1    # "fromId":I
     :cond_4
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -1825,7 +1641,6 @@
 
     goto :goto_0
 
-    .line 898
     .restart local v2    # "name":Ljava/lang/String;
     .restart local v3    # "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     :cond_5
@@ -1843,21 +1658,17 @@
 
     move-result-object v0
 
-    .line 899
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v0, :cond_2
 
-    .line 900
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
     if-eqz v5, :cond_6
 
-    .line 901
     iget-object v5, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
     iget-object v3, v5, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 903
     :cond_6
     new-instance v5, Lorg/telegram/ui/Components/AvatarDrawable;
 
@@ -1865,12 +1676,10 @@
 
     iput-object v5, p0, Lorg/telegram/ui/LocationActivity;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 904
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     goto :goto_1
 
-    .line 911
     .end local v0    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_7
     iget-object v5, p0, Lorg/telegram/ui/LocationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -1887,7 +1696,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 181
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1896,7 +1704,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 182
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1905,14 +1712,12 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 183
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 184
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1921,7 +1726,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setOccupyStatusBar(Z)V
 
-    .line 186
     :cond_0
     move-object/from16 v0, p0
 
@@ -1938,7 +1742,6 @@
     :goto_0
     invoke-virtual {v3, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAddToContainer(Z)V
 
-    .line 188
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1951,7 +1754,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 217
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1960,7 +1762,6 @@
 
     move-result-object v16
 
-    .line 218
     .local v16, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     move-object/from16 v0, p0
 
@@ -1968,7 +1769,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 219
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -1997,7 +1797,6 @@
 
     if-lez v2, :cond_7
 
-    .line 220
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2014,7 +1813,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 221
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
@@ -2043,7 +1841,6 @@
 
     if-lez v2, :cond_1
 
-    .line 222
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -2060,7 +1857,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    .line 227
     :cond_1
     :goto_1
     const/4 v2, 0x1
@@ -2071,7 +1867,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 268
     :goto_2
     const/4 v2, 0x0
 
@@ -2083,7 +1878,6 @@
 
     move-result-object v14
 
-    .line 269
     .local v14, "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     const/4 v2, 0x2
 
@@ -2097,7 +1891,6 @@
 
     invoke-virtual {v14, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addSubItem(ILjava/lang/String;)Landroid/widget/TextView;
 
-    .line 270
     const/4 v2, 0x3
 
     const-string/jumbo v3, "Satellite"
@@ -2110,7 +1903,6 @@
 
     invoke-virtual {v14, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addSubItem(ILjava/lang/String;)Landroid/widget/TextView;
 
-    .line 271
     const/4 v2, 0x4
 
     const-string/jumbo v3, "Hybrid"
@@ -2123,7 +1915,6 @@
 
     invoke-virtual {v14, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addSubItem(ILjava/lang/String;)Landroid/widget/TextView;
 
-    .line 272
     new-instance v2, Lorg/telegram/ui/LocationActivity$3;
 
     move-object/from16 v0, p0
@@ -2136,14 +1927,12 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->fragmentView:Landroid/view/View;
 
-    .line 285
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lorg/telegram/ui/LocationActivity;->fragmentView:Landroid/view/View;
 
     check-cast v13, Landroid/widget/FrameLayout;
 
-    .line 287
     .local v13, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v2, Landroid/widget/ImageView;
 
@@ -2155,7 +1944,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
 
-    .line 288
     const/high16 v2, 0x42600000    # 56.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2178,7 +1966,6 @@
 
     move-result-object v12
 
-    .line 289
     .local v12, "drawable":Landroid/graphics/drawable/Drawable;
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -2186,7 +1973,6 @@
 
     if-ge v2, v3, :cond_2
 
-    .line 290
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2201,7 +1987,6 @@
 
     move-result-object v18
 
-    .line 291
     .local v18, "shadowDrawable":Landroid/graphics/drawable/Drawable;
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
 
@@ -2215,7 +2000,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 292
     new-instance v11, Lorg/telegram/ui/Components/CombinedDrawable;
 
     const/4 v2, 0x0
@@ -2226,7 +2010,6 @@
 
     invoke-direct {v11, v0, v12, v2, v3}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;II)V
 
-    .line 293
     .local v11, "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     const/high16 v2, 0x42600000    # 56.0f
 
@@ -2242,10 +2025,8 @@
 
     invoke-virtual {v11, v2, v3}, Lorg/telegram/ui/Components/CombinedDrawable;->setIconSize(II)V
 
-    .line 294
     move-object v12, v11
 
-    .line 296
     .end local v11    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     .end local v18    # "shadowDrawable":Landroid/graphics/drawable/Drawable;
     :cond_2
@@ -2255,7 +2036,6 @@
 
     invoke-virtual {v2, v12}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 297
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -2264,7 +2044,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 298
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -2273,7 +2052,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 299
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -2292,19 +2070,16 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 300
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-lt v2, v3, :cond_3
 
-    .line 301
     new-instance v9, Landroid/animation/StateListAnimator;
 
     invoke-direct {v9}, Landroid/animation/StateListAnimator;-><init>()V
 
-    .line 302
     .local v9, "animator":Landroid/animation/StateListAnimator;
     const/4 v2, 0x1
 
@@ -2362,7 +2137,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 303
     const/4 v2, 0x0
 
     new-array v2, v2, [I
@@ -2413,14 +2187,12 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 304
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v9}, Landroid/widget/ImageView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
-    .line 305
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -2431,9 +2203,7 @@
 
     invoke-direct {v3, v0}, Lorg/telegram/ui/LocationActivity$4;-><init>(Lorg/telegram/ui/LocationActivity;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 314
     .end local v9    # "animator":Landroid/animation/StateListAnimator;
     :cond_3
     move-object/from16 v0, p0
@@ -2442,7 +2212,6 @@
 
     if-eqz v2, :cond_1e
 
-    .line 315
     new-instance v2, Lcom/google/android/gms/maps/MapView;
 
     move-object/from16 v0, p1
@@ -2453,19 +2222,16 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
-    .line 316
     new-instance v2, Lorg/telegram/ui/Components/MapPlaceholderDrawable;
 
     invoke-direct {v2}, Lorg/telegram/ui/Components/MapPlaceholderDrawable;-><init>()V
 
     invoke-virtual {v13, v2}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 317
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
-    .line 318
     .local v15, "map":Lcom/google/android/gms/maps/MapView;
     new-instance v2, Ljava/lang/Thread;
 
@@ -2477,10 +2243,8 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 352
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 354
     new-instance v2, Landroid/widget/FrameLayout;
 
     move-object/from16 v0, p1
@@ -2491,7 +2255,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
 
-    .line 355
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -2502,7 +2265,6 @@
 
     move-result-object v10
 
-    .line 356
     .local v10, "background":Landroid/graphics/drawable/Drawable;
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
 
@@ -2518,14 +2280,12 @@
 
     invoke-virtual {v10, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 357
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v2, v10}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 358
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
@@ -2542,7 +2302,6 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 359
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
@@ -2555,7 +2314,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 372
     new-instance v2, Lorg/telegram/ui/Components/BackupImageView;
 
     move-object/from16 v0, p1
@@ -2566,7 +2324,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->avatarImageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -2579,7 +2336,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 374
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
@@ -2633,7 +2389,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 376
     new-instance v2, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
@@ -2644,7 +2399,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2655,7 +2409,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 378
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2668,7 +2421,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2677,7 +2429,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 380
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2690,7 +2441,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 381
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2699,7 +2449,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 382
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2708,7 +2457,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 383
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/LocationActivity;->nameTextView:Landroid/widget/TextView;
@@ -2722,7 +2470,6 @@
     :goto_6
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 384
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
@@ -2776,7 +2523,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 386
     new-instance v2, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
@@ -2787,7 +2533,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
 
-    .line 387
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2798,7 +2543,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 388
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2811,7 +2555,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 389
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2820,7 +2563,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 390
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2829,7 +2571,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 391
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2838,7 +2579,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 392
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/LocationActivity;->distanceTextView:Landroid/widget/TextView;
@@ -2852,7 +2592,6 @@
     :goto_a
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity;->bottomView:Landroid/widget/FrameLayout;
@@ -2906,7 +2645,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 395
     new-instance v2, Landroid/location/Location;
 
     const-string/jumbo v3, "network"
@@ -2917,7 +2655,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
 
-    .line 396
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
@@ -2936,7 +2673,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->userLocation:Landroid/location/Location;
@@ -2955,7 +2691,6 @@
 
     invoke-virtual {v2, v4, v5}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 399
     new-instance v2, Landroid/widget/ImageView;
 
     move-object/from16 v0, p1
@@ -2966,7 +2701,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
 
-    .line 400
     const/high16 v2, 0x42600000    # 56.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -2989,14 +2723,12 @@
 
     move-result-object v12
 
-    .line 401
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-ge v2, v3, :cond_4
 
-    .line 402
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -3011,7 +2743,6 @@
 
     move-result-object v18
 
-    .line 403
     .restart local v18    # "shadowDrawable":Landroid/graphics/drawable/Drawable;
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
 
@@ -3025,7 +2756,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 404
     new-instance v11, Lorg/telegram/ui/Components/CombinedDrawable;
 
     const/4 v2, 0x0
@@ -3036,7 +2766,6 @@
 
     invoke-direct {v11, v0, v12, v2, v3}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;II)V
 
-    .line 405
     .restart local v11    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     const/high16 v2, 0x42600000    # 56.0f
 
@@ -3052,10 +2781,8 @@
 
     invoke-virtual {v11, v2, v3}, Lorg/telegram/ui/Components/CombinedDrawable;->setIconSize(II)V
 
-    .line 406
     move-object v12, v11
 
-    .line 408
     .end local v11    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     .end local v18    # "shadowDrawable":Landroid/graphics/drawable/Drawable;
     :cond_4
@@ -3065,7 +2792,6 @@
 
     invoke-virtual {v2, v12}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 409
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
@@ -3084,7 +2810,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 410
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
@@ -3093,7 +2818,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 411
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
@@ -3102,19 +2826,16 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 412
     sget v2, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v3, 0x15
 
     if-lt v2, v3, :cond_5
 
-    .line 413
     new-instance v9, Landroid/animation/StateListAnimator;
 
     invoke-direct {v9}, Landroid/animation/StateListAnimator;-><init>()V
 
-    .line 414
     .restart local v9    # "animator":Landroid/animation/StateListAnimator;
     const/4 v2, 0x1
 
@@ -3172,7 +2893,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 415
     const/4 v2, 0x0
 
     new-array v2, v2, [I
@@ -3223,14 +2943,12 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 416
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
 
     invoke-virtual {v2, v9}, Landroid/widget/ImageView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
-    .line 417
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
@@ -3241,9 +2959,7 @@
 
     invoke-direct {v3, v0}, Lorg/telegram/ui/LocationActivity$7;-><init>(Lorg/telegram/ui/LocationActivity;)V
 
-    invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 425
     .end local v9    # "animator":Landroid/animation/StateListAnimator;
     :cond_5
     move-object/from16 v0, p0
@@ -3305,7 +3021,6 @@
 
     invoke-virtual {v13, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 426
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->routeButton:Landroid/widget/ImageView;
@@ -3318,7 +3033,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 449
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -3378,7 +3092,6 @@
 
     invoke-virtual {v13, v0, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 450
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -3391,7 +3104,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 682
     .end local v10    # "background":Landroid/graphics/drawable/Drawable;
     :goto_18
     move-object/from16 v0, p0
@@ -3400,7 +3112,6 @@
 
     return-object v2
 
-    .line 186
     .end local v12    # "drawable":Landroid/graphics/drawable/Drawable;
     .end local v13    # "frameLayout":Landroid/widget/FrameLayout;
     .end local v14    # "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -3411,7 +3122,6 @@
 
     goto/16 :goto_0
 
-    .line 225
     .restart local v16    # "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     :cond_7
     move-object/from16 v0, p0
@@ -3430,7 +3140,6 @@
 
     goto/16 :goto_1
 
-    .line 229
     :cond_8
     move-object/from16 v0, p0
 
@@ -3446,7 +3155,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 231
     const/4 v2, 0x0
 
     const v3, 0x7f0200c0
@@ -3473,7 +3181,6 @@
 
     move-result-object v14
 
-    .line 265
     .restart local v14    # "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     invoke-virtual {v14}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
 
@@ -3491,7 +3198,6 @@
 
     goto/16 :goto_2
 
-    .line 374
     .restart local v10    # "background":Landroid/graphics/drawable/Drawable;
     .restart local v12    # "drawable":Landroid/graphics/drawable/Drawable;
     .restart local v13    # "frameLayout":Landroid/widget/FrameLayout;
@@ -3511,13 +3217,11 @@
 
     goto/16 :goto_5
 
-    .line 383
     :cond_c
     const/4 v2, 0x3
 
     goto/16 :goto_6
 
-    .line 384
     :cond_d
     const/4 v4, 0x3
 
@@ -3533,13 +3237,11 @@
 
     goto/16 :goto_9
 
-    .line 392
     :cond_10
     const/4 v2, 0x3
 
     goto/16 :goto_a
 
-    .line 393
     :cond_11
     const/4 v4, 0x3
 
@@ -3555,7 +3257,6 @@
 
     goto/16 :goto_d
 
-    .line 425
     :cond_14
     const/16 v2, 0x3c
 
@@ -3581,7 +3282,6 @@
 
     goto/16 :goto_12
 
-    .line 449
     :cond_19
     const/16 v2, 0x3c
 
@@ -3607,7 +3307,6 @@
 
     goto/16 :goto_17
 
-    .line 468
     .end local v10    # "background":Landroid/graphics/drawable/Drawable;
     .end local v15    # "map":Lcom/google/android/gms/maps/MapView;
     :cond_1e
@@ -3617,14 +3316,12 @@
 
     iput-boolean v2, v0, Lorg/telegram/ui/LocationActivity;->searchWas:Z
 
-    .line 469
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lorg/telegram/ui/LocationActivity;->searching:Z
 
-    .line 470
     new-instance v2, Landroid/widget/FrameLayout;
 
     move-object/from16 v0, p1
@@ -3635,7 +3332,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
-    .line 471
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -3646,21 +3342,18 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/FrameLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 472
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     if-eqz v2, :cond_1f
 
-    .line 473
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->destroy()V
 
-    .line 475
     :cond_1f
     move-object/from16 v0, p0
 
@@ -3668,14 +3361,12 @@
 
     if-eqz v2, :cond_20
 
-    .line 476
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchAdapter:Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;->destroy()V
 
-    .line 479
     :cond_20
     new-instance v2, Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -3687,7 +3378,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 480
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3704,7 +3394,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 481
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3713,7 +3402,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 482
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3734,7 +3422,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 483
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3751,7 +3438,6 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 485
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3764,7 +3450,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 498
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -3777,7 +3462,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 519
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
@@ -3790,7 +3474,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->setDelegate(Lorg/telegram/ui/Adapters/BaseLocationAdapter$BaseLocationAdapterDelegate;)V
 
-    .line 527
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
@@ -3801,7 +3484,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->setOverScrollHeight(I)V
 
-    .line 529
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -3818,7 +3500,6 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 531
     new-instance v2, Lorg/telegram/ui/LocationActivity$13;
 
     move-object/from16 v0, p0
@@ -3831,12 +3512,10 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
-    .line 572
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
-    .line 573
     .restart local v15    # "map":Lcom/google/android/gms/maps/MapView;
     new-instance v2, Ljava/lang/Thread;
 
@@ -3848,10 +3527,8 @@
 
     invoke-direct {v2, v3}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
 
-    .line 607
     invoke-virtual {v2}, Ljava/lang/Thread;->start()V
 
-    .line 609
     new-instance v17, Landroid/view/View;
 
     move-object/from16 v0, v17
@@ -3860,7 +3537,6 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 610
     .local v17, "shadow":Landroid/view/View;
     const v2, 0x7f0200b2
 
@@ -3868,7 +3544,6 @@
 
     invoke-virtual {v0, v2}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 611
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -3887,7 +3562,6 @@
 
     invoke-virtual {v2, v0, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 613
     new-instance v2, Landroid/widget/ImageView;
 
     move-object/from16 v0, p1
@@ -3898,7 +3572,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerImageView:Landroid/widget/ImageView;
 
-    .line 614
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerImageView:Landroid/widget/ImageView;
@@ -3907,7 +3580,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 615
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -3928,7 +3600,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 617
     new-instance v2, Landroid/widget/ImageView;
 
     move-object/from16 v0, p1
@@ -3939,7 +3610,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
 
-    .line 618
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
@@ -3948,7 +3618,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 619
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
@@ -3967,7 +3636,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 620
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->markerXImageView:Landroid/widget/ImageView;
@@ -3976,7 +3644,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 621
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -3997,7 +3664,6 @@
 
     invoke-virtual {v2, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 623
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
@@ -4065,7 +3731,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 624
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -4078,7 +3743,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 647
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->locationButton:Landroid/widget/ImageView;
@@ -4087,7 +3751,6 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 649
     new-instance v2, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     move-object/from16 v0, p1
@@ -4098,7 +3761,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 650
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -4113,7 +3775,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 651
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -4122,7 +3783,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setShowAtCenter(Z)V
 
-    .line 652
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -4131,7 +3791,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setVisibility(I)V
 
-    .line 653
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -4146,7 +3805,6 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 655
     new-instance v2, Lorg/telegram/ui/Components/RecyclerListView;
 
     move-object/from16 v0, p1
@@ -4157,7 +3815,6 @@
 
     iput-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 656
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4166,7 +3823,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 657
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4183,7 +3839,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 658
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4200,7 +3855,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 659
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4217,7 +3871,6 @@
 
     invoke-virtual {v13, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 660
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4230,7 +3883,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 668
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->searchListView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -4243,7 +3895,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 679
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/LocationActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -4252,7 +3903,6 @@
 
     goto/16 :goto_18
 
-    .line 623
     :cond_21
     const/16 v2, 0x3c
 
@@ -4285,12 +3935,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 956
     sget v2, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
 
     if-ne p1, v2, :cond_2
 
-    .line 957
     const/4 v2, 0x0
 
     aget-object v2, p2, v2
@@ -4301,7 +3949,6 @@
 
     move-result v1
 
-    .line 958
     .local v1, "mask":I
     and-int/lit8 v2, v1, 0x2
 
@@ -4311,39 +3958,32 @@
 
     if-eqz v2, :cond_1
 
-    .line 959
     :cond_0
     invoke-direct {p0}, Lorg/telegram/ui/LocationActivity;->updateUserData()V
 
-    .line 972
     .end local v1    # "mask":I
     :cond_1
     :goto_0
     return-void
 
-    .line 961
     :cond_2
     sget v2, Lorg/telegram/messenger/NotificationCenter;->closeChats:I
 
     if-ne p1, v2, :cond_3
 
-    .line 962
     invoke-virtual {p0}, Lorg/telegram/ui/LocationActivity;->removeSelfFromStack()V
 
     goto :goto_0
 
-    .line 963
     :cond_3
     sget v2, Lorg/telegram/messenger/NotificationCenter;->locationPermissionGranted:I
 
     if-ne p1, v2, :cond_1
 
-    .line 964
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v2, :cond_1
 
-    .line 966
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -4355,11 +3995,9 @@
 
     goto :goto_0
 
-    .line 967
     :catch_0
     move-exception v0
 
-    .line 968
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -4370,12 +4008,10 @@
     .locals 12
 
     .prologue
-    .line 1039
     new-instance v9, Lorg/telegram/ui/LocationActivity$21;
 
     invoke-direct {v9, p0}, Lorg/telegram/ui/LocationActivity$21;-><init>(Lorg/telegram/ui/LocationActivity;)V
 
-    .line 1045
     .local v9, "\u0441ellDelegate":Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
     const/16 v0, 0x31
 
@@ -5796,15 +5432,12 @@
     .locals 2
 
     .prologue
-    .line 148
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 149
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/LocationActivity;->swipeBackEnabled:Z
 
-    .line 150
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -5813,7 +5446,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 151
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -5822,12 +5454,10 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 152
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v0, :cond_0
 
-    .line 153
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -5836,7 +5466,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 155
     :cond_0
     const/4 v0, 0x1
 
@@ -5847,10 +5476,8 @@
     .locals 3
 
     .prologue
-    .line 160
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 161
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -5859,7 +5486,6 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 162
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -5868,7 +5494,6 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 163
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -5877,51 +5502,42 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 165
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     if-eqz v1, :cond_0
 
-    .line 166
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v1}, Lcom/google/android/gms/maps/MapView;->onDestroy()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 171
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     if-eqz v1, :cond_1
 
-    .line 172
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->adapter:Lorg/telegram/ui/Adapters/LocationActivityAdapter;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->destroy()V
 
-    .line 174
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->searchAdapter:Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;
 
     if-eqz v1, :cond_2
 
-    .line 175
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->searchAdapter:Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Adapters/LocationActivitySearchAdapter;->destroy()V
 
-    .line 177
     :cond_2
     return-void
 
-    .line 168
     :catch_0
     move-exception v0
 
-    .line 169
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -5932,10 +5548,8 @@
     .locals 1
 
     .prologue
-    .line 1021
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onLowMemory()V
 
-    .line 1022
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     if-eqz v0, :cond_0
@@ -5944,12 +5558,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 1023
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v0}, Lcom/google/android/gms/maps/MapView;->onLowMemory()V
 
-    .line 1025
     :cond_0
     return-void
 .end method
@@ -5958,10 +5570,8 @@
     .locals 2
 
     .prologue
-    .line 976
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onPause()V
 
-    .line 977
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     if-eqz v1, :cond_0
@@ -5970,7 +5580,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 979
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
@@ -5978,21 +5587,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 984
     :cond_0
     :goto_0
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lorg/telegram/ui/LocationActivity;->onResumeCalled:Z
 
-    .line 985
     return-void
 
-    .line 980
     :catch_0
     move-exception v0
 
-    .line 981
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -6009,10 +5614,8 @@
 
     const/4 v4, 0x1
 
-    .line 989
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 990
     invoke-virtual {p0}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -6021,7 +5624,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->removeAdjustResize(Landroid/app/Activity;I)V
 
-    .line 991
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     if-eqz v2, :cond_0
@@ -6030,7 +5632,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 993
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
@@ -6038,17 +5639,14 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 998
     :cond_0
     :goto_0
     iput-boolean v4, p0, Lorg/telegram/ui/LocationActivity;->onResumeCalled:Z
 
-    .line 999
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
     if-eqz v2, :cond_1
 
-    .line 1001
     :try_start_1
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->googleMap:Lcom/google/android/gms/maps/GoogleMap;
 
@@ -6058,15 +5656,12 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 1006
     :cond_1
     :goto_1
     invoke-direct {p0}, Lorg/telegram/ui/LocationActivity;->updateUserData()V
 
-    .line 1007
     invoke-direct {p0, v4}, Lorg/telegram/ui/LocationActivity;->fixLayoutInternal(Z)V
 
-    .line 1008
     iget-boolean v2, p0, Lorg/telegram/ui/LocationActivity;->checkPermission:Z
 
     if-eqz v2, :cond_2
@@ -6077,19 +5672,15 @@
 
     if-lt v2, v3, :cond_2
 
-    .line 1009
     invoke-virtual {p0}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 1010
     .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_2
 
-    .line 1011
     iput-boolean v5, p0, Lorg/telegram/ui/LocationActivity;->checkPermission:Z
 
-    .line 1012
     const-string/jumbo v2, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-virtual {v0, v2}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
@@ -6098,7 +5689,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1013
     new-array v2, v6, [Ljava/lang/String;
 
     const-string/jumbo v3, "android.permission.ACCESS_COARSE_LOCATION"
@@ -6111,27 +5701,22 @@
 
     invoke-virtual {v0, v2, v6}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
 
-    .line 1017
     .end local v0    # "activity":Landroid/app/Activity;
     :cond_2
     return-void
 
-    .line 994
     :catch_0
     move-exception v1
 
-    .line 995
     .local v1, "e":Ljava/lang/Throwable;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 1002
     .end local v1    # "e":Ljava/lang/Throwable;
     :catch_1
     move-exception v1
 
-    .line 1003
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -6150,10 +5735,8 @@
 
     const/4 v6, -0x1
 
-    .line 755
     if-eqz p1, :cond_1
 
-    .line 757
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
@@ -6165,7 +5748,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 758
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
     invoke-virtual {v2}, Lcom/google/android/gms/maps/MapView;->getParent()Landroid/view/ViewParent;
@@ -6174,7 +5756,6 @@
 
     check-cast v1, Landroid/view/ViewGroup;
 
-    .line 759
     .local v1, "viewGroup":Landroid/view/ViewGroup;
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
 
@@ -6182,7 +5763,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 764
     .end local v1    # "viewGroup":Landroid/view/ViewGroup;
     :cond_0
     :goto_0
@@ -6190,7 +5770,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 765
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->mapViewClip:Landroid/widget/FrameLayout;
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity;->mapView:Lcom/google/android/gms/maps/MapView;
@@ -6211,7 +5790,6 @@
 
     invoke-virtual {v2, v3, v7, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 766
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->layoutManager:Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->findFirstVisibleItemPosition()I
@@ -6220,29 +5798,24 @@
 
     invoke-direct {p0, v2}, Lorg/telegram/ui/LocationActivity;->updateClipView(I)V
 
-    .line 771
     :cond_1
     :goto_1
     return-void
 
-    .line 761
     :catch_0
     move-exception v0
 
-    .line 762
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 767
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->fragmentView:Landroid/view/View;
 
     if-eqz v2, :cond_1
 
-    .line 768
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity;->fragmentView:Landroid/view/View;
 
     check-cast v2, Landroid/widget/FrameLayout;
@@ -6263,10 +5836,8 @@
     .param p1, "delegate"    # Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
 
     .prologue
-    .line 1028
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity;->delegate:Lorg/telegram/ui/LocationActivity$LocationActivityDelegate;
 
-    .line 1029
     return-void
 .end method
 
@@ -6275,9 +5846,7 @@
     .param p1, "message"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 951
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity;->messageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 952
     return-void
 .end method

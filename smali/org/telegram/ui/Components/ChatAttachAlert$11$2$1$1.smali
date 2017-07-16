@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;
 
     .prologue
-    .line 801
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1$1;->this$3:Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 804
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1$1;->this$3:Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
@@ -76,7 +74,6 @@
 
     if-lt v0, v1, :cond_0
 
-    .line 805
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1$1;->this$3:Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11$2$1;->this$2:Lorg/telegram/ui/Components/ChatAttachAlert$11$2;
@@ -93,7 +90,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/camera/CameraView;->setSystemUiVisibility(I)V
 
-    .line 807
     :cond_0
     return-void
 .end method

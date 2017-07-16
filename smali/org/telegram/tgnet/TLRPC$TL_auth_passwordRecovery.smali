@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 6633
     const v0, 0x137948a5
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 6632
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -52,15 +50,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6638
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 6639
     if-eqz p2, :cond_0
 
-    .line 6640
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_auth_passwordRecovery"
@@ -85,21 +80,17 @@
 
     throw v1
 
-    .line 6642
     :cond_0
     const/4 v0, 0x0
 
-    .line 6647
     :goto_0
     return-object v0
 
-    .line 6645
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;-><init>()V
 
-    .line 6646
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -114,14 +105,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6651
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->email_pattern:Ljava/lang/String;
 
-    .line 6652
     return-void
 .end method
 
@@ -130,16 +119,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 6655
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 6656
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->email_pattern:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 6657
     return-void
 .end method

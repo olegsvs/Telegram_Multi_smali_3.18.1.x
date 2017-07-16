@@ -6,7 +6,6 @@
 # annotations
 .annotation build Landroid/annotation/SuppressLint;
     value = {
-        "InlinedApi"
     }
 .end annotation
 
@@ -89,17 +88,14 @@
 
     const/4 v3, 0x1
 
-    .line 59
     const-string/jumbo v0, "OMX.google.raw.decoder"
 
-    .line 60
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;->newPassthroughInstance(Ljava/lang/String;)Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;
 
     move-result-object v0
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->PASSTHROUGH_DECODER_INFO:Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;
 
-    .line 61
     const-string/jumbo v0, "^\\D?(\\d+)$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -108,82 +104,70 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->PROFILE_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 63
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->decoderInfosCache:Ljava/util/HashMap;
 
-    .line 77
     const/4 v0, -0x1
 
     sput v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
-    .line 561
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
-    .line 562
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x42
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 563
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x4d
 
     invoke-virtual {v0, v1, v7}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 564
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x58
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 565
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x64
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 567
     new-instance v0, Landroid/util/SparseIntArray;
 
     invoke-direct {v0}, Landroid/util/SparseIntArray;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
-    .line 568
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xa
 
     invoke-virtual {v0, v1, v3}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 570
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xb
 
     invoke-virtual {v0, v1, v4}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 571
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xc
 
     invoke-virtual {v0, v1, v5}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 572
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0xd
@@ -192,14 +176,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 573
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x14
 
     invoke-virtual {v0, v1, v6}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 574
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x15
@@ -208,7 +190,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 575
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x16
@@ -217,7 +198,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 576
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x1e
@@ -226,7 +206,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 577
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x1f
@@ -235,14 +214,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 578
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x400
 
     invoke-virtual {v0, v6, v1}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 579
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x28
@@ -251,7 +228,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 580
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x29
@@ -260,7 +236,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 581
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x2a
@@ -269,7 +244,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 582
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x32
@@ -278,7 +252,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 583
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x33
@@ -287,7 +260,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 584
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_LEVEL_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
 
     const/16 v1, 0x34
@@ -296,14 +268,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 586
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
-    .line 587
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L30"
@@ -314,7 +284,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 588
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L60"
@@ -325,7 +294,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 589
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L63"
@@ -338,7 +306,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 590
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L90"
@@ -351,7 +318,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 591
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L93"
@@ -364,7 +330,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 592
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L120"
@@ -377,7 +342,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 593
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L123"
@@ -390,7 +354,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 594
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L150"
@@ -403,7 +366,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 595
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L153"
@@ -416,7 +378,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 596
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L156"
@@ -429,7 +390,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 597
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L180"
@@ -442,7 +402,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 598
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L183"
@@ -455,7 +414,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 599
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "L186"
@@ -468,7 +426,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 601
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H30"
@@ -479,7 +436,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 602
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H60"
@@ -490,7 +446,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 603
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H63"
@@ -501,7 +456,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 604
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H90"
@@ -514,7 +468,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 605
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H93"
@@ -527,7 +480,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 606
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H120"
@@ -540,7 +492,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 607
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H123"
@@ -553,7 +504,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 608
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H150"
@@ -566,7 +516,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 609
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H153"
@@ -579,7 +528,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 610
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H156"
@@ -592,7 +540,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 611
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H180"
@@ -605,7 +552,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 612
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H183"
@@ -618,7 +564,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 613
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
 
     const-string/jumbo v1, "H186"
@@ -631,7 +576,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 614
     return-void
 .end method
 
@@ -639,7 +583,6 @@
     .locals 0
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -658,10 +601,8 @@
 
     const v1, 0x18c00
 
-    .line 412
     sparse-switch p0, :sswitch_data_0
 
-    .line 428
     const/4 v0, -0x1
 
     :goto_0
@@ -671,22 +612,18 @@
     :sswitch_1
     move v0, v1
 
-    .line 415
     goto :goto_0
 
     :sswitch_2
     move v0, v1
 
-    .line 416
     goto :goto_0
 
     :sswitch_3
     move v0, v1
 
-    .line 417
     goto :goto_0
 
-    .line 418
     :sswitch_4
     const v0, 0x31800
 
@@ -695,22 +632,18 @@
     :sswitch_5
     move v0, v2
 
-    .line 419
     goto :goto_0
 
     :sswitch_6
     move v0, v2
 
-    .line 420
     goto :goto_0
 
-    .line 421
     :sswitch_7
     const v0, 0xe1000
 
     goto :goto_0
 
-    .line 422
     :sswitch_8
     const/high16 v0, 0x140000
 
@@ -719,34 +652,28 @@
     :sswitch_9
     move v0, v3
 
-    .line 423
     goto :goto_0
 
     :sswitch_a
     move v0, v3
 
-    .line 424
     goto :goto_0
 
-    .line 425
     :sswitch_b
     const/high16 v0, 0x220000
 
     goto :goto_0
 
-    .line 426
     :sswitch_c
     const v0, 0x564000
 
     goto :goto_0
 
-    .line 427
     :sswitch_d
     const/high16 v0, 0x900000
 
     goto :goto_0
 
-    .line 412
     :sswitch_data_0
     .sparse-switch
         0x1 -> :sswitch_0
@@ -791,12 +718,10 @@
 
     const/4 v5, 0x0
 
-    .line 365
     array-length v6, p1
 
     if-ge v6, v7, :cond_0
 
-    .line 367
     const-string/jumbo v6, "MediaCodecUtil"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -819,11 +744,9 @@
 
     invoke-static {v6, v7}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 401
     :goto_0
     return-object v5
 
-    .line 373
     :cond_0
     const/4 v6, 0x1
 
@@ -838,7 +761,6 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 375
     const/4 v6, 0x1
 
     aget-object v6, p1, v6
@@ -861,7 +783,6 @@
 
     move-result-object v4
 
-    .line 376
     .local v4, "profileInteger":Ljava/lang/Integer;
     const/4 v6, 0x1
 
@@ -885,7 +806,6 @@
 
     move-result-object v2
 
-    .line 391
     .local v2, "levelInteger":Ljava/lang/Integer;
     :goto_1
     sget-object v6, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->AVC_PROFILE_NUMBER_TO_CONST:Landroid/util/SparseIntArray;
@@ -902,11 +822,9 @@
 
     move-result-object v3
 
-    .line 392
     .local v3, "profile":Ljava/lang/Integer;
     if-nez v3, :cond_3
 
-    .line 393
     const-string/jumbo v6, "MediaCodecUtil"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -931,7 +849,6 @@
 
     goto :goto_0
 
-    .line 377
     .end local v2    # "levelInteger":Ljava/lang/Integer;
     .end local v3    # "profile":Ljava/lang/Integer;
     .end local v4    # "profileInteger":Ljava/lang/Integer;
@@ -943,7 +860,6 @@
 
     if-lt v6, v7, :cond_2
 
-    .line 379
     const/4 v6, 0x1
 
     aget-object v6, p1, v6
@@ -956,7 +872,6 @@
 
     move-result-object v4
 
-    .line 380
     .restart local v4    # "profileInteger":Ljava/lang/Integer;
     const/4 v6, 0x2
 
@@ -973,7 +888,6 @@
     .restart local v2    # "levelInteger":Ljava/lang/Integer;
     goto :goto_1
 
-    .line 383
     .end local v2    # "levelInteger":Ljava/lang/Integer;
     .end local v4    # "profileInteger":Ljava/lang/Integer;
     :cond_2
@@ -1003,11 +917,9 @@
 
     goto/16 :goto_0
 
-    .line 386
     :catch_0
     move-exception v0
 
-    .line 387
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string/jumbo v6, "MediaCodecUtil"
 
@@ -1033,7 +945,6 @@
 
     goto/16 :goto_0
 
-    .line 396
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     .restart local v2    # "levelInteger":Ljava/lang/Integer;
     .restart local v3    # "profile":Ljava/lang/Integer;
@@ -1053,11 +964,9 @@
 
     move-result-object v1
 
-    .line 397
     .local v1, "level":Ljava/lang/Integer;
     if-nez v1, :cond_4
 
-    .line 398
     const-string/jumbo v6, "MediaCodecUtil"
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1082,7 +991,6 @@
 
     goto/16 :goto_0
 
-    .line 401
     :cond_4
     new-instance v5, Landroid/util/Pair;
 
@@ -1112,14 +1020,11 @@
 
     const/4 v2, 0x0
 
-    .line 318
     if-nez p0, :cond_0
 
-    .line 330
     :goto_0
     return-object v1
 
-    .line 321
     :cond_0
     const-string/jumbo v3, "\\."
 
@@ -1127,7 +1032,6 @@
 
     move-result-object v0
 
-    .line 322
     .local v0, "parts":[Ljava/lang/String;
     aget-object v4, v0, v2
 
@@ -1147,7 +1051,6 @@
 
     goto :goto_0
 
-    .line 325
     :pswitch_0
     invoke-static {p0, v0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getHevcProfileAndLevel(Ljava/lang/String;[Ljava/lang/String;)Landroid/util/Pair;
 
@@ -1155,7 +1058,6 @@
 
     goto :goto_0
 
-    .line 322
     :sswitch_0
     const-string/jumbo v5, "hev1"
 
@@ -1206,7 +1108,6 @@
 
     goto :goto_1
 
-    .line 328
     :pswitch_1
     invoke-static {p0, v0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getAvcProfileAndLevel(Ljava/lang/String;[Ljava/lang/String;)Landroid/util/Pair;
 
@@ -1214,7 +1115,6 @@
 
     goto :goto_0
 
-    .line 322
     :sswitch_data_0
     .sparse-switch
         0x2ddf23 -> :sswitch_2
@@ -1243,12 +1143,10 @@
     .end annotation
 
     .prologue
-    .line 122
     invoke-static {p0, p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getDecoderInfos(Ljava/lang/String;Z)Ljava/util/List;
 
     move-result-object v0
 
-    .line 123
     .local v0, "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
@@ -1298,7 +1196,6 @@
     .prologue
     const/16 v6, 0x15
 
-    .line 139
     const-class v5, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;
 
     monitor-enter v5
@@ -1308,7 +1205,6 @@
 
     invoke-direct {v2, p0, p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;-><init>(Ljava/lang/String;Z)V
 
-    .line 140
     .local v2, "key":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;
     sget-object v4, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->decoderInfosCache:Ljava/util/HashMap;
 
@@ -1320,13 +1216,11 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 141
     .local v0, "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     if-eqz v0, :cond_0
 
     move-object v1, v0
 
-    .line 159
     .end local v0    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     .local v1, "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     :goto_0
@@ -1334,7 +1228,6 @@
 
     return-object v1
 
-    .line 144
     .end local v1    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     .restart local v0    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     :cond_0
@@ -1347,14 +1240,12 @@
 
     invoke-direct {v3, p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;-><init>(Z)V
 
-    .line 146
     .local v3, "mediaCodecList":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;
     :goto_1
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getDecoderInfosInternal(Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 147
     if-eqz p1, :cond_1
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
@@ -1373,7 +1264,6 @@
 
     if-gt v4, v6, :cond_1
 
-    .line 150
     new-instance v3, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV16;
 
     .end local v3    # "mediaCodecList":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;
@@ -1381,20 +1271,17 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV16;-><init>(Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$1;)V
 
-    .line 151
     .restart local v3    # "mediaCodecList":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getDecoderInfosInternal(Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 152
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 153
     const-string/jumbo v6, "MediaCodecUtil"
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1419,7 +1306,6 @@
 
     const/4 v4, 0x0
 
-    .line 154
     invoke-interface {v0, v4}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1436,28 +1322,23 @@
 
     move-result-object v4
 
-    .line 153
     invoke-static {v6, v4}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 157
     :cond_1
     invoke-static {v0}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
-    .line 158
     sget-object v4, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->decoderInfosCache:Ljava/util/HashMap;
 
     invoke-virtual {v4, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
     move-object v1, v0
 
-    .line 159
     .end local v0    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     .restart local v1    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     goto :goto_0
 
-    .line 144
     .end local v1    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     .end local v3    # "mediaCodecList":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;
     .restart local v0    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
@@ -1472,7 +1353,6 @@
 
     goto :goto_1
 
-    .line 139
     .end local v0    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     .end local v2    # "key":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;
     :catchall_0
@@ -1507,31 +1387,26 @@
     .end annotation
 
     .prologue
-    .line 165
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 166
     .local v4, "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
     move-object/from16 v0, p0
 
     iget-object v7, v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
-    .line 167
     .local v7, "mimeType":Ljava/lang/String;
     invoke-interface/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;->getCodecCount()I
 
     move-result v8
 
-    .line 168
     .local v8, "numberOfCodecs":I
     invoke-interface/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;->secureDecodersExplicit()Z
 
     move-result v10
 
-    .line 170
     .local v10, "secureDecodersExplicit":Z
     const/4 v6, 0x0
 
@@ -1539,20 +1414,17 @@
     :goto_0
     if-ge v6, v8, :cond_4
 
-    .line 171
     move-object/from16 v0, p1
 
     invoke-interface {v0, v6}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompat;->getCodecInfoAt(I)Landroid/media/MediaCodecInfo;
 
     move-result-object v2
 
-    .line 172
     .local v2, "codecInfo":Landroid/media/MediaCodecInfo;
     invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->getName()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 173
     .local v3, "codecName":Ljava/lang/String;
     invoke-static {v2, v3, v10}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->isCodecUsableDecoder(Landroid/media/MediaCodecInfo;Ljava/lang/String;Z)Z
 
@@ -1560,7 +1432,6 @@
 
     if-eqz v12, :cond_6
 
-    .line 174
     invoke-virtual {v2}, Landroid/media/MediaCodecInfo;->getSupportedTypes()[Ljava/lang/String;
 
     move-result-object v13
@@ -1574,7 +1445,6 @@
 
     aget-object v11, v13, v12
 
-    .line 175
     .local v11, "supportedType":Ljava/lang/String;
     invoke-virtual {v11, v7}, Ljava/lang/String;->equalsIgnoreCase(Ljava/lang/String;)Z
     :try_end_0
@@ -1584,13 +1454,11 @@
 
     if-eqz v15, :cond_2
 
-    .line 177
     :try_start_1
     invoke-virtual {v2, v11}, Landroid/media/MediaCodecInfo;->getCapabilitiesForType(Ljava/lang/String;)Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     move-result-object v1
 
-    .line 178
     .local v1, "capabilities":Landroid/media/MediaCodecInfo$CodecCapabilities;
     move-object/from16 v0, p1
 
@@ -1598,7 +1466,6 @@
 
     move-result v9
 
-    .line 179
     .local v9, "secure":Z
     if-eqz v10, :cond_0
 
@@ -1617,16 +1484,13 @@
 
     if-nez v15, :cond_3
 
-    .line 182
     :cond_1
     invoke-static {v3, v7, v1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;->newInstance(Ljava/lang/String;Ljava/lang/String;Landroid/media/MediaCodecInfo$CodecCapabilities;)Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;
 
     move-result-object v15
 
-    .line 181
     invoke-interface {v4, v15}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 174
     .end local v1    # "capabilities":Landroid/media/MediaCodecInfo$CodecCapabilities;
     .end local v9    # "secure":Z
     :cond_2
@@ -1635,7 +1499,6 @@
 
     goto :goto_1
 
-    .line 183
     .restart local v1    # "capabilities":Landroid/media/MediaCodecInfo$CodecCapabilities;
     .restart local v9    # "secure":Z
     :cond_3
@@ -1643,7 +1506,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 184
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -1670,7 +1532,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 204
     .end local v1    # "capabilities":Landroid/media/MediaCodecInfo$CodecCapabilities;
     .end local v2    # "codecInfo":Landroid/media/MediaCodecInfo;
     .end local v3    # "codecName":Ljava/lang/String;
@@ -1679,14 +1540,12 @@
     :cond_4
     return-object v4
 
-    .line 189
     .restart local v2    # "codecInfo":Landroid/media/MediaCodecInfo;
     .restart local v3    # "codecName":Ljava/lang/String;
     .restart local v11    # "supportedType":Ljava/lang/String;
     :catch_0
     move-exception v5
 
-    .line 190
     .local v5, "e":Ljava/lang/Exception;
     :try_start_2
     sget v15, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
@@ -1703,7 +1562,6 @@
 
     if-nez v15, :cond_5
 
-    .line 192
     const-string/jumbo v15, "MediaCodecUtil"
 
     new-instance v16, Ljava/lang/StringBuilder;
@@ -1738,7 +1596,6 @@
 
     goto :goto_2
 
-    .line 205
     .end local v2    # "codecInfo":Landroid/media/MediaCodecInfo;
     .end local v3    # "codecName":Ljava/lang/String;
     .end local v4    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
@@ -1751,7 +1608,6 @@
     :catch_1
     move-exception v5
 
-    .line 208
     .restart local v5    # "e":Ljava/lang/Exception;
     new-instance v12, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;
 
@@ -1761,7 +1617,6 @@
 
     throw v12
 
-    .line 196
     .restart local v2    # "codecInfo":Landroid/media/MediaCodecInfo;
     .restart local v3    # "codecName":Ljava/lang/String;
     .restart local v4    # "decoderInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;>;"
@@ -1810,12 +1665,10 @@
 
     invoke-static {v12, v13}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 197
     throw v5
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 170
     .end local v5    # "e":Ljava/lang/Exception;
     .end local v11    # "supportedType":Ljava/lang/String;
     :cond_6
@@ -1848,14 +1701,12 @@
 
     const/4 v4, 0x0
 
-    .line 335
     array-length v5, p1
 
     const/4 v6, 0x4
 
     if-ge v5, v6, :cond_0
 
-    .line 337
     const-string/jumbo v5, "MediaCodecUtil"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1878,11 +1729,9 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 361
     :goto_0
     return-object v4
 
-    .line 341
     :cond_0
     sget-object v5, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->PROFILE_PATTERN:Ljava/util/regex/Pattern;
 
@@ -1892,7 +1741,6 @@
 
     move-result-object v1
 
-    .line 342
     .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -1900,7 +1748,6 @@
 
     if-nez v5, :cond_1
 
-    .line 343
     const-string/jumbo v5, "MediaCodecUtil"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1925,13 +1772,11 @@
 
     goto :goto_0
 
-    .line 346
     :cond_1
     invoke-virtual {v1, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 348
     .local v3, "profileString":Ljava/lang/String;
     const-string/jumbo v5, "1"
 
@@ -1941,10 +1786,8 @@
 
     if-eqz v5, :cond_2
 
-    .line 349
     const/4 v2, 0x1
 
-    .line 356
     .local v2, "profile":I
     :goto_1
     sget-object v5, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->HEVC_CODEC_STRING_TO_PROFILE_LEVEL:Ljava/util/Map;
@@ -1959,11 +1802,9 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 357
     .local v0, "level":Ljava/lang/Integer;
     if-nez v0, :cond_4
 
-    .line 358
     const-string/jumbo v5, "MediaCodecUtil"
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -1992,7 +1833,6 @@
 
     goto :goto_0
 
-    .line 350
     .end local v0    # "level":Ljava/lang/Integer;
     .end local v2    # "profile":I
     :cond_2
@@ -2004,13 +1844,11 @@
 
     if-eqz v5, :cond_3
 
-    .line 351
     const/4 v2, 0x2
 
     .restart local v2    # "profile":I
     goto :goto_1
 
-    .line 353
     .end local v2    # "profile":I
     :cond_3
     const-string/jumbo v5, "MediaCodecUtil"
@@ -2037,7 +1875,6 @@
 
     goto/16 :goto_0
 
-    .line 361
     .restart local v0    # "level":Ljava/lang/Integer;
     .restart local v2    # "profile":I
     :cond_4
@@ -2056,7 +1893,6 @@
     .locals 1
 
     .prologue
-    .line 107
     sget-object v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->PASSTHROUGH_DECODER_INFO:Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;
 
     return-object v0
@@ -2077,7 +1913,6 @@
 
     const/4 v0, 0x0
 
-    .line 217
     invoke-virtual {p0}, Landroid/media/MediaCodecInfo;->isEncoder()Z
 
     move-result v1
@@ -2094,12 +1929,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 284
     :cond_0
     :goto_0
     return v0
 
-    .line 222
     :cond_1
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2109,7 +1942,6 @@
 
     const-string/jumbo v1, "CIPAACDecoder"
 
-    .line 223
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2118,7 +1950,6 @@
 
     const-string/jumbo v1, "CIPMP3Decoder"
 
-    .line 224
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2127,7 +1958,6 @@
 
     const-string/jumbo v1, "CIPVorbisDecoder"
 
-    .line 225
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2136,7 +1966,6 @@
 
     const-string/jumbo v1, "CIPAMRNBDecoder"
 
-    .line 226
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2145,7 +1974,6 @@
 
     const-string/jumbo v1, "AACDecoder"
 
-    .line 227
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2154,14 +1982,12 @@
 
     const-string/jumbo v1, "MP3Decoder"
 
-    .line 228
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 232
     :cond_2
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2175,7 +2001,6 @@
 
     if-nez v1, :cond_0
 
-    .line 236
     :cond_3
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2193,14 +2018,12 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 237
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 243
     :cond_4
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2208,7 +2031,6 @@
 
     const-string/jumbo v1, "OMX.qcom.audio.decoder.mp3"
 
-    .line 244
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2219,7 +2041,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 245
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2230,7 +2051,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 246
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2241,7 +2061,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 247
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2252,7 +2071,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 248
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2263,7 +2081,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 249
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2274,7 +2091,6 @@
 
     const-string/jumbo v2, "gee"
 
-    .line 250
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2285,7 +2101,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 251
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2296,7 +2111,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 252
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2307,7 +2121,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 253
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2318,7 +2131,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 254
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2329,7 +2141,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 255
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2340,14 +2151,12 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 256
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 261
     :cond_5
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2355,7 +2164,6 @@
 
     const-string/jumbo v1, "OMX.qcom.audio.decoder.aac"
 
-    .line 262
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2366,7 +2174,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 263
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2377,7 +2184,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 264
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2388,7 +2194,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 265
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2399,14 +2204,12 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->DEVICE:Ljava/lang/String;
 
-    .line 266
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 272
     :cond_6
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2416,7 +2219,6 @@
 
     const-string/jumbo v2, "d2"
 
-    .line 273
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2437,7 +2239,6 @@
 
     const-string/jumbo v2, "jflte"
 
-    .line 274
     invoke-virtual {v1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
     move-result v1
@@ -2459,7 +2260,6 @@
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/Util;->MANUFACTURER:Ljava/lang/String;
 
-    .line 275
     invoke-virtual {v1, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -2474,7 +2274,6 @@
 
     if-nez v1, :cond_0
 
-    .line 279
     :cond_8
     sget v1, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
@@ -2492,14 +2291,12 @@
 
     const-string/jumbo v1, "OMX.qcom.video.decoder.vp8"
 
-    .line 280
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 284
     :cond_9
     const/4 v0, 0x1
 
@@ -2517,17 +2314,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 293
     sget v4, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
     const/4 v5, -0x1
 
     if-ne v4, v5, :cond_2
 
-    .line 294
     const/4 v2, 0x0
 
-    .line 295
     .local v2, "result":I
     const-string/jumbo v4, "video/avc"
 
@@ -2535,11 +2329,9 @@
 
     move-result-object v0
 
-    .line 296
     .local v0, "decoderInfo":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;
     if-eqz v0, :cond_1
 
-    .line 297
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecInfo;->getProfileLevels()[Landroid/media/MediaCodecInfo$CodecProfileLevel;
 
     move-result-object v4
@@ -2551,7 +2343,6 @@
 
     aget-object v1, v4, v3
 
-    .line 298
     .local v1, "profileLevel":Landroid/media/MediaCodecInfo$CodecProfileLevel;
     iget v6, v1, Landroid/media/MediaCodecInfo$CodecProfileLevel;->level:I
 
@@ -2563,12 +2354,10 @@
 
     move-result v2
 
-    .line 297
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 302
     .end local v1    # "profileLevel":Landroid/media/MediaCodecInfo$CodecProfileLevel;
     :cond_0
     sget v3, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
@@ -2584,17 +2373,14 @@
 
     move-result v2
 
-    .line 304
     :cond_1
     sput v2, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
-    .line 306
     :cond_2
     sget v3, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->maxH264DecodableFrameSize:I
 
     return v3
 
-    .line 302
     :cond_3
     const v3, 0x2a300
 
@@ -2607,21 +2393,17 @@
     .param p1, "secure"    # Z
 
     .prologue
-    .line 92
     :try_start_0
     invoke-static {p0, p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil;->getDecoderInfos(Ljava/lang/String;Z)Ljava/util/List;
     :try_end_0
     .catch Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 97
     :goto_0
     return-void
 
-    .line 93
     :catch_0
     move-exception v0
 
-    .line 95
     .local v0, "e":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;
     const-string/jumbo v1, "MediaCodecUtil"
 

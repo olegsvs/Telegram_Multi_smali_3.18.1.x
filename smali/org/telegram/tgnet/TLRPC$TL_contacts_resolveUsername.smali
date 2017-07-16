@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 22334
     const v0, -0x6c3345d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 22333
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22339
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22343
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22344
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;->username:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 22345
     return-void
 .end method

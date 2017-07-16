@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x4
 
     new-array v0, v0, [B
@@ -42,7 +41,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->NAL_START_CODE:[B
 
-    .line 86
     const/16 v0, 0x11
 
     new-array v0, v0, [F
@@ -51,14 +49,12 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->ASPECT_RATIO_IDC_VALUES:[F
 
-    .line 108
     new-instance v0, Ljava/lang/Object;
 
     invoke-direct {v0}, Ljava/lang/Object;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositionsLock:Ljava/lang/Object;
 
-    .line 114
     const/16 v0, 0xa
 
     new-array v0, v0, [I
@@ -67,7 +63,6 @@
 
     return-void
 
-    .line 81
     nop
 
     :array_0
@@ -78,7 +73,6 @@
         0x1t
     .end array-data
 
-    .line 86
     :array_1
     .array-data 4
         0x3f800000    # 1.0f
@@ -105,10 +99,8 @@
     .locals 0
 
     .prologue
-    .line 469
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 471
     return-void
 .end method
 
@@ -119,20 +111,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 443
     aput-boolean v1, p0, v1
 
-    .line 444
     const/4 v0, 0x1
 
     aput-boolean v1, p0, v0
 
-    .line 445
     const/4 v0, 0x2
 
     aput-boolean v1, p0, v0
 
-    .line 446
     return-void
 .end method
 
@@ -141,40 +129,33 @@
     .param p0, "data"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 173
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->position()I
 
     move-result v1
 
-    .line 174
     .local v1, "length":I
     const/4 v0, 0x0
 
-    .line 175
     .local v0, "consecutiveZeros":I
     const/4 v2, 0x0
 
-    .line 176
     .local v2, "offset":I
     :goto_0
     add-int/lit8 v5, v2, 0x1
 
     if-ge v5, v1, :cond_3
 
-    .line 177
     invoke-virtual {p0, v2}, Ljava/nio/ByteBuffer;->get(I)B
 
     move-result v5
 
     and-int/lit16 v4, v5, 0xff
 
-    .line 178
     .local v4, "value":I
     const/4 v5, 0x3
 
     if-ne v0, v5, :cond_0
 
-    .line 179
     const/4 v5, 0x1
 
     if-ne v4, v5, :cond_1
@@ -191,57 +172,44 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 181
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->duplicate()Ljava/nio/ByteBuffer;
 
     move-result-object v3
 
-    .line 182
     .local v3, "offsetData":Ljava/nio/ByteBuffer;
     add-int/lit8 v5, v2, -0x3
 
     invoke-virtual {v3, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 183
     invoke-virtual {v3, v1}, Ljava/nio/ByteBuffer;->limit(I)Ljava/nio/Buffer;
 
-    .line 184
     const/4 v5, 0x0
 
     invoke-virtual {p0, v5}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 185
     invoke-virtual {p0, v3}, Ljava/nio/ByteBuffer;->put(Ljava/nio/ByteBuffer;)Ljava/nio/ByteBuffer;
 
-    .line 198
     .end local v3    # "offsetData":Ljava/nio/ByteBuffer;
     .end local v4    # "value":I
     :goto_1
     return-void
 
-    .line 188
     .restart local v4    # "value":I
     :cond_0
     if-nez v4, :cond_1
 
-    .line 189
     add-int/lit8 v0, v0, 0x1
 
-    .line 191
     :cond_1
     if-eqz v4, :cond_2
 
-    .line 192
     const/4 v0, 0x0
 
-    .line 194
     :cond_2
     add-int/lit8 v2, v2, 0x1
 
-    .line 195
     goto :goto_0
 
-    .line 197
     .end local v4    # "value":I
     :cond_3
     invoke-virtual {p0}, Ljava/nio/ByteBuffer;->clear()Ljava/nio/Buffer;
@@ -263,10 +231,8 @@
 
     const/4 v4, 0x1
 
-    .line 381
     sub-int v1, p2, p1
 
-    .line 383
     .local v1, "length":I
     if-ltz v1, :cond_1
 
@@ -275,10 +241,8 @@
     :goto_0
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 384
     if-nez v1, :cond_2
 
-    .line 434
     .end local p2    # "endOffset":I
     :cond_0
     :goto_1
@@ -288,27 +252,21 @@
     :cond_1
     move v3, v5
 
-    .line 383
     goto :goto_0
 
-    .line 388
     :cond_2
     if-eqz p3, :cond_5
 
-    .line 389
     aget-boolean v3, p3, v5
 
     if-eqz v3, :cond_3
 
-    .line 390
     invoke-static {p3}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->clearPrefixFlags([Z)V
 
-    .line 391
     add-int/lit8 p2, p1, -0x3
 
     goto :goto_1
 
-    .line 392
     :cond_3
     if-le v1, v4, :cond_4
 
@@ -320,15 +278,12 @@
 
     if-ne v3, v4, :cond_4
 
-    .line 393
     invoke-static {p3}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->clearPrefixFlags([Z)V
 
-    .line 394
     add-int/lit8 p2, p1, -0x2
 
     goto :goto_1
 
-    .line 395
     :cond_4
     if-le v1, v6, :cond_5
 
@@ -346,19 +301,15 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 397
     invoke-static {p3}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->clearPrefixFlags([Z)V
 
-    .line 398
     add-int/lit8 p2, p1, -0x1
 
     goto :goto_1
 
-    .line 402
     :cond_5
     add-int/lit8 v2, p2, -0x1
 
-    .line 405
     .local v2, "limit":I
     add-int/lit8 v0, p1, 0x2
 
@@ -366,20 +317,17 @@
     :goto_2
     if-ge v0, v2, :cond_9
 
-    .line 406
     aget-byte v3, p0, v0
 
     and-int/lit16 v3, v3, 0xfe
 
     if-eqz v3, :cond_6
 
-    .line 405
     :goto_3
     add-int/lit8 v0, v0, 0x3
 
     goto :goto_2
 
-    .line 409
     :cond_6
     add-int/lit8 v3, v0, -0x2
 
@@ -397,29 +345,23 @@
 
     if-ne v3, v4, :cond_8
 
-    .line 410
     if-eqz p3, :cond_7
 
-    .line 411
     invoke-static {p3}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->clearPrefixFlags([Z)V
 
-    .line 413
     :cond_7
     add-int/lit8 p2, v0, -0x2
 
     goto :goto_1
 
-    .line 417
     :cond_8
     add-int/lit8 v0, v0, -0x2
 
     goto :goto_3
 
-    .line 421
     :cond_9
     if-eqz p3, :cond_0
 
-    .line 423
     if-le v1, v6, :cond_b
 
     add-int/lit8 v3, p2, -0x3
@@ -445,7 +387,6 @@
     :goto_4
     aput-boolean v3, p3, v5
 
-    .line 428
     if-le v1, v4, :cond_10
 
     add-int/lit8 v3, p2, -0x2
@@ -465,7 +406,6 @@
     :goto_5
     aput-boolean v3, p3, v4
 
-    .line 431
     add-int/lit8 v3, p2, -0x1
 
     aget-byte v3, p0, v3
@@ -480,7 +420,6 @@
     :cond_a
     move v3, v5
 
-    .line 423
     goto :goto_4
 
     :cond_b
@@ -534,7 +473,6 @@
     :cond_f
     move v3, v5
 
-    .line 428
     goto :goto_5
 
     :cond_10
@@ -560,7 +498,6 @@
     :cond_12
     move v4, v5
 
-    .line 431
     goto :goto_6
 .end method
 
@@ -571,7 +508,6 @@
     .param p2, "limit"    # I
 
     .prologue
-    .line 449
     move v0, p1
 
     .local v0, "i":I
@@ -580,7 +516,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 450
     aget-byte v1, p0, v0
 
     if-nez v1, :cond_0
@@ -599,12 +534,10 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 454
     .end local v0    # "i":I
     :goto_1
     return v0
 
-    .line 449
     .restart local v0    # "i":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
@@ -614,7 +547,6 @@
     :cond_1
     move v0, p2
 
-    .line 454
     goto :goto_1
 .end method
 
@@ -624,7 +556,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 221
     add-int/lit8 v0, p1, 0x3
 
     aget-byte v0, p0, v0
@@ -642,7 +573,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 209
     add-int/lit8 v0, p1, 0x3
 
     aget-byte v0, p0, v0
@@ -659,40 +589,33 @@
     .param p2, "nalLimit"    # I
 
     .prologue
-    .line 349
     new-instance v1, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
 
     invoke-direct {v1, p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;-><init>([BII)V
 
-    .line 350
     .local v1, "data":Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
     const/16 v4, 0x8
 
     invoke-virtual {v1, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 351
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v2
 
-    .line 352
     .local v2, "picParameterSetId":I
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v3
 
-    .line 353
     .local v3, "seqParameterSetId":I
     const/4 v4, 0x1
 
     invoke-virtual {v1, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 354
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v0
 
-    .line 355
     .local v0, "bottomFieldPicOrderInFramePresentFlag":Z
     new-instance v4, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$PpsData;
 
@@ -708,7 +631,6 @@
     .param p2, "nalLimit"    # I
 
     .prologue
-    .line 234
     new-instance v20, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
 
     move-object/from16 v0, v20
@@ -721,7 +643,6 @@
 
     invoke-direct {v0, v1, v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;-><init>([BII)V
 
-    .line 235
     .local v20, "data":Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;
     const/16 v4, 0x8
 
@@ -729,7 +650,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 236
     const/16 v4, 0x8
 
     move-object/from16 v0, v20
@@ -738,7 +658,6 @@
 
     move-result v33
 
-    .line 237
     .local v33, "profileIdc":I
     const/16 v4, 0x10
 
@@ -746,20 +665,16 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 238
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v5
 
-    .line 240
     .local v5, "seqParameterSetId":I
     const/16 v17, 0x1
 
-    .line 241
     .local v17, "chromaFormatIdc":I
     const/4 v9, 0x0
 
-    .line 242
     .local v9, "separateColorPlaneFlag":Z
     const/16 v4, 0x64
 
@@ -821,48 +736,39 @@
 
     if-ne v0, v4, :cond_5
 
-    .line 245
     :cond_0
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v17
 
-    .line 246
     const/4 v4, 0x3
 
     move/from16 v0, v17
 
     if-ne v0, v4, :cond_1
 
-    .line 247
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v9
 
-    .line 249
     :cond_1
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
-    .line 250
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
-    .line 251
     const/4 v4, 0x1
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 252
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v37
 
-    .line 253
     .local v37, "seqScalingMatrixPresentFlag":Z
     if-eqz v37, :cond_5
 
-    .line 254
     const/4 v4, 0x3
 
     move/from16 v0, v17
@@ -871,7 +777,6 @@
 
     const/16 v28, 0x8
 
-    .line 255
     .local v28, "limit":I
     :goto_0
     const/16 v27, 0x0
@@ -884,16 +789,13 @@
 
     if-ge v0, v1, :cond_5
 
-    .line 256
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v36
 
-    .line 257
     .local v36, "seqScalingListPresentFlag":Z
     if-eqz v36, :cond_2
 
-    .line 258
     const/4 v4, 0x6
 
     move/from16 v0, v27
@@ -907,13 +809,11 @@
 
     invoke-static {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->skipScalingList(Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;I)V
 
-    .line 255
     :cond_2
     add-int/lit8 v27, v27, 0x1
 
     goto :goto_1
 
-    .line 254
     .end local v27    # "i":I
     .end local v28    # "limit":I
     .end local v36    # "seqScalingListPresentFlag":Z
@@ -922,7 +822,6 @@
 
     goto :goto_0
 
-    .line 258
     .restart local v27    # "i":I
     .restart local v28    # "limit":I
     .restart local v36    # "seqScalingListPresentFlag":Z
@@ -931,7 +830,6 @@
 
     goto :goto_2
 
-    .line 264
     .end local v27    # "i":I
     .end local v28    # "limit":I
     .end local v36    # "seqScalingListPresentFlag":Z
@@ -943,50 +841,41 @@
 
     add-int/lit8 v11, v4, 0x4
 
-    .line 265
     .local v11, "frameNumLength":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v12
 
-    .line 266
     .local v12, "picOrderCntType":I
     const/4 v13, 0x0
 
-    .line 267
     .local v13, "picOrderCntLsbLength":I
     const/4 v14, 0x0
 
-    .line 268
     .local v14, "deltaPicOrderAlwaysZeroFlag":Z
     if-nez v12, :cond_a
 
-    .line 270
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v4
 
     add-int/lit8 v13, v4, 0x4
 
-    .line 280
     :cond_6
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
-    .line 281
     const/4 v4, 0x1
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 283
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v4
 
     add-int/lit8 v32, v4, 0x1
 
-    .line 284
     .local v32, "picWidthInMbs":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
@@ -994,13 +883,11 @@
 
     add-int/lit8 v29, v4, 0x1
 
-    .line 285
     .local v29, "picHeightInMapUnits":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v10
 
-    .line 286
     .local v10, "frameMbsOnlyFlag":Z
     if-eqz v10, :cond_b
 
@@ -1011,18 +898,15 @@
 
     mul-int v26, v4, v29
 
-    .line 287
     .local v26, "frameHeightInMbs":I
     if-nez v10, :cond_7
 
-    .line 288
     const/4 v4, 0x1
 
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 291
     :cond_7
     const/4 v4, 0x1
 
@@ -1030,54 +914,43 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->skipBits(I)V
 
-    .line 292
     mul-int/lit8 v6, v32, 0x10
 
-    .line 293
     .local v6, "frameWidth":I
     mul-int/lit8 v7, v26, 0x10
 
-    .line 294
     .local v7, "frameHeight":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v25
 
-    .line 295
     .local v25, "frameCroppingFlag":Z
     if-eqz v25, :cond_8
 
-    .line 296
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v22
 
-    .line 297
     .local v22, "frameCropLeftOffset":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v23
 
-    .line 298
     .local v23, "frameCropRightOffset":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v24
 
-    .line 299
     .local v24, "frameCropTopOffset":I
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v21
 
-    .line 301
     .local v21, "frameCropBottomOffset":I
     if-nez v17, :cond_d
 
-    .line 302
     const/16 v18, 0x1
 
-    .line 303
     .local v18, "cropUnitX":I
     if-eqz v10, :cond_c
 
@@ -1086,7 +959,6 @@
     :goto_4
     rsub-int/lit8 v19, v4, 0x2
 
-    .line 310
     .local v19, "cropUnitY":I
     :goto_5
     add-int v4, v22, v23
@@ -1095,14 +967,12 @@
 
     sub-int/2addr v6, v4
 
-    .line 311
     add-int v4, v24, v21
 
     mul-int v4, v4, v19
 
     sub-int/2addr v7, v4
 
-    .line 314
     .end local v18    # "cropUnitX":I
     .end local v19    # "cropUnitY":I
     .end local v21    # "frameCropBottomOffset":I
@@ -1112,26 +982,21 @@
     :cond_8
     const/high16 v8, 0x3f800000    # 1.0f
 
-    .line 315
     .local v8, "pixelWidthHeightRatio":F
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v40
 
-    .line 316
     .local v40, "vuiParametersPresentFlag":Z
     if-eqz v40, :cond_9
 
-    .line 317
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v16
 
-    .line 318
     .local v16, "aspectRatioInfoPresentFlag":Z
     if-eqz v16, :cond_9
 
-    .line 319
     const/16 v4, 0x8
 
     move-object/from16 v0, v20
@@ -1140,13 +1005,11 @@
 
     move-result v15
 
-    .line 320
     .local v15, "aspectRatioIdc":I
     const/16 v4, 0xff
 
     if-ne v15, v4, :cond_11
 
-    .line 321
     const/16 v4, 0x10
 
     move-object/from16 v0, v20
@@ -1155,7 +1018,6 @@
 
     move-result v35
 
-    .line 322
     .local v35, "sarWidth":I
     const/16 v4, 0x10
 
@@ -1165,13 +1027,11 @@
 
     move-result v34
 
-    .line 323
     .local v34, "sarHeight":I
     if-eqz v35, :cond_9
 
     if-eqz v34, :cond_9
 
-    .line 324
     move/from16 v0, v35
 
     int-to-float v4, v0
@@ -1184,7 +1044,6 @@
 
     div-float v8, v4, v41
 
-    .line 334
     .end local v15    # "aspectRatioIdc":I
     .end local v16    # "aspectRatioInfoPresentFlag":Z
     .end local v34    # "sarHeight":I
@@ -1197,7 +1056,6 @@
 
     return-object v4
 
-    .line 271
     .end local v6    # "frameWidth":I
     .end local v7    # "frameHeight":I
     .end local v8    # "pixelWidthHeightRatio":F
@@ -1212,18 +1070,14 @@
 
     if-ne v12, v4, :cond_6
 
-    .line 272
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
 
     move-result v14
 
-    .line 273
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readSignedExpGolombCodedInt()I
 
-    .line 274
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readSignedExpGolombCodedInt()I
 
-    .line 275
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
     move-result v4
@@ -1232,7 +1086,6 @@
 
     move-wide/from16 v30, v0
 
-    .line 276
     .local v30, "numRefFramesInPicOrderCntCycle":J
     const/16 v27, 0x0
 
@@ -1248,15 +1101,12 @@
 
     if-gez v4, :cond_6
 
-    .line 277
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readUnsignedExpGolombCodedInt()I
 
-    .line 276
     add-int/lit8 v27, v27, 0x1
 
     goto :goto_7
 
-    .line 286
     .end local v27    # "i":I
     .end local v30    # "numRefFramesInPicOrderCntCycle":J
     .restart local v10    # "frameMbsOnlyFlag":Z
@@ -1267,7 +1117,6 @@
 
     goto/16 :goto_3
 
-    .line 303
     .restart local v6    # "frameWidth":I
     .restart local v7    # "frameHeight":I
     .restart local v18    # "cropUnitX":I
@@ -1282,7 +1131,6 @@
 
     goto :goto_4
 
-    .line 305
     .end local v18    # "cropUnitX":I
     :cond_d
     const/4 v4, 0x3
@@ -1293,7 +1141,6 @@
 
     const/16 v39, 0x1
 
-    .line 306
     .local v39, "subWidthC":I
     :goto_8
     const/4 v4, 0x1
@@ -1304,12 +1151,10 @@
 
     const/16 v38, 0x2
 
-    .line 307
     .local v38, "subHeightC":I
     :goto_9
     move/from16 v18, v39
 
-    .line 308
     .restart local v18    # "cropUnitX":I
     if-eqz v10, :cond_10
 
@@ -1323,7 +1168,6 @@
     .restart local v19    # "cropUnitY":I
     goto/16 :goto_5
 
-    .line 305
     .end local v18    # "cropUnitX":I
     .end local v19    # "cropUnitY":I
     .end local v38    # "subHeightC":I
@@ -1333,14 +1177,12 @@
 
     goto :goto_8
 
-    .line 306
     .restart local v39    # "subWidthC":I
     :cond_f
     const/16 v38, 0x1
 
     goto :goto_9
 
-    .line 308
     .restart local v18    # "cropUnitX":I
     .restart local v38    # "subHeightC":I
     :cond_10
@@ -1348,7 +1190,6 @@
 
     goto :goto_a
 
-    .line 326
     .end local v18    # "cropUnitX":I
     .end local v21    # "frameCropBottomOffset":I
     .end local v22    # "frameCropLeftOffset":I
@@ -1367,14 +1208,12 @@
 
     if-ge v15, v4, :cond_12
 
-    .line 327
     sget-object v4, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->ASPECT_RATIO_IDC_VALUES:[F
 
     aget v8, v4, v15
 
     goto :goto_6
 
-    .line 329
     :cond_12
     const-string/jumbo v4, "NalUnitUtil"
 
@@ -1411,14 +1250,11 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 458
     const/16 v2, 0x8
 
-    .line 459
     .local v2, "lastScale":I
     const/16 v3, 0x8
 
-    .line 460
     .local v3, "nextScale":I
     const/4 v1, 0x0
 
@@ -1426,15 +1262,12 @@
     :goto_0
     if-ge v1, p1, :cond_2
 
-    .line 461
     if-eqz v3, :cond_0
 
-    .line 462
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readSignedExpGolombCodedInt()I
 
     move-result v0
 
-    .line 463
     .local v0, "deltaScale":I
     add-int v4, v2, v0
 
@@ -1442,12 +1275,10 @@
 
     rem-int/lit16 v3, v4, 0x100
 
-    .line 465
     .end local v0    # "deltaScale":I
     :cond_0
     if-nez v3, :cond_1
 
-    .line 460
     :goto_1
     add-int/lit8 v1, v1, 0x1
 
@@ -1456,10 +1287,8 @@
     :cond_1
     move v2, v3
 
-    .line 465
     goto :goto_1
 
-    .line 467
     :cond_2
     return-void
 .end method
@@ -1470,45 +1299,37 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 128
     sget-object v12, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositionsLock:Ljava/lang/Object;
 
     monitor-enter v12
 
-    .line 129
     const/4 v4, 0x0
 
-    .line 130
     .local v4, "position":I
     const/4 v6, 0x0
 
     .local v6, "scratchEscapeCount":I
     move v7, v6
 
-    .line 131
     .end local v6    # "scratchEscapeCount":I
     .local v7, "scratchEscapeCount":I
     :cond_0
     :goto_0
     if-ge v4, p1, :cond_2
 
-    .line 132
     :try_start_0
     invoke-static {p0, v4, p1}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->findNextUnescapeIndex([BII)I
 
     move-result v4
 
-    .line 133
     if-ge v4, p1, :cond_0
 
-    .line 134
     sget-object v11, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
 
     array-length v11, v11
 
     if-gt v11, v7, :cond_1
 
-    .line 136
     sget-object v11, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
 
     sget-object v13, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
@@ -1523,7 +1344,6 @@
 
     sput-object v11, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
 
-    .line 139
     :cond_1
     sget-object v11, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
     :try_end_0
@@ -1538,7 +1358,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 140
     add-int/lit8 v4, v4, 0x3
 
     move v7, v6
@@ -1547,19 +1366,15 @@
     .restart local v7    # "scratchEscapeCount":I
     goto :goto_0
 
-    .line 144
     :cond_2
     sub-int v8, p1, v7
 
-    .line 145
     .local v8, "unescapedLength":I
     const/4 v1, 0x0
 
-    .line 146
     .local v1, "escapedPosition":I
     const/4 v9, 0x0
 
-    .line 147
     .local v9, "unescapedPosition":I
     const/4 v2, 0x0
 
@@ -1567,24 +1382,19 @@
     :goto_1
     if-ge v2, v7, :cond_3
 
-    .line 148
     :try_start_2
     sget-object v11, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->scratchEscapePositions:[I
 
     aget v3, v11, v2
 
-    .line 149
     .local v3, "nextEscapePosition":I
     sub-int v0, v3, v1
 
-    .line 150
     .local v0, "copyLength":I
     invoke-static {p0, v1, p0, v9, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 151
     add-int/2addr v9, v0
 
-    .line 152
     add-int/lit8 v10, v9, 0x1
 
     .end local v9    # "unescapedPosition":I
@@ -1593,7 +1403,6 @@
 
     aput-byte v11, p0, v9
 
-    .line 153
     add-int/lit8 v9, v10, 0x1
 
     .end local v10    # "unescapedPosition":I
@@ -1602,34 +1411,28 @@
 
     aput-byte v11, p0, v10
 
-    .line 154
     add-int/lit8 v11, v0, 0x3
 
     add-int/2addr v1, v11
 
-    .line 147
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 157
     .end local v0    # "copyLength":I
     .end local v3    # "nextEscapePosition":I
     :cond_3
     sub-int v5, v8, v9
 
-    .line 158
     .local v5, "remainingLength":I
     invoke-static {p0, v1, p0, v9, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 159
     monitor-exit v12
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
     return v8
 
-    .line 160
     .end local v1    # "escapedPosition":I
     .end local v2    # "i":I
     .end local v5    # "remainingLength":I

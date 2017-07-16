@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ImageLoader;
 
     .prologue
-    .line 2039
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
@@ -57,28 +56,23 @@
 
     const/4 v9, 0x2
 
-    .line 2042
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
     if-eqz v5, :cond_0
 
-    .line 2043
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v5}, Lorg/telegram/messenger/ImageLoader;->access$4010(Lorg/telegram/messenger/ImageLoader;)I
 
-    .line 2045
     :cond_0
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
     if-eqz v5, :cond_1
 
-    .line 2046
     iget v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$reason:I
 
     if-ne v5, v11, :cond_3
 
-    .line 2047
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
     invoke-static {v5}, Lorg/telegram/messenger/ImageLoader$HttpFileTask;->access$4100(Lorg/telegram/messenger/ImageLoader$HttpFileTask;)Z
@@ -87,7 +81,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 2048
     new-instance v1, Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -112,13 +105,11 @@
 
     invoke-direct {v1, v5, v6, v7, v8}, Lorg/telegram/messenger/ImageLoader$HttpFileTask;-><init>(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2049
     .local v1, "newTask":Lorg/telegram/messenger/ImageLoader$HttpFileTask;
     new-instance v3, Lorg/telegram/messenger/ImageLoader$11$1;
 
     invoke-direct {v3, p0, v1}, Lorg/telegram/messenger/ImageLoader$11$1;-><init>(Lorg/telegram/messenger/ImageLoader$11;Lorg/telegram/messenger/ImageLoader$HttpFileTask;)V
 
-    .line 2056
     .local v3, "runnable":Ljava/lang/Runnable;
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
@@ -134,12 +125,10 @@
 
     invoke-virtual {v5, v6, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2057
     const-wide/16 v6, 0x3e8
 
     invoke-static {v3, v6, v7}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 2069
     .end local v1    # "newTask":Lorg/telegram/messenger/ImageLoader$HttpFileTask;
     .end local v3    # "runnable":Ljava/lang/Runnable;
     :cond_1
@@ -164,7 +153,6 @@
 
     if-nez v5, :cond_5
 
-    .line 2070
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v5}, Lorg/telegram/messenger/ImageLoader;->access$4400(Lorg/telegram/messenger/ImageLoader;)Ljava/util/LinkedList;
@@ -177,7 +165,6 @@
 
     check-cast v4, Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
-    .line 2071
     .local v4, "task":Lorg/telegram/messenger/ImageLoader$HttpFileTask;
     sget-object v5, Landroid/os/AsyncTask;->THREAD_POOL_EXECUTOR:Ljava/util/concurrent/Executor;
 
@@ -193,14 +180,12 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/ImageLoader$HttpFileTask;->executeOnExecutor(Ljava/util/concurrent/Executor;[Ljava/lang/Object;)Landroid/os/AsyncTask;
 
-    .line 2072
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v5}, Lorg/telegram/messenger/ImageLoader;->access$4008(Lorg/telegram/messenger/ImageLoader;)I
 
     goto :goto_0
 
-    .line 2059
     .end local v4    # "task":Lorg/telegram/messenger/ImageLoader$HttpFileTask;
     :cond_2
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -217,7 +202,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2060
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v5
@@ -244,13 +228,11 @@
 
     goto :goto_0
 
-    .line 2062
     :cond_3
     iget v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$reason:I
 
     if-ne v5, v9, :cond_1
 
-    .line 2063
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v5}, Lorg/telegram/messenger/ImageLoader;->access$4600(Lorg/telegram/messenger/ImageLoader;)Ljava/util/HashMap;
@@ -265,7 +247,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2064
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
@@ -318,7 +299,6 @@
 
     invoke-direct {v0, v5, v6}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 2065
     .local v0, "file":Ljava/io/File;
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
 
@@ -336,7 +316,6 @@
 
     move-result-object v2
 
-    .line 2066
     .local v2, "result":Ljava/lang/String;
     :goto_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -361,7 +340,6 @@
 
     goto/16 :goto_0
 
-    .line 2065
     .end local v2    # "result":Ljava/lang/String;
     :cond_4
     iget-object v5, p0, Lorg/telegram/messenger/ImageLoader$11;->val$oldTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
@@ -376,7 +354,6 @@
 
     goto :goto_1
 
-    .line 2074
     .end local v0    # "file":Ljava/io/File;
     :cond_5
     return-void

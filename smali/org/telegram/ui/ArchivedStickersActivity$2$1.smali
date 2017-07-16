@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArchivedStickersActivity$2;
 
     .prologue
-    .line 142
     iput-object p1, p0, Lorg/telegram/ui/ArchivedStickersActivity$2$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$2;
 
     iput-object p2, p0, Lorg/telegram/ui/ArchivedStickersActivity$2$1;->val$view:Landroid/view/View;
@@ -45,18 +44,15 @@
     .locals 2
 
     .prologue
-    .line 145
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity$2$1;->val$view:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
 
-    .line 146
     .local v0, "cell":Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->setChecked(Z)V
 
-    .line 147
     return-void
 .end method
 
@@ -64,17 +60,14 @@
     .locals 2
 
     .prologue
-    .line 151
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity$2$1;->val$view:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
 
-    .line 152
     .local v0, "cell":Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->setChecked(Z)V
 
-    .line 153
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingChatsActivity;
 
     .prologue
-    .line 221
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$2;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 224
     iget-object v4, p0, Lorg/telegram/ui/ThemingChatsActivity$2;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingChatsActivity$2;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -60,7 +58,6 @@
     :goto_0
     invoke-static {v4, v2}, Lorg/telegram/ui/ThemingChatsActivity;->access$002(Lorg/telegram/ui/ThemingChatsActivity;Z)Z
 
-    .line 225
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "plusconfig"
@@ -69,13 +66,11 @@
 
     move-result-object v1
 
-    .line 226
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 227
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "chatsShowPrefix"
 
@@ -91,7 +86,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 228
     iget-object v2, p0, Lorg/telegram/ui/ThemingChatsActivity$2;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ThemingChatsActivity;->access$100(Lorg/telegram/ui/ThemingChatsActivity;)Lorg/telegram/ui/ThemingChatsActivity$ListAdapter;
@@ -100,7 +94,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 229
     iget-object v2, p0, Lorg/telegram/ui/ThemingChatsActivity$2;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ThemingChatsActivity;->access$100(Lorg/telegram/ui/ThemingChatsActivity;)Lorg/telegram/ui/ThemingChatsActivity$ListAdapter;
@@ -109,7 +102,6 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingChatsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 231
     :cond_0
     return-void
 
@@ -118,6 +110,5 @@
     :cond_1
     move v2, v3
 
-    .line 224
     goto :goto_0
 .end method

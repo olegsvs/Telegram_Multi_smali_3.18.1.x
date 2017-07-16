@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper$14;
 
     .prologue
-    .line 2970
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$14$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 5
 
     .prologue
-    .line 2974
     :try_start_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -59,22 +57,18 @@
 
     move-result-object v1
 
-    .line 2975
     .local v1, "toast":Landroid/widget/Toast;
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2979
     .end local v1    # "toast":Landroid/widget/Toast;
     :goto_0
     return-void
 
-    .line 2976
     :catch_0
     move-exception v0
 
-    .line 2977
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

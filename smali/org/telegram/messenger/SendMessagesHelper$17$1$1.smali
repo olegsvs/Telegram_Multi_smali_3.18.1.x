@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$17$1;
 
     .prologue
-    .line 3444
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$17$1$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$17$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 3447
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$17$1$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$17$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$17$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$17;
@@ -54,7 +52,6 @@
 
     move-result-object v12
 
-    .line 3448
     .local v12, "textFinal":Ljava/lang/String;
     invoke-virtual {v12}, Ljava/lang/String;->length()I
 
@@ -62,7 +59,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3449
     invoke-virtual {v12}, Ljava/lang/String;->length()I
 
     move-result v0
@@ -81,7 +77,6 @@
 
     double-to-int v11, v2
 
-    .line 3450
     .local v11, "count":I
     const/4 v10, 0x0
 
@@ -89,7 +84,6 @@
     :goto_0
     if-ge v10, v11, :cond_0
 
-    .line 3451
     mul-int/lit16 v0, v10, 0x1000
 
     add-int/lit8 v2, v10, 0x1
@@ -108,7 +102,6 @@
 
     move-result-object v1
 
-    .line 3452
     .local v1, "mess":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -132,12 +125,10 @@
 
     invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$WebPage;ZLjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 3450
     add-int/lit8 v10, v10, 0x1
 
     goto :goto_0
 
-    .line 3455
     .end local v1    # "mess":Ljava/lang/String;
     .end local v10    # "a":I
     .end local v11    # "count":I

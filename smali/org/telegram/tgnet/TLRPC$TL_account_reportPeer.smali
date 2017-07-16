@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 20715
     const v0, -0x51e762a1
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 20714
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20721
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20725
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20726
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputPeer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 20727
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->reason:Lorg/telegram/tgnet/TLRPC$ReportReason;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$ReportReason;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 20728
     return-void
 .end method

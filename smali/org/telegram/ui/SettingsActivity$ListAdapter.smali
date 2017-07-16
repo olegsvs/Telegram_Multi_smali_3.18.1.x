@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1326
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 1327
     iput-object p2, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 1328
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 1332
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/SettingsActivity;->access$4900(Lorg/telegram/ui/SettingsActivity;)I
@@ -61,7 +57,6 @@
     .prologue
     const/4 v0, 0x2
 
-    .line 1582
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$5600(Lorg/telegram/ui/SettingsActivity;)I
@@ -78,16 +73,13 @@
 
     if-ne p1, v1, :cond_2
 
-    .line 1583
     :cond_0
     const/4 v0, 0x0
 
-    .line 1598
     :cond_1
     :goto_0
     return v0
 
-    .line 1585
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -121,13 +113,11 @@
 
     if-ne p1, v1, :cond_4
 
-    .line 1586
     :cond_3
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1587
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -185,13 +175,11 @@
 
     if-ne p1, v1, :cond_6
 
-    .line 1588
     :cond_5
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 1589
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -329,7 +317,6 @@
 
     if-eq p1, v1, :cond_1
 
-    .line 1591
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$3600(Lorg/telegram/ui/SettingsActivity;)I
@@ -338,12 +325,10 @@
 
     if-ne p1, v1, :cond_7
 
-    .line 1592
     const/4 v0, 0x5
 
     goto/16 :goto_0
 
-    .line 1593
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -369,13 +354,11 @@
 
     if-ne p1, v1, :cond_9
 
-    .line 1594
     :cond_8
     const/4 v0, 0x6
 
     goto/16 :goto_0
 
-    .line 1595
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -409,7 +392,6 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 1596
     :cond_a
     const/4 v0, 0x4
 
@@ -421,12 +403,10 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 1511
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 1512
     .local v0, "position":I
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
@@ -470,7 +450,6 @@
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
-    .line 1513
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$800(Lorg/telegram/ui/SettingsActivity;)I
 
     move-result v1
@@ -511,7 +490,6 @@
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
-    .line 1514
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$1300(Lorg/telegram/ui/SettingsActivity;)I
 
     move-result v1
@@ -536,7 +514,6 @@
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
-    .line 1515
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$2400(Lorg/telegram/ui/SettingsActivity;)I
 
     move-result v1
@@ -577,7 +554,6 @@
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
-    .line 1516
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$3100(Lorg/telegram/ui/SettingsActivity;)I
 
     move-result v1
@@ -626,7 +602,6 @@
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
 
-    .line 1517
     invoke-static {v1}, Lorg/telegram/ui/SettingsActivity;->access$3200(Lorg/telegram/ui/SettingsActivity;)I
 
     move-result v1
@@ -667,20 +642,17 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1337
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v2
 
     packed-switch v2, :pswitch_data_0
 
-    .line 1507
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 1339
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -694,7 +666,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 1340
     move-object/from16 v0, p1
 
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -711,7 +682,6 @@
 
     goto :goto_0
 
-    .line 1342
     :cond_1
     move-object/from16 v0, p1
 
@@ -729,7 +699,6 @@
 
     goto :goto_0
 
-    .line 1347
     :pswitch_2
     move-object/from16 v0, p1
 
@@ -737,7 +706,6 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 1348
     .local v1, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     move-object/from16 v0, p0
 
@@ -751,7 +719,6 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 1349
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "mainconfig"
@@ -762,7 +729,6 @@
 
     move-result-object v12
 
-    .line 1350
     .local v12, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "fons_size"
 
@@ -779,13 +745,11 @@
 
     move-result v13
 
-    .line 1351
     .local v13, "size":I
     sget-boolean v2, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v2, :cond_2
 
-    .line 1352
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "theme"
@@ -796,7 +760,6 @@
 
     move-result-object v16
 
-    .line 1353
     .local v16, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "chatTextSize"
 
@@ -815,7 +778,6 @@
 
     move-result v13
 
-    .line 1355
     .end local v16    # "themePrefs":Landroid/content/SharedPreferences;
     :cond_2
     const-string/jumbo v2, "TextSize"
@@ -850,14 +812,12 @@
 
     goto/16 :goto_0
 
-    .line 1350
     .end local v13    # "size":I
     :cond_3
     const/16 v2, 0x10
 
     goto :goto_1
 
-    .line 1353
     .restart local v13    # "size":I
     .restart local v16    # "themePrefs":Landroid/content/SharedPreferences;
     :cond_4
@@ -865,7 +825,6 @@
 
     goto :goto_2
 
-    .line 1356
     .end local v12    # "preferences":Landroid/content/SharedPreferences;
     .end local v13    # "size":I
     .end local v16    # "themePrefs":Landroid/content/SharedPreferences;
@@ -882,7 +841,6 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 1357
     const-string/jumbo v2, "Language"
 
     const v3, 0x7f07031e
@@ -901,7 +859,6 @@
 
     goto/16 :goto_0
 
-    .line 1358
     :cond_6
     move-object/from16 v0, p0
 
@@ -915,7 +872,6 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 1359
     const-string/jumbo v2, "Theme"
 
     const v3, 0x7f070621
@@ -934,7 +890,6 @@
 
     goto/16 :goto_0
 
-    .line 1360
     :cond_7
     move-object/from16 v0, p0
 
@@ -948,7 +903,6 @@
 
     if-ne v0, v2, :cond_a
 
-    .line 1362
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "mainconfig"
@@ -959,7 +913,6 @@
 
     move-result-object v12
 
-    .line 1363
     .restart local v12    # "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v2, "sortContactsBy"
 
@@ -969,11 +922,9 @@
 
     move-result v14
 
-    .line 1364
     .local v14, "sort":I
     if-nez v14, :cond_8
 
-    .line 1365
     const-string/jumbo v2, "Default"
 
     const v3, 0x7f0701d7
@@ -982,7 +933,6 @@
 
     move-result-object v18
 
-    .line 1371
     .local v18, "value":Ljava/lang/String;
     :goto_3
     const-string/jumbo v2, "SortBy"
@@ -1001,14 +951,12 @@
 
     goto/16 :goto_0
 
-    .line 1366
     .end local v18    # "value":Ljava/lang/String;
     :cond_8
     const/4 v2, 0x1
 
     if-ne v14, v2, :cond_9
 
-    .line 1367
     const-string/jumbo v2, "FirstName"
 
     const v3, 0x7f0705f4
@@ -1020,7 +968,6 @@
     .restart local v18    # "value":Ljava/lang/String;
     goto :goto_3
 
-    .line 1369
     .end local v18    # "value":Ljava/lang/String;
     :cond_9
     const-string/jumbo v2, "LastName"
@@ -1034,7 +981,6 @@
     .restart local v18    # "value":Ljava/lang/String;
     goto :goto_3
 
-    .line 1372
     .end local v12    # "preferences":Landroid/content/SharedPreferences;
     .end local v14    # "sort":I
     .end local v18    # "value":Ljava/lang/String;
@@ -1051,7 +997,6 @@
 
     if-ne v0, v2, :cond_b
 
-    .line 1373
     const-string/jumbo v2, "NotificationsAndSounds"
 
     const v3, 0x7f07043a
@@ -1066,7 +1011,6 @@
 
     goto/16 :goto_0
 
-    .line 1374
     :cond_b
     move-object/from16 v0, p0
 
@@ -1080,7 +1024,6 @@
 
     if-ne v0, v2, :cond_c
 
-    .line 1375
     const-string/jumbo v2, "ChatBackground"
 
     const v3, 0x7f07015d
@@ -1095,7 +1038,6 @@
 
     goto/16 :goto_0
 
-    .line 1376
     :cond_c
     move-object/from16 v0, p0
 
@@ -1109,7 +1051,6 @@
 
     if-ne v0, v2, :cond_d
 
-    .line 1377
     const-string/jumbo v2, "SendLogs"
 
     const v3, 0x7f070594
@@ -1124,7 +1065,6 @@
 
     goto/16 :goto_0
 
-    .line 1378
     :cond_d
     move-object/from16 v0, p0
 
@@ -1138,7 +1078,6 @@
 
     if-ne v0, v2, :cond_e
 
-    .line 1379
     const-string/jumbo v2, "ClearLogs"
 
     const v3, 0x7f07017a
@@ -1153,7 +1092,6 @@
 
     goto/16 :goto_0
 
-    .line 1380
     :cond_e
     move-object/from16 v0, p0
 
@@ -1167,7 +1105,6 @@
 
     if-ne v0, v2, :cond_f
 
-    .line 1381
     const-string/jumbo v2, "AskAQuestion"
 
     const v3, 0x7f07009e
@@ -1182,7 +1119,6 @@
 
     goto/16 :goto_0
 
-    .line 1382
     :cond_f
     move-object/from16 v0, p0
 
@@ -1196,7 +1132,6 @@
 
     if-ne v0, v2, :cond_10
 
-    .line 1383
     const-string/jumbo v2, "PrivacySettings"
 
     const v3, 0x7f0704fb
@@ -1211,7 +1146,6 @@
 
     goto/16 :goto_0
 
-    .line 1384
     :cond_10
     move-object/from16 v0, p0
 
@@ -1225,7 +1159,6 @@
 
     if-ne v0, v2, :cond_11
 
-    .line 1385
     const-string/jumbo v2, "DataSettings"
 
     const v3, 0x7f0701c3
@@ -1240,7 +1173,6 @@
 
     goto/16 :goto_0
 
-    .line 1386
     :cond_11
     move-object/from16 v0, p0
 
@@ -1254,7 +1186,6 @@
 
     if-ne v0, v2, :cond_12
 
-    .line 1387
     const-string/jumbo v2, "Switch Backend"
 
     const/4 v3, 0x1
@@ -1263,7 +1194,6 @@
 
     goto/16 :goto_0
 
-    .line 1388
     :cond_12
     move-object/from16 v0, p0
 
@@ -1277,7 +1207,6 @@
 
     if-ne v0, v2, :cond_13
 
-    .line 1389
     const-string/jumbo v2, "TelegramFAQ"
 
     const v3, 0x7f070618
@@ -1292,7 +1221,6 @@
 
     goto/16 :goto_0
 
-    .line 1390
     :cond_13
     move-object/from16 v0, p0
 
@@ -1306,7 +1234,6 @@
 
     if-ne v0, v2, :cond_14
 
-    .line 1391
     const-string/jumbo v2, "ImportContacts"
 
     const v3, 0x7f0702e8
@@ -1321,7 +1248,6 @@
 
     goto/16 :goto_0
 
-    .line 1392
     :cond_14
     move-object/from16 v0, p0
 
@@ -1335,7 +1261,6 @@
 
     if-ne v0, v2, :cond_16
 
-    .line 1393
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->getUnreadStickerSets()Ljava/util/ArrayList;
 
     move-result-object v2
@@ -1344,7 +1269,6 @@
 
     move-result v9
 
-    .line 1394
     .local v9, "count":I
     const-string/jumbo v2, "Stickers"
 
@@ -1386,7 +1310,6 @@
 
     goto :goto_4
 
-    .line 1395
     .end local v9    # "count":I
     :cond_16
     move-object/from16 v0, p0
@@ -1401,7 +1324,6 @@
 
     if-ne v0, v2, :cond_17
 
-    .line 1396
     const-string/jumbo v2, "PrivacyPolicy"
 
     const v3, 0x7f0704f9
@@ -1416,7 +1338,6 @@
 
     goto/16 :goto_0
 
-    .line 1397
     :cond_17
     move-object/from16 v0, p0
 
@@ -1430,7 +1351,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1398
     const-string/jumbo v2, "Emoji"
 
     const v3, 0x7f070219
@@ -1445,7 +1365,6 @@
 
     goto/16 :goto_0
 
-    .line 1403
     .end local v1    # "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     :pswitch_3
     move-object/from16 v0, p1
@@ -1454,7 +1373,6 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/TextCheckCell;
 
-    .line 1404
     .local v1, "textCell":Lorg/telegram/ui/Cells/TextCheckCell;
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1466,7 +1384,6 @@
 
     move-result-object v12
 
-    .line 1405
     .restart local v12    # "preferences":Landroid/content/SharedPreferences;
     move-object/from16 v0, p0
 
@@ -1480,7 +1397,6 @@
 
     if-ne v0, v2, :cond_18
 
-    .line 1406
     const-string/jumbo v2, "EnableAnimations"
 
     const v3, 0x7f070221
@@ -1503,7 +1419,6 @@
 
     goto/16 :goto_0
 
-    .line 1407
     :cond_18
     move-object/from16 v0, p0
 
@@ -1517,7 +1432,6 @@
 
     if-ne v0, v2, :cond_19
 
-    .line 1408
     const-string/jumbo v2, "SendByEnter"
 
     const v3, 0x7f07058c
@@ -1540,7 +1454,6 @@
 
     goto/16 :goto_0
 
-    .line 1409
     :cond_19
     move-object/from16 v0, p0
 
@@ -1554,7 +1467,6 @@
 
     if-ne v0, v2, :cond_1a
 
-    .line 1410
     const-string/jumbo v2, "SaveToGallerySettings"
 
     const v3, 0x7f070565
@@ -1577,7 +1489,6 @@
 
     goto/16 :goto_0
 
-    .line 1411
     :cond_1a
     move-object/from16 v0, p0
 
@@ -1591,7 +1502,6 @@
 
     if-ne v0, v2, :cond_1b
 
-    .line 1412
     const-string/jumbo v2, "AutoplayGifs"
 
     const v3, 0x7f0700b6
@@ -1614,7 +1524,6 @@
 
     goto/16 :goto_0
 
-    .line 1413
     :cond_1b
     move-object/from16 v0, p0
 
@@ -1628,7 +1537,6 @@
 
     if-ne v0, v2, :cond_1c
 
-    .line 1414
     const-string/jumbo v2, "RaiseToSpeak"
 
     const v3, 0x7f070508
@@ -1651,7 +1559,6 @@
 
     goto/16 :goto_0
 
-    .line 1415
     :cond_1c
     move-object/from16 v0, p0
 
@@ -1665,7 +1572,6 @@
 
     if-ne v0, v2, :cond_1d
 
-    .line 1416
     const-string/jumbo v2, "ChromeCustomTabs"
 
     const v3, 0x7f070175
@@ -1698,7 +1604,6 @@
 
     goto/16 :goto_0
 
-    .line 1417
     :cond_1d
     move-object/from16 v0, p0
 
@@ -1712,7 +1617,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1418
     const-string/jumbo v2, "DirectShare"
 
     const v3, 0x7f0701f8
@@ -1745,7 +1649,6 @@
 
     goto/16 :goto_0
 
-    .line 1423
     .end local v1    # "textCell":Lorg/telegram/ui/Cells/TextCheckCell;
     .end local v12    # "preferences":Landroid/content/SharedPreferences;
     :pswitch_4
@@ -1761,7 +1664,6 @@
 
     if-ne v0, v2, :cond_1e
 
-    .line 1424
     move-object/from16 v0, p1
 
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1780,7 +1682,6 @@
 
     goto/16 :goto_0
 
-    .line 1425
     :cond_1e
     move-object/from16 v0, p0
 
@@ -1794,7 +1695,6 @@
 
     if-ne v0, v2, :cond_1f
 
-    .line 1426
     move-object/from16 v0, p1
 
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1813,7 +1713,6 @@
 
     goto/16 :goto_0
 
-    .line 1427
     :cond_1f
     move-object/from16 v0, p0
 
@@ -1827,7 +1726,6 @@
 
     if-ne v0, v2, :cond_20
 
-    .line 1428
     move-object/from16 v0, p1
 
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1846,7 +1744,6 @@
 
     goto/16 :goto_0
 
-    .line 1429
     :cond_20
     move-object/from16 v0, p0
 
@@ -1860,7 +1757,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1430
     move-object/from16 v0, p1
 
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -1879,7 +1775,6 @@
 
     goto/16 :goto_0
 
-    .line 1435
     :pswitch_5
     move-object/from16 v0, p1
 
@@ -1887,7 +1782,6 @@
 
     check-cast v15, Lorg/telegram/ui/Cells/TextInfoCell;
 
-    .line 1437
     .local v15, "textInfoCell":Lorg/telegram/ui/Cells/TextInfoCell;
     :try_start_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -1908,17 +1802,14 @@
 
     move-result-object v11
 
-    .line 1438
     .local v11, "pInfo":Landroid/content/pm/PackageInfo;
     iget v2, v11, Landroid/content/pm/PackageInfo;->versionCode:I
 
     div-int/lit8 v8, v2, 0xa
 
-    .line 1439
     .local v8, "code":I
     const-string/jumbo v7, ""
 
-    .line 1440
     .local v7, "abi":Ljava/lang/String;
     iget v2, v11, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -1926,7 +1817,6 @@
 
     packed-switch v2, :pswitch_data_1
 
-    .line 1454
     :goto_5
     sget-object v2, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1964,14 +1854,12 @@
 
     goto/16 :goto_0
 
-    .line 1455
     .end local v7    # "abi":Ljava/lang/String;
     .end local v8    # "code":I
     .end local v11    # "pInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v10
 
-    .line 1456
     .local v10, "e":Ljava/lang/Exception;
     const-string/jumbo v2, "tmessages"
 
@@ -1979,7 +1867,6 @@
 
     goto/16 :goto_0
 
-    .line 1442
     .end local v10    # "e":Ljava/lang/Exception;
     .restart local v7    # "abi":Ljava/lang/String;
     .restart local v8    # "code":I
@@ -1988,24 +1875,18 @@
     :try_start_1
     const-string/jumbo v7, "arm"
 
-    .line 1443
     goto :goto_5
 
-    .line 1445
     :pswitch_7
     const-string/jumbo v7, "arm-v7a"
 
-    .line 1446
     goto :goto_5
 
-    .line 1448
     :pswitch_8
     const-string/jumbo v7, "x86"
 
-    .line 1449
     goto :goto_5
 
-    .line 1451
     :pswitch_9
     const-string/jumbo v7, "universal"
     :try_end_1
@@ -2013,7 +1894,6 @@
 
     goto :goto_5
 
-    .line 1462
     .end local v7    # "abi":Ljava/lang/String;
     .end local v8    # "code":I
     .end local v11    # "pInfo":Landroid/content/pm/PackageInfo;
@@ -2025,7 +1905,6 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    .line 1464
     .local v1, "textCell":Lorg/telegram/ui/Cells/TextDetailSettingsCell;
     move-object/from16 v0, p0
 
@@ -2039,12 +1918,10 @@
 
     if-ne v0, v2, :cond_22
 
-    .line 1465
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v17
 
-    .line 1467
     .local v17, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v17, :cond_21
 
@@ -2064,7 +1941,6 @@
 
     if-eqz v2, :cond_21
 
-    .line 1468
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
 
     move-result-object v2
@@ -2095,7 +1971,6 @@
 
     move-result-object v18
 
-    .line 1472
     .restart local v18    # "value":Ljava/lang/String;
     :goto_6
     const-string/jumbo v2, "Phone"
@@ -2114,7 +1989,6 @@
 
     goto/16 :goto_0
 
-    .line 1470
     .end local v18    # "value":Ljava/lang/String;
     :cond_21
     const-string/jumbo v2, "NumberUnknown"
@@ -2128,7 +2002,6 @@
     .restart local v18    # "value":Ljava/lang/String;
     goto :goto_6
 
-    .line 1473
     .end local v17    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .end local v18    # "value":Ljava/lang/String;
     :cond_22
@@ -2144,12 +2017,10 @@
 
     if-ne v0, v2, :cond_24
 
-    .line 1474
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v17
 
-    .line 1476
     .restart local v17    # "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v17, :cond_23
 
@@ -2169,7 +2040,6 @@
 
     if-eqz v2, :cond_23
 
-    .line 1477
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -2192,7 +2062,6 @@
 
     move-result-object v18
 
-    .line 1481
     .restart local v18    # "value":Ljava/lang/String;
     :goto_7
     const-string/jumbo v2, "Username"
@@ -2211,7 +2080,6 @@
 
     goto/16 :goto_0
 
-    .line 1479
     .end local v18    # "value":Ljava/lang/String;
     :cond_23
     const-string/jumbo v2, "UsernameEmpty"
@@ -2225,7 +2093,6 @@
     .restart local v18    # "value":Ljava/lang/String;
     goto :goto_7
 
-    .line 1484
     .end local v17    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .end local v18    # "value":Ljava/lang/String;
     :cond_24
@@ -2241,7 +2108,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 1485
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -2254,7 +2120,6 @@
 
     invoke-static {v3, v2}, Lorg/telegram/ui/SettingsActivity;->access$5502(Lorg/telegram/ui/SettingsActivity;Lorg/telegram/ui/Cells/TextDetailSettingsCell;)Lorg/telegram/ui/Cells/TextDetailSettingsCell;
 
-    .line 1486
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -2265,9 +2130,7 @@
 
     const/4 v3, 0x1
 
-    invoke-virtual {v2, v3}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;->setMultilineText(Z)V
 
-    .line 1501
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/SettingsActivity$ListAdapter;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -2334,7 +2197,6 @@
 
     goto :goto_8
 
-    .line 1337
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -2346,7 +2208,6 @@
         :pswitch_a
     .end packed-switch
 
-    .line 1440
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_6
@@ -2362,14 +2223,11 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 1522
     const/4 v5, 0x0
 
-    .line 1523
     .local v5, "view":Landroid/view/View;
     packed-switch p2, :pswitch_data_0
 
-    .line 1576
     :goto_0
     new-instance v6, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -2381,14 +2239,12 @@
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1577
     new-instance v6, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v6, v5}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
 
     return-object v6
 
-    .line 1525
     :pswitch_0
     new-instance v5, Lorg/telegram/ui/Cells/EmptyCell;
 
@@ -2399,7 +2255,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/EmptyCell;-><init>(Landroid/content/Context;)V
 
-    .line 1526
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2411,7 +2266,6 @@
 
     goto :goto_0
 
-    .line 1529
     :pswitch_1
     new-instance v5, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
@@ -2422,11 +2276,9 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 1530
     .restart local v5    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 1532
     :pswitch_2
     new-instance v5, Lorg/telegram/ui/Cells/TextSettingsCell;
 
@@ -2437,7 +2289,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 1533
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2449,7 +2300,6 @@
 
     goto :goto_0
 
-    .line 1536
     :pswitch_3
     new-instance v5, Lorg/telegram/ui/Cells/TextCheckCell;
 
@@ -2460,7 +2310,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/TextCheckCell;-><init>(Landroid/content/Context;)V
 
-    .line 1537
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2472,7 +2321,6 @@
 
     goto :goto_0
 
-    .line 1540
     :pswitch_4
     new-instance v5, Lorg/telegram/ui/Cells/HeaderCell;
 
@@ -2483,7 +2331,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/HeaderCell;-><init>(Landroid/content/Context;)V
 
-    .line 1541
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2495,7 +2342,6 @@
 
     goto :goto_0
 
-    .line 1544
     :pswitch_5
     new-instance v5, Lorg/telegram/ui/Cells/TextInfoCell;
 
@@ -2506,7 +2352,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/TextInfoCell;-><init>(Landroid/content/Context;)V
 
-    .line 1545
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2516,7 +2361,6 @@
 
     invoke-virtual {v5, v6}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 1547
     :try_start_0
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -2536,17 +2380,14 @@
 
     move-result-object v4
 
-    .line 1548
     .local v4, "pInfo":Landroid/content/pm/PackageInfo;
     iget v6, v4, Landroid/content/pm/PackageInfo;->versionCode:I
 
     div-int/lit8 v2, v6, 0xa
 
-    .line 1549
     .local v2, "code":I
     const-string/jumbo v1, ""
 
-    .line 1550
     .local v1, "abi":Ljava/lang/String;
     iget v6, v4, Landroid/content/pm/PackageInfo;->versionCode:I
 
@@ -2554,7 +2395,6 @@
 
     packed-switch v6, :pswitch_data_1
 
-    .line 1566
     :goto_1
     move-object v0, v5
 
@@ -2614,20 +2454,17 @@
 
     goto/16 :goto_0
 
-    .line 1567
     .end local v1    # "abi":Ljava/lang/String;
     .end local v2    # "code":I
     .end local v4    # "pInfo":Landroid/content/pm/PackageInfo;
     :catch_0
     move-exception v3
 
-    .line 1568
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 1552
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v1    # "abi":Ljava/lang/String;
     .restart local v2    # "code":I
@@ -2636,24 +2473,18 @@
     :try_start_1
     const-string/jumbo v1, "arm"
 
-    .line 1553
     goto :goto_1
 
-    .line 1556
     :pswitch_7
     const-string/jumbo v1, "arm-v7a"
 
-    .line 1557
     goto :goto_1
 
-    .line 1560
     :pswitch_8
     const-string/jumbo v1, "x86"
 
-    .line 1561
     goto :goto_1
 
-    .line 1563
     :pswitch_9
     const-string/jumbo v1, "universal"
     :try_end_1
@@ -2661,7 +2492,6 @@
 
     goto :goto_1
 
-    .line 1572
     .end local v1    # "abi":Ljava/lang/String;
     .end local v2    # "code":I
     .end local v4    # "pInfo":Landroid/content/pm/PackageInfo;
@@ -2675,7 +2505,6 @@
 
     invoke-direct {v5, v6}, Lorg/telegram/ui/Cells/TextDetailSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 1573
     .restart local v5    # "view":Landroid/view/View;
     const-string/jumbo v6, "windowBackgroundWhite"
 
@@ -2687,7 +2516,6 @@
 
     goto/16 :goto_0
 
-    .line 1523
     nop
 
     :pswitch_data_0
@@ -2701,7 +2529,6 @@
         :pswitch_a
     .end packed-switch
 
-    .line 1550
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_6

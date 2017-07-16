@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 1068
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$23;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 1082
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 1071
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$23;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$23;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -80,7 +77,6 @@
 
     invoke-static {v0, p1, v1, p3}, Lorg/telegram/ui/Components/EmojiView;->access$5500(Lorg/telegram/ui/Components/EmojiView;III)V
 
-    .line 1072
     return-void
 .end method
 
@@ -89,11 +85,9 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1076
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$23;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$5000(Lorg/telegram/ui/Components/EmojiView;)V
 
-    .line 1077
     return-void
 .end method

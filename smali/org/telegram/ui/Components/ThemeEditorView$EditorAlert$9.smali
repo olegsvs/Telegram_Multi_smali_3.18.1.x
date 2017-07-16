@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 737
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 740
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$800(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 741
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$2000(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Landroid/widget/FrameLayout;
@@ -59,13 +56,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 742
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$2102(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Z)Z
 
-    .line 743
     return-void
 .end method

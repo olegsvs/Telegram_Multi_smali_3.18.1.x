@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$3;
 
     .prologue
-    .line 1234
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$3$1;->this$1:Lorg/telegram/messenger/ImageLoader$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1236
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$3$1;->this$1:Lorg/telegram/messenger/ImageLoader$3;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$3;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/ImageLoader;->checkMediaPaths()V
 
-    .line 1237
     return-void
 .end method

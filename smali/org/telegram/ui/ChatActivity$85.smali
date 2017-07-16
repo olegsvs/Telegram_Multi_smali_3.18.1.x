@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 8157
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$85;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ChatActivity$85;->val$isFav:Z
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 8160
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$85;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$17000(Lorg/telegram/ui/ChatActivity;)Landroid/widget/TextView;
@@ -67,10 +65,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 8161
     return-void
 
-    .line 8160
     :cond_0
     const-string/jumbo v0, "AddToFavorites"
 

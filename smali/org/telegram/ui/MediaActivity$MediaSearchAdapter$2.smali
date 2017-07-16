@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 2008
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;->val$query:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 2012
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
@@ -52,7 +50,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 2013
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     const/4 v2, 0x0
@@ -61,7 +58,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2017
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$2;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
@@ -69,14 +65,11 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->access$4700(Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;Ljava/lang/String;)V
 
-    .line 2018
     return-void
 
-    .line 2014
     :catch_0
     move-exception v0
 
-    .line 2015
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

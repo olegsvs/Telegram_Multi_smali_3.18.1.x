@@ -68,29 +68,24 @@
     .param p2, "baseUri"    # Ljava/lang/String;
 
     .prologue
-    .line 345
     const-string/jumbo v0, "SmoothStreamingMedia"
 
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ElementParser;-><init>(Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$ElementParser;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 346
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->lookAheadCount:I
 
-    .line 347
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->protectionElement:Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
-    .line 348
     new-instance v0, Ljava/util/LinkedList;
 
     invoke-direct {v0}, Ljava/util/LinkedList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->streamElements:Ljava/util/List;
 
-    .line 349
     return-void
 .end method
 
@@ -101,12 +96,10 @@
     .param p1, "child"    # Ljava/lang/Object;
 
     .prologue
-    .line 365
     instance-of v0, p1, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
     if-eqz v0, :cond_1
 
-    .line 366
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->streamElements:Ljava/util/List;
 
     check-cast p1, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
@@ -114,19 +107,16 @@
     .end local p1    # "child":Ljava/lang/Object;
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 371
     :cond_0
     :goto_0
     return-void
 
-    .line 367
     .restart local p1    # "child":Ljava/lang/Object;
     :cond_1
     instance-of v0, p1, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     if-eqz v0, :cond_0
 
-    .line 368
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->protectionElement:Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     if-nez v0, :cond_2
@@ -136,7 +126,6 @@
     :goto_1
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 369
     check-cast p1, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     .end local p1    # "child":Ljava/lang/Object;
@@ -144,7 +133,6 @@
 
     goto :goto_0
 
-    .line 368
     .restart local p1    # "child":Ljava/lang/Object;
     :cond_2
     const/4 v0, 0x0
@@ -156,7 +144,6 @@
     .locals 18
 
     .prologue
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->streamElements:Ljava/util/List;
@@ -167,7 +154,6 @@
 
     new-array v15, v3, [Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
 
-    .line 376
     .local v15, "streamElementArray":[Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
     move-object/from16 v0, p0
 
@@ -175,14 +161,12 @@
 
     invoke-interface {v3, v15}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->protectionElement:Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$ProtectionElement;
 
     if-eqz v3, :cond_1
 
-    .line 378
     new-instance v2, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     const/4 v3, 0x1
@@ -213,7 +197,6 @@
 
     invoke-direct {v2, v3}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;-><init>([Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;)V
 
-    .line 380
     .local v2, "drmInitData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
     array-length v4, v15
 
@@ -224,7 +207,6 @@
 
     aget-object v17, v15, v3
 
-    .line 381
     .local v17, "streamElement":Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
     const/16 v16, 0x0
 
@@ -240,7 +222,6 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 382
     move-object/from16 v0, v17
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lorg/telegram/messenger/exoplayer2/Format;
@@ -257,18 +238,15 @@
 
     aput-object v6, v5, v16
 
-    .line 381
     add-int/lit8 v16, v16, 0x1
 
     goto :goto_1
 
-    .line 380
     :cond_0
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 386
     .end local v2    # "drmInitData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
     .end local v16    # "i":I
     .end local v17    # "streamElement":Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;
@@ -322,7 +300,6 @@
     .end annotation
 
     .prologue
-    .line 353
     const-string/jumbo v0, "MajorVersion"
 
     invoke-virtual {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->parseRequiredInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
@@ -331,7 +308,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->majorVersion:I
 
-    .line 354
     const-string/jumbo v0, "MinorVersion"
 
     invoke-virtual {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->parseRequiredInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)I
@@ -340,7 +316,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->minorVersion:I
 
-    .line 355
     const-string/jumbo v0, "TimeScale"
 
     const-wide/32 v2, 0x989680
@@ -351,7 +326,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->timescale:J
 
-    .line 356
     const-string/jumbo v0, "Duration"
 
     invoke-virtual {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->parseRequiredLong(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)J
@@ -360,7 +334,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->duration:J
 
-    .line 357
     const-string/jumbo v0, "DVRWindowLength"
 
     const-wide/16 v2, 0x0
@@ -371,7 +344,6 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->dvrWindowLength:J
 
-    .line 358
     const-string/jumbo v0, "LookaheadCount"
 
     const/4 v1, -0x1
@@ -382,7 +354,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->lookAheadCount:I
 
-    .line 359
     const-string/jumbo v0, "IsLive"
 
     const/4 v1, 0x0
@@ -393,7 +364,6 @@
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->isLive:Z
 
-    .line 360
     const-string/jumbo v0, "TimeScale"
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->timescale:J
@@ -404,6 +374,5 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifestParser$SmoothStreamingMediaParser;->putNormalizedAttribute(Ljava/lang/String;Ljava/lang/Object;)V
 
-    .line 361
     return-void
 .end method

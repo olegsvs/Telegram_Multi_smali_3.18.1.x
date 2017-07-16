@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 309
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 363
     return-void
 .end method
 
@@ -49,7 +47,6 @@
     .locals 5
 
     .prologue
-    .line 335
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$300(Lorg/telegram/ui/PopupNotificationActivity;)Lorg/telegram/messenger/MessageObject;
@@ -58,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 336
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -83,7 +79,6 @@
 
     invoke-virtual {v0, v2, v3, v1, v4}, Lorg/telegram/messenger/MessagesController;->sendTyping(JII)V
 
-    .line 338
     :cond_0
     return-void
 .end method
@@ -93,7 +88,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 368
     return-void
 .end method
 
@@ -101,7 +95,6 @@
     .locals 0
 
     .prologue
-    .line 343
     return-void
 .end method
 
@@ -109,7 +102,6 @@
     .locals 0
 
     .prologue
-    .line 348
     return-void
 .end method
 
@@ -118,7 +110,6 @@
     .param p1, "loading"    # Z
 
     .prologue
-    .line 331
     return-void
 .end method
 
@@ -129,7 +120,6 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 312
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$300(Lorg/telegram/ui/PopupNotificationActivity;)Lorg/telegram/messenger/MessageObject;
@@ -138,11 +128,9 @@
 
     if-nez v0, :cond_0
 
-    .line 321
     :goto_0
     return-void
 
-    .line 315
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
@@ -170,7 +158,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 316
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$500(Lorg/telegram/ui/PopupNotificationActivity;)Ljava/util/ArrayList;
@@ -185,7 +172,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 318
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -241,14 +227,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesController;->markDialogAsRead(JIIIZZ)V
 
-    .line 319
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$302(Lorg/telegram/ui/PopupNotificationActivity;Lorg/telegram/messenger/MessageObject;)Lorg/telegram/messenger/MessageObject;
 
-    .line 320
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$2;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$600(Lorg/telegram/ui/PopupNotificationActivity;)V
@@ -261,7 +245,6 @@
     .param p1, "opened"    # Z
 
     .prologue
-    .line 358
     return-void
 .end method
 
@@ -271,7 +254,6 @@
     .param p2, "big"    # Z
 
     .prologue
-    .line 326
     return-void
 .end method
 
@@ -280,6 +262,5 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 353
     return-void
 .end method

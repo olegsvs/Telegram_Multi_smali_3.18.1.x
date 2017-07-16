@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     .prologue
-    .line 268
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker$2;->this$2:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker$2;->val$this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -48,18 +47,14 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 271
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0
 
-    .line 272
     invoke-static {p1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 273
     const/4 v0, 0x1
 
-    .line 275
     :goto_0
     return v0
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/TwoStepVerificationActivity;
 
     .prologue
-    .line 191
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$2;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 194
     const/4 v0, 0x5
 
     if-eq p2, v0, :cond_0
@@ -53,16 +51,13 @@
 
     if-ne p2, v0, :cond_1
 
-    .line 195
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$2;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$000(Lorg/telegram/ui/TwoStepVerificationActivity;)V
 
-    .line 196
     const/4 v0, 0x1
 
-    .line 198
     :goto_0
     return v0
 

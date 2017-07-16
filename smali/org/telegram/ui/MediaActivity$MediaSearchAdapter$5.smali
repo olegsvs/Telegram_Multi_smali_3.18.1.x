@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 2158
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$5;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 2166
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$5;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -72,13 +70,11 @@
     .param p1, "webPage"    # Lorg/telegram/tgnet/TLRPC$WebPage;
 
     .prologue
-    .line 2161
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$5;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/MediaActivity;->access$3600(Lorg/telegram/ui/MediaActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)V
 
-    .line 2162
     return-void
 .end method

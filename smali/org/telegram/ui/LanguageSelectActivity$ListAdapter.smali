@@ -29,18 +29,14 @@
     .param p3, "isSearch"    # Z
 
     .prologue
-    .line 291
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 292
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 293
     iput-boolean p3, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
-    .line 294
     return-void
 .end method
 
@@ -52,24 +48,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 303
     iget-boolean v1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
     if-eqz v1, :cond_2
 
-    .line 304
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iget-object v1, v1, Lorg/telegram/ui/LanguageSelectActivity;->searchResult:Ljava/util/ArrayList;
 
     if-nez v1, :cond_1
 
-    .line 312
     :cond_0
     :goto_0
     return v0
 
-    .line 307
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
@@ -81,7 +73,6 @@
 
     goto :goto_0
 
-    .line 309
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -91,7 +82,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 312
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
     move-result-object v0
@@ -110,7 +100,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 338
     const/4 v0, 0x0
 
     return v0
@@ -121,7 +110,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 298
     const/4 v0, 0x1
 
     return v0
@@ -137,18 +125,15 @@
 
     const/4 v4, 0x0
 
-    .line 323
     iget-object v2, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v2, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 326
     .local v2, "textSettingsCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     iget-boolean v5, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->search:Z
 
     if-eqz v5, :cond_1
 
-    .line 327
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iget-object v5, v5, Lorg/telegram/ui/LanguageSelectActivity;->searchResult:Ljava/util/ArrayList;
@@ -159,7 +144,6 @@
 
     check-cast v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 328
     .local v1, "localeInfo":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
@@ -175,7 +159,6 @@
 
     move v0, v3
 
-    .line 333
     .local v0, "last":Z
     :goto_0
     iget-object v5, v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
@@ -185,17 +168,14 @@
     :goto_1
     invoke-virtual {v2, v5, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/String;Z)V
 
-    .line 334
     return-void
 
     .end local v0    # "last":Z
     :cond_0
     move v0, v4
 
-    .line 328
     goto :goto_0
 
-    .line 330
     .end local v1    # "localeInfo":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -210,7 +190,6 @@
 
     check-cast v1, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 331
     .restart local v1    # "localeInfo":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -242,7 +221,6 @@
     :cond_3
     move v3, v4
 
-    .line 333
     goto :goto_1
 .end method
 
@@ -252,7 +230,6 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 318
     new-instance v0, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     new-instance v1, Lorg/telegram/ui/Cells/TextSettingsCell;

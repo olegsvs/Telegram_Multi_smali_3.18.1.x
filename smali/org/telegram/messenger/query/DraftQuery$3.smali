@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 212
     iput-wide p1, p0, Lorg/telegram/messenger/query/DraftQuery$3;->val$messageIdFinal:J
 
     iput p3, p0, Lorg/telegram/messenger/query/DraftQuery$3;->val$channelIdFinal:I
@@ -48,10 +47,8 @@
     .locals 12
 
     .prologue
-    .line 216
     const/4 v3, 0x0
 
-    .line 217
     .local v3, "message":Lorg/telegram/tgnet/TLRPC$Message;
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -92,7 +89,6 @@
 
     move-result-object v0
 
-    .line 218
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -100,18 +96,15 @@
 
     if-eqz v5, :cond_0
 
-    .line 219
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 220
     .local v1, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v1, :cond_0
 
-    .line 221
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -124,28 +117,22 @@
 
     move-result-object v3
 
-    .line 222
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 225
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 226
     if-nez v3, :cond_2
 
-    .line 227
     iget v5, p0, Lorg/telegram/messenger/query/DraftQuery$3;->val$channelIdFinal:I
 
     if-eqz v5, :cond_1
 
-    .line 228
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;-><init>()V
 
-    .line 229
     .local v4, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
     iget v5, p0, Lorg/telegram/messenger/query/DraftQuery$3;->val$channelIdFinal:I
 
@@ -155,7 +142,6 @@
 
     iput-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 230
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;->id:Ljava/util/ArrayList;
 
     iget-wide v6, p0, Lorg/telegram/messenger/query/DraftQuery$3;->val$messageIdFinal:J
@@ -168,7 +154,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 231
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -179,20 +164,17 @@
 
     invoke-virtual {v5, v4, v6}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 263
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v4    # "req":Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
     :goto_0
     return-void
 
-    .line 243
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_1
     new-instance v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;
 
     invoke-direct {v4}, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;-><init>()V
 
-    .line 244
     .local v4, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;->id:Ljava/util/ArrayList;
 
@@ -206,7 +188,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 245
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -221,19 +202,16 @@
 
     goto :goto_0
 
-    .line 260
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v4    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;
     :catch_0
     move-exception v2
 
-    .line 261
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 258
     .end local v2    # "e":Ljava/lang/Exception;
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_2

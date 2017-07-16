@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoViewer;
 
     .prologue
-    .line 2953
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     iput p2, p0, Lorg/telegram/ui/PhotoViewer$43;->val$mode:I
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2956
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -52,7 +50,6 @@
 
     invoke-static {v12, v13}, Lorg/telegram/ui/PhotoViewer;->access$11902(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2957
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v12, v13}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->setVisibility(I)V
 
-    .line 2958
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -76,7 +72,6 @@
 
     if-eqz v12, :cond_0
 
-    .line 2959
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -89,7 +84,6 @@
 
     invoke-virtual {v12, v13}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 2961
     :cond_0
     move-object/from16 v0, p0
 
@@ -101,7 +95,6 @@
 
     if-nez v12, :cond_1
 
-    .line 2962
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -114,7 +107,6 @@
 
     invoke-virtual {v12, v13}, Lorg/telegram/ui/Components/CheckBox;->setVisibility(I)V
 
-    .line 2964
     :cond_1
     move-object/from16 v0, p0
 
@@ -128,7 +120,6 @@
 
     invoke-virtual {v12, v13}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 2965
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -141,11 +132,9 @@
 
     move-result-object v2
 
-    .line 2966
     .local v2, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v2, :cond_3
 
-    .line 2967
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -183,7 +172,6 @@
     :goto_0
     invoke-virtual {v13, v2, v14, v12}, Lorg/telegram/ui/Components/PhotoCropView;->setBitmap(Landroid/graphics/Bitmap;IZ)V
 
-    .line 2968
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -196,7 +184,6 @@
 
     move-result v4
 
-    .line 2969
     .local v4, "bitmapWidth":I
     move-object/from16 v0, p0
 
@@ -210,7 +197,6 @@
 
     move-result v3
 
-    .line 2971
     .local v3, "bitmapHeight":I
     move-object/from16 v0, p0
 
@@ -226,7 +212,6 @@
 
     div-float v10, v12, v13
 
-    .line 2972
     .local v10, "scaleX":F
     move-object/from16 v0, p0
 
@@ -242,7 +227,6 @@
 
     div-float v11, v12, v13
 
-    .line 2973
     .local v11, "scaleY":F
     move-object/from16 v0, p0
 
@@ -260,7 +244,6 @@
 
     div-float v7, v12, v13
 
-    .line 2974
     .local v7, "newScaleX":F
     move-object/from16 v0, p0
 
@@ -278,7 +261,6 @@
 
     div-float v8, v12, v13
 
-    .line 2975
     .local v8, "newScaleY":F
     cmpl-float v12, v10, v11
 
@@ -286,7 +268,6 @@
 
     move v9, v11
 
-    .line 2976
     .local v9, "scale":F
     :goto_1
     cmpl-float v12, v7, v8
@@ -295,7 +276,6 @@
 
     move v6, v8
 
-    .line 2977
     .local v6, "newScale":F
     :goto_2
     move-object/from16 v0, p0
@@ -310,7 +290,6 @@
 
     if-ne v12, v13, :cond_2
 
-    .line 2978
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -337,25 +316,21 @@
 
     int-to-float v5, v12
 
-    .line 2979
     .local v5, "minSide":F
     int-to-float v12, v4
 
     div-float v7, v5, v12
 
-    .line 2980
     int-to-float v12, v3
 
     div-float v8, v5, v12
 
-    .line 2981
     cmpl-float v12, v7, v8
 
     if-lez v12, :cond_7
 
     move v6, v7
 
-    .line 2984
     .end local v5    # "minSide":F
     :cond_2
     :goto_3
@@ -367,7 +342,6 @@
 
     invoke-static {v12, v13}, Lorg/telegram/ui/PhotoViewer;->access$11102(Lorg/telegram/ui/PhotoViewer;F)F
 
-    .line 2985
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -376,7 +350,6 @@
 
     invoke-static {v12, v13}, Lorg/telegram/ui/PhotoViewer;->access$11202(Lorg/telegram/ui/PhotoViewer;F)F
 
-    .line 2986
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -406,7 +379,6 @@
 
     invoke-static {v13, v12}, Lorg/telegram/ui/PhotoViewer;->access$11302(Lorg/telegram/ui/PhotoViewer;F)F
 
-    .line 2987
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -417,7 +389,6 @@
 
     invoke-static {v12, v14, v15}, Lorg/telegram/ui/PhotoViewer;->access$12202(Lorg/telegram/ui/PhotoViewer;J)J
 
-    .line 2988
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -426,7 +397,6 @@
 
     invoke-static {v12, v13}, Lorg/telegram/ui/PhotoViewer;->access$12302(Lorg/telegram/ui/PhotoViewer;Z)Z
 
-    .line 2991
     .end local v3    # "bitmapHeight":I
     .end local v4    # "bitmapWidth":I
     .end local v6    # "newScale":F
@@ -446,7 +416,6 @@
 
     invoke-static {v12, v13}, Lorg/telegram/ui/PhotoViewer;->access$10902(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2992
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -465,7 +434,6 @@
 
     iget-object v15, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 2993
     invoke-static {v15}, Lorg/telegram/ui/PhotoViewer;->access$10600(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object v15
@@ -526,7 +494,6 @@
 
     fill-array-data v17, :array_0
 
-    .line 2994
     invoke-static/range {v15 .. v17}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v15
@@ -539,7 +506,6 @@
 
     iget-object v15, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
 
-    .line 2995
     invoke-static {v15}, Lorg/telegram/ui/PhotoViewer;->access$9200(Lorg/telegram/ui/PhotoViewer;)Lorg/telegram/ui/Components/PhotoCropView;
 
     move-result-object v15
@@ -562,10 +528,8 @@
 
     aput-object v15, v13, v14
 
-    .line 2992
     invoke-virtual {v12, v13}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 2997
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -578,7 +542,6 @@
 
     invoke-virtual {v12, v14, v15}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 2998
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -595,7 +558,6 @@
 
     invoke-virtual {v12, v13}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 3019
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/PhotoViewer$43;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -606,10 +568,8 @@
 
     invoke-virtual {v12}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 3020
     return-void
 
-    .line 2967
     :cond_4
     const/4 v12, 0x0
 
@@ -624,14 +584,12 @@
     :cond_5
     move v9, v10
 
-    .line 2975
     goto/16 :goto_1
 
     .restart local v9    # "scale":F
     :cond_6
     move v6, v7
 
-    .line 2976
     goto/16 :goto_2
 
     .restart local v5    # "minSide":F
@@ -639,24 +597,20 @@
     :cond_7
     move v6, v8
 
-    .line 2981
     goto/16 :goto_3
 
-    .line 2986
     .end local v5    # "minSide":F
     :cond_8
     const/4 v12, 0x0
 
     goto/16 :goto_4
 
-    .line 2993
     :array_0
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 2995
     :array_1
     .array-data 4
         0x0

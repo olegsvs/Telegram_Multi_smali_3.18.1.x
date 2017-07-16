@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 21826
     const v0, -0x1ebd8191
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_geochats_getRecents;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 21825
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 21832
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$geochats_Messages;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$geochats_Messages;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 21836
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_geochats_getRecents;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21837
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_geochats_getRecents;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21838
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_geochats_getRecents;->limit:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21839
     return-void
 .end method

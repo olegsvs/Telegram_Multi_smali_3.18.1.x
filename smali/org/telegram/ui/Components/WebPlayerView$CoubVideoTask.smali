@@ -41,27 +41,22 @@
     .param p2, "vid"    # Ljava/lang/String;
 
     .prologue
-    .line 857
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 854
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->canRetry:Z
 
-    .line 855
     const/4 v0, 0x4
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
 
-    .line 858
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->videoId:Ljava/lang/String;
 
-    .line 859
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 851
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -92,7 +86,6 @@
 
     const/4 v11, 0x0
 
-    .line 862
     iget-object v6, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     sget-object v7, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -113,7 +106,6 @@
 
     move-result-object v3
 
-    .line 863
     .local v3, "playerCode":Ljava/lang/String;
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->isCancelled()Z
 
@@ -121,19 +113,16 @@
 
     if-eqz v6, :cond_1
 
-    .line 879
     :cond_0
     :goto_0
     return-object v5
 
-    .line 867
     :cond_1
     :try_start_0
     new-instance v2, Lorg/json/JSONObject;
 
     invoke-direct {v2, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 868
     .local v2, "json":Lorg/json/JSONObject;
     const-string/jumbo v6, "file"
 
@@ -141,7 +130,6 @@
 
     move-result-object v4
 
-    .line 869
     .local v4, "video":Ljava/lang/String;
     const-string/jumbo v6, "audio_file_url"
 
@@ -149,20 +137,17 @@
 
     move-result-object v0
 
-    .line 870
     .local v0, "audio":Ljava/lang/String;
     if-eqz v4, :cond_2
 
     if-eqz v0, :cond_2
 
-    .line 871
     iget-object v6, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
 
     const/4 v7, 0x0
 
     aput-object v4, v6, v7
 
-    .line 872
     iget-object v6, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
 
     const/4 v7, 0x1
@@ -171,14 +156,12 @@
 
     aput-object v8, v6, v7
 
-    .line 873
     iget-object v6, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
 
     const/4 v7, 0x2
 
     aput-object v0, v6, v7
 
-    .line 874
     iget-object v6, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
 
     const/4 v7, 0x3
@@ -189,7 +172,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 879
     .end local v0    # "audio":Ljava/lang/String;
     .end local v2    # "json":Lorg/json/JSONObject;
     .end local v4    # "video":Ljava/lang/String;
@@ -207,11 +189,9 @@
 
     goto :goto_0
 
-    .line 876
     :catch_0
     move-exception v1
 
-    .line 877
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -222,7 +202,6 @@
     .locals 0
 
     .prologue
-    .line 851
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->onPostExecute(Ljava/lang/String;)V
@@ -237,20 +216,16 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 884
     if-eqz p1, :cond_2
 
-    .line 885
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/Components/WebPlayerView;->access$1702(Lorg/telegram/ui/Components/WebPlayerView;Z)Z
 
-    .line 886
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1902(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 887
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
@@ -259,7 +234,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1802(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 888
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
@@ -270,7 +244,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$2502(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 889
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->results:[Ljava/lang/String;
@@ -281,7 +254,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$2602(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 890
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2000(Lorg/telegram/ui/Components/WebPlayerView;)Z
@@ -290,12 +262,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 891
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2100(Lorg/telegram/ui/Components/WebPlayerView;)V
 
-    .line 893
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -303,7 +273,6 @@
 
     invoke-static {v0, v1, v3}, Lorg/telegram/ui/Components/WebPlayerView;->access$2200(Lorg/telegram/ui/Components/WebPlayerView;ZZ)V
 
-    .line 894
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$100(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$ControlsView;
@@ -312,12 +281,10 @@
 
     invoke-virtual {v0, v3, v3}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->show(ZZ)V
 
-    .line 898
     :cond_1
     :goto_0
     return-void
 
-    .line 895
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->isCancelled()Z
 
@@ -325,7 +292,6 @@
 
     if-nez v0, :cond_1
 
-    .line 896
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$CoubVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2300(Lorg/telegram/ui/Components/WebPlayerView;)V

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ShareAlert;
 
     .prologue
-    .line 126
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1;->val$context:Landroid/content/Context;
@@ -47,13 +46,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 129
     new-instance v0, Lorg/telegram/ui/Components/ShareAlert$1$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/ShareAlert$1$1;-><init>(Lorg/telegram/ui/Components/ShareAlert$1;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 141
     return-void
 .end method

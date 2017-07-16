@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 5282
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$78;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$78;->val$messages:Ljava/util/ArrayList;
@@ -49,7 +48,6 @@
     .locals 3
 
     .prologue
-    .line 5285
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$78;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$78;->val$messages:Ljava/util/ArrayList;
@@ -58,6 +56,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MessagesStorage;->access$700(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;I)Ljava/util/ArrayList;
 
-    .line 5286
     return-void
 .end method

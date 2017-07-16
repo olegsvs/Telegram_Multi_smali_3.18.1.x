@@ -32,18 +32,13 @@
     .param p3, "trackOutput"    # Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     .prologue
-    .line 509
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 510
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->track:Lorg/telegram/messenger/exoplayer2/extractor/mp4/Track;
 
-    .line 511
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->sampleTable:Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackSampleTable;
 
-    .line 512
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Mp4Extractor$Mp4Track;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 513
     return-void
 .end method

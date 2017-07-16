@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     .prologue
-    .line 1269
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$1;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -46,7 +45,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 1282
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$2400(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)Z
@@ -55,12 +53,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 1288
     :cond_0
     :goto_0
     return-void
 
-    .line 1285
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
@@ -88,7 +84,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1286
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->onNextPressed()V
@@ -104,7 +99,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 1273
     return-void
 .end method
 
@@ -116,6 +110,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 1278
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 10755
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -45,7 +44,6 @@
     .locals 7
 
     .prologue
-    .line 10758
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Cells/ChatMessageCell;->getViewTreeObserver()Landroid/view/ViewTreeObserver;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v5, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 10760
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -67,7 +64,6 @@
 
     move-result v1
 
-    .line 10761
     .local v1, "height":I
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
@@ -75,7 +71,6 @@
 
     move-result v2
 
-    .line 10762
     .local v2, "top":I
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
@@ -83,13 +78,11 @@
 
     move-result v0
 
-    .line 10763
     .local v0, "bottom":I
     if-ltz v2, :cond_1
 
     const/4 v4, 0x0
 
-    .line 10764
     .local v4, "viewTop":I
     :goto_0
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
@@ -98,14 +91,11 @@
 
     move-result v3
 
-    .line 10765
     .local v3, "viewBottom":I
     if-le v3, v1, :cond_0
 
-    .line 10766
     add-int v3, v4, v1
 
-    .line 10768
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$5;->val$messageCell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
@@ -113,12 +103,10 @@
 
     invoke-virtual {v5, v4, v6}, Lorg/telegram/ui/Cells/ChatMessageCell;->setVisiblePart(II)V
 
-    .line 10770
     const/4 v5, 0x1
 
     return v5
 
-    .line 10763
     .end local v3    # "viewBottom":I
     .end local v4    # "viewTop":I
     :cond_1

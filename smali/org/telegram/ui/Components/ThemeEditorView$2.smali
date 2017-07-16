@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ThemeEditorView;
 
     .prologue
-    .line 1014
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->val$themeName:Ljava/lang/String;
@@ -47,12 +46,10 @@
     .param p2, "bitmap"    # Landroid/graphics/Bitmap;
 
     .prologue
-    .line 1017
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->val$themeName:Ljava/lang/String;
 
     invoke-static {v0, p2, p1}, Lorg/telegram/ui/ActionBar/Theme;->setThemeWallpaper(Ljava/lang/String;Landroid/graphics/Bitmap;Ljava/io/File;)V
 
-    .line 1018
     return-void
 .end method
 
@@ -60,7 +57,6 @@
     .locals 4
 
     .prologue
-    .line 1022
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -77,7 +73,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1023
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ThemeEditorView;->access$200(Lorg/telegram/ui/Components/ThemeEditorView;)Ljava/util/ArrayList;
@@ -90,14 +85,11 @@
 
     check-cast v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 1024
     .local v1, "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ThemeDescription;->startEditing()V
 
-    .line 1025
     if-nez v0, :cond_0
 
-    .line 1026
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2400(Lorg/telegram/ui/Components/ThemeEditorView;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -114,13 +106,11 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setColor(I)V
 
-    .line 1022
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1029
     .end local v1    # "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$2;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -133,6 +123,5 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1700(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Z)V
 
-    .line 1030
     return-void
 .end method

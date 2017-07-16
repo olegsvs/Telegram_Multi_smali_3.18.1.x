@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 290
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView$3;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-direct {p0, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
@@ -40,14 +39,12 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 293
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TabsView$3;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     if-eqz v0, :cond_0
 
-    .line 294
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TabsView$3;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -56,7 +53,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 296
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 

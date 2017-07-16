@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 22853
     const v0, -0x40658895
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchGifs;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 22852
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22859
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22863
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchGifs;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22864
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchGifs;->q:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 22865
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_searchGifs;->offset:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22866
     return-void
 .end method

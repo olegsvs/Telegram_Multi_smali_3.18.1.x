@@ -100,7 +100,6 @@
     .prologue
     const/16 v1, 0x20
 
-    .line 99
     const/16 v0, 0x60
 
     new-array v0, v0, [I
@@ -109,7 +108,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->BASIC_CHARACTER_SET:[I
 
-    .line 127
     const/16 v0, 0x10
 
     new-array v0, v0, [I
@@ -118,14 +116,12 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->SPECIAL_CHARACTER_SET:[I
 
-    .line 147
     new-array v0, v1, [I
 
     fill-array-data v0, :array_2
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->SPECIAL_ES_FR_CHARACTER_SET:[I
 
-    .line 157
     new-array v0, v1, [I
 
     fill-array-data v0, :array_3
@@ -134,7 +130,6 @@
 
     return-void
 
-    .line 99
     nop
 
     :array_0
@@ -237,7 +232,6 @@
         0x25a0
     .end array-data
 
-    .line 127
     :array_1
     .array-data 4
         0xae
@@ -258,7 +252,6 @@
         0xfb
     .end array-data
 
-    .line 147
     :array_2
     .array-data 4
         0xc1
@@ -295,7 +288,6 @@
         0xbb
     .end array-data
 
-    .line 157
     :array_3
     .array-data 4
         0xc3
@@ -338,46 +330,37 @@
     .param p1, "accessibilityChannel"    # I
 
     .prologue
-    .line 182
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;-><init>()V
 
-    .line 183
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->ccData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 185
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
-    .line 186
     packed-switch p1, :pswitch_data_0
 
-    .line 195
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->selectedField:I
 
-    .line 198
     :goto_0
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
-    .line 199
     const/4 v0, 0x4
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionRowCount:I
 
-    .line 200
     return-void
 
-    .line 189
     :pswitch_0
     const/4 v0, 0x2
 
@@ -385,7 +368,6 @@
 
     goto :goto_0
 
-    .line 186
     nop
 
     :pswitch_data_0
@@ -399,7 +381,6 @@
     .locals 2
 
     .prologue
-    .line 392
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0}, Ljava/lang/StringBuilder;->length()I
@@ -408,7 +389,6 @@
 
     if-lez v0, :cond_0
 
-    .line 393
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
@@ -421,7 +401,6 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 395
     :cond_0
     return-void
 .end method
@@ -431,12 +410,10 @@
     .param p0, "ccData"    # B
 
     .prologue
-    .line 447
     and-int/lit8 v1, p0, 0x7f
 
     add-int/lit8 v0, v1, -0x20
 
-    .line 448
     .local v0, "index":I
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->BASIC_CHARACTER_SET:[I
 
@@ -459,23 +436,19 @@
 
     const/4 v8, 0x0
 
-    .line 405
     iget-object v9, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v9}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
-    .line 406
     .local v0, "buildLength":I
     if-nez v0, :cond_1
 
-    .line 429
     :cond_0
     :goto_0
     return-object v6
 
-    .line 410
     :cond_1
     iget-object v9, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
@@ -491,27 +464,22 @@
 
     move v2, v7
 
-    .line 411
-    .local v2, "endsWithNewline":Z
     :goto_1
     if-ne v0, v7, :cond_2
 
     if-nez v2, :cond_0
 
-    .line 415
     :cond_2
     if-eqz v2, :cond_4
 
     add-int/lit8 v1, v0, -0x1
 
-    .line 416
     .local v1, "endIndex":I
     :goto_2
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
     if-eq v6, v7, :cond_5
 
-    .line 417
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v8, v1}, Ljava/lang/StringBuilder;->substring(II)Ljava/lang/String;
@@ -521,30 +489,23 @@
     goto :goto_0
 
     .end local v1    # "endIndex":I
-    .end local v2    # "endsWithNewline":Z
     :cond_3
     move v2, v8
 
-    .line 410
     goto :goto_1
 
-    .restart local v2    # "endsWithNewline":Z
     :cond_4
     move v1, v0
 
-    .line 415
     goto :goto_2
 
-    .line 420
     .restart local v1    # "endIndex":I
     :cond_5
     const/4 v5, 0x0
 
-    .line 421
     .local v5, "startIndex":I
     move v4, v1
 
-    .line 422
     .local v4, "searchBackwardFromIndex":I
     const/4 v3, 0x0
 
@@ -556,7 +517,6 @@
 
     if-eq v4, v11, :cond_6
 
-    .line 423
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     const-string/jumbo v7, "\n"
@@ -567,25 +527,20 @@
 
     move-result v4
 
-    .line 422
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_3
 
-    .line 425
     :cond_6
     if-eq v4, v11, :cond_7
 
-    .line 426
     add-int/lit8 v5, v4, 0x1
 
-    .line 428
     :cond_7
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v6, v8, v5}, Ljava/lang/StringBuilder;->delete(II)Ljava/lang/StringBuilder;
 
-    .line 429
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     sub-int v7, v1, v5
@@ -602,10 +557,8 @@
     .param p0, "ccData"    # B
 
     .prologue
-    .line 457
     and-int/lit8 v0, p0, 0x1f
 
-    .line 458
     .local v0, "index":I
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->SPECIAL_ES_FR_CHARACTER_SET:[I
 
@@ -621,10 +574,8 @@
     .param p0, "ccData"    # B
 
     .prologue
-    .line 462
     and-int/lit8 v0, p0, 0x1f
 
-    .line 463
     .local v0, "index":I
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->SPECIAL_PT_DE_CHARACTER_SET:[I
 
@@ -640,10 +591,8 @@
     .param p0, "ccData"    # B
 
     .prologue
-    .line 452
     and-int/lit8 v0, p0, 0xf
 
-    .line 453
     .local v0, "index":I
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->SPECIAL_CHARACTER_SET:[I
 
@@ -662,16 +611,13 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 318
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->isRepeatable(B)Z
 
     move-result v0
 
-    .line 319
     .local v0, "isRepeatableControl":Z
     if-eqz v0, :cond_2
 
-    .line 320
     iget-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlSet:Z
 
     if-eqz v2, :cond_1
@@ -684,31 +630,25 @@
 
     if-ne v2, p2, :cond_1
 
-    .line 323
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlSet:Z
 
     move v0, v1
 
-    .line 337
     .end local v0    # "isRepeatableControl":Z
     :cond_0
     :goto_0
     return v0
 
-    .line 326
     .restart local v0    # "isRepeatableControl":Z
     :cond_1
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlSet:Z
 
-    .line 327
     iput-byte p1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlCc1:B
 
-    .line 328
     iput-byte p2, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlCc2:B
 
-    .line 331
     :cond_2
     invoke-static {p1, p2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->isMiscCode(BB)Z
 
@@ -716,12 +656,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 332
     invoke-direct {p0, p2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->handleMiscCode(B)V
 
     goto :goto_0
 
-    .line 333
     :cond_3
     invoke-static {p1, p2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->isPreambleAddressCode(BB)Z
 
@@ -729,8 +667,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 335
-    invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->maybeAppendNewline()V
 
     goto :goto_0
 .end method
@@ -748,68 +684,55 @@
 
     const/4 v1, 0x1
 
-    .line 341
     packed-switch p1, :pswitch_data_0
 
-    .line 362
     :pswitch_0
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
     if-nez v0, :cond_1
 
-    .line 389
     :cond_0
     :goto_0
     return-void
 
-    .line 343
     :pswitch_1
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionRowCount:I
 
-    .line 344
     invoke-direct {p0, v1}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
     goto :goto_0
 
-    .line 347
     :pswitch_2
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionRowCount:I
 
-    .line 348
     invoke-direct {p0, v1}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
     goto :goto_0
 
-    .line 351
     :pswitch_3
     const/4 v0, 0x4
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionRowCount:I
 
-    .line 352
     invoke-direct {p0, v1}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
     goto :goto_0
 
-    .line 355
     :pswitch_4
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
     goto :goto_0
 
-    .line 358
     :pswitch_5
     invoke-direct {p0, v3}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
     goto :goto_0
 
-    .line 366
     :cond_1
     sparse-switch p1, :sswitch_data_0
 
     goto :goto_0
 
-    .line 384
     :sswitch_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
@@ -819,7 +742,6 @@
 
     if-lez v0, :cond_0
 
-    .line 385
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
@@ -834,13 +756,11 @@
 
     goto :goto_0
 
-    .line 368
     :sswitch_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
-    .line 369
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
     if-eq v0, v1, :cond_2
@@ -849,7 +769,6 @@
 
     if-ne v0, v3, :cond_0
 
-    .line 370
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
@@ -857,7 +776,6 @@
 
     goto :goto_0
 
-    .line 374
     :sswitch_2
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
@@ -865,7 +783,6 @@
 
     goto :goto_0
 
-    .line 377
     :sswitch_3
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getDisplayCaption()Ljava/lang/String;
 
@@ -873,20 +790,16 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
-    .line 378
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v2}, Ljava/lang/StringBuilder;->setLength(I)V
 
     goto :goto_0
 
-    .line 381
     :sswitch_4
-    invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->maybeAppendNewline()V
 
     goto :goto_0
 
-    .line 341
     :pswitch_data_0
     .packed-switch 0x20
         :pswitch_4
@@ -901,7 +814,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 366
     :sswitch_data_0
     .sparse-switch
         0x21 -> :sswitch_0
@@ -918,7 +830,6 @@
     .param p1, "cc2"    # B
 
     .prologue
-    .line 467
     const/16 v0, 0x14
 
     if-eq p0, v0, :cond_0
@@ -953,7 +864,6 @@
     .param p1, "cc2"    # B
 
     .prologue
-    .line 472
     const/16 v0, 0x10
 
     if-lt p0, v0, :cond_0
@@ -986,7 +896,6 @@
     .param p0, "cc1"    # B
 
     .prologue
-    .line 476
     const/16 v0, 0x10
 
     if-lt p0, v0, :cond_0
@@ -1015,7 +924,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 491
     const/4 v6, 0x4
 
     if-ne p0, v6, :cond_0
@@ -1024,46 +932,38 @@
 
     if-ge p1, v6, :cond_1
 
-    .line 500
     :cond_0
     :goto_0
     return v5
 
-    .line 494
     :cond_1
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v2
 
-    .line 495
     .local v2, "startPosition":I
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 496
     .local v0, "countryCode":I
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedShort()I
 
     move-result v1
 
-    .line 497
     .local v1, "providerCode":I
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v4
 
-    .line 498
     .local v4, "userIdentifier":I
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v3
 
-    .line 499
     .local v3, "userDataTypeCode":I
     invoke-virtual {p2, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 500
     const/16 v6, 0xb5
 
     if-ne v0, v6, :cond_0
@@ -1085,20 +985,17 @@
     goto :goto_0
 .end method
 
-.method private maybeAppendNewline()V
     .locals 4
 
     .prologue
     const/16 v3, 0xa
 
-    .line 398
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
 
     move-result v0
 
-    .line 399
     .local v0, "buildLength":I
     if-lez v0, :cond_0
 
@@ -1112,12 +1009,10 @@
 
     if-eq v1, v3, :cond_0
 
-    .line 400
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 402
     :cond_0
     return-void
 .end method
@@ -1127,35 +1022,29 @@
     .param p1, "captionMode"    # I
 
     .prologue
-    .line 433
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
     if-ne v0, p1, :cond_1
 
-    .line 444
     :cond_0
     :goto_0
     return-void
 
-    .line 437
     :cond_1
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
-    .line 439
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 440
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_2
 
     if-nez p1, :cond_0
 
-    .line 442
     :cond_2
     const/4 v0, 0x0
 
@@ -1170,12 +1059,10 @@
     .locals 3
 
     .prologue
-    .line 232
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->lastCaptionString:Ljava/lang/String;
 
-    .line 233
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/cea/CeaSubtitle;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/text/Cue;
@@ -1198,7 +1085,6 @@
 
     const/4 v8, 0x1
 
-    .line 238
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->ccData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     iget-object v6, p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->data:Ljava/nio/ByteBuffer;
@@ -1215,14 +1101,11 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
-    .line 239
     const/4 v0, 0x0
 
-    .line 240
     .local v0, "captionDataProcessed":Z
     const/4 v4, 0x0
 
-    .line 241
     .local v4, "isRepeatableControl":Z
     :cond_0
     :goto_0
@@ -1234,7 +1117,6 @@
 
     if-lez v5, :cond_b
 
-    .line 242
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->ccData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
@@ -1243,7 +1125,6 @@
 
     int-to-byte v3, v5
 
-    .line 243
     .local v3, "ccDataHeader":B
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->ccData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -1255,7 +1136,6 @@
 
     int-to-byte v1, v5
 
-    .line 244
     .local v1, "ccData1":B
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->ccData:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -1267,7 +1147,6 @@
 
     int-to-byte v2, v5
 
-    .line 247
     .local v2, "ccData2":B
     and-int/lit8 v5, v3, 0x6
 
@@ -1275,7 +1154,6 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 252
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->selectedField:I
 
     if-ne v5, v8, :cond_1
@@ -1295,17 +1173,14 @@
 
     if-ne v5, v8, :cond_0
 
-    .line 258
     :cond_2
     if-nez v1, :cond_3
 
     if-eqz v2, :cond_0
 
-    .line 262
     :cond_3
     const/4 v0, 0x1
 
-    .line 267
     const/16 v5, 0x11
 
     if-eq v1, v5, :cond_4
@@ -1321,7 +1196,6 @@
 
     if-ne v5, v6, :cond_5
 
-    .line 269
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getSpecialChar(B)C
@@ -1332,13 +1206,11 @@
 
     goto :goto_0
 
-    .line 276
     :cond_5
     and-int/lit8 v5, v2, 0x60
 
     if-ne v5, v9, :cond_9
 
-    .line 278
     const/16 v5, 0x12
 
     if-eq v1, v5, :cond_6
@@ -1347,11 +1219,9 @@
 
     if-ne v1, v5, :cond_7
 
-    .line 280
     :cond_6
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->backspace()V
 
-    .line 281
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getExtendedEsFrChar(B)C
@@ -1362,7 +1232,6 @@
 
     goto :goto_0
 
-    .line 286
     :cond_7
     const/16 v5, 0x13
 
@@ -1372,11 +1241,9 @@
 
     if-ne v1, v5, :cond_9
 
-    .line 288
     :cond_8
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->backspace()V
 
-    .line 289
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getExtendedPtDeChar(B)C
@@ -1387,19 +1254,15 @@
 
     goto/16 :goto_0
 
-    .line 295
     :cond_9
     if-ge v1, v9, :cond_a
 
-    .line 296
     invoke-direct {p0, v1, v2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->handleCtrl(BB)Z
 
     move-result v4
 
-    .line 297
     goto/16 :goto_0
 
-    .line 301
     :cond_a
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
@@ -1409,10 +1272,8 @@
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 302
     if-lt v2, v9, :cond_0
 
-    .line 303
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getChar(B)C
@@ -1423,22 +1284,18 @@
 
     goto/16 :goto_0
 
-    .line 307
     .end local v1    # "ccData1":B
     .end local v2    # "ccData2":B
     .end local v3    # "ccDataHeader":B
     :cond_b
     if-eqz v0, :cond_e
 
-    .line 308
     if-nez v4, :cond_c
 
-    .line 309
     const/4 v5, 0x0
 
     iput-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlSet:Z
 
-    .line 311
     :cond_c
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionMode:I
 
@@ -1450,7 +1307,6 @@
 
     if-ne v5, v6, :cond_e
 
-    .line 312
     :cond_d
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->getDisplayCaption()Ljava/lang/String;
 
@@ -1458,7 +1314,6 @@
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
-    .line 315
     :cond_e
     return-void
 .end method
@@ -1472,7 +1327,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-super {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;->dequeueInputBuffer()Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     move-result-object v0
@@ -1489,7 +1343,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-super {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;->dequeueOutputBuffer()Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;
 
     move-result-object v0
@@ -1505,38 +1358,28 @@
 
     const/4 v1, 0x0
 
-    .line 209
     invoke-super {p0}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;->flush()V
 
-    .line 210
     invoke-direct {p0, v1}, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->setCaptionMode(I)V
 
-    .line 211
     const/4 v0, 0x4
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionRowCount:I
 
-    .line 212
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionStringBuilder:Ljava/lang/StringBuilder;
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 213
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
-    .line 214
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->lastCaptionString:Ljava/lang/String;
 
-    .line 215
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlSet:Z
 
-    .line 216
     iput-byte v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlCc1:B
 
-    .line 217
     iput-byte v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->repeatableControlCc2:B
 
-    .line 218
     return-void
 .end method
 
@@ -1544,7 +1387,6 @@
     .locals 1
 
     .prologue
-    .line 204
     const-string/jumbo v0, "Cea608Decoder"
 
     return-object v0
@@ -1554,7 +1396,6 @@
     .locals 2
 
     .prologue
-    .line 227
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->captionString:Ljava/lang/String;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/cea/Cea608Decoder;->lastCaptionString:Ljava/lang/String;
@@ -1585,7 +1426,6 @@
     .end annotation
 
     .prologue
-    .line 29
     invoke-super {p0, p1}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;->queueInputBuffer(Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;)V
 
     return-void
@@ -1595,7 +1435,6 @@
     .locals 0
 
     .prologue
-    .line 223
     return-void
 .end method
 
@@ -1603,7 +1442,6 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/cea/CeaDecoder;->setPositionUs(J)V
 
     return-void

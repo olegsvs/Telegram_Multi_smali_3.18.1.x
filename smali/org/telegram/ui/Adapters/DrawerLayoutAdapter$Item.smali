@@ -32,21 +32,16 @@
     .param p4, "icon"    # I
 
     .prologue
-    .line 225
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->this$0:Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 226
     iput p4, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->icon:I
 
-    .line 227
     iput p2, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->id:I
 
-    .line 228
     iput-object p3, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->text:Ljava/lang/String;
 
-    .line 229
     return-void
 .end method
 
@@ -57,13 +52,11 @@
     .param p1, "actionCell"    # Lorg/telegram/ui/Cells/DrawerActionCell;
 
     .prologue
-    .line 232
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->text:Ljava/lang/String;
 
     iget v1, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;->icon:I
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/ui/Cells/DrawerActionCell;->setTextAndIcon(Ljava/lang/String;I)V
 
-    .line 233
     return-void
 .end method

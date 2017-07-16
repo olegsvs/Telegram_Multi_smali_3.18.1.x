@@ -41,7 +41,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DialogsActivity$6;
 
     .prologue
-    .line 875
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
 
     iput-boolean p2, p0, Lorg/telegram/ui/DialogsActivity$6$3;->val$isEncrypted:Z
@@ -71,14 +70,12 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 878
     const/4 v3, 0x3
 
     move/from16 v0, p2
 
     if-ne v0, v3, :cond_4
 
-    .line 879
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -91,7 +88,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 880
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -104,7 +100,6 @@
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/TabsView;->forceUpdateTabCounters()V
 
-    .line 882
     :cond_0
     move-object/from16 v0, p0
 
@@ -116,7 +111,6 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/DialogsActivity;->access$3002(Lorg/telegram/ui/DialogsActivity;Z)Z
 
-    .line 883
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -135,11 +129,9 @@
 
     move-result v13
 
-    .line 884
     .local v13, "muted":Z
     if-nez v13, :cond_2
 
-    .line 885
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -172,13 +164,11 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/DialogsActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 990
     .end local v13    # "muted":Z
     :cond_1
     :goto_0
     return-void
 
-    .line 887
     .restart local v13    # "muted":Z
     :cond_2
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -191,13 +181,11 @@
 
     move-result-object v14
 
-    .line 888
     .local v14, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v14}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v12
 
-    .line 889
     .local v12, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -231,7 +219,6 @@
 
     invoke-interface {v12, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 890
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -250,10 +237,8 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lorg/telegram/messenger/MessagesStorage;->setDialogFlags(JJ)V
 
-    .line 891
     invoke-interface {v12}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 892
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -280,18 +265,15 @@
 
     check-cast v11, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 893
     .local v11, "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v11, :cond_3
 
-    .line 894
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
 
     iput-object v3, v11, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
-    .line 896
     :cond_3
     move-object/from16 v0, p0
 
@@ -307,7 +289,6 @@
 
     goto :goto_0
 
-    .line 898
     .end local v11    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v12    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v13    # "muted":Z
@@ -319,14 +300,12 @@
 
     if-ne v0, v3, :cond_9
 
-    .line 899
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->val$isEncrypted:Z
 
     if-nez v3, :cond_8
 
-    .line 900
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -353,7 +332,6 @@
 
     check-cast v11, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 901
     .restart local v11    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     move-object/from16 v0, p0
 
@@ -361,7 +339,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 902
     invoke-static {}, Lorg/telegram/ui/Components/Favorite;->getInstance()Lorg/telegram/ui/Components/Favorite;
 
     move-result-object v3
@@ -382,7 +359,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/Favorite;->deleteFavorite(Ljava/lang/Long;)V
 
-    .line 903
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -391,7 +367,6 @@
 
     invoke-virtual {v3, v11}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 908
     :goto_1
     move-object/from16 v0, p0
 
@@ -407,7 +382,6 @@
 
     if-ne v3, v4, :cond_6
 
-    .line 909
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -420,7 +394,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 910
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -433,13 +406,11 @@
 
     invoke-virtual {v3}, Lorg/telegram/ui/Adapters/DialogsAdapter;->notifyDataSetChanged()V
 
-    .line 912
     :cond_5
     sget-boolean v3, Lorg/telegram/ui/ActionBar/Theme;->plusHideTabs:Z
 
     if-nez v3, :cond_6
 
-    .line 913
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -448,7 +419,6 @@
 
     invoke-static {v3}, Lorg/telegram/ui/DialogsActivity;->access$3200(Lorg/telegram/ui/DialogsActivity;)V
 
-    .line 916
     :cond_6
     move-object/from16 v0, p0
 
@@ -462,7 +432,6 @@
 
     goto/16 :goto_0
 
-    .line 905
     :cond_7
     invoke-static {}, Lorg/telegram/ui/Components/Favorite;->getInstance()Lorg/telegram/ui/Components/Favorite;
 
@@ -484,7 +453,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/Favorite;->addFavorite(Ljava/lang/Long;)V
 
-    .line 906
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -495,7 +463,6 @@
 
     goto :goto_1
 
-    .line 918
     .end local v11    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     :cond_8
     new-instance v3, Lorg/telegram/ui/DialogsActivity$6$3$1;
@@ -508,7 +475,6 @@
 
     goto/16 :goto_0
 
-    .line 928
     :cond_9
     const/4 v3, 0x5
 
@@ -516,7 +482,6 @@
 
     if-ne v0, v3, :cond_b
 
-    .line 929
     move-object/from16 v0, p0
 
     iget v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->val$unread:I
@@ -529,7 +494,6 @@
 
     if-nez v3, :cond_a
 
-    .line 930
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -540,7 +504,6 @@
 
     goto/16 :goto_0
 
-    .line 932
     :cond_a
     move-object/from16 v0, p0
 
@@ -554,7 +517,6 @@
 
     goto/16 :goto_0
 
-    .line 934
     :cond_b
     const/4 v3, 0x6
 
@@ -562,7 +524,6 @@
 
     if-ne v0, v3, :cond_c
 
-    .line 935
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -573,11 +534,9 @@
 
     goto/16 :goto_0
 
-    .line 940
     :cond_c
     if-nez p2, :cond_e
 
-    .line 941
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -617,7 +576,6 @@
 
     if-nez v3, :cond_1
 
-    .line 942
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -634,13 +592,11 @@
 
     goto/16 :goto_0
 
-    .line 941
     :cond_d
     const/4 v6, 0x0
 
     goto :goto_2
 
-    .line 945
     :cond_e
     new-instance v2, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -656,7 +612,6 @@
 
     invoke-direct {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 946
     .local v2, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v3, "AppName"
 
@@ -668,7 +623,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 948
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -695,7 +649,6 @@
 
     move-result-object v10
 
-    .line 949
     .local v10, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -721,25 +674,21 @@
 
     move-result-object v16
 
-    .line 950
     .local v16, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v10, :cond_f
 
     iget-object v15, v10, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
-    .line 951
     .local v15, "title":Ljava/lang/String;
     :goto_3
     invoke-virtual {v2, v15}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 952
     const/4 v3, 0x1
 
     move/from16 v0, p2
 
     if-ne v0, v3, :cond_11
 
-    .line 953
     const-string/jumbo v3, "AreYouSureClearHistory"
 
     const v4, 0x7f07008b
@@ -750,7 +699,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 961
     :goto_4
     const-string/jumbo v3, "OK"
 
@@ -770,7 +718,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 986
     const-string/jumbo v3, "Cancel"
 
     const v4, 0x7f0700f0
@@ -783,7 +730,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 987
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/DialogsActivity$6$3;->this$1:Lorg/telegram/ui/DialogsActivity$6;
@@ -798,7 +744,6 @@
 
     goto/16 :goto_0
 
-    .line 950
     .end local v15    # "title":Ljava/lang/String;
     :cond_f
     if-eqz v16, :cond_10
@@ -820,7 +765,6 @@
 
     goto :goto_3
 
-    .line 955
     .restart local v15    # "title":Ljava/lang/String;
     :cond_11
     move-object/from16 v0, p0
@@ -829,7 +773,6 @@
 
     if-eqz v3, :cond_12
 
-    .line 956
     const-string/jumbo v3, "AreYouSureDeleteAndExit"
 
     const v4, 0x7f07008e
@@ -842,7 +785,6 @@
 
     goto :goto_4
 
-    .line 958
     :cond_12
     const-string/jumbo v3, "AreYouSureDeleteThisChat"
 

@@ -22,10 +22,8 @@
     .locals 2
 
     .prologue
-    .line 31
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 23
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -34,28 +32,24 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
-    .line 25
     new-instance v0, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v0}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->interpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 26
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->rect:Landroid/graphics/RectF;
 
-    .line 32
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 33
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -68,21 +62,18 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 35
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 36
     return-void
 .end method
 
@@ -93,16 +84,13 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 54
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v14
 
-    .line 55
     .local v14, "newTime":J
     const/4 v12, 0x0
 
-    .line 56
     .local v12, "invalidate":Z
     move-object/from16 v0, p0
 
@@ -114,14 +102,12 @@
 
     if-eqz v2, :cond_1
 
-    .line 57
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->lastFrameTime:J
 
     sub-long v10, v14, v2
 
-    .line 58
     .local v10, "dt":J
     move-object/from16 v0, p0
 
@@ -139,7 +125,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 59
     :cond_0
     move-object/from16 v0, p0
 
@@ -161,7 +146,6 @@
 
     iput v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
 
-    .line 60
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->animating:Z
@@ -178,23 +162,19 @@
 
     if-ltz v2, :cond_7
 
-    .line 61
     const/4 v2, 0x0
 
     move-object/from16 v0, p0
 
     iput v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
 
-    .line 65
     :goto_0
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->invalidateSelf()V
 
-    .line 69
     .end local v10    # "dt":J
     :cond_1
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 70
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->getIntrinsicWidth()I
 
     move-result v2
@@ -215,29 +195,23 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 71
     const/high16 v2, -0x3dcc0000    # -45.0f
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v2}, Landroid/graphics/Canvas;->rotate(F)V
 
-    .line 72
     const/high16 v13, 0x3f800000    # 1.0f
 
-    .line 73
     .local v13, "progress1":F
     const/high16 v16, 0x3f800000    # 1.0f
 
-    .line 74
     .local v16, "progress2":F
     const/high16 v17, 0x3f800000    # 1.0f
 
-    .line 75
     .local v17, "progress3":F
     const/16 v18, 0x0
 
-    .line 76
     .local v18, "progress4":F
     move-object/from16 v0, p0
 
@@ -259,7 +233,6 @@
 
     if-gez v2, :cond_8
 
-    .line 77
     const/high16 v2, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -272,7 +245,6 @@
 
     sub-float v13, v2, v3
 
-    .line 100
     :cond_2
     :goto_1
     const/4 v2, 0x0
@@ -281,7 +253,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 101
     const/4 v3, 0x0
 
     const/4 v4, 0x0
@@ -306,7 +277,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 103
     :cond_3
     const/4 v2, 0x0
 
@@ -314,7 +284,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 104
     const/high16 v2, 0x41000000    # 8.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -341,7 +310,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 106
     :cond_4
     const/4 v2, 0x0
 
@@ -349,7 +317,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 107
     const/4 v3, 0x0
 
     const/high16 v2, 0x41000000    # 8.0f
@@ -376,7 +343,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 109
     :cond_5
     const/high16 v2, 0x3f800000    # 1.0f
 
@@ -384,7 +350,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 110
     const/high16 v2, 0x41000000    # 8.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -415,11 +380,9 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 113
     :cond_6
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 115
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v2
@@ -428,7 +391,6 @@
 
     move-result v8
 
-    .line 116
     .local v8, "cx":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->getBounds()Landroid/graphics/Rect;
 
@@ -438,7 +400,6 @@
 
     move-result v9
 
-    .line 117
     .local v9, "cy":I
     move-object/from16 v0, p0
 
@@ -486,7 +447,6 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 118
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->rect:Landroid/graphics/RectF;
@@ -533,15 +493,12 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 120
     move-object/from16 v0, p0
 
     iput-wide v14, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->lastFrameTime:J
 
-    .line 121
     return-void
 
-    .line 63
     .end local v8    # "cx":I
     .end local v9    # "cy":I
     .end local v13    # "progress1":F
@@ -576,7 +533,6 @@
 
     goto/16 :goto_0
 
-    .line 78
     .end local v10    # "dt":J
     .restart local v13    # "progress1":F
     .restart local v16    # "progress2":F
@@ -603,10 +559,8 @@
 
     if-gez v2, :cond_9
 
-    .line 79
     const/4 v13, 0x0
 
-    .line 80
     const/high16 v2, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -625,7 +579,6 @@
 
     goto/16 :goto_1
 
-    .line 81
     :cond_9
     move-object/from16 v0, p0
 
@@ -647,12 +600,10 @@
 
     if-gez v2, :cond_a
 
-    .line 82
     const/16 v16, 0x0
 
     move/from16 v13, v16
 
-    .line 83
     const/high16 v2, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -671,7 +622,6 @@
 
     goto/16 :goto_1
 
-    .line 84
     :cond_a
     move-object/from16 v0, p0
 
@@ -693,14 +643,12 @@
 
     if-gez v2, :cond_b
 
-    .line 85
     const/16 v17, 0x0
 
     move/from16 v16, v17
 
     move/from16 v13, v17
 
-    .line 86
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
@@ -715,7 +663,6 @@
 
     goto/16 :goto_1
 
-    .line 87
     :cond_b
     move-object/from16 v0, p0
 
@@ -737,14 +684,12 @@
 
     if-gez v2, :cond_c
 
-    .line 88
     const/16 v17, 0x0
 
     move/from16 v16, v17
 
     move/from16 v13, v17
 
-    .line 89
     const/high16 v2, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
@@ -763,7 +708,6 @@
 
     goto/16 :goto_1
 
-    .line 90
     :cond_c
     move-object/from16 v0, p0
 
@@ -785,12 +729,10 @@
 
     if-gez v2, :cond_d
 
-    .line 91
     const/16 v17, 0x0
 
     move/from16 v16, v17
 
-    .line 92
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
@@ -805,7 +747,6 @@
 
     goto/16 :goto_1
 
-    .line 93
     :cond_d
     move-object/from16 v0, p0
 
@@ -827,10 +768,8 @@
 
     if-gez v2, :cond_e
 
-    .line 94
     const/16 v17, 0x0
 
-    .line 95
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
@@ -845,7 +784,6 @@
 
     goto/16 :goto_1
 
-    .line 96
     :cond_e
     move-object/from16 v0, p0
 
@@ -867,7 +805,6 @@
 
     if-gez v2, :cond_2
 
-    .line 97
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->angle:F
@@ -882,7 +819,6 @@
 
     goto/16 :goto_1
 
-    .line 118
     .restart local v8    # "cx":I
     .restart local v9    # "cy":I
     :cond_f
@@ -912,7 +848,6 @@
     .locals 1
 
     .prologue
-    .line 145
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -926,7 +861,6 @@
     .locals 1
 
     .prologue
-    .line 140
     const/high16 v0, 0x41c00000    # 24.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -940,7 +874,6 @@
     .locals 1
 
     .prologue
-    .line 135
     const/4 v0, -0x2
 
     return v0
@@ -951,7 +884,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -960,12 +892,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 49
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 50
     return-void
 .end method
 
@@ -974,12 +904,10 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColorFilter(Landroid/graphics/ColorFilter;)Landroid/graphics/ColorFilter;
 
-    .line 131
     return-void
 .end method
 
@@ -987,22 +915,18 @@
     .locals 2
 
     .prologue
-    .line 39
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->animating:Z
 
-    .line 40
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->lastFrameTime:J
 
-    .line 41
     invoke-virtual {p0}, Lorg/telegram/ui/Components/CloseProgressDrawable2;->invalidateSelf()V
 
-    .line 42
     return-void
 .end method
 
@@ -1010,11 +934,9 @@
     .locals 1
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/CloseProgressDrawable2;->animating:Z
 
-    .line 46
     return-void
 .end method

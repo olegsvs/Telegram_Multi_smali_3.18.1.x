@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 816
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$1;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$1;->val$this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -45,12 +44,10 @@
     .locals 1
 
     .prologue
-    .line 819
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$1;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->notifyDataSetChanged()V
 
-    .line 820
     return-void
 .end method
 
@@ -72,7 +69,6 @@
     .end annotation
 
     .prologue
-    .line 825
     .local p1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;>;"
     .local p2, "hashMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;>;"
     return-void

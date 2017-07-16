@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LoginActivity;
 
     .prologue
-    .line 152
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 155
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 156
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity;->access$000(Lorg/telegram/ui/LoginActivity;)[Lorg/telegram/ui/Components/SlideView;
@@ -61,18 +58,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SlideView;->onNextPressed()V
 
-    .line 160
     :cond_0
     :goto_0
     return-void
 
-    .line 157
     :cond_1
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 158
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$1;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity;->onBackPressed()Z

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 198
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -49,14 +48,12 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 210
     new-instance v1, Landroid/content/Intent;
 
     const-string/jumbo v2, "com.htc.launcher.action.SET_NOTIFICATION"
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 211
     .local v1, "intent1":Landroid/content/Intent;
     const-string/jumbo v2, "com.htc.launcher.extra.COMPONENT"
 
@@ -70,19 +67,16 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 212
     const-string/jumbo v2, "com.htc.launcher.extra.COUNT"
 
     invoke-virtual {v1, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 214
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v2, "com.htc.launcher.action.UPDATE_SHORTCUT"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 215
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v2, "packagename"
 
@@ -96,12 +90,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 216
     const-string/jumbo v2, "count"
 
     invoke-virtual {v0, v2, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 218
     invoke-static {v1}, Lorg/telegram/messenger/NotificationBadge;->access$100(Landroid/content/Intent;)Z
 
     move-result v2
@@ -114,7 +106,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 219
     :cond_0
     new-instance v2, Lorg/telegram/messenger/NotificationBadge$NewHtcHomeBadger$1;
 
@@ -122,7 +113,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 227
     :cond_1
     return-void
 .end method
@@ -140,7 +130,6 @@
     .end annotation
 
     .prologue
-    .line 231
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;

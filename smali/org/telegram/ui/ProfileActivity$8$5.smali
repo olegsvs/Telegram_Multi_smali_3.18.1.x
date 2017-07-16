@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$8;
 
     .prologue
-    .line 1017
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$8$5;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1021
     :try_start_0
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -51,7 +49,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 1022
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "clipboard"
@@ -62,7 +59,6 @@
 
     check-cast v1, Landroid/text/ClipboardManager;
 
-    .line 1023
     .local v1, "clipboard":Landroid/text/ClipboardManager;
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$8$5;->this$1:Lorg/telegram/ui/ProfileActivity$8;
 
@@ -76,12 +72,10 @@
 
     invoke-virtual {v1, v3}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1032
     .end local v1    # "clipboard":Landroid/text/ClipboardManager;
     :goto_0
     return-void
 
-    .line 1025
     :cond_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -93,7 +87,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 1026
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -111,7 +104,6 @@
 
     move-result-object v0
 
-    .line 1027
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
@@ -119,13 +111,11 @@
 
     goto :goto_0
 
-    .line 1029
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :catch_0
     move-exception v2
 
-    .line 1030
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v3, "tmessages"
 

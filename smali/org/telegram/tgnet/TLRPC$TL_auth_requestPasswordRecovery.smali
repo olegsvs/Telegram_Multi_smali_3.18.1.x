@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 22629
     const v0, -0x2768439a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 22628
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -50,7 +48,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22633
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
 
     move-result-object v0
@@ -63,11 +60,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22637
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22638
     return-void
 .end method

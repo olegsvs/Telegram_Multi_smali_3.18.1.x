@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ImageLoader;
 
     .prologue
-    .line 1603
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$6;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$6;->val$oldKey:Ljava/lang/String;
@@ -53,7 +52,6 @@
     .locals 4
 
     .prologue
-    .line 1606
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$6;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$6;->val$oldKey:Ljava/lang/String;
@@ -64,6 +62,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/ImageLoader;->access$3100(Lorg/telegram/messenger/ImageLoader;Ljava/lang/String;Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$FileLocation;)V
 
-    .line 1607
     return-void
 .end method

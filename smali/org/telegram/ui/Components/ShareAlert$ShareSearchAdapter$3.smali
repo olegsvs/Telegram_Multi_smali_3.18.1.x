@@ -28,7 +28,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     .prologue
-    .line 909
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->val$query:Ljava/lang/String;
@@ -46,11 +45,9 @@
     .locals 4
 
     .prologue
-    .line 913
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->cancel()Z
 
-    .line 914
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$3000(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)Ljava/util/Timer;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 915
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     const/4 v2, 0x0
@@ -68,7 +64,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 919
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$3;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
@@ -78,14 +73,11 @@
 
     invoke-static {v1, v2, v3}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;->access$3100(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;Ljava/lang/String;I)V
 
-    .line 920
     return-void
 
-    .line 916
     :catch_0
     move-exception v0
 
-    .line 917
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

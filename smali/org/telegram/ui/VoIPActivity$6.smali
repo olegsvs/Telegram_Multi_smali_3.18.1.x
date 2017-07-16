@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 286
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$6;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 289
     new-instance v0, Landroid/content/Intent;
 
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -51,7 +49,6 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 290
     .local v0, "intent":Landroid/content/Intent;
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -83,12 +80,10 @@
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 291
     const v1, 0x8000
 
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 292
     const-string/jumbo v1, "userId"
 
     iget-object v2, p0, Lorg/telegram/ui/VoIPActivity$6;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -101,16 +96,13 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 293
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$6;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/VoIPActivity;->startActivity(Landroid/content/Intent;)V
 
-    .line 294
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$6;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/VoIPActivity;->finish()V
 
-    .line 295
     return-void
 .end method

@@ -36,12 +36,10 @@
     .locals 1
 
     .prologue
-    .line 766
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$VcardData;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 768
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -57,7 +55,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/LaunchActivity$1;
 
     .prologue
-    .line 766
     invoke-direct {p0, p1}, Lorg/telegram/ui/LaunchActivity$VcardData;-><init>(Lorg/telegram/ui/LaunchActivity;)V
 
     return-void

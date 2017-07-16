@@ -34,13 +34,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3004
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 3005
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 3006
     return-void
 .end method
 
@@ -51,26 +48,21 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 3061
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     if-nez v0, :cond_1
 
-    .line 3074
     :cond_0
     :goto_0
     return-void
 
-    .line 3064
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_2
 
-    .line 3065
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 3066
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textX:I
 
     int-to-float v0, v0
@@ -81,22 +73,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 3067
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 3068
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3069
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 3071
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
@@ -104,7 +92,6 @@
 
     if-lez v0, :cond_0
 
-    .line 3072
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -172,36 +159,30 @@
 
     const/high16 v4, 0x41900000    # 18.0f
 
-    .line 3021
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 3022
     .local v1, "width":I
     const/4 v0, 0x0
 
-    .line 3024
     .local v0, "height":I
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     if-eqz v2, :cond_6
 
-    .line 3025
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;->level:I
 
     if-nez v2, :cond_3
 
-    .line 3026
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;->caption:Lorg/telegram/tgnet/TLRPC$RichText;
 
     if-eqz v2, :cond_2
 
-    .line 3027
     const/high16 v2, 0x40800000    # 4.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -210,7 +191,6 @@
 
     iput v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textY:I
 
-    .line 3031
     :goto_0
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -218,20 +198,17 @@
 
     iput v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textX:I
 
-    .line 3036
     :goto_1
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->lastCreatedWidth:I
 
     if-eq v2, v1, :cond_1
 
-    .line 3037
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     if-eqz v2, :cond_4
 
-    .line 3038
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
@@ -256,43 +233,36 @@
 
     iput-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 3042
     :cond_0
     :goto_2
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v2, :cond_1
 
-    .line 3043
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v2}, Landroid/text/StaticLayout;->getHeight()I
 
     move-result v0
 
-    .line 3044
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;->level:I
 
     if-lez v2, :cond_5
 
-    .line 3045
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     add-int/2addr v0, v2
 
-    .line 3056
     :cond_1
     :goto_3
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->setMeasuredDimension(II)V
 
-    .line 3057
     return-void
 
-    .line 3029
     :cond_2
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -302,13 +272,11 @@
 
     goto :goto_0
 
-    .line 3033
     :cond_3
     const/4 v2, 0x0
 
     iput v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textY:I
 
-    .line 3034
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     iget v2, v2, Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;->level:I
@@ -327,7 +295,6 @@
 
     goto :goto_1
 
-    .line 3039
     :cond_4
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
@@ -335,7 +302,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3040
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
@@ -362,7 +328,6 @@
 
     goto :goto_2
 
-    .line 3047
     :cond_5
     const/high16 v2, 0x41800000    # 16.0f
 
@@ -374,7 +339,6 @@
 
     goto :goto_3
 
-    .line 3053
     :cond_6
     const/4 v0, 0x1
 
@@ -386,7 +350,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3016
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->textLayout:Landroid/text/StaticLayout;
@@ -428,17 +391,13 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
     .prologue
-    .line 3009
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockParagraph;
 
-    .line 3010
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->lastCreatedWidth:I
 
-    .line 3011
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockParagraphCell;->requestLayout()V
 
-    .line 3012
     return-void
 .end method

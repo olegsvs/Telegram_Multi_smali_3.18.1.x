@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 11079
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$9;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$9;->val$req:Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipants;
@@ -47,7 +46,6 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 11082
     new-instance v2, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$9$1;
 
     invoke-direct {v2, p0, p2, p1}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$9$1;-><init>(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$9;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
@@ -63,10 +61,8 @@
     :goto_0
     invoke-static {v2, v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 11098
     return-void
 
-    .line 11082
     :cond_0
     const-wide/16 v0, 0x0
 

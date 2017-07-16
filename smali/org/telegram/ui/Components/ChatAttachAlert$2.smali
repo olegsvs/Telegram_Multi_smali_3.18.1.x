@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatAttachAlert;
 
     .prologue
-    .line 504
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$2;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -44,18 +43,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 507
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 508
     iput v0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 509
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 510
     iput v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 511
     return-void
 .end method

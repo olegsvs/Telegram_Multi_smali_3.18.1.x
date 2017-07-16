@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 5427
     const v0, -0x285e6297
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 5426
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Page;-><init>()V
 
     return-void
@@ -55,19 +53,15 @@
 
     const/4 v8, 0x0
 
-    .line 5431
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 5432
     .local v2, "magic":I
     if-eq v2, v5, :cond_0
 
-    .line 5433
     if-eqz p2, :cond_1
 
-    .line 5434
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -88,13 +82,11 @@
 
     throw v4
 
-    .line 5438
     :cond_0
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 5439
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -102,7 +94,6 @@
     :goto_0
     if-ge v0, v1, :cond_3
 
-    .line 5440
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -111,18 +102,15 @@
 
     move-result-object v3
 
-    .line 5441
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$PageBlock;
     if-nez v3, :cond_2
 
-    .line 5476
     .end local v0    # "a":I
     .end local v1    # "count":I
     .end local v3    # "object":Lorg/telegram/tgnet/TLRPC$PageBlock;
     :cond_1
     return-void
 
-    .line 5444
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     .restart local v3    # "object":Lorg/telegram/tgnet/TLRPC$PageBlock;
@@ -131,25 +119,20 @@
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5439
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5446
     .end local v3    # "object":Lorg/telegram/tgnet/TLRPC$PageBlock;
     :cond_3
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 5447
     if-eq v2, v5, :cond_4
 
-    .line 5448
     if-eqz p2, :cond_1
 
-    .line 5449
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -170,19 +153,16 @@
 
     throw v4
 
-    .line 5453
     :cond_4
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 5454
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v1, :cond_5
 
-    .line 5455
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -191,34 +171,27 @@
 
     move-result-object v3
 
-    .line 5456
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$Photo;
     if-eqz v3, :cond_1
 
-    .line 5459
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->photos:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5454
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 5461
     .end local v3    # "object":Lorg/telegram/tgnet/TLRPC$Photo;
     :cond_5
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 5462
     if-eq v2, v5, :cond_6
 
-    .line 5463
     if-eqz p2, :cond_1
 
-    .line 5464
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -239,19 +212,16 @@
 
     throw v4
 
-    .line 5468
     :cond_6
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 5469
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v1, :cond_1
 
-    .line 5470
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -260,16 +230,13 @@
 
     move-result-object v3
 
-    .line 5471
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$Document;
     if-eqz v3, :cond_1
 
-    .line 5474
     iget-object v4, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->videos:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5469
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -282,33 +249,27 @@
     .prologue
     const v3, 0x1cb5c415
 
-    .line 5479
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5480
     invoke-virtual {p1, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5481
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->blocks:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 5482
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5483
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 5484
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->blocks:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -319,32 +280,26 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$PageBlock;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 5483
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5486
     :cond_0
     invoke-virtual {p1, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5487
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->photos:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 5488
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5489
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 5490
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->photos:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -355,32 +310,26 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$Photo;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 5489
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 5492
     :cond_1
     invoke-virtual {p1, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5493
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->videos:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 5494
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5495
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v1, :cond_2
 
-    .line 5496
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_pageFull;->videos:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -391,12 +340,10 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$Document;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 5495
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 5498
     :cond_2
     return-void
 .end method

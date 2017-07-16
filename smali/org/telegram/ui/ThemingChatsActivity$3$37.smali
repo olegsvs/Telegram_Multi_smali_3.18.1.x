@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatsActivity$3;
 
     .prologue
-    .line 912
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$37;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingChatsActivity$3$37;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 915
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$3$37;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -62,7 +60,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 916
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$3$37;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -71,7 +68,6 @@
 
     sput v0, Lorg/telegram/ui/ActionBar/Theme;->chatsAvatarMarginLeft:I
 
-    .line 917
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$3$37;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -86,7 +82,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/ThemingChatsActivity;->access$300(Lorg/telegram/ui/ThemingChatsActivity;Ljava/lang/String;I)V
 
-    .line 919
     :cond_0
     return-void
 .end method

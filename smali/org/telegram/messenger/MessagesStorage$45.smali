@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 2500
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$45;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,18 +44,15 @@
 
     const/4 v8, 0x1
 
-    .line 2503
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2504
     .local v1, "contacts":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2506
     .local v6, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :try_start_0
     iget-object v7, p0, Lorg/telegram/messenger/MessagesStorage$45;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -75,13 +71,11 @@
 
     move-result-object v2
 
-    .line 2507
     .local v2, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2508
     .local v4, "uids":Ljava/lang/StringBuilder;
     :goto_0
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -90,24 +84,20 @@
 
     if-eqz v7, :cond_3
 
-    .line 2509
     const/4 v7, 0x0
 
     invoke-virtual {v2, v7}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v5
 
-    .line 2510
     .local v5, "user_id":I
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contact;-><init>()V
 
-    .line 2511
     .local v0, "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     iput v5, v0, Lorg/telegram/tgnet/TLRPC$TL_contact;->user_id:I
 
-    .line 2512
     const/4 v7, 0x1
 
     invoke-virtual {v2, v7}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -121,23 +111,19 @@
     :goto_1
     iput-boolean v7, v0, Lorg/telegram/tgnet/TLRPC$TL_contact;->mutual:Z
 
-    .line 2513
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 2514
     const-string/jumbo v7, ","
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2516
     :cond_0
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2517
     iget v7, v0, Lorg/telegram/tgnet/TLRPC$TL_contact;->user_id:I
 
     invoke-virtual {v4, v7}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
@@ -146,7 +132,6 @@
 
     goto :goto_0
 
-    .line 2524
     .end local v0    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v2    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v4    # "uids":Ljava/lang/StringBuilder;
@@ -154,17 +139,13 @@
     :catch_0
     move-exception v3
 
-    .line 2525
     .local v3, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 2526
     invoke-virtual {v6}, Ljava/util/ArrayList;->clear()V
 
-    .line 2527
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 2529
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_2
@@ -174,7 +155,6 @@
 
     invoke-virtual {v7, v1, v6, v8}, Lorg/telegram/messenger/ContactsController;->processLoadedContacts(Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
 
-    .line 2530
     return-void
 
     .restart local v0    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
@@ -184,24 +164,20 @@
     :cond_2
     move v7, v9
 
-    .line 2512
     goto :goto_1
 
-    .line 2519
     .end local v0    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v5    # "user_id":I
     :cond_3
     :try_start_1
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 2521
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v7
 
     if-eqz v7, :cond_1
 
-    .line 2522
     iget-object v7, p0, Lorg/telegram/messenger/MessagesStorage$45;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;

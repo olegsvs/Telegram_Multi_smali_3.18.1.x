@@ -59,43 +59,34 @@
 
     const/4 v3, 0x0
 
-    .line 245
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
-    .line 246
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 210
     new-instance v0, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 213
     iput-boolean v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
-    .line 214
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForLongPress:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
-    .line 215
     iput v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressCount:I
 
-    .line 216
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
-    .line 248
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/BackupImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 249
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/high16 v1, 0x41d80000    # 27.0f
@@ -106,7 +97,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 250
     iget-object v8, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/16 v0, 0x36
@@ -125,14 +115,12 @@
 
     invoke-virtual {p0, v8, v0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 252
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
-    .line 253
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "dialogTextGray2"
@@ -143,7 +131,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 254
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -152,29 +139,24 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 255
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v9}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 256
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v9}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 259
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
     const/4 v4, -0x1
@@ -195,7 +177,6 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 260
     return-void
 .end method
 
@@ -204,7 +185,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForLongPress:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
     return-object v0
@@ -216,7 +196,6 @@
     .param p1, "x1"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
     .prologue
-    .line 206
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForLongPress:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
     return-object p1
@@ -227,7 +206,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     iget v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressCount:I
 
     return v0
@@ -238,7 +216,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     iget v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressCount:I
 
     add-int/lit8 v0, v0, 0x1
@@ -253,7 +230,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
     return v0
@@ -265,7 +241,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 206
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
     return p1
@@ -276,7 +251,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->onLongPress()V
 
     return-void
@@ -287,7 +261,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     .prologue
-    .line 206
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
     return-object v0
@@ -297,7 +270,6 @@
     .locals 7
 
     .prologue
-    .line 268
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$400(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/ChatActivity;
@@ -310,12 +282,10 @@
 
     if-nez v1, :cond_1
 
-    .line 282
     :cond_0
     :goto_0
     return-void
 
-    .line 271
     :cond_1
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -325,7 +295,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 272
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "AppName"
 
@@ -337,7 +306,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 273
     const-string/jumbo v1, "ChatHintsDelete"
 
     const v2, 0x7f070162
@@ -368,7 +336,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 274
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -383,7 +350,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 280
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -396,7 +362,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 281
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     goto :goto_0
@@ -408,33 +373,27 @@
     .locals 1
 
     .prologue
-    .line 348
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
-    .line 349
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForLongPress:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
     if-eqz v0, :cond_0
 
-    .line 350
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForLongPress:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 352
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
     if-eqz v0, :cond_1
 
-    .line 353
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->removeCallbacks(Ljava/lang/Runnable;)Z
 
-    .line 355
     :cond_1
     return-void
 .end method
@@ -447,7 +406,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 264
     const/high16 v0, 0x42aa0000    # 85.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -470,7 +428,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 265
     return-void
 .end method
 
@@ -483,10 +440,8 @@
 
     const/4 v5, 0x0
 
-    .line 301
     const/4 v0, 0x0
 
-    .line 303
     .local v0, "result":Z
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -494,26 +449,20 @@
 
     if-nez v1, :cond_3
 
-    .line 304
     iput-boolean v6, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressed:Z
 
-    .line 305
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->invalidate()V
 
-    .line 306
     const/4 v0, 0x1
 
-    .line 322
     :cond_0
     :goto_0
     if-nez v0, :cond_5
 
-    .line 323
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
-    .line 329
     :cond_1
     :goto_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -530,40 +479,32 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 330
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->cancelCheckLongPress()V
 
-    .line 333
     :cond_2
     return v0
 
-    .line 307
     :cond_3
     iget-boolean v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressed:Z
 
     if-eqz v1, :cond_0
 
-    .line 308
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     if-ne v1, v6, :cond_4
 
-    .line 309
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     invoke-interface {v1, v6}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 310
     iput-boolean v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressed:Z
 
-    .line 311
     invoke-virtual {p0, v5}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->playSoundEffect(I)V
 
-    .line 312
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$600(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/ChatAttachAlert$ChatAttachViewDelegate;
@@ -574,7 +515,6 @@
 
     move-result-object v3
 
-    sget-object v4, Lorg/telegram/messenger/query/SearchQuery;->inlineBots:Ljava/util/ArrayList;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->getTag()Ljava/lang/Object;
 
@@ -606,27 +546,22 @@
 
     invoke-interface {v2, v1}, Lorg/telegram/ui/Components/ChatAttachAlert$ChatAttachViewDelegate;->didSelectBot(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 313
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1, v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$700(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
 
-    .line 314
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->dismiss()V
 
-    .line 315
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v1, v6}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$700(Lorg/telegram/ui/Components/ChatAttachAlert;Z)V
 
-    .line 316
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->invalidate()V
 
     goto :goto_0
 
-    .line 317
     :cond_4
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -636,15 +571,12 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 318
     iput-boolean v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pressed:Z
 
-    .line 319
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->invalidate()V
 
     goto :goto_0
 
-    .line 325
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -652,7 +584,6 @@
 
     if-nez v1, :cond_1
 
-    .line 326
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->startCheckLongPress()V
 
     goto :goto_1
@@ -663,21 +594,16 @@
     .param p1, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 285
     if-nez p1, :cond_0
 
-    .line 297
     :goto_0
     return-void
 
-    .line 288
     :cond_0
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 289
     const/4 v0, 0x0
 
-    .line 290
     .local v0, "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->nameTextView:Landroid/widget/TextView;
 
@@ -691,24 +617,20 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 291
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v1, p1}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 292
     if-eqz p1, :cond_1
 
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     if-eqz v1, :cond_1
 
-    .line 293
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 295
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
@@ -718,7 +640,6 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 296
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->requestLayout()V
 
     goto :goto_0
@@ -728,27 +649,22 @@
     .locals 4
 
     .prologue
-    .line 337
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
     if-eqz v0, :cond_0
 
-    .line 345
     :goto_0
     return-void
 
-    .line 340
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->checkingForLongPress:Z
 
-    .line 341
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
     if-nez v0, :cond_1
 
-    .line 342
     new-instance v0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
     const/4 v1, 0x0
@@ -757,7 +673,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 
-    .line 344
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->pendingCheckForTap:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;
 

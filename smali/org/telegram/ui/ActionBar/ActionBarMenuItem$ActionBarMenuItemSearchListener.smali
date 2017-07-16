@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 52
     const/4 v0, 0x1
 
     return v0
@@ -41,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 57
     return-void
 .end method
 
@@ -49,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 49
     return-void
 .end method
 
@@ -58,7 +54,6 @@
     .param p1, "editText"    # Landroid/widget/EditText;
 
     .prologue
-    .line 63
     return-void
 .end method
 
@@ -67,6 +62,5 @@
     .param p1, "editText"    # Landroid/widget/EditText;
 
     .prologue
-    .line 60
     return-void
 .end method

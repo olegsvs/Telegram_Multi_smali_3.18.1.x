@@ -39,7 +39,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/StickersAdapter;
 
     .prologue
-    .line 115
     iput-object p1, p0, Lorg/telegram/ui/Adapters/StickersAdapter$1;->this$0:Lorg/telegram/ui/Adapters/StickersAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/StickersAdapter$1;->val$recentStickers:Ljava/util/ArrayList;
@@ -54,7 +53,6 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 117
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -67,7 +65,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 118
     iget-object v1, p0, Lorg/telegram/ui/Adapters/StickersAdapter$1;->val$recentStickers:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -82,19 +79,16 @@
 
     if-nez v1, :cond_0
 
-    .line 122
     .end local v0    # "a":I
     :goto_1
     return v0
 
-    .line 117
     .restart local v0    # "a":I
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 122
     :cond_1
     const/4 v0, -0x1
 
@@ -107,7 +101,6 @@
     .locals 1
 
     .prologue
-    .line 115
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Document;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$Document;
@@ -125,14 +118,12 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 127
     iget-wide v2, p1, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     invoke-direct {p0, v2, v3}, Lorg/telegram/ui/Adapters/StickersAdapter$1;->getIndex(J)I
 
     move-result v0
 
-    .line 128
     .local v0, "idx1":I
     iget-wide v2, p2, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
@@ -140,27 +131,21 @@
 
     move-result v1
 
-    .line 129
     .local v1, "idx2":I
     if-le v0, v1, :cond_0
 
-    .line 130
     const/4 v2, -0x1
 
-    .line 134
     :goto_0
     return v2
 
-    .line 131
     :cond_0
     if-ge v0, v1, :cond_1
 
-    .line 132
     const/4 v2, 0x1
 
     goto :goto_0
 
-    .line 134
     :cond_1
     const/4 v2, 0x0
 

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1740
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$15;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$15;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -47,29 +46,24 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1743
     instance-of v2, p1, Lorg/telegram/tgnet/TLRPC$TL_webPage;
 
     if-eqz v2, :cond_0
 
     move-object v0, p1
 
-    .line 1744
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_webPage;
 
-    .line 1745
     .local v0, "webPage":Lorg/telegram/tgnet/TLRPC$TL_webPage;
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_webPage;->cached_page:Lorg/telegram/tgnet/TLRPC$Page;
 
     if-nez v2, :cond_1
 
-    .line 1766
     .end local v0    # "webPage":Lorg/telegram/tgnet/TLRPC$TL_webPage;
     :cond_0
     :goto_0
     return-void
 
-    .line 1748
     .restart local v0    # "webPage":Lorg/telegram/tgnet/TLRPC$TL_webPage;
     :cond_1
     new-instance v2, Lorg/telegram/ui/ArticleViewer$15$1;
@@ -78,12 +72,10 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1762
     new-instance v1, Ljava/util/HashMap;
 
     invoke-direct {v1}, Ljava/util/HashMap;-><init>()V
 
-    .line 1763
     .local v1, "webpages":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$WebPage;>;"
     iget-wide v2, v0, Lorg/telegram/tgnet/TLRPC$TL_webPage;->id:J
 
@@ -93,7 +85,6 @@
 
     invoke-virtual {v1, v2, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1764
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2

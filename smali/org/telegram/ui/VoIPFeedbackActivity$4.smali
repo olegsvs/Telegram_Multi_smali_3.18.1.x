@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPFeedbackActivity;
 
     .prologue
-    .line 106
     iput-object p1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->val$btn:Landroid/view/View;
@@ -54,7 +53,6 @@
 
     const/4 v1, 0x0
 
-    .line 109
     iget-object v3, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->val$btn:Landroid/view/View;
 
     if-lez p1, :cond_1
@@ -64,7 +62,6 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 110
     iget-object v3, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->val$commentBox:Landroid/widget/EditText;
 
     const/4 v0, 0x5
@@ -78,7 +75,6 @@
     :goto_1
     invoke-virtual {v3, v0}, Landroid/widget/EditText;->setVisibility(I)V
 
-    .line 111
     iget-object v0, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->val$commentBox:Landroid/widget/EditText;
 
     invoke-virtual {v0}, Landroid/widget/EditText;->getVisibility()I
@@ -87,7 +83,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 112
     iget-object v0, p0, Lorg/telegram/ui/VoIPFeedbackActivity$4;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     const-string/jumbo v2, "input_method"
@@ -106,19 +101,16 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 114
     :cond_0
     return-void
 
     :cond_1
     move v0, v1
 
-    .line 109
     goto :goto_0
 
     :cond_2
     move v0, v2
 
-    .line 110
     goto :goto_1
 .end method

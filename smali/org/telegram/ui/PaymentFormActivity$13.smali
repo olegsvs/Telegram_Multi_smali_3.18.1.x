@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 1386
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,12 +45,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 1389
     const/4 v1, 0x5
 
     if-ne p2, v1, :cond_3
 
-    .line 1390
     invoke-virtual {p1}, Landroid/widget/TextView;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -62,7 +59,6 @@
 
     move-result v0
 
-    .line 1391
     .local v0, "num":I
     :cond_0
     add-int/lit8 v1, v0, 0x1
@@ -77,18 +73,14 @@
 
     if-ge v1, v3, :cond_2
 
-    .line 1392
     add-int/lit8 v0, v0, 0x1
 
-    .line 1393
     const/4 v1, 0x4
 
     if-ne v0, v1, :cond_1
 
-    .line 1394
     add-int/lit8 v0, v0, 0x1
 
-    .line 1396
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -110,7 +102,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1397
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PaymentFormActivity;->access$1200(Lorg/telegram/ui/PaymentFormActivity;)[Landroid/widget/EditText;
@@ -124,18 +115,15 @@
     :cond_2
     move v1, v2
 
-    .line 1406
     .end local v0    # "num":I
     :goto_0
     return v1
 
-    .line 1402
     :cond_3
     const/4 v1, 0x6
 
     if-ne p2, v1, :cond_4
 
-    .line 1403
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$13;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PaymentFormActivity;->access$1900(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -146,10 +134,8 @@
 
     move v1, v2
 
-    .line 1404
     goto :goto_0
 
-    .line 1406
     :cond_4
     const/4 v1, 0x0
 

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/ChatMessageCell;
 
     .prologue
-    .line 929
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$1;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     iput-object p2, p0, Lorg/telegram/ui/Cells/ChatMessageCell$1;->val$name:Ljava/lang/String;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 932
     iget-object v1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$1;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getContext()Landroid/content/Context;
@@ -56,7 +54,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 933
     iget-object v1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$1;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ChatMessageCell;->getContext()Landroid/content/Context;
@@ -69,7 +66,6 @@
 
     move-result-object v0
 
-    .line 934
     .local v0, "toast":Landroid/widget/Toast;
     const/16 v1, 0x30
 
@@ -81,10 +77,8 @@
 
     invoke-virtual {v0, v1, v3, v2}, Landroid/widget/Toast;->setGravity(III)V
 
-    .line 935
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 937
     .end local v0    # "toast":Landroid/widget/Toast;
     :cond_0
     return-void

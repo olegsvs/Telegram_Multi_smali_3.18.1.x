@@ -54,7 +54,6 @@
     .locals 2
 
     .prologue
-    .line 44
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/4 v1, 0x7
@@ -70,11 +69,9 @@
     .locals 2
 
     .prologue
-    .line 35
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     new-instance v0, Ljava/util/concurrent/ConcurrentHashMap;
 
     const/4 v1, 0x7
@@ -83,7 +80,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/time/FormatCache;->cInstanceCache:Ljava/util/concurrent/ConcurrentMap;
 
-    .line 224
     return-void
 .end method
 
@@ -105,22 +101,18 @@
     .end annotation
 
     .prologue
-    .line 121
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     if-nez p4, :cond_0
 
-    .line 122
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p4
 
-    .line 124
     :cond_0
     invoke-static {p1, p2, p4}, Lorg/telegram/messenger/time/FormatCache;->getPatternForStyle(Ljava/lang/Integer;Ljava/lang/Integer;Ljava/util/Locale;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 125
     .local v0, "pattern":Ljava/lang/String;
     invoke-virtual {p0, v0, p3, p4}, Lorg/telegram/messenger/time/FormatCache;->getInstance(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)Ljava/text/Format;
 
@@ -136,7 +128,6 @@
     .param p2, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 191
     new-instance v2, Lorg/telegram/messenger/time/FormatCache$MultipartKey;
 
     const/4 v5, 0x3
@@ -157,7 +148,6 @@
 
     invoke-direct {v2, v5}, Lorg/telegram/messenger/time/FormatCache$MultipartKey;-><init>([Ljava/lang/Object;)V
 
-    .line 193
     .local v2, "key":Lorg/telegram/messenger/time/FormatCache$MultipartKey;
     sget-object v5, Lorg/telegram/messenger/time/FormatCache;->cDateTimeInstanceCache:Ljava/util/concurrent/ConcurrentMap;
 
@@ -167,14 +157,11 @@
 
     check-cast v3, Ljava/lang/String;
 
-    .line 194
     .local v3, "pattern":Ljava/lang/String;
     if-nez v3, :cond_0
 
-    .line 197
     if-nez p0, :cond_1
 
-    .line 198
     :try_start_0
     invoke-virtual {p1}, Ljava/lang/Integer;->intValue()I
 
@@ -184,7 +171,6 @@
 
     move-result-object v1
 
-    .line 204
     .local v1, "formatter":Ljava/text/DateFormat;
     :goto_0
     check-cast v1, Ljava/text/SimpleDateFormat;
@@ -194,7 +180,6 @@
 
     move-result-object v3
 
-    .line 205
     sget-object v5, Lorg/telegram/messenger/time/FormatCache;->cDateTimeInstanceCache:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v5, v2, v3}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -203,23 +188,18 @@
 
     check-cast v4, Ljava/lang/String;
 
-    .line 206
     .local v4, "previous":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 210
     move-object v3, v4
 
-    .line 216
     .end local v4    # "previous":Ljava/lang/String;
     :cond_0
     return-object v3
 
-    .line 199
     :cond_1
     if-nez p1, :cond_2
 
-    .line 200
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
 
     move-result v5
@@ -231,7 +211,6 @@
     .restart local v1    # "formatter":Ljava/text/DateFormat;
     goto :goto_0
 
-    .line 202
     .end local v1    # "formatter":Ljava/text/DateFormat;
     :cond_2
     invoke-virtual {p0}, Ljava/lang/Integer;->intValue()I
@@ -251,12 +230,10 @@
     .restart local v1    # "formatter":Ljava/text/DateFormat;
     goto :goto_0
 
-    .line 212
     .end local v1    # "formatter":Ljava/text/DateFormat;
     :catch_0
     move-exception v0
 
-    .line 213
     .local v0, "ex":Ljava/lang/ClassCastException;
     new-instance v5, Ljava/lang/IllegalArgumentException;
 
@@ -312,7 +289,6 @@
     .end annotation
 
     .prologue
-    .line 160
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -343,7 +319,6 @@
     .end annotation
 
     .prologue
-    .line 143
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -372,7 +347,6 @@
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     const/4 v2, 0x3
 
-    .line 54
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object v0
@@ -404,11 +378,9 @@
     .end annotation
 
     .prologue
-    .line 70
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     if-nez p1, :cond_0
 
-    .line 71
     new-instance v3, Ljava/lang/NullPointerException;
 
     const-string/jumbo v4, "pattern must not be null"
@@ -417,25 +389,20 @@
 
     throw v3
 
-    .line 73
     :cond_0
     if-nez p2, :cond_1
 
-    .line 74
     invoke-static {}, Ljava/util/TimeZone;->getDefault()Ljava/util/TimeZone;
 
     move-result-object p2
 
-    .line 76
     :cond_1
     if-nez p3, :cond_2
 
-    .line 77
     invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
 
     move-result-object p3
 
-    .line 79
     :cond_2
     new-instance v1, Lorg/telegram/messenger/time/FormatCache$MultipartKey;
 
@@ -457,7 +424,6 @@
 
     invoke-direct {v1, v3}, Lorg/telegram/messenger/time/FormatCache$MultipartKey;-><init>([Ljava/lang/Object;)V
 
-    .line 80
     .local v1, "key":Lorg/telegram/messenger/time/FormatCache$MultipartKey;
     iget-object v3, p0, Lorg/telegram/messenger/time/FormatCache;->cInstanceCache:Ljava/util/concurrent/ConcurrentMap;
 
@@ -467,16 +433,13 @@
 
     check-cast v0, Ljava/text/Format;
 
-    .line 81
     .local v0, "format":Ljava/text/Format;, "TF;"
     if-nez v0, :cond_3
 
-    .line 82
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/time/FormatCache;->createInstance(Ljava/lang/String;Ljava/util/TimeZone;Ljava/util/Locale;)Ljava/text/Format;
 
     move-result-object v0
 
-    .line 83
     iget-object v3, p0, Lorg/telegram/messenger/time/FormatCache;->cInstanceCache:Ljava/util/concurrent/ConcurrentMap;
 
     invoke-interface {v3, v1, v0}, Ljava/util/concurrent/ConcurrentMap;->putIfAbsent(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
@@ -485,14 +448,11 @@
 
     check-cast v2, Ljava/text/Format;
 
-    .line 84
     .local v2, "previousValue":Ljava/text/Format;, "TF;"
     if-eqz v2, :cond_3
 
-    .line 87
     move-object v0, v2
 
-    .line 90
     .end local v2    # "previousValue":Ljava/text/Format;, "TF;"
     :cond_3
     return-object v0
@@ -513,7 +473,6 @@
     .end annotation
 
     .prologue
-    .line 177
     .local p0, "this":Lorg/telegram/messenger/time/FormatCache;, "Lorg/telegram/messenger/time/FormatCache<TF;>;"
     const/4 v0, 0x0
 

@@ -35,7 +35,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$4;
 
     .prologue
-    .line 928
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$4$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$4$1;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
@@ -59,7 +58,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 931
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -88,7 +86,6 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesStorage;->updateMessageStateAndId(JLjava/lang/Integer;IIZI)[J
 
-    .line 932
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -103,14 +100,12 @@
 
     invoke-virtual/range {v3 .. v8}, Lorg/telegram/messenger/MessagesStorage;->putMessages(Ljava/util/ArrayList;ZZZI)V
 
-    .line 933
     new-instance v0, Lorg/telegram/messenger/SendMessagesHelper$4$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SendMessagesHelper$4$1$1;-><init>(Lorg/telegram/messenger/SendMessagesHelper$4$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 943
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$1;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessageObject;->isVideoMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
@@ -127,7 +122,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 944
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$4$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$4;
 
@@ -139,7 +133,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper;->stopVideoService(Ljava/lang/String;)V
 
-    .line 946
     :cond_1
     return-void
 .end method

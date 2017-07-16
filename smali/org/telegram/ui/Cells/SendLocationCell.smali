@@ -27,24 +27,20 @@
 
     const/4 v6, 0x0
 
-    .line 34
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 36
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->imageView:Landroid/widget/ImageView;
 
-    .line 37
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->imageView:Landroid/widget/ImageView;
 
     const v2, 0x7f02021e
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 38
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -65,7 +61,6 @@
 
     move-result-object v7
 
-    .line 39
     .local v7, "circle":Landroid/graphics/drawable/Drawable;
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/SendLocationCell;->getResources()Landroid/content/res/Resources;
 
@@ -77,7 +72,6 @@
 
     move-result-object v9
 
-    .line 40
     .local v9, "drawable":Landroid/graphics/drawable/Drawable;
     new-instance v0, Landroid/graphics/PorterDuffColorFilter;
 
@@ -93,12 +87,10 @@
 
     invoke-virtual {v9, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 41
     new-instance v8, Lorg/telegram/ui/Components/CombinedDrawable;
 
     invoke-direct {v8, v7, v9}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 42
     .local v8, "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -110,12 +102,10 @@
 
     invoke-virtual {v8, v0, v2}, Lorg/telegram/ui/Components/CombinedDrawable;->setCustomSize(II)V
 
-    .line 43
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->imageView:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v8}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 44
     iget-object v13, p0, Lorg/telegram/ui/Cells/SendLocationCell;->imageView:Landroid/widget/ImageView;
 
     const/16 v0, 0x28
@@ -151,21 +141,18 @@
 
     invoke-virtual {p0, v13, v0}, Lorg/telegram/ui/Cells/SendLocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 46
     new-instance v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/16 v1, 0x10
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteBlueText7"
@@ -176,7 +163,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 49
     iget-object v1, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -188,7 +174,6 @@
     :goto_3
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
 
-    .line 50
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -199,7 +184,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 51
     iget-object v13, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/4 v0, -0x1
@@ -237,21 +221,18 @@
 
     invoke-virtual {p0, v13, v0}, Lorg/telegram/ui/Cells/SendLocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 53
     new-instance v0, Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
-    .line 54
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/16 v1, 0xe
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextSize(I)V
 
-    .line 55
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText3"
@@ -262,7 +243,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setTextColor(I)V
 
-    .line 56
     iget-object v1, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -274,7 +254,6 @@
     :goto_7
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setGravity(I)V
 
-    .line 57
     iget-object v13, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     const/4 v0, -0x1
@@ -310,13 +289,11 @@
 
     invoke-virtual {p0, v13, v0}, Lorg/telegram/ui/Cells/SendLocationCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 58
     return-void
 
     :cond_0
     move v2, v11
 
-    .line 44
     goto/16 :goto_0
 
     :cond_1
@@ -332,13 +309,11 @@
     :cond_3
     move v0, v11
 
-    .line 49
     goto :goto_3
 
     :cond_4
     move v2, v11
 
-    .line 51
     goto :goto_4
 
     :cond_5
@@ -354,13 +329,11 @@
     :cond_7
     move v0, v11
 
-    .line 56
     goto :goto_7
 
     :cond_8
     move v10, v11
 
-    .line 57
     goto :goto_8
 
     :cond_9
@@ -378,7 +351,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->imageView:Landroid/widget/ImageView;
 
     return-object v0
@@ -394,7 +366,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 66
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -415,7 +386,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 67
     return-void
 .end method
 
@@ -425,16 +395,13 @@
     .param p2, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->titleTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Cells/SendLocationCell;->accurateTextView:Lorg/telegram/ui/ActionBar/SimpleTextView;
 
     invoke-virtual {v0, p2}, Lorg/telegram/ui/ActionBar/SimpleTextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 72
     return-void
 .end method

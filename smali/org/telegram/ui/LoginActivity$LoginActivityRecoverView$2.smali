@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     .prologue
-    .line 2504
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -48,7 +47,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2507
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
@@ -61,7 +59,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2508
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "RestoreEmailTroubleText"
 
@@ -73,7 +70,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2509
     const-string/jumbo v2, "RestorePasswordNoEmailTitle"
 
     const v3, 0x7f07053d
@@ -84,7 +80,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2510
     const-string/jumbo v2, "OK"
 
     const v3, 0x7f070452
@@ -99,7 +94,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2516
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$2;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     iget-object v2, v2, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;->this$0:Lorg/telegram/ui/LoginActivity;
@@ -112,17 +106,13 @@
 
     move-result-object v1
 
-    .line 2517
     .local v1, "dialog":Landroid/app/Dialog;
     if-eqz v1, :cond_0
 
-    .line 2518
     invoke-virtual {v1, v4}, Landroid/app/Dialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 2519
     invoke-virtual {v1, v4}, Landroid/app/Dialog;->setCancelable(Z)V
 
-    .line 2521
     :cond_0
     return-void
 .end method

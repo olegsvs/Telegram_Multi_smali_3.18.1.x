@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 764
     iput-wide p1, p0, Lorg/telegram/messenger/query/StickersQuery$18;->val$id:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 767
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$1300()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -53,7 +51,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 768
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$1700()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 769
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$1500()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -77,7 +73,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/query/StickersQuery;->access$1102(I)I
 
-    .line 770
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -90,7 +85,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 771
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$1500()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -109,6 +103,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/query/StickersQuery;->access$1200(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
-    .line 772
     return-void
 .end method

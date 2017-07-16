@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/TwoStepVerificationActivity$11$1;
 
     .prologue
-    .line 857
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$11$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$11$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 860
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 861
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$11$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$11$1;
 
     iget-object v0, v0, Lorg/telegram/ui/TwoStepVerificationActivity$11$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$11;
@@ -65,6 +62,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->finishFragment()V
 
-    .line 862
     return-void
 .end method

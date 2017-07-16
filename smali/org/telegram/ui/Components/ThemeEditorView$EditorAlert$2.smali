@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 583
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -49,7 +48,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 586
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -66,14 +64,12 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/ThemeEditorView;->access$202(Lorg/telegram/ui/Components/ThemeEditorView;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 587
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v2, p2}, Lorg/telegram/ui/Components/ThemeEditorView;->access$1502(Lorg/telegram/ui/Components/ThemeEditorView;I)I
 
-    .line 588
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -92,7 +88,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 589
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -107,7 +102,6 @@
 
     check-cast v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 590
     .local v1, "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ThemeDescription;->getCurrentKey()Ljava/lang/String;
 
@@ -121,7 +115,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 591
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -132,20 +125,16 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/Components/WallpaperUpdater;->showAlert(Z)V
 
-    .line 600
     .end local v1    # "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     :goto_1
     return-void
 
-    .line 594
     .restart local v1    # "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     :cond_0
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ThemeDescription;->startEditing()V
 
-    .line 595
     if-nez v0, :cond_1
 
-    .line 596
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$900(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
@@ -158,13 +147,11 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setColor(I)V
 
-    .line 588
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 599
     .end local v1    # "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;

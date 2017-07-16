@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ProfileActivity$9$2$1;
 
     .prologue
-    .line 1172
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$9$2$1$1;->this$3:Lorg/telegram/ui/ProfileActivity$9$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1175
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -64,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->loadFullChat(IIZ)V
 
-    .line 1176
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 244
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$2;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iput p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$2;->val$currentReqId:I
@@ -51,13 +50,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 247
     new-instance v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$2$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$2$1;-><init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter$2;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 281
     return-void
 .end method

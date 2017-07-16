@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 3373
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$53;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -45,10 +44,8 @@
     .locals 5
 
     .prologue
-    .line 3376
     const/4 v1, 0x0
 
-    .line 3378
     .local v1, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$53;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -63,7 +60,6 @@
 
     move-result-object v1
 
-    .line 3379
     const/4 v2, 0x1
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -72,7 +68,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3380
     const/4 v2, 0x2
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -81,7 +76,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3381
     const/4 v2, 0x3
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -98,7 +92,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3382
     const/4 v2, 0x4
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -107,7 +100,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3383
     const/4 v2, 0x5
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$53;->val$chat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -116,50 +108,40 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 3384
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3388
     if-eqz v1, :cond_0
 
-    .line 3389
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 3392
     :cond_0
     :goto_0
     return-void
 
-    .line 3385
     :catch_0
     move-exception v0
 
-    .line 3386
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3388
     if-eqz v1, :cond_0
 
-    .line 3389
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
     goto :goto_0
 
-    .line 3388
     .end local v0    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
     if-eqz v1, :cond_1
 
-    .line 3389
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
     :cond_1

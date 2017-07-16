@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/Painting$2;
 
     .prologue
-    .line 221
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     const/4 v0, 0x0
 
-    .line 224
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -62,12 +60,10 @@
 
     if-nez v2, :cond_1
 
-    .line 255
     :cond_0
     :goto_0
     return-void
 
-    .line 227
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
@@ -100,16 +96,13 @@
 
     check-cast v11, Lorg/telegram/ui/Components/Paint/Shader;
 
-    .line 228
     .local v11, "shader":Lorg/telegram/ui/Components/Paint/Shader;
     if-eqz v11, :cond_0
 
-    .line 232
     iget v2, v11, Lorg/telegram/ui/Components/Paint/Shader;->program:I
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 234
     const-string/jumbo v2, "mvpMatrix"
 
     invoke-virtual {v11, v2}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -130,7 +123,6 @@
 
     invoke-static {v2, v12, v0, v3}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZLjava/nio/FloatBuffer;)V
 
-    .line 235
     const-string/jumbo v2, "texture"
 
     invoke-virtual {v11, v2}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -139,7 +131,6 @@
 
     invoke-static {v2, v0}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 236
     const-string/jumbo v2, "mask"
 
     invoke-virtual {v11, v2}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -148,7 +139,6 @@
 
     invoke-static {v2, v12}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 237
     const-string/jumbo v2, "color"
 
     invoke-virtual {v11, v2}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -161,12 +151,10 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/Components/Paint/Shader;->SetColorUniform(II)V
 
-    .line 239
     const v2, 0x84c0
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 240
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -177,12 +165,10 @@
 
     invoke-static {v13, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 242
     const v2, 0x84c1
 
     invoke-static {v2}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 243
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -193,10 +179,8 @@
 
     invoke-static {v13, v2}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 245
     invoke-static {v12, v0}, Landroid/opengl/GLES20;->glBlendFunc(II)V
 
-    .line 247
     const/16 v2, 0x1406
 
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
@@ -211,10 +195,8 @@
 
     invoke-static/range {v0 .. v5}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 248
     invoke-static {v0}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 249
     const/16 v7, 0x1406
 
     iget-object v2, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
@@ -235,17 +217,14 @@
 
     invoke-static/range {v5 .. v10}, Landroid/opengl/GLES20;->glVertexAttribPointer(IIIZILjava/nio/Buffer;)V
 
-    .line 250
     invoke-static {v12}, Landroid/opengl/GLES20;->glEnableVertexAttribArray(I)V
 
-    .line 252
     const/4 v1, 0x5
 
     const/4 v2, 0x4
 
     invoke-static {v1, v0, v2}, Landroid/opengl/GLES20;->glDrawArrays(III)V
 
-    .line 254
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2$1;->this$1:Lorg/telegram/ui/Components/Paint/Painting$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -258,7 +237,6 @@
 
     goto/16 :goto_0
 
-    .line 227
     .end local v11    # "shader":Lorg/telegram/ui/Components/Paint/Shader;
     :cond_2
     const-string/jumbo v2, "compositeWithMask"

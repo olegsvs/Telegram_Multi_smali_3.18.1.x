@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropView;
 
     .prologue
-    .line 773
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->val$ratios:[[Ljava/lang/Integer;
@@ -57,22 +56,18 @@
 
     const/4 v5, 0x0
 
-    .line 776
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-static {v3, v5}, Lorg/telegram/ui/Components/Crop/CropView;->access$2302(Lorg/telegram/ui/Components/Crop/CropView;Z)Z
 
-    .line 777
     packed-switch p2, :pswitch_data_0
 
-    .line 791
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->val$ratios:[[Ljava/lang/Integer;
 
     add-int/lit8 v4, p2, -0x2
 
     aget-object v1, v3, v4
 
-    .line 793
     .local v1, "ratioPair":[Ljava/lang/Integer;
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
@@ -88,7 +83,6 @@
 
     if-lez v3, :cond_2
 
-    .line 794
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     aget-object v4, v1, v5
@@ -111,12 +105,10 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/Crop/CropView;->access$2400(Lorg/telegram/ui/Components/Crop/CropView;F)V
 
-    .line 801
     .end local v1    # "ratioPair":[Ljava/lang/Integer;
     :goto_0
     return-void
 
-    .line 779
     :pswitch_0
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
@@ -144,7 +136,6 @@
 
     move-result v2
 
-    .line 780
     .local v2, "w":F
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
@@ -173,7 +164,6 @@
 
     move-result v0
 
-    .line 781
     .local v0, "h":F
     :goto_2
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
@@ -184,7 +174,6 @@
 
     goto :goto_0
 
-    .line 779
     .end local v0    # "h":F
     .end local v2    # "w":F
     :cond_0
@@ -200,7 +189,6 @@
 
     goto :goto_1
 
-    .line 780
     .restart local v2    # "w":F
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
@@ -215,7 +203,6 @@
 
     goto :goto_2
 
-    .line 786
     .end local v2    # "w":F
     :pswitch_1
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
@@ -224,7 +211,6 @@
 
     goto :goto_0
 
-    .line 796
     .restart local v1    # "ratioPair":[Ljava/lang/Integer;
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/Components/Crop/CropView$6;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
@@ -251,7 +237,6 @@
 
     goto :goto_0
 
-    .line 777
     nop
 
     :pswitch_data_0

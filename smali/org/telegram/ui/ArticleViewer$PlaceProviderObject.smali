@@ -43,10 +43,8 @@
     .locals 1
 
     .prologue
-    .line 4962
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4973
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$PlaceProviderObject;->scale:F

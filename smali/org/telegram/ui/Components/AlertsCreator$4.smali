@@ -18,7 +18,6 @@
 
 
 # instance fields
-.field final synthetic val$linearLayout:Landroid/widget/LinearLayout;
 
 .field final synthetic val$selectedColor:[I
 
@@ -28,8 +27,6 @@
     .locals 0
 
     .prologue
-    .line 469
-    iput-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$4;->val$linearLayout:Landroid/widget/LinearLayout;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$4;->val$selectedColor:[I
 
@@ -49,14 +46,11 @@
 
     const/4 v5, 0x0
 
-    .line 472
-    iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$4;->val$linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3}, Landroid/widget/LinearLayout;->getChildCount()I
 
     move-result v2
 
-    .line 473
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -64,8 +58,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 474
-    iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$4;->val$linearLayout:Landroid/widget/LinearLayout;
 
     invoke-virtual {v3, v0}, Landroid/widget/LinearLayout;->getChildAt(I)Landroid/view/View;
 
@@ -73,7 +65,6 @@
 
     check-cast v1, Lorg/telegram/ui/Cells/RadioColorCell;
 
-    .line 475
     .local v1, "cell":Lorg/telegram/ui/Cells/RadioColorCell;
     if-ne v1, p1, :cond_0
 
@@ -82,7 +73,6 @@
     :goto_1
     invoke-virtual {v1, v3, v4}, Lorg/telegram/ui/Cells/RadioColorCell;->setChecked(ZZ)V
 
-    .line 473
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -90,10 +80,8 @@
     :cond_0
     move v3, v5
 
-    .line 475
     goto :goto_1
 
-    .line 477
     .end local v1    # "cell":Lorg/telegram/ui/Cells/RadioColorCell;
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/Components/AlertsCreator$4;->val$selectedColor:[I
@@ -114,6 +102,5 @@
 
     aput v3, v4, v5
 
-    .line 478
     return-void
 .end method

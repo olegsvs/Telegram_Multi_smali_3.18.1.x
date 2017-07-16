@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 2201
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$38;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$38;->val$chat_id:I
@@ -57,20 +56,16 @@
     .locals 20
 
     .prologue
-    .line 2204
     const/4 v8, 0x0
 
-    .line 2205
     .local v8, "pinnedMessageObject":Lorg/telegram/messenger/MessageObject;
     const/4 v3, 0x0
 
-    .line 2206
     .local v3, "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2208
     .local v4, "loadedUsers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :try_start_0
     move-object/from16 v0, p0
@@ -111,7 +106,6 @@
 
     move-result-object v13
 
-    .line 2209
     .local v13, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v13}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -119,18 +113,15 @@
 
     if-eqz v1, :cond_0
 
-    .line 2210
     const/4 v1, 0x0
 
     invoke-virtual {v13, v1}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v14
 
-    .line 2211
     .local v14, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v14, :cond_0
 
-    .line 2212
     const/4 v1, 0x0
 
     invoke-virtual {v14, v1}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -143,10 +134,8 @@
 
     move-result-object v3
 
-    .line 2213
     invoke-virtual {v14}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 2214
     const/4 v1, 0x1
 
     invoke-virtual {v13, v1}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -155,22 +144,18 @@
 
     iput v1, v3, Lorg/telegram/tgnet/TLRPC$ChatFull;->pinned_msg_id:I
 
-    .line 2217
     .end local v14    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
     invoke-virtual {v13}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 2219
     instance-of v1, v3, Lorg/telegram/tgnet/TLRPC$TL_chatFull;
 
     if-eqz v1, :cond_7
 
-    .line 2220
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2221
     .local v18, "usersToLoad":Ljava/lang/StringBuilder;
     const/4 v9, 0x0
 
@@ -186,7 +171,6 @@
 
     if-ge v9, v1, :cond_2
 
-    .line 2222
     iget-object v1, v3, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$ChatParticipants;->participants:Ljava/util/ArrayList;
@@ -197,7 +181,6 @@
 
     check-cast v11, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 2223
     .local v11, "c":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->length()I
 
@@ -205,14 +188,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 2224
     const-string/jumbo v1, ","
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2226
     :cond_1
     iget v1, v11, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
@@ -220,12 +201,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2221
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 2228
     .end local v11    # "c":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_2
     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->length()I
@@ -234,7 +213,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 2229
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -245,7 +223,6 @@
 
     invoke-virtual {v1, v2, v4}, Lorg/telegram/messenger/MessagesStorage;->getUsersInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 2278
     .end local v9    # "a":I
     .end local v18    # "usersToLoad":Ljava/lang/StringBuilder;
     :cond_3
@@ -256,14 +233,12 @@
 
     if-eqz v1, :cond_4
 
-    .line 2279
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 2281
     :cond_4
     instance-of v1, v3, Lorg/telegram/tgnet/TLRPC$TL_channelFull;
 
@@ -273,7 +248,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 2282
     move-object/from16 v0, p0
 
     iget v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$chat_id:I
@@ -289,7 +263,6 @@
 
     move-result-object v8
 
-    .line 2287
     :cond_5
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -311,27 +284,23 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesController;->processChatInfo(ILorg/telegram/tgnet/TLRPC$ChatFull;Ljava/util/ArrayList;ZZZLorg/telegram/messenger/MessageObject;)V
 
-    .line 2288
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     if-eqz v1, :cond_6
 
-    .line 2289
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 2292
     .end local v13    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_6
     :goto_2
     return-void
 
-    .line 2231
     .restart local v13    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_7
     :try_start_1
@@ -339,7 +308,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 2232
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -386,14 +354,12 @@
 
     move-result-object v13
 
-    .line 2233
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_chatParticipants;-><init>()V
 
     iput-object v1, v3, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
 
-    .line 2234
     :cond_8
     :goto_3
     invoke-virtual {v13}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -405,14 +371,11 @@
 
     if-eqz v1, :cond_c
 
-    .line 2236
     const/16 v17, 0x0
 
-    .line 2237
     .local v17, "user":Lorg/telegram/tgnet/TLRPC$User;
     const/16 v16, 0x0
 
-    .line 2238
     .local v16, "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     const/4 v1, 0x0
 
@@ -421,11 +384,9 @@
 
     move-result-object v14
 
-    .line 2239
     .restart local v14    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v14, :cond_9
 
-    .line 2240
     const/4 v1, 0x0
 
     invoke-virtual {v14, v1}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -438,10 +399,8 @@
 
     move-result-object v17
 
-    .line 2241
     invoke-virtual {v14}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 2243
     :cond_9
     const/4 v1, 0x2
 
@@ -449,10 +408,8 @@
 
     move-result-object v14
 
-    .line 2244
     if-eqz v14, :cond_a
 
-    .line 2245
     const/4 v1, 0x0
 
     invoke-virtual {v14, v1}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -465,23 +422,19 @@
 
     move-result-object v16
 
-    .line 2246
     invoke-virtual {v14}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 2248
     :cond_a
     if-eqz v17, :cond_8
 
     if-eqz v16, :cond_8
 
-    .line 2249
     move-object/from16 v0, v17
 
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     if-eqz v1, :cond_b
 
-    .line 2250
     move-object/from16 v0, v17
 
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -494,13 +447,11 @@
 
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 2252
     :cond_b
     move-object/from16 v0, v17
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2253
     const/4 v1, 0x3
 
     invoke-virtual {v13, v1}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -511,12 +462,10 @@
 
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
-    .line 2254
     new-instance v12, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
 
     invoke-direct {v12}, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;-><init>()V
 
-    .line 2255
     .local v12, "chatChannelParticipant":Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
     move-object/from16 v0, v16
 
@@ -524,26 +473,22 @@
 
     iput v1, v12, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->user_id:I
 
-    .line 2256
     move-object/from16 v0, v16
 
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
     iput v1, v12, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->date:I
 
-    .line 2257
     move-object/from16 v0, v16
 
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->inviter_id:I
 
     iput v1, v12, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->inviter_id:I
 
-    .line 2258
     move-object/from16 v0, v16
 
     iput-object v0, v12, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->channelParticipant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 2259
     iget-object v1, v3, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$ChatParticipants;->participants:Ljava/util/ArrayList;
@@ -555,13 +500,11 @@
 
     goto :goto_3
 
-    .line 2261
     .end local v12    # "chatChannelParticipant":Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
     .end local v14    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :catch_0
     move-exception v15
 
-    .line 2262
     .local v15, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-static {v15}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -571,7 +514,6 @@
 
     goto :goto_3
 
-    .line 2284
     .end local v13    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v15    # "e":Ljava/lang/Exception;
     .end local v16    # "participant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
@@ -579,14 +521,12 @@
     :catch_1
     move-exception v15
 
-    .line 2285
     .restart local v15    # "e":Ljava/lang/Exception;
     :try_start_4
     invoke-static {v15}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 2287
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -607,14 +547,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesController;->processChatInfo(ILorg/telegram/tgnet/TLRPC$ChatFull;Ljava/util/ArrayList;ZZZLorg/telegram/messenger/MessageObject;)V
 
-    .line 2288
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     if-eqz v1, :cond_6
 
-    .line 2289
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
@@ -623,19 +561,16 @@
 
     goto/16 :goto_2
 
-    .line 2265
     .end local v15    # "e":Ljava/lang/Exception;
     .restart local v13    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_c
     :try_start_5
     invoke-virtual {v13}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 2266
     new-instance v18, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 2267
     .restart local v18    # "usersToLoad":Ljava/lang/StringBuilder;
     const/4 v9, 0x0
 
@@ -649,7 +584,6 @@
 
     if-ge v9, v1, :cond_e
 
-    .line 2268
     iget-object v1, v3, Lorg/telegram/tgnet/TLRPC$ChatFull;->bot_info:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -658,7 +592,6 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$BotInfo;
 
-    .line 2269
     .local v10, "botInfo":Lorg/telegram/tgnet/TLRPC$BotInfo;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->length()I
 
@@ -666,14 +599,12 @@
 
     if-eqz v1, :cond_d
 
-    .line 2270
     const-string/jumbo v1, ","
 
     move-object/from16 v0, v18
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 2272
     :cond_d
     iget v1, v10, Lorg/telegram/tgnet/TLRPC$BotInfo;->user_id:I
 
@@ -681,12 +612,10 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
 
-    .line 2267
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_4
 
-    .line 2274
     .end local v10    # "botInfo":Lorg/telegram/tgnet/TLRPC$BotInfo;
     :cond_e
     invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->length()I
@@ -695,7 +624,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 2275
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -711,7 +639,6 @@
 
     goto/16 :goto_1
 
-    .line 2287
     .end local v9    # "a":I
     .end local v13    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v18    # "usersToLoad":Ljava/lang/StringBuilder;
@@ -740,14 +667,12 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesController;->processChatInfo(ILorg/telegram/tgnet/TLRPC$ChatFull;Ljava/util/ArrayList;ZZZLorg/telegram/messenger/MessageObject;)V
 
-    .line 2288
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     if-eqz v1, :cond_f
 
-    .line 2289
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/messenger/MessagesStorage$38;->val$semaphore:Ljava/util/concurrent/Semaphore;

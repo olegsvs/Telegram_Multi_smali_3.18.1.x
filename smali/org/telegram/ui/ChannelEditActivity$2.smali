@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditActivity;
 
     .prologue
-    .line 171
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -43,26 +42,21 @@
 
     const/4 v5, 0x1
 
-    .line 174
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 175
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ChannelEditActivity;->finishFragment()V
 
-    .line 229
     :cond_0
     :goto_0
     return-void
 
-    .line 176
     :cond_1
     if-ne p1, v5, :cond_0
 
-    .line 177
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$200(Lorg/telegram/ui/ChannelEditActivity;)Z
@@ -71,7 +65,6 @@
 
     if-nez v1, :cond_0
 
-    .line 180
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$300(Lorg/telegram/ui/ChannelEditActivity;)Landroid/widget/EditText;
@@ -84,7 +77,6 @@
 
     if-nez v1, :cond_3
 
-    .line 181
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ChannelEditActivity;->getParentActivity()Landroid/app/Activity;
@@ -99,16 +91,13 @@
 
     check-cast v0, Landroid/os/Vibrator;
 
-    .line 182
     .local v0, "v":Landroid/os/Vibrator;
     if-eqz v0, :cond_2
 
-    .line 183
     const-wide/16 v2, 0xc8
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 185
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -122,14 +111,12 @@
 
     goto :goto_0
 
-    .line 188
     .end local v0    # "v":Landroid/os/Vibrator;
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ChannelEditActivity;->access$202(Lorg/telegram/ui/ChannelEditActivity;Z)Z
 
-    .line 190
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$400(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/Components/AvatarUpdater;
@@ -140,12 +127,10 @@
 
     if-eqz v1, :cond_4
 
-    .line 191
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1, v5}, Lorg/telegram/ui/ChannelEditActivity;->access$502(Lorg/telegram/ui/ChannelEditActivity;Z)Z
 
-    .line 192
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     new-instance v2, Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -160,7 +145,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelEditActivity;->access$602(Lorg/telegram/ui/ChannelEditActivity;Lorg/telegram/ui/ActionBar/AlertDialog;)Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 193
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$600(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -177,7 +161,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 194
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$600(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -186,7 +169,6 @@
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 195
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$600(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -195,7 +177,6 @@
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 196
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$600(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -218,7 +199,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog;->setButton(ILjava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)V
 
-    .line 209
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$600(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -229,7 +209,6 @@
 
     goto/16 :goto_0
 
-    .line 212
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -259,7 +238,6 @@
 
     if-nez v1, :cond_5
 
-    .line 213
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -286,7 +264,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->changeChatTitle(ILjava/lang/String;)V
 
-    .line 215
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -324,7 +301,6 @@
 
     if-nez v1, :cond_6
 
-    .line 216
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -357,7 +333,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->updateChannelAbout(ILjava/lang/String;Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 218
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -375,7 +350,6 @@
 
     if-eq v1, v2, :cond_7
 
-    .line 219
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelEditActivity;->access$000(Lorg/telegram/ui/ChannelEditActivity;)Lorg/telegram/tgnet/TLRPC$Chat;
@@ -384,7 +358,6 @@
 
     iput-boolean v5, v1, Lorg/telegram/tgnet/TLRPC$Chat;->signatures:Z
 
-    .line 220
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -403,7 +376,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->toogleChannelSignatures(IZ)V
 
-    .line 222
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -413,7 +385,6 @@
 
     if-eqz v1, :cond_9
 
-    .line 223
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -432,7 +403,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->changeChatAvatar(ILorg/telegram/tgnet/TLRPC$InputFile;)V
 
-    .line 227
     :cond_8
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
@@ -441,7 +411,6 @@
 
     goto/16 :goto_0
 
-    .line 224
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -463,7 +432,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 225
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1

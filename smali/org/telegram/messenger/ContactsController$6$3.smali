@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$6;
 
     .prologue
-    .line 871
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$6$3;->val$contactsBookShort:Ljava/util/HashMap;
@@ -53,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 874
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -62,7 +60,6 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/ContactsController;->contactsBookSPhones:Ljava/util/HashMap;
 
-    .line 875
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -71,7 +68,6 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/ContactsController;->contactsBook:Ljava/util/HashMap;
 
-    .line 876
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -80,28 +76,24 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/ContactsController;->access$602(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 877
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-static {v0, v3}, Lorg/telegram/messenger/ContactsController;->access$702(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 878
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-boolean v0, v0, Lorg/telegram/messenger/ContactsController$6;->val$first:Z
 
     if-eqz v0, :cond_0
 
-    .line 879
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
 
     iput-boolean v3, v0, Lorg/telegram/messenger/ContactsController;->contactsLoaded:Z
 
-    .line 881
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
@@ -125,7 +117,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 882
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -140,7 +131,6 @@
 
     invoke-static {v0, v1, v2, v2, v2}, Lorg/telegram/messenger/ContactsController;->access$900(Lorg/telegram/messenger/ContactsController;Ljava/util/ArrayList;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 883
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$6$3;->this$1:Lorg/telegram/messenger/ContactsController$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$6;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -151,7 +141,6 @@
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 885
     :cond_1
     new-instance v0, Lorg/telegram/messenger/ContactsController$6$3$1;
 
@@ -159,6 +148,5 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 892
     return-void
 .end method

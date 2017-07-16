@@ -22,19 +22,14 @@
     .param p4, "out"    # Z
 
     .prologue
-    .line 27
     invoke-direct {p0}, Landroid/text/style/MetricAffectingSpan;-><init>()V
 
-    .line 28
     iput-object p1, p0, Lorg/telegram/ui/Components/URLSpanMono;->currentMessage:Ljava/lang/CharSequence;
 
-    .line 29
     iput p2, p0, Lorg/telegram/ui/Components/URLSpanMono;->currentStart:I
 
-    .line 30
     iput p3, p0, Lorg/telegram/ui/Components/URLSpanMono;->currentEnd:I
 
-    .line 31
     return-void
 .end method
 
@@ -44,7 +39,6 @@
     .locals 3
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Components/URLSpanMono;->currentMessage:Ljava/lang/CharSequence;
 
     iget v1, p0, Lorg/telegram/ui/Components/URLSpanMono;->currentStart:I
@@ -61,7 +55,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->addToClipboard(Ljava/lang/CharSequence;)V
 
-    .line 35
     return-void
 .end method
 
@@ -70,7 +63,6 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 46
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -89,22 +81,17 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 47
     sget-object v0, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 48
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 49
     iget-boolean v0, p0, Lorg/telegram/ui/Components/URLSpanMono;->isOut:Z
 
     if-eqz v0, :cond_0
 
-    .line 50
     const-string/jumbo v0, "chat_messageTextOut"
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -113,11 +100,9 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 54
     :goto_0
     return-void
 
-    .line 52
     :cond_0
     const-string/jumbo v0, "chat_messageTextIn"
 
@@ -135,12 +120,10 @@
     .param p1, "p"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 39
     sget-object v0, Landroid/graphics/Typeface;->MONOSPACE:Landroid/graphics/Typeface;
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 40
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -159,7 +142,6 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 41
     invoke-virtual {p1}, Landroid/text/TextPaint;->getFlags()I
 
     move-result v0
@@ -168,6 +150,5 @@
 
     invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setFlags(I)V
 
-    .line 42
     return-void
 .end method

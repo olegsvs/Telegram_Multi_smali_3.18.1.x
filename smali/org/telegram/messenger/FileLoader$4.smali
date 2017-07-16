@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoader;
 
     .prologue
-    .line 296
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/FileLoader$4;->val$location:Lorg/telegram/tgnet/TLRPC$FileLocation;
@@ -57,16 +56,13 @@
     .locals 4
 
     .prologue
-    .line 299
     const/4 v0, 0x0
 
-    .line 300
     .local v0, "fileName":Ljava/lang/String;
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     if-eqz v2, :cond_2
 
-    .line 301
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     iget-object v3, p0, Lorg/telegram/messenger/FileLoader$4;->val$locationExt:Ljava/lang/String;
@@ -75,23 +71,19 @@
 
     move-result-object v0
 
-    .line 307
     :cond_0
     :goto_0
     if-nez v0, :cond_4
 
-    .line 327
     :cond_1
     :goto_1
     return-void
 
-    .line 302
     :cond_2
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$document:Lorg/telegram/tgnet/TLRPC$Document;
 
     if-eqz v2, :cond_3
 
-    .line 303
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
@@ -100,13 +92,11 @@
 
     goto :goto_0
 
-    .line 304
     :cond_3
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$webDocument:Lorg/telegram/tgnet/TLRPC$TL_webDocument;
 
     if-eqz v2, :cond_0
 
-    .line 305
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$webDocument:Lorg/telegram/tgnet/TLRPC$TL_webDocument;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->getAttachFileName(Lorg/telegram/tgnet/TLObject;)Ljava/lang/String;
@@ -115,7 +105,6 @@
 
     goto :goto_0
 
-    .line 310
     :cond_4
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
@@ -129,11 +118,9 @@
 
     check-cast v1, Lorg/telegram/messenger/FileLoadOperation;
 
-    .line 311
     .local v1, "operation":Lorg/telegram/messenger/FileLoadOperation;
     if-eqz v1, :cond_1
 
-    .line 312
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$document:Lorg/telegram/tgnet/TLRPC$Document;
 
     invoke-static {v2}, Lorg/telegram/messenger/MessageObject;->isVoiceDocument(Lorg/telegram/tgnet/TLRPC$Document;)Z
@@ -150,7 +137,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 313
     :cond_5
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
@@ -164,25 +150,21 @@
 
     if-nez v2, :cond_6
 
-    .line 314
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->access$1110(Lorg/telegram/messenger/FileLoader;)I
 
-    .line 325
     :cond_6
     :goto_2
     invoke-virtual {v1}, Lorg/telegram/messenger/FileLoadOperation;->cancel()V
 
     goto :goto_1
 
-    .line 316
     :cond_7
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->val$location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     if-eqz v2, :cond_9
 
-    .line 317
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->access$1200(Lorg/telegram/messenger/FileLoader;)Ljava/util/LinkedList;
@@ -203,7 +185,6 @@
 
     if-eqz v2, :cond_6
 
-    .line 318
     :cond_8
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
@@ -211,7 +192,6 @@
 
     goto :goto_2
 
-    .line 321
     :cond_9
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
@@ -225,7 +205,6 @@
 
     if-nez v2, :cond_6
 
-    .line 322
     iget-object v2, p0, Lorg/telegram/messenger/FileLoader$4;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoader;->access$1510(Lorg/telegram/messenger/FileLoader;)I

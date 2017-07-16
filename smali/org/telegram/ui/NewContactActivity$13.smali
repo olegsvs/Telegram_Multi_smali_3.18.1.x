@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/NewContactActivity;
 
     .prologue
-    .line 717
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/NewContactActivity$13;->val$show:Z
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 731
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$1800(Lorg/telegram/ui/NewContactActivity;)Landroid/animation/AnimatorSet;
@@ -64,14 +62,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 732
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/NewContactActivity;->access$1802(Lorg/telegram/ui/NewContactActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 734
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .prologue
     const/4 v1, 0x4
 
-    .line 720
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$1800(Lorg/telegram/ui/NewContactActivity;)Landroid/animation/AnimatorSet;
@@ -104,12 +99,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 721
     iget-boolean v0, p0, Lorg/telegram/ui/NewContactActivity$13;->val$show:Z
 
     if-nez v0, :cond_1
 
-    .line 722
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$1900(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/ContextProgressView;
@@ -118,12 +111,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ContextProgressView;->setVisibility(I)V
 
-    .line 727
     :cond_0
     :goto_0
     return-void
 
-    .line 724
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$13;->this$0:Lorg/telegram/ui/NewContactActivity;
 

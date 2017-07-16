@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 7043
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$110;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$110;->val$finalUpdate:Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;
@@ -45,13 +44,11 @@
     .locals 1
 
     .prologue
-    .line 7046
     new-instance v0, Lorg/telegram/messenger/MessagesController$110$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$110$1;-><init>(Lorg/telegram/messenger/MessagesController$110;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 7059
     return-void
 .end method

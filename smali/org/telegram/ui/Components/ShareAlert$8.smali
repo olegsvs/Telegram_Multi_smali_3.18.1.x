@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ShareAlert;
 
     .prologue
-    .line 387
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,15 +44,12 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 390
     if-gez p2, :cond_1
 
-    .line 411
     :cond_0
     :goto_0
     return-void
 
-    .line 394
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
@@ -73,7 +69,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 395
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert;->access$600(Lorg/telegram/ui/Components/ShareAlert;)Lorg/telegram/ui/Components/ShareAlert$ShareDialogsAdapter;
@@ -84,17 +79,14 @@
 
     move-result-object v1
 
-    .line 399
     .local v1, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     :goto_1
     if-eqz v1, :cond_0
 
     move-object v0, p1
 
-    .line 402
     check-cast v0, Lorg/telegram/ui/Cells/ShareDialogCell;
 
-    .line 403
     .local v0, "cell":Lorg/telegram/ui/Cells/ShareDialogCell;
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
@@ -114,7 +106,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 404
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ShareAlert;->access$1200(Lorg/telegram/ui/Components/ShareAlert;)Ljava/util/HashMap;
@@ -129,12 +120,10 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 405
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2, v6}, Lorg/telegram/ui/Cells/ShareDialogCell;->setChecked(ZZ)V
 
-    .line 410
     :goto_2
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
@@ -142,7 +131,6 @@
 
     goto :goto_0
 
-    .line 397
     .end local v0    # "cell":Lorg/telegram/ui/Cells/ShareDialogCell;
     .end local v1    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     :cond_2
@@ -159,7 +147,6 @@
     .restart local v1    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     goto :goto_1
 
-    .line 407
     .restart local v0    # "cell":Lorg/telegram/ui/Cells/ShareDialogCell;
     :cond_3
     iget-object v2, p0, Lorg/telegram/ui/Components/ShareAlert$8;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -176,7 +163,6 @@
 
     invoke-virtual {v2, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 408
     invoke-virtual {v0, v6, v6}, Lorg/telegram/ui/Cells/ShareDialogCell;->setChecked(ZZ)V
 
     goto :goto_2

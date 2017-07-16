@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     .prologue
-    .line 36
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/customtabs/ICustomTabsService$Stub;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/customtabs/CustomTabsService;->extraCommand(Ljava/lang/String;Landroid/os/Bundle;)Landroid/os/Bundle;
@@ -69,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 62
     .local p4, "otherLikelyBundles":Ljava/util/List;, "Ljava/util/List<Landroid/os/Bundle;>;"
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
@@ -91,19 +88,16 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 42
     new-instance v1, Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
 
     invoke-direct {v1, p1}, Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;-><init>(Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback;)V
 
-    .line 45
     .local v1, "sessionToken":Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
     :try_start_0
     new-instance v0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1$1;
 
     invoke-direct {v0, p0, v1}, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1$1;-><init>(Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;)V
 
-    .line 50
     .local v0, "e":Landroid/os/IBinder$DeathRecipient;
     iget-object v4, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
@@ -115,7 +109,6 @@
     :try_end_0
     .catch Landroid/os/RemoteException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 51
     :try_start_1
     invoke-interface {p1}, Lorg/telegram/messenger/support/customtabs/ICustomTabsCallback;->asBinder()Landroid/os/IBinder;
 
@@ -125,7 +118,6 @@
 
     invoke-interface {v4, v0, v6}, Landroid/os/IBinder;->linkToDeath(Landroid/os/IBinder$DeathRecipient;I)V
 
-    .line 52
     iget-object v4, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     invoke-static {v4}, Lorg/telegram/messenger/support/customtabs/CustomTabsService;->access$000(Lorg/telegram/messenger/support/customtabs/CustomTabsService;)Ljava/util/Map;
@@ -138,12 +130,10 @@
 
     invoke-interface {v4, v6, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 53
     monitor-exit v5
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 55
     :try_start_2
     iget-object v4, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
@@ -153,12 +143,10 @@
 
     move-result v3
 
-    .line 57
     .end local v0    # "e":Landroid/os/IBinder$DeathRecipient;
     :goto_0
     return v3
 
-    .line 53
     .restart local v0    # "e":Landroid/os/IBinder$DeathRecipient;
     :catchall_0
     move-exception v4
@@ -173,12 +161,10 @@
     :try_end_4
     .catch Landroid/os/RemoteException; {:try_start_4 .. :try_end_4} :catch_0
 
-    .line 56
     .end local v0    # "e":Landroid/os/IBinder$DeathRecipient;
     :catch_0
     move-exception v2
 
-    .line 57
     .local v2, "var7":Landroid/os/RemoteException;
     goto :goto_0
 .end method
@@ -189,7 +175,6 @@
     .param p2, "bundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 70
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     new-instance v1, Lorg/telegram/messenger/support/customtabs/CustomTabsSessionToken;
@@ -208,7 +193,6 @@
     .param p1, "flags"    # J
 
     .prologue
-    .line 38
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsService$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsService;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/support/customtabs/CustomTabsService;->warmup(J)Z

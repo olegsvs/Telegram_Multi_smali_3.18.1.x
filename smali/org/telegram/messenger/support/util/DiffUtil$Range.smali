@@ -29,10 +29,8 @@
     .locals 0
 
     .prologue
-    .line 394
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 395
     return-void
 .end method
 
@@ -44,21 +42,15 @@
     .param p4, "newListEnd"    # I
 
     .prologue
-    .line 397
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 398
     iput p1, p0, Lorg/telegram/messenger/support/util/DiffUtil$Range;->oldListStart:I
 
-    .line 399
     iput p2, p0, Lorg/telegram/messenger/support/util/DiffUtil$Range;->oldListEnd:I
 
-    .line 400
     iput p3, p0, Lorg/telegram/messenger/support/util/DiffUtil$Range;->newListStart:I
 
-    .line 401
     iput p4, p0, Lorg/telegram/messenger/support/util/DiffUtil$Range;->newListEnd:I
 
-    .line 402
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 2403
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$19;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const-wide/16 v4, 0xbb8
 
-    .line 2409
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$19;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LaunchActivity;->access$1700(Lorg/telegram/ui/LaunchActivity;)Landroid/widget/Toast;
@@ -68,7 +66,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 2411
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$19;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LaunchActivity;->access$1700(Lorg/telegram/ui/LaunchActivity;)Landroid/widget/Toast;
@@ -77,7 +74,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->cancel()V
 
-    .line 2413
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$19;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LaunchActivity;->access$1900(Lorg/telegram/ui/LaunchActivity;)I
@@ -94,7 +90,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/LaunchActivity;->access$2002(Lorg/telegram/ui/LaunchActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2414
     :cond_0
     new-instance v0, Lorg/telegram/ui/LaunchActivity$19$1;
 
@@ -102,7 +97,6 @@
 
     invoke-static {v0, v4, v5}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 2429
     :cond_1
     return-void
 .end method

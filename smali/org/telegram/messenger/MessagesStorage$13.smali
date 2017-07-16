@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1084
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$13;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$13;->val$type:I
@@ -45,7 +44,6 @@
     .locals 8
 
     .prologue
-    .line 1088
     :try_start_0
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$13;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -87,13 +85,11 @@
 
     move-result-object v1
 
-    .line 1089
     .local v1, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1090
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$SearchImage;>;"
     :goto_0
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -102,12 +98,10 @@
 
     if-eqz v5, :cond_1
 
-    .line 1091
     new-instance v4, Lorg/telegram/messenger/MediaController$SearchImage;
 
     invoke-direct {v4}, Lorg/telegram/messenger/MediaController$SearchImage;-><init>()V
 
-    .line 1092
     .local v4, "searchImage":Lorg/telegram/messenger/MediaController$SearchImage;
     const/4 v5, 0x0
 
@@ -117,7 +111,6 @@
 
     iput-object v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->id:Ljava/lang/String;
 
-    .line 1093
     const/4 v5, 0x1
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->stringValue(I)Ljava/lang/String;
@@ -126,7 +119,6 @@
 
     iput-object v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->imageUrl:Ljava/lang/String;
 
-    .line 1094
     const/4 v5, 0x2
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->stringValue(I)Ljava/lang/String;
@@ -135,7 +127,6 @@
 
     iput-object v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->thumbUrl:Ljava/lang/String;
 
-    .line 1095
     const/4 v5, 0x3
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->stringValue(I)Ljava/lang/String;
@@ -144,7 +135,6 @@
 
     iput-object v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->localUrl:Ljava/lang/String;
 
-    .line 1096
     const/4 v5, 0x4
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -153,7 +143,6 @@
 
     iput v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->width:I
 
-    .line 1097
     const/4 v5, 0x5
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -162,7 +151,6 @@
 
     iput v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->height:I
 
-    .line 1098
     const/4 v5, 0x6
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -171,7 +159,6 @@
 
     iput v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->size:I
 
-    .line 1099
     const/4 v5, 0x7
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -180,7 +167,6 @@
 
     iput v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->date:I
 
-    .line 1100
     const/16 v5, 0x8
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->isNull(I)Z
@@ -189,18 +175,15 @@
 
     if-nez v5, :cond_0
 
-    .line 1101
     const/16 v5, 0x8
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v2
 
-    .line 1102
     .local v2, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v2, :cond_0
 
-    .line 1103
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -215,47 +198,39 @@
 
     iput-object v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 1104
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1107
     .end local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
     iget v5, p0, Lorg/telegram/messenger/MessagesStorage$13;->val$type:I
 
     iput v5, v4, Lorg/telegram/messenger/MediaController$SearchImage;->type:I
 
-    .line 1108
     invoke-virtual {v0, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 1117
     .end local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$SearchImage;>;"
     .end local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v4    # "searchImage":Lorg/telegram/messenger/MediaController$SearchImage;
     :catch_0
     move-exception v3
 
-    .line 1118
     .local v3, "e":Ljava/lang/Throwable;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1120
     .end local v3    # "e":Ljava/lang/Throwable;
     :goto_1
     return-void
 
-    .line 1110
     .restart local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$SearchImage;>;"
     .restart local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_1
     :try_start_1
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1111
     new-instance v5, Lorg/telegram/messenger/MessagesStorage$13$1;
 
     invoke-direct {v5, p0, v0}, Lorg/telegram/messenger/MessagesStorage$13$1;-><init>(Lorg/telegram/messenger/MessagesStorage$13;Ljava/util/ArrayList;)V

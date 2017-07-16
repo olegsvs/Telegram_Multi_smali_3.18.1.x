@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2719
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v2, 0x0
 
-    .line 2722
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v4}, Lorg/telegram/ui/ChatActivity;->getParentActivity()Landroid/app/Activity;
@@ -70,12 +68,10 @@
 
     if-nez v4, :cond_1
 
-    .line 2749
     :cond_0
     :goto_0
     return v2
 
-    .line 2725
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -87,13 +83,11 @@
 
     move-result-object v1
 
-    .line 2726
     .local v1, "object":Ljava/lang/Object;
     instance-of v4, v1, Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 2727
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/ChatActivity;->access$6300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -106,12 +100,10 @@
 
     if-eqz v4, :cond_3
 
-    .line 2728
     sget-boolean v4, Lorg/telegram/ui/Components/URLSpanBotCommand;->enabled:Z
 
     if-eqz v4, :cond_0
 
-    .line 2729
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -120,7 +112,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setFieldText(Ljava/lang/CharSequence;)V
 
-    .line 2730
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity;->chatActivityEnterView:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -149,10 +140,8 @@
 
     move v2, v3
 
-    .line 2731
     goto :goto_0
 
-    .line 2735
     .restart local v1    # "object":Ljava/lang/Object;
     :cond_3
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -165,7 +154,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 2736
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "AppName"
 
@@ -177,7 +165,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2737
     const-string/jumbo v2, "ClearSearch"
 
     const v4, 0x7f07017f
@@ -188,7 +175,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2738
     const-string/jumbo v2, "ClearButton"
 
     const v4, 0x7f070177
@@ -207,7 +193,6 @@
 
     invoke-virtual {v0, v2, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2744
     const-string/jumbo v2, "Cancel"
 
     const v4, 0x7f0700f0
@@ -218,7 +203,6 @@
 
     invoke-virtual {v0, v2, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 2745
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$38;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -229,6 +213,5 @@
 
     move v2, v3
 
-    .line 2746
     goto/16 :goto_0
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 2127
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$23;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$23;->val$req:Lorg/telegram/tgnet/TLObject;
@@ -47,23 +46,19 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2130
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_payments_validatedRequestedInfo;
 
     if-eqz v0, :cond_0
 
-    .line 2131
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$23$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/PaymentFormActivity$23$1;-><init>(Lorg/telegram/ui/PaymentFormActivity$23;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2193
     :goto_0
     return-void
 
-    .line 2151
     :cond_0
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$23$2;
 

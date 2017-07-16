@@ -20,7 +20,6 @@
     .locals 1
 
     .prologue
-    .line 23
     const/4 v0, 0x0
 
     sput-object v0, Lorg/telegram/messenger/ContactsSyncAdapterService;->sSyncAdapter:Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
@@ -32,10 +31,8 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Landroid/app/Service;-><init>()V
 
-    .line 27
     return-void
 .end method
 
@@ -54,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 22
     invoke-static/range {p0 .. p5}, Lorg/telegram/messenger/ContactsSyncAdapterService;->performSync(Landroid/content/Context;Landroid/accounts/Account;Landroid/os/Bundle;Ljava/lang/String;Landroid/content/ContentProviderClient;Landroid/content/SyncResult;)V
 
     return-void
@@ -64,19 +60,16 @@
     .locals 1
 
     .prologue
-    .line 53
     sget-object v0, Lorg/telegram/messenger/ContactsSyncAdapterService;->sSyncAdapter:Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
 
     if-nez v0, :cond_0
 
-    .line 54
     new-instance v0, Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lorg/telegram/messenger/ContactsSyncAdapterService;->sSyncAdapter:Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
 
-    .line 56
     :cond_0
     sget-object v0, Lorg/telegram/messenger/ContactsSyncAdapterService;->sSyncAdapter:Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
 
@@ -98,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 61
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +115,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 62
     return-void
 .end method
 
@@ -134,7 +125,6 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 49
     invoke-direct {p0}, Lorg/telegram/messenger/ContactsSyncAdapterService;->getSyncAdapter()Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;
 
     move-result-object v0

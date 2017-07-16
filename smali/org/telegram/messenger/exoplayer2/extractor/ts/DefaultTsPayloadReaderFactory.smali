@@ -33,12 +33,10 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/DefaultTsPayloadReaderFactory;-><init>(I)V
 
-    .line 47
     return-void
 .end method
 
@@ -47,13 +45,10 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/DefaultTsPayloadReaderFactory;->flags:I
 
-    .line 51
     return-void
 .end method
 
@@ -72,7 +67,6 @@
     .end annotation
 
     .prologue
-    .line 55
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
@@ -92,15 +86,12 @@
 
     const/4 v2, 0x0
 
-    .line 60
     sparse-switch p1, :sswitch_data_0
 
-    .line 86
     :cond_0
     :goto_0
     return-object v0
 
-    .line 63
     :sswitch_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -114,7 +105,6 @@
 
     goto :goto_0
 
-    .line 65
     :sswitch_1
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/DefaultTsPayloadReaderFactory;->flags:I
 
@@ -134,7 +124,6 @@
 
     goto :goto_0
 
-    .line 69
     :sswitch_2
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -148,7 +137,6 @@
 
     goto :goto_0
 
-    .line 72
     :sswitch_3
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -162,7 +150,6 @@
 
     goto :goto_0
 
-    .line 74
     :sswitch_4
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -174,7 +161,6 @@
 
     goto :goto_0
 
-    .line 76
     :sswitch_5
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/DefaultTsPayloadReaderFactory;->flags:I
 
@@ -220,7 +206,6 @@
 
     goto :goto_2
 
-    .line 80
     :sswitch_6
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -232,7 +217,6 @@
 
     goto :goto_0
 
-    .line 82
     :sswitch_7
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/SectionReader;
 
@@ -244,7 +228,6 @@
 
     goto :goto_0
 
-    .line 84
     :sswitch_8
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/PesReader;
 
@@ -256,7 +239,6 @@
 
     goto/16 :goto_0
 
-    .line 60
     nop
 
     :sswitch_data_0

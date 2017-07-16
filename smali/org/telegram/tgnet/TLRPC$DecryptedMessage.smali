@@ -50,10 +50,8 @@
     .locals 1
 
     .prologue
-    .line 8699
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 8707
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,20 +68,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 8712
     const/4 v0, 0x0
 
-    .line 8713
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     sparse-switch p1, :sswitch_data_0
 
-    .line 8730
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 8731
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in DecryptedMessage"
@@ -108,51 +102,42 @@
 
     throw v1
 
-    .line 8715
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessage_layer17;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessage_layer17;-><init>()V
 
-    .line 8716
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     goto :goto_0
 
-    .line 8718
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageService;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageService;-><init>()V
 
-    .line 8719
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     goto :goto_0
 
-    .line 8721
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageService_layer8;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageService_layer8;-><init>()V
 
-    .line 8722
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     goto :goto_0
 
-    .line 8724
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessage_layer8;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessage_layer8;-><init>()V
 
-    .line 8725
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     goto :goto_0
 
-    .line 8727
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessage;
 
@@ -162,18 +147,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$DecryptedMessage;
     goto :goto_0
 
-    .line 8733
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 8734
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$DecryptedMessage;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 8736
     :cond_1
     return-object v0
 
-    .line 8713
     nop
 
     :sswitch_data_0

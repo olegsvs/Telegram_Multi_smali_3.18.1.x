@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneHelpActivity$3;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$3$1;->this$1:Lorg/telegram/ui/ChangePhoneHelpActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$3$1;->this$1:Lorg/telegram/ui/ChangePhoneHelpActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneHelpActivity$3;->this$0:Lorg/telegram/ui/ChangePhoneHelpActivity;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ChangePhoneHelpActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
-    .line 135
     return-void
 .end method

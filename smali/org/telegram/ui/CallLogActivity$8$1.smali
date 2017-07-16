@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CallLogActivity$8;
 
     .prologue
-    .line 375
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iput-object p2, p0, Lorg/telegram/ui/CallLogActivity$8$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,23 +54,19 @@
 
     const/4 v13, 0x1
 
-    .line 378
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v10, :cond_e
 
-    .line 379
     new-instance v9, Landroid/util/SparseArray;
 
     invoke-direct {v9}, Landroid/util/SparseArray;-><init>()V
 
-    .line 380
     .local v9, "users":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v4, p0, Lorg/telegram/ui/CallLogActivity$8$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 381
     .local v4, "msgs":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
@@ -85,7 +80,6 @@
 
     invoke-static {v10, v14}, Lorg/telegram/ui/CallLogActivity;->access$602(Lorg/telegram/ui/CallLogActivity;Z)Z
 
-    .line 382
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -98,7 +92,6 @@
 
     if-ge v0, v10, :cond_0
 
-    .line 383
     iget-object v10, v4, Lorg/telegram/tgnet/TLRPC$messages_Messages;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -107,18 +100,15 @@
 
     check-cast v7, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 384
     .local v7, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget v10, v7, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-virtual {v9, v10, v7}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 382
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 386
     .end local v7    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
@@ -165,7 +155,6 @@
 
     move-object v2, v10
 
-    .line 387
     .local v2, "currentRow":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     :goto_1
     const/4 v0, 0x0
@@ -179,7 +168,6 @@
 
     if-ge v0, v10, :cond_a
 
-    .line 388
     iget-object v10, v4, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -188,13 +176,11 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 389
     .local v3, "msg":Lorg/telegram/tgnet/TLRPC$Message;
     iget-object v10, v3, Lorg/telegram/tgnet/TLRPC$Message;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
 
     if-nez v10, :cond_2
 
-    .line 387
     :goto_3
     add-int/lit8 v0, v0, 0x1
 
@@ -205,10 +191,8 @@
     :cond_1
     move-object v2, v11
 
-    .line 386
     goto :goto_1
 
-    .line 392
     .restart local v2    # "currentRow":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     .restart local v3    # "msg":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_2
@@ -222,14 +206,12 @@
 
     move v1, v12
 
-    .line 393
     .local v1, "callType":I
     :goto_4
     iget-object v10, v3, Lorg/telegram/tgnet/TLRPC$Message;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
 
     iget-object v5, v10, Lorg/telegram/tgnet/TLRPC$MessageAction;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
-    .line 394
     .local v5, "reason":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     if-ne v1, v13, :cond_4
 
@@ -241,11 +223,9 @@
 
     if-eqz v10, :cond_4
 
-    .line 395
     :cond_3
     const/4 v1, 0x2
 
-    .line 397
     :cond_4
     iget v10, v3, Lorg/telegram/tgnet/TLRPC$Message;->from_id:I
 
@@ -259,7 +239,6 @@
 
     iget v8, v10, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:I
 
-    .line 398
     .local v8, "userID":I
     :goto_5
     if-eqz v2, :cond_5
@@ -274,7 +253,6 @@
 
     if-eq v10, v1, :cond_7
 
-    .line 399
     :cond_5
     if-eqz v2, :cond_6
 
@@ -292,7 +270,6 @@
 
     if-nez v10, :cond_6
 
-    .line 400
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -303,7 +280,6 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 402
     :cond_6
     new-instance v6, Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
@@ -313,7 +289,6 @@
 
     invoke-direct {v6, v10, v11}, Lorg/telegram/ui/CallLogActivity$CallLogRow;-><init>(Lorg/telegram/ui/CallLogActivity;Lorg/telegram/ui/CallLogActivity$1;)V
 
-    .line 403
     .local v6, "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     new-instance v10, Ljava/util/ArrayList;
 
@@ -321,7 +296,6 @@
 
     iput-object v10, v6, Lorg/telegram/ui/CallLogActivity$CallLogRow;->calls:Ljava/util/List;
 
-    .line 404
     invoke-virtual {v9, v8}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
 
     move-result-object v10
@@ -330,13 +304,10 @@
 
     iput-object v10, v6, Lorg/telegram/ui/CallLogActivity$CallLogRow;->user:Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 405
     iput v1, v6, Lorg/telegram/ui/CallLogActivity$CallLogRow;->type:I
 
-    .line 406
     move-object v2, v6
 
-    .line 408
     .end local v6    # "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     :cond_7
     iget-object v10, v2, Lorg/telegram/ui/CallLogActivity$CallLogRow;->calls:Ljava/util/List;
@@ -351,10 +322,8 @@
     :cond_8
     move v1, v13
 
-    .line 392
     goto :goto_4
 
-    .line 397
     .restart local v1    # "callType":I
     .restart local v5    # "reason":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     :cond_9
@@ -362,7 +331,6 @@
 
     goto :goto_5
 
-    .line 410
     .end local v1    # "callType":I
     .end local v3    # "msg":Lorg/telegram/tgnet/TLRPC$Message;
     .end local v5    # "reason":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
@@ -391,7 +359,6 @@
 
     if-nez v10, :cond_b
 
-    .line 411
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -402,7 +369,6 @@
 
     invoke-virtual {v10, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 416
     .end local v0    # "a":I
     .end local v2    # "currentRow":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     .end local v4    # "msgs":Lorg/telegram/tgnet/TLRPC$messages_Messages;
@@ -415,14 +381,12 @@
 
     invoke-static {v10, v12}, Lorg/telegram/ui/CallLogActivity;->access$702(Lorg/telegram/ui/CallLogActivity;Z)Z
 
-    .line 417
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-static {v10, v13}, Lorg/telegram/ui/CallLogActivity;->access$1402(Lorg/telegram/ui/CallLogActivity;Z)Z
 
-    .line 418
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -433,7 +397,6 @@
 
     if-eqz v10, :cond_c
 
-    .line 419
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -444,7 +407,6 @@
 
     invoke-virtual {v10}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 421
     :cond_c
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
@@ -456,7 +418,6 @@
 
     if-eqz v10, :cond_d
 
-    .line 422
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 
     iget-object v10, v10, Lorg/telegram/ui/CallLogActivity$8;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -467,11 +428,9 @@
 
     invoke-virtual {v10}, Lorg/telegram/ui/CallLogActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 424
     :cond_d
     return-void
 
-    .line 414
     :cond_e
     iget-object v10, p0, Lorg/telegram/ui/CallLogActivity$8$1;->this$1:Lorg/telegram/ui/CallLogActivity$8;
 

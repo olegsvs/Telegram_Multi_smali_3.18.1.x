@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lorg/telegram/ui/Cells/SharedDocumentCell$1;->this$0:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
 
     const/4 v2, 0x0
 
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedDocumentCell$1;->this$0:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedDocumentCell;->access$000(Lorg/telegram/ui/Cells/SharedDocumentCell;)Landroid/widget/TextView;
@@ -62,7 +60,6 @@
     :goto_0
     invoke-virtual {v3, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/Cells/SharedDocumentCell$1;->this$0:Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/SharedDocumentCell;->access$100(Lorg/telegram/ui/Cells/SharedDocumentCell;)Landroid/widget/ImageView;
@@ -74,18 +71,15 @@
     :goto_1
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 93
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 91
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 92
     goto :goto_1
 .end method

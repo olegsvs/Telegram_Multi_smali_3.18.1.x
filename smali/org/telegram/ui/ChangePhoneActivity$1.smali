@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangePhoneActivity;
 
     .prologue
-    .line 146
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$1;->this$0:Lorg/telegram/ui/ChangePhoneActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 149
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$1;->this$0:Lorg/telegram/ui/ChangePhoneActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangePhoneActivity;->access$000(Lorg/telegram/ui/ChangePhoneActivity;)[Lorg/telegram/ui/Components/SlideView;
@@ -61,18 +58,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SlideView;->onNextPressed()V
 
-    .line 154
     :cond_0
     :goto_0
     return-void
 
-    .line 151
     :cond_1
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 152
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$1;->this$0:Lorg/telegram/ui/ChangePhoneActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity;->finishFragment()V

@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 204
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/PaymentFormActivity$1;
 
     .prologue
-    .line 204
     invoke-direct {p0, p1}, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;-><init>(Lorg/telegram/ui/PaymentFormActivity;)V
 
     return-void
@@ -53,13 +51,11 @@
     .end annotation
 
     .prologue
-    .line 207
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;-><init>(Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;Ljava/lang/String;Ljava/lang/String;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 227
     return-void
 .end method

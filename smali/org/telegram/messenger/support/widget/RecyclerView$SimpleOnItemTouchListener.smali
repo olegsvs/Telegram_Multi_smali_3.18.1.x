@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 9803
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 9806
     const/4 v0, 0x0
 
     return v0
@@ -47,7 +45,6 @@
     .param p1, "disallowIntercept"    # Z
 
     .prologue
-    .line 9815
     return-void
 .end method
 
@@ -57,6 +54,5 @@
     .param p2, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 9811
     return-void
 .end method

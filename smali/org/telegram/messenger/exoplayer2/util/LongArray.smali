@@ -18,12 +18,10 @@
     .locals 1
 
     .prologue
-    .line 31
     const/16 v0, 0x20
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/LongArray;-><init>(I)V
 
-    .line 32
     return-void
 .end method
 
@@ -32,15 +30,12 @@
     .param p1, "initialCapacity"    # I
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     new-array v0, p1, [J
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
-    .line 39
     return-void
 .end method
 
@@ -51,7 +46,6 @@
     .param p1, "value"    # J
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->size:I
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
@@ -60,7 +54,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 48
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->size:I
@@ -73,7 +66,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
-    .line 50
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
@@ -85,7 +77,6 @@
 
     aput-wide p1, v0, v1
 
-    .line 51
     return-void
 .end method
 
@@ -94,14 +85,12 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 62
     if-ltz p1, :cond_0
 
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->size:I
 
     if-lt p1, v0, :cond_1
 
-    .line 63
     :cond_0
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
@@ -139,7 +128,6 @@
 
     throw v0
 
-    .line 65
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
@@ -152,7 +140,6 @@
     .locals 1
 
     .prologue
-    .line 72
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->size:I
 
     return v0
@@ -162,7 +149,6 @@
     .locals 2
 
     .prologue
-    .line 81
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->values:[J
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/LongArray;->size:I

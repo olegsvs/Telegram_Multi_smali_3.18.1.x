@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditTypeActivity;
 
     .prologue
-    .line 328
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$7;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 331
     iget-object v3, p0, Lorg/telegram/ui/ChannelEditTypeActivity$7;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$1100(Lorg/telegram/ui/ChannelEditTypeActivity;)Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
@@ -51,11 +49,9 @@
 
     if-nez v3, :cond_0
 
-    .line 342
     :goto_0
     return-void
 
-    .line 335
     :cond_0
     :try_start_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -68,7 +64,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 336
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -84,11 +79,9 @@
 
     move-result-object v0
 
-    .line 337
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 338
     iget-object v3, p0, Lorg/telegram/ui/ChannelEditTypeActivity$7;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/ChannelEditTypeActivity;->getParentActivity()Landroid/app/Activity;
@@ -115,13 +108,11 @@
 
     goto :goto_0
 
-    .line 339
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :catch_0
     move-exception v2
 
-    .line 340
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

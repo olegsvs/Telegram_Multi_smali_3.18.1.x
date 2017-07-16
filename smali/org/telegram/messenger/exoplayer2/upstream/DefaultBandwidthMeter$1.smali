@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;
 
     .prologue
-    .line 108
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;
 
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter$1;->val$elapsedMs:I
@@ -53,7 +52,6 @@
     .locals 6
 
     .prologue
-    .line 111
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter$1;->this$0:Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;->access$000(Lorg/telegram/messenger/exoplayer2/upstream/DefaultBandwidthMeter;)Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter$EventListener;
@@ -68,6 +66,5 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/BandwidthMeter$EventListener;->onBandwidthSample(IJJ)V
 
-    .line 112
     return-void
 .end method

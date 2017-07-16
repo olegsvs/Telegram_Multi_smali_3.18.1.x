@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$CheckForLongPress;
 
     .prologue
-    .line 533
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$CheckForLongPress$1;->this$1:Lorg/telegram/ui/ArticleViewer$CheckForLongPress;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$CheckForLongPress$1;->val$urlFinal:Ljava/lang/String;
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 536
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$CheckForLongPress$1;->this$1:Lorg/telegram/ui/ArticleViewer$CheckForLongPress;
 
     iget-object v1, v1, Lorg/telegram/ui/ArticleViewer$CheckForLongPress;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -58,16 +56,13 @@
 
     if-nez v1, :cond_1
 
-    .line 550
     :cond_0
     :goto_0
     return-void
 
-    .line 539
     :cond_1
     if-nez p2, :cond_2
 
-    .line 540
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$CheckForLongPress$1;->this$1:Lorg/telegram/ui/ArticleViewer$CheckForLongPress;
 
     iget-object v1, v1, Lorg/telegram/ui/ArticleViewer$CheckForLongPress;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -82,16 +77,13 @@
 
     goto :goto_0
 
-    .line 541
     :cond_2
     const/4 v1, 0x1
 
     if-ne p2, v1, :cond_0
 
-    .line 542
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$CheckForLongPress$1;->val$urlFinal:Ljava/lang/String;
 
-    .line 543
     .local v0, "url":Ljava/lang/String;
     const-string/jumbo v1, "mailto:"
 
@@ -101,21 +93,18 @@
 
     if-eqz v1, :cond_4
 
-    .line 544
     const/4 v1, 0x7
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 548
     :cond_3
     :goto_1
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->addToClipboard(Ljava/lang/CharSequence;)V
 
     goto :goto_0
 
-    .line 545
     :cond_4
     const-string/jumbo v1, "tel:"
 
@@ -125,7 +114,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 546
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;

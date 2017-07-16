@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DialogsActivity;
 
     .prologue
-    .line 1382
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$13;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iput p2, p0, Lorg/telegram/ui/DialogsActivity$13;->val$type:I
@@ -53,28 +52,23 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1385
     if-ne p2, v1, :cond_1
 
-    .line 1386
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$13;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iget v1, p0, Lorg/telegram/ui/DialogsActivity$13;->val$type:I
 
     invoke-static {v0, v1}, Lorg/telegram/ui/DialogsActivity;->access$4700(Lorg/telegram/ui/DialogsActivity;I)V
 
-    .line 1394
     :cond_0
     :goto_0
     return-void
 
-    .line 1387
     :cond_1
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_2
 
-    .line 1388
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$13;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iget v1, p0, Lorg/telegram/ui/DialogsActivity$13;->val$position:I
@@ -83,24 +77,20 @@
 
     goto :goto_0
 
-    .line 1389
     :cond_2
     const/4 v0, 0x3
 
     if-ne p2, v0, :cond_3
 
-    .line 1390
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$13;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/DialogsActivity;->access$3400(Lorg/telegram/ui/DialogsActivity;Z)V
 
     goto :goto_0
 
-    .line 1391
     :cond_3
     if-nez p2, :cond_0
 
-    .line 1392
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$13;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     new-instance v1, Lorg/telegram/ui/PlusManageTabsActivity;

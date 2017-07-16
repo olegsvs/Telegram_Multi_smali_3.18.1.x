@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$12;
 
     .prologue
-    .line 1295
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$12$1;->val$objects:Ljava/util/ArrayList;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 1298
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -70,25 +68,21 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1299
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-eqz v1, :cond_0
 
-    .line 1300
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->val$result:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->removeAll(Ljava/util/Collection;)Z
 
-    .line 1301
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 1302
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -107,7 +101,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1305
     :cond_0
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
@@ -129,11 +122,9 @@
 
     check-cast v2, Lorg/telegram/messenger/MessageObject;
 
-    .line 1306
     .local v2, "dialogObj":Lorg/telegram/messenger/MessageObject;
     if-eqz v2, :cond_2
 
-    .line 1307
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -146,7 +137,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1308
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->val$objects:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -155,7 +145,6 @@
 
     check-cast v3, Lorg/telegram/messenger/MessageObject;
 
-    .line 1309
     .local v3, "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v2, :cond_3
 
@@ -169,7 +158,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 1310
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -186,7 +174,6 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1311
     iget-object v4, v3, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -195,7 +182,6 @@
 
     if-nez v4, :cond_1
 
-    .line 1312
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -217,11 +203,9 @@
     .end local v3    # "obj":Lorg/telegram/messenger/MessageObject;
     check-cast v3, Lorg/telegram/messenger/MessageObject;
 
-    .line 1313
     .restart local v3    # "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v3, :cond_1
 
-    .line 1314
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$12$1;->this$1:Lorg/telegram/messenger/MessagesController$12;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController$12;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -238,7 +222,6 @@
 
     invoke-virtual {v4, v5, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1317
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -250,7 +233,6 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1322
     .end local v0    # "a":I
     .end local v3    # "obj":Lorg/telegram/messenger/MessageObject;
     :cond_2
@@ -282,10 +264,8 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1323
     return-void
 
-    .line 1307
     .restart local v0    # "a":I
     .restart local v3    # "obj":Lorg/telegram/messenger/MessageObject;
     :cond_3

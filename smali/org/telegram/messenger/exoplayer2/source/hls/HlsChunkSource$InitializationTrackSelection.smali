@@ -25,10 +25,8 @@
     .param p2, "tracks"    # [I
 
     .prologue
-    .line 384
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/trackselection/BaseTrackSelection;-><init>(Lorg/telegram/messenger/exoplayer2/source/TrackGroup;[I)V
 
-    .line 385
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/exoplayer2/source/TrackGroup;->getFormat(I)Lorg/telegram/messenger/exoplayer2/Format;
@@ -41,7 +39,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
-    .line 386
     return-void
 .end method
 
@@ -51,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 407
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
     return v0
@@ -61,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 417
     const/4 v0, 0x0
 
     return-object v0
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 412
     const/4 v0, 0x0
 
     return v0
@@ -82,12 +76,10 @@
     .param p1, "bufferedDurationUs"    # J
 
     .prologue
-    .line 390
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v2
 
-    .line 391
     .local v2, "nowMs":J
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
@@ -97,11 +89,9 @@
 
     if-nez v1, :cond_0
 
-    .line 398
     :goto_0
     return-void
 
-    .line 395
     :cond_0
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->length:I
 
@@ -111,25 +101,21 @@
     :goto_1
     if-ltz v0, :cond_2
 
-    .line 396
     invoke-virtual {p0, v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->isBlacklisted(IJ)Z
 
     move-result v1
 
     if-nez v1, :cond_1
 
-    .line 397
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsChunkSource$InitializationTrackSelection;->selectedIndex:I
 
     goto :goto_0
 
-    .line 395
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
     goto :goto_1
 
-    .line 402
     :cond_2
     new-instance v1, Ljava/lang/IllegalStateException;
 

@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter$3;
 
     .prologue
-    .line 392
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$3$1;->this$1:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 392
     check-cast p1, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;
 
     check-cast p2, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;
@@ -69,21 +67,17 @@
     .param p2, "rhs"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;
 
     .prologue
-    .line 395
     iget v0, p1, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;->date:I
 
     iget v1, p2, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;->date:I
 
     if-ge v0, v1, :cond_0
 
-    .line 396
     const/4 v0, 0x1
 
-    .line 400
     :goto_0
     return v0
 
-    .line 397
     :cond_0
     iget v0, p1, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$RecentSearchObject;->date:I
 
@@ -91,12 +85,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 398
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 400
     :cond_1
     const/4 v0, 0x0
 

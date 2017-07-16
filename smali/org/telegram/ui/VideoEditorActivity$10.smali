@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 784
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$10;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 787
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$10;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$10;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -58,15 +56,12 @@
     :goto_0
     invoke-static {v1, v0}, Lorg/telegram/ui/VideoEditorActivity;->access$2502(Lorg/telegram/ui/VideoEditorActivity;Z)Z
 
-    .line 788
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$10;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VideoEditorActivity;->updateMuteButton()V
 
-    .line 789
     return-void
 
-    .line 787
     :cond_0
     const/4 v0, 0x0
 

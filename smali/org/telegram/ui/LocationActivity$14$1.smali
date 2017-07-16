@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LocationActivity$14;
 
     .prologue
-    .line 581
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 584
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -62,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 586
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
@@ -72,7 +69,6 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/maps/MapView;->onCreate(Landroid/os/Bundle;)V
 
-    .line 587
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -83,7 +79,6 @@
 
     invoke-static {v1}, Lcom/google/android/gms/maps/MapsInitializer;->initialize(Landroid/content/Context;)I
 
-    .line 588
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -98,7 +93,6 @@
 
     invoke-virtual {v1, v2}, Lcom/google/android/gms/maps/MapView;->getMapAsync(Lcom/google/android/gms/maps/OnMapReadyCallback;)V
 
-    .line 596
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -107,7 +101,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/LocationActivity;->access$1302(Lorg/telegram/ui/LocationActivity;Z)Z
 
-    .line 597
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -118,7 +111,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 598
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$14$1;->this$1:Lorg/telegram/ui/LocationActivity$14;
 
     iget-object v1, v1, Lorg/telegram/ui/LocationActivity$14;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -131,16 +123,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 604
     :cond_0
     :goto_0
     return-void
 
-    .line 600
     :catch_0
     move-exception v0
 
-    .line 601
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

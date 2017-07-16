@@ -11,10 +11,8 @@
     .locals 0
 
     .prologue
-    .line 24
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 25
     return-void
 .end method
 
@@ -29,7 +27,6 @@
     .param p2, "service"    # Landroid/os/IBinder;
 
     .prologue
-    .line 28
     new-instance v0, Lorg/telegram/messenger/support/customtabs/CustomTabsServiceConnection$1;
 
     invoke-static {p2}, Lorg/telegram/messenger/support/customtabs/ICustomTabsService$Stub;->asInterface(Landroid/os/IBinder;)Lorg/telegram/messenger/support/customtabs/ICustomTabsService;
@@ -40,6 +37,5 @@
 
     invoke-virtual {p0, p1, v0}, Lorg/telegram/messenger/support/customtabs/CustomTabsServiceConnection;->onCustomTabsServiceConnected(Landroid/content/ComponentName;Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)V
 
-    .line 30
     return-void
 .end method

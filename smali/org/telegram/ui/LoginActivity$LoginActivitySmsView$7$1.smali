@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     .prologue
-    .line 1592
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     const/4 v8, 0x0
 
-    .line 1595
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -64,7 +62,6 @@
 
     if-lt v3, v4, :cond_4
 
-    .line 1596
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -77,7 +74,6 @@
 
     div-int/lit8 v0, v3, 0x3c
 
-    .line 1597
     .local v0, "minutes":I
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -93,7 +89,6 @@
 
     sub-int v2, v3, v4
 
-    .line 1598
     .local v2, "seconds":I
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -117,7 +112,6 @@
 
     if-ne v3, v5, :cond_3
 
-    .line 1599
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -151,7 +145,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1603
     :cond_1
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
@@ -164,7 +157,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1604
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -199,14 +191,12 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/LoginActivity$ProgressView;->setProgress(F)V
 
-    .line 1646
     .end local v0    # "minutes":I
     .end local v2    # "seconds":I
     :cond_2
     :goto_1
     return-void
 
-    .line 1600
     .restart local v0    # "minutes":I
     .restart local v2    # "seconds":I
     :cond_3
@@ -220,7 +210,6 @@
 
     if-ne v3, v6, :cond_1
 
-    .line 1601
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -255,7 +244,6 @@
 
     goto :goto_0
 
-    .line 1607
     .end local v0    # "minutes":I
     .end local v2    # "seconds":I
     :cond_4
@@ -269,7 +257,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1608
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -280,7 +267,6 @@
 
     invoke-virtual {v3, v9}, Lorg/telegram/ui/LoginActivity$ProgressView;->setProgress(F)V
 
-    .line 1610
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -288,7 +274,6 @@
 
     invoke-static {v3}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$4400(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
 
-    .line 1611
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -299,10 +284,8 @@
 
     if-ne v3, v5, :cond_6
 
-    .line 1612
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->setWaitingForCall(Z)V
 
-    .line 1613
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -311,21 +294,18 @@
 
     invoke-virtual {v3, p0, v4}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 1614
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v3, v8}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$4602(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Z)Z
 
-    .line 1615
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$3700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
 
-    .line 1616
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -334,7 +314,6 @@
 
     goto :goto_1
 
-    .line 1617
     :cond_6
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -346,7 +325,6 @@
 
     if-ne v3, v6, :cond_2
 
-    .line 1618
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -359,7 +337,6 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 1619
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -378,19 +355,16 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1620
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$4700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
 
-    .line 1621
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;-><init>()V
 
-    .line 1622
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
@@ -402,7 +376,6 @@
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;->phone_number:Ljava/lang/String;
 
-    .line 1623
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -413,7 +386,6 @@
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;->phone_code_hash:Ljava/lang/String;
 
-    .line 1624
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -428,7 +400,6 @@
 
     goto/16 :goto_1
 
-    .line 1637
     .end local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
     :cond_7
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
@@ -441,10 +412,8 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 1638
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->setWaitingForSms(Z)V
 
-    .line 1639
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -453,21 +422,18 @@
 
     invoke-virtual {v3, p0, v4}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 1640
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v3, v8}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$4602(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;Z)Z
 
-    .line 1641
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$3700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
 
-    .line 1642
     iget-object v3, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;

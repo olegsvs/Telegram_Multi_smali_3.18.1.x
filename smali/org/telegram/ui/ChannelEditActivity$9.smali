@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditActivity;
 
     .prologue
-    .line 466
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$9;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 469
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$9;->this$0:Lorg/telegram/ui/ChannelEditActivity;
@@ -53,7 +51,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 470
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$9;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -65,7 +62,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 471
     const-string/jumbo v1, "MegaDeleteAlert"
 
     const v2, 0x7f070371
@@ -76,7 +72,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 475
     :goto_0
     const-string/jumbo v1, "AppName"
 
@@ -88,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 476
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 489
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -116,7 +109,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 490
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$9;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -125,10 +117,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ChannelEditActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 491
     return-void
 
-    .line 473
     :cond_0
     const-string/jumbo v1, "ChannelDeleteAlert"
 

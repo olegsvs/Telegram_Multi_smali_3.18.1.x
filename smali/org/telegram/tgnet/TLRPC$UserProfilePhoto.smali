@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 13876
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -40,20 +39,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13882
     const/4 v0, 0x0
 
-    .line 13883
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     sparse-switch p1, :sswitch_data_0
 
-    .line 13894
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 13895
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in UserProfilePhoto"
@@ -78,29 +73,24 @@
 
     throw v1
 
-    .line 13885
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhotoEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhotoEmpty;-><init>()V
 
-    .line 13886
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     goto :goto_0
 
-    .line 13888
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto;-><init>()V
 
-    .line 13889
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     goto :goto_0
 
-    .line 13891
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto_old;
 
@@ -110,18 +100,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
     goto :goto_0
 
-    .line 13897
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 13898
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 13900
     :cond_1
     return-object v0
 
-    .line 13883
     nop
 
     :sswitch_data_0

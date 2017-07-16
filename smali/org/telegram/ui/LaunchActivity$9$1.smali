@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LaunchActivity$9;
 
     .prologue
-    .line 1568
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$9$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -59,7 +58,6 @@
 
     const/4 v10, 0x0
 
-    .line 1571
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
     iget-object v6, v6, Lorg/telegram/ui/LaunchActivity$9;->this$0:Lorg/telegram/ui/LaunchActivity;
@@ -70,7 +68,6 @@
 
     if-nez v6, :cond_1
 
-    .line 1573
     :try_start_0
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
@@ -80,7 +77,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1577
     :goto_0
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -96,12 +92,10 @@
 
     if-eqz v6, :cond_b
 
-    .line 1578
     iget-object v5, p0, Lorg/telegram/ui/LaunchActivity$9$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;
 
-    .line 1579
     .local v5, "invite":Lorg/telegram/tgnet/TLRPC$ChatInvite;
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
@@ -115,7 +109,6 @@
 
     if-nez v6, :cond_2
 
-    .line 1580
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -124,30 +117,25 @@
 
     invoke-virtual {v6, v7, v10}, Lorg/telegram/messenger/MessagesController;->putChat(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
 
-    .line 1581
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1582
     .local v2, "chats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-virtual {v2, v6}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1583
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v6
 
     invoke-virtual {v6, v11, v2, v10, v9}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1584
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1585
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v6, "chat_id"
 
@@ -157,7 +145,6 @@
 
     invoke-virtual {v0, v6, v7}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1586
     invoke-static {}, Lorg/telegram/ui/LaunchActivity;->access$1400()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -194,13 +181,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 1587
     :cond_0
     new-instance v4, Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {v4, v0}, Lorg/telegram/ui/ChatActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 1588
     .local v4, "fragment":Lorg/telegram/ui/ChatActivity;
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -212,7 +197,6 @@
 
     invoke-virtual {v6, v7, v8}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1589
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
     iget-object v6, v6, Lorg/telegram/ui/LaunchActivity$9;->this$0:Lorg/telegram/ui/LaunchActivity;
@@ -223,7 +207,6 @@
 
     invoke-virtual {v6, v4, v10, v9, v9}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZ)Z
 
-    .line 1625
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v2    # "chats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
     .end local v4    # "fragment":Lorg/telegram/ui/ChatActivity;
@@ -232,17 +215,14 @@
     :goto_1
     return-void
 
-    .line 1574
     :catch_0
     move-exception v3
 
-    .line 1575
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 1592
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v5    # "invite":Lorg/telegram/tgnet/TLRPC$ChatInvite;
     :cond_2
@@ -288,7 +268,6 @@
 
     if-nez v6, :cond_5
 
-    .line 1593
     invoke-static {}, Lorg/telegram/ui/LaunchActivity;->access$1400()Ljava/util/ArrayList;
 
     move-result-object v6
@@ -309,7 +288,6 @@
 
     check-cast v4, Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    .line 1594
     .local v4, "fragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     new-instance v6, Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -327,7 +305,6 @@
 
     goto :goto_1
 
-    .line 1596
     .end local v4    # "fragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     :cond_5
     new-instance v1, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -338,7 +315,6 @@
 
     invoke-direct {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1597
     .local v1, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v6, "AppName"
 
@@ -348,7 +324,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1598
     iget-boolean v6, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->megagroup:Z
 
     if-nez v6, :cond_6
@@ -372,7 +347,6 @@
 
     if-nez v6, :cond_9
 
-    .line 1599
     :cond_7
     const-string/jumbo v7, "ChannelJoinTo"
 
@@ -397,7 +371,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1603
     :goto_3
     const-string/jumbo v6, "OK"
 
@@ -411,7 +384,6 @@
 
     invoke-virtual {v1, v6, v7}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1609
     const-string/jumbo v6, "Cancel"
 
     const v7, 0x7f0700f0
@@ -422,7 +394,6 @@
 
     invoke-virtual {v1, v6, v11}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1610
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
     iget-object v6, v6, Lorg/telegram/ui/LaunchActivity$9;->this$0:Lorg/telegram/ui/LaunchActivity;
@@ -431,13 +402,11 @@
 
     goto/16 :goto_1
 
-    .line 1599
     :cond_8
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$ChatInvite;->title:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 1601
     :cond_9
     const-string/jumbo v7, "JoinToGroup"
 
@@ -469,7 +438,6 @@
 
     goto :goto_4
 
-    .line 1614
     .end local v1    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v5    # "invite":Lorg/telegram/tgnet/TLRPC$ChatInvite;
     :cond_b
@@ -481,7 +449,6 @@
 
     invoke-direct {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1615
     .restart local v1    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v6, "AppName"
 
@@ -491,7 +458,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1616
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v6, v6, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -504,7 +470,6 @@
 
     if-eqz v6, :cond_c
 
-    .line 1617
     const-string/jumbo v6, "FloodWait"
 
     const v7, 0x7f070252
@@ -515,7 +480,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1621
     :goto_5
     const-string/jumbo v6, "OK"
 
@@ -525,7 +489,6 @@
 
     invoke-virtual {v1, v6, v11}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1622
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
 
     iget-object v6, v6, Lorg/telegram/ui/LaunchActivity$9;->this$0:Lorg/telegram/ui/LaunchActivity;
@@ -534,7 +497,6 @@
 
     goto/16 :goto_1
 
-    .line 1619
     :cond_c
     const-string/jumbo v6, "JoinToGroupErrorNotExist"
 

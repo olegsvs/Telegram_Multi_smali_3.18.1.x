@@ -9,7 +9,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$LoopingTimeline;
     }
 .end annotation
 
@@ -32,12 +31,10 @@
     .param p1, "childSource"    # Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     .prologue
-    .line 44
     const v0, 0x7fffffff
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;-><init>(Lorg/telegram/messenger/exoplayer2/source/MediaSource;I)V
 
-    .line 45
     return-void
 .end method
 
@@ -47,10 +44,8 @@
     .param p2, "loopCount"    # I
 
     .prologue
-    .line 55
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 56
     if-lez p2, :cond_0
 
     const/4 v0, 0x1
@@ -58,16 +53,12 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 57
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
-    .line 58
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->loopCount:I
 
-    .line 59
     return-void
 
-    .line 56
     :cond_0
     const/4 v0, 0x0
 
@@ -80,7 +71,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 29
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childPeriodCount:I
 
     return p1
@@ -91,7 +81,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;
 
     .prologue
-    .line 29
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->loopCount:I
 
     return v0
@@ -106,7 +95,6 @@
     .param p3, "positionUs"    # J
 
     .prologue
-    .line 79
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childPeriodCount:I
@@ -129,12 +117,10 @@
     .end annotation
 
     .prologue
-    .line 74
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/source/MediaSource;->maybeThrowSourceInfoRefreshError()V
 
-    .line 75
     return-void
 .end method
 
@@ -143,7 +129,6 @@
     .param p1, "listener"    # Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource$1;
@@ -152,7 +137,6 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/exoplayer2/source/MediaSource;->prepareSource(Lorg/telegram/messenger/exoplayer2/source/MediaSource$Listener;)V
 
-    .line 70
     return-void
 .end method
 
@@ -161,12 +145,10 @@
     .param p1, "mediaPeriod"    # Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;
 
     .prologue
-    .line 84
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/source/MediaSource;->releasePeriod(Lorg/telegram/messenger/exoplayer2/source/MediaPeriod;)V
 
-    .line 85
     return-void
 .end method
 
@@ -174,11 +156,9 @@
     .locals 1
 
     .prologue
-    .line 89
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/LoopingMediaSource;->childSource:Lorg/telegram/messenger/exoplayer2/source/MediaSource;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/source/MediaSource;->releaseSource()V
 
-    .line 90
     return-void
 .end method

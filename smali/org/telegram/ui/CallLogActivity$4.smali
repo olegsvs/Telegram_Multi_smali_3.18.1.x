@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CallLogActivity;
 
     .prologue
-    .line 228
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$4;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v2, 0x0
 
-    .line 231
     if-ltz p2, :cond_0
 
     iget-object v3, p0, Lorg/telegram/ui/CallLogActivity$4;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -65,11 +63,9 @@
     :cond_0
     move v1, v2
 
-    .line 246
     :goto_0
     return v1
 
-    .line 234
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/CallLogActivity$4;->this$0:Lorg/telegram/ui/CallLogActivity;
 
@@ -83,7 +79,6 @@
 
     check-cast v0, Lorg/telegram/ui/CallLogActivity$CallLogRow;
 
-    .line 235
     .local v0, "row":Lorg/telegram/ui/CallLogActivity$CallLogRow;
     new-instance v3, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -99,7 +94,6 @@
 
     const v5, 0x7f0700ed
 
-    .line 236
     invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -114,7 +108,6 @@
 
     const v6, 0x7f0701d9
 
-    .line 238
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -125,12 +118,10 @@
 
     invoke-direct {v2, p0, v0}, Lorg/telegram/ui/CallLogActivity$4$1;-><init>(Lorg/telegram/ui/CallLogActivity$4;Lorg/telegram/ui/CallLogActivity$CallLogRow;)V
 
-    .line 237
     invoke-virtual {v3, v4, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-result-object v2
 
-    .line 245
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     goto :goto_0

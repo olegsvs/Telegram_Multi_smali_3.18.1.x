@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 23595
     const v0, 0x338e2464
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDocumentByHash;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 23594
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23602
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Document;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23606
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDocumentByHash;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23607
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDocumentByHash;->sha256:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 23608
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDocumentByHash;->size:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23609
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getDocumentByHash;->mime_type:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 23610
     return-void
 .end method

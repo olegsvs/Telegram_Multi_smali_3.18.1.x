@@ -41,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 4102
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,20 +53,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4115
     const/4 v0, 0x0
 
-    .line 4116
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Audio;
     sparse-switch p1, :sswitch_data_0
 
-    .line 4133
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 4134
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Audio"
@@ -92,51 +87,42 @@
 
     throw v1
 
-    .line 4118
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_audioEmpty_layer45;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_audioEmpty_layer45;-><init>()V
 
-    .line 4119
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     goto :goto_0
 
-    .line 4121
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_audio_layer45;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_audio_layer45;-><init>()V
 
-    .line 4122
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     goto :goto_0
 
-    .line 4124
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_audio_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_audio_old;-><init>()V
 
-    .line 4125
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     goto :goto_0
 
-    .line 4127
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_audioEncrypted;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_audioEncrypted;-><init>()V
 
-    .line 4128
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     goto :goto_0
 
-    .line 4130
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_audio_old2;
 
@@ -146,18 +132,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Audio;
     goto :goto_0
 
-    .line 4136
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4137
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Audio;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 4139
     :cond_1
     return-object v0
 
-    .line 4116
     nop
 
     :sswitch_data_0

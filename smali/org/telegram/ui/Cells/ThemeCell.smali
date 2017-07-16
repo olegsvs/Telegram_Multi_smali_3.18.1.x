@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const/16 v0, 0x400
 
     new-array v0, v0, [B
@@ -51,27 +50,22 @@
 
     const/4 v10, 0x0
 
-    .line 46
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 48
     invoke-virtual {p0, v10}, Lorg/telegram/ui/Cells/ThemeCell;->setWillNotDraw(Z)V
 
-    .line 50
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->paint:Landroid/graphics/Paint;
 
-    .line 52
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
-    .line 53
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteBlackText"
@@ -82,29 +76,24 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 54
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41800000    # 16.0f
 
     invoke-virtual {v0, v2, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 55
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -115,14 +104,12 @@
 
     invoke-virtual {v0, v10, v10, v10, v1}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 60
     iget-object v1, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -136,7 +123,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 61
     iget-object v9, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     const/4 v0, -0x1
@@ -174,14 +160,12 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/ThemeCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->checkImage:Landroid/widget/ImageView;
 
-    .line 64
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->checkImage:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -198,14 +182,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->checkImage:Landroid/widget/ImageView;
 
     const v1, 0x7f020252
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 66
     iget-object v9, p0, Lorg/telegram/ui/Cells/ThemeCell;->checkImage:Landroid/widget/ImageView;
 
     const/16 v0, 0x13
@@ -233,19 +215,16 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/ThemeCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 68
     new-instance v0, Landroid/widget/ImageView;
 
     invoke-direct {v0, p1}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v10}, Landroid/widget/ImageView;->setFocusable(Z)V
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     const-string/jumbo v1, "stickers_menuSelector"
@@ -260,14 +239,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     const v1, 0x7f0200bd
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     new-instance v1, Landroid/graphics/PorterDuffColorFilter;
@@ -284,14 +261,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     sget-object v1, Landroid/widget/ImageView$ScaleType;->CENTER:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     const/16 v1, 0x30
@@ -311,19 +286,16 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Cells/ThemeCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 75
     return-void
 
     :cond_0
     move v0, v8
 
-    .line 60
     goto/16 :goto_0
 
     :cond_1
     move v2, v8
 
-    .line 61
     goto/16 :goto_1
 
     :cond_2
@@ -339,13 +311,11 @@
     :cond_4
     move v2, v7
 
-    .line 66
     goto :goto_4
 
     :cond_5
     move v8, v7
 
-    .line 74
     goto :goto_5
 .end method
 
@@ -355,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->currentThemeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     return-object v0
@@ -365,7 +334,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     return-object v0
@@ -376,12 +344,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 185
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->needDivider:Z
 
     if-eqz v0, :cond_0
 
-    .line 186
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ThemeCell;->getPaddingLeft()I
 
     move-result v0
@@ -422,7 +388,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 188
     :cond_0
     const/high16 v0, 0x41d80000    # 27.0f
 
@@ -430,20 +395,17 @@
 
     move-result v6
 
-    .line 189
     .local v6, "x":I
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_1
 
-    .line 190
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/ThemeCell;->getWidth()I
 
     move-result v0
 
     sub-int v6, v0, v6
 
-    .line 192
     :cond_1
     int-to-float v0, v6
 
@@ -467,7 +429,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 193
     return-void
 .end method
 
@@ -479,7 +440,6 @@
     .prologue
     const/high16 v3, 0x40000000    # 2.0f
 
-    .line 79
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -509,10 +469,8 @@
 
     invoke-super {p0, v1, v0}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 80
     return-void
 
-    .line 79
     :cond_0
     const/4 v0, 0x0
 
@@ -524,12 +482,10 @@
     .param p1, "listener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->optionsButton:Landroid/widget/ImageView;
 
     invoke-virtual {v0, p1}, Landroid/widget/ImageView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 84
     return-void
 .end method
 
@@ -538,12 +494,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Cells/ThemeCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 92
     return-void
 .end method
 
@@ -553,21 +507,18 @@
     .param p2, "divider"    # Z
 
     .prologue
-    .line 99
     move-object/from16 v0, p1
 
     move-object/from16 v1, p0
 
     iput-object v0, v1, Lorg/telegram/ui/Cells/ThemeCell;->currentThemeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 100
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->name:Ljava/lang/String;
 
     move-object/from16 v21, v0
 
-    .line 101
     .local v21, "text":Ljava/lang/String;
     const-string/jumbo v23, ".attheme"
 
@@ -581,7 +532,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 102
     const/16 v23, 0x0
 
     const/16 v24, 0x2e
@@ -604,7 +554,6 @@
 
     move-result-object v21
 
-    .line 104
     :cond_0
     move-object/from16 v0, p0
 
@@ -618,14 +567,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 105
     move/from16 v0, p2
 
     move-object/from16 v1, p0
 
     iput-boolean v0, v1, Lorg/telegram/ui/Cells/ThemeCell;->needDivider:Z
 
-    .line 106
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ThemeCell;->checkImage:Landroid/widget/ImageView;
@@ -651,10 +598,8 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 108
     const/4 v8, 0x0
 
-    .line 109
     .local v8, "finished":Z
     move-object/from16 v0, p1
 
@@ -672,15 +617,12 @@
 
     if-eqz v23, :cond_5
 
-    .line 110
     :cond_1
     const/16 v19, 0x0
 
-    .line 112
     .local v19, "stream":Ljava/io/FileInputStream;
     const/4 v5, 0x0
 
-    .line 114
     .local v5, "currentPosition":I
     :try_start_0
     move-object/from16 v0, p1
@@ -691,7 +633,6 @@
 
     if-eqz v23, :cond_8
 
-    .line 115
     move-object/from16 v0, p1
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->assetName:Ljava/lang/String;
@@ -702,7 +643,6 @@
 
     move-result-object v7
 
-    .line 119
     .local v7, "file":Ljava/io/File;
     :goto_1
     new-instance v20, Ljava/io/FileInputStream;
@@ -714,13 +654,10 @@
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_5
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 122
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .local v20, "stream":Ljava/io/FileInputStream;
     const/4 v14, 0x0
 
-    .line 123
-    .local v14, "linesRead":I
     :cond_2
     :try_start_1
     sget-object v23, Lorg/telegram/ui/Cells/ThemeCell;->bytes:[B
@@ -742,14 +679,11 @@
 
     if-eq v0, v1, :cond_4
 
-    .line 124
     move/from16 v16, v5
 
-    .line 125
     .local v16, "previousPosition":I
     const/16 v18, 0x0
 
-    .line 126
     .local v18, "start":I
     const/4 v4, 0x0
 
@@ -759,7 +693,6 @@
 
     if-ge v4, v0, :cond_3
 
-    .line 127
     sget-object v23, Lorg/telegram/ui/Cells/ThemeCell;->bytes:[B
 
     aget-byte v23, v23, v4
@@ -772,15 +705,12 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 128
     add-int/lit8 v14, v14, 0x1
 
-    .line 129
     sub-int v23, v4, v18
 
     add-int/lit8 v12, v23, 0x1
 
-    .line 130
     .local v12, "len":I
     new-instance v13, Ljava/lang/String;
 
@@ -800,8 +730,6 @@
 
     invoke-direct {v13, v0, v1, v2, v3}, Ljava/lang/String;-><init>([BIILjava/lang/String;)V
 
-    .line 131
-    .local v13, "line":Ljava/lang/String;
     const-string/jumbo v23, "WPS"
 
     move-object/from16 v0, v23
@@ -815,9 +743,7 @@
 
     if-eqz v23, :cond_9
 
-    .line 158
     .end local v12    # "len":I
-    .end local v13    # "line":Ljava/lang/String;
     :cond_3
     :goto_3
     move/from16 v0, v16
@@ -830,7 +756,6 @@
 
     if-lt v14, v0, :cond_d
 
-    .line 170
     .end local v4    # "a":I
     .end local v16    # "previousPosition":I
     .end local v18    # "start":I
@@ -838,23 +763,19 @@
     :goto_4
     if-eqz v20, :cond_5
 
-    .line 171
     :try_start_2
     invoke-virtual/range {v20 .. v20}, Ljava/io/FileInputStream;->close()V
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_3
 
-    .line 178
     .end local v5    # "currentPosition":I
     .end local v7    # "file":Ljava/io/File;
-    .end local v14    # "linesRead":I
     .end local v17    # "read":I
     .end local v20    # "stream":Ljava/io/FileInputStream;
     :cond_5
     :goto_5
     if-nez v8, :cond_6
 
-    .line 179
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Cells/ThemeCell;->paint:Landroid/graphics/Paint;
@@ -869,18 +790,15 @@
 
     invoke-virtual/range {v23 .. v24}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 181
     :cond_6
     return-void
 
-    .line 106
     .end local v8    # "finished":Z
     :cond_7
     const/16 v23, 0x4
 
     goto/16 :goto_0
 
-    .line 117
     .restart local v5    # "currentPosition":I
     .restart local v8    # "finished":Z
     .restart local v19    # "stream":Ljava/io/FileInputStream;
@@ -904,12 +822,9 @@
     .restart local v7    # "file":Ljava/io/File;
     goto/16 :goto_1
 
-    .line 134
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .restart local v4    # "a":I
     .restart local v12    # "len":I
-    .restart local v13    # "line":Ljava/lang/String;
-    .restart local v14    # "linesRead":I
     .restart local v16    # "previousPosition":I
     .restart local v17    # "read":I
     .restart local v18    # "start":I
@@ -931,7 +846,6 @@
 
     if-eq v9, v0, :cond_b
 
-    .line 135
     const/16 v23, 0x0
 
     move/from16 v0, v23
@@ -940,7 +854,6 @@
 
     move-result-object v11
 
-    .line 136
     .local v11, "key":Ljava/lang/String;
     const-string/jumbo v23, "actionBarDefault"
 
@@ -952,7 +865,6 @@
 
     if-eqz v23, :cond_b
 
-    .line 137
     add-int/lit8 v23, v9, 0x1
 
     move/from16 v0, v23
@@ -961,7 +873,6 @@
 
     move-result-object v15
 
-    .line 139
     .local v15, "param":Ljava/lang/String;
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
@@ -988,7 +899,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 141
     :try_start_5
     invoke-static {v15}, Landroid/graphics/Color;->parseColor(Ljava/lang/String;)I
     :try_end_5
@@ -998,12 +908,10 @@
 
     move-result v22
 
-    .line 148
     .local v22, "value":I
     :goto_6
     const/4 v8, 0x1
 
-    .line 149
     :try_start_6
     move-object/from16 v0, p0
 
@@ -1022,12 +930,10 @@
 
     goto/16 :goto_3
 
-    .line 166
     .end local v4    # "a":I
     .end local v9    # "idx":I
     .end local v11    # "key":Ljava/lang/String;
     .end local v12    # "len":I
-    .end local v13    # "line":Ljava/lang/String;
     .end local v15    # "param":Ljava/lang/String;
     .end local v16    # "previousPosition":I
     .end local v17    # "read":I
@@ -1038,9 +944,7 @@
 
     move-object/from16 v19, v20
 
-    .line 167
     .end local v7    # "file":Ljava/io/File;
-    .end local v14    # "linesRead":I
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .local v6, "e":Ljava/lang/Throwable;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
@@ -1050,10 +954,8 @@
     :try_end_7
     .catchall {:try_start_7 .. :try_end_7} :catchall_0
 
-    .line 170
     if-eqz v19, :cond_5
 
-    .line 171
     :try_start_8
     invoke-virtual/range {v19 .. v19}, Ljava/io/FileInputStream;->close()V
     :try_end_8
@@ -1061,17 +963,14 @@
 
     goto/16 :goto_5
 
-    .line 173
     :catch_1
     move-exception v6
 
-    .line 174
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 142
     .end local v6    # "e":Ljava/lang/Exception;
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .restart local v4    # "a":I
@@ -1079,8 +978,6 @@
     .restart local v9    # "idx":I
     .restart local v11    # "key":Ljava/lang/String;
     .restart local v12    # "len":I
-    .restart local v13    # "line":Ljava/lang/String;
-    .restart local v14    # "linesRead":I
     .restart local v15    # "param":Ljava/lang/String;
     .restart local v16    # "previousPosition":I
     .restart local v17    # "read":I
@@ -1089,7 +986,6 @@
     :catch_2
     move-exception v10
 
-    .line 143
     .local v10, "ignore":Ljava/lang/Exception;
     :try_start_9
     invoke-static {v15}, Lorg/telegram/messenger/Utilities;->parseInt(Ljava/lang/String;)Ljava/lang/Integer;
@@ -1100,11 +996,9 @@
 
     move-result v22
 
-    .line 144
     .restart local v22    # "value":I
     goto :goto_6
 
-    .line 146
     .end local v10    # "ignore":Ljava/lang/Exception;
     .end local v22    # "value":I
     :cond_a
@@ -1119,26 +1013,21 @@
     .restart local v22    # "value":I
     goto :goto_6
 
-    .line 154
     .end local v11    # "key":Ljava/lang/String;
     .end local v15    # "param":Ljava/lang/String;
     .end local v22    # "value":I
     :cond_b
     add-int v18, v18, v12
 
-    .line 155
     add-int/2addr v5, v12
 
-    .line 126
     .end local v9    # "idx":I
     .end local v12    # "len":I
-    .end local v13    # "line":Ljava/lang/String;
     :cond_c
     add-int/lit8 v4, v4, 0x1
 
     goto/16 :goto_2
 
-    .line 161
     :cond_d
     invoke-virtual/range {v20 .. v20}, Ljava/io/FileInputStream;->getChannel()Ljava/nio/channels/FileChannel;
 
@@ -1153,64 +1042,52 @@
     .catch Ljava/lang/Throwable; {:try_start_9 .. :try_end_9} :catch_0
     .catchall {:try_start_9 .. :try_end_9} :catchall_1
 
-    .line 162
     if-eqz v8, :cond_2
 
     goto/16 :goto_4
 
-    .line 173
     .end local v4    # "a":I
     .end local v16    # "previousPosition":I
     .end local v18    # "start":I
     :catch_3
     move-exception v6
 
-    .line 174
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 169
     .end local v6    # "e":Ljava/lang/Exception;
     .end local v7    # "file":Ljava/io/File;
-    .end local v14    # "linesRead":I
     .end local v17    # "read":I
     .end local v20    # "stream":Ljava/io/FileInputStream;
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     :catchall_0
     move-exception v23
 
-    .line 170
     :goto_8
     if-eqz v19, :cond_e
 
-    .line 171
     :try_start_a
     invoke-virtual/range {v19 .. v19}, Ljava/io/FileInputStream;->close()V
     :try_end_a
     .catch Ljava/lang/Exception; {:try_start_a .. :try_end_a} :catch_4
 
-    .line 175
     :cond_e
     :goto_9
     throw v23
 
-    .line 173
     :catch_4
     move-exception v6
 
-    .line 174
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_9
 
-    .line 169
     .end local v6    # "e":Ljava/lang/Exception;
     .end local v19    # "stream":Ljava/io/FileInputStream;
     .restart local v7    # "file":Ljava/io/File;
-    .restart local v14    # "linesRead":I
     .restart local v20    # "stream":Ljava/io/FileInputStream;
     :catchall_1
     move-exception v23
@@ -1221,9 +1098,7 @@
     .restart local v19    # "stream":Ljava/io/FileInputStream;
     goto :goto_8
 
-    .line 166
     .end local v7    # "file":Ljava/io/File;
-    .end local v14    # "linesRead":I
     :catch_5
     move-exception v6
 

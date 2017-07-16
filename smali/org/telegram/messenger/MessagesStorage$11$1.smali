@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$11;
 
     .prologue
-    .line 1042
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$11$1;->this$1:Lorg/telegram/messenger/MessagesStorage$11;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$11$1;->val$pushDialogs:Ljava/util/HashMap;
@@ -61,7 +60,6 @@
     .locals 6
 
     .prologue
-    .line 1045
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
@@ -78,6 +76,5 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/NotificationsController;->processLoadedUnreadMessages(Ljava/util/HashMap;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 1046
     return-void
 .end method

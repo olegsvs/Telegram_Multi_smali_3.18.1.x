@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LaunchActivity$8$1;
 
     .prologue
-    .line 1506
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$8$1$2;->this$2:Lorg/telegram/ui/LaunchActivity$8$1;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$8$1$2;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -54,18 +53,15 @@
 
     const/4 v4, 0x0
 
-    .line 1509
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 1510
     .local v7, "args":Landroid/os/Bundle;
     const-string/jumbo v0, "scrollToTopOnResume"
 
     invoke-virtual {v7, v0, v8}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 1511
     const-string/jumbo v0, "chat_id"
 
     long-to-int v1, p2
@@ -74,7 +70,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1512
     invoke-static {}, Lorg/telegram/ui/LaunchActivity;->access$1400()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -111,7 +106,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1513
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -123,7 +117,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1514
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -144,7 +137,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/MessagesController;->addUserToChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;ILjava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
 
-    .line 1515
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$8$1$2;->this$2:Lorg/telegram/ui/LaunchActivity$8$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LaunchActivity$8$1;->this$1:Lorg/telegram/ui/LaunchActivity$8;
@@ -161,7 +153,6 @@
 
     invoke-virtual {v0, v1, v8, v4, v8}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;ZZZ)Z
 
-    .line 1517
     :cond_1
     return-void
 .end method

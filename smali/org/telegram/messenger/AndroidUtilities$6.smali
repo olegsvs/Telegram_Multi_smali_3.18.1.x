@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 1945
     iput-object p1, p0, Lorg/telegram/messenger/AndroidUtilities$6;->val$pck:Ljava/lang/String;
 
     iput-object p2, p0, Lorg/telegram/messenger/AndroidUtilities$6;->val$context:Landroid/app/Activity;
@@ -46,13 +45,11 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1948
     new-instance v0, Lorg/telegram/messenger/AndroidUtilities$6$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/AndroidUtilities$6$1;-><init>(Lorg/telegram/messenger/AndroidUtilities$6;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1962
     return-void
 .end method

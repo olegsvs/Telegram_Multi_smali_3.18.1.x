@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 1539
     const v0, 0x3ace484c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 1538
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,15 +54,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1546
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 1547
     if-eqz p2, :cond_0
 
-    .line 1548
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_contacts_link"
@@ -89,21 +84,17 @@
 
     throw v1
 
-    .line 1550
     :cond_0
     const/4 v0, 0x0
 
-    .line 1555
     :goto_0
     return-object v0
 
-    .line 1553
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;-><init>()V
 
-    .line 1554
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_contacts_link;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -118,7 +109,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1559
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -129,7 +119,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->my_link:Lorg/telegram/tgnet/TLRPC$ContactLink;
 
-    .line 1560
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -140,7 +129,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->foreign_link:Lorg/telegram/tgnet/TLRPC$ContactLink;
 
-    .line 1561
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -151,7 +139,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->user:Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1562
     return-void
 .end method
 
@@ -160,26 +147,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 1565
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 1566
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->my_link:Lorg/telegram/tgnet/TLRPC$ContactLink;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$ContactLink;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1567
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->foreign_link:Lorg/telegram/tgnet/TLRPC$ContactLink;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$ContactLink;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1568
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$User;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1569
     return-void
 .end method

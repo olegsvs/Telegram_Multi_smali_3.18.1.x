@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CallLogActivity;
 
     .prologue
-    .line 323
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$7;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,33 +43,27 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 326
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 327
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v2, "destroyAfterSelect"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 328
     const-string/jumbo v2, "returnAsResult"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 329
     const-string/jumbo v2, "onlyUsers"
 
     invoke-virtual {v0, v2, v3}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 330
     new-instance v1, Lorg/telegram/ui/ContactsActivity;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/ContactsActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 331
     .local v1, "contactsFragment":Lorg/telegram/ui/ContactsActivity;
     new-instance v2, Lorg/telegram/ui/CallLogActivity$7$1;
 
@@ -78,11 +71,9 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ContactsActivity;->setDelegate(Lorg/telegram/ui/ContactsActivity$ContactsActivityDelegate;)V
 
-    .line 337
     iget-object v2, p0, Lorg/telegram/ui/CallLogActivity$7;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/CallLogActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 338
     return-void
 .end method

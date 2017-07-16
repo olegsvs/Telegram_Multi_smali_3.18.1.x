@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelUsersActivity$6;
 
     .prologue
-    .line 399
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,17 +52,14 @@
 
     const/4 v4, 0x0
 
-    .line 402
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_1
 
-    .line 403
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
 
-    .line 404
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 405
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -82,7 +77,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/ChannelUsersActivity;->access$702(Lorg/telegram/ui/ChannelUsersActivity;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 407
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
@@ -106,7 +100,6 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 408
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
@@ -124,7 +117,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 470
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
     :cond_1
     :goto_0
@@ -134,14 +126,12 @@
 
     invoke-static {v2, v4}, Lorg/telegram/ui/ChannelUsersActivity;->access$1102(Lorg/telegram/ui/ChannelUsersActivity;Z)Z
 
-    .line 471
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     invoke-static {v2, v5}, Lorg/telegram/ui/ChannelUsersActivity;->access$1202(Lorg/telegram/ui/ChannelUsersActivity;Z)Z
 
-    .line 472
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -152,7 +142,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 473
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -163,7 +152,6 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 475
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
@@ -175,7 +163,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 476
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
@@ -186,11 +173,9 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/ChannelUsersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 478
     :cond_3
     return-void
 
-    .line 451
     .restart local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;
     :cond_4
     :try_start_1
@@ -204,7 +189,6 @@
 
     if-ne v2, v5, :cond_1
 
-    .line 452
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipants;->participants:Ljava/util/ArrayList;
 
     new-instance v3, Lorg/telegram/ui/ChannelUsersActivity$6$1$2;
@@ -217,11 +201,9 @@
 
     goto :goto_0
 
-    .line 466
     :catch_0
     move-exception v0
 
-    .line 467
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

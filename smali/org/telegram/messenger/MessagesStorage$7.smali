@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 697
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 36
 
     .prologue
-    .line 701
     :try_start_0
     move-object/from16 v0, p0
 
@@ -61,7 +59,6 @@
 
     move-result-object v31
 
-    .line 702
     .local v31, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_0
     :goto_0
@@ -71,7 +68,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 703
     const/4 v2, 0x0
 
     move-object/from16 v0, v31
@@ -80,7 +76,6 @@
 
     move-result-wide v6
 
-    .line 704
     .local v6, "taskId":J
     const/4 v2, 0x1
 
@@ -90,11 +85,9 @@
 
     move-result-object v32
 
-    .line 705
     .local v32, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v32, :cond_0
 
-    .line 706
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -103,11 +96,9 @@
 
     move-result v35
 
-    .line 707
     .local v35, "type":I
     packed-switch v35, :pswitch_data_0
 
-    .line 807
     :cond_1
     :goto_1
     invoke-virtual/range {v32 .. v32}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
@@ -116,7 +107,6 @@
 
     goto :goto_0
 
-    .line 811
     .end local v6    # "taskId":J
     .end local v31    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v32    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
@@ -124,16 +114,13 @@
     :catch_0
     move-exception v33
 
-    .line 812
     .local v33, "e":Ljava/lang/Exception;
     invoke-static/range {v33 .. v33}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 814
     .end local v33    # "e":Ljava/lang/Exception;
     :goto_2
     return-void
 
-    .line 709
     .restart local v6    # "taskId":J
     .restart local v31    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v32    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
@@ -156,11 +143,9 @@
 
     move-result-object v29
 
-    .line 710
     .local v29, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v29, :cond_1
 
-    .line 711
     sget-object v2, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v3, Lorg/telegram/messenger/MessagesStorage$7$1;
@@ -175,7 +160,6 @@
 
     goto :goto_1
 
-    .line 721
     .end local v29    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :pswitch_1
     const/4 v2, 0x0
@@ -186,7 +170,6 @@
 
     move-result v4
 
-    .line 722
     .local v4, "channelId":I
     const/4 v2, 0x0
 
@@ -196,7 +179,6 @@
 
     move-result v5
 
-    .line 723
     .local v5, "newDialogType":I
     sget-object v9, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -210,7 +192,6 @@
 
     goto :goto_1
 
-    .line 733
     .end local v4    # "channelId":I
     .end local v5    # "newDialogType":I
     :pswitch_2
@@ -218,7 +199,6 @@
 
     invoke-direct {v10}, Lorg/telegram/tgnet/TLRPC$TL_dialog;-><init>()V
 
-    .line 734
     .local v10, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     const/4 v2, 0x0
 
@@ -230,7 +210,6 @@
 
     iput-wide v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
-    .line 735
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -241,7 +220,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->top_message:I
 
-    .line 736
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -252,7 +230,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->read_inbox_max_id:I
 
-    .line 737
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -263,7 +240,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->read_outbox_max_id:I
 
-    .line 738
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -274,7 +250,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 739
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -285,7 +260,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->last_message_date:I
 
-    .line 740
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -296,7 +270,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pts:I
 
-    .line 741
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -307,14 +280,12 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->flags:I
 
-    .line 742
     const/4 v2, 0x5
 
     move/from16 v0, v35
 
     if-ne v0, v2, :cond_2
 
-    .line 743
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -325,7 +296,6 @@
 
     iput-boolean v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinned:Z
 
-    .line 744
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -336,7 +306,6 @@
 
     iput v2, v10, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinnedNum:I
 
-    .line 746
     :cond_2
     const/4 v2, 0x0
 
@@ -354,7 +323,6 @@
 
     move-result-object v11
 
-    .line 747
     .local v11, "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     new-instance v8, Lorg/telegram/messenger/MessagesStorage$7$3;
 
@@ -368,7 +336,6 @@
 
     goto/16 :goto_1
 
-    .line 756
     .end local v10    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v11    # "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     :pswitch_3
@@ -380,7 +347,6 @@
 
     move-result-wide v16
 
-    .line 757
     .local v16, "random_id":J
     const/4 v2, 0x0
 
@@ -398,7 +364,6 @@
 
     move-result-object v11
 
-    .line 758
     .restart local v11    # "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     const/4 v2, 0x0
 
@@ -418,7 +383,6 @@
 
     check-cast v15, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGame;
 
-    .line 759
     .local v15, "game":Lorg/telegram/tgnet/TLRPC$TL_inputMediaGame;
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -432,7 +396,6 @@
 
     goto/16 :goto_1
 
-    .line 763
     .end local v11    # "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     .end local v15    # "game":Lorg/telegram/tgnet/TLRPC$TL_inputMediaGame;
     .end local v16    # "random_id":J
@@ -445,7 +408,6 @@
 
     move-result-wide v20
 
-    .line 764
     .local v20, "did":J
     const/4 v2, 0x0
 
@@ -455,7 +417,6 @@
 
     move-result v22
 
-    .line 765
     .local v22, "pin":Z
     const/4 v2, 0x0
 
@@ -473,7 +434,6 @@
 
     move-result-object v11
 
-    .line 766
     .restart local v11    # "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     new-instance v18, Lorg/telegram/messenger/MessagesStorage$7$4;
 
@@ -489,7 +449,6 @@
 
     goto/16 :goto_1
 
-    .line 775
     .end local v11    # "peer":Lorg/telegram/tgnet/TLRPC$InputPeer;
     .end local v20    # "did":J
     .end local v22    # "pin":Z
@@ -502,7 +461,6 @@
 
     move-result v4
 
-    .line 776
     .restart local v4    # "channelId":I
     const/4 v2, 0x0
 
@@ -512,7 +470,6 @@
 
     move-result v5
 
-    .line 777
     .restart local v5    # "newDialogType":I
     const/4 v2, 0x0
 
@@ -530,7 +487,6 @@
 
     move-result-object v8
 
-    .line 778
     .local v8, "inputChannel":Lorg/telegram/tgnet/TLRPC$InputChannel;
     sget-object v9, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -544,7 +500,6 @@
 
     goto/16 :goto_1
 
-    .line 787
     .end local v4    # "channelId":I
     .end local v5    # "newDialogType":I
     .end local v8    # "inputChannel":Lorg/telegram/tgnet/TLRPC$InputChannel;
@@ -557,7 +512,6 @@
 
     move-result v4
 
-    .line 788
     .restart local v4    # "channelId":I
     const/4 v2, 0x0
 
@@ -567,7 +521,6 @@
 
     move-result v30
 
-    .line 789
     .local v30, "constructor":I
     const/4 v2, 0x0
 
@@ -579,11 +532,9 @@
 
     move-result-object v34
 
-    .line 790
     .local v34, "request":Lorg/telegram/tgnet/TLObject;
     if-nez v34, :cond_3
 
-    .line 791
     const/4 v2, 0x0
 
     move-object/from16 v0, v32
@@ -594,11 +545,9 @@
 
     move-result-object v34
 
-    .line 793
     :cond_3
     if-nez v34, :cond_4
 
-    .line 794
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesStorage$7;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -607,11 +556,9 @@
 
     goto/16 :goto_1
 
-    .line 796
     :cond_4
     move-object/from16 v28, v34
 
-    .line 797
     .local v28, "finalRequest":Lorg/telegram/tgnet/TLObject;
     new-instance v23, Lorg/telegram/messenger/MessagesStorage$7$6;
 
@@ -627,7 +574,6 @@
 
     goto/16 :goto_1
 
-    .line 810
     .end local v4    # "channelId":I
     .end local v6    # "taskId":J
     .end local v28    # "finalRequest":Lorg/telegram/tgnet/TLObject;
@@ -642,7 +588,6 @@
 
     goto/16 :goto_2
 
-    .line 707
     nop
 
     :pswitch_data_0

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     .prologue
-    .line 445
     iput-object p1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$7;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 448
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "Notifications"
@@ -54,7 +52,6 @@
 
     move-result-object v0
 
-    .line 449
     .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -92,7 +89,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 450
     iget-object v1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$7;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -103,7 +99,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 451
     iget-object v1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$7;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ProfileNotificationsActivity$3;->this$0:Lorg/telegram/ui/ProfileNotificationsActivity;
@@ -122,7 +117,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ProfileNotificationsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 453
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ProfileNotificationsActivity$3$7;->this$1:Lorg/telegram/ui/ProfileNotificationsActivity$3;
 
@@ -130,6 +124,5 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/ProfileNotificationsActivity;->dismissCurrentDialig()V
 
-    .line 454
     return-void
 .end method

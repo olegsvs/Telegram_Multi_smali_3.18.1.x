@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     .prologue
-    .line 519
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$4;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v4, 0x0
 
-    .line 522
     sget-boolean v2, Lorg/telegram/messenger/ApplicationLoader;->SHOW_ANDROID_EMOJI:Z
 
     if-nez v2, :cond_0
@@ -56,7 +54,6 @@
     :goto_0
     sput-boolean v2, Lorg/telegram/messenger/ApplicationLoader;->SHOW_ANDROID_EMOJI:Z
 
-    .line 523
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "plusconfig"
@@ -65,13 +62,11 @@
 
     move-result-object v1
 
-    .line 524
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 525
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "showAndroidEmoji"
 
@@ -83,7 +78,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 526
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -94,7 +88,6 @@
 
     invoke-virtual {v2, v5, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 527
     return v3
 
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
@@ -102,6 +95,5 @@
     :cond_0
     move v2, v4
 
-    .line 522
     goto :goto_0
 .end method

@@ -27,7 +27,6 @@
     .param p4, "reverseLayout"    # Z
 
     .prologue
-    .line 288
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$6;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-direct {p0, p2, p3, p4}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;-><init>(Landroid/content/Context;IZ)V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 291
     const/4 v0, 0x0
 
     return v0

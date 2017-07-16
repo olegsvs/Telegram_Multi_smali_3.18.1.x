@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 292
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 295
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$1000(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;
@@ -54,33 +52,27 @@
 
     move-result-object v3
 
-    .line 296
     .local v3, "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     if-nez v3, :cond_1
 
-    .line 368
     .end local p1    # "view":Landroid/view/View;
     :cond_0
     :goto_0
     return-void
 
-    .line 299
     .restart local p1    # "view":Landroid/view/View;
     :cond_1
     iget-object v0, v3, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->file:Ljava/io/File;
 
-    .line 300
     .local v0, "file":Ljava/io/File;
     if-nez v0, :cond_5
 
-    .line 301
     iget v5, v3, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->icon:I
 
     const v6, 0x7f02010f
 
     if-ne v5, v6, :cond_3
 
-    .line 302
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$700(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;
@@ -89,7 +81,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 303
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$700(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;
@@ -98,7 +89,6 @@
 
     invoke-interface {v5}, Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;->startDocumentSelectActivity()V
 
-    .line 305
     :cond_2
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -108,7 +98,6 @@
 
     goto :goto_0
 
-    .line 307
     :cond_3
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -134,7 +123,6 @@
 
     check-cast v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
 
-    .line 308
     .local v2, "he":Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -146,19 +134,16 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 309
     iget-object v5, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->dir:Ljava/io/File;
 
     if-eqz v5, :cond_4
 
-    .line 310
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     iget-object v6, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->dir:Ljava/io/File;
 
     invoke-static {v5, v6}, Lorg/telegram/ui/DocumentSelectActivity;->access$200(Lorg/telegram/ui/DocumentSelectActivity;Ljava/io/File;)Z
 
-    .line 314
     :goto_1
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -174,7 +159,6 @@
 
     goto :goto_0
 
-    .line 312
     :cond_4
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -182,7 +166,6 @@
 
     goto :goto_1
 
-    .line 316
     .end local v2    # "he":Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
     :cond_5
     invoke-virtual {v0}, Ljava/io/File;->isDirectory()Z
@@ -191,7 +174,6 @@
 
     if-eqz v5, :cond_8
 
-    .line 317
     new-instance v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
 
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -200,7 +182,6 @@
 
     invoke-direct {v2, v5, v6}, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;-><init>(Lorg/telegram/ui/DocumentSelectActivity;Lorg/telegram/ui/DocumentSelectActivity$1;)V
 
-    .line 318
     .restart local v2    # "he":Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -214,7 +195,6 @@
 
     iput v5, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->scrollItem:I
 
-    .line 319
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$1800(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -227,18 +207,15 @@
 
     move-result-object v4
 
-    .line 320
     .local v4, "topView":Landroid/view/View;
     if-eqz v4, :cond_6
 
-    .line 321
     invoke-virtual {v4}, Landroid/view/View;->getTop()I
 
     move-result v5
 
     iput v5, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->scrollOffset:I
 
-    .line 323
     :cond_6
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -248,7 +225,6 @@
 
     iput-object v5, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->dir:Ljava/io/File;
 
-    .line 324
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$2000(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -261,7 +237,6 @@
 
     iput-object v5, v2, Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;->title:Ljava/lang/String;
 
-    .line 325
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$1600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -270,7 +245,6 @@
 
     invoke-virtual {v5, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 326
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5, v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$200(Lorg/telegram/ui/DocumentSelectActivity;Ljava/io/File;)Z
@@ -279,7 +253,6 @@
 
     if-nez v5, :cond_7
 
-    .line 327
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$1600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -290,7 +263,6 @@
 
     goto/16 :goto_0
 
-    .line 330
     :cond_7
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -304,7 +276,6 @@
 
     goto/16 :goto_0
 
-    .line 332
     .end local v2    # "he":Lorg/telegram/ui/DocumentSelectActivity$HistoryEntry;
     .end local v4    # "topView":Landroid/view/View;
     :cond_8
@@ -314,7 +285,6 @@
 
     if-nez v5, :cond_9
 
-    .line 333
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     const-string/jumbo v6, "AccessError"
@@ -327,7 +297,6 @@
 
     invoke-static {v5, v6}, Lorg/telegram/ui/DocumentSelectActivity;->access$1100(Lorg/telegram/ui/DocumentSelectActivity;Ljava/lang/String;)V
 
-    .line 334
     new-instance v0, Ljava/io/File;
 
     .end local v0    # "file":Ljava/io/File;
@@ -335,7 +304,6 @@
 
     invoke-direct {v0, v5}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 336
     .restart local v0    # "file":Ljava/io/File;
     :cond_9
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -350,7 +318,6 @@
 
     if-eqz v5, :cond_a
 
-    .line 337
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
     move-result-wide v6
@@ -365,7 +332,6 @@
 
     if-lez v5, :cond_a
 
-    .line 338
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     const-string/jumbo v6, "FileUploadLimit"
@@ -398,7 +364,6 @@
 
     goto/16 :goto_0
 
-    .line 342
     :cond_a
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
@@ -410,7 +375,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 345
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$2200(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -423,7 +387,6 @@
 
     if-eqz v5, :cond_d
 
-    .line 346
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$500(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/HashMap;
@@ -440,7 +403,6 @@
 
     if-eqz v5, :cond_b
 
-    .line 347
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$500(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/HashMap;
@@ -453,7 +415,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 351
     :goto_2
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -467,7 +428,6 @@
 
     if-eqz v5, :cond_c
 
-    .line 352
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$2300(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -476,7 +436,6 @@
 
     invoke-virtual {v5}, Lorg/telegram/ui/ActionBar/ActionBar;->hideActionMode()V
 
-    .line 356
     :goto_3
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -484,12 +443,10 @@
 
     invoke-static {v5, v6}, Lorg/telegram/ui/DocumentSelectActivity;->access$802(Lorg/telegram/ui/DocumentSelectActivity;Z)Z
 
-    .line 357
     instance-of v5, p1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     if-eqz v5, :cond_0
 
-    .line 358
     check-cast p1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     .end local p1    # "view":Landroid/view/View;
@@ -515,7 +472,6 @@
 
     goto/16 :goto_0
 
-    .line 349
     .restart local p1    # "view":Landroid/view/View;
     :cond_b
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -532,7 +488,6 @@
 
     goto :goto_2
 
-    .line 354
     :cond_c
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -556,7 +511,6 @@
 
     goto :goto_3
 
-    .line 361
     :cond_d
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -566,12 +520,10 @@
 
     if-eqz v5, :cond_0
 
-    .line 362
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 363
     .local v1, "files":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     invoke-virtual {v0}, Ljava/io/File;->getAbsolutePath()Ljava/lang/String;
 
@@ -579,7 +531,6 @@
 
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 364
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$6;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$700(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;

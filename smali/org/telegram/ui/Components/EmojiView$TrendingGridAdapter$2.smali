@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     .prologue
-    .line 1953
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,17 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1956
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
-    .line 1957
     .local v1, "parent":Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->getStickerSet()Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
     move-result-object v0
 
-    .line 1958
     .local v0, "pack":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
@@ -101,12 +97,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 1969
     :cond_0
     :goto_0
     return-void
 
-    .line 1961
     :cond_1
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled()Z
 
@@ -114,7 +108,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 1962
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -133,7 +126,6 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1963
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -148,7 +140,6 @@
 
     invoke-interface {v2, v3}, Lorg/telegram/ui/Components/EmojiView$Listener;->onStickerSetRemove(Lorg/telegram/tgnet/TLRPC$StickerSetCovered;)V
 
-    .line 1968
     :goto_1
     const/4 v2, 0x1
 
@@ -156,7 +147,6 @@
 
     goto :goto_0
 
-    .line 1965
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
@@ -176,7 +166,6 @@
 
     invoke-virtual {v2, v3, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1966
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter$2;->this$1:Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/Components/EmojiView$TrendingGridAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;

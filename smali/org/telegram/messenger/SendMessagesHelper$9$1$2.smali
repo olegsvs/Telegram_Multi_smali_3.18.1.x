@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/SendMessagesHelper$9$1;
 
     .prologue
-    .line 2382
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$2;->this$2:Lorg/telegram/messenger/SendMessagesHelper$9$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$9$1$2;->val$newMessage:Lorg/telegram/tgnet/TLRPC$TL_updateNewMessage;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v3, -0x1
 
-    .line 2385
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -62,6 +60,5 @@
 
     invoke-virtual {v0, v3, v1, v3, v2}, Lorg/telegram/messenger/MessagesController;->processNewDifferenceParams(IIII)V
 
-    .line 2386
     return-void
 .end method

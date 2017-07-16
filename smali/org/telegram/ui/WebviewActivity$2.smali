@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity$2;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -41,28 +40,23 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 144
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 145
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$2;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/WebviewActivity;->finishFragment()V
 
-    .line 152
     :cond_0
     :goto_0
     return-void
 
-    .line 146
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_2
 
-    .line 147
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$2;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/WebviewActivity;->access$000(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/messenger/MessageObject;
@@ -73,7 +67,6 @@
 
     iput-boolean v4, v0, Lorg/telegram/tgnet/TLRPC$Message;->with_my_score:Z
 
-    .line 148
     iget-object v7, p0, Lorg/telegram/ui/WebviewActivity$2;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     new-instance v0, Lorg/telegram/ui/Components/ShareAlert;
@@ -106,13 +99,11 @@
 
     goto :goto_0
 
-    .line 149
     :cond_2
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity$2;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/WebviewActivity;->access$200(Lorg/telegram/ui/WebviewActivity;)Ljava/lang/String;

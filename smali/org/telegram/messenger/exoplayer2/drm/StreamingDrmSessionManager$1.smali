@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
     .prologue
-    .line 399
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$1;, "Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager.1;"
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$1;->this$0:Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 402
     .local p0, "this":Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$1;, "Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager.1;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$1;->this$0:Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager;
 
@@ -52,6 +50,5 @@
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/drm/StreamingDrmSessionManager$EventListener;->onDrmKeysLoaded()V
 
-    .line 403
     return-void
 .end method

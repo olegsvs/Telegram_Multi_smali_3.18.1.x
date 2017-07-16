@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 29
     const-class v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;
 
     invoke-virtual {v0}, Ljava/lang/Class;->getName()Ljava/lang/String;
@@ -54,12 +53,10 @@
     .end annotation
 
     .prologue
-    .line 74
     sget-object v0, Ljava/util/logging/Level;->FINEST:Ljava/util/logging/Level;
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;-><init>(Ljava/io/InputStream;Ljava/util/logging/Level;)V
 
-    .line 75
     return-void
 .end method
 
@@ -81,31 +78,25 @@
 
     const/4 v8, 0x0
 
-    .line 77
     invoke-direct {p0}, Lorg/telegram/messenger/audioinfo/AudioInfo;-><init>()V
 
-    .line 78
     iput-object p2, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->debugLevel:Ljava/util/logging/Level;
 
-    .line 79
     invoke-static {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->isID3v2StartPosition(Ljava/io/InputStream;)Z
 
     move-result v5
 
     if-eqz v5, :cond_1
 
-    .line 80
     new-instance v4, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
 
     invoke-direct {v4, p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;-><init>(Ljava/io/InputStream;)V
 
-    .line 81
     .local v4, "tagHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
     const-string/jumbo v5, "ID3"
 
     iput-object v5, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->brand:Ljava/lang/String;
 
-    .line 82
     const-string/jumbo v5, "2.%d.%d"
 
     new-array v6, v6, [Ljava/lang/Object;
@@ -136,12 +127,10 @@
 
     iput-object v5, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->version:Ljava/lang/String;
 
-    .line 83
     invoke-virtual {v4, p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->tagBody(Ljava/io/InputStream;)Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;
 
     move-result-object v3
 
-    .line 85
     .local v3, "tagBody":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;
     :goto_0
     :try_start_0
@@ -155,12 +144,10 @@
 
     if-lez v5, :cond_0
 
-    .line 86
     new-instance v2, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
 
     invoke-direct {v2, v3}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;-><init>(Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;)V
 
-    .line 87
     .local v2, "frameHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
     invoke-virtual {v2}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;->isPadding()Z
     :try_end_0
@@ -170,7 +157,6 @@
 
     if-eqz v5, :cond_2
 
-    .line 116
     .end local v2    # "frameHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
     :cond_0
     :goto_1
@@ -184,14 +170,12 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;->skipFully(J)V
 
-    .line 117
     invoke-virtual {v4}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->getFooterSize()I
 
     move-result v5
 
     if-lez v5, :cond_1
 
-    .line 118
     invoke-virtual {v4}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;->getFooterSize()I
 
     move-result v5
@@ -200,13 +184,11 @@
 
     invoke-virtual {p1, v6, v7}, Ljava/io/InputStream;->skip(J)J
 
-    .line 121
     .end local v3    # "tagBody":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;
     .end local v4    # "tagHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
     :cond_1
     return-void
 
-    .line 90
     .restart local v2    # "frameHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
     .restart local v3    # "tagBody":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;
     .restart local v4    # "tagHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
@@ -226,7 +208,6 @@
 
     if-lez v5, :cond_3
 
-    .line 91
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     invoke-virtual {v5, p2}, Ljava/util/logging/Logger;->isLoggable(Ljava/util/logging/Level;)Z
@@ -235,7 +216,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 92
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     const-string/jumbo v6, "ID3 frame claims to extend frames area"
@@ -246,12 +226,10 @@
 
     goto :goto_1
 
-    .line 111
     .end local v2    # "frameHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
     :catch_0
     move-exception v0
 
-    .line 112
     .local v0, "e":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -261,7 +239,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 113
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -290,7 +267,6 @@
 
     goto :goto_1
 
-    .line 96
     .end local v0    # "e":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
     .restart local v2    # "frameHeader":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
     :cond_3
@@ -307,14 +283,12 @@
 
     if-nez v5, :cond_5
 
-    .line 97
     invoke-virtual {v3, v2}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->frameBody(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;)Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;
     :try_end_2
     .catch Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception; {:try_start_2 .. :try_end_2} :catch_0
 
     move-result-object v1
 
-    .line 99
     .local v1, "frameBody":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;
     :try_start_3
     invoke-virtual {p0, v1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)V
@@ -322,7 +296,6 @@
     .catch Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception; {:try_start_3 .. :try_end_3} :catch_1
     .catchall {:try_start_3 .. :try_end_3} :catchall_0
 
-    .line 105
     :try_start_4
     invoke-virtual {v1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getData()Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
@@ -338,11 +311,9 @@
 
     goto/16 :goto_0
 
-    .line 100
     :catch_1
     move-exception v0
 
-    .line 101
     .restart local v0    # "e":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Exception;
     :try_start_5
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
@@ -353,7 +324,6 @@
 
     if-eqz v5, :cond_4
 
-    .line 102
     sget-object v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     const-string/jumbo v6, "ID3 exception occured in frame %s: %s"
@@ -386,7 +356,6 @@
     :try_end_5
     .catchall {:try_start_5 .. :try_end_5} :catchall_0
 
-    .line 105
     :cond_4
     :try_start_6
     invoke-virtual {v1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getData()Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
@@ -417,7 +386,6 @@
 
     throw v5
 
-    .line 108
     .end local v1    # "frameBody":Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;
     :cond_5
     invoke-virtual {v3}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagBody;->getData()Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
@@ -447,12 +415,10 @@
     .end annotation
 
     .prologue
-    .line 61
     const/4 v0, 0x3
 
     invoke-virtual {p0, v0}, Ljava/io/InputStream;->mark(I)V
 
-    .line 63
     :try_start_0
     invoke-virtual {p0}, Ljava/io/InputStream;->read()I
 
@@ -482,19 +448,16 @@
 
     const/4 v0, 0x1
 
-    .line 65
     :goto_0
     invoke-virtual {p0}, Ljava/io/InputStream;->reset()V
 
     return v0
 
-    .line 63
     :cond_0
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 65
     :catchall_0
     move-exception v0
 
@@ -516,12 +479,10 @@
     .end annotation
 
     .prologue
-    .line 354
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->readEncoding()Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
 
     move-result-object v1
 
-    .line 356
     .local v1, "encoding":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getTagHeader()Lorg/telegram/messenger/audioinfo/mp3/ID3v2TagHeader;
 
@@ -535,7 +496,6 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 357
     const/4 v6, 0x3
 
     sget-object v7, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;->ISO_8859_1:Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
@@ -544,7 +504,6 @@
 
     move-result-object v2
 
-    .line 358
     .local v2, "fileType":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
@@ -562,10 +521,8 @@
     :goto_0
     packed-switch v6, :pswitch_data_0
 
-    .line 366
     const-string/jumbo v4, "image/unknown"
 
-    .line 371
     .end local v2    # "fileType":Ljava/lang/String;
     .local v4, "imageType":Ljava/lang/String;
     :goto_1
@@ -577,7 +534,6 @@
 
     move-result v5
 
-    .line 372
     .local v5, "pictureType":B
     const/16 v6, 0xc8
 
@@ -585,7 +541,6 @@
 
     move-result-object v0
 
-    .line 373
     .local v0, "description":Ljava/lang/String;
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getData()Lorg/telegram/messenger/audioinfo/mp3/ID3v2DataInput;
 
@@ -601,7 +556,6 @@
 
     move-result-object v3
 
-    .line 374
     .local v3, "imageData":[B
     new-instance v6, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;
 
@@ -609,7 +563,6 @@
 
     return-object v6
 
-    .line 358
     .end local v0    # "description":Ljava/lang/String;
     .end local v3    # "imageData":[B
     .end local v4    # "imageType":Ljava/lang/String;
@@ -641,24 +594,19 @@
 
     goto :goto_0
 
-    .line 360
     :pswitch_0
     const-string/jumbo v4, "image/png"
 
-    .line 361
     .restart local v4    # "imageType":Ljava/lang/String;
     goto :goto_1
 
-    .line 363
     .end local v4    # "imageType":Ljava/lang/String;
     :pswitch_1
     const-string/jumbo v4, "image/jpeg"
 
-    .line 364
     .restart local v4    # "imageType":Ljava/lang/String;
     goto :goto_1
 
-    .line 369
     .end local v2    # "fileType":Ljava/lang/String;
     .end local v4    # "imageType":Ljava/lang/String;
     :cond_1
@@ -673,7 +621,6 @@
     .restart local v4    # "imageType":Ljava/lang/String;
     goto :goto_1
 
-    .line 358
     :sswitch_data_0
     .sparse-switch
         0x11fc1 -> :sswitch_1
@@ -698,12 +645,10 @@
     .end annotation
 
     .prologue
-    .line 346
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->readEncoding()Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
 
     move-result-object v1
 
-    .line 347
     .local v1, "encoding":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
     const/4 v4, 0x3
 
@@ -713,7 +658,6 @@
 
     move-result-object v2
 
-    .line 348
     .local v2, "language":Ljava/lang/String;
     const/16 v4, 0xc8
 
@@ -721,7 +665,6 @@
 
     move-result-object v0
 
-    .line 349
     .local v0, "description":Ljava/lang/String;
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getRemainingLength()J
 
@@ -733,7 +676,6 @@
 
     move-result-object v3
 
-    .line 350
     .local v3, "text":Ljava/lang/String;
     new-instance v4, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$CommentOrUnsynchronizedLyrics;
 
@@ -753,7 +695,6 @@
     .end annotation
 
     .prologue
-    .line 124
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -768,7 +709,6 @@
 
     if-eqz v20, :cond_0
 
-    .line 125
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -805,7 +745,6 @@
 
     invoke-virtual/range {v20 .. v22}, Ljava/util/logging/Logger;->log(Ljava/util/logging/Level;Ljava/lang/String;)V
 
-    .line 127
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getFrameHeader()Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameHeader;
 
@@ -827,12 +766,10 @@
     :goto_0
     packed-switch v20, :pswitch_data_0
 
-    .line 338
     :cond_2
     :goto_1
     return-void
 
-    .line 127
     :sswitch_0
     const-string/jumbo v22, "PIC"
 
@@ -1262,7 +1199,6 @@
 
     goto/16 :goto_0
 
-    .line 130
     :pswitch_0
     move-object/from16 v0, p0
 
@@ -1286,13 +1222,11 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 131
     :cond_3
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseAttachedPictureFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;
 
     move-result-object v10
 
-    .line 132
     .local v10, "picture":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;
     move-object/from16 v0, p0
 
@@ -1320,18 +1254,15 @@
 
     if-nez v20, :cond_2
 
-    .line 134
     :cond_4
     :try_start_0
     iget-object v4, v10, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;->imageData:[B
 
-    .line 135
     .local v4, "bytes":[B
     new-instance v9, Landroid/graphics/BitmapFactory$Options;
 
     invoke-direct {v9}, Landroid/graphics/BitmapFactory$Options;-><init>()V
 
-    .line 136
     .local v9, "opts":Landroid/graphics/BitmapFactory$Options;
     const/16 v20, 0x1
 
@@ -1339,14 +1270,12 @@
 
     iput-boolean v0, v9, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 137
     const/16 v20, 0x1
 
     move/from16 v0, v20
 
     iput v0, v9, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 138
     const/16 v20, 0x0
 
     array-length v0, v4
@@ -1359,7 +1288,6 @@
 
     invoke-static {v4, v0, v1, v9}, Landroid/graphics/BitmapFactory;->decodeByteArray([BIILandroid/graphics/BitmapFactory$Options;)Landroid/graphics/Bitmap;
 
-    .line 139
     iget v0, v9, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
     move/from16 v20, v0
@@ -1384,7 +1312,6 @@
 
     if-le v0, v1, :cond_6
 
-    .line 140
     :cond_5
     iget v0, v9, Landroid/graphics/BitmapFactory$Options;->outWidth:I
 
@@ -1398,7 +1325,6 @@
 
     move-result v13
 
-    .line 141
     .local v13, "size":I
     :goto_2
     const/16 v20, 0x320
@@ -1407,7 +1333,6 @@
 
     if-le v13, v0, :cond_6
 
-    .line 142
     iget v0, v9, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
     move/from16 v20, v0
@@ -1418,12 +1343,10 @@
 
     iput v0, v9, Landroid/graphics/BitmapFactory$Options;->inSampleSize:I
 
-    .line 143
     div-int/lit8 v13, v13, 0x2
 
     goto :goto_2
 
-    .line 146
     .end local v13    # "size":I
     :cond_6
     const/16 v20, 0x0
@@ -1432,7 +1355,6 @@
 
     iput-boolean v0, v9, Landroid/graphics/BitmapFactory$Options;->inJustDecodeBounds:Z
 
-    .line 147
     const/16 v20, 0x0
 
     array-length v0, v4
@@ -1453,7 +1375,6 @@
 
     iput-object v0, v1, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->cover:Landroid/graphics/Bitmap;
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->cover:Landroid/graphics/Bitmap;
@@ -1462,7 +1383,6 @@
 
     if-eqz v20, :cond_7
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->cover:Landroid/graphics/Bitmap;
@@ -1497,7 +1417,6 @@
 
     div-float v12, v20, v21
 
-    .line 150
     .local v12, "scale":F
     const/16 v20, 0x0
 
@@ -1505,7 +1424,6 @@
 
     if-lez v20, :cond_8
 
-    .line 151
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->cover:Landroid/graphics/Bitmap;
@@ -1572,7 +1490,6 @@
 
     iput-object v0, v1, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->smallCover:Landroid/graphics/Bitmap;
 
-    .line 155
     :goto_3
     move-object/from16 v0, p0
 
@@ -1582,7 +1499,6 @@
 
     if-nez v20, :cond_7
 
-    .line 156
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->cover:Landroid/graphics/Bitmap;
@@ -1597,7 +1513,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 162
     .end local v4    # "bytes":[B
     .end local v9    # "opts":Landroid/graphics/BitmapFactory$Options;
     .end local v12    # "scale":F
@@ -1615,7 +1530,6 @@
 
     goto/16 :goto_1
 
-    .line 153
     .restart local v4    # "bytes":[B
     .restart local v9    # "opts":Landroid/graphics/BitmapFactory$Options;
     .restart local v12    # "scale":F
@@ -1637,20 +1551,17 @@
 
     goto :goto_3
 
-    .line 159
     .end local v4    # "bytes":[B
     .end local v9    # "opts":Landroid/graphics/BitmapFactory$Options;
     .end local v12    # "scale":F
     :catch_0
     move-exception v6
 
-    .line 160
     .local v6, "e":Ljava/lang/Throwable;
     invoke-virtual {v6}, Ljava/lang/Throwable;->printStackTrace()V
 
     goto :goto_4
 
-    .line 168
     .end local v6    # "e":Ljava/lang/Throwable;
     .end local v10    # "picture":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;
     :pswitch_1
@@ -1658,7 +1569,6 @@
 
     move-result-object v5
 
-    .line 169
     .local v5, "comm":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$CommentOrUnsynchronizedLyrics;
     move-object/from16 v0, p0
 
@@ -1686,7 +1596,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 170
     :cond_9
     iget-object v0, v5, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$CommentOrUnsynchronizedLyrics;->text:Ljava/lang/String;
 
@@ -1700,7 +1609,6 @@
 
     goto/16 :goto_1
 
-    .line 175
     .end local v5    # "comm":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$CommentOrUnsynchronizedLyrics;
     :pswitch_2
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
@@ -1715,7 +1623,6 @@
 
     goto/16 :goto_1
 
-    .line 179
     :pswitch_3
     const-string/jumbo v20, "1"
 
@@ -1735,7 +1642,6 @@
 
     goto/16 :goto_1
 
-    .line 183
     :pswitch_4
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
@@ -1749,13 +1655,11 @@
 
     goto/16 :goto_1
 
-    .line 187
     :pswitch_5
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
     move-result-object v14
 
-    .line 188
     .local v14, "tcon":Ljava/lang/String;
     invoke-virtual {v14}, Ljava/lang/String;->length()I
 
@@ -1763,15 +1667,12 @@
 
     if-lez v20, :cond_2
 
-    .line 189
     move-object/from16 v0, p0
 
     iput-object v14, v0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->genre:Ljava/lang/String;
 
-    .line 191
     const/4 v7, 0x0
 
-    .line 192
     .local v7, "id3v1Genre":Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
     const/16 v20, 0x0
 
@@ -1790,7 +1691,6 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 193
     const/16 v20, 0x29
 
     move/from16 v0, v20
@@ -1799,7 +1699,6 @@
 
     move-result v11
 
-    .line 194
     .local v11, "pos":I
     const/16 v20, 0x1
 
@@ -1807,7 +1706,6 @@
 
     if-le v11, v0, :cond_a
 
-    .line 195
     const/16 v20, 0x1
 
     move/from16 v0, v20
@@ -1824,7 +1722,6 @@
 
     move-result-object v7
 
-    .line 196
     if-nez v7, :cond_a
 
     invoke-virtual {v14}, Ljava/lang/String;->length()I
@@ -1839,7 +1736,6 @@
 
     if-le v0, v1, :cond_a
 
-    .line 197
     add-int/lit8 v20, v11, 0x1
 
     move/from16 v0, v20
@@ -1854,13 +1750,11 @@
 
     iput-object v0, v1, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->genre:Ljava/lang/String;
 
-    .line 203
     .end local v11    # "pos":I
     :cond_a
     :goto_5
     if-eqz v7, :cond_2
 
-    .line 204
     invoke-virtual {v7}, Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;->getDescription()Ljava/lang/String;
 
     move-result-object v20
@@ -1873,13 +1767,11 @@
 
     goto/16 :goto_1
 
-    .line 206
     :catch_1
     move-exception v20
 
     goto/16 :goto_1
 
-    .line 201
     :cond_b
     invoke-static {v14}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1893,7 +1785,6 @@
 
     goto :goto_5
 
-    .line 213
     .end local v7    # "id3v1Genre":Lorg/telegram/messenger/audioinfo/mp3/ID3v1Genre;
     .end local v14    # "tcon":Ljava/lang/String;
     :pswitch_6
@@ -1909,13 +1800,11 @@
 
     goto/16 :goto_1
 
-    .line 216
     :pswitch_7
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
     move-result-object v15
 
-    .line 217
     .local v15, "tdrc":Ljava/lang/String;
     invoke-virtual {v15}, Ljava/lang/String;->length()I
 
@@ -1929,7 +1818,6 @@
 
     if-lt v0, v1, :cond_2
 
-    .line 219
     const/16 v20, 0x0
 
     const/16 v21, 0x4
@@ -1961,11 +1849,9 @@
 
     goto/16 :goto_1
 
-    .line 220
     :catch_2
     move-exception v6
 
-    .line 221
     .local v6, "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -1981,7 +1867,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 222
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2014,7 +1899,6 @@
 
     goto/16 :goto_1
 
-    .line 229
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v15    # "tdrc":Ljava/lang/String;
     :pswitch_8
@@ -2022,7 +1906,6 @@
 
     move-result-object v16
 
-    .line 231
     .local v16, "tlen":Ljava/lang/String;
     :try_start_4
     invoke-static/range {v16 .. v16}, Ljava/lang/Long;->valueOf(Ljava/lang/String;)Ljava/lang/Long;
@@ -2043,11 +1926,9 @@
 
     goto/16 :goto_1
 
-    .line 232
     :catch_3
     move-exception v6
 
-    .line 233
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2063,7 +1944,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 234
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2098,7 +1978,6 @@
 
     goto/16 :goto_1
 
-    .line 240
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v16    # "tlen":Ljava/lang/String;
     :pswitch_9
@@ -2114,7 +1993,6 @@
 
     goto/16 :goto_1
 
-    .line 244
     :pswitch_a
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
@@ -2128,13 +2006,11 @@
 
     goto/16 :goto_1
 
-    .line 248
     :pswitch_b
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
     move-result-object v17
 
-    .line 249
     .local v17, "tpos":Ljava/lang/String;
     invoke-virtual/range {v17 .. v17}, Ljava/lang/String;->length()I
 
@@ -2142,7 +2018,6 @@
 
     if-lez v20, :cond_2
 
-    .line 250
     const/16 v20, 0x2f
 
     move-object/from16 v0, v17
@@ -2153,11 +2028,9 @@
 
     move-result v8
 
-    .line 251
     .local v8, "index":I
     if-gez v8, :cond_c
 
-    .line 253
     :try_start_5
     invoke-static/range {v17 .. v17}, Ljava/lang/Short;->valueOf(Ljava/lang/String;)Ljava/lang/Short;
 
@@ -2177,11 +2050,9 @@
 
     goto/16 :goto_1
 
-    .line 254
     :catch_4
     move-exception v6
 
-    .line 255
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2197,7 +2068,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 256
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2232,7 +2102,6 @@
 
     goto/16 :goto_1
 
-    .line 261
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     :cond_c
     const/16 v20, 0x0
@@ -2262,7 +2131,6 @@
     :try_end_6
     .catch Ljava/lang/NumberFormatException; {:try_start_6 .. :try_end_6} :catch_6
 
-    .line 268
     :cond_d
     :goto_6
     add-int/lit8 v20, v8, 0x1
@@ -2294,11 +2162,9 @@
 
     goto/16 :goto_1
 
-    .line 269
     :catch_5
     move-exception v6
 
-    .line 270
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2314,7 +2180,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 271
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2349,12 +2214,10 @@
 
     goto/16 :goto_1
 
-    .line 262
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     :catch_6
     move-exception v6
 
-    .line 263
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2370,7 +2233,6 @@
 
     if-eqz v20, :cond_d
 
-    .line 264
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2405,7 +2267,6 @@
 
     goto :goto_6
 
-    .line 279
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v8    # "index":I
     .end local v17    # "tpos":Ljava/lang/String;
@@ -2414,7 +2275,6 @@
 
     move-result-object v18
 
-    .line 280
     .local v18, "trck":Ljava/lang/String;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
 
@@ -2422,7 +2282,6 @@
 
     if-lez v20, :cond_2
 
-    .line 281
     const/16 v20, 0x2f
 
     move-object/from16 v0, v18
@@ -2433,11 +2292,9 @@
 
     move-result v8
 
-    .line 282
     .restart local v8    # "index":I
     if-gez v8, :cond_e
 
-    .line 284
     :try_start_8
     invoke-static/range {v18 .. v18}, Ljava/lang/Short;->valueOf(Ljava/lang/String;)Ljava/lang/Short;
 
@@ -2457,11 +2314,9 @@
 
     goto/16 :goto_1
 
-    .line 285
     :catch_7
     move-exception v6
 
-    .line 286
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2477,7 +2332,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 287
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2512,7 +2366,6 @@
 
     goto/16 :goto_1
 
-    .line 292
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     :cond_e
     const/16 v20, 0x0
@@ -2542,7 +2395,6 @@
     :try_end_9
     .catch Ljava/lang/NumberFormatException; {:try_start_9 .. :try_end_9} :catch_9
 
-    .line 299
     :cond_f
     :goto_7
     add-int/lit8 v20, v8, 0x1
@@ -2574,11 +2426,9 @@
 
     goto/16 :goto_1
 
-    .line 300
     :catch_8
     move-exception v6
 
-    .line 301
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2594,7 +2444,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 302
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2629,12 +2478,10 @@
 
     goto/16 :goto_1
 
-    .line 293
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     :catch_9
     move-exception v6
 
-    .line 294
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2650,7 +2497,6 @@
 
     if-eqz v20, :cond_f
 
-    .line 295
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2685,7 +2531,6 @@
 
     goto :goto_7
 
-    .line 310
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v8    # "index":I
     .end local v18    # "trck":Ljava/lang/String;
@@ -2702,7 +2547,6 @@
 
     goto/16 :goto_1
 
-    .line 314
     :pswitch_e
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
@@ -2716,13 +2560,11 @@
 
     goto/16 :goto_1
 
-    .line 318
     :pswitch_f
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseTextFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Ljava/lang/String;
 
     move-result-object v19
 
-    .line 319
     .local v19, "tyer":Ljava/lang/String;
     invoke-virtual/range {v19 .. v19}, Ljava/lang/String;->length()I
 
@@ -2730,7 +2572,6 @@
 
     if-lez v20, :cond_2
 
-    .line 321
     :try_start_b
     invoke-static/range {v19 .. v19}, Ljava/lang/Short;->valueOf(Ljava/lang/String;)Ljava/lang/Short;
 
@@ -2750,11 +2591,9 @@
 
     goto/16 :goto_1
 
-    .line 322
     :catch_a
     move-exception v6
 
-    .line 323
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
@@ -2770,7 +2609,6 @@
 
     if-eqz v20, :cond_2
 
-    .line 324
     sget-object v20, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->LOGGER:Ljava/util/logging/Logger;
 
     move-object/from16 v0, p0
@@ -2805,7 +2643,6 @@
 
     goto/16 :goto_1
 
-    .line 331
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .end local v19    # "tyer":Ljava/lang/String;
     :pswitch_10
@@ -2817,7 +2654,6 @@
 
     if-nez v20, :cond_2
 
-    .line 332
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info;->parseCommentOrUnsynchronizedLyricsFrame(Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;)Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$CommentOrUnsynchronizedLyrics;
 
     move-result-object v20
@@ -2836,7 +2672,6 @@
 
     goto/16 :goto_1
 
-    .line 127
     :sswitch_data_0
     .sparse-switch
         0x10561 -> :sswitch_2
@@ -2923,12 +2758,10 @@
     .end annotation
 
     .prologue
-    .line 341
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->readEncoding()Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
 
     move-result-object v0
 
-    .line 342
     .local v0, "encoding":Lorg/telegram/messenger/audioinfo/mp3/ID3v2Encoding;
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody;->getRemainingLength()J
 

@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 517
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -48,7 +47,6 @@
 
     const/4 v4, 0x1
 
-    .line 573
     aget v2, p1, v4
 
     aget v3, p1, v5
@@ -57,11 +55,9 @@
 
     add-int/lit8 v0, v2, 0x1
 
-    .line 574
     .local v0, "fullRange":I
     div-int/lit8 v1, v0, 0x2
 
-    .line 575
     .local v1, "halfRange":I
     aget v3, p1, v5
 
@@ -74,7 +70,6 @@
 
     aput v2, p2, v5
 
-    .line 576
     aget v2, p1, v4
 
     const/4 v3, 0x2
@@ -87,20 +82,17 @@
 
     aput v2, p2, v4
 
-    .line 577
     return-void
 
     .restart local v0    # "fullRange":I
     :cond_0
     move v2, v1
 
-    .line 575
     goto :goto_0
 
     :cond_1
     move v0, v1
 
-    .line 576
     goto :goto_1
 .end method
 

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1887
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$15;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput p2, p0, Lorg/telegram/messenger/SecretChatHelper$15;->val$reqId:I
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1890
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -58,21 +56,17 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 1892
     :try_start_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1896
     :goto_0
     return-void
 
-    .line 1893
     :catch_0
     move-exception v0
 
-    .line 1894
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/NotificationsController$14;
 
     .prologue
-    .line 1457
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$14$1;->this$1:Lorg/telegram/messenger/NotificationsController$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,10 +43,8 @@
     .param p3, "status"    # I
 
     .prologue
-    .line 1460
     if-nez p3, :cond_0
 
-    .line 1462
     const/high16 v2, 0x3f800000    # 1.0f
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -67,16 +64,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1467
     :cond_0
     :goto_0
     return-void
 
-    .line 1463
     :catch_0
     move-exception v7
 
-    .line 1464
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

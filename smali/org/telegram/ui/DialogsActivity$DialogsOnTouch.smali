@@ -35,12 +35,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1555
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1556
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -51,7 +49,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->displayMetrics:Landroid/util/DisplayMetrics;
 
-    .line 1557
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->displayMetrics:Landroid/util/DisplayMetrics;
 
     iget v0, v0, Landroid/util/DisplayMetrics;->xdpi:F
@@ -62,7 +59,6 @@
 
     iput v0, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->vDPI:F
 
-    .line 1558
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .param p3, "x2"    # Lorg/telegram/ui/DialogsActivity$1;
 
     .prologue
-    .line 1544
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;-><init>(Lorg/telegram/ui/DialogsActivity;Landroid/content/Context;)V
 
     return-void
@@ -91,7 +86,6 @@
 
     const/4 v0, 0x0
 
-    .line 1561
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
@@ -110,7 +104,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/DialogsActivity;->access$1902(Lorg/telegram/ui/DialogsActivity;F)F
 
-    .line 1563
     sget-boolean v1, Lorg/telegram/ui/ActionBar/Theme;->plusHideTabs:Z
 
     if-nez v1, :cond_0
@@ -127,12 +120,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 1594
     :cond_0
     :goto_0
     return v0
 
-    .line 1571
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
@@ -142,7 +133,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1572
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$2900(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/Components/TabsView;
@@ -155,7 +145,6 @@
 
     invoke-virtual {v1, p2}, Landroid/support/v4/view/ViewPager;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 1575
     :cond_2
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
@@ -165,7 +154,6 @@
 
     goto :goto_0
 
-    .line 1577
     :pswitch_0
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getX()F
 
@@ -183,7 +171,6 @@
 
     iput v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->touchPosition:F
 
-    .line 1579
     iget v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->touchPosition:F
 
     const/high16 v2, 0x42480000    # 50.0f
@@ -192,7 +179,6 @@
 
     if-lez v1, :cond_3
 
-    .line 1580
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$5000(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -205,22 +191,18 @@
 
     invoke-virtual {v1, v0, v0}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setAllowOpenDrawer(ZZ)V
 
-    .line 1581
     iput-boolean v4, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->changed:Z
 
-    .line 1583
     :cond_3
     instance-of v0, p1, Landroid/widget/LinearLayout;
 
     goto :goto_0
 
-    .line 1585
     :pswitch_1
     iget-boolean v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->changed:Z
 
     if-eqz v1, :cond_4
 
-    .line 1587
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DialogsActivity;->access$5100(Lorg/telegram/ui/DialogsActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -233,13 +215,11 @@
 
     invoke-virtual {v1, v4, v0}, Lorg/telegram/ui/ActionBar/DrawerLayoutContainer;->setAllowOpenDrawer(ZZ)V
 
-    .line 1590
     :cond_4
     iput-boolean v0, p0, Lorg/telegram/ui/DialogsActivity$DialogsOnTouch;->changed:Z
 
     goto :goto_0
 
-    .line 1575
     nop
 
     :pswitch_data_0

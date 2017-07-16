@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$8;
 
     .prologue
-    .line 999
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$8$1;->val$usersDict:Ljava/util/HashMap;
@@ -49,12 +48,10 @@
     .locals 25
 
     .prologue
-    .line 1002
     const-string/jumbo v4, "done loading contacts"
 
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 1003
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -105,7 +102,6 @@
 
     if-ltz v4, :cond_1
 
-    .line 1004
     :cond_0
     move-object/from16 v0, p0
 
@@ -121,11 +117,9 @@
 
     invoke-virtual {v4, v5, v0}, Lorg/telegram/messenger/ContactsController;->loadContacts(ZZ)V
 
-    .line 1191
     :goto_0
     return-void
 
-    .line 1007
     :cond_1
     move-object/from16 v0, p0
 
@@ -135,7 +129,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1008
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
@@ -148,12 +141,10 @@
 
     sput v4, Lorg/telegram/messenger/UserConfig;->lastContactsSyncTime:I
 
-    .line 1009
     const/4 v4, 0x0
 
     invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 1012
     :cond_2
     move-object/from16 v0, p0
 
@@ -178,7 +169,6 @@
 
     check-cast v14, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 1013
     .local v14, "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     move-object/from16 v0, p0
 
@@ -210,7 +200,6 @@
 
     if-eq v5, v0, :cond_3
 
-    .line 1014
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -225,14 +214,12 @@
 
     invoke-virtual {v4, v5, v0}, Lorg/telegram/messenger/ContactsController;->loadContacts(ZZ)V
 
-    .line 1015
     const-string/jumbo v4, "contacts are broken, load from server"
 
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
     goto :goto_0
 
-    .line 1020
     .end local v14    # "contact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     :cond_4
     move-object/from16 v0, p0
@@ -245,7 +232,6 @@
 
     if-eq v4, v5, :cond_8
 
-    .line 1021
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -270,7 +256,6 @@
 
     invoke-virtual {v4, v5, v0, v1, v2}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1022
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v5
@@ -302,7 +287,6 @@
 
     invoke-virtual {v5, v0, v4}, Lorg/telegram/messenger/MessagesStorage;->putContacts(Ljava/util/ArrayList;Z)V
 
-    .line 1023
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -317,12 +301,10 @@
 
     invoke-static {v4, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1034
     new-instance v17, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 1035
     .local v17, "ids":Ljava/lang/StringBuilder;
     move-object/from16 v0, p0
 
@@ -347,7 +329,6 @@
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 1036
     .local v12, "aContactsArr":Lorg/telegram/tgnet/TLRPC$TL_contact;
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->length()I
 
@@ -355,14 +336,12 @@
 
     if-eqz v5, :cond_5
 
-    .line 1037
     const-string/jumbo v5, ","
 
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 1039
     :cond_5
     iget v5, v12, Lorg/telegram/tgnet/TLRPC$TL_contact;->user_id:I
 
@@ -372,7 +351,6 @@
 
     goto :goto_2
 
-    .line 1022
     .end local v12    # "aContactsArr":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v17    # "ids":Ljava/lang/StringBuilder;
     :cond_6
@@ -380,7 +358,6 @@
 
     goto :goto_1
 
-    .line 1041
     .restart local v17    # "ids":Ljava/lang/StringBuilder;
     :cond_7
     invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -393,12 +370,10 @@
 
     sput-object v4, Lorg/telegram/messenger/UserConfig;->contactsHash:Ljava/lang/String;
 
-    .line 1042
     const/4 v4, 0x0
 
     invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 1045
     .end local v17    # "ids":Ljava/lang/StringBuilder;
     :cond_8
     move-object/from16 v0, p0
@@ -415,40 +390,33 @@
 
     invoke-static {v4, v5}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1056
     new-instance v6, Landroid/util/SparseArray;
 
     invoke-direct {v6}, Landroid/util/SparseArray;-><init>()V
 
-    .line 1057
     .local v6, "contactsDictionary":Landroid/util/SparseArray;, "Landroid/util/SparseArray<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 1058
     .local v7, "sectionsDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;>;"
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 1059
     .local v8, "sectionsDictMutual":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1060
     .local v9, "sortedSectionsArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1061
     .local v10, "sortedSectionsArrayMutual":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     const/4 v15, 0x0
 
-    .line 1063
     .local v15, "contactsByPhonesDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     move-object/from16 v0, p0
 
@@ -462,18 +430,15 @@
 
     if-nez v4, :cond_9
 
-    .line 1064
     new-instance v15, Ljava/util/HashMap;
 
     .end local v15    # "contactsByPhonesDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     invoke-direct {v15}, Ljava/util/HashMap;-><init>()V
 
-    .line 1067
     .restart local v15    # "contactsByPhonesDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     :cond_9
     move-object/from16 v16, v15
 
-    .line 1069
     .local v16, "contactsByPhonesDictFinal":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     const/4 v11, 0x0
 
@@ -491,7 +456,6 @@
 
     if-ge v11, v4, :cond_12
 
-    .line 1070
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -504,7 +468,6 @@
 
     check-cast v21, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
-    .line 1071
     .local v21, "value":Lorg/telegram/tgnet/TLRPC$TL_contact;
     move-object/from16 v0, p0
 
@@ -524,18 +487,15 @@
 
     check-cast v20, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1072
     .local v20, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v20, :cond_b
 
-    .line 1069
     :cond_a
     :goto_4
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_3
 
-    .line 1075
     :cond_b
     move-object/from16 v0, v21
 
@@ -545,7 +505,6 @@
 
     invoke-virtual {v6, v4, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 1076
     if-eqz v15, :cond_c
 
     move-object/from16 v0, v20
@@ -558,7 +517,6 @@
 
     if-nez v4, :cond_c
 
-    .line 1077
     move-object/from16 v0, v20
 
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
@@ -567,13 +525,11 @@
 
     invoke-virtual {v15, v4, v0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1080
     :cond_c
     invoke-static/range {v20 .. v20}, Lorg/telegram/messenger/UserObject;->getFirstName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v18
 
-    .line 1081
     .local v18, "key":Ljava/lang/String;
     invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
 
@@ -583,7 +539,6 @@
 
     if-le v4, v5, :cond_d
 
-    .line 1082
     const/4 v4, 0x0
 
     const/4 v5, 0x1
@@ -594,7 +549,6 @@
 
     move-result-object v18
 
-    .line 1084
     :cond_d
     invoke-virtual/range {v18 .. v18}, Ljava/lang/String;->length()I
 
@@ -602,10 +556,8 @@
 
     if-nez v4, :cond_11
 
-    .line 1085
     const-string/jumbo v18, "#"
 
-    .line 1089
     :goto_5
     move-object/from16 v0, p0
 
@@ -625,14 +577,11 @@
 
     check-cast v19, Ljava/lang/String;
 
-    .line 1090
     .local v19, "replace":Ljava/lang/String;
     if-eqz v19, :cond_e
 
-    .line 1091
     move-object/from16 v18, v19
 
-    .line 1093
     :cond_e
     move-object/from16 v0, v18
 
@@ -642,41 +591,34 @@
 
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 1094
     .local v13, "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     if-nez v13, :cond_f
 
-    .line 1095
     new-instance v13, Ljava/util/ArrayList;
 
     .end local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1096
     .restart local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     move-object/from16 v0, v18
 
     invoke-virtual {v7, v0, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1097
     move-object/from16 v0, v18
 
     invoke-virtual {v9, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1099
     :cond_f
     move-object/from16 v0, v21
 
     invoke-virtual {v13, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1100
     move-object/from16 v0, v20
 
     iget-boolean v4, v0, Lorg/telegram/tgnet/TLRPC$User;->mutual_contact:Z
 
     if-eqz v4, :cond_a
 
-    .line 1101
     move-object/from16 v0, v18
 
     invoke-virtual {v8, v0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -686,28 +628,23 @@
     .end local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     check-cast v13, Ljava/util/ArrayList;
 
-    .line 1102
     .restart local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     if-nez v13, :cond_10
 
-    .line 1103
     new-instance v13, Ljava/util/ArrayList;
 
     .end local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     invoke-direct {v13}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1104
     .restart local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     move-object/from16 v0, v18
 
     invoke-virtual {v8, v0, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1105
     move-object/from16 v0, v18
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1107
     :cond_10
     move-object/from16 v0, v21
 
@@ -715,7 +652,6 @@
 
     goto/16 :goto_4
 
-    .line 1087
     .end local v13    # "arr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_contact;>;"
     .end local v19    # "replace":Ljava/lang/String;
     :cond_11
@@ -725,7 +661,6 @@
 
     goto :goto_5
 
-    .line 1111
     .end local v18    # "key":Ljava/lang/String;
     .end local v20    # "user":Lorg/telegram/tgnet/TLRPC$User;
     .end local v21    # "value":Lorg/telegram/tgnet/TLRPC$TL_contact;
@@ -738,7 +673,6 @@
 
     invoke-static {v9, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1125
     new-instance v4, Lorg/telegram/messenger/ContactsController$8$1$4;
 
     move-object/from16 v0, p0
@@ -747,7 +681,6 @@
 
     invoke-static {v10, v4}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 1139
     new-instance v4, Lorg/telegram/messenger/ContactsController$8$1$5;
 
     move-object/from16 v5, p0
@@ -756,7 +689,6 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1166
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -795,7 +727,6 @@
 
     if-eqz v4, :cond_13
 
-    .line 1167
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -826,7 +757,6 @@
 
     invoke-static {v4, v5, v0, v1, v2}, Lorg/telegram/messenger/ContactsController;->access$900(Lorg/telegram/messenger/ContactsController;Ljava/util/ArrayList;Ljava/util/concurrent/ConcurrentHashMap;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 1168
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/messenger/ContactsController$8$1;->this$1:Lorg/telegram/messenger/ContactsController$8;
@@ -839,11 +769,9 @@
 
     invoke-virtual {v4}, Ljava/util/ArrayList;->clear()V
 
-    .line 1171
     :cond_13
     if-eqz v16, :cond_14
 
-    .line 1172
     new-instance v4, Lorg/telegram/messenger/ContactsController$8$1$6;
 
     move-object/from16 v0, p0
@@ -856,7 +784,6 @@
 
     goto/16 :goto_0
 
-    .line 1189
     :cond_14
     move-object/from16 v0, p0
 

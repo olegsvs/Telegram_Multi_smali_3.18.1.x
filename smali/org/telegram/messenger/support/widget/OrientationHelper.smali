@@ -25,25 +25,20 @@
     .param p1, "layoutManager"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     .prologue
-    .line 47
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     const/high16 v0, -0x80000000
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper;->mLastTotalSpace:I
 
-    .line 45
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper;->mTmpRect:Landroid/graphics/Rect;
 
-    .line 48
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
-    .line 49
     return-void
 .end method
 
@@ -53,7 +48,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/support/widget/OrientationHelper$1;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/OrientationHelper;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
     return-void
@@ -64,7 +58,6 @@
     .param p0, "layoutManager"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     .prologue
-    .line 251
     new-instance v0, Lorg/telegram/messenger/support/widget/OrientationHelper$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/support/widget/OrientationHelper$1;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
@@ -78,10 +71,8 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 234
     packed-switch p1, :pswitch_data_0
 
-    .line 240
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "invalid orientation"
@@ -90,13 +81,11 @@
 
     throw v0
 
-    .line 236
     :pswitch_0
     invoke-static {p0}, Lorg/telegram/messenger/support/widget/OrientationHelper;->createHorizontalHelper(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)Lorg/telegram/messenger/support/widget/OrientationHelper;
 
     move-result-object v0
 
-    .line 238
     :goto_0
     return-object v0
 
@@ -107,7 +96,6 @@
 
     goto :goto_0
 
-    .line 234
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -120,7 +108,6 @@
     .param p0, "layoutManager"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     .prologue
-    .line 349
     new-instance v0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/support/widget/OrientationHelper$2;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
@@ -167,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 71
     const/high16 v0, -0x80000000
 
     iget v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper;->mLastTotalSpace:I
@@ -207,13 +193,11 @@
     .locals 1
 
     .prologue
-    .line 57
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/OrientationHelper;->getTotalSpace()I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper;->mLastTotalSpace:I
 
-    .line 58
     return-void
 .end method

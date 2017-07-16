@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$2;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$2;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorDialog;->access$000(Lorg/telegram/ui/Components/ColorSelectorDialog;)Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$2;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorDialog;->access$000(Lorg/telegram/ui/Components/ColorSelectorDialog;)Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;
@@ -66,7 +63,6 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;->colorChanged(I)V
 
-    .line 119
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$2;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
@@ -82,11 +78,9 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/HistorySelectorView;->selectColor(I)V
 
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$2;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ColorSelectorDialog;->dismiss()V
 
-    .line 121
     return-void
 .end method

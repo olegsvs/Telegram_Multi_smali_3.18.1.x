@@ -20,12 +20,10 @@
     .param p1, "cause"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 53
     const-string/jumbo v0, "Failed to query underlying media codecs"
 
     invoke-direct {p0, v0, p1}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 54
     return-void
 .end method
 
@@ -35,7 +33,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$1;
 
     .prologue
-    .line 50
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$DecoderQueryException;-><init>(Ljava/lang/Throwable;)V
 
     return-void

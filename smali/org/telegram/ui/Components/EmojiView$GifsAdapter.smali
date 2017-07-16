@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2345
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$GifsAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 2346
     iput-object p2, p0, Lorg/telegram/ui/Components/EmojiView$GifsAdapter;->mContext:Landroid/content/Context;
 
-    .line 2347
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 2356
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$GifsAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$3900(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/ArrayList;
@@ -63,7 +59,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 2361
     int-to-long v0, p1
 
     return-wide v0
@@ -74,7 +69,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 2351
     const/4 v0, 0x0
 
     return v0
@@ -86,7 +80,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2372
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$GifsAdapter;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView;->access$3900(Lorg/telegram/ui/Components/EmojiView;)Ljava/util/ArrayList;
@@ -99,11 +92,9 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 2373
     .local v0, "document":Lorg/telegram/tgnet/TLRPC$Document;
     if-eqz v0, :cond_0
 
-    .line 2374
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/ContextLinkCell;
@@ -112,7 +103,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/ui/Cells/ContextLinkCell;->setGif(Lorg/telegram/tgnet/TLRPC$Document;Z)V
 
-    .line 2376
     :cond_0
     return-void
 .end method
@@ -123,14 +113,12 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2366
     new-instance v0, Lorg/telegram/ui/Cells/ContextLinkCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$GifsAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/ContextLinkCell;-><init>(Landroid/content/Context;)V
 
-    .line 2367
     .local v0, "view":Lorg/telegram/ui/Cells/ContextLinkCell;
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 

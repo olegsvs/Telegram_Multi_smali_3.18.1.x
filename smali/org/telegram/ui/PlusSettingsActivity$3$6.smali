@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 801
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$6;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$6;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -49,7 +48,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 804
     iget-object v3, p0, Lorg/telegram/ui/PlusSettingsActivity$3$6;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -60,7 +58,6 @@
 
     sput v3, Lorg/telegram/ui/ActionBar/Theme;->plusTabsTextSize:I
 
-    .line 805
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "plusconfig"
@@ -69,13 +66,11 @@
 
     move-result-object v2
 
-    .line 806
     .local v2, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 807
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v3, "tabsTextSize"
 
@@ -83,10 +78,8 @@
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 808
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 809
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "theme"
@@ -99,7 +92,6 @@
 
     move-result-object v1
 
-    .line 810
     .local v1, "editorTheme":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v3, "chatsTabsTextSize"
 
@@ -107,10 +99,8 @@
 
     invoke-interface {v1, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 811
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 812
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -131,7 +121,6 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 813
     iget-object v3, p0, Lorg/telegram/ui/PlusSettingsActivity$3$6;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v3, v3, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -142,7 +131,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 814
     iget-object v3, p0, Lorg/telegram/ui/PlusSettingsActivity$3$6;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v3, v3, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -153,7 +141,6 @@
 
     invoke-virtual {v3}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 816
     :cond_0
     return-void
 .end method

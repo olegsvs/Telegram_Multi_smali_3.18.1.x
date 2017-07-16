@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelEditTypeActivity$2;
 
     .prologue
-    .line 134
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$2;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelEditTypeActivity$2$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$2;
 
     iget-object v1, v0, Lorg/telegram/ui/ChannelEditTypeActivity$2;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
@@ -72,7 +70,6 @@
     :goto_0
     invoke-static {v1, v0}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$202(Lorg/telegram/ui/ChannelEditTypeActivity;Z)Z
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$2;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$2;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
@@ -83,18 +80,15 @@
 
     if-nez v0, :cond_1
 
-    .line 139
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$2;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$2;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$300(Lorg/telegram/ui/ChannelEditTypeActivity;)V
 
-    .line 141
     :cond_1
     return-void
 
-    .line 137
     :cond_2
     const/4 v0, 0x0
 

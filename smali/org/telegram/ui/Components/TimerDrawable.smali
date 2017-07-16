@@ -4,7 +4,6 @@
 
 
 # instance fields
-.field private linePaint:Landroid/graphics/Paint;
 
 .field private paint:Landroid/graphics/Paint;
 
@@ -29,42 +28,33 @@
 
     const/4 v1, 0x1
 
-    .line 34
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 26
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timePaint:Landroid/text/TextPaint;
 
-    .line 27
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 28
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
-    iput-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
-    .line 30
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeWidth:F
 
-    .line 31
     iput v2, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeHeight:I
 
-    .line 32
     iput v2, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
 
-    .line 35
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timePaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -75,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timePaint:Landroid/text/TextPaint;
 
     const/high16 v1, 0x41300000    # 11.0f
@@ -88,8 +77,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 38
-    iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -101,14 +88,11 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 39
-    iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 40
     return-void
 .end method
 
@@ -123,24 +107,20 @@
 
     const/high16 v9, 0x41100000    # 9.0f
 
-    .line 89
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TimerDrawable;->getIntrinsicWidth()I
 
     move-result v7
 
-    .line 90
     .local v7, "width":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TimerDrawable;->getIntrinsicHeight()I
 
     move-result v6
 
-    .line 93
     .local v6, "height":I
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
 
     if-nez v0, :cond_2
 
-    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "chat_secretTimerBackground"
@@ -151,8 +131,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 95
-    iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "chat_secretTimerText"
 
@@ -162,7 +140,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 97
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
 
     move-result v0
@@ -181,7 +158,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 98
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
 
     move-result v0
@@ -196,11 +172,9 @@
 
     move-result v2
 
-    iget-object v3, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 100
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "chat_secretTimerText"
@@ -211,7 +185,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 101
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -238,13 +211,11 @@
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 102
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -271,13 +242,11 @@
 
     int-to-float v4, v0
 
-    iget-object v5, p0, Lorg/telegram/ui/Components/TimerDrawable;->linePaint:Landroid/graphics/Paint;
 
     move-object v0, p1
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 104
     const/high16 v0, 0x40e00000    # 7.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
@@ -308,7 +277,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 111
     :goto_0
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
 
@@ -318,10 +286,8 @@
 
     if-eqz v0, :cond_1
 
-    .line 112
     const/4 v8, 0x0
 
-    .line 113
     .local v8, "xOffxet":I
     sget v0, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
@@ -331,10 +297,8 @@
 
     if-nez v0, :cond_0
 
-    .line 114
     const/4 v8, -0x1
 
-    .line 116
     :cond_0
     div-int/lit8 v0, v7, 0x2
 
@@ -370,17 +334,14 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 119
     .end local v8    # "xOffxet":I
     :cond_1
     return-void
 
-    .line 106
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->paint:Landroid/graphics/Paint;
 
@@ -392,7 +353,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timePaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "chat_secretTimerText"
@@ -403,7 +363,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 108
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -433,7 +392,6 @@
     .locals 1
 
     .prologue
-    .line 143
     const/high16 v0, 0x41980000    # 19.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -447,7 +405,6 @@
     .locals 1
 
     .prologue
-    .line 138
     const/high16 v0, 0x41980000    # 19.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -461,7 +418,6 @@
     .locals 1
 
     .prologue
-    .line 133
     const/4 v0, 0x0
 
     return v0
@@ -472,7 +428,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 124
     return-void
 .end method
 
@@ -481,7 +436,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 129
     return-void
 .end method
 
@@ -498,10 +452,8 @@
 
     const/4 v3, 0x2
 
-    .line 43
     iput p1, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
 
-    .line 46
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
 
     const/4 v2, 0x1
@@ -512,7 +464,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 47
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -531,7 +482,6 @@
 
     move-result-object v1
 
-    .line 48
     .local v1, "timeString":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -539,7 +489,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 49
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -558,7 +507,6 @@
 
     move-result-object v1
 
-    .line 75
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timePaint:Landroid/text/TextPaint;
@@ -569,7 +517,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeWidth:F
 
-    .line 77
     :try_start_0
     new-instance v0, Landroid/text/StaticLayout;
 
@@ -597,7 +544,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeLayout:Landroid/text/StaticLayout;
 
-    .line 78
     iget-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getHeight()I
@@ -608,14 +554,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :goto_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TimerDrawable;->invalidateSelf()V
 
-    .line 85
     return-void
 
-    .line 51
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_1
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
@@ -626,7 +569,6 @@
 
     if-ge v0, v5, :cond_2
 
-    .line 52
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -647,7 +589,6 @@
 
     move-result-object v1
 
-    .line 53
     .restart local v1    # "timeString":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -655,7 +596,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 54
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -676,7 +616,6 @@
 
     goto :goto_0
 
-    .line 56
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_2
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
@@ -687,7 +626,6 @@
 
     if-ge v0, v6, :cond_3
 
-    .line 57
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -710,7 +648,6 @@
 
     move-result-object v1
 
-    .line 58
     .restart local v1    # "timeString":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -718,7 +655,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 59
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -739,7 +675,6 @@
 
     goto/16 :goto_0
 
-    .line 61
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_3
     iget v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->time:I
@@ -752,7 +687,6 @@
 
     if-ge v0, v2, :cond_4
 
-    .line 62
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -777,7 +711,6 @@
 
     move-result-object v1
 
-    .line 63
     .restart local v1    # "timeString":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -785,7 +718,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 64
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -806,7 +738,6 @@
 
     goto/16 :goto_0
 
-    .line 67
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_4
     new-instance v0, Ljava/lang/StringBuilder;
@@ -835,7 +766,6 @@
 
     move-result-object v1
 
-    .line 68
     .restart local v1    # "timeString":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -843,7 +773,6 @@
 
     if-ge v0, v3, :cond_5
 
-    .line 69
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -864,7 +793,6 @@
 
     goto/16 :goto_0
 
-    .line 70
     :cond_5
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -872,22 +800,18 @@
 
     if-le v0, v3, :cond_0
 
-    .line 71
     const-string/jumbo v1, "c"
 
     goto/16 :goto_0
 
-    .line 79
     :catch_0
     move-exception v8
 
-    .line 80
     .local v8, "e":Ljava/lang/Exception;
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TimerDrawable;->timeLayout:Landroid/text/StaticLayout;
 
-    .line 81
     invoke-static {v8}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_1

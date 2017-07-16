@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 2108
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;->val$documents:Ljava/util/ArrayList;
@@ -45,18 +44,15 @@
     .locals 2
 
     .prologue
-    .line 2111
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;->val$documents:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->access$5002(Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 2112
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$4;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->notifyDataSetChanged()V
 
-    .line 2113
     return-void
 .end method

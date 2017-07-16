@@ -67,34 +67,26 @@
 
     const-wide/16 v2, 0x78
 
-    .line 11537
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 11593
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mListener:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
-    .line 11594
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mFinishedListeners:Ljava/util/ArrayList;
 
-    .line 11597
     iput-wide v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mAddDuration:J
 
-    .line 11598
     iput-wide v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mRemoveDuration:J
 
-    .line 11599
     iput-wide v4, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mMoveDuration:J
 
-    .line 11600
     iput-wide v4, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mChangeDuration:J
 
-    .line 12201
     return-void
 .end method
 
@@ -105,14 +97,12 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 11922
     invoke-static {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->access$1400(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)I
 
     move-result v3
 
     and-int/lit8 v0, v3, 0xe
 
-    .line 11923
     .local v0, "flags":I
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->isInvalid()Z
 
@@ -120,31 +110,25 @@
 
     if-eqz v3, :cond_0
 
-    .line 11924
     const/4 v3, 0x4
 
-    .line 11933
     :goto_0
     return v3
 
-    .line 11926
     :cond_0
     and-int/lit8 v3, v0, 0x4
 
     if-nez v3, :cond_1
 
-    .line 11927
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getOldPosition()I
 
     move-result v1
 
-    .line 11928
     .local v1, "oldPos":I
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v2
 
-    .line 11929
     .local v2, "pos":I
     if-eq v1, v4, :cond_1
 
@@ -152,7 +136,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 11930
     or-int/lit16 v0, v0, 0x800
 
     .end local v1    # "oldPos":I
@@ -160,7 +143,6 @@
     :cond_1
     move v3, v0
 
-    .line 11933
     goto :goto_0
 .end method
 
@@ -238,7 +220,6 @@
     .end param
 
     .prologue
-    .line 12111
     const/4 v0, 0x1
 
     return v0
@@ -266,7 +247,6 @@
     .end annotation
 
     .prologue
-    .line 12141
     .local p2, "payloads":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->canReuseUpdatedViewHolder(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)Z
 
@@ -280,20 +260,16 @@
     .param p1, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 12006
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->onAnimationFinished(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
-    .line 12007
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mListener:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
     if-eqz v0, :cond_0
 
-    .line 12008
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mListener:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;->onAnimationFinished(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
-    .line 12010
     :cond_0
     return-void
 .end method
@@ -303,10 +279,8 @@
     .param p1, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 12047
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->onAnimationStarted(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
-    .line 12048
     return-void
 .end method
 
@@ -314,14 +288,12 @@
     .locals 3
 
     .prologue
-    .line 12149
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mFinishedListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 12150
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -329,7 +301,6 @@
     :goto_0
     if-ge v1, v0, :cond_0
 
-    .line 12151
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mFinishedListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -340,18 +311,15 @@
 
     invoke-interface {v2}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->onAnimationsFinished()V
 
-    .line 12150
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 12153
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mFinishedListeners:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 12154
     return-void
 .end method
 
@@ -365,7 +333,6 @@
     .locals 2
 
     .prologue
-    .line 11626
     iget-wide v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mAddDuration:J
 
     return-wide v0
@@ -375,7 +342,6 @@
     .locals 2
 
     .prologue
-    .line 11662
     iget-wide v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mChangeDuration:J
 
     return-wide v0
@@ -385,7 +351,6 @@
     .locals 2
 
     .prologue
-    .line 11608
     iget-wide v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mMoveDuration:J
 
     return-wide v0
@@ -395,7 +360,6 @@
     .locals 2
 
     .prologue
-    .line 11644
     iget-wide v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mRemoveDuration:J
 
     return-wide v0
@@ -409,27 +373,21 @@
     .param p1, "listener"    # Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;
 
     .prologue
-    .line 12078
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->isRunning()Z
 
     move-result v0
 
-    .line 12079
     .local v0, "running":Z
     if-eqz p1, :cond_0
 
-    .line 12080
     if-nez v0, :cond_1
 
-    .line 12081
     invoke-interface {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorFinishedListener;->onAnimationsFinished()V
 
-    .line 12086
     :cond_0
     :goto_0
     return v0
 
-    .line 12083
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mFinishedListeners:Ljava/util/ArrayList;
 
@@ -442,7 +400,6 @@
     .locals 1
 
     .prologue
-    .line 12166
     new-instance v0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemHolderInfo;-><init>()V
@@ -455,7 +412,6 @@
     .param p1, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 12021
     return-void
 .end method
 
@@ -464,7 +420,6 @@
     .param p1, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 12059
     return-void
 .end method
 
@@ -482,7 +437,6 @@
     .end annotation
 
     .prologue
-    .line 11751
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->obtainHolderInfo()Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
     move-result-object v0
@@ -527,7 +481,6 @@
     .end annotation
 
     .prologue
-    .line 11722
     .local p4, "payloads":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Object;>;"
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->obtainHolderInfo()Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemHolderInfo;
 
@@ -548,10 +501,8 @@
     .param p1, "addDuration"    # J
 
     .prologue
-    .line 11635
     iput-wide p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mAddDuration:J
 
-    .line 11636
     return-void
 .end method
 
@@ -560,10 +511,8 @@
     .param p1, "changeDuration"    # J
 
     .prologue
-    .line 11671
     iput-wide p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mChangeDuration:J
 
-    .line 11672
     return-void
 .end method
 
@@ -572,10 +521,8 @@
     .param p1, "listener"    # Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
     .prologue
-    .line 11683
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mListener:Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator$ItemAnimatorListener;
 
-    .line 11684
     return-void
 .end method
 
@@ -584,10 +531,8 @@
     .param p1, "moveDuration"    # J
 
     .prologue
-    .line 11617
     iput-wide p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mMoveDuration:J
 
-    .line 11618
     return-void
 .end method
 
@@ -596,9 +541,7 @@
     .param p1, "removeDuration"    # J
 
     .prologue
-    .line 11653
     iput-wide p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;->mRemoveDuration:J
 
-    .line 11654
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     .prologue
-    .line 241
     iput-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$3;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$3;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$600(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Landroid/animation/AnimatorSet;
@@ -60,14 +58,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$3;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$602(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 254
     :cond_0
     return-void
 .end method
@@ -77,7 +73,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 244
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$3;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$600(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Landroid/animation/AnimatorSet;
@@ -98,7 +93,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 245
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetCell$3;->this$0:Lorg/telegram/ui/Cells/FeaturedStickerSetCell;
 
     invoke-static {v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetCell;->access$700(Lorg/telegram/ui/Cells/FeaturedStickerSetCell;)Landroid/widget/TextView;
@@ -109,7 +103,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 247
     :cond_0
     return-void
 .end method

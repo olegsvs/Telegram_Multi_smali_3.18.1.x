@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 9164
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$94;->val$options:Ljava/util/ArrayList;
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 9167
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$17400(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/messenger/MessageObject;
@@ -66,12 +64,10 @@
 
     if-lt p2, v0, :cond_1
 
-    .line 9171
     :cond_0
     :goto_0
     return-void
 
-    .line 9170
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$94;->this$0:Lorg/telegram/ui/ChatActivity;
 

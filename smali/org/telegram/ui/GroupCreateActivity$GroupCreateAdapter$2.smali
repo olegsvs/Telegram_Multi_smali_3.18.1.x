@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 990
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;->val$query:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 994
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
@@ -52,7 +50,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 995
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     const/4 v2, 0x0
@@ -61,7 +58,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1000
     :goto_0
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$2$1;
 
@@ -69,14 +65,11 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1059
     return-void
 
-    .line 996
     :catch_0
     move-exception v0
 
-    .line 997
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

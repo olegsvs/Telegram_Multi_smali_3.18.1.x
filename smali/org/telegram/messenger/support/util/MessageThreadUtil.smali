@@ -31,11 +31,9 @@
     .locals 0
 
     .prologue
-    .line 27
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil;, "Lorg/telegram/messenger/support/util/MessageThreadUtil<TT;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 231
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 87
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil;, "Lorg/telegram/messenger/support/util/MessageThreadUtil<TT;>;"
     .local p1, "callback":Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;, "Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback<TT;>;"
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
@@ -77,7 +74,6 @@
     .end annotation
 
     .prologue
-    .line 31
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil;, "Lorg/telegram/messenger/support/util/MessageThreadUtil<TT;>;"
     .local p1, "callback":Lorg/telegram/messenger/support/util/ThreadUtil$MainThreadCallback;, "Lorg/telegram/messenger/support/util/ThreadUtil$MainThreadCallback<TT;>;"
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;

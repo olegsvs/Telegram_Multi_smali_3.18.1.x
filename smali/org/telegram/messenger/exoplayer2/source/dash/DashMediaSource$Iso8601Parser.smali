@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 772
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$1;
 
     .prologue
-    .line 772
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$Iso8601Parser;-><init>()V
 
     return-void
@@ -62,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 776
     new-instance v3, Ljava/io/BufferedReader;
 
     new-instance v4, Ljava/io/InputStreamReader;
@@ -75,7 +72,6 @@
 
     move-result-object v1
 
-    .line 779
     .local v1, "firstLine":Ljava/lang/String;
     :try_start_0
     new-instance v2, Ljava/text/SimpleDateFormat;
@@ -86,7 +82,6 @@
 
     invoke-direct {v2, v3, v4}, Ljava/text/SimpleDateFormat;-><init>(Ljava/lang/String;Ljava/util/Locale;)V
 
-    .line 780
     .local v2, "format":Ljava/text/SimpleDateFormat;
     const-string/jumbo v3, "UTC"
 
@@ -96,7 +91,6 @@
 
     invoke-virtual {v2, v3}, Ljava/text/SimpleDateFormat;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 781
     invoke-virtual {v2, v1}, Ljava/text/SimpleDateFormat;->parse(Ljava/lang/String;)Ljava/util/Date;
 
     move-result-object v3
@@ -113,12 +107,10 @@
 
     return-object v3
 
-    .line 782
     .end local v2    # "format":Ljava/text/SimpleDateFormat;
     :catch_0
     move-exception v0
 
-    .line 783
     .local v0, "e":Ljava/text/ParseException;
     new-instance v3, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -136,7 +128,6 @@
     .end annotation
 
     .prologue
-    .line 772
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$Iso8601Parser;->parse(Landroid/net/Uri;Ljava/io/InputStream;)Ljava/lang/Long;
 
     move-result-object v0

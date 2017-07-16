@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$8;
 
     .prologue
-    .line 827
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$8$1;->this$1:Lorg/telegram/ui/SettingsActivity$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +42,8 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 830
     if-nez p2, :cond_1
 
-    .line 831
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$8$1;->this$1:Lorg/telegram/ui/SettingsActivity$8;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$8;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -57,18 +54,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AvatarUpdater;->openCamera()V
 
-    .line 837
     :cond_0
     :goto_0
     return-void
 
-    .line 832
     :cond_1
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_2
 
-    .line 833
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$8$1;->this$1:Lorg/telegram/ui/SettingsActivity$8;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$8;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -81,13 +75,11 @@
 
     goto :goto_0
 
-    .line 834
     :cond_2
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 835
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0

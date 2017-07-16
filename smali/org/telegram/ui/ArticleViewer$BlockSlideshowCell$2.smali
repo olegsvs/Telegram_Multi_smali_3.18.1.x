@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     .prologue
-    .line 3637
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->val$this$0:Lorg/telegram/ui/ArticleViewer;
@@ -46,7 +45,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 3651
     return-void
 .end method
 
@@ -57,7 +55,6 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 3641
     return-void
 .end method
 
@@ -66,7 +63,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 3645
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$2;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$8400(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Landroid/view/View;
@@ -75,6 +71,5 @@
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 3646
     return-void
 .end method

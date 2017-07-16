@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 185
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/trackselection/BaseTrackSelection$1;
 
     .prologue
-    .line 185
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/trackselection/BaseTrackSelection$DecreasingBandwidthComparator;-><init>()V
 
     return-void
@@ -55,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 185
     check-cast p1, Lorg/telegram/messenger/exoplayer2/Format;
 
     check-cast p2, Lorg/telegram/messenger/exoplayer2/Format;
@@ -73,7 +70,6 @@
     .param p2, "b"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 189
     iget v0, p2, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I

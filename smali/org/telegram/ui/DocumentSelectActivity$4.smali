@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 238
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$4;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "newState"    # I
 
     .prologue
-    .line 241
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$4;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     if-eqz p2, :cond_0
@@ -50,10 +48,8 @@
     :goto_0
     invoke-static {v1, v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$802(Lorg/telegram/ui/DocumentSelectActivity;Z)Z
 
-    .line 242
     return-void
 
-    .line 241
     :cond_0
     const/4 v0, 0x0
 

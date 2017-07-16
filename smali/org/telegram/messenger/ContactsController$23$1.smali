@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$23;
 
     .prologue
-    .line 1951
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$23$1;->this$1:Lorg/telegram/messenger/ContactsController$23;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$23$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,17 +50,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1954
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$23$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_0
 
-    .line 1955
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$23$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
 
-    .line 1956
     .local v0, "rules":Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -71,7 +67,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1957
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$23$1;->this$1:Lorg/telegram/messenger/ContactsController$23;
 
     iget-object v1, v1, Lorg/telegram/messenger/ContactsController$23;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -80,7 +75,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/ContactsController;->access$2402(Lorg/telegram/messenger/ContactsController;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 1958
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$23$1;->this$1:Lorg/telegram/messenger/ContactsController$23;
 
     iget-object v1, v1, Lorg/telegram/messenger/ContactsController$23;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -89,7 +83,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/ContactsController;->access$2502(Lorg/telegram/messenger/ContactsController;I)I
 
-    .line 1962
     .end local v0    # "rules":Lorg/telegram/tgnet/TLRPC$TL_account_privacyRules;
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -102,10 +95,8 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1963
     return-void
 
-    .line 1960
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$23$1;->this$1:Lorg/telegram/messenger/ContactsController$23;
 

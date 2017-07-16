@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 15360
     const v0, 0x450a1c0a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->constructor:I
@@ -50,10 +49,8 @@
     .locals 1
 
     .prologue
-    .line 15359
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 15363
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,15 +67,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 15366
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 15367
     if-eqz p2, :cond_0
 
-    .line 15368
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_messages_foundGifs"
@@ -103,21 +97,17 @@
 
     throw v1
 
-    .line 15370
     :cond_0
     const/4 v0, 0x0
 
-    .line 15375
     :goto_0
     return-object v0
 
-    .line 15373
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;-><init>()V
 
-    .line 15374
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -132,28 +122,23 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 15379
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
 
     iput v4, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->next_offset:I
 
-    .line 15380
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 15381
     .local v2, "magic":I
     const v4, 0x1cb5c415
 
     if-eq v2, v4, :cond_0
 
-    .line 15382
     if-eqz p2, :cond_1
 
-    .line 15383
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -178,13 +163,11 @@
 
     throw v4
 
-    .line 15387
     :cond_0
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 15388
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -192,7 +175,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 15389
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -201,18 +183,15 @@
 
     move-result-object v3
 
-    .line 15390
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$FoundGif;
     if-nez v3, :cond_2
 
-    .line 15395
     .end local v0    # "a":I
     .end local v1    # "count":I
     .end local v3    # "object":Lorg/telegram/tgnet/TLRPC$FoundGif;
     :cond_1
     return-void
 
-    .line 15393
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     .restart local v3    # "object":Lorg/telegram/tgnet/TLRPC$FoundGif;
@@ -221,7 +200,6 @@
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 15388
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -232,40 +210,33 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 15398
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 15399
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->next_offset:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 15400
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 15401
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 15402
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 15403
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 15404
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_foundGifs;->results:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -276,12 +247,10 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$FoundGif;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 15403
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 15406
     :cond_0
     return-void
 .end method

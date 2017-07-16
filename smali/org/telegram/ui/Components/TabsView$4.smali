@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 318
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView$4;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 322
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->plusSelectedTab:I
 
     if-ne v0, p1, :cond_0
 
-    .line 323
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$4;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$100(Lorg/telegram/ui/Components/TabsView;)Lorg/telegram/ui/Components/TabsView$Listener;
@@ -56,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 324
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$4;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$100(Lorg/telegram/ui/Components/TabsView;)Lorg/telegram/ui/Components/TabsView$Listener;
@@ -81,7 +77,6 @@
 
     invoke-interface {v1, p1, v0}, Lorg/telegram/ui/Components/TabsView$Listener;->onTabLongClick(II)V
 
-    .line 327
     :cond_0
     return-void
 .end method
@@ -90,16 +85,13 @@
     .locals 1
 
     .prologue
-    .line 331
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$4;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/TabsView;->forceUpdateTabCounters()V
 
-    .line 332
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$4;->this$0:Lorg/telegram/ui/Components/TabsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TabsView;->access$300(Lorg/telegram/ui/Components/TabsView;)V
 
-    .line 333
     return-void
 .end method

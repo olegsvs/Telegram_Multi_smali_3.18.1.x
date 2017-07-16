@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PasscodeView;
 
     .prologue
-    .line 787
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$8;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     iput p2, p0, Lorg/telegram/ui/Components/PasscodeView$8;->val$num:I
@@ -47,7 +46,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 790
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$8;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     iget v0, p0, Lorg/telegram/ui/Components/PasscodeView$8;->val$num:I
@@ -65,10 +63,8 @@
 
     invoke-static {v1, v0, v2}, Lorg/telegram/ui/Components/PasscodeView;->access$800(Lorg/telegram/ui/Components/PasscodeView;FI)V
 
-    .line 791
     return-void
 
-    .line 790
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Components/PasscodeView$8;->val$x:F
 

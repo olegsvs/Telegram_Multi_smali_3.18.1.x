@@ -19,16 +19,12 @@
     .param p2, "group"    # I
 
     .prologue
-    .line 32
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->sampleStreamWrapper:Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;
 
-    .line 34
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->group:I
 
-    .line 35
     return-void
 .end method
 
@@ -38,7 +34,6 @@
     .locals 2
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->sampleStreamWrapper:Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->group:I
@@ -59,12 +54,10 @@
     .end annotation
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->sampleStreamWrapper:Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;->maybeThrowError()V
 
-    .line 45
     return-void
 .end method
 
@@ -74,7 +67,6 @@
     .param p2, "buffer"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderInputBuffer;
 
     .prologue
-    .line 49
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->sampleStreamWrapper:Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->group:I
@@ -91,13 +83,11 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 54
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->sampleStreamWrapper:Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStream;->group:I
 
     invoke-virtual {v0, v1, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/hls/HlsSampleStreamWrapper;->skipToKeyframeBefore(IJ)V
 
-    .line 55
     return-void
 .end method

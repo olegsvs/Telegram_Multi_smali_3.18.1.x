@@ -29,7 +29,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;
 
     .prologue
-    .line 194
     iput-object p1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;->this$3:Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 198
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;->this$3:Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;
 
@@ -55,7 +53,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 202
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
@@ -63,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 203
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v1
@@ -78,7 +74,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/ContactsController;->setDeleteAccountTTL(I)V
 
-    .line 204
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;->this$3:Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;->this$2:Lorg/telegram/ui/PrivacySettingsActivity$2$1;
@@ -93,15 +88,12 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/PrivacySettingsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 206
     :cond_0
     return-void
 
-    .line 199
     :catch_0
     move-exception v0
 
-    .line 200
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

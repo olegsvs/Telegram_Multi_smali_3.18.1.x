@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactAddActivity;
 
     .prologue
-    .line 272
     iput-object p1, p0, Lorg/telegram/ui/ContactAddActivity$5;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 275
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -61,15 +59,12 @@
 
     move-result-object v0
 
-    .line 276
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v0, :cond_0
 
-    .line 281
     :goto_0
     return-void
 
-    .line 279
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ContactAddActivity$5;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
@@ -79,7 +74,6 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 280
     iget-object v1, p0, Lorg/telegram/ui/ContactAddActivity$5;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ContactAddActivity;->access$500(Lorg/telegram/ui/ContactAddActivity;)Lorg/telegram/ui/Components/BackupImageView;

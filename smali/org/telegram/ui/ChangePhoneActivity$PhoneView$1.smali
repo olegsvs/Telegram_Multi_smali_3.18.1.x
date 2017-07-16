@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     .prologue
-    .line 375
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1;->val$this$0:Lorg/telegram/ui/ChangePhoneActivity;
@@ -46,14 +45,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 378
     new-instance v0, Lorg/telegram/ui/CountrySelectActivity;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/CountrySelectActivity;-><init>(Z)V
 
-    .line 379
     .local v0, "fragment":Lorg/telegram/ui/CountrySelectActivity;
     new-instance v1, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1;
 
@@ -61,13 +58,11 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/CountrySelectActivity;->setCountrySelectActivityDelegate(Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;)V
 
-    .line 393
     iget-object v1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     iget-object v1, v1, Lorg/telegram/ui/ChangePhoneActivity$PhoneView;->this$0:Lorg/telegram/ui/ChangePhoneActivity;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/ChangePhoneActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 394
     return-void
 .end method

@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 109
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .param p2, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     const-string/jumbo v0, ".dmp"
 
     invoke-virtual {p2, v0}, Ljava/lang/String;->endsWith(Ljava/lang/String;)Z

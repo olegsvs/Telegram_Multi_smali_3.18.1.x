@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 20505
     const v0, -0x1c1069ed
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_importAuthorization;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 20504
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,7 +54,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20511
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
 
     move-result-object v0
@@ -69,21 +66,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20515
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_auth_importAuthorization;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20516
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_importAuthorization;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20517
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_importAuthorization;->bytes:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 20518
     return-void
 .end method

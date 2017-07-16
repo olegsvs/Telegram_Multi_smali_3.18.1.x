@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 8401
     const v0, -0x6a1c0411
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatDeletePhoto;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 8400
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$MessageAction;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 8405
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatDeletePhoto;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 8406
     return-void
 .end method

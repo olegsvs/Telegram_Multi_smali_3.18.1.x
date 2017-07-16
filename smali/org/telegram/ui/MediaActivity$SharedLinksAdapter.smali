@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1538
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SectionsAdapter;-><init>()V
 
-    .line 1539
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->mContext:Landroid/content/Context;
 
-    .line 1540
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .prologue
     const/4 v2, 0x3
 
-    .line 1559
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -66,7 +62,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 1560
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -107,7 +102,6 @@
 
     add-int/lit8 v0, v0, 0x1
 
-    .line 1562
     :goto_0
     return v0
 
@@ -123,7 +117,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1544
     const/4 v0, 0x0
 
     return-object v0
@@ -135,7 +128,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1640
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -156,23 +148,18 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 1641
     if-nez p2, :cond_0
 
-    .line 1642
     const/4 v0, 0x0
 
-    .line 1647
     :goto_0
     return v0
 
-    .line 1644
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 1647
     :cond_1
     const/4 v0, 0x2
 
@@ -184,7 +171,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 1652
     const/4 v0, 0x0
 
     return-object v0
@@ -195,7 +181,6 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 1657
     const/4 v0, 0x0
 
     return v0
@@ -211,7 +196,6 @@
 
     const/4 v4, 0x3
 
-    .line 1554
     iget-object v2, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -295,10 +279,8 @@
     .prologue
     const/4 v5, 0x3
 
-    .line 1567
     if-nez p2, :cond_0
 
-    .line 1568
     new-instance p2, Lorg/telegram/ui/Cells/GraySectionCell;
 
     .end local p2    # "view":Landroid/view/View;
@@ -306,27 +288,23 @@
 
     invoke-direct {p2, v3}, Lorg/telegram/ui/Cells/GraySectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 1569
     .restart local p2    # "view":Landroid/view/View;
     sget-boolean v3, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v3, :cond_0
 
-    .line 1570
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefShadowColor:I
 
     invoke-virtual {p2, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
     move-object v3, p2
 
-    .line 1571
     check-cast v3, Lorg/telegram/ui/Cells/GraySectionCell;
 
     sget v4, Lorg/telegram/ui/ActionBar/Theme;->prefSectionColor:I
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Cells/GraySectionCell;->setTextColor(I)V
 
-    .line 1574
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -346,7 +324,6 @@
 
     if-ge p1, v3, :cond_1
 
-    .line 1575
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -365,7 +342,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1576
     .local v2, "name":Ljava/lang/String;
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -385,7 +361,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1577
     .local v1, "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     const/4 v3, 0x0
 
@@ -398,7 +373,6 @@
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     move-object v3, p2
 
-    .line 1578
     check-cast v3, Lorg/telegram/ui/Cells/GraySectionCell;
 
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -427,7 +401,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Cells/GraySectionCell;->setText(Ljava/lang/String;)V
 
-    .line 1580
     .end local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     .end local v1    # "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v2    # "name":Ljava/lang/String;
@@ -441,7 +414,6 @@
     .param p2, "row"    # I
 
     .prologue
-    .line 1549
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -468,7 +440,6 @@
 
     const/4 v5, 0x0
 
-    .line 1614
     invoke-virtual {p3}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v4
@@ -477,7 +448,6 @@
 
     if-eq v4, v7, :cond_0
 
-    .line 1615
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/MediaActivity;->access$2400(Lorg/telegram/ui/MediaActivity;)[Lorg/telegram/ui/MediaActivity$SharedMediaData;
@@ -496,7 +466,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 1616
     .local v2, "name":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -516,7 +485,6 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 1617
     .local v1, "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     invoke-virtual {p3}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -524,14 +492,12 @@
 
     packed-switch v4, :pswitch_data_0
 
-    .line 1636
     .end local v1    # "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v2    # "name":Ljava/lang/String;
     :cond_0
     :goto_0
     return-void
 
-    .line 1619
     .restart local v1    # "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .restart local v2    # "name":Ljava/lang/String;
     :pswitch_0
@@ -541,7 +507,6 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject;
 
-    .line 1620
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v4, p3, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -575,14 +540,12 @@
 
     goto :goto_0
 
-    .line 1624
     .end local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :pswitch_1
     iget-object v3, p3, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v3, Lorg/telegram/ui/Cells/SharedLinkCell;
 
-    .line 1625
     .local v3, "sharedLinkCell":Lorg/telegram/ui/Cells/SharedLinkCell;
     add-int/lit8 v4, p2, -0x1
 
@@ -592,7 +555,6 @@
 
     check-cast v0, Lorg/telegram/messenger/MessageObject;
 
-    .line 1626
     .restart local v0    # "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -640,7 +602,6 @@
     :goto_1
     invoke-virtual {v3, v0, v4}, Lorg/telegram/ui/Cells/SharedLinkCell;->setLink(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 1627
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/MediaActivity;->access$3800(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -653,7 +614,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 1628
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/MediaActivity;->access$600(Lorg/telegram/ui/MediaActivity;)[Ljava/util/HashMap;
@@ -707,13 +667,11 @@
     :cond_2
     move v4, v5
 
-    .line 1626
     goto :goto_1
 
     :cond_3
     move v4, v6
 
-    .line 1628
     goto :goto_2
 
     :cond_4
@@ -721,7 +679,6 @@
 
     goto :goto_3
 
-    .line 1630
     :cond_5
     iget-object v4, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -741,7 +698,6 @@
 
     goto :goto_4
 
-    .line 1617
     nop
 
     :pswitch_data_0
@@ -757,17 +713,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 1586
     packed-switch p2, :pswitch_data_0
 
-    .line 1606
     new-instance v0, Lorg/telegram/ui/Cells/LoadingCell;
 
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/LoadingCell;-><init>(Landroid/content/Context;)V
 
-    .line 1609
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -776,7 +729,6 @@
 
     return-object v1
 
-    .line 1588
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/GraySectionCell;
@@ -785,11 +737,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/GraySectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 1589
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 1591
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/SharedLinkCell;
@@ -801,7 +751,6 @@
     .restart local v0    # "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 1592
     check-cast v1, Lorg/telegram/ui/Cells/SharedLinkCell;
 
     new-instance v2, Lorg/telegram/ui/MediaActivity$SharedLinksAdapter$1;
@@ -812,7 +761,6 @@
 
     goto :goto_0
 
-    .line 1586
     nop
 
     :pswitch_data_0

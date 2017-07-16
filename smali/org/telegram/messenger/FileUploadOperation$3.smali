@@ -39,7 +39,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileUploadOperation;
 
     .prologue
-    .line 404
     iput-object p1, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     iput p2, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$requestSize:I
@@ -67,12 +66,10 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 407
     if-eqz p1, :cond_4
 
     iget v11, p1, Lorg/telegram/tgnet/TLObject;->networkType:I
 
-    .line 408
     .local v11, "networkType":I
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -85,7 +82,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 409
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -98,14 +94,12 @@
 
     invoke-virtual {v0, v11, v1, v4, v5}, Lorg/telegram/messenger/StatsController;->incrementSentBytesCount(IIJ)V
 
-    .line 417
     :cond_0
     :goto_1
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestIv:[B
 
     if-eqz v0, :cond_1
 
-    .line 418
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1000(Lorg/telegram/messenger/FileUploadOperation;)Ljava/util/ArrayList;
@@ -116,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 420
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -132,12 +125,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 421
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
 
     if-eqz v0, :cond_18
 
-    .line 422
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     iget-object v1, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -154,7 +145,6 @@
 
     invoke-static {v0, v4, v5}, Lorg/telegram/messenger/FileUploadOperation;->access$1202(Lorg/telegram/messenger/FileUploadOperation;J)J
 
-    .line 423
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1300(Lorg/telegram/messenger/FileUploadOperation;)Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;
@@ -183,12 +173,10 @@
 
     invoke-interface {v0, v1, v3}, Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;->didChangedUploadProgress(Lorg/telegram/messenger/FileUploadOperation;F)V
 
-    .line 424
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$810(Lorg/telegram/messenger/FileUploadOperation;)I
 
-    .line 425
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1400(Lorg/telegram/messenger/FileUploadOperation;)Z
@@ -215,14 +203,12 @@
 
     if-ne v0, v1, :cond_b
 
-    .line 426
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     const/4 v1, 0x3
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/FileUploadOperation;->access$1502(Lorg/telegram/messenger/FileUploadOperation;I)I
 
-    .line 427
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1600(Lorg/telegram/messenger/FileUploadOperation;)[B
@@ -231,7 +217,6 @@
 
     if-nez v0, :cond_9
 
-    .line 429
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1700(Lorg/telegram/messenger/FileUploadOperation;)Z
@@ -240,12 +225,10 @@
 
     if-eqz v0, :cond_8
 
-    .line 430
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputFileBig;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputFileBig;-><init>()V
 
-    .line 435
     .local v2, "result":Lorg/telegram/tgnet/TLRPC$InputFile;
     :goto_2
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -256,7 +239,6 @@
 
     iput v0, v2, Lorg/telegram/tgnet/TLRPC$InputFile;->parts:I
 
-    .line 436
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2000(Lorg/telegram/messenger/FileUploadOperation;)J
@@ -265,7 +247,6 @@
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$InputFile;->id:J
 
-    .line 437
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2100(Lorg/telegram/messenger/FileUploadOperation;)Ljava/lang/String;
@@ -292,7 +273,6 @@
 
     iput-object v0, v2, Lorg/telegram/tgnet/TLRPC$InputFile;->name:Ljava/lang/String;
 
-    .line 438
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1300(Lorg/telegram/messenger/FileUploadOperation;)Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;
@@ -309,12 +289,10 @@
 
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;->didFinishUploadingFile(Lorg/telegram/messenger/FileUploadOperation;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;[B[B)V
 
-    .line 439
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2200(Lorg/telegram/messenger/FileUploadOperation;)V
 
-    .line 493
     .end local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputFile;
     :cond_2
     :goto_3
@@ -328,7 +306,6 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 494
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -343,12 +320,10 @@
 
     invoke-virtual {v0, v1, v3, v4}, Lorg/telegram/messenger/StatsController;->incrementSentItemsCount(III)V
 
-    .line 506
     :cond_3
     :goto_4
     return-void
 
-    .line 407
     .end local v11    # "networkType":I
     :cond_4
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getCurrentNetworkType()I
@@ -357,7 +332,6 @@
 
     goto/16 :goto_0
 
-    .line 410
     .restart local v11    # "networkType":I
     :cond_5
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -370,7 +344,6 @@
 
     if-ne v0, v1, :cond_6
 
-    .line 411
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -385,7 +358,6 @@
 
     goto/16 :goto_1
 
-    .line 412
     :cond_6
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -397,7 +369,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 413
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -412,7 +383,6 @@
 
     goto/16 :goto_1
 
-    .line 414
     :cond_7
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -424,7 +394,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 415
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -439,13 +408,11 @@
 
     goto/16 :goto_1
 
-    .line 432
     :cond_8
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputFile;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputFile;-><init>()V
 
-    .line 433
     .restart local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputFile;
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -497,7 +464,6 @@
 
     goto/16 :goto_2
 
-    .line 442
     .end local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputFile;
     :cond_9
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -508,12 +474,10 @@
 
     if-eqz v0, :cond_a
 
-    .line 443
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileBigUploaded;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileBigUploaded;-><init>()V
 
-    .line 448
     .local v2, "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     :goto_5
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -524,7 +488,6 @@
 
     iput v0, v2, Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;->parts:I
 
-    .line 449
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2000(Lorg/telegram/messenger/FileUploadOperation;)J
@@ -533,7 +496,6 @@
 
     iput-wide v0, v2, Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;->id:J
 
-    .line 450
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2300(Lorg/telegram/messenger/FileUploadOperation;)I
@@ -542,7 +504,6 @@
 
     iput v0, v2, Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;->key_fingerprint:I
 
-    .line 451
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$1300(Lorg/telegram/messenger/FileUploadOperation;)Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;
@@ -569,21 +530,18 @@
 
     invoke-interface/range {v3 .. v8}, Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;->didFinishUploadingFile(Lorg/telegram/messenger/FileUploadOperation;Lorg/telegram/tgnet/TLRPC$InputFile;Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;[B[B)V
 
-    .line 452
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2200(Lorg/telegram/messenger/FileUploadOperation;)V
 
     goto/16 :goto_3
 
-    .line 445
     .end local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     :cond_a
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileUploaded;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedFileUploaded;-><init>()V
 
-    .line 446
     .restart local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     sget-object v0, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -635,7 +593,6 @@
 
     goto :goto_5
 
-    .line 454
     .end local v2    # "result":Lorg/telegram/tgnet/TLRPC$InputEncryptedFile;
     :cond_b
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -648,7 +605,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 455
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$200(Lorg/telegram/messenger/FileUploadOperation;)I
@@ -657,7 +613,6 @@
 
     if-nez v0, :cond_12
 
-    .line 456
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2500(Lorg/telegram/messenger/FileUploadOperation;)I
@@ -668,14 +623,12 @@
 
     if-lt v0, v1, :cond_c
 
-    .line 457
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/FileUploadOperation;->access$2502(Lorg/telegram/messenger/FileUploadOperation;I)I
 
-    .line 459
     :cond_c
     iget v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestPartNum:I
 
@@ -687,19 +640,15 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 460
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2608(Lorg/telegram/messenger/FileUploadOperation;)I
 
-    .line 461
     iget-wide v12, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestBytesOffset:J
 
-    .line 462
     .local v12, "offsetToSave":J
     iget-object v10, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestIv:[B
 
-    .line 464
     .local v10, "ivToSave":[B
     :goto_6
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -727,17 +676,14 @@
     .local v2, "result":Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
     if-eqz v2, :cond_d
 
-    .line 465
     invoke-static {v2}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->access$2800(Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;)J
 
     move-result-wide v12
 
-    .line 466
     invoke-static {v2}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->access$2900(Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;)[B
 
     move-result-object v10
 
-    .line 467
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2700(Lorg/telegram/messenger/FileUploadOperation;)Ljava/util/HashMap;
@@ -756,14 +702,12 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 468
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2608(Lorg/telegram/messenger/FileUploadOperation;)I
 
     goto :goto_6
 
-    .line 470
     :cond_d
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -800,7 +744,6 @@
 
     if-nez v0, :cond_11
 
-    .line 471
     :cond_f
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -812,7 +755,6 @@
 
     move-result-object v9
 
-    .line 472
     .local v9, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -840,7 +782,6 @@
 
     invoke-interface {v9, v0, v12, v13}, Landroid/content/SharedPreferences$Editor;->putLong(Ljava/lang/String;J)Landroid/content/SharedPreferences$Editor;
 
-    .line 473
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$3100(Lorg/telegram/messenger/FileUploadOperation;)Z
@@ -849,7 +790,6 @@
 
     if-eqz v0, :cond_10
 
-    .line 474
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -880,11 +820,9 @@
 
     invoke-interface {v9, v0, v1}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 476
     :cond_10
     invoke-interface {v9}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 487
     .end local v9    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v10    # "ivToSave":[B
     .end local v12    # "offsetToSave":J
@@ -894,7 +832,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2508(Lorg/telegram/messenger/FileUploadOperation;)I
 
-    .line 491
     .end local v2    # "result":Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
     :cond_12
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -903,7 +840,6 @@
 
     goto/16 :goto_3
 
-    .line 479
     :cond_13
     new-instance v2, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
 
@@ -913,25 +849,21 @@
 
     invoke-direct {v2, v0, v1}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;-><init>(Lorg/telegram/messenger/FileUploadOperation;Lorg/telegram/messenger/FileUploadOperation$1;)V
 
-    .line 480
     .restart local v2    # "result":Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
     iget-wide v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestBytesOffset:J
 
     invoke-static {v2, v0, v1}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->access$2802(Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;J)J
 
-    .line 481
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestIv:[B
 
     if-eqz v0, :cond_14
 
-    .line 482
     const/16 v0, 0x20
 
     new-array v0, v0, [B
 
     invoke-static {v2, v0}, Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;->access$2902(Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;[B)[B
 
-    .line 483
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->val$currentRequestIv:[B
 
     const/4 v1, 0x0
@@ -946,7 +878,6 @@
 
     invoke-static {v0, v1, v3, v4, v5}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 485
     :cond_14
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -964,7 +895,6 @@
 
     goto :goto_7
 
-    .line 495
     .end local v2    # "result":Lorg/telegram/messenger/FileUploadOperation$UploadCachedResult;
     :cond_15
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
@@ -977,7 +907,6 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 496
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -994,7 +923,6 @@
 
     goto/16 :goto_4
 
-    .line 497
     :cond_16
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -1006,7 +934,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 498
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -1023,7 +950,6 @@
 
     goto/16 :goto_4
 
-    .line 499
     :cond_17
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -1035,7 +961,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 500
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -1052,7 +977,6 @@
 
     goto/16 :goto_4
 
-    .line 503
     :cond_18
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
@@ -1064,7 +988,6 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/FileUploadOperation$FileUploadOperationDelegate;->didFailedUploadingFile(Lorg/telegram/messenger/FileUploadOperation;)V
 
-    .line 504
     iget-object v0, p0, Lorg/telegram/messenger/FileUploadOperation$3;->this$0:Lorg/telegram/messenger/FileUploadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileUploadOperation;->access$2200(Lorg/telegram/messenger/FileUploadOperation;)V

@@ -25,12 +25,9 @@
     .param p2, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 164
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom;-><init>(I)V
 
-    .line 165
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/Atom$LeafAtom;->data:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 166
     return-void
 .end method

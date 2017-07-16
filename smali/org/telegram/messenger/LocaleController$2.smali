@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/LocaleController;
 
     .prologue
-    .line 531
     iput-object p1, p0, Lorg/telegram/messenger/LocaleController$2;->this$0:Lorg/telegram/messenger/LocaleController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 531
     check-cast p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     check-cast p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;
@@ -69,30 +67,24 @@
     .param p2, "o2"    # Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
     .prologue
-    .line 534
     iget-object v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
     if-nez v0, :cond_0
 
-    .line 535
     const/4 v0, -0x1
 
-    .line 539
     :goto_0
     return v0
 
-    .line 536
     :cond_0
     iget-object v0, p2, Lorg/telegram/messenger/LocaleController$LocaleInfo;->shortName:Ljava/lang/String;
 
     if-nez v0, :cond_1
 
-    .line 537
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 539
     :cond_1
     iget-object v0, p1, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 

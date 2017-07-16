@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatDialogsView;
 
     .prologue
-    .line 334
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$5;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 337
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$5;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatDialogsView;->access$900(Lorg/telegram/ui/Components/ChatDialogsView;)Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsViewDelegate;
@@ -52,7 +50,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 339
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$5;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
@@ -74,16 +71,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 344
     :cond_0
     :goto_0
     return-void
 
-    .line 340
     :catch_0
     move-exception v0
 
-    .line 341
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

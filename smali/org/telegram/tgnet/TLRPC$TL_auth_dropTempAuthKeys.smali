@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 22691
     const v0, -0x71b75e78
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_dropTempAuthKeys;->constructor:I
@@ -48,10 +47,8 @@
     .locals 1
 
     .prologue
-    .line 22690
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 22693
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -70,7 +67,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22696
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -83,35 +79,29 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22700
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_auth_dropTempAuthKeys;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22701
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22702
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_dropTempAuthKeys;->except_auth_keys:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 22703
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22704
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 22705
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_dropTempAuthKeys;->except_auth_keys:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -126,12 +116,10 @@
 
     invoke-virtual {p1, v2, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 22704
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 22707
     :cond_0
     return-void
 .end method

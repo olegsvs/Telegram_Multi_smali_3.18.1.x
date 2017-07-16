@@ -24,7 +24,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const/4 v0, 0x0
 
     sput-object v0, Lorg/telegram/messenger/FileLog;->Instance:Lorg/telegram/messenger/FileLog;
@@ -38,35 +37,26 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 22
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->streamWriter:Ljava/io/OutputStreamWriter;
 
-    .line 23
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->dateFormat:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 24
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->logQueue:Lorg/telegram/messenger/DispatchQueue;
 
-    .line 25
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->currentFile:Ljava/io/File;
 
-    .line 26
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->networkFile:Ljava/io/File;
 
-    .line 43
     sget-boolean v4, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v4, :cond_1
 
-    .line 68
     :cond_0
     :goto_0
     return-void
 
-    .line 46
     :cond_1
     const-string/jumbo v4, "dd_MM_yyyy_HH_mm_ss"
 
@@ -78,7 +68,6 @@
 
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->dateFormat:Lorg/telegram/messenger/time/FastDateFormat;
 
-    .line 48
     :try_start_0
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -88,11 +77,9 @@
 
     move-result-object v2
 
-    .line 49
     .local v2, "sdCard":Ljava/io/File;
     if-eqz v2, :cond_0
 
-    .line 52
     new-instance v0, Ljava/io/File;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -119,11 +106,9 @@
 
     invoke-direct {v0, v4}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 53
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 54
     new-instance v4, Ljava/io/File;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -160,7 +145,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 59
     .end local v0    # "dir":Ljava/io/File;
     .end local v2    # "sdCard":Ljava/io/File;
     :goto_1
@@ -173,19 +157,16 @@
 
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->logQueue:Lorg/telegram/messenger/DispatchQueue;
 
-    .line 60
     iget-object v4, p0, Lorg/telegram/messenger/FileLog;->currentFile:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->createNewFile()Z
 
-    .line 61
     new-instance v3, Ljava/io/FileOutputStream;
 
     iget-object v4, p0, Lorg/telegram/messenger/FileLog;->currentFile:Ljava/io/File;
 
     invoke-direct {v3, v4}, Ljava/io/FileOutputStream;-><init>(Ljava/io/File;)V
 
-    .line 62
     .local v3, "stream":Ljava/io/FileOutputStream;
     new-instance v4, Ljava/io/OutputStreamWriter;
 
@@ -193,7 +174,6 @@
 
     iput-object v4, p0, Lorg/telegram/messenger/FileLog;->streamWriter:Ljava/io/OutputStreamWriter;
 
-    .line 63
     iget-object v4, p0, Lorg/telegram/messenger/FileLog;->streamWriter:Ljava/io/OutputStreamWriter;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -232,7 +212,6 @@
 
     invoke-virtual {v4, v5}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 64
     iget-object v4, p0, Lorg/telegram/messenger/FileLog;->streamWriter:Ljava/io/OutputStreamWriter;
 
     invoke-virtual {v4}, Ljava/io/OutputStreamWriter;->flush()V
@@ -241,23 +220,19 @@
 
     goto/16 :goto_0
 
-    .line 65
     .end local v3    # "stream":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v1
 
-    .line 66
     .local v1, "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
     goto/16 :goto_0
 
-    .line 55
     .end local v1    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v1
 
-    .line 56
     .restart local v1    # "e":Ljava/lang/Exception;
     invoke-virtual {v1}, Ljava/lang/Exception;->printStackTrace()V
 
@@ -269,7 +244,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLog;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lorg/telegram/messenger/FileLog;->dateFormat:Lorg/telegram/messenger/time/FastDateFormat;
 
     return-object v0
@@ -280,7 +254,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLog;
 
     .prologue
-    .line 21
     iget-object v0, p0, Lorg/telegram/messenger/FileLog;->streamWriter:Ljava/io/OutputStreamWriter;
 
     return-object v0
@@ -290,7 +263,6 @@
     .locals 8
 
     .prologue
-    .line 197
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const/4 v7, 0x0
@@ -299,15 +271,12 @@
 
     move-result-object v5
 
-    .line 198
     .local v5, "sdCard":Ljava/io/File;
     if-nez v5, :cond_0
 
-    .line 224
     :goto_0
     return-void
 
-    .line 201
     :cond_0
     new-instance v1, Ljava/io/File;
 
@@ -335,17 +304,14 @@
 
     invoke-direct {v1, v6}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 202
     .local v1, "dir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v3
 
-    .line 203
     .local v3, "files":[Ljava/io/File;
     if-eqz v3, :cond_4
 
-    .line 204
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -354,10 +320,8 @@
 
     if-ge v0, v6, :cond_4
 
-    .line 205
     aget-object v2, v3, v0
 
-    .line 206
     .local v2, "file":Ljava/io/File;
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
@@ -387,14 +351,12 @@
 
     if-eqz v6, :cond_2
 
-    .line 204
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 209
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
@@ -424,13 +386,11 @@
 
     if-nez v6, :cond_1
 
-    .line 212
     :cond_3
     invoke-virtual {v2}, Ljava/io/File;->delete()Z
 
     goto :goto_2
 
-    .line 216
     .end local v0    # "a":I
     .end local v2    # "file":Ljava/io/File;
     :cond_4
@@ -438,7 +398,6 @@
 
     add-int/lit8 v4, v6, -0x1
 
-    .line 217
     .local v4, "i":I
     new-instance v6, Lorg/telegram/messenger/FileLog$6;
 
@@ -454,23 +413,19 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 157
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v0, :cond_1
 
-    .line 174
     :cond_0
     :goto_0
     return-void
 
-    .line 160
     :cond_1
     const-string/jumbo v0, "tmessages"
 
     invoke-static {v0, p0}, Landroid/util/Log;->d(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 161
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -479,7 +434,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -500,23 +454,19 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 111
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v0, :cond_1
 
-    .line 128
     :cond_0
     :goto_0
     return-void
 
-    .line 114
     :cond_1
     const-string/jumbo v0, "tmessages"
 
     invoke-static {v0, p0}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 115
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -525,7 +475,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 116
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -547,23 +496,19 @@
     .param p1, "exception"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 90
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v0, :cond_1
 
-    .line 108
     :cond_0
     :goto_0
     return-void
 
-    .line 93
     :cond_1
     const-string/jumbo v0, "tmessages"
 
     invoke-static {v0, p0, p1}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;Ljava/lang/Throwable;)I
 
-    .line 94
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -572,7 +517,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 95
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -593,20 +537,16 @@
     .param p0, "e"    # Ljava/lang/Throwable;
 
     .prologue
-    .line 131
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v0, :cond_0
 
-    .line 154
     :goto_0
     return-void
 
-    .line 134
     :cond_0
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 135
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -615,7 +555,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 136
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -630,7 +569,6 @@
 
     goto :goto_0
 
-    .line 152
     :cond_1
     invoke-virtual {p0}, Ljava/lang/Throwable;->printStackTrace()V
 
@@ -641,26 +579,20 @@
     .locals 4
 
     .prologue
-    .line 30
     sget-object v0, Lorg/telegram/messenger/FileLog;->Instance:Lorg/telegram/messenger/FileLog;
 
-    .line 31
     .local v0, "localInstance":Lorg/telegram/messenger/FileLog;
     if-nez v0, :cond_1
 
-    .line 32
     const-class v3, Lorg/telegram/messenger/FileLog;
 
     monitor-enter v3
 
-    .line 33
     :try_start_0
     sget-object v0, Lorg/telegram/messenger/FileLog;->Instance:Lorg/telegram/messenger/FileLog;
 
-    .line 34
     if-nez v0, :cond_0
 
-    .line 35
     new-instance v1, Lorg/telegram/messenger/FileLog;
 
     invoke-direct {v1}, Lorg/telegram/messenger/FileLog;-><init>()V
@@ -676,18 +608,15 @@
 
     move-object v0, v1
 
-    .line 37
     .end local v1    # "localInstance":Lorg/telegram/messenger/FileLog;
     .restart local v0    # "localInstance":Lorg/telegram/messenger/FileLog;
     :cond_0
     :try_start_2
     monitor-exit v3
 
-    .line 39
     :cond_1
     return-object v0
 
-    .line 37
     :catchall_0
     move-exception v2
 
@@ -714,20 +643,16 @@
     .locals 10
 
     .prologue
-    .line 71
     sget-boolean v3, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v3, :cond_0
 
-    .line 72
     const-string/jumbo v3, ""
 
-    .line 86
     .local v2, "sdCard":Ljava/io/File;
     :goto_0
     return-object v3
 
-    .line 75
     .end local v2    # "sdCard":Ljava/io/File;
     :cond_0
     :try_start_0
@@ -739,16 +664,13 @@
 
     move-result-object v2
 
-    .line 76
     .restart local v2    # "sdCard":Ljava/io/File;
     if-nez v2, :cond_1
 
-    .line 77
     const-string/jumbo v3, ""
 
     goto :goto_0
 
-    .line 79
     :cond_1
     new-instance v0, Ljava/io/File;
 
@@ -776,11 +698,9 @@
 
     invoke-direct {v0, v3}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 80
     .local v0, "dir":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->mkdirs()Z
 
-    .line 81
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v3
@@ -823,7 +743,6 @@
 
     iput-object v4, v3, Lorg/telegram/messenger/FileLog;->networkFile:Ljava/io/File;
 
-    .line 82
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v3
@@ -838,16 +757,13 @@
 
     goto :goto_0
 
-    .line 83
     .end local v0    # "dir":Ljava/io/File;
     :catch_0
     move-exception v1
 
-    .line 84
     .local v1, "e":Ljava/lang/Throwable;
     invoke-virtual {v1}, Ljava/lang/Throwable;->printStackTrace()V
 
-    .line 86
     const-string/jumbo v3, ""
 
     goto :goto_0
@@ -858,23 +774,19 @@
     .param p0, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 177
     sget-boolean v0, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
 
     if-nez v0, :cond_1
 
-    .line 194
     :cond_0
     :goto_0
     return-void
 
-    .line 180
     :cond_1
     const-string/jumbo v0, "tmessages"
 
     invoke-static {v0, p0}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 181
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0
@@ -883,7 +795,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 182
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v0

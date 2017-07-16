@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4816
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$85;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$85;->val$regid:Ljava/lang/String;
@@ -47,32 +46,26 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4819
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
 
     if-eqz v0, :cond_0
 
-    .line 4820
     const-string/jumbo v0, "registered for push"
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 4821
     const/4 v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/UserConfig;->registeredForPush:Z
 
-    .line 4822
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$85;->val$regid:Ljava/lang/String;
 
     sput-object v0, Lorg/telegram/messenger/UserConfig;->pushString:Ljava/lang/String;
 
-    .line 4823
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 4825
     :cond_0
     new-instance v0, Lorg/telegram/messenger/MessagesController$85$1;
 
@@ -80,6 +73,5 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4831
     return-void
 .end method

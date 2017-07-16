@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 720
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$7;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +42,14 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 723
     instance-of v1, p1, Lorg/telegram/ui/Cells/StickerEmojiCell;
 
     if-nez v1, :cond_1
 
-    .line 733
     :cond_0
     :goto_0
     return-void
 
-    .line 726
     :cond_1
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -63,10 +59,8 @@
 
     move-object v0, p1
 
-    .line 727
     check-cast v0, Lorg/telegram/ui/Cells/StickerEmojiCell;
 
-    .line 728
     .local v0, "cell":Lorg/telegram/ui/Cells/StickerEmojiCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/StickerEmojiCell;->isDisabled()Z
 
@@ -74,10 +68,8 @@
 
     if-nez v1, :cond_0
 
-    .line 731
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/StickerEmojiCell;->disable()V
 
-    .line 732
     iget-object v1, p0, Lorg/telegram/ui/Components/EmojiView$7;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmojiView;->access$000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$Listener;

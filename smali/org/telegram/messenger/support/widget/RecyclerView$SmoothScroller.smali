@@ -44,22 +44,18 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 10662
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 10648
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
-    .line 10663
     new-instance v0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-direct {v0, v1, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;-><init>(II)V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
-    .line 10664
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 10646
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->onAnimation(II)V
 
     return-void
@@ -82,10 +77,8 @@
     .param p2, "dy"    # I
 
     .prologue
-    .line 10758
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
-    .line 10759
     .local v1, "recyclerView":Lorg/telegram/messenger/support/widget/RecyclerView;
     iget-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
@@ -99,22 +92,18 @@
 
     if-nez v1, :cond_1
 
-    .line 10760
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->stop()V
 
-    .line 10762
     :cond_1
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 10763
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     if-eqz v2, :cond_2
 
-    .line 10765
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     invoke-virtual {p0, v2}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->getChildPosition(Landroid/view/View;)I
@@ -125,7 +114,6 @@
 
     if-ne v2, v3, :cond_4
 
-    .line 10766
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     iget-object v3, v1, Lorg/telegram/messenger/support/widget/RecyclerView;->mState:Lorg/telegram/messenger/support/widget/RecyclerView$State;
@@ -134,66 +122,54 @@
 
     invoke-virtual {p0, v2, v3, v4}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->onTargetFound(Landroid/view/View;Lorg/telegram/messenger/support/widget/RecyclerView$State;Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;)V
 
-    .line 10767
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;->runIfNecessary(Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
-    .line 10768
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->stop()V
 
-    .line 10774
     :cond_2
     :goto_0
     iget-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-eqz v2, :cond_3
 
-    .line 10775
     iget-object v2, v1, Lorg/telegram/messenger/support/widget/RecyclerView;->mState:Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     iget-object v3, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {p0, p1, p2, v2, v3}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->onSeekTargetStep(IILorg/telegram/messenger/support/widget/RecyclerView$State;Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;)V
 
-    .line 10776
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;->hasJumpTarget()Z
 
     move-result v0
 
-    .line 10777
     .local v0, "hadJumpTarget":Z
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclingAction:Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$Action;->runIfNecessary(Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
-    .line 10778
     if-eqz v0, :cond_3
 
-    .line 10780
     iget-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-eqz v2, :cond_5
 
-    .line 10781
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 10782
     iget-object v2, v1, Lorg/telegram/messenger/support/widget/RecyclerView;->mViewFlinger:Lorg/telegram/messenger/support/widget/RecyclerView$ViewFlinger;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewFlinger;->postOnAnimation()V
 
-    .line 10788
     .end local v0    # "hadJumpTarget":Z
     :cond_3
     :goto_1
     return-void
 
-    .line 10770
     :cond_4
     const-string/jumbo v2, "RecyclerView"
 
@@ -201,14 +177,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 10771
     const/4 v2, 0x0
 
     iput-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
     goto :goto_0
 
-    .line 10784
     .restart local v0    # "hadJumpTarget":Z
     :cond_5
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->stop()V
@@ -223,7 +197,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 10808
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mLayout:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
@@ -239,7 +212,6 @@
     .locals 1
 
     .prologue
-    .line 10801
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mLayout:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
@@ -256,7 +228,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 10794
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildLayoutPosition(Landroid/view/View;)I
@@ -272,7 +243,6 @@
     .end annotation
 
     .prologue
-    .line 10702
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     return-object v0
@@ -282,7 +252,6 @@
     .locals 1
 
     .prologue
-    .line 10754
     iget v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     return v0
@@ -295,12 +264,10 @@
     .end annotation
 
     .prologue
-    .line 10817
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView;->scrollToPosition(I)V
 
-    .line 10818
     return-void
 .end method
 
@@ -308,7 +275,6 @@
     .locals 1
 
     .prologue
-    .line 10736
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
     return v0
@@ -318,7 +284,6 @@
     .locals 1
 
     .prologue
-    .line 10744
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     return v0
@@ -329,7 +294,6 @@
     .param p1, "scrollVector"    # Landroid/graphics/PointF;
 
     .prologue
-    .line 10834
     iget v2, p1, Landroid/graphics/PointF;->x:F
 
     iget v3, p1, Landroid/graphics/PointF;->x:F
@@ -350,7 +314,6 @@
 
     move-result-wide v0
 
-    .line 10836
     .local v0, "magnitude":D
     iget v2, p1, Landroid/graphics/PointF;->x:F
 
@@ -362,7 +325,6 @@
 
     iput v2, p1, Landroid/graphics/PointF;->x:F
 
-    .line 10837
     iget v2, p1, Landroid/graphics/PointF;->y:F
 
     float-to-double v2, v2
@@ -373,7 +335,6 @@
 
     iput v2, p1, Landroid/graphics/PointF;->y:F
 
-    .line 10838
     return-void
 .end method
 
@@ -382,7 +343,6 @@
     .param p1, "child"    # Landroid/view/View;
 
     .prologue
-    .line 10821
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->getChildPosition(Landroid/view/View;)I
 
     move-result v0
@@ -393,10 +353,8 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 10822
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 10827
     :cond_0
     return-void
 .end method
@@ -418,10 +376,8 @@
     .param p1, "targetPosition"    # I
 
     .prologue
-    .line 10693
     iput p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
-    .line 10694
     return-void
 .end method
 
@@ -433,20 +389,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 10679
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
-    .line 10680
     iput-object p2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
-    .line 10681
     iget v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 10682
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Invalid target position"
@@ -455,7 +407,6 @@
 
     throw v0
 
-    .line 10684
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
@@ -465,13 +416,10 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$State;->access$1102(Lorg/telegram/messenger/support/widget/RecyclerView$State;I)I
 
-    .line 10685
     iput-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
-    .line 10686
     iput-boolean v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 10687
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->getTargetPosition()I
 
     move-result v0
@@ -482,17 +430,14 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 10688
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->onStart()V
 
-    .line 10689
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mViewFlinger:Lorg/telegram/messenger/support/widget/RecyclerView$ViewFlinger;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewFlinger;->postOnAnimation()V
 
-    .line 10690
     return-void
 .end method
 
@@ -506,47 +451,36 @@
 
     const/4 v1, 0x0
 
-    .line 10712
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
     if-nez v0, :cond_0
 
-    .line 10726
     :goto_0
     return-void
 
-    .line 10715
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->onStop()V
 
-    .line 10716
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/widget/RecyclerView;->mState:Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     invoke-static {v0, v2}, Lorg/telegram/messenger/support/widget/RecyclerView$State;->access$1102(Lorg/telegram/messenger/support/widget/RecyclerView$State;I)I
 
-    .line 10717
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetView:Landroid/view/View;
 
-    .line 10718
     iput v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mTargetPosition:I
 
-    .line 10719
     iput-boolean v3, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mPendingInitialRun:Z
 
-    .line 10720
     iput-boolean v3, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRunning:Z
 
-    .line 10722
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-static {v0, p0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->access$1200(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;)V
 
-    .line 10724
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
-    .line 10725
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     goto :goto_0

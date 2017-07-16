@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoFilterView;
 
     .prologue
-    .line 1935
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 1938
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5600(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoEditorSeekBar;
@@ -52,7 +50,6 @@
 
     move-result v0
 
-    .line 1939
     .local v0, "progress":I
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -68,21 +65,18 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 1940
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5502(Lorg/telegram/ui/Components/PhotoFilterView;F)F
 
-    .line 1962
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$8300(Lorg/telegram/ui/Components/PhotoFilterView;)V
 
-    .line 1963
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -91,7 +85,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1964
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5000(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;
@@ -102,11 +95,9 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/PhotoFilterView$EGLThread;->requestRender(Z)V
 
-    .line 1966
     :cond_1
     return-void
 
-    .line 1941
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -122,7 +113,6 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 1942
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -131,7 +121,6 @@
 
     goto :goto_0
 
-    .line 1943
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -147,7 +136,6 @@
 
     if-ne v1, v2, :cond_4
 
-    .line 1944
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -156,7 +144,6 @@
 
     goto :goto_0
 
-    .line 1945
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -172,7 +159,6 @@
 
     if-ne v1, v2, :cond_5
 
-    .line 1946
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -181,7 +167,6 @@
 
     goto :goto_0
 
-    .line 1947
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -197,7 +182,6 @@
 
     if-ne v1, v2, :cond_6
 
-    .line 1948
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -206,7 +190,6 @@
 
     goto :goto_0
 
-    .line 1949
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -222,7 +205,6 @@
 
     if-ne v1, v2, :cond_7
 
-    .line 1950
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -231,7 +213,6 @@
 
     goto :goto_0
 
-    .line 1951
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -247,7 +228,6 @@
 
     if-ne v1, v2, :cond_8
 
-    .line 1952
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -256,7 +236,6 @@
 
     goto/16 :goto_0
 
-    .line 1953
     :cond_8
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -272,7 +251,6 @@
 
     if-ne v1, v2, :cond_9
 
-    .line 1954
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -281,7 +259,6 @@
 
     goto/16 :goto_0
 
-    .line 1955
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -297,7 +274,6 @@
 
     if-ne v1, v2, :cond_a
 
-    .line 1956
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -306,7 +282,6 @@
 
     goto/16 :goto_0
 
-    .line 1957
     :cond_a
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -322,7 +297,6 @@
 
     if-ne v1, v2, :cond_b
 
-    .line 1958
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0
@@ -331,7 +305,6 @@
 
     goto/16 :goto_0
 
-    .line 1959
     :cond_b
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -347,7 +320,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 1960
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$7;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     int-to-float v2, v0

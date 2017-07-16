@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1321
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$4;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1324
     const/4 v0, 0x0
 
     return v0

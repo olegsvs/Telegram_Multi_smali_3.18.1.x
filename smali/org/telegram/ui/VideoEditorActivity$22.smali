@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 1271
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->val$show:Z
@@ -53,18 +52,15 @@
 
     const/4 v5, 0x0
 
-    .line 1274
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 1275
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     iget-boolean v1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->val$show:Z
 
     if-eqz v1, :cond_0
 
-    .line 1276
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$5500(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;
@@ -73,7 +69,6 @@
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->setVisibility(I)V
 
-    .line 1277
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$5600(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
@@ -82,12 +77,10 @@
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->setVisibility(I)V
 
-    .line 1278
     new-array v1, v8, [Landroid/animation/Animator;
 
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1279
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5500(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;
 
     move-result-object v2
@@ -106,7 +99,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1280
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$5600(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object v2
@@ -123,29 +115,23 @@
 
     aput-object v2, v1, v6
 
-    .line 1278
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 1289
     :goto_0
     const-wide/16 v2, 0xc8
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 1290
     new-instance v1, Landroid/view/animation/AccelerateInterpolator;
 
     invoke-direct {v1}, Landroid/view/animation/AccelerateInterpolator;-><init>()V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 1291
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 1292
     return-void
 
-    .line 1282
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -155,7 +141,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->setVisibility(I)V
 
-    .line 1283
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$5600(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
@@ -164,14 +149,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/PickerBottomLayoutViewer;->setVisibility(I)V
 
-    .line 1284
     const/4 v1, 0x3
 
     new-array v1, v1, [Landroid/animation/Animator;
 
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1285
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$1600(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PickerBottomLayoutViewer;
 
     move-result-object v2
@@ -190,8 +173,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1286
-    invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$400(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/VideoTimelineView;
 
     move-result-object v2
 
@@ -209,7 +190,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$22;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 1287
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$700(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/VideoSeekBarView;
 
     move-result-object v2
@@ -226,7 +206,6 @@
 
     aput-object v2, v1, v8
 
-    .line 1284
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
     goto :goto_0

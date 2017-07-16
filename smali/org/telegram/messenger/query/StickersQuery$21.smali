@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 864
     iput p1, p0, Lorg/telegram/messenger/query/StickersQuery$21;->val$type:I
 
     iput p2, p0, Lorg/telegram/messenger/query/StickersQuery$21;->val$hash:I
@@ -46,13 +45,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 867
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$21$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/query/StickersQuery$21$1;-><init>(Lorg/telegram/messenger/query/StickersQuery$21;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 930
     return-void
 .end method

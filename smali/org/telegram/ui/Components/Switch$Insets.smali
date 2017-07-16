@@ -37,7 +37,6 @@
 
     const/high16 v2, 0x40800000    # 4.0f
 
-    .line 45
     new-instance v0, Lorg/telegram/ui/Components/Switch$Insets;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -63,21 +62,15 @@
     .param p4, "bottom"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput p1, p0, Lorg/telegram/ui/Components/Switch$Insets;->left:I
 
-    .line 54
     iput p2, p0, Lorg/telegram/ui/Components/Switch$Insets;->top:I
 
-    .line 55
     iput p3, p0, Lorg/telegram/ui/Components/Switch$Insets;->right:I
 
-    .line 56
     iput p4, p0, Lorg/telegram/ui/Components/Switch$Insets;->bottom:I
 
-    .line 57
     return-void
 .end method

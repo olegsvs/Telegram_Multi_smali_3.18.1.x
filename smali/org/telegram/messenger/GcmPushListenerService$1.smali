@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/GcmPushListenerService;
 
     .prologue
-    .line 28
     iput-object p1, p0, Lorg/telegram/messenger/GcmPushListenerService$1;->this$0:Lorg/telegram/messenger/GcmPushListenerService;
 
     iput-object p2, p0, Lorg/telegram/messenger/GcmPushListenerService$1;->val$bundle:Landroid/os/Bundle;
@@ -45,10 +44,8 @@
     .locals 15
 
     .prologue
-    .line 31
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->postInitApplication()V
 
-    .line 34
     :try_start_0
     iget-object v12, p0, Lorg/telegram/messenger/GcmPushListenerService$1;->val$bundle:Landroid/os/Bundle;
 
@@ -58,7 +55,6 @@
 
     move-result-object v6
 
-    .line 35
     .local v6, "key":Ljava/lang/String;
     const-string/jumbo v12, "DC_UPDATE"
 
@@ -68,7 +64,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 36
     iget-object v12, p0, Lorg/telegram/messenger/GcmPushListenerService$1;->val$bundle:Landroid/os/Bundle;
 
     const-string/jumbo v13, "custom"
@@ -77,13 +72,11 @@
 
     move-result-object v2
 
-    .line 37
     .local v2, "data":Ljava/lang/String;
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8, v2}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 38
     .local v8, "object":Lorg/json/JSONObject;
     const-string/jumbo v12, "dc"
 
@@ -91,7 +84,6 @@
 
     move-result v3
 
-    .line 39
     .local v3, "dc":I
     const-string/jumbo v12, "addr"
 
@@ -99,7 +91,6 @@
 
     move-result-object v0
 
-    .line 40
     .local v0, "addr":Ljava/lang/String;
     const-string/jumbo v12, ":"
 
@@ -107,7 +98,6 @@
 
     move-result-object v9
 
-    .line 41
     .local v9, "parts":[Ljava/lang/String;
     array-length v12, v9
 
@@ -115,7 +105,6 @@
 
     if-eq v12, v13, :cond_0
 
-    .line 65
     .end local v0    # "addr":Ljava/lang/String;
     .end local v2    # "data":Ljava/lang/String;
     .end local v3    # "dc":I
@@ -125,7 +114,6 @@
     :goto_0
     return-void
 
-    .line 44
     .restart local v0    # "addr":Ljava/lang/String;
     .restart local v2    # "data":Ljava/lang/String;
     .restart local v3    # "dc":I
@@ -137,7 +125,6 @@
 
     aget-object v5, v9, v12
 
-    .line 45
     .local v5, "ip":Ljava/lang/String;
     const/4 v12, 0x1
 
@@ -147,7 +134,6 @@
 
     move-result v10
 
-    .line 46
     .local v10, "port":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -157,7 +143,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 63
     .end local v0    # "addr":Ljava/lang/String;
     .end local v2    # "data":Ljava/lang/String;
     .end local v3    # "dc":I
@@ -170,7 +155,6 @@
     :goto_1
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->onInternalPushReceived()V
 
-    .line 64
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v12
@@ -179,7 +163,6 @@
 
     goto :goto_0
 
-    .line 48
     .restart local v6    # "key":Ljava/lang/String;
     :cond_2
     :try_start_1
@@ -187,7 +170,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 49
     iget-object v12, p0, Lorg/telegram/messenger/GcmPushListenerService$1;->val$bundle:Landroid/os/Bundle;
 
     const-string/jumbo v13, "badge"
@@ -198,13 +180,11 @@
 
     move-result v11
 
-    .line 50
     .local v11, "value":I
     const/4 v12, -0x1
 
     if-ne v11, v12, :cond_1
 
-    .line 51
     sget-object v12, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v13, "connectivity"
@@ -215,13 +195,11 @@
 
     check-cast v1, Landroid/net/ConnectivityManager;
 
-    .line 52
     .local v1, "connectivityManager":Landroid/net/ConnectivityManager;
     invoke-virtual {v1}, Landroid/net/ConnectivityManager;->getActiveNetworkInfo()Landroid/net/NetworkInfo;
 
     move-result-object v7
 
-    .line 53
     .local v7, "netInfo":Landroid/net/NetworkInfo;
     if-eqz v7, :cond_3
 
@@ -231,7 +209,6 @@
 
     if-nez v12, :cond_1
 
-    .line 54
     :cond_3
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
@@ -243,7 +220,6 @@
 
     goto :goto_1
 
-    .line 59
     .end local v1    # "connectivityManager":Landroid/net/ConnectivityManager;
     .end local v6    # "key":Ljava/lang/String;
     .end local v7    # "netInfo":Landroid/net/NetworkInfo;
@@ -251,7 +227,6 @@
     :catch_0
     move-exception v4
 
-    .line 60
     .local v4, "e":Ljava/lang/Exception;
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

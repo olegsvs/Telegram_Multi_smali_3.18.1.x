@@ -34,36 +34,30 @@
 
     const/4 v11, 0x1
 
-    .line 35
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 37
     sget-object v0, Lorg/telegram/ui/Cells/CheckBoxCell;->paint:Landroid/graphics/Paint;
 
     if-nez v0, :cond_0
 
-    .line 38
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     sput-object v0, Lorg/telegram/ui/Cells/CheckBoxCell;->paint:Landroid/graphics/Paint;
 
-    .line 39
     sget-object v0, Lorg/telegram/ui/Cells/CheckBoxCell;->paint:Landroid/graphics/Paint;
 
     const v1, -0x262627
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 40
     sget-object v0, Lorg/telegram/ui/Cells/CheckBoxCell;->paint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x3f800000    # 1.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 43
     :cond_0
     new-instance v0, Landroid/widget/TextView;
 
@@ -71,7 +65,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
-    .line 44
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     if-eqz p2, :cond_1
@@ -85,36 +78,30 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41800000    # 16.0f
 
     invoke-virtual {v0, v11, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 46
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 49
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 50
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -128,7 +115,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 51
     iget-object v9, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     const/4 v0, -0x1
@@ -170,14 +156,12 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/CheckBoxCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 53
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
-    .line 54
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     if-eqz p2, :cond_6
@@ -191,36 +175,30 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 55
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     const/high16 v1, 0x41800000    # 16.0f
 
     invoke-virtual {v0, v11, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 57
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, v11}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 60
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -234,7 +212,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 61
     iget-object v9, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x2
@@ -262,14 +239,12 @@
 
     invoke-virtual {p0, v9, v0}, Lorg/telegram/ui/Cells/CheckBoxCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 63
     new-instance v0, Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-direct {v0, p1, p2}, Lorg/telegram/ui/Components/CheckBoxSquare;-><init>(Landroid/content/Context;Z)V
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
-    .line 64
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     const/16 v5, 0x12
@@ -309,10 +284,8 @@
 
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/Cells/CheckBoxCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 65
     return-void
 
-    .line 44
     :cond_1
     const-string/jumbo v0, "windowBackgroundWhiteBlackText"
 
@@ -321,13 +294,11 @@
     :cond_2
     move v0, v8
 
-    .line 50
     goto/16 :goto_1
 
     :cond_3
     move v2, v8
 
-    .line 51
     goto/16 :goto_2
 
     :cond_4
@@ -340,7 +311,6 @@
 
     goto/16 :goto_4
 
-    .line 54
     :cond_6
     const-string/jumbo v0, "windowBackgroundWhiteValueText"
 
@@ -349,19 +319,16 @@
     :cond_7
     move v0, v7
 
-    .line 60
     goto :goto_6
 
     :cond_8
     move v2, v7
 
-    .line 61
     goto :goto_7
 
     :cond_9
     move v7, v8
 
-    .line 64
     goto :goto_8
 
     :cond_a
@@ -381,7 +348,6 @@
     .locals 1
 
     .prologue
-    .line 107
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     return-object v0
@@ -391,7 +357,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     return-object v0
@@ -401,7 +366,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     return-object v0
@@ -411,7 +375,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/CheckBoxSquare;->isChecked()Z
@@ -426,12 +389,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 112
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->needDivider:Z
 
     if-eqz v0, :cond_0
 
-    .line 113
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/CheckBoxCell;->getPaddingLeft()I
 
     move-result v0
@@ -472,7 +433,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 115
     :cond_0
     return-void
 .end method
@@ -489,7 +449,6 @@
 
     const/high16 v4, 0x40000000    # 2.0f
 
-    .line 69
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v2
@@ -511,7 +470,6 @@
 
     invoke-virtual {p0, v2, v1}, Lorg/telegram/ui/Cells/CheckBoxCell;->setMeasuredDimension(II)V
 
-    .line 71
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/CheckBoxCell;->getMeasuredWidth()I
 
     move-result v1
@@ -536,7 +494,6 @@
 
     sub-int v0, v1, v2
 
-    .line 73
     .local v0, "availableWidth":I
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
@@ -556,7 +513,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->measure(II)V
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
@@ -589,7 +545,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/widget/TextView;->measure(II)V
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -610,10 +565,8 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/Components/CheckBoxSquare;->measure(II)V
 
-    .line 76
     return-void
 
-    .line 69
     .end local v0    # "availableWidth":I
     :cond_0
     const/4 v1, 0x0
@@ -626,12 +579,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/CheckBoxSquare;->setColor(I)V
 
-    .line 123
     return-void
 .end method
 
@@ -641,12 +592,10 @@
     .param p2, "animated"    # Z
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/ui/Components/CheckBoxSquare;->setChecked(ZZ)V
 
-    .line 92
     return-void
 .end method
 
@@ -660,25 +609,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 83
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v1, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 84
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->checkBox:Lorg/telegram/ui/Components/CheckBoxSquare;
 
     invoke-virtual {v1, p3, v0}, Lorg/telegram/ui/Components/CheckBoxSquare;->setChecked(ZZ)V
 
-    .line 85
     iget-object v1, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v1, p2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 86
     iput-boolean p4, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->needDivider:Z
 
-    .line 87
     if-nez p4, :cond_0
 
     const/4 v0, 0x1
@@ -686,7 +630,6 @@
     :cond_0
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/CheckBoxCell;->setWillNotDraw(Z)V
 
-    .line 88
     return-void
 .end method
 
@@ -695,12 +638,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 79
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 80
     return-void
 .end method
 
@@ -709,11 +650,9 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 118
     iget-object v0, p0, Lorg/telegram/ui/Cells/CheckBoxCell;->valueTextView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 119
     return-void
 .end method

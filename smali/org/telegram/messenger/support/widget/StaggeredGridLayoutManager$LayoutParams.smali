@@ -31,10 +31,8 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 2364
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(II)V
 
-    .line 2365
     return-void
 .end method
 
@@ -44,10 +42,8 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 2360
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 2361
     return-void
 .end method
 
@@ -56,10 +52,8 @@
     .param p1, "source"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 2372
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 2373
     return-void
 .end method
 
@@ -68,10 +62,8 @@
     .param p1, "source"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 2368
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 2369
     return-void
 .end method
 
@@ -80,10 +72,8 @@
     .param p1, "source"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
     .prologue
-    .line 2376
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;)V
 
-    .line 2377
     return-void
 .end method
 
@@ -93,15 +83,12 @@
     .locals 1
 
     .prologue
-    .line 2408
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LayoutParams;->mSpan:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$Span;
 
     if-nez v0, :cond_0
 
-    .line 2409
     const/4 v0, -0x1
 
-    .line 2411
     :goto_0
     return v0
 
@@ -117,7 +104,6 @@
     .locals 1
 
     .prologue
-    .line 2398
     iget-boolean v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
     return v0
@@ -128,9 +114,7 @@
     .param p1, "fullSpan"    # Z
 
     .prologue
-    .line 2388
     iput-boolean p1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$LayoutParams;->mFullSpan:Z
 
-    .line 2389
     return-void
 .end method

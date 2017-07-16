@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 1205
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$15;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1208
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$3$15;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -56,11 +54,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1236
     :goto_0
     return-void
 
-    .line 1211
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$3$15;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
@@ -68,17 +64,14 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PlusSettingsActivity;->access$7102(Lorg/telegram/ui/PlusSettingsActivity;Z)Z
 
-    .line 1212
     new-instance v0, Lorg/telegram/ui/PlusSettingsActivity$3$15$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PlusSettingsActivity$3$15$1;-><init>(Lorg/telegram/ui/PlusSettingsActivity$3$15;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1226
     sput-boolean v1, Lorg/telegram/messenger/AndroidUtilities;->needRestart:Z
 
-    .line 1227
     new-instance v0, Lorg/telegram/ui/PlusSettingsActivity$3$15$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PlusSettingsActivity$3$15$2;-><init>(Lorg/telegram/ui/PlusSettingsActivity$3$15;)V

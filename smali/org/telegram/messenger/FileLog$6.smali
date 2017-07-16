@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 217
     iput p1, p0, Lorg/telegram/messenger/FileLog$6;->val$i:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .locals 5
 
     .prologue
-    .line 220
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -81,10 +79,8 @@
 
     move-result-object v0
 
-    .line 221
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 222
     return-void
 .end method

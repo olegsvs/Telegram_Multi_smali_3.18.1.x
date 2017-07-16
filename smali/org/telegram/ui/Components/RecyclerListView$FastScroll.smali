@@ -64,53 +64,44 @@
 
     const/4 v2, 0x1
 
-    .line 256
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 257
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 237
     new-instance v1, Landroid/graphics/RectF;
 
     invoke-direct {v1}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->rect:Landroid/graphics/RectF;
 
-    .line 238
     new-instance v1, Landroid/graphics/Paint;
 
     invoke-direct {v1, v2}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->paint:Landroid/graphics/Paint;
 
-    .line 245
     new-instance v1, Landroid/text/TextPaint;
 
     invoke-direct {v1, v2}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterPaint:Landroid/text/TextPaint;
 
-    .line 247
     new-instance v1, Landroid/graphics/Path;
 
     invoke-direct {v1}, Landroid/graphics/Path;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->path:Landroid/graphics/Path;
 
-    .line 248
     new-array v1, v3, [F
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->radii:[F
 
-    .line 253
     const/4 v1, 0x6
 
     new-array v1, v1, [I
 
     iput-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
-    .line 259
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterPaint:Landroid/text/TextPaint;
 
     const/high16 v2, 0x42340000    # 45.0f
@@ -123,14 +114,12 @@
 
     invoke-virtual {v1, v2}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 260
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 261
     iget-object v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->radii:[F
 
     const/high16 v2, 0x42300000    # 44.0f
@@ -143,12 +132,10 @@
 
     aput v2, v1, v0
 
-    .line 260
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 264
     :cond_0
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -163,13 +150,10 @@
     :goto_1
     iput v1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->scrollX:I
 
-    .line 265
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->updateColors()V
 
-    .line 266
     return-void
 
-    .line 264
     :cond_1
     const/high16 v1, 0x42ea0000    # 117.0f
 
@@ -186,7 +170,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 235
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->setProgress(F)V
 
     return-void
@@ -197,7 +180,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/RecyclerListView$FastScroll;
 
     .prologue
-    .line 235
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->updateColors()V
 
     return-void
@@ -207,14 +189,12 @@
     .locals 15
 
     .prologue
-    .line 332
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RecyclerListView;->getLayoutManager()Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     move-result-object v11
 
-    .line 333
     .local v11, "layoutManager":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
     instance-of v0, v11, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
@@ -222,11 +202,8 @@
 
     move-object v12, v11
 
-    .line 334
     check-cast v12, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
 
-    .line 335
-    .local v12, "linearLayoutManager":Lorg/telegram/messenger/support/widget/LinearLayoutManager;
     invoke-virtual {v12}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->getOrientation()I
 
     move-result v0
@@ -235,14 +212,12 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 336
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RecyclerListView;->getAdapter()Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     move-result-object v8
 
-    .line 337
     .local v8, "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     instance-of v0, v8, Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;
 
@@ -250,10 +225,8 @@
 
     move-object v9, v8
 
-    .line 338
     check-cast v9, Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;
 
-    .line 339
     .local v9, "fastScrollAdapter":Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;
     iget v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
@@ -261,52 +234,42 @@
 
     move-result v14
 
-    .line 340
     .local v14, "position":I
     const/4 v0, 0x0
 
     invoke-virtual {v12, v14, v0}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 341
     invoke-virtual {v9, v14}, Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;->getLetter(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 342
     .local v1, "newLetter":Ljava/lang/String;
     if-nez v1, :cond_2
 
-    .line 343
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_0
 
-    .line 344
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->oldLetterLayout:Landroid/text/StaticLayout;
 
-    .line 346
     :cond_0
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
-    .line 364
     .end local v1    # "newLetter":Ljava/lang/String;
     .end local v8    # "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     .end local v9    # "fastScrollAdapter":Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;
-    .end local v12    # "linearLayoutManager":Lorg/telegram/messenger/support/widget/LinearLayoutManager;
     .end local v14    # "position":I
     :cond_1
     :goto_0
     return-void
 
-    .line 347
     .restart local v1    # "newLetter":Ljava/lang/String;
     .restart local v8    # "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     .restart local v9    # "fastScrollAdapter":Lorg/telegram/ui/Components/RecyclerListView$FastScrollAdapter;
-    .restart local v12    # "linearLayoutManager":Lorg/telegram/messenger/support/widget/LinearLayoutManager;
     .restart local v14    # "position":I
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->currentLetter:Ljava/lang/String;
@@ -317,7 +280,6 @@
 
     if-nez v0, :cond_1
 
-    .line 348
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterPaint:Landroid/text/TextPaint;
@@ -336,12 +298,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
-    .line 349
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->oldLetterLayout:Landroid/text/StaticLayout;
 
-    .line 350
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0}, Landroid/text/StaticLayout;->getLineCount()I
@@ -350,12 +310,10 @@
 
     if-lez v0, :cond_1
 
-    .line 351
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_3
 
-    .line 352
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
     const/4 v2, 0x0
@@ -364,7 +322,6 @@
 
     move-result v10
 
-    .line 353
     .local v10, "lWidth":F
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
@@ -374,7 +331,6 @@
 
     move-result v13
 
-    .line 354
     .local v13, "lleft":F
     const/high16 v0, 0x41200000    # 10.0f
 
@@ -420,7 +376,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->textX:F
 
-    .line 358
     .end local v10    # "lWidth":F
     .end local v13    # "lleft":F
     :goto_1
@@ -446,7 +401,6 @@
 
     goto :goto_0
 
-    .line 356
     :cond_3
     const/high16 v0, 0x42b00000    # 88.0f
 
@@ -490,13 +444,10 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 451
     iput p1, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
-    .line 452
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
-    .line 453
     return-void
 .end method
 
@@ -504,14 +455,12 @@
     .locals 5
 
     .prologue
-    .line 269
     const-string/jumbo v2, "fastScrollInactive"
 
     invoke-static {v2}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
 
     move-result v1
 
-    .line 270
     .local v1, "inactive":I
     const-string/jumbo v2, "fastScrollActive"
 
@@ -519,13 +468,11 @@
 
     move-result v0
 
-    .line 271
     .local v0, "active":I
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 272
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterPaint:Landroid/text/TextPaint;
 
     const-string/jumbo v3, "fastScrollText"
@@ -536,7 +483,6 @@
 
     invoke-virtual {v2, v3}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 273
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x0
@@ -547,7 +493,6 @@
 
     aput v4, v2, v3
 
-    .line 274
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x1
@@ -558,7 +503,6 @@
 
     aput v4, v2, v3
 
-    .line 275
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x2
@@ -569,7 +513,6 @@
 
     aput v4, v2, v3
 
-    .line 276
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x3
@@ -580,7 +523,6 @@
 
     aput v4, v2, v3
 
-    .line 277
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x4
@@ -591,7 +533,6 @@
 
     aput v4, v2, v3
 
-    .line 278
     iget-object v2, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->colors:[I
 
     const/4 v3, 0x5
@@ -602,10 +543,8 @@
 
     aput v4, v2, v3
 
-    .line 279
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
-    .line 280
     return-void
 .end method
 
@@ -619,7 +558,6 @@
     .param p4, "b"    # I
 
     .prologue
-    .line 444
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/RecyclerListView;->access$000(Lorg/telegram/ui/Components/RecyclerListView;)Z
@@ -628,11 +566,9 @@
 
     if-nez v0, :cond_0
 
-    .line 448
     :goto_0
     return-void
 
-    .line 447
     :cond_0
     invoke-super {p0, p1, p2, p3, p4}, Landroid/view/View;->layout(IIII)V
 
@@ -644,7 +580,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 373
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->paint:Landroid/graphics/Paint;
@@ -805,7 +740,6 @@
 
     invoke-virtual {v12, v13}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 374
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getMeasuredHeight()I
 
     move-result v12
@@ -834,7 +768,6 @@
 
     double-to-int v11, v12
 
-    .line 375
     .local v11, "y":I
     move-object/from16 v0, p0
 
@@ -886,7 +819,6 @@
 
     invoke-virtual/range {v12 .. v16}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 376
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->rect:Landroid/graphics/RectF;
@@ -915,7 +847,6 @@
 
     invoke-virtual {v0, v12, v13, v14, v15}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 377
     move-object/from16 v0, p0
 
     iget-boolean v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->pressed:Z
@@ -932,7 +863,6 @@
 
     if-eqz v12, :cond_5
 
-    .line 378
     :cond_0
     move-object/from16 v0, p0
 
@@ -950,7 +880,6 @@
 
     invoke-virtual {v12, v13}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 379
     const/high16 v12, 0x41f00000    # 30.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -959,7 +888,6 @@
 
     add-int v8, v11, v12
 
-    .line 380
     .local v8, "progressY":I
     const/high16 v12, 0x42380000    # 46.0f
 
@@ -969,10 +897,8 @@
 
     sub-int/2addr v11, v12
 
-    .line 381
     const/4 v2, 0x0
 
-    .line 382
     .local v2, "diff":F
     const/high16 v12, 0x41400000    # 12.0f
 
@@ -982,7 +908,6 @@
 
     if-gt v11, v12, :cond_1
 
-    .line 383
     const/high16 v12, 0x41400000    # 12.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -993,14 +918,12 @@
 
     int-to-float v2, v12
 
-    .line 384
     const/high16 v12, 0x41400000    # 12.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v11
 
-    .line 388
     :cond_1
     const/high16 v12, 0x41200000    # 10.0f
 
@@ -1016,7 +939,6 @@
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 389
     const/high16 v12, 0x41e80000    # 29.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1029,7 +951,6 @@
 
     if-gtz v12, :cond_c
 
-    .line 390
     const/high16 v12, 0x42300000    # 44.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1038,7 +959,6 @@
 
     int-to-float v10, v12
 
-    .line 391
     .local v10, "raduisTop":F
     const/high16 v12, 0x40800000    # 4.0f
 
@@ -1070,7 +990,6 @@
 
     add-float v9, v12, v13
 
-    .line 397
     .local v9, "raduisBottom":F
     :goto_0
     sget-boolean v12, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -1130,13 +1049,11 @@
 
     if-eqz v12, :cond_4
 
-    .line 398
     :cond_3
     sget-boolean v12, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v12, :cond_d
 
-    .line 399
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->radii:[F
@@ -1153,7 +1070,6 @@
 
     aput v10, v12, v13
 
-    .line 400
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->radii:[F
@@ -1170,7 +1086,6 @@
 
     aput v9, v12, v13
 
-    .line 405
     :goto_1
     move-object/from16 v0, p0
 
@@ -1178,7 +1093,6 @@
 
     invoke-virtual {v12}, Landroid/graphics/Path;->reset()V
 
-    .line 406
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->rect:Landroid/graphics/RectF;
@@ -1227,7 +1141,6 @@
 
     invoke-virtual {v14, v12, v15, v13, v0}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 407
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->path:Landroid/graphics/Path;
@@ -1244,14 +1157,12 @@
 
     invoke-virtual {v12, v13, v14, v15}, Landroid/graphics/Path;->addRoundRect(Landroid/graphics/RectF;[FLandroid/graphics/Path$Direction;)V
 
-    .line 408
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->path:Landroid/graphics/Path;
 
     invoke-virtual {v12}, Landroid/graphics/Path;->close()V
 
-    .line 410
     :cond_4
     move-object/from16 v0, p0
 
@@ -1263,15 +1174,12 @@
 
     iget-object v3, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->letterLayout:Landroid/text/StaticLayout;
 
-    .line 411
     .local v3, "layoutToDraw":Landroid/text/StaticLayout;
     :goto_4
     if-eqz v3, :cond_5
 
-    .line 412
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 413
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
@@ -1294,7 +1202,6 @@
 
     invoke-virtual {v0, v12, v13, v14, v15}, Landroid/graphics/Canvas;->scale(FFFF)V
 
-    .line 414
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->path:Landroid/graphics/Path;
@@ -1307,7 +1214,6 @@
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Canvas;->drawPath(Landroid/graphics/Path;Landroid/graphics/Paint;)V
 
-    .line 415
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->textX:F
@@ -1320,15 +1226,12 @@
 
     invoke-virtual {v0, v12, v13}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 416
     move-object/from16 v0, p1
 
     invoke-virtual {v3, v0}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 417
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 420
     .end local v2    # "diff":F
     .end local v3    # "layoutToDraw":Landroid/text/StaticLayout;
     .end local v8    # "progressY":I
@@ -1381,13 +1284,11 @@
 
     if-lez v12, :cond_b
 
-    .line 421
     :cond_8
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v6
 
-    .line 422
     .local v6, "newTime":J
     move-object/from16 v0, p0
 
@@ -1395,7 +1296,6 @@
 
     sub-long v4, v6, v12
 
-    .line 423
     .local v4, "dt":J
     const-wide/16 v12, 0x0
 
@@ -1409,20 +1309,16 @@
 
     if-lez v12, :cond_a
 
-    .line 424
     :cond_9
     const-wide/16 v4, 0x11
 
-    .line 426
     :cond_a
     move-object/from16 v0, p0
 
     iput-wide v6, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastUpdateTime:J
 
-    .line 427
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
-    .line 428
     move-object/from16 v0, p0
 
     iget-boolean v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->pressed:Z
@@ -1435,7 +1331,6 @@
 
     if-eqz v12, :cond_11
 
-    .line 429
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
@@ -1452,7 +1347,6 @@
 
     iput v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
 
-    .line 430
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
@@ -1463,21 +1357,18 @@
 
     if-lez v12, :cond_b
 
-    .line 431
     const/high16 v12, 0x3f800000    # 1.0f
 
     move-object/from16 v0, p0
 
     iput v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
 
-    .line 440
     .end local v4    # "dt":J
     .end local v6    # "newTime":J
     :cond_b
     :goto_5
     return-void
 
-    .line 393
     .restart local v2    # "diff":F
     .restart local v8    # "progressY":I
     :cond_c
@@ -1491,7 +1382,6 @@
 
     sub-float/2addr v2, v12
 
-    .line 394
     const/high16 v12, 0x42300000    # 44.0f
 
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1500,7 +1390,6 @@
 
     int-to-float v9, v12
 
-    .line 395
     .restart local v9    # "raduisBottom":F
     const/high16 v12, 0x40800000    # 4.0f
 
@@ -1539,7 +1428,6 @@
     .restart local v10    # "raduisTop":F
     goto/16 :goto_0
 
-    .line 402
     :cond_d
     move-object/from16 v0, p0
 
@@ -1557,7 +1445,6 @@
 
     aput v10, v12, v13
 
-    .line 403
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->radii:[F
@@ -1576,7 +1463,6 @@
 
     goto/16 :goto_1
 
-    .line 406
     :cond_e
     const/4 v12, 0x0
 
@@ -1587,7 +1473,6 @@
 
     goto/16 :goto_3
 
-    .line 410
     :cond_10
     move-object/from16 v0, p0
 
@@ -1595,7 +1480,6 @@
 
     goto/16 :goto_4
 
-    .line 434
     .end local v2    # "diff":F
     .end local v8    # "progressY":I
     .end local v9    # "raduisBottom":F
@@ -1619,7 +1503,6 @@
 
     iput v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
 
-    .line 435
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->bubbleProgress:F
@@ -1630,7 +1513,6 @@
 
     if-gez v12, :cond_b
 
-    .line 436
     const/4 v12, 0x0
 
     move-object/from16 v0, p0
@@ -1646,7 +1528,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 368
     const/high16 v0, 0x43040000    # 132.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1659,7 +1540,6 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->setMeasuredDimension(II)V
 
-    .line 369
     return-void
 .end method
 
@@ -1678,14 +1558,12 @@
 
     const/4 v6, 0x1
 
-    .line 284
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v7
 
     packed-switch v7, :pswitch_data_0
 
-    .line 328
     invoke-super {p0, p1}, Landroid/view/View;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v6
@@ -1694,13 +1572,11 @@
     :goto_0
     return v6
 
-    .line 286
     :pswitch_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v5
 
-    .line 287
     .local v5, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
@@ -1708,7 +1584,6 @@
 
     iput v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastY:F
 
-    .line 288
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getMeasuredHeight()I
 
     move-result v7
@@ -1741,7 +1616,6 @@
 
     add-float v0, v7, v8
 
-    .line 289
     .local v0, "currectY":F
     sget-boolean v7, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
@@ -1799,13 +1673,11 @@
 
     if-lez v7, :cond_4
 
-    .line 290
     :cond_3
     const/4 v6, 0x0
 
     goto :goto_0
 
-    .line 292
     :cond_4
     iget v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastY:F
 
@@ -1813,25 +1685,20 @@
 
     iput v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->startDy:F
 
-    .line 293
     iput-boolean v6, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->pressed:Z
 
-    .line 294
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
     iput-wide v8, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastUpdateTime:J
 
-    .line 295
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getCurrentLetter()V
 
-    .line 296
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
     goto :goto_0
 
-    .line 299
     .end local v0    # "currectY":F
     .end local v5    # "x":F
     :pswitch_1
@@ -1839,12 +1706,10 @@
 
     if-eqz v7, :cond_0
 
-    .line 302
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v4
 
-    .line 303
     .local v4, "newY":F
     invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -1856,7 +1721,6 @@
 
     add-float v3, v7, v8
 
-    .line 304
     .local v3, "minY":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getMeasuredHeight()I
 
@@ -1876,27 +1740,22 @@
 
     add-float v2, v7, v8
 
-    .line 305
     .local v2, "maxY":F
     cmpg-float v7, v4, v3
 
     if-gez v7, :cond_7
 
-    .line 306
     move v4, v3
 
-    .line 310
     :cond_5
     :goto_1
     iget v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastY:F
 
     sub-float v1, v4, v7
 
-    .line 311
     .local v1, "dy":F
     iput v4, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastY:F
 
-    .line 312
     iget v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getMeasuredHeight()I
@@ -1917,39 +1776,32 @@
 
     iput v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
-    .line 313
     iget v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
     cmpg-float v7, v7, v10
 
     if-gez v7, :cond_8
 
-    .line 314
     iput v10, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
-    .line 318
     :cond_6
     :goto_2
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->getCurrentLetter()V
 
-    .line 319
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 307
     .end local v1    # "dy":F
     :cond_7
     cmpl-float v7, v4, v2
 
     if-lez v7, :cond_5
 
-    .line 308
     move v4, v2
 
     goto :goto_1
 
-    .line 315
     .restart local v1    # "dy":F
     :cond_8
     iget v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
@@ -1958,12 +1810,10 @@
 
     if-lez v7, :cond_6
 
-    .line 316
     iput v11, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->progress:F
 
     goto :goto_2
 
-    .line 323
     .end local v1    # "dy":F
     .end local v2    # "maxY":F
     .end local v3    # "minY":F
@@ -1973,19 +1823,16 @@
 
     iput-boolean v7, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->pressed:Z
 
-    .line 324
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v8
 
     iput-wide v8, p0, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->lastUpdateTime:J
 
-    .line 325
     invoke-virtual {p0}, Lorg/telegram/ui/Components/RecyclerListView$FastScroll;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 284
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

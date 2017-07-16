@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/SlidingTabView;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lorg/telegram/ui/Components/SlidingTabView$1;->this$0:Lorg/telegram/ui/Components/SlidingTabView;
 
     iput p2, p0, Lorg/telegram/ui/Components/SlidingTabView$1;->val$position:I
@@ -46,13 +45,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/Components/SlidingTabView$1;->this$0:Lorg/telegram/ui/Components/SlidingTabView;
 
     iget v1, p0, Lorg/telegram/ui/Components/SlidingTabView$1;->val$position:I
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/SlidingTabView;->access$000(Lorg/telegram/ui/Components/SlidingTabView;I)V
 
-    .line 67
     return-void
 .end method

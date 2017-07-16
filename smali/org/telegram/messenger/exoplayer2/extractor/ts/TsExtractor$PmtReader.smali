@@ -43,12 +43,10 @@
     .param p2, "pid"    # I
 
     .prologue
-    .line 321
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 322
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x5
@@ -59,10 +57,8 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
-    .line 323
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pid:I
 
-    .line 324
     return-void
 .end method
 
@@ -72,24 +68,19 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 412
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v3
 
-    .line 413
     .local v3, "descriptorsStartPosition":I
     add-int v2, v3, p2
 
-    .line 414
     .local v2, "descriptorsEndPosition":I
     const/4 v8, -0x1
 
-    .line 415
     .local v8, "streamType":I
     const/4 v6, 0x0
 
-    .line 416
     .local v6, "language":Ljava/lang/String;
     :goto_0
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
@@ -98,18 +89,15 @@
 
     if-ge v9, v2, :cond_7
 
-    .line 417
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v1
 
-    .line 418
     .local v1, "descriptorTag":I
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 419
     .local v0, "descriptorLength":I
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
@@ -117,18 +105,15 @@
 
     add-int v7, v9, v0
 
-    .line 420
     .local v7, "positionOfNextDescriptor":I
     const/4 v9, 0x5
 
     if-ne v1, v9, :cond_3
 
-    .line 421
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedInt()J
 
     move-result-wide v4
 
-    .line 422
     .local v4, "formatIdentifier":J
     invoke-static {}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;->access$800()J
 
@@ -138,10 +123,8 @@
 
     if-nez v9, :cond_1
 
-    .line 423
     const/16 v8, 0x81
 
-    .line 440
     .end local v4    # "formatIdentifier":J
     :cond_0
     :goto_1
@@ -155,7 +138,6 @@
 
     goto :goto_0
 
-    .line 424
     .restart local v4    # "formatIdentifier":J
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;->access$900()J
@@ -166,12 +148,10 @@
 
     if-nez v9, :cond_2
 
-    .line 425
     const/16 v8, 0x87
 
     goto :goto_1
 
-    .line 426
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;->access$1000()J
 
@@ -181,52 +161,43 @@
 
     if-nez v9, :cond_0
 
-    .line 427
     const/16 v8, 0x24
 
     goto :goto_1
 
-    .line 429
     .end local v4    # "formatIdentifier":J
     :cond_3
     const/16 v9, 0x6a
 
     if-ne v1, v9, :cond_4
 
-    .line 430
     const/16 v8, 0x81
 
     goto :goto_1
 
-    .line 431
     :cond_4
     const/16 v9, 0x7a
 
     if-ne v1, v9, :cond_5
 
-    .line 432
     const/16 v8, 0x87
 
     goto :goto_1
 
-    .line 433
     :cond_5
     const/16 v9, 0x7b
 
     if-ne v1, v9, :cond_6
 
-    .line 434
     const/16 v8, 0x8a
 
     goto :goto_1
 
-    .line 435
     :cond_6
     const/16 v9, 0xa
 
     if-ne v1, v9, :cond_0
 
-    .line 436
     new-instance v9, Ljava/lang/String;
 
     iget-object v10, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -245,19 +216,16 @@
 
     goto :goto_1
 
-    .line 442
     .end local v0    # "descriptorLength":I
     .end local v1    # "descriptorTag":I
     .end local v7    # "positionOfNextDescriptor":I
     :cond_7
     invoke-virtual {p1, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 443
     new-instance v9, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
 
     iget-object v10, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 444
     invoke-static {v10, v3, v2}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v10
@@ -274,14 +242,12 @@
     .param p1, "sectionData"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 338
     const/16 v11, 0xa
 
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v11}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 341
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -292,7 +258,6 @@
 
     invoke-virtual {v0, v11, v12}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes(Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;I)V
 
-    .line 342
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -301,7 +266,6 @@
 
     invoke-virtual {v11, v12}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 343
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -312,13 +276,11 @@
 
     move-result v6
 
-    .line 346
     .local v6, "programInfoLength":I
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v6}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 348
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -339,7 +301,6 @@
 
     if-nez v11, :cond_0
 
-    .line 351
     new-instance v2, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
 
     const/16 v11, 0x15
@@ -352,7 +313,6 @@
 
     invoke-direct {v2, v11, v12, v13}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;-><init>(ILjava/lang/String;[B)V
 
-    .line 352
     .local v2, "dummyEsInfo":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
     move-object/from16 v0, p0
 
@@ -374,7 +334,6 @@
 
     invoke-static {v11, v12}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;->access$202(Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader;)Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader;
 
-    .line 353
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -409,20 +368,17 @@
 
     invoke-interface {v11, v12, v13, v14}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader;->init(Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;)V
 
-    .line 357
     .end local v2    # "dummyEsInfo":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
     :cond_0
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v8
 
-    .line 358
     .local v8, "remainingEntriesLength":I
     :cond_1
     :goto_0
     if-lez v8, :cond_6
 
-    .line 359
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -433,7 +389,6 @@
 
     invoke-virtual {v0, v11, v12}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes(Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;I)V
 
-    .line 360
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -444,7 +399,6 @@
 
     move-result v9
 
-    .line 361
     .local v9, "streamType":I
     move-object/from16 v0, p0
 
@@ -454,7 +408,6 @@
 
     invoke-virtual {v11, v12}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 362
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -465,7 +418,6 @@
 
     move-result v3
 
-    .line 363
     .local v3, "elementaryPid":I
     move-object/from16 v0, p0
 
@@ -475,7 +427,6 @@
 
     invoke-virtual {v11, v12}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 364
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->pmtScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -486,7 +437,6 @@
 
     move-result v5
 
-    .line 365
     .local v5, "esInfoLength":I
     move-object/from16 v0, p0
 
@@ -496,22 +446,18 @@
 
     move-result-object v4
 
-    .line 366
     .local v4, "esInfo":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
     const/4 v11, 0x6
 
     if-ne v9, v11, :cond_2
 
-    .line 367
     iget v9, v4, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;->streamType:I
 
-    .line 369
     :cond_2
     add-int/lit8 v11, v5, 0x5
 
     sub-int/2addr v8, v11
 
-    .line 371
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -524,7 +470,6 @@
 
     move v10, v9
 
-    .line 372
     .local v10, "trackId":I
     :goto_1
     move-object/from16 v0, p0
@@ -541,7 +486,6 @@
 
     if-nez v11, :cond_1
 
-    .line 375
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -554,7 +498,6 @@
 
     invoke-virtual {v11, v10, v12}, Landroid/util/SparseBooleanArray;->put(IZ)V
 
-    .line 378
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -569,7 +512,6 @@
 
     if-ne v9, v11, :cond_5
 
-    .line 379
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -578,13 +520,11 @@
 
     move-result-object v7
 
-    .line 387
     .local v7, "reader":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader;
     :cond_3
     :goto_2
     if-eqz v7, :cond_1
 
-    .line 388
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -602,10 +542,8 @@
     :cond_4
     move v10, v3
 
-    .line 371
     goto :goto_1
 
-    .line 381
     .restart local v10    # "trackId":I
     :cond_5
     move-object/from16 v0, p0
@@ -620,11 +558,9 @@
 
     move-result-object v7
 
-    .line 382
     .restart local v7    # "reader":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader;
     if-eqz v7, :cond_3
 
-    .line 383
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -651,7 +587,6 @@
 
     goto :goto_2
 
-    .line 391
     .end local v3    # "elementaryPid":I
     .end local v4    # "esInfo":Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$EsInfo;
     .end local v5    # "esInfoLength":I
@@ -669,7 +604,6 @@
 
     if-eqz v11, :cond_8
 
-    .line 392
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -680,7 +614,6 @@
 
     if-nez v11, :cond_7
 
-    .line 393
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -691,7 +624,6 @@
 
     invoke-interface {v11}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;->endTracks()V
 
-    .line 400
     :cond_7
     :goto_3
     move-object/from16 v0, p0
@@ -702,10 +634,8 @@
 
     invoke-static {v11, v12}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;->access$702(Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;Z)Z
 
-    .line 401
     return-void
 
-    .line 396
     :cond_8
     move-object/from16 v0, p0
 
@@ -719,7 +649,6 @@
 
     invoke-virtual {v11, v12}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 397
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -734,7 +663,6 @@
 
     invoke-virtual {v11, v12}, Landroid/util/SparseArray;->remove(I)V
 
-    .line 398
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PmtReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
@@ -755,6 +683,5 @@
     .param p3, "idGenerator"    # Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;
 
     .prologue
-    .line 330
     return-void
 .end method

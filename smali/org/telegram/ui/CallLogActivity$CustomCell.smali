@@ -24,12 +24,9 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$CustomCell;->this$0:Lorg/telegram/ui/CallLogActivity;
 
-    .line 142
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 143
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;
 
     .prologue
-    .line 881
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;->this$1:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 884
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;->this$1:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -56,7 +54,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 885
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;->this$1:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, v1, v2, v2, v2}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->queryServerSearch(Ljava/lang/String;ZZZ)V
 
-    .line 887
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8$1;->this$1:Lorg/telegram/ui/Adapters/DialogsSearchAdapter$8;
 
@@ -83,6 +79,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$1800(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;Ljava/lang/String;)V
 
-    .line 888
     return-void
 .end method

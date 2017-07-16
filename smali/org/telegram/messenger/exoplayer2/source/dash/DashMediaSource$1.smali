@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
     .prologue
-    .line 232
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 235
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$1;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;->access$100(Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;)V
 
-    .line 236
     return-void
 .end method

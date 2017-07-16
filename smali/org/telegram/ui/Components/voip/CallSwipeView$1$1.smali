@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/voip/CallSwipeView$1;
 
     .prologue
-    .line 78
     iput-object p1, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1$1;->this$1:Lorg/telegram/ui/Components/voip/CallSwipeView$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 81
     iget-object v0, p0, Lorg/telegram/ui/Components/voip/CallSwipeView$1$1;->this$1:Lorg/telegram/ui/Components/voip/CallSwipeView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/voip/CallSwipeView$1;->this$0:Lorg/telegram/ui/Components/voip/CallSwipeView;
@@ -52,6 +50,5 @@
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 82
     return-void
 .end method

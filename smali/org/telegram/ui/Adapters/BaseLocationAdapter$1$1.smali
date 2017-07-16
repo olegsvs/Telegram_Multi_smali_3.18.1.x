@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1$1;->this$1:Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1$1;->this$1:Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -50,7 +48,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->access$102(Lorg/telegram/ui/Adapters/BaseLocationAdapter;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1$1;->this$1:Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -65,6 +62,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->searchGooglePlacesWithQuery(Ljava/lang/String;Landroid/location/Location;)V
 
-    .line 89
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/voip/VoIPHelper$2;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lorg/telegram/ui/Components/voip/VoIPHelper$2$1;->this$0:Lorg/telegram/ui/Components/voip/VoIPHelper$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Components/voip/VoIPHelper$2$1;->this$0:Lorg/telegram/ui/Components/voip/VoIPHelper$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/voip/VoIPHelper$2;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -52,6 +50,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/voip/VoIPHelper;->access$000(Lorg/telegram/tgnet/TLRPC$User;Landroid/app/Activity;)V
 
-    .line 84
     return-void
 .end method

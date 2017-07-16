@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$4;
 
     .prologue
-    .line 1452
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v4, 0x4
 
-    .line 1455
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$4;->val$name:Ljava/lang/String;
@@ -58,11 +56,9 @@
 
     aget-object v0, v1, v2
 
-    .line 1456
     .local v0, "ext":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 1457
     const-string/jumbo v1, "xml"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -71,7 +67,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 1458
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$4;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -92,14 +87,12 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 1459
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     iget-boolean v1, v1, Lorg/telegram/ui/PlusSettingsActivity$4;->val$favExists:Z
 
     if-eqz v1, :cond_1
 
-    .line 1460
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$4;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -110,18 +103,15 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/PlusSettingsActivity;->access$6900(Lorg/telegram/ui/PlusSettingsActivity;Ljava/lang/String;)V
 
-    .line 1471
     :cond_0
     :goto_0
     return-void
 
-    .line 1462
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
 
     goto :goto_0
 
-    .line 1465
     :cond_2
     const-string/jumbo v1, "db"
 
@@ -131,7 +121,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1466
     iget-object v1, p0, Lorg/telegram/ui/PlusSettingsActivity$4$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/PlusSettingsActivity$4;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -152,7 +141,6 @@
 
     if-ne v1, v4, :cond_0
 
-    .line 1467
     invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
 
     goto :goto_0

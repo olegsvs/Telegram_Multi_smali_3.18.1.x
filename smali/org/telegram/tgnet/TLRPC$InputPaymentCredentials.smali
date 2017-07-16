@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 9278
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,20 +43,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 9286
     const/4 v0, 0x0
 
-    .line 9287
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputPaymentCredentials;
     sparse-switch p1, :sswitch_data_0
 
-    .line 9295
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 9296
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputPaymentCredentials"
@@ -82,18 +77,15 @@
 
     throw v1
 
-    .line 9289
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentials;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPaymentCredentials;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentials;-><init>()V
 
-    .line 9290
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPaymentCredentials;
     goto :goto_0
 
-    .line 9292
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputPaymentCredentialsSaved;
 
@@ -103,18 +95,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputPaymentCredentials;
     goto :goto_0
 
-    .line 9298
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 9299
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputPaymentCredentials;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 9301
     :cond_1
     return-object v0
 
-    .line 9287
     nop
 
     :sswitch_data_0

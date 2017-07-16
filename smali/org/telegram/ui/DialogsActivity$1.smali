@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DialogsActivity;
 
     .prologue
-    .line 259
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$1;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/DialogsActivity$1;->val$context:Landroid/content/Context;
@@ -45,13 +44,11 @@
     .locals 2
 
     .prologue
-    .line 262
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$1;->val$context:Landroid/content/Context;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ActionBar/Theme;->createChatResources(Landroid/content/Context;Z)V
 
-    .line 263
     return-void
 .end method

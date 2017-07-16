@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 26
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -20,12 +19,10 @@
     .param p1, "attributeName"    # Ljava/lang/String;
 
     .prologue
-    .line 84
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeCount()I
 
     move-result v0
 
-    .line 85
     .local v0, "attributeCount":I
     const/4 v1, 0x0
 
@@ -33,7 +30,6 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 86
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeName(I)Ljava/lang/String;
 
     move-result-object v2
@@ -44,22 +40,18 @@
 
     if-eqz v2, :cond_0
 
-    .line 87
     invoke-interface {p0, v1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 90
     :goto_1
     return-object v2
 
-    .line 85
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 90
     :cond_1
     const/4 v2, 0x0
 
@@ -76,7 +68,6 @@
     .end annotation
 
     .prologue
-    .line 48
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -107,7 +98,6 @@
     .end annotation
 
     .prologue
-    .line 37
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isEndTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v0
@@ -145,7 +135,6 @@
     .end annotation
 
     .prologue
-    .line 72
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getEventType()I
 
     move-result v0
@@ -176,7 +165,6 @@
     .end annotation
 
     .prologue
-    .line 61
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
     move-result v0

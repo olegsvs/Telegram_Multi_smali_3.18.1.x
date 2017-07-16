@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 300
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$1;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$1;->val$semaphore:Ljava/util/concurrent/Semaphore;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 303
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$1;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -64,11 +62,9 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$502(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 304
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$1;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 305
     return-void
 .end method

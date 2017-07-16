@@ -41,27 +41,22 @@
     .param p2, "vid"    # Ljava/lang/String;
 
     .prologue
-    .line 801
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 798
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->canRetry:Z
 
-    .line 799
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->results:[Ljava/lang/String;
 
-    .line 802
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->videoId:Ljava/lang/String;
 
-    .line 803
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 795
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -86,7 +80,6 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 806
     iget-object v8, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     sget-object v9, Ljava/util/Locale;->US:Ljava/util/Locale;
@@ -111,7 +104,6 @@
 
     move-result-object v7
 
-    .line 807
     .local v7, "playerCode":Ljava/lang/String;
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->isCancelled()Z
 
@@ -119,14 +111,11 @@
 
     if-eqz v8, :cond_0
 
-    .line 808
     const/4 v8, 0x0
 
-    .line 831
     :goto_0
     return-object v8
 
-    .line 811
     :cond_0
     :try_start_0
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$2400()Ljava/util/regex/Pattern;
@@ -137,7 +126,6 @@
 
     move-result-object v3
 
-    .line 812
     .local v3, "filelist":Ljava/util/regex/Matcher;
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->find()Z
 
@@ -145,20 +133,17 @@
 
     if-eqz v8, :cond_3
 
-    .line 813
     const/4 v8, 0x1
 
     invoke-virtual {v3, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
 
-    .line 814
     .local v5, "jsonCode":Ljava/lang/String;
     new-instance v4, Lorg/json/JSONArray;
 
     invoke-direct {v4, v5}, Lorg/json/JSONArray;-><init>(Ljava/lang/String;)V
 
-    .line 815
     .local v4, "json":Lorg/json/JSONArray;
     const/4 v0, 0x0
 
@@ -170,12 +155,10 @@
 
     if-ge v0, v8, :cond_3
 
-    .line 816
     invoke-virtual {v4, v0}, Lorg/json/JSONArray;->getJSONArray(I)Lorg/json/JSONArray;
 
     move-result-object v1
 
-    .line 817
     .local v1, "array":Lorg/json/JSONArray;
     invoke-virtual {v1}, Lorg/json/JSONArray;->length()I
 
@@ -183,14 +166,12 @@
 
     if-nez v8, :cond_2
 
-    .line 815
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 820
     :cond_2
     const/4 v8, 0x0
 
@@ -198,7 +179,6 @@
 
     move-result-object v6
 
-    .line 821
     .local v6, "object":Lorg/json/JSONObject;
     const-string/jumbo v8, "file"
 
@@ -208,7 +188,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 824
     iget-object v8, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->results:[Ljava/lang/String;
 
     const/4 v9, 0x0
@@ -221,7 +200,6 @@
 
     aput-object v10, v8, v9
 
-    .line 825
     iget-object v8, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->results:[Ljava/lang/String;
 
     const/4 v9, 0x1
@@ -234,7 +212,6 @@
 
     goto :goto_2
 
-    .line 828
     .end local v0    # "a":I
     .end local v1    # "array":Lorg/json/JSONArray;
     .end local v3    # "filelist":Ljava/util/regex/Matcher;
@@ -244,11 +221,9 @@
     :catch_0
     move-exception v2
 
-    .line 829
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 831
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_3
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->isCancelled()Z
@@ -275,7 +250,6 @@
     .locals 0
 
     .prologue
-    .line 795
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->onPostExecute(Ljava/lang/String;)V
@@ -290,20 +264,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 836
     if-eqz p1, :cond_2
 
-    .line 837
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$1702(Lorg/telegram/ui/Components/WebPlayerView;Z)Z
 
-    .line 838
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1902(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 839
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->results:[Ljava/lang/String;
@@ -312,7 +282,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1802(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 840
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2000(Lorg/telegram/ui/Components/WebPlayerView;)Z
@@ -321,12 +290,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 841
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2100(Lorg/telegram/ui/Components/WebPlayerView;)V
 
-    .line 843
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -334,7 +301,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$2200(Lorg/telegram/ui/Components/WebPlayerView;ZZ)V
 
-    .line 844
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$100(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$ControlsView;
@@ -343,12 +309,10 @@
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->show(ZZ)V
 
-    .line 848
     :cond_1
     :goto_0
     return-void
 
-    .line 845
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->isCancelled()Z
 
@@ -356,7 +320,6 @@
 
     if-nez v0, :cond_1
 
-    .line 846
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$AparatVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2300(Lorg/telegram/ui/Components/WebPlayerView;)V

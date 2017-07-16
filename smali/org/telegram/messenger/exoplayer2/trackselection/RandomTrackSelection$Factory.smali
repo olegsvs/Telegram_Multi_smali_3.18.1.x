@@ -26,17 +26,14 @@
     .locals 1
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     new-instance v0, Ljava/util/Random;
 
     invoke-direct {v0}, Ljava/util/Random;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection$Factory;->random:Ljava/util/Random;
 
-    .line 37
     return-void
 .end method
 
@@ -45,10 +42,8 @@
     .param p1, "seed"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-instance v0, Ljava/util/Random;
 
     int-to-long v2, p1
@@ -57,7 +52,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection$Factory;->random:Ljava/util/Random;
 
-    .line 44
     return-void
 .end method
 
@@ -69,7 +63,6 @@
     .param p2, "tracks"    # [I
 
     .prologue
-    .line 48
     new-instance v0, Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection$Factory;->random:Ljava/util/Random;
@@ -83,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 31
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection$Factory;->createTrackSelection(Lorg/telegram/messenger/exoplayer2/source/TrackGroup;[I)Lorg/telegram/messenger/exoplayer2/trackselection/RandomTrackSelection;
 
     move-result-object v0

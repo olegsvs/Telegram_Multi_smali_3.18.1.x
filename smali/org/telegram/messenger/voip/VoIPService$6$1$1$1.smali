@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/messenger/voip/VoIPService$6$1$1;
 
     .prologue
-    .line 520
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1;->this$3:Lorg/telegram/messenger/voip/VoIPService$6$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 523
     iget-object v1, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1;->this$3:Lorg/telegram/messenger/voip/VoIPService$6$1$1;
 
     iget-object v1, v1, Lorg/telegram/messenger/voip/VoIPService$6$1$1;->this$2:Lorg/telegram/messenger/voip/VoIPService$6$1;
@@ -54,12 +52,10 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/voip/VoIPService;->access$1702(Lorg/telegram/messenger/voip/VoIPService;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 524
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;-><init>()V
 
-    .line 525
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
@@ -67,7 +63,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
-    .line 526
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
     iget-object v2, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1;->this$3:Lorg/telegram/messenger/voip/VoIPService$6$1$1;
@@ -86,7 +81,6 @@
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;->access_hash:J
 
-    .line 527
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;
 
     iget-object v2, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1;->this$3:Lorg/telegram/messenger/voip/VoIPService$6$1$1;
@@ -105,14 +99,12 @@
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$TL_inputPhoneCall;->id:J
 
-    .line 528
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonMissed;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonMissed;-><init>()V
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_phone_discardCall;->reason:Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
 
-    .line 529
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -125,6 +117,5 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 545
     return-void
 .end method

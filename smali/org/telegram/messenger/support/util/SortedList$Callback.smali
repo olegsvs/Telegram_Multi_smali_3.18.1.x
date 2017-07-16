@@ -35,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 684
     .local p0, "this":Lorg/telegram/messenger/support/util/SortedList$Callback;, "Lorg/telegram/messenger/support/util/SortedList$Callback<TT2;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -78,10 +77,8 @@
     .param p3, "payload"    # Ljava/lang/Object;
 
     .prologue
-    .line 710
     .local p0, "this":Lorg/telegram/messenger/support/util/SortedList$Callback;, "Lorg/telegram/messenger/support/util/SortedList$Callback<TT2;>;"
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/support/util/SortedList$Callback;->onChanged(II)V
 
-    .line 711
     return-void
 .end method

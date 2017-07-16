@@ -20,9 +20,7 @@
     .param p1, "msg"    # Ljava/lang/String;
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/ParserException;-><init>(Ljava/lang/String;)V
 
-    .line 34
     return-void
 .end method

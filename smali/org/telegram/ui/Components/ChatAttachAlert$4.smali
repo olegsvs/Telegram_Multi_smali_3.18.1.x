@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 533
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -44,14 +43,11 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 541
     sub-int v4, p4, p2
 
-    .line 542
     .local v4, "width":I
     sub-int v2, p5, p3
 
-    .line 543
     .local v2, "height":I
     const/high16 v7, 0x41000000    # 8.0f
 
@@ -59,7 +55,6 @@
 
     move-result v3
 
-    .line 544
     .local v3, "t":I
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -83,7 +78,6 @@
 
     invoke-virtual {v7, v8, v3, v4, v9}, Lorg/telegram/ui/Components/RecyclerListView;->layout(IIII)V
 
-    .line 545
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3700(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/EmptyTextProgressView;
@@ -106,7 +100,6 @@
 
     invoke-virtual {v7, v8, v3, v4, v9}, Lorg/telegram/ui/Components/EmptyTextProgressView;->layout(IIII)V
 
-    .line 546
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3800(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/view/View;
@@ -141,7 +134,6 @@
 
     invoke-virtual {v7, v8, v9, v4, v10}, Landroid/view/View;->layout(IIII)V
 
-    .line 547
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3900(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/widget/TextView;
@@ -206,7 +198,6 @@
 
     invoke-virtual {v7, v8, v9, v10, v11}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 549
     const/high16 v7, 0x43b40000    # 360.0f
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -217,7 +208,6 @@
 
     div-int/lit8 v1, v7, 0x3
 
-    .line 550
     .local v1, "diff":I
     const/4 v0, 0x0
 
@@ -227,7 +217,6 @@
 
     if-ge v0, v7, :cond_0
 
-    .line 551
     div-int/lit8 v7, v0, 0x4
 
     mul-int/lit8 v7, v7, 0x5f
@@ -240,7 +229,6 @@
 
     move-result v6
 
-    .line 552
     .local v6, "y":I
     const/high16 v7, 0x41200000    # 10.0f
 
@@ -262,7 +250,6 @@
 
     add-int v5, v7, v8
 
-    .line 553
     .local v5, "x":I
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatAttachAlert$4;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -302,12 +289,10 @@
 
     invoke-virtual {v7, v5, v6, v8, v9}, Landroid/view/View;->layout(IIII)V
 
-    .line 550
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 555
     .end local v5    # "x":I
     .end local v6    # "y":I
     :cond_0
@@ -320,7 +305,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 536
     const/high16 v0, 0x43930000    # 294.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -335,6 +319,5 @@
 
     invoke-super {p0, p1, v0}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 537
     return-void
 .end method

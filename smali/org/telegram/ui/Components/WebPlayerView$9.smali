@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/WebPlayerView;
 
     .prologue
-    .line 1474
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$9;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1477
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$9;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$3400(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$WebPlayerViewDelegate;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1478
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$9;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$3400(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$WebPlayerViewDelegate;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/WebPlayerView$WebPlayerViewDelegate;->onSharePressed()V
 
-    .line 1480
     :cond_0
     return-void
 .end method

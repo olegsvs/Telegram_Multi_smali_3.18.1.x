@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/StickersAlert$1;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,24 +54,20 @@
 
     const/4 v11, 0x0
 
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0, v11}, Lorg/telegram/ui/Components/StickersAlert;->access$002(Lorg/telegram/ui/Components/StickersAlert;I)I
 
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_3
 
-    .line 117
     iget-object v9, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 118
     .local v9, "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -82,19 +77,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 119
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert;->dismiss()V
 
-    .line 140
     .end local v9    # "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     :goto_0
     return-void
 
-    .line 120
     .restart local v9    # "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     :cond_0
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
@@ -107,7 +99,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 121
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -116,7 +107,6 @@
 
     check-cast v8, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 122
     .local v8, "set":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
@@ -128,7 +118,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/StickersAlert;->access$102(Lorg/telegram/ui/Components/StickersAlert;Lorg/telegram/tgnet/TLRPC$InputStickerSet;)Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
-    .line 123
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -143,7 +132,6 @@
 
     iput-wide v2, v0, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
-    .line 124
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -158,7 +146,6 @@
 
     iput-wide v2, v0, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->access_hash:J
 
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -167,7 +154,6 @@
 
     goto :goto_0
 
-    .line 127
     .end local v8    # "set":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
@@ -180,7 +166,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/StickersAlert;->access$302(Lorg/telegram/ui/Components/StickersAlert;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 128
     const/4 v7, 0x0
 
     .local v7, "a":I
@@ -193,7 +178,6 @@
 
     if-ge v7, v0, :cond_2
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -212,12 +196,10 @@
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 128
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 131
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
@@ -245,7 +227,6 @@
 
     invoke-virtual {v10, v0}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 132
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -256,7 +237,6 @@
 
     invoke-virtual {v0, v12}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 133
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -269,7 +249,6 @@
 
     invoke-virtual {v0, v12}, Landroid/view/View;->setVisibility(I)V
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -282,7 +261,6 @@
 
     goto/16 :goto_0
 
-    .line 137
     .end local v7    # "a":I
     .end local v9    # "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     :cond_3
@@ -304,7 +282,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$1$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$1;->this$0:Lorg/telegram/ui/Components/StickersAlert;

@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 781
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 781
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState$1;->createFromParcel(Landroid/os/Parcel;)Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState;
 
     move-result-object v0
@@ -57,7 +55,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 784
     new-instance v0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState;
 
     const/4 v1, 0x0
@@ -71,7 +68,6 @@
     .locals 1
 
     .prologue
-    .line 781
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState$1;->newArray(I)[Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState;
 
     move-result-object v0
@@ -84,7 +80,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 789
     new-array v0, p1, [Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$SavedState;
 
     return-object v0

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 648
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$3;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,11 +39,9 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 651
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$3;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->checkAutodownloadSettings()V
 
-    .line 652
     return-void
 .end method

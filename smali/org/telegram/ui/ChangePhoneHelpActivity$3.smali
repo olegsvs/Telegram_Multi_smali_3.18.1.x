@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$3;->this$0:Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 125
     iget-object v1, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$3;->this$0:Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ChangePhoneHelpActivity;->getParentActivity()Landroid/app/Activity;
@@ -51,11 +49,9 @@
 
     if-nez v1, :cond_0
 
-    .line 139
     :goto_0
     return-void
 
-    .line 128
     :cond_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -67,7 +63,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 129
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "AppName"
 
@@ -79,7 +74,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 130
     const-string/jumbo v1, "PhoneNumberAlert"
 
     const v2, 0x7f0704ce
@@ -90,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 131
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -105,7 +98,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 137
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -118,7 +110,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 138
     iget-object v1, p0, Lorg/telegram/ui/ChangePhoneHelpActivity$3;->this$0:Lorg/telegram/ui/ChangePhoneHelpActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;

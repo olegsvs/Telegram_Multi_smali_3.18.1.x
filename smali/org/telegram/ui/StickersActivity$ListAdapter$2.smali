@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     .prologue
-    .line 428
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,27 +51,23 @@
 
     const/4 v6, 0x0
 
-    .line 431
     iget-object v5, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/StickersActivity$ListAdapter;->this$0:Lorg/telegram/ui/StickersActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/StickersActivity;->access$400(Lorg/telegram/ui/StickersActivity;)V
 
-    .line 432
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/ui/Cells/StickerSetCell;
 
-    .line 433
     .local v1, "cell":Lorg/telegram/ui/Cells/StickerSetCell;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/StickerSetCell;->getStickersSet()Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     move-result-object v4
 
-    .line 434
     .local v4, "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -86,7 +81,6 @@
 
     invoke-direct {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 435
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -94,7 +88,6 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 438
     iget-object v5, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/StickersActivity$ListAdapter;->this$0:Lorg/telegram/ui/StickersActivity;
@@ -105,32 +98,27 @@
 
     if-nez v5, :cond_1
 
-    .line 439
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-boolean v5, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->official:Z
 
     if-eqz v5, :cond_0
 
-    .line 440
     new-array v3, v7, [I
 
     aput v6, v3, v6
 
-    .line 441
     .local v3, "options":[I
     new-array v2, v7, [Ljava/lang/CharSequence;
 
     const-string/jumbo v5, "StickersHide"
 
-    .line 442
     invoke-static {v5, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
 
     aput-object v5, v2, v6
 
-    .line 470
     .local v2, "items":[Ljava/lang/CharSequence;
     :goto_0
     new-instance v5, Lorg/telegram/ui/StickersActivity$ListAdapter$2$1;
@@ -139,7 +127,6 @@
 
     invoke-virtual {v0, v2, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 476
     iget-object v5, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$2;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
     iget-object v5, v5, Lorg/telegram/ui/StickersActivity$ListAdapter;->this$0:Lorg/telegram/ui/StickersActivity;
@@ -150,10 +137,8 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/StickersActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 477
     return-void
 
-    .line 445
     .end local v2    # "items":[Ljava/lang/CharSequence;
     .end local v3    # "options":[I
     :cond_0
@@ -161,13 +146,11 @@
 
     fill-array-data v3, :array_0
 
-    .line 446
     .restart local v3    # "options":[I
     new-array v2, v8, [Ljava/lang/CharSequence;
 
     const-string/jumbo v5, "StickersHide"
 
-    .line 447
     invoke-static {v5, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -178,7 +161,6 @@
 
     const v6, 0x7f070601
 
-    .line 448
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -189,7 +171,6 @@
 
     const v6, 0x7f070603
 
-    .line 449
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -202,7 +183,6 @@
 
     const v7, 0x7f0705ff
 
-    .line 450
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
@@ -212,7 +192,6 @@
     .restart local v2    # "items":[Ljava/lang/CharSequence;
     goto :goto_0
 
-    .line 454
     .end local v2    # "items":[Ljava/lang/CharSequence;
     .end local v3    # "options":[I
     :cond_1
@@ -222,18 +201,15 @@
 
     if-eqz v5, :cond_2
 
-    .line 455
     new-array v3, v7, [I
 
     aput v6, v3, v6
 
-    .line 456
     .restart local v3    # "options":[I
     new-array v2, v7, [Ljava/lang/CharSequence;
 
     const-string/jumbo v5, "StickersRemove"
 
-    .line 457
     invoke-static {v5, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -243,7 +219,6 @@
     .restart local v2    # "items":[Ljava/lang/CharSequence;
     goto :goto_0
 
-    .line 460
     .end local v2    # "items":[Ljava/lang/CharSequence;
     .end local v3    # "options":[I
     :cond_2
@@ -251,13 +226,11 @@
 
     fill-array-data v3, :array_1
 
-    .line 461
     .restart local v3    # "options":[I
     new-array v2, v8, [Ljava/lang/CharSequence;
 
     const-string/jumbo v5, "StickersHide"
 
-    .line 462
     invoke-static {v5, v9}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -268,7 +241,6 @@
 
     const v6, 0x7f070601
 
-    .line 463
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -279,7 +251,6 @@
 
     const v6, 0x7f070603
 
-    .line 464
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v5
@@ -292,7 +263,6 @@
 
     const v7, 0x7f0705ff
 
-    .line 465
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v6
@@ -302,7 +272,6 @@
     .restart local v2    # "items":[Ljava/lang/CharSequence;
     goto/16 :goto_0
 
-    .line 445
     :array_0
     .array-data 4
         0x0
@@ -311,7 +280,6 @@
         0x3
     .end array-data
 
-    .line 460
     :array_1
     .array-data 4
         0x0

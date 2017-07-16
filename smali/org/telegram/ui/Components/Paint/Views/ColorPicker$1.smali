@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Views/ColorPicker;
 
     .prologue
-    .line 91
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$1;->this$0:Lorg/telegram/ui/Components/Paint/Views/ColorPicker;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 94
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$1;->this$0:Lorg/telegram/ui/Components/Paint/Views/ColorPicker;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->access$000(Lorg/telegram/ui/Components/Paint/Views/ColorPicker;)Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 95
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$1;->this$0:Lorg/telegram/ui/Components/Paint/Views/ColorPicker;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker;->access$000(Lorg/telegram/ui/Components/Paint/Views/ColorPicker;)Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;
@@ -60,7 +57,6 @@
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/Paint/Views/ColorPicker$ColorPickerDelegate;->onSettingsPressed()V
 
-    .line 97
     :cond_0
     return-void
 .end method

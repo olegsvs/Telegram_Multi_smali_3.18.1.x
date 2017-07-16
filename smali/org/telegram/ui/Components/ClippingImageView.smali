@@ -49,64 +49,54 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 48
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 49
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->paint:Landroid/graphics/Paint;
 
-    .line 50
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setFilterBitmap(Z)V
 
-    .line 51
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
-    .line 52
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->drawRect:Landroid/graphics/RectF;
 
-    .line 53
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
 
-    .line 54
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->roundPaint:Landroid/graphics/Paint;
 
-    .line 55
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->roundRect:Landroid/graphics/RectF;
 
-    .line 56
     new-instance v0, Landroid/graphics/Matrix;
 
     invoke-direct {v0}, Landroid/graphics/Matrix;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->shaderMatrix:Landroid/graphics/Matrix;
 
-    .line 57
     return-void
 .end method
 
@@ -116,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 64
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationProgress:F
 
     return v0
@@ -126,7 +115,6 @@
     .locals 1
 
     .prologue
-    .line 83
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipBottom:I
 
     return v0
@@ -136,7 +124,6 @@
     .locals 1
 
     .prologue
-    .line 87
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipRight:I
 
     return v0
@@ -146,7 +133,6 @@
     .locals 1
 
     .prologue
-    .line 91
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipLeft:I
 
     return v0
@@ -156,7 +142,6 @@
     .locals 1
 
     .prologue
-    .line 95
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipRight:I
 
     return v0
@@ -166,7 +151,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipTop:I
 
     return v0
@@ -176,7 +160,6 @@
     .locals 1
 
     .prologue
-    .line 103
     iget v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->radius:I
 
     return v0
@@ -187,44 +170,36 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 107
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getVisibility()I
 
     move-result v9
 
     if-eqz v9, :cond_1
 
-    .line 167
     :cond_0
     :goto_0
     return-void
 
-    .line 110
     :cond_1
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
     if-eqz v9, :cond_0
 
-    .line 111
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getScaleY()F
 
     move-result v7
 
-    .line 112
     .local v7, "scaleY":F
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 114
     iget-boolean v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->needRadius:Z
 
     if-eqz v9, :cond_7
 
-    .line 115
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->shaderMatrix:Landroid/graphics/Matrix;
 
     invoke-virtual {v9}, Landroid/graphics/Matrix;->reset()V
 
-    .line 116
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->roundRect:Landroid/graphics/RectF;
 
     const/4 v10, 0x0
@@ -245,7 +220,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 120
     iget v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->orientation:I
 
     rem-int/lit16 v9, v9, 0x168
@@ -262,7 +236,6 @@
 
     if-ne v9, v10, :cond_3
 
-    .line 121
     :cond_2
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
@@ -270,7 +243,6 @@
 
     move-result v1
 
-    .line 122
     .local v1, "bitmapW":I
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
@@ -278,7 +250,6 @@
 
     move-result v0
 
-    .line 127
     .local v0, "bitmapH":I
     :goto_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getWidth()I
@@ -297,7 +268,6 @@
 
     div-float v6, v9, v10
 
-    .line 128
     .local v6, "scaleW":F
     :goto_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getHeight()I
@@ -316,14 +286,12 @@
 
     div-float v5, v9, v10
 
-    .line 129
     .local v5, "scaleH":F
     :goto_3
     invoke-static {v6, v5}, Ljava/lang/Math;->min(FF)F
 
     move-result v4
 
-    .line 130
     .local v4, "scale":F
     sub-float v9, v6, v5
 
@@ -337,7 +305,6 @@
 
     if-lez v9, :cond_6
 
-    .line 131
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getWidth()I
 
     move-result v9
@@ -354,7 +321,6 @@
 
     double-to-int v8, v10
 
-    .line 132
     .local v8, "w":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getHeight()I
 
@@ -372,7 +338,6 @@
 
     double-to-int v3, v10
 
-    .line 133
     .local v3, "h":I
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
 
@@ -394,7 +359,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 134
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
@@ -407,7 +371,6 @@
 
     invoke-static {v9, v10, v11, v12, v13}, Lorg/telegram/messenger/AndroidUtilities;->setRectToRect(Landroid/graphics/Matrix;Landroid/graphics/RectF;Landroid/graphics/RectF;ILandroid/graphics/Matrix$ScaleToFit;)V
 
-    .line 139
     .end local v3    # "h":I
     .end local v8    # "w":I
     :goto_4
@@ -417,7 +380,6 @@
 
     invoke-virtual {v9, v10}, Landroid/graphics/BitmapShader;->setLocalMatrix(Landroid/graphics/Matrix;)V
 
-    .line 140
     iget v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipLeft:I
 
     int-to-float v9, v9
@@ -460,7 +422,6 @@
 
     invoke-virtual {p1, v9, v10, v11, v12}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 141
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->roundRect:Landroid/graphics/RectF;
 
     iget v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->radius:I
@@ -475,7 +436,6 @@
 
     invoke-virtual {p1, v9, v10, v11, v12}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 165
     .end local v0    # "bitmapH":I
     .end local v1    # "bitmapW":I
     .end local v4    # "scale":F
@@ -486,7 +446,6 @@
 
     goto/16 :goto_0
 
-    .line 124
     :cond_3
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
@@ -494,7 +453,6 @@
 
     move-result v1
 
-    .line 125
     .restart local v1    # "bitmapW":I
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
@@ -505,20 +463,17 @@
     .restart local v0    # "bitmapH":I
     goto/16 :goto_1
 
-    .line 127
     :cond_4
     const/high16 v6, 0x3f800000    # 1.0f
 
     goto/16 :goto_2
 
-    .line 128
     .restart local v6    # "scaleW":F
     :cond_5
     const/high16 v5, 0x3f800000    # 1.0f
 
     goto/16 :goto_3
 
-    .line 136
     .restart local v4    # "scale":F
     .restart local v5    # "scaleH":F
     :cond_6
@@ -546,7 +501,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 137
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->shaderMatrix:Landroid/graphics/Matrix;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
@@ -561,7 +515,6 @@
 
     goto :goto_4
 
-    .line 143
     .end local v0    # "bitmapH":I
     .end local v1    # "bitmapW":I
     .end local v4    # "scale":F
@@ -580,7 +533,6 @@
 
     if-ne v9, v10, :cond_9
 
-    .line 144
     :cond_8
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->drawRect:Landroid/graphics/RectF;
 
@@ -622,7 +574,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 145
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
@@ -633,7 +584,6 @@
 
     invoke-virtual {v9, v10, v11, v12}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 146
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     iget v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->orientation:I
@@ -646,7 +596,6 @@
 
     invoke-virtual {v9, v10, v11, v12}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    .line 147
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getWidth()I
@@ -667,7 +616,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/graphics/Matrix;->postTranslate(FF)Z
 
-    .line 158
     :goto_6
     iget v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipLeft:I
 
@@ -711,7 +659,6 @@
 
     invoke-virtual {p1, v9, v10, v11, v12}, Landroid/graphics/Canvas;->clipRect(FFFF)Z
 
-    .line 160
     :try_start_0
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
@@ -725,17 +672,14 @@
 
     goto/16 :goto_5
 
-    .line 161
     :catch_0
     move-exception v2
 
-    .line 162
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_5
 
-    .line 148
     .end local v2    # "e":Ljava/lang/Exception;
     :cond_9
     iget v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->orientation:I
@@ -744,7 +688,6 @@
 
     if-ne v9, v10, :cond_a
 
-    .line 149
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->drawRect:Landroid/graphics/RectF;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getWidth()I
@@ -785,7 +728,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 150
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
@@ -796,7 +738,6 @@
 
     invoke-virtual {v9, v10, v11, v12}, Landroid/graphics/Matrix;->setRectToRect(Landroid/graphics/RectF;Landroid/graphics/RectF;Landroid/graphics/Matrix$ScaleToFit;)Z
 
-    .line 151
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     iget v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->orientation:I
@@ -809,7 +750,6 @@
 
     invoke-virtual {v9, v10, v11, v12}, Landroid/graphics/Matrix;->postRotate(FFF)Z
 
-    .line 152
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->getWidth()I
@@ -832,7 +772,6 @@
 
     goto/16 :goto_6
 
-    .line 154
     :cond_a
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->drawRect:Landroid/graphics/RectF;
 
@@ -854,7 +793,6 @@
 
     invoke-virtual {v9, v10, v11, v12, v13}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 155
     iget-object v9, p0, Lorg/telegram/ui/Components/ClippingImageView;->matrix:Landroid/graphics/Matrix;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
@@ -883,10 +821,8 @@
 
     const/4 v4, 0x0
 
-    .line 68
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationProgress:F
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -915,7 +851,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setScaleX(F)V
 
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -944,7 +879,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setScaleY(F)V
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -973,7 +907,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setTranslationX(F)V
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -1002,7 +935,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setTranslationY(F)V
 
-    .line 74
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -1033,7 +965,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setClipHorizontal(I)V
 
-    .line 75
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -1070,7 +1001,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setClipTop(I)V
 
-    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -1107,7 +1037,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setClipBottom(I)V
 
-    .line 77
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
     aget-object v0, v0, v4
@@ -1144,10 +1073,8 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/ClippingImageView;->setRadius(I)V
 
-    .line 79
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 80
     return-void
 .end method
 
@@ -1156,10 +1083,8 @@
     .param p1, "values"    # [[F
 
     .prologue
-    .line 60
     iput-object p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->animationValues:[[F
 
-    .line 61
     return-void
 .end method
 
@@ -1168,13 +1093,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 170
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipBottom:I
 
-    .line 171
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 172
     return-void
 .end method
 
@@ -1183,16 +1105,12 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 175
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipRight:I
 
-    .line 176
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipLeft:I
 
-    .line 177
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 178
     return-void
 .end method
 
@@ -1201,13 +1119,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 181
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipLeft:I
 
-    .line 182
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 183
     return-void
 .end method
 
@@ -1216,13 +1131,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 186
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipRight:I
 
-    .line 187
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 188
     return-void
 .end method
 
@@ -1231,13 +1143,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 191
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipTop:I
 
-    .line 192
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 193
     return-void
 .end method
 
@@ -1246,16 +1155,12 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 196
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipBottom:I
 
-    .line 197
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->clipTop:I
 
-    .line 198
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 199
     return-void
 .end method
 
@@ -1266,13 +1171,10 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 206
     iput-object p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->bmp:Landroid/graphics/Bitmap;
 
-    .line 207
     if-eqz p1, :cond_0
 
-    .line 208
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapRect:Landroid/graphics/RectF;
 
     invoke-virtual {p1}, Landroid/graphics/Bitmap;->getWidth()I
@@ -1289,12 +1191,10 @@
 
     invoke-virtual {v0, v3, v3, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 209
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->needRadius:Z
 
     if-eqz v0, :cond_0
 
-    .line 210
     new-instance v0, Landroid/graphics/BitmapShader;
 
     sget-object v1, Landroid/graphics/Shader$TileMode;->CLAMP:Landroid/graphics/Shader$TileMode;
@@ -1305,18 +1205,15 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapShader:Landroid/graphics/BitmapShader;
 
-    .line 211
     iget-object v0, p0, Lorg/telegram/ui/Components/ClippingImageView;->roundPaint:Landroid/graphics/Paint;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ClippingImageView;->bitmapShader:Landroid/graphics/BitmapShader;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 214
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ClippingImageView;->invalidate()V
 
-    .line 215
     return-void
 .end method
 
@@ -1325,10 +1222,8 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 218
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->needRadius:Z
 
-    .line 219
     return-void
 .end method
 
@@ -1337,10 +1232,8 @@
     .param p1, "angle"    # I
 
     .prologue
-    .line 202
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->orientation:I
 
-    .line 203
     return-void
 .end method
 
@@ -1349,9 +1242,7 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 222
     iput p1, p0, Lorg/telegram/ui/Components/ClippingImageView;->radius:I
 
-    .line 223
     return-void
 .end method

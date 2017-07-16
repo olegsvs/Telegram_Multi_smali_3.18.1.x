@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1885
     invoke-direct {p0}, Lorg/telegram/messenger/LocaleController$PluralRules;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "count"    # I
 
     .prologue
-    .line 1887
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0

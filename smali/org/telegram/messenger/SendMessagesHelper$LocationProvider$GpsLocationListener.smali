@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/SendMessagesHelper$1;
 
     .prologue
-    .line 93
     invoke-direct {p0, p1}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;-><init>(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)V
 
     return-void
@@ -53,7 +51,6 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 97
     if-eqz p1, :cond_0
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
@@ -64,12 +61,10 @@
 
     if-nez v0, :cond_1
 
-    .line 111
     :cond_0
     :goto_0
     return-void
 
-    .line 100
     :cond_1
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -91,12 +86,10 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 101
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$402(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;Landroid/location/Location;)Landroid/location/Location;
 
-    .line 102
     invoke-virtual {p1}, Landroid/location/Location;->getAccuracy()F
 
     move-result v0
@@ -107,7 +100,6 @@
 
     if-gez v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$500(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$LocationProviderDelegate;
@@ -116,7 +108,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 104
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$500(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$LocationProviderDelegate;
@@ -125,7 +116,6 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$LocationProviderDelegate;->onLocationAcquired(Landroid/location/Location;)V
 
-    .line 106
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
@@ -135,7 +125,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 107
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$300(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Ljava/lang/Runnable;
@@ -144,7 +133,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 109
     :cond_3
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$GpsLocationListener;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
@@ -158,7 +146,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 126
     return-void
 .end method
 
@@ -167,7 +154,6 @@
     .param p1, "provider"    # Ljava/lang/String;
 
     .prologue
-    .line 121
     return-void
 .end method
 
@@ -178,6 +164,5 @@
     .param p3, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 116
     return-void
 .end method

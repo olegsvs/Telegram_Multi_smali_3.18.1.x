@@ -44,17 +44,14 @@
     .locals 1
 
     .prologue
-    .line 4957
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 4980
     new-instance v0, Landroid/util/SparseArray;
 
     invoke-direct {v0}, Landroid/util/SparseArray;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
-    .line 4982
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mAttachCount:I
@@ -67,7 +64,6 @@
     .param p1, "viewType"    # I
 
     .prologue
-    .line 5105
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -76,23 +72,19 @@
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
-    .line 5106
     .local v0, "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     if-nez v0, :cond_0
 
-    .line 5107
     new-instance v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     .end local v0    # "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     invoke-direct {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;-><init>()V
 
-    .line 5108
     .restart local v0    # "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
     invoke-virtual {v1, p1, v0}, Landroid/util/SparseArray;->put(ILjava/lang/Object;)V
 
-    .line 5110
     :cond_0
     return-object v0
 .end method
@@ -104,14 +96,12 @@
     .param p1, "adapter"    # Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
 
     .prologue
-    .line 5072
     iget v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mAttachCount:I
 
     add-int/lit8 v0, v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mAttachCount:I
 
-    .line 5073
     return-void
 .end method
 
@@ -119,7 +109,6 @@
     .locals 3
 
     .prologue
-    .line 4985
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -132,7 +121,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 4986
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -141,18 +129,15 @@
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
-    .line 4987
     .local v0, "data":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     iget-object v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 4985
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 4989
     .end local v0    # "data":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     :cond_0
     return-void
@@ -162,14 +147,12 @@
     .locals 1
 
     .prologue
-    .line 5076
     iget v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mAttachCount:I
 
     add-int/lit8 v0, v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mAttachCount:I
 
-    .line 5077
     return-void
 .end method
 
@@ -179,12 +162,10 @@
     .param p2, "bindTimeNs"    # J
 
     .prologue
-    .line 5056
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v0
 
-    .line 5057
     .local v0, "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     iget-wide v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mBindRunningAverageNs:J
 
@@ -194,7 +175,6 @@
 
     iput-wide v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mBindRunningAverageNs:J
 
-    .line 5059
     return-void
 .end method
 
@@ -204,12 +184,10 @@
     .param p2, "createTimeNs"    # J
 
     .prologue
-    .line 5050
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v0
 
-    .line 5051
     .local v0, "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     iget-wide v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mCreateRunningAverageNs:J
 
@@ -219,7 +197,6 @@
 
     iput-wide v2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mCreateRunningAverageNs:J
 
-    .line 5053
     return-void
 .end method
 
@@ -228,7 +205,6 @@
     .param p1, "viewType"    # I
 
     .prologue
-    .line 5010
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
     invoke-virtual {v2, p1}, Landroid/util/SparseArray;->get(I)Ljava/lang/Object;
@@ -237,7 +213,6 @@
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
-    .line 5011
     .local v0, "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     if-eqz v0, :cond_0
 
@@ -249,10 +224,8 @@
 
     if-nez v2, :cond_0
 
-    .line 5012
     iget-object v1, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
-    .line 5013
     .local v1, "scrapHeap":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;>;"
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -266,7 +239,6 @@
 
     check-cast v2, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
-    .line 5015
     .end local v1    # "scrapHeap":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;>;"
     :goto_0
     return-object v2
@@ -282,7 +254,6 @@
     .param p1, "viewType"    # I
 
     .prologue
-    .line 5006
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v0
@@ -303,13 +274,10 @@
     .param p3, "compatibleWithPrevious"    # Z
 
     .prologue
-    .line 5093
     if-eqz p1, :cond_0
 
-    .line 5094
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->detach()V
 
-    .line 5096
     :cond_0
     if-nez p3, :cond_1
 
@@ -317,17 +285,13 @@
 
     if-nez v0, :cond_1
 
-    .line 5097
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->clear()V
 
-    .line 5099
     :cond_1
     if-eqz p2, :cond_2
 
-    .line 5100
     invoke-virtual {p0, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->attach(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 5102
     :cond_2
     return-void
 .end method
@@ -337,12 +301,10 @@
     .param p1, "scrap"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 5030
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v1
 
-    .line 5031
     .local v1, "viewType":I
     invoke-direct {p0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
@@ -350,7 +312,6 @@
 
     iget-object v0, v2, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
-    .line 5032
     .local v0, "scrapHeap":Ljava/util/ArrayList;
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
@@ -368,15 +329,12 @@
 
     if-gt v2, v3, :cond_0
 
-    .line 5040
     :goto_0
     return-void
 
-    .line 5038
     :cond_0
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->resetInternal()V
 
-    .line 5039
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
@@ -390,14 +348,12 @@
     .prologue
     const-wide/16 v4, 0x4
 
-    .line 5043
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
 
     if-nez v0, :cond_0
 
-    .line 5046
     .end local p3    # "newValue":J
     :goto_0
     return-wide p3
@@ -423,23 +379,18 @@
     .param p2, "max"    # I
 
     .prologue
-    .line 4992
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v0
 
-    .line 4993
     .local v0, "scrapData":Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
     iput p2, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mMaxScrap:I
 
-    .line 4994
     iget-object v1, v0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
-    .line 4995
     .local v1, "scrapHeap":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;>;"
     if-eqz v1, :cond_0
 
-    .line 4996
     :goto_0
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
@@ -447,7 +398,6 @@
 
     if-le v2, p2, :cond_0
 
-    .line 4997
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v2
@@ -458,7 +408,6 @@
 
     goto :goto_0
 
-    .line 5000
     :cond_0
     return-void
 .end method
@@ -467,10 +416,8 @@
     .locals 4
 
     .prologue
-    .line 5019
     const/4 v0, 0x0
 
-    .line 5020
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -484,7 +431,6 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 5021
     iget-object v3, p0, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->mScrap:Landroid/util/SparseArray;
 
     invoke-virtual {v3, v1}, Landroid/util/SparseArray;->valueAt(I)Ljava/lang/Object;
@@ -495,24 +441,20 @@
 
     iget-object v2, v3, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mScrapHeap:Ljava/util/ArrayList;
 
-    .line 5022
     .local v2, "viewHolders":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;>;"
     if-eqz v2, :cond_0
 
-    .line 5023
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v3
 
     add-int/2addr v0, v3
 
-    .line 5020
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 5026
     .end local v2    # "viewHolders":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;>;"
     :cond_1
     return v0
@@ -522,17 +464,14 @@
     .locals 4
     .param p1, "viewType"    # I
     .param p2, "approxCurrentNs"    # J
-    .param p4, "deadlineNs"    # J
 
     .prologue
-    .line 5067
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v2
 
     iget-wide v0, v2, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mBindRunningAverageNs:J
 
-    .line 5068
     .local v0, "expectedDurationNs":J
     const-wide/16 v2, 0x0
 
@@ -562,17 +501,14 @@
     .locals 4
     .param p1, "viewType"    # I
     .param p2, "approxCurrentNs"    # J
-    .param p4, "deadlineNs"    # J
 
     .prologue
-    .line 5062
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool;->getScrapDataForType(I)Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;
 
     move-result-object v2
 
     iget-wide v0, v2, Lorg/telegram/messenger/support/widget/RecyclerView$RecycledViewPool$ScrapData;->mCreateRunningAverageNs:J
 
-    .line 5063
     .local v0, "expectedDurationNs":J
     const-wide/16 v2, 0x0
 

@@ -41,7 +41,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     .prologue
-    .line 683
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$newResultsHashMap:Ljava/util/HashMap;
@@ -59,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 683
     check-cast p1, Lorg/telegram/tgnet/TLRPC$User;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$User;
@@ -83,7 +81,6 @@
 
     const/4 v2, -0x1
 
-    .line 686
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$newResultsHashMap:Ljava/util/HashMap;
 
     iget v6, p1, Lorg/telegram/tgnet/TLRPC$User;->id:I
@@ -114,12 +111,10 @@
 
     move v2, v3
 
-    .line 702
     :cond_0
     :goto_0
     return v2
 
-    .line 688
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$newResultsHashMap:Ljava/util/HashMap;
 
@@ -135,7 +130,6 @@
 
     if-nez v5, :cond_0
 
-    .line 690
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$newResultsHashMap:Ljava/util/HashMap;
 
     iget v6, p2, Lorg/telegram/tgnet/TLRPC$User;->id:I
@@ -152,10 +146,8 @@
 
     move v2, v4
 
-    .line 691
     goto :goto_0
 
-    .line 693
     :cond_2
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$users:Ljava/util/ArrayList;
 
@@ -169,7 +161,6 @@
 
     move-result v0
 
-    .line 694
     .local v0, "lhsNum":I
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$9;->val$users:Ljava/util/ArrayList;
 
@@ -183,13 +174,11 @@
 
     move-result v1
 
-    .line 695
     .local v1, "rhsNum":I
     if-eq v0, v2, :cond_4
 
     if-eq v1, v2, :cond_4
 
-    .line 696
     if-lt v0, v1, :cond_0
 
     if-ne v0, v1, :cond_3
@@ -203,13 +192,11 @@
 
     goto :goto_0
 
-    .line 697
     :cond_4
     if-eq v0, v2, :cond_5
 
     if-eq v1, v2, :cond_0
 
-    .line 699
     :cond_5
     if-ne v0, v2, :cond_6
 
@@ -217,12 +204,10 @@
 
     move v2, v4
 
-    .line 700
     goto :goto_0
 
     :cond_6
     move v2, v3
 
-    .line 702
     goto :goto_0
 .end method

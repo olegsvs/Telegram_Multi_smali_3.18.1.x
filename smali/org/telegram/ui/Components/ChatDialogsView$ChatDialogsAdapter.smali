@@ -42,33 +42,26 @@
     .param p3, "chat_id"    # J
 
     .prologue
-    .line 615
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 604
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->InvisibleRow:I
 
-    .line 605
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->NoChatsRow:I
 
-    .line 606
     const/4 v0, 0x2
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->ChatDialogRow:I
 
-    .line 616
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->mContext:Landroid/content/Context;
 
-    .line 617
     iput-wide p3, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->chatId:J
 
-    .line 618
     return-void
 .end method
 
@@ -80,7 +73,6 @@
     .param p5, "x3"    # Lorg/telegram/ui/Components/ChatDialogsView$1;
 
     .prologue
-    .line 600
     invoke-direct {p0, p1, p2, p3, p4}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;-><init>(Lorg/telegram/ui/Components/ChatDialogsView;Landroid/content/Context;J)V
 
     return-void
@@ -91,7 +83,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;
 
     .prologue
-    .line 600
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->getTitleRes()I
 
     move-result v0
@@ -112,7 +103,6 @@
     .end annotation
 
     .prologue
-    .line 626
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$1000(Lorg/telegram/ui/Components/ChatDialogsView;)I
@@ -121,7 +111,6 @@
 
     packed-switch v0, :pswitch_data_0
 
-    .line 642
     :pswitch_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -132,7 +121,6 @@
     :goto_0
     return-object v0
 
-    .line 628
     :pswitch_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -142,7 +130,6 @@
 
     goto :goto_0
 
-    .line 630
     :pswitch_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -152,7 +139,6 @@
 
     goto :goto_0
 
-    .line 632
     :pswitch_3
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -162,7 +148,6 @@
 
     goto :goto_0
 
-    .line 634
     :pswitch_4
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -172,7 +157,6 @@
 
     goto :goto_0
 
-    .line 636
     :pswitch_5
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -182,7 +166,6 @@
 
     goto :goto_0
 
-    .line 638
     :pswitch_6
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -192,7 +175,6 @@
 
     goto :goto_0
 
-    .line 640
     :pswitch_7
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -202,7 +184,6 @@
 
     goto :goto_0
 
-    .line 626
     nop
 
     :pswitch_data_0
@@ -225,7 +206,6 @@
     .prologue
     const v0, 0x7f070161
 
-    .line 702
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatDialogsView;->access$1000(Lorg/telegram/ui/Components/ChatDialogsView;)I
@@ -234,48 +214,40 @@
 
     packed-switch v1, :pswitch_data_0
 
-    .line 718
     :goto_0
     :pswitch_0
     return v0
 
-    .line 706
     :pswitch_1
     const v0, 0x7f070245
 
     goto :goto_0
 
-    .line 708
     :pswitch_2
     const v0, 0x7f070667
 
     goto :goto_0
 
-    .line 710
     :pswitch_3
     const v0, 0x7f0702b4
 
     goto :goto_0
 
-    .line 712
     :pswitch_4
     const v0, 0x7f07060c
 
     goto :goto_0
 
-    .line 714
     :pswitch_5
     const v0, 0x7f07015c
 
     goto :goto_0
 
-    .line 716
     :pswitch_6
     const v0, 0x7f0700d7
 
     goto :goto_0
 
-    .line 702
     nop
 
     :pswitch_data_0
@@ -298,7 +270,6 @@
     .locals 1
 
     .prologue
-    .line 622
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->getDialogsArray()Ljava/util/ArrayList;
 
     move-result-object v0
@@ -315,12 +286,10 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 648
     invoke-direct {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->getDialogsArray()Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 649
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     if-ltz p1, :cond_0
 
@@ -330,11 +299,9 @@
 
     if-lt p1, v1, :cond_1
 
-    .line 650
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 652
     :goto_0
     return-wide v2
 
@@ -355,7 +322,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 657
     iget-wide v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->chatId:J
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->getItemId(I)J
@@ -366,7 +332,6 @@
 
     if-nez v0, :cond_1
 
-    .line 658
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->access$1000(Lorg/telegram/ui/Components/ChatDialogsView;)I
@@ -383,20 +348,16 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 660
     iget v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->NoChatsRow:I
 
-    .line 664
     :goto_0
     return v0
 
-    .line 662
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->InvisibleRow:I
 
     goto :goto_0
 
-    .line 664
     :cond_1
     iget v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->ChatDialogRow:I
 
@@ -409,7 +370,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 686
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v5
@@ -418,18 +378,15 @@
 
     if-ne v5, v6, :cond_1
 
-    .line 687
     invoke-virtual {p0, p2}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->getItemId(I)J
 
     move-result-wide v2
 
-    .line 689
     .local v2, "id":J
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
 
-    .line 690
     .local v0, "cell":Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
 
@@ -437,17 +394,14 @@
 
     invoke-virtual {v0, v5}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setTag(Ljava/lang/Object;)V
 
-    .line 691
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->setDialog(J)V
 
-    .line 699
     .end local v0    # "cell":Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
     .end local v2    # "id":J
     :cond_0
     :goto_0
     return-void
 
-    .line 692
     :cond_1
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -457,18 +411,15 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 693
     iget-object v4, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v4, Landroid/widget/TextView;
 
-    .line 694
     .local v4, "tv":Landroid/widget/TextView;
     const/16 v5, 0x11
 
     invoke-virtual {v4, v5}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 695
     const-string/jumbo v5, "NoChatsYet"
 
     const v6, 0x7f0706ee
@@ -493,7 +444,6 @@
 
     move-result-object v1
 
-    .line 696
     .local v1, "title":Ljava/lang/String;
     invoke-virtual {v4, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
@@ -510,16 +460,13 @@
 
     const/4 v2, -0x1
 
-    .line 669
     const/4 v0, 0x0
 
-    .line 670
     .local v0, "view":Landroid/view/View;
     iget v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->ChatDialogRow:I
 
     if-ne p2, v1, :cond_1
 
-    .line 671
     new-instance v0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;
 
     .end local v0    # "view":Landroid/view/View;
@@ -529,7 +476,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;-><init>(Lorg/telegram/ui/Components/ChatDialogsView;Landroid/content/Context;)V
 
-    .line 672
     .restart local v0    # "view":Landroid/view/View;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -561,7 +507,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 681
     :cond_0
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter$Holder;
@@ -570,13 +515,11 @@
 
     return-object v1
 
-    .line 673
     :cond_1
     iget v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->NoChatsRow:I
 
     if-ne p2, v1, :cond_4
 
-    .line 674
     new-instance v0, Landroid/widget/TextView;
 
     .end local v0    # "view":Landroid/view/View;
@@ -584,7 +527,6 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 675
     .restart local v0    # "view":Landroid/view/View;
     new-instance v3, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -636,13 +578,11 @@
 
     goto :goto_2
 
-    .line 676
     :cond_4
     iget v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogsAdapter;->InvisibleRow:I
 
     if-ne p2, v1, :cond_0
 
-    .line 677
     new-instance v0, Landroid/view/View;
 
     .end local v0    # "view":Landroid/view/View;
@@ -650,7 +590,6 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 678
     .restart local v0    # "view":Landroid/view/View;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -658,7 +597,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 679
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1615
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$22;->val$messages:Ljava/util/ArrayList;
@@ -53,31 +52,26 @@
 
     const/4 v3, 0x0
 
-    .line 1618
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/MessagesController;->access$3002(Lorg/telegram/messenger/MessagesController;Z)Z
 
-    .line 1619
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->val$messages:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_2
 
-    .line 1620
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget v2, p0, Lorg/telegram/messenger/MessagesController$22;->val$taskTime:I
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/MessagesController;->access$3102(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 1621
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$22;->val$messages:Ljava/util/ArrayList;
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/MessagesController;->access$2902(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 1623
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->access$3200(Lorg/telegram/messenger/MessagesController;)Ljava/lang/Runnable;
@@ -86,7 +80,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1624
     sget-object v1, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -97,12 +90,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->cancelRunnable(Ljava/lang/Runnable;)V
 
-    .line 1625
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v1, v4}, Lorg/telegram/messenger/MessagesController;->access$3202(Lorg/telegram/messenger/MessagesController;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 1628
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -112,7 +103,6 @@
 
     if-nez v1, :cond_1
 
-    .line 1629
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     new-instance v2, Lorg/telegram/messenger/MessagesController$22$1;
@@ -121,7 +111,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/MessagesController;->access$3202(Lorg/telegram/messenger/MessagesController;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 1635
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -130,7 +119,6 @@
 
     move-result v0
 
-    .line 1636
     .local v0, "currentServerTime":I
     sget-object v1, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
@@ -160,19 +148,16 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;J)V
 
-    .line 1642
     .end local v0    # "currentServerTime":I
     :cond_1
     :goto_0
     return-void
 
-    .line 1639
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v1, v3}, Lorg/telegram/messenger/MessagesController;->access$3102(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 1640
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$22;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v1, v4}, Lorg/telegram/messenger/MessagesController;->access$2902(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)Ljava/util/ArrayList;

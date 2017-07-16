@@ -33,7 +33,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$7;
 
     .prologue
-    .line 723
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$7$2;->this$1:Lorg/telegram/messenger/MessagesStorage$7;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$7$2;->val$channelId:I
@@ -53,7 +52,6 @@
     .locals 7
 
     .prologue
-    .line 726
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -68,6 +66,5 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/messenger/MessagesController;->getChannelDifference(IIJLorg/telegram/tgnet/TLRPC$InputChannel;)V
 
-    .line 727
     return-void
 .end method

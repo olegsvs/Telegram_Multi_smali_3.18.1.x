@@ -37,7 +37,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;
 
     .prologue
-    .line 681
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1$1;->this$2:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 681
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1$1;->onReceiveValue(Ljava/lang/String;)V
@@ -66,7 +64,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 684
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1$1;->this$2:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->this$1:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
@@ -129,7 +126,6 @@
 
     aput-object v1, v0, v6
 
-    .line 685
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1$1;->this$2:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->this$1:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
@@ -140,6 +136,5 @@
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 686
     return-void
 .end method

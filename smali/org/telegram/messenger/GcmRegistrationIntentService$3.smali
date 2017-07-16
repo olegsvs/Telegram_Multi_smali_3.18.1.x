@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/GcmRegistrationIntentService;
 
     .prologue
-    .line 60
     iput-object p1, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$3;->this$0:Lorg/telegram/messenger/GcmRegistrationIntentService;
 
     iput-object p2, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$3;->val$token:Ljava/lang/String;
@@ -47,32 +46,26 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 63
     iget-object v0, p0, Lorg/telegram/messenger/GcmRegistrationIntentService$3;->val$token:Ljava/lang/String;
 
     sput-object v0, Lorg/telegram/messenger/UserConfig;->pushString:Ljava/lang/String;
 
-    .line 64
     sput-boolean v1, Lorg/telegram/messenger/UserConfig;->registeredForPush:Z
 
-    .line 65
     invoke-static {v1}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 66
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 67
     new-instance v0, Lorg/telegram/messenger/GcmRegistrationIntentService$3$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/GcmRegistrationIntentService$3$1;-><init>(Lorg/telegram/messenger/GcmRegistrationIntentService$3;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 74
     :cond_0
     return-void
 .end method

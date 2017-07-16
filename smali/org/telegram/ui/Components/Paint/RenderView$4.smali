@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/RenderView;
 
     .prologue
-    .line 537
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$4;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/RenderView$4;->val$action:Ljava/lang/Runnable;
@@ -45,7 +44,6 @@
     .locals 1
 
     .prologue
-    .line 540
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$4;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView;->access$000(Lorg/telegram/ui/Components/Paint/RenderView;)Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
@@ -66,12 +64,10 @@
 
     if-nez v0, :cond_1
 
-    .line 546
     :cond_0
     :goto_0
     return-void
 
-    .line 544
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$4;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
@@ -81,7 +77,6 @@
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->access$1300(Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Z
 
-    .line 545
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$4;->val$action:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V

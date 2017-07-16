@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/AudioSelectActivity$5;
 
     .prologue
-    .line 265
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$5$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$5;
 
     iput-object p2, p0, Lorg/telegram/ui/AudioSelectActivity$5$1;->val$newAudioEntries:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 268
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$5$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$5;
 
     iget-object v0, v0, Lorg/telegram/ui/AudioSelectActivity$5;->this$0:Lorg/telegram/ui/AudioSelectActivity;
@@ -54,7 +52,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/AudioSelectActivity;->access$302(Lorg/telegram/ui/AudioSelectActivity;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 269
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$5$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$5;
 
     iget-object v0, v0, Lorg/telegram/ui/AudioSelectActivity$5;->this$0:Lorg/telegram/ui/AudioSelectActivity;
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 270
     iget-object v0, p0, Lorg/telegram/ui/AudioSelectActivity$5$1;->this$1:Lorg/telegram/ui/AudioSelectActivity$5;
 
     iget-object v0, v0, Lorg/telegram/ui/AudioSelectActivity$5;->this$0:Lorg/telegram/ui/AudioSelectActivity;
@@ -76,6 +72,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/AudioSelectActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 271
     return-void
 .end method

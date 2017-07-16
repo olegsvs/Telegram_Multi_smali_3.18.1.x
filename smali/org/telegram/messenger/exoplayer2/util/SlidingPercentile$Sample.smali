@@ -27,7 +27,6 @@
     .locals 0
 
     .prologue
-    .line 152
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$1;
 
     .prologue
-    .line 152
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/SlidingPercentile$Sample;-><init>()V
 
     return-void

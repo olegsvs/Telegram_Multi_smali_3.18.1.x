@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusChatsStatsActivity;
 
     .prologue
-    .line 733
     iput-object p1, p0, Lorg/telegram/ui/PlusChatsStatsActivity$8;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 736
     iget-object v2, p0, Lorg/telegram/ui/PlusChatsStatsActivity$8;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$2900(Lorg/telegram/ui/PlusChatsStatsActivity;)Ljava/util/List;
@@ -60,13 +58,11 @@
 
     move-result v1
 
-    .line 737
     .local v1, "id":I
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 738
     .local v0, "args":Landroid/os/Bundle;
     iget-object v2, p0, Lorg/telegram/ui/PlusChatsStatsActivity$8;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
@@ -86,7 +82,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 739
     iget-object v2, p0, Lorg/telegram/ui/PlusChatsStatsActivity$8;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     new-instance v3, Lorg/telegram/ui/ChatActivity;
@@ -95,6 +90,5 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/PlusChatsStatsActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 740
     return-void
 .end method

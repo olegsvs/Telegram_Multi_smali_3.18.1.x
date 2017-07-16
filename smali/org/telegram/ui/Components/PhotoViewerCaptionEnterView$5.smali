@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     .prologue
-    .line 201
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$5;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,12 +47,10 @@
 
     const/4 v0, 0x1
 
-    .line 204
     const/4 v2, 0x4
 
     if-ne p2, v2, :cond_2
 
-    .line 205
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$5;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$400(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Landroid/view/View;
@@ -70,12 +67,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 214
     :cond_0
     :goto_0
     return v0
 
-    .line 207
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$5;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -93,14 +88,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 208
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
     move-result v2
 
     if-ne v2, v0, :cond_0
 
-    .line 209
     iget-object v2, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$5;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v2, v1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$000(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;I)V
@@ -110,6 +103,5 @@
     :cond_2
     move v0, v1
 
-    .line 214
     goto :goto_0
 .end method

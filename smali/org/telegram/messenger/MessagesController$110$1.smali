@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$110;
 
     .prologue
-    .line 7046
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$110$1;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 7049
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$110$1;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$110;->val$finalUpdate:Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 7050
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$110$1;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$110;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -73,7 +70,6 @@
 
     if-nez v0, :cond_0
 
-    .line 7051
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$110$1;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$110;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -92,7 +88,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 7056
     :cond_0
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -107,10 +102,8 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7057
     return-void
 
-    .line 7054
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$110$1;->this$1:Lorg/telegram/messenger/MessagesController$110;
 

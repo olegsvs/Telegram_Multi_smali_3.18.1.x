@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPFeedbackActivity;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$1;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,11 +42,9 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/VoIPFeedbackActivity$1;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VoIPFeedbackActivity;->finish()V
 
-    .line 94
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2718
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$19;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$19;->val$audioToSend:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -53,18 +52,15 @@
     .locals 1
 
     .prologue
-    .line 2721
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$19;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$5600(Lorg/telegram/messenger/MediaController;)V
 
-    .line 2722
     new-instance v0, Lorg/telegram/messenger/MediaController$19$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MediaController$19$1;-><init>(Lorg/telegram/messenger/MediaController$19;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2746
     return-void
 .end method

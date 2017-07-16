@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     .prologue
-    .line 213
     iput-object p1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,17 +52,14 @@
 
     const/4 v3, 0x0
 
-    .line 216
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_1
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
 
-    .line 218
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
@@ -77,7 +73,6 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 219
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iget-object v4, v1, Lorg/telegram/ui/ArchivedStickersActivity$4;->this$0:Lorg/telegram/ui/ArchivedStickersActivity;
@@ -97,21 +92,18 @@
     :goto_0
     invoke-static {v4, v1}, Lorg/telegram/ui/ArchivedStickersActivity;->access$402(Lorg/telegram/ui/ArchivedStickersActivity;Z)Z
 
-    .line 220
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/ArchivedStickersActivity$4;->this$0:Lorg/telegram/ui/ArchivedStickersActivity;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/ArchivedStickersActivity;->access$302(Lorg/telegram/ui/ArchivedStickersActivity;Z)Z
 
-    .line 221
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/ArchivedStickersActivity$4;->this$0:Lorg/telegram/ui/ArchivedStickersActivity;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ArchivedStickersActivity;->access$802(Lorg/telegram/ui/ArchivedStickersActivity;Z)Z
 
-    .line 222
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/ArchivedStickersActivity$4;->this$0:Lorg/telegram/ui/ArchivedStickersActivity;
@@ -122,7 +114,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 223
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/ArchivedStickersActivity$4;->this$0:Lorg/telegram/ui/ArchivedStickersActivity;
@@ -133,7 +124,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 225
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ArchivedStickersActivity$4$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$4;
 
@@ -141,7 +131,6 @@
 
     invoke-static {v1}, Lorg/telegram/ui/ArchivedStickersActivity;->access$1000(Lorg/telegram/ui/ArchivedStickersActivity;)V
 
-    .line 227
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_archivedStickers;
     :cond_1
     return-void
@@ -150,6 +139,5 @@
     :cond_2
     move v1, v3
 
-    .line 219
     goto :goto_0
 .end method

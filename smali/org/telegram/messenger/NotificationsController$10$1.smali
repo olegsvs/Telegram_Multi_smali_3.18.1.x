@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/NotificationsController$10;
 
     .prologue
-    .line 708
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$10$1;->this$1:Lorg/telegram/messenger/NotificationsController$10;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 711
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$10$1;->this$1:Lorg/telegram/messenger/NotificationsController$10;
 
     iget-object v0, v0, Lorg/telegram/messenger/NotificationsController$10;->this$0:Lorg/telegram/messenger/NotificationsController;
@@ -52,6 +50,5 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/NotificationsController;->popupMessages:Ljava/util/ArrayList;
 
-    .line 712
     return-void
 .end method

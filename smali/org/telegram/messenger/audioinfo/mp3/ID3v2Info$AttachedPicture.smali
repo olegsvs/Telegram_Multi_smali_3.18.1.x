@@ -39,21 +39,15 @@
     .param p4, "imageData"    # [B
 
     .prologue
-    .line 40
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 41
     iput-byte p1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;->type:B
 
-    .line 42
     iput-object p2, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;->description:Ljava/lang/String;
 
-    .line 43
     iput-object p3, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;->imageType:Ljava/lang/String;
 
-    .line 44
     iput-object p4, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2Info$AttachedPicture;->imageData:[B
 
-    .line 45
     return-void
 .end method

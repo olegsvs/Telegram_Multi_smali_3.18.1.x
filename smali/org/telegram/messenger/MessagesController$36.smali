@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2120
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$36;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$36;->val$did:J
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 2123
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$36;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1400(Lorg/telegram/messenger/MessagesController;)Ljava/util/HashMap;
@@ -64,7 +62,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2124
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$36;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1500(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -79,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 2125
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$36;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1600(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -94,6 +90,5 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 2126
     return-void
 .end method

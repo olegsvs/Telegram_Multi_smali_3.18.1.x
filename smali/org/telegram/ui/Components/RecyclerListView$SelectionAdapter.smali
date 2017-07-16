@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 97
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;-><init>()V
 
     return-void

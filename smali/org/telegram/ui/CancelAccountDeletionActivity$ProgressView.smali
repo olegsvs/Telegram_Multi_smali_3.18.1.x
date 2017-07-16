@@ -30,27 +30,22 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 90
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->this$0:Lorg/telegram/ui/CancelAccountDeletionActivity;
 
-    .line 91
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 86
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->paint:Landroid/graphics/Paint;
 
-    .line 87
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->paint2:Landroid/graphics/Paint;
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "login_progressInner"
@@ -61,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->paint2:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "login_progressOuter"
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 94
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 103
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->getMeasuredWidth()I
 
     move-result v0
@@ -98,7 +90,6 @@
 
     float-to-int v8, v0
 
-    .line 104
     .local v8, "start":I
     int-to-float v3, v8
 
@@ -116,7 +107,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 105
     int-to-float v3, v8
 
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->getMeasuredWidth()I
@@ -139,7 +129,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 106
     return-void
 .end method
 
@@ -148,12 +137,9 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 97
     iput p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->progress:F
 
-    .line 98
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;->invalidate()V
 
-    .line 99
     return-void
 .end method

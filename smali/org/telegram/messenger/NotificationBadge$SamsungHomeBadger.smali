@@ -30,7 +30,6 @@
     .locals 3
 
     .prologue
-    .line 410
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
@@ -56,7 +55,6 @@
     .locals 0
 
     .prologue
-    .line 408
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -69,16 +67,13 @@
     .param p3, "isInsert"    # Z
 
     .prologue
-    .line 453
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 454
     .local v0, "contentValues":Landroid/content/ContentValues;
     if-eqz p3, :cond_0
 
-    .line 455
     const-string/jumbo v1, "package"
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getPackageName()Ljava/lang/String;
@@ -87,7 +82,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 456
     const-string/jumbo v1, "class"
 
     invoke-virtual {p1}, Landroid/content/ComponentName;->getClassName()Ljava/lang/String;
@@ -96,7 +90,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 459
     :cond_0
     const-string/jumbo v1, "badgecount"
 
@@ -106,7 +99,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 461
     return-object v0
 .end method
 
@@ -117,20 +109,17 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 417
     :try_start_0
     sget-object v2, Lorg/telegram/messenger/NotificationBadge$SamsungHomeBadger;->defaultBadger:Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
     if-nez v2, :cond_0
 
-    .line 418
     new-instance v2, Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
     invoke-direct {v2}, Lorg/telegram/messenger/NotificationBadge$DefaultBadger;-><init>()V
 
     sput-object v2, Lorg/telegram/messenger/NotificationBadge$SamsungHomeBadger;->defaultBadger:Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
-    .line 420
     :cond_0
     sget-object v2, Lorg/telegram/messenger/NotificationBadge$SamsungHomeBadger;->defaultBadger:Lorg/telegram/messenger/NotificationBadge$DefaultBadger;
 
@@ -138,7 +127,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 425
     :goto_0
     const-string/jumbo v2, "content://com.sec.badge/apps?notify=true"
 
@@ -146,7 +134,6 @@
 
     move-result-object v1
 
-    .line 426
     .local v1, "mUri":Landroid/net/Uri;
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -154,11 +141,9 @@
 
     move-result-object v0
 
-    .line 427
     .local v0, "contentResolver":Landroid/content/ContentResolver;
     const/4 v7, 0x0
 
-    .line 429
     .local v7, "cursor":Landroid/database/Cursor;
     :try_start_1
     sget-object v2, Lorg/telegram/messenger/NotificationBadge$SamsungHomeBadger;->CONTENT_PROJECTION:[Ljava/lang/String;
@@ -187,10 +172,8 @@
 
     move-result-object v7
 
-    .line 430
     if-eqz v7, :cond_3
 
-    .line 431
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -199,11 +182,9 @@
 
     move-result-object v9
 
-    .line 432
     .local v9, "entryActivityName":Ljava/lang/String;
     const/4 v8, 0x0
 
-    .line 433
     .local v8, "entryActivityExist":Z
     :cond_1
     :goto_1
@@ -213,14 +194,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 434
     const/4 v2, 0x0
 
     invoke-interface {v7, v2}, Landroid/database/Cursor;->getInt(I)I
 
     move-result v10
 
-    .line 435
     .local v10, "id":I
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
 
@@ -232,7 +211,6 @@
 
     move-result-object v6
 
-    .line 436
     .local v6, "contentValues":Landroid/content/ContentValues;
     const-string/jumbo v2, "_id=?"
 
@@ -250,7 +228,6 @@
 
     invoke-virtual {v0, v1, v6, v2, v3}, Landroid/content/ContentResolver;->update(Landroid/net/Uri;Landroid/content/ContentValues;Ljava/lang/String;[Ljava/lang/String;)I
 
-    .line 437
     const-string/jumbo v2, "class"
 
     invoke-interface {v7, v2}, Landroid/database/Cursor;->getColumnIndex(Ljava/lang/String;)I
@@ -267,18 +244,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 438
     const/4 v8, 0x1
 
     goto :goto_1
 
-    .line 442
     .end local v6    # "contentValues":Landroid/content/ContentValues;
     .end local v10    # "id":I
     :cond_2
     if-nez v8, :cond_3
 
-    .line 443
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
 
     move-result-object v2
@@ -289,23 +263,19 @@
 
     move-result-object v6
 
-    .line 444
     .restart local v6    # "contentValues":Landroid/content/ContentValues;
     invoke-virtual {v0, v1, v6}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 448
     .end local v6    # "contentValues":Landroid/content/ContentValues;
     .end local v8    # "entryActivityExist":Z
     .end local v9    # "entryActivityName":Ljava/lang/String;
     :cond_3
     invoke-static {v7}, Lorg/telegram/messenger/NotificationBadge;->close(Landroid/database/Cursor;)V
 
-    .line 450
     return-void
 
-    .line 448
     :catchall_0
     move-exception v2
 
@@ -313,7 +283,6 @@
 
     throw v2
 
-    .line 421
     .end local v0    # "contentResolver":Landroid/content/ContentResolver;
     .end local v1    # "mUri":Landroid/net/Uri;
     .end local v7    # "cursor":Landroid/database/Cursor;
@@ -336,7 +305,6 @@
     .end annotation
 
     .prologue
-    .line 466
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;

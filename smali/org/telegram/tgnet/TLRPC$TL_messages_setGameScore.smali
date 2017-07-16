@@ -39,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 23287
     const v0, -0x71071340
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->constructor:I
@@ -51,7 +50,6 @@
     .locals 0
 
     .prologue
-    .line 23286
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -66,7 +64,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23298
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object v0
@@ -79,12 +76,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23302
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23303
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->edit_message:Z
 
     if-eqz v0, :cond_0
@@ -96,7 +91,6 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->flags:I
 
-    .line 23304
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->force:Z
 
     if-eqz v0, :cond_1
@@ -108,35 +102,28 @@
     :goto_1
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->flags:I
 
-    .line 23305
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23306
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputPeer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23307
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23308
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputUser;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23309
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->score:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23310
     return-void
 
-    .line 23303
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->flags:I
 
@@ -144,7 +131,6 @@
 
     goto :goto_0
 
-    .line 23304
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_setGameScore;->flags:I
 

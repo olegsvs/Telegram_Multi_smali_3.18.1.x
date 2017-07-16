@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 115
     iput-wide p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2;->val$uid:J
 
     iput p3, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2;->val$type:I
@@ -52,15 +51,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 118
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 119
     check-cast v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 120
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -72,19 +68,16 @@
 
     invoke-virtual {v2, v3, v4, v5, v5}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 122
     instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;
 
     if-eqz v2, :cond_1
 
-    .line 123
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 127
     .local v1, "count":I
     :goto_0
     new-instance v2, Lorg/telegram/messenger/query/SharedMediaQuery$2$1;
@@ -93,7 +86,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 135
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2;->val$uid:J
 
     iget v4, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2;->val$type:I
@@ -104,13 +96,11 @@
 
     invoke-static/range {v1 .. v6}, Lorg/telegram/messenger/query/SharedMediaQuery;->access$100(IJIIZ)V
 
-    .line 137
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     .end local v1    # "count":I
     :cond_0
     return-void
 
-    .line 125
     .restart local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_1
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;->count:I

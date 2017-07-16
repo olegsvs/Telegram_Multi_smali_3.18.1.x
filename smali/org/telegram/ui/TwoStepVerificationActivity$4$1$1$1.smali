@@ -29,7 +29,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;
 
     .prologue
-    .line 255
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1$1;->this$3:Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1$1;->val$res:Lorg/telegram/tgnet/TLRPC$TL_auth_passwordRecovery;
@@ -47,14 +46,12 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 258
     new-instance v0, Lorg/telegram/ui/TwoStepVerificationActivity;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;-><init>(I)V
 
-    .line 259
     .local v0, "fragment":Lorg/telegram/ui/TwoStepVerificationActivity;
     iget-object v1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1$1;->this$3:Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;
 
@@ -70,7 +67,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$202(Lorg/telegram/ui/TwoStepVerificationActivity;Lorg/telegram/tgnet/TLRPC$account_Password;)Lorg/telegram/tgnet/TLRPC$account_Password;
 
-    .line 260
     invoke-static {v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$200(Lorg/telegram/ui/TwoStepVerificationActivity;)Lorg/telegram/tgnet/TLRPC$account_Password;
 
     move-result-object v1
@@ -81,12 +77,10 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$account_Password;->email_unconfirmed_pattern:Ljava/lang/String;
 
-    .line 261
     const/4 v1, 0x4
 
     invoke-static {v0, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$502(Lorg/telegram/ui/TwoStepVerificationActivity;I)I
 
-    .line 262
     iget-object v1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1$1;->this$3:Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;
 
     iget-object v1, v1, Lorg/telegram/ui/TwoStepVerificationActivity$4$1$1;->this$2:Lorg/telegram/ui/TwoStepVerificationActivity$4$1;
@@ -97,6 +91,5 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 263
     return-void
 .end method

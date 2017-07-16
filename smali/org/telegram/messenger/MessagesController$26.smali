@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1737
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$26;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$26;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -47,7 +46,6 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1740
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->deleteBlockedUser(I)V
 
-    .line 1741
     return-void
 .end method

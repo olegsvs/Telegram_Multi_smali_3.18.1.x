@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     .prologue
-    .line 254
     iput-object p1, p0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$2;->this$0:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     iput p2, p0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$2;->val$position:I
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$2;->this$0:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->access$200(Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
@@ -55,7 +53,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$2;->this$0:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->access$200(Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
@@ -66,7 +63,6 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 260
     :cond_0
     return-void
 .end method

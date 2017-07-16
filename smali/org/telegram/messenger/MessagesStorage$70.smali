@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 4637
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$70;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$70;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 4641
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$70;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -53,7 +51,6 @@
 
     int-to-long v2, v1
 
-    .line 4642
     .local v2, "messageId":J
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$70;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -63,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 4643
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$70;->val$message:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -78,7 +74,6 @@
 
     or-long/2addr v2, v4
 
-    .line 4645
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$70;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -116,16 +111,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4649
     .end local v2    # "messageId":J
     :goto_0
     return-void
 
-    .line 4646
     :catch_0
     move-exception v0
 
-    .line 4647
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

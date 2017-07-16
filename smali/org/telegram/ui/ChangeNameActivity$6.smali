@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeNameActivity;
 
     .prologue
-    .line 217
     iput-object p1, p0, Lorg/telegram/ui/ChangeNameActivity$6;->this$0:Lorg/telegram/ui/ChangeNameActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 220
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity$6;->this$0:Lorg/telegram/ui/ChangeNameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeNameActivity;->access$000(Lorg/telegram/ui/ChangeNameActivity;)Landroid/widget/EditText;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity$6;->this$0:Lorg/telegram/ui/ChangeNameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeNameActivity;->access$000(Lorg/telegram/ui/ChangeNameActivity;)Landroid/widget/EditText;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0}, Landroid/widget/EditText;->requestFocus()Z
 
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/ChangeNameActivity$6;->this$0:Lorg/telegram/ui/ChangeNameActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangeNameActivity;->access$000(Lorg/telegram/ui/ChangeNameActivity;)Landroid/widget/EditText;
@@ -68,7 +64,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 224
     :cond_0
     return-void
 .end method

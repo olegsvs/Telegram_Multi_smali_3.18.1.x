@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2310
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$14;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 2313
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$14;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-virtual {v0, v1, v1, v1}, Lorg/telegram/messenger/MediaController;->cleanupPlayer(ZZZ)V
 
-    .line 2314
     return-void
 .end method
 
@@ -58,6 +55,5 @@
     .param p1, "audioTrack"    # Landroid/media/AudioTrack;
 
     .prologue
-    .line 2319
     return-void
 .end method

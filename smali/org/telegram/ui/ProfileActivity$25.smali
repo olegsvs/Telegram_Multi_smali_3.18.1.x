@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 2408
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$25;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$25;->val$animatorSet:Landroid/animation/AnimatorSet;
@@ -45,11 +44,9 @@
     .locals 1
 
     .prologue
-    .line 2411
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$25;->val$animatorSet:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 2412
     return-void
 .end method

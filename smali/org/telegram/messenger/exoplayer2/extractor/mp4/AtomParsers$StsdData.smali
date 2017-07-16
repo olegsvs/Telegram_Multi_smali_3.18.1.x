@@ -30,19 +30,15 @@
     .param p1, "numberOfEntries"    # I
 
     .prologue
-    .line 1173
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1174
     new-array v0, p1, [Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackEncryptionBox;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$StsdData;->trackEncryptionBoxes:[Lorg/telegram/messenger/exoplayer2/extractor/mp4/TrackEncryptionBox;
 
-    .line 1175
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp4/AtomParsers$StsdData;->requiredSampleTransformation:I
 
-    .line 1176
     return-void
 .end method

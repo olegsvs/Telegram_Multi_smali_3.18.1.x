@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$9;
 
     .prologue
-    .line 1064
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$9$1;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$9$1;->val$id:I
@@ -53,19 +52,16 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1067
     iget v0, p0, Lorg/telegram/ui/ChatActivity$9$1;->val$id:I
 
     const/16 v1, 0xf
 
     if-eq v0, v1, :cond_2
 
-    .line 1068
     iget-boolean v0, p0, Lorg/telegram/ui/ChatActivity$9$1;->val$isChat:Z
 
     if-eqz v0, :cond_1
 
-    .line 1069
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$9$1;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$9;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -78,7 +74,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1070
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -93,7 +88,6 @@
 
     invoke-virtual {v0, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->deleteDialog(JI)V
 
-    .line 1077
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$9$1;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
@@ -101,11 +95,9 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->finishFragment()V
 
-    .line 1081
     :goto_1
     return-void
 
-    .line 1072
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -145,7 +137,6 @@
 
     goto :goto_0
 
-    .line 1075
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -163,7 +154,6 @@
 
     goto :goto_0
 
-    .line 1079
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 

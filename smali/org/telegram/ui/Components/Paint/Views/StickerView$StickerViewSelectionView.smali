@@ -29,13 +29,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 143
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->this$0:Lorg/telegram/ui/Components/Paint/Views/StickerView;
 
-    .line 144
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;-><init>(Lorg/telegram/ui/Components/Paint/Views/EntityView;Landroid/content/Context;)V
 
-    .line 140
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -44,21 +41,18 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcPaint:Landroid/graphics/Paint;
 
-    .line 141
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcRect:Landroid/graphics/RectF;
 
-    .line 146
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcPaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 147
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x3f800000    # 1.0f
@@ -71,14 +65,12 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 148
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 149
     return-void
 .end method
 
@@ -91,10 +83,8 @@
     .prologue
     const/high16 v12, 0x40000000    # 2.0f
 
-    .line 176
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/Paint/Views/EntityView$SelectionView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 178
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -103,7 +93,6 @@
 
     int-to-float v11, v0
 
-    .line 179
     .local v11, "thickness":F
     const/high16 v0, 0x40900000    # 4.5f
 
@@ -113,7 +102,6 @@
 
     int-to-float v9, v0
 
-    .line 181
     .local v9, "radius":F
     add-float v0, v9, v11
 
@@ -127,7 +115,6 @@
 
     add-float v7, v0, v1
 
-    .line 182
     .local v7, "inset":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->getWidth()I
 
@@ -139,15 +126,12 @@
 
     sub-float v8, v0, v7
 
-    .line 184
     .local v8, "mainRadius":F
     const/high16 v10, 0x40800000    # 4.0f
 
-    .line 185
     .local v10, "space":F
     const/high16 v3, 0x40800000    # 4.0f
 
-    .line 187
     .local v3, "length":F
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcRect:Landroid/graphics/RectF;
 
@@ -161,7 +145,6 @@
 
     invoke-virtual {v0, v7, v7, v1, v2}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 188
     const/4 v6, 0x0
 
     .local v6, "i":I
@@ -170,7 +153,6 @@
 
     if-ge v6, v0, :cond_0
 
-    .line 189
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->arcRect:Landroid/graphics/RectF;
 
     int-to-float v0, v6
@@ -187,12 +169,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawArc(Landroid/graphics/RectF;FFZLandroid/graphics/Paint;)V
 
-    .line 188
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_0
 
-    .line 192
     :cond_0
     add-float v0, v7, v8
 
@@ -200,14 +180,12 @@
 
     invoke-virtual {p1, v7, v0, v9, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 193
     add-float v0, v7, v8
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->dotStrokePaint:Landroid/graphics/Paint;
 
     invoke-virtual {p1, v7, v0, v9, v1}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 195
     mul-float v0, v8, v12
 
     add-float/2addr v0, v7
@@ -218,7 +196,6 @@
 
     invoke-virtual {p1, v0, v1, v9, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 196
     mul-float v0, v8, v12
 
     add-float/2addr v0, v7
@@ -229,7 +206,6 @@
 
     invoke-virtual {p1, v0, v1, v9, v2}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 197
     return-void
 .end method
 
@@ -243,7 +219,6 @@
 
     const/high16 v7, 0x40000000    # 2.0f
 
-    .line 153
     const/high16 v5, 0x3f800000    # 1.0f
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -252,7 +227,6 @@
 
     int-to-float v4, v5
 
-    .line 154
     .local v4, "thickness":F
     const/high16 v5, 0x419c0000    # 19.5f
 
@@ -262,11 +236,9 @@
 
     int-to-float v2, v5
 
-    .line 156
     .local v2, "radius":F
     add-float v0, v2, v4
 
-    .line 157
     .local v0, "inset":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->getHeight()I
 
@@ -282,7 +254,6 @@
 
     add-float v1, v0, v5
 
-    .line 159
     .local v1, "middle":F
     sub-float v5, v0, v2
 
@@ -308,14 +279,11 @@
 
     if-gez v5, :cond_0
 
-    .line 160
     const/4 v5, 0x1
 
-    .line 171
     :goto_0
     return v5
 
-    .line 161
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->getWidth()I
 
@@ -365,12 +333,10 @@
 
     if-gez v5, :cond_1
 
-    .line 162
     const/4 v5, 0x2
 
     goto :goto_0
 
-    .line 165
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Paint/Views/StickerView$StickerViewSelectionView;->getWidth()I
 
@@ -380,7 +346,6 @@
 
     div-float v3, v5, v7
 
-    .line 167
     .local v3, "selectionRadius":F
     sub-float v5, p1, v3
 
@@ -410,12 +375,10 @@
 
     if-gez v5, :cond_2
 
-    .line 168
     const/4 v5, 0x3
 
     goto :goto_0
 
-    .line 171
     :cond_2
     const/4 v5, 0x0
 

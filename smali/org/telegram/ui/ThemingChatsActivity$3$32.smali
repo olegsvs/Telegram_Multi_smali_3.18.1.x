@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatsActivity$3;
 
     .prologue
-    .line 796
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$32;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingChatsActivity$3$32;->val$key:Ljava/lang/String;
@@ -46,12 +45,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 799
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->dialogs_countGrayPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 800
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatsActivity$3$32;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -60,6 +57,5 @@
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingChatsActivity;->access$300(Lorg/telegram/ui/ThemingChatsActivity;Ljava/lang/String;I)V
 
-    .line 801
     return-void
 .end method

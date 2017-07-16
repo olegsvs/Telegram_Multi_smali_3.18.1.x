@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 604
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$4;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 22
 
     .prologue
-    .line 608
     :try_start_0
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 609
     .local v7, "ids":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
     sget-object v16, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -59,13 +56,11 @@
 
     move-result-object v11
 
-    .line 610
     .local v11, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v11}, Landroid/content/SharedPreferences;->getAll()Ljava/util/Map;
 
     move-result-object v15
 
-    .line 611
     .local v15, "values":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;*>;"
     invoke-interface {v15}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -89,7 +84,6 @@
 
     check-cast v6, Ljava/util/Map$Entry;
 
-    .line 612
     .local v6, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     invoke-interface {v6}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -97,7 +91,6 @@
 
     check-cast v10, Ljava/lang/String;
 
-    .line 613
     .local v10, "key":Ljava/lang/String;
     const-string/jumbo v17, "notify2_"
 
@@ -109,14 +102,12 @@
 
     if-eqz v17, :cond_0
 
-    .line 614
     invoke-interface {v6}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Ljava/lang/Integer;
 
-    .line 615
     .local v14, "value":Ljava/lang/Integer;
     invoke-virtual {v14}, Ljava/lang/Integer;->intValue()I
 
@@ -142,7 +133,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 616
     :cond_1
     const-string/jumbo v17, "notify2_"
 
@@ -156,7 +146,6 @@
 
     move-result-object v10
 
-    .line 618
     invoke-virtual {v14}, Ljava/lang/Integer;->intValue()I
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_1
@@ -171,10 +160,8 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 619
     const-wide/16 v8, 0x1
 
-    .line 629
     .local v8, "flags":J
     :goto_1
     :try_start_1
@@ -201,11 +188,9 @@
 
     goto :goto_0
 
-    .line 630
     :catch_0
     move-exception v4
 
-    .line 631
     .local v4, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-virtual {v4}, Ljava/lang/Exception;->printStackTrace()V
@@ -214,7 +199,6 @@
 
     goto :goto_0
 
-    .line 652
     .end local v4    # "e":Ljava/lang/Exception;
     .end local v6    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .end local v7    # "ids":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
@@ -226,16 +210,13 @@
     :catch_1
     move-exception v4
 
-    .line 653
     .local v4, "e":Ljava/lang/Throwable;
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 655
     .end local v4    # "e":Ljava/lang/Throwable;
     :goto_2
     return-void
 
-    .line 621
     .restart local v6    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .restart local v7    # "ids":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
     .restart local v10    # "key":Ljava/lang/String;
@@ -272,11 +253,9 @@
 
     check-cast v13, Ljava/lang/Integer;
 
-    .line 622
     .local v13, "time":Ljava/lang/Integer;
     if-eqz v13, :cond_3
 
-    .line 623
     invoke-virtual {v13}, Ljava/lang/Integer;->intValue()I
 
     move-result v17
@@ -298,7 +277,6 @@
     .restart local v8    # "flags":J
     goto :goto_1
 
-    .line 625
     .end local v8    # "flags":J
     :cond_3
     const-wide/16 v8, 0x1
@@ -306,7 +284,6 @@
     .restart local v8    # "flags":J
     goto :goto_1
 
-    .line 633
     .end local v8    # "flags":J
     .end local v13    # "time":Ljava/lang/Integer;
     :cond_4
@@ -326,7 +303,6 @@
 
     goto/16 :goto_0
 
-    .line 639
     .end local v6    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;*>;"
     .end local v10    # "key":Ljava/lang/String;
     .end local v14    # "value":Ljava/lang/Integer;
@@ -344,7 +320,6 @@
 
     invoke-virtual/range {v16 .. v16}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 640
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesStorage$4;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -361,7 +336,6 @@
 
     move-result-object v12
 
-    .line 641
     .local v12, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     invoke-virtual {v7}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -384,11 +358,9 @@
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 642
     .local v5, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/Long;>;"
     invoke-virtual {v12}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 643
     const/16 v18, 0x1
 
     invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
@@ -407,7 +379,6 @@
 
     invoke-virtual {v12, v0, v1, v2}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 644
     const/16 v18, 0x2
 
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
@@ -426,7 +397,6 @@
 
     invoke-virtual {v12, v0, v1, v2}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 645
     invoke-virtual {v12}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_2
@@ -434,13 +404,11 @@
 
     goto :goto_3
 
-    .line 649
     .end local v5    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/Long;>;"
     .end local v12    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :catch_2
     move-exception v4
 
-    .line 650
     .local v4, "e":Ljava/lang/Exception;
     :try_start_5
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -449,14 +417,12 @@
 
     goto/16 :goto_2
 
-    .line 647
     .end local v4    # "e":Ljava/lang/Exception;
     .restart local v12    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :cond_6
     :try_start_6
     invoke-virtual {v12}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 648
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesStorage$4;->this$0:Lorg/telegram/messenger/MessagesStorage;

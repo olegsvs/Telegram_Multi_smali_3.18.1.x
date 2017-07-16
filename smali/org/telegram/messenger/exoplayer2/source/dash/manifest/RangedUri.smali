@@ -21,10 +21,8 @@
     .param p4, "length"    # J
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     if-nez p1, :cond_0
 
     const-string/jumbo p1, ""
@@ -33,13 +31,10 @@
     :cond_0
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->referenceUri:Ljava/lang/String;
 
-    .line 51
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->start:J
 
-    .line 52
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
 
-    .line 53
     return-void
 .end method
 
@@ -55,12 +50,10 @@
 
     const-wide/16 v4, -0x1
 
-    .line 89
     invoke-virtual {p0, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->resolveUriString(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 90
     .local v1, "resolvedUri":Ljava/lang/String;
     if-eqz p1, :cond_0
 
@@ -74,12 +67,10 @@
 
     if-nez v2, :cond_1
 
-    .line 99
     :cond_0
     :goto_0
     return-object v0
 
-    .line 92
     :cond_1
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
 
@@ -99,7 +90,6 @@
 
     if-nez v2, :cond_3
 
-    .line 93
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->start:J
@@ -124,7 +114,6 @@
 
     goto :goto_1
 
-    .line 95
     :cond_3
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
 
@@ -144,7 +133,6 @@
 
     if-nez v2, :cond_0
 
-    .line 96
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->start:J
@@ -179,15 +167,12 @@
 
     const/4 v2, 0x0
 
-    .line 117
     if-ne p0, p1, :cond_1
 
-    .line 126
     :cond_0
     :goto_0
     return v1
 
-    .line 120
     :cond_1
     if-eqz p1, :cond_2
 
@@ -204,16 +189,13 @@
     :cond_2
     move v1, v2
 
-    .line 121
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 123
     check-cast v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
-    .line 124
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->start:J
 
@@ -235,7 +217,6 @@
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->referenceUri:Ljava/lang/String;
 
-    .line 126
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v3
@@ -252,15 +233,12 @@
     .locals 4
 
     .prologue
-    .line 105
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->hashCode:I
 
     if-nez v1, :cond_0
 
-    .line 106
     const/16 v0, 0x11
 
-    .line 107
     .local v0, "result":I
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->start:J
 
@@ -268,7 +246,6 @@
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 108
     mul-int/lit8 v1, v0, 0x1f
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
@@ -277,7 +254,6 @@
 
     add-int v0, v1, v2
 
-    .line 109
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->referenceUri:Ljava/lang/String;
@@ -288,10 +264,8 @@
 
     add-int v0, v1, v2
 
-    .line 110
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->hashCode:I
 
-    .line 112
     .end local v0    # "result":I
     :cond_0
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->hashCode:I
@@ -304,7 +278,6 @@
     .param p1, "baseUri"    # Ljava/lang/String;
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->referenceUri:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lorg/telegram/messenger/exoplayer2/util/UriUtil;->resolveToUri(Ljava/lang/String;Ljava/lang/String;)Landroid/net/Uri;
@@ -319,7 +292,6 @@
     .param p1, "baseUri"    # Ljava/lang/String;
 
     .prologue
-    .line 72
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->referenceUri:Ljava/lang/String;
 
     invoke-static {p1, v0}, Lorg/telegram/messenger/exoplayer2/util/UriUtil;->resolve(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$21;
 
     .prologue
-    .line 1362
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$21$1;->this$1:Lorg/telegram/messenger/MessagesStorage$21;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$21$1;->val$mids:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1365
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -58,6 +56,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->markChannelDialogMessageAsDeleted(Ljava/util/ArrayList;I)V
 
-    .line 1366
     return-void
 .end method

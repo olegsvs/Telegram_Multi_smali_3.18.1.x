@@ -45,7 +45,6 @@
 .method public abstract getCurrentPosition()J
 .end method
 
-.method public abstract getCurrentTimeline()Lorg/telegram/messenger/exoplayer2/Timeline;
 .end method
 
 .method public abstract getCurrentTrackGroups()Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ContactAddActivity;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -43,26 +42,21 @@
 
     const/4 v6, 0x1
 
-    .line 96
     const/4 v2, -0x1
 
     if-ne p1, v2, :cond_1
 
-    .line 97
     iget-object v2, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ContactAddActivity;->finishFragment()V
 
-    .line 111
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     if-ne p1, v6, :cond_0
 
-    .line 99
     iget-object v2, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ContactAddActivity;->access$000(Lorg/telegram/ui/ContactAddActivity;)Landroid/widget/EditText;
@@ -79,7 +73,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 100
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -98,7 +91,6 @@
 
     move-result-object v1
 
-    .line 101
     .local v1, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v2, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
@@ -116,7 +108,6 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 102
     iget-object v2, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ContactAddActivity;->access$200(Lorg/telegram/ui/ContactAddActivity;)Landroid/widget/EditText;
@@ -133,19 +124,16 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
 
-    .line 103
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Lorg/telegram/messenger/ContactsController;->addContact(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 104
     iget-object v2, p0, Lorg/telegram/ui/ContactAddActivity$1;->this$0:Lorg/telegram/ui/ContactAddActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ContactAddActivity;->finishFragment()V
 
-    .line 105
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -154,7 +142,6 @@
 
     move-result-object v0
 
-    .line 106
     .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -190,7 +177,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 107
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -207,7 +193,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 108
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2

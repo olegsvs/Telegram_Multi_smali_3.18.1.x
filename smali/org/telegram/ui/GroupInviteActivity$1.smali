@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 99
     iput-object p1, p0, Lorg/telegram/ui/GroupInviteActivity$1;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 102
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity$1;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupInviteActivity;->finishFragment()V
 
-    .line 105
     :cond_0
     return-void
 .end method

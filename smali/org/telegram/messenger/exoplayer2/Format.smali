@@ -91,7 +91,6 @@
     .locals 1
 
     .prologue
-    .line 642
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/Format$1;-><init>()V
@@ -106,87 +105,74 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 376
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 377
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
-    .line 378
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
-    .line 379
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    .line 380
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    .line 381
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
-    .line 382
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->maxInputSize:I
 
-    .line 383
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
-    .line 384
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->height:I
 
-    .line 385
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameRate:F
 
-    .line 386
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->rotationDegrees:I
 
-    .line 387
     invoke-virtual {p1}, Landroid/os/Parcel;->readFloat()F
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->pixelWidthHeightRatio:F
 
-    .line 388
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
@@ -195,7 +181,6 @@
 
     const/4 v0, 0x1
 
-    .line 389
     .local v0, "hasProjectionData":Z
     :goto_0
     if-eqz v0, :cond_1
@@ -207,82 +192,70 @@
     :goto_1
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
-    .line 390
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->stereoMode:I
 
-    .line 391
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->channelCount:I
 
-    .line 392
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleRate:I
 
-    .line 393
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->pcmEncoding:I
 
-    .line 394
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderDelay:I
 
-    .line 395
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderPadding:I
 
-    .line 396
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->selectionFlags:I
 
-    .line 397
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v3
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
-    .line 398
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->accessibilityChannel:I
 
-    .line 399
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
 
     move-result-wide v4
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/Format;->subsampleOffsetUs:J
 
-    .line 400
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v2
 
-    .line 401
     .local v2, "initializationDataSize":I
     new-instance v3, Ljava/util/ArrayList;
 
@@ -290,14 +263,12 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
-    .line 402
     const/4 v1, 0x0
 
     .local v1, "i":I
     :goto_2
     if-ge v1, v2, :cond_2
 
-    .line 403
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
@@ -306,12 +277,10 @@
 
     invoke-interface {v3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 402
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 388
     .end local v0    # "hasProjectionData":Z
     .end local v1    # "i":I
     .end local v2    # "initializationDataSize":I
@@ -320,14 +289,12 @@
 
     goto :goto_0
 
-    .line 389
     .restart local v0    # "hasProjectionData":Z
     :cond_1
     const/4 v3, 0x0
 
     goto :goto_1
 
-    .line 405
     .restart local v1    # "i":I
     .restart local v2    # "initializationDataSize":I
     :cond_2
@@ -345,7 +312,6 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->drmInitData:Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
-    .line 406
     const-class v3, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
     invoke-virtual {v3}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
@@ -360,7 +326,6 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
-    .line 407
     return-void
 .end method
 
@@ -409,95 +374,71 @@
     .end annotation
 
     .prologue
-    .line 346
     .local p24, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 347
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
-    .line 348
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
-    .line 349
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    .line 350
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    .line 351
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
-    .line 352
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/Format;->maxInputSize:I
 
-    .line 353
     iput p7, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
-    .line 354
     iput p8, p0, Lorg/telegram/messenger/exoplayer2/Format;->height:I
 
-    .line 355
     iput p9, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameRate:F
 
-    .line 356
     iput p10, p0, Lorg/telegram/messenger/exoplayer2/Format;->rotationDegrees:I
 
-    .line 357
     iput p11, p0, Lorg/telegram/messenger/exoplayer2/Format;->pixelWidthHeightRatio:F
 
-    .line 358
     iput-object p12, p0, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
-    .line 359
     iput p13, p0, Lorg/telegram/messenger/exoplayer2/Format;->stereoMode:I
 
-    .line 360
     move/from16 v0, p14
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->channelCount:I
 
-    .line 361
     move/from16 v0, p15
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleRate:I
 
-    .line 362
     move/from16 v0, p16
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->pcmEncoding:I
 
-    .line 363
     move/from16 v0, p17
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderDelay:I
 
-    .line 364
     move/from16 v0, p18
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderPadding:I
 
-    .line 365
     move/from16 v0, p19
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->selectionFlags:I
 
-    .line 366
     move-object/from16 v0, p20
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
-    .line 367
     move/from16 v0, p21
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->accessibilityChannel:I
 
-    .line 368
     move-wide/from16 v0, p22
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->subsampleOffsetUs:J
 
-    .line 369
     if-nez p24, :cond_0
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -510,17 +451,14 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
-    .line 371
     move-object/from16 v0, p25
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->drmInitData:Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
-    .line 372
     move-object/from16 v0, p26
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
-    .line 373
     return-void
 .end method
 
@@ -552,7 +490,6 @@
     .end annotation
 
     .prologue
-    .line 233
     .local p7, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -646,7 +583,6 @@
     .end annotation
 
     .prologue
-    .line 261
     .local p10, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -736,7 +672,6 @@
     .end annotation
 
     .prologue
-    .line 251
     .local p8, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v8, -0x1
 
@@ -805,7 +740,6 @@
     .end annotation
 
     .prologue
-    .line 243
     .local p7, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v7, -0x1
 
@@ -847,7 +781,6 @@
     .param p4, "bitrate"    # I
 
     .prologue
-    .line 328
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
     const/4 v6, -0x1
@@ -930,7 +863,6 @@
     .end annotation
 
     .prologue
-    .line 318
     .local p4, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -998,7 +930,6 @@
     .param p4, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 335
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
     const/4 v2, 0x0
@@ -1067,7 +998,6 @@
     .param p6, "language"    # Ljava/lang/String;
 
     .prologue
-    .line 272
     const/4 v7, -0x1
 
     move-object v0, p0
@@ -1103,7 +1033,6 @@
     .param p7, "accessibilityChannel"    # I
 
     .prologue
-    .line 279
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
     const/4 v6, -0x1
@@ -1173,7 +1102,6 @@
     .param p7, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 294
     const-wide v8, 0x7fffffffffffffffL
 
     move-object v0, p0
@@ -1212,7 +1140,6 @@
     .param p8, "subsampleOffsetUs"    # J
 
     .prologue
-    .line 308
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
     const/4 v2, 0x0
@@ -1281,7 +1208,6 @@
     .param p6, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 287
     const/4 v6, -0x1
 
     const-wide v8, 0x7fffffffffffffffL
@@ -1319,7 +1245,6 @@
     .param p7, "subsampleOffsetUs"    # J
 
     .prologue
-    .line 301
     const/4 v6, -0x1
 
     move-object v0, p0
@@ -1370,7 +1295,6 @@
     .end annotation
 
     .prologue
-    .line 196
     .local p8, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -1458,7 +1382,6 @@
     .end annotation
 
     .prologue
-    .line 213
     .local p8, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v11, 0x0
 
@@ -1526,7 +1449,6 @@
     .end annotation
 
     .prologue
-    .line 222
     .local p8, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/Format;
 
@@ -1612,7 +1534,6 @@
     .end annotation
 
     .prologue
-    .line 205
     .local p8, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     const/4 v9, -0x1
 
@@ -1655,17 +1576,14 @@
     .end annotation
 
     .prologue
-    .line 591
     const/high16 v0, -0x40800000    # -1.0f
 
     cmpl-float v0, p2, v0
 
     if-eqz v0, :cond_0
 
-    .line 592
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaFormat;->setFloat(Ljava/lang/String;F)V
 
-    .line 594
     :cond_0
     return-void
 .end method
@@ -1680,15 +1598,12 @@
     .end annotation
 
     .prologue
-    .line 584
     const/4 v0, -0x1
 
     if-eq p2, v0, :cond_0
 
-    .line 585
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaFormat;->setInteger(Ljava/lang/String;I)V
 
-    .line 587
     :cond_0
     return-void
 .end method
@@ -1703,13 +1618,10 @@
     .end annotation
 
     .prologue
-    .line 577
     if-eqz p2, :cond_0
 
-    .line 578
     invoke-virtual {p0, p1, p2}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 580
     :cond_0
     return-void
 .end method
@@ -1727,7 +1639,6 @@
     .param p7, "language"    # Ljava/lang/String;
 
     .prologue
-    .line 427
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -1846,7 +1757,6 @@
     .param p1, "drmInitData"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     .prologue
-    .line 460
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -1980,7 +1890,6 @@
     .param p2, "encoderPadding"    # I
 
     .prologue
-    .line 452
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -2110,12 +2019,10 @@
     .param p2, "preferManifestDrmInitData"    # Z
 
     .prologue
-    .line 436
     move-object/from16 v0, p1
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
-    .line 437
     .local v3, "id":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -2127,7 +2034,6 @@
 
     iget-object v6, v0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    .line 438
     .local v6, "codecs":Ljava/lang/String;
     :goto_0
     move-object/from16 v0, p0
@@ -2142,7 +2048,6 @@
 
     iget v7, v0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
-    .line 439
     .local v7, "bitrate":I
     :goto_1
     move-object/from16 v0, p0
@@ -2159,7 +2064,6 @@
 
     iget v11, v0, Lorg/telegram/messenger/exoplayer2/Format;->frameRate:F
 
-    .line 440
     .local v11, "frameRate":F
     :goto_2
     move-object/from16 v0, p0
@@ -2172,7 +2076,6 @@
 
     or-int v21, v2, v4
 
-    .line 441
     .local v21, "selectionFlags":I
     move-object/from16 v0, p0
 
@@ -2186,7 +2089,6 @@
 
     move-object/from16 v22, v0
 
-    .line 442
     .local v22, "language":Ljava/lang/String;
     :goto_3
     if-eqz p2, :cond_0
@@ -2211,7 +2113,6 @@
 
     move-object/from16 v27, v0
 
-    .line 444
     .local v27, "drmInitData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
     :goto_4
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
@@ -2310,7 +2211,6 @@
 
     return-object v2
 
-    .line 437
     .end local v6    # "codecs":Ljava/lang/String;
     .end local v7    # "bitrate":I
     .end local v11    # "frameRate":F
@@ -2324,7 +2224,6 @@
 
     goto/16 :goto_0
 
-    .line 438
     .restart local v6    # "codecs":Ljava/lang/String;
     :cond_3
     move-object/from16 v0, p0
@@ -2333,7 +2232,6 @@
 
     goto/16 :goto_1
 
-    .line 439
     .restart local v7    # "bitrate":I
     :cond_4
     move-object/from16 v0, p0
@@ -2342,7 +2240,6 @@
 
     goto/16 :goto_2
 
-    .line 441
     .restart local v11    # "frameRate":F
     .restart local v21    # "selectionFlags":I
     :cond_5
@@ -2354,7 +2251,6 @@
 
     goto/16 :goto_3
 
-    .line 442
     .restart local v22    # "language":Ljava/lang/String;
     :cond_6
     move-object/from16 v0, p0
@@ -2371,7 +2267,6 @@
     .param p1, "maxInputSize"    # I
 
     .prologue
-    .line 410
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -2506,7 +2401,6 @@
     .param p1, "metadata"    # Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
     .prologue
-    .line 468
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -2639,7 +2533,6 @@
     .param p1, "subsampleOffsetUs"    # J
 
     .prologue
-    .line 418
     new-instance v2, Lorg/telegram/messenger/exoplayer2/Format;
 
     move-object/from16 v0, p0
@@ -2771,7 +2664,6 @@
     .locals 1
 
     .prologue
-    .line 600
     const/4 v0, 0x0
 
     return v0
@@ -2786,16 +2678,13 @@
 
     const/4 v5, 0x0
 
-    .line 541
     if-ne p0, p1, :cond_0
 
     move v2, v4
 
-    .line 572
     :goto_0
     return v2
 
-    .line 544
     :cond_0
     if-eqz p1, :cond_1
 
@@ -2812,16 +2701,13 @@
     :cond_1
     move v2, v5
 
-    .line 545
     goto :goto_0
 
     :cond_2
     move-object v1, p1
 
-    .line 547
     check-cast v1, Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 548
     .local v1, "other":Lorg/telegram/messenger/exoplayer2/Format;
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
@@ -2923,7 +2809,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
-    .line 555
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2934,7 +2819,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
-    .line 556
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2951,7 +2835,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
-    .line 558
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2962,7 +2845,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    .line 559
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2973,7 +2855,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
-    .line 560
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2984,7 +2865,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->drmInitData:Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
-    .line 561
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -2995,7 +2875,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
-    .line 562
     invoke-static {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->areEqual(Ljava/lang/Object;Ljava/lang/Object;)Z
 
     move-result v2
@@ -3006,7 +2885,6 @@
 
     iget-object v3, v1, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
-    .line 563
     invoke-static {v2, v3}, Ljava/util/Arrays;->equals([B[B)Z
 
     move-result v2
@@ -3015,7 +2893,6 @@
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
-    .line 564
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v2
@@ -3031,10 +2908,8 @@
     :cond_3
     move v2, v5
 
-    .line 565
     goto/16 :goto_0
 
-    .line 567
     :cond_4
     const/4 v0, 0x0
 
@@ -3048,7 +2923,6 @@
 
     if-ge v0, v2, :cond_6
 
-    .line 568
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3073,10 +2947,8 @@
 
     move v2, v5
 
-    .line 569
     goto/16 :goto_0
 
-    .line 567
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
@@ -3085,7 +2957,6 @@
     :cond_6
     move v2, v4
 
-    .line 572
     goto/16 :goto_0
 .end method
 
@@ -3093,7 +2964,6 @@
     .locals 4
     .annotation build Landroid/annotation/SuppressLint;
         value = {
-            "InlinedApi"
         }
     .end annotation
 
@@ -3102,17 +2972,14 @@
     .end annotation
 
     .prologue
-    .line 489
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameworkMediaFormat:Landroid/media/MediaFormat;
 
     if-nez v2, :cond_1
 
-    .line 490
     new-instance v0, Landroid/media/MediaFormat;
 
     invoke-direct {v0}, Landroid/media/MediaFormat;-><init>()V
 
-    .line 491
     .local v0, "format":Landroid/media/MediaFormat;
     const-string/jumbo v2, "mime"
 
@@ -3120,77 +2987,66 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/media/MediaFormat;->setString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 492
     const-string/jumbo v2, "language"
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetStringV16(Landroid/media/MediaFormat;Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 493
     const-string/jumbo v2, "max-input-size"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->maxInputSize:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 494
     const-string/jumbo v2, "width"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 495
     const-string/jumbo v2, "height"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->height:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 496
     const-string/jumbo v2, "frame-rate"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameRate:F
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetFloatV16(Landroid/media/MediaFormat;Ljava/lang/String;F)V
 
-    .line 497
     const-string/jumbo v2, "rotation-degrees"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->rotationDegrees:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 498
     const-string/jumbo v2, "channel-count"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->channelCount:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 499
     const-string/jumbo v2, "sample-rate"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleRate:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 500
     const-string/jumbo v2, "encoder-delay"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderDelay:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 501
     const-string/jumbo v2, "encoder-padding"
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderPadding:I
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/Format;->maybeSetIntegerV16(Landroid/media/MediaFormat;Ljava/lang/String;I)V
 
-    .line 502
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -3203,7 +3059,6 @@
 
     if-ge v1, v2, :cond_0
 
-    .line 503
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -3236,16 +3091,13 @@
 
     invoke-virtual {v0, v3, v2}, Landroid/media/MediaFormat;->setByteBuffer(Ljava/lang/String;Ljava/nio/ByteBuffer;)V
 
-    .line 502
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 505
     :cond_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameworkMediaFormat:Landroid/media/MediaFormat;
 
-    .line 507
     .end local v0    # "format":Landroid/media/MediaFormat;
     .end local v1    # "i":I
     :cond_1
@@ -3260,7 +3112,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 480
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
     if-eq v1, v0, :cond_0
@@ -3289,15 +3140,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 519
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->hashCode:I
 
     if-nez v1, :cond_0
 
-    .line 520
     const/16 v0, 0x11
 
-    .line 521
     .local v0, "result":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
@@ -3308,7 +3156,6 @@
     :goto_0
     add-int/lit16 v0, v1, 0x20f
 
-    .line 522
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
@@ -3320,7 +3167,6 @@
     :goto_1
     add-int v0, v3, v1
 
-    .line 523
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
@@ -3332,7 +3178,6 @@
     :goto_2
     add-int v0, v3, v1
 
-    .line 524
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
@@ -3344,42 +3189,36 @@
     :goto_3
     add-int v0, v3, v1
 
-    .line 525
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
     add-int v0, v1, v3
 
-    .line 526
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
     add-int v0, v1, v3
 
-    .line 527
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->height:I
 
     add-int v0, v1, v3
 
-    .line 528
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->channelCount:I
 
     add-int v0, v1, v3
 
-    .line 529
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleRate:I
 
     add-int v0, v1, v3
 
-    .line 530
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
@@ -3391,14 +3230,12 @@
     :goto_4
     add-int v0, v3, v1
 
-    .line 531
     mul-int/lit8 v1, v0, 0x1f
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->accessibilityChannel:I
 
     add-int v0, v1, v3
 
-    .line 532
     mul-int/lit8 v3, v0, 0x1f
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->drmInitData:Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
@@ -3410,7 +3247,6 @@
     :goto_5
     add-int v0, v3, v1
 
-    .line 533
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
@@ -3420,17 +3256,14 @@
     :goto_6
     add-int v0, v1, v2
 
-    .line 534
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/Format;->hashCode:I
 
-    .line 536
     .end local v0    # "result":I
     :cond_0
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->hashCode:I
 
     return v1
 
-    .line 521
     .restart local v0    # "result":I
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
@@ -3441,7 +3274,6 @@
 
     goto :goto_0
 
-    .line 522
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
@@ -3451,7 +3283,6 @@
 
     goto :goto_1
 
-    .line 523
     :cond_3
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
@@ -3461,7 +3292,6 @@
 
     goto :goto_2
 
-    .line 524
     :cond_4
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
@@ -3471,7 +3301,6 @@
 
     goto :goto_3
 
-    .line 530
     :cond_5
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
@@ -3481,7 +3310,6 @@
 
     goto :goto_4
 
-    .line 532
     :cond_6
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/Format;->drmInitData:Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
@@ -3491,7 +3319,6 @@
 
     goto :goto_5
 
-    .line 533
     :cond_7
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
@@ -3506,7 +3333,6 @@
     .locals 2
 
     .prologue
-    .line 512
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -3664,62 +3490,50 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 605
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 606
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 607
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 608
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->codecs:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 609
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 610
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->maxInputSize:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 611
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->width:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 612
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->height:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 613
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->frameRate:F
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 614
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->rotationDegrees:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 615
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->pixelWidthHeightRatio:F
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeFloat(F)V
 
-    .line 616
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
     if-eqz v2, :cond_1
@@ -3729,86 +3543,70 @@
     :goto_0
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 617
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
     if-eqz v2, :cond_0
 
-    .line 618
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->projectionData:[B
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 620
     :cond_0
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->stereoMode:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 621
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->channelCount:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 622
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->sampleRate:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 623
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->pcmEncoding:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 624
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderDelay:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 625
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->encoderPadding:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 626
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->selectionFlags:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 627
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->language:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 628
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->accessibilityChannel:I
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 629
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/Format;->subsampleOffsetUs:J
 
     invoke-virtual {p1, v4, v5}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 630
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
 
     move-result v1
 
-    .line 631
     .local v1, "initializationDataSize":I
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 632
     const/4 v0, 0x0
 
     .local v0, "i":I
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 633
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->initializationData:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -3819,7 +3617,6 @@
 
     invoke-virtual {p1, v2}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 632
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
@@ -3829,10 +3626,8 @@
     :cond_1
     move v2, v3
 
-    .line 616
     goto :goto_0
 
-    .line 635
     .restart local v0    # "i":I
     .restart local v1    # "initializationDataSize":I
     :cond_2
@@ -3840,11 +3635,9 @@
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 636
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/Format;->metadata:Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
     invoke-virtual {p1, v2, v3}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 637
     return-void
 .end method

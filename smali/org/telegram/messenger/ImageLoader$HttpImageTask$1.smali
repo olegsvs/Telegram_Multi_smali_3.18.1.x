@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
     .prologue
-    .line 291
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$HttpImageTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
     iput p2, p0, Lorg/telegram/messenger/ImageLoader$HttpImageTask$1;->val$progress:F
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 294
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$HttpImageTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$HttpImageTask;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$HttpImageTask;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -70,13 +68,11 @@
 
     invoke-virtual {v0, v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 295
     new-instance v0, Lorg/telegram/messenger/ImageLoader$HttpImageTask$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ImageLoader$HttpImageTask$1$1;-><init>(Lorg/telegram/messenger/ImageLoader$HttpImageTask$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 301
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemeActivity$2;
 
     .prologue
-    .line 102
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$2$1;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +42,5 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 106
     return-void
 .end method

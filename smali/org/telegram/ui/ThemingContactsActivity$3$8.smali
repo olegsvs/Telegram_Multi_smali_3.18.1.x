@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingContactsActivity$3;
 
     .prologue
-    .line 299
     iput-object p1, p0, Lorg/telegram/ui/ThemingContactsActivity$3$8;->this$1:Lorg/telegram/ui/ThemingContactsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 302
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "theme"
@@ -54,7 +52,6 @@
 
     move-result-object v0
 
-    .line 303
     .local v0, "themePrefs":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -68,7 +65,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 304
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$3$8;->this$1:Lorg/telegram/ui/ThemingContactsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingContactsActivity$3;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
@@ -79,7 +75,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 305
     iget-object v1, p0, Lorg/telegram/ui/ThemingContactsActivity$3$8;->this$1:Lorg/telegram/ui/ThemingContactsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingContactsActivity$3;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 307
     :cond_0
     return-void
 .end method

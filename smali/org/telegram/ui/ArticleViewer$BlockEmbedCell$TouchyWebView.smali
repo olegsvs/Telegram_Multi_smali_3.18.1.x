@@ -25,18 +25,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3091
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
-    .line 3092
     invoke-direct {p0, p2}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
-    .line 3093
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;->setFocusable(Z)V
 
-    .line 3094
     return-void
 .end method
 
@@ -49,7 +45,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 3098
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;->access$7100(Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbed;
@@ -60,10 +55,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 3099
     invoke-virtual {p0, v1}, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 3103
     :goto_0
     invoke-super {p0, p1}, Landroid/webkit/WebView;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -71,7 +64,6 @@
 
     return v0
 
-    .line 3101
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$TouchyWebView;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 

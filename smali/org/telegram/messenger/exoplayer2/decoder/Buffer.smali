@@ -12,7 +12,6 @@
     .locals 0
 
     .prologue
-    .line 23
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -25,14 +24,12 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 73
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
     or-int/2addr v0, p1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
-    .line 74
     return-void
 .end method
 
@@ -40,12 +37,10 @@
     .locals 1
 
     .prologue
-    .line 32
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
-    .line 33
     return-void
 .end method
 
@@ -54,7 +49,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 82
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
     xor-int/lit8 v1, p1, -0x1
@@ -63,7 +57,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
-    .line 83
     return-void
 .end method
 
@@ -72,7 +65,6 @@
     .param p1, "flag"    # I
 
     .prologue
-    .line 92
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
     and-int/2addr v0, p1
@@ -94,7 +86,6 @@
     .locals 1
 
     .prologue
-    .line 39
     const/high16 v0, -0x80000000
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->getFlag(I)Z
@@ -108,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 46
     const/4 v0, 0x4
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->getFlag(I)Z
@@ -122,7 +112,6 @@
     .locals 1
 
     .prologue
-    .line 53
     const/4 v0, 0x1
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->getFlag(I)Z
@@ -137,9 +126,7 @@
     .param p1, "flags"    # I
 
     .prologue
-    .line 63
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/decoder/Buffer;->flags:I
 
-    .line 64
     return-void
 .end method

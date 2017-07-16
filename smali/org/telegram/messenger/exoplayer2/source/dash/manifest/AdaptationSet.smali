@@ -40,23 +40,18 @@
     .end annotation
 
     .prologue
-    .line 34
     .local p3, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 35
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;->id:I
 
-    .line 36
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;->type:I
 
-    .line 37
     invoke-static {p3}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;->representations:Ljava/util/List;
 
-    .line 38
     return-void
 .end method

@@ -28,7 +28,6 @@
     .prologue
     const-wide/16 v4, 0x0
 
-    .line 88
     const/4 v1, 0x0
 
     const-wide/16 v2, 0x1
@@ -41,7 +40,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;-><init>(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJJJ)V
 
-    .line 89
     return-void
 .end method
 
@@ -54,16 +52,12 @@
     .param p8, "indexLength"    # J
 
     .prologue
-    .line 82
     invoke-direct/range {p0 .. p5}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;-><init>(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJ)V
 
-    .line 83
     iput-wide p6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexStart:J
 
-    .line 84
     iput-wide p8, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexLength:J
 
-    .line 85
     return-void
 .end method
 
@@ -75,7 +69,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 92
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexLength:J
 
     const-wide/16 v4, 0x0

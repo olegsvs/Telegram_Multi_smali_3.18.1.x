@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2248
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
     return-void
@@ -32,12 +31,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 2251
     invoke-virtual {p0}, Lorg/telegram/ui/ActionBar/Theme$4;->getBounds()Landroid/graphics/Rect;
 
     move-result-object v0
 
-    .line 2252
     .local v0, "bounds":Landroid/graphics/Rect;
     invoke-virtual {v0}, Landroid/graphics/Rect;->centerX()I
 
@@ -65,7 +62,6 @@
 
     invoke-virtual {p1, v1, v2, v3, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 2253
     return-void
 .end method
 
@@ -73,7 +69,6 @@
     .locals 1
 
     .prologue
-    .line 2267
     const/4 v0, 0x0
 
     return v0
@@ -84,7 +79,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 2258
     return-void
 .end method
 
@@ -93,6 +87,5 @@
     .param p1, "colorFilter"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 2263
     return-void
 .end method

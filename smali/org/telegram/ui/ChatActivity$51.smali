@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 3239
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 3242
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->getParentActivity()Landroid/app/Activity;
@@ -51,16 +49,13 @@
 
     if-nez v0, :cond_1
 
-    .line 3312
     :cond_0
     :goto_0
     return-void
 
-    .line 3245
     :cond_1
     const/4 v11, 0x0
 
-    .line 3246
     .local v11, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -76,7 +71,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 3247
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity;->currentUser:Lorg/telegram/tgnet/TLRPC$User;
@@ -85,14 +79,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 3248
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$13800(Lorg/telegram/ui/ChatActivity;)Ljava/lang/String;
 
     move-result-object v10
 
-    .line 3249
     .local v10, "botUserLast":Ljava/lang/String;
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -100,7 +92,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$13802(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 3250
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -113,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesController;->unblockUser(I)V
 
-    .line 3251
     if-eqz v10, :cond_2
 
     invoke-virtual {v10}, Ljava/lang/String;->length()I
@@ -122,7 +112,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 3252
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -133,12 +122,10 @@
 
     invoke-virtual {v0, v1, v10}, Lorg/telegram/messenger/MessagesController;->sendBotStart(Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/String;)V
 
-    .line 3307
     .end local v10    # "botUserLast":Ljava/lang/String;
     :goto_1
     if-eqz v11, :cond_0
 
-    .line 3308
     const-string/jumbo v0, "AppName"
 
     const v1, 0x7f070078
@@ -149,7 +136,6 @@
 
     invoke-virtual {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 3309
     const-string/jumbo v0, "Cancel"
 
     const v1, 0x7f0700f0
@@ -162,7 +148,6 @@
 
     invoke-virtual {v11, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 3310
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-virtual {v11}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -173,7 +158,6 @@
 
     goto :goto_0
 
-    .line 3254
     .restart local v10    # "botUserLast":Ljava/lang/String;
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
@@ -204,7 +188,6 @@
 
     goto :goto_1
 
-    .line 3257
     .end local v10    # "botUserLast":Ljava/lang/String;
     :cond_3
     new-instance v11, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
@@ -218,7 +201,6 @@
 
     invoke-direct {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 3258
     .restart local v11    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v0, "AreYouSureUnblockContact"
 
@@ -230,7 +212,6 @@
 
     invoke-virtual {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 3259
     const-string/jumbo v0, "OK"
 
     const v1, 0x7f070452
@@ -247,7 +228,6 @@
 
     goto :goto_1
 
-    .line 3266
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -271,7 +251,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 3267
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$13800(Lorg/telegram/ui/ChatActivity;)Ljava/lang/String;
@@ -284,7 +263,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 3268
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -301,7 +279,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->sendBotStart(Lorg/telegram/tgnet/TLRPC$User;Ljava/lang/String;)V
 
-    .line 3272
     :goto_2
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -309,14 +286,12 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$13802(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 3273
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$4100(Lorg/telegram/ui/ChatActivity;)V
 
     goto/16 :goto_1
 
-    .line 3270
     :cond_5
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -346,7 +321,6 @@
 
     goto :goto_2
 
-    .line 3275
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -366,7 +340,6 @@
 
     if-nez v0, :cond_8
 
-    .line 3276
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity;->currentChat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -377,7 +350,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 3277
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -404,7 +376,6 @@
 
     goto/16 :goto_1
 
-    .line 3279
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -414,7 +385,6 @@
 
     goto/16 :goto_1
 
-    .line 3282
     :cond_8
     new-instance v11, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -427,7 +397,6 @@
 
     invoke-direct {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 3284
     .restart local v11    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$51;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -451,7 +420,6 @@
 
     if-eqz v0, :cond_9
 
-    .line 3285
     const-string/jumbo v0, "ReturnToThisGroupMsg"
 
     const v1, 0x7f070543
@@ -462,7 +430,6 @@
 
     invoke-virtual {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 3286
     const-string/jumbo v0, "OK"
 
     const v1, 0x7f070452
@@ -479,7 +446,6 @@
 
     goto/16 :goto_1
 
-    .line 3296
     :cond_9
     const-string/jumbo v0, "AreYouSureDeleteThisChat"
 
@@ -491,7 +457,6 @@
 
     invoke-virtual {v11, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 3297
     const-string/jumbo v0, "OK"
 
     const v1, 0x7f070452

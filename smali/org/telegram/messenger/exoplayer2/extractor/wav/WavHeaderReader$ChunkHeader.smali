@@ -31,16 +31,12 @@
     .param p2, "size"    # J
 
     .prologue
-    .line 162
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 163
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->id:I
 
-    .line 164
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;->size:J
 
-    .line 165
     return-void
 .end method
 
@@ -58,28 +54,23 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 178
     iget-object v1, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     const/16 v4, 0x8
 
     invoke-interface {p0, v1, v5, v4}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->peekFully([BII)V
 
-    .line 179
     invoke-virtual {p1, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 181
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
-    .line 182
     .local v0, "id":I
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedInt()J
 
     move-result-wide v2
 
-    .line 184
     .local v2, "size":J
     new-instance v1, Lorg/telegram/messenger/exoplayer2/extractor/wav/WavHeaderReader$ChunkHeader;
 

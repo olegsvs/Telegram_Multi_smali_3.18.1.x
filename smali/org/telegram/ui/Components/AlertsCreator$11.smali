@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 774
     iput-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$11;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$11;->val$listener:Landroid/content/DialogInterface$OnClickListener;
@@ -45,7 +44,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 777
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -56,18 +54,15 @@
 
     move-result v0
 
-    .line 779
     .local v0, "sel":I
     iget-object v1, p0, Lorg/telegram/ui/Components/AlertsCreator$11;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v1, :cond_0
 
-    .line 780
     iget-object v1, p0, Lorg/telegram/ui/Components/AlertsCreator$11;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->dismissCurrentDialig()V
 
-    .line 782
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/AlertsCreator$11;->val$listener:Landroid/content/DialogInterface$OnClickListener;
 
@@ -75,6 +70,5 @@
 
     invoke-interface {v1, v2, v0}, Landroid/content/DialogInterface$OnClickListener;->onClick(Landroid/content/DialogInterface;I)V
 
-    .line 783
     return-void
 .end method

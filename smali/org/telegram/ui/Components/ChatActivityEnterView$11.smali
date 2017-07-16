@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     .prologue
-    .line 768
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 774
     iget-object v3, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -62,7 +60,6 @@
     :goto_0
     invoke-static {v3, v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3902(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)Z
 
-    .line 775
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$4000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -82,7 +79,6 @@
     :goto_1
     invoke-virtual {v3, v1}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 779
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -131,7 +127,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 780
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1000(Lorg/telegram/ui/Components/ChatActivityEnterView;)J
@@ -140,20 +135,17 @@
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(J)V
 
-    .line 782
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->visibleToast:Landroid/widget/Toast;
 
     if-eqz v1, :cond_0
 
-    .line 783
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->visibleToast:Landroid/widget/Toast;
 
     invoke-virtual {v1}, Landroid/widget/Toast;->cancel()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 788
     :cond_0
     :goto_2
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -164,7 +156,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 789
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -185,43 +176,35 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->visibleToast:Landroid/widget/Toast;
 
-    .line 793
     :goto_3
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->visibleToast:Landroid/widget/Toast;
 
     invoke-virtual {v1}, Landroid/widget/Toast;->show()V
 
-    .line 794
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$4100(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
-    .line 795
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 774
     goto/16 :goto_0
 
-    .line 775
     :cond_2
     const v1, 0x7f0201f8
 
     goto :goto_1
 
-    .line 785
     :catch_0
     move-exception v0
 
-    .line 786
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 791
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$11;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;

@@ -13,13 +13,10 @@
     .param p1, "owner"    # Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;
 
     .prologue
-    .line 29
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;-><init>()V
 
-    .line 30
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleOutputBuffer;->owner:Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;
 
-    .line 31
     return-void
 .end method
 
@@ -29,11 +26,9 @@
     .locals 1
 
     .prologue
-    .line 35
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleOutputBuffer;->owner:Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/exoplayer2/text/SimpleSubtitleDecoder;->releaseOutputBuffer(Lorg/telegram/messenger/exoplayer2/text/SubtitleOutputBuffer;)V
 
-    .line 36
     return-void
 .end method

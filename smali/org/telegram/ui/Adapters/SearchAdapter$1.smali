@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/SearchAdapter;
 
     .prologue
-    .line 63
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/SearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/Adapters/SearchAdapter$1;->this$0:Lorg/telegram/ui/Adapters/SearchAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Adapters/SearchAdapter;->notifyDataSetChanged()V
 
-    .line 67
     return-void
 .end method
 
@@ -68,7 +65,6 @@
     .end annotation
 
     .prologue
-    .line 72
     .local p1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;>;"
     .local p2, "hashMap":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;>;"
     return-void

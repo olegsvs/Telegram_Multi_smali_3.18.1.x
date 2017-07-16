@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemeActivity$2;
 
     .prologue
-    .line 152
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$2$4;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemeActivity$2$4;->val$editText:Landroid/widget/EditText;
@@ -54,7 +53,6 @@
 
     const/4 v8, 0x0
 
-    .line 155
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->val$editText:Landroid/widget/EditText;
 
     invoke-virtual {v5}, Landroid/widget/EditText;->length()I
@@ -63,7 +61,6 @@
 
     if-nez v5, :cond_2
 
-    .line 156
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v6, "vibrator"
@@ -74,16 +71,13 @@
 
     check-cast v4, Landroid/os/Vibrator;
 
-    .line 157
     .local v4, "vibrator":Landroid/os/Vibrator;
     if-eqz v4, :cond_0
 
-    .line 158
     const-wide/16 v6, 0xc8
 
     invoke-virtual {v4, v6, v7}, Landroid/os/Vibrator;->vibrate(J)V
 
-    .line 160
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->val$editText:Landroid/widget/EditText;
 
@@ -91,19 +85,16 @@
 
     invoke-static {v5, v6, v8}, Lorg/telegram/messenger/AndroidUtilities;->shakeView(Landroid/view/View;FI)V
 
-    .line 180
     .end local v4    # "vibrator":Landroid/os/Vibrator;
     :cond_1
     :goto_0
     return-void
 
-    .line 163
     :cond_2
     new-instance v3, Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-direct {v3}, Lorg/telegram/ui/Components/ThemeEditorView;-><init>()V
 
-    .line 164
     .local v3, "themeEditorView":Lorg/telegram/ui/Components/ThemeEditorView;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -133,7 +124,6 @@
 
     move-result-object v1
 
-    .line 165
     .local v1, "name":Ljava/lang/String;
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
@@ -145,10 +135,8 @@
 
     invoke-virtual {v3, v5, v1}, Lorg/telegram/ui/Components/ThemeEditorView;->show(Landroid/app/Activity;Ljava/lang/String;)V
 
-    .line 166
     invoke-static {v1, v7}, Lorg/telegram/ui/ActionBar/Theme;->saveCurrentTheme(Ljava/lang/String;Z)V
 
-    .line 167
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
     iget-object v5, v5, Lorg/telegram/ui/ThemeActivity$2;->this$0:Lorg/telegram/ui/ThemeActivity;
@@ -159,12 +147,10 @@
 
     invoke-virtual {v5}, Lorg/telegram/ui/ThemeActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 168
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->val$alertDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v5}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
 
-    .line 170
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v6, "mainconfig"
@@ -173,7 +159,6 @@
 
     move-result-object v2
 
-    .line 171
     .local v2, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v5, "themehint"
 
@@ -183,7 +168,6 @@
 
     if-nez v5, :cond_1
 
-    .line 174
     invoke-interface {v2}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v5
@@ -196,7 +180,6 @@
 
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 176
     :try_start_0
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->this$1:Lorg/telegram/ui/ThemeActivity$2;
 
@@ -226,11 +209,9 @@
 
     goto :goto_0
 
-    .line 177
     :catch_0
     move-exception v0
 
-    .line 178
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

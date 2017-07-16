@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$17;
 
     .prologue
-    .line 1709
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$17$1;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$17$1;->val$u:Lorg/telegram/tgnet/TLRPC$User;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1712
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$17$1;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$17;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -56,6 +54,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/ContactsController;->addContactToPhoneBook(Lorg/telegram/tgnet/TLRPC$User;Z)J
 
-    .line 1713
     return-void
 .end method

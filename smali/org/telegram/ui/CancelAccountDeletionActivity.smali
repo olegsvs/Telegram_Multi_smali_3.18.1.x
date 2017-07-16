@@ -56,30 +56,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 110
     invoke-direct {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>(Landroid/os/Bundle;)V
 
-    .line 71
     iput v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
 
-    .line 72
     const/4 v0, 0x5
 
     new-array v0, v0, [Lorg/telegram/ui/Components/SlideView;
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
-    .line 75
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->permissionsItems:Ljava/util/ArrayList;
 
-    .line 76
     iput-boolean v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->checkPermissions:Z
 
-    .line 111
     const-string/jumbo v0, "hash"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -88,7 +82,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->hash:Ljava/lang/String;
 
-    .line 112
     const-string/jumbo v0, "phone"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -97,7 +90,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->phone:Ljava/lang/String;
 
-    .line 113
     return-void
 .end method
 
@@ -106,7 +98,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     return-object v0
@@ -117,7 +108,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     .prologue
-    .line 69
     iget v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
 
     return v0
@@ -128,7 +118,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->hash:Ljava/lang/String;
 
     return-object v0
@@ -139,7 +128,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->phone:Ljava/lang/String;
 
     return-object v0
@@ -152,7 +140,6 @@
     .param p2, "x2"    # Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;
 
     .prologue
-    .line 69
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/CancelAccountDeletionActivity;->fillNextCodeParams(Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
     return-void
@@ -164,7 +151,6 @@
     .param p1, "x1"    # Landroid/app/Dialog;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->errorDialog:Landroid/app/Dialog;
 
     return-object p1
@@ -186,26 +172,22 @@
 
     const/4 v2, 0x1
 
-    .line 282
     const-string/jumbo v0, "phoneHash"
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->phone_code_hash:Ljava/lang/String;
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 283
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->next_type:Lorg/telegram/tgnet/TLRPC$auth_CodeType;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_codeTypeCall;
 
     if-eqz v0, :cond_2
 
-    .line 284
     const-string/jumbo v0, "nextType"
 
     invoke-virtual {p1, v0, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 290
     :cond_0
     :goto_0
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
@@ -214,12 +196,10 @@
 
     if-eqz v0, :cond_4
 
-    .line 291
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 292
     const-string/jumbo v0, "length"
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
@@ -228,15 +208,12 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 293
     invoke-virtual {p0, v2, v2, p1, v3}, Lorg/telegram/ui/CancelAccountDeletionActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 313
     :cond_1
     :goto_1
     return-void
 
-    .line 285
     :cond_2
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->next_type:Lorg/telegram/tgnet/TLRPC$auth_CodeType;
 
@@ -244,14 +221,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 286
     const-string/jumbo v0, "nextType"
 
     invoke-virtual {p1, v0, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 287
     :cond_3
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->next_type:Lorg/telegram/tgnet/TLRPC$auth_CodeType;
 
@@ -259,25 +234,21 @@
 
     if-eqz v0, :cond_0
 
-    .line 288
     const-string/jumbo v0, "nextType"
 
     invoke-virtual {p1, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
     goto :goto_0
 
-    .line 295
     :cond_4
     iget v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->timeout:I
 
     if-nez v0, :cond_5
 
-    .line 296
     const/16 v0, 0x3c
 
     iput v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->timeout:I
 
-    .line 298
     :cond_5
     const-string/jumbo v0, "timeout"
 
@@ -287,19 +258,16 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 299
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCodeTypeCall;
 
     if-eqz v0, :cond_6
 
-    .line 300
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0, v6}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 301
     const-string/jumbo v0, "length"
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
@@ -308,12 +276,10 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 302
     invoke-virtual {p0, v6, v2, p1, v3}, Lorg/telegram/ui/CancelAccountDeletionActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
     goto :goto_1
 
-    .line 303
     :cond_6
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
 
@@ -321,12 +287,10 @@
 
     if-eqz v0, :cond_7
 
-    .line 304
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 305
     const-string/jumbo v0, "pattern"
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
@@ -335,12 +299,10 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 306
     invoke-virtual {p0, v5, v2, p1, v3}, Lorg/telegram/ui/CancelAccountDeletionActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
     goto :goto_1
 
-    .line 307
     :cond_7
     iget-object v0, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
 
@@ -348,12 +310,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 308
     const-string/jumbo v0, "type"
 
     invoke-virtual {p1, v0, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 309
     const-string/jumbo v0, "length"
 
     iget-object v1, p2, Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;->type:Lorg/telegram/tgnet/TLRPC$auth_SentCodeType;
@@ -362,7 +322,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 310
     invoke-virtual {p0, v4, v2, p1, v3}, Lorg/telegram/ui/CancelAccountDeletionActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
     goto :goto_1
@@ -375,7 +334,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 136
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v1, "AppName"
@@ -388,14 +346,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v1, 0x7f0200b6
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v1, Lorg/telegram/ui/CancelAccountDeletionActivity$1;
@@ -404,14 +360,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v9
 
-    .line 150
     .local v9, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const/4 v0, 0x1
 
@@ -429,37 +383,31 @@
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->doneButton:Landroid/view/View;
 
-    .line 151
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->doneButton:Landroid/view/View;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 153
     new-instance v0, Landroid/widget/ScrollView;
 
     invoke-direct {v0, p1}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->fragmentView:Landroid/view/View;
 
-    .line 154
     iget-object v10, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->fragmentView:Landroid/view/View;
 
     check-cast v10, Landroid/widget/ScrollView;
 
-    .line 155
     .local v10, "scrollView":Landroid/widget/ScrollView;
     const/4 v0, 0x1
 
     invoke-virtual {v10, v0}, Landroid/widget/ScrollView;->setFillViewport(Z)V
 
-    .line 157
     new-instance v8, Landroid/widget/FrameLayout;
 
     invoke-direct {v8, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 158
     .local v8, "frameLayout":Landroid/widget/FrameLayout;
     const/4 v0, -0x1
 
@@ -473,7 +421,6 @@
 
     invoke-virtual {v10, v8, v0}, Landroid/widget/ScrollView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x0
@@ -484,7 +431,6 @@
 
     aput-object v2, v0, v1
 
-    .line 161
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x1
@@ -497,7 +443,6 @@
 
     aput-object v2, v0, v1
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x2
@@ -510,7 +455,6 @@
 
     aput-object v2, v0, v1
 
-    .line 163
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x3
@@ -523,7 +467,6 @@
 
     aput-object v2, v0, v1
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x4
@@ -536,7 +479,6 @@
 
     aput-object v2, v0, v1
 
-    .line 166
     const/4 v7, 0x0
 
     .local v7, "a":I
@@ -547,7 +489,6 @@
 
     if-ge v7, v0, :cond_4
 
-    .line 167
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v1, v0, v7
@@ -559,7 +500,6 @@
     :goto_1
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/SlideView;->setVisibility(I)V
 
-    .line 168
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v11, v0, v7
@@ -601,18 +541,15 @@
 
     invoke-virtual {v8, v11, v0}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 166
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 167
     :cond_0
     const/16 v0, 0x8
 
     goto :goto_1
 
-    .line 168
     :cond_1
     const/high16 v1, -0x40800000    # -1.0f
 
@@ -628,7 +565,6 @@
 
     goto :goto_4
 
-    .line 171
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -644,7 +580,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->fragmentView:Landroid/view/View;
 
     return-object v0
@@ -654,7 +589,6 @@
     .locals 17
 
     .prologue
-    .line 931
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
@@ -665,7 +599,6 @@
 
     check-cast v10, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;
 
-    .line 932
     .local v10, "phoneView":Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;
     move-object/from16 v0, p0
 
@@ -677,7 +610,6 @@
 
     check-cast v11, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
-    .line 933
     .local v11, "smsView1":Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
     move-object/from16 v0, p0
 
@@ -689,7 +621,6 @@
 
     check-cast v12, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
-    .line 934
     .local v12, "smsView2":Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
     move-object/from16 v0, p0
 
@@ -701,7 +632,6 @@
 
     check-cast v13, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
-    .line 935
     .local v13, "smsView3":Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
     move-object/from16 v0, p0
 
@@ -713,7 +643,6 @@
 
     check-cast v14, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
-    .line 937
     .local v14, "smsView4":Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
     const/16 v1, 0x2b
 
@@ -867,7 +796,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 946
     invoke-static {v10}, Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;->access$3100(Lorg/telegram/ui/CancelAccountDeletionActivity$PhoneView;)Lorg/telegram/ui/Components/RadialProgressView;
 
     move-result-object v2
@@ -892,7 +820,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 948
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$3200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -917,7 +844,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 949
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -942,7 +868,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 950
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -967,7 +892,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 951
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -992,7 +916,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 952
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1021,7 +944,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 953
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1046,7 +968,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 954
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1700(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1071,7 +992,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 955
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1114,7 +1034,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 956
     invoke-static {v11}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1157,7 +1076,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 958
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$3200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1182,7 +1100,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 959
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1207,7 +1124,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 960
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1232,7 +1148,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 961
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1257,7 +1172,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 962
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1286,7 +1200,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 963
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1311,7 +1224,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 964
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1700(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1336,7 +1248,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 965
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1379,7 +1290,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 966
     invoke-static {v12}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1422,7 +1332,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 968
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$3200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1447,7 +1356,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 969
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1472,7 +1380,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 970
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1497,7 +1404,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 971
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1522,7 +1428,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 972
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1551,7 +1456,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 973
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1576,7 +1480,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 974
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1700(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1601,7 +1504,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 975
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1644,7 +1546,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 976
     invoke-static {v13}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1687,7 +1588,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 978
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$3200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1712,7 +1612,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 979
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1737,7 +1636,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 980
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1762,7 +1660,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 981
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1787,7 +1684,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 982
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$900(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/EditText;
 
     move-result-object v2
@@ -1816,7 +1712,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 983
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2200(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1841,7 +1736,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 984
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$1700(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Landroid/widget/TextView;
 
     move-result-object v2
@@ -1866,7 +1760,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 985
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1909,7 +1802,6 @@
 
     new-instance v1, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 986
     invoke-static {v14}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;->access$2300(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;)Lorg/telegram/ui/CancelAccountDeletionActivity$ProgressView;
 
     move-result-object v2
@@ -1955,16 +1847,13 @@
     .locals 2
 
     .prologue
-    .line 231
     iget-object v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     if-nez v1, :cond_0
 
-    .line 240
     :goto_0
     return-void
 
-    .line 235
     :cond_0
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -1973,7 +1862,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 239
     :goto_1
     const/4 v1, 0x0
 
@@ -1981,11 +1869,9 @@
 
     goto :goto_0
 
-    .line 236
     :catch_0
     move-exception v0
 
-    .line 237
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -1998,7 +1884,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 220
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -2019,12 +1904,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 228
     :cond_0
     :goto_0
     return-void
 
-    .line 223
     :cond_1
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -2038,7 +1921,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 224
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     const-string/jumbo v1, "Loading"
@@ -2051,17 +1933,14 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 225
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 226
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 227
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->show()V
@@ -2073,7 +1952,6 @@
     .locals 2
 
     .prologue
-    .line 204
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -2084,27 +1962,23 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 205
     iget-object v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v1, v1, v0
 
     if-eqz v1, :cond_0
 
-    .line 206
     iget-object v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/SlideView;->onDestroyActivity()V
 
-    .line 204
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 209
     :cond_1
     const/4 v1, 0x1
 
@@ -2116,7 +1990,6 @@
     .param p1, "dialog"    # Landroid/app/Dialog;
 
     .prologue
-    .line 194
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x17
@@ -2135,7 +2008,6 @@
 
     if-nez v0, :cond_0
 
-    .line 195
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v1
@@ -2160,16 +2032,13 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
 
-    .line 197
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->errorDialog:Landroid/app/Dialog;
 
     if-ne p1, v0, :cond_1
 
-    .line 198
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->finishFragment()V
 
-    .line 200
     :cond_1
     return-void
 .end method
@@ -2178,10 +2047,8 @@
     .locals 4
 
     .prologue
-    .line 117
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 118
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -2192,33 +2059,28 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 119
     iget-object v2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v2, v2, v0
 
     if-eqz v2, :cond_0
 
-    .line 120
     iget-object v2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v2, v2, v0
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/SlideView;->onDestroyActivity()V
 
-    .line 118
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 123
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     if-eqz v2, :cond_2
 
-    .line 125
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -2226,13 +2088,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 129
     :goto_1
     const/4 v2, 0x0
 
     iput-object v2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 131
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->getParentActivity()Landroid/app/Activity;
 
@@ -2242,14 +2102,11 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->removeAdjustResize(Landroid/app/Activity;I)V
 
-    .line 132
     return-void
 
-    .line 126
     :catch_0
     move-exception v1
 
-    .line 127
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -2263,22 +2120,18 @@
     .param p3, "grantResults"    # [I
 
     .prologue
-    .line 184
     const/4 v0, 0x6
 
     if-ne p1, v0, :cond_0
 
-    .line 185
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->checkPermissions:Z
 
-    .line 186
     iget v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
 
     if-nez v0, :cond_0
 
-    .line 187
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     iget v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
@@ -2287,7 +2140,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SlideView;->onNextPressed()V
 
-    .line 190
     :cond_0
     return-void
 .end method
@@ -2296,10 +2148,8 @@
     .locals 2
 
     .prologue
-    .line 178
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 179
     invoke-virtual {p0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
@@ -2308,7 +2158,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->requestAdjustResize(Landroid/app/Activity;I)V
 
-    .line 180
     return-void
 .end method
 
@@ -2318,10 +2167,8 @@
     .param p2, "backward"    # Z
 
     .prologue
-    .line 214
     if-eqz p1, :cond_0
 
-    .line 215
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     iget v1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
@@ -2330,7 +2177,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SlideView;->onShow()V
 
-    .line 217
     :cond_0
     return-void
 .end method
@@ -2347,18 +2193,15 @@
 
     const/4 v7, 0x0
 
-    .line 243
     const/4 v3, 0x3
 
     if-eq p1, v3, :cond_0
 
     if-nez p1, :cond_2
 
-    .line 244
     :cond_0
     if-nez p1, :cond_1
 
-    .line 247
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->doneButton:Landroid/view/View;
 
@@ -2366,7 +2209,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setVisibility(I)V
 
-    .line 251
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
@@ -2374,20 +2216,16 @@
 
     aget-object v2, v3, v4
 
-    .line 252
     .local v2, "outView":Lorg/telegram/ui/Components/SlideView;
     iget-object v3, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->views:[Lorg/telegram/ui/Components/SlideView;
 
     aget-object v1, v3, p1
 
-    .line 253
     .local v1, "newView":Lorg/telegram/ui/Components/SlideView;
     iput p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->currentViewNum:I
 
-    .line 255
     invoke-virtual {v1, p3, v7}, Lorg/telegram/ui/Components/SlideView;->setParams(Landroid/os/Bundle;Z)V
 
-    .line 256
     iget-object v3, p0, Lorg/telegram/ui/CancelAccountDeletionActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/SlideView;->getHeaderName()Ljava/lang/String;
@@ -2396,10 +2234,8 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 257
     invoke-virtual {v1}, Lorg/telegram/ui/Components/SlideView;->onShow()V
 
-    .line 258
     if-eqz p4, :cond_3
 
     sget-object v3, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
@@ -2413,12 +2249,10 @@
     :goto_1
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/SlideView;->setX(F)V
 
-    .line 260
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 261
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     new-instance v3, Landroid/view/animation/AccelerateDecelerateInterpolator;
 
@@ -2426,12 +2260,10 @@
 
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 262
     const-wide/16 v4, 0x12c
 
     invoke-virtual {v0, v4, v5}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 263
     const/4 v3, 0x2
 
     new-array v4, v3, [Landroid/animation/Animator;
@@ -2451,7 +2283,6 @@
     :goto_2
     aput v3, v6, v7
 
-    .line 264
     invoke-static {v2, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -2466,30 +2297,24 @@
 
     aput v6, v5, v7
 
-    .line 265
     invoke-static {v1, v3, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     aput-object v3, v4, v8
 
-    .line 263
     invoke-virtual {v0, v4}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 266
     new-instance v3, Lorg/telegram/ui/CancelAccountDeletionActivity$2;
 
     invoke-direct {v3, p0, v1, v2}, Lorg/telegram/ui/CancelAccountDeletionActivity$2;-><init>(Lorg/telegram/ui/CancelAccountDeletionActivity;Lorg/telegram/ui/Components/SlideView;Lorg/telegram/ui/Components/SlideView;)V
 
     invoke-virtual {v0, v3}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 278
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 279
     return-void
 
-    .line 249
     .end local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     .end local v1    # "newView":Lorg/telegram/ui/Components/SlideView;
     .end local v2    # "outView":Lorg/telegram/ui/Components/SlideView;
@@ -2500,7 +2325,6 @@
 
     goto :goto_0
 
-    .line 258
     .restart local v1    # "newView":Lorg/telegram/ui/Components/SlideView;
     .restart local v2    # "outView":Lorg/telegram/ui/Components/SlideView;
     :cond_3
@@ -2512,7 +2336,6 @@
 
     goto :goto_1
 
-    .line 263
     .restart local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     :cond_4
     sget-object v3, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;

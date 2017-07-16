@@ -43,20 +43,16 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
-    .line 123
     invoke-direct {p0, p2}, Landroid/view/ViewGroup;-><init>(Landroid/content/Context;)V
 
-    .line 118
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
-    .line 124
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addingSpan:Landroid/view/View;
 
     return-object p1
@@ -78,7 +73,6 @@
     .param p1, "x1"    # Landroid/animation/AnimatorSet;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -90,7 +84,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 114
     iput-boolean p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animationStarted:Z
 
     return p1
@@ -102,7 +95,6 @@
     .param p1, "x1"    # Landroid/view/View;
 
     .prologue
-    .line 114
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
 
     return-object p1
@@ -119,7 +111,6 @@
 
     const/4 v4, 0x2
 
-    .line 228
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$400(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/ArrayList;
@@ -128,7 +119,6 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 229
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$500(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/HashMap;
@@ -145,7 +135,6 @@
 
     invoke-virtual {v0, v1, p1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$000(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/Components/EditTextBoldCursor;
@@ -154,33 +143,27 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setHintVisible(Z)V
 
-    .line 232
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 233
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->setupEndValues()V
 
-    .line 234
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 236
     :cond_0
     iput-boolean v2, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animationStarted:Z
 
-    .line 237
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
-    .line 238
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity$SpansContainer$1;
@@ -189,22 +172,18 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 247
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 248
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addingSpan:Landroid/view/View;
 
-    .line 249
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 250
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addingSpan:Landroid/view/View;
@@ -221,7 +200,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addingSpan:Landroid/view/View;
@@ -238,7 +216,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 252
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addingSpan:Landroid/view/View;
@@ -255,13 +232,10 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 253
     invoke-virtual {p0, p1}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->addView(Landroid/view/View;)V
 
-    .line 254
     return-void
 
-    .line 250
     nop
 
     :array_0
@@ -270,14 +244,12 @@
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 251
     :array_1
     .array-data 4
         0x3c23d70a    # 0.01f
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 252
     :array_2
     .array-data 4
         0x0
@@ -296,12 +268,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 220
     invoke-virtual {p0}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->getChildCount()I
 
     move-result v2
 
-    .line 221
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -309,12 +279,10 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 222
     invoke-virtual {p0, v0}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 223
     .local v1, "child":Landroid/view/View;
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -326,12 +294,10 @@
 
     invoke-virtual {v1, v5, v5, v3, v4}, Landroid/view/View;->layout(IIII)V
 
-    .line 221
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 225
     .end local v1    # "child":Landroid/view/View;
     :cond_0
     return-void
@@ -343,18 +309,15 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 128
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->getChildCount()I
 
     move-result v6
 
-    .line 129
     .local v6, "count":I
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v13
 
-    .line 130
     .local v13, "width":I
     const/high16 v16, 0x42000000    # 32.0f
 
@@ -364,11 +327,9 @@
 
     sub-int v10, v13, v16
 
-    .line 131
     .local v10, "maxWidth":I
     const/4 v8, 0x0
 
-    .line 132
     .local v8, "currentLineWidth":I
     const/high16 v16, 0x41400000    # 12.0f
 
@@ -376,11 +337,9 @@
 
     move-result v15
 
-    .line 133
     .local v15, "y":I
     const/4 v3, 0x0
 
-    .line 134
     .local v3, "allCurrentLineWidth":I
     const/high16 v16, 0x41400000    # 12.0f
 
@@ -388,7 +347,6 @@
 
     move-result v4
 
-    .line 136
     .local v4, "allY":I
     const/4 v2, 0x0
 
@@ -396,14 +354,12 @@
     :goto_0
     if-ge v2, v6, :cond_8
 
-    .line 137
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->getChildAt(I)Landroid/view/View;
 
     move-result-object v5
 
-    .line 138
     .local v5, "child":Landroid/view/View;
     instance-of v0, v5, Lorg/telegram/ui/Components/GroupCreateSpan;
 
@@ -411,13 +367,11 @@
 
     if-nez v16, :cond_0
 
-    .line 136
     :goto_1
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 141
     :cond_0
     const/high16 v16, -0x80000000
 
@@ -445,7 +399,6 @@
 
     invoke-virtual {v5, v0, v1}, Landroid/view/View;->measure(II)V
 
-    .line 142
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
@@ -466,7 +419,6 @@
 
     if-le v0, v10, :cond_1
 
-    .line 143
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v16
@@ -481,10 +433,8 @@
 
     add-int v15, v15, v16
 
-    .line 144
     const/4 v8, 0x0
 
-    .line 146
     :cond_1
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -496,7 +446,6 @@
 
     if-le v0, v10, :cond_2
 
-    .line 147
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v16
@@ -511,10 +460,8 @@
 
     add-int v4, v4, v16
 
-    .line 148
     const/4 v3, 0x0
 
-    .line 150
     :cond_2
     const/high16 v16, 0x41800000    # 16.0f
 
@@ -524,7 +471,6 @@
 
     add-int v14, v16, v8
 
-    .line 151
     .local v14, "x":I
     move-object/from16 v0, p0
 
@@ -534,7 +480,6 @@
 
     if-nez v16, :cond_3
 
-    .line 152
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
@@ -545,7 +490,6 @@
 
     if-ne v5, v0, :cond_5
 
-    .line 153
     const/high16 v16, 0x41800000    # 16.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -564,7 +508,6 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 154
     int-to-float v0, v4
 
     move/from16 v16, v0
@@ -573,7 +516,6 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setTranslationY(F)V
 
-    .line 167
     :cond_3
     :goto_2
     move-object/from16 v0, p0
@@ -586,7 +528,6 @@
 
     if-eq v5, v0, :cond_4
 
-    .line 168
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
     move-result v16
@@ -601,7 +542,6 @@
 
     add-int v8, v8, v16
 
-    .line 170
     :cond_4
     invoke-virtual {v5}, Landroid/view/View;->getMeasuredWidth()I
 
@@ -619,7 +559,6 @@
 
     goto/16 :goto_1
 
-    .line 155
     :cond_5
     move-object/from16 v0, p0
 
@@ -629,7 +568,6 @@
 
     if-eqz v16, :cond_7
 
-    .line 156
     invoke-virtual {v5}, Landroid/view/View;->getTranslationX()F
 
     move-result v16
@@ -642,7 +580,6 @@
 
     if-eqz v16, :cond_6
 
-    .line 157
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
@@ -677,7 +614,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 159
     :cond_6
     invoke-virtual {v5}, Landroid/view/View;->getTranslationY()F
 
@@ -691,7 +627,6 @@
 
     if-eqz v16, :cond_3
 
-    .line 160
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
@@ -728,7 +663,6 @@
 
     goto/16 :goto_2
 
-    .line 163
     :cond_7
     int-to-float v0, v14
 
@@ -738,7 +672,6 @@
 
     invoke-virtual {v5, v0}, Landroid/view/View;->setTranslationX(F)V
 
-    .line 164
     int-to-float v0, v15
 
     move/from16 v16, v0
@@ -749,7 +682,6 @@
 
     goto/16 :goto_2
 
-    .line 173
     .end local v5    # "child":Landroid/view/View;
     .end local v14    # "x":I
     :cond_8
@@ -759,7 +691,6 @@
 
     if-eqz v16, :cond_f
 
-    .line 174
     const/high16 v16, 0x43b70000    # 366.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -768,7 +699,6 @@
 
     div-int/lit8 v11, v16, 0x3
 
-    .line 178
     .local v11, "minWidth":I
     :goto_3
     sub-int v16, v10, v8
@@ -777,10 +707,8 @@
 
     if-ge v0, v11, :cond_9
 
-    .line 179
     const/4 v8, 0x0
 
-    .line 180
     const/high16 v16, 0x42300000    # 44.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -789,7 +717,6 @@
 
     add-int v15, v15, v16
 
-    .line 182
     :cond_9
     sub-int v16, v10, v3
 
@@ -797,7 +724,6 @@
 
     if-ge v0, v11, :cond_a
 
-    .line 183
     const/high16 v16, 0x42300000    # 44.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -806,7 +732,6 @@
 
     add-int v4, v4, v16
 
-    .line 185
     :cond_a
     move-object/from16 v0, p0
 
@@ -840,7 +765,6 @@
 
     invoke-virtual/range {v16 .. v18}, Lorg/telegram/ui/Components/EditTextBoldCursor;->measure(II)V
 
-    .line 186
     move-object/from16 v0, p0
 
     iget-boolean v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animationStarted:Z
@@ -849,7 +773,6 @@
 
     if-nez v16, :cond_11
 
-    .line 187
     const/high16 v16, 0x42300000    # 44.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -858,7 +781,6 @@
 
     add-int v7, v4, v16
 
-    .line 188
     .local v7, "currentHeight":I
     const/high16 v16, 0x41800000    # 16.0f
 
@@ -868,7 +790,6 @@
 
     add-int v9, v8, v16
 
-    .line 189
     .local v9, "fieldX":I
     move-object/from16 v0, p0
 
@@ -880,7 +801,6 @@
 
     invoke-static {v0, v15}, Lorg/telegram/ui/GroupCreateActivity;->access$102(Lorg/telegram/ui/GroupCreateActivity;I)I
 
-    .line 190
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
@@ -889,7 +809,6 @@
 
     if-eqz v16, :cond_10
 
-    .line 191
     const/high16 v16, 0x42300000    # 44.0f
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -898,7 +817,6 @@
 
     add-int v12, v15, v16
 
-    .line 192
     .local v12, "resultHeight":I
     move-object/from16 v0, p0
 
@@ -914,7 +832,6 @@
 
     if-eq v0, v12, :cond_b
 
-    .line 193
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
@@ -947,7 +864,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 195
     :cond_b
     move-object/from16 v0, p0
 
@@ -971,7 +887,6 @@
 
     if-eqz v16, :cond_c
 
-    .line 196
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
@@ -1012,7 +927,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 198
     :cond_c
     move-object/from16 v0, p0
 
@@ -1048,7 +962,6 @@
 
     if-eqz v16, :cond_d
 
-    .line 199
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
@@ -1101,7 +1014,6 @@
 
     invoke-virtual/range {v16 .. v17}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 201
     :cond_d
     move-object/from16 v0, p0
 
@@ -1117,7 +1029,6 @@
 
     invoke-virtual/range {v16 .. v17}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setAllowDrawCursor(Z)V
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
@@ -1132,7 +1043,6 @@
 
     invoke-virtual/range {v16 .. v17}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    .line 203
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
@@ -1141,7 +1051,6 @@
 
     invoke-virtual/range {v16 .. v16}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 204
     const/16 v16, 0x1
 
     move/from16 v0, v16
@@ -1150,7 +1059,6 @@
 
     iput-boolean v0, v1, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animationStarted:Z
 
-    .line 215
     .end local v7    # "currentHeight":I
     .end local v9    # "fieldX":I
     .end local v12    # "resultHeight":I
@@ -1172,10 +1080,8 @@
 
     invoke-virtual {v0, v13, v1}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->setMeasuredDimension(II)V
 
-    .line 216
     return-void
 
-    .line 176
     .end local v11    # "minWidth":I
     :cond_f
     sget-object v16, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
@@ -1211,7 +1117,6 @@
     .restart local v11    # "minWidth":I
     goto/16 :goto_3
 
-    .line 206
     .restart local v7    # "currentHeight":I
     .restart local v9    # "fieldX":I
     :cond_10
@@ -1225,7 +1130,6 @@
 
     invoke-static {v0, v7}, Lorg/telegram/ui/GroupCreateActivity;->access$202(Lorg/telegram/ui/GroupCreateActivity;I)I
 
-    .line 207
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -1242,7 +1146,6 @@
 
     invoke-virtual/range {v16 .. v17}, Lorg/telegram/ui/Components/EditTextBoldCursor;->setTranslationX(F)V
 
-    .line 208
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -1273,7 +1176,6 @@
 
     goto :goto_4
 
-    .line 210
     .end local v7    # "currentHeight":I
     .end local v9    # "fieldX":I
     :cond_11
@@ -1285,7 +1187,6 @@
 
     if-eqz v16, :cond_e
 
-    .line 211
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -1306,7 +1207,6 @@
 
     if-nez v16, :cond_e
 
-    .line 212
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -1343,14 +1243,12 @@
     .prologue
     const/4 v4, 0x2
 
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateActivity;->access$302(Lorg/telegram/ui/GroupCreateActivity;Z)Z
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$500(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/HashMap;
@@ -1367,7 +1265,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$400(Lorg/telegram/ui/GroupCreateActivity;)Ljava/util/ArrayList;
@@ -1376,40 +1273,33 @@
 
     invoke-virtual {v0, p1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 260
     const/4 v0, 0x0
 
     invoke-virtual {p1, v0}, Lorg/telegram/ui/Components/GroupCreateSpan;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 262
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 263
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->setupEndValues()V
 
-    .line 264
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 266
     :cond_0
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animationStarted:Z
 
-    .line 267
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
-    .line 268
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     new-instance v1, Lorg/telegram/ui/GroupCreateActivity$SpansContainer$2;
@@ -1418,22 +1308,18 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 281
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->currentAnimation:Landroid/animation/AnimatorSet;
 
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 282
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
 
-    .line 283
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 284
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
@@ -1450,7 +1336,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 285
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
@@ -1467,7 +1352,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 286
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->animators:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removingSpan:Landroid/view/View;
@@ -1484,27 +1368,22 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 287
     invoke-virtual {p0}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->requestLayout()V
 
-    .line 288
     return-void
 
-    .line 284
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    .line 285
     :array_1
     .array-data 4
         0x3f800000    # 1.0f
         0x3c23d70a    # 0.01f
     .end array-data
 
-    .line 286
     :array_2
     .array-data 4
         0x3f800000    # 1.0f

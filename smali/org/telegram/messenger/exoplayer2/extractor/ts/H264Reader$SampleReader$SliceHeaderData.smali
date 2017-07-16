@@ -59,7 +59,6 @@
     .locals 0
 
     .prologue
-    .line 436
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -70,7 +69,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$1;
 
     .prologue
-    .line 436
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;-><init>()V
 
     return-void
@@ -82,7 +80,6 @@
     .param p1, "x1"    # Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;
 
     .prologue
-    .line 436
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->isFirstVclNalUnitOfPicture(Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;)Z
 
     move-result v0
@@ -97,7 +94,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 497
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->isComplete:Z
 
     if-eqz v1, :cond_5
@@ -242,13 +238,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 460
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->hasSliceType:Z
 
-    .line 461
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->isComplete:Z
 
-    .line 462
     return-void
 .end method
 
@@ -256,7 +249,6 @@
     .locals 2
 
     .prologue
-    .line 492
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->hasSliceType:Z
 
     if-eqz v0, :cond_1
@@ -305,55 +297,38 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 473
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->spsData:Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil$SpsData;
 
-    .line 474
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->nalRefIdc:I
 
-    .line 475
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->sliceType:I
 
-    .line 476
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->frameNum:I
 
-    .line 477
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->picParameterSetId:I
 
-    .line 478
     iput-boolean p6, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->fieldPicFlag:Z
 
-    .line 479
     iput-boolean p7, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->bottomFieldFlagPresent:Z
 
-    .line 480
     iput-boolean p8, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->bottomFieldFlag:Z
 
-    .line 481
     iput-boolean p9, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->idrPicFlag:Z
 
-    .line 482
     iput p10, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->idrPicId:I
 
-    .line 483
     iput p11, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->picOrderCntLsb:I
 
-    .line 484
     iput p12, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->deltaPicOrderCntBottom:I
 
-    .line 485
     iput p13, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->deltaPicOrderCnt0:I
 
-    .line 486
     iput p14, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->deltaPicOrderCnt1:I
 
-    .line 487
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->isComplete:Z
 
-    .line 488
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->hasSliceType:Z
 
-    .line 489
     return-void
 .end method
 
@@ -362,14 +337,11 @@
     .param p1, "sliceType"    # I
 
     .prologue
-    .line 465
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->sliceType:I
 
-    .line 466
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H264Reader$SampleReader$SliceHeaderData;->hasSliceType:Z
 
-    .line 467
     return-void
 .end method

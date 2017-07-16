@@ -34,13 +34,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4343
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 4344
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 4338
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -49,7 +46,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textX:I
 
-    .line 4339
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -58,7 +54,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textY:I
 
-    .line 4345
     return-void
 .end method
 
@@ -69,26 +64,21 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 4412
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockAuthorDate;
 
     if-nez v0, :cond_1
 
-    .line 4422
     :cond_0
     :goto_0
     return-void
 
-    .line 4415
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_0
 
-    .line 4416
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4417
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textX:I
 
     int-to-float v0, v0
@@ -99,19 +89,16 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4418
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 4419
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4420
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
@@ -123,16 +110,13 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 4360
     invoke-static/range {p1 .. p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v13
 
-    .line 4361
     .local v13, "width":I
     const/4 v7, 0x0
 
-    .line 4363
     .local v7, "height":I
     move-object/from16 v0, p0
 
@@ -140,14 +124,12 @@
 
     if-eqz v14, :cond_5
 
-    .line 4364
     move-object/from16 v0, p0
 
     iget v14, v0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->lastCreatedWidth:I
 
     if-eq v14, v13, :cond_4
 
-    .line 4366
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -180,7 +162,6 @@
 
     move-result-object v5
 
-    .line 4369
     .local v5, "author":Ljava/lang/CharSequence;
     instance-of v14, v5, Landroid/text/Spannable;
 
@@ -188,10 +169,8 @@
 
     move-object v10, v5
 
-    .line 4370
     check-cast v10, Landroid/text/Spannable;
 
-    .line 4371
     .local v10, "spannableAuthor":Landroid/text/Spannable;
     const/4 v14, 0x0
 
@@ -209,7 +188,6 @@
 
     check-cast v11, [Landroid/text/style/MetricAffectingSpan;
 
-    .line 4376
     .local v11, "spans":[Landroid/text/style/MetricAffectingSpan;
     :goto_0
     move-object/from16 v0, p0
@@ -226,7 +204,6 @@
 
     if-nez v14, :cond_1
 
-    .line 4377
     const-string/jumbo v14, "ArticleDateByAuthor"
 
     const v15, 0x7f07009d
@@ -291,7 +268,6 @@
 
     move-result-object v12
 
-    .line 4384
     .local v12, "text":Ljava/lang/CharSequence;
     :goto_1
     if-eqz v11, :cond_3
@@ -301,18 +277,15 @@
 
     if-lez v14, :cond_3
 
-    .line 4385
     invoke-static {v12, v5}, Landroid/text/TextUtils;->indexOf(Ljava/lang/CharSequence;Ljava/lang/CharSequence;)I
 
     move-result v8
 
-    .line 4386
     .local v8, "idx":I
     const/4 v14, -0x1
 
     if-eq v8, v14, :cond_3
 
-    .line 4387
     invoke-static {}, Landroid/text/Spannable$Factory;->getInstance()Landroid/text/Spannable$Factory;
 
     move-result-object v14
@@ -321,11 +294,9 @@
 
     move-result-object v9
 
-    .line 4388
     .local v9, "spannable":Landroid/text/Spannable;
     move-object v12, v9
 
-    .line 4389
     const/4 v4, 0x0
 
     .local v4, "a":I
@@ -334,7 +305,6 @@
 
     if-ge v4, v14, :cond_3
 
-    .line 4390
     aget-object v14, v11, v4
 
     aget-object v15, v11, v4
@@ -365,12 +335,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4389
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_2
 
-    .line 4373
     .end local v4    # "a":I
     .end local v8    # "idx":I
     .end local v9    # "spannable":Landroid/text/Spannable;
@@ -380,14 +348,12 @@
     :cond_0
     const/4 v10, 0x0
 
-    .line 4374
     .restart local v10    # "spannableAuthor":Landroid/text/Spannable;
     const/4 v11, 0x0
 
     .restart local v11    # "spans":[Landroid/text/style/MetricAffectingSpan;
     goto/16 :goto_0
 
-    .line 4378
     :cond_1
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -395,7 +361,6 @@
 
     if-nez v14, :cond_2
 
-    .line 4379
     const-string/jumbo v14, "ArticleByAuthor"
 
     const v15, 0x7f07009c
@@ -419,7 +384,6 @@
     .restart local v12    # "text":Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 4381
     .end local v12    # "text":Ljava/lang/CharSequence;
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -451,15 +415,12 @@
     .restart local v12    # "text":Ljava/lang/CharSequence;
     goto :goto_1
 
-    .line 4394
     :catch_0
     move-exception v6
 
-    .line 4395
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 4397
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_3
     move-object/from16 v0, p0
@@ -494,14 +455,12 @@
 
     iput-object v14, v0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 4398
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v14, :cond_4
 
-    .line 4399
     const/high16 v14, 0x41800000    # 16.0f
 
     invoke-static {v14}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -520,7 +479,6 @@
 
     add-int/2addr v7, v14
 
-    .line 4407
     .end local v5    # "author":Ljava/lang/CharSequence;
     .end local v10    # "spannableAuthor":Landroid/text/Spannable;
     .end local v11    # "spans":[Landroid/text/style/MetricAffectingSpan;
@@ -531,10 +489,8 @@
 
     invoke-virtual {v0, v13, v7}, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->setMeasuredDimension(II)V
 
-    .line 4408
     return-void
 
-    .line 4404
     :cond_5
     const/4 v7, 0x1
 
@@ -546,7 +502,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4355
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->textLayout:Landroid/text/StaticLayout;
@@ -588,17 +543,13 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockAuthorDate;
 
     .prologue
-    .line 4348
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockAuthorDate;
 
-    .line 4349
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->lastCreatedWidth:I
 
-    .line 4350
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockAuthorDateCell;->requestLayout()V
 
-    .line 4351
     return-void
 .end method

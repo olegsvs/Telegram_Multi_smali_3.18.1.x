@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 82
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter$1;
 
     .prologue
-    .line 82
     invoke-direct {p0, p1}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogSearchResult;-><init>(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)V
 
     return-void

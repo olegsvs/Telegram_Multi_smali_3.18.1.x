@@ -14,13 +14,10 @@
     .param p2, "message"    # Ljava/lang/String;
 
     .prologue
-    .line 10
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/String;)V
 
-    .line 11
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/drm/DecryptionException;->errorCode:I
 
-    .line 12
     return-void
 .end method
 
@@ -30,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 18
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DecryptionException;->errorCode:I
 
     return v0

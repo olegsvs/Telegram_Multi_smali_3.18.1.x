@@ -35,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 26240
     const v0, -0x5d44ca35
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->constructor:I
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 26239
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,15 +58,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 26249
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 26250
     if-eqz p2, :cond_0
 
-    .line 26251
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_phoneCallProtocol"
@@ -93,21 +88,17 @@
 
     throw v1
 
-    .line 26253
     :cond_0
     const/4 v0, 0x0
 
-    .line 26258
     :goto_0
     return-object v0
 
-    .line 26256
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;-><init>()V
 
-    .line 26257
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -126,14 +117,12 @@
 
     const/4 v2, 0x0
 
-    .line 26262
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
-    .line 26263
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
     and-int/lit8 v0, v0, 0x1
@@ -145,7 +134,6 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->udp_p2p:Z
 
-    .line 26264
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
     and-int/lit8 v0, v0, 0x2
@@ -155,33 +143,28 @@
     :goto_1
     iput-boolean v1, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->udp_reflector:Z
 
-    .line 26265
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->min_layer:I
 
-    .line 26266
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->max_layer:I
 
-    .line 26267
     return-void
 
     :cond_0
     move v0, v2
 
-    .line 26263
     goto :goto_0
 
     :cond_1
     move v1, v2
 
-    .line 26264
     goto :goto_1
 .end method
 
@@ -190,12 +173,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 26270
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26271
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->udp_p2p:Z
 
     if-eqz v0, :cond_0
@@ -207,7 +188,6 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
-    .line 26272
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->udp_reflector:Z
 
     if-eqz v0, :cond_1
@@ -219,25 +199,20 @@
     :goto_1
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
-    .line 26273
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26274
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->min_layer:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26275
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->max_layer:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26276
     return-void
 
-    .line 26271
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 
@@ -245,7 +220,6 @@
 
     goto :goto_0
 
-    .line 26272
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallProtocol;->flags:I
 

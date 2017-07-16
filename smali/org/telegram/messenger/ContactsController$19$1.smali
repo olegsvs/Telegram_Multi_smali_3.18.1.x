@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$19;
 
     .prologue
-    .line 1834
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$19$1;->this$1:Lorg/telegram/messenger/ContactsController$19;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$19$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 1837
     iget-object v6, p0, Lorg/telegram/messenger/ContactsController$19$1;->this$1:Lorg/telegram/messenger/ContactsController$19;
 
     iget-object v6, v6, Lorg/telegram/messenger/ContactsController$19;->val$editor:Landroid/content/SharedPreferences$Editor;
@@ -60,12 +58,10 @@
 
     invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1838
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$19$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 1839
     .local v5, "vector":Lorg/telegram/tgnet/TLRPC$Vector;
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -75,12 +71,10 @@
 
     if-nez v6, :cond_6
 
-    .line 1840
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1841
     .local v0, "dbUsersStatus":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
@@ -100,7 +94,6 @@
 
     move-result-object v1
 
-    .line 1842
     .local v1, "object":Ljava/lang/Object;
     new-instance v3, Lorg/telegram/tgnet/TLRPC$User;
 
@@ -109,28 +102,23 @@
     .local v3, "toDbUser":Lorg/telegram/tgnet/TLRPC$User;
     move-object v2, v1
 
-    .line 1843
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;
 
-    .line 1845
     .local v2, "status":Lorg/telegram/tgnet/TLRPC$TL_contactStatus;
     if-eqz v2, :cond_0
 
-    .line 1848
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     instance-of v7, v7, Lorg/telegram/tgnet/TLRPC$TL_userStatusRecently;
 
     if-eqz v7, :cond_3
 
-    .line 1849
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     const/16 v8, -0x64
 
     iput v8, v7, Lorg/telegram/tgnet/TLRPC$UserStatus;->expires:I
 
-    .line 1856
     :cond_1
     :goto_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -147,27 +135,22 @@
 
     move-result-object v4
 
-    .line 1857
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v4, :cond_2
 
-    .line 1858
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     iput-object v7, v4, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
-    .line 1860
     :cond_2
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     iput-object v7, v3, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
-    .line 1861
     invoke-virtual {v0, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_0
 
-    .line 1850
     .end local v4    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_3
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
@@ -176,7 +159,6 @@
 
     if-eqz v7, :cond_4
 
-    .line 1851
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     const/16 v8, -0x65
@@ -185,7 +167,6 @@
 
     goto :goto_1
 
-    .line 1852
     :cond_4
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
@@ -193,7 +174,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 1853
     iget-object v7, v2, Lorg/telegram/tgnet/TLRPC$TL_contactStatus;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
     const/16 v8, -0x66
@@ -202,7 +182,6 @@
 
     goto :goto_1
 
-    .line 1863
     .end local v1    # "object":Ljava/lang/Object;
     .end local v2    # "status":Lorg/telegram/tgnet/TLRPC$TL_contactStatus;
     .end local v3    # "toDbUser":Lorg/telegram/tgnet/TLRPC$User;
@@ -213,7 +192,6 @@
 
     invoke-virtual {v6, v0, v9, v9, v9}, Lorg/telegram/messenger/MessagesStorage;->updateUsers(Ljava/util/ArrayList;ZZZ)V
 
-    .line 1865
     .end local v0    # "dbUsersStatus":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :cond_6
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -236,6 +214,5 @@
 
     invoke-virtual {v6, v7, v8}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1866
     return-void
 .end method

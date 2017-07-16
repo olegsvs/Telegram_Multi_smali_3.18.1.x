@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     .prologue
-    .line 434
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 436
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$800(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Landroid/widget/EditText;
@@ -56,11 +54,9 @@
 
     if-nez v1, :cond_0
 
-    .line 440
     :goto_0
     return v0
 
-    .line 439
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -76,7 +72,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/EditText;->dispatchKeyEvent(Landroid/view/KeyEvent;)Z
 
-    .line 440
     const/4 v0, 0x1
 
     goto :goto_0
@@ -86,7 +81,6 @@
     .locals 0
 
     .prologue
-    .line 491
     return-void
 .end method
 
@@ -97,7 +91,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 444
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$800(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Landroid/widget/EditText;
@@ -118,11 +111,9 @@
 
     if-le v4, v5, :cond_0
 
-    .line 462
     :goto_0
     return-void
 
-    .line 447
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -134,14 +125,11 @@
 
     move-result v1
 
-    .line 448
     .local v1, "i":I
     if-gez v1, :cond_1
 
-    .line 449
     const/4 v1, 0x0
 
-    .line 452
     :cond_1
     :try_start_0
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -150,7 +138,6 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$602(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
 
-    .line 453
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$800(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;)Landroid/widget/EditText;
@@ -177,7 +164,6 @@
 
     move-result-object v3
 
-    .line 454
     .local v3, "localCharSequence":Ljava/lang/CharSequence;
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -201,14 +187,12 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 455
     invoke-interface {v3}, Ljava/lang/CharSequence;->length()I
 
     move-result v4
 
     add-int v2, v1, v4
 
-    .line 456
     .local v2, "j":I
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
@@ -221,27 +205,23 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 460
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v4, v7}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$602(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
 
     goto :goto_0
 
-    .line 457
     .end local v2    # "j":I
     .end local v3    # "localCharSequence":Ljava/lang/CharSequence;
     :catch_0
     move-exception v0
 
-    .line 458
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 460
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$10;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-static {v4, v7}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$602(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;Z)Z
@@ -264,7 +244,6 @@
     .param p1, "gif"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 476
     return-void
 .end method
 
@@ -273,7 +252,6 @@
     .param p1, "opened"    # Z
 
     .prologue
-    .line 481
     return-void
 .end method
 
@@ -283,7 +261,6 @@
     .param p2, "inputStickerSet"    # Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
     .prologue
-    .line 496
     return-void
 .end method
 
@@ -292,7 +269,6 @@
     .param p1, "sticker"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 466
     return-void
 .end method
 
@@ -301,7 +277,6 @@
     .param p1, "stickerSet"    # Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
     .prologue
-    .line 501
     return-void
 .end method
 
@@ -310,7 +285,6 @@
     .param p1, "stickerSet"    # Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
     .prologue
-    .line 506
     return-void
 .end method
 
@@ -318,7 +292,6 @@
     .locals 0
 
     .prologue
-    .line 471
     return-void
 .end method
 
@@ -327,6 +300,5 @@
     .param p1, "opened"    # Z
 
     .prologue
-    .line 486
     return-void
 .end method

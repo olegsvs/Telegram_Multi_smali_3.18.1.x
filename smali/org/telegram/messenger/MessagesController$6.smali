@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 697
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 700
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/tgnet/ConnectionsManager;->setIsUpdating(Z)V
 
-    .line 701
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1100(Lorg/telegram/messenger/MessagesController;)Ljava/util/HashMap;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 702
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1200(Lorg/telegram/messenger/MessagesController;)Ljava/util/HashMap;
@@ -68,7 +64,6 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 703
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1300(Lorg/telegram/messenger/MessagesController;)Ljava/util/HashMap;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 704
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1400(Lorg/telegram/messenger/MessagesController;)Ljava/util/HashMap;
@@ -86,7 +80,6 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 705
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1500(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -95,7 +88,6 @@
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 706
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$6;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1600(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -104,6 +96,5 @@
 
     invoke-virtual {v0}, Landroid/util/SparseIntArray;->clear()V
 
-    .line 707
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesStorage$35;
 
     .prologue
-    .line 2052
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$35$1;->this$1:Lorg/telegram/messenger/MessagesStorage$35;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$35$1;->val$finalInfo:Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2055
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -86,6 +84,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2056
     return-void
 .end method

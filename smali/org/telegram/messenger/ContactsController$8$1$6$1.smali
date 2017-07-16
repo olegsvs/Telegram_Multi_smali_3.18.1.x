@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/messenger/ContactsController$8$1$6;
 
     .prologue
-    .line 1175
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$8$1$6$1;->this$3:Lorg/telegram/messenger/ContactsController$8$1$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1178
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$8$1$6$1;->this$3:Lorg/telegram/messenger/ContactsController$8$1$6;
 
     iget-object v0, v0, Lorg/telegram/messenger/ContactsController$8$1$6;->this$2:Lorg/telegram/messenger/ContactsController$8$1;
@@ -56,6 +54,5 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/ContactsController;->contactsByPhone:Ljava/util/HashMap;
 
-    .line 1179
     return-void
 .end method

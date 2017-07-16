@@ -20,10 +20,8 @@
     .locals 1
 
     .prologue
-    .line 35
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnFlingListener;-><init>()V
 
-    .line 43
     new-instance v0, Lorg/telegram/messenger/support/widget/SnapHelper$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/support/widget/SnapHelper$1;-><init>(Lorg/telegram/messenger/support/widget/SnapHelper;)V
@@ -37,21 +35,18 @@
     .locals 2
 
     .prologue
-    .line 124
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mScrollListener:Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView;->removeOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 125
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView;->setOnFlingListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnFlingListener;)V
 
-    .line 126
     return-void
 .end method
 
@@ -64,7 +59,6 @@
     .end annotation
 
     .prologue
-    .line 113
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView;->getOnFlingListener()Lorg/telegram/messenger/support/widget/RecyclerView$OnFlingListener;
@@ -73,7 +67,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 114
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "An instance of OnFlingListener already set."
@@ -82,7 +75,6 @@
 
     throw v0
 
-    .line 116
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
@@ -90,12 +82,10 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView;->addOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 117
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/support/widget/RecyclerView;->setOnFlingListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnFlingListener;)V
 
-    .line 118
     return-void
 .end method
 
@@ -111,44 +101,35 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 158
     instance-of v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
     if-nez v3, :cond_1
 
-    .line 174
     :cond_0
     :goto_0
     return v2
 
-    .line 162
     :cond_1
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/support/widget/SnapHelper;->createSnapScroller(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)Lorg/telegram/messenger/support/widget/LinearSmoothScroller;
 
     move-result-object v0
 
-    .line 163
     .local v0, "smoothScroller":Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;
     if-eqz v0, :cond_0
 
-    .line 167
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/support/widget/SnapHelper;->findTargetSnapPosition(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;II)I
 
     move-result v1
 
-    .line 168
     .local v1, "targetPosition":I
     const/4 v3, -0x1
 
     if-eq v1, v3, :cond_0
 
-    .line 172
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;->setTargetPosition(I)V
 
-    .line 173
     invoke-virtual {p1, v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->startSmoothScroll(Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller;)V
 
-    .line 174
     const/4 v2, 0x1
 
     goto :goto_0
@@ -169,38 +150,30 @@
     .end annotation
 
     .prologue
-    .line 94
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     if-ne v0, p1, :cond_1
 
-    .line 107
     :cond_0
     :goto_0
     return-void
 
-    .line 97
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     if-eqz v0, :cond_2
 
-    .line 98
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/SnapHelper;->destroyCallbacks()V
 
-    .line 100
     :cond_2
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
-    .line 101
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     if-eqz v0, :cond_0
 
-    .line 102
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/SnapHelper;->setupCallbacks()V
 
-    .line 103
     new-instance v0, Landroid/widget/Scroller;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
@@ -217,7 +190,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mGravityScroller:Landroid/widget/Scroller;
 
-    .line 105
     invoke-virtual {p0}, Lorg/telegram/messenger/support/widget/SnapHelper;->snapToTargetExistingView()V
 
     goto :goto_0
@@ -248,12 +220,10 @@
 
     const/4 v1, 0x0
 
-    .line 138
     const/4 v0, 0x2
 
     new-array v9, v0, [I
 
-    .line 139
     .local v9, "outDist":[I
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mGravityScroller:Landroid/widget/Scroller;
 
@@ -269,7 +239,6 @@
 
     invoke-virtual/range {v0 .. v8}, Landroid/widget/Scroller;->fling(IIIIIIII)V
 
-    .line 141
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mGravityScroller:Landroid/widget/Scroller;
 
     invoke-virtual {v0}, Landroid/widget/Scroller;->getFinalX()I
@@ -278,7 +247,6 @@
 
     aput v0, v9, v1
 
-    .line 142
     const/4 v0, 0x1
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mGravityScroller:Landroid/widget/Scroller;
@@ -289,7 +257,6 @@
 
     aput v1, v9, v0
 
-    .line 143
     return-object v9
 .end method
 
@@ -300,15 +267,12 @@
     .end annotation
 
     .prologue
-    .line 210
     instance-of v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$SmoothScroller$ScrollVectorProvider;
 
     if-nez v0, :cond_0
 
-    .line 211
     const/4 v0, 0x0
 
-    .line 213
     :goto_0
     return-object v0
 
@@ -342,23 +306,19 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 66
     iget-object v4, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/support/widget/RecyclerView;->getLayoutManager()Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     move-result-object v1
 
-    .line 67
     .local v1, "layoutManager":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
     if-nez v1, :cond_1
 
-    .line 76
     :cond_0
     :goto_0
     return v3
 
-    .line 70
     :cond_1
     iget-object v4, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
@@ -366,18 +326,15 @@
 
     move-result-object v0
 
-    .line 71
     .local v0, "adapter":Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;
     if-eqz v0, :cond_0
 
-    .line 74
     iget-object v4, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/support/widget/RecyclerView;->getMinFlingVelocity()I
 
     move-result v2
 
-    .line 75
     .local v2, "minFlingVelocity":I
     invoke-static {p2}, Ljava/lang/Math;->abs(I)I
 
@@ -391,7 +348,6 @@
 
     if-le v4, v2, :cond_0
 
-    .line 76
     :cond_2
     invoke-direct {p0, v1, p1, p2}, Lorg/telegram/messenger/support/widget/SnapHelper;->snapFromFling(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;II)Z
 
@@ -412,17 +368,14 @@
 
     const/4 v4, 0x0
 
-    .line 183
     iget-object v3, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
     if-nez v3, :cond_1
 
-    .line 198
     :cond_0
     :goto_0
     return-void
 
-    .line 186
     :cond_1
     iget-object v3, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 
@@ -430,25 +383,20 @@
 
     move-result-object v0
 
-    .line 187
     .local v0, "layoutManager":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
     if-eqz v0, :cond_0
 
-    .line 190
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/support/widget/SnapHelper;->findSnapView(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)Landroid/view/View;
 
     move-result-object v2
 
-    .line 191
     .local v2, "snapView":Landroid/view/View;
     if-eqz v2, :cond_0
 
-    .line 194
     invoke-virtual {p0, v0, v2}, Lorg/telegram/messenger/support/widget/SnapHelper;->calculateDistanceToFinalSnap(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;Landroid/view/View;)[I
 
     move-result-object v1
 
-    .line 195
     .local v1, "snapDistance":[I
     aget v3, v1, v4
 
@@ -458,7 +406,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 196
     :cond_2
     iget-object v3, p0, Lorg/telegram/messenger/support/widget/SnapHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
 

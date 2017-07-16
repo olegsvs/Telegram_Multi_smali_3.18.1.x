@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 1254
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$1;
 
     .prologue
-    .line 1254
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;-><init>(Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;)V
 
     return-void
@@ -61,12 +59,10 @@
     .end annotation
 
     .prologue
-    .line 1295
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->binaryElement(IILorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)V
 
-    .line 1296
     return-void
 .end method
 
@@ -80,12 +76,10 @@
     .end annotation
 
     .prologue
-    .line 1274
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->endMasterElement(I)V
 
-    .line 1275
     return-void
 .end method
 
@@ -100,12 +94,10 @@
     .end annotation
 
     .prologue
-    .line 1284
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->floatElement(ID)V
 
-    .line 1285
     return-void
 .end method
 
@@ -114,7 +106,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 1258
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->getElementType(I)I
@@ -135,12 +126,10 @@
     .end annotation
 
     .prologue
-    .line 1279
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->integerElement(IJ)V
 
-    .line 1280
     return-void
 .end method
 
@@ -149,7 +138,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 1263
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->isLevel1Element(I)Z
@@ -171,7 +159,6 @@
     .end annotation
 
     .prologue
-    .line 1269
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     move v1, p1
@@ -182,7 +169,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->startMasterElement(IJJ)V
 
-    .line 1270
     return-void
 .end method
 
@@ -197,11 +183,9 @@
     .end annotation
 
     .prologue
-    .line 1289
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$InnerEbmlReaderOutput;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;
 
     invoke-virtual {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor;->stringElement(ILjava/lang/String;)V
 
-    .line 1290
     return-void
 .end method

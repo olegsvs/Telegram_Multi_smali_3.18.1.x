@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     .prologue
-    .line 69
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 72
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     iget v3, v3, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;->val$currentReqId:I
@@ -64,17 +62,14 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 73
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v3, :cond_5
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_contacts_found;
 
-    .line 75
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_found;
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
@@ -86,14 +81,12 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 76
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     iget-boolean v3, v3, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;->val$allowChats:Z
 
     if-eqz v3, :cond_0
 
-    .line 77
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -106,7 +99,6 @@
 
     if-ge v0, v3, :cond_0
 
-    .line 78
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     iget-object v3, v3, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;->this$0:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
@@ -123,12 +115,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 77
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 81
     .end local v0    # "a":I
     :cond_0
     const/4 v0, 0x0
@@ -143,7 +133,6 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 82
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_contacts_found;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -152,7 +141,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 83
     .local v2, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
@@ -175,14 +163,12 @@
 
     if-eqz v3, :cond_3
 
-    .line 81
     :cond_2
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 86
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
@@ -202,7 +188,6 @@
 
     goto :goto_2
 
-    .line 88
     .end local v2    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_4
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
@@ -215,7 +200,6 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->access$202(Lorg/telegram/ui/Adapters/SearchAdapterHelper;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 89
     iget-object v3, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;
 
     iget-object v3, v3, Lorg/telegram/ui/Adapters/SearchAdapterHelper$1;->this$0:Lorg/telegram/ui/Adapters/SearchAdapterHelper;
@@ -226,7 +210,6 @@
 
     invoke-interface {v3}, Lorg/telegram/ui/Adapters/SearchAdapterHelper$SearchAdapterHelperDelegate;->onDataSetChanged()V
 
-    .line 92
     .end local v0    # "a":I
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_found;
     :cond_5
@@ -238,6 +221,5 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Adapters/SearchAdapterHelper;->access$402(Lorg/telegram/ui/Adapters/SearchAdapterHelper;I)I
 
-    .line 93
     return-void
 .end method

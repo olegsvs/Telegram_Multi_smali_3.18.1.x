@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$50;
 
     .prologue
-    .line 2722
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$50$1;->this$1:Lorg/telegram/messenger/MessagesController$50;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 2725
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$50$1;->this$1:Lorg/telegram/messenger/MessagesController$50;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessagesController$50;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -62,11 +60,9 @@
 
     check-cast v0, Ljava/util/HashMap;
 
-    .line 2726
     .local v0, "typings":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Boolean;>;"
     if-eqz v0, :cond_0
 
-    .line 2727
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$50$1;->this$1:Lorg/telegram/messenger/MessagesController$50;
 
     iget-wide v2, v1, Lorg/telegram/messenger/MessagesController$50;->val$dialog_id:J
@@ -77,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2729
     :cond_0
     return-void
 .end method

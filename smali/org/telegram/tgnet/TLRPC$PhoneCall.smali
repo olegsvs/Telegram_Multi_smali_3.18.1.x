@@ -68,10 +68,8 @@
     .locals 1
 
     .prologue
-    .line 6909
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 6920
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -88,20 +86,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6931
     const/4 v0, 0x0
 
-    .line 6932
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     sparse-switch p1, :sswitch_data_0
 
-    .line 6952
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 6953
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in PhoneCall"
@@ -126,62 +120,51 @@
 
     throw v1
 
-    .line 6934
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallRequested;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallRequested;-><init>()V
 
-    .line 6935
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6937
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCall;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCall;-><init>()V
 
-    .line 6938
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6940
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;-><init>()V
 
-    .line 6941
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6943
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallAccepted;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallAccepted;-><init>()V
 
-    .line 6944
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6946
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallWaiting;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallWaiting;-><init>()V
 
-    .line 6947
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6949
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscarded;
 
@@ -191,18 +174,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCall;
     goto :goto_0
 
-    .line 6955
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6956
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$PhoneCall;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 6958
     :cond_1
     return-object v0
 
-    .line 6932
     nop
 
     :sswitch_data_0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/BotKeyboardView;
 
     .prologue
-    .line 123
     iput-object p1, p0, Lorg/telegram/ui/Components/BotKeyboardView$1;->this$0:Lorg/telegram/ui/Components/BotKeyboardView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 126
     iget-object v0, p0, Lorg/telegram/ui/Components/BotKeyboardView$1;->this$0:Lorg/telegram/ui/Components/BotKeyboardView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/BotKeyboardView;->access$000(Lorg/telegram/ui/Components/BotKeyboardView;)Lorg/telegram/ui/Components/BotKeyboardView$BotKeyboardViewDelegate;
@@ -57,6 +55,5 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/ui/Components/BotKeyboardView$BotKeyboardViewDelegate;->didPressedButton(Lorg/telegram/tgnet/TLRPC$KeyboardButton;)V
 
-    .line 127
     return-void
 .end method

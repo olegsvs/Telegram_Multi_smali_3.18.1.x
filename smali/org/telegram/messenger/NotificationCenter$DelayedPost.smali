@@ -29,18 +29,14 @@
     .param p3, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 150
     iput-object p1, p0, Lorg/telegram/messenger/NotificationCenter$DelayedPost;->this$0:Lorg/telegram/messenger/NotificationCenter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 151
     iput p2, p0, Lorg/telegram/messenger/NotificationCenter$DelayedPost;->id:I
 
-    .line 152
     iput-object p3, p0, Lorg/telegram/messenger/NotificationCenter$DelayedPost;->args:[Ljava/lang/Object;
 
-    .line 153
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p4, "x3"    # Lorg/telegram/messenger/NotificationCenter$1;
 
     .prologue
-    .line 148
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/NotificationCenter$DelayedPost;-><init>(Lorg/telegram/messenger/NotificationCenter;I[Ljava/lang/Object;)V
 
     return-void
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/NotificationCenter$DelayedPost;
 
     .prologue
-    .line 148
     iget v0, p0, Lorg/telegram/messenger/NotificationCenter$DelayedPost;->id:I
 
     return v0
@@ -74,7 +68,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/NotificationCenter$DelayedPost;
 
     .prologue
-    .line 148
     iget-object v0, p0, Lorg/telegram/messenger/NotificationCenter$DelayedPost;->args:[Ljava/lang/Object;
 
     return-object v0

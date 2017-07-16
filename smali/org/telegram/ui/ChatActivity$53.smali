@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 3525
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$53;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ChatActivity$53;->val$visible:Z
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 3528
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$53;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$9300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/ChatDialogsView;
@@ -63,10 +61,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/ChatDialogsView;->setBtnResId(I)V
 
-    .line 3529
     return-void
 
-    .line 3528
     :cond_0
     const v0, 0x7f02023e
 

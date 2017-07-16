@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 1232
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$7;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     iput-wide p2, p0, Lorg/telegram/messenger/SendMessagesHelper$7;->val$newTaskId:J
@@ -47,10 +46,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1235
     if-nez p2, :cond_0
 
-    .line 1236
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 1238
     :cond_0
     iget-wide v0, p0, Lorg/telegram/messenger/SendMessagesHelper$7;->val$newTaskId:J
 
@@ -72,7 +68,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1239
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -81,7 +76,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->removePendingTask(J)V
 
-    .line 1241
     :cond_1
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2294
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$13;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$13;->val$result:[Ljava/lang/Boolean;
@@ -55,7 +54,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2297
     iget-object v2, p0, Lorg/telegram/messenger/MediaController$13;->val$result:[Ljava/lang/Boolean;
 
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$13;->this$0:Lorg/telegram/messenger/MediaController;
@@ -81,17 +79,14 @@
 
     aput-object v0, v2, v1
 
-    .line 2298
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$13;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 2299
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 2297
     goto :goto_0
 .end method

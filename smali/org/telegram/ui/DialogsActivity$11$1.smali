@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DialogsActivity$11;
 
     .prologue
-    .line 1294
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$11$1;->this$1:Lorg/telegram/ui/DialogsActivity$11;
 
     iput p2, p0, Lorg/telegram/ui/DialogsActivity$11$1;->val$did:I
@@ -47,11 +46,9 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1297
     iget v0, p0, Lorg/telegram/ui/DialogsActivity$11$1;->val$did:I
 
     invoke-static {v0}, Lorg/telegram/messenger/query/SearchQuery;->removePeer(I)V
 
-    .line 1298
     return-void
 .end method

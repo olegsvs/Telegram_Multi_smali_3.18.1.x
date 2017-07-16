@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 159
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$1;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,21 +43,17 @@
     .param p3, "thumb"    # Z
 
     .prologue
-    .line 162
     invoke-virtual {p1}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    .line 163
     .local v0, "bmp":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 164
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$1;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/VoIPActivity;->access$000(Lorg/telegram/ui/VoIPActivity;Landroid/graphics/Bitmap;)V
 
-    .line 166
     :cond_0
     return-void
 .end method

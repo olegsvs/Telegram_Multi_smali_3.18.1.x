@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 2169
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,6 +35,5 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2173
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatActivity$3;
 
     .prologue
-    .line 1267
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatActivity$3$51;->this$1:Lorg/telegram/ui/ThemingChatActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingChatActivity$3$51;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 1270
     iget-object v2, p0, Lorg/telegram/ui/ThemingChatActivity$3$51;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -62,7 +60,6 @@
 
     if-eq v2, v3, :cond_0
 
-    .line 1271
     iget-object v2, p0, Lorg/telegram/ui/ThemingChatActivity$3$51;->this$1:Lorg/telegram/ui/ThemingChatActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/ThemingChatActivity$3;->this$0:Lorg/telegram/ui/ThemingChatActivity;
@@ -77,7 +74,6 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/ui/ThemingChatActivity;->access$300(Lorg/telegram/ui/ThemingChatActivity;Ljava/lang/String;I)V
 
-    .line 1272
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "mainconfig"
@@ -88,13 +84,11 @@
 
     move-result-object v1
 
-    .line 1273
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 1274
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "fons_size"
 
@@ -106,7 +100,6 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1275
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -119,10 +112,8 @@
 
     iput v3, v2, Lorg/telegram/messenger/MessagesController;->fontSize:I
 
-    .line 1276
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1278
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :cond_0

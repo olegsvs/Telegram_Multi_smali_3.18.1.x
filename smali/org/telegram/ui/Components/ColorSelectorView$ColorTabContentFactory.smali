@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ColorSelectorView;
 
     .prologue
-    .line 158
     iput-object p1, p0, Lorg/telegram/ui/Components/ColorSelectorView$ColorTabContentFactory;->this$0:Lorg/telegram/ui/Components/ColorSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 161
     const-string/jumbo v0, "HSV"
 
     invoke-virtual {v0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -51,18 +49,15 @@
 
     if-eqz v0, :cond_0
 
-    .line 162
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorView$ColorTabContentFactory;->this$0:Lorg/telegram/ui/Components/ColorSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorView;->access$000(Lorg/telegram/ui/Components/ColorSelectorView;)Lorg/telegram/ui/Components/HsvSelectorView;
 
     move-result-object v0
 
-    .line 171
     :goto_0
     return-object v0
 
-    .line 164
     :cond_0
     const-string/jumbo v0, "RGB"
 
@@ -72,7 +67,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorView$ColorTabContentFactory;->this$0:Lorg/telegram/ui/Components/ColorSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorView;->access$100(Lorg/telegram/ui/Components/ColorSelectorView;)Lorg/telegram/ui/Components/RgbSelectorView;
@@ -81,7 +75,6 @@
 
     goto :goto_0
 
-    .line 167
     :cond_1
     const-string/jumbo v0, "HEX"
 
@@ -91,7 +84,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 168
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorView$ColorTabContentFactory;->this$0:Lorg/telegram/ui/Components/ColorSelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorView;->access$200(Lorg/telegram/ui/Components/ColorSelectorView;)Lorg/telegram/ui/Components/HexSelectorView;
@@ -100,7 +92,6 @@
 
     goto :goto_0
 
-    .line 171
     :cond_2
     const/4 v0, 0x0
 

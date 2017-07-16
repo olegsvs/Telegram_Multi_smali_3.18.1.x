@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/BottomSheet;
 
     .prologue
-    .line 551
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$2;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,15 +47,12 @@
     .end annotation
 
     .prologue
-    .line 555
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/BottomSheet$2;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/ActionBar/BottomSheet;->access$502(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/view/WindowInsets;)Landroid/view/WindowInsets;
 
-    .line 556
     invoke-virtual {p1}, Landroid/view/View;->requestLayout()V
 
-    .line 557
     invoke-virtual {p2}, Landroid/view/WindowInsets;->consumeSystemWindowInsets()Landroid/view/WindowInsets;
 
     move-result-object v0

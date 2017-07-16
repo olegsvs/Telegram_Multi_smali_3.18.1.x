@@ -29,12 +29,10 @@
     .param p2, "listener"    # Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     .prologue
-    .line 178
     const-wide/16 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0, v1}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;-><init>(Landroid/os/Handler;Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;J)V
 
-    .line 179
     return-void
 .end method
 
@@ -45,10 +43,8 @@
     .param p3, "mediaTimeOffsetMs"    # J
 
     .prologue
-    .line 182
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 183
     if-eqz p2, :cond_0
 
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -60,16 +56,12 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
-    .line 184
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
-    .line 185
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->mediaTimeOffsetMs:J
 
-    .line 186
     return-void
 
-    .line 183
     :cond_0
     const/4 v0, 0x0
 
@@ -82,7 +74,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 171
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->adjustMediaTime(J)J
 
     move-result-wide v0
@@ -95,7 +86,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
 
     .prologue
-    .line 171
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     return-object v0
@@ -108,12 +98,10 @@
     .prologue
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 309
     invoke-static {p1, p2}, Lorg/telegram/messenger/exoplayer2/C;->usToMs(J)J
 
     move-result-wide v0
 
-    .line 310
     .local v0, "mediaTimeMs":J
     cmp-long v4, v0, v2
 
@@ -137,7 +125,6 @@
     .param p1, "mediaTimeOffsetMs"    # J
 
     .prologue
-    .line 189
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
@@ -158,12 +145,10 @@
     .param p5, "mediaTimeUs"    # J
 
     .prologue
-    .line 297
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 298
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$6;
@@ -184,7 +169,6 @@
 
     invoke-virtual {v8, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 306
     :cond_0
     return-void
 .end method
@@ -204,14 +188,12 @@
     .param p15, "bytesLoaded"    # J
 
     .prologue
-    .line 244
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v2, :cond_0
 
-    .line 245
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
@@ -250,7 +232,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 254
     :cond_0
     return-void
 .end method
@@ -264,7 +245,6 @@
     .param p7, "bytesLoaded"    # J
 
     .prologue
-    .line 236
     const/4 v4, -0x1
 
     const/4 v5, 0x0
@@ -291,7 +271,6 @@
 
     invoke-virtual/range {v1 .. v17}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->loadCanceled(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;IILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJJJJ)V
 
-    .line 238
     return-void
 .end method
 
@@ -310,14 +289,12 @@
     .param p15, "bytesLoaded"    # J
 
     .prologue
-    .line 222
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v2, :cond_0
 
-    .line 223
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
@@ -356,7 +333,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 232
     :cond_0
     return-void
 .end method
@@ -370,7 +346,6 @@
     .param p7, "bytesLoaded"    # J
 
     .prologue
-    .line 214
     const/4 v4, -0x1
 
     const/4 v5, 0x0
@@ -397,7 +372,6 @@
 
     invoke-virtual/range {v1 .. v17}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->loadCompleted(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;IILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJJJJ)V
 
-    .line 216
     return-void
 .end method
 
@@ -418,14 +392,12 @@
     .param p18, "wasCanceled"    # Z
 
     .prologue
-    .line 268
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v2, :cond_0
 
-    .line 269
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
@@ -468,7 +440,6 @@
 
     invoke-virtual {v0, v2}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 279
     :cond_0
     return-void
 .end method
@@ -484,7 +455,6 @@
     .param p10, "wasCanceled"    # Z
 
     .prologue
-    .line 258
     const/4 v4, -0x1
 
     const/4 v5, 0x0
@@ -515,7 +485,6 @@
 
     invoke-virtual/range {v1 .. v19}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->loadError(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;IILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJJJJLjava/io/IOException;Z)V
 
-    .line 261
     return-void
 .end method
 
@@ -532,12 +501,10 @@
     .param p11, "elapsedRealtimeMs"    # J
 
     .prologue
-    .line 200
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 201
     iget-object v14, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$1;
@@ -566,7 +533,6 @@
 
     invoke-virtual {v14, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 210
     :cond_0
     return-void
 .end method
@@ -578,7 +544,6 @@
     .param p3, "elapsedRealtimeMs"    # J
 
     .prologue
-    .line 193
     const/4 v4, -0x1
 
     const/4 v5, 0x0
@@ -601,7 +566,6 @@
 
     invoke-virtual/range {v1 .. v13}, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->loadStarted(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;IILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJJ)V
 
-    .line 195
     return-void
 .end method
 
@@ -612,12 +576,10 @@
     .param p4, "mediaEndTimeUs"    # J
 
     .prologue
-    .line 283
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 284
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/AdaptiveMediaSourceEventListener$EventDispatcher$5;
@@ -634,7 +596,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 292
     :cond_0
     return-void
 .end method

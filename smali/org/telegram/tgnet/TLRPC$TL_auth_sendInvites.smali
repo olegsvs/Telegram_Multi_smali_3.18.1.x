@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 20468
     const v0, 0x771c1d97
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_auth_sendInvites;->constructor:I
@@ -50,10 +49,8 @@
     .locals 1
 
     .prologue
-    .line 20467
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 20470
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,7 +69,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20474
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -85,35 +81,29 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20478
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_auth_sendInvites;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20479
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20480
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_sendInvites;->phone_numbers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 20481
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20482
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 20483
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_sendInvites;->phone_numbers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -124,17 +114,14 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 20482
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 20485
     :cond_0
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_auth_sendInvites;->message:Ljava/lang/String;
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 20486
     return-void
 .end method

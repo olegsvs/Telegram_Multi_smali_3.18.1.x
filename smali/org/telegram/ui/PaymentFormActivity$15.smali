@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 1469
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$15;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 1472
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v2
@@ -55,7 +53,6 @@
 
     move-result v1
 
-    .line 1473
     .local v1, "num":I
     const/4 v0, 0x0
 
@@ -71,7 +68,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 1474
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$15;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/PaymentFormActivity;->access$700(Lorg/telegram/ui/PaymentFormActivity;)[Lorg/telegram/ui/Cells/RadioCell;
@@ -87,18 +83,15 @@
     :goto_1
     invoke-virtual {v4, v2, v3}, Lorg/telegram/ui/Cells/RadioCell;->setChecked(ZZ)V
 
-    .line 1473
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1474
     :cond_0
     const/4 v2, 0x0
 
     goto :goto_1
 
-    .line 1476
     :cond_1
     return-void
 .end method

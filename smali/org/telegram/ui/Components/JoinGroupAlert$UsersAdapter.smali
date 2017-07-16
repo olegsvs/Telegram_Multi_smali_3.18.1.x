@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 212
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 213
     iput-object p2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->context:Landroid/content/Context;
 
-    .line 214
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 218
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/JoinGroupAlert;->access$200(Lorg/telegram/ui/Components/JoinGroupAlert;)Lorg/telegram/tgnet/TLRPC$ChatInvite;
@@ -57,7 +53,6 @@
 
     move-result v0
 
-    .line 220
     .local v0, "count":I
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -69,7 +64,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 221
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/JoinGroupAlert;->access$200(Lorg/telegram/ui/Components/JoinGroupAlert;)Lorg/telegram/tgnet/TLRPC$ChatInvite;
@@ -80,19 +74,15 @@
 
     iget v1, v2, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    .line 225
     .local v1, "participants_count":I
     :goto_0
     if-eq v0, v1, :cond_0
 
-    .line 226
     add-int/lit8 v0, v0, 0x1
 
-    .line 228
     :cond_0
     return v0
 
-    .line 223
     .end local v1    # "participants_count":I
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
@@ -112,7 +102,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 233
     int-to-long v0, p1
 
     return-wide v0
@@ -123,7 +112,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 269
     const/4 v0, 0x0
 
     return v0
@@ -134,7 +122,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 238
     const/4 v0, 0x0
 
     return v0
@@ -146,12 +133,10 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 250
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/JoinSheetUserCell;
 
-    .line 251
     .local v0, "cell":Lorg/telegram/ui/Cells/JoinSheetUserCell;
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -167,7 +152,6 @@
 
     if-ge p2, v2, :cond_0
 
-    .line 252
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/JoinGroupAlert;->access$200(Lorg/telegram/ui/Components/JoinGroupAlert;)Lorg/telegram/tgnet/TLRPC$ChatInvite;
@@ -184,7 +168,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/JoinSheetUserCell;->setUser(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 263
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -194,10 +177,8 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/JoinSheetUserCell;->setNameColor(I)V
 
-    .line 265
     return-void
 
-    .line 255
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
@@ -209,7 +190,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 256
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/JoinGroupAlert;->access$200(Lorg/telegram/ui/Components/JoinGroupAlert;)Lorg/telegram/tgnet/TLRPC$ChatInvite;
@@ -220,7 +200,6 @@
 
     iget v1, v2, Lorg/telegram/tgnet/TLRPC$Chat;->participants_count:I
 
-    .line 260
     .local v1, "participants_count":I
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
@@ -241,7 +220,6 @@
 
     goto :goto_0
 
-    .line 258
     .end local v1    # "participants_count":I
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->this$0:Lorg/telegram/ui/Components/JoinGroupAlert;
@@ -262,14 +240,12 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 243
     new-instance v0, Lorg/telegram/ui/Cells/JoinSheetUserCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$UsersAdapter;->context:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/JoinSheetUserCell;-><init>(Landroid/content/Context;)V
 
-    .line 244
     .local v0, "view":Landroid/view/View;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -289,7 +265,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 245
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

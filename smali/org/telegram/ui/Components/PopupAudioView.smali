@@ -49,27 +49,20 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 57
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/BaseCell;-><init>(Landroid/content/Context;)V
 
-    .line 34
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->wasLayout:Z
 
-    .line 44
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 47
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
-    .line 51
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeWidth:I
 
-    .line 52
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->lastTimeString:Ljava/lang/String;
 
-    .line 58
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -78,7 +71,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timePaint:Landroid/text/TextPaint;
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timePaint:Landroid/text/TextPaint;
 
     const/high16 v1, 0x41800000    # 16.0f
@@ -91,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 61
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -102,7 +93,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->TAG:I
 
-    .line 63
     new-instance v0, Lorg/telegram/ui/Components/SeekBar;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->getContext()Landroid/content/Context;
@@ -113,19 +103,16 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
-    .line 64
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
     invoke-virtual {v0, p0}, Lorg/telegram/ui/Components/SeekBar;->setDelegate(Lorg/telegram/ui/Components/SeekBar$SeekBarDelegate;)V
 
-    .line 65
     new-instance v0, Lorg/telegram/ui/Components/ProgressView;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/ProgressView;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
-    .line 66
     return-void
 .end method
 
@@ -139,12 +126,10 @@
 
     const/4 v3, 0x1
 
-    .line 207
     iget v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     if-nez v1, :cond_2
 
-    .line 208
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -155,7 +140,6 @@
 
     move-result v0
 
-    .line 209
     .local v0, "result":Z
     iget-object v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -173,7 +157,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 210
     iget-object v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -184,7 +167,6 @@
 
     if-nez v1, :cond_0
 
-    .line 211
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -193,34 +175,27 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/MessagesController;->markMessageContentAsRead(Lorg/telegram/messenger/MessageObject;)V
 
-    .line 212
     iget-object v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v1}, Lorg/telegram/messenger/MessageObject;->setContentIsRead()V
 
-    .line 215
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 216
     iput v3, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 217
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
-    .line 234
     .end local v0    # "result":Z
     :cond_1
     :goto_0
     return-void
 
-    .line 219
     :cond_2
     iget v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     if-ne v1, v3, :cond_3
 
-    .line 220
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -231,26 +206,21 @@
 
     move-result v0
 
-    .line 221
     .restart local v0    # "result":Z
     if-eqz v0, :cond_1
 
-    .line 222
     iput v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 223
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_0
 
-    .line 225
     .end local v0    # "result":Z
     :cond_3
     iget v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     if-ne v1, v5, :cond_4
 
-    .line 226
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v1
@@ -263,17 +233,14 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;ZZ)V
 
-    .line 227
     const/4 v1, 0x4
 
     iput v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 228
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_0
 
-    .line 229
     :cond_4
     iget v1, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
@@ -281,7 +248,6 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 230
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v1
@@ -294,10 +260,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/FileLoader;->cancelLoadFile(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 231
     iput v5, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 232
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_0
@@ -309,14 +273,12 @@
     .locals 4
 
     .prologue
-    .line 266
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     const/4 v1, 0x2
 
     if-ne v0, v1, :cond_0
 
-    .line 267
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v0
@@ -333,15 +295,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/FileLoader;->loadFile(Lorg/telegram/tgnet/TLRPC$Document;ZZ)V
 
-    .line 268
     const/4 v0, 0x3
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 269
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
-    .line 271
     :cond_0
     return-void
 .end method
@@ -350,7 +309,6 @@
     .locals 1
 
     .prologue
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -360,7 +318,6 @@
     .locals 1
 
     .prologue
-    .line 329
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->TAG:I
 
     return v0
@@ -370,17 +327,14 @@
     .locals 1
 
     .prologue
-    .line 160
     invoke-super {p0}, Lorg/telegram/ui/Cells/BaseCell;->onDetachedFromWindow()V
 
-    .line 161
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0, p0}, Lorg/telegram/messenger/MediaController;->removeLoadingFileObserver(Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 162
     return-void
 .end method
 
@@ -391,28 +345,23 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-nez v0, :cond_1
 
-    .line 156
     :cond_0
     :goto_0
     return-void
 
-    .line 121
     :cond_1
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->wasLayout:Z
 
     if-nez v0, :cond_2
 
-    .line 122
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->requestLayout()V
 
     goto :goto_0
 
-    .line 126
     :cond_2
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->chat_msgInMediaDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -430,20 +379,16 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Components/PopupAudioView;->setDrawableBounds(Landroid/graphics/drawable/Drawable;IIII)V
 
-    .line 127
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_msgInMediaDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 129
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eqz v0, :cond_0
 
-    .line 133
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 134
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     if-eqz v0, :cond_3
@@ -454,7 +399,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 135
     :cond_3
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBarX:I
 
@@ -466,21 +410,17 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 136
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/SeekBar;->draw(Landroid/graphics/Canvas;)V
 
-    .line 141
     :goto_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 143
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     add-int/lit8 v8, v0, 0x5
 
-    .line 144
     .local v8, "state":I
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timePaint:Landroid/text/TextPaint;
 
@@ -488,7 +428,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 145
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->chat_fileStatesDrawable:[[Landroid/graphics/drawable/Drawable;
 
     aget-object v0, v0, v8
@@ -497,7 +436,6 @@
 
     aget-object v6, v0, v1
 
-    .line 146
     .local v6, "buttonDrawable":Landroid/graphics/drawable/Drawable;
     const/high16 v0, 0x42100000    # 36.0f
 
@@ -505,7 +443,6 @@
 
     move-result v7
 
-    .line 147
     .local v7, "side":I
     invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
@@ -515,7 +452,6 @@
 
     div-int/lit8 v9, v0, 0x2
 
-    .line 148
     .local v9, "x":I
     invoke-virtual {v6}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
@@ -525,7 +461,6 @@
 
     div-int/lit8 v10, v0, 0x2
 
-    .line 149
     .local v10, "y":I
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonX:I
 
@@ -537,13 +472,10 @@
 
     invoke-virtual {p0, v6, v0, v1}, Lorg/telegram/ui/Components/PopupAudioView;->setDrawableBounds(Landroid/graphics/drawable/Drawable;II)V
 
-    .line 150
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 152
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 153
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeX:I
 
     int-to-float v0, v0
@@ -558,17 +490,14 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 154
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 155
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto/16 :goto_0
 
-    .line 138
     .end local v6    # "buttonDrawable":Landroid/graphics/drawable/Drawable;
     .end local v7    # "side":I
     .end local v8    # "state":I
@@ -593,7 +522,6 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 139
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/ProgressView;->draw(Landroid/graphics/Canvas;)V
@@ -606,10 +534,8 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 305
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateButtonState()V
 
-    .line 306
     return-void
 .end method
 
@@ -626,20 +552,16 @@
 
     const/high16 v3, 0x41200000    # 10.0f
 
-    .line 93
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-nez v0, :cond_1
 
-    .line 94
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Cells/BaseCell;->onLayout(ZIIII)V
 
-    .line 113
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :cond_1
     const/high16 v0, 0x42580000    # 54.0f
 
@@ -649,14 +571,12 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBarX:I
 
-    .line 99
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonX:I
 
-    .line 100
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->getMeasuredWidth()I
 
     move-result v0
@@ -675,7 +595,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeX:I
 
-    .line 102
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->getMeasuredWidth()I
@@ -700,7 +619,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/SeekBar;->setSize(II)V
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->getMeasuredWidth()I
@@ -721,7 +639,6 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/ProgressView;->width:I
 
-    .line 104
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -730,7 +647,6 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/ProgressView;->height:I
 
-    .line 105
     const/high16 v0, 0x41500000    # 13.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -739,24 +655,20 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBarY:I
 
-    .line 106
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonY:I
 
-    .line 108
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateProgress()V
 
-    .line 110
     if-nez p1, :cond_2
 
     iget-boolean v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->wasLayout:Z
 
     if-nez v0, :cond_0
 
-    .line 111
     :cond_2
     const/4 v0, 0x1
 
@@ -771,12 +683,10 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 87
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 88
     .local v0, "width":I
     const/high16 v1, 0x42600000    # 56.0f
 
@@ -786,7 +696,6 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/PopupAudioView;->setMeasuredDimension(II)V
 
-    .line 89
     return-void
 .end method
 
@@ -796,26 +705,21 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 315
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {v0, p2}, Lorg/telegram/ui/Components/ProgressView;->setProgress(F)V
 
-    .line 316
     iget v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
     const/4 v1, 0x3
 
     if-eq v0, v1, :cond_0
 
-    .line 317
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateButtonState()V
 
-    .line 319
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
-    .line 320
     return-void
 .end method
 
@@ -826,7 +730,6 @@
     .param p3, "isEncrypted"    # Z
 
     .prologue
-    .line 325
     return-void
 .end method
 
@@ -835,22 +738,18 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 334
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-nez v0, :cond_0
 
-    .line 339
     :goto_0
     return-void
 
-    .line 337
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     iput p1, v0, Lorg/telegram/messenger/MessageObject;->audioProgress:F
 
-    .line 338
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -867,10 +766,8 @@
     .param p1, "fileName"    # Ljava/lang/String;
 
     .prologue
-    .line 310
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateButtonState()V
 
-    .line 311
     return-void
 .end method
 
@@ -883,18 +780,15 @@
 
     const/4 v9, 0x0
 
-    .line 166
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
-    .line 167
     .local v2, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
 
-    .line 168
     .local v3, "y":F
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
@@ -926,34 +820,28 @@
 
     move-result v0
 
-    .line 169
     .local v0, "result":Z
     if-eqz v0, :cond_2
 
-    .line 170
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 171
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
 
     invoke-interface {v4, v10}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 173
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
-    .line 203
     :cond_1
     :goto_0
     return v0
 
-    .line 175
     :cond_2
     const/high16 v4, 0x42100000    # 36.0f
 
@@ -961,7 +849,6 @@
 
     move-result v1
 
-    .line 176
     .local v1, "side":I
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -969,7 +856,6 @@
 
     if-nez v4, :cond_4
 
-    .line 177
     iget v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonX:I
 
     int-to-float v4, v4
@@ -1006,55 +892,43 @@
 
     if-gtz v4, :cond_3
 
-    .line 178
     iput v10, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
-    .line 179
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
-    .line 180
     const/4 v0, 0x1
 
-    .line 198
     :cond_3
     :goto_1
     if-nez v0, :cond_1
 
-    .line 199
     invoke-super {p0, p1}, Lorg/telegram/ui/Cells/BaseCell;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move-result v0
 
     goto :goto_0
 
-    .line 182
     :cond_4
     iget v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
     if-ne v4, v10, :cond_3
 
-    .line 183
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
 
     if-ne v4, v10, :cond_5
 
-    .line 184
     iput v9, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
-    .line 185
     invoke-virtual {p0, v9}, Lorg/telegram/ui/Components/PopupAudioView;->playSoundEffect(I)V
 
-    .line 186
     invoke-direct {p0}, Lorg/telegram/ui/Components/PopupAudioView;->didPressedButton()V
 
-    .line 187
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_1
 
-    .line 188
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1064,15 +938,12 @@
 
     if-ne v4, v5, :cond_6
 
-    .line 189
     iput v9, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
-    .line 190
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_1
 
-    .line 191
     :cond_6
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -1082,7 +953,6 @@
 
     if-ne v4, v5, :cond_3
 
-    .line 192
     iget v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonX:I
 
     int-to-float v4, v4
@@ -1119,11 +989,9 @@
 
     if-lez v4, :cond_3
 
-    .line 193
     :cond_7
     iput v9, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonPressed:I
 
-    .line 194
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto :goto_1
@@ -1134,12 +1002,10 @@
     .param p1, "messageObject"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-eq v0, p1, :cond_0
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
     const-string/jumbo v1, "chat_inAudioSeekbar"
@@ -1162,7 +1028,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Components/SeekBar;->setColors(III)V
 
-    .line 71
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     const v1, -0x261d15
@@ -1171,22 +1036,17 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/ProgressView;->setProgressColors(II)V
 
-    .line 73
     iput-object p1, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 74
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->wasLayout:Z
 
-    .line 76
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->requestLayout()V
 
-    .line 78
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateButtonState()V
 
-    .line 79
     return-void
 .end method
 
@@ -1196,14 +1056,12 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 274
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v4}, Lorg/telegram/messenger/MessageObject;->getFileName()Ljava/lang/String;
 
     move-result-object v1
 
-    .line 275
     .local v1, "fileName":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
@@ -1213,7 +1071,6 @@
 
     move-result-object v0
 
-    .line 276
     .local v0, "cacheFile":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
 
@@ -1221,14 +1078,12 @@
 
     if-eqz v4, :cond_2
 
-    .line 277
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v4
 
     invoke-virtual {v4, p0}, Lorg/telegram/messenger/MediaController;->removeLoadingFileObserver(Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 278
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v4
@@ -1239,7 +1094,6 @@
 
     move-result v2
 
-    .line 279
     .local v2, "playing":Z
     if-eqz v2, :cond_0
 
@@ -1255,27 +1109,22 @@
 
     if-eqz v4, :cond_1
 
-    .line 280
     :cond_0
     const/4 v4, 0x0
 
     iput v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 284
     :goto_0
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/ProgressView;->setProgress(F)V
 
-    .line 300
     .end local v2    # "playing":Z
     :goto_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->updateProgress()V
 
-    .line 301
     return-void
 
-    .line 282
     .restart local v2    # "playing":Z
     :cond_1
     const/4 v4, 0x1
@@ -1284,7 +1133,6 @@
 
     goto :goto_0
 
-    .line 286
     .end local v2    # "playing":Z
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
@@ -1293,7 +1141,6 @@
 
     invoke-virtual {v4, v1, p0}, Lorg/telegram/messenger/MediaController;->addLoadingFileObserver(Ljava/lang/String;Lorg/telegram/messenger/MediaController$FileDownloadProgressListener;)V
 
-    .line 287
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v4
@@ -1304,25 +1151,21 @@
 
     if-nez v4, :cond_3
 
-    .line 288
     const/4 v4, 0x2
 
     iput v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 289
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {v4, v6}, Lorg/telegram/ui/Components/ProgressView;->setProgress(F)V
 
     goto :goto_1
 
-    .line 291
     :cond_3
     const/4 v4, 0x3
 
     iput v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->buttonState:I
 
-    .line 292
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v4
@@ -1331,11 +1174,9 @@
 
     move-result-object v3
 
-    .line 293
     .local v3, "progress":Ljava/lang/Float;
     if-eqz v3, :cond_4
 
-    .line 294
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
     invoke-virtual {v3}, Ljava/lang/Float;->floatValue()F
@@ -1346,7 +1187,6 @@
 
     goto :goto_1
 
-    .line 296
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/Components/PopupAudioView;->progressView:Lorg/telegram/ui/Components/ProgressView;
 
@@ -1361,16 +1201,13 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 237
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     if-nez v0, :cond_0
 
-    .line 263
     :goto_0
     return-void
 
-    .line 241
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
@@ -1380,7 +1217,6 @@
 
     if-nez v0, :cond_1
 
-    .line 242
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->seekBar:Lorg/telegram/ui/Components/SeekBar;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
@@ -1389,11 +1225,9 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/SeekBar;->setProgress(F)V
 
-    .line 245
     :cond_1
     const/4 v10, 0x0
 
-    .line 246
     .local v10, "duration":I
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
@@ -1407,7 +1241,6 @@
 
     if-nez v0, :cond_6
 
-    .line 247
     const/4 v8, 0x0
 
     .local v8, "a":I
@@ -1426,7 +1259,6 @@
 
     if-ge v8, v0, :cond_2
 
-    .line 248
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MessageObject;->getDocument()Lorg/telegram/tgnet/TLRPC$Document;
@@ -1441,16 +1273,13 @@
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 249
     .local v9, "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     instance-of v0, v9, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
 
     if-eqz v0, :cond_5
 
-    .line 250
     iget v10, v9, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->duration:I
 
-    .line 257
     .end local v8    # "a":I
     .end local v9    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     :cond_2
@@ -1483,7 +1312,6 @@
 
     move-result-object v1
 
-    .line 258
     .local v1, "timeString":Ljava/lang/String;
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->lastTimeString:Ljava/lang/String;
 
@@ -1501,7 +1329,6 @@
 
     if-nez v0, :cond_4
 
-    .line 259
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timePaint:Landroid/text/TextPaint;
 
@@ -1519,7 +1346,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeWidth:I
 
-    .line 260
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/PopupAudioView;->timePaint:Landroid/text/TextPaint;
@@ -1536,13 +1362,11 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PopupAudioView;->timeLayout:Landroid/text/StaticLayout;
 
-    .line 262
     :cond_4
     invoke-virtual {p0}, Lorg/telegram/ui/Components/PopupAudioView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 247
     .end local v1    # "timeString":Ljava/lang/String;
     .restart local v8    # "a":I
     .restart local v9    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
@@ -1551,7 +1375,6 @@
 
     goto :goto_1
 
-    .line 255
     .end local v8    # "a":I
     .end local v9    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     :cond_6

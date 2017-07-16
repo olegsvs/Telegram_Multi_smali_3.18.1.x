@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$17;
 
     .prologue
-    .line 1734
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$17$2;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$17$2;->val$res:Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 1737
     iget-object v2, p0, Lorg/telegram/messenger/ContactsController$17$2;->val$res:Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;->users:Ljava/util/ArrayList;
@@ -70,7 +68,6 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1738
     .local v1, "u":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -78,7 +75,6 @@
 
     invoke-virtual {v3, v1, v5}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 1739
     iget-object v3, p0, Lorg/telegram/messenger/ContactsController$17$2;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iget-object v3, v3, Lorg/telegram/messenger/ContactsController$17;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -93,18 +89,15 @@
 
     if-nez v3, :cond_0
 
-    .line 1740
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contact;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contact;-><init>()V
 
-    .line 1741
     .local v0, "newContact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     iget v3, v1, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     iput v3, v0, Lorg/telegram/tgnet/TLRPC$TL_contact;->user_id:I
 
-    .line 1742
     iget-object v3, p0, Lorg/telegram/messenger/ContactsController$17$2;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iget-object v3, v3, Lorg/telegram/messenger/ContactsController$17;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -113,7 +106,6 @@
 
     invoke-virtual {v3, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1743
     iget-object v3, p0, Lorg/telegram/messenger/ContactsController$17$2;->this$1:Lorg/telegram/messenger/ContactsController$17;
 
     iget-object v3, v3, Lorg/telegram/messenger/ContactsController$17;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -126,7 +118,6 @@
 
     goto :goto_0
 
-    .line 1746
     .end local v0    # "newContact":Lorg/telegram/tgnet/TLRPC$TL_contact;
     .end local v1    # "u":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
@@ -138,7 +129,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/ContactsController;->access$1700(Lorg/telegram/messenger/ContactsController;Z)V
 
-    .line 1747
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -149,6 +139,5 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1748
     return-void
 .end method

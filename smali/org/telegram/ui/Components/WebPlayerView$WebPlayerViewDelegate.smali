@@ -15,7 +15,6 @@
 
 
 # virtual methods
-.method public abstract checkInlinePermissons()Z
 .end method
 
 .method public abstract getTextureViewContainer()Landroid/view/ViewGroup;
@@ -24,7 +23,6 @@
 .method public abstract onInitFailed()V
 .end method
 
-.method public abstract onInlineSurfaceTextureReady()V
 .end method
 
 .method public abstract onPlayStateChanged(Lorg/telegram/ui/Components/WebPlayerView;Z)V
@@ -33,7 +31,6 @@
 .method public abstract onSharePressed()V
 .end method
 
-.method public abstract onSwitchInlineMode(Landroid/view/View;ZFIZ)Landroid/view/TextureView;
 .end method
 
 .method public abstract onSwitchToFullscreen(Landroid/view/View;ZFIZ)Landroid/view/TextureView;
@@ -42,5 +39,4 @@
 .method public abstract onVideoSizeChanged(FI)V
 .end method
 
-.method public abstract prepareToSwitchInlineMode(ZLjava/lang/Runnable;FZ)V
 .end method

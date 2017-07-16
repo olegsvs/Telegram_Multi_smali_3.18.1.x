@@ -24,7 +24,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     .prologue
-    .line 10694
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 10697
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/InstantCameraView;->hideCamera(Z)V
 
-    .line 10698
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1$1;->this$3:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4$1;->this$2:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$4;
@@ -73,6 +70,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/InstantCameraView;->setVisibility(I)V
 
-    .line 10699
     return-void
 .end method

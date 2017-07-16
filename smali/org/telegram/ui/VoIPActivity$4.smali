@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 225
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,20 +47,16 @@
 
     const/4 v4, 0x0
 
-    .line 228
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v3
 
-    .line 229
     .local v3, "svc":Lorg/telegram/messenger/voip/VoIPService;
     if-nez v3, :cond_0
 
-    .line 272
     :goto_0
     return-void
 
-    .line 231
     :cond_0
     invoke-virtual {v3}, Lorg/telegram/messenger/voip/VoIPService;->isBluetoothHeadsetConnected()Z
 
@@ -75,7 +70,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 232
     new-instance v5, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     iget-object v6, p0, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -88,7 +82,6 @@
 
     const v8, 0x7f070678
 
-    .line 233
     invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -99,7 +92,6 @@
 
     const v7, 0x7f070679
 
-    .line 234
     invoke-static {v4, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -112,7 +104,6 @@
 
     const v8, 0x7f07067a
 
-    .line 235
     invoke-static {v7, v8}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v7
@@ -127,18 +118,15 @@
 
     invoke-direct {v7, p0}, Lorg/telegram/ui/VoIPActivity$4$1;-><init>(Lorg/telegram/ui/VoIPActivity$4;)V
 
-    .line 233
     invoke-virtual {v5, v6, v4, v7}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->setItems([Ljava/lang/CharSequence;[ILandroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
 
     move-result-object v1
 
-    .line 261
     .local v1, "bldr":Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/BottomSheet$Builder;->show()Lorg/telegram/ui/ActionBar/BottomSheet;
 
     goto :goto_0
 
-    .line 264
     .end local v1    # "bldr":Lorg/telegram/ui/ActionBar/BottomSheet$Builder;
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -153,7 +141,6 @@
 
     if-nez v5, :cond_2
 
-    .line 265
     .local v2, "checked":Z
     :goto_1
     iget-object v4, p0, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -164,7 +151,6 @@
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/Components/voip/CheckableImageView;->setChecked(Z)V
 
-    .line 266
     iget-object v4, p0, Lorg/telegram/ui/VoIPActivity$4;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     const-string/jumbo v5, "audio"
@@ -175,7 +161,6 @@
 
     check-cast v0, Landroid/media/AudioManager;
 
-    .line 267
     .local v0, "am":Landroid/media/AudioManager;
     invoke-virtual {v3}, Lorg/telegram/messenger/voip/VoIPService;->hasEarpiece()Z
 
@@ -183,7 +168,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 268
     invoke-virtual {v0, v2}, Landroid/media/AudioManager;->setSpeakerphoneOn(Z)V
 
     goto :goto_0
@@ -193,10 +177,8 @@
     :cond_2
     move v2, v4
 
-    .line 264
     goto :goto_1
 
-    .line 270
     .restart local v0    # "am":Landroid/media/AudioManager;
     .restart local v2    # "checked":Z
     :cond_3
@@ -204,7 +186,6 @@
 
     goto :goto_0
 
-    .line 235
     :array_0
     .array-data 4
         0x7f0200cf

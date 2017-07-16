@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
     .prologue
-    .line 135
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil$2.1;"
     iput-object p1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
@@ -42,7 +41,6 @@
     .locals 7
 
     .prologue
-    .line 139
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil$2.1;"
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
@@ -53,11 +51,9 @@
 
     move-result-object v6
 
-    .line 140
     .local v6, "msg":Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;
     if-nez v6, :cond_0
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
@@ -66,16 +62,13 @@
 
     invoke-virtual {v0, v1}, Ljava/util/concurrent/atomic/AtomicBoolean;->set(Z)V
 
-    .line 166
     return-void
 
-    .line 143
     :cond_0
     iget v0, v6, Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;->what:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 162
     const-string/jumbo v0, "ThreadUtil"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -102,7 +95,6 @@
 
     goto :goto_0
 
-    .line 145
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
@@ -112,7 +104,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->removeMessages(I)V
 
-    .line 146
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->val$callback:Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;
@@ -123,7 +114,6 @@
 
     goto :goto_0
 
-    .line 149
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
@@ -133,7 +123,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->removeMessages(I)V
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
@@ -142,7 +131,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->removeMessages(I)V
 
-    .line 151
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->val$callback:Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;
@@ -161,7 +149,6 @@
 
     goto :goto_0
 
-    .line 155
     :pswitch_2
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
@@ -175,7 +162,6 @@
 
     goto :goto_0
 
-    .line 159
     :pswitch_3
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;->this$1:Lorg/telegram/messenger/support/util/MessageThreadUtil$2;
 
@@ -189,7 +175,6 @@
 
     goto :goto_0
 
-    .line 143
     nop
 
     :pswitch_data_0

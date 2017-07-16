@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingActivity;
 
     .prologue
-    .line 146
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$1;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,17 +38,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 149
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 150
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$1;->this$0:Lorg/telegram/ui/ThemingActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ThemingActivity;->finishFragment()V
 
-    .line 152
     :cond_0
     return-void
 .end method

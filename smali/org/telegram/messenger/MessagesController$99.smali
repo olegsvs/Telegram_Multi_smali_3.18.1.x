@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 5991
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$99;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$99;->val$chat_id:I
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 5994
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$99;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget v3, p0, Lorg/telegram/messenger/MessagesController$99;->val$chat_id:I
@@ -58,7 +56,6 @@
 
     move-result-object v0
 
-    .line 5995
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v0, :cond_0
 
@@ -74,18 +71,15 @@
 
     if-eqz v2, :cond_1
 
-    .line 6071
     :cond_0
     :goto_0
     return-void
 
-    .line 5998
     :cond_1
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipant;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipant;-><init>()V
 
-    .line 5999
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipant;
     iget v2, p0, Lorg/telegram/messenger/MessagesController$99;->val$chat_id:I
 
@@ -95,14 +89,12 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipant;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 6000
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputUserSelf;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputUserSelf;-><init>()V
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_channels_getParticipant;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 6001
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v2

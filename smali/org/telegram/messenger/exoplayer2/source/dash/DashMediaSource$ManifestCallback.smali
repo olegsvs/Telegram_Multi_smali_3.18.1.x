@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 717
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$ManifestCallback;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .param p2, "x1"    # Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$1;
 
     .prologue
-    .line 717
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$ManifestCallback;-><init>(Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;)V
 
     return-void
@@ -64,7 +62,6 @@
     .locals 8
 
     .prologue
-    .line 717
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;
@@ -98,7 +95,6 @@
     .end annotation
 
     .prologue
-    .line 729
     .local p1, "loadable":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$ManifestCallback;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
@@ -110,7 +106,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;->onLoadCanceled(Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;JJ)V
 
-    .line 730
     return-void
 .end method
 
@@ -118,7 +113,6 @@
     .locals 6
 
     .prologue
-    .line 717
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;
@@ -149,7 +143,6 @@
     .end annotation
 
     .prologue
-    .line 723
     .local p1, "loadable":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$ManifestCallback;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 
@@ -161,7 +154,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;->onManifestLoadCompleted(Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;JJ)V
 
-    .line 724
     return-void
 .end method
 
@@ -169,7 +161,6 @@
     .locals 8
 
     .prologue
-    .line 717
     move-object v1, p1
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;
@@ -207,7 +198,6 @@
     .end annotation
 
     .prologue
-    .line 735
     .local p1, "loadable":Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable;, "Lorg/telegram/messenger/exoplayer2/upstream/ParsingLoadable<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource$ManifestCallback;->this$0:Lorg/telegram/messenger/exoplayer2/source/dash/DashMediaSource;
 

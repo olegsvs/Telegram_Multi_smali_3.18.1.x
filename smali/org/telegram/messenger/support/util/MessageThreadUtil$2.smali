@@ -55,7 +55,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/util/MessageThreadUtil;
 
     .prologue
-    .line 87
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     iput-object p1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->this$0:Lorg/telegram/messenger/support/util/MessageThreadUtil;
 
@@ -63,21 +62,18 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 88
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
-    .line 89
     invoke-static {}, Landroid/support/v4/content/ParallelExecutorCompat;->getParallelExecutor()Ljava/util/concurrent/Executor;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mExecutor:Ljava/util/concurrent/Executor;
 
-    .line 90
     new-instance v0, Ljava/util/concurrent/atomic/AtomicBoolean;
 
     const/4 v1, 0x0
@@ -86,7 +82,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
-    .line 135
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2$1;-><init>(Lorg/telegram/messenger/support/util/MessageThreadUtil$2;)V
@@ -100,7 +95,6 @@
     .locals 3
 
     .prologue
-    .line 130
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mBackgroundRunning:Ljava/util/concurrent/atomic/AtomicBoolean;
 
@@ -114,14 +108,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 131
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mExecutor:Ljava/util/concurrent/Executor;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mBackgroundRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0, v1}, Ljava/util/concurrent/Executor;->execute(Ljava/lang/Runnable;)V
 
-    .line 133
     :cond_0
     return-void
 .end method
@@ -131,16 +123,13 @@
     .param p1, "msg"    # Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;
 
     .prologue
-    .line 120
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 121
     invoke-direct {p0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->maybeExecuteBackgroundRunnable()V
 
-    .line 122
     return-void
 .end method
 
@@ -149,16 +138,13 @@
     .param p1, "msg"    # Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;
 
     .prologue
-    .line 125
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->sendMessageAtFrontOfQueue(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 126
     invoke-direct {p0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->maybeExecuteBackgroundRunnable()V
 
-    .line 127
     return-void
 .end method
 
@@ -170,7 +156,6 @@
     .param p2, "scrollHint"    # I
 
     .prologue
-    .line 111
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     const/4 v0, 0x3
 
@@ -180,7 +165,6 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 112
     return-void
 .end method
 
@@ -195,7 +179,6 @@
     .end annotation
 
     .prologue
-    .line 116
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     .local p1, "tile":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     const/4 v0, 0x4
@@ -208,7 +191,6 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 117
     return-void
 .end method
 
@@ -217,7 +199,6 @@
     .param p1, "generation"    # I
 
     .prologue
-    .line 99
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     const/4 v0, 0x1
 
@@ -229,7 +210,6 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 100
     return-void
 .end method
 
@@ -242,7 +222,6 @@
     .param p5, "scrollHint"    # I
 
     .prologue
-    .line 105
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$2;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.2;"
     const/4 v0, 0x2
 
@@ -264,6 +243,5 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$2;->sendMessageAtFrontOfQueue(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 107
     return-void
 .end method

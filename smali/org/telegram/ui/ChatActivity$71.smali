@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 5584
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$71;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,58 +52,47 @@
     .param p16, "caption"    # Ljava/lang/String;
 
     .prologue
-    .line 5587
     new-instance v10, Lorg/telegram/messenger/VideoEditedInfo;
 
     invoke-direct {v10}, Lorg/telegram/messenger/VideoEditedInfo;-><init>()V
 
-    .line 5588
     .local v10, "videoEditedInfo":Lorg/telegram/messenger/VideoEditedInfo;
     move-wide/from16 v0, p2
 
     iput-wide v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->startTime:J
 
-    .line 5589
     move-wide/from16 v0, p4
 
     iput-wide v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->endTime:J
 
-    .line 5590
     move/from16 v0, p8
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->rotationValue:I
 
-    .line 5591
     move/from16 v0, p9
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->originalWidth:I
 
-    .line 5592
     move/from16 v0, p10
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->originalHeight:I
 
-    .line 5593
     move/from16 v0, p11
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->bitrate:I
 
-    .line 5594
     move/from16 v0, p6
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->resultWidth:I
 
-    .line 5595
     move/from16 v0, p7
 
     iput v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->resultHeight:I
 
-    .line 5596
     move-object/from16 v0, p1
 
     iput-object v0, v10, Lorg/telegram/messenger/VideoEditedInfo;->originalPath:Ljava/lang/String;
 
-    .line 5597
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$71;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -135,7 +123,6 @@
 
     invoke-static/range {v3 .. v14}, Lorg/telegram/messenger/SendMessagesHelper;->prepareSendingVideo(Ljava/lang/String;JJIILorg/telegram/messenger/VideoEditedInfo;JLorg/telegram/messenger/MessageObject;Ljava/lang/String;)V
 
-    .line 5598
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$71;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -152,7 +139,6 @@
 
     invoke-virtual/range {v2 .. v7}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 5599
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/ChatActivity$71;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -165,6 +151,5 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/query/DraftQuery;->cleanDraft(JZ)V
 
-    .line 5600
     return-void
 .end method

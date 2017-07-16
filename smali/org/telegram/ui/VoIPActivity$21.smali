@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 1047
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$21;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1050
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$21;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3000(Lorg/telegram/ui/VoIPActivity;)Landroid/view/View;
@@ -50,7 +48,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1051
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$21;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$200(Lorg/telegram/ui/VoIPActivity;)Landroid/view/View;
@@ -61,13 +58,11 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setEnabled(Z)V
 
-    .line 1052
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$21;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$2902(Lorg/telegram/ui/VoIPActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1053
     return-void
 .end method

@@ -16,7 +16,6 @@
     .prologue
     const/4 v3, 0x5
 
-    .line 8
     const/16 v0, 0x14d
 
     new-array v0, v0, [Ljava/lang/String;
@@ -2019,7 +2018,6 @@
 
     sput-object v0, Lorg/telegram/messenger/voip/EncryptionKeyEmojifier;->emojis:[Ljava/lang/String;
 
-    .line 40
     new-array v0, v3, [I
 
     fill-array-data v0, :array_0
@@ -2044,7 +2042,6 @@
     .locals 0
 
     .prologue
-    .line 7
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -2056,7 +2053,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 43
     aget-byte v0, p0, p1
 
     and-int/lit8 v0, v0, 0x7f
@@ -2102,7 +2098,6 @@
     .prologue
     const-wide/16 v6, 0xff
 
-    .line 47
     aget-byte v0, p0, p1
 
     int-to-long v0, v0
@@ -2219,14 +2214,12 @@
     .prologue
     const/4 v5, 0x5
 
-    .line 53
     array-length v2, p0
 
     const/16 v3, 0x20
 
     if-eq v2, v3, :cond_0
 
-    .line 54
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "sha256 needs to be exactly 32 bytes"
@@ -2235,11 +2228,9 @@
 
     throw v2
 
-    .line 55
     :cond_0
     new-array v1, v5, [Ljava/lang/String;
 
-    .line 56
     .local v1, "result":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -2247,7 +2238,6 @@
     :goto_0
     if-ge v0, v5, :cond_1
 
-    .line 57
     sget-object v2, Lorg/telegram/messenger/voip/EncryptionKeyEmojifier;->emojis:[Ljava/lang/String;
 
     sget-object v3, Lorg/telegram/messenger/voip/EncryptionKeyEmojifier;->offsets:[I
@@ -2268,12 +2258,10 @@
 
     aput-object v2, v1, v0
 
-    .line 56
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 59
     :cond_1
     return-object v1
 .end method
@@ -2285,10 +2273,8 @@
     .prologue
     const/4 v8, 0x4
 
-    .line 63
     new-array v1, v8, [Ljava/lang/String;
 
-    .line 64
     .local v1, "result":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -2296,7 +2282,6 @@
     :goto_0
     if-ge v0, v8, :cond_0
 
-    .line 65
     sget-object v2, Lorg/telegram/messenger/voip/EncryptionKeyEmojifier;->emojis:[Ljava/lang/String;
 
     mul-int/lit8 v3, v0, 0x8
@@ -2319,12 +2304,10 @@
 
     aput-object v2, v1, v0
 
-    .line 64
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 67
     :cond_0
     return-object v1
 .end method

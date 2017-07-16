@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     .prologue
-    .line 1047
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,19 +52,16 @@
 
     const v2, 0x7f070078
 
-    .line 1050
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
     invoke-static {v0, v3}, Lorg/telegram/ui/LoginActivity$PhoneView;->access$1802(Lorg/telegram/ui/LoginActivity$PhoneView;Z)Z
 
-    .line 1051
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
 
-    .line 1052
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -82,7 +78,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/LoginActivity;->access$1900(Lorg/telegram/ui/LoginActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 1072
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
@@ -93,10 +88,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 1073
     return-void
 
-    .line 1054
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -104,7 +97,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1055
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -117,7 +109,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1056
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -134,7 +125,6 @@
 
     goto :goto_0
 
-    .line 1057
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -148,7 +138,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 1058
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -173,7 +162,6 @@
 
     goto :goto_0
 
-    .line 1059
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -187,7 +175,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 1060
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -206,7 +193,6 @@
 
     goto :goto_0
 
-    .line 1061
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -232,7 +218,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 1062
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
@@ -258,7 +243,6 @@
 
     goto/16 :goto_0
 
-    .line 1063
     :cond_6
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -272,7 +256,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 1064
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -297,7 +280,6 @@
 
     goto/16 :goto_0
 
-    .line 1065
     :cond_7
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -311,7 +293,6 @@
 
     if-eqz v0, :cond_8
 
-    .line 1066
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
@@ -336,7 +317,6 @@
 
     goto/16 :goto_0
 
-    .line 1067
     :cond_8
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -346,7 +326,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1068
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;->this$2:Lorg/telegram/ui/LoginActivity$PhoneView$7;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;

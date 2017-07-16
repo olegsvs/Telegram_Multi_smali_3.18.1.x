@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 3675
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -44,20 +43,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3683
     const/4 v0, 0x0
 
-    .line 3684
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     sparse-switch p1, :sswitch_data_0
 
-    .line 3695
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 3696
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in PeerNotifySettings"
@@ -82,29 +77,24 @@
 
     throw v1
 
-    .line 3686
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
 
-    .line 3687
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     goto :goto_0
 
-    .line 3689
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings_layer47;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings_layer47;-><init>()V
 
-    .line 3690
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     goto :goto_0
 
-    .line 3692
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettingsEmpty;
 
@@ -114,18 +104,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
     goto :goto_0
 
-    .line 3698
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3699
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 3701
     :cond_1
     return-object v0
 
-    .line 3684
     nop
 
     :sswitch_data_0

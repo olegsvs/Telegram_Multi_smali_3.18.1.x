@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -26,7 +25,6 @@
 
     const/4 v2, 0x1
 
-    .line 21
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
     move-result-object v0
@@ -39,22 +37,18 @@
 
     if-eqz v0, :cond_1
 
-    .line 22
     const-string/jumbo v0, "screen off"
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 23
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/tgnet/ConnectionsManager;->setAppPaused(ZZ)V
 
-    .line 24
     sput-boolean v3, Lorg/telegram/messenger/ApplicationLoader;->isScreenOn:Z
 
-    .line 30
     :cond_0
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -67,10 +61,8 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 31
     return-void
 
-    .line 25
     :cond_1
     invoke-virtual {p2}, Landroid/content/Intent;->getAction()Ljava/lang/String;
 
@@ -84,19 +76,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 26
     const-string/jumbo v0, "screen on"
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 27
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
 
     invoke-virtual {v0, v3, v2}, Lorg/telegram/tgnet/ConnectionsManager;->setAppPaused(ZZ)V
 
-    .line 28
     sput-boolean v2, Lorg/telegram/messenger/ApplicationLoader;->isScreenOn:Z
 
     goto :goto_0

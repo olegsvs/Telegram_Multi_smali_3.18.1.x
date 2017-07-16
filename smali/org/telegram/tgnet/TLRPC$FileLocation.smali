@@ -33,7 +33,6 @@
     .locals 0
 
     .prologue
-    .line 18217
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -46,20 +45,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18226
     const/4 v0, 0x0
 
-    .line 18227
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     sparse-switch p1, :sswitch_data_0
 
-    .line 18238
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 18239
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in FileLocation"
@@ -84,29 +79,24 @@
 
     throw v1
 
-    .line 18229
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_fileLocation;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_fileLocation;-><init>()V
 
-    .line 18230
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     goto :goto_0
 
-    .line 18232
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_fileEncryptedLocation;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_fileEncryptedLocation;-><init>()V
 
-    .line 18233
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     goto :goto_0
 
-    .line 18235
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_fileLocationUnavailable;
 
@@ -116,18 +106,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$FileLocation;
     goto :goto_0
 
-    .line 18241
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 18242
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$FileLocation;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 18244
     :cond_1
     return-object v0
 
-    .line 18227
     nop
 
     :sswitch_data_0

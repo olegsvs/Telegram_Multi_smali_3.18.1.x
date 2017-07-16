@@ -27,13 +27,10 @@
     .param p1, "baseName"    # Ljava/io/File;
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
-    .line 53
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -62,7 +59,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
-    .line 54
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .locals 2
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->exists()Z
@@ -79,19 +74,16 @@
 
     if-eqz v0, :cond_0
 
-    .line 148
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
     invoke-virtual {v0, v1}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
-    .line 151
     :cond_0
     return-void
 .end method
@@ -102,17 +94,14 @@
     .locals 1
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 60
     return-void
 .end method
 
@@ -126,15 +115,12 @@
     .end annotation
 
     .prologue
-    .line 128
     invoke-virtual {p1}, Ljava/io/OutputStream;->close()V
 
-    .line 130
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
-    .line 131
     return-void
 .end method
 
@@ -147,10 +133,8 @@
     .end annotation
 
     .prologue
-    .line 142
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->restoreBackup()V
 
-    .line 143
     new-instance v0, Ljava/io/FileInputStream;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
@@ -169,7 +153,6 @@
     .end annotation
 
     .prologue
-    .line 92
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
@@ -178,7 +161,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 93
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
 
     invoke-virtual {v4}, Ljava/io/File;->exists()Z
@@ -187,7 +169,6 @@
 
     if-nez v4, :cond_1
 
-    .line 94
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->backupName:Ljava/io/File;
@@ -198,7 +179,6 @@
 
     if-nez v4, :cond_0
 
-    .line 95
     const-string/jumbo v4, "AtomicFile"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -235,7 +215,6 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 103
     :cond_0
     :goto_0
     :try_start_0
@@ -247,12 +226,10 @@
     :try_end_0
     .catch Ljava/io/FileNotFoundException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 115
     .local v3, "str":Ljava/io/OutputStream;
     :goto_1
     return-object v3
 
-    .line 98
     .end local v3    # "str":Ljava/io/OutputStream;
     :cond_1
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
@@ -261,11 +238,9 @@
 
     goto :goto_0
 
-    .line 104
     :catch_0
     move-exception v0
 
-    .line 105
     .local v0, "e":Ljava/io/FileNotFoundException;
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/util/AtomicFile;->baseName:Ljava/io/File;
 
@@ -273,7 +248,6 @@
 
     move-result-object v2
 
-    .line 106
     .local v2, "parent":Ljava/io/File;
     invoke-virtual {v2}, Ljava/io/File;->mkdirs()Z
 
@@ -281,7 +255,6 @@
 
     if-nez v4, :cond_2
 
-    .line 107
     new-instance v4, Ljava/io/IOException;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -308,7 +281,6 @@
 
     throw v4
 
-    .line 110
     :cond_2
     :try_start_1
     new-instance v3, Lorg/telegram/messenger/exoplayer2/util/AtomicFile$AtomicFileOutputStream;
@@ -322,12 +294,10 @@
     .restart local v3    # "str":Ljava/io/OutputStream;
     goto :goto_1
 
-    .line 111
     .end local v3    # "str":Ljava/io/OutputStream;
     :catch_1
     move-exception v1
 
-    .line 112
     .local v1, "e2":Ljava/io/FileNotFoundException;
     new-instance v4, Ljava/io/IOException;
 

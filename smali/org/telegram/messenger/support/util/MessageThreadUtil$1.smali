@@ -51,7 +51,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/util/MessageThreadUtil;
 
     .prologue
-    .line 31
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.1;"
     iput-object p1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->this$0:Lorg/telegram/messenger/support/util/MessageThreadUtil;
 
@@ -59,14 +58,12 @@
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
-    .line 33
     new-instance v0, Landroid/os/Handler;
 
     invoke-static {}, Landroid/os/Looper;->getMainLooper()Landroid/os/Looper;
@@ -77,7 +74,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->mMainThreadHandler:Landroid/os/Handler;
 
-    .line 59
     new-instance v0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$1$1;-><init>(Lorg/telegram/messenger/support/util/MessageThreadUtil$1;)V
@@ -92,20 +88,17 @@
     .param p1, "msg"    # Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;
 
     .prologue
-    .line 55
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.1;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->mQueue:Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/util/MessageThreadUtil$MessageQueue;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 56
     iget-object v0, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->mMainThreadHandler:Landroid/os/Handler;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->mMainThreadRunnable:Ljava/lang/Runnable;
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 57
     return-void
 .end method
 
@@ -123,7 +116,6 @@
     .end annotation
 
     .prologue
-    .line 46
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.1;"
     .local p2, "tile":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     const/4 v0, 0x2
@@ -134,7 +126,6 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 47
     return-void
 .end method
 
@@ -144,7 +135,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 51
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.1;"
     const/4 v0, 0x3
 
@@ -154,7 +144,6 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 52
     return-void
 .end method
 
@@ -164,7 +153,6 @@
     .param p2, "itemCount"    # I
 
     .prologue
-    .line 41
     .local p0, "this":Lorg/telegram/messenger/support/util/MessageThreadUtil$1;, "Lorg/telegram/messenger/support/util/MessageThreadUtil.1;"
     const/4 v0, 0x1
 
@@ -174,6 +162,5 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/support/util/MessageThreadUtil$1;->sendMessage(Lorg/telegram/messenger/support/util/MessageThreadUtil$SyncQueueItem;)V
 
-    .line 42
     return-void
 .end method

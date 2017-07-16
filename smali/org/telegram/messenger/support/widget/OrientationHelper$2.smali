@@ -20,7 +20,6 @@
     .param p1, "layoutManager"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     .prologue
-    .line 349
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/support/widget/OrientationHelper;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;Lorg/telegram/messenger/support/widget/OrientationHelper$1;)V
@@ -35,15 +34,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 388
-    .line 389
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 390
     .local v0, "params":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
@@ -63,15 +59,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 372
-    .line 373
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 374
     .local v0, "params":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
@@ -95,15 +88,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 380
-    .line 381
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 382
     .local v0, "params":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
@@ -127,15 +117,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 395
-    .line 396
     invoke-virtual {p1}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
-    .line 397
     .local v0, "params":Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
@@ -154,7 +141,6 @@
     .locals 1
 
     .prologue
-    .line 357
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -168,7 +154,6 @@
     .locals 2
 
     .prologue
-    .line 352
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -190,7 +175,6 @@
     .locals 1
 
     .prologue
-    .line 425
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
@@ -204,7 +188,6 @@
     .locals 1
 
     .prologue
-    .line 430
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getHeightMode()I
@@ -218,7 +201,6 @@
     .locals 1
 
     .prologue
-    .line 435
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getWidthMode()I
@@ -232,7 +214,6 @@
     .locals 1
 
     .prologue
-    .line 367
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPaddingTop()I
@@ -246,7 +227,6 @@
     .locals 2
 
     .prologue
-    .line 414
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getHeight()I
@@ -263,7 +243,6 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
-    .line 415
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getPaddingBottom()I
 
     move-result v1
@@ -278,7 +257,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 402
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     const/4 v1, 0x1
@@ -287,7 +265,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
 
-    .line 403
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->bottom:I
@@ -300,7 +277,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 408
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     const/4 v1, 0x1
@@ -309,7 +285,6 @@
 
     invoke-virtual {v0, p1, v1, v2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getTransformedBoundingBox(Landroid/view/View;ZLandroid/graphics/Rect;)V
 
-    .line 409
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mTmpRect:Landroid/graphics/Rect;
 
     iget v0, v0, Landroid/graphics/Rect;->top:I
@@ -323,10 +298,8 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 420
     invoke-virtual {p1, p2}, Landroid/view/View;->offsetTopAndBottom(I)V
 
-    .line 421
     return-void
 .end method
 
@@ -335,11 +308,9 @@
     .param p1, "amount"    # I
 
     .prologue
-    .line 362
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/OrientationHelper$2;->mLayoutManager:Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->offsetChildrenVertical(I)V
 
-    .line 363
     return-void
 .end method

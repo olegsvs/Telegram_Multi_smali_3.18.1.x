@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4767
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$84;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,18 +46,14 @@
 
     const/4 v5, 0x0
 
-    .line 4770
     if-nez p2, :cond_0
 
-    .line 4771
     sget-object v2, Lorg/telegram/messenger/BuildVars;->BUILD_VERSION_STRING:Ljava/lang/String;
 
     sput-object v2, Lorg/telegram/messenger/UserConfig;->lastUpdateVersion:Ljava/lang/String;
 
-    .line 4772
     invoke-static {v5}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 4773
     const-string/jumbo v2, "MessagesController"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -85,25 +80,21 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4775
     :cond_0
     instance-of v2, p1, Lorg/telegram/tgnet/TLRPC$Updates;
 
     if-eqz v2, :cond_1
 
-    .line 4776
     const-string/jumbo v2, "MessagesController"
 
     const-string/jumbo v3, "generateUpdateMessage processUpdates"
 
     invoke-static {v2, v3}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 4778
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;-><init>()V
 
-    .line 4779
     .local v0, "update":Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
     const-string/jumbo v2, "updatePlusText"
 
@@ -115,36 +106,29 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;->message:Ljava/lang/String;
 
-    .line 4781
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_messageMediaEmpty;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaEmpty;-><init>()V
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
-    .line 4782
     const-string/jumbo v2, "update"
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;->type:Ljava/lang/String;
 
-    .line 4783
     iput-boolean v5, v0, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;->popup:Z
 
-    .line 4784
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4785
     .local v1, "updates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4786
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$84;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v2, v1, v6, v6, v5}, Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
 
-    .line 4801
     .end local v0    # "update":Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
     .end local v1    # "updates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     :cond_1

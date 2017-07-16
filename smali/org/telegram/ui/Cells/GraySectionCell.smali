@@ -21,10 +21,8 @@
 
     const/4 v4, 0x0
 
-    .line 27
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 29
     const-string/jumbo v0, "graySection"
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -33,7 +31,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/GraySectionCell;->setBackgroundColor(I)V
 
-    .line 31
     new-instance v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/GraySectionCell;->getContext()Landroid/content/Context;
@@ -44,7 +41,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
-    .line 32
     iget-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -53,7 +49,6 @@
 
     invoke-virtual {v0, v1, v6}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 33
     iget-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -64,7 +59,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText2"
@@ -75,7 +69,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 35
     iget-object v1, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -89,7 +82,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 36
     iget-object v7, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     const/4 v0, -0x1
@@ -113,19 +105,16 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Cells/GraySectionCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 37
     return-void
 
     :cond_0
     move v0, v5
 
-    .line 35
     goto :goto_0
 
     :cond_1
     move v2, v5
 
-    .line 36
     goto :goto_1
 .end method
 
@@ -139,7 +128,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 41
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -160,7 +148,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 42
     return-void
 .end method
 
@@ -169,12 +156,10 @@
     .param p1, "text"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 46
     return-void
 .end method
 
@@ -183,11 +168,9 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 49
     iget-object v0, p0, Lorg/telegram/ui/Cells/GraySectionCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 50
     return-void
 .end method

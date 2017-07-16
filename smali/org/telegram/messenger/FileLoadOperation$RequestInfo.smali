@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/FileLoadOperation$1;
 
     .prologue
-    .line 25
     invoke-direct {p0}, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;-><init>()V
 
     return-void
@@ -51,7 +49,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
     .prologue
-    .line 25
     iget v0, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->offset:I
 
     return v0
@@ -63,7 +60,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 25
     iput p1, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->offset:I
 
     return p1
@@ -74,7 +70,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
     .prologue
-    .line 25
     iget v0, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->requestToken:I
 
     return v0
@@ -86,7 +81,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 25
     iput p1, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->requestToken:I
 
     return p1
@@ -97,7 +91,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->response:Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
     return-object v0
@@ -109,7 +102,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->response:Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
     return-object p1
@@ -120,7 +112,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->responseWeb:Lorg/telegram/tgnet/TLRPC$TL_upload_webFile;
 
     return-object v0
@@ -132,7 +123,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$TL_upload_webFile;
 
     .prologue
-    .line 25
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->responseWeb:Lorg/telegram/tgnet/TLRPC$TL_upload_webFile;
 
     return-object p1

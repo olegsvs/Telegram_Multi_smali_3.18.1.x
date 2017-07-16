@@ -39,7 +39,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     .prologue
-    .line 639
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$6;->this$1:Lorg/telegram/ui/ChangePhoneActivity$PhoneView;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$6;->val$this$0:Lorg/telegram/ui/ChangePhoneActivity;
@@ -55,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 639
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -73,7 +71,6 @@
     .param p2, "rhs"    # Ljava/lang/String;
 
     .prologue
-    .line 642
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 
     move-result v0

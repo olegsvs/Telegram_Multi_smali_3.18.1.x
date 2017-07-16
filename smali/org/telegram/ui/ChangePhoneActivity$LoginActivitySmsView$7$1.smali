@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     .prologue
-    .line 1210
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     const/4 v8, 0x0
 
-    .line 1213
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -64,7 +62,6 @@
 
     if-lt v3, v4, :cond_4
 
-    .line 1214
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -77,7 +74,6 @@
 
     div-int/lit8 v0, v3, 0x3c
 
-    .line 1215
     .local v0, "minutes":I
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -93,7 +89,6 @@
 
     sub-int v2, v3, v4
 
-    .line 1216
     .local v2, "seconds":I
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -117,7 +112,6 @@
 
     if-ne v3, v5, :cond_3
 
-    .line 1217
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -151,7 +145,6 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1221
     :cond_1
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
@@ -164,7 +157,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 1222
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -199,14 +191,12 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ChangePhoneActivity$ProgressView;->setProgress(F)V
 
-    .line 1264
     .end local v0    # "minutes":I
     .end local v2    # "seconds":I
     :cond_2
     :goto_1
     return-void
 
-    .line 1218
     .restart local v0    # "minutes":I
     .restart local v2    # "seconds":I
     :cond_3
@@ -220,7 +210,6 @@
 
     if-ne v3, v6, :cond_1
 
-    .line 1219
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -255,7 +244,6 @@
 
     goto :goto_0
 
-    .line 1225
     .end local v0    # "minutes":I
     .end local v2    # "seconds":I
     :cond_4
@@ -269,7 +257,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 1226
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -280,7 +267,6 @@
 
     invoke-virtual {v3, v9}, Lorg/telegram/ui/ChangePhoneActivity$ProgressView;->setProgress(F)V
 
-    .line 1228
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -288,7 +274,6 @@
 
     invoke-static {v3}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$3700(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;)V
 
-    .line 1229
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -299,10 +284,8 @@
 
     if-ne v3, v5, :cond_6
 
-    .line 1230
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->setWaitingForCall(Z)V
 
-    .line 1231
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -311,21 +294,18 @@
 
     invoke-virtual {v3, p0, v4}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 1232
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v3, v8}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$3902(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;Z)Z
 
-    .line 1233
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$3000(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;)V
 
-    .line 1234
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -334,7 +314,6 @@
 
     goto :goto_1
 
-    .line 1235
     :cond_6
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -346,7 +325,6 @@
 
     if-ne v3, v6, :cond_2
 
-    .line 1236
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -359,7 +337,6 @@
 
     if-ne v3, v4, :cond_7
 
-    .line 1237
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -378,19 +355,16 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1238
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$4000(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;)V
 
-    .line 1239
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;-><init>()V
 
-    .line 1240
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
@@ -402,7 +376,6 @@
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;->phone_number:Ljava/lang/String;
 
-    .line 1241
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -413,7 +386,6 @@
 
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;->phone_code_hash:Ljava/lang/String;
 
-    .line 1242
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -426,7 +398,6 @@
 
     goto/16 :goto_1
 
-    .line 1255
     .end local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_auth_resendCode;
     :cond_7
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
@@ -439,10 +410,8 @@
 
     if-ne v3, v5, :cond_2
 
-    .line 1256
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->setWaitingForSms(Z)V
 
-    .line 1257
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -451,21 +420,18 @@
 
     invoke-virtual {v3, p0, v4}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 1258
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v3, v8}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$3902(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;Z)Z
 
-    .line 1259
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v3}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$3000(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;)V
 
-    .line 1260
     iget-object v3, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;
 
     iget-object v3, v3, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;

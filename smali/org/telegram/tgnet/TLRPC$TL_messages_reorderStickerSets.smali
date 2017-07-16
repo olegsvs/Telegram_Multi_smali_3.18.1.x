@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 23571
     const v0, 0x78337739
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->constructor:I
@@ -52,10 +51,8 @@
     .locals 1
 
     .prologue
-    .line 23570
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 23575
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -74,7 +71,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23578
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Bool;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Bool;
 
     move-result-object v0
@@ -87,12 +83,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23582
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23583
     iget-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->masks:Z
 
     if-eqz v2, :cond_0
@@ -104,35 +98,29 @@
     :goto_0
     iput v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->flags:I
 
-    .line 23584
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->flags:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23585
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23586
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 23587
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23588
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 23589
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_reorderStickerSets;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -147,12 +135,10 @@
 
     invoke-virtual {p1, v2, v3}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 23588
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 23583
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_0
@@ -162,7 +148,6 @@
 
     goto :goto_0
 
-    .line 23591
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     :cond_1

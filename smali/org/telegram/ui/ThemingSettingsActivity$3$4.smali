@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingSettingsActivity$3;
 
     .prologue
-    .line 223
     iput-object p1, p0, Lorg/telegram/ui/ThemingSettingsActivity$3$4;->this$1:Lorg/telegram/ui/ThemingSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 226
     sput p1, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
-    .line 227
     iget-object v0, p0, Lorg/telegram/ui/ThemingSettingsActivity$3$4;->this$1:Lorg/telegram/ui/ThemingSettingsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingSettingsActivity$3;->this$0:Lorg/telegram/ui/ThemingSettingsActivity;
@@ -54,6 +51,5 @@
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingSettingsActivity;->access$300(Lorg/telegram/ui/ThemingSettingsActivity;Ljava/lang/String;I)V
 
-    .line 228
     return-void
 .end method

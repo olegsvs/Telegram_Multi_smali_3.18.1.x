@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 595
     iput-boolean p1, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$cache:Z
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$res:Ljava/util/ArrayList;
@@ -60,7 +59,6 @@
 
     const/4 v12, 0x0
 
-    .line 598
     iget-boolean v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$cache:Z
 
     if-eqz v5, :cond_0
@@ -104,7 +102,6 @@
 
     if-nez v5, :cond_4
 
-    .line 599
     :cond_1
     new-instance v5, Lorg/telegram/messenger/query/StickersQuery$14$1;
 
@@ -121,41 +118,34 @@
     :goto_0
     invoke-static {v5, v6, v7}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 608
     iget-object v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$res:Ljava/util/ArrayList;
 
     if-nez v5, :cond_4
 
-    .line 649
     :cond_2
     :goto_1
     return-void
 
-    .line 599
     :cond_3
     const-wide/16 v6, 0x0
 
     goto :goto_0
 
-    .line 612
     :cond_4
     iget-object v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$res:Ljava/util/ArrayList;
 
     if-eqz v5, :cond_7
 
-    .line 614
     :try_start_0
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 615
     .local v4, "stickerSetsNew":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     new-instance v3, Ljava/util/HashMap;
 
     invoke-direct {v3}, Ljava/util/HashMap;-><init>()V
 
-    .line 617
     .local v3, "stickerSetsByIdNew":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     const/4 v0, 0x0
 
@@ -169,7 +159,6 @@
 
     if-ge v0, v5, :cond_5
 
-    .line 618
     iget-object v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$res:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -178,11 +167,9 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 619
     .local v2, "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 620
     iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
@@ -193,19 +180,16 @@
 
     invoke-virtual {v3, v5, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 617
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 623
     .end local v2    # "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     :cond_5
     iget-boolean v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$cache:Z
 
     if-nez v5, :cond_6
 
-    .line 624
     iget-object v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$unreadStickers:Ljava/util/ArrayList;
 
     iget v6, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$date:I
@@ -214,7 +198,6 @@
 
     invoke-static {v4, v5, v6, v7}, Lorg/telegram/messenger/query/StickersQuery;->access$1200(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
-    .line 626
     :cond_6
     new-instance v5, Lorg/telegram/messenger/query/StickersQuery$14$2;
 
@@ -226,34 +209,29 @@
 
     goto :goto_1
 
-    .line 637
     .end local v0    # "a":I
     .end local v3    # "stickerSetsByIdNew":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     .end local v4    # "stickerSetsNew":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     :catch_0
     move-exception v1
 
-    .line 638
     .local v1, "e":Ljava/lang/Throwable;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 640
     .end local v1    # "e":Ljava/lang/Throwable;
     :cond_7
     iget-boolean v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$cache:Z
 
     if-nez v5, :cond_2
 
-    .line 641
     new-instance v5, Lorg/telegram/messenger/query/StickersQuery$14$3;
 
     invoke-direct {v5, p0}, Lorg/telegram/messenger/query/StickersQuery$14$3;-><init>(Lorg/telegram/messenger/query/StickersQuery$14;)V
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 647
     iget v5, p0, Lorg/telegram/messenger/query/StickersQuery$14;->val$date:I
 
     const/4 v6, 0x0

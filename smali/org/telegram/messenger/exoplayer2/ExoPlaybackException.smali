@@ -34,16 +34,12 @@
     .param p4, "rendererIndex"    # I
 
     .prologue
-    .line 100
     invoke-direct {p0, p2, p3}, Ljava/lang/Exception;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 101
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->type:I
 
-    .line 102
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->rendererIndex:I
 
-    .line 103
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p1, "rendererIndex"    # I
 
     .prologue
-    .line 75
     new-instance v0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;
 
     const/4 v1, 0x1
@@ -70,7 +65,6 @@
     .param p0, "cause"    # Ljava/io/IOException;
 
     .prologue
-    .line 85
     new-instance v0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;
 
     const/4 v1, 0x0
@@ -89,7 +83,6 @@
     .param p0, "cause"    # Ljava/lang/RuntimeException;
 
     .prologue
-    .line 95
     new-instance v0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;
 
     const/4 v1, 0x2
@@ -111,7 +104,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 121
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->type:I
 
     if-ne v1, v0, :cond_0
@@ -119,7 +111,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 122
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -128,7 +119,6 @@
 
     return-object v0
 
-    .line 121
     :cond_0
     const/4 v0, 0x0
 
@@ -139,7 +129,6 @@
     .locals 1
 
     .prologue
-    .line 111
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->type:I
 
     if-nez v0, :cond_0
@@ -149,7 +138,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 112
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -158,7 +146,6 @@
 
     return-object v0
 
-    .line 111
     :cond_0
     const/4 v0, 0x0
 
@@ -169,7 +156,6 @@
     .locals 2
 
     .prologue
-    .line 131
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->type:I
 
     const/4 v1, 0x2
@@ -181,7 +167,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 132
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/ExoPlaybackException;->getCause()Ljava/lang/Throwable;
 
     move-result-object v0
@@ -190,7 +175,6 @@
 
     return-object v0
 
-    .line 131
     :cond_0
     const/4 v0, 0x0
 

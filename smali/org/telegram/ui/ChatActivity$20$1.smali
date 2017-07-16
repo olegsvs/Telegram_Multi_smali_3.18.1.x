@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$20;
 
     .prologue
-    .line 2017
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$20$1;->val$messageObject:Lorg/telegram/messenger/MessageObject;
@@ -51,7 +50,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2020
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$20;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -62,11 +60,9 @@
 
     if-nez v0, :cond_0
 
-    .line 2032
     :goto_0
     return-void
 
-    .line 2023
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
@@ -80,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 2024
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$20;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -91,7 +86,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemLongClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;)V
 
-    .line 2025
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$20;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -104,14 +98,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLongClickable(Z)V
 
-    .line 2026
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$20;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$8702(Lorg/telegram/ui/ChatActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 2027
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->this$1:Lorg/telegram/ui/ChatActivity$20;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$20;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -124,12 +116,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 2028
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$20$1;->val$cell:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ChatMessageCell;->invalidate()V
 
-    .line 2030
     :cond_1
     invoke-static {}, Lorg/telegram/ui/SecretPhotoViewer;->getInstance()Lorg/telegram/ui/SecretPhotoViewer;
 
@@ -145,7 +135,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/SecretPhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 2031
     invoke-static {}, Lorg/telegram/ui/SecretPhotoViewer;->getInstance()Lorg/telegram/ui/SecretPhotoViewer;
 
     move-result-object v0

@@ -21,13 +21,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 39
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/BaseLocationAdapter;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->mContext:Landroid/content/Context;
 
-    .line 41
     return-void
 .end method
 
@@ -41,17 +38,14 @@
 
     const/4 v8, 0x0
 
-    .line 58
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
     if-eqz v0, :cond_0
 
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->customLocation:Landroid/location/Location;
 
     if-eqz v0, :cond_1
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
     const-string/jumbo v1, "SendSelectedLocation"
@@ -100,18 +94,15 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/SendLocationCell;->setText(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 69
     :cond_0
     :goto_0
     return-void
 
-    .line 62
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->gpsLocation:Landroid/location/Location;
 
     if-eqz v0, :cond_2
 
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
     const-string/jumbo v1, "SendLocation"
@@ -150,7 +141,6 @@
 
     goto :goto_0
 
-    .line 65
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
@@ -180,7 +170,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 129
     const/4 v0, 0x2
 
     if-le p1, v0, :cond_0
@@ -195,7 +184,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 130
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->places:Ljava/util/ArrayList;
 
     add-int/lit8 v1, p1, -0x3
@@ -206,7 +194,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;
 
-    .line 132
     :goto_0
     return-object v0
 
@@ -220,7 +207,6 @@
     .locals 2
 
     .prologue
-    .line 73
     iget-boolean v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->searching:Z
 
     if-nez v0, :cond_0
@@ -237,11 +223,9 @@
 
     if-eqz v0, :cond_1
 
-    .line 74
     :cond_0
     const/4 v0, 0x4
 
-    .line 76
     :goto_0
     return v0
 
@@ -284,30 +268,23 @@
 
     const/4 v0, 0x1
 
-    .line 137
     if-nez p1, :cond_1
 
-    .line 138
     const/4 v0, 0x0
 
-    .line 148
     :cond_0
     :goto_0
     return v0
 
-    .line 139
     :cond_1
     if-eq p1, v0, :cond_0
 
-    .line 141
     if-ne p1, v1, :cond_2
 
     move v0, v1
 
-    .line 142
     goto :goto_0
 
-    .line 143
     :cond_2
     iget-boolean v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->searching:Z
 
@@ -325,13 +302,11 @@
 
     if-eqz v0, :cond_4
 
-    .line 144
     :cond_3
     const/4 v0, 0x4
 
     goto :goto_0
 
-    .line 145
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->places:Ljava/util/ArrayList;
 
@@ -343,12 +318,10 @@
 
     if-ne p1, v0, :cond_5
 
-    .line 146
     const/4 v0, 0x5
 
     goto :goto_0
 
-    .line 148
     :cond_5
     const/4 v0, 0x3
 
@@ -360,12 +333,10 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 153
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 154
     .local v0, "position":I
     const/4 v1, 0x2
 
@@ -421,18 +392,15 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 108
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 126
     :goto_0
     return-void
 
-    .line 110
     :pswitch_0
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -444,7 +412,6 @@
 
     goto :goto_0
 
-    .line 113
     :pswitch_1
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -452,12 +419,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->sendLocationCell:Lorg/telegram/ui/Cells/SendLocationCell;
 
-    .line 114
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->updateCell()V
 
     goto :goto_0
 
-    .line 117
     :pswitch_2
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -475,7 +440,6 @@
 
     goto :goto_0
 
-    .line 120
     :pswitch_3
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -507,7 +471,6 @@
 
     goto :goto_0
 
-    .line 123
     :pswitch_4
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -519,7 +482,6 @@
 
     goto :goto_0
 
-    .line 108
     nop
 
     :pswitch_data_0
@@ -538,17 +500,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 82
     packed-switch p2, :pswitch_data_0
 
-    .line 100
     new-instance v0, Lorg/telegram/ui/Cells/LocationPoweredCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/LocationPoweredCell;-><init>(Landroid/content/Context;)V
 
-    .line 103
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -557,7 +516,6 @@
 
     return-object v1
 
-    .line 84
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/EmptyCell;
@@ -566,11 +524,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/EmptyCell;-><init>(Landroid/content/Context;)V
 
-    .line 85
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 87
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/SendLocationCell;
@@ -579,11 +535,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/SendLocationCell;-><init>(Landroid/content/Context;)V
 
-    .line 88
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 90
     .end local v0    # "view":Landroid/view/View;
     :pswitch_2
     new-instance v0, Lorg/telegram/ui/Cells/GraySectionCell;
@@ -592,11 +546,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/GraySectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 91
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 93
     .end local v0    # "view":Landroid/view/View;
     :pswitch_3
     new-instance v0, Lorg/telegram/ui/Cells/LocationCell;
@@ -605,11 +557,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/LocationCell;-><init>(Landroid/content/Context;)V
 
-    .line 94
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 96
     .end local v0    # "view":Landroid/view/View;
     :pswitch_4
     new-instance v0, Lorg/telegram/ui/Cells/LocationLoadingCell;
@@ -618,11 +568,9 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/LocationLoadingCell;-><init>(Landroid/content/Context;)V
 
-    .line 97
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 82
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -638,13 +586,10 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 53
     iput-object p1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->customLocation:Landroid/location/Location;
 
-    .line 54
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->updateCell()V
 
-    .line 55
     return-void
 .end method
 
@@ -653,13 +598,10 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 48
     iput-object p1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->gpsLocation:Landroid/location/Location;
 
-    .line 49
     invoke-direct {p0}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->updateCell()V
 
-    .line 50
     return-void
 .end method
 
@@ -668,9 +610,7 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 44
     iput p1, p0, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->overScrollHeight:I
 
-    .line 45
     return-void
 .end method

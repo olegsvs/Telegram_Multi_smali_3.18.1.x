@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 10612
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 10615
     return-void
 .end method
 
@@ -41,7 +39,6 @@
     .param p2, "itemCount"    # I
 
     .prologue
-    .line 10619
     return-void
 .end method
 
@@ -52,10 +49,8 @@
     .param p3, "payload"    # Ljava/lang/Object;
 
     .prologue
-    .line 10624
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$AdapterDataObserver;->onItemRangeChanged(II)V
 
-    .line 10625
     return-void
 .end method
 
@@ -65,7 +60,6 @@
     .param p2, "itemCount"    # I
 
     .prologue
-    .line 10629
     return-void
 .end method
 
@@ -76,7 +70,6 @@
     .param p3, "itemCount"    # I
 
     .prologue
-    .line 10637
     return-void
 .end method
 
@@ -86,6 +79,5 @@
     .param p2, "itemCount"    # I
 
     .prologue
-    .line 10633
     return-void
 .end method

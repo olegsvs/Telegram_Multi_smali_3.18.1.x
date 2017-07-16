@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/StickerPreviewViewer;
 
     .prologue
-    .line 364
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$4;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 367
     invoke-virtual {p2}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -68,13 +66,11 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 368
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$4;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     invoke-virtual {v0}, Lorg/telegram/ui/StickerPreviewViewer;->close()V
 
-    .line 370
     :cond_1
     return v2
 .end method

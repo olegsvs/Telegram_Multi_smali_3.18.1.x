@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 521
     iput-wide p1, p0, Lorg/telegram/ui/Components/AlertsCreator$7;->val$dialog_id:J
 
     iput-object p3, p0, Lorg/telegram/ui/Components/AlertsCreator$7;->val$onSelect:Ljava/lang/Runnable;
@@ -46,7 +45,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 524
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -57,13 +55,11 @@
 
     move-result-object v1
 
-    .line 525
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 526
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -87,20 +83,16 @@
 
     invoke-interface {v0, v2}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 527
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 528
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$7;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_0
 
-    .line 529
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$7;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 531
     :cond_0
     return-void
 .end method

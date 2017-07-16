@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 1271
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,14 +40,12 @@
     .prologue
     const/high16 v2, 0x3f800000    # 1.0f
 
-    .line 1274
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$4002(Lorg/telegram/ui/VoIPActivity;Landroid/animation/Animator;)Landroid/animation/Animator;
 
-    .line 1275
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$4100(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1276
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -70,7 +66,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$2602(Lorg/telegram/ui/VoIPActivity;Landroid/widget/TextView;)Landroid/widget/TextView;
 
-    .line 1277
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3500(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -81,7 +76,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTranslationY(F)V
 
-    .line 1278
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3500(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -90,7 +84,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setScaleX(F)V
 
-    .line 1279
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3500(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -99,7 +92,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setScaleY(F)V
 
-    .line 1280
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3500(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -108,7 +100,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/TextView;->setAlpha(F)V
 
-    .line 1281
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$24;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$3500(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -127,6 +118,5 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 1282
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$14;
 
     .prologue
-    .line 599
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$14$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 602
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$14$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$14;
 
     iget-object v0, v0, Lorg/telegram/messenger/query/StickersQuery$14;->val$res:Ljava/util/ArrayList;
@@ -56,17 +54,14 @@
 
     if-eqz v0, :cond_0
 
-    .line 603
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$14$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$14;
 
     iget v0, v0, Lorg/telegram/messenger/query/StickersQuery$14;->val$hash:I
 
     invoke-static {v0}, Lorg/telegram/messenger/query/StickersQuery;->access$1102(I)I
 
-    .line 605
     :cond_0
     invoke-static {v1, v1}, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturesStickers(ZZ)V
 
-    .line 606
     return-void
 .end method

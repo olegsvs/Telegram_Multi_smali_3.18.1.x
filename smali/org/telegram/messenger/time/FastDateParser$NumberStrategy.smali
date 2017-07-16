@@ -24,15 +24,12 @@
     .param p1, "field"    # I
 
     .prologue
-    .line 690
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/time/FastDateParser$Strategy;-><init>(Lorg/telegram/messenger/time/FastDateParser$1;)V
 
-    .line 691
     iput p1, p0, Lorg/telegram/messenger/time/FastDateParser$NumberStrategy;->field:I
 
-    .line 692
     return-void
 .end method
 
@@ -44,14 +41,12 @@
     .param p2, "regex"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 708
     invoke-virtual {p1}, Lorg/telegram/messenger/time/FastDateParser;->isNextNumber()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 709
     const-string/jumbo v0, "(\\p{Nd}{"
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
@@ -70,13 +65,11 @@
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 713
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 711
     :cond_0
     const-string/jumbo v0, "(\\p{Nd}++)"
 
@@ -89,7 +82,6 @@
     .locals 1
 
     .prologue
-    .line 699
     const/4 v0, 0x1
 
     return v0
@@ -100,7 +92,6 @@
     .param p1, "iValue"    # I
 
     .prologue
-    .line 731
     return p1
 .end method
 
@@ -111,7 +102,6 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 721
     iget v0, p0, Lorg/telegram/messenger/time/FastDateParser$NumberStrategy;->field:I
 
     invoke-static {p3}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -124,6 +114,5 @@
 
     invoke-virtual {p2, v0, v1}, Ljava/util/Calendar;->set(II)V
 
-    .line 722
     return-void
 .end method

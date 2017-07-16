@@ -43,7 +43,6 @@
     .locals 0
 
     .prologue
-    .line 17586
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -56,20 +55,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 17600
     const/4 v0, 0x0
 
-    .line 17601
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$StickerSet;
     sparse-switch p1, :sswitch_data_0
 
-    .line 17609
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 17610
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in StickerSet"
@@ -94,18 +89,15 @@
 
     throw v1
 
-    .line 17603
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_stickerSet_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$StickerSet;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_stickerSet_old;-><init>()V
 
-    .line 17604
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$StickerSet;
     goto :goto_0
 
-    .line 17606
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_stickerSet;
 
@@ -115,18 +107,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$StickerSet;
     goto :goto_0
 
-    .line 17612
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 17613
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$StickerSet;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 17615
     :cond_1
     return-object v0
 
-    .line 17601
     nop
 
     :sswitch_data_0

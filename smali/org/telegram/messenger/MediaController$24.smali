@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 3320
     iput p1, p0, Lorg/telegram/messenger/MediaController$24;->val$guid:I
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$24;->val$albumsSorted:Ljava/util/ArrayList;
@@ -60,7 +59,6 @@
     .locals 7
 
     .prologue
-    .line 3323
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v0
@@ -71,7 +69,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 3324
     iget v0, p0, Lorg/telegram/messenger/MediaController$24;->val$guid:I
 
     iget-object v1, p0, Lorg/telegram/messenger/MediaController$24;->val$albumsSorted:Ljava/util/ArrayList;
@@ -88,22 +85,18 @@
 
     invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/MediaController;->access$6000(ILjava/util/ArrayList;Ljava/lang/Integer;Ljava/util/ArrayList;Ljava/lang/Integer;Lorg/telegram/messenger/MediaController$AlbumEntry;I)V
 
-    .line 3330
     :goto_0
     return-void
 
-    .line 3327
     :cond_0
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$6102(Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 3328
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$24;->val$allPhotosAlbumFinal:Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     sput-object v0, Lorg/telegram/messenger/MediaController;->allPhotosAlbumEntry:Lorg/telegram/messenger/MediaController$AlbumEntry;
 
-    .line 3329
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0

@@ -33,7 +33,6 @@
 
 .field private lastCreatedWidth:I
 
-.field private lineHeight:I
 
 .field private nameLayout:Landroid/text/StaticLayout;
 
@@ -58,20 +57,16 @@
 
     const/high16 v2, 0x42000000    # 32.0f
 
-    .line 2906
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 2907
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 2896
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textX:I
 
-    .line 2897
     const/high16 v0, 0x42600000    # 56.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -80,7 +75,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textY:I
 
-    .line 2899
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -89,14 +83,12 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->captionX:I
 
-    .line 2908
     new-instance v0, Lorg/telegram/messenger/ImageReceiver;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/ImageReceiver;-><init>(Landroid/view/View;)V
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarImageView:Lorg/telegram/messenger/ImageReceiver;
 
-    .line 2909
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarImageView:Lorg/telegram/messenger/ImageReceiver;
 
     const/high16 v1, 0x41a00000    # 20.0f
@@ -107,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/ImageReceiver;->setRoundRadius(I)V
 
-    .line 2910
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -130,14 +121,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/ImageReceiver;->setImageCoords(IIII)V
 
-    .line 2912
     new-instance v0, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 2913
     return-void
 .end method
 
@@ -154,36 +143,29 @@
 
     const/4 v4, 0x0
 
-    .line 2966
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     if-nez v0, :cond_0
 
-    .line 2992
     :goto_0
     return-void
 
-    .line 2969
     :cond_0
     iget-boolean v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarVisible:Z
 
     if-eqz v0, :cond_1
 
-    .line 2970
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarImageView:Lorg/telegram/messenger/ImageReceiver;
 
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/ImageReceiver;->draw(Landroid/graphics/Canvas;)Z
 
-    .line 2972
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->nameLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_2
 
-    .line 2973
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 2974
     iget-boolean v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarVisible:Z
 
     if-eqz v0, :cond_5
@@ -216,24 +198,19 @@
 
     invoke-virtual {p1, v2, v0}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2975
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->nameLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2976
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 2978
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->dateLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_3
 
-    .line 2979
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 2980
     iget-boolean v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarVisible:Z
 
     if-eqz v0, :cond_7
@@ -259,24 +236,19 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2981
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->dateLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2982
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 2984
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_4
 
-    .line 2985
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 2986
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textX:I
 
     int-to-float v0, v0
@@ -287,22 +259,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 2987
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 2988
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 2989
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 2991
     :cond_4
     const/high16 v0, 0x41900000    # 18.0f
 
@@ -326,7 +294,6 @@
 
     int-to-float v3, v0
 
-    iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->lineHeight:I
 
     iget-object v5, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
@@ -352,7 +319,6 @@
     :cond_5
     move v0, v4
 
-    .line 2974
     goto/16 :goto_1
 
     :cond_6
@@ -363,10 +329,8 @@
     :cond_7
     move v1, v4
 
-    .line 2980
     goto :goto_3
 
-    .line 2991
     :cond_8
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -381,27 +345,22 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 2928
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v10
 
-    .line 2929
     .local v10, "width":I
     const/4 v7, 0x0
 
-    .line 2931
     .local v7, "height":I
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     if-eqz v0, :cond_8
 
-    .line 2932
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->lastCreatedWidth:I
 
     if-eq v0, v10, :cond_2
 
-    .line 2933
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     iget-wide v0, v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->author_photo_id:J
@@ -419,7 +378,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2934
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
@@ -430,7 +388,6 @@
 
     move-result-object v9
 
-    .line 2935
     .local v9, "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     if-eqz v9, :cond_4
 
@@ -441,7 +398,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2936
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     const/4 v1, 0x0
@@ -456,7 +412,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 2937
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
     const/high16 v1, 0x42200000    # 40.0f
@@ -471,7 +426,6 @@
 
     move-result-object v8
 
-    .line 2938
     .local v8, "image":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->avatarImageView:Lorg/telegram/messenger/ImageReceiver;
 
@@ -519,7 +473,6 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/ImageReceiver;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;ILjava/lang/String;Z)V
 
-    .line 2941
     .end local v8    # "image":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     .end local v9    # "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     :cond_0
@@ -556,14 +509,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->nameLayout:Landroid/text/StaticLayout;
 
-    .line 2942
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->date:I
 
     if-eqz v0, :cond_7
 
-    .line 2943
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
@@ -613,7 +564,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->dateLayout:Landroid/text/StaticLayout;
 
-    .line 2947
     :goto_4
     const/high16 v0, 0x42600000    # 56.0f
 
@@ -621,14 +571,12 @@
 
     move-result v7
 
-    .line 2948
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;->text:Lorg/telegram/tgnet/TLRPC$RichText;
 
     if-eqz v0, :cond_1
 
-    .line 2949
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v1, 0x0
@@ -653,12 +601,10 @@
 
     iput-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 2950
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_1
 
-    .line 2951
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -675,45 +621,36 @@
 
     add-int/2addr v7, v0
 
-    .line 2954
     :cond_1
-    iput v7, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->lineHeight:I
 
-    .line 2961
     :cond_2
     :goto_5
     invoke-virtual {p0, v10, v7}, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->setMeasuredDimension(II)V
 
-    .line 2962
     return-void
 
-    .line 2933
     :cond_3
     const/4 v0, 0x0
 
     goto/16 :goto_0
 
-    .line 2935
     .restart local v9    # "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     :cond_4
     const/4 v0, 0x0
 
     goto/16 :goto_1
 
-    .line 2941
     .end local v9    # "photo":Lorg/telegram/tgnet/TLRPC$Photo;
     :cond_5
     const/4 v0, 0x0
 
     goto/16 :goto_2
 
-    .line 2943
     :cond_6
     const/4 v0, 0x0
 
     goto :goto_3
 
-    .line 2945
     :cond_7
     const/4 v0, 0x0
 
@@ -721,7 +658,6 @@
 
     goto :goto_4
 
-    .line 2958
     :cond_8
     const/4 v7, 0x1
 
@@ -733,7 +669,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2923
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->textLayout:Landroid/text/StaticLayout;
@@ -775,17 +710,13 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
     .prologue
-    .line 2916
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockEmbedPost;
 
-    .line 2917
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->lastCreatedWidth:I
 
-    .line 2918
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockEmbedPostCell;->requestLayout()V
 
-    .line 2919
     return-void
 .end method

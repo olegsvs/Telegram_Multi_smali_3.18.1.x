@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 664
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$5;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesStorage$5;->val$id:J
@@ -49,7 +48,6 @@
     .locals 6
 
     .prologue
-    .line 668
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$5;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -63,7 +61,6 @@
 
     move-result-object v1
 
-    .line 669
     .local v1, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v2, 0x1
 
@@ -71,44 +68,36 @@
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 670
     const/4 v2, 0x2
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$5;->val$data:Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindByteBuffer(ILorg/telegram/tgnet/NativeByteBuffer;)V
 
-    .line 671
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 672
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 676
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$5;->val$data:Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 678
     .end local v1    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_0
     return-void
 
-    .line 673
     :catch_0
     move-exception v0
 
-    .line 674
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 676
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$5;->val$data:Lorg/telegram/tgnet/NativeByteBuffer;
 
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V

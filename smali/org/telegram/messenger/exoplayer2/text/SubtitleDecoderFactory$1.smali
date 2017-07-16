@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,14 +43,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 89
     if-nez p1, :cond_0
 
-    .line 110
     :goto_0
     return-object v1
 
-    .line 93
     :cond_0
     const/4 v2, -0x1
 
@@ -68,7 +64,6 @@
 
     goto :goto_0
 
-    .line 95
     :pswitch_0
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.webvtt.WebvttDecoder"
 
@@ -78,7 +73,6 @@
 
     goto :goto_0
 
-    .line 93
     :sswitch_0
     const-string/jumbo v3, "text/vtt"
 
@@ -157,7 +151,6 @@
 
     goto :goto_1
 
-    .line 97
     :pswitch_1
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.ttml.TtmlDecoder"
 
@@ -167,7 +160,6 @@
 
     goto :goto_0
 
-    .line 99
     :pswitch_2
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.webvtt.Mp4WebvttDecoder"
 
@@ -177,7 +169,6 @@
 
     goto :goto_0
 
-    .line 101
     :pswitch_3
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.subrip.SubripDecoder"
 
@@ -187,7 +178,6 @@
 
     goto :goto_0
 
-    .line 103
     :pswitch_4
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.tx3g.Tx3gDecoder"
 
@@ -197,7 +187,6 @@
 
     goto :goto_0
 
-    .line 105
     :pswitch_5
     const-string/jumbo v2, "org.telegram.messenger.exoplayer2.text.cea.Cea608Decoder"
 
@@ -209,15 +198,12 @@
 
     goto :goto_0
 
-    .line 109
     :catch_0
     move-exception v0
 
-    .line 110
     .local v0, "e":Ljava/lang/ClassNotFoundException;
     goto :goto_0
 
-    .line 93
     :sswitch_data_0
     .sparse-switch
         -0x3be2f26c -> :sswitch_0
@@ -246,7 +232,6 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 73
     :try_start_0
     iget-object v2, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
@@ -254,11 +239,9 @@
 
     move-result-object v0
 
-    .line 74
     .local v0, "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     if-nez v0, :cond_0
 
-    .line 75
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v3, "Attempted to create decoder for unsupported format"
@@ -269,12 +252,10 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 83
     .end local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :catch_0
     move-exception v1
 
-    .line 84
     .local v1, "e":Ljava/lang/Exception;
     new-instance v2, Ljava/lang/IllegalStateException;
 
@@ -284,7 +265,6 @@
 
     throw v2
 
-    .line 77
     .end local v1    # "e":Ljava/lang/Exception;
     .restart local v0    # "clazz":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     :cond_0
@@ -293,7 +273,6 @@
 
     if-ne v0, v2, :cond_1
 
-    .line 78
     const-class v2, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
     invoke-virtual {v0, v2}, Ljava/lang/Class;->asSubclass(Ljava/lang/Class;)Ljava/lang/Class;
@@ -310,7 +289,6 @@
 
     aput-object v5, v3, v4
 
-    .line 79
     invoke-virtual {v2, v3}, Ljava/lang/Class;->getConstructor([Ljava/lang/Class;)Ljava/lang/reflect/Constructor;
 
     move-result-object v2
@@ -335,7 +313,6 @@
 
     check-cast v2, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoder;
 
-    .line 81
     :goto_0
     return-object v2
 
@@ -374,7 +351,6 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 67
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/text/SubtitleDecoderFactory$1;->getDecoderClass(Ljava/lang/String;)Ljava/lang/Class;

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatsActivity$3;
 
     .prologue
-    .line 543
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$16;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v5, 0x0
 
-    .line 546
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "theme"
@@ -56,7 +54,6 @@
 
     move-result-object v0
 
-    .line 547
     .local v0, "themePrefs":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -70,10 +67,8 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 548
     sput p2, Lorg/telegram/ui/ActionBar/Theme;->chatsHeaderGradient:I
 
-    .line 550
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -90,7 +85,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 551
     iget-object v1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$16;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -101,7 +95,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 552
     iget-object v1, p0, Lorg/telegram/ui/ThemingChatsActivity$3$16;->this$1:Lorg/telegram/ui/ThemingChatsActivity$3;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingChatsActivity$3;->this$0:Lorg/telegram/ui/ThemingChatsActivity;
@@ -112,7 +105,6 @@
 
     invoke-virtual {v1}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 554
     :cond_0
     return-void
 .end method

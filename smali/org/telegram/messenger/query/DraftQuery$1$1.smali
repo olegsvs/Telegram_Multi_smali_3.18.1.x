@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/DraftQuery$1;
 
     .prologue
-    .line 84
     iput-object p1, p0, Lorg/telegram/messenger/query/DraftQuery$1$1;->this$0:Lorg/telegram/messenger/query/DraftQuery$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +42,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 87
     const/4 v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/UserConfig;->draftsLoaded:Z
 
-    .line 88
     invoke-static {v1}, Lorg/telegram/messenger/query/DraftQuery;->access$002(Z)Z
 
-    .line 89
     invoke-static {v1}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 90
     return-void
 .end method

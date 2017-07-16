@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangePhoneActivity;
 
     .prologue
-    .line 290
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$2;->this$0:Lorg/telegram/ui/ChangePhoneActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$2;->val$newView:Lorg/telegram/ui/Components/SlideView;
@@ -47,21 +46,18 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 298
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$2;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SlideView;->setVisibility(I)V
 
-    .line 299
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$2;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SlideView;->setX(F)V
 
-    .line 300
     return-void
 .end method
 
@@ -70,13 +66,11 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 293
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$2;->val$newView:Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SlideView;->setVisibility(I)V
 
-    .line 294
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Painting;
 
     .prologue
-    .line 153
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$path:Lorg/telegram/ui/Components/Paint/Path;
@@ -61,17 +60,14 @@
 
     const/4 v6, 0x0
 
-    .line 156
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$path:Lorg/telegram/ui/Components/Paint/Path;
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/Paint/Painting;->access$002(Lorg/telegram/ui/Components/Paint/Painting;Lorg/telegram/ui/Components/Paint/Path;)Lorg/telegram/ui/Components/Paint/Path;
 
-    .line 158
     const/4 v0, 0x0
 
-    .line 160
     .local v0, "bounds":Landroid/graphics/RectF;
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -81,7 +77,6 @@
 
     invoke-static {v7, v3}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 161
     const v3, 0x8ce0
 
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -92,21 +87,17 @@
 
     invoke-static {v7, v3, v8, v4, v6}, Landroid/opengl/GLES20;->glFramebufferTexture2D(IIIII)V
 
-    .line 163
     invoke-static {}, Lorg/telegram/ui/Components/Paint/Utils;->HasGLError()V
 
-    .line 165
     invoke-static {v7}, Landroid/opengl/GLES20;->glCheckFramebufferStatus(I)I
 
     move-result v2
 
-    .line 166
     .local v2, "status":I
     const v3, 0x8cd5
 
     if-ne v2, v3, :cond_4
 
-    .line 167
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$300(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Size;
@@ -129,20 +120,16 @@
 
     invoke-static {v6, v6, v3, v4}, Landroid/opengl/GLES20;->glViewport(IIII)V
 
-    .line 169
     iget-boolean v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$clearBuffer:Z
 
     if-eqz v3, :cond_0
 
-    .line 170
     invoke-static {v5, v5, v5, v5}, Landroid/opengl/GLES20;->glClearColor(FFFF)V
 
-    .line 171
     const/16 v3, 0x4000
 
     invoke-static {v3}, Landroid/opengl/GLES20;->glClear(I)V
 
-    .line 174
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -152,12 +139,10 @@
 
     if-nez v3, :cond_2
 
-    .line 209
     :cond_1
     :goto_0
     return-void
 
-    .line 177
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -186,16 +171,13 @@
 
     check-cast v1, Lorg/telegram/ui/Components/Paint/Shader;
 
-    .line 178
     .local v1, "shader":Lorg/telegram/ui/Components/Paint/Shader;
     if-eqz v1, :cond_1
 
-    .line 182
     iget v3, v1, Lorg/telegram/ui/Components/Paint/Shader;->program:I
 
     invoke-static {v3}, Landroid/opengl/GLES20;->glUseProgram(I)V
 
-    .line 183
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$600(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/Texture;
@@ -204,7 +186,6 @@
 
     if-nez v3, :cond_3
 
-    .line 184
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     new-instance v4, Lorg/telegram/ui/Components/Paint/Texture;
@@ -223,13 +204,11 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/Components/Paint/Painting;->access$602(Lorg/telegram/ui/Components/Paint/Painting;Lorg/telegram/ui/Components/Paint/Texture;)Lorg/telegram/ui/Components/Paint/Texture;
 
-    .line 186
     :cond_3
     const v3, 0x84c0
 
     invoke-static {v3}, Landroid/opengl/GLES20;->glActiveTexture(I)V
 
-    .line 187
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$600(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/Texture;
@@ -242,7 +221,6 @@
 
     invoke-static {v8, v3}, Landroid/opengl/GLES20;->glBindTexture(II)V
 
-    .line 188
     const-string/jumbo v3, "mvpMatrix"
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -263,7 +241,6 @@
 
     invoke-static {v3, v4, v6, v5}, Landroid/opengl/GLES20;->glUniformMatrix4fv(IIZLjava/nio/FloatBuffer;)V
 
-    .line 189
     const-string/jumbo v3, "texture"
 
     invoke-virtual {v1, v3}, Lorg/telegram/ui/Components/Paint/Shader;->getUniform(Ljava/lang/String;)I
@@ -272,7 +249,6 @@
 
     invoke-static {v3, v6}, Landroid/opengl/GLES20;->glUniform1i(II)V
 
-    .line 191
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$path:Lorg/telegram/ui/Components/Paint/Path;
 
     iget-object v4, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -285,12 +261,10 @@
 
     move-result-object v0
 
-    .line 194
     .end local v1    # "shader":Lorg/telegram/ui/Components/Paint/Shader;
     :cond_4
     invoke-static {v7, v6}, Landroid/opengl/GLES20;->glBindFramebuffer(II)V
 
-    .line 196
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$900(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/Painting$PaintingDelegate;
@@ -299,7 +273,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 197
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$900(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/Painting$PaintingDelegate;
@@ -308,7 +281,6 @@
 
     invoke-interface {v3, v0}, Lorg/telegram/ui/Components/Paint/Painting$PaintingDelegate;->contentChanged(Landroid/graphics/RectF;)V
 
-    .line 200
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
@@ -318,7 +290,6 @@
 
     if-eqz v3, :cond_7
 
-    .line 201
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v3}, Lorg/telegram/ui/Components/Paint/Painting;->access$1000(Lorg/telegram/ui/Components/Paint/Painting;)Landroid/graphics/RectF;
@@ -327,26 +298,22 @@
 
     invoke-virtual {v3, v0}, Landroid/graphics/RectF;->union(Landroid/graphics/RectF;)V
 
-    .line 206
     :goto_2
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$action:Ljava/lang/Runnable;
 
     if-eqz v3, :cond_1
 
-    .line 207
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->val$action:Ljava/lang/Runnable;
 
     invoke-interface {v3}, Ljava/lang/Runnable;->run()V
 
     goto/16 :goto_0
 
-    .line 177
     :cond_6
     const-string/jumbo v3, "brush"
 
     goto/16 :goto_1
 
-    .line 203
     :cond_7
     iget-object v3, p0, Lorg/telegram/ui/Components/Paint/Painting$1;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 

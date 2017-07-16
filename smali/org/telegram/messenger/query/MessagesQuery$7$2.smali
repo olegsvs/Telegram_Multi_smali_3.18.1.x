@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/MessagesQuery$7;
 
     .prologue
-    .line 361
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesQuery$7$2;->this$0:Lorg/telegram/messenger/query/MessagesQuery$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,21 +44,17 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 364
     if-nez p2, :cond_0
 
     move-object v7, p1
 
-    .line 365
     check-cast v7, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 366
     .local v7, "messagesRes":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     iget-object v0, v7, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->saveMessagesThumbs(Ljava/util/ArrayList;)V
 
-    .line 367
     iget-object v0, v7, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesQuery$7$2;->this$0:Lorg/telegram/messenger/query/MessagesQuery$7;
@@ -78,7 +73,6 @@
 
     invoke-static/range {v0 .. v6}, Lorg/telegram/messenger/query/MessagesQuery;->access$300(Ljava/util/ArrayList;Ljava/util/HashMap;Ljava/util/ArrayList;Ljava/util/ArrayList;JZ)V
 
-    .line 368
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -89,7 +83,6 @@
 
     invoke-virtual {v0, v1, v2, v8, v8}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 369
     iget-object v0, p0, Lorg/telegram/messenger/query/MessagesQuery$7$2;->this$0:Lorg/telegram/messenger/query/MessagesQuery$7;
 
     iget-object v0, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$replyMessageOwners:Ljava/util/HashMap;
@@ -98,7 +91,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/query/MessagesQuery;->access$400(Ljava/util/HashMap;Ljava/util/ArrayList;)V
 
-    .line 371
     .end local v7    # "messagesRes":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_0
     return-void

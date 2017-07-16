@@ -60,7 +60,6 @@
 
     const/4 v3, 0x0
 
-    .line 25
     new-instance v0, Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
 
     const-string/jumbo v1, "NONE"
@@ -141,7 +140,6 @@
 
     sput-object v0, Lorg/telegram/ui/Components/Crop/CropAreaView$Control;->RIGHT:Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
 
-    .line 24
     const/16 v0, 0x9
 
     new-array v0, v0, [Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
@@ -204,7 +202,6 @@
     .end annotation
 
     .prologue
-    .line 24
     invoke-direct {p0, p1, p2}, Ljava/lang/Enum;-><init>(Ljava/lang/String;I)V
 
     return-void
@@ -215,7 +212,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 24
     const-class v0, Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
 
     invoke-static {v0, p0}, Ljava/lang/Enum;->valueOf(Ljava/lang/Class;Ljava/lang/String;)Ljava/lang/Enum;
@@ -231,7 +227,6 @@
     .locals 1
 
     .prologue
-    .line 24
     sget-object v0, Lorg/telegram/ui/Components/Crop/CropAreaView$Control;->$VALUES:[Lorg/telegram/ui/Components/Crop/CropAreaView$Control;
 
     invoke-virtual {v0}, [Lorg/telegram/ui/Components/Crop/CropAreaView$Control;->clone()Ljava/lang/Object;

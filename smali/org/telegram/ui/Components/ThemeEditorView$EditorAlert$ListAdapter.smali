@@ -56,29 +56,24 @@
     .param p3, "descriptions"    # [Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     .prologue
-    .line 832
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 829
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->items:Ljava/util/ArrayList;
 
-    .line 830
     new-instance v4, Ljava/util/HashMap;
 
     invoke-direct {v4}, Ljava/util/HashMap;-><init>()V
 
     iput-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->itemsMap:Ljava/util/HashMap;
 
-    .line 833
     iput-object p2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->context:Landroid/content/Context;
 
-    .line 834
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -87,16 +82,13 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 835
     aget-object v2, p3, v0
 
-    .line 836
     .local v2, "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ThemeDescription;->getCurrentKey()Ljava/lang/String;
 
     move-result-object v3
 
-    .line 837
     .local v3, "key":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->itemsMap:Ljava/util/HashMap;
 
@@ -106,37 +98,30 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 838
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/ActionBar/ThemeDescription;>;"
     if-nez v1, :cond_0
 
-    .line 839
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/ActionBar/ThemeDescription;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 840
     .restart local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/ActionBar/ThemeDescription;>;"
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->itemsMap:Ljava/util/HashMap;
 
     invoke-virtual {v4, v3, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 841
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 843
     :cond_0
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 834
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 845
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/ActionBar/ThemeDescription;>;"
     .end local v2    # "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     .end local v3    # "key":Ljava/lang/String;
@@ -160,7 +145,6 @@
     .end annotation
 
     .prologue
-    .line 853
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->items:Ljava/util/ArrayList;
@@ -171,11 +155,9 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 854
     :cond_0
     const/4 v0, 0x0
 
-    .line 856
     :goto_0
     return-object v0
 
@@ -195,7 +177,6 @@
     .locals 1
 
     .prologue
-    .line 849
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -210,7 +191,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 886
     const/4 v0, 0x0
 
     return v0
@@ -221,7 +201,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 861
     const/4 v0, 0x1
 
     return v0
@@ -233,7 +212,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 873
     iget-object v3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->items:Ljava/util/ArrayList;
 
     invoke-virtual {v3, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -242,7 +220,6 @@
 
     check-cast v0, Ljava/util/ArrayList;
 
-    .line 874
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/ui/ActionBar/ThemeDescription;>;"
     const/4 v3, 0x0
 
@@ -252,7 +229,6 @@
 
     check-cast v2, Lorg/telegram/ui/ActionBar/ThemeDescription;
 
-    .line 876
     .local v2, "description":Lorg/telegram/ui/ActionBar/ThemeDescription;
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ThemeDescription;->getCurrentKey()Ljava/lang/String;
 
@@ -266,10 +242,8 @@
 
     if-eqz v3, :cond_0
 
-    .line 877
     const/4 v1, 0x0
 
-    .line 881
     .local v1, "color":I
     :goto_0
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -282,10 +256,8 @@
 
     invoke-virtual {v3, v4, v1}, Lorg/telegram/ui/Cells/TextColorThemeCell;->setTextAndColor(Ljava/lang/String;I)V
 
-    .line 882
     return-void
 
-    .line 879
     .end local v1    # "color":I
     :cond_0
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/ThemeDescription;->getSetColor()I
@@ -302,14 +274,12 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 866
     new-instance v0, Lorg/telegram/ui/Cells/TextColorThemeCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;->context:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextColorThemeCell;-><init>(Landroid/content/Context;)V
 
-    .line 867
     .local v0, "view":Landroid/view/View;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -321,7 +291,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 868
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V

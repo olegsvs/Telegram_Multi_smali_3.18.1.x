@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 429
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$3;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/ScrollView;-><init>(Landroid/content/Context;)V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 432
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$3;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupCreateActivity;->access$300(Lorg/telegram/ui/GroupCreateActivity;)Z
@@ -53,16 +51,13 @@
 
     if-eqz v1, :cond_0
 
-    .line 433
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$3;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/GroupCreateActivity;->access$302(Lorg/telegram/ui/GroupCreateActivity;Z)Z
 
-    .line 439
     :goto_0
     return v0
 
-    .line 436
     :cond_0
     invoke-virtual {p1}, Landroid/view/View;->getLeft()I
 
@@ -86,7 +81,6 @@
 
     invoke-virtual {p2, v0, v1}, Landroid/graphics/Rect;->offset(II)V
 
-    .line 437
     iget v0, p2, Landroid/graphics/Rect;->top:I
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$3;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -107,7 +101,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->top:I
 
-    .line 438
     iget v0, p2, Landroid/graphics/Rect;->bottom:I
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$3;->this$0:Lorg/telegram/ui/GroupCreateActivity;
@@ -128,7 +121,6 @@
 
     iput v0, p2, Landroid/graphics/Rect;->bottom:I
 
-    .line 439
     invoke-super {p0, p1, p2, p3}, Landroid/widget/ScrollView;->requestChildRectangleOnScreen(Landroid/view/View;Landroid/graphics/Rect;Z)Z
 
     move-result v0

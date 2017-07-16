@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 3472
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$25;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MediaController$25;->val$error:Z
@@ -67,7 +66,6 @@
 
     const/4 v5, 0x0
 
-    .line 3475
     iget-boolean v0, p0, Lorg/telegram/messenger/MediaController$25;->val$error:Z
 
     if-nez v0, :cond_0
@@ -76,7 +74,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 3476
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$25;->this$0:Lorg/telegram/messenger/MediaController;
 
@@ -86,7 +83,6 @@
 
     monitor-enter v1
 
-    .line 3477
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$25;->this$0:Lorg/telegram/messenger/MediaController;
 
@@ -94,12 +90,10 @@
 
     invoke-static {v0, v2}, Lorg/telegram/messenger/MediaController;->access$6302(Lorg/telegram/messenger/MediaController;Z)Z
 
-    .line 3478
     monitor-exit v1
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3479
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$25;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$6400(Lorg/telegram/messenger/MediaController;)Ljava/util/ArrayList;
@@ -110,18 +104,15 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 3480
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$25;->this$0:Lorg/telegram/messenger/MediaController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MediaController;->access$6500(Lorg/telegram/messenger/MediaController;)Z
 
-    .line 3482
     :cond_1
     iget-boolean v0, p0, Lorg/telegram/messenger/MediaController$25;->val$error:Z
 
     if-eqz v0, :cond_2
 
-    .line 3483
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -144,11 +135,9 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 3490
     :goto_0
     return-void
 
-    .line 3478
     :catchall_0
     move-exception v0
 
@@ -159,13 +148,11 @@
 
     throw v0
 
-    .line 3485
     :cond_2
     iget-boolean v0, p0, Lorg/telegram/messenger/MediaController$25;->val$firstWrite:Z
 
     if-eqz v0, :cond_3
 
-    .line 3486
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -188,7 +175,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 3488
     :cond_3
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 

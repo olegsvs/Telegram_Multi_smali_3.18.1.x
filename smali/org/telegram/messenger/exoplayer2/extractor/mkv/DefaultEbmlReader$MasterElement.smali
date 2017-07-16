@@ -27,16 +27,12 @@
     .param p2, "elementEndPosition"    # J
 
     .prologue
-    .line 232
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 233
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementId:I
 
-    .line 234
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementEndPosition:J
 
-    .line 235
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p4, "x2"    # Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$1;
 
     .prologue
-    .line 227
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;-><init>(IJ)V
 
     return-void
@@ -58,7 +53,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;
 
     .prologue
-    .line 227
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementEndPosition:J
 
     return-wide v0
@@ -69,7 +63,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;
 
     .prologue
-    .line 227
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/DefaultEbmlReader$MasterElement;->elementId:I
 
     return v0

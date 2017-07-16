@@ -30,18 +30,13 @@
     .param p3, "inputSize"    # I
 
     .prologue
-    .line 663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 664
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/video/MediaCodecVideoRenderer$CodecMaxValues;->width:I
 
-    .line 665
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/video/MediaCodecVideoRenderer$CodecMaxValues;->height:I
 
-    .line 666
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/video/MediaCodecVideoRenderer$CodecMaxValues;->inputSize:I
 
-    .line 667
     return-void
 .end method

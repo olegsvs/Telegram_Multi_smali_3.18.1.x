@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     .prologue
-    .line 141
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 144
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -65,7 +63,6 @@
 
     check-cast v0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$ChangeInfo;
 
-    .line 145
     .local v0, "change":Lorg/telegram/messenger/support/widget/DefaultItemAnimator$ChangeInfo;
     iget-object v2, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
@@ -73,14 +70,12 @@
 
     goto :goto_0
 
-    .line 147
     .end local v0    # "change":Lorg/telegram/messenger/support/widget/DefaultItemAnimator$ChangeInfo;
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->val$changes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 148
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/DefaultItemAnimator$2;->this$0:Lorg/telegram/messenger/support/widget/DefaultItemAnimator;
 
     iget-object v1, v1, Lorg/telegram/messenger/support/widget/DefaultItemAnimator;->mChangesList:Ljava/util/ArrayList;
@@ -89,6 +84,5 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 149
     return-void
 .end method

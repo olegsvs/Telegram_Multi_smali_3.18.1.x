@@ -14,10 +14,8 @@
     .end annotation
 
     .prologue
-    .line 26
     invoke-direct {p0, p1}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;-><init>(Ljava/io/InputStream;)V
 
-    .line 27
     return-void
 .end method
 
@@ -27,10 +25,8 @@
     .param p2, "position"    # J
 
     .prologue
-    .line 30
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;-><init>(Ljava/io/InputStream;J)V
 
-    .line 31
     return-void
 .end method
 
@@ -48,15 +44,12 @@
     .end annotation
 
     .prologue
-    .line 34
     const/4 v1, 0x0
 
-    .line 35
     .local v1, "total":I
     :goto_0
     if-ge v1, p3, :cond_1
 
-    .line 36
     add-int v2, p2, v1
 
     sub-int v3, p3, v1
@@ -65,16 +58,13 @@
 
     move-result v0
 
-    .line 37
     .local v0, "current":I
     if-lez v0, :cond_0
 
-    .line 38
     add-int/2addr v1, v0
 
     goto :goto_0
 
-    .line 40
     :cond_0
     new-instance v2, Ljava/io/EOFException;
 
@@ -82,7 +72,6 @@
 
     throw v2
 
-    .line 43
     .end local v0    # "current":I
     :cond_1
     return-void
@@ -98,24 +87,20 @@
     .end annotation
 
     .prologue
-    .line 46
     const-wide/16 v2, 0x0
 
-    .line 47
     .local v2, "total":J
     :goto_0
     cmp-long v4, v2, p1
 
     if-gez v4, :cond_1
 
-    .line 48
     sub-long v4, p1, v2
 
     invoke-virtual {p0, v4, v5}, Lorg/telegram/messenger/audioinfo/mp3/MP3Input;->skip(J)J
 
     move-result-wide v0
 
-    .line 49
     .local v0, "current":J
     const-wide/16 v4, 0x0
 
@@ -123,12 +108,10 @@
 
     if-lez v4, :cond_0
 
-    .line 50
     add-long/2addr v2, v0
 
     goto :goto_0
 
-    .line 52
     :cond_0
     new-instance v4, Ljava/io/EOFException;
 
@@ -136,7 +119,6 @@
 
     throw v4
 
-    .line 55
     .end local v0    # "current":J
     :cond_1
     return-void
@@ -146,7 +128,6 @@
     .locals 4
 
     .prologue
-    .line 58
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

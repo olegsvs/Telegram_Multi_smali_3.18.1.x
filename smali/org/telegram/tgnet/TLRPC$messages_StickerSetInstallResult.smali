@@ -32,10 +32,8 @@
     .locals 1
 
     .prologue
-    .line 2821
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 2822
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -52,20 +50,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2825
     const/4 v0, 0x0
 
-    .line 2826
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;
     sparse-switch p1, :sswitch_data_0
 
-    .line 2834
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 2835
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_StickerSetInstallResult"
@@ -90,18 +84,15 @@
 
     throw v1
 
-    .line 2828
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultSuccess;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultSuccess;-><init>()V
 
-    .line 2829
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;
     goto :goto_0
 
-    .line 2831
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultArchive;
 
@@ -111,18 +102,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;
     goto :goto_0
 
-    .line 2837
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2838
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 2840
     :cond_1
     return-object v0
 
-    .line 2826
     nop
 
     :sswitch_data_0

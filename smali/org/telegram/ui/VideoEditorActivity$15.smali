@@ -33,12 +33,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 1001
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1004
     const/4 v0, 0x2
 
     new-array v0, v0, [I
@@ -54,14 +52,12 @@
     .locals 2
 
     .prologue
-    .line 1009
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VideoEditorActivity;->access$1700(Lorg/telegram/ui/VideoEditorActivity;Z)V
 
-    .line 1010
     return-void
 .end method
 
@@ -70,7 +66,6 @@
     .param p1, "text"    # Ljava/lang/CharSequence;
 
     .prologue
-    .line 1014
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VideoEditorActivity;->access$4700(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -97,7 +92,6 @@
 
     if-eqz p1, :cond_0
 
-    .line 1015
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VideoEditorActivity;->access$4700(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -128,7 +122,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Adapters/MentionsAdapter;->searchUsernameOrHashtag(Ljava/lang/String;ILjava/util/ArrayList;)V
 
-    .line 1017
     :cond_0
     return-void
 .end method
@@ -146,7 +139,6 @@
 
     const/4 v2, 0x0
 
-    .line 1021
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$4700(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -186,7 +178,6 @@
 
     move-result v0
 
-    .line 1022
     .local v0, "height":I
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
 
@@ -198,12 +189,10 @@
 
     if-ge v1, v0, :cond_4
 
-    .line 1023
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/VideoEditorActivity;->access$4902(Lorg/telegram/ui/VideoEditorActivity;Z)Z
 
-    .line 1024
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -224,7 +213,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1025
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -233,7 +221,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 1033
     :cond_0
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -246,7 +233,6 @@
 
     invoke-virtual {v1, v2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 1034
     iget v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->previousSize:I
 
     if-ne v1, p1, :cond_1
@@ -259,7 +245,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 1035
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -269,17 +254,14 @@
 
     invoke-virtual {v1}, Landroid/view/View;->requestLayout()V
 
-    .line 1036
     iput p1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->previousSize:I
 
-    .line 1037
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->location:[I
 
     aget v1, v1, v4
 
     iput v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->previousY:I
 
-    .line 1039
     :cond_2
     return-void
 
@@ -287,17 +269,14 @@
     :cond_3
     move v1, v2
 
-    .line 1021
     goto :goto_0
 
-    .line 1028
     .restart local v0    # "height":I
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$4902(Lorg/telegram/ui/VideoEditorActivity;Z)Z
 
-    .line 1029
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -318,7 +297,6 @@
 
     if-ne v1, v6, :cond_0
 
-    .line 1030
     iget-object v1, p0, Lorg/telegram/ui/VideoEditorActivity$15;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/VideoEditorActivity;->access$2200(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/RecyclerListView;

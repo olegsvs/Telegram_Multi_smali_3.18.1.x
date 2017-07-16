@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CommonGroupsActivity$4;
 
     .prologue
-    .line 155
     iput-object p1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,17 +52,14 @@
 
     const/4 v2, 0x0
 
-    .line 158
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_4
 
-    .line 159
     iget-object v0, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$messages_Chats;
 
-    .line 160
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v1, v4, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 161
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v4, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -104,7 +99,6 @@
     :goto_0
     invoke-static {v4, v1}, Lorg/telegram/ui/CommonGroupsActivity;->access$302(Lorg/telegram/ui/CommonGroupsActivity;Z)Z
 
-    .line 162
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -117,7 +111,6 @@
 
     invoke-virtual {v1, v4}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 166
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
@@ -126,14 +119,12 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/CommonGroupsActivity;->access$402(Lorg/telegram/ui/CommonGroupsActivity;Z)Z
 
-    .line 167
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/CommonGroupsActivity;->access$602(Lorg/telegram/ui/CommonGroupsActivity;Z)Z
 
-    .line 168
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -144,7 +135,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 169
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -155,7 +145,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 171
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
@@ -167,7 +156,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 172
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;
 
     iget-object v1, v1, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
@@ -178,7 +166,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 174
     :cond_2
     return-void
 
@@ -186,10 +173,8 @@
     :cond_3
     move v1, v2
 
-    .line 161
     goto :goto_0
 
-    .line 164
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Chats;
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$4$1;->this$1:Lorg/telegram/ui/CommonGroupsActivity$4;

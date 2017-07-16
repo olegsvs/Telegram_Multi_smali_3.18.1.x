@@ -42,12 +42,10 @@
     .locals 0
 
     .prologue
-    .line 356
     iput-object p1, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;-><init>()V
 
-    .line 406
     return-void
 .end method
 
@@ -57,7 +55,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/PlusManageTabsActivity$1;
 
     .prologue
-    .line 356
     invoke-direct {p0, p1}, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;-><init>(Lorg/telegram/ui/PlusManageTabsActivity;)V
 
     return-void
@@ -69,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 383
     iget-object v0, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusManageTabsActivity;->access$000(Lorg/telegram/ui/PlusManageTabsActivity;)[I
@@ -85,7 +81,6 @@
     .locals 0
 
     .prologue
-    .line 356
     check-cast p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;
 
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->onBindViewHolder(Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;I)V
@@ -99,7 +94,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 369
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->tabTitles:[Ljava/lang/String;
@@ -128,7 +122,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setTextAndIcon(Ljava/lang/String;I)V
 
-    .line 370
     iget-object v0, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusManageTabsActivity;->access$100(Lorg/telegram/ui/PlusManageTabsActivity;)[I
@@ -139,7 +132,6 @@
 
     if-gez v0, :cond_0
 
-    .line 371
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     iget-object v1, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
@@ -150,7 +142,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setTextColor(I)V
 
-    .line 372
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     iget-object v1, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
@@ -161,18 +152,15 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setIconColor(I)V
 
-    .line 373
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setChecked(Z)V
 
-    .line 379
     :goto_0
     return-void
 
-    .line 375
     :cond_0
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
@@ -184,7 +172,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setTextColor(I)V
 
-    .line 376
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     iget-object v1, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
@@ -195,7 +182,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setIconColor(I)V
 
-    .line 377
     iget-object v0, p1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;->tabCell:Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     const/4 v1, 0x1
@@ -209,7 +195,6 @@
     .locals 1
 
     .prologue
-    .line 356
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->onCreateViewHolder(Landroid/view/ViewGroup;I)Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;
 
     move-result-object v0
@@ -223,7 +208,6 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 360
     new-instance v0, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
 
     iget-object v1, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
@@ -234,7 +218,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;-><init>(Lorg/telegram/ui/PlusManageTabsActivity;Landroid/content/Context;)V
 
-    .line 361
     .local v0, "view":Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;
     new-instance v1, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
@@ -246,7 +229,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/PlusManageTabsActivity$TabCheckCell;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 362
     new-instance v1, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter$ItemViewHolder;-><init>(Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;Landroid/view/View;)V
@@ -262,15 +244,12 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 388
     if-eq p1, p2, :cond_0
 
-    .line 389
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/PlusManageTabsActivity;->access$402(Lorg/telegram/ui/PlusManageTabsActivity;Z)Z
 
-    .line 392
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
@@ -280,7 +259,6 @@
 
     aget v1, v4, p2
 
-    .line 393
     .local v1, "t2":I
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
@@ -290,7 +268,6 @@
 
     aget v0, v4, p1
 
-    .line 394
     .local v0, "t1":I
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
@@ -300,7 +277,6 @@
 
     aput v1, v4, p1
 
-    .line 395
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PlusManageTabsActivity;->access$000(Lorg/telegram/ui/PlusManageTabsActivity;)[I
@@ -309,7 +285,6 @@
 
     aput v0, v4, p2
 
-    .line 396
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PlusManageTabsActivity;->access$100(Lorg/telegram/ui/PlusManageTabsActivity;)[I
@@ -318,7 +293,6 @@
 
     aget v3, v4, p2
 
-    .line 397
     .local v3, "v2":I
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
@@ -328,16 +302,13 @@
 
     aget v2, v4, p1
 
-    .line 398
     .local v2, "v1":I
     if-eq v2, v3, :cond_1
 
-    .line 399
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/PlusManageTabsActivity;->access$502(Lorg/telegram/ui/PlusManageTabsActivity;Z)Z
 
-    .line 401
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
@@ -347,7 +318,6 @@
 
     aput v3, v4, p1
 
-    .line 402
     iget-object v4, p0, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PlusManageTabsActivity;->access$100(Lorg/telegram/ui/PlusManageTabsActivity;)[I
@@ -356,9 +326,7 @@
 
     aput v2, v4, p2
 
-    .line 403
     invoke-virtual {p0, p1, p2}, Lorg/telegram/ui/PlusManageTabsActivity$RecyclerListAdapter;->notifyItemMoved(II)V
 
-    .line 404
     return-void
 .end method

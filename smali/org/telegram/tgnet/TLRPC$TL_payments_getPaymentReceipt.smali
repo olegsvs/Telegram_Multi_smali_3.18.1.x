@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 24291
     const v0, -0x5f6d5680
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_payments_getPaymentReceipt;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 24290
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 24296
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_payments_paymentReceipt;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_payments_paymentReceipt;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 24300
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_payments_getPaymentReceipt;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24301
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_payments_getPaymentReceipt;->msg_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24302
     return-void
 .end method

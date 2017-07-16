@@ -37,7 +37,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChannelUsersActivity$6$1;
 
     .prologue
-    .line 452
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1$2;->this$2:Lorg/telegram/ui/ChannelUsersActivity$6$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 452
     check-cast p1, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
@@ -69,7 +67,6 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     .prologue
-    .line 455
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1$2;->this$2:Lorg/telegram/ui/ChannelUsersActivity$6$1;
 
     iget-object v2, v2, Lorg/telegram/ui/ChannelUsersActivity$6$1;->this$1:Lorg/telegram/ui/ChannelUsersActivity$6;
@@ -80,7 +77,6 @@
 
     move-result v0
 
-    .line 456
     .local v0, "type1":I
     iget-object v2, p0, Lorg/telegram/ui/ChannelUsersActivity$6$1$2;->this$2:Lorg/telegram/ui/ChannelUsersActivity$6$1;
 
@@ -92,27 +88,21 @@
 
     move-result v1
 
-    .line 457
     .local v1, "type2":I
     if-le v0, v1, :cond_0
 
-    .line 458
     const/4 v2, 0x1
 
-    .line 462
     :goto_0
     return v2
 
-    .line 459
     :cond_0
     if-ge v0, v1, :cond_1
 
-    .line 460
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 462
     :cond_1
     const/4 v2, 0x0
 

@@ -25,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 2234
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -38,20 +37,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2239
     const/4 v0, 0x0
 
-    .line 2240
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$GeoPoint;
     sparse-switch p1, :sswitch_data_0
 
-    .line 2248
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 2249
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in GeoPoint"
@@ -76,18 +71,15 @@
 
     throw v1
 
-    .line 2242
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_geoPointEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$GeoPoint;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_geoPointEmpty;-><init>()V
 
-    .line 2243
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$GeoPoint;
     goto :goto_0
 
-    .line 2245
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_geoPoint;
 
@@ -97,18 +89,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$GeoPoint;
     goto :goto_0
 
-    .line 2251
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2252
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$GeoPoint;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 2254
     :cond_1
     return-object v0
 
-    .line 2240
     nop
 
     :sswitch_data_0

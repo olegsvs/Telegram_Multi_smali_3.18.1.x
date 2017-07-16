@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SecretChatHelper$6;
 
     .prologue
-    .line 1061
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$6$1;->this$1:Lorg/telegram/messenger/SecretChatHelper$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,13 +40,11 @@
     .locals 1
 
     .prologue
-    .line 1064
     new-instance v0, Lorg/telegram/messenger/SecretChatHelper$6$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SecretChatHelper$6$1$1;-><init>(Lorg/telegram/messenger/SecretChatHelper$6$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1073
     return-void
 .end method

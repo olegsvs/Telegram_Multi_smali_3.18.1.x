@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 1
 
     .prologue
-    .line 16
     invoke-virtual {p0}, Lorg/telegram/tgnet/NativeByteBuffer$1;->initialValue()Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v0
@@ -52,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 19
     new-instance v0, Lorg/telegram/tgnet/NativeByteBuffer;
 
     const/4 v1, 0x0

@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SessionsActivity$3;
 
     .prologue
-    .line 295
     iput-object p1, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 298
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/SessionsActivity$3;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -58,12 +56,10 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/SessionsActivity;->access$602(Lorg/telegram/ui/SessionsActivity;Z)Z
 
-    .line 299
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_2
 
-    .line 300
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/SessionsActivity$3;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -74,12 +70,10 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 301
     iget-object v1, p0, Lorg/telegram/ui/SessionsActivity$3$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_account_authorizations;
 
-    .line 302
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_account_authorizations;
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_authorizations;->authorizations:Ljava/util/ArrayList;
 
@@ -100,7 +94,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;
 
-    .line 303
     .local v0, "authorization":Lorg/telegram/tgnet/TLRPC$TL_authorization;
     iget v3, v0, Lorg/telegram/tgnet/TLRPC$TL_authorization;->flags:I
 
@@ -108,7 +101,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 304
     iget-object v3, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
     iget-object v3, v3, Lorg/telegram/ui/SessionsActivity$3;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -117,7 +109,6 @@
 
     goto :goto_0
 
-    .line 306
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
@@ -131,7 +122,6 @@
 
     goto :goto_0
 
-    .line 309
     .end local v0    # "authorization":Lorg/telegram/tgnet/TLRPC$TL_authorization;
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
@@ -140,7 +130,6 @@
 
     invoke-static {v2}, Lorg/telegram/ui/SessionsActivity;->access$400(Lorg/telegram/ui/SessionsActivity;)V
 
-    .line 311
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_account_authorizations;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
@@ -153,7 +142,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 312
     iget-object v2, p0, Lorg/telegram/ui/SessionsActivity$3$1;->this$1:Lorg/telegram/ui/SessionsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/SessionsActivity$3;->this$0:Lorg/telegram/ui/SessionsActivity;
@@ -164,7 +152,6 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/SessionsActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 314
     :cond_3
     return-void
 .end method

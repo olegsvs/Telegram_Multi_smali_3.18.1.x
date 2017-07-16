@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$PhoneView;
 
     .prologue
-    .line 1044
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->this$1:Lorg/telegram/ui/LoginActivity$PhoneView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$PhoneView$7;->val$params:Landroid/os/Bundle;
@@ -51,13 +50,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1047
     new-instance v0, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/LoginActivity$PhoneView$7$1;-><init>(Lorg/telegram/ui/LoginActivity$PhoneView$7;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1075
     return-void
 .end method

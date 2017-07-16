@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 18540
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -36,20 +35,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18544
     const/4 v0, 0x0
 
-    .line 18545
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
     sparse-switch p1, :sswitch_data_0
 
-    .line 18553
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 18554
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ExportedChatInvite"
@@ -74,18 +69,15 @@
 
     throw v1
 
-    .line 18547
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;-><init>()V
 
-    .line 18548
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
     goto :goto_0
 
-    .line 18550
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatInviteEmpty;
 
@@ -95,18 +87,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
     goto :goto_0
 
-    .line 18556
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 18557
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 18559
     :cond_1
     return-object v0
 
-    .line 18545
     nop
 
     :sswitch_data_0

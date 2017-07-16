@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$17;
 
     .prologue
-    .line 1589
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$17$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,26 +52,22 @@
 
     const/4 v2, 0x1
 
-    .line 1592
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/ProfileActivity;->access$5802(Lorg/telegram/ui/ProfileActivity;I)I
 
-    .line 1593
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 1594
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
 
     if-eqz v0, :cond_0
 
-    .line 1595
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iget-object v1, v0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -85,7 +80,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/ProfileActivity;->access$5902(Lorg/telegram/ui/ProfileActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 1596
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -98,7 +92,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1597
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -115,7 +108,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ProfileActivity;->access$6002(Lorg/telegram/ui/ProfileActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1598
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -136,12 +128,10 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1614
     :cond_0
     :goto_0
     return-void
 
-    .line 1600
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
@@ -153,14 +143,12 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 1601
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$17$1;->this$1:Lorg/telegram/ui/ProfileActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$17;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ProfileActivity;->access$6102(Lorg/telegram/ui/ProfileActivity;I)I
 
-    .line 1602
     new-instance v0, Lorg/telegram/ui/ProfileActivity$17$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ProfileActivity$17$1$1;-><init>(Lorg/telegram/ui/ProfileActivity$17$1;)V

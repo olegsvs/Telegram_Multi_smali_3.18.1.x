@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 26045
     const v0, -0x645d2800
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 26044
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Chat;-><init>()V
 
     return-void
@@ -49,19 +47,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 26049
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;->id:I
 
-    .line 26051
     const-string/jumbo v0, "DELETED"
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;->title:Ljava/lang/String;
 
-    .line 26052
     return-void
 .end method
 
@@ -70,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 26055
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26056
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_chatEmpty;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 26057
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$78;
 
     .prologue
-    .line 4490
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$78$2;->this$1:Lorg/telegram/messenger/MessagesController$78;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$78$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,7 +48,6 @@
 
     const/4 v1, 0x0
 
-    .line 4493
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$78$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$78$2;->this$1:Lorg/telegram/messenger/MessagesController$78;
@@ -83,12 +81,10 @@
 
     invoke-static {v2, v3, v4, v5}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 4494
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 4493
     goto :goto_0
 .end method

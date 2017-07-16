@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,20 +44,17 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 148
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v1, "android.intent.action.BADGE_COUNT_UPDATE"
 
     invoke-direct {v0, v1}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 149
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v1, "badge_count"
 
     invoke-virtual {v0, v1, p1}, Landroid/content/Intent;->putExtra(Ljava/lang/String;I)Landroid/content/Intent;
 
-    .line 150
     const-string/jumbo v1, "badge_count_package_name"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -71,7 +67,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 151
     const-string/jumbo v1, "badge_count_class_name"
 
     invoke-static {}, Lorg/telegram/messenger/NotificationBadge;->access$000()Landroid/content/ComponentName;
@@ -84,14 +79,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 152
     new-instance v1, Lorg/telegram/messenger/NotificationBadge$DefaultBadger$1;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/messenger/NotificationBadge$DefaultBadger$1;-><init>(Lorg/telegram/messenger/NotificationBadge$DefaultBadger;Landroid/content/Intent;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 162
     return-void
 .end method
 
@@ -108,7 +101,6 @@
     .end annotation
 
     .prologue
-    .line 166
     new-instance v0, Ljava/util/ArrayList;
 
     const/4 v1, 0x0

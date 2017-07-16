@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     .prologue
-    .line 1041
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,19 +52,16 @@
 
     const/4 v4, 0x0
 
-    .line 1044
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$2002(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;Z)Z
 
-    .line 1045
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
 
-    .line 1046
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
@@ -82,7 +78,6 @@
 
     invoke-static {v1, v2, v0}, Lorg/telegram/ui/ChangePhoneActivity;->access$1600(Lorg/telegram/ui/ChangePhoneActivity;Landroid/os/Bundle;Lorg/telegram/tgnet/TLRPC$TL_auth_sentCode;)V
 
-    .line 1054
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
@@ -93,10 +88,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity;->needHideProgress()V
 
-    .line 1055
     return-void
 
-    .line 1048
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -114,7 +107,6 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 1049
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -127,14 +119,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 1050
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->onBackPressed()V
 
-    .line 1051
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$5;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 231
     iput-object p1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 234
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/tgnet/ConnectionsManager;->switchBackend()V
 
-    .line 235
     const/4 v0, 0x1
 
     return v0

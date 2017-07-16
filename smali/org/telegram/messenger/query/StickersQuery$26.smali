@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 1179
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$26;->val$stickerSet:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$26;->val$context:Landroid/content/Context;
@@ -50,13 +49,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1182
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$26$1;
 
     invoke-direct {v0, p0, p2}, Lorg/telegram/messenger/query/StickersQuery$26$1;-><init>(Lorg/telegram/messenger/query/StickersQuery$26;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1201
     return-void
 .end method

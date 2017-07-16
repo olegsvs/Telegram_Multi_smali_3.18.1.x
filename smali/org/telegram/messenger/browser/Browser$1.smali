@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 90
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -35,10 +34,8 @@
     .param p1, "client"    # Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     .prologue
-    .line 93
     invoke-static {p1}, Lorg/telegram/messenger/browser/Browser;->access$102(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
-    .line 94
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -49,14 +46,12 @@
 
     if-eqz v1, :cond_0
 
-    .line 95
     invoke-static {}, Lorg/telegram/messenger/browser/Browser;->access$100()Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     move-result-object v1
 
     if-eqz v1, :cond_0
 
-    .line 97
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/browser/Browser;->access$100()Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
@@ -68,16 +63,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 103
     :cond_0
     :goto_0
     return-void
 
-    .line 98
     :catch_0
     move-exception v0
 
-    .line 99
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -88,11 +80,9 @@
     .locals 1
 
     .prologue
-    .line 107
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/browser/Browser;->access$102(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
-    .line 108
     return-void
 .end method

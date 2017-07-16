@@ -36,29 +36,22 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
-    .line 40
     iput v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 41
     iput v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 42
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPayload:Ljava/lang/Object;
 
-    .line 45
     iput-object p1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mWrapped:Lorg/telegram/messenger/support/util/ListUpdateCallback;
 
-    .line 46
     return-void
 .end method
 
@@ -68,35 +61,29 @@
     .locals 4
 
     .prologue
-    .line 54
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     if-nez v0, :cond_0
 
-    .line 70
     :goto_0
     return-void
 
-    .line 57
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     packed-switch v0, :pswitch_data_0
 
-    .line 68
     :goto_1
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPayload:Ljava/lang/Object;
 
-    .line 69
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     goto :goto_0
 
-    .line 59
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mWrapped:Lorg/telegram/messenger/support/util/ListUpdateCallback;
 
@@ -108,7 +95,6 @@
 
     goto :goto_1
 
-    .line 62
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mWrapped:Lorg/telegram/messenger/support/util/ListUpdateCallback;
 
@@ -120,7 +106,6 @@
 
     goto :goto_1
 
-    .line 65
     :pswitch_2
     iget-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mWrapped:Lorg/telegram/messenger/support/util/ListUpdateCallback;
 
@@ -134,7 +119,6 @@
 
     goto :goto_1
 
-    .line 57
     nop
 
     :pswitch_data_0
@@ -154,7 +138,6 @@
     .prologue
     const/4 v3, 0x3
 
-    .line 108
     iget v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     if-ne v1, v3, :cond_0
@@ -177,14 +160,12 @@
 
     if-ne v1, p3, :cond_0
 
-    .line 112
     iget v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
     iget v2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
     add-int v0, v1, v2
 
-    .line 113
     .local v0, "previousEnd":I
     iget v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
@@ -194,7 +175,6 @@
 
     iput v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 114
     add-int v1, p1, p2
 
     invoke-static {v0, v1}, Ljava/lang/Math;->max(II)I
@@ -207,25 +187,19 @@
 
     iput v1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 122
     .end local v0    # "previousEnd":I
     :goto_0
     return-void
 
-    .line 117
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->dispatchLastEvent()V
 
-    .line 118
     iput p1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 119
     iput p2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 120
     iput-object p3, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPayload:Ljava/lang/Object;
 
-    .line 121
     iput v3, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     goto :goto_0
@@ -239,7 +213,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 74
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     if-ne v0, v2, :cond_0
@@ -256,14 +229,12 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 76
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
     add-int/2addr v0, p2
 
     iput v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 77
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
     invoke-static {p1, v0}, Ljava/lang/Math;->min(II)I
@@ -272,21 +243,16 @@
 
     iput v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 84
     :goto_0
     return-void
 
-    .line 80
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->dispatchLastEvent()V
 
-    .line 81
     iput p1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 82
     iput p2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 83
     iput v2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     goto :goto_0
@@ -298,15 +264,12 @@
     .param p2, "toPosition"    # I
 
     .prologue
-    .line 102
     invoke-virtual {p0}, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->dispatchLastEvent()V
 
-    .line 103
     iget-object v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mWrapped:Lorg/telegram/messenger/support/util/ListUpdateCallback;
 
     invoke-interface {v0, p1, p2}, Lorg/telegram/messenger/support/util/ListUpdateCallback;->onMoved(II)V
 
-    .line 104
     return-void
 .end method
 
@@ -318,7 +281,6 @@
     .prologue
     const/4 v2, 0x2
 
-    .line 88
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     if-ne v0, v2, :cond_0
@@ -333,31 +295,24 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 90
     iget v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
     add-int/2addr v0, p2
 
     iput v0, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 91
     iput p1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 98
     :goto_0
     return-void
 
-    .line 94
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->dispatchLastEvent()V
 
-    .line 95
     iput p1, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventPosition:I
 
-    .line 96
     iput p2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventCount:I
 
-    .line 97
     iput v2, p0, Lorg/telegram/messenger/support/util/BatchingListUpdateCallback;->mLastEventType:I
 
     goto :goto_0

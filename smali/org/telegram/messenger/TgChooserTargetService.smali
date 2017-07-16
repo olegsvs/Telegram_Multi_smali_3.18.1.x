@@ -20,7 +20,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Landroid/service/chooser/ChooserTargetService;-><init>()V
 
     return-void
@@ -32,7 +31,6 @@
     .param p1, "x1"    # Ljava/io/File;
 
     .prologue
-    .line 42
     invoke-direct {p0, p1}, Lorg/telegram/messenger/TgChooserTargetService;->createRoundBitmap(Ljava/io/File;)Landroid/graphics/drawable/Icon;
 
     move-result-object v0
@@ -45,7 +43,6 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 163
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -55,11 +52,9 @@
 
     move-result-object v0
 
-    .line 164
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_1
 
-    .line 165
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v5
@@ -74,18 +69,15 @@
 
     move-result-object v3
 
-    .line 166
     .local v3, "result":Landroid/graphics/Bitmap;
     const/4 v5, 0x0
 
     invoke-virtual {v3, v5}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 167
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v3}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 168
     .local v1, "canvas":Landroid/graphics/Canvas;
     new-instance v4, Landroid/graphics/BitmapShader;
 
@@ -95,13 +87,11 @@
 
     invoke-direct {v4, v0, v5, v6}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    .line 169
     .local v4, "shader":Landroid/graphics/BitmapShader;
     iget-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->roundPaint:Landroid/graphics/Paint;
 
     if-nez v5, :cond_0
 
-    .line 170
     new-instance v5, Landroid/graphics/Paint;
 
     const/4 v6, 0x1
@@ -110,20 +100,17 @@
 
     iput-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->roundPaint:Landroid/graphics/Paint;
 
-    .line 171
     new-instance v5, Landroid/graphics/RectF;
 
     invoke-direct {v5}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->bitmapRect:Landroid/graphics/RectF;
 
-    .line 173
     :cond_0
     iget-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->roundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v5, v4}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 174
     iget-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->bitmapRect:Landroid/graphics/RectF;
 
     const/4 v6, 0x0
@@ -144,7 +131,6 @@
 
     invoke-virtual {v5, v6, v7, v8, v9}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 175
     iget-object v5, p0, Lorg/telegram/messenger/TgChooserTargetService;->bitmapRect:Landroid/graphics/RectF;
 
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
@@ -163,14 +149,12 @@
 
     invoke-virtual {v1, v5, v6, v7, v8}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 176
     invoke-static {v3}, Landroid/graphics/drawable/Icon;->createWithBitmap(Landroid/graphics/Bitmap;)Landroid/graphics/drawable/Icon;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v5
 
-    .line 181
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v1    # "canvas":Landroid/graphics/Canvas;
     .end local v3    # "result":Landroid/graphics/Bitmap;
@@ -178,15 +162,12 @@
     :goto_0
     return-object v5
 
-    .line 178
     :catch_0
     move-exception v2
 
-    .line 179
     .local v2, "e":Ljava/lang/Throwable;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 181
     .end local v2    # "e":Ljava/lang/Throwable;
     :cond_1
     const/4 v5, 0x0
@@ -216,12 +197,10 @@
     .prologue
     const/4 v8, 0x0
 
-    .line 49
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 50
     .local v5, "targets":Ljava/util/List;, "Ljava/util/List<Landroid/service/chooser/ChooserTarget;>;"
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->isClientActivated()Z
 
@@ -229,12 +208,10 @@
 
     if-nez v6, :cond_1
 
-    .line 158
     :cond_0
     :goto_0
     return-object v5
 
-    .line 53
     :cond_1
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -244,7 +221,6 @@
 
     move-result-object v3
 
-    .line 54
     .local v3, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v6, "direct_share"
 
@@ -256,18 +232,15 @@
 
     if-eqz v6, :cond_0
 
-    .line 58
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v2
 
-    .line 59
     .local v2, "imageLoader":Lorg/telegram/messenger/ImageLoader;
     new-instance v4, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v4, v8}, Ljava/util/concurrent/Semaphore;-><init>(I)V
 
-    .line 60
     .local v4, "semaphore":Ljava/util/concurrent/Semaphore;
     new-instance v0, Landroid/content/ComponentName;
 
@@ -283,7 +256,6 @@
 
     invoke-direct {v0, v6, v7}, Landroid/content/ComponentName;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 61
     .local v0, "componentName":Landroid/content/ComponentName;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -299,7 +271,6 @@
 
     invoke-virtual {v6, v7}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 154
     :try_start_0
     invoke-virtual {v4}, Ljava/util/concurrent/Semaphore;->acquire()V
     :try_end_0
@@ -307,11 +278,9 @@
 
     goto :goto_0
 
-    .line 155
     :catch_0
     move-exception v1
 
-    .line 156
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

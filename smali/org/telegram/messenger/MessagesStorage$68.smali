@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 4604
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$68;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$68;->val$downloadMediaMaskFinal:I
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 4607
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MediaController;->newDownloadObjectsAvailable(I)V
 
-    .line 4608
     return-void
 .end method

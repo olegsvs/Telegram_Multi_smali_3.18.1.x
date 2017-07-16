@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 248
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$5;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "state"    # I
 
     .prologue
-    .line 262
     return-void
 .end method
 
@@ -53,7 +51,6 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 252
     return-void
 .end method
 
@@ -62,7 +59,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 256
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity$5;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ThemePreviewActivity;->access$1400(Lorg/telegram/ui/ThemePreviewActivity;)Landroid/view/View;
@@ -71,6 +67,5 @@
 
     invoke-virtual {v0}, Landroid/view/View;->invalidate()V
 
-    .line 257
     return-void
 .end method

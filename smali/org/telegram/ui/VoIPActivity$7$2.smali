@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VoIPActivity$7;
 
     .prologue
-    .line 360
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$7$2;->this$1:Lorg/telegram/ui/VoIPActivity$7;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 363
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$7$2;->this$1:Lorg/telegram/ui/VoIPActivity$7;
 
     iget-object v0, v0, Lorg/telegram/ui/VoIPActivity$7;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -48,6 +46,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VoIPActivity;->access$1202(Lorg/telegram/ui/VoIPActivity;Landroid/animation/Animator;)Landroid/animation/Animator;
 
-    .line 364
     return-void
 .end method

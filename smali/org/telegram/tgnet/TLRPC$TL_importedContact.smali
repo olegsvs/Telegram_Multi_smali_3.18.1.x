@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 19451
     const v0, -0x2ffd7bc8
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 19450
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,15 +52,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19457
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 19458
     if-eqz p2, :cond_0
 
-    .line 19459
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_importedContact"
@@ -87,21 +82,17 @@
 
     throw v1
 
-    .line 19461
     :cond_0
     const/4 v0, 0x0
 
-    .line 19466
     :goto_0
     return-object v0
 
-    .line 19464
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_importedContact;-><init>()V
 
-    .line 19465
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_importedContact;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -116,21 +107,18 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19470
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->user_id:I
 
-    .line 19471
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->client_id:J
 
-    .line 19472
     return-void
 .end method
 
@@ -139,21 +127,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 19475
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19476
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->user_id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19477
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_importedContact;->client_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 19478
     return-void
 .end method

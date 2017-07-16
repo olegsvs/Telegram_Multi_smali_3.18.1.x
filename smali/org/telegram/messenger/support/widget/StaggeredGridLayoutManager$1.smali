@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     .prologue
-    .line 221
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$1;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 224
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager$1;->this$0:Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/widget/StaggeredGridLayoutManager;->checkForGaps()Z
 
-    .line 225
     return-void
 .end method

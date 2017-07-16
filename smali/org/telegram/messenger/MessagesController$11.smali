@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1177
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$11;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$11;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -51,21 +50,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1180
     if-nez p2, :cond_0
 
-    .line 1181
     new-instance v0, Lorg/telegram/messenger/MessagesController$11$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/MessagesController$11$1;-><init>(Lorg/telegram/messenger/MessagesController$11;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1214
     :goto_0
     return-void
 
-    .line 1207
     :cond_0
     new-instance v0, Lorg/telegram/messenger/MessagesController$11$2;
 

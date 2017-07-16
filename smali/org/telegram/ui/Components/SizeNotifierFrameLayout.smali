@@ -29,22 +29,18 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 38
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 27
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->rect:Landroid/graphics/Rect;
 
-    .line 39
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->setWillNotDraw(Z)V
 
-    .line 40
     return-void
 .end method
 
@@ -53,7 +49,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     .prologue
-    .line 25
     iget-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
 
     return-object v0
@@ -64,7 +59,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     .prologue
-    .line 25
     iget v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->keyboardHeight:I
 
     return v0
@@ -76,7 +70,6 @@
     .locals 1
 
     .prologue
-    .line 48
     iget-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -86,18 +79,15 @@
     .locals 4
 
     .prologue
-    .line 62
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 63
     .local v0, "rootView":Landroid/view/View;
     iget-object v2, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 64
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v3
@@ -119,7 +109,6 @@
 
     sub-int v1, v2, v3
 
-    .line 65
     .local v1, "usableViewHeight":I
     iget-object v2, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->rect:Landroid/graphics/Rect;
 
@@ -135,7 +124,6 @@
 
     return v2
 
-    .line 64
     .end local v1    # "usableViewHeight":I
     :cond_0
     const/4 v2, 0x0
@@ -147,7 +135,6 @@
     .locals 1
 
     .prologue
-    .line 136
     const/4 v0, 0x1
 
     return v0
@@ -157,19 +144,16 @@
     .locals 3
 
     .prologue
-    .line 69
     iget-object v1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
 
     if-eqz v1, :cond_0
 
-    .line 70
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getKeyboardHeight()I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->keyboardHeight:I
 
-    .line 71
     sget-object v1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->x:I
@@ -182,7 +166,6 @@
 
     const/4 v0, 0x1
 
-    .line 72
     .local v0, "isWidthGreater":Z
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/SizeNotifierFrameLayout$1;
@@ -191,12 +174,10 @@
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->post(Ljava/lang/Runnable;)Z
 
-    .line 81
     .end local v0    # "isWidthGreater":Z
     :cond_0
     return-void
 
-    .line 71
     :cond_1
     const/4 v0, 0x0
 
@@ -208,14 +189,12 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 89
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v12, :cond_8
 
-    .line 90
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -224,17 +203,14 @@
 
     if-eqz v12, :cond_2
 
-    .line 91
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->bottomClip:I
 
     if-eqz v12, :cond_0
 
-    .line 92
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 93
     const/4 v12, 0x0
 
     const/4 v13, 0x0
@@ -259,7 +235,6 @@
 
     invoke-virtual {v0, v12, v13, v14, v15}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 95
     :cond_0
     move-object/from16 v0, p0
 
@@ -279,7 +254,6 @@
 
     invoke-virtual/range {v12 .. v16}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 96
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -288,22 +262,18 @@
 
     invoke-virtual {v12, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 97
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->bottomClip:I
 
     if-eqz v12, :cond_1
 
-    .line 98
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 133
     :cond_1
     :goto_0
     return-void
 
-    .line 100
     :cond_2
     move-object/from16 v0, p0
 
@@ -313,14 +283,12 @@
 
     if-eqz v12, :cond_1
 
-    .line 101
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
     check-cast v3, Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 102
     .local v3, "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     invoke-virtual {v3}, Landroid/graphics/drawable/BitmapDrawable;->getTileModeX()Landroid/graphics/Shader$TileMode;
 
@@ -330,23 +298,19 @@
 
     if-ne v12, v13, :cond_3
 
-    .line 103
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 104
     const/high16 v12, 0x40000000    # 2.0f
 
     sget v13, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
     div-float v5, v12, v13
 
-    .line 105
     .local v5, "scale":F
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v5, v5}, Landroid/graphics/Canvas;->scale(FF)V
 
-    .line 106
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -405,7 +369,6 @@
 
     invoke-virtual/range {v12 .. v16}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 107
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -414,12 +377,10 @@
 
     invoke-virtual {v12, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 108
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
 
-    .line 110
     .end local v5    # "scale":F
     :cond_3
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->isActionBarVisible()Z
@@ -444,7 +405,6 @@
     :goto_2
     add-int v2, v12, v13
 
-    .line 111
     .local v2, "actionBarHeight":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getMeasuredHeight()I
 
@@ -452,7 +412,6 @@
 
     sub-int v8, v12, v2
 
-    .line 112
     .local v8, "viewHeight":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getMeasuredWidth()I
 
@@ -472,7 +431,6 @@
 
     div-float v6, v12, v13
 
-    .line 113
     .local v6, "scaleX":F
     move-object/from16 v0, p0
 
@@ -494,7 +452,6 @@
 
     div-float v7, v12, v13
 
-    .line 114
     .local v7, "scaleY":F
     cmpg-float v12, v6, v7
 
@@ -502,7 +459,6 @@
 
     move v5, v7
 
-    .line 115
     .restart local v5    # "scale":F
     :goto_3
     move-object/from16 v0, p0
@@ -525,7 +481,6 @@
 
     double-to-int v9, v12
 
-    .line 116
     .local v9, "width":I
     move-object/from16 v0, p0
 
@@ -547,7 +502,6 @@
 
     double-to-int v4, v12
 
-    .line 117
     .local v4, "height":I
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getMeasuredWidth()I
 
@@ -557,7 +511,6 @@
 
     div-int/lit8 v10, v12, 0x2
 
-    .line 118
     .local v10, "x":I
     sub-int v12, v8, v4
 
@@ -571,7 +524,6 @@
 
     add-int v11, v12, v2
 
-    .line 119
     .local v11, "y":I
     move-object/from16 v0, p0
 
@@ -579,10 +531,8 @@
 
     if-eqz v12, :cond_4
 
-    .line 120
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 121
     const/4 v12, 0x0
 
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->getMeasuredHeight()I
@@ -599,7 +549,6 @@
 
     invoke-virtual {v0, v12, v2, v9, v13}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 123
     :cond_4
     move-object/from16 v0, p0
 
@@ -611,7 +560,6 @@
 
     invoke-virtual {v12, v10, v11, v13, v14}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 124
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
@@ -620,19 +568,16 @@
 
     invoke-virtual {v12, v0}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 125
     move-object/from16 v0, p0
 
     iget v12, v0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->bottomClip:I
 
     if-eqz v12, :cond_1
 
-    .line 126
     invoke-virtual/range {p1 .. p1}, Landroid/graphics/Canvas;->restore()V
 
     goto/16 :goto_0
 
-    .line 110
     .end local v2    # "actionBarHeight":I
     .end local v4    # "height":I
     .end local v5    # "scale":F
@@ -659,10 +604,8 @@
     :cond_7
     move v5, v6
 
-    .line 114
     goto :goto_3
 
-    .line 131
     .end local v2    # "actionBarHeight":I
     .end local v3    # "bitmapDrawable":Landroid/graphics/drawable/BitmapDrawable;
     .end local v6    # "scaleX":F
@@ -683,13 +626,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 57
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 58
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->notifyHeightChanged()V
 
-    .line 59
     return-void
 .end method
 
@@ -698,13 +638,10 @@
     .param p1, "bitmap"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->backgroundDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 44
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->invalidate()V
 
-    .line 45
     return-void
 .end method
 
@@ -713,10 +650,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 84
     iput p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->bottomClip:I
 
-    .line 85
     return-void
 .end method
 
@@ -725,9 +660,7 @@
     .param p1, "delegate"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayout$SizeNotifierFrameLayoutDelegate;
 
-    .line 53
     return-void
 .end method

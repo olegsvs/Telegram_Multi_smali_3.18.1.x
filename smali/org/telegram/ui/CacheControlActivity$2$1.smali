@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CacheControlActivity$2;
 
     .prologue
-    .line 289
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->this$1:Lorg/telegram/ui/CacheControlActivity$2;
 
     iput-boolean p2, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->val$imagesClearedFinal:Z
@@ -45,19 +44,16 @@
     .locals 2
 
     .prologue
-    .line 292
     iget-boolean v1, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->val$imagesClearedFinal:Z
 
     if-eqz v1, :cond_0
 
-    .line 293
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lorg/telegram/messenger/ImageLoader;->clearMemory()V
 
-    .line 295
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->this$1:Lorg/telegram/ui/CacheControlActivity$2;
 
@@ -69,7 +65,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 296
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->this$1:Lorg/telegram/ui/CacheControlActivity$2;
 
     iget-object v1, v1, Lorg/telegram/ui/CacheControlActivity$2;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -80,7 +75,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 299
     :cond_1
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$2$1;->this$1:Lorg/telegram/ui/CacheControlActivity$2;
@@ -91,15 +85,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 303
     :goto_0
     return-void
 
-    .line 300
     :catch_0
     move-exception v0
 
-    .line 301
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

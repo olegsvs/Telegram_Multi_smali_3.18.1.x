@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 2896
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$messageObjects:Ljava/util/ArrayList;
 
     iput-wide p2, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$dialog_id:J
@@ -48,14 +47,12 @@
     .locals 14
 
     .prologue
-    .line 2899
     iget-object v11, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$messageObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v11}, Ljava/util/ArrayList;->size()I
 
     move-result v10
 
-    .line 2900
     .local v10, "size":I
     const/4 v0, 0x0
 
@@ -63,7 +60,6 @@
     :goto_0
     if-ge v0, v10, :cond_3
 
-    .line 2901
     iget-object v11, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$messageObjects:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -72,19 +68,16 @@
 
     check-cast v7, Lorg/telegram/messenger/MessageObject;
 
-    .line 2902
     .local v7, "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v11, v7, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v8, v11, Lorg/telegram/tgnet/TLRPC$Message;->attachPath:Ljava/lang/String;
 
-    .line 2903
     .local v8, "originalPath":Ljava/lang/String;
     new-instance v4, Ljava/io/File;
 
     invoke-direct {v4, v8}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 2905
     .local v4, "f":Ljava/io/File;
     iget-wide v12, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$dialog_id:J
 
@@ -94,12 +87,10 @@
 
     const/4 v6, 0x1
 
-    .line 2908
     .local v6, "isEncrypted":Z
     :goto_1
     if-eqz v8, :cond_0
 
-    .line 2909
     new-instance v11, Ljava/lang/StringBuilder;
 
     invoke-direct {v11}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,15 +117,12 @@
 
     move-result-object v8
 
-    .line 2912
     :cond_0
     const/4 v1, 0x0
 
-    .line 2913
     .local v1, "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     if-nez v6, :cond_1
 
-    .line 2914
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v12
@@ -151,12 +139,10 @@
     .end local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    .line 2916
     .restart local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     :cond_1
     if-nez v1, :cond_2
 
-    .line 2917
     iget-object v11, v7, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v11, v11, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -166,12 +152,10 @@
     .end local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_document;
 
-    .line 2920
     .restart local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     :cond_2
     if-eqz v6, :cond_6
 
-    .line 2921
     iget-wide v12, p0, Lorg/telegram/messenger/SendMessagesHelper$13;->val$dialog_id:J
 
     const/16 v11, 0x20
@@ -180,7 +164,6 @@
 
     long-to-int v5, v12
 
-    .line 2922
     .local v5, "high_id":I
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -194,11 +177,9 @@
 
     move-result-object v3
 
-    .line 2923
     .local v3, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     if-nez v3, :cond_6
 
-    .line 2940
     .end local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     .end local v3    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v4    # "f":Ljava/io/File;
@@ -209,7 +190,6 @@
     :cond_3
     return-void
 
-    .line 2905
     .restart local v4    # "f":Ljava/io/File;
     .restart local v7    # "messageObject":Lorg/telegram/messenger/MessageObject;
     .restart local v8    # "originalPath":Ljava/lang/String;
@@ -218,7 +198,6 @@
 
     goto :goto_1
 
-    .line 2914
     .restart local v1    # "document":Lorg/telegram/tgnet/TLRPC$TL_document;
     .restart local v6    # "isEncrypted":Z
     :cond_5
@@ -226,26 +205,21 @@
 
     goto :goto_2
 
-    .line 2928
     :cond_6
     new-instance v9, Ljava/util/HashMap;
 
     invoke-direct {v9}, Ljava/util/HashMap;-><init>()V
 
-    .line 2929
     .local v9, "params":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Ljava/lang/String;>;"
     if-eqz v8, :cond_7
 
-    .line 2930
     const-string/jumbo v11, "originalPath"
 
     invoke-virtual {v9, v11, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2932
     :cond_7
     move-object v2, v1
 
-    .line 2933
     .local v2, "documentFinal":Lorg/telegram/tgnet/TLRPC$TL_document;
     new-instance v11, Lorg/telegram/messenger/SendMessagesHelper$13$1;
 
@@ -253,7 +227,6 @@
 
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2900
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_0

@@ -1,5 +1,4 @@
 .class Lorg/telegram/ui/StickersActivity$ListAdapter$1;
-.super Lorg/telegram/ui/Components/URLSpanNoUnderline;
 .source "StickersActivity.java"
 
 
@@ -25,10 +24,8 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 373
     iput-object p1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
 
-    invoke-direct {p0, p2}, Lorg/telegram/ui/Components/URLSpanNoUnderline;-><init>(Ljava/lang/String;)V
 
     return-void
 .end method
@@ -40,7 +37,6 @@
     .param p1, "widget"    # Landroid/view/View;
 
     .prologue
-    .line 376
     const-string/jumbo v0, "stickers"
 
     iget-object v1, p0, Lorg/telegram/ui/StickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/StickersActivity$ListAdapter;
@@ -51,6 +47,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->openByUserName(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;I)V
 
-    .line 377
     return-void
 .end method

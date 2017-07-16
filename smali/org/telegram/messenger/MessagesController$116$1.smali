@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController$116;
 
     .prologue
-    .line 8211
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$116$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,7 +54,6 @@
 
     const/4 v6, 0x0
 
-    .line 8215
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
 
@@ -65,7 +63,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8219
     :goto_0
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
 
@@ -73,17 +70,14 @@
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/ActionBar/BaseFragment;->setVisibleDialog(Landroid/app/Dialog;)V
 
-    .line 8220
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v3, :cond_2
 
-    .line 8221
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$116$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
 
-    .line 8222
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -93,7 +87,6 @@
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 8223
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -102,7 +95,6 @@
 
     invoke-virtual {v3, v4, v6}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 8224
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -113,7 +105,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 8225
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -122,7 +113,6 @@
 
     if-nez v3, :cond_1
 
-    .line 8226
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -137,23 +127,19 @@
 
     invoke-static {v8, v3, v4, v7, v6}, Lorg/telegram/messenger/MessagesController;->openChatOrProfileWith(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;IZ)V
 
-    .line 8249
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     :cond_0
     :goto_1
     return-void
 
-    .line 8216
     :catch_0
     move-exception v0
 
-    .line 8217
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 8227
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     :cond_1
@@ -165,7 +151,6 @@
 
     if-nez v3, :cond_0
 
-    .line 8228
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -186,7 +171,6 @@
 
     goto :goto_1
 
-    .line 8231
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
     :cond_2
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
@@ -205,7 +189,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 8233
     :try_start_1
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
 
@@ -231,7 +214,6 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 8235
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "plusconfig"
@@ -242,7 +224,6 @@
 
     move-result-object v1
 
-    .line 8236
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "searchOnTwitter"
 
@@ -256,7 +237,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 8238
     :try_start_2
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
 
@@ -304,11 +284,9 @@
 
     goto/16 :goto_1
 
-    .line 8239
     :catch_1
     move-exception v0
 
-    .line 8240
     .restart local v0    # "e":Ljava/lang/Exception;
     :try_start_3
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$116$1;->this$0:Lorg/telegram/messenger/MessagesController$116;
@@ -357,13 +335,11 @@
 
     goto/16 :goto_1
 
-    .line 8244
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :catch_2
     move-exception v0
 
-    .line 8245
     .restart local v0    # "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

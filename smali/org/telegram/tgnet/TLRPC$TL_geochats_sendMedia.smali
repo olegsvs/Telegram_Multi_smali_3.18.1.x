@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 21995
     const v0, -0x470f2101
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_geochats_sendMedia;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 21994
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 22002
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_geochats_statedMessage;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_geochats_statedMessage;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 22006
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_geochats_sendMedia;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 22007
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_geochats_sendMedia;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputGeoChat;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$TL_inputGeoChat;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22008
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_geochats_sendMedia;->media:Lorg/telegram/tgnet/TLRPC$InputMedia;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputMedia;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 22009
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_geochats_sendMedia;->random_id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 22010
     return-void
 .end method

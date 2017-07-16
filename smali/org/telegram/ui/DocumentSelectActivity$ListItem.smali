@@ -37,17 +37,14 @@
     .locals 1
 
     .prologue
-    .line 91
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 94
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->subtitle:Ljava/lang/String;
 
-    .line 95
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->ext:Ljava/lang/String;
@@ -61,7 +58,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/DocumentSelectActivity$1;
 
     .prologue
-    .line 91
     invoke-direct {p0, p1}, Lorg/telegram/ui/DocumentSelectActivity$ListItem;-><init>(Lorg/telegram/ui/DocumentSelectActivity;)V
 
     return-void

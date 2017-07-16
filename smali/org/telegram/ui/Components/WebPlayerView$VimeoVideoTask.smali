@@ -41,27 +41,22 @@
     .param p2, "vid"    # Ljava/lang/String;
 
     .prologue
-    .line 740
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 737
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->canRetry:Z
 
-    .line 738
     const/4 v0, 0x2
 
     new-array v0, v0, [Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->results:[Ljava/lang/String;
 
-    .line 741
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->videoId:Ljava/lang/String;
 
-    .line 742
     return-void
 .end method
 
@@ -71,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 734
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -86,7 +80,6 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 745
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
@@ -119,7 +112,6 @@
 
     move-result-object v9
 
-    .line 746
     .local v9, "playerCode":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->isCancelled()Z
 
@@ -127,21 +119,17 @@
 
     if-eqz v11, :cond_0
 
-    .line 747
     const/4 v11, 0x0
 
-    .line 775
     :goto_0
     return-object v11
 
-    .line 750
     :cond_0
     :try_start_0
     new-instance v8, Lorg/json/JSONObject;
 
     invoke-direct {v8, v9}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 751
     .local v8, "json":Lorg/json/JSONObject;
     const-string/jumbo v11, "request"
 
@@ -155,7 +143,6 @@
 
     move-result-object v4
 
-    .line 752
     .local v4, "files":Lorg/json/JSONObject;
     const-string/jumbo v11, "hls"
 
@@ -165,7 +152,6 @@
 
     if-eqz v11, :cond_2
 
-    .line 753
     const-string/jumbo v11, "hls"
 
     invoke-virtual {v4, v11}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
@@ -174,7 +160,6 @@
 
     move-result-object v6
 
-    .line 755
     .local v6, "hls":Lorg/json/JSONObject;
     :try_start_1
     move-object/from16 v0, p0
@@ -193,7 +178,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 762
     :goto_1
     :try_start_2
     move-object/from16 v0, p0
@@ -208,7 +192,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 775
     .end local v4    # "files":Lorg/json/JSONObject;
     .end local v6    # "hls":Lorg/json/JSONObject;
     .end local v8    # "json":Lorg/json/JSONObject;
@@ -224,14 +207,12 @@
 
     goto :goto_0
 
-    .line 756
     .restart local v4    # "files":Lorg/json/JSONObject;
     .restart local v6    # "hls":Lorg/json/JSONObject;
     .restart local v8    # "json":Lorg/json/JSONObject;
     :catch_0
     move-exception v3
 
-    .line 757
     .local v3, "e":Ljava/lang/Exception;
     :try_start_3
     const-string/jumbo v11, "default_cdn"
@@ -240,7 +221,6 @@
 
     move-result-object v2
 
-    .line 758
     .local v2, "defaultCdn":Ljava/lang/String;
     const-string/jumbo v11, "cdns"
 
@@ -248,13 +228,11 @@
 
     move-result-object v1
 
-    .line 759
     .local v1, "cdns":Lorg/json/JSONObject;
     invoke-virtual {v1, v2}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v6
 
-    .line 760
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->results:[Ljava/lang/String;
@@ -273,7 +251,6 @@
 
     goto :goto_1
 
-    .line 772
     .end local v1    # "cdns":Lorg/json/JSONObject;
     .end local v2    # "defaultCdn":Ljava/lang/String;
     .end local v3    # "e":Ljava/lang/Exception;
@@ -283,13 +260,11 @@
     :catch_1
     move-exception v3
 
-    .line 773
     .restart local v3    # "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 763
     .end local v3    # "e":Ljava/lang/Exception;
     .restart local v4    # "files":Lorg/json/JSONObject;
     .restart local v8    # "json":Lorg/json/JSONObject;
@@ -303,7 +278,6 @@
 
     if-eqz v11, :cond_1
 
-    .line 764
     move-object/from16 v0, p0
 
     iget-object v11, v0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->results:[Ljava/lang/String;
@@ -314,14 +288,12 @@
 
     aput-object v13, v11, v12
 
-    .line 765
     const-string/jumbo v11, "progressive"
 
     invoke-virtual {v4, v11}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v10
 
-    .line 766
     .local v10, "progressive":Lorg/json/JSONArray;
     const/4 v7, 0x0
 
@@ -332,12 +304,10 @@
 
     if-ge v7, v11, :cond_1
 
-    .line 767
     invoke-virtual {v10, v7}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v5
 
-    .line 768
     .local v5, "format":Lorg/json/JSONObject;
     move-object/from16 v0, p0
 
@@ -357,7 +327,6 @@
 
     goto :goto_2
 
-    .line 775
     .end local v4    # "files":Lorg/json/JSONObject;
     .end local v5    # "format":Lorg/json/JSONObject;
     .end local v7    # "i":I
@@ -379,7 +348,6 @@
     .locals 0
 
     .prologue
-    .line 734
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->onPostExecute(Ljava/lang/String;)V
@@ -394,20 +362,16 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 780
     if-eqz p1, :cond_2
 
-    .line 781
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$1702(Lorg/telegram/ui/Components/WebPlayerView;Z)Z
 
-    .line 782
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1902(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 783
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->results:[Ljava/lang/String;
@@ -416,7 +380,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1802(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 784
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2000(Lorg/telegram/ui/Components/WebPlayerView;)Z
@@ -425,12 +388,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 785
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2100(Lorg/telegram/ui/Components/WebPlayerView;)V
 
-    .line 787
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -438,7 +399,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$2200(Lorg/telegram/ui/Components/WebPlayerView;ZZ)V
 
-    .line 788
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$100(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$ControlsView;
@@ -447,12 +407,10 @@
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->show(ZZ)V
 
-    .line 792
     :cond_1
     :goto_0
     return-void
 
-    .line 789
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->isCancelled()Z
 
@@ -460,7 +418,6 @@
 
     if-nez v0, :cond_1
 
-    .line 790
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$VimeoVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2300(Lorg/telegram/ui/Components/WebPlayerView;)V

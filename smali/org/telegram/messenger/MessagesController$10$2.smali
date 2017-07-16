@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$10;
 
     .prologue
-    .line 1151
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$10$2;->this$1:Lorg/telegram/messenger/MessagesController$10;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$10$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1154
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$10$2;->this$1:Lorg/telegram/messenger/MessagesController$10;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -60,7 +58,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->access$2100(Lorg/telegram/messenger/MessagesController;Ljava/lang/String;I)V
 
-    .line 1155
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$10$2;->this$1:Lorg/telegram/messenger/MessagesController$10;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -79,6 +76,5 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1156
     return-void
 .end method

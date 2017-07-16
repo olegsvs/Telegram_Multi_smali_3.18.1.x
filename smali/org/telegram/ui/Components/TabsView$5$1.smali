@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/TabsView$5;
 
     .prologue
-    .line 359
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView$5$1;->this$1:Lorg/telegram/ui/Components/TabsView$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 362
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView$5$1;->this$1:Lorg/telegram/ui/Components/TabsView$5;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/TabsView$5;->this$0:Lorg/telegram/ui/Components/TabsView;
@@ -81,10 +79,8 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 363
     return-void
 
-    .line 362
     :cond_0
     const/4 v0, 0x0
 

@@ -57,7 +57,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const/16 v0, 0x8
 
     new-array v0, v0, [D
@@ -85,17 +84,14 @@
     .locals 2
 
     .prologue
-    .line 65
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     const/4 v0, 0x4
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->prefixFlags:[Z
 
-    .line 67
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
 
     const/16 v1, 0x80
@@ -104,7 +100,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->csdBuffer:Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
 
-    .line 68
     return-void
 .end method
 
@@ -125,7 +120,6 @@
     .end annotation
 
     .prologue
-    .line 173
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;->data:[B
@@ -138,7 +132,6 @@
 
     move-result-object v15
 
-    .line 175
     .local v15, "csdData":[B
     const/4 v2, 0x4
 
@@ -148,7 +141,6 @@
 
     move/from16 v16, v0
 
-    .line 176
     .local v16, "firstByte":I
     const/4 v2, 0x5
 
@@ -158,7 +150,6 @@
 
     move/from16 v25, v0
 
-    .line 177
     .local v25, "secondByte":I
     const/4 v2, 0x6
 
@@ -168,7 +159,6 @@
 
     move/from16 v27, v0
 
-    .line 178
     .local v27, "thirdByte":I
     shl-int/lit8 v2, v16, 0x4
 
@@ -176,7 +166,6 @@
 
     or-int v7, v2, v3
 
-    .line 179
     .local v7, "width":I
     and-int/lit8 v2, v25, 0xf
 
@@ -184,11 +173,9 @@
 
     or-int v8, v2, v27
 
-    .line 181
     .local v8, "height":I
     const/high16 v12, 0x3f800000    # 1.0f
 
-    .line 182
     .local v12, "pixelWidthHeightRatio":F
     const/4 v2, 0x7
 
@@ -198,11 +185,9 @@
 
     shr-int/lit8 v14, v2, 0x4
 
-    .line 183
     .local v14, "aspectRatioCode":I
     packed-switch v14, :pswitch_data_0
 
-    .line 198
     :goto_0
     const/4 v2, 0x0
 
@@ -216,7 +201,6 @@
 
     const/high16 v9, -0x40800000    # -1.0f
 
-    .line 200
     invoke-static {v15}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v10
@@ -225,16 +209,13 @@
 
     const/4 v13, 0x0
 
-    .line 198
     invoke-static/range {v2 .. v13}, Lorg/telegram/messenger/exoplayer2/Format;->createVideoSampleFormat(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIIFLjava/util/List;IFLorg/telegram/messenger/exoplayer2/drm/DrmInitData;)Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v17
 
-    .line 202
     .local v17, "format":Lorg/telegram/messenger/exoplayer2/Format;
     const-wide/16 v18, 0x0
 
-    .line 203
     .local v18, "frameDurationUs":J
     const/4 v2, 0x7
 
@@ -244,7 +225,6 @@
 
     add-int/lit8 v22, v2, -0x1
 
-    .line 204
     .local v22, "frameRateCodeMinusOne":I
     if-ltz v22, :cond_1
 
@@ -256,12 +236,10 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 205
     sget-object v2, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->FRAME_RATE_VALUES:[D
 
     aget-wide v20, v2, v22
 
-    .line 206
     .local v20, "frameRate":D
     move-object/from16 v0, p0
 
@@ -269,7 +247,6 @@
 
     move/from16 v26, v0
 
-    .line 207
     .local v26, "sequenceExtensionPosition":I
     add-int/lit8 v2, v26, 0x9
 
@@ -279,7 +256,6 @@
 
     shr-int/lit8 v24, v2, 0x5
 
-    .line 208
     .local v24, "frameRateExtensionN":I
     add-int/lit8 v2, v26, 0x9
 
@@ -287,7 +263,6 @@
 
     and-int/lit8 v23, v2, 0x1f
 
-    .line 209
     .local v23, "frameRateExtensionD":I
     move/from16 v0, v24
 
@@ -295,7 +270,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 210
     move/from16 v0, v24
 
     int-to-double v2, v0
@@ -312,7 +286,6 @@
 
     mul-double v20, v20, v2
 
-    .line 212
     :cond_0
     const-wide v2, 0x412e848000000000L    # 1000000.0
 
@@ -322,7 +295,6 @@
 
     move-wide/from16 v18, v0
 
-    .line 215
     .end local v20    # "frameRate":D
     .end local v23    # "frameRateExtensionD":I
     .end local v24    # "frameRateExtensionN":I
@@ -340,7 +312,6 @@
 
     return-object v2
 
-    .line 185
     .end local v17    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     .end local v18    # "frameDurationUs":J
     .end local v22    # "frameRateCodeMinusOne":I
@@ -355,10 +326,8 @@
 
     div-float v12, v2, v3
 
-    .line 186
     goto :goto_0
 
-    .line 188
     :pswitch_1
     mul-int/lit8 v2, v8, 0x10
 
@@ -370,10 +339,8 @@
 
     div-float v12, v2, v3
 
-    .line 189
     goto :goto_0
 
-    .line 191
     :pswitch_2
     mul-int/lit8 v2, v8, 0x79
 
@@ -385,10 +352,8 @@
 
     div-float v12, v2, v3
 
-    .line 192
     goto :goto_0
 
-    .line 183
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0
@@ -404,24 +369,20 @@
     .param p1, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 94
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v13
 
-    .line 95
     .local v13, "offset":I
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit()I
 
     move-result v12
 
-    .line 96
     .local v12, "limit":I
     move-object/from16 v0, p1
 
     iget-object v10, v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 99
     .local v10, "dataArray":[B
     move-object/from16 v0, p0
 
@@ -441,7 +402,6 @@
 
     iput-wide v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->totalBytesWritten:J
 
-    .line 100
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
@@ -454,10 +414,8 @@
 
     invoke-interface {v3, v0, v4}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 102
     move v15, v13
 
-    .line 104
     .local v15, "searchOffset":I
     :goto_0
     move-object/from16 v0, p0
@@ -468,31 +426,26 @@
 
     move-result v16
 
-    .line 106
     .local v16, "startCodeOffset":I
     move/from16 v0, v16
 
     if-ne v0, v12, :cond_1
 
-    .line 108
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->hasOutputFormat:Z
 
     if-nez v3, :cond_0
 
-    .line 109
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->csdBuffer:Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
 
     invoke-virtual {v3, v10, v13, v12}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;->onData([BII)V
 
-    .line 111
     :cond_0
     return-void
 
-    .line 115
     :cond_1
     move-object/from16 v0, p1
 
@@ -506,7 +459,6 @@
 
     move/from16 v17, v0
 
-    .line 117
     .local v17, "startCodeValue":I
     move-object/from16 v0, p0
 
@@ -514,14 +466,11 @@
 
     if-nez v3, :cond_3
 
-    .line 120
     sub-int v11, v16, v13
 
-    .line 121
     .local v11, "lengthToStartCode":I
     if-lez v11, :cond_2
 
-    .line 122
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->csdBuffer:Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
@@ -530,13 +479,11 @@
 
     invoke-virtual {v3, v10, v13, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;->onData([BII)V
 
-    .line 126
     :cond_2
     if-gez v11, :cond_7
 
     neg-int v2, v11
 
-    .line 127
     .local v2, "bytesAlreadyPassed":I
     :goto_1
     move-object/from16 v0, p0
@@ -551,7 +498,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 129
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->csdBuffer:Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
@@ -560,7 +506,6 @@
 
     move-result-object v14
 
-    .line 130
     .local v14, "result":Landroid/util/Pair;, "Landroid/util/Pair<Lorg/telegram/messenger/exoplayer2/Format;Ljava/lang/Long;>;"
     move-object/from16 v0, p0
 
@@ -572,7 +517,6 @@
 
     invoke-interface {v4, v3}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 131
     iget-object v3, v14, Landroid/util/Pair;->second:Ljava/lang/Object;
 
     check-cast v3, Ljava/lang/Long;
@@ -585,14 +529,12 @@
 
     iput-wide v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->frameDurationUs:J
 
-    .line 132
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->hasOutputFormat:Z
 
-    .line 136
     .end local v2    # "bytesAlreadyPassed":I
     .end local v11    # "lengthToStartCode":I
     .end local v14    # "result":Landroid/util/Pair;, "Landroid/util/Pair<Lorg/telegram/messenger/exoplayer2/Format;Ljava/lang/Long;>;"
@@ -611,11 +553,9 @@
 
     if-nez v17, :cond_6
 
-    .line 137
     :cond_4
     sub-int v8, v12, v16
 
-    .line 138
     .local v8, "bytesWrittenPastStartCode":I
     move-object/from16 v0, p0
 
@@ -623,7 +563,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 139
     move-object/from16 v0, p0
 
     iget-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->isKeyframe:Z
@@ -632,7 +571,6 @@
 
     const/4 v6, 0x1
 
-    .line 140
     .local v6, "flags":I
     :goto_2
     move-object/from16 v0, p0
@@ -651,7 +589,6 @@
 
     sub-int v7, v3, v8
 
-    .line 141
     .local v7, "size":I
     move-object/from16 v0, p0
 
@@ -665,14 +602,12 @@
 
     invoke-interface/range {v3 .. v9}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIII[B)V
 
-    .line 142
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->isKeyframe:Z
 
-    .line 144
     .end local v6    # "flags":I
     .end local v7    # "size":I
     :cond_5
@@ -682,40 +617,33 @@
 
     if-ne v0, v3, :cond_9
 
-    .line 145
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->foundFirstFrameInGroup:Z
 
-    .line 146
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->isKeyframe:Z
 
-    .line 155
     .end local v8    # "bytesWrittenPastStartCode":I
     :cond_6
     :goto_3
     move/from16 v13, v16
 
-    .line 156
     add-int/lit8 v15, v13, 0x3
 
-    .line 157
     goto/16 :goto_0
 
-    .line 126
     .restart local v11    # "lengthToStartCode":I
     :cond_7
     const/4 v2, 0x0
 
     goto/16 :goto_1
 
-    .line 139
     .end local v11    # "lengthToStartCode":I
     .restart local v8    # "bytesWrittenPastStartCode":I
     :cond_8
@@ -723,7 +651,6 @@
 
     goto :goto_2
 
-    .line 148
     :cond_9
     move-object/from16 v0, p0
 
@@ -740,7 +667,6 @@
 
     iput-wide v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->frameTimeUs:J
 
-    .line 149
     move-object/from16 v0, p0
 
     iget-wide v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->totalBytesWritten:J
@@ -755,14 +681,12 @@
 
     iput-wide v4, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->framePosition:J
 
-    .line 150
     const/4 v3, 0x0
 
     move-object/from16 v0, p0
 
     iput-boolean v3, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->pesPtsUsAvailable:Z
 
-    .line 151
     const/4 v3, 0x1
 
     move-object/from16 v0, p0
@@ -771,7 +695,6 @@
 
     goto :goto_3
 
-    .line 148
     :cond_a
     move-object/from16 v0, p0
 
@@ -794,7 +717,6 @@
     .param p2, "idGenerator"    # Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;
 
     .prologue
-    .line 81
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getNextId()I
 
     move-result v0
@@ -805,7 +727,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 82
     return-void
 .end method
 
@@ -813,7 +734,6 @@
     .locals 0
 
     .prologue
-    .line 163
     return-void
 .end method
 
@@ -823,7 +743,6 @@
     .param p3, "dataAlignmentIndicator"    # Z
 
     .prologue
-    .line 86
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     cmp-long v0, p1, v0
@@ -835,19 +754,15 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->pesPtsUsAvailable:Z
 
-    .line 87
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->pesPtsUsAvailable:Z
 
     if-eqz v0, :cond_0
 
-    .line 88
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->pesTimeUs:J
 
-    .line 90
     :cond_0
     return-void
 
-    .line 86
     :cond_1
     const/4 v0, 0x0
 
@@ -860,27 +775,21 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->prefixFlags:[Z
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/NalUnitUtil;->clearPrefixFlags([Z)V
 
-    .line 73
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->csdBuffer:Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader$CsdBuffer;->reset()V
 
-    .line 74
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->pesPtsUsAvailable:Z
 
-    .line 75
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->foundFirstFrameInGroup:Z
 
-    .line 76
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/H262Reader;->totalBytesWritten:J
 
-    .line 77
     return-void
 .end method

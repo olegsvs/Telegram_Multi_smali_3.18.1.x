@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/voip/VoIPService;->declineIncomingCall(ILjava/lang/Runnable;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -33,7 +32,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 817
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$12;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/voip/VoIPService$12;->val$wasNotConnected:Z
@@ -55,10 +53,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 820
     if-eqz p2, :cond_1
 
-    .line 821
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,32 +75,26 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 829
     :goto_0
     iget-boolean v1, p0, Lorg/telegram/messenger/voip/VoIPService$12;->val$wasNotConnected:Z
 
     if-nez v1, :cond_0
 
-    .line 830
     iget-object v1, p0, Lorg/telegram/messenger/voip/VoIPService$12;->val$stopper:Ljava/lang/Runnable;
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 831
     iget-object v1, p0, Lorg/telegram/messenger/voip/VoIPService$12;->val$onDone:Ljava/lang/Runnable;
 
     if-eqz v1, :cond_0
 
-    .line 832
     iget-object v1, p0, Lorg/telegram/messenger/voip/VoIPService$12;->val$onDone:Ljava/lang/Runnable;
 
     invoke-interface {v1}, Ljava/lang/Runnable;->run()V
 
-    .line 834
     :cond_0
     return-void
 
-    .line 823
     :cond_1
     instance-of v1, p1, Lorg/telegram/tgnet/TLRPC$TL_updates;
 
@@ -112,10 +102,8 @@
 
     move-object v0, p1
 
-    .line 824
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_updates;
 
-    .line 825
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$TL_updates;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -125,7 +113,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 827
     .end local v0    # "updates":Lorg/telegram/tgnet/TLRPC$TL_updates;
     :cond_2
     new-instance v1, Ljava/lang/StringBuilder;

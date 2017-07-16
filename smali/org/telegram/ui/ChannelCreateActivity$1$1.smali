@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelCreateActivity$1;
 
     .prologue
-    .line 129
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$1$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 132
     iget-object v0, p0, Lorg/telegram/ui/ChannelCreateActivity$1$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$1;
 
     iget-object v1, v0, Lorg/telegram/ui/ChannelCreateActivity$1;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -72,10 +70,8 @@
     :goto_0
     invoke-static {v1, v0}, Lorg/telegram/ui/ChannelCreateActivity;->access$002(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 133
     return-void
 
-    .line 132
     :cond_1
     const/4 v0, 0x0
 

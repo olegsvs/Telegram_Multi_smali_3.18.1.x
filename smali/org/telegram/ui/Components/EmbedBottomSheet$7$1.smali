@@ -5,7 +5,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/EmbedBottomSheet$7;->prepareToSwitchInlineMode(ZLjava/lang/Runnable;FZ)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -17,7 +16,6 @@
 # instance fields
 .field final synthetic this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
-.field final synthetic val$switchInlineModeRunnable:Ljava/lang/Runnable;
 
 
 # direct methods
@@ -26,10 +24,8 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     .prologue
-    .line 389
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
-    iput-object p2, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->val$switchInlineModeRunnable:Ljava/lang/Runnable;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
@@ -43,7 +39,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 392
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -58,7 +53,6 @@
 
     if-nez v0, :cond_0
 
-    .line 393
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -71,7 +65,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 394
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$7;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$7;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -84,12 +77,9 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 396
     :cond_0
-    iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$7$1;->val$switchInlineModeRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 397
     return-void
 .end method

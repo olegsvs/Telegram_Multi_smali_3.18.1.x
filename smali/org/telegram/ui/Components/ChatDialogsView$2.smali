@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/Components/ChatDialogsView;->updateOnlineCount()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -37,7 +36,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatDialogsView;
 
     .prologue
-    .line 196
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$2;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -61,7 +59,6 @@
 
     const v10, 0xc350
 
-    .line 199
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v8
@@ -96,7 +93,6 @@
 
     move-result-object v2
 
-    .line 200
     .local v2, "user1":Lorg/telegram/tgnet/TLRPC$User;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -132,15 +128,12 @@
 
     move-result-object v3
 
-    .line 201
     .local v3, "user2":Lorg/telegram/tgnet/TLRPC$User;
     const/4 v0, 0x0
 
-    .line 202
     .local v0, "status1":I
     const/4 v1, 0x0
 
-    .line 203
     .local v1, "status2":I
     if-eqz v2, :cond_0
 
@@ -148,7 +141,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 204
     iget v4, v2, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -157,7 +149,6 @@
 
     if-ne v4, v8, :cond_2
 
-    .line 205
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -168,7 +159,6 @@
 
     add-int v0, v4, v10
 
-    .line 210
     :goto_0
     iget v4, v2, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -180,7 +170,6 @@
 
     if-ne v4, v8, :cond_0
 
-    .line 211
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -193,7 +182,6 @@
 
     add-int/lit8 v0, v4, -0x64
 
-    .line 214
     :cond_0
     if-eqz v3, :cond_1
 
@@ -201,7 +189,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 215
     iget v4, v3, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -210,7 +197,6 @@
 
     if-ne v4, v8, :cond_3
 
-    .line 216
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -221,7 +207,6 @@
 
     add-int v1, v4, v10
 
-    .line 221
     :goto_1
     iget v4, v3, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -233,7 +218,6 @@
 
     if-ne v4, v8, :cond_1
 
-    .line 222
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -246,22 +230,18 @@
 
     add-int/lit8 v1, v4, -0x64
 
-    .line 225
     :cond_1
     if-lez v0, :cond_6
 
     if-lez v1, :cond_6
 
-    .line 226
     if-le v0, v1, :cond_4
 
     move v4, v5
 
-    .line 244
     :goto_2
     return v4
 
-    .line 207
     :cond_2
     iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
@@ -269,7 +249,6 @@
 
     goto :goto_0
 
-    .line 218
     :cond_3
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$User;->status:Lorg/telegram/tgnet/TLRPC$UserStatus;
 
@@ -277,51 +256,41 @@
 
     goto :goto_1
 
-    .line 228
     :cond_4
     if-ge v0, v1, :cond_5
 
     move v4, v6
 
-    .line 229
     goto :goto_2
 
     :cond_5
     move v4, v7
 
-    .line 231
     goto :goto_2
 
-    .line 232
     :cond_6
     if-gez v0, :cond_9
 
     if-gez v1, :cond_9
 
-    .line 233
     if-le v0, v1, :cond_7
 
     move v4, v5
 
-    .line 234
     goto :goto_2
 
-    .line 235
     :cond_7
     if-ge v0, v1, :cond_8
 
     move v4, v6
 
-    .line 236
     goto :goto_2
 
     :cond_8
     move v4, v7
 
-    .line 238
     goto :goto_2
 
-    .line 239
     :cond_9
     if-gez v0, :cond_a
 
@@ -335,10 +304,8 @@
     :cond_b
     move v4, v6
 
-    .line 240
     goto :goto_2
 
-    .line 241
     :cond_c
     if-gez v1, :cond_d
 
@@ -352,13 +319,11 @@
     :cond_e
     move v4, v5
 
-    .line 242
     goto :goto_2
 
     :cond_f
     move v4, v7
 
-    .line 244
     goto :goto_2
 .end method
 
@@ -366,7 +331,6 @@
     .locals 1
 
     .prologue
-    .line 196
     check-cast p1, Ljava/lang/Integer;
 
     check-cast p2, Ljava/lang/Integer;

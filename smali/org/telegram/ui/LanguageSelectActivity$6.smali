@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 237
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$6;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$6;->val$query:Ljava/lang/String;
@@ -42,7 +41,6 @@
     .locals 3
 
     .prologue
-    .line 241
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$6;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
@@ -52,7 +50,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 242
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$6;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     const/4 v2, 0x0
@@ -61,7 +58,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 246
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/LanguageSelectActivity$6;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
@@ -69,14 +65,11 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/LanguageSelectActivity;->access$800(Lorg/telegram/ui/LanguageSelectActivity;Ljava/lang/String;)V
 
-    .line 247
     return-void
 
-    .line 243
     :catch_0
     move-exception v0
 
-    .line 244
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

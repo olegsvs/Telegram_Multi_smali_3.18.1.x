@@ -40,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 48
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;)V
 
-    .line 49
     return-void
 .end method
 
@@ -62,14 +60,11 @@
     .end annotation
 
     .prologue
-    .line 54
     .local p1, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
-    .line 56
     return-void
 .end method
 
@@ -88,16 +83,13 @@
 
     const/4 v2, 0x0
 
-    .line 113
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->uri:Landroid/net/Uri;
 
-    .line 115
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
     if-eqz v1, :cond_0
 
-    .line 116
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
     invoke-virtual {v1}, Ljava/io/RandomAccessFile;->close()V
@@ -105,37 +97,29 @@
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 121
     :cond_0
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 122
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->opened:Z
 
     if-eqz v1, :cond_1
 
-    .line 123
     iput-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->opened:Z
 
-    .line 124
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v1, :cond_1
 
-    .line 125
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v1, p0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferEnd(Ljava/lang/Object;)V
 
-    .line 129
     :cond_1
     return-void
 
-    .line 118
     :catch_0
     move-exception v0
 
-    .line 119
     .local v0, "e":Ljava/io/IOException;
     :try_start_1
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource$FileDataSourceException;
@@ -146,27 +130,22 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 121
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 122
     iget-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->opened:Z
 
     if-eqz v2, :cond_2
 
-    .line 123
     iput-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->opened:Z
 
-    .line 124
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v2, :cond_2
 
-    .line 125
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v2, p0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferEnd(Ljava/lang/Object;)V
@@ -179,7 +158,6 @@
     .locals 1
 
     .prologue
-    .line 108
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->uri:Landroid/net/Uri;
 
     return-object v0
@@ -195,13 +173,11 @@
     .end annotation
 
     .prologue
-    .line 61
     :try_start_0
     iget-object v1, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->uri:Landroid/net/Uri;
 
-    .line 62
     new-instance v1, Ljava/io/RandomAccessFile;
 
     iget-object v2, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
@@ -216,14 +192,12 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
-    .line 63
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
 
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->position:J
 
     invoke-virtual {v1, v2, v3}, Ljava/io/RandomAccessFile;->seek(J)V
 
-    .line 64
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     const-wide/16 v4, -0x1
@@ -245,7 +219,6 @@
     :goto_0
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
-    .line 66
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
     const-wide/16 v4, 0x0
@@ -254,7 +227,6 @@
 
     if-gez v1, :cond_1
 
-    .line 67
     new-instance v1, Ljava/io/EOFException;
 
     invoke-direct {v1}, Ljava/io/EOFException;-><init>()V
@@ -263,11 +235,9 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 69
     :catch_0
     move-exception v0
 
-    .line 70
     .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource$FileDataSourceException;
 
@@ -275,7 +245,6 @@
 
     throw v1
 
-    .line 64
     .end local v0    # "e":Ljava/io/IOException;
     :cond_0
     :try_start_1
@@ -285,23 +254,19 @@
 
     goto :goto_0
 
-    .line 73
     :cond_1
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->opened:Z
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v1, :cond_2
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v1, p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferStart(Ljava/lang/Object;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
-    .line 78
     :cond_2
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
@@ -320,18 +285,14 @@
     .end annotation
 
     .prologue
-    .line 83
     if-nez p3, :cond_1
 
-    .line 84
     const/4 v0, 0x0
 
-    .line 102
     :cond_0
     :goto_0
     return v0
 
-    .line 85
     :cond_1
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
@@ -341,12 +302,10 @@
 
     if-nez v2, :cond_2
 
-    .line 86
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 90
     :cond_2
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->file:Ljava/io/RandomAccessFile;
@@ -367,11 +326,9 @@
 
     move-result v0
 
-    .line 95
     .local v0, "bytesRead":I
     if-lez v0, :cond_0
 
-    .line 96
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
     int-to-long v4, v0
@@ -380,24 +337,20 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->bytesRemaining:J
 
-    .line 97
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v2, :cond_0
 
-    .line 98
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v2, p0, v0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onBytesTransferred(Ljava/lang/Object;I)V
 
     goto :goto_0
 
-    .line 91
     .end local v0    # "bytesRead":I
     :catch_0
     move-exception v1
 
-    .line 92
     .local v1, "e":Ljava/io/IOException;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/upstream/FileDataSource$FileDataSourceException;
 

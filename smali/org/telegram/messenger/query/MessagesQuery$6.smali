@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 228
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$replyMessages:Ljava/util/ArrayList;
 
     iput-wide p2, p0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$dialogId:J
@@ -48,7 +47,6 @@
     .locals 19
 
     .prologue
-    .line 232
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -94,7 +92,6 @@
 
     move-result-object v5
 
-    .line 233
     .local v5, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_0
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -103,18 +100,15 @@
 
     if-eqz v12, :cond_1
 
-    .line 234
     const/4 v12, 0x0
 
     invoke-virtual {v5, v12}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v6
 
-    .line 235
     .local v6, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v6, :cond_0
 
-    .line 236
     const/4 v12, 0x0
 
     invoke-virtual {v6, v12}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -127,11 +121,9 @@
 
     move-result-object v9
 
-    .line 237
     .local v9, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual {v6}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 238
     const/4 v12, 0x1
 
     invoke-virtual {v5, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -140,7 +132,6 @@
 
     iput v12, v9, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 239
     const/4 v12, 0x2
 
     invoke-virtual {v5, v12}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -149,14 +140,12 @@
 
     iput v12, v9, Lorg/telegram/tgnet/TLRPC$Message;->date:I
 
-    .line 240
     move-object/from16 v0, p0
 
     iget-wide v12, v0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$dialogId:J
 
     iput-wide v12, v9, Lorg/telegram/tgnet/TLRPC$Message;->dialog_id:J
 
-    .line 242
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$replyMessageRandomOwners:Ljava/util/HashMap;
@@ -177,11 +166,9 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 243
     .local v3, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-eqz v3, :cond_0
 
-    .line 244
     new-instance v10, Lorg/telegram/messenger/MessageObject;
 
     const/4 v12, 0x0
@@ -192,7 +179,6 @@
 
     invoke-direct {v10, v9, v12, v13, v14}, Lorg/telegram/messenger/MessageObject;-><init>(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/AbstractMap;Ljava/util/AbstractMap;Z)V
 
-    .line 245
     .local v10, "messageObject":Lorg/telegram/messenger/MessageObject;
     const/4 v4, 0x0
 
@@ -204,18 +190,15 @@
 
     if-ge v4, v12, :cond_0
 
-    .line 246
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v11
 
     check-cast v11, Lorg/telegram/messenger/MessageObject;
 
-    .line 247
     .local v11, "object":Lorg/telegram/messenger/MessageObject;
     iput-object v10, v11, Lorg/telegram/messenger/MessageObject;->replyMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 248
     iget-object v12, v11, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     invoke-virtual {v10}, Lorg/telegram/messenger/MessageObject;->getId()I
@@ -224,12 +207,10 @@
 
     iput v13, v12, Lorg/telegram/tgnet/TLRPC$Message;->reply_to_msg_id:I
 
-    .line 245
     add-int/lit8 v4, v4, 0x1
 
     goto :goto_0
 
-    .line 253
     .end local v3    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v4    # "b":I
     .end local v6    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
@@ -239,7 +220,6 @@
     :cond_1
     invoke-virtual {v5}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 254
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$replyMessageRandomOwners:Ljava/util/HashMap;
@@ -250,7 +230,6 @@
 
     if-nez v12, :cond_3
 
-    .line 255
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/messenger/query/MessagesQuery$6;->val$replyMessageRandomOwners:Ljava/util/HashMap;
@@ -276,7 +255,6 @@
 
     check-cast v8, Ljava/util/Map$Entry;
 
-    .line 256
     .local v8, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;>;"
     invoke-interface {v8}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -284,7 +262,6 @@
 
     check-cast v3, Ljava/util/ArrayList;
 
-    .line 257
     .restart local v3    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     const/4 v2, 0x0
 
@@ -296,7 +273,6 @@
 
     if-ge v2, v12, :cond_2
 
-    .line 258
     invoke-virtual {v3, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v12
@@ -309,12 +285,10 @@
 
     iput-wide v14, v12, Lorg/telegram/tgnet/TLRPC$Message;->reply_to_random_id:J
 
-    .line 257
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 262
     .end local v2    # "a":I
     .end local v3    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v8    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;>;"
@@ -329,16 +303,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 271
     .end local v5    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :goto_2
     return-void
 
-    .line 268
     :catch_0
     move-exception v7
 
-    .line 269
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

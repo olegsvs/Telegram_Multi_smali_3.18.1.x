@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     .prologue
-    .line 245
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 248
     if-nez p2, :cond_1
 
-    .line 249
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateFinalActivity$4;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
@@ -59,18 +56,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AvatarUpdater;->openCamera()V
 
-    .line 257
     :cond_0
     :goto_0
     return-void
 
-    .line 250
     :cond_1
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_2
 
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateFinalActivity$4;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
@@ -83,27 +77,23 @@
 
     goto :goto_0
 
-    .line 252
     :cond_2
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateFinalActivity$4;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1102(Lorg/telegram/ui/GroupCreateFinalActivity;Lorg/telegram/tgnet/TLRPC$FileLocation;)Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 254
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateFinalActivity$4;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1202(Lorg/telegram/ui/GroupCreateFinalActivity;Lorg/telegram/tgnet/TLRPC$InputFile;)Lorg/telegram/tgnet/TLRPC$InputFile;
 
-    .line 255
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$4$1;->this$1:Lorg/telegram/ui/GroupCreateFinalActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/GroupCreateFinalActivity$4;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;

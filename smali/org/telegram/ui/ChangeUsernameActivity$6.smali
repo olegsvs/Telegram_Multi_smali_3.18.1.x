@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUsernameActivity;
 
     .prologue
-    .line 411
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$6;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$6;->val$progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -51,15 +50,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 414
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 415
     check-cast v0, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 416
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$6$1;
 
@@ -67,12 +63,10 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 445
     .end local v0    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :goto_0
     return-void
 
-    .line 433
     :cond_0
     new-instance v1, Lorg/telegram/ui/ChangeUsernameActivity$6$2;
 

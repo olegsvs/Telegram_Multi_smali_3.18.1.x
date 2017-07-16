@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ApplicationLoader;
 
     .prologue
-    .line 304
     iput-object p1, p0, Lorg/telegram/messenger/ApplicationLoader$1;->this$0:Lorg/telegram/messenger/ApplicationLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 307
     iget-object v1, p0, Lorg/telegram/messenger/ApplicationLoader$1;->this$0:Lorg/telegram/messenger/ApplicationLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/ApplicationLoader;->access$000(Lorg/telegram/messenger/ApplicationLoader;)Z
@@ -50,7 +48,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 308
     sget-object v1, Lorg/telegram/messenger/UserConfig;->pushString:Ljava/lang/String;
 
     if-eqz v1, :cond_0
@@ -63,7 +60,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 309
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -86,7 +82,6 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 315
     :goto_0
     new-instance v0, Landroid/content/Intent;
 
@@ -96,18 +91,15 @@
 
     invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 316
     .local v0, "intent":Landroid/content/Intent;
     iget-object v1, p0, Lorg/telegram/messenger/ApplicationLoader$1;->this$0:Lorg/telegram/messenger/ApplicationLoader;
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/ApplicationLoader;->startService(Landroid/content/Intent;)Landroid/content/ComponentName;
 
-    .line 323
     .end local v0    # "intent":Landroid/content/Intent;
     :goto_1
     return-void
 
-    .line 311
     :cond_0
     const-string/jumbo v1, "GCM Registration not found."
 
@@ -115,7 +107,6 @@
 
     goto :goto_0
 
-    .line 321
     :cond_1
     const-string/jumbo v1, "No valid Google Play Services APK found."
 

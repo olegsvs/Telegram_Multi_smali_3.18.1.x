@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 177
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 180
     const/4 v5, -0x1
 
     if-ne p1, v5, :cond_3
 
-    .line 181
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$400(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -57,7 +54,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 182
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$500(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/HashMap;
@@ -66,7 +62,6 @@
 
     invoke-virtual {v5}, Ljava/util/HashMap;->clear()V
 
-    .line 183
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$600(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -75,7 +70,6 @@
 
     invoke-virtual {v5}, Lorg/telegram/ui/ActionBar/ActionBar;->hideActionMode()V
 
-    .line 184
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$300(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -86,7 +80,6 @@
 
     move-result v2
 
-    .line 185
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -94,7 +87,6 @@
     :goto_0
     if-ge v0, v2, :cond_2
 
-    .line 186
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$300(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -105,13 +97,11 @@
 
     move-result-object v1
 
-    .line 187
     .local v1, "child":Landroid/view/View;
     instance-of v5, v1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     if-eqz v5, :cond_0
 
-    .line 188
     check-cast v1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     .end local v1    # "child":Landroid/view/View;
@@ -121,13 +111,11 @@
 
     invoke-virtual {v1, v5, v6}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setChecked(ZZ)V
 
-    .line 185
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 192
     .end local v0    # "a":I
     .end local v2    # "count":I
     :cond_1
@@ -135,17 +123,14 @@
 
     invoke-virtual {v5}, Lorg/telegram/ui/DocumentSelectActivity;->finishFragment()V
 
-    .line 204
     :cond_2
     return-void
 
-    .line 194
     :cond_3
     const/4 v5, 0x3
 
     if-ne p1, v5, :cond_2
 
-    .line 195
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$700(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;
@@ -154,12 +139,10 @@
 
     if-eqz v5, :cond_2
 
-    .line 196
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 197
     .local v3, "files":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -173,7 +156,6 @@
 
     invoke-virtual {v3, v5}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 198
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$700(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;
@@ -184,7 +166,6 @@
 
     invoke-interface {v5, v6, v3}, Lorg/telegram/ui/DocumentSelectActivity$DocumentSelectActivityDelegate;->didSelectFiles(Lorg/telegram/ui/DocumentSelectActivity;Ljava/util/ArrayList;)V
 
-    .line 199
     iget-object v5, p0, Lorg/telegram/ui/DocumentSelectActivity$2;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/DocumentSelectActivity;->access$500(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/HashMap;
@@ -212,7 +193,6 @@
 
     check-cast v4, Lorg/telegram/ui/DocumentSelectActivity$ListItem;
 
-    .line 200
     .local v4, "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

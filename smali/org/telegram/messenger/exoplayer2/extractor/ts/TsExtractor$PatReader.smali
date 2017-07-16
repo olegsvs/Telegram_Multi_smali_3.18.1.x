@@ -28,12 +28,10 @@
     .locals 2
 
     .prologue
-    .line 274
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 275
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x4
@@ -44,7 +42,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
-    .line 276
     return-void
 .end method
 
@@ -57,19 +54,16 @@
     .prologue
     const/16 v8, 0xd
 
-    .line 289
     const/16 v4, 0x8
 
     invoke-virtual {p1, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 291
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v4
 
     div-int/lit8 v2, v4, 0x4
 
-    .line 292
     .local v2, "programCount":I
     const/4 v0, 0x0
 
@@ -77,14 +71,12 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 293
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     const/4 v5, 0x4
 
     invoke-virtual {p1, v4, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes(Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;I)V
 
-    .line 294
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     const/16 v5, 0x10
@@ -93,7 +85,6 @@
 
     move-result v3
 
-    .line 295
     .local v3, "programNumber":I
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
@@ -101,21 +92,17 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 296
     if-nez v3, :cond_0
 
-    .line 297
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     invoke-virtual {v4, v8}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 292
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 299
     :cond_0
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->patScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
@@ -123,7 +110,6 @@
 
     move-result v1
 
-    .line 300
     .local v1, "pid":I
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor$PatReader;->this$0:Lorg/telegram/messenger/exoplayer2/extractor/ts/TsExtractor;
 
@@ -145,7 +131,6 @@
 
     goto :goto_1
 
-    .line 303
     .end local v1    # "pid":I
     .end local v3    # "programNumber":I
     :cond_1
@@ -159,6 +144,5 @@
     .param p3, "idGenerator"    # Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;
 
     .prologue
-    .line 282
     return-void
 .end method

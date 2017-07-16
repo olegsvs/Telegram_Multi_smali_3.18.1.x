@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 97
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerMasksView$4;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,17 +44,14 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 100
     instance-of v2, p1, Lorg/telegram/ui/Cells/StickerEmojiCell;
 
     if-nez v2, :cond_1
 
-    .line 112
     :cond_0
     :goto_0
     return-void
 
-    .line 103
     :cond_1
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -65,10 +61,8 @@
 
     move-object v0, p1
 
-    .line 104
     check-cast v0, Lorg/telegram/ui/Cells/StickerEmojiCell;
 
-    .line 105
     .local v0, "cell":Lorg/telegram/ui/Cells/StickerEmojiCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/StickerEmojiCell;->isDisabled()Z
 
@@ -76,12 +70,10 @@
 
     if-nez v2, :cond_0
 
-    .line 108
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/StickerEmojiCell;->getSticker()Lorg/telegram/tgnet/TLRPC$Document;
 
     move-result-object v1
 
-    .line 109
     .local v1, "document":Lorg/telegram/tgnet/TLRPC$Document;
     iget-object v2, p0, Lorg/telegram/ui/Components/StickerMasksView$4;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -91,7 +83,6 @@
 
     invoke-interface {v2, v1}, Lorg/telegram/ui/Components/StickerMasksView$Listener;->onStickerSelected(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 110
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -104,7 +95,6 @@
 
     invoke-static {v6, v1, v2}, Lorg/telegram/messenger/query/StickersQuery;->addRecentSticker(ILorg/telegram/tgnet/TLRPC$Document;I)V
 
-    .line 111
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2

@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 21141
     const v0, -0x1a716a2e
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->constructor:I
@@ -52,10 +51,8 @@
     .locals 1
 
     .prologue
-    .line 21140
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 21145
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,15 +69,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 21148
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 21149
     if-eqz p2, :cond_0
 
-    .line 21150
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_messages_deleteMessages"
@@ -105,21 +99,17 @@
 
     throw v1
 
-    .line 21152
     :cond_0
     const/4 v0, 0x0
 
-    .line 21157
     :goto_0
     return-object v0
 
-    .line 21155
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;-><init>()V
 
-    .line 21156
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -135,7 +125,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 21161
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
 
     move-result-object v0
@@ -153,14 +142,12 @@
 
     const/4 v5, 0x0
 
-    .line 21165
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v3
 
     iput v3, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->flags:I
 
-    .line 21166
     iget v3, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->flags:I
 
     and-int/lit8 v3, v3, 0x1
@@ -172,21 +159,17 @@
     :goto_0
     iput-boolean v3, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->revoke:Z
 
-    .line 21167
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 21168
     .local v2, "magic":I
     const v3, 0x1cb5c415
 
     if-eq v2, v3, :cond_1
 
-    .line 21169
     if-eqz p2, :cond_2
 
-    .line 21170
     new-instance v3, Ljava/lang/RuntimeException;
 
     const-string/jumbo v6, "wrong Vector magic, got %x"
@@ -211,17 +194,14 @@
     :cond_0
     move v3, v5
 
-    .line 21166
     goto :goto_0
 
-    .line 21174
     .restart local v2    # "magic":I
     :cond_1
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 21175
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -229,7 +209,6 @@
     :goto_1
     if-ge v0, v1, :cond_2
 
-    .line 21176
     iget-object v3, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
@@ -242,12 +221,10 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 21175
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 21178
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_2
@@ -259,12 +236,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 21181
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21182
     iget-boolean v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->revoke:Z
 
     if-eqz v2, :cond_0
@@ -276,35 +251,29 @@
     :goto_0
     iput v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->flags:I
 
-    .line 21183
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->flags:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21184
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21185
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 21186
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21187
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_1
     if-ge v0, v1, :cond_1
 
-    .line 21188
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteMessages;->id:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -319,12 +288,10 @@
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 21187
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 21182
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_0
@@ -334,7 +301,6 @@
 
     goto :goto_0
 
-    .line 21190
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     :cond_1

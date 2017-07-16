@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     .prologue
-    .line 832
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$3;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 835
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$11$3;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$11;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$11;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -54,6 +52,5 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 836
     return-void
 .end method

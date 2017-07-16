@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LoginActivity;
 
     .prologue
-    .line 389
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$2;->this$0:Lorg/telegram/ui/LoginActivity;
 
     iput-boolean p2, p0, Lorg/telegram/ui/LoginActivity$2;->val$banned:Z
@@ -51,7 +50,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 393
     :try_start_0
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -71,7 +69,6 @@
 
     move-result-object v2
 
-    .line 394
     .local v2, "pInfo":Landroid/content/pm/PackageInfo;
     sget-object v4, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -101,7 +98,6 @@
 
     move-result-object v3
 
-    .line 396
     .local v3, "version":Ljava/lang/String;
     new-instance v1, Landroid/content/Intent;
 
@@ -109,13 +105,11 @@
 
     invoke-direct {v1, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 397
     .local v1, "mailer":Landroid/content/Intent;
     const-string/jumbo v4, "message/rfc822"
 
     invoke-virtual {v1, v4}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 398
     const-string/jumbo v4, "android.intent.extra.EMAIL"
 
     const/4 v5, 0x1
@@ -130,12 +124,10 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;[Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 399
     iget-boolean v4, p0, Lorg/telegram/ui/LoginActivity$2;->val$banned:Z
 
     if-eqz v4, :cond_0
 
-    .line 400
     const-string/jumbo v4, "android.intent.extra.SUBJECT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -160,7 +152,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 401
     const-string/jumbo v4, "android.intent.extra.TEXT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -239,7 +230,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 406
     :goto_0
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$2;->this$0:Lorg/telegram/ui/LoginActivity;
 
@@ -255,14 +245,12 @@
 
     invoke-virtual {v4, v5}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 410
     .end local v1    # "mailer":Landroid/content/Intent;
     .end local v2    # "pInfo":Landroid/content/pm/PackageInfo;
     .end local v3    # "version":Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 403
     .restart local v1    # "mailer":Landroid/content/Intent;
     .restart local v2    # "pInfo":Landroid/content/pm/PackageInfo;
     .restart local v3    # "version":Ljava/lang/String;
@@ -291,7 +279,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 404
     const-string/jumbo v4, "android.intent.extra.TEXT"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -374,14 +361,12 @@
 
     goto/16 :goto_0
 
-    .line 407
     .end local v1    # "mailer":Landroid/content/Intent;
     .end local v2    # "pInfo":Landroid/content/pm/PackageInfo;
     .end local v3    # "version":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 408
     .local v0, "e":Ljava/lang/Exception;
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$2;->this$0:Lorg/telegram/ui/LoginActivity;
 

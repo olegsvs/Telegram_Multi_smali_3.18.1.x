@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 117
     iput-object p1, p0, Lorg/telegram/ui/IdenticonActivity$2;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -44,10 +43,8 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 120
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 121
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$2;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/IdenticonActivity;->access$000(Lorg/telegram/ui/IdenticonActivity;)Landroid/widget/FrameLayout;
@@ -98,7 +95,6 @@
 
     sub-int v0, v2, v3
 
-    .line 122
     .local v0, "x":I
     const/high16 v2, 0x40a00000    # 5.0f
 
@@ -140,7 +136,6 @@
 
     move-result v1
 
-    .line 123
     .local v1, "y":I
     iget-object v2, p0, Lorg/telegram/ui/IdenticonActivity$2;->this$0:Lorg/telegram/ui/IdenticonActivity;
 
@@ -174,6 +169,5 @@
 
     invoke-virtual {v2, v0, v1, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 124
     return-void
 .end method

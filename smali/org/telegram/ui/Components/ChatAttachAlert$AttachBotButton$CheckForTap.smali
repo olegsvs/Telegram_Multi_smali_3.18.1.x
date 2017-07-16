@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 220
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,7 +39,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Components/ChatAttachAlert$1;
 
     .prologue
-    .line 220
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;-><init>(Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;)V
 
     return-void
@@ -52,7 +50,6 @@
     .locals 4
 
     .prologue
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->access$000(Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;)Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
@@ -61,7 +58,6 @@
 
     if-nez v0, :cond_0
 
-    .line 223
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     new-instance v1, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
@@ -72,7 +68,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->access$002(Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;)Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;
 
-    .line 225
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
@@ -88,7 +83,6 @@
 
     iput v1, v0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForLongPress;->currentPressCount:I
 
-    .line 226
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton$CheckForTap;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;
@@ -111,6 +105,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Components/ChatAttachAlert$AttachBotButton;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 227
     return-void
 .end method

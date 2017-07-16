@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/HexSelectorView;
 
     .prologue
-    .line 102
     iput-object p1, p0, Lorg/telegram/ui/Components/HexSelectorView$4;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,20 +43,17 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 105
     const/4 v1, 0x6
 
     if-eq p2, v1, :cond_0
 
     if-nez p2, :cond_1
 
-    .line 106
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/HexSelectorView$4;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/HexSelectorView;->validateColorInTextView()V
 
-    .line 107
     iget-object v1, p0, Lorg/telegram/ui/Components/HexSelectorView$4;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-virtual {v1}, Lorg/telegram/ui/Components/HexSelectorView;->getContext()Landroid/content/Context;
@@ -72,7 +68,6 @@
 
     check-cast v0, Landroid/view/inputmethod/InputMethodManager;
 
-    .line 108
     .local v0, "in":Landroid/view/inputmethod/InputMethodManager;
     iget-object v1, p0, Lorg/telegram/ui/Components/HexSelectorView$4;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
@@ -88,10 +83,8 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/inputmethod/InputMethodManager;->hideSoftInputFromWindow(Landroid/os/IBinder;I)Z
 
-    .line 109
     const/4 v1, 0x1
 
-    .line 111
     .end local v0    # "in":Landroid/view/inputmethod/InputMethodManager;
     :goto_0
     return v1

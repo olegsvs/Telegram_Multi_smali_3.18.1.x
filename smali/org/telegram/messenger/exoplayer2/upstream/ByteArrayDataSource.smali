@@ -22,13 +22,10 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 37
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 39
     array-length v0, p1
 
     if-lez v0, :cond_0
@@ -38,13 +35,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 40
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->data:[B
 
-    .line 41
     return-void
 
-    .line 39
     :cond_0
     const/4 v0, 0x0
 
@@ -62,12 +56,10 @@
     .end annotation
 
     .prologue
-    .line 78
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->uri:Landroid/net/Uri;
 
-    .line 79
     return-void
 .end method
 
@@ -75,7 +67,6 @@
     .locals 1
 
     .prologue
-    .line 73
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->uri:Landroid/net/Uri;
 
     return-object v0
@@ -91,19 +82,16 @@
     .end annotation
 
     .prologue
-    .line 45
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->uri:Landroid/net/Uri;
 
-    .line 46
     iget-wide v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->position:J
 
     long-to-int v0, v0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->readPosition:I
 
-    .line 47
     iget-wide v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     const-wide/16 v2, -0x1
@@ -127,7 +115,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
-    .line 49
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
     if-lez v0, :cond_0
@@ -144,7 +131,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 50
     :cond_0
     new-instance v0, Ljava/io/IOException;
 
@@ -198,13 +184,11 @@
 
     throw v0
 
-    .line 47
     :cond_1
     iget-wide v0, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     goto :goto_0
 
-    .line 53
     :cond_2
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
@@ -225,28 +209,22 @@
     .end annotation
 
     .prologue
-    .line 58
     if-nez p3, :cond_0
 
-    .line 59
     const/4 v0, 0x0
 
-    .line 68
     :goto_0
     return v0
 
-    .line 60
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
     if-nez v0, :cond_1
 
-    .line 61
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 64
     :cond_1
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
@@ -254,21 +232,18 @@
 
     move-result p3
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->readPosition:I
 
     invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 66
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->readPosition:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->readPosition:I
 
-    .line 67
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/ByteArrayDataSource;->bytesRemaining:I
 
     sub-int/2addr v0, p3
@@ -277,6 +252,5 @@
 
     move v0, p3
 
-    .line 68
     goto :goto_0
 .end method

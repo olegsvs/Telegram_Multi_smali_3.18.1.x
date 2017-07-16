@@ -20,7 +20,6 @@
     .param p1, "delegate"    # Ljava/io/InputStream;
 
     .prologue
-    .line 26
     new-instance v0, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;
 
     invoke-direct {v0, p1}, Lorg/telegram/messenger/audioinfo/util/PositionInputStream;-><init>(Ljava/io/InputStream;)V
@@ -31,7 +30,6 @@
 
     invoke-direct {p0, v0, v1, v2}, Lorg/telegram/messenger/audioinfo/m4a/MP4Box;-><init>(Lorg/telegram/messenger/audioinfo/util/PositionInputStream;Lorg/telegram/messenger/audioinfo/m4a/MP4Box;Ljava/lang/String;)V
 
-    .line 27
     return-void
 .end method
 
@@ -47,13 +45,11 @@
     .end annotation
 
     .prologue
-    .line 31
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/audioinfo/m4a/MP4Input;->nextChild()Lorg/telegram/messenger/audioinfo/m4a/MP4Atom;
 
     move-result-object v0
 
-    .line 32
     .local v0, "atom":Lorg/telegram/messenger/audioinfo/m4a/MP4Atom;
     invoke-virtual {v0}, Lorg/telegram/messenger/audioinfo/m4a/MP4Atom;->getType()Ljava/lang/String;
 
@@ -65,7 +61,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 33
     return-object v0
 .end method
 
@@ -73,7 +68,6 @@
     .locals 4
 
     .prologue
-    .line 39
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

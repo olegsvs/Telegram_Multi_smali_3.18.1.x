@@ -26,16 +26,12 @@
     .param p4, "inputLength"    # J
 
     .prologue
-    .line 31
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 32
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->firstFramePosition:J
 
-    .line 33
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->bitrate:I
 
-    .line 34
     const-wide/16 v0, -0x1
 
     cmp-long v0, p4, v0
@@ -47,10 +43,8 @@
     :goto_0
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->durationUs:J
 
-    .line 35
     return-void
 
-    .line 34
     :cond_0
     invoke-virtual {p0, p4, p5}, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->getTimeUs(J)J
 
@@ -65,7 +59,6 @@
     .locals 2
 
     .prologue
-    .line 56
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->durationUs:J
 
     return-wide v0
@@ -76,7 +69,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 44
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->durationUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -113,7 +105,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 50
     const-wide/16 v0, 0x0
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->firstFramePosition:J
@@ -145,7 +136,6 @@
     .locals 4
 
     .prologue
-    .line 39
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/ConstantBitrateSeeker;->durationUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324

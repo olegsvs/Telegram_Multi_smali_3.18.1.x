@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ImageLoader;
 
     .prologue
-    .line 1136
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "canceled"    # I
 
     .prologue
-    .line 1204
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -52,14 +50,12 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1205
     new-instance v0, Lorg/telegram/messenger/ImageLoader$2$5;
 
     invoke-direct {v0, p0, p1, p2}, Lorg/telegram/messenger/ImageLoader$2$5;-><init>(Lorg/telegram/messenger/ImageLoader$2;Ljava/lang/String;I)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1212
     return-void
 .end method
 
@@ -69,7 +65,6 @@
     .param p2, "isEncrypted"    # Z
 
     .prologue
-    .line 1171
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/ImageLoader$2$3;
@@ -78,7 +73,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1183
     return-void
 .end method
 
@@ -89,7 +83,6 @@
     .param p3, "type"    # I
 
     .prologue
-    .line 1187
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -98,14 +91,12 @@
 
     invoke-virtual {v0, p1}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1188
     new-instance v0, Lorg/telegram/messenger/ImageLoader$2$4;
 
     invoke-direct {v0, p0, p2, p1, p3}, Lorg/telegram/messenger/ImageLoader$2$4;-><init>(Lorg/telegram/messenger/ImageLoader$2;Ljava/io/File;Ljava/lang/String;I)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1200
     return-void
 .end method
 
@@ -119,7 +110,6 @@
     .param p6, "totalFileSize"    # J
 
     .prologue
-    .line 1155
     sget-object v0, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/messenger/ImageLoader$2$2;
@@ -142,7 +132,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1167
     return-void
 .end method
 
@@ -152,7 +141,6 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 1216
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -165,12 +153,10 @@
 
     invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1217
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1218
     .local v0, "currentTime":J
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
@@ -198,20 +184,17 @@
 
     if-gez v2, :cond_1
 
-    .line 1219
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2, v0, v1}, Lorg/telegram/messenger/ImageLoader;->access$2602(Lorg/telegram/messenger/ImageLoader;J)J
 
-    .line 1220
     new-instance v2, Lorg/telegram/messenger/ImageLoader$2$6;
 
     invoke-direct {v2, p0, p1, p2}, Lorg/telegram/messenger/ImageLoader$2$6;-><init>(Lorg/telegram/messenger/ImageLoader$2;Ljava/lang/String;F)V
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1227
     :cond_1
     return-void
 .end method
@@ -223,7 +206,6 @@
     .param p3, "isEncrypted"    # Z
 
     .prologue
-    .line 1139
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2}, Lorg/telegram/messenger/ImageLoader;->access$100(Lorg/telegram/messenger/ImageLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -236,12 +218,10 @@
 
     invoke-virtual {v2, p1, v3}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1140
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
-    .line 1141
     .local v0, "currentTime":J
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
@@ -269,20 +249,17 @@
 
     if-gez v2, :cond_1
 
-    .line 1142
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/ImageLoader$2;->this$0:Lorg/telegram/messenger/ImageLoader;
 
     invoke-static {v2, v0, v1}, Lorg/telegram/messenger/ImageLoader;->access$2602(Lorg/telegram/messenger/ImageLoader;J)J
 
-    .line 1144
     new-instance v2, Lorg/telegram/messenger/ImageLoader$2$1;
 
     invoke-direct {v2, p0, p1, p2, p3}, Lorg/telegram/messenger/ImageLoader$2$1;-><init>(Lorg/telegram/messenger/ImageLoader$2;Ljava/lang/String;FZ)V
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1151
     :cond_1
     return-void
 .end method

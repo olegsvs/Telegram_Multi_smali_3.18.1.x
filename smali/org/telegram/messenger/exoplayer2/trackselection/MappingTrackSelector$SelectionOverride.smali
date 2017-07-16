@@ -32,24 +32,18 @@
     .param p3, "tracks"    # [I
 
     .prologue
-    .line 51
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->factory:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection$Factory;
 
-    .line 53
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->groupIndex:I
 
-    .line 54
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->tracks:[I
 
-    .line 55
     array-length v0, p3
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->length:I
 
-    .line 56
     return-void
 .end method
 
@@ -62,7 +56,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 72
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->tracks:[I
 
     array-length v4, v3
@@ -74,19 +67,15 @@
 
     aget v0, v3, v2
 
-    .line 73
     .local v0, "overrideTrack":I
     if-ne v0, p1, :cond_1
 
-    .line 74
     const/4 v1, 0x1
 
-    .line 77
     .end local v0    # "overrideTrack":I
     :cond_0
     return v1
 
-    .line 72
     .restart local v0    # "overrideTrack":I
     :cond_1
     add-int/lit8 v2, v2, 0x1
@@ -99,7 +88,6 @@
     .param p1, "groups"    # Lorg/telegram/messenger/exoplayer2/source/TrackGroupArray;
 
     .prologue
-    .line 65
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->factory:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection$Factory;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/MappingTrackSelector$SelectionOverride;->groupIndex:I

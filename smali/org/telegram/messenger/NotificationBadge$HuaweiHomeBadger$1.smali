@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationBadge$HuaweiHomeBadger;
 
     .prologue
-    .line 178
     iput-object p1, p0, Lorg/telegram/messenger/NotificationBadge$HuaweiHomeBadger$1;->this$0:Lorg/telegram/messenger/NotificationBadge$HuaweiHomeBadger;
 
     iput-object p2, p0, Lorg/telegram/messenger/NotificationBadge$HuaweiHomeBadger$1;->val$localBundle:Landroid/os/Bundle;
@@ -45,7 +44,6 @@
     .locals 6
 
     .prologue
-    .line 182
     :try_start_0
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -69,15 +67,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 186
     :goto_0
     return-void
 
-    .line 183
     :catch_0
     move-exception v0
 
-    .line 184
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

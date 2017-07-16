@@ -26,7 +26,6 @@
     .locals 1
 
     .prologue
-    .line 242
     iput-wide p1, p0, Lorg/telegram/ui/Components/AlertsCreator$1;->val$dialog_id:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
 
     const/4 v10, 0x3
 
-    .line 245
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v6
@@ -55,14 +53,11 @@
 
     move-result v5
 
-    .line 246
     .local v5, "untilTime":I
     if-nez p2, :cond_2
 
-    .line 247
     add-int/lit16 v5, v5, 0xe10
 
-    .line 256
     :cond_0
     :goto_0
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -75,17 +70,14 @@
 
     move-result-object v4
 
-    .line 257
     .local v4, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    .line 259
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     if-ne p2, v10, :cond_5
 
-    .line 260
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,10 +100,8 @@
 
     invoke-interface {v1, v6, v11}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 261
     const-wide/16 v2, 0x1
 
-    .line 267
     .local v2, "flags":J
     :goto_1
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
@@ -122,7 +112,6 @@
 
     invoke-virtual {v6, v8, v9}, Lorg/telegram/messenger/NotificationsController;->removeNotificationsForDialog(J)V
 
-    .line 268
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v6
@@ -131,10 +120,8 @@
 
     invoke-virtual {v6, v8, v9, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->setDialogFlags(JJ)V
 
-    .line 269
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 270
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -153,32 +140,26 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 271
     .local v0, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v0, :cond_1
 
-    .line 272
     new-instance v6, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;
 
     invoke-direct {v6}, Lorg/telegram/tgnet/TLRPC$TL_peerNotifySettings;-><init>()V
 
     iput-object v6, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
-    .line 273
     iget-object v6, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->notify_settings:Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;
 
     iput v5, v6, Lorg/telegram/tgnet/TLRPC$PeerNotifySettings;->mute_until:I
 
-    .line 275
     :cond_1
     iget-wide v6, p0, Lorg/telegram/ui/Components/AlertsCreator$1;->val$dialog_id:J
 
     invoke-static {v6, v7}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(J)V
 
-    .line 276
     return-void
 
-    .line 248
     .end local v0    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v2    # "flags":J
@@ -188,32 +169,26 @@
 
     if-ne p2, v6, :cond_3
 
-    .line 249
     add-int/lit16 v5, v5, 0x7080
 
     goto :goto_0
 
-    .line 250
     :cond_3
     if-ne p2, v11, :cond_4
 
-    .line 251
     const v6, 0x2a300
 
     add-int/2addr v5, v6
 
     goto :goto_0
 
-    .line 252
     :cond_4
     if-ne p2, v10, :cond_0
 
-    .line 253
     const v5, 0x7fffffff
 
     goto :goto_0
 
-    .line 263
     .restart local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v4    # "preferences":Landroid/content/SharedPreferences;
     :cond_5
@@ -239,7 +214,6 @@
 
     invoke-interface {v1, v6, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 264
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -262,7 +236,6 @@
 
     invoke-interface {v1, v6, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 265
     int-to-long v6, v5
 
     const/16 v8, 0x20

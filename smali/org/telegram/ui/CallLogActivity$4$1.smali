@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CallLogActivity$4;
 
     .prologue
-    .line 239
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$4$1;->this$1:Lorg/telegram/ui/CallLogActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/CallLogActivity$4$1;->val$row:Lorg/telegram/ui/CallLogActivity$CallLogRow;
@@ -47,7 +46,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 242
     iget-object v0, p0, Lorg/telegram/ui/CallLogActivity$4$1;->this$1:Lorg/telegram/ui/CallLogActivity$4;
 
     iget-object v0, v0, Lorg/telegram/ui/CallLogActivity$4;->this$0:Lorg/telegram/ui/CallLogActivity;
@@ -56,6 +54,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/CallLogActivity;->access$300(Lorg/telegram/ui/CallLogActivity;Lorg/telegram/ui/CallLogActivity$CallLogRow;)V
 
-    .line 243
     return-void
 .end method

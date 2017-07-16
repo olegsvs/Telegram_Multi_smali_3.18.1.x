@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1756
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$27;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,25 +44,20 @@
     .prologue
     const/4 v7, 0x1
 
-    .line 1759
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1760
     .local v0, "blocked":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v3, 0x0
 
-    .line 1761
     .local v3, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     if-nez p2, :cond_1
 
     move-object v2, p1
 
-    .line 1762
     check-cast v2, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
 
-    .line 1763
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;->blocked:Ljava/util/ArrayList;
 
@@ -84,7 +78,6 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_contactBlocked;
 
-    .line 1764
     .local v1, "contactBlocked":Lorg/telegram/tgnet/TLRPC$TL_contactBlocked;
     iget v5, v1, Lorg/telegram/tgnet/TLRPC$TL_contactBlocked;->user_id:I
 
@@ -96,12 +89,10 @@
 
     goto :goto_0
 
-    .line 1766
     .end local v1    # "contactBlocked":Lorg/telegram/tgnet/TLRPC$TL_contactBlocked;
     :cond_0
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$contacts_Blocked;->users:Ljava/util/ArrayList;
 
-    .line 1767
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -112,14 +103,12 @@
 
     invoke-virtual {v4, v5, v6, v7, v7}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1768
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
 
     invoke-virtual {v4, v0, v7}, Lorg/telegram/messenger/MessagesStorage;->putBlockedUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1770
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$contacts_Blocked;
     :cond_1
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$27;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -128,6 +117,5 @@
 
     invoke-virtual {v4, v0, v3, v5}, Lorg/telegram/messenger/MessagesController;->processLoadedBlockedUsers(Ljava/util/ArrayList;Ljava/util/ArrayList;Z)V
 
-    .line 1771
     return-void
 .end method

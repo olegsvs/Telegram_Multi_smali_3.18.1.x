@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2;
 
     .prologue
-    .line 509
     iput-object p1, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2$1;->this$2:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2;
 
     iput-object p2, p0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2$1;->val$contactsCopy:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 17
 
     .prologue
-    .line 512
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2$1;->this$2:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2;
@@ -60,7 +58,6 @@
 
     move-result-object v9
 
-    .line 513
     .local v9, "search1":Ljava/lang/String;
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
@@ -68,7 +65,6 @@
 
     if-nez v13, :cond_0
 
-    .line 514
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2$1;->this$2:Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2;
@@ -85,11 +81,9 @@
 
     invoke-static {v13, v14, v15}, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;->access$2000(Lorg/telegram/ui/SetAdminsActivity$SearchAdapter;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 564
     :goto_0
     return-void
 
-    .line 517
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -99,7 +93,6 @@
 
     move-result-object v10
 
-    .line 518
     .local v10, "search2":Ljava/lang/String;
     invoke-virtual {v9, v10}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -113,11 +106,9 @@
 
     if-nez v13, :cond_2
 
-    .line 519
     :cond_1
     const/4 v10, 0x0
 
-    .line 521
     :cond_2
     if-eqz v10, :cond_5
 
@@ -128,33 +119,27 @@
 
     new-array v8, v13, [Ljava/lang/String;
 
-    .line 522
     .local v8, "search":[Ljava/lang/String;
     const/4 v13, 0x0
 
     aput-object v9, v8, v13
 
-    .line 523
     if-eqz v10, :cond_3
 
-    .line 524
     const/4 v13, 0x1
 
     aput-object v10, v8, v13
 
-    .line 527
     :cond_3
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 528
     .local v6, "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$ChatParticipant;>;"
     new-instance v7, Ljava/util/ArrayList;
 
     invoke-direct {v7}, Ljava/util/ArrayList;-><init>()V
 
-    .line 530
     .local v7, "resultArrayNames":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/CharSequence;>;"
     const/4 v1, 0x0
 
@@ -170,7 +155,6 @@
 
     if-ge v1, v13, :cond_d
 
-    .line 531
     move-object/from16 v0, p0
 
     iget-object v13, v0, Lorg/telegram/ui/SetAdminsActivity$SearchAdapter$2$1;->val$contactsCopy:Ljava/util/ArrayList;
@@ -181,7 +165,6 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 532
     .local v4, "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -197,7 +180,6 @@
 
     move-result-object v12
 
-    .line 533
     .local v12, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget v13, v12, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -207,14 +189,12 @@
 
     if-ne v13, v14, :cond_6
 
-    .line 530
     :cond_4
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 521
     .end local v1    # "a":I
     .end local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .end local v6    # "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$ChatParticipant;>;"
@@ -226,7 +206,6 @@
 
     goto :goto_1
 
-    .line 537
     .restart local v1    # "a":I
     .restart local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .restart local v6    # "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$ChatParticipant;>;"
@@ -246,7 +225,6 @@
 
     move-result-object v3
 
-    .line 538
     .local v3, "name":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -256,7 +234,6 @@
 
     move-result-object v11
 
-    .line 539
     .local v11, "tName":Ljava/lang/String;
     invoke-virtual {v3, v11}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -264,14 +241,11 @@
 
     if-eqz v13, :cond_7
 
-    .line 540
     const/4 v11, 0x0
 
-    .line 543
     :cond_7
     const/4 v2, 0x0
 
-    .line 544
     .local v2, "found":I
     array-length v14, v8
 
@@ -282,7 +256,6 @@
 
     aget-object v5, v8, v13
 
-    .line 545
     .local v5, "q":Ljava/lang/String;
     invoke-virtual {v3, v5}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -346,21 +319,17 @@
 
     if-eqz v15, :cond_a
 
-    .line 546
     :cond_8
     const/4 v2, 0x1
 
-    .line 551
     :cond_9
     :goto_5
     if-eqz v2, :cond_c
 
-    .line 552
     const/4 v13, 0x1
 
     if-ne v2, v13, :cond_b
 
-    .line 553
     iget-object v13, v12, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
     iget-object v14, v12, Lorg/telegram/tgnet/TLRPC$User;->last_name:Ljava/lang/String;
@@ -371,13 +340,11 @@
 
     invoke-virtual {v7, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 557
     :goto_6
     invoke-virtual {v6, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_3
 
-    .line 547
     :cond_a
     iget-object v15, v12, Lorg/telegram/tgnet/TLRPC$User;->username:Ljava/lang/String;
 
@@ -391,12 +358,10 @@
 
     if-eqz v15, :cond_9
 
-    .line 548
     const/4 v2, 0x2
 
     goto :goto_5
 
-    .line 555
     :cond_b
     new-instance v13, Ljava/lang/StringBuilder;
 
@@ -446,13 +411,11 @@
 
     goto :goto_6
 
-    .line 544
     :cond_c
     add-int/lit8 v13, v13, 0x1
 
     goto/16 :goto_4
 
-    .line 563
     .end local v2    # "found":I
     .end local v3    # "name":Ljava/lang/String;
     .end local v4    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$CacheOutTask;
 
     .prologue
-    .line 929
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheOutTask;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
@@ -45,10 +44,8 @@
     .locals 6
 
     .prologue
-    .line 932
     const/4 v1, 0x0
 
-    .line 933
     .local v1, "toSet":Landroid/graphics/drawable/BitmapDrawable;
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
@@ -56,15 +53,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 934
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 945
     :cond_0
     :goto_0
     move-object v2, v1
 
-    .line 946
     .local v2, "toSetFinal":Landroid/graphics/drawable/BitmapDrawable;
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheOutTask;
 
@@ -80,17 +74,14 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 952
     return-void
 
-    .line 935
     .end local v2    # "toSetFinal":Landroid/graphics/drawable/BitmapDrawable;
     :cond_1
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v3, :cond_0
 
-    .line 936
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheOutTask;
 
     iget-object v3, v3, Lorg/telegram/messenger/ImageLoader$CacheOutTask;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -111,10 +102,8 @@
 
     move-result-object v1
 
-    .line 937
     if-nez v1, :cond_2
 
-    .line 938
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheOutTask;
 
     iget-object v3, v3, Lorg/telegram/messenger/ImageLoader$CacheOutTask;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -135,12 +124,10 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/LruCache;->put(Ljava/lang/String;Landroid/graphics/drawable/BitmapDrawable;)Landroid/graphics/drawable/BitmapDrawable;
 
-    .line 939
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
     goto :goto_0
 
-    .line 941
     :cond_2
     iget-object v3, p0, Lorg/telegram/messenger/ImageLoader$CacheOutTask$1;->val$bitmapDrawable:Landroid/graphics/drawable/BitmapDrawable;
 
@@ -148,7 +135,6 @@
 
     move-result-object v0
 
-    .line 942
     .local v0, "image":Landroid/graphics/Bitmap;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->recycle()V
 

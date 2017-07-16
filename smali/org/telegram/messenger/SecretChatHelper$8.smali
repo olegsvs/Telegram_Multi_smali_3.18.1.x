@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1374
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$8;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1374
     check-cast p1, Lorg/telegram/messenger/SecretChatHelper$TL_decryptedMessageHolder;
 
     check-cast p2, Lorg/telegram/messenger/SecretChatHelper$TL_decryptedMessageHolder;
@@ -69,7 +67,6 @@
     .param p2, "rhs"    # Lorg/telegram/messenger/SecretChatHelper$TL_decryptedMessageHolder;
 
     .prologue
-    .line 1377
     iget-object v0, p1, Lorg/telegram/messenger/SecretChatHelper$TL_decryptedMessageHolder;->layer:Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageLayer;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageLayer;->out_seq_no:I
@@ -80,14 +77,11 @@
 
     if-le v0, v1, :cond_0
 
-    .line 1378
     const/4 v0, 0x1
 
-    .line 1382
     :goto_0
     return v0
 
-    .line 1379
     :cond_0
     iget-object v0, p1, Lorg/telegram/messenger/SecretChatHelper$TL_decryptedMessageHolder;->layer:Lorg/telegram/tgnet/TLRPC$TL_decryptedMessageLayer;
 
@@ -99,12 +93,10 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 1380
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 1382
     :cond_1
     const/4 v0, 0x0
 

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 11040
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->val$fromId:I
@@ -47,28 +46,23 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 11043
     if-nez p2, :cond_1
 
-    .line 11044
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->val$fromId:I
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->access$20600(Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;I)V
 
-    .line 11048
     :cond_0
     :goto_0
     return-void
 
-    .line 11045
     :cond_1
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 11046
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$8;->val$fromId:I

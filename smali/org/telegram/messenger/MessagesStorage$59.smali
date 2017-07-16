@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 3564
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$59;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$59;->val$chat_id:I
@@ -53,19 +52,16 @@
     .locals 7
 
     .prologue
-    .line 3568
     :try_start_0
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3569
     .local v3, "usersToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3570
     .local v1, "encryptedChats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$EncryptedChat;>;"
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -91,7 +87,6 @@
 
     invoke-virtual {v4, v5, v1, v3}, Lorg/telegram/messenger/MessagesStorage;->getEncryptedChatsInternal(Ljava/lang/String;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 3571
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
@@ -104,12 +99,10 @@
 
     if-nez v4, :cond_0
 
-    .line 3572
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 3573
     .local v2, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -121,14 +114,12 @@
 
     invoke-virtual {v4, v5, v2}, Lorg/telegram/messenger/MessagesStorage;->getUsersInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 3574
     invoke-virtual {v2}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 3575
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->val$result:Ljava/util/ArrayList;
 
     const/4 v5, 0x0
@@ -139,7 +130,6 @@
 
     invoke-virtual {v4, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 3576
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->val$result:Ljava/util/ArrayList;
 
     const/4 v5, 0x0
@@ -153,31 +143,26 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3582
     .end local v2    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :cond_0
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v4}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 3584
     .end local v1    # "encryptedChats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$EncryptedChat;>;"
     .end local v3    # "usersToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :goto_0
     return-void
 
-    .line 3579
     :catch_0
     move-exception v0
 
-    .line 3580
     .local v0, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3582
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$59;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v4}, Ljava/util/concurrent/Semaphore;->release()V

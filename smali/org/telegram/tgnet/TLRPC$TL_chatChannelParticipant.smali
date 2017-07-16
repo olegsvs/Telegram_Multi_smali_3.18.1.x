@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 26037
     const v0, -0x3728b6c2
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 26036
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChatParticipant;-><init>()V
 
     return-void

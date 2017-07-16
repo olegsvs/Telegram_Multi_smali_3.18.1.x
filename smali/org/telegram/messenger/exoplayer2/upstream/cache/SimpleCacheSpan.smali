@@ -20,7 +20,6 @@
     .prologue
     const/16 v1, 0x20
 
-    .line 31
     const-string/jumbo v0, "^(.+)\\.(\\d+)\\.(\\d+)\\.v1\\.exo$"
 
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
@@ -29,7 +28,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V1:Ljava/util/regex/Pattern;
 
-    .line 33
     const-string/jumbo v0, "^(.+)\\.(\\d+)\\.(\\d+)\\.v2\\.exo$"
 
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
@@ -38,7 +36,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V2:Ljava/util/regex/Pattern;
 
-    .line 35
     const-string/jumbo v0, "^(\\d+)\\.(\\d+)\\.(\\d+)\\.v3\\.exo$"
 
     invoke-static {v0, v1}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;I)Ljava/util/regex/Pattern;
@@ -59,10 +56,8 @@
     .param p8, "file"    # Ljava/io/File;
 
     .prologue
-    .line 111
     invoke-direct/range {p0 .. p8}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;-><init>(Ljava/lang/String;JJJLjava/io/File;)V
 
-    .line 112
     return-void
 .end method
 
@@ -74,12 +69,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 64
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 65
     .local v11, "name":Ljava/lang/String;
     const-string/jumbo v2, ".v3.exo"
 
@@ -89,26 +82,21 @@
 
     if-nez v2, :cond_2
 
-    .line 66
     invoke-static {p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->upgradeFile(Ljava/io/File;Lorg/telegram/messenger/exoplayer2/upstream/cache/CachedContentIndex;)Ljava/io/File;
 
     move-result-object p0
 
-    .line 67
     if-nez p0, :cond_1
 
-    .line 81
     :cond_0
     :goto_0
     return-object v0
 
-    .line 70
     :cond_1
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v11
 
-    .line 73
     :cond_2
     sget-object v2, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V3:Ljava/util/regex/Pattern;
 
@@ -116,7 +104,6 @@
 
     move-result-object v10
 
-    .line 74
     .local v10, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v10}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -124,12 +111,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 77
     invoke-virtual {p0}, Ljava/io/File;->length()J
 
     move-result-wide v4
 
-    .line 78
     .local v4, "length":J
     const/4 v2, 0x1
 
@@ -141,13 +126,11 @@
 
     move-result v9
 
-    .line 79
     .local v9, "id":I
     invoke-virtual {p1, v9}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CachedContentIndex;->getKeyForId(I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 80
     .local v1, "key":Ljava/lang/String;
     if-eqz v1, :cond_0
 
@@ -165,7 +148,6 @@
 
     const/4 v6, 0x3
 
-    .line 81
     invoke-virtual {v10, v6}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v6
@@ -188,7 +170,6 @@
     .param p3, "length"    # J
 
     .prologue
-    .line 52
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
@@ -212,7 +193,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 44
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     const-wide/16 v4, -0x1
@@ -236,7 +216,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 48
     new-instance v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;
 
     const-wide/16 v4, -0x1
@@ -262,7 +241,6 @@
     .param p4, "lastAccessTimestamp"    # J
 
     .prologue
-    .line 40
     new-instance v0, Ljava/io/File;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -318,12 +296,10 @@
 
     const/4 v10, 0x0
 
-    .line 86
     invoke-virtual {p0}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 87
     .local v6, "filename":Ljava/lang/String;
     sget-object v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V2:Ljava/util/regex/Pattern;
 
@@ -331,7 +307,6 @@
 
     move-result-object v8
 
-    .line 88
     .local v8, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v8}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -339,7 +314,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 89
     invoke-virtual {v8, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v0
@@ -348,19 +322,16 @@
 
     move-result-object v7
 
-    .line 90
     .local v7, "key":Ljava/lang/String;
     if-nez v7, :cond_3
 
     move-object v9, v10
 
-    .line 106
     .end local v7    # "key":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object v9
 
-    .line 94
     :cond_1
     sget-object v0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->CACHE_FILE_PATTERN_V1:Ljava/util/regex/Pattern;
 
@@ -368,7 +339,6 @@
 
     move-result-object v8
 
-    .line 95
     invoke-virtual {v8}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
@@ -377,16 +347,13 @@
 
     move-object v9, v10
 
-    .line 96
     goto :goto_0
 
-    .line 98
     :cond_2
     invoke-virtual {v8, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v7
 
-    .line 101
     .restart local v7    # "key":Ljava/lang/String;
     :cond_3
     invoke-virtual {p0}, Ljava/io/File;->getParentFile()Ljava/io/File;
@@ -399,7 +366,6 @@
 
     const/4 v2, 0x2
 
-    .line 102
     invoke-virtual {v8, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -418,12 +384,10 @@
 
     move-result-wide v4
 
-    .line 101
     invoke-static/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->getCacheFile(Ljava/io/File;IJJ)Ljava/io/File;
 
     move-result-object v9
 
-    .line 103
     .local v9, "newCacheFile":Ljava/io/File;
     invoke-virtual {p0, v9}, Ljava/io/File;->renameTo(Ljava/io/File;)Z
 
@@ -433,7 +397,6 @@
 
     move-object v9, v10
 
-    .line 104
     goto :goto_0
 .end method
 
@@ -444,17 +407,14 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 123
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->isCached:Z
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 124
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 125
     .local v4, "now":J
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;->file:Ljava/io/File;
 
@@ -470,7 +430,6 @@
 
     move-result-object v14
 
-    .line 126
     .local v14, "newCacheFile":Ljava/io/File;
     new-instance v6, Lorg/telegram/messenger/exoplayer2/upstream/cache/SimpleCacheSpan;
 

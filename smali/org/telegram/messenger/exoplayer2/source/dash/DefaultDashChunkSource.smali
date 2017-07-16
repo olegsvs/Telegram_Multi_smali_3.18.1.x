@@ -52,49 +52,37 @@
     .param p9, "maxSegmentsPerLoad"    # I
 
     .prologue
-    .line 111
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 112
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifestLoaderErrorThrower:Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;
 
-    .line 113
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
-    .line 114
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->adaptationSetIndex:I
 
-    .line 115
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 116
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
-    .line 117
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->periodIndex:I
 
-    .line 118
     move-wide/from16 v0, p7
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->elapsedRealtimeOffsetMs:J
 
-    .line 119
     move/from16 v0, p9
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->maxSegmentsPerLoad:I
 
-    .line 121
     invoke-virtual {p2, p3}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->getPeriodDurationUs(I)J
 
     move-result-wide v4
 
-    .line 122
     .local v4, "periodDurationUs":J
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->getRepresentations()Ljava/util/List;
 
     move-result-object v6
 
-    .line 123
     .local v6, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     invoke-interface {p5}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->length()I
 
@@ -104,7 +92,6 @@
 
     iput-object v7, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
-    .line 124
     const/4 v2, 0x0
 
     .local v2, "i":I
@@ -115,7 +102,6 @@
 
     if-ge v2, v7, :cond_0
 
-    .line 125
     invoke-interface {p5, v2}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
 
     move-result v7
@@ -126,7 +112,6 @@
 
     check-cast v3, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
-    .line 126
     .local v3, "representation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
@@ -136,12 +121,10 @@
 
     aput-object v8, v7, v2
 
-    .line 124
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 128
     .end local v3    # "representation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
     :cond_0
     return-void
@@ -153,7 +136,6 @@
     .prologue
     const-wide/16 v4, 0x3e8
 
-    .line 294
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->elapsedRealtimeOffsetMs:J
 
     const-wide/16 v2, 0x0
@@ -162,7 +144,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 295
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -173,7 +154,6 @@
 
     mul-long/2addr v0, v4
 
-    .line 297
     :goto_0
     return-wide v0
 
@@ -200,7 +180,6 @@
     .end annotation
 
     .prologue
-    .line 290
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->periodIndex:I
@@ -235,16 +214,13 @@
     .param p6, "indexUri"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     .prologue
-    .line 305
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
     iget-object v10, v3, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->baseUrl:Ljava/lang/String;
 
-    .line 306
     .local v10, "baseUrl":Ljava/lang/String;
     if-eqz p5, :cond_1
 
-    .line 309
     move-object/from16 v0, p5
 
     move-object/from16 v1, p6
@@ -253,14 +229,11 @@
 
     move-result-object v11
 
-    .line 310
     .local v11, "requestUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     if-nez v11, :cond_0
 
-    .line 311
     move-object/from16 v11, p5
 
-    .line 316
     :cond_0
     :goto_0
     new-instance v2, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
@@ -275,14 +248,12 @@
 
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
-    .line 317
     invoke-virtual {v8}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v8
 
     invoke-direct/range {v2 .. v8}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;)V
 
-    .line 318
     .local v2, "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     new-instance v3, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;
 
@@ -302,7 +273,6 @@
 
     return-object v3
 
-    .line 314
     .end local v2    # "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     .end local v11    # "requestUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     :cond_1
@@ -324,14 +294,12 @@
     .param p7, "maxSegmentCount"    # I
 
     .prologue
-    .line 325
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
     move-object/from16 v26, v0
 
-    .line 326
     .local v26, "representation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
     move-object/from16 v0, p0
 
@@ -341,7 +309,6 @@
 
     move-result-wide v12
 
-    .line 327
     .local v12, "startTimeUs":J
     move-object/from16 v0, p0
 
@@ -351,7 +318,6 @@
 
     move-result-object v27
 
-    .line 328
     .local v27, "segmentUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     move-object/from16 v0, v26
 
@@ -359,7 +325,6 @@
 
     move-object/from16 v22, v0
 
-    .line 329
     .local v22, "baseUrl":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -367,7 +332,6 @@
 
     if-nez v5, :cond_0
 
-    .line 330
     move-object/from16 v0, p0
 
     move/from16 v1, p6
@@ -376,7 +340,6 @@
 
     move-result-wide v14
 
-    .line 331
     .local v14, "endTimeUs":J
     new-instance v4, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
@@ -396,14 +359,12 @@
 
     iget-wide v8, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
 
-    .line 332
     invoke-virtual/range {v26 .. v26}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-direct/range {v4 .. v10}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;)V
 
-    .line 333
     .local v4, "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     new-instance v6, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;
 
@@ -423,17 +384,14 @@
 
     invoke-direct/range {v6 .. v17}, Lorg/telegram/messenger/exoplayer2/source/chunk/SingleSampleMediaChunk;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;Lorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJILorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 351
     :goto_0
     return-object v6
 
-    .line 336
     .end local v4    # "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     .end local v14    # "endTimeUs":J
     :cond_0
     const/16 v17, 0x1
 
-    .line 337
     .local v17, "segmentCount":I
     const/16 v23, 0x1
 
@@ -445,7 +403,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 338
     add-int v5, p6, v23
 
     move-object/from16 v0, p0
@@ -454,7 +411,6 @@
 
     move-result-object v25
 
-    .line 339
     .local v25, "nextSegmentUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     move-object/from16 v0, v27
 
@@ -466,11 +422,9 @@
 
     move-result-object v24
 
-    .line 340
     .local v24, "mergedSegmentUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     if-nez v24, :cond_2
 
-    .line 347
     .end local v24    # "mergedSegmentUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .end local v25    # "nextSegmentUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     :cond_1
@@ -484,7 +438,6 @@
 
     move-result-wide v14
 
-    .line 348
     .restart local v14    # "endTimeUs":J
     new-instance v4, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
@@ -504,14 +457,12 @@
 
     iget-wide v8, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;->length:J
 
-    .line 349
     invoke-virtual/range {v26 .. v26}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->getCacheKey()Ljava/lang/String;
 
     move-result-object v10
 
     invoke-direct/range {v4 .. v10}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;)V
 
-    .line 350
     .restart local v4    # "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     move-object/from16 v0, v26
 
@@ -521,7 +472,6 @@
 
     move-wide/from16 v18, v0
 
-    .line 351
     .local v18, "sampleOffsetUs":J
     new-instance v6, Lorg/telegram/messenger/exoplayer2/source/chunk/ContainerMediaChunk;
 
@@ -549,7 +499,6 @@
 
     goto :goto_0
 
-    .line 344
     .end local v4    # "dataSpec":Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
     .end local v14    # "endTimeUs":J
     .end local v18    # "sampleOffsetUs":J
@@ -558,10 +507,8 @@
     :cond_2
     move-object/from16 v27, v24
 
-    .line 345
     add-int/lit8 v17, v17, 0x1
 
-    .line 337
     add-int/lit8 v23, v23, 0x1
 
     goto :goto_1
@@ -576,18 +523,15 @@
     .param p4, "out"    # Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkHolder;
 
     .prologue
-    .line 165
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v3, :cond_0
 
-    .line 240
     :goto_0
     return-void
 
-    .line 169
     :cond_0
     if-eqz p1, :cond_4
 
@@ -597,7 +541,6 @@
 
     sub-long v20, v4, p2
 
-    .line 170
     .local v20, "bufferedDurationUs":J
     :goto_1
     move-object/from16 v0, p0
@@ -608,7 +551,6 @@
 
     invoke-interface {v3, v0, v1}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->updateSelectedTrack(J)V
 
-    .line 172
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
@@ -617,62 +559,50 @@
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 173
     invoke-interface {v4}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getSelectedIndex()I
 
     move-result v4
 
     aget-object v2, v3, v4
 
-    .line 174
     .local v2, "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     iget-object v0, v2, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->representation:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
     move-object/from16 v35, v0
 
-    .line 175
     .local v35, "selectedRepresentation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
     iget-object v0, v2, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;
 
     move-object/from16 v34, v0
 
-    .line 177
     .local v34, "segmentIndex":Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;
     const/4 v7, 0x0
 
-    .line 178
     .local v7, "pendingInitializationUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     const/4 v8, 0x0
 
-    .line 179
     .local v8, "pendingIndexUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     iget-object v14, v2, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->sampleFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 180
     .local v14, "sampleFormat":Lorg/telegram/messenger/exoplayer2/Format;
     if-nez v14, :cond_1
 
-    .line 181
     invoke-virtual/range {v35 .. v35}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->getInitializationUri()Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v7
 
-    .line 183
     :cond_1
     if-nez v34, :cond_2
 
-    .line 184
     invoke-virtual/range {v35 .. v35}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;->getIndexUri()Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v8
 
-    .line 186
     :cond_2
     if-nez v7, :cond_3
 
     if-eqz v8, :cond_5
 
-    .line 188
     :cond_3
     move-object/from16 v0, p0
 
@@ -682,7 +612,6 @@
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 189
     invoke-interface {v4}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getSelectedFormat()Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v4
@@ -699,17 +628,14 @@
 
     iget-object v6, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 190
     invoke-interface {v6}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getSelectionData()Ljava/lang/Object;
 
     move-result-object v6
 
-    .line 188
     invoke-static/range {v2 .. v8}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->newInitializationChunk(Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;)Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
 
     move-result-object v23
 
-    .line 191
     .local v23, "initializationChunk":Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
     move-object/from16 v0, v23
 
@@ -719,7 +645,6 @@
 
     goto :goto_0
 
-    .line 169
     .end local v2    # "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     .end local v7    # "pendingInitializationUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .end local v8    # "pendingIndexUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
@@ -733,7 +658,6 @@
 
     goto :goto_1
 
-    .line 195
     .restart local v2    # "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     .restart local v7    # "pendingInitializationUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .restart local v8    # "pendingIndexUri":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
@@ -746,19 +670,16 @@
 
     move-result-wide v30
 
-    .line 196
     .local v30, "nowUs":J
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getFirstSegmentNum()I
 
     move-result v17
 
-    .line 197
     .local v17, "firstAvailableSegmentNum":I
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getLastSegmentNum()I
 
     move-result v24
 
-    .line 198
     .local v24, "lastAvailableSegmentNum":I
     const/4 v3, -0x1
 
@@ -768,12 +689,10 @@
 
     const/16 v22, 0x1
 
-    .line 199
     .local v22, "indexUnbounded":Z
     :goto_2
     if-eqz v22, :cond_7
 
-    .line 202
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
@@ -786,7 +705,6 @@
 
     sub-long v28, v30, v4
 
-    .line 203
     .local v28, "liveEdgeTimeUs":J
     move-object/from16 v0, p0
 
@@ -806,11 +724,9 @@
 
     mul-long v32, v4, v10
 
-    .line 204
     .local v32, "periodStartUs":J
     sub-long v26, v28, v32
 
-    .line 205
     .local v26, "liveEdgeTimeInPeriodUs":J
     move-object/from16 v0, p0
 
@@ -824,7 +740,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 206
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
@@ -835,23 +750,19 @@
 
     mul-long v18, v4, v10
 
-    .line 207
     .local v18, "bufferDepthUs":J
     sub-long v4, v26, v18
 
-    .line 208
     invoke-virtual {v2, v4, v5}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getSegmentNum(J)I
 
     move-result v3
 
-    .line 207
     move/from16 v0, v17
 
     invoke-static {v0, v3}, Ljava/lang/Math;->max(II)I
 
     move-result v17
 
-    .line 212
     .end local v18    # "bufferDepthUs":J
     :cond_6
     move-wide/from16 v0, v26
@@ -862,14 +773,12 @@
 
     add-int/lit8 v24, v3, -0x1
 
-    .line 216
     .end local v26    # "liveEdgeTimeInPeriodUs":J
     .end local v28    # "liveEdgeTimeUs":J
     .end local v32    # "periodStartUs":J
     :cond_7
     if-nez p1, :cond_c
 
-    .line 217
     move-wide/from16 v0, p2
 
     invoke-virtual {v2, v0, v1}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getSegmentNum(J)I
@@ -884,7 +793,6 @@
 
     move-result v15
 
-    .line 228
     .local v15, "segmentNum":I
     :cond_8
     move/from16 v0, v24
@@ -901,7 +809,6 @@
 
     if-lt v15, v0, :cond_e
 
-    .line 231
     :cond_9
     move-object/from16 v0, p0
 
@@ -937,7 +844,6 @@
 
     goto/16 :goto_0
 
-    .line 198
     .end local v15    # "segmentNum":I
     .end local v22    # "indexUnbounded":Z
     :cond_b
@@ -945,20 +851,17 @@
 
     goto/16 :goto_2
 
-    .line 220
     .restart local v22    # "indexUnbounded":Z
     :cond_c
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/source/chunk/MediaChunk;->getNextChunkIndex()I
 
     move-result v15
 
-    .line 221
     .restart local v15    # "segmentNum":I
     move/from16 v0, v17
 
     if-ge v15, v0, :cond_8
 
-    .line 223
     new-instance v3, Lorg/telegram/messenger/exoplayer2/source/BehindLiveWindowException;
 
     invoke-direct {v3}, Lorg/telegram/messenger/exoplayer2/source/BehindLiveWindowException;-><init>()V
@@ -969,13 +872,11 @@
 
     goto/16 :goto_0
 
-    .line 231
     :cond_d
     const/4 v3, 0x0
 
     goto :goto_3
 
-    .line 235
     :cond_e
     move-object/from16 v0, p0
 
@@ -989,7 +890,6 @@
 
     move-result v16
 
-    .line 236
     .local v16, "maxSegmentCount":I
     move-object/from16 v0, p0
 
@@ -999,7 +899,6 @@
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 237
     invoke-interface {v3}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getSelectedFormat()Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v11
@@ -1016,19 +915,16 @@
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
-    .line 238
     invoke-interface {v3}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getSelectionData()Ljava/lang/Object;
 
     move-result-object v13
 
     move-object v9, v2
 
-    .line 236
     invoke-static/range {v9 .. v16}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->newMediaChunk(Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;Lorg/telegram/messenger/exoplayer2/Format;II)Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
 
     move-result-object v25
 
-    .line 239
     .local v25, "nextMediaChunk":Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
     move-object/from16 v0, v25
 
@@ -1053,7 +949,6 @@
     .end annotation
 
     .prologue
-    .line 157
     .local p3, "queue":Ljava/util/List;, "Ljava/util/List<+Lorg/telegram/messenger/exoplayer2/source/chunk/MediaChunk;>;"
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->fatalError:Ljava/io/IOException;
 
@@ -1069,13 +964,11 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 158
     :cond_0
     invoke-interface {p3}, Ljava/util/List;->size()I
 
     move-result v0
 
-    .line 160
     :goto_0
     return v0
 
@@ -1098,23 +991,19 @@
     .end annotation
 
     .prologue
-    .line 148
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->fatalError:Ljava/io/IOException;
 
     if-eqz v0, :cond_0
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->fatalError:Ljava/io/IOException;
 
     throw v0
 
-    .line 151
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifestLoaderErrorThrower:Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/upstream/LoaderErrorThrower;->maybeThrowError()V
 
-    .line 153
     return-void
 .end method
 
@@ -1123,17 +1012,14 @@
     .param p1, "chunk"    # Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;
 
     .prologue
-    .line 244
     instance-of v4, p1, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;
 
     if-eqz v4, :cond_1
 
     move-object v0, p1
 
-    .line 245
     check-cast v0, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;
 
-    .line 246
     .local v0, "initializationChunk":Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
@@ -1141,42 +1027,34 @@
 
     iget-object v6, v0, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;->trackFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 247
     invoke-interface {v5, v6}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->indexOf(Lorg/telegram/messenger/exoplayer2/Format;)I
 
     move-result v5
 
     aget-object v1, v4, v5
 
-    .line 248
     .local v1, "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;->getSampleFormat()Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v2
 
-    .line 249
     .local v2, "sampleFormat":Lorg/telegram/messenger/exoplayer2/Format;
     if-eqz v2, :cond_0
 
-    .line 250
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->setSampleFormat(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 255
     :cond_0
     iget-object v4, v1, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;
 
     if-nez v4, :cond_1
 
-    .line 256
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;->getSeekMap()Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;
 
     move-result-object v3
 
-    .line 257
     .local v3, "seekMap":Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;
     if-eqz v3, :cond_1
 
-    .line 258
     new-instance v4, Lorg/telegram/messenger/exoplayer2/source/dash/DashWrappingSegmentIndex;
 
     check-cast v3, Lorg/telegram/messenger/exoplayer2/extractor/ChunkIndex;
@@ -1186,7 +1064,6 @@
 
     iget-object v5, v5, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
-    .line 259
     invoke-virtual {v5}, Landroid/net/Uri;->toString()Ljava/lang/String;
 
     move-result-object v5
@@ -1195,7 +1072,6 @@
 
     iput-object v4, v1, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->segmentIndex:Lorg/telegram/messenger/exoplayer2/source/dash/DashSegmentIndex;
 
-    .line 263
     .end local v0    # "initializationChunk":Lorg/telegram/messenger/exoplayer2/source/chunk/InitializationChunk;
     .end local v1    # "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     .end local v2    # "sampleFormat":Lorg/telegram/messenger/exoplayer2/Format;
@@ -1212,17 +1088,13 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 267
     if-nez p2, :cond_0
 
-    .line 268
     const/4 v2, 0x0
 
-    .line 283
     :goto_0
     return v2
 
-    .line 271
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
@@ -1248,21 +1120,18 @@
 
     if-ne v2, v4, :cond_1
 
-    .line 274
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
     iget-object v5, p1, Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;->trackFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 275
     invoke-interface {v4, v5}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->indexOf(Lorg/telegram/messenger/exoplayer2/Format;)I
 
     move-result v4
 
     aget-object v1, v2, v4
 
-    .line 276
     .local v1, "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     invoke-virtual {v1}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;->getLastSegmentNum()I
 
@@ -1271,7 +1140,6 @@
     .local v0, "lastAvailableSegmentNum":I
     move-object v2, p1
 
-    .line 277
     check-cast v2, Lorg/telegram/messenger/exoplayer2/source/chunk/MediaChunk;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/source/chunk/MediaChunk;->getNextChunkIndex()I
@@ -1280,15 +1148,12 @@
 
     if-le v2, v0, :cond_1
 
-    .line 278
     iput-boolean v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->missingLastSegment:Z
 
     move v2, v3
 
-    .line 279
     goto :goto_0
 
-    .line 283
     .end local v0    # "lastAvailableSegmentNum":I
     .end local v1    # "representationHolder":Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
     :cond_1
@@ -1298,12 +1163,10 @@
 
     iget-object v4, p1, Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;->trackFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 284
     invoke-interface {v3, v4}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->indexOf(Lorg/telegram/messenger/exoplayer2/Format;)I
 
     move-result v3
 
-    .line 283
     invoke-static {v2, v3, p3}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkedTrackBlacklistUtil;->maybeBlacklistTrack(Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;ILjava/lang/Exception;)Z
 
     move-result v2
@@ -1317,14 +1180,11 @@
     .param p2, "newPeriodIndex"    # I
 
     .prologue
-    .line 133
     :try_start_0
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
-    .line 134
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->periodIndex:I
 
-    .line 135
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->manifest:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->periodIndex:I
@@ -1333,13 +1193,11 @@
 
     move-result-wide v2
 
-    .line 136
     .local v2, "periodDurationUs":J
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->getRepresentations()Ljava/util/List;
 
     move-result-object v5
 
-    .line 137
     .local v5, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     const/4 v1, 0x0
 
@@ -1351,7 +1209,6 @@
 
     if-ge v1, v6, :cond_0
 
-    .line 138
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->trackSelection:Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;
 
     invoke-interface {v6, v1}, Lorg/telegram/messenger/exoplayer2/trackselection/TrackSelection;->getIndexInTrackGroup(I)I
@@ -1364,7 +1221,6 @@
 
     check-cast v4, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
-    .line 139
     .local v4, "representation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->representationHolders:[Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$RepresentationHolder;
 
@@ -1374,12 +1230,10 @@
     :try_end_0
     .catch Lorg/telegram/messenger/exoplayer2/source/BehindLiveWindowException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 137
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 141
     .end local v1    # "i":I
     .end local v2    # "periodDurationUs":J
     .end local v4    # "representation":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
@@ -1387,11 +1241,9 @@
     :catch_0
     move-exception v0
 
-    .line 142
     .local v0, "e":Lorg/telegram/messenger/exoplayer2/source/BehindLiveWindowException;
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;->fatalError:Ljava/io/IOException;
 
-    .line 144
     .end local v0    # "e":Lorg/telegram/messenger/exoplayer2/source/BehindLiveWindowException;
     :cond_0
     return-void

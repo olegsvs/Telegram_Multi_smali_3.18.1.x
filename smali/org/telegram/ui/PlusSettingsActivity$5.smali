@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusSettingsActivity;
 
     .prologue
-    .line 1485
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$5;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "isChecked"    # Z
 
     .prologue
-    .line 1523
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -65,6 +63,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1524
     return-void
 .end method

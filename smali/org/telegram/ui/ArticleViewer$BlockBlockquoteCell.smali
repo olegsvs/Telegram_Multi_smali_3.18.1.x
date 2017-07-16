@@ -38,13 +38,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 4122
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 4123
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 4117
     const/high16 v0, 0x42000000    # 32.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -53,7 +50,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
-    .line 4118
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -62,7 +58,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY:I
 
-    .line 4124
     return-void
 .end method
 
@@ -75,25 +70,20 @@
     .prologue
     const/high16 v4, 0x40c00000    # 6.0f
 
-    .line 4167
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     if-nez v0, :cond_0
 
-    .line 4185
     :goto_0
     return-void
 
-    .line 4170
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_1
 
-    .line 4171
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4172
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     int-to-float v0, v0
@@ -104,31 +94,25 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4173
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 4174
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4175
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 4177
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_2
 
-    .line 4178
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4179
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textX:I
 
     int-to-float v0, v0
@@ -139,22 +123,18 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4180
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 4181
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4182
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 4184
     :cond_2
     const/high16 v0, 0x41900000    # 18.0f
 
@@ -213,27 +193,22 @@
 
     const/high16 v6, 0x41000000    # 8.0f
 
-    .line 4139
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 4140
     .local v1, "width":I
     const/4 v0, 0x0
 
-    .line 4142
     .local v0, "height":I
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     if-eqz v2, :cond_3
 
-    .line 4143
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->lastCreatedWidth:I
 
     if-eq v2, v1, :cond_2
 
-    .line 4144
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
@@ -254,12 +229,10 @@
 
     iput-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 4145
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v2, :cond_0
 
-    .line 4146
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -274,7 +247,6 @@
 
     add-int/2addr v0, v2
 
-    .line 4148
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -296,12 +268,10 @@
 
     iput-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Landroid/text/StaticLayout;
 
-    .line 4149
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout2:Landroid/text/StaticLayout;
 
     if-eqz v2, :cond_1
 
-    .line 4150
     const/high16 v2, 0x40000000    # 2.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -312,7 +282,6 @@
 
     iput v2, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textY2:I
 
-    .line 4151
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -327,26 +296,21 @@
 
     add-int/2addr v0, v2
 
-    .line 4153
     :cond_1
     if-eqz v0, :cond_2
 
-    .line 4154
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     add-int/2addr v0, v2
 
-    .line 4162
     :cond_2
     :goto_0
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->setMeasuredDimension(II)V
 
-    .line 4163
     return-void
 
-    .line 4159
     :cond_3
     const/4 v0, 0x1
 
@@ -358,7 +322,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 4134
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->textLayout:Landroid/text/StaticLayout;
@@ -418,17 +381,13 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
     .prologue
-    .line 4127
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockBlockquote;
 
-    .line 4128
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->lastCreatedWidth:I
 
-    .line 4129
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockBlockquoteCell;->requestLayout()V
 
-    .line 4130
     return-void
 .end method

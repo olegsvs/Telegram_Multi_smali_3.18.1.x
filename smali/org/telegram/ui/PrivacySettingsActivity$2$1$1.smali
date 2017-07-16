@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/PrivacySettingsActivity$2$1;
 
     .prologue
-    .line 191
     iput-object p1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;->this$2:Lorg/telegram/ui/PrivacySettingsActivity$2$1;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;->val$progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -51,13 +50,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 194
     new-instance v0, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/PrivacySettingsActivity$2$1$1$1;-><init>(Lorg/telegram/ui/PrivacySettingsActivity$2$1$1;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 208
     return-void
 .end method

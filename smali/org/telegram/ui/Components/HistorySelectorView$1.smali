@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/HistorySelectorView;
 
     .prologue
-    .line 85
     iput-object p1, p0, Lorg/telegram/ui/Components/HistorySelectorView$1;->this$0:Lorg/telegram/ui/Components/HistorySelectorView;
 
     iput p2, p0, Lorg/telegram/ui/Components/HistorySelectorView$1;->val$color:I
@@ -46,18 +45,15 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 87
     iget-object v0, p0, Lorg/telegram/ui/Components/HistorySelectorView$1;->this$0:Lorg/telegram/ui/Components/HistorySelectorView;
 
     iget v1, p0, Lorg/telegram/ui/Components/HistorySelectorView$1;->val$color:I
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/HistorySelectorView;->access$000(Lorg/telegram/ui/Components/HistorySelectorView;I)V
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/Components/HistorySelectorView$1;->this$0:Lorg/telegram/ui/Components/HistorySelectorView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/HistorySelectorView;->access$100(Lorg/telegram/ui/Components/HistorySelectorView;)V
 
-    .line 89
     return-void
 .end method

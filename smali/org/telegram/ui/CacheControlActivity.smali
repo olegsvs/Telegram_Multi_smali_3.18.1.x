@@ -62,54 +62,40 @@
     .prologue
     const-wide/16 v2, -0x1
 
-    .line 59
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 72
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->databaseSize:J
 
-    .line 73
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->cacheSize:J
 
-    .line 74
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->documentsSize:J
 
-    .line 75
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->audioSize:J
 
-    .line 76
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->musicSize:J
 
-    .line 77
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->photoSize:J
 
-    .line 78
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->videoSize:J
 
-    .line 79
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->totalSize:J
 
-    .line 80
     const/4 v0, 0x7
 
     new-array v0, v0, [Z
 
     iput-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->clear:[Z
 
-    .line 81
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/CacheControlActivity;->calculating:Z
 
-    .line 83
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/CacheControlActivity;->canceled:Z
 
-    .line 85
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->themesSize:J
 
-    .line 582
     return-void
 .end method
 
@@ -118,7 +104,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->cacheSize:J
 
     return-wide v0
@@ -130,7 +115,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->cacheSize:J
 
     return-wide p1
@@ -143,7 +127,6 @@
     .param p2, "x2"    # I
 
     .prologue
-    .line 59
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/CacheControlActivity;->getDirectorySize(Ljava/io/File;I)J
 
     move-result-wide v0
@@ -156,7 +139,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lorg/telegram/ui/CacheControlActivity;->calculating:Z
 
     return v0
@@ -168,7 +150,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 59
     iput-boolean p1, p0, Lorg/telegram/ui/CacheControlActivity;->calculating:Z
 
     return p1
@@ -179,7 +160,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     return-object v0
@@ -190,7 +170,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->clear:[Z
 
     return-object v0
@@ -201,7 +180,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->keepMediaRow:I
 
     return v0
@@ -212,7 +190,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->databaseRow:I
 
     return v0
@@ -223,7 +200,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->databaseSize:J
 
     return-wide v0
@@ -235,7 +211,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->databaseSize:J
 
     return-wide p1
@@ -246,7 +221,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->cacheRow:I
 
     return v0
@@ -257,7 +231,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->visibleDialog:Landroid/app/Dialog;
 
     return-object v0
@@ -268,7 +241,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->visibleDialog:Landroid/app/Dialog;
 
     return-object v0
@@ -279,7 +251,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     invoke-direct {p0}, Lorg/telegram/ui/CacheControlActivity;->cleanupFolders()V
 
     return-void
@@ -290,7 +261,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-boolean v0, p0, Lorg/telegram/ui/CacheControlActivity;->canceled:Z
 
     return v0
@@ -301,7 +271,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     return v0
@@ -312,7 +281,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->databaseInfoRow:I
 
     return v0
@@ -323,7 +291,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->cacheInfoRow:I
 
     return v0
@@ -334,7 +301,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget v0, p0, Lorg/telegram/ui/CacheControlActivity;->keepMediaInfoRow:I
 
     return v0
@@ -345,7 +311,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->photoSize:J
 
     return-wide v0
@@ -357,7 +322,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->photoSize:J
 
     return-wide p1
@@ -368,7 +332,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->videoSize:J
 
     return-wide v0
@@ -380,7 +343,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->videoSize:J
 
     return-wide p1
@@ -391,7 +353,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->documentsSize:J
 
     return-wide v0
@@ -403,7 +364,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->documentsSize:J
 
     return-wide p1
@@ -414,7 +374,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->musicSize:J
 
     return-wide v0
@@ -426,7 +385,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->musicSize:J
 
     return-wide p1
@@ -437,7 +395,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->themesSize:J
 
     return-wide v0
@@ -449,7 +406,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->themesSize:J
 
     return-wide p1
@@ -460,7 +416,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->audioSize:J
 
     return-wide v0
@@ -472,7 +427,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->audioSize:J
 
     return-wide p1
@@ -483,7 +437,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/CacheControlActivity;
 
     .prologue
-    .line 59
     iget-wide v0, p0, Lorg/telegram/ui/CacheControlActivity;->totalSize:J
 
     return-wide v0
@@ -495,7 +448,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 59
     iput-wide p1, p0, Lorg/telegram/ui/CacheControlActivity;->totalSize:J
 
     return-wide p1
@@ -507,7 +459,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 197
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {p0}, Lorg/telegram/ui/CacheControlActivity;->getParentActivity()Landroid/app/Activity;
@@ -518,7 +469,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;-><init>(Landroid/content/Context;I)V
 
-    .line 198
     .local v0, "progressDialog":Lorg/telegram/ui/ActionBar/AlertDialog;
     const-string/jumbo v1, "Loading"
 
@@ -530,16 +480,12 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 199
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 200
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCancelable(Z)V
 
-    .line 201
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->show()V
 
-    .line 202
     sget-object v1, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v2, Lorg/telegram/ui/CacheControlActivity$2;
@@ -548,7 +494,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 307
     return-void
 .end method
 
@@ -558,27 +503,22 @@
     .param p2, "documentsMusicType"    # I
 
     .prologue
-    .line 157
     if-eqz p1, :cond_0
 
     iget-boolean v5, p0, Lorg/telegram/ui/CacheControlActivity;->canceled:Z
 
     if-eqz v5, :cond_2
 
-    .line 158
     :cond_0
     const-wide/16 v6, 0x0
 
-    .line 193
     :cond_1
     :goto_0
     return-wide v6
 
-    .line 160
     :cond_2
     const-wide/16 v6, 0x0
 
-    .line 161
     .local v6, "size":J
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
@@ -586,17 +526,14 @@
 
     if-eqz v5, :cond_a
 
-    .line 163
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->listFiles()[Ljava/io/File;
 
     move-result-object v1
 
-    .line 164
     .local v1, "array":[Ljava/io/File;
     if-eqz v1, :cond_1
 
-    .line 165
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -605,21 +542,17 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 166
     iget-boolean v5, p0, Lorg/telegram/ui/CacheControlActivity;->canceled:Z
 
     if-eqz v5, :cond_3
 
-    .line 167
     const-wide/16 v6, 0x0
 
     goto :goto_0
 
-    .line 169
     :cond_3
     aget-object v3, v1, v0
 
-    .line 170
     .local v3, "file":Ljava/io/File;
     const/4 v5, 0x1
 
@@ -629,7 +562,6 @@
 
     if-ne p2, v5, :cond_8
 
-    .line 171
     :cond_4
     invoke-virtual {v3}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -639,7 +571,6 @@
 
     move-result-object v4
 
-    .line 172
     .local v4, "name":Ljava/lang/String;
     const-string/jumbo v5, ".mp3"
 
@@ -657,13 +588,11 @@
 
     if-eqz v5, :cond_7
 
-    .line 173
     :cond_5
     const/4 v5, 0x1
 
     if-ne p2, v5, :cond_8
 
-    .line 165
     .end local v4    # "name":Ljava/lang/String;
     :cond_6
     :goto_2
@@ -671,14 +600,12 @@
 
     goto :goto_1
 
-    .line 176
     .restart local v4    # "name":Ljava/lang/String;
     :cond_7
     const/4 v5, 0x2
 
     if-eq p2, v5, :cond_6
 
-    .line 180
     .end local v4    # "name":Ljava/lang/String;
     :cond_8
     invoke-virtual {v3}, Ljava/io/File;->isDirectory()Z
@@ -687,7 +614,6 @@
 
     if-eqz v5, :cond_9
 
-    .line 181
     invoke-direct {p0, v3, p2}, Lorg/telegram/ui/CacheControlActivity;->getDirectorySize(Ljava/io/File;I)J
 
     move-result-wide v8
@@ -696,7 +622,6 @@
 
     goto :goto_2
 
-    .line 183
     :cond_9
     invoke-virtual {v3}, Ljava/io/File;->length()J
     :try_end_0
@@ -708,20 +633,17 @@
 
     goto :goto_2
 
-    .line 187
     .end local v0    # "a":I
     .end local v1    # "array":[Ljava/io/File;
     .end local v3    # "file":Ljava/io/File;
     :catch_0
     move-exception v2
 
-    .line 188
     .local v2, "e":Ljava/lang/Throwable;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 190
     .end local v2    # "e":Ljava/lang/Throwable;
     :cond_a
     invoke-virtual {p1}, Ljava/io/File;->isFile()Z
@@ -730,7 +652,6 @@
 
     if-eqz v5, :cond_1
 
-    .line 191
     invoke-virtual {p1}, Ljava/io/File;->length()J
 
     move-result-wide v8
@@ -744,21 +665,18 @@
     .locals 4
 
     .prologue
-    .line 573
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarColor:I
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 574
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarTitleColor:I
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitleColor(I)V
 
-    .line 575
     invoke-virtual {p0}, Lorg/telegram/ui/CacheControlActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -773,7 +691,6 @@
 
     move-result-object v0
 
-    .line 576
     .local v0, "back":Landroid/graphics/drawable/Drawable;
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -781,12 +698,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 577
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 578
     invoke-virtual {p0}, Lorg/telegram/ui/CacheControlActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -801,7 +716,6 @@
 
     move-result-object v1
 
-    .line 579
     .local v1, "other":Landroid/graphics/drawable/Drawable;
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -809,7 +723,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 580
     return-void
 .end method
 
@@ -824,19 +737,16 @@
 
     const/4 v6, 0x0
 
-    .line 311
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v4, 0x7f0200b6
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 312
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v3, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 313
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v4, "StorageUsage"
@@ -849,7 +759,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 314
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v4, Lorg/telegram/ui/CacheControlActivity$3;
@@ -858,26 +767,22 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 323
     new-instance v3, Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-direct {v3, p0, p1}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;-><init>(Lorg/telegram/ui/CacheControlActivity;Landroid/content/Context;)V
 
     iput-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
-    .line 325
     new-instance v3, Landroid/widget/FrameLayout;
 
     invoke-direct {v3, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->fragmentView:Landroid/view/View;
 
-    .line 326
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 329
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -887,7 +792,6 @@
 
     move-result-object v2
 
-    .line 330
     .local v2, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "prefBGColor"
 
@@ -903,23 +807,19 @@
 
     move-result v1
 
-    .line 331
     .local v1, "sColor":I
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 333
     new-instance v3, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v3, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 334
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 335
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -928,7 +828,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 336
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v4, -0x1
@@ -941,14 +840,12 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 337
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v4, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 338
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/ui/CacheControlActivity$4;
@@ -957,7 +854,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 560
     iget-object v3, p0, Lorg/telegram/ui/CacheControlActivity;->fragmentView:Landroid/view/View;
 
     return-object v3
@@ -967,7 +863,6 @@
     .locals 11
 
     .prologue
-    .line 671
     const/16 v0, 0xc
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1313,15 +1208,12 @@
     .locals 4
 
     .prologue
-    .line 90
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 92
     const/4 v1, 0x0
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
-    .line 93
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1330,7 +1222,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->keepMediaRow:I
 
-    .line 94
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1339,7 +1230,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->keepMediaInfoRow:I
 
-    .line 95
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1348,7 +1238,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->cacheRow:I
 
-    .line 96
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1357,7 +1246,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->cacheInfoRow:I
 
-    .line 98
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1366,7 +1254,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->databaseRow:I
 
-    .line 99
     iget v1, p0, Lorg/telegram/ui/CacheControlActivity;->rowCount:I
 
     add-int/lit8 v2, v1, 0x1
@@ -1375,7 +1262,6 @@
 
     iput v1, p0, Lorg/telegram/ui/CacheControlActivity;->databaseInfoRow:I
 
-    .line 101
     new-instance v0, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -1386,7 +1272,6 @@
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 102
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->length()J
 
@@ -1394,7 +1279,6 @@
 
     iput-wide v2, p0, Lorg/telegram/ui/CacheControlActivity;->databaseSize:J
 
-    .line 104
     sget-object v1, Lorg/telegram/messenger/Utilities;->globalQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v2, Lorg/telegram/ui/CacheControlActivity$1;
@@ -1403,7 +1287,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 147
     const/4 v1, 0x1
 
     return v1
@@ -1413,15 +1296,12 @@
     .locals 1
 
     .prologue
-    .line 152
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 153
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/CacheControlActivity;->canceled:Z
 
-    .line 154
     return-void
 .end method
 
@@ -1429,20 +1309,16 @@
     .locals 1
 
     .prologue
-    .line 565
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 566
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 567
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity;->listAdapter:Lorg/telegram/ui/CacheControlActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 569
     :cond_0
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -1450,7 +1326,6 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/CacheControlActivity;->updateTheme()V
 
-    .line 570
     :cond_1
     return-void
 .end method

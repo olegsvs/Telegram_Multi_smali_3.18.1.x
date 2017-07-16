@@ -33,19 +33,16 @@
     .locals 1
 
     .prologue
-    .line 1326
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;-><init>(Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;)V
 
-    .line 1327
     new-instance v0, Landroid/media/AudioTimestamp;
 
     invoke-direct {v0}, Landroid/media/AudioTimestamp;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->audioTimestamp:Landroid/media/AudioTimestamp;
 
-    .line 1328
     return-void
 .end method
 
@@ -55,7 +52,6 @@
     .locals 2
 
     .prologue
-    .line 1361
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastTimestampFramePosition:J
 
     return-wide v0
@@ -65,7 +61,6 @@
     .locals 2
 
     .prologue
-    .line 1356
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->audioTimestamp:Landroid/media/AudioTimestamp;
 
     iget-wide v0, v0, Landroid/media/AudioTimestamp;->nanoTime:J
@@ -81,19 +76,14 @@
     .prologue
     const-wide/16 v0, 0x0
 
-    .line 1333
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->reconfigure(Landroid/media/AudioTrack;Z)V
 
-    .line 1334
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->rawTimestampFramePositionWrapCount:J
 
-    .line 1335
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastRawTimestampFramePosition:J
 
-    .line 1336
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastTimestampFramePosition:J
 
-    .line 1337
     return-void
 .end method
 
@@ -101,7 +91,6 @@
     .locals 8
 
     .prologue
-    .line 1341
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->audioTrack:Landroid/media/AudioTrack;
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->audioTimestamp:Landroid/media/AudioTimestamp;
@@ -110,16 +99,13 @@
 
     move-result v2
 
-    .line 1342
     .local v2, "updated":Z
     if-eqz v2, :cond_1
 
-    .line 1343
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->audioTimestamp:Landroid/media/AudioTimestamp;
 
     iget-wide v0, v3, Landroid/media/AudioTimestamp;->framePosition:J
 
-    .line 1344
     .local v0, "rawFramePosition":J
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastRawTimestampFramePosition:J
 
@@ -127,7 +113,6 @@
 
     if-lez v3, :cond_0
 
-    .line 1346
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->rawTimestampFramePositionWrapCount:J
 
     const-wide/16 v6, 0x1
@@ -136,11 +121,9 @@
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->rawTimestampFramePositionWrapCount:J
 
-    .line 1348
     :cond_0
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastRawTimestampFramePosition:J
 
-    .line 1349
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->rawTimestampFramePositionWrapCount:J
 
     const/16 v3, 0x20
@@ -151,7 +134,6 @@
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtilV19;->lastTimestampFramePosition:J
 
-    .line 1351
     .end local v0    # "rawFramePosition":J
     :cond_1
     return v2

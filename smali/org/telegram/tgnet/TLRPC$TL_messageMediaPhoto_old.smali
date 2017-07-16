@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 3236
     const v0, -0x373ba5d6
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto_old;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 3235
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto;-><init>()V
 
     return-void
@@ -49,7 +47,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3240
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -60,7 +57,6 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto_old;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
-    .line 3241
     return-void
 .end method
 
@@ -69,16 +65,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 3244
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto_old;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 3245
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto_old;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$Photo;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 3246
     return-void
 .end method

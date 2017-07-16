@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1322
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$21;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$21;->val$channelId:I
@@ -49,7 +48,6 @@
     .locals 13
 
     .prologue
-    .line 1326
     :try_start_0
     iget v10, p0, Lorg/telegram/messenger/MessagesStorage$21;->val$channelId:I
 
@@ -57,13 +55,11 @@
 
     int-to-long v2, v10
 
-    .line 1327
     .local v2, "did":J
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1328
     .local v8, "mids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     iget-object v10, p0, Lorg/telegram/messenger/MessagesStorage$21;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -97,7 +93,6 @@
 
     move-result-object v0
 
-    .line 1329
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v6, Ljava/util/ArrayList;
 
@@ -105,7 +100,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
 
-    .line 1331
     .local v6, "filesToDelete":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/io/File;>;"
     :cond_0
     :goto_0
@@ -116,18 +110,15 @@
 
     if-eqz v10, :cond_2
 
-    .line 1332
     const/4 v10, 0x0
 
     invoke-virtual {v0, v10}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 1333
     .local v1, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v1, :cond_0
 
-    .line 1334
     const/4 v10, 0x0
 
     invoke-virtual {v1, v10}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -140,11 +131,9 @@
 
     move-result-object v7
 
-    .line 1335
     .local v7, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1336
     if-eqz v7, :cond_0
 
     iget v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->from_id:I
@@ -159,7 +148,6 @@
 
     if-eq v10, v11, :cond_0
 
-    .line 1337
     iget v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
     invoke-static {v10}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -168,14 +156,12 @@
 
     invoke-virtual {v8, v10}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1338
     iget-object v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     instance-of v10, v10, Lorg/telegram/tgnet/TLRPC$TL_messageMediaPhoto;
 
     if-eqz v10, :cond_4
 
-    .line 1339
     iget-object v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v10, v10, Lorg/telegram/tgnet/TLRPC$MessageMedia;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
@@ -200,13 +186,11 @@
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 1340
     .local v9, "photoSize":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     invoke-static {v9}, Lorg/telegram/messenger/FileLoader;->getPathToAttach(Lorg/telegram/tgnet/TLObject;)Ljava/io/File;
 
     move-result-object v5
 
-    .line 1341
     .local v5, "file":Ljava/io/File;
     if-eqz v5, :cond_1
 
@@ -220,14 +204,12 @@
 
     if-lez v11, :cond_1
 
-    .line 1342
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto :goto_1
 
-    .line 1358
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v5    # "file":Ljava/io/File;
     .end local v7    # "message":Lorg/telegram/tgnet/TLRPC$Message;
@@ -235,31 +217,26 @@
     :catch_0
     move-exception v4
 
-    .line 1359
     .local v4, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1361
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_2
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1362
     new-instance v10, Lorg/telegram/messenger/MessagesStorage$21$1;
 
     invoke-direct {v10, p0, v8}, Lorg/telegram/messenger/MessagesStorage$21$1;-><init>(Lorg/telegram/messenger/MessagesStorage$21;Ljava/util/ArrayList;)V
 
     invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1368
     iget-object v10, p0, Lorg/telegram/messenger/MessagesStorage$21;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iget v11, p0, Lorg/telegram/messenger/MessagesStorage$21;->val$channelId:I
 
     invoke-static {v10, v8, v11}, Lorg/telegram/messenger/MessagesStorage;->access$700(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;I)Ljava/util/ArrayList;
 
-    .line 1369
     iget-object v10, p0, Lorg/telegram/messenger/MessagesStorage$21;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     const/4 v11, 0x0
@@ -268,7 +245,6 @@
 
     invoke-static {v10, v8, v11, v12}, Lorg/telegram/messenger/MessagesStorage;->access$800(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;Ljava/util/ArrayList;I)V
 
-    .line 1370
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v10
@@ -277,14 +253,12 @@
 
     invoke-virtual {v10, v6, v11}, Lorg/telegram/messenger/FileLoader;->deleteFiles(Ljava/util/ArrayList;I)V
 
-    .line 1371
     invoke-virtual {v8}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v10
 
     if-nez v10, :cond_3
 
-    .line 1372
     new-instance v10, Lorg/telegram/messenger/MessagesStorage$21$2;
 
     invoke-direct {v10, p0, v8}, Lorg/telegram/messenger/MessagesStorage$21$2;-><init>(Lorg/telegram/messenger/MessagesStorage$21;Ljava/util/ArrayList;)V
@@ -293,7 +267,6 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 1382
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v2    # "did":J
     .end local v6    # "filesToDelete":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/io/File;>;"
@@ -302,7 +275,6 @@
     :goto_2
     return-void
 
-    .line 1345
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .restart local v2    # "did":J
@@ -317,7 +289,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 1346
     iget-object v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
     iget-object v10, v10, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
@@ -326,7 +297,6 @@
 
     move-result-object v5
 
-    .line 1347
     .restart local v5    # "file":Ljava/io/File;
     if-eqz v5, :cond_5
 
@@ -340,10 +310,8 @@
 
     if-lez v10, :cond_5
 
-    .line 1348
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1350
     :cond_5
     iget-object v10, v7, Lorg/telegram/tgnet/TLRPC$Message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
@@ -355,7 +323,6 @@
 
     move-result-object v5
 
-    .line 1351
     if-eqz v5, :cond_0
 
     invoke-virtual {v5}, Ljava/io/File;->toString()Ljava/lang/String;
@@ -368,14 +335,12 @@
 
     if-lez v10, :cond_0
 
-    .line 1352
     invoke-virtual {v6, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
 
     goto/16 :goto_0
 
-    .line 1379
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v2    # "did":J
@@ -386,7 +351,6 @@
     :catch_1
     move-exception v4
 
-    .line 1380
     .restart local v4    # "e":Ljava/lang/Exception;
     invoke-static {v4}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

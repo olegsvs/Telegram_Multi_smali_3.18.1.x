@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 988
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$9;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -40,7 +39,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 991
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$9;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 992
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$9;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
@@ -70,7 +67,6 @@
 
     invoke-interface {v0, v1}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 994
     :cond_0
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 

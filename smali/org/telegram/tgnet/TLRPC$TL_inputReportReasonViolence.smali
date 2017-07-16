@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 8547
     const v0, 0x1e22c78d
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonViolence;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 8546
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ReportReason;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 8551
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonViolence;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 8552
     return-void
 .end method

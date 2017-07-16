@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     .prologue
-    .line 219
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsAdapter$2;->this$0:Lorg/telegram/ui/Adapters/DialogsAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 219
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;
@@ -71,7 +69,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 223
     :try_start_0
     iget v2, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
@@ -79,15 +76,12 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 224
     const/4 v1, 0x0
 
-    .line 232
     :cond_0
     :goto_0
     return v1
 
-    .line 225
     :cond_1
     iget v2, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
@@ -97,16 +91,13 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 226
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 230
     :catch_0
     move-exception v0
 
-    .line 231
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

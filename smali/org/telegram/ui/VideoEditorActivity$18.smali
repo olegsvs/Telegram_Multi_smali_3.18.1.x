@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 1144
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1147
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/VideoEditorActivity;->access$4700(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -54,7 +52,6 @@
 
     move-result-object v1
 
-    .line 1148
     .local v1, "object":Ljava/lang/Object;
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -66,7 +63,6 @@
 
     move-result v2
 
-    .line 1149
     .local v2, "start":I
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -78,7 +74,6 @@
 
     move-result v0
 
-    .line 1150
     .local v0, "len":I
     instance-of v4, v1, Lorg/telegram/tgnet/TLRPC$User;
 
@@ -86,14 +81,11 @@
 
     move-object v3, v1
 
-    .line 1151
     check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1152
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v3, :cond_0
 
-    .line 1153
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/VideoEditorActivity;->access$1800(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
@@ -128,19 +120,16 @@
 
     invoke-virtual {v4, v2, v0, v5}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->replaceWithText(IILjava/lang/String;)V
 
-    .line 1158
     .end local v3    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     :goto_0
     return-void
 
-    .line 1155
     :cond_1
     instance-of v4, v1, Ljava/lang/String;
 
     if-eqz v4, :cond_0
 
-    .line 1156
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$18;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/VideoEditorActivity;->access$1800(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;

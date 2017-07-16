@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 5201
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -41,7 +40,6 @@
     .prologue
     const/16 v1, 0x8
 
-    .line 5204
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10400(Lorg/telegram/ui/ArticleViewer;)Landroid/animation/AnimatorSet;
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 5205
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$10500(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/ActionBar/ActionBar;
@@ -71,7 +68,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBar;->setVisibility(I)V
 
-    .line 5206
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$4600(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/ui/Components/VideoPlayer;
@@ -80,7 +76,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 5207
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$3500(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/FrameLayout;
@@ -89,7 +84,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 5209
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -103,7 +97,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 5210
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$3400(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/TextView;
@@ -114,7 +107,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 5212
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$30;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -122,7 +114,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$10402(Lorg/telegram/ui/ArticleViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 5214
     :cond_2
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/TypingDotsDrawable;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lorg/telegram/ui/Components/TypingDotsDrawable$1;->this$0:Lorg/telegram/ui/Components/TypingDotsDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 106
     iget-object v0, p0, Lorg/telegram/ui/Components/TypingDotsDrawable$1;->this$0:Lorg/telegram/ui/Components/TypingDotsDrawable;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/TypingDotsDrawable;->access$000(Lorg/telegram/ui/Components/TypingDotsDrawable;)V
 
-    .line 107
     return-void
 .end method

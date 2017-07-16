@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$99;
 
     .prologue
-    .line 6001
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$99$1;->this$1:Lorg/telegram/messenger/MessagesController$99;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$99$1;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -47,12 +46,10 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 6004
     move-object v10, p1
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;
 
-    .line 6005
     .local v10, "res":Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;
     if-eqz v10, :cond_0
 
@@ -72,7 +69,6 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 6006
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$99$1;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iget-boolean v0, v0, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
@@ -93,12 +89,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 6069
     :cond_0
     :goto_0
     return-void
 
-    .line 6009
     :cond_1
     new-instance v0, Lorg/telegram/messenger/MessagesController$99$1$1;
 
@@ -106,7 +100,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 6015
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -121,40 +114,33 @@
 
     invoke-virtual {v0, v2, v3, v4, v5}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 6017
     new-instance v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;
 
     invoke-direct {v7}, Lorg/telegram/tgnet/TLRPC$TL_messageService;-><init>()V
 
-    .line 6018
     .local v7, "message":Lorg/telegram/tgnet/TLRPC$TL_messageService;
     const/4 v0, 0x1
 
     iput-boolean v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->media_unread:Z
 
-    .line 6019
     const/4 v0, 0x1
 
     iput-boolean v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->unread:Z
 
-    .line 6020
     const/16 v0, 0x100
 
     iput v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->flags:I
 
-    .line 6021
     const/4 v0, 0x1
 
     iput-boolean v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->post:Z
 
-    .line 6022
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$99$1;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     iget-boolean v0, v0, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
     if-eqz v0, :cond_2
 
-    .line 6023
     iget v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->flags:I
 
     const/high16 v2, -0x80000000
@@ -163,7 +149,6 @@
 
     iput v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->flags:I
 
-    .line 6025
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getNewMessageId()I
 
@@ -173,28 +158,24 @@
 
     iput v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->local_id:I
 
-    .line 6026
     iget-object v0, v10, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;->participant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->date:I
 
     iput v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->date:I
 
-    .line 6027
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatAddUser;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageActionChatAddUser;-><init>()V
 
     iput-object v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
 
-    .line 6028
     iget-object v0, v10, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;->participant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
     iget v0, v0, Lorg/telegram/tgnet/TLRPC$ChannelParticipant;->inviter_id:I
 
     iput v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->from_id:I
 
-    .line 6029
     iget-object v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$MessageAction;->users:Ljava/util/ArrayList;
@@ -209,14 +190,12 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6030
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_peerChannel;-><init>()V
 
     iput-object v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 6031
     iget-object v0, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$99$1;->this$1:Lorg/telegram/messenger/MessagesController$99;
@@ -225,7 +204,6 @@
 
     iput v2, v0, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:I
 
-    .line 6032
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$99$1;->this$1:Lorg/telegram/messenger/MessagesController$99;
 
     iget v0, v0, Lorg/telegram/messenger/MessagesController$99;->val$chat_id:I
@@ -236,29 +214,24 @@
 
     iput-wide v2, v7, Lorg/telegram/tgnet/TLRPC$TL_messageService;->dialog_id:J
 
-    .line 6033
     const/4 v0, 0x0
 
     invoke-static {v0}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 6035
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6036
     .local v9, "pushMessages":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 6038
     .local v1, "messagesArr":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     new-instance v12, Ljava/util/concurrent/ConcurrentHashMap;
 
     invoke-direct {v12}, Ljava/util/concurrent/ConcurrentHashMap;-><init>()V
 
-    .line 6039
     .local v12, "usersDict":Ljava/util/concurrent/ConcurrentHashMap;, "Ljava/util/concurrent/ConcurrentHashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$User;>;"
     const/4 v6, 0x0
 
@@ -272,7 +245,6 @@
 
     if-ge v6, v0, :cond_3
 
-    .line 6040
     iget-object v0, v10, Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -281,7 +253,6 @@
 
     check-cast v11, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 6041
     .local v11, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget v0, v11, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -291,28 +262,23 @@
 
     invoke-virtual {v12, v0, v11}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 6039
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 6044
     .end local v11    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_3
     invoke-virtual {v1, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6045
     new-instance v8, Lorg/telegram/messenger/MessageObject;
 
     const/4 v0, 0x1
 
     invoke-direct {v8, v7, v12, v0}, Lorg/telegram/messenger/MessageObject;-><init>(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/AbstractMap;Z)V
 
-    .line 6046
     .local v8, "obj":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {v9, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 6048
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -327,7 +293,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 6059
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -348,7 +313,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesStorage;->putMessages(Ljava/util/ArrayList;ZZZI)V
 
-    .line 6061
     new-instance v0, Lorg/telegram/messenger/MessagesController$99$1$3;
 
     invoke-direct {v0, p0, v9}, Lorg/telegram/messenger/MessagesController$99$1$3;-><init>(Lorg/telegram/messenger/MessagesController$99$1;Ljava/util/ArrayList;)V

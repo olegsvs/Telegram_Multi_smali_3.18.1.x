@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$24;
 
     .prologue
-    .line 2262
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$24$2;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 2265
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -64,13 +62,11 @@
 
     invoke-static {v1, v0, v2}, Lorg/telegram/messenger/browser/Browser;->openUrl(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 2266
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$200(Lorg/telegram/ui/PaymentFormActivity;)V
 
-    .line 2267
     return-void
 .end method

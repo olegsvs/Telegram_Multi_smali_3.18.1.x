@@ -23,18 +23,14 @@
     .param p1, "firstSampleTimestampUs"    # J
 
     .prologue
-    .line 49
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 50
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->firstSampleTimestampUs:J
 
-    .line 51
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
-    .line 52
     return-void
 .end method
 
@@ -43,7 +39,6 @@
     .param p0, "pts"    # J
 
     .prologue
-    .line 123
     const-wide/32 v0, 0xf4240
 
     mul-long/2addr v0, p0
@@ -60,7 +55,6 @@
     .param p0, "us"    # J
 
     .prologue
-    .line 133
     const-wide/32 v0, 0x15f90
 
     mul-long/2addr v0, p0
@@ -79,7 +73,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 89
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -88,10 +81,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 90
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
-    .line 102
     :goto_0
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->timestampOffsetUs:J
 
@@ -99,7 +90,6 @@
 
     return-wide v0
 
-    .line 92
     :cond_0
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->firstSampleTimestampUs:J
 
@@ -109,25 +99,20 @@
 
     if-eqz v0, :cond_1
 
-    .line 94
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->firstSampleTimestampUs:J
 
     sub-long/2addr v0, p1
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->timestampOffsetUs:J
 
-    .line 96
     :cond_1
     monitor-enter p0
 
-    .line 97
     :try_start_0
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
-    .line 99
     invoke-virtual {p0}, Ljava/lang/Object;->notifyAll()V
 
-    .line 100
     monitor-exit p0
 
     goto :goto_0
@@ -147,7 +132,6 @@
     .param p1, "pts"    # J
 
     .prologue
-    .line 68
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
     const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
@@ -156,14 +140,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 71
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
     invoke-static {v8, v9}, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->usToPts(J)J
 
     move-result-wide v2
 
-    .line 72
     .local v2, "lastPts":J
     const-wide v8, 0x100000000L
 
@@ -173,7 +155,6 @@
 
     div-long v0, v8, v10
 
-    .line 73
     .local v0, "closestWrapCount":J
     const-wide v8, 0x200000000L
 
@@ -185,7 +166,6 @@
 
     add-long v6, p1, v8
 
-    .line 74
     .local v6, "ptsWrapBelow":J
     const-wide v8, 0x200000000L
 
@@ -193,7 +173,6 @@
 
     add-long v4, p1, v8
 
-    .line 75
     .local v4, "ptsWrapAbove":J
     sub-long v8, v6, v2
 
@@ -213,7 +192,6 @@
 
     move-wide p1, v6
 
-    .line 78
     .end local v0    # "closestWrapCount":J
     .end local v2    # "lastPts":J
     .end local v4    # "ptsWrapAbove":J
@@ -237,7 +215,6 @@
     :cond_1
     move-wide p1, v4
 
-    .line 75
     goto :goto_0
 .end method
 
@@ -245,12 +222,10 @@
     .locals 2
 
     .prologue
-    .line 58
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/TimestampAdjuster;->lastSampleTimestamp:J
 
-    .line 59
     return-void
 .end method
 
@@ -263,7 +238,6 @@
     .end annotation
 
     .prologue
-    .line 111
     monitor-enter p0
 
     :goto_0
@@ -276,14 +250,12 @@
 
     if-nez v0, :cond_0
 
-    .line 112
     invoke-virtual {p0}, Ljava/lang/Object;->wait()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
     goto :goto_0
 
-    .line 111
     :catchall_0
     move-exception v0
 
@@ -291,7 +263,6 @@
 
     throw v0
 
-    .line 114
     :cond_0
     monitor-exit p0
 

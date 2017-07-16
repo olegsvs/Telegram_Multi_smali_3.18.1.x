@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingActivity$3;
 
     .prologue
-    .line 336
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$5;->this$1:Lorg/telegram/ui/ThemingActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 339
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$3$5;->this$1:Lorg/telegram/ui/ThemingActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingActivity$3;->this$0:Lorg/telegram/ui/ThemingActivity;
@@ -56,11 +54,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 383
     :goto_0
     return-void
 
-    .line 342
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$3$5;->this$1:Lorg/telegram/ui/ThemingActivity$3;
 
@@ -68,17 +64,14 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ThemingActivity;->access$1002(Lorg/telegram/ui/ThemingActivity;Z)Z
 
-    .line 343
     new-instance v0, Lorg/telegram/ui/ThemingActivity$3$5$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ThemingActivity$3$5$1;-><init>(Lorg/telegram/ui/ThemingActivity$3$5;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 373
     sput-boolean v1, Lorg/telegram/messenger/AndroidUtilities;->needRestart:Z
 
-    .line 374
     new-instance v0, Lorg/telegram/ui/ThemingActivity$3$5$2;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ThemingActivity$3$5$2;-><init>(Lorg/telegram/ui/ThemingActivity$3$5;)V

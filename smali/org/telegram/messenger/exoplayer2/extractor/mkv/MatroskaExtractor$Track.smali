@@ -83,55 +83,40 @@
 
     const/4 v1, -0x1
 
-    .line 1300
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1316
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->width:I
 
-    .line 1317
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
 
-    .line 1318
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
-    .line 1319
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
 
-    .line 1320
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayUnit:I
 
-    .line 1321
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->projectionData:[B
 
-    .line 1322
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->stereoMode:I
 
-    .line 1326
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->channelCount:I
 
-    .line 1327
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->audioBitDepth:I
 
-    .line 1328
     const/16 v0, 0x1f40
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->sampleRate:I
 
-    .line 1329
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecDelayNs:J
 
-    .line 1330
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->seekPreRollNs:J
 
-    .line 1334
     iput-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->flagDefault:Z
 
-    .line 1335
     const-string/jumbo v0, "eng"
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->language:Ljava/lang/String;
@@ -144,7 +129,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$1;
 
     .prologue
-    .line 1300
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;-><init>()V
 
     return-void
@@ -156,7 +140,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 1300
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->language:Ljava/lang/String;
 
     return-object p1
@@ -182,18 +165,15 @@
     .end annotation
 
     .prologue
-    .line 1510
     const/16 v7, 0x10
 
     :try_start_0
     invoke-virtual {p0, v7}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 1511
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedInt()J
 
     move-result-wide v2
 
-    .line 1512
     .local v2, "compression":J
     const-wide/32 v8, 0x31435657
 
@@ -201,14 +181,11 @@
 
     if-eqz v7, :cond_0
 
-    .line 1513
     const/4 v7, 0x0
 
-    .line 1525
     :goto_0
     return-object v7
 
-    .line 1518
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
@@ -216,11 +193,9 @@
 
     add-int/lit8 v6, v7, 0x14
 
-    .line 1519
     .local v6, "startOffset":I
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 1520
     .local v0, "bufferData":[B
     move v5, v6
 
@@ -232,7 +207,6 @@
 
     if-ge v5, v7, :cond_2
 
-    .line 1521
     aget-byte v7, v0, v5
 
     if-nez v7, :cond_1
@@ -259,14 +233,12 @@
 
     if-ne v7, v8, :cond_1
 
-    .line 1524
     array-length v7, v0
 
     invoke-static {v0, v5, v7}, Ljava/util/Arrays;->copyOfRange([BII)[B
 
     move-result-object v4
 
-    .line 1525
     .local v4, "initializationData":[B
     invoke-static {v4}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
@@ -274,14 +246,12 @@
 
     goto :goto_0
 
-    .line 1520
     .end local v4    # "initializationData":[B
     :cond_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_1
 
-    .line 1529
     :cond_2
     new-instance v7, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -293,7 +263,6 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1530
     .end local v0    # "bufferData":[B
     .end local v2    # "compression":J
     .end local v5    # "offset":I
@@ -301,7 +270,6 @@
     :catch_0
     move-exception v1
 
-    .line 1531
     .local v1, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     new-instance v7, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -326,33 +294,27 @@
 
     const/4 v2, 0x1
 
-    .line 1594
     :try_start_0
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLittleEndianUnsignedShort()I
 
     move-result v1
 
-    .line 1595
     .local v1, "formatTag":I
     if-ne v1, v2, :cond_1
 
-    .line 1602
     :cond_0
     :goto_0
     return v2
 
-    .line 1597
     :cond_1
     const v4, 0xfffe
 
     if-ne v1, v4, :cond_3
 
-    .line 1598
     const/16 v4, 0x18
 
     invoke-virtual {p0, v4}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 1599
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v4
@@ -369,7 +331,6 @@
 
     if-nez v4, :cond_2
 
-    .line 1600
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v4
@@ -396,15 +357,12 @@
     :cond_3
     move v2, v3
 
-    .line 1602
     goto :goto_0
 
-    .line 1604
     .end local v1    # "formatTag":I
     :catch_0
     move-exception v0
 
-    .line 1605
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -437,7 +395,6 @@
 
     const/4 v9, -0x1
 
-    .line 1544
     const/4 v8, 0x0
 
     :try_start_0
@@ -445,7 +402,6 @@
 
     if-eq v8, v10, :cond_0
 
-    .line 1545
     new-instance v8, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v9, "Error parsing vorbis codec private"
@@ -456,11 +412,9 @@
     :try_end_0
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1581
     :catch_0
     move-exception v0
 
-    .line 1582
     .local v0, "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     new-instance v8, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -470,19 +424,16 @@
 
     throw v8
 
-    .line 1547
     .end local v0    # "e":Ljava/lang/ArrayIndexOutOfBoundsException;
     :cond_0
     const/4 v2, 0x1
 
-    .line 1548
     .local v2, "offset":I
     const/4 v6, 0x0
 
     .local v6, "vorbisInfoLength":I
     move v3, v2
 
-    .line 1549
     .end local v2    # "offset":I
     .local v3, "offset":I
     :goto_0
@@ -491,10 +442,8 @@
 
     if-ne v8, v9, :cond_1
 
-    .line 1550
     add-int/lit16 v6, v6, 0xff
 
-    .line 1551
     add-int/lit8 v2, v3, 0x1
 
     .end local v3    # "offset":I
@@ -505,7 +454,6 @@
     .restart local v3    # "offset":I
     goto :goto_0
 
-    .line 1553
     :cond_1
     add-int/lit8 v2, v3, 0x1
 
@@ -515,13 +463,11 @@
 
     add-int/2addr v6, v8
 
-    .line 1555
     const/4 v7, 0x0
 
     .local v7, "vorbisSkipLength":I
     move v3, v2
 
-    .line 1556
     .end local v2    # "offset":I
     .restart local v3    # "offset":I
     :goto_1
@@ -529,10 +475,8 @@
 
     if-ne v8, v9, :cond_2
 
-    .line 1557
     add-int/lit16 v7, v7, 0xff
 
-    .line 1558
     add-int/lit8 v2, v3, 0x1
 
     .end local v3    # "offset":I
@@ -543,7 +487,6 @@
     .restart local v3    # "offset":I
     goto :goto_1
 
-    .line 1560
     :cond_2
     add-int/lit8 v2, v3, 0x1
 
@@ -553,14 +496,12 @@
 
     add-int/2addr v7, v8
 
-    .line 1562
     aget-byte v8, p0, v2
 
     const/4 v9, 0x1
 
     if-eq v8, v9, :cond_3
 
-    .line 1563
     new-instance v8, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v9, "Error parsing vorbis codec private"
@@ -569,27 +510,22 @@
 
     throw v8
 
-    .line 1565
     :cond_3
     new-array v5, v6, [B
 
-    .line 1566
     .local v5, "vorbisInfo":[B
     const/4 v8, 0x0
 
     invoke-static {p0, v2, v5, v8, v6}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1567
     add-int/2addr v2, v6
 
-    .line 1568
     aget-byte v8, p0, v2
 
     const/4 v9, 0x3
 
     if-eq v8, v9, :cond_4
 
-    .line 1569
     new-instance v8, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v9, "Error parsing vorbis codec private"
@@ -598,18 +534,15 @@
 
     throw v8
 
-    .line 1571
     :cond_4
     add-int/2addr v2, v7
 
-    .line 1572
     aget-byte v8, p0, v2
 
     const/4 v9, 0x5
 
     if-eq v8, v9, :cond_5
 
-    .line 1573
     new-instance v8, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v9, "Error parsing vorbis codec private"
@@ -618,7 +551,6 @@
 
     throw v8
 
-    .line 1575
     :cond_5
     array-length v8, p0
 
@@ -626,7 +558,6 @@
 
     new-array v4, v8, [B
 
-    .line 1576
     .local v4, "vorbisBooks":[B
     const/4 v8, 0x0
 
@@ -636,23 +567,19 @@
 
     invoke-static {p0, v2, v4, v8, v9}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1577
     new-instance v1, Ljava/util/ArrayList;
 
     const/4 v8, 0x2
 
     invoke-direct {v1, v8}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1578
     .local v1, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     invoke-interface {v1, v5}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1579
     invoke-interface {v1, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
     :try_end_1
     .catch Ljava/lang/ArrayIndexOutOfBoundsException; {:try_start_1 .. :try_end_1} :catch_0
 
-    .line 1580
     return-object v1
 .end method
 
@@ -669,18 +596,14 @@
     .end annotation
 
     .prologue
-    .line 1346
     const/4 v6, -0x1
 
-    .line 1347
     .local v6, "maxInputSize":I
     const/4 v9, -0x1
 
-    .line 1348
     .local v9, "pcmEncoding":I
     const/4 v10, 0x0
 
-    .line 1349
     .local v10, "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     move-object/from16 v0, p0
 
@@ -698,7 +621,6 @@
     :goto_0
     packed-switch v2, :pswitch_data_0
 
-    .line 1458
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v4, "Unrecognized codec identifier."
@@ -707,7 +629,6 @@
 
     throw v2
 
-    .line 1349
     :sswitch_0
     const-string/jumbo v5, "V_VP8"
 
@@ -1046,17 +967,14 @@
 
     goto/16 :goto_0
 
-    .line 1351
     :pswitch_0
     const-string/jumbo v3, "video/x-vnd.on2.vp8"
 
-    .line 1462
     .local v3, "mimeType":Ljava/lang/String;
     :cond_1
     :goto_1
     const/4 v12, 0x0
 
-    .line 1463
     .local v12, "selectionFlags":I
     move-object/from16 v0, p0
 
@@ -1069,7 +987,6 @@
     :goto_2
     or-int/2addr v12, v2
 
-    .line 1464
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->flagForced:Z
@@ -1081,14 +998,12 @@
     :goto_3
     or-int/2addr v12, v2
 
-    .line 1467
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_7
 
-    .line 1468
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v2
@@ -1117,7 +1032,6 @@
 
     move-result-object v28
 
-    .line 1494
     .local v28, "format":Lorg/telegram/messenger/exoplayer2/Format;
     :goto_4
     move-object/from16 v0, p0
@@ -1134,7 +1048,6 @@
 
     iput-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 1495
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
@@ -1143,35 +1056,28 @@
 
     invoke-interface {v2, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 1496
     return-void
 
-    .line 1354
     .end local v3    # "mimeType":Ljava/lang/String;
     .end local v12    # "selectionFlags":I
     .end local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :pswitch_1
     const-string/jumbo v3, "video/x-vnd.on2.vp9"
 
-    .line 1355
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto :goto_1
 
-    .line 1357
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_2
     const-string/jumbo v3, "video/mpeg2"
 
-    .line 1358
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto :goto_1
 
-    .line 1362
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_3
     const-string/jumbo v3, "video/mp4v-es"
 
-    .line 1363
     .restart local v3    # "mimeType":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1181,29 +1087,24 @@
 
     const/4 v10, 0x0
 
-    .line 1365
     :goto_5
     goto :goto_1
 
-    .line 1363
     :cond_2
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecPrivate:[B
 
-    .line 1364
     invoke-static {v2}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v10
 
     goto :goto_5
 
-    .line 1367
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_4
     const-string/jumbo v3, "video/avc"
 
-    .line 1368
     .restart local v3    # "mimeType":Ljava/lang/String;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -1217,13 +1118,11 @@
 
     move-result-object v27
 
-    .line 1369
     .local v27, "avcConfig":Lorg/telegram/messenger/exoplayer2/video/AvcConfig;
     move-object/from16 v0, v27
 
     iget-object v10, v0, Lorg/telegram/messenger/exoplayer2/video/AvcConfig;->initializationData:Ljava/util/List;
 
-    .line 1370
     move-object/from16 v0, v27
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/video/AvcConfig;->nalUnitLengthFieldLength:I
@@ -1234,13 +1133,11 @@
 
     goto/16 :goto_1
 
-    .line 1373
     .end local v3    # "mimeType":Ljava/lang/String;
     .end local v27    # "avcConfig":Lorg/telegram/messenger/exoplayer2/video/AvcConfig;
     :pswitch_5
     const-string/jumbo v3, "video/hevc"
 
-    .line 1374
     .restart local v3    # "mimeType":Ljava/lang/String;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -1254,13 +1151,11 @@
 
     move-result-object v29
 
-    .line 1375
     .local v29, "hevcConfig":Lorg/telegram/messenger/exoplayer2/video/HevcConfig;
     move-object/from16 v0, v29
 
     iget-object v10, v0, Lorg/telegram/messenger/exoplayer2/video/HevcConfig;->initializationData:Ljava/util/List;
 
-    .line 1376
     move-object/from16 v0, v29
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/video/HevcConfig;->nalUnitLengthFieldLength:I
@@ -1271,7 +1166,6 @@
 
     goto/16 :goto_1
 
-    .line 1379
     .end local v3    # "mimeType":Ljava/lang/String;
     .end local v29    # "hevcConfig":Lorg/telegram/messenger/exoplayer2/video/HevcConfig;
     :pswitch_6
@@ -1287,41 +1181,33 @@
 
     move-result-object v10
 
-    .line 1380
     if-nez v10, :cond_3
 
     const-string/jumbo v3, "video/x-unknown"
 
-    .line 1381
     .restart local v3    # "mimeType":Ljava/lang/String;
     :goto_6
     goto/16 :goto_1
 
-    .line 1380
     .end local v3    # "mimeType":Ljava/lang/String;
     :cond_3
     const-string/jumbo v3, "video/wvc1"
 
     goto :goto_6
 
-    .line 1385
     :pswitch_7
     const-string/jumbo v3, "video/x-unknown"
 
-    .line 1386
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1388
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_8
     const-string/jumbo v3, "audio/vorbis"
 
-    .line 1389
     .restart local v3    # "mimeType":Ljava/lang/String;
     const/16 v6, 0x2000
 
-    .line 1390
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->codecPrivate:[B
@@ -1330,19 +1216,15 @@
 
     move-result-object v10
 
-    .line 1391
     goto/16 :goto_1
 
-    .line 1393
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_9
     const-string/jumbo v3, "audio/opus"
 
-    .line 1394
     .restart local v3    # "mimeType":Ljava/lang/String;
     const/16 v6, 0x1680
 
-    .line 1395
     new-instance v10, Ljava/util/ArrayList;
 
     .end local v10    # "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
@@ -1350,7 +1232,6 @@
 
     invoke-direct {v10, v2}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 1396
     .restart local v10    # "initializationData":Ljava/util/List;, "Ljava/util/List<[B>;"
     move-object/from16 v0, p0
 
@@ -1358,10 +1239,8 @@
 
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1397
     const/16 v2, 0x8
 
-    .line 1398
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -1386,13 +1265,10 @@
 
     move-result-object v2
 
-    .line 1397
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 1399
     const/16 v2, 0x8
 
-    .line 1400
     invoke-static {v2}, Ljava/nio/ByteBuffer;->allocate(I)Ljava/nio/ByteBuffer;
 
     move-result-object v2
@@ -1417,17 +1293,14 @@
 
     move-result-object v2
 
-    .line 1399
     invoke-interface {v10, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_1
 
-    .line 1403
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_a
     const-string/jumbo v3, "audio/mp4a-latm"
 
-    .line 1404
     .restart local v3    # "mimeType":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1437,72 +1310,56 @@
 
     move-result-object v10
 
-    .line 1405
     goto/16 :goto_1
 
-    .line 1407
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_b
     const-string/jumbo v3, "audio/mpeg"
 
-    .line 1408
     .restart local v3    # "mimeType":Ljava/lang/String;
     const/16 v6, 0x1000
 
-    .line 1409
     goto/16 :goto_1
 
-    .line 1411
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_c
     const-string/jumbo v3, "audio/ac3"
 
-    .line 1412
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1414
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_d
     const-string/jumbo v3, "audio/eac3"
 
-    .line 1415
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1417
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_e
     const-string/jumbo v3, "audio/true-hd"
 
-    .line 1418
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1421
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_f
     const-string/jumbo v3, "audio/vnd.dts"
 
-    .line 1422
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1424
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_10
     const-string/jumbo v3, "audio/vnd.dts.hd"
 
-    .line 1425
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1427
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_11
     const-string/jumbo v3, "audio/x-flac"
 
-    .line 1428
     .restart local v3    # "mimeType":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1512,15 +1369,12 @@
 
     move-result-object v10
 
-    .line 1429
     goto/16 :goto_1
 
-    .line 1431
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_12
     const-string/jumbo v3, "audio/raw"
 
-    .line 1432
     .restart local v3    # "mimeType":Ljava/lang/String;
     new-instance v2, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -1536,7 +1390,6 @@
 
     if-nez v2, :cond_4
 
-    .line 1433
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v4, "Non-PCM MS/ACM is unsupported"
@@ -1545,7 +1398,6 @@
 
     throw v2
 
-    .line 1435
     :cond_4
     move-object/from16 v0, p0
 
@@ -1555,10 +1407,8 @@
 
     move-result v9
 
-    .line 1436
     if-nez v9, :cond_1
 
-    .line 1437
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1587,12 +1437,10 @@
 
     throw v2
 
-    .line 1441
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_13
     const-string/jumbo v3, "audio/raw"
 
-    .line 1442
     .restart local v3    # "mimeType":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1602,10 +1450,8 @@
 
     move-result v9
 
-    .line 1443
     if-nez v9, :cond_1
 
-    .line 1444
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -1634,21 +1480,17 @@
 
     throw v2
 
-    .line 1448
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_14
     const-string/jumbo v3, "application/x-subrip"
 
-    .line 1449
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1451
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_15
     const-string/jumbo v3, "application/vobsub"
 
-    .line 1452
     .restart local v3    # "mimeType":Ljava/lang/String;
     move-object/from16 v0, p0
 
@@ -1658,32 +1500,26 @@
 
     move-result-object v10
 
-    .line 1453
     goto/16 :goto_1
 
-    .line 1455
     .end local v3    # "mimeType":Ljava/lang/String;
     :pswitch_16
     const-string/jumbo v3, "application/pgs"
 
-    .line 1456
     .restart local v3    # "mimeType":Ljava/lang/String;
     goto/16 :goto_1
 
-    .line 1463
     .restart local v12    # "selectionFlags":I
     :cond_5
     const/4 v2, 0x0
 
     goto/16 :goto_2
 
-    .line 1464
     :cond_6
     const/4 v2, 0x0
 
     goto/16 :goto_3
 
-    .line 1471
     :cond_7
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -1691,14 +1527,12 @@
 
     if-eqz v2, :cond_c
 
-    .line 1472
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayUnit:I
 
     if-nez v2, :cond_8
 
-    .line 1473
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
@@ -1716,7 +1550,6 @@
 
     iput v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayWidth:I
 
-    .line 1474
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
@@ -1734,11 +1567,9 @@
 
     iput v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->displayHeight:I
 
-    .line 1476
     :cond_8
     const/high16 v23, -0x40800000    # -1.0f
 
-    .line 1477
     .local v23, "pixelWidthHeightRatio":F
     move-object/from16 v0, p0
 
@@ -1756,7 +1587,6 @@
 
     if-eq v2, v4, :cond_9
 
-    .line 1478
     move-object/from16 v0, p0
 
     iget v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/mkv/MatroskaExtractor$Track;->height:I
@@ -1783,7 +1613,6 @@
 
     div-float v23, v2, v4
 
-    .line 1480
     :cond_9
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1837,11 +1666,9 @@
 
     move-result-object v28
 
-    .line 1483
     .restart local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     goto/16 :goto_4
 
-    .line 1473
     .end local v23    # "pixelWidthHeightRatio":F
     .end local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :cond_a
@@ -1851,7 +1678,6 @@
 
     goto :goto_7
 
-    .line 1474
     :cond_b
     move-object/from16 v0, p0
 
@@ -1859,7 +1685,6 @@
 
     goto :goto_8
 
-    .line 1483
     :cond_c
     const-string/jumbo v2, "application/x-subrip"
 
@@ -1869,7 +1694,6 @@
 
     if-eqz v2, :cond_d
 
-    .line 1484
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v13
@@ -1901,7 +1725,6 @@
     .restart local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     goto/16 :goto_4
 
-    .line 1486
     .end local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :cond_d
     const-string/jumbo v2, "application/vobsub"
@@ -1914,14 +1737,12 @@
 
     const-string/jumbo v2, "application/pgs"
 
-    .line 1487
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_f
 
-    .line 1488
     :cond_e
     invoke-static/range {p2 .. p2}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
@@ -1954,7 +1775,6 @@
     .restart local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     goto/16 :goto_4
 
-    .line 1491
     .end local v28    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :cond_f
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ParserException;
@@ -1965,7 +1785,6 @@
 
     throw v2
 
-    .line 1349
     :sswitch_data_0
     .sparse-switch
         -0x7ce7f5de -> :sswitch_5

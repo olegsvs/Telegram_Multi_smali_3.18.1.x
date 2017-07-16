@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 5305
     const v0, 0x56730bcc
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_null;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 5304
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -48,15 +46,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 5309
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_null;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 5310
     if-eqz p2, :cond_0
 
-    .line 5311
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_null"
@@ -81,21 +76,17 @@
 
     throw v1
 
-    .line 5313
     :cond_0
     const/4 v0, 0x0
 
-    .line 5318
     :goto_0
     return-object v0
 
-    .line 5316
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_null;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_null;-><init>()V
 
-    .line 5317
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_null;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_null;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -109,11 +100,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 5322
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_null;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5323
     return-void
 .end method

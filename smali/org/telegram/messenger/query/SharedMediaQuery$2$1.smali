@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/SharedMediaQuery$2;
 
     .prologue
-    .line 127
     iput-object p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2$1;->this$0:Lorg/telegram/messenger/query/SharedMediaQuery$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$2$1;->val$res:Lorg/telegram/tgnet/TLRPC$messages_Messages;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 130
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 131
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -69,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 132
     return-void
 .end method

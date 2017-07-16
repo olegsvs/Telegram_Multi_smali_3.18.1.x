@@ -34,16 +34,12 @@
     .param p2, "dataSource"    # Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     .prologue
-    .line 245
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 246
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->uri:Landroid/net/Uri;
 
-    .line 247
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
-    .line 248
     return-void
 .end method
 
@@ -52,7 +48,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;
 
     .prologue
-    .line 237
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleSize:I
 
     return v0
@@ -63,7 +58,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;
 
     .prologue
-    .line 237
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleData:[B
 
     return-object v0
@@ -75,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 253
     return-void
 .end method
 
@@ -83,7 +76,6 @@
     .locals 1
 
     .prologue
-    .line 257
     const/4 v0, 0x0
 
     return v0
@@ -99,12 +91,10 @@
     .end annotation
 
     .prologue
-    .line 263
     const/4 v1, 0x0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleSize:I
 
-    .line 266
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
@@ -116,36 +106,30 @@
 
     invoke-interface {v1, v2}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource;->open(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)J
 
-    .line 268
     const/4 v0, 0x0
 
-    .line 269
     .local v0, "result":I
     :goto_0
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_2
 
-    .line 270
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleSize:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleSize:I
 
-    .line 271
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleData:[B
 
     if-nez v1, :cond_1
 
-    .line 272
     const/16 v1, 0x400
 
     new-array v1, v1, [B
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleData:[B
 
-    .line 276
     :cond_0
     :goto_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
@@ -168,7 +152,6 @@
 
     goto :goto_0
 
-    .line 273
     :cond_1
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleSize:I
 
@@ -178,7 +161,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 274
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleData:[B
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/SingleSampleMediaPeriod$SourceLoadable;->sampleData:[B
@@ -197,7 +179,6 @@
 
     goto :goto_1
 
-    .line 279
     .end local v0    # "result":I
     :catchall_0
     move-exception v1
@@ -214,6 +195,5 @@
 
     invoke-interface {v1}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource;->close()V
 
-    .line 281
     return-void
 .end method

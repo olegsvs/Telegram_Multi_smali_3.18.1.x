@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 806
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$9;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 809
     iget-object v0, p0, Lorg/telegram/ui/PopupNotificationActivity$9;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PopupNotificationActivity;->access$800(Lorg/telegram/ui/PopupNotificationActivity;)V
 
-    .line 810
     return-void
 .end method

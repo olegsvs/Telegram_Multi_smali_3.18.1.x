@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 2093
     invoke-direct {p0}, Landroid/graphics/drawable/StateListDrawable;-><init>()V
 
     return-void
@@ -32,23 +31,19 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 2096
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x15
 
     if-ge v3, v4, :cond_3
 
-    .line 2097
     invoke-static {p0, p1}, Lorg/telegram/ui/ActionBar/Theme;->access$000(Landroid/graphics/drawable/Drawable;I)Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 2098
     .local v1, "drawable":Landroid/graphics/drawable/Drawable;
     const/4 v0, 0x0
 
-    .line 2099
     .local v0, "colorFilter":Landroid/graphics/ColorFilter;
     instance-of v3, v1, Landroid/graphics/drawable/BitmapDrawable;
 
@@ -56,7 +51,6 @@
 
     move-object v3, v1
 
-    .line 2100
     check-cast v3, Landroid/graphics/drawable/BitmapDrawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/BitmapDrawable;->getPaint()Landroid/graphics/Paint;
@@ -67,21 +61,17 @@
 
     move-result-object v0
 
-    .line 2104
     :cond_0
     :goto_0
     invoke-super {p0, p1}, Landroid/graphics/drawable/StateListDrawable;->selectDrawable(I)Z
 
     move-result v2
 
-    .line 2105
     .local v2, "result":Z
     if-eqz v0, :cond_1
 
-    .line 2106
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 2110
     .end local v0    # "colorFilter":Landroid/graphics/ColorFilter;
     .end local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     .end local v2    # "result":Z
@@ -89,7 +79,6 @@
     :goto_1
     return v2
 
-    .line 2101
     .restart local v0    # "colorFilter":Landroid/graphics/ColorFilter;
     .restart local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_2
@@ -99,7 +88,6 @@
 
     move-object v3, v1
 
-    .line 2102
     check-cast v3, Landroid/graphics/drawable/NinePatchDrawable;
 
     invoke-virtual {v3}, Landroid/graphics/drawable/NinePatchDrawable;->getPaint()Landroid/graphics/Paint;
@@ -112,7 +100,6 @@
 
     goto :goto_0
 
-    .line 2110
     .end local v0    # "colorFilter":Landroid/graphics/ColorFilter;
     .end local v1    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_3

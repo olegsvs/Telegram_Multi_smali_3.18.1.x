@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/AudioTrackJNI;
 
     .prologue
-    .line 80
     iput-object p1, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 84
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
@@ -53,7 +51,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 89
     :cond_0
     :goto_0
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
@@ -64,7 +61,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 91
     :try_start_1
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
@@ -76,7 +72,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/voip/AudioTrackJNI;->access$300(Lorg/telegram/messenger/voip/AudioTrackJNI;[B)V
 
-    .line 92
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
     invoke-static {v2}, Lorg/telegram/messenger/voip/AudioTrackJNI;->access$000(Lorg/telegram/messenger/voip/AudioTrackJNI;)Landroid/media/AudioTrack;
@@ -95,7 +90,6 @@
 
     invoke-virtual {v2, v3, v4, v5}, Landroid/media/AudioTrack;->write([BII)I
 
-    .line 93
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
     invoke-static {v2}, Lorg/telegram/messenger/voip/AudioTrackJNI;->access$100(Lorg/telegram/messenger/voip/AudioTrackJNI;)Z
@@ -104,7 +98,6 @@
 
     if-nez v2, :cond_0
 
-    .line 94
     iget-object v2, p0, Lorg/telegram/messenger/voip/AudioTrackJNI$1;->this$0:Lorg/telegram/messenger/voip/AudioTrackJNI;
 
     invoke-static {v2}, Lorg/telegram/messenger/voip/AudioTrackJNI;->access$000(Lorg/telegram/messenger/voip/AudioTrackJNI;)Landroid/media/AudioTrack;
@@ -115,7 +108,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 101
     :cond_1
     const-string/jumbo v2, "tg-voip"
 
@@ -123,15 +115,12 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 102
     :goto_1
     return-void
 
-    .line 85
     :catch_0
     move-exception v1
 
-    .line 86
     .local v1, "x":Ljava/lang/Exception;
     const-string/jumbo v2, "error starting AudioTrack"
 
@@ -139,12 +128,10 @@
 
     goto :goto_1
 
-    .line 97
     .end local v1    # "x":Ljava/lang/Exception;
     :catch_1
     move-exception v0
 
-    .line 98
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

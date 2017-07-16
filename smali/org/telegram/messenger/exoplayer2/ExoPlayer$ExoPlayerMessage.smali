@@ -30,18 +30,13 @@
     .param p3, "message"    # Ljava/lang/Object;
 
     .prologue
-    .line 219
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 220
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayer$ExoPlayerMessage;->target:Lorg/telegram/messenger/exoplayer2/ExoPlayer$ExoPlayerComponent;
 
-    .line 221
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayer$ExoPlayerMessage;->messageType:I
 
-    .line 222
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/ExoPlayer$ExoPlayerMessage;->message:Ljava/lang/Object;
 
-    .line 223
     return-void
 .end method

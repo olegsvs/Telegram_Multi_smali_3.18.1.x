@@ -51,40 +51,28 @@
     .param p12, "data"    # [B
 
     .prologue
-    .line 458
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 459
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->version:J
 
-    .line 460
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->channels:I
 
-    .line 461
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->sampleRate:J
 
-    .line 462
     iput p6, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->bitrateMax:I
 
-    .line 463
     iput p7, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->bitrateNominal:I
 
-    .line 464
     iput p8, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->bitrateMin:I
 
-    .line 465
     iput p9, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->blockSize0:I
 
-    .line 466
     iput p10, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->blockSize1:I
 
-    .line 467
     iput-boolean p11, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->framingFlag:Z
 
-    .line 468
     iput-object p12, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->data:[B
 
-    .line 469
     return-void
 .end method
 
@@ -94,7 +82,6 @@
     .locals 2
 
     .prologue
-    .line 472
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$VorbisIdHeader;->bitrateNominal:I
 
     if-nez v0, :cond_0

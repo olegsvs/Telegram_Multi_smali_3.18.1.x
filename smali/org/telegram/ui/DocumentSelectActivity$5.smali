@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 245
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 248
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -58,15 +56,12 @@
 
     if-eqz v8, :cond_0
 
-    .line 249
     const/4 v8, 0x0
 
-    .line 288
     .end local p1    # "view":Landroid/view/View;
     :goto_0
     return v8
 
-    .line 251
     .restart local p1    # "view":Landroid/view/View;
     :cond_0
     move-object/from16 v0, p0
@@ -83,20 +78,16 @@
 
     move-result-object v6
 
-    .line 252
     .local v6, "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     if-nez v6, :cond_1
 
-    .line 253
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 255
     :cond_1
     iget-object v5, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->file:Ljava/io/File;
 
-    .line 256
     .local v5, "file":Ljava/io/File;
     if-eqz v5, :cond_7
 
@@ -106,14 +97,12 @@
 
     if-nez v8, :cond_7
 
-    .line 257
     invoke-virtual {v5}, Ljava/io/File;->canRead()Z
 
     move-result v8
 
     if-nez v8, :cond_2
 
-    .line 258
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -128,12 +117,10 @@
 
     invoke-static {v8, v9}, Lorg/telegram/ui/DocumentSelectActivity;->access$1100(Lorg/telegram/ui/DocumentSelectActivity;Ljava/lang/String;)V
 
-    .line 259
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 261
     :cond_2
     move-object/from16 v0, p0
 
@@ -149,7 +136,6 @@
 
     if-eqz v8, :cond_3
 
-    .line 262
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
     move-result-wide v8
@@ -166,7 +152,6 @@
 
     if-lez v8, :cond_3
 
-    .line 263
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -201,12 +186,10 @@
 
     invoke-static {v8, v9}, Lorg/telegram/ui/DocumentSelectActivity;->access$1100(Lorg/telegram/ui/DocumentSelectActivity;Ljava/lang/String;)V
 
-    .line 264
     const/4 v8, 0x0
 
     goto :goto_0
 
-    .line 267
     :cond_3
     invoke-virtual {v5}, Ljava/io/File;->length()J
 
@@ -218,12 +201,10 @@
 
     if-nez v8, :cond_4
 
-    .line 268
     const/4 v8, 0x0
 
     goto/16 :goto_0
 
-    .line 270
     :cond_4
     move-object/from16 v0, p0
 
@@ -239,7 +220,6 @@
 
     invoke-virtual {v8, v9, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 271
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -254,18 +234,15 @@
 
     invoke-virtual {v8, v9, v10}, Lorg/telegram/ui/Components/NumberTextView;->setNumber(IZ)V
 
-    .line 272
     new-instance v3, Landroid/animation/AnimatorSet;
 
     invoke-direct {v3}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 273
     .local v3, "animatorSet":Landroid/animation/AnimatorSet;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 274
     .local v4, "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     const/4 v2, 0x0
 
@@ -285,7 +262,6 @@
 
     if-ge v2, v8, :cond_5
 
-    .line 275
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -300,11 +276,9 @@
 
     check-cast v7, Landroid/view/View;
 
-    .line 276
     .local v7, "view2":Landroid/view/View;
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->clearDrawableAnimation(Landroid/view/View;)V
 
-    .line 277
     const-string/jumbo v8, "scaleY"
 
     const/4 v9, 0x2
@@ -319,25 +293,20 @@
 
     invoke-virtual {v4, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 274
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 279
     .end local v7    # "view2":Landroid/view/View;
     :cond_5
     invoke-virtual {v3, v4}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    .line 280
     const-wide/16 v8, 0xfa
 
     invoke-virtual {v3, v8, v9}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 281
     invoke-virtual {v3}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 282
     move-object/from16 v0, p0
 
     iget-object v8, v0, Lorg/telegram/ui/DocumentSelectActivity$5;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
@@ -346,14 +315,12 @@
 
     invoke-static {v8, v9}, Lorg/telegram/ui/DocumentSelectActivity;->access$802(Lorg/telegram/ui/DocumentSelectActivity;Z)Z
 
-    .line 283
     move-object/from16 v0, p1
 
     instance-of v8, v0, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     if-eqz v8, :cond_6
 
-    .line 284
     check-cast p1, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     .end local p1    # "view":Landroid/view/View;
@@ -365,7 +332,6 @@
 
     invoke-virtual {v0, v8, v9}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setChecked(ZZ)V
 
-    .line 286
     :cond_6
     move-object/from16 v0, p0
 
@@ -377,7 +343,6 @@
 
     invoke-virtual {v8}, Lorg/telegram/ui/ActionBar/ActionBar;->showActionMode()V
 
-    .line 288
     .end local v2    # "a":I
     .end local v3    # "animatorSet":Landroid/animation/AnimatorSet;
     .end local v4    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
@@ -386,7 +351,6 @@
 
     goto/16 :goto_0
 
-    .line 277
     :array_0
     .array-data 4
         0x3dcccccd    # 0.1f

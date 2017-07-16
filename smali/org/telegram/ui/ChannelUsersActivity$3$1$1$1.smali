@@ -29,7 +29,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChannelUsersActivity$3$1$1;
 
     .prologue
-    .line 282
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1$1$1;->this$3:Lorg/telegram/ui/ChannelUsersActivity$3$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1$1$1;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 285
     iget-object v1, p0, Lorg/telegram/ui/ChannelUsersActivity$3$1$1$1;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$Updates;->chats:Ljava/util/ArrayList;
@@ -58,7 +56,6 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 286
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -70,6 +67,5 @@
 
     invoke-virtual {v1, v2, v4, v3}, Lorg/telegram/messenger/MessagesController;->loadFullChat(IIZ)V
 
-    .line 287
     return-void
 .end method

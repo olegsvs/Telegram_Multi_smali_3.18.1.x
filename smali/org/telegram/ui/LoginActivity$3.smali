@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LoginActivity;
 
     .prologue
-    .line 459
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$3;->this$0:Lorg/telegram/ui/LoginActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$3;->val$outView:Lorg/telegram/ui/Components/SlideView;
@@ -46,7 +45,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 473
     return-void
 .end method
 
@@ -60,21 +58,18 @@
     .end annotation
 
     .prologue
-    .line 467
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$3;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SlideView;->setVisibility(I)V
 
-    .line 468
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$3;->val$outView:Lorg/telegram/ui/Components/SlideView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/SlideView;->setX(F)V
 
-    .line 469
     return-void
 .end method
 
@@ -83,7 +78,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 477
     return-void
 .end method
 
@@ -92,6 +86,5 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 462
     return-void
 .end method

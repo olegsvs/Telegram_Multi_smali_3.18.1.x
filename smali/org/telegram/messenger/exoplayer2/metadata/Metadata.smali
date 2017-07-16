@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 108
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/metadata/Metadata$1;-><init>()V
@@ -51,10 +50,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 54
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 55
     invoke-virtual {p1}, Landroid/os/Parcel;->readInt()I
 
     move-result v1
@@ -63,7 +60,6 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
-    .line 56
     const/4 v0, 0x0
 
     .local v0, "i":I
@@ -74,7 +70,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 57
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     const-class v1, Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
@@ -91,12 +86,10 @@
 
     aput-object v1, v2, v0
 
-    .line 56
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 59
     :cond_0
     return-void
 .end method
@@ -114,14 +107,11 @@
     .end annotation
 
     .prologue
-    .line 45
     .local p1, "entries":Ljava/util/List;, "Ljava/util/List<+Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 46
     if-eqz p1, :cond_0
 
-    .line 47
     invoke-interface {p1}, Ljava/util/List;->size()I
 
     move-result v0
@@ -130,16 +120,13 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
-    .line 48
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     invoke-interface {p1, v0}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 52
     :goto_0
     return-void
 
-    .line 50
     :cond_0
     const/4 v0, 0x0
 
@@ -155,10 +142,8 @@
     .param p1, "entries"    # [Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     if-nez p1, :cond_0
 
     const/4 v0, 0x0
@@ -169,7 +154,6 @@
     :cond_0
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
-    .line 40
     return-void
 .end method
 
@@ -179,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 97
     const/4 v0, 0x0
 
     return v0
@@ -190,17 +173,13 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 80
     if-ne p0, p1, :cond_0
 
-    .line 81
     const/4 v1, 0x1
 
-    .line 87
     :goto_0
     return v1
 
-    .line 83
     :cond_0
     if-eqz p1, :cond_1
 
@@ -214,7 +193,6 @@
 
     if-eq v1, v2, :cond_2
 
-    .line 84
     :cond_1
     const/4 v1, 0x0
 
@@ -223,10 +201,8 @@
     :cond_2
     move-object v0, p1
 
-    .line 86
     check-cast v0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
 
-    .line 87
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/metadata/Metadata;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
@@ -244,7 +220,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 75
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     aget-object v0, v0, p1
@@ -256,7 +231,6 @@
     .locals 1
 
     .prologue
-    .line 92
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -270,7 +244,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     array-length v0, v0
@@ -286,14 +259,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 102
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     array-length v1, v1
 
     invoke-virtual {p1, v1}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 103
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/metadata/Metadata;->entries:[Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
 
     array-length v4, v3
@@ -305,16 +276,13 @@
 
     aget-object v0, v3, v1
 
-    .line 104
     .local v0, "entry":Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
     invoke-virtual {p1, v0, v2}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 103
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 106
     .end local v0    # "entry":Lorg/telegram/messenger/exoplayer2/metadata/Metadata$Entry;
     :cond_0
     return-void

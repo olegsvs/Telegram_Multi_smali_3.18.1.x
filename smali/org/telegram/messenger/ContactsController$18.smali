@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 1768
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$18;->this$0:Lorg/telegram/messenger/ContactsController;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$18;->val$uids:Ljava/util/ArrayList;
@@ -51,14 +50,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1771
     if-eqz p2, :cond_0
 
-    .line 1819
     :goto_0
     return-void
 
-    .line 1774
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -68,7 +64,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/MessagesStorage;->deleteContacts(Ljava/util/ArrayList;)V
 
-    .line 1775
     sget-object v5, Lorg/telegram/messenger/Utilities;->phoneBookQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v6, Lorg/telegram/messenger/ContactsController$18$1;
@@ -77,7 +72,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1784
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -90,7 +84,6 @@
 
     if-ge v0, v5, :cond_3
 
-    .line 1785
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$18;->val$users:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -99,7 +92,6 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 1786
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
 
@@ -109,20 +101,17 @@
 
     if-eqz v5, :cond_2
 
-    .line 1784
     :cond_1
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1789
     :cond_2
     invoke-static {v4}, Lorg/telegram/messenger/UserObject;->getUserName(Lorg/telegram/tgnet/TLRPC$User;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 1790
     .local v3, "name":Ljava/lang/CharSequence;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -134,7 +123,6 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/MessagesStorage;->applyPhoneBookUpdates(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1791
     iget-object v5, p0, Lorg/telegram/messenger/ContactsController$18;->this$0:Lorg/telegram/messenger/ContactsController;
 
     iget-object v5, v5, Lorg/telegram/messenger/ContactsController;->contactsBookSPhones:Ljava/util/HashMap;
@@ -147,11 +135,9 @@
 
     check-cast v1, Lorg/telegram/messenger/ContactsController$Contact;
 
-    .line 1792
     .local v1, "contact":Lorg/telegram/messenger/ContactsController$Contact;
     if-eqz v1, :cond_1
 
-    .line 1793
     iget-object v5, v1, Lorg/telegram/messenger/ContactsController$Contact;->shortPhones:Ljava/util/ArrayList;
 
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
@@ -160,13 +146,11 @@
 
     move-result v2
 
-    .line 1794
     .local v2, "index":I
     const/4 v5, -0x1
 
     if-eq v2, v5, :cond_1
 
-    .line 1795
     iget-object v5, v1, Lorg/telegram/messenger/ContactsController$Contact;->phoneDeleted:Ljava/util/ArrayList;
 
     const/4 v6, 0x1
@@ -179,7 +163,6 @@
 
     goto :goto_2
 
-    .line 1800
     .end local v1    # "contact":Lorg/telegram/messenger/ContactsController$Contact;
     .end local v2    # "index":I
     .end local v3    # "name":Ljava/lang/CharSequence;

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ShareAlert;
 
     .prologue
-    .line 413
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$9;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,11 +40,9 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 416
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$9;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ShareAlert;->access$900(Lorg/telegram/ui/Components/ShareAlert;)V
 
-    .line 417
     return-void
 .end method

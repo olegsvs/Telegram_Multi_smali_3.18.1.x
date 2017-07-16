@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 5649
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$72;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$72;->val$arrayList:Ljava/util/ArrayList;
@@ -44,7 +43,6 @@
     .param p2, "videoEditedInfo"    # Lorg/telegram/messenger/VideoEditedInfo;
 
     .prologue
-    .line 5652
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$72;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$72;->val$arrayList:Ljava/util/ArrayList;
@@ -61,6 +59,5 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/ui/ChatActivity;->sendMedia(Lorg/telegram/messenger/MediaController$PhotoEntry;Lorg/telegram/messenger/VideoEditedInfo;)V
 
-    .line 5653
     return-void
 .end method

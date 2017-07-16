@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 1318
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$17;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iput-object p2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$17;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
@@ -51,7 +50,6 @@
 
     const/4 v6, 0x0
 
-    .line 1321
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "plusconfig"
@@ -60,13 +58,11 @@
 
     move-result-object v1
 
-    .line 1322
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 1323
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "toastNotificationPadding"
 
@@ -78,10 +74,8 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1324
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 1325
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$17;->val$numberPicker:Lorg/telegram/ui/Components/NumberPicker;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/NumberPicker;->getValue()I
@@ -90,7 +84,6 @@
 
     sput v2, Lorg/telegram/ui/ActionBar/Theme;->plusToastNotificationPadding:I
 
-    .line 1326
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$17;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -101,7 +94,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 1327
     iget-object v2, p0, Lorg/telegram/ui/PlusSettingsActivity$3$17;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/PlusSettingsActivity$3;->this$0:Lorg/telegram/ui/PlusSettingsActivity;
@@ -112,7 +104,6 @@
 
     invoke-virtual {v2}, Landroid/widget/ListView;->invalidateViews()V
 
-    .line 1330
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -136,6 +127,5 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1331
     return-void
 .end method

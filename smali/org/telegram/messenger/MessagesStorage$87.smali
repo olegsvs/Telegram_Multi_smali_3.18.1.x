@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 6242
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$87;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$87;->val$chat:[Lorg/telegram/tgnet/TLRPC$Chat;
@@ -53,7 +52,6 @@
     .locals 4
 
     .prologue
-    .line 6245
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$87;->val$chat:[Lorg/telegram/tgnet/TLRPC$Chat;
 
     const/4 v1, 0x0
@@ -68,11 +66,9 @@
 
     aput-object v2, v0, v1
 
-    .line 6246
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$87;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 6247
     return-void
 .end method

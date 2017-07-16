@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 332
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,28 +38,23 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 335
     const/4 v1, -0x1
 
     if-ne p1, v1, :cond_1
 
-    .line 336
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/SettingsActivity;->finishFragment()V
 
-    .line 355
     :cond_0
     :goto_0
     return-void
 
-    .line 337
     :cond_1
     const/4 v1, 0x1
 
     if-ne p1, v1, :cond_2
 
-    .line 338
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     new-instance v2, Lorg/telegram/ui/ChangeNameActivity;
@@ -71,13 +65,11 @@
 
     goto :goto_0
 
-    .line 339
     :cond_2
     const/4 v1, 0x2
 
     if-ne p1, v1, :cond_0
 
-    .line 340
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/SettingsActivity;->getParentActivity()Landroid/app/Activity;
@@ -86,7 +78,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 343
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -97,7 +88,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 344
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "AreYouSureLogout"
 
@@ -109,7 +99,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 345
     const-string/jumbo v1, "AppName"
 
     const v2, 0x7f070078
@@ -120,7 +109,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 346
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -135,7 +123,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 352
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -148,7 +135,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 353
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$2;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;

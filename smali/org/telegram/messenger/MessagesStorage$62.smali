@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 3928
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$62;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesStorage$62;->val$move:Z
@@ -53,16 +52,13 @@
     .locals 10
 
     .prologue
-    .line 3932
     :try_start_0
     iget-boolean v3, p0, Lorg/telegram/messenger/MessagesStorage$62;->val$move:Z
 
     if-eqz v3, :cond_2
 
-    .line 3933
     const/4 v2, -0x1
 
-    .line 3934
     .local v2, "minDate":I
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$62;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -100,7 +96,6 @@
 
     move-result-object v0
 
-    .line 3935
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -108,23 +103,19 @@
 
     if-eqz v3, :cond_0
 
-    .line 3936
     const/4 v3, 0x0
 
     invoke-virtual {v0, v3}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v2
 
-    .line 3938
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 3939
     const/4 v3, -0x1
 
     if-eq v2, v3, :cond_1
 
-    .line 3940
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$62;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v3}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -183,14 +174,12 @@
 
     invoke-virtual {v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 3948
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v2    # "minDate":I
     :cond_1
     :goto_0
     return-void
 
-    .line 3943
     :cond_2
     iget-object v3, p0, Lorg/telegram/messenger/MessagesStorage$62;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -244,11 +233,9 @@
 
     goto :goto_0
 
-    .line 3945
     :catch_0
     move-exception v1
 
-    .line 3946
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

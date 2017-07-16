@@ -39,28 +39,20 @@
     .param p6, "textFormats"    # [Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 48
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 49
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->name:Ljava/lang/String;
 
-    .line 50
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->url:Ljava/lang/String;
 
-    .line 51
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 52
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->videoFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 53
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->audioFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 54
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;->textFormats:[Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 55
     return-void
 .end method
 
@@ -71,7 +63,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 42
     const-string/jumbo v0, "0"
 
     const-string/jumbo v2, "application/x-mpegURL"
@@ -82,7 +73,6 @@
 
     move-result-object v3
 
-    .line 44
     .local v3, "format":Lorg/telegram/messenger/exoplayer2/Format;
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMasterPlaylist$HlsUrl;
 

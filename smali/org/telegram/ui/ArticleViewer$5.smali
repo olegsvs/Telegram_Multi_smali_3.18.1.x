@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 1327
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1330
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v4, v4, Lorg/telegram/ui/ArticleViewer;->blocks:Ljava/util/ArrayList;
@@ -62,7 +60,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 1331
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v4}, Lorg/telegram/ui/ArticleViewer;->access$3700(Lorg/telegram/ui/ArticleViewer;)I
@@ -71,12 +68,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 1367
     :cond_0
     :goto_0
     return-void
 
-    .line 1334
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -88,11 +83,9 @@
 
     move-result-object v3
 
-    .line 1335
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v3, :cond_2
 
-    .line 1336
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v5, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -107,7 +100,6 @@
 
     goto :goto_0
 
-    .line 1338
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -117,7 +109,6 @@
 
     iget-wide v0, v4, Lorg/telegram/tgnet/TLRPC$WebPage;->id:J
 
-    .line 1339
     .local v0, "pageId":J
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -125,18 +116,15 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;Z)V
 
-    .line 1340
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;-><init>()V
 
-    .line 1341
     .local v2, "req":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;
     const-string/jumbo v4, "previews"
 
     iput-object v4, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;->username:Ljava/lang/String;
 
-    .line 1342
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$5;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;

@@ -65,17 +65,14 @@
     .locals 1
 
     .prologue
-    .line 48
     const-string/jumbo v0, "^(\\S+)\\s+-->\\s+(\\S+)(.*)?$"
 
-    .line 49
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->CUE_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 51
     const-string/jumbo v0, "(\\S+?):(\\S+)"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -91,17 +88,14 @@
     .locals 1
 
     .prologue
-    .line 79
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 80
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->textBuilder:Ljava/lang/StringBuilder;
 
-    .line 81
     return-void
 .end method
 
@@ -111,7 +105,6 @@
     .param p1, "spannedText"    # Landroid/text/SpannableStringBuilder;
 
     .prologue
-    .line 320
     const/4 v0, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -124,7 +117,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 334
     const-string/jumbo v0, "WebvttCueParser"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -153,11 +145,9 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 337
     :goto_1
     return-void
 
-    .line 320
     :sswitch_0
     const-string/jumbo v1, "lt"
 
@@ -210,7 +200,6 @@
 
     goto :goto_0
 
-    .line 322
     :pswitch_0
     const/16 v0, 0x3c
 
@@ -218,7 +207,6 @@
 
     goto :goto_1
 
-    .line 325
     :pswitch_1
     const/16 v0, 0x3e
 
@@ -226,7 +214,6 @@
 
     goto :goto_1
 
-    .line 328
     :pswitch_2
     const/16 v0, 0x20
 
@@ -234,7 +221,6 @@
 
     goto :goto_1
 
-    .line 331
     :pswitch_3
     const/16 v0, 0x26
 
@@ -242,7 +228,6 @@
 
     goto :goto_1
 
-    .line 320
     nop
 
     :sswitch_data_0
@@ -293,16 +278,13 @@
 
     const/16 v9, 0x21
 
-    .line 355
     iget v2, p1, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->position:I
 
-    .line 356
     .local v2, "start":I
     invoke-virtual {p2}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 357
     .local v0, "end":I
     iget-object v7, p1, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
@@ -318,11 +300,9 @@
     :goto_0
     packed-switch v4, :pswitch_data_0
 
-    .line 383
     :cond_1
     return-void
 
-    .line 357
     :sswitch_0
     const-string/jumbo v8, "b"
 
@@ -414,7 +394,6 @@
 
     goto :goto_0
 
-    .line 359
     :pswitch_0
     new-instance v4, Landroid/text/style/StyleSpan;
 
@@ -422,20 +401,16 @@
 
     invoke-virtual {p2, v4, v2, v0, v9}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 377
     :goto_1
     :pswitch_1
     invoke-interface {p4}, Ljava/util/List;->clear()V
 
-    .line 378
     invoke-static {p3, p0, p1, p4}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->getApplicableStyles(Ljava/util/List;Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Ljava/util/List;)V
 
-    .line 379
     invoke-interface {p4}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 380
     .local v3, "styleMatchesCount":I
     const/4 v1, 0x0
 
@@ -443,7 +418,6 @@
     :goto_2
     if-ge v1, v3, :cond_1
 
-    .line 381
     invoke-interface {p4, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -454,12 +428,10 @@
 
     invoke-static {p2, v4, v2, v0}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->applyStyleToText(Landroid/text/SpannableStringBuilder;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;II)V
 
-    .line 380
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 363
     .end local v1    # "i":I
     .end local v3    # "styleMatchesCount":I
     :pswitch_2
@@ -471,17 +443,13 @@
 
     goto :goto_1
 
-    .line 367
     :pswitch_3
-    new-instance v4, Landroid/text/style/UnderlineSpan;
 
-    invoke-direct {v4}, Landroid/text/style/UnderlineSpan;-><init>()V
 
     invoke-virtual {p2, v4, v2, v0, v9}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
     goto :goto_1
 
-    .line 357
     :sswitch_data_0
     .sparse-switch
         0x0 -> :sswitch_6
@@ -515,14 +483,11 @@
     .prologue
     const/16 v3, 0x21
 
-    .line 387
     if-nez p1, :cond_0
 
-    .line 433
     :goto_0
     return-void
 
-    .line 390
     :cond_0
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getStyle()I
 
@@ -532,7 +497,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 391
     new-instance v0, Landroid/text/style/StyleSpan;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getStyle()I
@@ -543,7 +507,6 @@
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 394
     :cond_1
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->isLinethrough()Z
 
@@ -551,29 +514,22 @@
 
     if-eqz v0, :cond_2
 
-    .line 395
     new-instance v0, Landroid/text/style/StrikethroughSpan;
 
     invoke-direct {v0}, Landroid/text/style/StrikethroughSpan;-><init>()V
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 397
     :cond_2
-    invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->isUnderline()Z
 
     move-result v0
 
     if-eqz v0, :cond_3
 
-    .line 398
-    new-instance v0, Landroid/text/style/UnderlineSpan;
 
-    invoke-direct {v0}, Landroid/text/style/UnderlineSpan;-><init>()V
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 400
     :cond_3
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->hasFontColor()Z
 
@@ -581,7 +537,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 401
     new-instance v0, Landroid/text/style/ForegroundColorSpan;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getFontColor()I
@@ -592,7 +547,6 @@
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 404
     :cond_4
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->hasBackgroundColor()Z
 
@@ -600,7 +554,6 @@
 
     if-eqz v0, :cond_5
 
-    .line 405
     new-instance v0, Landroid/text/style/BackgroundColorSpan;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getBackgroundColor()I
@@ -611,7 +564,6 @@
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 408
     :cond_5
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getFontFamily()Ljava/lang/String;
 
@@ -619,7 +571,6 @@
 
     if-eqz v0, :cond_6
 
-    .line 409
     new-instance v0, Landroid/text/style/TypefaceSpan;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getFontFamily()Ljava/lang/String;
@@ -630,7 +581,6 @@
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 412
     :cond_6
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getTextAlign()Landroid/text/Layout$Alignment;
 
@@ -638,7 +588,6 @@
 
     if-eqz v0, :cond_7
 
-    .line 413
     new-instance v0, Landroid/text/style/AlignmentSpan$Standard;
 
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getTextAlign()Landroid/text/Layout$Alignment;
@@ -649,7 +598,6 @@
 
     invoke-virtual {p0, v0, p2, p3, v3}, Landroid/text/SpannableStringBuilder;->setSpan(Ljava/lang/Object;III)V
 
-    .line 416
     :cond_7
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;->getFontSizeUnit()I
 
@@ -659,7 +607,6 @@
 
     goto :goto_0
 
-    .line 418
     :pswitch_0
     new-instance v0, Landroid/text/style/AbsoluteSizeSpan;
 
@@ -677,7 +624,6 @@
 
     goto/16 :goto_0
 
-    .line 422
     :pswitch_1
     new-instance v0, Landroid/text/style/RelativeSizeSpan;
 
@@ -691,7 +637,6 @@
 
     goto/16 :goto_0
 
-    .line 426
     :pswitch_2
     new-instance v0, Landroid/text/style/RelativeSizeSpan;
 
@@ -709,7 +654,6 @@
 
     goto/16 :goto_0
 
-    .line 416
     nop
 
     :pswitch_data_0
@@ -726,14 +670,12 @@
     .param p1, "startPos"    # I
 
     .prologue
-    .line 315
     const/16 v1, 0x3e
 
     invoke-virtual {p0, v1, p1}, Ljava/lang/String;->indexOf(II)I
 
     move-result v0
 
-    .line 316
     .local v0, "index":I
     const/4 v1, -0x1
 
@@ -773,14 +715,12 @@
     .end annotation
 
     .prologue
-    .line 451
     .local p0, "declaredStyles":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;>;"
     .local p3, "output":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;>;"
     invoke-interface {p0}, Ljava/util/List;->size()I
 
     move-result v3
 
-    .line 452
     .local v3, "styleCount":I
     const/4 v0, 0x0
 
@@ -788,14 +728,12 @@
     :goto_0
     if-ge v0, v3, :cond_1
 
-    .line 453
     invoke-interface {p0, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;
 
-    .line 454
     .local v2, "style":Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;
     iget-object v4, p2, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
@@ -807,30 +745,25 @@
 
     move-result v1
 
-    .line 455
     .local v1, "score":I
     if-lez v1, :cond_0
 
-    .line 456
     new-instance v4, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;
 
     invoke-direct {v4, v1, v2}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;-><init>(ILorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;)V
 
     invoke-interface {p3, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 452
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 459
     .end local v1    # "score":I
     .end local v2    # "style":Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;
     :cond_1
     invoke-static {p3}, Ljava/util/Collections;->sort(Ljava/util/List;)V
 
-    .line 460
     return-void
 .end method
 
@@ -839,22 +772,18 @@
     .param p0, "tagExpression"    # Ljava/lang/String;
 
     .prologue
-    .line 442
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 443
     invoke-virtual {p0}, Ljava/lang/String;->isEmpty()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 444
     const/4 v0, 0x0
 
-    .line 446
     :goto_0
     return-object v0
 
@@ -881,7 +810,6 @@
 
     const/4 v1, 0x0
 
-    .line 340
     const/4 v2, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -896,11 +824,9 @@
 
     move v0, v1
 
-    .line 349
     :pswitch_0
     return v0
 
-    .line 340
     :sswitch_0
     const-string/jumbo v3, "b"
 
@@ -1030,7 +956,6 @@
 
     const/4 v3, 0x0
 
-    .line 223
     const/4 v4, 0x1
 
     :try_start_0
@@ -1048,7 +973,6 @@
 
     const/4 v5, 0x2
 
-    .line 224
     invoke-virtual {p1, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
@@ -1061,7 +985,6 @@
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 230
     const/4 v4, 0x3
 
     invoke-virtual {p1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -1070,16 +993,13 @@
 
     invoke-static {v4, p3}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->parseCueSettingsList(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;)V
 
-    .line 233
     invoke-virtual {p4, v3}, Ljava/lang/StringBuilder;->setLength(I)V
 
-    .line 235
     :goto_0
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object v1
 
-    .local v1, "line":Ljava/lang/String;
     if-eqz v1, :cond_1
 
     invoke-virtual {v1}, Ljava/lang/String;->isEmpty()Z
@@ -1088,19 +1008,16 @@
 
     if-nez v3, :cond_1
 
-    .line 236
     invoke-virtual {p4}, Ljava/lang/StringBuilder;->length()I
 
     move-result v3
 
     if-lez v3, :cond_0
 
-    .line 237
     const-string/jumbo v3, "\n"
 
     invoke-virtual {p4, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 239
     :cond_0
     invoke-virtual {v1}, Ljava/lang/String;->trim()Ljava/lang/String;
 
@@ -1110,12 +1027,9 @@
 
     goto :goto_0
 
-    .line 225
-    .end local v1    # "line":Ljava/lang/String;
     :catch_0
     move-exception v0
 
-    .line 226
     .local v0, "e":Ljava/lang/NumberFormatException;
     const-string/jumbo v2, "WebvttCueParser"
 
@@ -1145,13 +1059,10 @@
 
     move v2, v3
 
-    .line 242
     .end local v0    # "e":Ljava/lang/NumberFormatException;
     :goto_1
     return v2
 
-    .line 241
-    .restart local v1    # "line":Ljava/lang/String;
     :cond_1
     invoke-virtual {p4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
@@ -1168,14 +1079,12 @@
     .param p1, "builder"    # Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
     .prologue
-    .line 120
     sget-object v4, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->CUE_SETTING_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v4, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 121
     .local v0, "cueSettingMatcher":Ljava/util/regex/Matcher;
     :goto_0
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->find()Z
@@ -1184,14 +1093,12 @@
 
     if-eqz v4, :cond_4
 
-    .line 122
     const/4 v4, 0x1
 
     invoke-virtual {v0, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 123
     .local v2, "name":Ljava/lang/String;
     const/4 v4, 0x2
 
@@ -1199,10 +1106,8 @@
 
     move-result-object v3
 
-    .line 125
     .local v3, "value":Ljava/lang/String;
     :try_start_0
-    const-string/jumbo v4, "line"
 
     invoke-virtual {v4, v2}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -1210,18 +1115,15 @@
 
     if-eqz v4, :cond_0
 
-    .line 126
     invoke-static {v3, p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->parseLineAttribute(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;)V
     :try_end_0
     .catch Ljava/lang/NumberFormatException; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 136
     :catch_0
     move-exception v1
 
-    .line 137
     .local v1, "e":Ljava/lang/NumberFormatException;
     const-string/jumbo v4, "WebvttCueParser"
 
@@ -1251,7 +1153,6 @@
 
     goto :goto_0
 
-    .line 127
     .end local v1    # "e":Ljava/lang/NumberFormatException;
     :cond_0
     :try_start_1
@@ -1263,7 +1164,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 128
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->parseTextAlignment(Ljava/lang/String;)Landroid/text/Layout$Alignment;
 
     move-result-object v4
@@ -1272,7 +1172,6 @@
 
     goto :goto_0
 
-    .line 129
     :cond_1
     const-string/jumbo v4, "position"
 
@@ -1282,12 +1181,10 @@
 
     if-eqz v4, :cond_2
 
-    .line 130
     invoke-static {v3, p1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->parsePositionAttribute(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;)V
 
     goto :goto_0
 
-    .line 131
     :cond_2
     const-string/jumbo v4, "size"
 
@@ -1297,7 +1194,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 132
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->parsePercentage(Ljava/lang/String;)F
 
     move-result v4
@@ -1306,7 +1202,6 @@
 
     goto :goto_0
 
-    .line 134
     :cond_3
     const-string/jumbo v4, "WebvttCueParser"
 
@@ -1344,7 +1239,6 @@
 
     goto/16 :goto_0
 
-    .line 140
     .end local v2    # "name":Ljava/lang/String;
     .end local v3    # "value":Ljava/lang/String;
     :cond_4
@@ -1370,29 +1264,24 @@
     .end annotation
 
     .prologue
-    .line 152
     .local p3, "styles":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;>;"
     new-instance v13, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v13}, Landroid/text/SpannableStringBuilder;-><init>()V
 
-    .line 153
     .local v13, "spannedText":Landroid/text/SpannableStringBuilder;
     new-instance v15, Ljava/util/Stack;
 
     invoke-direct {v15}, Ljava/util/Stack;-><init>()V
 
-    .line 154
     .local v15, "startTagStack":Ljava/util/Stack;, "Ljava/util/Stack<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;>;"
     new-instance v10, Ljava/util/ArrayList;
 
     invoke-direct {v10}, Ljava/util/ArrayList;-><init>()V
 
-    .line 155
     .local v10, "scratchStyleMatches":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StyleMatch;>;"
     const/4 v9, 0x0
 
-    .line 156
     .local v9, "pos":I
     :cond_0
     :goto_0
@@ -1404,26 +1293,21 @@
 
     if-ge v9, v0, :cond_c
 
-    .line 157
     move-object/from16 v0, p1
 
     invoke-virtual {v0, v9}, Ljava/lang/String;->charAt(I)C
 
     move-result v3
 
-    .line 158
     .local v3, "curr":C
     sparse-switch v3, :sswitch_data_0
 
-    .line 205
     invoke-virtual {v13, v3}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 206
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_0
 
-    .line 160
     :sswitch_0
     add-int/lit8 v17, v9, 0x1
 
@@ -1437,17 +1321,13 @@
 
     if-lt v0, v1, :cond_1
 
-    .line 161
     add-int/lit8 v9, v9, 0x1
 
-    .line 162
     goto :goto_0
 
-    .line 164
     :cond_1
     move v8, v9
 
-    .line 165
     .local v8, "ltPos":I
     add-int/lit8 v17, v8, 0x1
 
@@ -1469,7 +1349,6 @@
 
     const/4 v6, 0x1
 
-    .line 166
     .local v6, "isClosingTag":Z
     :goto_1
     add-int/lit8 v17, v8, 0x1
@@ -1482,7 +1361,6 @@
 
     move-result v9
 
-    .line 167
     add-int/lit8 v17, v9, -0x2
 
     move-object/from16 v0, p1
@@ -1503,7 +1381,6 @@
 
     const/4 v7, 0x1
 
-    .line 168
     .local v7, "isVoidTag":Z
     :goto_2
     if-eqz v6, :cond_5
@@ -1528,13 +1405,11 @@
 
     move-result-object v5
 
-    .line 170
     .local v5, "fullTagExpression":Ljava/lang/String;
     invoke-static {v5}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->getTagName(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v16
 
-    .line 171
     .local v16, "tagName":Ljava/lang/String;
     if-eqz v16, :cond_0
 
@@ -1544,10 +1419,8 @@
 
     if-eqz v17, :cond_0
 
-    .line 174
     if-eqz v6, :cond_7
 
-    .line 177
     :cond_2
     invoke-virtual {v15}, Ljava/util/Stack;->isEmpty()Z
 
@@ -1555,14 +1428,12 @@
 
     if-nez v17, :cond_0
 
-    .line 180
     invoke-virtual {v15}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     move-result-object v14
 
     check-cast v14, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
-    .line 181
     .local v14, "startTag":Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
     move-object/from16 v0, p0
 
@@ -1570,7 +1441,6 @@
 
     invoke-static {v0, v14, v13, v1, v10}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->applySpansForTag(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Landroid/text/SpannableStringBuilder;Ljava/util/List;Ljava/util/List;)V
 
-    .line 182
     iget-object v0, v14, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->name:Ljava/lang/String;
 
     move-object/from16 v17, v0
@@ -1587,7 +1457,6 @@
 
     goto/16 :goto_0
 
-    .line 165
     .end local v5    # "fullTagExpression":Ljava/lang/String;
     .end local v6    # "isClosingTag":Z
     .end local v7    # "isVoidTag":Z
@@ -1598,14 +1467,12 @@
 
     goto :goto_1
 
-    .line 167
     .restart local v6    # "isClosingTag":Z
     :cond_4
     const/4 v7, 0x0
 
     goto :goto_2
 
-    .line 168
     .restart local v7    # "isVoidTag":Z
     :cond_5
     const/16 v17, 0x1
@@ -1617,13 +1484,11 @@
 
     goto :goto_4
 
-    .line 183
     .restart local v5    # "fullTagExpression":Ljava/lang/String;
     .restart local v16    # "tagName":Ljava/lang/String;
     :cond_7
     if-nez v7, :cond_0
 
-    .line 184
     invoke-virtual {v13}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v17
@@ -1640,7 +1505,6 @@
 
     goto/16 :goto_0
 
-    .line 188
     .end local v5    # "fullTagExpression":Ljava/lang/String;
     .end local v6    # "isClosingTag":Z
     .end local v7    # "isVoidTag":Z
@@ -1661,7 +1525,6 @@
 
     move-result v11
 
-    .line 189
     .local v11, "semiColonEndIndex":I
     const/16 v17, 0x20
 
@@ -1677,7 +1540,6 @@
 
     move-result v12
 
-    .line 190
     .local v12, "spaceEndIndex":I
     const/16 v17, -0x1
 
@@ -1687,7 +1549,6 @@
 
     move v4, v12
 
-    .line 193
     .local v4, "entityEndIndex":I
     :goto_5
     const/16 v17, -0x1
@@ -1696,7 +1557,6 @@
 
     if-eq v4, v0, :cond_b
 
-    .line 194
     add-int/lit8 v17, v9, 0x1
 
     move-object/from16 v0, p1
@@ -1711,23 +1571,19 @@
 
     invoke-static {v0, v13}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->applyEntity(Ljava/lang/String;Landroid/text/SpannableStringBuilder;)V
 
-    .line 195
     if-ne v4, v12, :cond_8
 
-    .line 196
     const-string/jumbo v17, " "
 
     move-object/from16 v0, v17
 
     invoke-virtual {v13, v0}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 198
     :cond_8
     add-int/lit8 v9, v4, 0x1
 
     goto/16 :goto_0
 
-    .line 190
     .end local v4    # "entityEndIndex":I
     :cond_9
     const/16 v17, -0x1
@@ -1740,7 +1596,6 @@
 
     goto :goto_5
 
-    .line 192
     :cond_a
     invoke-static {v11, v12}, Ljava/lang/Math;->min(II)I
 
@@ -1748,18 +1603,14 @@
 
     goto :goto_5
 
-    .line 200
     .restart local v4    # "entityEndIndex":I
     :cond_b
     invoke-virtual {v13, v3}, Landroid/text/SpannableStringBuilder;->append(C)Landroid/text/SpannableStringBuilder;
 
-    .line 201
     add-int/lit8 v9, v9, 0x1
 
-    .line 203
     goto/16 :goto_0
 
-    .line 211
     .end local v3    # "curr":C
     .end local v4    # "entityEndIndex":I
     .end local v11    # "semiColonEndIndex":I
@@ -1772,7 +1623,6 @@
 
     if-nez v17, :cond_d
 
-    .line 212
     invoke-virtual {v15}, Ljava/util/Stack;->pop()Ljava/lang/Object;
 
     move-result-object v17
@@ -1789,7 +1639,6 @@
 
     goto :goto_6
 
-    .line 214
     :cond_d
     invoke-static {}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;->buildWholeCueVirtualTag()Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;
 
@@ -1803,15 +1652,12 @@
 
     invoke-static {v0, v1, v13, v2, v10}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->applySpansForTag(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser$StartTag;Landroid/text/SpannableStringBuilder;Ljava/util/List;Ljava/util/List;)V
 
-    .line 216
     move-object/from16 v0, p2
 
     invoke-virtual {v0, v13}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;->setText(Landroid/text/SpannableStringBuilder;)Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
-    .line 217
     return-void
 
-    .line 158
     :sswitch_data_0
     .sparse-switch
         0x26 -> :sswitch_1
@@ -1832,20 +1678,17 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 249
     const/16 v1, 0x2c
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
-    .line 250
     .local v0, "commaIndex":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 251
     add-int/lit8 v1, v0, 0x1
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -1858,12 +1701,10 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;->setLineAnchor(I)Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
-    .line 252
     invoke-virtual {p0, v2, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 256
     :goto_0
     const-string/jumbo v1, "%"
 
@@ -1873,7 +1714,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 257
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->parsePercentage(Ljava/lang/String;)F
 
     move-result v1
@@ -1884,11 +1724,9 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;->setLineType(I)Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
-    .line 261
     :goto_1
     return-void
 
-    .line 254
     :cond_0
     const/high16 v1, -0x80000000
 
@@ -1896,7 +1734,6 @@
 
     goto :goto_0
 
-    .line 259
     :cond_1
     invoke-static {p0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
 
@@ -1926,7 +1763,6 @@
 
     const/4 v0, 0x0
 
-    .line 276
     const/4 v3, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -1939,7 +1775,6 @@
     :goto_0
     packed-switch v3, :pswitch_data_0
 
-    .line 285
     const-string/jumbo v0, "WebvttCueParser"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -1962,14 +1797,12 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 286
     const/high16 v0, -0x80000000
 
     :goto_1
     :pswitch_0
     return v0
 
-    .line 276
     :sswitch_0
     const-string/jumbo v4, "start"
 
@@ -2025,16 +1858,13 @@
     :pswitch_1
     move v0, v1
 
-    .line 281
     goto :goto_1
 
     :pswitch_2
     move v0, v2
 
-    .line 283
     goto :goto_1
 
-    .line 276
     nop
 
     :sswitch_data_0
@@ -2065,20 +1895,17 @@
     .end annotation
 
     .prologue
-    .line 265
     const/16 v1, 0x2c
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->indexOf(I)I
 
     move-result v0
 
-    .line 266
     .local v0, "commaIndex":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 267
     add-int/lit8 v1, v0, 0x1
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->substring(I)Ljava/lang/String;
@@ -2091,14 +1918,12 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;->setPositionAnchor(I)Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
-    .line 268
     const/4 v1, 0x0
 
     invoke-virtual {p0, v1, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 272
     :goto_0
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttParserUtil;->parsePercentage(Ljava/lang/String;)F
 
@@ -2106,10 +1931,8 @@
 
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;->setPosition(F)Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCue$Builder;
 
-    .line 273
     return-void
 
-    .line 270
     :cond_0
     const/high16 v1, -0x80000000
 
@@ -2123,7 +1946,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 291
     const/4 v0, -0x1
 
     invoke-virtual {p0}, Ljava/lang/String;->hashCode()I
@@ -2136,7 +1958,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 302
     const-string/jumbo v0, "WebvttCueParser"
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -2159,13 +1980,11 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 303
     const/4 v0, 0x0
 
     :goto_1
     return-object v0
 
-    .line 291
     :sswitch_0
     const-string/jumbo v1, "start"
 
@@ -2244,25 +2063,21 @@
 
     goto :goto_0
 
-    .line 294
     :pswitch_0
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_NORMAL:Landroid/text/Layout$Alignment;
 
     goto :goto_1
 
-    .line 297
     :pswitch_1
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_CENTER:Landroid/text/Layout$Alignment;
 
     goto :goto_1
 
-    .line 300
     :pswitch_2
     sget-object v0, Landroid/text/Layout$Alignment;->ALIGN_OPPOSITE:Landroid/text/Layout$Alignment;
 
     goto :goto_1
 
-    .line 291
     :sswitch_data_0
     .sparse-switch
         -0x514d33ab -> :sswitch_2
@@ -2303,13 +2118,11 @@
     .end annotation
 
     .prologue
-    .line 93
     .local p3, "styles":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCssStyle;>;"
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object v6
 
-    .line 94
     .local v6, "firstLine":Ljava/lang/String;
     sget-object v0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->CUE_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
@@ -2317,7 +2130,6 @@
 
     move-result-object v1
 
-    .line 95
     .local v1, "cueHeaderMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -2325,7 +2137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
     const/4 v0, 0x0
 
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->textBuilder:Ljava/lang/StringBuilder;
@@ -2340,17 +2151,14 @@
 
     move-result v0
 
-    .line 108
     :goto_0
     return v0
 
-    .line 100
     :cond_0
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLine()Ljava/lang/String;
 
     move-result-object v7
 
-    .line 101
     .local v7, "secondLine":Ljava/lang/String;
     sget-object v0, Lorg/telegram/messenger/exoplayer2/text/webvtt/WebvttCueParser;->CUE_HEADER_PATTERN:Ljava/util/regex/Pattern;
 
@@ -2358,14 +2166,12 @@
 
     move-result-object v1
 
-    .line 102
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
     move-result v0
 
     if-eqz v0, :cond_1
 
-    .line 104
     invoke-virtual {v6}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object v0
@@ -2384,7 +2190,6 @@
 
     goto :goto_0
 
-    .line 108
     :cond_1
     const/4 v0, 0x0
 

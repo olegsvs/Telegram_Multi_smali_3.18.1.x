@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 932
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$9;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 935
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$9;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$900(Lorg/telegram/ui/MediaActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -54,12 +52,10 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 936
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$9;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$3100(Lorg/telegram/ui/MediaActivity;)V
 
-    .line 937
     const/4 v0, 0x1
 
     return v0

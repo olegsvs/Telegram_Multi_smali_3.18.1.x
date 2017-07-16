@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 431
     iput-boolean p1, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$gif:Z
 
     iput p2, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$type:I
@@ -52,7 +51,6 @@
 
     const/4 v5, 0x0
 
-    .line 434
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "emoji"
@@ -65,19 +63,15 @@
 
     move-result-object v0
 
-    .line 435
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v1, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$gif:Z
 
     if-eqz v1, :cond_1
 
-    .line 436
     invoke-static {v5}, Lorg/telegram/messenger/query/StickersQuery;->access$102(Z)Z
 
-    .line 437
     invoke-static {v6}, Lorg/telegram/messenger/query/StickersQuery;->access$202(Z)Z
 
-    .line 438
     const-string/jumbo v1, "lastGifLoadTime"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -90,23 +84,19 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 444
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$documents:Ljava/util/ArrayList;
 
     if-eqz v1, :cond_0
 
-    .line 445
     iget-boolean v1, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$gif:Z
 
     if-eqz v1, :cond_2
 
-    .line 446
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$9;->val$documents:Ljava/util/ArrayList;
 
     invoke-static {v1}, Lorg/telegram/messenger/query/StickersQuery;->access$002(Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 450
     :goto_1
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -136,11 +126,9 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 452
     :cond_0
     return-void
 
-    .line 440
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$400()[Z
 
@@ -150,7 +138,6 @@
 
     aput-boolean v5, v1, v2
 
-    .line 441
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$500()[Z
 
     move-result-object v1
@@ -159,7 +146,6 @@
 
     aput-boolean v6, v1, v2
 
-    .line 442
     const-string/jumbo v1, "lastStickersLoadTime"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -174,7 +160,6 @@
 
     goto :goto_0
 
-    .line 448
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->access$300()[Ljava/util/ArrayList;
 

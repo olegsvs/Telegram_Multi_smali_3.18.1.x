@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 208
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$4;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 211
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoPaintView$4;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PhotoPaintView;->closeTextEnter(Z)V
 
-    .line 212
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingContactsActivity$3;
 
     .prologue
-    .line 368
     iput-object p1, p0, Lorg/telegram/ui/ThemingContactsActivity$3$12;->this$1:Lorg/telegram/ui/ThemingContactsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,15 +41,12 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 371
     iget-object v0, p0, Lorg/telegram/ui/ThemingContactsActivity$3$12;->this$1:Lorg/telegram/ui/ThemingContactsActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingContactsActivity$3;->this$0:Lorg/telegram/ui/ThemingContactsActivity;
 
-    const-string/jumbo v1, "contactsOnlineColor"
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingContactsActivity;->access$300(Lorg/telegram/ui/ThemingContactsActivity;Ljava/lang/String;I)V
 
-    .line 372
     return-void
 .end method

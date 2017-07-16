@@ -94,17 +94,14 @@
     .locals 1
 
     .prologue
-    .line 64
     const-string/jumbo v0, "^bytes (\\d+)-(\\d+)/(\\d+)$"
 
-    .line 65
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->CONTENT_RANGE_HEADER:Ljava/util/regex/Pattern;
 
-    .line 66
     new-instance v0, Ljava/util/concurrent/atomic/AtomicReference;
 
     invoke-direct {v0}, Ljava/util/concurrent/atomic/AtomicReference;-><init>()V
@@ -129,13 +126,11 @@
     .end annotation
 
     .prologue
-    .line 94
     .local p2, "contentTypePredicate":Lorg/telegram/messenger/exoplayer2/util/Predicate;, "Lorg/telegram/messenger/exoplayer2/util/Predicate<Ljava/lang/String;>;"
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, v0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/util/Predicate;Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;)V
 
-    .line 95
     return-void
 .end method
 
@@ -162,7 +157,6 @@
     .local p3, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;>;"
     const/16 v4, 0x1f40
 
-    .line 106
     move-object v0, p0
 
     move-object v1, p1
@@ -175,7 +169,6 @@
 
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/util/Predicate;Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;II)V
 
-    .line 108
     return-void
 .end method
 
@@ -200,7 +193,6 @@
     .end annotation
 
     .prologue
-    .line 124
     .local p2, "contentTypePredicate":Lorg/telegram/messenger/exoplayer2/util/Predicate;, "Lorg/telegram/messenger/exoplayer2/util/Predicate<Ljava/lang/String;>;"
     .local p3, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;>;"
     const/4 v6, 0x0
@@ -219,7 +211,6 @@
 
     invoke-direct/range {v0 .. v6}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/util/Predicate;Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;IIZ)V
 
-    .line 125
     return-void
 .end method
 
@@ -245,41 +236,32 @@
     .end annotation
 
     .prologue
-    .line 143
     .local p2, "contentTypePredicate":Lorg/telegram/messenger/exoplayer2/util/Predicate;, "Lorg/telegram/messenger/exoplayer2/util/Predicate<Ljava/lang/String;>;"
     .local p3, "listener":Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;, "Lorg/telegram/messenger/exoplayer2/upstream/TransferListener<-Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 144
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotEmpty(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->userAgent:Ljava/lang/String;
 
-    .line 145
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->contentTypePredicate:Lorg/telegram/messenger/exoplayer2/util/Predicate;
 
-    .line 146
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
-    .line 147
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
-    .line 148
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connectTimeoutMillis:I
 
-    .line 149
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->readTimeoutMillis:I
 
-    .line 150
     iput-boolean p6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->allowCrossProtocolRedirects:Z
 
-    .line 151
     return-void
 .end method
 
@@ -287,12 +269,10 @@
     .locals 3
 
     .prologue
-    .line 634
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
     if-eqz v1, :cond_0
 
-    .line 636
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
@@ -300,21 +280,17 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 640
     :goto_0
     const/4 v1, 0x0
 
     iput-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
-    .line 642
     :cond_0
     return-void
 
-    .line 637
     :catch_0
     move-exception v0
 
-    .line 638
     .local v0, "e":Ljava/lang/Exception;
     const-string/jumbo v1, "DefaultHttpDataSource"
 
@@ -330,10 +306,8 @@
     .param p0, "connection"    # Ljava/net/HttpURLConnection;
 
     .prologue
-    .line 468
     const-wide/16 v0, -0x1
 
-    .line 469
     .local v0, "contentLength":J
     const-string/jumbo v8, "Content-Length"
 
@@ -341,7 +315,6 @@
 
     move-result-object v4
 
-    .line 470
     .local v4, "contentLengthHeader":Ljava/lang/String;
     invoke-static {v4}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -349,7 +322,6 @@
 
     if-nez v8, :cond_0
 
-    .line 472
     :try_start_0
     invoke-static {v4}, Ljava/lang/Long;->parseLong(Ljava/lang/String;)J
     :try_end_0
@@ -357,7 +329,6 @@
 
     move-result-wide v0
 
-    .line 477
     :cond_0
     :goto_0
     const-string/jumbo v8, "Content-Range"
@@ -366,7 +337,6 @@
 
     move-result-object v5
 
-    .line 478
     .local v5, "contentRangeHeader":Ljava/lang/String;
     invoke-static {v5}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -374,14 +344,12 @@
 
     if-nez v8, :cond_1
 
-    .line 479
     sget-object v8, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->CONTENT_RANGE_HEADER:Ljava/util/regex/Pattern;
 
     invoke-virtual {v8, v5}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v7
 
-    .line 480
     .local v7, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v7}, Ljava/util/regex/Matcher;->find()Z
 
@@ -389,10 +357,8 @@
 
     if-eqz v8, :cond_1
 
-    .line 482
     const/4 v8, 0x2
 
-    .line 483
     :try_start_1
     invoke-virtual {v7, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -420,7 +386,6 @@
 
     add-long v2, v8, v10
 
-    .line 484
     .local v2, "contentLengthFromRange":J
     const-wide/16 v8, 0x0
 
@@ -428,22 +393,18 @@
 
     if-gez v8, :cond_2
 
-    .line 487
     move-wide v0, v2
 
-    .line 502
     .end local v2    # "contentLengthFromRange":J
     .end local v7    # "matcher":Ljava/util/regex/Matcher;
     :cond_1
     :goto_1
     return-wide v0
 
-    .line 473
     .end local v5    # "contentRangeHeader":Ljava/lang/String;
     :catch_0
     move-exception v6
 
-    .line 474
     .local v6, "e":Ljava/lang/NumberFormatException;
     const-string/jumbo v8, "DefaultHttpDataSource"
 
@@ -475,7 +436,6 @@
 
     goto :goto_0
 
-    .line 488
     .end local v6    # "e":Ljava/lang/NumberFormatException;
     .restart local v2    # "contentLengthFromRange":J
     .restart local v5    # "contentRangeHeader":Ljava/lang/String;
@@ -485,7 +445,6 @@
 
     if-eqz v8, :cond_1
 
-    .line 493
     :try_start_2
     const-string/jumbo v8, "DefaultHttpDataSource"
 
@@ -525,7 +484,6 @@
 
     invoke-static {v8, v9}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 495
     invoke-static {v0, v1, v2, v3}, Ljava/lang/Math;->max(JJ)J
     :try_end_2
     .catch Ljava/lang/NumberFormatException; {:try_start_2 .. :try_end_2} :catch_1
@@ -534,12 +492,10 @@
 
     goto :goto_1
 
-    .line 497
     .end local v2    # "contentLengthFromRange":J
     :catch_1
     move-exception v6
 
-    .line 498
     .restart local v6    # "e":Ljava/lang/NumberFormatException;
     const-string/jumbo v8, "DefaultHttpDataSource"
 
@@ -583,10 +539,8 @@
     .end annotation
 
     .prologue
-    .line 441
     if-nez p1, :cond_0
 
-    .line 442
     new-instance v2, Ljava/net/ProtocolException;
 
     const-string/jumbo v3, "Null location redirect"
@@ -595,19 +549,16 @@
 
     throw v2
 
-    .line 445
     :cond_0
     new-instance v1, Ljava/net/URL;
 
     invoke-direct {v1, p0, p1}, Ljava/net/URL;-><init>(Ljava/net/URL;Ljava/lang/String;)V
 
-    .line 447
     .local v1, "url":Ljava/net/URL;
     invoke-virtual {v1}, Ljava/net/URL;->getProtocol()Ljava/lang/String;
 
     move-result-object v0
 
-    .line 448
     .local v0, "protocol":Ljava/lang/String;
     const-string/jumbo v2, "https"
 
@@ -625,7 +576,6 @@
 
     if-nez v2, :cond_1
 
-    .line 449
     new-instance v2, Ljava/net/ProtocolException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -650,7 +600,6 @@
 
     throw v2
 
-    .line 458
     :cond_1
     return-object v1
 .end method
@@ -670,30 +619,25 @@
     .end annotation
 
     .prologue
-    .line 394
     invoke-virtual {p1}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v2
 
     check-cast v2, Ljava/net/HttpURLConnection;
 
-    .line 395
     .local v2, "connection":Ljava/net/HttpURLConnection;
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connectTimeoutMillis:I
 
     invoke-virtual {v2, v6}, Ljava/net/HttpURLConnection;->setConnectTimeout(I)V
 
-    .line 396
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->readTimeoutMillis:I
 
     invoke-virtual {v2, v6}, Ljava/net/HttpURLConnection;->setReadTimeout(I)V
 
-    .line 397
     iget-object v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     monitor-enter v8
 
-    .line 398
     :try_start_0
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
@@ -718,7 +662,6 @@
 
     check-cast v4, Ljava/util/Map$Entry;
 
-    .line 399
     .local v4, "property":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     invoke-interface {v4}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -736,7 +679,6 @@
 
     goto :goto_0
 
-    .line 401
     .end local v4    # "property":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/String;>;"
     :catchall_0
     move-exception v6
@@ -753,7 +695,6 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 402
     const-wide/16 v6, 0x0
 
     cmp-long v6, p3, v6
@@ -766,7 +707,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 403
     :cond_1
     new-instance v6, Ljava/lang/StringBuilder;
 
@@ -794,7 +734,6 @@
 
     move-result-object v5
 
-    .line 404
     .local v5, "rangeRequest":Ljava/lang/String;
     const-wide/16 v6, -0x1
 
@@ -802,7 +741,6 @@
 
     if-eqz v6, :cond_2
 
-    .line 405
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
@@ -825,13 +763,11 @@
 
     move-result-object v5
 
-    .line 407
     :cond_2
     const-string/jumbo v6, "Range"
 
     invoke-virtual {v2, v6, v5}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 409
     .end local v5    # "rangeRequest":Ljava/lang/String;
     :cond_3
     const-string/jumbo v6, "User-Agent"
@@ -840,23 +776,19 @@
 
     invoke-virtual {v2, v6, v7}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 410
     if-nez p7, :cond_4
 
-    .line 411
     const-string/jumbo v6, "Accept-Encoding"
 
     const-string/jumbo v7, "identity"
 
     invoke-virtual {v2, v6, v7}, Ljava/net/HttpURLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 413
     :cond_4
     move/from16 v0, p8
 
     invoke-virtual {v2, v0}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    .line 414
     if-eqz p2, :cond_5
 
     const/4 v6, 0x1
@@ -864,56 +796,44 @@
     :goto_1
     invoke-virtual {v2, v6}, Ljava/net/HttpURLConnection;->setDoOutput(Z)V
 
-    .line 415
     if-eqz p2, :cond_7
 
-    .line 416
     const-string/jumbo v6, "POST"
 
     invoke-virtual {v2, v6}, Ljava/net/HttpURLConnection;->setRequestMethod(Ljava/lang/String;)V
 
-    .line 417
     array-length v6, p2
 
     if-nez v6, :cond_6
 
-    .line 418
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 429
     :goto_2
     return-object v2
 
-    .line 414
     :cond_5
     const/4 v6, 0x0
 
     goto :goto_1
 
-    .line 420
     :cond_6
     array-length v6, p2
 
     invoke-virtual {v2, v6}, Ljava/net/HttpURLConnection;->setFixedLengthStreamingMode(I)V
 
-    .line 421
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->connect()V
 
-    .line 422
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getOutputStream()Ljava/io/OutputStream;
 
     move-result-object v3
 
-    .line 423
     .local v3, "os":Ljava/io/OutputStream;
     invoke-virtual {v3, p2}, Ljava/io/OutputStream;->write([B)V
 
-    .line 424
     invoke-virtual {v3}, Ljava/io/OutputStream;->close()V
 
     goto :goto_2
 
-    .line 427
     .end local v3    # "os":Ljava/io/OutputStream;
     :cond_7
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->connect()V
@@ -931,7 +851,6 @@
     .end annotation
 
     .prologue
-    .line 342
     new-instance v4, Ljava/net/URL;
 
     move-object/from16 v0, p1
@@ -944,25 +863,21 @@
 
     invoke-direct {v4, v3}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 343
     .local v4, "url":Ljava/net/URL;
     move-object/from16 v0, p1
 
     iget-object v5, v0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->postBody:[B
 
-    .line 344
     .local v5, "postBody":[B
     move-object/from16 v0, p1
 
     iget-wide v6, v0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->position:J
 
-    .line 345
     .local v6, "position":J
     move-object/from16 v0, p1
 
     iget-wide v8, v0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
-    .line 346
     .local v8, "length":J
     move-object/from16 v0, p1
 
@@ -974,7 +889,6 @@
 
     const/4 v10, 0x1
 
-    .line 348
     .local v10, "allowGzip":Z
     :goto_0
     move-object/from16 v0, p0
@@ -983,7 +897,6 @@
 
     if-nez v3, :cond_2
 
-    .line 351
     const/4 v11, 0x1
 
     move-object/from16 v3, p0
@@ -992,18 +905,15 @@
 
     move-result-object v2
 
-    .line 374
     :cond_0
     return-object v2
 
-    .line 346
     .end local v10    # "allowGzip":Z
     :cond_1
     const/4 v10, 0x0
 
     goto :goto_0
 
-    .line 355
     .restart local v10    # "allowGzip":Z
     :cond_2
     const/4 v13, 0x0
@@ -1011,7 +921,6 @@
     .local v13, "redirectCount":I
     move v14, v13
 
-    .line 356
     .end local v13    # "redirectCount":I
     .local v14, "redirectCount":I
     :goto_1
@@ -1023,7 +932,6 @@
 
     if-gt v14, v3, :cond_4
 
-    .line 357
     const/4 v11, 0x0
 
     move-object/from16 v3, p0
@@ -1032,13 +940,11 @@
 
     move-result-object v2
 
-    .line 359
     .local v2, "connection":Ljava/net/HttpURLConnection;
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v15
 
-    .line 360
     .local v15, "responseCode":I
     const/16 v3, 0x12c
 
@@ -1066,34 +972,28 @@
 
     if-ne v15, v3, :cond_0
 
-    .line 369
     :cond_3
     const/4 v5, 0x0
 
-    .line 370
     const-string/jumbo v3, "Location"
 
     invoke-virtual {v2, v3}, Ljava/net/HttpURLConnection;->getHeaderField(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 371
     .local v12, "location":Ljava/lang/String;
     invoke-virtual {v2}, Ljava/net/HttpURLConnection;->disconnect()V
 
-    .line 372
     invoke-static {v4, v12}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->handleRedirect(Ljava/net/URL;Ljava/lang/String;)Ljava/net/URL;
 
     move-result-object v4
 
     move v14, v13
 
-    .line 376
     .end local v13    # "redirectCount":I
     .restart local v14    # "redirectCount":I
     goto :goto_1
 
-    .line 379
     .end local v2    # "connection":Ljava/net/HttpURLConnection;
     .end local v12    # "location":Ljava/lang/String;
     .end local v14    # "redirectCount":I
@@ -1133,7 +1033,6 @@
     .param p1, "bytesRemaining"    # J
 
     .prologue
-    .line 597
     sget v4, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v5, 0x13
@@ -1146,19 +1045,16 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 627
     :cond_0
     :goto_0
     return-void
 
-    .line 602
     :cond_1
     :try_start_0
     invoke-virtual {p0}, Ljava/net/HttpURLConnection;->getInputStream()Ljava/io/InputStream;
 
     move-result-object v1
 
-    .line 603
     .local v1, "inputStream":Ljava/io/InputStream;
     const-wide/16 v4, -0x1
 
@@ -1166,7 +1062,6 @@
 
     if-nez v4, :cond_4
 
-    .line 605
     invoke-virtual {v1}, Ljava/io/InputStream;->read()I
 
     move-result v4
@@ -1175,7 +1070,6 @@
 
     if-eq v4, v5, :cond_0
 
-    .line 613
     :cond_2
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1185,7 +1079,6 @@
 
     move-result-object v0
 
-    .line 614
     .local v0, "className":Ljava/lang/String;
     const-string/jumbo v4, "com.android.okhttp.internal.http.HttpTransport$ChunkedInputStream"
 
@@ -1197,14 +1090,12 @@
 
     const-string/jumbo v4, "com.android.okhttp.internal.http.HttpTransport$FixedLengthInputStream"
 
-    .line 615
     invoke-virtual {v0, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v4
 
     if-eqz v4, :cond_0
 
-    .line 617
     :cond_3
     invoke-virtual {v1}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -1214,7 +1105,6 @@
 
     move-result-object v2
 
-    .line 618
     .local v2, "superclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
     const-string/jumbo v4, "unexpectedEndOfInput"
 
@@ -1226,13 +1116,11 @@
 
     move-result-object v3
 
-    .line 619
     .local v3, "unexpectedEndOfInput":Ljava/lang/reflect/Method;
     const/4 v4, 0x1
 
     invoke-virtual {v3, v4}, Ljava/lang/reflect/Method;->setAccessible(Z)V
 
-    .line 620
     const/4 v4, 0x0
 
     new-array v4, v4, [Ljava/lang/Object;
@@ -1243,7 +1131,6 @@
 
     goto :goto_0
 
-    .line 622
     .end local v0    # "className":Ljava/lang/String;
     .end local v1    # "inputStream":Ljava/io/InputStream;
     .end local v2    # "superclass":Ljava/lang/Class;, "Ljava/lang/Class<*>;"
@@ -1253,7 +1140,6 @@
 
     goto :goto_0
 
-    .line 608
     .restart local v1    # "inputStream":Ljava/io/InputStream;
     :cond_4
     const-wide/16 v4, 0x800
@@ -1281,18 +1167,14 @@
 
     const/4 v3, -0x1
 
-    .line 558
     if-nez p3, :cond_1
 
-    .line 559
     const/4 v2, 0x0
 
-    .line 582
     :cond_0
     :goto_0
     return v2
 
-    .line 561
     :cond_1
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
@@ -1300,14 +1182,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 562
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRead:J
 
     sub-long v0, v4, v6
 
-    .line 563
     .local v0, "bytesRemaining":J
     const-wide/16 v4, 0x0
 
@@ -1317,10 +1197,8 @@
 
     move v2, v3
 
-    .line 564
     goto :goto_0
 
-    .line 566
     :cond_2
     int-to-long v4, p3
 
@@ -1330,7 +1208,6 @@
 
     long-to-int p3, v4
 
-    .line 569
     .end local v0    # "bytesRemaining":J
     :cond_3
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
@@ -1339,18 +1216,15 @@
 
     move-result v2
 
-    .line 570
     .local v2, "read":I
     if-ne v2, v3, :cond_5
 
-    .line 571
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
     cmp-long v4, v4, v8
 
     if-eqz v4, :cond_4
 
-    .line 573
     new-instance v3, Ljava/io/EOFException;
 
     invoke-direct {v3}, Ljava/io/EOFException;-><init>()V
@@ -1360,10 +1234,8 @@
     :cond_4
     move v2, v3
 
-    .line 575
     goto :goto_0
 
-    .line 578
     :cond_5
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRead:J
 
@@ -1373,12 +1245,10 @@
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRead:J
 
-    .line 579
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v3, :cond_0
 
-    .line 580
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v3, p0, v2}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onBytesTransferred(Ljava/lang/Object;I)V
@@ -1395,7 +1265,6 @@
     .end annotation
 
     .prologue
-    .line 514
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
 
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToSkip:J
@@ -1404,11 +1273,9 @@
 
     if-nez v3, :cond_0
 
-    .line 541
     :goto_0
     return-void
 
-    .line 519
     :cond_0
     sget-object v3, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->skipBufferReference:Ljava/util/concurrent/atomic/AtomicReference;
 
@@ -1420,16 +1287,13 @@
 
     check-cast v2, [B
 
-    .line 520
     .local v2, "skipBuffer":[B
     if-nez v2, :cond_1
 
-    .line 521
     const/16 v3, 0x1000
 
     new-array v2, v3, [B
 
-    .line 524
     :cond_1
     :goto_1
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
@@ -1440,7 +1304,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 525
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToSkip:J
 
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
@@ -1457,7 +1320,6 @@
 
     long-to-int v1, v4
 
-    .line 526
     .local v1, "readLength":I
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
 
@@ -1467,7 +1329,6 @@
 
     move-result v0
 
-    .line 527
     .local v0, "read":I
     invoke-static {}, Ljava/lang/Thread;->interrupted()Z
 
@@ -1475,27 +1336,23 @@
 
     if-eqz v3, :cond_2
 
-    .line 528
     new-instance v3, Ljava/io/InterruptedIOException;
 
     invoke-direct {v3}, Ljava/io/InterruptedIOException;-><init>()V
 
     throw v3
 
-    .line 530
     :cond_2
     const/4 v3, -0x1
 
     if-ne v0, v3, :cond_3
 
-    .line 531
     new-instance v3, Ljava/io/EOFException;
 
     invoke-direct {v3}, Ljava/io/EOFException;-><init>()V
 
     throw v3
 
-    .line 533
     :cond_3
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
 
@@ -1505,19 +1362,16 @@
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
 
-    .line 534
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v3, :cond_1
 
-    .line 535
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v3, p0, v0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onBytesTransferred(Ljava/lang/Object;I)V
 
     goto :goto_1
 
-    .line 540
     .end local v0    # "read":I
     .end local v1    # "readLength":I
     :cond_4
@@ -1534,7 +1388,6 @@
     .locals 2
 
     .prologue
-    .line 323
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRead:J
 
     return-wide v0
@@ -1544,7 +1397,6 @@
     .locals 4
 
     .prologue
-    .line 335
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
     const-wide/16 v2, -0x1
@@ -1572,7 +1424,6 @@
     .locals 2
 
     .prologue
-    .line 313
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
 
     return-wide v0
@@ -1582,24 +1433,19 @@
     .locals 2
 
     .prologue
-    .line 182
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 183
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 184
     monitor-exit v1
 
-    .line 185
     return-void
 
-    .line 184
     :catchall_0
     move-exception v0
 
@@ -1615,27 +1461,21 @@
     .param p1, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 174
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 176
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     monitor-exit v1
 
-    .line 178
     return-void
 
-    .line 177
     :catchall_0
     move-exception v0
 
@@ -1659,13 +1499,11 @@
 
     const/4 v4, 0x0
 
-    .line 277
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
 
     if-eqz v1, :cond_0
 
-    .line 278
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRemaining()J
@@ -1676,7 +1514,6 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 280
     :try_start_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
 
@@ -1685,40 +1522,31 @@
     .catch Ljava/io/IOException; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 286
     :cond_0
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
 
-    .line 287
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 288
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->opened:Z
 
     if-eqz v1, :cond_1
 
-    .line 289
     iput-boolean v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->opened:Z
 
-    .line 290
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v1, :cond_1
 
-    .line 291
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v1, p0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferEnd(Ljava/lang/Object;)V
 
-    .line 295
     :cond_1
     return-void
 
-    .line 281
     :catch_0
     move-exception v0
 
-    .line 282
     .local v0, "e":Ljava/io/IOException;
     :try_start_2
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
@@ -1733,30 +1561,24 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 286
     .end local v0    # "e":Ljava/io/IOException;
     :catchall_0
     move-exception v1
 
     iput-object v5, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->inputStream:Ljava/io/InputStream;
 
-    .line 287
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 288
     iget-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->opened:Z
 
     if-eqz v2, :cond_2
 
-    .line 289
     iput-boolean v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->opened:Z
 
-    .line 290
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v2, :cond_2
 
-    .line 291
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v2, p0}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferEnd(Ljava/lang/Object;)V
@@ -1769,7 +1591,6 @@
     .locals 1
 
     .prologue
-    .line 303
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
     return-object v0
@@ -1791,7 +1612,6 @@
     .end annotation
 
     .prologue
-    .line 160
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
     if-nez v0, :cond_0
@@ -1815,7 +1635,6 @@
     .locals 1
 
     .prologue
-    .line 155
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
     if-nez v0, :cond_0
@@ -1853,20 +1672,16 @@
     .end annotation
 
     .prologue
-    .line 189
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 190
     const-wide/16 v8, 0x0
 
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesRead:J
 
-    .line 191
     const-wide/16 v8, 0x0
 
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesSkipped:J
 
-    .line 193
     :try_start_0
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->makeConnection(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)Ljava/net/HttpURLConnection;
 
@@ -1876,7 +1691,6 @@
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 201
     :try_start_1
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
@@ -1886,7 +1700,6 @@
 
     move-result v6
 
-    .line 209
     .local v6, "responseCode":I
     const/16 v7, 0xc8
 
@@ -1896,7 +1709,6 @@
 
     if-le v6, v7, :cond_2
 
-    .line 210
     :cond_0
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
@@ -1904,22 +1716,18 @@
 
     move-result-object v5
 
-    .line 211
     .local v5, "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 212
     new-instance v4, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;
 
     invoke-direct {v4, v6, v5, p1}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;-><init>(ILjava/util/Map;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
-    .line 214
     .local v4, "exception":Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;
     const/16 v7, 0x1a0
 
     if-ne v6, v7, :cond_1
 
-    .line 215
     new-instance v7, Lorg/telegram/messenger/exoplayer2/upstream/DataSourceException;
 
     const/4 v8, 0x0
@@ -1928,18 +1736,15 @@
 
     invoke-virtual {v4, v7}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;->initCause(Ljava/lang/Throwable;)Ljava/lang/Throwable;
 
-    .line 217
     :cond_1
     throw v4
 
-    .line 194
     .end local v4    # "exception":Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;
     .end local v5    # "headers":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     .end local v6    # "responseCode":I
     :catch_0
     move-exception v3
 
-    .line 195
     .local v3, "e":Ljava/io/IOException;
     new-instance v7, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 
@@ -1973,16 +1778,13 @@
 
     throw v7
 
-    .line 202
     .end local v3    # "e":Ljava/io/IOException;
     :catch_1
     move-exception v3
 
-    .line 203
     .restart local v3    # "e":Ljava/io/IOException;
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 204
     new-instance v7, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 
     new-instance v8, Ljava/lang/StringBuilder;
@@ -2015,7 +1817,6 @@
 
     throw v7
 
-    .line 221
     .end local v3    # "e":Ljava/io/IOException;
     .restart local v6    # "responseCode":I
     :cond_2
@@ -2025,7 +1826,6 @@
 
     move-result-object v2
 
-    .line 222
     .local v2, "contentType":Ljava/lang/String;
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->contentTypePredicate:Lorg/telegram/messenger/exoplayer2/util/Predicate;
 
@@ -2039,17 +1839,14 @@
 
     if-nez v7, :cond_3
 
-    .line 223
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 224
     new-instance v7, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidContentTypeException;
 
     invoke-direct {v7, v2, p1}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidContentTypeException;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
     throw v7
 
-    .line 230
     :cond_3
     const/16 v7, 0xc8
 
@@ -2068,14 +1865,12 @@
     :goto_0
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToSkip:J
 
-    .line 233
     iget v7, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->flags:I
 
     and-int/lit8 v7, v7, 0x1
 
     if-nez v7, :cond_8
 
-    .line 234
     iget-wide v8, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     const-wide/16 v10, -0x1
@@ -2084,12 +1879,10 @@
 
     if-eqz v7, :cond_6
 
-    .line 235
     iget-wide v8, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
-    .line 250
     :goto_1
     :try_start_2
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
@@ -2102,34 +1895,28 @@
     :try_end_2
     .catch Ljava/io/IOException; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 256
     const/4 v7, 0x1
 
     iput-boolean v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->opened:Z
 
-    .line 257
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     if-eqz v7, :cond_4
 
-    .line 258
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->listener:Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;
 
     invoke-interface {v7, p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/TransferListener;->onTransferStart(Ljava/lang/Object;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)V
 
-    .line 261
     :cond_4
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->bytesToRead:J
 
     return-wide v8
 
-    .line 230
     :cond_5
     const-wide/16 v8, 0x0
 
     goto :goto_0
 
-    .line 237
     :cond_6
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->connection:Ljava/net/HttpURLConnection;
 
@@ -2137,7 +1924,6 @@
 
     move-result-wide v0
 
-    .line 238
     .local v0, "contentLength":J
     const-wide/16 v8, -0x1
 
@@ -2159,7 +1945,6 @@
 
     goto :goto_2
 
-    .line 246
     .end local v0    # "contentLength":J
     :cond_8
     iget-wide v8, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
@@ -2168,15 +1953,12 @@
 
     goto :goto_1
 
-    .line 251
     :catch_2
     move-exception v3
 
-    .line 252
     .restart local v3    # "e":Ljava/io/IOException;
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->closeConnectionQuietly()V
 
-    .line 253
     new-instance v7, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 
     const/4 v8, 0x1
@@ -2198,11 +1980,9 @@
     .end annotation
 
     .prologue
-    .line 267
     :try_start_0
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->skipInternal()V
 
-    .line 268
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->readInternal([BII)I
     :try_end_0
     .catch Ljava/io/IOException; {:try_start_0 .. :try_end_0} :catch_0
@@ -2211,11 +1991,9 @@
 
     return v1
 
-    .line 269
     :catch_0
     move-exception v0
 
-    .line 270
     .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;
 
@@ -2234,30 +2012,23 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 165
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     invoke-static {p2}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     monitor-enter v1
 
-    .line 168
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/DefaultHttpDataSource;->requestProperties:Ljava/util/HashMap;
 
     invoke-virtual {v0, p1, p2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     monitor-exit v1
 
-    .line 170
     return-void
 
-    .line 169
     :catchall_0
     move-exception v0
 

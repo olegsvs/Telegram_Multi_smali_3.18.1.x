@@ -36,10 +36,8 @@
     .param p1, "args"    # Landroid/os/Bundle;
 
     .prologue
-    .line 48
     invoke-direct {p0, p1}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>(Landroid/os/Bundle;)V
 
-    .line 49
     const-string/jumbo v0, "chat_id"
 
     invoke-virtual {p1, v0}, Landroid/os/Bundle;->getInt(Ljava/lang/String;)I
@@ -48,7 +46,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->chat_id:I
 
-    .line 50
     return-void
 .end method
 
@@ -57,7 +54,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ConvertGroupActivity;
 
     .prologue
-    .line 35
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertRow:I
 
     return v0
@@ -68,7 +64,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ConvertGroupActivity;
 
     .prologue
-    .line 35
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->chat_id:I
 
     return v0
@@ -79,7 +74,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ConvertGroupActivity;
 
     .prologue
-    .line 35
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->rowCount:I
 
     return v0
@@ -90,7 +84,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ConvertGroupActivity;
 
     .prologue
-    .line 35
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertInfoRow:I
 
     return v0
@@ -101,7 +94,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ConvertGroupActivity;
 
     .prologue
-    .line 35
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertDetailRow:I
 
     return v0
@@ -118,19 +110,16 @@
 
     const/4 v4, 0x0
 
-    .line 73
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v2, 0x7f0200b6
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v1, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v2, "ConvertGroup"
@@ -143,7 +132,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 76
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v2, Lorg/telegram/ui/ConvertGroupActivity$1;
@@ -152,26 +140,22 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 85
     new-instance v1, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;-><init>(Lorg/telegram/ui/ConvertGroupActivity;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listAdapter:Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;
 
-    .line 87
     new-instance v1, Landroid/widget/FrameLayout;
 
     invoke-direct {v1, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->fragmentView:Landroid/view/View;
 
-    .line 88
     iget-object v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 89
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     const-string/jumbo v1, "windowBackgroundGray"
 
@@ -181,14 +165,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 91
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v1, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 92
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -197,12 +179,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 93
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 94
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v2, -0x1
@@ -215,14 +195,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 95
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity;->listAdapter:Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 96
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v2, Lorg/telegram/ui/ConvertGroupActivity$2;
@@ -231,7 +209,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 115
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -243,15 +220,12 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 128
     sget v0, Lorg/telegram/messenger/NotificationCenter;->closeChats:I
 
     if-ne p1, v0, :cond_0
 
-    .line 129
     invoke-virtual {p0}, Lorg/telegram/ui/ConvertGroupActivity;->removeSelfFromStack()V
 
-    .line 131
     :cond_0
     return-void
 .end method
@@ -260,7 +234,6 @@
     .locals 11
 
     .prologue
-    .line 202
     const/16 v0, 0xb
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -566,10 +539,8 @@
     .locals 2
 
     .prologue
-    .line 54
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 56
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -578,7 +549,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertInfoRow:I
 
-    .line 57
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -587,7 +557,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertRow:I
 
-    .line 58
     iget v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -596,7 +565,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->convertDetailRow:I
 
-    .line 60
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -605,7 +573,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 62
     const/4 v0, 0x1
 
     return v0
@@ -615,10 +582,8 @@
     .locals 2
 
     .prologue
-    .line 67
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 68
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -627,7 +592,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 69
     return-void
 .end method
 
@@ -635,20 +599,16 @@
     .locals 1
 
     .prologue
-    .line 120
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 121
     iget-object v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->listAdapter:Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/ConvertGroupActivity;->listAdapter:Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 124
     :cond_0
     return-void
 .end method

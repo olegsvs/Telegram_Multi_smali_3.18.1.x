@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/camera/CameraController$9;
 
     .prologue
-    .line 572
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$9$1;->this$1:Lorg/telegram/messenger/camera/CameraController$9;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$9$1;->val$camera:Landroid/hardware/Camera;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 576
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$9$1;->val$camera:Landroid/hardware/Camera;
 
@@ -53,7 +51,6 @@
 
     move-result-object v1
 
-    .line 577
     .local v1, "params":Landroid/hardware/Camera$Parameters;
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$9$1;->this$1:Lorg/telegram/messenger/camera/CameraController$9;
 
@@ -65,23 +62,19 @@
 
     invoke-virtual {v1, v2}, Landroid/hardware/Camera$Parameters;->setFlashMode(Ljava/lang/String;)V
 
-    .line 578
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraController$9$1;->val$camera:Landroid/hardware/Camera;
 
     invoke-virtual {v2, v1}, Landroid/hardware/Camera;->setParameters(Landroid/hardware/Camera$Parameters;)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 582
     .end local v1    # "params":Landroid/hardware/Camera$Parameters;
     :goto_0
     return-void
 
-    .line 579
     :catch_0
     move-exception v0
 
-    .line 580
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

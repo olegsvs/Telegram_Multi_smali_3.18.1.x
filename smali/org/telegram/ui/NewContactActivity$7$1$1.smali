@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/NewContactActivity$7$1;
 
     .prologue
-    .line 333
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$7$1$1;->this$2:Lorg/telegram/ui/NewContactActivity$7$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 336
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$7$1$1;->this$2:Lorg/telegram/ui/NewContactActivity$7$1;
 
     iget-object v0, v0, Lorg/telegram/ui/NewContactActivity$7$1;->this$1:Lorg/telegram/ui/NewContactActivity$7;
@@ -54,6 +52,5 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 337
     return-void
 .end method

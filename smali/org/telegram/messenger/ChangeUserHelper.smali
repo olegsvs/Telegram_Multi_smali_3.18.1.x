@@ -14,7 +14,6 @@
     .locals 1
 
     .prologue
-    .line 11
     const/4 v0, 0x0
 
     sput v0, Lorg/telegram/messenger/ChangeUserHelper;->userID:I
@@ -26,7 +25,6 @@
     .locals 0
 
     .prologue
-    .line 9
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +34,6 @@
     .locals 1
 
     .prologue
-    .line 24
     sget v0, Lorg/telegram/messenger/ChangeUserHelper;->userID:I
 
     return v0
@@ -46,7 +43,6 @@
     .locals 2
 
     .prologue
-    .line 20
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -79,15 +75,12 @@
     .param p0, "id"    # I
 
     .prologue
-    .line 14
     const/4 v0, -0x1
 
     if-eq p0, v0, :cond_0
 
-    .line 15
     sput p0, Lorg/telegram/messenger/ChangeUserHelper;->userID:I
 
-    .line 16
     :cond_0
     const-string/jumbo v0, "userTAG"
 
@@ -113,6 +106,5 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 17
     return-void
 .end method

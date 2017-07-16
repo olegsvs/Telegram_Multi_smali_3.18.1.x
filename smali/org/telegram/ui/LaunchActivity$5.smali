@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LaunchActivity;
 
     .prologue
-    .line 625
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$5;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LaunchActivity$5;->val$view:Landroid/view/View;
@@ -47,14 +46,12 @@
     .prologue
     const/high16 v3, 0x42c80000    # 100.0f
 
-    .line 628
     iget-object v1, p0, Lorg/telegram/ui/LaunchActivity$5;->val$view:Landroid/view/View;
 
     invoke-virtual {v1}, Landroid/view/View;->getMeasuredHeight()I
 
     move-result v0
 
-    .line 629
     .local v0, "height":I
     sget v1, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -62,12 +59,10 @@
 
     if-lt v1, v2, :cond_0
 
-    .line 630
     sget v1, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     sub-int/2addr v0, v1
 
-    .line 632
     :cond_0
     invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -93,12 +88,10 @@
 
     if-le v1, v2, :cond_1
 
-    .line 633
     sget-object v1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iput v0, v1, Landroid/graphics/Point;->y:I
 
-    .line 634
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
@@ -123,7 +116,6 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 636
     :cond_1
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$5"    # Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1;
 
     .prologue
-    .line 537
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1$1;->this$5:Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 540
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1$1;->this$5:Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/voip/VoIPService$6$1$1$1$1;->this$4:Lorg/telegram/messenger/voip/VoIPService$6$1$1$1;
@@ -56,6 +54,5 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/voip/VoIPService;->access$900(Lorg/telegram/messenger/voip/VoIPService;)V
 
-    .line 541
     return-void
 .end method

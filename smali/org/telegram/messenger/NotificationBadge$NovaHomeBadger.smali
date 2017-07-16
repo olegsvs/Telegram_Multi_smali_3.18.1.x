@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 235
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,12 +42,10 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 243
     new-instance v0, Landroid/content/ContentValues;
 
     invoke-direct {v0}, Landroid/content/ContentValues;-><init>()V
 
-    .line 244
     .local v0, "contentValues":Landroid/content/ContentValues;
     const-string/jumbo v1, "tag"
 
@@ -92,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 245
     const-string/jumbo v1, "count"
 
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -101,7 +97,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/content/ContentValues;->put(Ljava/lang/String;Ljava/lang/Integer;)V
 
-    .line 246
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     invoke-virtual {v1}, Landroid/content/Context;->getContentResolver()Landroid/content/ContentResolver;
@@ -116,7 +111,6 @@
 
     invoke-virtual {v1, v2, v0}, Landroid/content/ContentResolver;->insert(Landroid/net/Uri;Landroid/content/ContentValues;)Landroid/net/Uri;
 
-    .line 247
     return-void
 .end method
 
@@ -133,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 251
     const/4 v0, 0x1
 
     new-array v0, v0, [Ljava/lang/String;

@@ -42,7 +42,6 @@
 
     const v3, -0xff0001
 
-    .line 35
     const-string/jumbo v0, "^rgb\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -51,7 +50,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGB_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 38
     const-string/jumbo v0, "^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d{1,3})\\)$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -60,7 +58,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGBA_PATTERN_INT_ALPHA:Ljava/util/regex/Pattern;
 
-    .line 41
     const-string/jumbo v0, "^rgba\\((\\d{1,3}),(\\d{1,3}),(\\d{1,3}),(\\d*\\.?\\d*?)\\)$"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -69,14 +66,12 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGBA_PATTERN_FLOAT_ALPHA:Ljava/util/regex/Pattern;
 
-    .line 122
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
-    .line 123
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "aliceblue"
@@ -89,7 +84,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 124
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "antiquewhite"
@@ -102,7 +96,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 125
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "aqua"
@@ -113,7 +106,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 126
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "aquamarine"
@@ -126,7 +118,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 127
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "azure"
@@ -139,7 +130,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 128
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "beige"
@@ -152,7 +142,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 129
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "bisque"
@@ -165,7 +154,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 130
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "black"
@@ -178,7 +166,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 131
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "blanchedalmond"
@@ -191,7 +178,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 132
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "blue"
@@ -204,7 +190,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 133
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "blueviolet"
@@ -217,7 +202,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 134
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "brown"
@@ -230,7 +214,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 135
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "burlywood"
@@ -243,7 +226,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 136
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "cadetblue"
@@ -256,7 +238,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 137
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "chartreuse"
@@ -269,7 +250,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 138
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "chocolate"
@@ -282,7 +262,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 139
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "coral"
@@ -295,7 +274,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 140
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "cornflowerblue"
@@ -308,7 +286,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 141
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "cornsilk"
@@ -321,7 +298,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 142
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "crimson"
@@ -334,7 +310,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 143
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "cyan"
@@ -345,7 +320,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 144
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkblue"
@@ -358,7 +332,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 145
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkcyan"
@@ -371,7 +344,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 146
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkgoldenrod"
@@ -384,7 +356,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 147
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkgray"
@@ -397,7 +368,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 148
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkgreen"
@@ -410,7 +380,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 149
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkgrey"
@@ -423,7 +392,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 150
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkkhaki"
@@ -436,7 +404,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 151
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkmagenta"
@@ -449,7 +416,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 152
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkolivegreen"
@@ -462,7 +428,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 153
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkorange"
@@ -475,7 +440,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 154
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkorchid"
@@ -488,7 +452,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 155
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkred"
@@ -501,7 +464,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 156
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darksalmon"
@@ -514,7 +476,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 157
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkseagreen"
@@ -527,7 +488,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 158
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkslateblue"
@@ -540,7 +500,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 159
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkslategray"
@@ -551,7 +510,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 160
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkslategrey"
@@ -562,7 +520,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 161
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkturquoise"
@@ -575,7 +532,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 162
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "darkviolet"
@@ -588,7 +544,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 163
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "deeppink"
@@ -601,7 +556,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 164
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "deepskyblue"
@@ -614,7 +568,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 165
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "dimgray"
@@ -625,7 +578,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 166
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "dimgrey"
@@ -636,7 +588,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 167
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "dodgerblue"
@@ -649,7 +600,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 168
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "firebrick"
@@ -662,7 +612,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 169
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "floralwhite"
@@ -675,7 +624,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 170
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "forestgreen"
@@ -688,7 +636,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 171
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "fuchsia"
@@ -701,7 +648,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 172
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "gainsboro"
@@ -714,7 +660,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 173
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "ghostwhite"
@@ -727,7 +672,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 174
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "gold"
@@ -740,7 +684,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 175
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "goldenrod"
@@ -753,7 +696,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 176
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "gray"
@@ -766,7 +708,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 177
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "green"
@@ -779,7 +720,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 178
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "greenyellow"
@@ -792,7 +732,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 179
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "grey"
@@ -805,7 +744,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 180
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "honeydew"
@@ -818,7 +756,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 181
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "hotpink"
@@ -831,7 +768,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 182
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "indianred"
@@ -844,7 +780,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 183
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "indigo"
@@ -857,7 +792,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 184
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "ivory"
@@ -870,7 +804,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 185
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "khaki"
@@ -883,7 +816,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 186
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lavender"
@@ -896,7 +828,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 187
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lavenderblush"
@@ -909,7 +840,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 188
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lawngreen"
@@ -922,7 +852,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 189
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lemonchiffon"
@@ -935,7 +864,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 190
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightblue"
@@ -948,7 +876,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 191
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightcoral"
@@ -961,7 +888,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 192
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightcyan"
@@ -974,7 +900,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 193
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightgoldenrodyellow"
@@ -987,7 +912,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 194
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightgray"
@@ -1000,7 +924,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 195
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightgreen"
@@ -1013,7 +936,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 196
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightgrey"
@@ -1026,7 +948,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 197
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightpink"
@@ -1039,7 +960,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 198
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightsalmon"
@@ -1052,7 +972,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 199
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightseagreen"
@@ -1065,7 +984,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 200
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightskyblue"
@@ -1078,7 +996,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 201
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightslategray"
@@ -1089,7 +1006,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 202
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightslategrey"
@@ -1100,7 +1016,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 203
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightsteelblue"
@@ -1113,7 +1028,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 204
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lightyellow"
@@ -1126,7 +1040,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 205
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "lime"
@@ -1139,7 +1052,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 206
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "limegreen"
@@ -1152,10 +1064,8 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 207
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
-    const-string/jumbo v1, "linen"
 
     const v2, -0x50f1a
 
@@ -1165,7 +1075,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 208
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "magenta"
@@ -1178,7 +1087,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 209
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "maroon"
@@ -1191,7 +1099,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 210
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumaquamarine"
@@ -1204,7 +1111,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 211
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumblue"
@@ -1217,7 +1123,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 212
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumorchid"
@@ -1230,7 +1135,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 213
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumpurple"
@@ -1243,7 +1147,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 214
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumseagreen"
@@ -1256,7 +1159,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 215
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumslateblue"
@@ -1269,7 +1171,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 216
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumspringgreen"
@@ -1282,7 +1183,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 217
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumturquoise"
@@ -1295,7 +1195,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 218
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mediumvioletred"
@@ -1308,7 +1207,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 219
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "midnightblue"
@@ -1321,7 +1219,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 220
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mintcream"
@@ -1334,7 +1231,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 221
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "mistyrose"
@@ -1347,7 +1243,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 222
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "moccasin"
@@ -1360,7 +1255,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 223
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "navajowhite"
@@ -1373,7 +1267,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 224
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "navy"
@@ -1386,7 +1279,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 225
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "oldlace"
@@ -1399,7 +1291,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 226
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "olive"
@@ -1412,7 +1303,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 227
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "olivedrab"
@@ -1425,7 +1315,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 228
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "orange"
@@ -1438,7 +1327,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 229
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "orangered"
@@ -1451,7 +1339,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 230
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "orchid"
@@ -1464,7 +1351,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 231
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "palegoldenrod"
@@ -1477,7 +1363,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 232
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "palegreen"
@@ -1490,7 +1375,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 233
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "paleturquoise"
@@ -1503,7 +1387,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 234
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "palevioletred"
@@ -1516,7 +1399,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 235
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "papayawhip"
@@ -1529,7 +1411,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 236
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "peachpuff"
@@ -1542,7 +1423,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 237
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "peru"
@@ -1555,7 +1435,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 238
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "pink"
@@ -1568,7 +1447,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 239
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "plum"
@@ -1581,7 +1459,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 240
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "powderblue"
@@ -1594,7 +1471,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 241
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "purple"
@@ -1607,7 +1483,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 242
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "rebeccapurple"
@@ -1620,7 +1495,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 243
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "red"
@@ -1633,7 +1507,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 244
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "rosybrown"
@@ -1646,7 +1519,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 245
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "royalblue"
@@ -1659,7 +1531,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 246
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "saddlebrown"
@@ -1672,7 +1543,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 247
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "salmon"
@@ -1685,7 +1555,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 248
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "sandybrown"
@@ -1698,7 +1567,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 249
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "seagreen"
@@ -1711,7 +1579,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 250
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "seashell"
@@ -1724,7 +1591,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 251
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "sienna"
@@ -1737,7 +1603,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 252
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "silver"
@@ -1750,7 +1615,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 253
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "skyblue"
@@ -1763,7 +1627,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 254
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "slateblue"
@@ -1776,7 +1639,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 255
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "slategray"
@@ -1787,7 +1649,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 256
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "slategrey"
@@ -1798,7 +1659,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 257
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "snow"
@@ -1811,7 +1671,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 258
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "springgreen"
@@ -1824,7 +1683,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 259
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "steelblue"
@@ -1837,7 +1695,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 260
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "tan"
@@ -1850,7 +1707,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 261
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "teal"
@@ -1863,7 +1719,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 262
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "thistle"
@@ -1876,7 +1731,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 263
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "tomato"
@@ -1889,7 +1743,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 264
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "transparent"
@@ -1902,7 +1755,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 265
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "turquoise"
@@ -1915,7 +1767,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 266
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "violet"
@@ -1928,7 +1779,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 267
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "wheat"
@@ -1941,7 +1791,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 268
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "white"
@@ -1954,7 +1803,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 269
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "whitesmoke"
@@ -1967,7 +1815,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 270
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "yellow"
@@ -1980,7 +1827,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 271
     sget-object v0, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
 
     const-string/jumbo v1, "yellowgreen"
@@ -1993,7 +1839,6 @@
 
     invoke-interface {v0, v1, v2}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 272
     return-void
 .end method
 
@@ -2001,7 +1846,6 @@
     .locals 0
 
     .prologue
-    .line 30
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -2015,7 +1859,6 @@
     .param p3, "blue"    # I
 
     .prologue
-    .line 114
     shl-int/lit8 v0, p0, 0x18
 
     shl-int/lit8 v1, p1, 0x10
@@ -2047,7 +1890,6 @@
 
     const/16 v6, 0xa
 
-    .line 67
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v2
@@ -2059,7 +1901,6 @@
     :goto_0
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 68
     const-string/jumbo v2, " "
 
     const-string/jumbo v5, ""
@@ -2068,7 +1909,6 @@
 
     move-result-object p0
 
-    .line 69
     invoke-virtual {p0, v4}, Ljava/lang/String;->charAt(I)C
 
     move-result v2
@@ -2077,7 +1917,6 @@
 
     if-ne v2, v4, :cond_3
 
-    .line 71
     invoke-virtual {p0, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2090,7 +1929,6 @@
 
     long-to-int v0, v2
 
-    .line 72
     .local v0, "color":I
     invoke-virtual {p0}, Ljava/lang/String;->length()I
 
@@ -2100,12 +1938,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 74
     const/high16 v2, -0x1000000
 
     or-int/2addr v0, v2
 
-    .line 107
     .end local v0    # "color":I
     :goto_1
     return v0
@@ -2113,10 +1949,8 @@
     :cond_0
     move v2, v4
 
-    .line 67
     goto :goto_0
 
-    .line 75
     .restart local v0    # "color":I
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->length()I
@@ -2127,7 +1961,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 77
     and-int/lit16 v2, v0, 0xff
 
     shl-int/lit8 v2, v2, 0x18
@@ -2138,7 +1971,6 @@
 
     goto :goto_1
 
-    .line 79
     :cond_2
     new-instance v2, Ljava/lang/IllegalArgumentException;
 
@@ -2146,7 +1978,6 @@
 
     throw v2
 
-    .line 82
     .end local v0    # "color":I
     :cond_3
     const-string/jumbo v2, "rgba"
@@ -2157,18 +1988,15 @@
 
     if-eqz v2, :cond_6
 
-    .line 83
     if-eqz p1, :cond_4
 
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGBA_PATTERN_FLOAT_ALPHA:Ljava/util/regex/Pattern;
 
-    .line 84
     :goto_2
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 85
     .local v1, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -2176,14 +2004,12 @@
 
     if-eqz v2, :cond_8
 
-    .line 86
     if-eqz p1, :cond_5
 
     const/high16 v2, 0x437f0000    # 255.0f
 
     const/4 v4, 0x4
 
-    .line 87
     invoke-virtual {v1, v4}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -2196,7 +2022,6 @@
 
     float-to-int v2, v2
 
-    .line 89
     :goto_3
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
@@ -2206,7 +2031,6 @@
 
     move-result v3
 
-    .line 90
     invoke-virtual {v1, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -2215,7 +2039,6 @@
 
     move-result v4
 
-    .line 91
     invoke-virtual {v1, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v5
@@ -2224,26 +2047,22 @@
 
     move-result v5
 
-    .line 86
     invoke-static {v2, v3, v4, v5}, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->argb(IIII)I
 
     move-result v0
 
     goto :goto_1
 
-    .line 83
     .end local v1    # "matcher":Ljava/util/regex/Matcher;
     :cond_4
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGBA_PATTERN_INT_ALPHA:Ljava/util/regex/Pattern;
 
     goto :goto_2
 
-    .line 87
     .restart local v1    # "matcher":Ljava/util/regex/Matcher;
     :cond_5
     const/4 v2, 0x4
 
-    .line 88
     invoke-virtual {v1, v2}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2254,7 +2073,6 @@
 
     goto :goto_3
 
-    .line 94
     .end local v1    # "matcher":Ljava/util/regex/Matcher;
     :cond_6
     const-string/jumbo v2, "rgb"
@@ -2265,14 +2083,12 @@
 
     if-eqz v2, :cond_7
 
-    .line 95
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->RGB_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v1
 
-    .line 96
     .restart local v1    # "matcher":Ljava/util/regex/Matcher;
     invoke-virtual {v1}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -2280,7 +2096,6 @@
 
     if-eqz v2, :cond_8
 
-    .line 98
     invoke-virtual {v1, v3}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v2
@@ -2289,7 +2104,6 @@
 
     move-result v2
 
-    .line 99
     invoke-virtual {v1, v7}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v3
@@ -2298,7 +2112,6 @@
 
     move-result v3
 
-    .line 100
     invoke-virtual {v1, v8}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
 
     move-result-object v4
@@ -2307,14 +2120,12 @@
 
     move-result v4
 
-    .line 97
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->rgb(III)I
 
     move-result v0
 
     goto/16 :goto_1
 
-    .line 105
     .end local v1    # "matcher":Ljava/util/regex/Matcher;
     :cond_7
     sget-object v2, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->COLOR_MAP:Ljava/util/Map;
@@ -2329,18 +2140,15 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 106
     .local v0, "color":Ljava/lang/Integer;
     if-eqz v0, :cond_8
 
-    .line 107
     invoke-virtual {v0}, Ljava/lang/Integer;->intValue()I
 
     move-result v0
 
     goto/16 :goto_1
 
-    .line 110
     .end local v0    # "color":Ljava/lang/Integer;
     :cond_8
     new-instance v2, Ljava/lang/IllegalArgumentException;
@@ -2355,7 +2163,6 @@
     .param p0, "colorExpression"    # Ljava/lang/String;
 
     .prologue
-    .line 63
     const/4 v0, 0x1
 
     invoke-static {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->parseColorInternal(Ljava/lang/String;Z)I
@@ -2370,7 +2177,6 @@
     .param p0, "colorExpression"    # Ljava/lang/String;
 
     .prologue
-    .line 53
     const/4 v0, 0x0
 
     invoke-static {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->parseColorInternal(Ljava/lang/String;Z)I
@@ -2387,7 +2193,6 @@
     .param p2, "blue"    # I
 
     .prologue
-    .line 118
     const/16 v0, 0xff
 
     invoke-static {v0, p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/util/ColorParser;->argb(IIII)I

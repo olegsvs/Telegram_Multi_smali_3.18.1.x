@@ -29,7 +29,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2381
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2388
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$10100(Lorg/telegram/ui/ChatActivity;)Z
@@ -79,12 +77,10 @@
 
     if-gez v2, :cond_1
 
-    .line 2392
     :cond_0
     :goto_0
     return v1
 
-    .line 2391
     :cond_1
     invoke-static {}, Lorg/telegram/ui/StickerPreviewViewer;->getInstance()Lorg/telegram/ui/StickerPreviewViewer;
 
@@ -102,7 +98,6 @@
 
     move-result v0
 
-    .line 2392
     .local v0, "result":Z
     invoke-super {p0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -129,22 +124,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2414
     sub-int v9, p4, p2
 
-    .line 2415
     .local v9, "width":I
     sub-int v6, p5, p3
 
-    .line 2417
     .local v6, "height":I
     const/4 v7, -0x1
 
-    .line 2418
     .local v7, "newPosition":I
     const/4 v8, 0x0
 
-    .line 2419
     .local v8, "newTop":I
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -172,14 +162,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 2420
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$10200(Lorg/telegram/ui/ChatActivity;)I
 
     move-result v7
 
-    .line 2421
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$10300(Lorg/telegram/ui/ChatActivity;)I
@@ -198,23 +186,19 @@
 
     sub-int v8, v0, v2
 
-    .line 2424
     :cond_0
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 2426
     const/4 v0, -0x1
 
     if-eq v7, v0, :cond_1
 
-    .line 2427
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     const/4 v2, 0x1
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$6202(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 2428
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$6300(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Adapters/MentionsAdapter;
@@ -239,7 +223,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2429
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$6400(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
@@ -259,30 +242,23 @@
 
     move v5, p5
 
-    .line 2433
     invoke-super/range {v0 .. v5}, Lorg/telegram/ui/Components/RecyclerListView;->onLayout(ZIIII)V
 
-    .line 2434
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$6202(Lorg/telegram/ui/ChatActivity;Z)Z
 
-    .line 2437
     :cond_1
     iput v6, p0, Lorg/telegram/ui/ChatActivity$30;->lastHeight:I
 
-    .line 2438
     iput v9, p0, Lorg/telegram/ui/ChatActivity$30;->lastWidth:I
 
-    .line 2439
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$10500(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 2440
     return-void
 
-    .line 2431
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -300,7 +276,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2397
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$10100(Lorg/telegram/ui/ChatActivity;)Z
@@ -333,10 +308,8 @@
 
     if-gez v0, :cond_0
 
-    .line 2398
     const/4 v0, 0x0
 
-    .line 2401
     :goto_0
     return v0
 
@@ -352,7 +325,6 @@
     .locals 1
 
     .prologue
-    .line 2406
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$30;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$6200(Lorg/telegram/ui/ChatActivity;)Z
@@ -361,11 +333,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 2410
     :goto_0
     return-void
 
-    .line 2409
     :cond_0
     invoke-super {p0}, Lorg/telegram/ui/Components/RecyclerListView;->requestLayout()V
 

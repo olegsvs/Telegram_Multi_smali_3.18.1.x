@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 8728
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$91;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$91;->val$deleteForAll:[Z
@@ -50,12 +49,10 @@
 
     const/4 v3, 0x0
 
-    .line 8731
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/ui/Cells/CheckBoxCell;
 
-    .line 8732
     .local v0, "cell":Lorg/telegram/ui/Cells/CheckBoxCell;
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$91;->val$deleteForAll:[Z
 
@@ -70,19 +67,16 @@
     :goto_0
     aput-boolean v1, v4, v3
 
-    .line 8733
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$91;->val$deleteForAll:[Z
 
     aget-boolean v1, v1, v3
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/CheckBoxCell;->setChecked(ZZ)V
 
-    .line 8734
     return-void
 
     :cond_0
     move v1, v3
 
-    .line 8732
     goto :goto_0
 .end method

@@ -67,31 +67,26 @@
     .locals 1
 
     .prologue
-    .line 20033
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 20034
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;->dialogs:Ljava/util/ArrayList;
 
-    .line 20035
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;->messages:Ljava/util/ArrayList;
 
-    .line 20036
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;->chats:Ljava/util/ArrayList;
 
-    .line 20037
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -108,20 +103,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 20041
     const/4 v0, 0x0
 
-    .line 20042
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     sparse-switch p1, :sswitch_data_0
 
-    .line 20050
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 20051
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_Dialogs"
@@ -146,18 +137,15 @@
 
     throw v1
 
-    .line 20044
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;-><init>()V
 
-    .line 20045
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     goto :goto_0
 
-    .line 20047
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogsSlice;
 
@@ -167,18 +155,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     goto :goto_0
 
-    .line 20053
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 20054
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 20056
     :cond_1
     return-object v0
 
-    .line 20042
     nop
 
     :sswitch_data_0

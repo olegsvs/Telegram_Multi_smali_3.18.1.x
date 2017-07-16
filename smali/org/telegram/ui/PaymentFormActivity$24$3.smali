@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$24;
 
     .prologue
-    .line 2271
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2274
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v1, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
@@ -62,20 +60,17 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 2275
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2276
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$24$3;->this$1:Lorg/telegram/ui/PaymentFormActivity$24;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$24;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/PaymentFormActivity;->access$2400(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2277
     return-void
 .end method

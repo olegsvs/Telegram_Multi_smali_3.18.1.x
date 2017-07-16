@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 13947
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -42,20 +41,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13954
     const/4 v0, 0x0
 
-    .line 13955
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     sparse-switch p1, :sswitch_data_0
 
-    .line 13996
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 13997
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in MessageEntity"
@@ -80,139 +75,114 @@
 
     throw v1
 
-    .line 13957
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityTextUrl;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityTextUrl;-><init>()V
 
-    .line 13958
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13960
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityBotCommand;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityBotCommand;-><init>()V
 
-    .line 13961
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13963
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityEmail;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityEmail;-><init>()V
 
-    .line 13964
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13966
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityPre;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityPre;-><init>()V
 
-    .line 13967
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13969
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityUnknown;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityUnknown;-><init>()V
 
-    .line 13970
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13972
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityUrl;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityUrl;-><init>()V
 
-    .line 13973
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13975
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityItalic;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityItalic;-><init>()V
 
-    .line 13976
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13978
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMention;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMention;-><init>()V
 
-    .line 13979
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13981
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityMentionName;-><init>()V
 
-    .line 13982
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13984
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMessageEntityMentionName;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMessageEntityMentionName;-><init>()V
 
-    .line 13985
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13987
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityBold;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityBold;-><init>()V
 
-    .line 13988
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13990
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityHashtag;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messageEntityHashtag;-><init>()V
 
-    .line 13991
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13993
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messageEntityCode;
 
@@ -222,18 +192,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$MessageEntity;
     goto :goto_0
 
-    .line 13999
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 14000
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$MessageEntity;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 14002
     :cond_1
     return-object v0
 
-    .line 13955
     nop
 
     :sswitch_data_0

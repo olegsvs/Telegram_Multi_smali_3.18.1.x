@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/ContentResolver;
 
     .prologue
-    .line 524
     iput-object p1, p0, Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger$2;->this$0:Lorg/telegram/messenger/NotificationBadge$SonyHomeBadger;
 
     invoke-direct {p0, p2}, Landroid/content/AsyncQueryHandler;-><init>(Landroid/content/ContentResolver;)V
@@ -40,17 +39,14 @@
     .param p1, "msg"    # Landroid/os/Message;
 
     .prologue
-    .line 529
     :try_start_0
     invoke-super {p0, p1}, Landroid/content/AsyncQueryHandler;->handleMessage(Landroid/os/Message;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 533
     :goto_0
     return-void
 
-    .line 530
     :catch_0
     move-exception v0
 

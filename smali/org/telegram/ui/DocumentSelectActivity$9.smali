@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 510
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$9;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .param p2, "rhs"    # Ljava/io/File;
 
     .prologue
-    .line 513
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -64,7 +62,6 @@
 
     if-eq v0, v1, :cond_1
 
-    .line 514
     invoke-virtual {p1}, Ljava/io/File;->isDirectory()Z
 
     move-result v0
@@ -73,17 +70,14 @@
 
     const/4 v0, -0x1
 
-    .line 516
     :goto_0
     return v0
 
-    .line 514
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 516
     :cond_1
     invoke-virtual {p1}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -104,7 +98,6 @@
     .locals 1
 
     .prologue
-    .line 510
     check-cast p1, Ljava/io/File;
 
     check-cast p2, Ljava/io/File;

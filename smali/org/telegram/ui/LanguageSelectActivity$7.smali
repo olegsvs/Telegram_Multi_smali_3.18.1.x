@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 253
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity$7;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LanguageSelectActivity$7;->val$query:Ljava/lang/String;
@@ -45,7 +44,6 @@
     .locals 8
 
     .prologue
-    .line 257
     iget-object v3, p0, Lorg/telegram/ui/LanguageSelectActivity$7;->val$query:Ljava/lang/String;
 
     invoke-virtual {v3}, Ljava/lang/String;->trim()Ljava/lang/String;
@@ -56,7 +54,6 @@
 
     move-result-object v1
 
-    .line 258
     .local v1, "q":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -64,7 +61,6 @@
 
     if-nez v3, :cond_0
 
-    .line 259
     iget-object v3, p0, Lorg/telegram/ui/LanguageSelectActivity$7;->this$0:Lorg/telegram/ui/LanguageSelectActivity;
 
     new-instance v6, Ljava/util/ArrayList;
@@ -73,23 +69,19 @@
 
     invoke-static {v3, v6}, Lorg/telegram/ui/LanguageSelectActivity;->access$900(Lorg/telegram/ui/LanguageSelectActivity;Ljava/util/ArrayList;)V
 
-    .line 272
     :goto_0
     return-void
 
-    .line 262
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 263
     .local v4, "time":J
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 265
     .local v2, "resultArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/LocaleController$LocaleInfo;>;"
     invoke-static {}, Lorg/telegram/messenger/LocaleController;->getInstance()Lorg/telegram/messenger/LocaleController;
 
@@ -115,7 +107,6 @@
 
     check-cast v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;
 
-    .line 266
     .local v0, "c":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     iget-object v6, v0, Lorg/telegram/messenger/LocaleController$LocaleInfo;->name:Ljava/lang/String;
 
@@ -145,13 +136,11 @@
 
     if-eqz v6, :cond_1
 
-    .line 267
     :cond_2
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
     goto :goto_1
 
-    .line 271
     .end local v0    # "c":Lorg/telegram/messenger/LocaleController$LocaleInfo;
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/LanguageSelectActivity$7;->this$0:Lorg/telegram/ui/LanguageSelectActivity;

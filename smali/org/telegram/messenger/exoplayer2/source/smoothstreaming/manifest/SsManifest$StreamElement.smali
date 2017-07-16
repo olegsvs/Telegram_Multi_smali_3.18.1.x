@@ -100,90 +100,71 @@
     .end annotation
 
     .prologue
-    .line 156
     .local p14, "chunkStartTimes":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Long;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 157
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->baseUri:Ljava/lang/String;
 
-    .line 158
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkTemplate:Ljava/lang/String;
 
-    .line 159
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->type:I
 
-    .line 160
     iput-object p4, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->subType:Ljava/lang/String;
 
-    .line 161
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->timescale:J
 
-    .line 162
     move-object/from16 v0, p7
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->name:Ljava/lang/String;
 
-    .line 163
     move/from16 v0, p8
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->maxWidth:I
 
-    .line 164
     move/from16 v0, p9
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->maxHeight:I
 
-    .line 165
     move/from16 v0, p10
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->displayWidth:I
 
-    .line 166
     move/from16 v0, p11
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->displayHeight:I
 
-    .line 167
     move-object/from16 v0, p12
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->language:Ljava/lang/String;
 
-    .line 168
     move-object/from16 v0, p13
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 169
     invoke-interface/range {p14 .. p14}, Ljava/util/List;->size()I
 
     move-result v2
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
-    .line 170
     move-object/from16 v0, p14
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimes:Ljava/util/List;
 
-    .line 171
     const-wide/32 v4, 0xf4240
 
     move-wide/from16 v2, p15
 
     move-wide v6, p5
 
-    .line 172
     invoke-static/range {v2 .. v7}, Lorg/telegram/messenger/exoplayer2/util/Util;->scaleLargeTimestamp(JJJ)J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->lastChunkDurationUs:J
 
-    .line 173
     const-wide/32 v2, 0xf4240
 
-    .line 174
     move-object/from16 v0, p14
 
     invoke-static {v0, v2, v3, p5, p6}, Lorg/telegram/messenger/exoplayer2/util/Util;->scaleLargeTimestamps(Ljava/util/List;JJ)[J
@@ -192,7 +173,6 @@
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimesUs:[J
 
-    .line 175
     return-void
 .end method
 
@@ -208,7 +188,6 @@
 
     const/4 v3, 0x0
 
-    .line 216
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->formats:[Lorg/telegram/messenger/exoplayer2/Format;
 
     if-eqz v1, :cond_0
@@ -218,7 +197,6 @@
     :goto_0
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 217
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimes:Ljava/util/List;
 
     if-eqz v1, :cond_1
@@ -228,7 +206,6 @@
     :goto_1
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 218
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimes:Ljava/util/List;
 
     invoke-interface {v1}, Ljava/util/List;->size()I
@@ -240,7 +217,6 @@
     :goto_2
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 219
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkTemplate:Ljava/lang/String;
 
     const-string/jumbo v2, "{bitrate}"
@@ -251,7 +227,6 @@
 
     iget v3, v3, Lorg/telegram/messenger/exoplayer2/Format;->bitrate:I
 
-    .line 220
     invoke-static {v3}, Ljava/lang/Integer;->toString(I)Ljava/lang/String;
 
     move-result-object v3
@@ -264,7 +239,6 @@
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimes:Ljava/util/List;
 
-    .line 221
     invoke-interface {v1, p2}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v1
@@ -279,7 +253,6 @@
 
     move-result-object v0
 
-    .line 222
     .local v0, "chunkUrl":Ljava/lang/String;
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->baseUri:Ljava/lang/String;
 
@@ -293,19 +266,16 @@
     :cond_0
     move v1, v3
 
-    .line 216
     goto :goto_0
 
     :cond_1
     move v1, v3
 
-    .line 217
     goto :goto_1
 
     :cond_2
     move v2, v3
 
-    .line 218
     goto :goto_2
 .end method
 
@@ -314,7 +284,6 @@
     .param p1, "chunkIndex"    # I
 
     .prologue
-    .line 204
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkCount:I
 
     add-int/lit8 v0, v0, -0x1
@@ -349,7 +318,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 184
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimesUs:[J
 
     invoke-static {v0, p1, p2, v1, v1}, Lorg/telegram/messenger/exoplayer2/util/Util;->binarySearchFloor([JJZZ)I
@@ -364,7 +332,6 @@
     .param p1, "chunkIndex"    # I
 
     .prologue
-    .line 194
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/smoothstreaming/manifest/SsManifest$StreamElement;->chunkStartTimesUs:[J
 
     aget-wide v0, v0, p1

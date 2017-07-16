@@ -69,7 +69,6 @@
     .locals 0
 
     .prologue
-    .line 24612
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -82,20 +81,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 24639
     const/4 v0, 0x0
 
-    .line 24640
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     sparse-switch p1, :sswitch_data_0
 
-    .line 24663
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 24664
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in EncryptedChat"
@@ -120,73 +115,60 @@
 
     throw v1
 
-    .line 24642
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested_old;-><init>()V
 
-    .line 24643
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24645
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatRequested;-><init>()V
 
-    .line 24646
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24648
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat;-><init>()V
 
-    .line 24649
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24651
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChat_old;-><init>()V
 
-    .line 24652
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24654
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatEmpty;-><init>()V
 
-    .line 24655
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24657
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatWaiting;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatWaiting;-><init>()V
 
-    .line 24658
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24660
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_encryptedChatDiscarded;
 
@@ -196,18 +178,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     goto :goto_0
 
-    .line 24666
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 24667
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 24669
     :cond_1
     return-object v0
 
-    .line 24640
     nop
 
     :sswitch_data_0

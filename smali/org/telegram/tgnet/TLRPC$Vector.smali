@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 26365
     const v0, 0x1cb5c415
 
     sput v0, Lorg/telegram/tgnet/TLRPC$Vector;->constructor:I
@@ -48,10 +47,8 @@
     .locals 1
 
     .prologue
-    .line 26364
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 26366
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V

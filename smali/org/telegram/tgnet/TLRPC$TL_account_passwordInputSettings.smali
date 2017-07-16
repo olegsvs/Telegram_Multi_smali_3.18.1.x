@@ -35,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 19745
     const v0, -0x796e9215
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->constructor:I
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 19744
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,15 +58,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19754
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 19755
     if-eqz p2, :cond_0
 
-    .line 19756
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_account_passwordInputSettings"
@@ -93,21 +88,17 @@
 
     throw v1
 
-    .line 19758
     :cond_0
     const/4 v0, 0x0
 
-    .line 19763
     :goto_0
     return-object v0
 
-    .line 19761
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;-><init>()V
 
-    .line 19762
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -122,28 +113,24 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19767
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
-    .line 19768
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 19769
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->new_salt:[B
 
-    .line 19771
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -151,14 +138,12 @@
 
     if-eqz v0, :cond_1
 
-    .line 19772
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readByteArray(Z)[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->new_password_hash:[B
 
-    .line 19774
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -166,14 +151,12 @@
 
     if-eqz v0, :cond_2
 
-    .line 19775
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->hint:Ljava/lang/String;
 
-    .line 19777
     :cond_2
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -181,14 +164,12 @@
 
     if-eqz v0, :cond_3
 
-    .line 19778
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->email:Ljava/lang/String;
 
-    .line 19780
     :cond_3
     return-void
 .end method
@@ -198,29 +179,24 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 19783
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19784
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 19785
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
     and-int/lit8 v0, v0, 0x1
 
     if-eqz v0, :cond_0
 
-    .line 19786
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->new_salt:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 19788
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -228,12 +204,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 19789
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->new_password_hash:[B
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeByteArray([B)V
 
-    .line 19791
     :cond_1
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -241,12 +215,10 @@
 
     if-eqz v0, :cond_2
 
-    .line 19792
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->hint:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 19794
     :cond_2
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->flags:I
 
@@ -254,12 +226,10 @@
 
     if-eqz v0, :cond_3
 
-    .line 19795
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_account_passwordInputSettings;->email:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 19797
     :cond_3
     return-void
 .end method

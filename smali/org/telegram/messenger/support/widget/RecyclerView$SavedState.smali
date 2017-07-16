@@ -42,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 11169
     new-instance v0, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState$1;-><init>()V
@@ -62,10 +61,8 @@
     .param p2, "loader"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 11147
     invoke-direct {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcel;Ljava/lang/ClassLoader;)V
 
-    .line 11148
     if-eqz p2, :cond_0
 
     .end local p2    # "loader":Ljava/lang/ClassLoader;
@@ -76,15 +73,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
-    .line 11150
     return-void
 
-    .line 11148
     .restart local p2    # "loader":Ljava/lang/ClassLoader;
     :cond_0
     const-class v0, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
-    .line 11149
     invoke-virtual {v0}, Ljava/lang/Class;->getClassLoader()Ljava/lang/ClassLoader;
 
     move-result-object p2
@@ -97,10 +91,8 @@
     .param p1, "superState"    # Landroid/os/Parcelable;
 
     .prologue
-    .line 11156
     invoke-direct {p0, p1}, Landroid/support/v4/view/AbsSavedState;-><init>(Landroid/os/Parcelable;)V
 
-    .line 11157
     return-void
 .end method
 
@@ -111,12 +103,10 @@
     .param p1, "other"    # Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;
 
     .prologue
-    .line 11166
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
-    .line 11167
     return-void
 .end method
 
@@ -126,16 +116,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 11161
     invoke-super {p0, p1, p2}, Landroid/support/v4/view/AbsSavedState;->writeToParcel(Landroid/os/Parcel;I)V
 
-    .line 11162
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/RecyclerView$SavedState;->mLayoutState:Landroid/os/Parcelable;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeParcelable(Landroid/os/Parcelable;I)V
 
-    .line 11163
     return-void
 .end method

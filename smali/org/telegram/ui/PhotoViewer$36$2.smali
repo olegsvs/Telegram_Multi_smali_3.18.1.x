@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoViewer$36;
 
     .prologue
-    .line 2351
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$36$2;->this$1:Lorg/telegram/ui/PhotoViewer$36;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2354
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$36$2;->this$1:Lorg/telegram/ui/PhotoViewer$36;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$36;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2355
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$36$2;->this$1:Lorg/telegram/ui/PhotoViewer$36;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$36;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -77,7 +74,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 2356
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$36$2;->this$1:Lorg/telegram/ui/PhotoViewer$36;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$36;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -86,7 +82,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PhotoViewer;->access$10002(Lorg/telegram/ui/PhotoViewer;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2358
     :cond_0
     return-void
 .end method

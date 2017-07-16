@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 610
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$8;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "mediaPlayer"    # Landroid/media/MediaPlayer;
 
     .prologue
-    .line 613
     iget-object v0, p0, Lorg/telegram/messenger/voip/VoIPService$8;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     invoke-static {v0}, Lorg/telegram/messenger/voip/VoIPService;->access$2100(Lorg/telegram/messenger/voip/VoIPService;)Landroid/media/MediaPlayer;
@@ -51,6 +49,5 @@
 
     invoke-virtual {v0}, Landroid/media/MediaPlayer;->start()V
 
-    .line 614
     return-void
 .end method

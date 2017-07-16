@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyControlActivity;
 
     .prologue
-    .line 187
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v5, 0x1
 
-    .line 190
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PrivacyControlActivity;->access$300(Lorg/telegram/ui/PrivacyControlActivity;)I
@@ -72,7 +70,6 @@
 
     if-ne p2, v4, :cond_6
 
-    .line 191
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -80,7 +77,6 @@
 
     move-result v3
 
-    .line 192
     .local v3, "newType":I
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -90,10 +86,8 @@
 
     if-ne p2, v4, :cond_3
 
-    .line 193
     const/4 v3, 0x1
 
-    .line 199
     :cond_1
     :goto_0
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -104,13 +98,11 @@
 
     if-ne v3, v4, :cond_5
 
-    .line 266
     .end local v3    # "newType":I
     :cond_2
     :goto_1
     return-void
 
-    .line 194
     .restart local v3    # "newType":I
     :cond_3
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -121,12 +113,10 @@
 
     if-ne p2, v4, :cond_4
 
-    .line 195
     const/4 v3, 0x0
 
     goto :goto_0
 
-    .line 196
     :cond_4
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -136,18 +126,15 @@
 
     if-ne p2, v4, :cond_1
 
-    .line 197
     const/4 v3, 0x2
 
     goto :goto_0
 
-    .line 202
     :cond_5
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/PrivacyControlActivity;->access$602(Lorg/telegram/ui/PrivacyControlActivity;Z)Z
 
-    .line 203
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PrivacyControlActivity;->access$700(Lorg/telegram/ui/PrivacyControlActivity;)Landroid/view/View;
@@ -156,7 +143,6 @@
 
     invoke-virtual {v4, v6}, Landroid/view/View;->setVisibility(I)V
 
-    .line 204
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     iget-object v5, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -167,19 +153,16 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/PrivacyControlActivity;->access$802(Lorg/telegram/ui/PrivacyControlActivity;I)I
 
-    .line 205
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4, v3}, Lorg/telegram/ui/PrivacyControlActivity;->access$002(Lorg/telegram/ui/PrivacyControlActivity;I)I
 
-    .line 206
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PrivacyControlActivity;->access$900(Lorg/telegram/ui/PrivacyControlActivity;)V
 
     goto :goto_1
 
-    .line 207
     .end local v3    # "newType":I
     :cond_6
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -198,7 +181,6 @@
 
     if-ne p2, v4, :cond_2
 
-    .line 209
     :cond_7
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -208,14 +190,12 @@
 
     if-ne p2, v4, :cond_8
 
-    .line 210
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/PrivacyControlActivity;->access$1200(Lorg/telegram/ui/PrivacyControlActivity;)Ljava/util/ArrayList;
 
     move-result-object v1
 
-    .line 214
     .local v1, "createFromArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :goto_2
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -224,12 +204,10 @@
 
     if-eqz v4, :cond_b
 
-    .line 215
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 216
     .local v0, "args":Landroid/os/Bundle;
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -244,7 +222,6 @@
     :goto_3
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 217
     const-string/jumbo v7, "isGroup"
 
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -260,12 +237,10 @@
     :goto_4
     invoke-virtual {v0, v7, v4}, Landroid/os/Bundle;->putBoolean(Ljava/lang/String;Z)V
 
-    .line 218
     new-instance v2, Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {v2, v0}, Lorg/telegram/ui/GroupCreateActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 219
     .local v2, "fragment":Lorg/telegram/ui/GroupCreateActivity;
     new-instance v4, Lorg/telegram/ui/PrivacyControlActivity$2$1;
 
@@ -273,14 +248,12 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/GroupCreateActivity;->setDelegate(Lorg/telegram/ui/GroupCreateActivity$GroupCreateActivityDelegate;)V
 
-    .line 238
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/PrivacyControlActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     goto/16 :goto_1
 
-    .line 212
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v1    # "createFromArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v2    # "fragment":Lorg/telegram/ui/GroupCreateActivity;
@@ -294,7 +267,6 @@
     .restart local v1    # "createFromArray":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     goto :goto_2
 
-    .line 216
     .restart local v0    # "args":Landroid/os/Bundle;
     :cond_9
     const-string/jumbo v4, "isAlwaysShare"
@@ -304,10 +276,8 @@
     :cond_a
     move v4, v6
 
-    .line 217
     goto :goto_4
 
-    .line 240
     .end local v0    # "args":Landroid/os/Bundle;
     :cond_b
     new-instance v2, Lorg/telegram/ui/PrivacyUsersActivity;
@@ -334,7 +304,6 @@
     :goto_6
     invoke-direct {v2, v1, v4, v5}, Lorg/telegram/ui/PrivacyUsersActivity;-><init>(Ljava/util/ArrayList;ZZ)V
 
-    .line 241
     .local v2, "fragment":Lorg/telegram/ui/PrivacyUsersActivity;
     new-instance v4, Lorg/telegram/ui/PrivacyControlActivity$2$2;
 
@@ -342,7 +311,6 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/PrivacyUsersActivity;->setDelegate(Lorg/telegram/ui/PrivacyUsersActivity$PrivacyActivityDelegate;)V
 
-    .line 263
     iget-object v4, p0, Lorg/telegram/ui/PrivacyControlActivity$2;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/PrivacyControlActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
@@ -353,7 +321,6 @@
     :cond_c
     move v4, v6
 
-    .line 240
     goto :goto_5
 
     :cond_d

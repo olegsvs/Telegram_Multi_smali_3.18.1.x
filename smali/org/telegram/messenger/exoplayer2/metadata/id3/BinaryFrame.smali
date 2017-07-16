@@ -25,7 +25,6 @@
     .locals 1
 
     .prologue
-    .line 65
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame$1;-><init>()V
@@ -40,21 +39,18 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 35
     invoke-virtual {p1}, Landroid/os/Parcel;->readString()Ljava/lang/String;
 
     move-result-object v0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/metadata/id3/Id3Frame;-><init>(Ljava/lang/String;)V
 
-    .line 36
     invoke-virtual {p1}, Landroid/os/Parcel;->createByteArray()[B
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->data:[B
 
-    .line 37
     return-void
 .end method
 
@@ -64,13 +60,10 @@
     .param p2, "data"    # [B
 
     .prologue
-    .line 30
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/id3/Id3Frame;-><init>(Ljava/lang/String;)V
 
-    .line 31
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->data:[B
 
-    .line 32
     return-void
 .end method
 
@@ -85,15 +78,12 @@
 
     const/4 v2, 0x0
 
-    .line 41
     if-ne p0, p1, :cond_1
 
-    .line 48
     :cond_0
     :goto_0
     return v1
 
-    .line 44
     :cond_1
     if-eqz p1, :cond_2
 
@@ -110,16 +100,13 @@
     :cond_2
     move v1, v2
 
-    .line 45
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 47
     check-cast v0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;
 
-    .line 48
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->id:Ljava/lang/String;
 
@@ -151,10 +138,8 @@
     .locals 3
 
     .prologue
-    .line 53
     const/16 v0, 0x11
 
-    .line 54
     .local v0, "result":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->id:Ljava/lang/String;
 
@@ -164,7 +149,6 @@
 
     add-int/lit16 v0, v1, 0x20f
 
-    .line 55
     mul-int/lit8 v1, v0, 0x1f
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->data:[B
@@ -175,7 +159,6 @@
 
     add-int v0, v1, v2
 
-    .line 56
     return v0
 .end method
 
@@ -185,16 +168,13 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 61
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->id:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeString(Ljava/lang/String;)V
 
-    .line 62
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/id3/BinaryFrame;->data:[B
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeByteArray([B)V
 
-    .line 63
     return-void
 .end method

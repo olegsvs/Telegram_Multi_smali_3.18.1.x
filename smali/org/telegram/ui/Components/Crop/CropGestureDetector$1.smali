@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropGestureDetector;
 
     .prologue
-    .line 43
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropGestureDetector$1;->this$0:Lorg/telegram/ui/Components/Crop/CropGestureDetector;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "detector"    # Landroid/view/ScaleGestureDetector;
 
     .prologue
-    .line 47
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getScaleFactor()F
 
     move-result v0
 
-    .line 49
     .local v0, "scaleFactor":F
     invoke-static {v0}, Ljava/lang/Float;->isNaN(F)Z
 
@@ -61,15 +58,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 50
     :cond_0
     const/4 v1, 0x0
 
-    .line 54
     :goto_0
     return v1
 
-    .line 52
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/Crop/CropGestureDetector$1;->this$0:Lorg/telegram/ui/Components/Crop/CropGestureDetector;
 
@@ -77,7 +71,6 @@
 
     move-result-object v1
 
-    .line 53
     invoke-virtual {p1}, Landroid/view/ScaleGestureDetector;->getFocusX()F
 
     move-result v2
@@ -86,10 +79,8 @@
 
     move-result v3
 
-    .line 52
     invoke-interface {v1, v0, v2, v3}, Lorg/telegram/ui/Components/Crop/CropGestureDetector$CropGestureListener;->onScale(FFF)V
 
-    .line 54
     const/4 v1, 0x1
 
     goto :goto_0
@@ -100,7 +91,6 @@
     .param p1, "detector"    # Landroid/view/ScaleGestureDetector;
 
     .prologue
-    .line 59
     const/4 v0, 0x1
 
     return v0
@@ -111,6 +101,5 @@
     .param p1, "detector"    # Landroid/view/ScaleGestureDetector;
 
     .prologue
-    .line 65
     return-void
 .end method

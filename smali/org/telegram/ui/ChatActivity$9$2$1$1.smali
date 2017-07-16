@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChatActivity$9$2$1;
 
     .prologue
-    .line 1126
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$9$2$1$1;->this$3:Lorg/telegram/ui/ChatActivity$9$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1130
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$9$2$1$1;->this$3:Lorg/telegram/ui/ChatActivity$9$2$1;
 
@@ -55,15 +53,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1134
     :goto_0
     return-void
 
-    .line 1131
     :catch_0
     move-exception v0
 
-    .line 1132
     .local v0, "e":Ljava/lang/Exception;
     const-string/jumbo v1, "tmessages"
 

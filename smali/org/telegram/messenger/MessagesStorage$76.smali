@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 5007
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$76;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$76;->val$messages:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 9
 
     .prologue
-    .line 5011
     :try_start_0
     const-string/jumbo v4, ","
 
@@ -55,7 +53,6 @@
 
     move-result-object v2
 
-    .line 5012
     .local v2, "ids":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/messenger/MessagesStorage$76;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -87,13 +84,11 @@
 
     move-result-object v0
 
-    .line 5013
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5014
     .local v3, "mids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :goto_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
@@ -102,7 +97,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 5015
     const/4 v4, 0x0
 
     invoke-virtual {v0, v4}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -119,24 +113,20 @@
 
     goto :goto_0
 
-    .line 5029
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v2    # "ids":Ljava/lang/String;
     .end local v3    # "mids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     :catch_0
     move-exception v1
 
-    .line 5030
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 5032
     .end local v1    # "e":Ljava/lang/Exception;
     :cond_0
     :goto_1
     return-void
 
-    .line 5017
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v2    # "ids":Ljava/lang/String;
     .restart local v3    # "mids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
@@ -144,21 +134,18 @@
     :try_start_1
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 5018
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v4
 
     if-nez v4, :cond_0
 
-    .line 5019
     new-instance v4, Lorg/telegram/messenger/MessagesStorage$76$1;
 
     invoke-direct {v4, p0, v3}, Lorg/telegram/messenger/MessagesStorage$76$1;-><init>(Lorg/telegram/messenger/MessagesStorage$76;Ljava/util/ArrayList;)V
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5025
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -169,7 +156,6 @@
 
     invoke-static {v4, v3, v5, v6}, Lorg/telegram/messenger/MessagesStorage;->access$900(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    .line 5026
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -178,7 +164,6 @@
 
     invoke-static {v4, v3, v5}, Lorg/telegram/messenger/MessagesStorage;->access$700(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;I)Ljava/util/ArrayList;
 
-    .line 5027
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4

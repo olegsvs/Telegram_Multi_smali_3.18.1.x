@@ -29,17 +29,14 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 32
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 21
     new-instance v0, Landroid/graphics/Rect;
 
     invoke-direct {v0}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->rect:Landroid/graphics/Rect;
 
-    .line 33
     return-void
 .end method
 
@@ -48,7 +45,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;
 
     .prologue
-    .line 19
     iget-object v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto$SizeNotifierFrameLayoutPhotoDelegate;
 
     return-object v0
@@ -59,7 +55,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;
 
     .prologue
-    .line 19
     iget v0, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->keyboardHeight:I
 
     return v0
@@ -71,23 +66,19 @@
     .locals 6
 
     .prologue
-    .line 50
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->getRootView()Landroid/view/View;
 
     move-result-object v0
 
-    .line 51
     .local v0, "rootView":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->rect:Landroid/graphics/Rect;
 
     invoke-virtual {p0, v4}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->getWindowVisibleDisplayFrame(Landroid/graphics/Rect;)V
 
-    .line 52
     iget-boolean v4, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->withoutWindow:Z
 
     if-eqz v4, :cond_2
 
-    .line 53
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
     move-result v5
@@ -109,7 +100,6 @@
 
     sub-int v3, v4, v5
 
-    .line 54
     .local v3, "usableViewHeight":I
     iget-object v4, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->rect:Landroid/graphics/Rect;
 
@@ -123,19 +113,16 @@
 
     sub-int v1, v3, v4
 
-    .line 62
     :cond_0
     :goto_1
     return v1
 
-    .line 53
     .end local v3    # "usableViewHeight":I
     :cond_1
     const/4 v4, 0x0
 
     goto :goto_0
 
-    .line 56
     :cond_2
     invoke-virtual {v0}, Landroid/view/View;->getHeight()I
 
@@ -147,13 +134,11 @@
 
     sub-int v3, v4, v5
 
-    .line 57
     .restart local v3    # "usableViewHeight":I
     iget-object v4, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->rect:Landroid/graphics/Rect;
 
     iget v2, v4, Landroid/graphics/Rect;->top:I
 
-    .line 58
     .local v2, "top":I
     sget-object v4, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -163,7 +148,6 @@
 
     sub-int v1, v4, v3
 
-    .line 59
     .local v1, "size":I
     const/high16 v4, 0x41200000    # 10.0f
 
@@ -179,7 +163,6 @@
 
     if-gt v1, v4, :cond_0
 
-    .line 60
     const/4 v1, 0x0
 
     goto :goto_1
@@ -189,19 +172,16 @@
     .locals 3
 
     .prologue
-    .line 67
     iget-object v1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto$SizeNotifierFrameLayoutPhotoDelegate;
 
     if-eqz v1, :cond_0
 
-    .line 68
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->getKeyboardHeight()I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->keyboardHeight:I
 
-    .line 69
     sget-object v1, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v1, v1, Landroid/graphics/Point;->x:I
@@ -214,7 +194,6 @@
 
     const/4 v0, 0x1
 
-    .line 70
     .local v0, "isWidthGreater":Z
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto$1;
@@ -223,12 +202,10 @@
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->post(Ljava/lang/Runnable;)Z
 
-    .line 79
     .end local v0    # "isWidthGreater":Z
     :cond_0
     return-void
 
-    .line 69
     :cond_1
     const/4 v0, 0x0
 
@@ -244,13 +221,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 45
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 46
     invoke-virtual {p0}, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->notifyHeightChanged()V
 
-    .line 47
     return-void
 .end method
 
@@ -259,10 +233,8 @@
     .param p1, "sizeNotifierFrameLayoutPhotoDelegate"    # Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto$SizeNotifierFrameLayoutPhotoDelegate;
 
     .prologue
-    .line 36
     iput-object p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->delegate:Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto$SizeNotifierFrameLayoutPhotoDelegate;
 
-    .line 37
     return-void
 .end method
 
@@ -271,9 +243,7 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 40
     iput-boolean p1, p0, Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;->withoutWindow:Z
 
-    .line 41
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$40;
 
     .prologue
-    .line 2844
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$40$1;->this$1:Lorg/telegram/ui/ChatActivity$40;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$40$1;->val$text:Ljava/lang/CharSequence;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 2847
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$40$1;->this$1:Lorg/telegram/ui/ChatActivity$40;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -56,7 +54,6 @@
 
     if-ne p0, v0, :cond_0
 
-    .line 2848
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$40$1;->this$1:Lorg/telegram/ui/ChatActivity$40;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -67,7 +64,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/ChatActivity;->access$11500(Lorg/telegram/ui/ChatActivity;Ljava/lang/CharSequence;Z)V
 
-    .line 2849
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$40$1;->this$1:Lorg/telegram/ui/ChatActivity$40;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$40;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -76,7 +72,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$11402(Lorg/telegram/ui/ChatActivity;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 2851
     :cond_0
     return-void
 .end method

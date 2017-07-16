@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;
 
     .prologue
-    .line 379
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$BackgroundDrawable$1;->this$1:Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 382
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$BackgroundDrawable$1;->this$1:Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 383
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$BackgroundDrawable$1;->this$1:Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoViewer$BackgroundDrawable;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -69,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->setAllowDrawContent(Z)V
 
-    .line 385
     :cond_0
     return-void
 .end method

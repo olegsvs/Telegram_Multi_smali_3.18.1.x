@@ -24,15 +24,12 @@
     .param p1, "initialLength"    # I
 
     .prologue
-    .line 28
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 29
     new-array v0, p1, [B
 
     iput-object v0, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;->bytes:[B
 
-    .line 30
     return-void
 .end method
 
@@ -43,37 +40,31 @@
     .param p1, "minLength"    # I
 
     .prologue
-    .line 33
     iget-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;->bytes:[B
 
     array-length v1, v1
 
     if-le p1, v1, :cond_1
 
-    .line 34
     iget-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;->bytes:[B
 
     array-length v1, v1
 
     mul-int/lit8 v0, v1, 0x2
 
-    .line 35
     .local v0, "length":I
     :goto_0
     if-le p1, v0, :cond_0
 
-    .line 36
     mul-int/lit8 v0, v0, 0x2
 
     goto :goto_0
 
-    .line 38
     :cond_0
     new-array v1, v0, [B
 
     iput-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;->bytes:[B
 
-    .line 40
     .end local v0    # "length":I
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/audioinfo/mp3/ID3v2FrameBody$Buffer;->bytes:[B

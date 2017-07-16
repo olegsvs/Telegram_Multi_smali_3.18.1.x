@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$96;
 
     .prologue
-    .line 9529
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$96$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -49,19 +48,16 @@
 
     const/4 v3, 0x0
 
-    .line 9532
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$96;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/ChatActivity;->access$12102(Lorg/telegram/ui/ChatActivity;I)I
 
-    .line 9533
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-nez v1, :cond_1
 
-    .line 9534
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
@@ -74,7 +70,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 9535
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v1, "AppName"
 
@@ -86,7 +81,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 9536
     const-string/jumbo v1, "EditMessageError"
 
     const v2, 0x7f07020f
@@ -97,7 +91,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 9537
     const-string/jumbo v1, "OK"
 
     const v2, 0x7f070452
@@ -108,7 +101,6 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 9538
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$96;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -119,7 +111,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ChatActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 9540
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$96;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -128,7 +119,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 9541
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$96;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -137,13 +127,11 @@
 
     invoke-virtual {v1, v4, v3}, Lorg/telegram/ui/Components/ChatActivityEnterView;->setEditingMessageObject(Lorg/telegram/messenger/MessageObject;Z)V
 
-    .line 9548
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_0
     :goto_0
     return-void
 
-    .line 9544
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
@@ -153,7 +141,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 9545
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$96$1;->this$1:Lorg/telegram/ui/ChatActivity$96;
 
     iget-object v1, v1, Lorg/telegram/ui/ChatActivity$96;->this$0:Lorg/telegram/ui/ChatActivity;

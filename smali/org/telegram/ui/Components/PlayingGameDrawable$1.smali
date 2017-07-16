@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PlayingGameDrawable;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lorg/telegram/ui/Components/PlayingGameDrawable$1;->this$0:Lorg/telegram/ui/Components/PlayingGameDrawable;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/Components/PlayingGameDrawable$1;->this$0:Lorg/telegram/ui/Components/PlayingGameDrawable;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PlayingGameDrawable;->access$000(Lorg/telegram/ui/Components/PlayingGameDrawable;)V
 
-    .line 116
     return-void
 .end method

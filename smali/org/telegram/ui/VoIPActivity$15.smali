@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 802
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$15;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/VoIPActivity$15;->val$dlg:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -45,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 805
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$15;->val$dlg:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->isShowing()Z
@@ -68,12 +66,10 @@
 
     if-nez v0, :cond_1
 
-    .line 810
     :cond_0
     :goto_0
     return-void
 
-    .line 808
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$15;->val$dlg:Lorg/telegram/ui/ActionBar/AlertDialog;
 
@@ -87,7 +83,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 809
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$15;->val$dlg:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->getWindow()Landroid/view/Window;

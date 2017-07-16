@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 872
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 875
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$1900(Lorg/telegram/ui/VideoEditorActivity;)Landroid/view/TextureView;
@@ -73,12 +71,10 @@
 
     if-nez v2, :cond_1
 
-    .line 891
     :cond_0
     :goto_0
     return-void
 
-    .line 879
     :cond_1
     :try_start_0
     new-instance v1, Landroid/view/Surface;
@@ -95,7 +91,6 @@
 
     invoke-direct {v1, v2}, Landroid/view/Surface;-><init>(Landroid/graphics/SurfaceTexture;)V
 
-    .line 880
     .local v1, "s":Landroid/view/Surface;
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -105,7 +100,6 @@
 
     invoke-virtual {v2, v1}, Landroid/media/MediaPlayer;->setSurface(Landroid/view/Surface;)V
 
-    .line 881
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$1500(Lorg/telegram/ui/VideoEditorActivity;)Z
@@ -114,7 +108,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 882
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$200(Lorg/telegram/ui/VideoEditorActivity;)Z
@@ -123,7 +116,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 883
     iget-object v2, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$100(Lorg/telegram/ui/VideoEditorActivity;)Landroid/media/MediaPlayer;
@@ -138,18 +130,15 @@
 
     goto :goto_0
 
-    .line 888
     .end local v1    # "s":Landroid/view/Surface;
     :catch_0
     move-exception v0
 
-    .line 889
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 885
     .end local v0    # "e":Ljava/lang/Exception;
     .restart local v1    # "s":Landroid/view/Surface;
     :cond_2
@@ -162,11 +151,9 @@
 
     iget-object v3, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    invoke-static {v3}, Lorg/telegram/ui/VideoEditorActivity;->access$400(Lorg/telegram/ui/VideoEditorActivity;)Lorg/telegram/ui/Components/VideoTimelineView;
 
     move-result-object v3
 
-    invoke-virtual {v3}, Lorg/telegram/ui/Components/VideoTimelineView;->getLeftProgress()F
 
     move-result v3
 
@@ -194,7 +181,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 900
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VideoEditorActivity;->access$100(Lorg/telegram/ui/VideoEditorActivity;)Landroid/media/MediaPlayer;
@@ -203,11 +189,9 @@
 
     if-nez v0, :cond_0
 
-    .line 904
     :goto_0
     return v2
 
-    .line 903
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$13;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -229,7 +213,6 @@
     .param p3, "height"    # I
 
     .prologue
-    .line 896
     return-void
 .end method
 
@@ -238,6 +221,5 @@
     .param p1, "surface"    # Landroid/graphics/SurfaceTexture;
 
     .prologue
-    .line 910
     return-void
 .end method

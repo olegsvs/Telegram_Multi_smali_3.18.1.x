@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;
 
     .prologue
-    .line 534
     iput-object p1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "albumEntry"    # Lorg/telegram/messenger/MediaController$AlbumEntry;
 
     .prologue
-    .line 537
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/PhotoAlbumPickerActivity$ListAdapter;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
@@ -51,6 +49,5 @@
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$1600(Lorg/telegram/ui/PhotoAlbumPickerActivity;Lorg/telegram/messenger/MediaController$AlbumEntry;I)V
 
-    .line 538
     return-void
 .end method

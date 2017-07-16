@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 531
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0, p2}, Lcom/google/android/gms/maps/MapView;-><init>(Landroid/content/Context;)V
@@ -50,14 +49,12 @@
 
     const/4 v8, 0x1
 
-    .line 534
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     if-nez v1, :cond_5
 
-    .line 535
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -66,7 +63,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 536
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -75,7 +71,6 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 538
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -85,7 +80,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/LocationActivity;->access$2202(Lorg/telegram/ui/LocationActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 539
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -94,7 +88,6 @@
 
     invoke-virtual {v1, v12, v13}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 540
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -105,7 +98,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
-    .line 541
     invoke-static {v3}, Lorg/telegram/ui/LocationActivity;->access$2300(Lorg/telegram/ui/LocationActivity;)Landroid/widget/ImageView;
 
     move-result-object v3
@@ -142,7 +134,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
-    .line 542
     invoke-static {v3}, Lorg/telegram/ui/LocationActivity;->access$2500(Lorg/telegram/ui/LocationActivity;)Landroid/widget/ImageView;
 
     move-result-object v3
@@ -159,10 +150,8 @@
 
     aput-object v3, v2, v8
 
-    .line 540
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 543
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -171,7 +160,6 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 555
     :cond_1
     :goto_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -180,7 +168,6 @@
 
     if-ne v1, v10, :cond_4
 
-    .line 556
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2600(Lorg/telegram/ui/LocationActivity;)Z
@@ -189,16 +176,13 @@
 
     if-nez v1, :cond_2
 
-    .line 557
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 558
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     invoke-virtual {v0, v12, v13}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 559
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2700(Lorg/telegram/ui/LocationActivity;)Landroid/widget/ImageView;
@@ -217,15 +201,12 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->play(Landroid/animation/Animator;)Landroid/animation/AnimatorSet$Builder;
 
-    .line 560
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 561
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1, v8}, Lorg/telegram/ui/LocationActivity;->access$2602(Lorg/telegram/ui/LocationActivity;Z)Z
 
-    .line 563
     .end local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -244,7 +225,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 564
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$900(Lorg/telegram/ui/LocationActivity;)Landroid/location/Location;
@@ -267,7 +247,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/location/Location;->setLatitude(D)V
 
-    .line 565
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$900(Lorg/telegram/ui/LocationActivity;)Landroid/location/Location;
@@ -290,7 +269,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/location/Location;->setLongitude(D)V
 
-    .line 567
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -306,7 +284,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Adapters/LocationActivityAdapter;->setCustomLocation(Landroid/location/Location;)V
 
-    .line 569
     :cond_4
     invoke-super {p0, p1}, Lcom/google/android/gms/maps/MapView;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -314,7 +291,6 @@
 
     return v1
 
-    .line 544
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -322,7 +298,6 @@
 
     if-ne v1, v8, :cond_1
 
-    .line 545
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -331,7 +306,6 @@
 
     if-eqz v1, :cond_6
 
-    .line 546
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -340,7 +314,6 @@
 
     invoke-virtual {v1}, Landroid/animation/AnimatorSet;->cancel()V
 
-    .line 548
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -350,7 +323,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/LocationActivity;->access$2202(Lorg/telegram/ui/LocationActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 549
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -359,7 +331,6 @@
 
     invoke-virtual {v1, v12, v13}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 550
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;
@@ -370,7 +341,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
-    .line 551
     invoke-static {v3}, Lorg/telegram/ui/LocationActivity;->access$2300(Lorg/telegram/ui/LocationActivity;)Landroid/widget/ImageView;
 
     move-result-object v3
@@ -397,7 +367,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
-    .line 552
     invoke-static {v3}, Lorg/telegram/ui/LocationActivity;->access$2500(Lorg/telegram/ui/LocationActivity;)Landroid/widget/ImageView;
 
     move-result-object v3
@@ -416,10 +385,8 @@
 
     aput-object v3, v2, v8
 
-    .line 550
     invoke-virtual {v1, v2}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 553
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$13;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$2200(Lorg/telegram/ui/LocationActivity;)Landroid/animation/AnimatorSet;

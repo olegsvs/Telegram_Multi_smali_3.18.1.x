@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     .prologue
-    .line 597
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v5, 0x0
 
-    .line 600
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -62,7 +60,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$1502(Lorg/telegram/ui/ChannelEditTypeActivity;I)I
 
-    .line 601
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -97,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 602
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
@@ -108,7 +104,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 603
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -139,7 +134,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 604
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -154,7 +148,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 605
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -173,7 +166,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 606
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -182,12 +174,10 @@
 
     invoke-static {v0, v6}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$702(Lorg/telegram/ui/ChannelEditTypeActivity;Z)Z
 
-    .line 619
     :cond_0
     :goto_0
     return-void
 
-    .line 608
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -205,7 +195,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 609
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -214,7 +203,6 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$202(Lorg/telegram/ui/ChannelEditTypeActivity;Z)Z
 
-    .line 610
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -223,7 +211,6 @@
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$300(Lorg/telegram/ui/ChannelEditTypeActivity;)V
 
-    .line 614
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
@@ -239,7 +226,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTag(Ljava/lang/Object;)V
 
-    .line 615
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -258,7 +244,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setTextColor(I)V
 
-    .line 616
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditTypeActivity$9;
@@ -269,7 +254,6 @@
 
     goto :goto_0
 
-    .line 612
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$9$1$1;->this$2:Lorg/telegram/ui/ChannelEditTypeActivity$9$1;
 

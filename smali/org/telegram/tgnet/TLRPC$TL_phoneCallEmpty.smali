@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 7042
     const v0, 0x5366c915
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 7041
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PhoneCall;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 7046
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt64(Z)J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;->id:J
 
-    .line 7047
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 7050
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7051
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallEmpty;->id:J
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt64(J)V
 
-    .line 7052
     return-void
 .end method

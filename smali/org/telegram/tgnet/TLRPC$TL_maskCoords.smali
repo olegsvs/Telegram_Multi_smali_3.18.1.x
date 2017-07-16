@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 10768
     const v0, -0x5129244e
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->constructor:I
@@ -45,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 10767
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,15 +56,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 10776
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 10777
     if-eqz p2, :cond_0
 
-    .line 10778
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_maskCoords"
@@ -91,21 +86,17 @@
 
     throw v1
 
-    .line 10780
     :cond_0
     const/4 v0, 0x0
 
-    .line 10785
     :goto_0
     return-object v0
 
-    .line 10783
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;-><init>()V
 
-    .line 10784
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_maskCoords;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -120,35 +111,30 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 10789
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->n:I
 
-    .line 10790
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->x:D
 
-    .line 10791
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->y:D
 
-    .line 10792
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->zoom:D
 
-    .line 10793
     return-void
 .end method
 
@@ -157,31 +143,25 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 10796
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 10797
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->n:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 10798
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->x:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V
 
-    .line 10799
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->y:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V
 
-    .line 10800
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_maskCoords;->zoom:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V
 
-    .line 10801
     return-void
 .end method

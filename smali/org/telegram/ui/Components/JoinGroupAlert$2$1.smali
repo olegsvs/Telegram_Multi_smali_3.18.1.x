@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/JoinGroupAlert$2;
 
     .prologue
-    .line 169
     iput-object p1, p0, Lorg/telegram/ui/Components/JoinGroupAlert$2$1;->this$1:Lorg/telegram/ui/Components/JoinGroupAlert$2;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/JoinGroupAlert$2$1;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_importChatInvite;
@@ -47,15 +46,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 172
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 173
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 174
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -65,7 +61,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 176
     .end local v0    # "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     :cond_0
     new-instance v1, Lorg/telegram/ui/Components/JoinGroupAlert$2$1$1;
@@ -74,6 +69,5 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 202
     return-void
 .end method

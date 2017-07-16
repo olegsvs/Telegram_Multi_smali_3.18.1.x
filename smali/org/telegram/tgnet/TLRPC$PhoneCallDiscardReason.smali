@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 6568
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -32,20 +31,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 6571
     const/4 v0, 0x0
 
-    .line 6572
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     sparse-switch p1, :sswitch_data_0
 
-    .line 6586
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 6587
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in PhoneCallDiscardReason"
@@ -70,40 +65,33 @@
 
     throw v1
 
-    .line 6574
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonHangup;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonHangup;-><init>()V
 
-    .line 6575
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     goto :goto_0
 
-    .line 6577
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonBusy;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonBusy;-><init>()V
 
-    .line 6578
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     goto :goto_0
 
-    .line 6580
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonMissed;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonMissed;-><init>()V
 
-    .line 6581
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     goto :goto_0
 
-    .line 6583
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_phoneCallDiscardReasonDisconnect;
 
@@ -113,18 +101,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;
     goto :goto_0
 
-    .line 6589
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 6590
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$PhoneCallDiscardReason;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 6592
     :cond_1
     return-object v0
 
-    .line 6572
     nop
 
     :sswitch_data_0

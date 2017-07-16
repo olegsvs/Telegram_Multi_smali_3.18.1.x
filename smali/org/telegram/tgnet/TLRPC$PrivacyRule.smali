@@ -32,10 +32,8 @@
     .locals 1
 
     .prologue
-    .line 3078
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 3079
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -52,20 +50,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3082
     const/4 v0, 0x0
 
-    .line 3083
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     sparse-switch p1, :sswitch_data_0
 
-    .line 3103
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 3104
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in PrivacyRule"
@@ -90,62 +84,51 @@
 
     throw v1
 
-    .line 3085
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowUsers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowUsers;-><init>()V
 
-    .line 3086
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3088
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowAll;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowAll;-><init>()V
 
-    .line 3089
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3091
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowContacts;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowContacts;-><init>()V
 
-    .line 3092
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3094
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowContacts;-><init>()V
 
-    .line 3095
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3097
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowAll;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_privacyValueAllowAll;-><init>()V
 
-    .line 3098
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3100
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_privacyValueDisallowUsers;
 
@@ -155,18 +138,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$PrivacyRule;
     goto :goto_0
 
-    .line 3106
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3107
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$PrivacyRule;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 3109
     :cond_1
     return-object v0
 
-    .line 3083
     nop
 
     :sswitch_data_0

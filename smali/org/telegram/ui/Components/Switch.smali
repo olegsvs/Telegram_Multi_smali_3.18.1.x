@@ -79,24 +79,20 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 101
     invoke-direct {p0, p1}, Landroid/widget/CompoundButton;-><init>(Landroid/content/Context;)V
 
-    .line 84
     invoke-static {}, Landroid/view/VelocityTracker;->obtain()Landroid/view/VelocityTracker;
 
     move-result-object v1
 
     iput-object v1, p0, Lorg/telegram/ui/Components/Switch;->mVelocityTracker:Landroid/view/VelocityTracker;
 
-    .line 98
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 103
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v1
@@ -109,17 +105,14 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 104
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    .line 105
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 107
     :cond_0
     invoke-virtual {p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
@@ -133,17 +126,14 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 108
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 109
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 112
     :cond_1
     sget v1, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
@@ -153,7 +143,6 @@
 
     if-gez v1, :cond_2
 
-    .line 113
     const/high16 v1, 0x41f00000    # 30.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -162,19 +151,15 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/Switch;->mSwitchMinWidth:I
 
-    .line 118
     :goto_0
     iput v3, p0, Lorg/telegram/ui/Components/Switch;->mSwitchPadding:I
 
-    .line 119
     iput-boolean v3, p0, Lorg/telegram/ui/Components/Switch;->mSplitTrack:Z
 
-    .line 121
     invoke-static {p1}, Landroid/view/ViewConfiguration;->get(Landroid/content/Context;)Landroid/view/ViewConfiguration;
 
     move-result-object v0
 
-    .line 122
     .local v0, "config":Landroid/view/ViewConfiguration;
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledTouchSlop()I
 
@@ -182,27 +167,22 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/Switch;->mTouchSlop:I
 
-    .line 123
     invoke-virtual {v0}, Landroid/view/ViewConfiguration;->getScaledMinimumFlingVelocity()I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/ui/Components/Switch;->mMinFlingVelocity:I
 
-    .line 125
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->refreshDrawableState()V
 
-    .line 126
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->isChecked()Z
 
     move-result v1
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/Switch;->setChecked(Z)V
 
-    .line 127
     return-void
 
-    .line 115
     .end local v0    # "config":Landroid/view/ViewConfiguration;
     :cond_2
     iput v3, p0, Lorg/telegram/ui/Components/Switch;->mSwitchMinWidth:I
@@ -215,12 +195,10 @@
     .param p1, "newCheckedState"    # Z
 
     .prologue
-    .line 356
     if-eqz p1, :cond_0
 
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 357
     .local v0, "targetPosition":F
     :goto_0
     const-string/jumbo v1, "thumbPosition"
@@ -239,22 +217,18 @@
 
     iput-object v1, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 358
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0xfa
 
     invoke-virtual {v1, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 359
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v1}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 360
     return-void
 
-    .line 356
     .end local v0    # "targetPosition":F
     :cond_0
     const/4 v0, 0x0
@@ -266,17 +240,14 @@
     .locals 1
 
     .prologue
-    .line 363
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 364
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 366
     :cond_0
     return-void
 .end method
@@ -286,24 +257,19 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 328
     invoke-static {p1}, Landroid/view/MotionEvent;->obtain(Landroid/view/MotionEvent;)Landroid/view/MotionEvent;
 
     move-result-object v0
 
-    .line 329
     .local v0, "cancel":Landroid/view/MotionEvent;
     const/4 v1, 0x3
 
     invoke-virtual {v0, v1}, Landroid/view/MotionEvent;->setAction(I)V
 
-    .line 330
     invoke-super {p0, v0}, Landroid/widget/CompoundButton;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
-    .line 331
     invoke-virtual {v0}, Landroid/view/MotionEvent;->recycle()V
 
-    .line 332
     return-void
 .end method
 
@@ -314,7 +280,6 @@
     .param p2, "high"    # F
 
     .prologue
-    .line 61
     cmpg-float v0, p0, p1
 
     if-gez v0, :cond_0
@@ -343,7 +308,6 @@
     .locals 2
 
     .prologue
-    .line 369
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
     const/high16 v1, 0x3f000000    # 0.5f
@@ -367,19 +331,16 @@
     .locals 3
 
     .prologue
-    .line 632
     sget-boolean v1, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v1, :cond_0
 
-    .line 633
     const/high16 v1, 0x3f800000    # 1.0f
 
     iget v2, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
     sub-float v0, v1, v2
 
-    .line 637
     .local v0, "position":F
     :goto_0
     invoke-direct {p0}, Lorg/telegram/ui/Components/Switch;->getThumbScrollRange()I
@@ -398,7 +359,6 @@
 
     return v1
 
-    .line 635
     .end local v0    # "position":F
     :cond_0
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
@@ -411,29 +371,23 @@
     .locals 4
 
     .prologue
-    .line 641
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    .line 642
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 643
     .local v1, "padding":Landroid/graphics/Rect;
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 646
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_0
 
-    .line 647
     sget-object v0, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
-    .line 652
     .local v0, "insets":Lorg/telegram/ui/Components/Switch$Insets;
     :goto_0
     iget v2, p0, Lorg/telegram/ui/Components/Switch;->mSwitchWidth:I
@@ -458,13 +412,11 @@
 
     sub-int/2addr v2, v3
 
-    .line 654
     .end local v0    # "insets":Lorg/telegram/ui/Components/Switch$Insets;
     .end local v1    # "padding":Landroid/graphics/Rect;
     :goto_1
     return v2
 
-    .line 649
     .restart local v1    # "padding":Landroid/graphics/Rect;
     :cond_0
     sget-object v0, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
@@ -472,7 +424,6 @@
     .restart local v0    # "insets":Lorg/telegram/ui/Components/Switch$Insets;
     goto :goto_0
 
-    .line 654
     .end local v0    # "insets":Lorg/telegram/ui/Components/Switch$Insets;
     .end local v1    # "padding":Landroid/graphics/Rect;
     :cond_1
@@ -487,12 +438,10 @@
     .param p2, "y"    # F
 
     .prologue
-    .line 243
     invoke-direct {p0}, Lorg/telegram/ui/Components/Switch;->getThumbOffset()I
 
     move-result v2
 
-    .line 245
     .local v2, "thumbOffset":I
     iget-object v5, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -500,14 +449,12 @@
 
     invoke-virtual {v5, v6}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 246
     iget v5, p0, Lorg/telegram/ui/Components/Switch;->mSwitchTop:I
 
     iget v6, p0, Lorg/telegram/ui/Components/Switch;->mTouchSlop:I
 
     sub-int v4, v5, v6
 
-    .line 247
     .local v4, "thumbTop":I
     iget v5, p0, Lorg/telegram/ui/Components/Switch;->mSwitchLeft:I
 
@@ -517,7 +464,6 @@
 
     sub-int v1, v5, v6
 
-    .line 248
     .local v1, "thumbLeft":I
     iget v5, p0, Lorg/telegram/ui/Components/Switch;->mThumbWidth:I
 
@@ -539,7 +485,6 @@
 
     add-int v3, v5, v6
 
-    .line 249
     .local v3, "thumbRight":I
     iget v5, p0, Lorg/telegram/ui/Components/Switch;->mSwitchBottom:I
 
@@ -547,7 +492,6 @@
 
     add-int v0, v5, v6
 
-    .line 250
     .local v0, "thumbBottom":I
     int-to-float v5, v1
 
@@ -589,13 +533,10 @@
     .param p1, "position"    # F
 
     .prologue
-    .line 373
     iput p1, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
-    .line 374
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->invalidate()V
 
-    .line 375
     return-void
 .end method
 
@@ -610,10 +551,8 @@
 
     const/4 v3, 0x0
 
-    .line 335
     iput v3, p0, Lorg/telegram/ui/Components/Switch;->mTouchMode:I
 
-    .line 337
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v4
@@ -628,26 +567,22 @@
 
     move v0, v1
 
-    .line 339
     .local v0, "commitChange":Z
     :goto_0
     if-eqz v0, :cond_5
 
-    .line 340
     iget-object v4, p0, Lorg/telegram/ui/Components/Switch;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     const/16 v5, 0x3e8
 
     invoke-virtual {v4, v5}, Landroid/view/VelocityTracker;->computeCurrentVelocity(I)V
 
-    .line 341
     iget-object v4, p0, Lorg/telegram/ui/Components/Switch;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v4}, Landroid/view/VelocityTracker;->getXVelocity()F
 
     move-result v2
 
-    .line 342
     .local v2, "xvel":F
     invoke-static {v2}, Ljava/lang/Math;->abs(F)F
 
@@ -661,7 +596,6 @@
 
     if-lez v4, :cond_4
 
-    .line 343
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v4, :cond_3
@@ -670,17 +604,14 @@
 
     if-gez v4, :cond_2
 
-    .line 351
     .end local v2    # "xvel":F
     .local v1, "newState":Z
     :cond_0
     :goto_1
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/Switch;->setChecked(Z)V
 
-    .line 352
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/Switch;->cancelSuperTouch(Landroid/view/MotionEvent;)V
 
-    .line 353
     return-void
 
     .end local v0    # "commitChange":Z
@@ -688,7 +619,6 @@
     :cond_1
     move v0, v3
 
-    .line 337
     goto :goto_0
 
     .restart local v0    # "commitChange":Z
@@ -696,7 +626,6 @@
     :cond_2
     move v1, v3
 
-    .line 343
     goto :goto_1
 
     :cond_3
@@ -708,7 +637,6 @@
 
     goto :goto_1
 
-    .line 345
     :cond_4
     invoke-direct {p0}, Lorg/telegram/ui/Components/Switch;->getTargetCheckedState()Z
 
@@ -717,7 +645,6 @@
     .restart local v1    # "newState":Z
     goto :goto_1
 
-    .line 348
     .end local v1    # "newState":Z
     .end local v2    # "xvel":F
     :cond_5
@@ -735,12 +662,10 @@
     .locals 4
 
     .prologue
-    .line 433
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 434
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
@@ -764,13 +689,11 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 436
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 437
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v2, Landroid/graphics/PorterDuffColorFilter;
@@ -794,11 +717,9 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 439
     :cond_1
     return-void
 
-    .line 434
     :cond_2
     const-string/jumbo v0, "switchTrack"
 
@@ -808,7 +729,6 @@
 
     goto :goto_0
 
-    .line 437
     :cond_3
     const-string/jumbo v0, "switchThumb"
 
@@ -824,36 +744,30 @@
     .param p1, "c"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 515
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 516
     .local v5, "padding":Landroid/graphics/Rect;
     move-object/from16 v0, p0
 
     iget v7, v0, Lorg/telegram/ui/Components/Switch;->mSwitchLeft:I
 
-    .line 517
     .local v7, "switchLeft":I
     move-object/from16 v0, p0
 
     iget v9, v0, Lorg/telegram/ui/Components/Switch;->mSwitchTop:I
 
-    .line 518
     .local v9, "switchTop":I
     move-object/from16 v0, p0
 
     iget v8, v0, Lorg/telegram/ui/Components/Switch;->mSwitchRight:I
 
-    .line 519
     .local v8, "switchRight":I
     move-object/from16 v0, p0
 
     iget v6, v0, Lorg/telegram/ui/Components/Switch;->mSwitchBottom:I
 
-    .line 521
     .local v6, "switchBottom":I
     invoke-direct/range {p0 .. p0}, Lorg/telegram/ui/Components/Switch;->getThumbOffset()I
 
@@ -861,7 +775,6 @@
 
     add-int v10, v7, v18
 
-    .line 524
     .local v10, "thumbInitialLeft":I
     move-object/from16 v0, p0
 
@@ -871,10 +784,8 @@
 
     if-eqz v18, :cond_6
 
-    .line 525
     sget-object v11, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
-    .line 530
     .local v11, "thumbInsets":Lorg/telegram/ui/Components/Switch$Insets;
     :goto_0
     move-object/from16 v0, p0
@@ -885,7 +796,6 @@
 
     if-eqz v18, :cond_4
 
-    .line 531
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
@@ -896,29 +806,23 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 533
     iget v0, v5, Landroid/graphics/Rect;->left:I
 
     move/from16 v18, v0
 
     add-int v10, v10, v18
 
-    .line 535
     move v15, v7
 
-    .line 536
     .local v15, "trackLeft":I
     move/from16 v17, v9
 
-    .line 537
     .local v17, "trackTop":I
     move/from16 v16, v8
 
-    .line 538
     .local v16, "trackRight":I
     move v14, v6
 
-    .line 539
     .local v14, "trackBottom":I
     sget-object v18, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
@@ -926,7 +830,6 @@
 
     if-eq v11, v0, :cond_3
 
-    .line 540
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->left:I
 
     move/from16 v18, v0
@@ -941,7 +844,6 @@
 
     if-le v0, v1, :cond_0
 
-    .line 541
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->left:I
 
     move/from16 v18, v0
@@ -954,7 +856,6 @@
 
     add-int v15, v15, v18
 
-    .line 543
     :cond_0
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->top:I
 
@@ -970,7 +871,6 @@
 
     if-le v0, v1, :cond_1
 
-    .line 544
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->top:I
 
     move/from16 v18, v0
@@ -983,7 +883,6 @@
 
     add-int v17, v17, v18
 
-    .line 546
     :cond_1
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->right:I
 
@@ -999,7 +898,6 @@
 
     if-le v0, v1, :cond_2
 
-    .line 547
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->right:I
 
     move/from16 v18, v0
@@ -1012,7 +910,6 @@
 
     sub-int v16, v16, v18
 
-    .line 549
     :cond_2
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->bottom:I
 
@@ -1028,7 +925,6 @@
 
     if-le v0, v1, :cond_3
 
-    .line 550
     iget v0, v11, Lorg/telegram/ui/Components/Switch$Insets;->bottom:I
 
     move/from16 v18, v0
@@ -1041,7 +937,6 @@
 
     sub-int v14, v14, v18
 
-    .line 553
     :cond_3
     move-object/from16 v0, p0
 
@@ -1057,7 +952,6 @@
 
     invoke-virtual {v0, v15, v1, v2, v14}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 556
     .end local v14    # "trackBottom":I
     .end local v15    # "trackLeft":I
     .end local v16    # "trackRight":I
@@ -1071,7 +965,6 @@
 
     if-eqz v18, :cond_5
 
-    .line 557
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
@@ -1082,14 +975,12 @@
 
     invoke-virtual {v0, v5}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 559
     iget v0, v5, Landroid/graphics/Rect;->left:I
 
     move/from16 v18, v0
 
     sub-int v12, v10, v18
 
-    .line 560
     .local v12, "thumbLeft":I
     move-object/from16 v0, p0
 
@@ -1105,7 +996,6 @@
 
     add-int v13, v18, v19
 
-    .line 561
     .local v13, "thumbRight":I
     sget v18, Lorg/telegram/messenger/AndroidUtilities;->density:F
 
@@ -1121,7 +1011,6 @@
 
     move-result v4
 
-    .line 562
     .local v4, "offset":I
     :goto_1
     move-object/from16 v0, p0
@@ -1142,12 +1031,10 @@
 
     invoke-virtual {v0, v12, v1, v13, v2}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 564
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/Switch;->getBackground()Landroid/graphics/drawable/Drawable;
 
     move-result-object v3
 
-    .line 565
     .local v3, "background":Landroid/graphics/drawable/Drawable;
     if-eqz v3, :cond_5
 
@@ -1161,10 +1048,8 @@
 
     if-lt v0, v1, :cond_5
 
-    .line 566
     invoke-virtual {v3, v12, v9, v13, v6}, Landroid/graphics/drawable/Drawable;->setHotspotBounds(IIII)V
 
-    .line 570
     .end local v3    # "background":Landroid/graphics/drawable/Drawable;
     .end local v4    # "offset":I
     .end local v12    # "thumbLeft":I
@@ -1172,10 +1057,8 @@
     :cond_5
     invoke-super/range {p0 .. p1}, Landroid/widget/CompoundButton;->draw(Landroid/graphics/Canvas;)V
 
-    .line 571
     return-void
 
-    .line 527
     .end local v11    # "thumbInsets":Lorg/telegram/ui/Components/Switch$Insets;
     :cond_6
     sget-object v11, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
@@ -1183,7 +1066,6 @@
     .restart local v11    # "thumbInsets":Lorg/telegram/ui/Components/Switch$Insets;
     goto/16 :goto_0
 
-    .line 561
     .restart local v12    # "thumbLeft":I
     .restart local v13    # "thumbRight":I
     :cond_7
@@ -1203,31 +1085,25 @@
     .end annotation
 
     .prologue
-    .line 687
     invoke-super {p0, p1, p2}, Landroid/widget/CompoundButton;->drawableHotspotChanged(FF)V
 
-    .line 689
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 690
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 693
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 694
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0, p1, p2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 696
     :cond_1
     return-void
 .end method
@@ -1236,41 +1112,33 @@
     .locals 2
 
     .prologue
-    .line 669
     invoke-super {p0}, Landroid/widget/CompoundButton;->drawableStateChanged()V
 
-    .line 671
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getDrawableState()[I
 
     move-result-object v0
 
-    .line 673
     .local v0, "myDrawableState":[I
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_0
 
-    .line 674
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 677
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v1, :cond_1
 
-    .line 678
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v0}, Landroid/graphics/drawable/Drawable;->setState([I)Z
 
-    .line 681
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->invalidate()V
 
-    .line 682
     return-void
 .end method
 
@@ -1278,17 +1146,14 @@
     .locals 2
 
     .prologue
-    .line 616
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-nez v0, :cond_0
 
-    .line 617
     invoke-super {p0}, Landroid/widget/CompoundButton;->getCompoundPaddingLeft()I
 
     move-result v0
 
-    .line 619
     :goto_0
     return v0
 
@@ -1308,17 +1173,14 @@
     .locals 2
 
     .prologue
-    .line 624
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_0
 
-    .line 625
     invoke-super {p0}, Landroid/widget/CompoundButton;->getCompoundPaddingRight()I
 
     move-result v0
 
-    .line 627
     :goto_0
     return v0
 
@@ -1338,7 +1200,6 @@
     .locals 1
 
     .prologue
-    .line 192
     iget-boolean v0, p0, Lorg/telegram/ui/Components/Switch;->mSplitTrack:Z
 
     return v0
@@ -1348,7 +1209,6 @@
     .locals 1
 
     .prologue
-    .line 144
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->mSwitchMinWidth:I
 
     return v0
@@ -1358,7 +1218,6 @@
     .locals 1
 
     .prologue
-    .line 135
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->mSwitchPadding:I
 
     return v0
@@ -1368,7 +1227,6 @@
     .locals 1
 
     .prologue
-    .line 183
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1378,7 +1236,6 @@
     .locals 1
 
     .prologue
-    .line 378
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
     return v0
@@ -1388,7 +1245,6 @@
     .locals 1
 
     .prologue
-    .line 153
     iget v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbTextPadding:I
 
     return v0
@@ -1398,7 +1254,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1408,31 +1263,25 @@
     .locals 1
 
     .prologue
-    .line 705
     invoke-super {p0}, Landroid/widget/CompoundButton;->jumpDrawablesToCurrentState()V
 
-    .line 707
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 708
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 711
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_1
 
-    .line 712
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->jumpToCurrentState()V
 
-    .line 715
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
@@ -1446,17 +1295,14 @@
 
     if-eqz v0, :cond_2
 
-    .line 716
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->end()V
 
-    .line 717
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/Switch;->mPositionAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 719
     :cond_2
     return-void
 .end method
@@ -1465,18 +1311,14 @@
     .locals 1
 
     .prologue
-    .line 388
     invoke-super {p0}, Landroid/widget/CompoundButton;->onAttachedToWindow()V
 
-    .line 389
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Switch;->attachedToWindow:Z
 
-    .line 390
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 391
     return-void
 .end method
 
@@ -1486,16 +1328,12 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 395
     invoke-super {p0}, Landroid/widget/CompoundButton;->onDetachedFromWindow()V
 
-    .line 396
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Switch;->attachedToWindow:Z
 
-    .line 397
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Switch;->wasLayout:Z
 
-    .line 398
     return-void
 .end method
 
@@ -1504,54 +1342,41 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 575
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 577
     iget-object v1, p0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 578
     .local v1, "padding":Landroid/graphics/Rect;
     iget-object v6, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 579
     .local v6, "trackDrawable":Landroid/graphics/drawable/Drawable;
     if-eqz v6, :cond_2
 
-    .line 580
     invoke-virtual {v6, v1}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 585
     :goto_0
     iget v4, p0, Lorg/telegram/ui/Components/Switch;->mSwitchTop:I
 
-    .line 586
     .local v4, "switchTop":I
     iget v3, p0, Lorg/telegram/ui/Components/Switch;->mSwitchBottom:I
 
-    .line 588
     .local v3, "switchBottom":I
     iget-object v5, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 589
     .local v5, "thumbDrawable":Landroid/graphics/drawable/Drawable;
     if-eqz v6, :cond_0
 
-    .line 590
     iget-boolean v7, p0, Lorg/telegram/ui/Components/Switch;->mSplitTrack:Z
 
     if-eqz v7, :cond_3
 
     if-eqz v5, :cond_3
 
-    .line 591
     sget-object v0, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
-    .line 592
     .local v0, "insets":Lorg/telegram/ui/Components/Switch$Insets;
     invoke-virtual {v5, v1}, Landroid/graphics/drawable/Drawable;->copyBounds(Landroid/graphics/Rect;)V
 
-    .line 593
     iget v7, v1, Landroid/graphics/Rect;->left:I
 
     iget v8, v0, Lorg/telegram/ui/Components/Switch$Insets;->left:I
@@ -1560,7 +1385,6 @@
 
     iput v7, v1, Landroid/graphics/Rect;->left:I
 
-    .line 594
     iget v7, v1, Landroid/graphics/Rect;->right:I
 
     iget v8, v0, Lorg/telegram/ui/Components/Switch$Insets;->right:I
@@ -1569,24 +1393,19 @@
 
     iput v7, v1, Landroid/graphics/Rect;->right:I
 
-    .line 596
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
     move-result v2
 
-    .line 597
     .local v2, "saveCount":I
     sget-object v7, Landroid/graphics/Region$Op;->DIFFERENCE:Landroid/graphics/Region$Op;
 
     invoke-virtual {p1, v1, v7}, Landroid/graphics/Canvas;->clipRect(Landroid/graphics/Rect;Landroid/graphics/Region$Op;)Z
 
-    .line 598
     invoke-virtual {v6, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 599
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 605
     .end local v0    # "insets":Lorg/telegram/ui/Components/Switch$Insets;
     .end local v2    # "saveCount":I
     :cond_0
@@ -1595,21 +1414,16 @@
 
     move-result v2
 
-    .line 607
     .restart local v2    # "saveCount":I
     if-eqz v5, :cond_1
 
-    .line 608
     invoke-virtual {v5, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 611
     :cond_1
     invoke-virtual {p1, v2}, Landroid/graphics/Canvas;->restoreToCount(I)V
 
-    .line 612
     return-void
 
-    .line 582
     .end local v2    # "saveCount":I
     .end local v3    # "switchBottom":I
     .end local v4    # "switchTop":I
@@ -1619,7 +1433,6 @@
 
     goto :goto_0
 
-    .line 601
     .restart local v3    # "switchBottom":I
     .restart local v4    # "switchTop":I
     .restart local v5    # "thumbDrawable":Landroid/graphics/drawable/Drawable;
@@ -1638,46 +1451,36 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 459
     invoke-super/range {p0 .. p5}, Landroid/widget/CompoundButton;->onLayout(ZIIII)V
 
-    .line 461
     const/4 v8, 0x1
 
     iput-boolean v8, p0, Lorg/telegram/ui/Components/Switch;->wasLayout:Z
 
-    .line 462
     const/4 v1, 0x0
 
-    .line 463
     .local v1, "opticalInsetLeft":I
     const/4 v2, 0x0
 
-    .line 464
     .local v2, "opticalInsetRight":I
     iget-object v8, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v8, :cond_0
 
-    .line 465
     iget-object v7, p0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 466
     .local v7, "trackPadding":Landroid/graphics/Rect;
     iget-object v8, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v8, :cond_1
 
-    .line 467
     iget-object v8, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v8, v7}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 472
     :goto_0
     sget-object v0, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
-    .line 473
     .local v0, "insets":Lorg/telegram/ui/Components/Switch$Insets;
     const/4 v8, 0x0
 
@@ -1691,7 +1494,6 @@
 
     move-result v1
 
-    .line 474
     const/4 v8, 0x0
 
     iget v9, v0, Lorg/telegram/ui/Components/Switch$Insets;->right:I
@@ -1704,7 +1506,6 @@
 
     move-result v2
 
-    .line 479
     .end local v0    # "insets":Lorg/telegram/ui/Components/Switch$Insets;
     .end local v7    # "trackPadding":Landroid/graphics/Rect;
     :cond_0
@@ -1712,14 +1513,12 @@
 
     if-eqz v8, :cond_2
 
-    .line 480
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getPaddingLeft()I
 
     move-result v8
 
     add-int v4, v8, v1
 
-    .line 481
     .local v4, "switchLeft":I
     iget v8, p0, Lorg/telegram/ui/Components/Switch;->mSwitchWidth:I
 
@@ -1729,7 +1528,6 @@
 
     sub-int v5, v8, v2
 
-    .line 489
     .local v5, "switchRight":I
     :goto_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getGravity()I
@@ -1740,35 +1538,27 @@
 
     sparse-switch v8, :sswitch_data_0
 
-    .line 492
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getPaddingTop()I
 
     move-result v6
 
-    .line 493
     .local v6, "switchTop":I
     iget v8, p0, Lorg/telegram/ui/Components/Switch;->mSwitchHeight:I
 
     add-int v3, v6, v8
 
-    .line 507
     .local v3, "switchBottom":I
     :goto_2
     iput v4, p0, Lorg/telegram/ui/Components/Switch;->mSwitchLeft:I
 
-    .line 508
     iput v6, p0, Lorg/telegram/ui/Components/Switch;->mSwitchTop:I
 
-    .line 509
     iput v3, p0, Lorg/telegram/ui/Components/Switch;->mSwitchBottom:I
 
-    .line 510
     iput v5, p0, Lorg/telegram/ui/Components/Switch;->mSwitchRight:I
 
-    .line 511
     return-void
 
-    .line 469
     .end local v3    # "switchBottom":I
     .end local v4    # "switchLeft":I
     .end local v5    # "switchRight":I
@@ -1779,7 +1569,6 @@
 
     goto :goto_0
 
-    .line 483
     .end local v7    # "trackPadding":Landroid/graphics/Rect;
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getWidth()I
@@ -1794,7 +1583,6 @@
 
     sub-int v5, v8, v2
 
-    .line 484
     .restart local v5    # "switchRight":I
     iget v8, p0, Lorg/telegram/ui/Components/Switch;->mSwitchWidth:I
 
@@ -1807,7 +1595,6 @@
     .restart local v4    # "switchLeft":I
     goto :goto_1
 
-    .line 497
     :sswitch_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getPaddingTop()I
 
@@ -1833,17 +1620,14 @@
 
     sub-int v6, v8, v9
 
-    .line 498
     .restart local v6    # "switchTop":I
     iget v8, p0, Lorg/telegram/ui/Components/Switch;->mSwitchHeight:I
 
     add-int v3, v6, v8
 
-    .line 499
     .restart local v3    # "switchBottom":I
     goto :goto_2
 
-    .line 502
     .end local v3    # "switchBottom":I
     .end local v6    # "switchTop":I
     :sswitch_1
@@ -1857,7 +1641,6 @@
 
     sub-int v3, v8, v9
 
-    .line 503
     .restart local v3    # "switchBottom":I
     iget v8, p0, Lorg/telegram/ui/Components/Switch;->mSwitchHeight:I
 
@@ -1866,7 +1649,6 @@
     .restart local v6    # "switchTop":I
     goto :goto_2
 
-    .line 489
     :sswitch_data_0
     .sparse-switch
         0x10 -> :sswitch_0
@@ -1880,21 +1662,17 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 197
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mTempRect:Landroid/graphics/Rect;
 
-    .line 200
     .local v2, "padding":Landroid/graphics/Rect;
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v10, :cond_2
 
-    .line 201
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v10, v2}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 202
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v10}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
@@ -1909,7 +1687,6 @@
 
     sub-int v8, v10, v11
 
-    .line 203
     .local v8, "thumbWidth":I
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
@@ -1917,47 +1694,38 @@
 
     move-result v7
 
-    .line 210
     .local v7, "thumbHeight":I
     :goto_0
     iput v8, p0, Lorg/telegram/ui/Components/Switch;->mThumbWidth:I
 
-    .line 213
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v10, :cond_3
 
-    .line 214
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v10, v2}, Landroid/graphics/drawable/Drawable;->getPadding(Landroid/graphics/Rect;)Z
 
-    .line 215
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v10}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v9
 
-    .line 221
     .local v9, "trackHeight":I
     :goto_1
     iget v3, v2, Landroid/graphics/Rect;->left:I
 
-    .line 222
     .local v3, "paddingLeft":I
     iget v4, v2, Landroid/graphics/Rect;->right:I
 
-    .line 223
     .local v4, "paddingRight":I
     iget-object v10, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v10, :cond_0
 
-    .line 224
     sget-object v0, Lorg/telegram/ui/Components/Switch$Insets;->NONE:Lorg/telegram/ui/Components/Switch$Insets;
 
-    .line 225
     .local v0, "inset":Lorg/telegram/ui/Components/Switch$Insets;
     iget v10, v0, Lorg/telegram/ui/Components/Switch$Insets;->left:I
 
@@ -1965,14 +1733,12 @@
 
     move-result v3
 
-    .line 226
     iget v10, v0, Lorg/telegram/ui/Components/Switch$Insets;->right:I
 
     invoke-static {v4, v10}, Ljava/lang/Math;->max(II)I
 
     move-result v4
 
-    .line 229
     .end local v0    # "inset":Lorg/telegram/ui/Components/Switch$Insets;
     :cond_0
     iget v10, p0, Lorg/telegram/ui/Components/Switch;->mSwitchMinWidth:I
@@ -1989,39 +1755,30 @@
 
     move-result v6
 
-    .line 230
     .local v6, "switchWidth":I
     invoke-static {v9, v7}, Ljava/lang/Math;->max(II)I
 
     move-result v5
 
-    .line 231
     .local v5, "switchHeight":I
     iput v6, p0, Lorg/telegram/ui/Components/Switch;->mSwitchWidth:I
 
-    .line 232
     iput v5, p0, Lorg/telegram/ui/Components/Switch;->mSwitchHeight:I
 
-    .line 234
     invoke-super {p0, p1, p2}, Landroid/widget/CompoundButton;->onMeasure(II)V
 
-    .line 236
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getMeasuredHeight()I
 
     move-result v1
 
-    .line 237
     .local v1, "measuredHeight":I
     if-ge v1, v5, :cond_1
 
-    .line 238
     invoke-virtual {p0, v6, v5}, Lorg/telegram/ui/Components/Switch;->setMeasuredDimension(II)V
 
-    .line 240
     :cond_1
     return-void
 
-    .line 205
     .end local v1    # "measuredHeight":I
     .end local v3    # "paddingLeft":I
     .end local v4    # "paddingRight":I
@@ -2033,18 +1790,15 @@
     :cond_2
     const/4 v8, 0x0
 
-    .line 206
     .restart local v8    # "thumbWidth":I
     const/4 v7, 0x0
 
     .restart local v7    # "thumbHeight":I
     goto :goto_0
 
-    .line 217
     :cond_3
     invoke-virtual {v2}, Landroid/graphics/Rect;->setEmpty()V
 
-    .line 218
     const/4 v9, 0x0
 
     .restart local v9    # "trackHeight":I
@@ -2064,21 +1818,17 @@
 
     const/4 v8, 0x1
 
-    .line 255
     iget-object v9, p0, Lorg/telegram/ui/Components/Switch;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v9, p1}, Landroid/view/VelocityTracker;->addMovement(Landroid/view/MotionEvent;)V
 
-    .line 256
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getActionMasked()I
 
     move-result v0
 
-    .line 257
     .local v0, "action":I
     packed-switch v0, :pswitch_data_0
 
-    .line 324
     :cond_0
     :goto_0
     :pswitch_0
@@ -2089,19 +1839,16 @@
     :goto_1
     return v7
 
-    .line 259
     :pswitch_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v5
 
-    .line 260
     .local v5, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v6
 
-    .line 261
     .local v6, "y":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->isEnabled()Z
 
@@ -2115,18 +1862,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 262
     iput v8, p0, Lorg/telegram/ui/Components/Switch;->mTouchMode:I
 
-    .line 263
     iput v5, p0, Lorg/telegram/ui/Components/Switch;->mTouchX:F
 
-    .line 264
     iput v6, p0, Lorg/telegram/ui/Components/Switch;->mTouchY:F
 
     goto :goto_0
 
-    .line 270
     .end local v5    # "x":F
     .end local v6    # "y":F
     :pswitch_2
@@ -2136,19 +1879,16 @@
 
     goto :goto_0
 
-    .line 275
     :pswitch_3
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v5
 
-    .line 276
     .restart local v5    # "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v6
 
-    .line 277
     .restart local v6    # "y":F
     iget v7, p0, Lorg/telegram/ui/Components/Switch;->mTouchX:F
 
@@ -2182,29 +1922,23 @@
 
     if-lez v7, :cond_0
 
-    .line 278
     :cond_1
     iput v11, p0, Lorg/telegram/ui/Components/Switch;->mTouchMode:I
 
-    .line 279
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->getParent()Landroid/view/ViewParent;
 
     move-result-object v7
 
     invoke-interface {v7, v8}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 280
     iput v5, p0, Lorg/telegram/ui/Components/Switch;->mTouchX:F
 
-    .line 281
     iput v6, p0, Lorg/telegram/ui/Components/Switch;->mTouchY:F
 
     move v7, v8
 
-    .line 282
     goto :goto_1
 
-    .line 288
     .end local v5    # "x":F
     .end local v6    # "y":F
     :pswitch_4
@@ -2212,38 +1946,31 @@
 
     move-result v5
 
-    .line 289
     .restart local v5    # "x":F
     invoke-direct {p0}, Lorg/telegram/ui/Components/Switch;->getThumbScrollRange()I
 
     move-result v4
 
-    .line 290
     .local v4, "thumbScrollRange":I
     iget v9, p0, Lorg/telegram/ui/Components/Switch;->mTouchX:F
 
     sub-float v3, v5, v9
 
-    .line 292
     .local v3, "thumbScrollOffset":F
     if-eqz v4, :cond_4
 
-    .line 293
     int-to-float v9, v4
 
     div-float v1, v3, v9
 
-    .line 297
     .local v1, "dPos":F
     :goto_2
     sget-boolean v9, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v9, :cond_2
 
-    .line 298
     neg-float v1, v1
 
-    .line 300
     :cond_2
     iget v9, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
@@ -2253,7 +1980,6 @@
 
     move-result v2
 
-    .line 301
     .local v2, "newPos":F
     iget v7, p0, Lorg/telegram/ui/Components/Switch;->thumbPosition:F
 
@@ -2261,19 +1987,15 @@
 
     if-eqz v7, :cond_3
 
-    .line 302
     iput v5, p0, Lorg/telegram/ui/Components/Switch;->mTouchX:F
 
-    .line 303
     invoke-direct {p0, v2}, Lorg/telegram/ui/Components/Switch;->setThumbPosition(F)V
 
     :cond_3
     move v7, v8
 
-    .line 305
     goto :goto_1
 
-    .line 295
     .end local v1    # "dPos":F
     .end local v2    # "newPos":F
     :cond_4
@@ -2293,7 +2015,6 @@
 
     goto :goto_3
 
-    .line 313
     .end local v3    # "thumbScrollOffset":F
     .end local v4    # "thumbScrollRange":I
     .end local v5    # "x":F
@@ -2302,31 +2023,25 @@
 
     if-ne v7, v11, :cond_6
 
-    .line 314
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/Switch;->stopDrag(Landroid/view/MotionEvent;)V
 
-    .line 315
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
     move v7, v8
 
-    .line 316
     goto/16 :goto_1
 
-    .line 318
     :cond_6
     const/4 v7, 0x0
 
     iput v7, p0, Lorg/telegram/ui/Components/Switch;->mTouchMode:I
 
-    .line 319
     iget-object v7, p0, Lorg/telegram/ui/Components/Switch;->mVelocityTracker:Landroid/view/VelocityTracker;
 
     invoke-virtual {v7}, Landroid/view/VelocityTracker;->clear()V
 
     goto/16 :goto_0
 
-    .line 257
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -2335,7 +2050,6 @@
         :pswitch_5
     .end packed-switch
 
-    .line 270
     :pswitch_data_1
     .packed-switch 0x0
         :pswitch_0
@@ -2348,12 +2062,10 @@
     .locals 1
 
     .prologue
-    .line 401
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/Switch;->wasLayout:Z
 
-    .line 402
     return-void
 .end method
 
@@ -2364,15 +2076,12 @@
     .prologue
     const/high16 v5, 0x3f000000    # 0.5f
 
-    .line 406
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->setChecked(Z)V
 
-    .line 408
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->isChecked()Z
 
     move-result p1
 
-    .line 410
     iget-boolean v3, p0, Lorg/telegram/ui/Components/Switch;->attachedToWindow:Z
 
     if-eqz v3, :cond_2
@@ -2381,10 +2090,8 @@
 
     if-eqz v3, :cond_2
 
-    .line 411
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/Switch;->animateThumbToCheckedState(Z)V
 
-    .line 417
     :goto_0
     const-string/jumbo v3, "prefSectionColor"
 
@@ -2394,7 +2101,6 @@
 
     move-result v2
 
-    .line 418
     .local v2, "sDarkColor":I
     const-string/jumbo v3, "themeColor"
 
@@ -2404,7 +2110,6 @@
 
     move-result v1
 
-    .line 419
     .local v1, "darkColor":I
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefSectionColor:I
 
@@ -2414,14 +2119,12 @@
 
     move v0, v1
 
-    .line 421
     .local v0, "checkColor":I
     :goto_1
     iget-object v3, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_0
 
-    .line 422
     iget-object v4, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v5, Landroid/graphics/PorterDuffColorFilter;
@@ -2441,7 +2144,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 423
     sget-boolean v3, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v3, :cond_0
@@ -2460,13 +2162,11 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 425
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v3, :cond_1
 
-    .line 426
     iget-object v4, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v5, Landroid/graphics/PorterDuffColorFilter;
@@ -2486,7 +2186,6 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 427
     sget-boolean v3, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v3, :cond_1
@@ -2506,17 +2205,14 @@
 
     invoke-virtual {v4, v5}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 430
     :cond_1
     return-void
 
-    .line 413
     .end local v1    # "darkColor":I
     .end local v2    # "sDarkColor":I
     :cond_2
     invoke-direct {p0}, Lorg/telegram/ui/Components/Switch;->cancelPositionAnimator()V
 
-    .line 414
     if-eqz p1, :cond_3
 
     const/high16 v3, 0x3f800000    # 1.0f
@@ -2536,10 +2232,8 @@
     :cond_4
     move v0, v2
 
-    .line 419
     goto :goto_1
 
-    .line 422
     .restart local v0    # "checkColor":I
     :cond_5
     const-string/jumbo v3, "switchTrack"
@@ -2550,13 +2244,11 @@
 
     goto :goto_2
 
-    .line 423
     :cond_6
     const v0, -0x383839
 
     goto :goto_3
 
-    .line 426
     .end local v0    # "checkColor":I
     :cond_7
     const-string/jumbo v3, "switchThumb"
@@ -2567,7 +2259,6 @@
 
     goto :goto_4
 
-    .line 427
     :cond_8
     const v3, -0x121213
 
@@ -2579,12 +2270,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 442
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->isChecked()Z
 
     move-result v0
 
-    .line 445
     .local v0, "checked":Z
     const/high16 v2, 0x3f000000    # 0.5f
 
@@ -2592,13 +2281,11 @@
 
     move-result v1
 
-    .line 449
     .local v1, "lightColor":I
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_0
 
-    .line 450
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v3, Landroid/graphics/PorterDuffColorFilter;
@@ -2613,13 +2300,11 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 452
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v2, :cond_1
 
-    .line 453
     iget-object v2, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     new-instance v3, Landroid/graphics/PorterDuffColorFilter;
@@ -2634,11 +2319,9 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 455
     :cond_1
     return-void
 
-    .line 450
     .restart local v1    # "lightColor":I
     .restart local p1    # "color":I
     :cond_2
@@ -2646,7 +2329,6 @@
 
     goto :goto_0
 
-    .line 453
     .end local v1    # "lightColor":I
     :cond_3
     const p1, -0x121213
@@ -2659,13 +2341,10 @@
     .param p1, "splitTrack"    # Z
 
     .prologue
-    .line 187
     iput-boolean p1, p0, Lorg/telegram/ui/Components/Switch;->mSplitTrack:Z
 
-    .line 188
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->invalidate()V
 
-    .line 189
     return-void
 .end method
 
@@ -2674,13 +2353,10 @@
     .param p1, "pixels"    # I
 
     .prologue
-    .line 139
     iput p1, p0, Lorg/telegram/ui/Components/Switch;->mSwitchMinWidth:I
 
-    .line 140
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 141
     return-void
 .end method
 
@@ -2689,13 +2365,10 @@
     .param p1, "pixels"    # I
 
     .prologue
-    .line 130
     iput p1, p0, Lorg/telegram/ui/Components/Switch;->mSwitchPadding:I
 
-    .line 131
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 132
     return-void
 .end method
 
@@ -2704,33 +2377,26 @@
     .param p1, "thumb"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 172
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 173
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 175
     :cond_0
     iput-object p1, p0, Lorg/telegram/ui/Components/Switch;->mThumbDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 176
     if-eqz p1, :cond_1
 
-    .line 177
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 179
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 180
     return-void
 .end method
 
@@ -2739,13 +2405,10 @@
     .param p1, "pixels"    # I
 
     .prologue
-    .line 148
     iput p1, p0, Lorg/telegram/ui/Components/Switch;->mThumbTextPadding:I
 
-    .line 149
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 150
     return-void
 .end method
 
@@ -2754,33 +2417,26 @@
     .param p1, "track"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 157
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     if-eqz v0, :cond_0
 
-    .line 158
     iget-object v0, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 160
     :cond_0
     iput-object p1, p0, Lorg/telegram/ui/Components/Switch;->mTrackDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 161
     if-eqz p1, :cond_1
 
-    .line 162
     invoke-virtual {p1, p0}, Landroid/graphics/drawable/Drawable;->setCallback(Landroid/graphics/drawable/Drawable$Callback;)V
 
-    .line 164
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->requestLayout()V
 
-    .line 165
     return-void
 .end method
 
@@ -2788,7 +2444,6 @@
     .locals 1
 
     .prologue
-    .line 383
     invoke-virtual {p0}, Lorg/telegram/ui/Components/Switch;->isChecked()Z
 
     move-result v0
@@ -2800,10 +2455,8 @@
     :goto_0
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Components/Switch;->setChecked(Z)V
 
-    .line 384
     return-void
 
-    .line 383
     :cond_0
     const/4 v0, 0x0
 
@@ -2815,7 +2468,6 @@
     .param p1, "who"    # Landroid/graphics/drawable/Drawable;
 
     .prologue
-    .line 700
     invoke-super {p0, p1}, Landroid/widget/CompoundButton;->verifyDrawable(Landroid/graphics/drawable/Drawable;)Z
 
     move-result v0

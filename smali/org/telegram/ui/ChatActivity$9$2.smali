@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$9;
 
     .prologue
-    .line 1097
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$9$2;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1101
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -60,16 +58,13 @@
 
     move-result-object v2
 
-    .line 1103
     .local v2, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v2, :cond_1
 
-    .line 1139
     :cond_0
     :goto_0
     return-void
 
-    .line 1106
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$9$2;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
@@ -81,12 +76,10 @@
 
     if-lez v3, :cond_0
 
-    .line 1108
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteChatUser;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteChatUser;-><init>()V
 
-    .line 1109
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_deleteChatUser;
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$9$2;->this$1:Lorg/telegram/ui/ChatActivity$9;
 
@@ -98,17 +91,14 @@
 
     iput v3, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteChatUser;->chat_id:I
 
-    .line 1110
     invoke-static {v2}, Lorg/telegram/messenger/MessagesController;->getInputUser(Lorg/telegram/tgnet/TLRPC$User;)Lorg/telegram/tgnet/TLRPC$InputUser;
 
     move-result-object v3
 
     iput-object v3, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_deleteChatUser;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
-    .line 1111
     move-object v1, v0
 
-    .line 1112
     .local v1, "request":Lorg/telegram/tgnet/TLObject;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 

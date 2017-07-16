@@ -29,12 +29,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     .prologue
-    .line 637
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$8;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 639
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$8;->ctrlPressed:Z
@@ -55,27 +53,22 @@
 
     const/4 v1, 0x1
 
-    .line 643
     const/4 v2, 0x4
 
     if-ne p2, v2, :cond_0
 
-    .line 644
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$8;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3000(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
-    .line 655
     :goto_0
     return v1
 
-    .line 646
     :cond_0
     if-eqz p3, :cond_5
 
     if-nez p2, :cond_5
 
-    .line 647
     iget-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$8;->ctrlPressed:Z
 
     if-nez v2, :cond_1
@@ -103,14 +96,12 @@
 
     if-nez v2, :cond_2
 
-    .line 648
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$8;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$3000(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
     goto :goto_0
 
-    .line 650
     :cond_2
     const/16 v2, 0x71
 
@@ -120,7 +111,6 @@
 
     if-ne p2, v2, :cond_5
 
-    .line 651
     :cond_3
     invoke-virtual {p3}, Landroid/view/KeyEvent;->getAction()I
 
@@ -138,6 +128,5 @@
     :cond_5
     move v1, v0
 
-    .line 655
     goto :goto_0
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelCreateActivity$13;
 
     .prologue
-    .line 776
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,19 +46,16 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 779
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3, v5}, Lorg/telegram/ui/ChannelCreateActivity;->access$2302(Lorg/telegram/ui/ChannelCreateActivity;Z)Z
 
-    .line 780
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v3, :cond_0
 
-    .line 781
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -70,12 +66,10 @@
 
     if-nez v3, :cond_1
 
-    .line 838
     :cond_0
     :goto_0
     return-void
 
-    .line 784
     :cond_1
     const/4 v0, 0x0
 
@@ -95,7 +89,6 @@
 
     if-ge v0, v3, :cond_2
 
-    .line 785
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -120,12 +113,10 @@
 
     invoke-virtual {v4, v3}, Landroid/widget/LinearLayout;->removeView(Landroid/view/View;)V
 
-    .line 784
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 787
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
@@ -137,12 +128,10 @@
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->clear()V
 
-    .line 788
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_messages_chats;
 
-    .line 790
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_chats;
     const/4 v0, 0x0
 
@@ -155,7 +144,6 @@
 
     if-ge v0, v3, :cond_4
 
-    .line 791
     new-instance v1, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
@@ -172,7 +160,6 @@
 
     invoke-direct {v1, v3, v4}, Lorg/telegram/ui/Cells/AdminedChannelCell;-><init>(Landroid/content/Context;Landroid/view/View$OnClickListener;)V
 
-    .line 832
     .local v1, "adminedChannelCell":Lorg/telegram/ui/Cells/AdminedChannelCell;
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_chats;->chats:Ljava/util/ArrayList;
 
@@ -197,7 +184,6 @@
     :goto_3
     invoke-virtual {v1, v3, v4}, Lorg/telegram/ui/Cells/AdminedChannelCell;->setChannel(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
 
-    .line 833
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -208,7 +194,6 @@
 
     invoke-virtual {v3, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 834
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -227,7 +212,6 @@
 
     invoke-virtual {v3, v1, v4}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 790
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -235,10 +219,8 @@
     :cond_3
     move v4, v5
 
-    .line 832
     goto :goto_3
 
-    .line 836
     .end local v1    # "adminedChannelCell":Lorg/telegram/ui/Cells/AdminedChannelCell;
     :cond_4
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;

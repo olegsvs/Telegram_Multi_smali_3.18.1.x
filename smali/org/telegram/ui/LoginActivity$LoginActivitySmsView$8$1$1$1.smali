@@ -31,7 +31,6 @@
     .param p1, "this$4"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
 
     .prologue
-    .line 1733
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v4, 0x0
 
-    .line 1736
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
 
     iget-object v2, v2, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1;
@@ -66,23 +64,19 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 1737
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_1
 
-    .line 1738
     iget-object v1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;
 
-    .line 1739
     .local v1, "password":Lorg/telegram/tgnet/TLRPC$TL_account_password;
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 1740
     .local v0, "bundle":Landroid/os/Bundle;
     const-string/jumbo v2, "current_salt"
 
@@ -94,21 +88,18 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1741
     const-string/jumbo v2, "hint"
 
     iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;->hint:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1742
     const-string/jumbo v2, "email_unconfirmed_pattern"
 
     iget-object v5, v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;->email_unconfirmed_pattern:Ljava/lang/String;
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1743
     const-string/jumbo v2, "phoneFormated"
 
     iget-object v5, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
@@ -125,7 +116,6 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1744
     const-string/jumbo v2, "phoneHash"
 
     iget-object v5, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
@@ -142,7 +132,6 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1745
     const-string/jumbo v2, "code"
 
     iget-object v5, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0, v2, v5}, Landroid/os/Bundle;->putString(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 1746
     const-string/jumbo v5, "has_recovery"
 
     iget-boolean v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_password;->has_recovery:Z
@@ -169,7 +157,6 @@
     :goto_0
     invoke-virtual {v0, v5, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1747
     iget-object v2, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1$1;->this$4:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;
 
     iget-object v2, v2, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1$1;->this$3:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$8$1;
@@ -184,7 +171,6 @@
 
     invoke-virtual {v2, v5, v3, v0, v4}, Lorg/telegram/ui/LoginActivity;->setPage(IZLandroid/os/Bundle;Z)V
 
-    .line 1751
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "password":Lorg/telegram/tgnet/TLRPC$TL_account_password;
     :goto_1
@@ -195,10 +181,8 @@
     :cond_0
     move v2, v4
 
-    .line 1746
     goto :goto_0
 
-    .line 1749
     .end local v0    # "bundle":Landroid/os/Bundle;
     .end local v1    # "password":Lorg/telegram/tgnet/TLRPC$TL_account_password;
     :cond_1

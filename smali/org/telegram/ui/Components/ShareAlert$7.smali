@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ShareAlert;
 
     .prologue
-    .line 369
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$7;->this$0:Lorg/telegram/ui/Components/ShareAlert;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -46,23 +45,19 @@
 
     const/high16 v5, 0x40800000    # 4.0f
 
-    .line 372
     invoke-virtual {p3, p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildViewHolder(Landroid/view/View;)Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 373
     .local v0, "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     if-eqz v0, :cond_2
 
-    .line 374
     invoke-virtual {v0}, Lorg/telegram/ui/Components/RecyclerListView$Holder;->getAdapterPosition()I
 
     move-result v1
 
-    .line 375
     .local v1, "pos":I
     rem-int/lit8 v2, v1, 0x4
 
@@ -73,7 +68,6 @@
     :goto_0
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 376
     rem-int/lit8 v2, v1, 0x4
 
     const/4 v4, 0x3
@@ -83,12 +77,10 @@
     :goto_1
     iput v3, p1, Landroid/graphics/Rect;->right:I
 
-    .line 381
     .end local v1    # "pos":I
     :goto_2
     return-void
 
-    .line 375
     .restart local v1    # "pos":I
     :cond_0
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -97,7 +89,6 @@
 
     goto :goto_0
 
-    .line 376
     :cond_1
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -105,7 +96,6 @@
 
     goto :goto_1
 
-    .line 378
     .end local v1    # "pos":I
     :cond_2
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -114,7 +104,6 @@
 
     iput v2, p1, Landroid/graphics/Rect;->left:I
 
-    .line 379
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2

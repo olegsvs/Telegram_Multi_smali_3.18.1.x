@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/PaymentFormActivity$23$1;
 
     .prologue
-    .line 2138
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$23$1$1;->this$2:Lorg/telegram/ui/PaymentFormActivity$23$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +42,5 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2142
     return-void
 .end method

@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 2368
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,18 +42,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 2375
     iput v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutChunkResult;->mConsumed:I
 
-    .line 2376
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutChunkResult;->mFinished:Z
 
-    .line 2377
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutChunkResult;->mIgnoreConsumed:Z
 
-    .line 2378
     iput-boolean v0, p0, Lorg/telegram/messenger/support/widget/LinearLayoutManager$LayoutChunkResult;->mFocusable:Z
 
-    .line 2379
     return-void
 .end method

@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 159
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -39,10 +38,8 @@
     .locals 3
 
     .prologue
-    .line 162
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 164
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -56,7 +53,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 165
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$200(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/webkit/WebView;
@@ -65,7 +61,6 @@
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->removeView(Landroid/view/View;)V
 
-    .line 166
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$200(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/webkit/WebView;
@@ -74,7 +69,6 @@
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 167
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$200(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/webkit/WebView;
@@ -85,7 +79,6 @@
 
     invoke-virtual {v1, v2}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 168
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$200(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/webkit/WebView;
@@ -94,7 +87,6 @@
 
     invoke-virtual {v1}, Landroid/webkit/WebView;->destroy()V
 
-    .line 171
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -102,13 +94,11 @@
 
     move-result-object v1
 
-    invoke-virtual {v1}, Lorg/telegram/ui/Components/WebPlayerView;->isInline()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 172
     invoke-static {}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$300()Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     move-result-object v1
@@ -117,12 +107,10 @@
 
     if-ne v1, v2, :cond_1
 
-    .line 173
     const/4 v1, 0x0
 
     invoke-static {v1}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$302(Lorg/telegram/ui/Components/EmbedBottomSheet;)Lorg/telegram/ui/Components/EmbedBottomSheet;
 
-    .line 176
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -134,16 +122,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 181
     :cond_2
     :goto_0
     return-void
 
-    .line 178
     :catch_0
     move-exception v0
 
-    .line 179
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -156,12 +141,10 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 185
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 186
     .local v1, "parentWidth":I
     iget-object v3, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -175,7 +158,6 @@
 
     div-float v2, v3, v4
 
-    .line 187
     .local v2, "scale":F
     iget-object v3, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -201,7 +183,6 @@
 
     float-to-int v0, v3
 
-    .line 188
     .local v0, "h":I
     iget-object v3, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$3;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -234,10 +215,8 @@
 
     invoke-super {p0, p1, v3}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 189
     return-void
 
-    .line 188
     :cond_0
     const/4 v3, 0x0
 

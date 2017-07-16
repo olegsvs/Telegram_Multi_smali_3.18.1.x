@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PlusSettingsActivity$3;
 
     .prologue
-    .line 1191
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$3$14;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
     .end annotation
 
     .prologue
-    .line 1194
     .local p2, "files":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/String;>;"
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$3$14;->this$1:Lorg/telegram/ui/PlusSettingsActivity$3;
 
@@ -68,7 +66,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/PlusSettingsActivity;->access$6900(Lorg/telegram/ui/PlusSettingsActivity;Ljava/lang/String;)V
 
-    .line 1195
     return-void
 .end method
 
@@ -76,6 +73,5 @@
     .locals 0
 
     .prologue
-    .line 1198
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$25;
 
     .prologue
-    .line 1156
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$25;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,14 +46,12 @@
     .prologue
     const/4 v6, 0x1
 
-    .line 1159
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v1, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultArchive;
 
     if-eqz v1, :cond_0
 
-    .line 1160
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -77,7 +74,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1161
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$25;
 
     iget v1, v1, Lorg/telegram/messenger/query/StickersQuery$25;->val$hide:I
@@ -100,7 +96,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1162
     new-instance v0, Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$25;
@@ -132,7 +127,6 @@
 
     invoke-direct {v0, v3, v2, v1}, Lorg/telegram/ui/Components/StickersArchiveAlert;-><init>(Landroid/content/Context;Lorg/telegram/ui/ActionBar/BaseFragment;Ljava/util/ArrayList;)V
 
-    .line 1163
     .local v0, "alert":Lorg/telegram/ui/Components/StickersArchiveAlert;
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$25$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$25;
 
@@ -144,12 +138,10 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 1166
     .end local v0    # "alert":Lorg/telegram/ui/Components/StickersArchiveAlert;
     :cond_0
     return-void
 
-    .line 1162
     :cond_1
     const/4 v1, 0x0
 

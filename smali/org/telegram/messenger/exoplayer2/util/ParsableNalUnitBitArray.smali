@@ -21,13 +21,10 @@
     .param p3, "limit"    # I
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     invoke-virtual {p0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->reset([BII)V
 
-    .line 40
     return-void
 .end method
 
@@ -35,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 222
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
     if-ltz v0, :cond_1
@@ -72,10 +68,8 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 225
     return-void
 
-    .line 222
     :cond_1
     const/4 v0, 0x0
 
@@ -86,10 +80,8 @@
     .locals 3
 
     .prologue
-    .line 208
     const/4 v0, 0x0
 
-    .line 209
     .local v0, "leadingZeros":I
     :goto_0
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBit()Z
@@ -98,12 +90,10 @@
 
     if-nez v1, :cond_0
 
-    .line 210
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 212
     :cond_0
     const/4 v1, 0x1
 
@@ -133,7 +123,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 216
     const/4 v0, 0x2
 
     if-gt v0, p1, :cond_0
@@ -184,10 +173,8 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 88
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 89
     .local v3, "oldByteOffset":I
     iget v4, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
@@ -195,7 +182,6 @@
 
     add-int v2, v4, v5
 
-    .line 90
     .local v2, "newByteOffset":I
     iget v4, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
@@ -203,19 +189,15 @@
 
     add-int v1, v4, v5
 
-    .line 91
     .local v1, "newBitOffset":I
     const/4 v4, 0x7
 
     if-le v1, v4, :cond_0
 
-    .line 92
     add-int/lit8 v2, v2, 0x1
 
-    .line 93
     add-int/lit8 v1, v1, -0x8
 
-    .line 95
     :cond_0
     add-int/lit8 v0, v3, 0x1
 
@@ -227,26 +209,21 @@
 
     if-ge v2, v4, :cond_2
 
-    .line 96
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->shouldSkipByte(I)Z
 
     move-result v4
 
     if-eqz v4, :cond_1
 
-    .line 98
     add-int/lit8 v2, v2, 0x1
 
-    .line 99
     add-int/lit8 v0, v0, 0x2
 
-    .line 95
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 102
     :cond_2
     iget v4, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteLimit:I
 
@@ -278,18 +255,14 @@
 
     const/4 v5, 0x0
 
-    .line 176
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 177
     .local v2, "initialByteOffset":I
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 178
     .local v1, "initialBitOffset":I
     const/4 v3, 0x0
 
-    .line 179
     .local v3, "leadingZeros":I
     :goto_0
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
@@ -304,12 +277,10 @@
 
     if-nez v6, :cond_0
 
-    .line 180
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_0
 
-    .line 182
     :cond_0
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
@@ -319,15 +290,12 @@
 
     move v0, v4
 
-    .line 183
     .local v0, "hitLimit":Z
     :goto_1
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 184
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 185
     if-nez v0, :cond_2
 
     mul-int/lit8 v6, v3, 0x2
@@ -347,14 +315,12 @@
     :cond_1
     move v0, v5
 
-    .line 182
     goto :goto_1
 
     .restart local v0    # "hitLimit":Z
     :cond_2
     move v4, v5
 
-    .line 185
     goto :goto_2
 .end method
 
@@ -364,7 +330,6 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 111
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readBits(I)I
 
     move-result v1
@@ -387,25 +352,19 @@
     .prologue
     const/16 v10, 0x8
 
-    .line 121
     if-nez p1, :cond_0
 
-    .line 122
     const/4 v4, 0x0
 
-    .line 166
     :goto_0
     return v4
 
-    .line 125
     :cond_0
     const/4 v4, 0x0
 
-    .line 128
     .local v4, "returnValue":I
     div-int/lit8 v5, p1, 0x8
 
-    .line 129
     .local v5, "wholeBytes":I
     const/4 v1, 0x0
 
@@ -413,7 +372,6 @@
     :goto_1
     if-ge v1, v5, :cond_3
 
-    .line 130
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
     add-int/lit8 v7, v7, 0x1
@@ -428,14 +386,12 @@
 
     add-int/lit8 v3, v7, 0x2
 
-    .line 132
     .local v3, "nextByteOffset":I
     :goto_2
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
     if-eqz v7, :cond_2
 
-    .line 133
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->data:[B
 
     iget v8, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
@@ -462,27 +418,22 @@
 
     or-int v0, v7, v8
 
-    .line 138
     .local v0, "byteValue":I
     :goto_3
     add-int/lit8 p1, p1, -0x8
 
-    .line 139
     and-int/lit16 v7, v0, 0xff
 
     shl-int/2addr v7, p1
 
     or-int/2addr v4, v7
 
-    .line 140
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 129
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 130
     .end local v0    # "byteValue":I
     .end local v3    # "nextByteOffset":I
     :cond_1
@@ -492,7 +443,6 @@
 
     goto :goto_2
 
-    .line 136
     .restart local v3    # "nextByteOffset":I
     :cond_2
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->data:[B
@@ -504,18 +454,15 @@
     .restart local v0    # "byteValue":I
     goto :goto_3
 
-    .line 144
     .end local v0    # "byteValue":I
     .end local v3    # "nextByteOffset":I
     :cond_3
     if-lez p1, :cond_5
 
-    .line 145
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
     add-int v2, v7, p1
 
-    .line 146
     .local v2, "nextBit":I
     const/16 v7, 0xff
 
@@ -525,7 +472,6 @@
 
     int-to-byte v6, v7
 
-    .line 147
     .local v6, "writeMask":B
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
@@ -541,12 +487,10 @@
 
     add-int/lit8 v3, v7, 0x2
 
-    .line 149
     .restart local v3    # "nextByteOffset":I
     :goto_4
     if-le v2, v10, :cond_7
 
-    .line 151
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->data:[B
 
     iget v8, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
@@ -575,17 +519,14 @@
 
     or-int/2addr v4, v7
 
-    .line 153
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 162
     :cond_4
     :goto_5
     rem-int/lit8 v7, v2, 0x8
 
     iput v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 165
     .end local v2    # "nextBit":I
     .end local v3    # "nextByteOffset":I
     .end local v6    # "writeMask":B
@@ -594,7 +535,6 @@
 
     goto/16 :goto_0
 
-    .line 147
     .restart local v2    # "nextBit":I
     .restart local v6    # "writeMask":B
     :cond_6
@@ -604,7 +544,6 @@
 
     goto :goto_4
 
-    .line 156
     .restart local v3    # "nextByteOffset":I
     :cond_7
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->data:[B
@@ -623,10 +562,8 @@
 
     or-int/2addr v4, v7
 
-    .line 157
     if-ne v2, v10, :cond_4
 
-    .line 158
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
     goto :goto_5
@@ -636,12 +573,10 @@
     .locals 3
 
     .prologue
-    .line 203
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readExpGolombCodeNum()I
 
     move-result v0
 
-    .line 204
     .local v0, "codeNum":I
     rem-int/lit8 v1, v0, 0x2
 
@@ -668,7 +603,6 @@
     .locals 1
 
     .prologue
-    .line 194
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->readExpGolombCodeNum()I
 
     move-result v0
@@ -683,24 +617,18 @@
     .param p3, "limit"    # I
 
     .prologue
-    .line 50
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->data:[B
 
-    .line 51
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 52
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteLimit:I
 
-    .line 53
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 54
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->assertValidOffset()V
 
-    .line 55
     return-void
 .end method
 
@@ -709,10 +637,8 @@
     .param p1, "n"    # I
 
     .prologue
-    .line 63
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 64
     .local v1, "oldByteOffset":I
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
@@ -722,7 +648,6 @@
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 65
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
     rem-int/lit8 v3, p1, 0x8
@@ -731,28 +656,24 @@
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 66
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
     const/4 v3, 0x7
 
     if-le v2, v3, :cond_0
 
-    .line 67
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 68
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
     add-int/lit8 v2, v2, -0x8
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->bitOffset:I
 
-    .line 70
     :cond_0
     add-int/lit8 v0, v1, 0x1
 
@@ -762,33 +683,27 @@
 
     if-gt v0, v2, :cond_2
 
-    .line 71
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->shouldSkipByte(I)Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 73
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->byteOffset:I
 
-    .line 74
     add-int/lit8 v0, v0, 0x2
 
-    .line 70
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 77
     :cond_2
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableNalUnitBitArray;->assertValidOffset()V
 
-    .line 78
     return-void
 .end method

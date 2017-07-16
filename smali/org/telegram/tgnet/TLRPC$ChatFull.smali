@@ -68,10 +68,8 @@
     .locals 1
 
     .prologue
-    .line 4856
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 4871
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -88,20 +86,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4878
     const/4 v0, 0x0
 
-    .line 4879
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     sparse-switch p1, :sswitch_data_0
 
-    .line 4896
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 4897
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in ChatFull"
@@ -126,51 +120,42 @@
 
     throw v1
 
-    .line 4881
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelFull;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelFull;-><init>()V
 
-    .line 4882
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     goto :goto_0
 
-    .line 4884
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelFull_layer52;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelFull_layer52;-><init>()V
 
-    .line 4885
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     goto :goto_0
 
-    .line 4887
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_chatFull;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_chatFull;-><init>()V
 
-    .line 4888
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     goto :goto_0
 
-    .line 4890
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelFull_layer48;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channelFull_layer48;-><init>()V
 
-    .line 4891
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     goto :goto_0
 
-    .line 4893
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channelFull_old;
 
@@ -180,18 +165,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$ChatFull;
     goto :goto_0
 
-    .line 4899
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 4900
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$ChatFull;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 4902
     :cond_1
     return-object v0
 
-    .line 4879
     nop
 
     :sswitch_data_0

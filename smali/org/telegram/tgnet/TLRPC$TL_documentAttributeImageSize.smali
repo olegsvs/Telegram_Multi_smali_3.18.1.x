@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 811
     const v0, 0x6c37c15c
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 810
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;-><init>()V
 
     return-void
@@ -49,21 +47,18 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 815
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->w:I
 
-    .line 816
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->h:I
 
-    .line 817
     return-void
 .end method
 
@@ -72,21 +67,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 820
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 821
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->w:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 822
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeImageSize;->h:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 823
     return-void
 .end method

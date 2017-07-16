@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoadOperation;
 
     .prologue
-    .line 309
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$1;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 312
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$1;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoadOperation;->access$000(Lorg/telegram/messenger/FileLoadOperation;)I
@@ -66,7 +64,6 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 314
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$1;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -76,15 +73,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 321
     :goto_0
     return-void
 
-    .line 315
     :catch_0
     move-exception v0
 
-    .line 316
     .local v0, "e":Ljava/lang/Exception;
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$1;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -94,7 +88,6 @@
 
     goto :goto_0
 
-    .line 319
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$1;->this$0:Lorg/telegram/messenger/FileLoadOperation;

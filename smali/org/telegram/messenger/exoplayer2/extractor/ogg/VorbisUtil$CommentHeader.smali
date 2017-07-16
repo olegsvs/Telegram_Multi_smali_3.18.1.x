@@ -30,18 +30,13 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 435
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 436
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CommentHeader;->vendor:Ljava/lang/String;
 
-    .line 437
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CommentHeader;->comments:[Ljava/lang/String;
 
-    .line 438
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CommentHeader;->length:I
 
-    .line 439
     return-void
 .end method

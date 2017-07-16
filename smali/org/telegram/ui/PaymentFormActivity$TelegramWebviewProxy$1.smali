@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
     .prologue
-    .line 207
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->val$eventName:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 5
 
     .prologue
-    .line 210
     iget-object v3, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
     iget-object v3, v3, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -60,12 +58,10 @@
 
     if-nez v3, :cond_1
 
-    .line 225
     :cond_0
     :goto_0
     return-void
 
-    .line 213
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->val$eventName:Ljava/lang/String;
 
@@ -77,7 +73,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 215
     :try_start_0
     new-instance v1, Lorg/json/JSONObject;
 
@@ -85,7 +80,6 @@
 
     invoke-direct {v1, v3}, Lorg/json/JSONObject;-><init>(Ljava/lang/String;)V
 
-    .line 216
     .local v1, "jsonObject":Lorg/json/JSONObject;
     const-string/jumbo v3, "credentials"
 
@@ -93,7 +87,6 @@
 
     move-result-object v2
 
-    .line 217
     .local v2, "response":Lorg/json/JSONObject;
     iget-object v3, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
@@ -105,7 +98,6 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 218
     iget-object v3, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
     iget-object v3, v3, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -120,7 +112,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 223
     .end local v1    # "jsonObject":Lorg/json/JSONObject;
     .end local v2    # "response":Lorg/json/JSONObject;
     :goto_1
@@ -132,11 +123,9 @@
 
     goto :goto_0
 
-    .line 219
     :catch_0
     move-exception v0
 
-    .line 220
     .local v0, "e":Ljava/lang/Throwable;
     iget-object v3, p0, Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$TelegramWebviewProxy;
 
@@ -146,7 +135,6 @@
 
     invoke-static {v3, v4}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 221
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 485
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$10;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;-><init>()V
@@ -41,7 +40,6 @@
     .param p3, "dy"    # I
 
     .prologue
-    .line 488
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$10;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/LocationActivity;->access$1700(Lorg/telegram/ui/LocationActivity;)Lorg/telegram/ui/Adapters/LocationActivityAdapter;
@@ -54,12 +52,10 @@
 
     if-nez v1, :cond_1
 
-    .line 496
     :cond_0
     :goto_0
     return-void
 
-    .line 491
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$10;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -71,13 +67,11 @@
 
     move-result v0
 
-    .line 492
     .local v0, "position":I
     const/4 v1, -0x1
 
     if-eq v0, v1, :cond_0
 
-    .line 495
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$10;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/LocationActivity;->access$1900(Lorg/telegram/ui/LocationActivity;I)V

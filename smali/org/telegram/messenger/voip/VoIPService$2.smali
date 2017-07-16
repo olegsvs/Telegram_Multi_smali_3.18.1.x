@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/voip/VoIPService;
 
     .prologue
-    .line 273
     iput-object p1, p0, Lorg/telegram/messenger/voip/VoIPService$2;->this$0:Lorg/telegram/messenger/voip/VoIPService;
 
     iput-object p2, p0, Lorg/telegram/messenger/voip/VoIPService$2;->val$preferences:Landroid/content/SharedPreferences;
@@ -47,20 +46,16 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 276
     if-nez p2, :cond_0
 
-    .line 277
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;
 
     .end local p1    # "response":Lorg/telegram/tgnet/TLObject;
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$TL_dataJSON;->data:Ljava/lang/String;
 
-    .line 278
     .local v0, "data":Ljava/lang/String;
     invoke-static {v0}, Lorg/telegram/messenger/voip/VoIPServerConfig;->setConfig(Ljava/lang/String;)V
 
-    .line 279
     iget-object v1, p0, Lorg/telegram/messenger/voip/VoIPService$2;->val$preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -85,7 +80,6 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 281
     .end local v0    # "data":Ljava/lang/String;
     :cond_0
     return-void

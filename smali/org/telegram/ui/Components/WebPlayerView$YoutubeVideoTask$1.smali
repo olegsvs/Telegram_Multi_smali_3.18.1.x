@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     .prologue
-    .line 677
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->this$1:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->val$functionCodeFinal:Ljava/lang/String;
@@ -45,14 +44,12 @@
     .locals 7
 
     .prologue
-    .line 680
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x15
 
     if-lt v4, v5, :cond_0
 
-    .line 681
     iget-object v4, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->this$1:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     iget-object v4, v4, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
@@ -69,11 +66,9 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/WebView;->evaluateJavascript(Ljava/lang/String;Landroid/webkit/ValueCallback;)V
 
-    .line 698
     :goto_0
     return-void
 
-    .line 690
     :cond_0
     :try_start_0
     new-instance v4, Ljava/lang/StringBuilder;
@@ -102,7 +97,6 @@
 
     move-result-object v3
 
-    .line 691
     .local v3, "javascript":Ljava/lang/String;
     const-string/jumbo v4, "UTF-8"
 
@@ -110,7 +104,6 @@
 
     move-result-object v1
 
-    .line 692
     .local v1, "data":[B
     const/4 v4, 0x0
 
@@ -118,7 +111,6 @@
 
     move-result-object v0
 
-    .line 693
     .local v0, "base64":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;->this$1:Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
@@ -152,14 +144,12 @@
 
     goto :goto_0
 
-    .line 694
     .end local v0    # "base64":Ljava/lang/String;
     .end local v1    # "data":[B
     .end local v3    # "javascript":Ljava/lang/String;
     :catch_0
     move-exception v2
 
-    .line 695
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

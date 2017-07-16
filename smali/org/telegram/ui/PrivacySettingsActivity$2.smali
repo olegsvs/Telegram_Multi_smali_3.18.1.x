@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacySettingsActivity;
 
     .prologue
-    .line 148
     iput-object p1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,20 +50,17 @@
 
     const/4 v1, 0x1
 
-    .line 151
     invoke-virtual {p1}, Landroid/view/View;->isEnabled()Z
 
     move-result v3
 
     if-nez v3, :cond_1
 
-    .line 239
     .end local p1    # "view":Landroid/view/View;
     :cond_0
     :goto_0
     return-void
 
-    .line 154
     .restart local p1    # "view":Landroid/view/View;
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
@@ -75,7 +71,6 @@
 
     if-ne p2, v3, :cond_2
 
-    .line 155
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v2, Lorg/telegram/ui/BlockedUsersActivity;
@@ -86,7 +81,6 @@
 
     goto :goto_0
 
-    .line 156
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -96,7 +90,6 @@
 
     if-ne p2, v3, :cond_3
 
-    .line 157
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v2, Lorg/telegram/ui/SessionsActivity;
@@ -107,7 +100,6 @@
 
     goto :goto_0
 
-    .line 158
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -117,7 +109,6 @@
 
     if-ne p2, v3, :cond_4
 
-    .line 159
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/PrivacySettingsActivity;->getParentActivity()Landroid/app/Activity;
@@ -126,7 +117,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 162
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
@@ -137,7 +127,6 @@
 
     invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 163
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v3, "DeleteAccountTitle"
 
@@ -149,14 +138,12 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 164
     const/4 v3, 0x4
 
     new-array v3, v3, [Ljava/lang/CharSequence;
 
     const-string/jumbo v4, "Months"
 
-    .line 165
     invoke-static {v4, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
@@ -165,7 +152,6 @@
 
     const-string/jumbo v2, "Months"
 
-    .line 166
     invoke-static {v2, v6}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -176,7 +162,6 @@
 
     const/4 v4, 0x6
 
-    .line 167
     invoke-static {v2, v4}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
@@ -185,7 +170,6 @@
 
     const-string/jumbo v2, "Years"
 
-    .line 168
     invoke-static {v2, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
@@ -196,10 +180,8 @@
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/PrivacySettingsActivity$2$1;-><init>(Lorg/telegram/ui/PrivacySettingsActivity$2;)V
 
-    .line 164
     invoke-virtual {v0, v3, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 212
     const-string/jumbo v1, "Cancel"
 
     const v2, 0x7f0700f0
@@ -212,7 +194,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 213
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -223,7 +204,6 @@
 
     goto/16 :goto_0
 
-    .line 214
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_4
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
@@ -234,7 +214,6 @@
 
     if-ne p2, v3, :cond_5
 
-    .line 215
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v3, Lorg/telegram/ui/PrivacyControlActivity;
@@ -245,7 +224,6 @@
 
     goto/16 :goto_0
 
-    .line 216
     :cond_5
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -255,7 +233,6 @@
 
     if-ne p2, v3, :cond_6
 
-    .line 217
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v2, Lorg/telegram/ui/PrivacyControlActivity;
@@ -266,7 +243,6 @@
 
     goto/16 :goto_0
 
-    .line 218
     :cond_6
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -276,7 +252,6 @@
 
     if-ne p2, v3, :cond_7
 
-    .line 219
     iget-object v2, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v3, Lorg/telegram/ui/PrivacyControlActivity;
@@ -287,7 +262,6 @@
 
     goto/16 :goto_0
 
-    .line 220
     :cond_7
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -297,7 +271,6 @@
 
     if-ne p2, v3, :cond_8
 
-    .line 221
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v3, Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -308,7 +281,6 @@
 
     goto/16 :goto_0
 
-    .line 222
     :cond_8
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -318,7 +290,6 @@
 
     if-ne p2, v3, :cond_a
 
-    .line 223
     sget-object v1, Lorg/telegram/messenger/UserConfig;->passcodeHash:Ljava/lang/String;
 
     invoke-virtual {v1}, Ljava/lang/String;->length()I
@@ -327,7 +298,6 @@
 
     if-lez v1, :cond_9
 
-    .line 224
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
     new-instance v2, Lorg/telegram/ui/PasscodeActivity;
@@ -338,7 +308,6 @@
 
     goto/16 :goto_0
 
-    .line 226
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -350,7 +319,6 @@
 
     goto/16 :goto_0
 
-    .line 228
     :cond_a
     iget-object v3, p0, Lorg/telegram/ui/PrivacySettingsActivity$2;->this$0:Lorg/telegram/ui/PrivacySettingsActivity;
 
@@ -360,7 +328,6 @@
 
     if-ne p2, v3, :cond_0
 
-    .line 229
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
@@ -369,14 +336,12 @@
 
     if-ne v3, v1, :cond_b
 
-    .line 230
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v3
 
     iput v2, v3, Lorg/telegram/messenger/MessagesController;->secretWebpagePreview:I
 
-    .line 234
     :goto_1
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -404,12 +369,10 @@
 
     invoke-interface {v3}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 235
     instance-of v3, p1, Lorg/telegram/ui/Cells/TextCheckCell;
 
     if-eqz v3, :cond_0
 
-    .line 236
     check-cast p1, Lorg/telegram/ui/Cells/TextCheckCell;
 
     .end local p1    # "view":Landroid/view/View;
@@ -426,7 +389,6 @@
 
     goto/16 :goto_0
 
-    .line 232
     .restart local p1    # "view":Landroid/view/View;
     :cond_b
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -441,6 +403,5 @@
     :cond_c
     move v1, v2
 
-    .line 236
     goto :goto_2
 .end method

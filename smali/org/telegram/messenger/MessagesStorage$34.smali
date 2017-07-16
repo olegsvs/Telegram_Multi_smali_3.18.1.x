@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1968
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$34;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesStorage$34;->val$ifExist:Z
@@ -49,7 +48,6 @@
     .locals 18
 
     .prologue
-    .line 1972
     :try_start_0
     move-object/from16 v0, p0
 
@@ -57,7 +55,6 @@
 
     if-eqz v15, :cond_1
 
-    .line 1973
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/messenger/MessagesStorage$34;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -108,27 +105,22 @@
 
     move-result-object v2
 
-    .line 1974
     .local v2, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v6
 
-    .line 1975
     .local v6, "exist":Z
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1976
     if-nez v6, :cond_1
 
-    .line 2026
     .end local v2    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v6    # "exist":Z
     :cond_0
     :goto_0
     return-void
 
-    .line 1980
     :cond_1
     move-object/from16 v0, p0
 
@@ -144,7 +136,6 @@
 
     move-result-object v14
 
-    .line 1981
     .local v14, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     new-instance v3, Lorg/telegram/tgnet/NativeByteBuffer;
 
@@ -158,7 +149,6 @@
 
     invoke-direct {v3, v15}, Lorg/telegram/tgnet/NativeByteBuffer;-><init>(I)V
 
-    .line 1982
     .local v3, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     move-object/from16 v0, p0
 
@@ -166,7 +156,6 @@
 
     invoke-virtual {v15, v3}, Lorg/telegram/tgnet/TLRPC$ChatFull;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1983
     const/4 v15, 0x1
 
     move-object/from16 v0, p0
@@ -183,12 +172,10 @@
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 1984
     const/4 v15, 0x2
 
     invoke-virtual {v14, v15, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindByteBuffer(ILorg/telegram/tgnet/NativeByteBuffer;)V
 
-    .line 1985
     const/4 v15, 0x3
 
     move-object/from16 v0, p0
@@ -205,16 +192,12 @@
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 1986
     invoke-virtual {v14}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 1987
     invoke-virtual {v14}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 1988
     invoke-virtual {v3}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1990
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/messenger/MessagesStorage$34;->val$info:Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -223,7 +206,6 @@
 
     if-eqz v15, :cond_0
 
-    .line 1991
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/messenger/MessagesStorage$34;->this$0:Lorg/telegram/messenger/MessagesStorage;
@@ -280,7 +262,6 @@
 
     move-result-object v2
 
-    .line 1992
     .restart local v2    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v2}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -288,14 +269,12 @@
 
     if-eqz v15, :cond_3
 
-    .line 1993
     const/4 v15, 0x3
 
     invoke-virtual {v2, v15}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v8
 
-    .line 1994
     .local v8, "inbox_max":I
     move-object/from16 v0, p0
 
@@ -305,7 +284,6 @@
 
     if-gt v8, v15, :cond_3
 
-    .line 1995
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/messenger/MessagesStorage$34;->val$info:Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -314,7 +292,6 @@
 
     sub-int v7, v15, v8
 
-    .line 1996
     .local v7, "inbox_diff":I
     move-object/from16 v0, p0
 
@@ -324,14 +301,12 @@
 
     if-ge v7, v15, :cond_2
 
-    .line 1997
     move-object/from16 v0, p0
 
     iget-object v15, v0, Lorg/telegram/messenger/MessagesStorage$34;->val$info:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iput v7, v15, Lorg/telegram/tgnet/TLRPC$ChatFull;->unread_count:I
 
-    .line 1999
     :cond_2
     const/4 v15, 0x0
 
@@ -339,7 +314,6 @@
 
     move-result v4
 
-    .line 2000
     .local v4, "dialog_date":I
     const/4 v15, 0x1
 
@@ -347,7 +321,6 @@
 
     move-result v13
 
-    .line 2001
     .local v13, "pts":I
     const/4 v15, 0x2
 
@@ -355,7 +328,6 @@
 
     move-result-wide v10
 
-    .line 2002
     .local v10, "last_mid":J
     const/4 v15, 0x4
 
@@ -363,7 +335,6 @@
 
     move-result v9
 
-    .line 2003
     .local v9, "outbox_max":I
     const/4 v15, 0x5
 
@@ -371,7 +342,6 @@
 
     move-result v12
 
-    .line 2005
     .local v12, "pinned":I
     move-object/from16 v0, p0
 
@@ -387,7 +357,6 @@
 
     move-result-object v14
 
-    .line 2006
     const/4 v15, 0x1
 
     move-object/from16 v0, p0
@@ -416,12 +385,10 @@
 
     invoke-virtual/range {v14 .. v17}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 2007
     const/4 v15, 0x2
 
     invoke-virtual {v14, v15, v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2008
     const/4 v15, 0x3
 
     move-object/from16 v0, p0
@@ -438,12 +405,10 @@
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2009
     const/4 v15, 0x4
 
     invoke-virtual {v14, v15, v10, v11}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 2010
     const/4 v15, 0x5
 
     move-object/from16 v0, p0
@@ -460,7 +425,6 @@
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2011
     const/4 v15, 0x6
 
     move-object/from16 v0, p0
@@ -483,44 +447,36 @@
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2012
     const/4 v15, 0x7
 
     const-wide/16 v16, 0x0
 
     invoke-virtual/range {v14 .. v17}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 2013
     const/16 v15, 0x8
 
     const/16 v16, 0x0
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2014
     const/16 v15, 0x9
 
     invoke-virtual {v14, v15, v13}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2015
     const/16 v15, 0xa
 
     const/16 v16, 0x0
 
     invoke-virtual/range {v14 .. v16}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2016
     const/16 v15, 0xb
 
     invoke-virtual {v14, v15, v12}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 2017
     invoke-virtual {v14}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 2018
     invoke-virtual {v14}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 2021
     .end local v4    # "dialog_date":I
     .end local v7    # "inbox_diff":I
     .end local v8    # "inbox_max":I
@@ -535,14 +491,12 @@
 
     goto/16 :goto_0
 
-    .line 2023
     .end local v2    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v3    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v14    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :catch_0
     move-exception v5
 
-    .line 2024
     .local v5, "e":Ljava/lang/Exception;
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

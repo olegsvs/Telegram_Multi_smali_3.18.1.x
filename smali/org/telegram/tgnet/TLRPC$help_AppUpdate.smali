@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 2451
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -42,20 +41,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2458
     const/4 v0, 0x0
 
-    .line 2459
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$help_AppUpdate;
     sparse-switch p1, :sswitch_data_0
 
-    .line 2467
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 2468
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in help_AppUpdate"
@@ -80,18 +75,15 @@
 
     throw v1
 
-    .line 2461
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$help_AppUpdate;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_help_appUpdate;-><init>()V
 
-    .line 2462
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$help_AppUpdate;
     goto :goto_0
 
-    .line 2464
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_noAppUpdate;
 
@@ -101,18 +93,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$help_AppUpdate;
     goto :goto_0
 
-    .line 2470
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 2471
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$help_AppUpdate;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 2473
     :cond_1
     return-object v0
 
-    .line 2459
     nop
 
     :sswitch_data_0

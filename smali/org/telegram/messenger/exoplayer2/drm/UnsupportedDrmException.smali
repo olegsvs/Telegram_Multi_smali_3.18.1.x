@@ -27,13 +27,10 @@
     .param p1, "reason"    # I
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Exception;-><init>()V
 
-    .line 53
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/drm/UnsupportedDrmException;->reason:I
 
-    .line 54
     return-void
 .end method
 
@@ -43,12 +40,9 @@
     .param p2, "cause"    # Ljava/lang/Exception;
 
     .prologue
-    .line 61
     invoke-direct {p0, p2}, Ljava/lang/Exception;-><init>(Ljava/lang/Throwable;)V
 
-    .line 62
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/drm/UnsupportedDrmException;->reason:I
 
-    .line 63
     return-void
 .end method

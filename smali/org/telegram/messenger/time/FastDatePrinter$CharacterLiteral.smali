@@ -27,13 +27,10 @@
     .param p1, "value"    # C
 
     .prologue
-    .line 626
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 627
     iput-char p1, p0, Lorg/telegram/messenger/time/FastDatePrinter$CharacterLiteral;->mValue:C
 
-    .line 628
     return-void
 .end method
 
@@ -45,12 +42,10 @@
     .param p2, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 643
     iget-char v0, p0, Lorg/telegram/messenger/time/FastDatePrinter$CharacterLiteral;->mValue:C
 
     invoke-virtual {p1, v0}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 644
     return-void
 .end method
 
@@ -58,7 +53,6 @@
     .locals 1
 
     .prologue
-    .line 635
     const/4 v0, 0x1
 
     return v0

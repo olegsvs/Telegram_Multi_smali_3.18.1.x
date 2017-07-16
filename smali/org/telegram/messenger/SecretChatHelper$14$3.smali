@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SecretChatHelper$14;
 
     .prologue
-    .line 1871
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$14$3;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 1874
     iget-object v1, p0, Lorg/telegram/messenger/SecretChatHelper$14$3;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
     iget-object v1, v1, Lorg/telegram/messenger/SecretChatHelper$14;->this$0:Lorg/telegram/messenger/SecretChatHelper;
@@ -50,7 +48,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/SecretChatHelper;->access$402(Lorg/telegram/messenger/SecretChatHelper;Z)Z
 
-    .line 1875
     iget-object v1, p0, Lorg/telegram/messenger/SecretChatHelper$14$3;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
     iget-object v1, v1, Lorg/telegram/messenger/SecretChatHelper$14;->val$context:Landroid/content/Context;
@@ -63,7 +60,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1877
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/SecretChatHelper$14$3;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
 
@@ -73,16 +69,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1882
     :cond_0
     :goto_0
     return-void
 
-    .line 1878
     :catch_0
     move-exception v0
 
-    .line 1879
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

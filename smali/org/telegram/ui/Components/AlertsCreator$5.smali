@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 484
     iput-boolean p1, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$globalAll:Z
 
     iput-object p2, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$selectedColor:[I
@@ -60,7 +59,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 487
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -69,19 +67,16 @@
 
     move-result-object v1
 
-    .line 488
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 489
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$globalAll:Z
 
     if-eqz v2, :cond_1
 
-    .line 490
     const-string/jumbo v2, "MessagesLed"
 
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$selectedColor:[I
@@ -90,31 +85,25 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 496
     :goto_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 497
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_0
 
-    .line 498
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 500
     :cond_0
     return-void
 
-    .line 491
     :cond_1
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$globalGroup:Z
 
     if-eqz v2, :cond_2
 
-    .line 492
     const-string/jumbo v2, "GroupLed"
 
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$5;->val$selectedColor:[I
@@ -125,7 +114,6 @@
 
     goto :goto_0
 
-    .line 494
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 

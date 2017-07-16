@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
     .prologue
-    .line 171
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji$1;->this$1:Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji$1;->val$this$0:Lorg/telegram/ui/Components/EmojiView;
@@ -46,13 +45,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 174
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji$1;->this$1:Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;->access$300(Lorg/telegram/ui/Components/EmojiView$ImageViewEmoji;Ljava/lang/String;)V
 
-    .line 175
     return-void
 .end method

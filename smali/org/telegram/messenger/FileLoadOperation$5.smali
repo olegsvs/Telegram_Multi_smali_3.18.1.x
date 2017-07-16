@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoadOperation;
 
     .prologue
-    .line 610
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     iput-object p2, p0, Lorg/telegram/messenger/FileLoadOperation$5;->val$requestInfo:Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
@@ -47,12 +46,10 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 613
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
     if-eqz v0, :cond_1
 
-    .line 614
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$5;->val$requestInfo:Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
     move-object v0, p1
@@ -61,11 +58,9 @@
 
     invoke-static {v1, v0}, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->access$802(Lorg/telegram/messenger/FileLoadOperation$RequestInfo;Lorg/telegram/tgnet/TLRPC$TL_upload_file;)Lorg/telegram/tgnet/TLRPC$TL_upload_file;
 
-    .line 618
     :goto_0
     if-eqz p1, :cond_0
 
-    .line 619
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLoadOperation;->access$1300(Lorg/telegram/messenger/FileLoadOperation;)I
@@ -76,7 +71,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 620
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -95,7 +89,6 @@
 
     invoke-virtual {v0, v1, v2, v4, v5}, Lorg/telegram/messenger/StatsController;->incrementReceivedBytesCount(IIJ)V
 
-    .line 629
     :cond_0
     :goto_1
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
@@ -104,10 +97,8 @@
 
     invoke-static {v0, v1, p2}, Lorg/telegram/messenger/FileLoadOperation;->access$1400(Lorg/telegram/messenger/FileLoadOperation;Lorg/telegram/messenger/FileLoadOperation$RequestInfo;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
-    .line 630
     return-void
 
-    .line 616
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/FileLoadOperation$5;->val$requestInfo:Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
@@ -119,7 +110,6 @@
 
     goto :goto_0
 
-    .line 621
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -131,7 +121,6 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 622
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -152,7 +141,6 @@
 
     goto :goto_1
 
-    .line 623
     :cond_3
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -164,7 +152,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 624
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0
@@ -185,7 +172,6 @@
 
     goto :goto_1
 
-    .line 625
     :cond_4
     iget-object v0, p0, Lorg/telegram/messenger/FileLoadOperation$5;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -197,7 +183,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 626
     invoke-static {}, Lorg/telegram/messenger/StatsController;->getInstance()Lorg/telegram/messenger/StatsController;
 
     move-result-object v0

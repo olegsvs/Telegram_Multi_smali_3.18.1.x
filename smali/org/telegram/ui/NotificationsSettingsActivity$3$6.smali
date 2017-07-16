@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     .prologue
-    .line 449
     iput-object p1, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$6;->this$1:Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     iput p2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$6;->val$position:I
@@ -47,19 +46,15 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 452
     const/4 v0, 0x0
 
-    .line 453
     .local v0, "minutes":I
     const/4 v2, 0x1
 
     if-ne p2, v2, :cond_1
 
-    .line 454
     const/4 v0, 0x5
 
-    .line 466
     :cond_0
     :goto_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -72,7 +67,6 @@
 
     move-result-object v1
 
-    .line 467
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -86,7 +80,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 468
     iget-object v2, p0, Lorg/telegram/ui/NotificationsSettingsActivity$3$6;->this$1:Lorg/telegram/ui/NotificationsSettingsActivity$3;
 
     iget-object v2, v2, Lorg/telegram/ui/NotificationsSettingsActivity$3;->this$0:Lorg/telegram/ui/NotificationsSettingsActivity;
@@ -99,61 +92,50 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/NotificationsSettingsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 469
     return-void
 
-    .line 455
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :cond_1
     const/4 v2, 0x2
 
     if-ne p2, v2, :cond_2
 
-    .line 456
     const/16 v0, 0xa
 
     goto :goto_0
 
-    .line 457
     :cond_2
     const/4 v2, 0x3
 
     if-ne p2, v2, :cond_3
 
-    .line 458
     const/16 v0, 0x1e
 
     goto :goto_0
 
-    .line 459
     :cond_3
     const/4 v2, 0x4
 
     if-ne p2, v2, :cond_4
 
-    .line 460
     const/16 v0, 0x3c
 
     goto :goto_0
 
-    .line 461
     :cond_4
     const/4 v2, 0x5
 
     if-ne p2, v2, :cond_5
 
-    .line 462
     const/16 v0, 0x78
 
     goto :goto_0
 
-    .line 463
     :cond_5
     const/4 v2, 0x6
 
     if-ne p2, v2, :cond_0
 
-    .line 464
     const/16 v0, 0xf0
 
     goto :goto_0

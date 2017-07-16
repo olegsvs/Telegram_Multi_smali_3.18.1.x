@@ -38,22 +38,18 @@
     .param p3, "locale"    # Ljava/util/Locale;
 
     .prologue
-    .line 641
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/time/FastDateParser$Strategy;-><init>(Lorg/telegram/messenger/time/FastDateParser$1;)V
 
-    .line 642
     iput p1, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->field:I
 
-    .line 643
     invoke-static {p1, p2, p3}, Lorg/telegram/messenger/time/FastDateParser;->access$200(ILjava/util/Calendar;Ljava/util/Locale;)Ljava/util/Map;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->keyValues:Ljava/util/Map;
 
-    .line 644
     return-void
 .end method
 
@@ -65,12 +61,10 @@
     .param p2, "regex"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 651
     const/16 v1, 0x28
 
     invoke-virtual {p2, v1}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 652
     iget-object v1, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->keyValues:Ljava/util/Map;
 
     invoke-interface {v1}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -94,7 +88,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 653
     .local v0, "textKeyValue":Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -108,7 +101,6 @@
 
     goto :goto_0
 
-    .line 655
     .end local v0    # "textKeyValue":Ljava/lang/String;
     :cond_0
     invoke-virtual {p2}, Ljava/lang/StringBuilder;->length()I
@@ -121,7 +113,6 @@
 
     invoke-virtual {p2, v1, v2}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 656
     const/4 v1, 0x1
 
     return v1
@@ -134,7 +125,6 @@
     .param p3, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 664
     iget-object v3, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->keyValues:Ljava/util/Map;
 
     invoke-interface {v3, p3}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -143,22 +133,18 @@
 
     check-cast v0, Ljava/lang/Integer;
 
-    .line 665
     .local v0, "iVal":Ljava/lang/Integer;
     if-nez v0, :cond_1
 
-    .line 666
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1, p3}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 667
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string/jumbo v3, " not in ("
 
     invoke-virtual {v1, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 668
     iget-object v3, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->keyValues:Ljava/util/Map;
 
     invoke-interface {v3}, Ljava/util/Map;->keySet()Ljava/util/Set;
@@ -182,7 +168,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 669
     .local v2, "textKeyValue":Ljava/lang/String;
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -194,7 +179,6 @@
 
     goto :goto_0
 
-    .line 671
     .end local v2    # "textKeyValue":Ljava/lang/String;
     :cond_0
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
@@ -207,7 +191,6 @@
 
     invoke-virtual {v1, v3, v4}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 672
     new-instance v3, Ljava/lang/IllegalArgumentException;
 
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
@@ -218,7 +201,6 @@
 
     throw v3
 
-    .line 674
     .end local v1    # "sb":Ljava/lang/StringBuilder;
     :cond_1
     iget v3, p0, Lorg/telegram/messenger/time/FastDateParser$TextStrategy;->field:I
@@ -229,6 +211,5 @@
 
     invoke-virtual {p2, v3, v4}, Ljava/util/Calendar;->set(II)V
 
-    .line 675
     return-void
 .end method

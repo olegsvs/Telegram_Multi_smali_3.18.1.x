@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatAttachAlert$13;
 
     .prologue
-    .line 994
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$13$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$13;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$13$1;->val$currentImage:Landroid/view/View;
@@ -43,7 +42,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 997
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$13$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$13;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$13;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -52,13 +50,11 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$5802(Lorg/telegram/ui/Components/ChatAttachAlert;Z)Z
 
-    .line 998
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$13$1;->val$currentImage:Landroid/view/View;
 
     const/4 v1, 0x4
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setVisibility(I)V
 
-    .line 999
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PlusChatsStatsActivity;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lorg/telegram/ui/PlusChatsStatsActivity$1;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$1;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PlusChatsStatsActivity;->access$000(Lorg/telegram/ui/PlusChatsStatsActivity;)Ljava/lang/Runnable;
@@ -50,11 +48,9 @@
 
     if-eq v0, p0, :cond_0
 
-    .line 152
     :goto_0
     return-void
 
-    .line 151
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PlusChatsStatsActivity$1;->this$0:Lorg/telegram/ui/PlusChatsStatsActivity;
 

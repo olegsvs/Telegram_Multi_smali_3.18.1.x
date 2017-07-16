@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/Paint/Input$1;
 
     .prologue
-    .line 190
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Input$1$1;->this$1:Lorg/telegram/ui/Components/Paint/Input$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 193
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Input$1$1;->this$1:Lorg/telegram/ui/Components/Paint/Input$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/Input$1;->this$0:Lorg/telegram/ui/Components/Paint/Input;
@@ -54,7 +52,6 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/ui/Components/Paint/Input;->access$002(Lorg/telegram/ui/Components/Paint/Input;D)D
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Input$1$1;->this$1:Lorg/telegram/ui/Components/Paint/Input$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/Paint/Input$1;->this$0:Lorg/telegram/ui/Components/Paint/Input;
@@ -63,6 +60,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/Paint/Input;->access$102(Lorg/telegram/ui/Components/Paint/Input;Z)Z
 
-    .line 195
     return-void
 .end method

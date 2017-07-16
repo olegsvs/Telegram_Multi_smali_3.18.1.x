@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 5
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -29,40 +28,32 @@
 
     const/4 v4, 0x0
 
-    .line 41
     const/16 v2, 0x10
 
     new-array v0, v2, [F
 
-    .line 42
     .local v0, "m":[F
     const/16 v2, 0x9
 
     new-array v1, v2, [F
 
-    .line 43
     .local v1, "v":[F
     invoke-virtual {p0, v1}, Landroid/graphics/Matrix;->getValues([F)V
 
-    .line 45
     aget v2, v1, v3
 
     aput v2, v0, v3
 
-    .line 46
     aget v2, v1, v6
 
     aput v2, v0, v6
 
-    .line 47
     aput v4, v0, v7
 
-    .line 48
     const/4 v2, 0x3
 
     aput v4, v0, v2
 
-    .line 50
     const/4 v2, 0x4
 
     const/4 v3, 0x3
@@ -71,7 +62,6 @@
 
     aput v3, v0, v2
 
-    .line 51
     const/4 v2, 0x5
 
     const/4 v3, 0x4
@@ -80,44 +70,36 @@
 
     aput v3, v0, v2
 
-    .line 52
     const/4 v2, 0x6
 
     aput v4, v0, v2
 
-    .line 53
     const/4 v2, 0x7
 
     aput v4, v0, v2
 
-    .line 55
     const/16 v2, 0x8
 
     aput v4, v0, v2
 
-    .line 56
     const/16 v2, 0x9
 
     aput v4, v0, v2
 
-    .line 57
     const/16 v2, 0xa
 
     aput v5, v0, v2
 
-    .line 58
     const/16 v2, 0xb
 
     aput v4, v0, v2
 
-    .line 60
     const/16 v2, 0xc
 
     aget v3, v1, v7
 
     aput v3, v0, v2
 
-    .line 61
     const/16 v2, 0xd
 
     const/4 v3, 0x5
@@ -126,17 +108,14 @@
 
     aput v3, v0, v2
 
-    .line 62
     const/16 v2, 0xe
 
     aput v4, v0, v2
 
-    .line 63
     const/16 v2, 0xf
 
     aput v5, v0, v2
 
-    .line 65
     return-object v0
 .end method
 
@@ -150,18 +129,14 @@
     .param p5, "far"    # F
 
     .prologue
-    .line 8
     sub-float v2, p1, p0
 
-    .line 9
     .local v2, "r_l":F
     sub-float v3, p3, p2
 
-    .line 10
     .local v3, "t_b":F
     sub-float v0, p5, p4
 
-    .line 11
     .local v0, "f_n":F
     add-float v7, p1, p0
 
@@ -171,7 +146,6 @@
 
     div-float v4, v7, v8
 
-    .line 12
     .local v4, "tx":F
     add-float v7, p3, p2
 
@@ -181,7 +155,6 @@
 
     div-float v5, v7, v8
 
-    .line 13
     .local v5, "ty":F
     add-float v7, p5, p4
 
@@ -191,13 +164,11 @@
 
     div-float v6, v7, v8
 
-    .line 15
     .local v6, "tz":F
     const/16 v7, 0x10
 
     new-array v1, v7, [F
 
-    .line 17
     .local v1, "out":[F
     const/4 v7, 0x0
 
@@ -207,35 +178,30 @@
 
     aput v8, v1, v7
 
-    .line 18
     const/4 v7, 0x1
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 19
     const/4 v7, 0x2
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 20
     const/4 v7, 0x3
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 22
     const/4 v7, 0x4
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 23
     const/4 v7, 0x5
 
     const/high16 v8, 0x40000000    # 2.0f
@@ -244,35 +210,30 @@
 
     aput v8, v1, v7
 
-    .line 24
     const/4 v7, 0x6
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 25
     const/4 v7, 0x7
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 27
     const/16 v7, 0x8
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 28
     const/16 v7, 0x9
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 29
     const/16 v7, 0xa
 
     const/high16 v8, -0x40000000    # -2.0f
@@ -281,36 +242,30 @@
 
     aput v8, v1, v7
 
-    .line 30
     const/16 v7, 0xb
 
     const/4 v8, 0x0
 
     aput v8, v1, v7
 
-    .line 32
     const/16 v7, 0xc
 
     aput v4, v1, v7
 
-    .line 33
     const/16 v7, 0xd
 
     aput v5, v1, v7
 
-    .line 34
     const/16 v7, 0xe
 
     aput v6, v1, v7
 
-    .line 35
     const/16 v7, 0xf
 
     const/high16 v8, 0x3f800000    # 1.0f
 
     aput v8, v1, v7
 
-    .line 37
     return-object v1
 .end method
 
@@ -330,12 +285,10 @@
 
     const/4 v5, 0x0
 
-    .line 69
     const/16 v1, 0x10
 
     new-array v0, v1, [F
 
-    .line 71
     .local v0, "out":[F
     aget v1, p0, v5
 
@@ -373,7 +326,6 @@
 
     aput v1, v0, v5
 
-    .line 72
     aget v1, p0, v6
 
     aget v2, p1, v5
@@ -412,7 +364,6 @@
 
     aput v1, v0, v6
 
-    .line 73
     aget v1, p0, v7
 
     aget v2, p1, v5
@@ -451,7 +402,6 @@
 
     aput v1, v0, v7
 
-    .line 74
     aget v1, p0, v8
 
     aget v2, p1, v5
@@ -490,7 +440,6 @@
 
     aput v1, v0, v8
 
-    .line 76
     aget v1, p0, v5
 
     aget v2, p1, v9
@@ -533,7 +482,6 @@
 
     aput v1, v0, v9
 
-    .line 77
     const/4 v1, 0x5
 
     aget v2, p0, v6
@@ -580,7 +528,6 @@
 
     aput v2, v0, v1
 
-    .line 78
     const/4 v1, 0x6
 
     aget v2, p0, v7
@@ -627,7 +574,6 @@
 
     aput v2, v0, v1
 
-    .line 79
     const/4 v1, 0x7
 
     aget v2, p0, v8
@@ -674,7 +620,6 @@
 
     aput v2, v0, v1
 
-    .line 81
     const/16 v1, 0x8
 
     aget v2, p0, v5
@@ -721,7 +666,6 @@
 
     aput v2, v0, v1
 
-    .line 82
     const/16 v1, 0x9
 
     aget v2, p0, v6
@@ -770,7 +714,6 @@
 
     aput v2, v0, v1
 
-    .line 83
     const/16 v1, 0xa
 
     aget v2, p0, v7
@@ -819,7 +762,6 @@
 
     aput v2, v0, v1
 
-    .line 84
     const/16 v1, 0xb
 
     aget v2, p0, v8
@@ -868,7 +810,6 @@
 
     aput v2, v0, v1
 
-    .line 86
     const/16 v1, 0xc
 
     aget v2, p0, v5
@@ -915,7 +856,6 @@
 
     aput v2, v0, v1
 
-    .line 87
     const/16 v1, 0xd
 
     aget v2, p0, v6
@@ -964,7 +904,6 @@
 
     aput v2, v0, v1
 
-    .line 88
     const/16 v1, 0xe
 
     aget v2, p0, v7
@@ -1013,7 +952,6 @@
 
     aput v2, v0, v1
 
-    .line 89
     const/16 v1, 0xf
 
     aget v2, p0, v8
@@ -1062,6 +1000,5 @@
 
     aput v2, v0, v1
 
-    .line 91
     return-object v0
 .end method

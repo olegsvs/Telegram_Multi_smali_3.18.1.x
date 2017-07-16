@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoPickerActivity$5;
 
     .prologue
-    .line 315
     iput-object p1, p0, Lorg/telegram/ui/PhotoPickerActivity$5$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,61 +52,49 @@
     .param p16, "caption"    # Ljava/lang/String;
 
     .prologue
-    .line 318
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/PhotoPickerActivity;->removeSelfFromStack()V
 
-    .line 319
     new-instance v5, Lorg/telegram/messenger/VideoEditedInfo;
 
     invoke-direct {v5}, Lorg/telegram/messenger/VideoEditedInfo;-><init>()V
 
-    .line 320
     .local v5, "videoEditedInfo":Lorg/telegram/messenger/VideoEditedInfo;
     iput-wide p2, v5, Lorg/telegram/messenger/VideoEditedInfo;->startTime:J
 
-    .line 321
     move-wide/from16 v0, p4
 
     iput-wide v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->endTime:J
 
-    .line 322
     move/from16 v0, p8
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->rotationValue:I
 
-    .line 323
     move/from16 v0, p9
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->originalWidth:I
 
-    .line 324
     move/from16 v0, p10
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->originalHeight:I
 
-    .line 325
     move/from16 v0, p11
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->bitrate:I
 
-    .line 326
     move/from16 v0, p6
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->resultWidth:I
 
-    .line 327
     move/from16 v0, p7
 
     iput v0, v5, Lorg/telegram/messenger/VideoEditedInfo;->resultHeight:I
 
-    .line 328
     iput-object p1, v5, Lorg/telegram/messenger/VideoEditedInfo;->originalPath:Ljava/lang/String;
 
-    .line 329
     iget-object v2, p0, Lorg/telegram/ui/PhotoPickerActivity$5$1;->this$1:Lorg/telegram/ui/PhotoPickerActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/PhotoPickerActivity$5;->this$0:Lorg/telegram/ui/PhotoPickerActivity;
@@ -126,6 +113,5 @@
 
     invoke-interface/range {v3 .. v10}, Lorg/telegram/ui/PhotoPickerActivity$PhotoPickerActivityDelegate;->didSelectVideo(Ljava/lang/String;Lorg/telegram/messenger/VideoEditedInfo;JJLjava/lang/String;)V
 
-    .line 330
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LaunchActivity$9$1;
 
     .prologue
-    .line 1603
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$9$1$1;->this$2:Lorg/telegram/ui/LaunchActivity$9$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1606
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$9$1$1;->this$2:Lorg/telegram/ui/LaunchActivity$9$1;
 
     iget-object v0, v0, Lorg/telegram/ui/LaunchActivity$9$1;->this$1:Lorg/telegram/ui/LaunchActivity$9;
@@ -108,6 +106,5 @@
 
     invoke-static/range {v0 .. v10}, Lorg/telegram/ui/LaunchActivity;->access$1500(Lorg/telegram/ui/LaunchActivity;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ZLjava/lang/Integer;Ljava/lang/String;I)V
 
-    .line 1607
     return-void
 .end method

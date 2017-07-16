@@ -52,24 +52,20 @@
 
     const/4 v8, 0x1
 
-    .line 89
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 45
     new-instance v2, Landroid/graphics/RectF;
 
     invoke-direct {v2}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->rect:Landroid/graphics/RectF;
 
-    .line 52
     new-instance v2, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$1;
 
     invoke-direct {v2, p0}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$1;-><init>(Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->drawable:Landroid/graphics/drawable/Drawable;
 
-    .line 91
     const/high16 v2, 0x40800000    # 4.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -94,7 +90,6 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 92
     const/high16 v2, 0x40800000    # 4.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -119,14 +114,12 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 94
     new-instance v2, Landroid/graphics/Paint;
 
     invoke-direct {v2, v8}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
-    .line 95
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
     const-string/jumbo v3, "featuredStickers_buttonProgress"
@@ -137,21 +130,18 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 96
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Cap;->ROUND:Landroid/graphics/Paint$Cap;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeCap(Landroid/graphics/Paint$Cap;)V
 
-    .line 97
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
     sget-object v3, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 98
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
     const/high16 v3, 0x40000000    # 2.0f
@@ -164,14 +154,12 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 100
     new-instance v2, Landroid/widget/TextView;
 
     invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
-    .line 101
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     const-string/jumbo v3, "chat_emojiPanelTrendingTitle"
@@ -182,12 +170,10 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 102
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v8, v9}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 103
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     const-string/jumbo v3, "fonts/rmedium.ttf"
@@ -198,19 +184,16 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 104
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     sget-object v3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 105
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 106
     iget-object v7, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     const/16 v2, 0x33
@@ -227,14 +210,12 @@
 
     invoke-virtual {p0, v7, v2}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 108
     new-instance v2, Landroid/widget/TextView;
 
     invoke-direct {v2, p1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
-    .line 109
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     const-string/jumbo v3, "chat_emojiPanelTrendingDescription"
@@ -245,26 +226,22 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 110
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     const/high16 v3, 0x41500000    # 13.0f
 
     invoke-virtual {v2, v8, v3}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 111
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     sget-object v3, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v2, v3}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 112
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     invoke-virtual {v2, v8}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 113
     iget-object v7, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     const/16 v2, 0x33
@@ -281,14 +258,12 @@
 
     invoke-virtual {p0, v7, v1}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 115
     new-instance v1, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$2;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell$2;-><init>(Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;Landroid/content/Context;)V
 
     iput-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
-    .line 152
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -305,14 +280,12 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 153
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const/16 v2, 0x11
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 154
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const-string/jumbo v2, "featuredStickers_buttonText"
@@ -323,14 +296,12 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 155
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const/high16 v2, 0x41600000    # 14.0f
 
     invoke-virtual {v1, v8, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 156
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const-string/jumbo v2, "fonts/rmedium.ttf"
@@ -341,7 +312,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 157
     iget-object v7, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const/high16 v1, 0x41e00000    # 28.0f
@@ -360,7 +330,6 @@
 
     invoke-virtual {p0, v7, v0}, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 158
     return-void
 .end method
 
@@ -369,7 +338,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->drawProgress:Z
 
     return v0
@@ -380,7 +348,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->progressAlpha:F
 
     return v0
@@ -392,7 +359,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 34
     iput p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->progressAlpha:F
 
     return p1
@@ -403,7 +369,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->botProgressPaint:Landroid/graphics/Paint;
 
     return-object v0
@@ -414,7 +379,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->rect:Landroid/graphics/RectF;
 
     return-object v0
@@ -425,7 +389,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->angle:I
 
     return v0
@@ -437,7 +400,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 34
     iput p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->angle:I
 
     return p1
@@ -448,7 +410,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;
 
     .prologue
-    .line 34
     iget-wide v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->lastUpdateTime:J
 
     return-wide v0
@@ -460,7 +421,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 34
     iput-wide p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->lastUpdateTime:J
 
     return-wide p1
@@ -472,7 +432,6 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->set:Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
     return-object v0
@@ -482,7 +441,6 @@
     .locals 1
 
     .prologue
-    .line 198
     iget-boolean v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->isInstalled:Z
 
     return v0
@@ -496,7 +454,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 162
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
@@ -517,7 +474,6 @@
 
     invoke-super {p0, v0, v1}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 163
     return-void
 .end method
 
@@ -526,17 +482,14 @@
     .param p1, "onClickListener"    # Landroid/view/View$OnClickListener;
 
     .prologue
-    .line 166
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->hasOnClick:Z
 
-    .line 167
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 168
     return-void
 .end method
 
@@ -545,22 +498,18 @@
     .param p1, "value"    # Z
 
     .prologue
-    .line 202
     iput-boolean p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->drawProgress:Z
 
-    .line 203
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->lastUpdateTime:J
 
-    .line 204
     iget-object v0, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     invoke-virtual {v0}, Landroid/widget/TextView;->invalidate()V
 
-    .line 205
     return-void
 .end method
 
@@ -574,14 +523,12 @@
 
     const/4 v4, 0x0
 
-    .line 171
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
 
     iput-wide v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->lastUpdateTime:J
 
-    .line 172
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -590,7 +537,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 173
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->infoTextView:Landroid/widget/TextView;
 
     const-string/jumbo v2, "Stickers"
@@ -605,28 +551,23 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 174
     if-eqz p2, :cond_0
 
-    .line 175
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->drawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v4, v4, v2, v4}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 179
     :goto_0
     iget-boolean v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->hasOnClick:Z
 
     if-eqz v1, :cond_2
 
-    .line 180
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     invoke-virtual {v1, v5}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 181
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-wide v2, v1, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
@@ -639,14 +580,12 @@
 
     if-eqz v1, :cond_1
 
-    .line 182
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     iget-object v2, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->delDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 183
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const-string/jumbo v2, "StickersRemove"
@@ -663,14 +602,11 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 194
     :goto_1
     iput-object p1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->set:Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 195
     return-void
 
-    .line 177
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->nameTextView:Landroid/widget/TextView;
 
@@ -678,7 +614,6 @@
 
     goto :goto_0
 
-    .line 185
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
@@ -686,7 +621,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 186
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "theme"
@@ -695,7 +629,6 @@
 
     move-result-object v0
 
-    .line 187
     .local v0, "themePrefs":Landroid/content/SharedPreferences;
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
@@ -715,7 +648,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 188
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;
 
     const-string/jumbo v2, "Add"
@@ -734,7 +666,6 @@
 
     goto :goto_1
 
-    .line 191
     .end local v0    # "themePrefs":Landroid/content/SharedPreferences;
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Cells/FeaturedStickerSetInfoCell;->addButton:Landroid/widget/TextView;

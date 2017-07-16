@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LaunchActivity$18;
 
     .prologue
-    .line 2252
     iput-object p1, p0, Lorg/telegram/ui/LaunchActivity$18$1;->this$1:Lorg/telegram/ui/LaunchActivity$18;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2255
     iget-object v0, p0, Lorg/telegram/ui/LaunchActivity$18$1;->this$1:Lorg/telegram/ui/LaunchActivity$18;
 
     iget-object v0, v0, Lorg/telegram/ui/LaunchActivity$18;->val$waitingForLocation:Ljava/util/HashMap;
@@ -70,7 +68,6 @@
 
     check-cast v7, Ljava/util/Map$Entry;
 
-    .line 2256
     .local v7, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lorg/telegram/messenger/MessageObject;>;"
     invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -78,7 +75,6 @@
 
     check-cast v4, Lorg/telegram/messenger/MessageObject;
 
-    .line 2257
     .local v4, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -96,7 +92,6 @@
 
     goto :goto_0
 
-    .line 2259
     .end local v4    # "messageObject":Lorg/telegram/messenger/MessageObject;
     .end local v7    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Lorg/telegram/messenger/MessageObject;>;"
     :cond_0

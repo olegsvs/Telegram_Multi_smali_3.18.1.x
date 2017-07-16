@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     .prologue
-    .line 217
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$6;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 220
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$6;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->isPopupShowing()Z
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView$6;->this$0:Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;
 
     sget-boolean v0, Lorg/telegram/messenger/AndroidUtilities;->usingHardwareInput:Z
@@ -63,11 +60,9 @@
     :goto_0
     invoke-static {v1, v0}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;->access$000(Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;I)V
 
-    .line 223
     :cond_0
     return-void
 
-    .line 221
     :cond_1
     const/4 v0, 0x2
 

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     .prologue
-    .line 81
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersArchiveAlert$1;->this$0:Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +42,7 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 84
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 85
     return-void
 .end method

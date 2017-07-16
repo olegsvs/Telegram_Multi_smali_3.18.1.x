@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CacheControlActivity$4;
 
     .prologue
-    .line 346
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$4$1;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v10, 0x0
 
-    .line 349
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "mainconfig"
@@ -62,7 +60,6 @@
 
     move-result-object v7
 
-    .line 350
     .local v7, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v4, "keep_media"
 
@@ -72,7 +69,6 @@
 
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 351
     iget-object v4, p0, Lorg/telegram/ui/CacheControlActivity$4$1;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
     iget-object v4, v4, Lorg/telegram/ui/CacheControlActivity$4;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -83,7 +79,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 352
     iget-object v4, p0, Lorg/telegram/ui/CacheControlActivity$4$1;->this$1:Lorg/telegram/ui/CacheControlActivity$4;
 
     iget-object v4, v4, Lorg/telegram/ui/CacheControlActivity$4;->this$0:Lorg/telegram/ui/CacheControlActivity;
@@ -94,7 +89,6 @@
 
     invoke-virtual {v4}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 354
     :cond_0
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -110,7 +104,6 @@
 
     move-result-object v6
 
-    .line 355
     .local v6, "pintent":Landroid/app/PendingIntent;
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -122,21 +115,17 @@
 
     check-cast v0, Landroid/app/AlarmManager;
 
-    .line 356
     .local v0, "alarmManager":Landroid/app/AlarmManager;
     if-ne p2, v1, :cond_1
 
-    .line 357
     invoke-virtual {v0, v6}, Landroid/app/AlarmManager;->cancel(Landroid/app/PendingIntent;)V
 
-    .line 361
     :goto_0
     return-void
 
     :cond_1
     move-wide v4, v2
 
-    .line 359
     invoke-virtual/range {v0 .. v6}, Landroid/app/AlarmManager;->setInexactRepeating(IJJLandroid/app/PendingIntent;)V
 
     goto :goto_0

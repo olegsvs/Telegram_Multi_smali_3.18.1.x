@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 738
     iput-object p1, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$selected:[I
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$globalGroup:Z
@@ -55,7 +54,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 741
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$selected:[I
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -70,7 +68,6 @@
 
     aput v2, v3, v4
 
-    .line 743
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -79,13 +76,11 @@
 
     move-result-object v1
 
-    .line 744
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 745
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$globalGroup:Z
 
@@ -100,35 +95,28 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 746
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 747
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     if-eqz v2, :cond_0
 
-    .line 748
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->dismissCurrentDialig()V
 
-    .line 750
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_1
 
-    .line 751
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 753
     :cond_1
     return-void
 
-    .line 745
     :cond_2
     const-string/jumbo v2, "popupAll"
 

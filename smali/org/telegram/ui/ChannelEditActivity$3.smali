@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditActivity;
 
     .prologue
-    .line 263
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
 
     const/4 v3, 0x0
 
-    .line 266
     iget-object v2, p0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ChannelEditActivity;->getParentActivity()Landroid/app/Activity;
@@ -61,11 +59,9 @@
 
     if-nez v2, :cond_0
 
-    .line 294
     :goto_0
     return-void
 
-    .line 269
     :cond_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -77,7 +73,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 273
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v2, p0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
@@ -87,7 +82,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 274
     const/4 v2, 0x3
 
     new-array v1, v2, [Ljava/lang/CharSequence;
@@ -118,7 +112,6 @@
 
     aput-object v2, v1, v5
 
-    .line 279
     .local v1, "items":[Ljava/lang/CharSequence;
     :goto_1
     new-instance v2, Lorg/telegram/ui/ChannelEditActivity$3$1;
@@ -127,7 +120,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 293
     iget-object v2, p0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -138,7 +130,6 @@
 
     goto :goto_0
 
-    .line 276
     .end local v1    # "items":[Ljava/lang/CharSequence;
     :cond_1
     new-array v1, v5, [Ljava/lang/CharSequence;

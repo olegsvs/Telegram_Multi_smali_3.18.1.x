@@ -34,10 +34,8 @@
     .locals 1
 
     .prologue
-    .line 19481
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 19483
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -54,20 +52,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19486
     const/4 v0, 0x0
 
-    .line 19487
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_RecentStickers;
     sparse-switch p1, :sswitch_data_0
 
-    .line 19495
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 19496
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_RecentStickers"
@@ -92,18 +86,15 @@
 
     throw v1
 
-    .line 19489
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_RecentStickers;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickers;-><init>()V
 
-    .line 19490
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_RecentStickers;
     goto :goto_0
 
-    .line 19492
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_recentStickersNotModified;
 
@@ -113,18 +104,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_RecentStickers;
     goto :goto_0
 
-    .line 19498
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 19499
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_RecentStickers;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 19501
     :cond_1
     return-object v0
 
-    .line 19487
     nop
 
     :sswitch_data_0

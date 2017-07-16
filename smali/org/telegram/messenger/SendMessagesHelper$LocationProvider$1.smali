@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     .prologue
-    .line 173
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 176
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$300(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Ljava/lang/Runnable;
@@ -50,11 +48,9 @@
 
     if-eq v0, p0, :cond_0
 
-    .line 187
     :goto_0
     return-void
 
-    .line 179
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
@@ -64,7 +60,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 180
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$400(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Landroid/location/Location;
@@ -73,7 +68,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 181
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;->access$500(Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;)Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$LocationProviderDelegate;
@@ -88,7 +82,6 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$LocationProviderDelegate;->onLocationAcquired(Landroid/location/Location;)V
 
-    .line 186
     :cond_1
     :goto_1
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
@@ -97,7 +90,6 @@
 
     goto :goto_0
 
-    .line 183
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$LocationProvider$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
 

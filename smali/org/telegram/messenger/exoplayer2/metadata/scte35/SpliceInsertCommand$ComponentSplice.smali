@@ -27,16 +27,12 @@
     .param p2, "componentSplicePts"    # J
 
     .prologue
-    .line 140
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 141
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentTag:I
 
-    .line 142
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentSplicePts:J
 
-    .line 143
     return-void
 .end method
 
@@ -47,7 +43,6 @@
     .param p4, "x2"    # Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$1;
 
     .prologue
-    .line 135
     invoke-direct {p0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;-><init>(IJ)V
 
     return-void
@@ -58,7 +53,6 @@
     .param p0, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 151
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;
 
     invoke-virtual {p0}, Landroid/os/Parcel;->readInt()I
@@ -81,16 +75,13 @@
     .param p1, "dest"    # Landroid/os/Parcel;
 
     .prologue
-    .line 146
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentTag:I
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->writeInt(I)V
 
-    .line 147
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/SpliceInsertCommand$ComponentSplice;->componentSplicePts:J
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeLong(J)V
 
-    .line 148
     return-void
 .end method

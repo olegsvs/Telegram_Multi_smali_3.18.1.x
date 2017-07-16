@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 92
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
@@ -55,7 +53,6 @@
 
     move-result-object v3
 
-    .line 93
     .local v3, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
@@ -67,16 +64,13 @@
 
     move-result-object v1
 
-    .line 94
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v3, :cond_2
 
-    .line 95
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 96
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v4, "user_id"
 
@@ -84,7 +78,6 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 97
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$100(Lorg/telegram/ui/Components/ChatAvatarContainer;)Landroid/widget/ImageView;
@@ -93,7 +86,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 98
     const-string/jumbo v4, "dialog_id"
 
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
@@ -108,17 +100,14 @@
 
     invoke-virtual {v0, v4, v6, v7}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 100
     :cond_0
     new-instance v2, Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {v2, v0}, Lorg/telegram/ui/ProfileActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 101
     .local v2, "fragment":Lorg/telegram/ui/ProfileActivity;
     invoke-virtual {v2, v8}, Lorg/telegram/ui/ProfileActivity;->setPlayProfileAnimation(Z)V
 
-    .line 102
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
@@ -127,23 +116,19 @@
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/ChatActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 114
     .end local v0    # "args":Landroid/os/Bundle;
     .end local v2    # "fragment":Lorg/telegram/ui/ProfileActivity;
     :cond_1
     :goto_0
     return-void
 
-    .line 103
     :cond_2
     if-eqz v1, :cond_1
 
-    .line 104
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 105
     .restart local v0    # "args":Landroid/os/Bundle;
     const-string/jumbo v4, "chat_id"
 
@@ -151,12 +136,10 @@
 
     invoke-virtual {v0, v4, v5}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 106
     new-instance v2, Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {v2, v0}, Lorg/telegram/ui/ProfileActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 107
     .restart local v2    # "fragment":Lorg/telegram/ui/ProfileActivity;
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
@@ -170,10 +153,8 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ProfileActivity;->setChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 108
     invoke-virtual {v2, v8}, Lorg/telegram/ui/ProfileActivity;->setPlayProfileAnimation(Z)V
 
-    .line 110
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;
@@ -182,7 +163,6 @@
 
     invoke-virtual {v2, v4}, Lorg/telegram/ui/ProfileActivity;->setParentChatActivity(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 112
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatAvatarContainer$2;->this$0:Lorg/telegram/ui/Components/ChatAvatarContainer;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/ChatAvatarContainer;->access$000(Lorg/telegram/ui/Components/ChatAvatarContainer;)Lorg/telegram/ui/ChatActivity;

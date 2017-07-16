@@ -31,7 +31,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 51
     iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -50,18 +49,15 @@
 
     const/4 v3, 0x1
 
-    .line 59
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v0
 
-    .line 60
     .local v0, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v1
 
-    .line 61
     .local v1, "y":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -69,13 +65,10 @@
 
     if-nez v2, :cond_1
 
-    .line 62
     iput v0, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startX:F
 
-    .line 63
     iput v1, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startY:F
 
-    .line 73
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onInterceptTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -84,7 +77,6 @@
     :goto_0
     return v2
 
-    .line 64
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -98,7 +90,6 @@
 
     if-nez v2, :cond_0
 
-    .line 65
     iget v2, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startX:F
 
     sub-float/2addr v2, v0
@@ -133,17 +124,13 @@
 
     if-ltz v2, :cond_0
 
-    .line 66
     :cond_2
     iput-boolean v3, p0, Lorg/telegram/ui/Components/PipVideoView$1;->dragging:Z
 
-    .line 67
     iput v0, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startX:F
 
-    .line 68
     iput v1, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startY:F
 
-    .line 69
     iget-object v2, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/PipVideoView;->access$000(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/View;
@@ -156,7 +143,6 @@
 
     move v2, v3
 
-    .line 70
     goto :goto_0
 .end method
 
@@ -173,28 +159,23 @@
 
     const/high16 v10, 0x3f000000    # 0.5f
 
-    .line 83
     iget-boolean v8, p0, Lorg/telegram/ui/Components/PipVideoView$1;->dragging:Z
 
     if-nez v8, :cond_0
 
-    .line 121
     :goto_0
     return v6
 
-    .line 86
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawX()F
 
     move-result v4
 
-    .line 87
     .local v4, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getRawY()F
 
     move-result v5
 
-    .line 88
     .local v5, "y":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -204,18 +185,15 @@
 
     if-ne v8, v9, :cond_9
 
-    .line 89
     iget v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startX:F
 
     sub-float v1, v4, v6
 
-    .line 90
     .local v1, "dx":F
     iget v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startY:F
 
     sub-float v2, v5, v6
 
-    .line 91
     .local v2, "dy":F
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
@@ -233,7 +211,6 @@
 
     iput v8, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 92
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -250,7 +227,6 @@
 
     iput v8, v6, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 93
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$200(Lorg/telegram/ui/Components/PipVideoView;)I
@@ -259,7 +235,6 @@
 
     div-int/lit8 v3, v6, 0x2
 
-    .line 94
     .local v3, "maxDiff":I
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
@@ -273,7 +248,6 @@
 
     if-ge v6, v8, :cond_6
 
-    .line 95
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -284,12 +258,10 @@
 
     iput v8, v6, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 99
     :cond_1
     :goto_1
     const/high16 v0, 0x3f800000    # 1.0f
 
-    .line 100
     .local v0, "alpha":F
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
@@ -301,7 +273,6 @@
 
     if-gez v6, :cond_7
 
-    .line 101
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -320,7 +291,6 @@
 
     add-float v0, v11, v6
 
-    .line 105
     :cond_2
     :goto_2
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
@@ -337,7 +307,6 @@
 
     if-eqz v6, :cond_3
 
-    .line 106
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$300(Lorg/telegram/ui/Components/PipVideoView;)Landroid/widget/FrameLayout;
@@ -346,11 +315,9 @@
 
     invoke-virtual {v6, v0}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 108
     :cond_3
     const/4 v3, 0x0
 
-    .line 109
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -363,7 +330,6 @@
 
     if-ge v6, v8, :cond_8
 
-    .line 110
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -374,7 +340,6 @@
 
     iput v8, v6, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 114
     :cond_4
     :goto_3
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
@@ -397,10 +362,8 @@
 
     invoke-interface {v6, v8, v9}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 115
     iput v4, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startX:F
 
-    .line 116
     iput v5, p0, Lorg/telegram/ui/Components/PipVideoView$1;->startY:F
 
     .end local v0    # "alpha":F
@@ -411,10 +374,8 @@
     :goto_4
     move v6, v7
 
-    .line 121
     goto/16 :goto_0
 
-    .line 96
     .restart local v1    # "dx":F
     .restart local v2    # "dy":F
     .restart local v3    # "maxDiff":I
@@ -445,7 +406,6 @@
 
     if-le v6, v8, :cond_1
 
-    .line 97
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -472,7 +432,6 @@
 
     goto/16 :goto_1
 
-    .line 102
     .restart local v0    # "alpha":F
     :cond_7
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
@@ -499,7 +458,6 @@
 
     if-le v6, v8, :cond_2
 
-    .line 103
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -536,7 +494,6 @@
 
     goto/16 :goto_2
 
-    .line 111
     :cond_8
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
@@ -564,7 +521,6 @@
 
     if-le v6, v8, :cond_4
 
-    .line 112
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$100(Lorg/telegram/ui/Components/PipVideoView;)Landroid/view/WindowManager$LayoutParams;
@@ -591,7 +547,6 @@
 
     goto/16 :goto_3
 
-    .line 117
     .end local v0    # "alpha":F
     .end local v1    # "dx":F
     .end local v2    # "dy":F
@@ -603,10 +558,8 @@
 
     if-ne v8, v7, :cond_5
 
-    .line 118
     iput-boolean v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->dragging:Z
 
-    .line 119
     iget-object v6, p0, Lorg/telegram/ui/Components/PipVideoView$1;->this$0:Lorg/telegram/ui/Components/PipVideoView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/PipVideoView;->access$500(Lorg/telegram/ui/Components/PipVideoView;)V
@@ -619,9 +572,7 @@
     .param p1, "disallowIntercept"    # Z
 
     .prologue
-    .line 78
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 79
     return-void
 .end method

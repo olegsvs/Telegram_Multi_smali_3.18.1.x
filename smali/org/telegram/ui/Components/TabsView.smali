@@ -72,10 +72,8 @@
 
     const/4 v3, 0x0
 
-    .line 267
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 98
     const/4 v0, 0x7
 
     new-array v0, v0, [I
@@ -84,29 +82,24 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TabsView;->positions:[I
 
-    .line 270
     new-instance v0, Lorg/telegram/ui/Components/TabsView$2;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/TabsView$2;-><init>(Lorg/telegram/ui/Components/TabsView;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
-    .line 280
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
     if-nez v0, :cond_0
 
-    .line 281
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
-    .line 282
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->loadArray()V
 
-    .line 290
     :cond_0
     new-instance v0, Lorg/telegram/ui/Components/TabsView$3;
 
@@ -114,15 +107,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
-    .line 299
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v0, v3}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 302
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->paintTabs()V
 
-    .line 303
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -131,28 +121,24 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 305
     new-instance v0, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     invoke-direct {v0, p1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
-    .line 306
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     sget-boolean v1, Lorg/telegram/ui/ActionBar/Theme;->plusTabsShouldExpand:Z
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setShouldExpand(Z)V
 
-    .line 307
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setViewPager(Landroid/support/v4/view/ViewPager;)V
 
-    .line 308
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     const/high16 v1, 0x40400000    # 3.0f
@@ -163,22 +149,16 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setIndicatorHeight(I)V
 
-    .line 311
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setDividerColor(I)V
 
-    .line 312
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
-    invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setUnderlineHeight(I)V
 
-    .line 313
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
-    invoke-virtual {v0, v3}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setUnderlineColor(I)V
 
-    .line 316
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
@@ -191,7 +171,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 318
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     new-instance v1, Lorg/telegram/ui/Components/TabsView$4;
@@ -200,7 +179,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setDelegate(Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip$PlusScrollSlidingTabStripDelegate;)V
 
-    .line 336
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     new-instance v1, Lorg/telegram/ui/Components/TabsView$5;
@@ -209,7 +187,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->setOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
-    .line 382
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-static {v4, v5}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -218,16 +195,12 @@
 
     invoke-virtual {p0, v0, v3, v1}, Lorg/telegram/ui/Components/TabsView;->addView(Landroid/view/View;ILandroid/view/ViewGroup$LayoutParams;)V
 
-    .line 385
     invoke-virtual {p0}, Lorg/telegram/ui/Components/TabsView;->forceUpdateTabCounters()V
 
-    .line 386
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->unreadCount()V
 
-    .line 387
     return-void
 
-    .line 98
     :array_0
     .array-data 4
         -0x1
@@ -245,7 +218,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->listener:Lorg/telegram/ui/Components/TabsView$Listener;
 
     return-object v0
@@ -256,7 +228,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
     return-object v0
@@ -267,7 +238,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->unreadCount()V
 
     return-void
@@ -278,7 +248,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/Components/TabsView;->currentPage:I
 
     return v0
@@ -290,7 +259,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 36
     iput p1, p0, Lorg/telegram/ui/Components/TabsView;->currentPage:I
 
     return p1
@@ -301,7 +269,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->saveNewPage()V
 
     return-void
@@ -312,7 +279,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     return-object v0
@@ -323,7 +289,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/TabsView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     return-object v0
@@ -335,14 +300,12 @@
     .prologue
     const/4 v9, 0x1
 
-    .line 103
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v6, p0, Lorg/telegram/ui/Components/TabsView;->tabs_list:Ljava/util/ArrayList;
 
-    .line 104
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v7, "plusconfig"
@@ -353,7 +316,6 @@
 
     move-result-object v2
 
-    .line 105
     .local v2, "plusPreferences":Landroid/content/SharedPreferences;
     const-string/jumbo v6, "tabs_list"
 
@@ -363,11 +325,9 @@
 
     move-result-object v5
 
-    .line 106
     .local v5, "stringArray":Ljava/lang/String;
     if-eqz v5, :cond_1
 
-    .line 107
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -384,7 +344,6 @@
 
     move-result-object v4
 
-    .line 108
     .local v4, "split":[Ljava/lang/String;
     const/4 v1, 0x0
 
@@ -394,11 +353,9 @@
 
     if-ge v1, v6, :cond_a
 
-    .line 110
     :try_start_0
     aget-object v3, v4, v1
 
-    .line 111
     .local v3, "s":Ljava/lang/String;
     invoke-virtual {v3}, Ljava/lang/String;->length()I
 
@@ -420,7 +377,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 108
     .end local v3    # "s":Ljava/lang/String;
     :cond_0
     :goto_1
@@ -428,17 +384,14 @@
 
     goto :goto_0
 
-    .line 112
     :catch_0
     move-exception v0
 
-    .line 113
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 117
     .end local v0    # "e":Ljava/lang/Exception;
     .end local v1    # "i":I
     .end local v4    # "split":[Ljava/lang/String;
@@ -457,10 +410,8 @@
 
     if-ge v1, v6, :cond_9
 
-    .line 120
     if-nez v1, :cond_3
 
-    .line 121
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideAllTab:Z
 
     if-nez v6, :cond_2
@@ -473,18 +424,15 @@
 
     invoke-virtual {v6, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 117
     :cond_2
     :goto_3
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 122
     :cond_3
     if-ne v1, v9, :cond_4
 
-    .line 123
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideUsersTab:Z
 
     if-nez v6, :cond_2
@@ -499,13 +447,11 @@
 
     goto :goto_3
 
-    .line 124
     :cond_4
     const/4 v6, 0x2
 
     if-ne v1, v6, :cond_5
 
-    .line 125
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideGroupsTab:Z
 
     if-nez v6, :cond_2
@@ -520,13 +466,11 @@
 
     goto :goto_3
 
-    .line 126
     :cond_5
     const/4 v6, 0x3
 
     if-ne v1, v6, :cond_6
 
-    .line 127
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideSuperGroupsTab:Z
 
     if-nez v6, :cond_2
@@ -541,13 +485,11 @@
 
     goto :goto_3
 
-    .line 128
     :cond_6
     const/4 v6, 0x4
 
     if-ne v1, v6, :cond_7
 
-    .line 129
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideChannelsTab:Z
 
     if-nez v6, :cond_2
@@ -562,13 +504,11 @@
 
     goto :goto_3
 
-    .line 130
     :cond_7
     const/4 v6, 0x5
 
     if-ne v1, v6, :cond_8
 
-    .line 131
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideBotsTab:Z
 
     if-nez v6, :cond_2
@@ -583,13 +523,11 @@
 
     goto :goto_3
 
-    .line 132
     :cond_8
     const/4 v6, 0x6
 
     if-ne v1, v6, :cond_2
 
-    .line 133
     sget-boolean v6, Lorg/telegram/ui/ActionBar/Theme;->plusHideFavsTab:Z
 
     if-nez v6, :cond_2
@@ -604,11 +542,9 @@
 
     goto :goto_3
 
-    .line 140
     :cond_9
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->storeTabsArrayList()V
 
-    .line 143
     :cond_a
     return-void
 .end method
@@ -623,22 +559,18 @@
 
     const/4 v11, 0x0
 
-    .line 152
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->getTabsArrayList()V
 
-    .line 154
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->clear()V
 
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabs_list:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
 
     move-result v9
 
-    .line 166
     .local v9, "size":I
     const/4 v7, 0x0
 
@@ -646,7 +578,6 @@
     :goto_0
     if-ge v7, v9, :cond_1
 
-    .line 167
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabs_list:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -659,13 +590,11 @@
 
     move-result v5
 
-    .line 168
     .local v5, "p":I
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->tabType:[I
 
     aget v4, v0, v5
 
-    .line 169
     .local v4, "type":I
     const/4 v0, 0x4
 
@@ -687,7 +616,6 @@
 
     const/16 v4, 0x9
 
-    .line 170
     :cond_0
     iget-object v10, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
@@ -707,17 +635,14 @@
 
     invoke-virtual {v10, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 171
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->positions:[I
 
     aput v7, v0, v5
 
-    .line 166
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_0
 
-    .line 174
     .end local v4    # "type":I
     .end local v5    # "p":I
     :cond_1
@@ -729,10 +654,8 @@
 
     if-nez v0, :cond_2
 
-    .line 175
     sput-boolean v12, Lorg/telegram/ui/ActionBar/Theme;->plusHideTabs:Z
 
-    .line 176
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "plusconfig"
@@ -741,13 +664,11 @@
 
     move-result-object v8
 
-    .line 177
     .local v8, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v8}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v6
 
-    .line 178
     .local v6, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v0, "hideTabs"
 
@@ -755,10 +676,8 @@
 
     invoke-interface {v6, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 179
     invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 180
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -777,14 +696,12 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 181
     new-instance v0, Lorg/telegram/ui/Components/TabsView$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/Components/TabsView$1;-><init>(Lorg/telegram/ui/Components/TabsView;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 192
     .end local v6    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v8    # "preferences":Landroid/content/SharedPreferences;
     :cond_2
@@ -792,12 +709,10 @@
 
     invoke-virtual {v0, v13}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
-    .line 193
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, v9}, Landroid/support/v4/view/ViewPager;->setOffscreenPageLimit(I)V
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     new-instance v1, Lorg/telegram/ui/Components/TabsView$TabsAdapter;
@@ -806,10 +721,8 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
-    .line 196
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->updatePagerItem()V
 
-    .line 197
     return-void
 .end method
 
@@ -817,12 +730,10 @@
     .locals 8
 
     .prologue
-    .line 218
     sget-boolean v5, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v5, :cond_2
 
-    .line 219
     iget-object v6, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->chatsTabsBGColor:I
@@ -836,25 +747,19 @@
     :goto_0
     invoke-virtual {v6, v5}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 220
     sget v4, Lorg/telegram/ui/ActionBar/Theme;->chatsHeaderGradient:I
 
-    .line 221
     .local v4, "val":I
     if-lez v4, :cond_0
 
-    .line 223
     packed-switch v4, :pswitch_data_0
 
-    .line 234
     sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 236
     .local v2, "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :goto_1
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->chatsHeaderGradientColor:I
 
-    .line 237
     .local v3, "gradColor":I
     const/4 v5, 0x2
 
@@ -870,13 +775,11 @@
 
     aput v3, v0, v5
 
-    .line 238
     .local v0, "colors":[I
     new-instance v1, Landroid/graphics/drawable/GradientDrawable;
 
     invoke-direct {v1, v2, v0}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
-    .line 239
     .local v1, "gd":Landroid/graphics/drawable/GradientDrawable;
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->chatsTabsBGColor:I
 
@@ -884,12 +787,10 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 240
     iget-object v5, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     invoke-virtual {v5, v1}, Landroid/widget/LinearLayout;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 245
     .end local v0    # "colors":[I
     .end local v1    # "gd":Landroid/graphics/drawable/GradientDrawable;
     .end local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
@@ -899,40 +800,32 @@
     :goto_2
     return-void
 
-    .line 219
     :cond_1
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->chatsTabsBGColor:I
 
     goto :goto_0
 
-    .line 225
     .restart local v4    # "val":I
     :pswitch_0
     sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 226
     .restart local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_1
 
-    .line 228
     .end local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_1
     sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->TL_BR:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 229
     .restart local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_1
 
-    .line 231
     .end local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_2
     sget-object v2, Landroid/graphics/drawable/GradientDrawable$Orientation;->BL_TR:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 232
     .restart local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_1
 
-    .line 243
     .end local v2    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     .end local v4    # "val":I
     :cond_2
@@ -948,7 +841,6 @@
 
     goto :goto_2
 
-    .line 223
     nop
 
     :pswitch_data_0
@@ -963,12 +855,10 @@
     .locals 5
 
     .prologue
-    .line 390
     iget v2, p0, Lorg/telegram/ui/Components/TabsView;->currentPage:I
 
     sput v2, Lorg/telegram/ui/ActionBar/Theme;->plusSelectedTab:I
 
-    .line 391
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "plusconfig"
@@ -979,13 +869,11 @@
 
     move-result-object v1
 
-    .line 392
     .local v1, "plusPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 393
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "selectedTab"
 
@@ -993,7 +881,6 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 394
     iget-object v2, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->plusSelectedTab:I
@@ -1010,17 +897,14 @@
 
     sput v2, Lorg/telegram/ui/ActionBar/Theme;->plusDialogType:I
 
-    .line 395
     const-string/jumbo v2, "dialogType"
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->plusDialogType:I
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 396
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 397
     return-void
 .end method
 
@@ -1028,7 +912,6 @@
     .locals 5
 
     .prologue
-    .line 146
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "plusconfig"
@@ -1039,13 +922,11 @@
 
     move-result-object v1
 
-    .line 147
     .local v1, "plusPreferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 148
     .local v0, "mEdit":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "tabs_list"
 
@@ -1061,7 +942,6 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 149
     return-void
 .end method
 
@@ -1069,7 +949,6 @@
     .locals 3
 
     .prologue
-    .line 463
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideFavsTab:Z
 
     if-nez v0, :cond_0
@@ -1088,7 +967,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 464
     :cond_0
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideBotsTab:Z
 
@@ -1108,7 +986,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 465
     :cond_1
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideChannelsTab:Z
 
@@ -1128,11 +1005,9 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 466
     :cond_2
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->unreadCountGroups()V
 
-    .line 467
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideUsersTab:Z
 
     if-nez v0, :cond_3
@@ -1151,7 +1026,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 468
     :cond_3
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideAllTab:Z
 
@@ -1171,7 +1045,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCountAll(Ljava/util/ArrayList;I)V
 
-    .line 469
     :cond_4
     return-void
 .end method
@@ -1193,17 +1066,14 @@
     .local p1, "dialogs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     const/4 v10, 0x0
 
-    .line 478
     const/4 v7, -0x1
 
     if-ne p2, v7, :cond_1
 
-    .line 511
     :cond_0
     :goto_0
     return-void
 
-    .line 481
     :cond_1
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1213,15 +1083,12 @@
 
     move-result-object v5
 
-    .line 482
     .local v5, "plusPreferences":Landroid/content/SharedPreferences;
     const/4 v1, 0x1
 
-    .line 483
     .local v1, "allMuted":Z
     const/4 v6, 0x0
 
-    .line 484
     .local v6, "unreadCount":I
     if-eqz p1, :cond_7
 
@@ -1231,7 +1098,6 @@
 
     if-nez v7, :cond_7
 
-    .line 485
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -1242,14 +1108,12 @@
 
     if-ge v0, v7, :cond_7
 
-    .line 486
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 487
     .local v2, "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v2, :cond_5
 
@@ -1257,7 +1121,6 @@
 
     if-lez v7, :cond_5
 
-    .line 488
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -1268,7 +1131,6 @@
 
     move-result v4
 
-    .line 489
     .local v4, "isMuted":Z
     if-eqz v4, :cond_2
 
@@ -1276,11 +1138,9 @@
 
     if-nez v7, :cond_5
 
-    .line 490
     :cond_2
     iget v3, v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 491
     .local v3, "i":I
     if-nez v3, :cond_3
 
@@ -1314,21 +1174,17 @@
 
     const/4 v3, 0x1
 
-    .line 492
     :cond_3
     if-lez v3, :cond_5
 
-    .line 493
     sget-boolean v7, Lorg/telegram/ui/ActionBar/Theme;->plusTabsCountersCountChats:Z
 
     if-eqz v7, :cond_6
 
-    .line 494
     if-lez v3, :cond_4
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 498
     :cond_4
     :goto_2
     if-lez v3, :cond_5
@@ -1337,7 +1193,6 @@
 
     const/4 v1, 0x0
 
-    .line 485
     .end local v3    # "i":I
     .end local v4    # "isMuted":Z
     :cond_5
@@ -1345,7 +1200,6 @@
 
     goto :goto_1
 
-    .line 496
     .restart local v3    # "i":I
     .restart local v4    # "isMuted":Z
     :cond_6
@@ -1353,7 +1207,6 @@
 
     goto :goto_2
 
-    .line 506
     .end local v0    # "a":I
     .end local v2    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v3    # "i":I
@@ -1377,7 +1230,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 508
     :cond_8
     iget-object v7, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
@@ -1389,7 +1241,6 @@
 
     invoke-virtual {v7, v6}, Lorg/telegram/ui/Components/TabsView$Tab;->setUnread(I)V
 
-    .line 509
     iget-object v7, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     iget-boolean v8, p0, Lorg/telegram/ui/Components/TabsView;->force:Z
@@ -1416,17 +1267,14 @@
     .local p1, "dialogs":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     const/4 v10, 0x0
 
-    .line 515
     const/4 v7, -0x1
 
     if-ne p2, v7, :cond_1
 
-    .line 553
     :cond_0
     :goto_0
     return-void
 
-    .line 518
     :cond_1
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1436,15 +1284,12 @@
 
     move-result-object v5
 
-    .line 520
     .local v5, "plusPreferences":Landroid/content/SharedPreferences;
     const/4 v1, 0x1
 
-    .line 521
     .local v1, "allMuted":Z
     const/4 v6, 0x0
 
-    .line 523
     .local v6, "unreadCount":I
     if-eqz p1, :cond_7
 
@@ -1454,7 +1299,6 @@
 
     if-nez v7, :cond_7
 
-    .line 524
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -1465,14 +1309,12 @@
 
     if-ge v0, v7, :cond_7
 
-    .line 525
     invoke-virtual {p1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v2
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 526
     .local v2, "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v2, :cond_5
 
@@ -1480,7 +1322,6 @@
 
     if-lez v7, :cond_5
 
-    .line 527
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -1491,7 +1332,6 @@
 
     move-result v4
 
-    .line 528
     .local v4, "isMuted":Z
     if-eqz v4, :cond_2
 
@@ -1499,11 +1339,9 @@
 
     if-nez v7, :cond_5
 
-    .line 529
     :cond_2
     iget v3, v2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 530
     .local v3, "i":I
     if-nez v3, :cond_3
 
@@ -1537,21 +1375,17 @@
 
     const/4 v3, 0x1
 
-    .line 531
     :cond_3
     if-lez v3, :cond_5
 
-    .line 532
     sget-boolean v7, Lorg/telegram/ui/ActionBar/Theme;->plusTabsCountersCountChats:Z
 
     if-eqz v7, :cond_6
 
-    .line 533
     if-lez v3, :cond_4
 
     add-int/lit8 v6, v6, 0x1
 
-    .line 537
     :cond_4
     :goto_2
     if-lez v3, :cond_5
@@ -1560,7 +1394,6 @@
 
     const/4 v1, 0x0
 
-    .line 524
     .end local v3    # "i":I
     .end local v4    # "isMuted":Z
     :cond_5
@@ -1568,7 +1401,6 @@
 
     goto :goto_1
 
-    .line 535
     .restart local v3    # "i":I
     .restart local v4    # "isMuted":Z
     :cond_6
@@ -1576,7 +1408,6 @@
 
     goto :goto_2
 
-    .line 546
     .end local v0    # "a":I
     .end local v2    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v3    # "i":I
@@ -1600,7 +1431,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 548
     :cond_8
     iget-object v7, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
@@ -1612,14 +1442,12 @@
 
     invoke-virtual {v7, v6}, Lorg/telegram/ui/Components/TabsView$Tab;->setUnread(I)V
 
-    .line 549
     iget-object v7, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     iget-boolean v8, p0, Lorg/telegram/ui/Components/TabsView;->force:Z
 
     invoke-virtual {v7, p2, v6, v1, v8}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->updateCounter(IIZZ)V
 
-    .line 550
     iput-boolean v10, p0, Lorg/telegram/ui/Components/TabsView;->force:Z
 
     goto/16 :goto_0
@@ -1629,7 +1457,6 @@
     .locals 3
 
     .prologue
-    .line 472
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideGroupsTab:Z
 
     if-nez v0, :cond_0
@@ -1653,7 +1480,6 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 473
     :cond_0
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideSuperGroupsTab:Z
 
@@ -1673,11 +1499,9 @@
 
     invoke-direct {p0, v0, v1}, Lorg/telegram/ui/Components/TabsView;->unreadCount(Ljava/util/ArrayList;I)V
 
-    .line 474
     :cond_1
     return-void
 
-    .line 472
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -1692,14 +1516,12 @@
     .locals 3
 
     .prologue
-    .line 256
     iget-object v1, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->size()I
 
     move-result v0
 
-    .line 258
     .local v0, "size":I
     sget-boolean v1, Lorg/telegram/ui/ActionBar/Theme;->plusHideTabs:Z
 
@@ -1710,7 +1532,6 @@
     :goto_0
     sput v1, Lorg/telegram/ui/ActionBar/Theme;->plusDialogType:I
 
-    .line 259
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->plusDialogType:I
 
     const/4 v2, 0x4
@@ -1731,28 +1552,23 @@
 
     if-nez v1, :cond_0
 
-    .line 260
     const/16 v1, 0x9
 
     sput v1, Lorg/telegram/ui/ActionBar/Theme;->plusDialogType:I
 
-    .line 262
     :cond_0
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->plusSelectedTab:I
 
     iput v1, p0, Lorg/telegram/ui/Components/TabsView;->currentPage:I
 
-    .line 263
     iget-object v1, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     iget v2, p0, Lorg/telegram/ui/Components/TabsView;->currentPage:I
 
     invoke-virtual {v1, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 264
     return-void
 
-    .line 258
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/TabsView;->tabsArray:Ljava/util/ArrayList;
 
@@ -1789,12 +1605,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 451
     sget v0, Lorg/telegram/messenger/NotificationCenter;->refreshTabsCounters:I
 
     if-ne p1, v0, :cond_0
 
-    .line 452
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->plusHideTabs:Z
 
     if-nez v0, :cond_0
@@ -1813,10 +1627,8 @@
 
     if-le v0, v1, :cond_0
 
-    .line 453
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->unreadCount()V
 
-    .line 456
     :cond_0
     return-void
 .end method
@@ -1825,12 +1637,10 @@
     .locals 1
 
     .prologue
-    .line 459
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/TabsView;->force:Z
 
-    .line 460
     return-void
 .end method
 
@@ -1838,7 +1648,6 @@
     .locals 1
 
     .prologue
-    .line 400
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     return-object v0
@@ -1848,10 +1657,8 @@
     .locals 2
 
     .prologue
-    .line 435
     invoke-super {p0}, Landroid/widget/FrameLayout;->onAttachedToWindow()V
 
-    .line 436
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1860,7 +1667,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 439
     return-void
 .end method
 
@@ -1868,10 +1674,8 @@
     .locals 2
 
     .prologue
-    .line 428
     invoke-super {p0}, Landroid/widget/FrameLayout;->onDetachedFromWindow()V
 
-    .line 429
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1880,7 +1684,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 431
     return-void
 .end method
 
@@ -1888,10 +1691,8 @@
     .locals 1
 
     .prologue
-    .line 201
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->loadArray()V
 
-    .line 202
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0}, Landroid/support/v4/view/ViewPager;->getAdapter()Landroid/support/v4/view/PagerAdapter;
@@ -1900,7 +1701,6 @@
 
     invoke-virtual {v0}, Landroid/support/v4/view/PagerAdapter;->notifyDataSetChanged()V
 
-    .line 205
     return-void
 .end method
 
@@ -1909,10 +1709,8 @@
     .param p1, "value"    # Lorg/telegram/ui/Components/TabsView$Listener;
 
     .prologue
-    .line 404
     iput-object p1, p0, Lorg/telegram/ui/Components/TabsView;->listener:Lorg/telegram/ui/Components/TabsView$Listener;
 
-    .line 405
     return-void
 .end method
 
@@ -1920,26 +1718,21 @@
     .locals 1
 
     .prologue
-    .line 208
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->tabsContainer:Landroid/widget/LinearLayout;
 
     if-eqz v0, :cond_0
 
-    .line 210
     invoke-direct {p0}, Lorg/telegram/ui/Components/TabsView;->paintTabs()V
 
-    .line 212
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     if-eqz v0, :cond_1
 
-    .line 213
     iget-object v0, p0, Lorg/telegram/ui/Components/TabsView;->pagerSlidingTabStrip:Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PlusPagerSlidingTabStrip;->notifyDataSetChanged()V
 
-    .line 215
     :cond_1
     return-void
 .end method

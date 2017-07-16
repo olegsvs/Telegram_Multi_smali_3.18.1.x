@@ -33,10 +33,8 @@
     .param p1, "includeSecure"    # Z
 
     .prologue
-    .line 466
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 467
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
@@ -44,10 +42,8 @@
     :goto_0
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->codecKind:I
 
-    .line 468
     return-void
 
-    .line 467
     :cond_0
     const/4 v0, 0x0
 
@@ -58,12 +54,10 @@
     .locals 2
 
     .prologue
-    .line 493
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     if-nez v0, :cond_0
 
-    .line 494
     new-instance v0, Landroid/media/MediaCodecList;
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->codecKind:I
@@ -76,7 +70,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
-    .line 496
     :cond_0
     return-void
 .end method
@@ -87,10 +80,8 @@
     .locals 1
 
     .prologue
-    .line 472
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->ensureMediaCodecInfosInitialized()V
 
-    .line 473
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     array-length v0, v0
@@ -103,10 +94,8 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 478
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->ensureMediaCodecInfosInitialized()V
 
-    .line 479
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$MediaCodecListCompatV21;->mediaCodecInfos:[Landroid/media/MediaCodecInfo;
 
     aget-object v0, v0, p1
@@ -120,7 +109,6 @@
     .param p2, "capabilities"    # Landroid/media/MediaCodecInfo$CodecCapabilities;
 
     .prologue
-    .line 489
     const-string/jumbo v0, "secure-playback"
 
     invoke-virtual {p2, v0}, Landroid/media/MediaCodecInfo$CodecCapabilities;->isFeatureSupported(Ljava/lang/String;)Z
@@ -134,7 +122,6 @@
     .locals 1
 
     .prologue
-    .line 484
     const/4 v0, 0x1
 
     return v0

@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 7916
     const v0, 0x3c37bb7a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsKicked;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 7915
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChannelParticipantsFilter;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 7920
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantsKicked;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7921
     return-void
 .end method

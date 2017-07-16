@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$CacheImage;
 
     .prologue
-    .line 1053
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->this$1:Lorg/telegram/messenger/ImageLoader$CacheImage;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$image:Landroid/graphics/drawable/BitmapDrawable;
@@ -51,23 +50,19 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 1056
     iget-object v4, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$image:Landroid/graphics/drawable/BitmapDrawable;
 
     instance-of v4, v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     if-eqz v4, :cond_4
 
-    .line 1057
     const/4 v2, 0x0
 
-    .line 1058
     .local v2, "imageSet":Z
     iget-object v1, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$image:Landroid/graphics/drawable/BitmapDrawable;
 
     check-cast v1, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
-    .line 1059
     .local v1, "fileDrawable":Lorg/telegram/ui/Components/AnimatedFileDrawable;
     const/4 v0, 0x0
 
@@ -81,7 +76,6 @@
 
     if-ge v0, v4, :cond_2
 
-    .line 1060
     iget-object v4, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$finalImageReceiverArray:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -90,7 +84,6 @@
 
     check-cast v3, Lorg/telegram/messenger/ImageReceiver;
 
-    .line 1061
     .local v3, "imgView":Lorg/telegram/messenger/ImageReceiver;
     if-nez v0, :cond_1
 
@@ -111,16 +104,13 @@
 
     if-eqz v4, :cond_0
 
-    .line 1062
     const/4 v2, 0x1
 
-    .line 1059
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1061
     :cond_1
     invoke-virtual {v1}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->makeCopy()Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
@@ -128,25 +118,21 @@
 
     goto :goto_1
 
-    .line 1065
     .end local v3    # "imgView":Lorg/telegram/messenger/ImageReceiver;
     :cond_2
     if-nez v2, :cond_3
 
-    .line 1066
     iget-object v4, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$image:Landroid/graphics/drawable/BitmapDrawable;
 
     check-cast v4, Lorg/telegram/ui/Components/AnimatedFileDrawable;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/AnimatedFileDrawable;->recycle()V
 
-    .line 1074
     .end local v1    # "fileDrawable":Lorg/telegram/ui/Components/AnimatedFileDrawable;
     .end local v2    # "imageSet":Z
     :cond_3
     return-void
 
-    .line 1069
     .end local v0    # "a":I
     :cond_4
     const/4 v0, 0x0
@@ -161,7 +147,6 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 1070
     iget-object v4, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$finalImageReceiverArray:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -170,7 +155,6 @@
 
     check-cast v3, Lorg/telegram/messenger/ImageReceiver;
 
-    .line 1071
     .restart local v3    # "imgView":Lorg/telegram/messenger/ImageReceiver;
     iget-object v4, p0, Lorg/telegram/messenger/ImageLoader$CacheImage$1;->val$image:Landroid/graphics/drawable/BitmapDrawable;
 
@@ -184,7 +168,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmapByKey(Landroid/graphics/drawable/BitmapDrawable;Ljava/lang/String;ZZ)Z
 
-    .line 1069
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2

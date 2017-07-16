@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 138
     iput-object p2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 139
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 148
     iget-object v0, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ConvertGroupActivity;->access$200(Lorg/telegram/ui/ConvertGroupActivity;)I
@@ -61,7 +57,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 191
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ConvertGroupActivity;->access$000(Lorg/telegram/ui/ConvertGroupActivity;)I
@@ -70,12 +65,10 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 196
     :cond_0
     :goto_0
     return v0
 
-    .line 193
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
@@ -93,7 +86,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 194
     :cond_2
     const/4 v0, 0x1
 
@@ -105,7 +97,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 143
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
@@ -135,25 +126,21 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 169
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v2
 
     packed-switch v2, :pswitch_data_0
 
-    .line 187
     :cond_0
     :goto_0
     return-void
 
-    .line 171
     :pswitch_0
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 172
     .local v1, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
@@ -163,7 +150,6 @@
 
     if-ne p2, v2, :cond_0
 
-    .line 173
     const-string/jumbo v2, "ConvertGroup"
 
     const v3, 0x7f07019c
@@ -178,14 +164,12 @@
 
     goto :goto_0
 
-    .line 177
     .end local v1    # "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     :pswitch_1
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 178
     .local v0, "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
@@ -195,7 +179,6 @@
 
     if-ne p2, v2, :cond_1
 
-    .line 179
     const-string/jumbo v2, "ConvertGroupInfo2"
 
     const v3, 0x7f0701a0
@@ -210,7 +193,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 180
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0200ae
@@ -225,7 +207,6 @@
 
     goto :goto_0
 
-    .line 181
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->this$0:Lorg/telegram/ui/ConvertGroupActivity;
 
@@ -235,7 +216,6 @@
 
     if-ne p2, v2, :cond_0
 
-    .line 182
     const-string/jumbo v2, "ConvertGroupInfo3"
 
     const v3, 0x7f0701a1
@@ -250,7 +230,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 183
     iget-object v2, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v3, 0x7f0200af
@@ -265,7 +244,6 @@
 
     goto :goto_0
 
-    .line 169
     nop
 
     :pswitch_data_0
@@ -281,17 +259,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 154
     packed-switch p2, :pswitch_data_0
 
-    .line 161
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v1, p0, Lorg/telegram/ui/ConvertGroupActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 164
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -300,7 +275,6 @@
 
     return-object v1
 
-    .line 156
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -309,7 +283,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 157
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -321,7 +294,6 @@
 
     goto :goto_0
 
-    .line 154
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

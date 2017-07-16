@@ -20,7 +20,6 @@
 # instance fields
 .field final synthetic this$1:Lorg/telegram/messenger/query/SearchQuery$3$1;
 
-.field final synthetic val$inlineDatesCopy:Ljava/util/HashMap;
 
 .field final synthetic val$topPeers:Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;
 
@@ -31,12 +30,10 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/query/SearchQuery$3$1;
 
     .prologue
-    .line 351
     iput-object p1, p0, Lorg/telegram/messenger/query/SearchQuery$3$1$1;->this$1:Lorg/telegram/messenger/query/SearchQuery$3$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/SearchQuery$3$1$1;->val$topPeers:Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;
 
-    iput-object p3, p0, Lorg/telegram/messenger/query/SearchQuery$3$1$1;->val$inlineDatesCopy:Ljava/util/HashMap;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -51,7 +48,6 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 355
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 356
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v9
@@ -84,7 +79,6 @@
 
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteDatabase;->beginTransaction()V
 
-    .line 357
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v9
@@ -103,7 +97,6 @@
 
     invoke-virtual {v9, v11, v12, v13, v14}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 359
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v9
@@ -118,7 +111,6 @@
 
     move-result-object v7
 
-    .line 360
     .local v7, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     const/4 v0, 0x0
 
@@ -134,7 +126,6 @@
 
     if-ge v0, v9, :cond_5
 
-    .line 362
     iget-object v9, p0, Lorg/telegram/messenger/query/SearchQuery$3$1$1;->val$topPeers:Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;
 
     iget-object v9, v9, Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;->categories:Ljava/util/ArrayList;
@@ -145,18 +136,14 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;
 
-    .line 363
     .local v2, "category":Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;
     iget-object v9, v2, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->category:Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
 
-    instance-of v9, v9, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryBotsInline;
 
     if-eqz v9, :cond_0
 
-    .line 364
     const/4 v8, 0x1
 
-    .line 368
     .local v8, "type":I
     :goto_1
     const/4 v1, 0x0
@@ -171,7 +158,6 @@
 
     if-ge v1, v9, :cond_4
 
-    .line 369
     iget-object v9, v2, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->peers:Ljava/util/ArrayList;
 
     invoke-virtual {v9, v1}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -180,7 +166,6 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
-    .line 371
     .local v6, "peer":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     iget-object v9, v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -188,15 +173,12 @@
 
     if-eqz v9, :cond_1
 
-    .line 372
     iget-object v9, v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget v4, v9, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:I
 
-    .line 378
     .local v4, "did":I
     :goto_3
-    iget-object v9, p0, Lorg/telegram/messenger/query/SearchQuery$3$1$1;->val$inlineDatesCopy:Ljava/util/HashMap;
 
     invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -208,28 +190,23 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 379
     .local v3, "date":Ljava/lang/Integer;
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 380
     const/4 v9, 0x1
 
     invoke-virtual {v7, v9, v4}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 381
     const/4 v9, 0x2
 
     invoke-virtual {v7, v9, v8}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 382
     const/4 v9, 0x3
 
     iget-wide v12, v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
     invoke-virtual {v7, v9, v12, v13}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindDouble(ID)V
 
-    .line 383
     const/4 v11, 0x4
 
     if-eqz v3, :cond_3
@@ -241,15 +218,12 @@
     :goto_4
     invoke-virtual {v7, v11, v9}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 384
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 368
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 366
     .end local v1    # "b":I
     .end local v3    # "date":Ljava/lang/Integer;
     .end local v4    # "did":I
@@ -261,7 +235,6 @@
     .restart local v8    # "type":I
     goto :goto_1
 
-    .line 373
     .restart local v1    # "b":I
     .restart local v6    # "peer":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     :cond_1
@@ -271,7 +244,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 374
     iget-object v9, v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget v9, v9, Lorg/telegram/tgnet/TLRPC$Peer;->chat_id:I
@@ -281,7 +253,6 @@
     .restart local v4    # "did":I
     goto :goto_3
 
-    .line 376
     .end local v4    # "did":I
     :cond_2
     iget-object v9, v6, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -297,10 +268,8 @@
     :cond_3
     move v9, v10
 
-    .line 383
     goto :goto_4
 
-    .line 360
     .end local v3    # "date":Ljava/lang/Integer;
     .end local v4    # "did":I
     .end local v6    # "peer":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
@@ -309,14 +278,12 @@
 
     goto :goto_0
 
-    .line 388
     .end local v1    # "b":I
     .end local v2    # "category":Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;
     .end local v8    # "type":I
     :cond_5
     invoke-virtual {v7}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 390
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v9
@@ -327,7 +294,6 @@
 
     invoke-virtual {v9}, Lorg/telegram/SQLite/SQLiteDatabase;->commitTransaction()V
 
-    .line 391
     new-instance v9, Lorg/telegram/messenger/query/SearchQuery$3$1$1$1;
 
     invoke-direct {v9, p0}, Lorg/telegram/messenger/query/SearchQuery$3$1$1$1;-><init>(Lorg/telegram/messenger/query/SearchQuery$3$1$1;)V
@@ -336,17 +302,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 401
     .end local v0    # "a":I
     .end local v7    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_5
     return-void
 
-    .line 398
     :catch_0
     move-exception v5
 
-    .line 399
     .local v5, "e":Ljava/lang/Exception;
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

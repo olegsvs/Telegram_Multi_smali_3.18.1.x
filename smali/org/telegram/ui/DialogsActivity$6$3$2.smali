@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/DialogsActivity$6$3;
 
     .prologue
-    .line 961
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$6$3$2;->this$2:Lorg/telegram/ui/DialogsActivity$6$3;
 
     iput p2, p0, Lorg/telegram/ui/DialogsActivity$6$3$2;->val$which:I
@@ -51,19 +50,16 @@
 
     const/4 v6, 0x0
 
-    .line 964
     iget v1, p0, Lorg/telegram/ui/DialogsActivity$6$3$2;->val$which:I
 
     if-eq v1, v5, :cond_4
 
-    .line 965
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$6$3$2;->this$2:Lorg/telegram/ui/DialogsActivity$6$3;
 
     iget-boolean v1, v1, Lorg/telegram/ui/DialogsActivity$6$3;->val$isChat:Z
 
     if-eqz v1, :cond_3
 
-    .line 966
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -90,7 +86,6 @@
 
     move-result-object v0
 
-    .line 967
     .local v0, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v0, :cond_2
 
@@ -100,7 +95,6 @@
 
     if-eqz v1, :cond_2
 
-    .line 968
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -117,7 +111,6 @@
 
     invoke-virtual {v1, v2, v3, v6}, Lorg/telegram/messenger/MessagesController;->deleteDialog(JI)V
 
-    .line 975
     .end local v0    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity$6$3$2;->this$2:Lorg/telegram/ui/DialogsActivity$6$3;
@@ -126,7 +119,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 976
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -145,7 +137,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/MessagesController;->blockUser(I)V
 
-    .line 978
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
@@ -153,7 +144,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 979
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -180,12 +170,10 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 984
     :cond_1
     :goto_1
     return-void
 
-    .line 970
     .restart local v0    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -228,7 +216,6 @@
 
     goto :goto_0
 
-    .line 973
     .end local v0    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_3
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -249,7 +236,6 @@
 
     goto :goto_0
 
-    .line 982
     :cond_4
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 

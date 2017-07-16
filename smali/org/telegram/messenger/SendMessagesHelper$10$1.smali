@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SendMessagesHelper$10;
 
     .prologue
-    .line 2487
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$10$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$10;
 
     iput p2, p0, Lorg/telegram/messenger/SendMessagesHelper$10$1;->val$msg_id:I
@@ -47,14 +46,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2490
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$10$1;->this$1:Lorg/telegram/messenger/SendMessagesHelper$10;
 
     iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$10;->val$newMsgObj:Lorg/telegram/tgnet/TLRPC$Message;
 
     iput v4, v0, Lorg/telegram/tgnet/TLRPC$Message;->send_state:I
 
-    .line 2491
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -75,6 +72,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2492
     return-void
 .end method

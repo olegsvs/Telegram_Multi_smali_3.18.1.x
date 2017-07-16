@@ -28,20 +28,16 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 235
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$TopView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 236
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 233
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ProfileActivity$TopView;->paint:Landroid/graphics/Paint;
 
-    .line 237
     return-void
 .end method
 
@@ -54,7 +50,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 254
     invoke-virtual {p0}, Lorg/telegram/ui/ProfileActivity$TopView;->getMeasuredHeight()I
 
     move-result v0
@@ -67,7 +62,6 @@
 
     sub-int v6, v0, v2
 
-    .line 255
     .local v6, "height":I
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -83,7 +77,6 @@
 
     invoke-virtual {v0, v2}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 256
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/ProfileActivity$TopView;->getMeasuredWidth()I
 
@@ -109,7 +102,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 257
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$TopView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$300(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -118,7 +110,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$TopView;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$400(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/ui/ActionBar/ActionBarLayout;
@@ -135,7 +126,6 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->drawHeaderShadow(Landroid/graphics/Canvas;I)V
 
-    .line 260
     :cond_1
     return-void
 .end method
@@ -146,7 +136,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 241
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
@@ -182,10 +171,8 @@
 
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/ProfileActivity$TopView;->setMeasuredDimension(II)V
 
-    .line 242
     return-void
 
-    .line 241
     :cond_0
     const/4 v0, 0x0
 
@@ -197,20 +184,16 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 246
     iget v0, p0, Lorg/telegram/ui/ProfileActivity$TopView;->currentColor:I
 
     if-eq p1, v0, :cond_0
 
-    .line 247
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$TopView;->paint:Landroid/graphics/Paint;
 
     invoke-virtual {v0, p1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 248
     invoke-virtual {p0}, Lorg/telegram/ui/ProfileActivity$TopView;->invalidate()V
 
-    .line 250
     :cond_0
     return-void
 .end method

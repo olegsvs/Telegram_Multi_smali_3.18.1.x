@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     .prologue
-    .line 260
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$2;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 263
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$2;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     iget-object v3, v0, Lorg/telegram/ui/ActionBar/AlertDialog$1;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -91,7 +89,6 @@
     :goto_0
     invoke-static {v3, v2, v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$1400(Lorg/telegram/ui/ActionBar/AlertDialog;IZ)V
 
-    .line 264
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$2;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/AlertDialog$1;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -151,7 +148,6 @@
     :cond_0
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$1400(Lorg/telegram/ui/ActionBar/AlertDialog;IZ)V
 
-    .line 265
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$1$2;->this$1:Lorg/telegram/ui/ActionBar/AlertDialog$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ActionBar/AlertDialog$1;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -162,12 +158,10 @@
 
     invoke-virtual {v0}, Landroid/widget/ScrollView;->invalidate()V
 
-    .line 266
     return-void
 
     :cond_1
     move v0, v2
 
-    .line 263
     goto :goto_0
 .end method

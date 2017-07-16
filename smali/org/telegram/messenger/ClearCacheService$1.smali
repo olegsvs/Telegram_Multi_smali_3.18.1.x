@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ClearCacheService;
 
     .prologue
-    .line 37
     iput-object p1, p0, Lorg/telegram/messenger/ClearCacheService$1;->this$0:Lorg/telegram/messenger/ClearCacheService;
 
     iput p2, p0, Lorg/telegram/messenger/ClearCacheService$1;->val$keepMedia:I
@@ -45,12 +44,10 @@
     .locals 20
 
     .prologue
-    .line 40
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v4
 
-    .line 41
     .local v4, "currentTime":J
     const v14, 0x5265c00
 
@@ -67,7 +64,6 @@
 
     int-to-long v6, v13
 
-    .line 42
     .local v6, "diff":J
     invoke-static {}, Lorg/telegram/messenger/ImageLoader;->getInstance()Lorg/telegram/messenger/ImageLoader;
 
@@ -77,7 +73,6 @@
 
     move-result-object v11
 
-    .line 43
     .local v11, "paths":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Ljava/io/File;>;"
     invoke-virtual {v11}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
 
@@ -101,7 +96,6 @@
 
     check-cast v9, Ljava/util/Map$Entry;
 
-    .line 44
     .local v9, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/io/File;>;"
     invoke-interface {v9}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -117,7 +111,6 @@
 
     if-eq v13, v15, :cond_0
 
-    .line 48
     :try_start_0
     invoke-interface {v9}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -129,11 +122,9 @@
 
     move-result-object v2
 
-    .line 49
     .local v2, "array":[Ljava/io/File;
     if-eqz v2, :cond_0
 
-    .line 50
     const/4 v3, 0x0
 
     .local v3, "b":I
@@ -142,10 +133,8 @@
 
     if-ge v3, v13, :cond_0
 
-    .line 51
     aget-object v10, v2, v3
 
-    .line 52
     .local v10, "f":Ljava/io/File;
     invoke-virtual {v10}, Ljava/io/File;->isFile()Z
 
@@ -153,7 +142,6 @@
 
     if-eqz v13, :cond_1
 
-    .line 53
     invoke-virtual {v10}, Ljava/io/File;->getName()Ljava/lang/String;
 
     move-result-object v13
@@ -166,14 +154,12 @@
 
     if-eqz v13, :cond_3
 
-    .line 50
     :cond_1
     :goto_3
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_2
 
-    .line 41
     .end local v2    # "array":[Ljava/io/File;
     .end local v3    # "b":I
     .end local v6    # "diff":J
@@ -185,7 +171,6 @@
 
     goto :goto_0
 
-    .line 56
     .restart local v2    # "array":[Ljava/io/File;
     .restart local v3    # "b":I
     .restart local v6    # "diff":J
@@ -201,7 +186,6 @@
 
     if-lt v13, v15, :cond_5
 
-    .line 58
     :try_start_1
     invoke-virtual {v10}, Ljava/io/File;->getPath()Ljava/lang/String;
 
@@ -211,7 +195,6 @@
 
     move-result-object v12
 
-    .line 59
     .local v12, "stat":Landroid/system/StructStat;
     iget-wide v0, v12, Landroid/system/StructStat;->st_atime:J
 
@@ -223,7 +206,6 @@
 
     if-eqz v13, :cond_4
 
-    .line 60
     iget-wide v0, v12, Landroid/system/StructStat;->st_atime:J
 
     move-wide/from16 v16, v0
@@ -234,7 +216,6 @@
 
     if-gez v13, :cond_1
 
-    .line 61
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
@@ -242,12 +223,10 @@
 
     goto :goto_3
 
-    .line 66
     .end local v12    # "stat":Landroid/system/StructStat;
     :catch_0
     move-exception v8
 
-    .line 67
     .local v8, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-static {v8}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -256,7 +235,6 @@
 
     goto :goto_3
 
-    .line 75
     .end local v2    # "array":[Ljava/io/File;
     .end local v3    # "b":I
     .end local v8    # "e":Ljava/lang/Exception;
@@ -264,13 +242,11 @@
     :catch_1
     move-exception v8
 
-    .line 76
     .local v8, "e":Ljava/lang/Throwable;
     invoke-static {v8}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 63
     .end local v8    # "e":Ljava/lang/Throwable;
     .restart local v2    # "array":[Ljava/io/File;
     .restart local v3    # "b":I
@@ -288,7 +264,6 @@
 
     if-gez v13, :cond_1
 
-    .line 64
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_0
@@ -296,7 +271,6 @@
 
     goto :goto_3
 
-    .line 69
     .end local v12    # "stat":Landroid/system/StructStat;
     :cond_5
     :try_start_4
@@ -310,14 +284,12 @@
 
     if-gez v13, :cond_1
 
-    .line 70
     invoke-virtual {v10}, Ljava/io/File;->delete()Z
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_1
 
     goto :goto_3
 
-    .line 79
     .end local v2    # "array":[Ljava/io/File;
     .end local v3    # "b":I
     .end local v9    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/io/File;>;"

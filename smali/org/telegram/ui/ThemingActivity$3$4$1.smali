@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ThemingActivity$3$4;
 
     .prologue
-    .line 309
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$4$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemingActivity$3$4$1;->val$xmlFile:Ljava/lang/String;
@@ -51,13 +50,11 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 312
     new-instance v0, Lorg/telegram/ui/ThemingActivity$3$4$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ThemingActivity$3$4$1$1;-><init>(Lorg/telegram/ui/ThemingActivity$3$4$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 322
     return-void
 .end method

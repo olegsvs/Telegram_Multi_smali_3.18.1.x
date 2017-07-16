@@ -77,7 +77,6 @@
     .locals 1
 
     .prologue
-    .line 57
     const/4 v0, 0x3
 
     new-array v0, v0, [B
@@ -103,12 +102,10 @@
     .param p1, "exposeId3"    # Z
 
     .prologue
-    .line 89
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;-><init>(ZLjava/lang/String;)V
 
-    .line 90
     return-void
 .end method
 
@@ -118,10 +115,8 @@
     .param p2, "language"    # Ljava/lang/String;
 
     .prologue
-    .line 96
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 97
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
     const/4 v1, 0x7
@@ -132,7 +127,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
 
-    .line 98
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     sget-object v1, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->ID3_IDENTIFIER:[B
@@ -147,16 +141,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 99
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setFindingSampleState()V
 
-    .line 100
     iput-boolean p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->exposeId3:Z
 
-    .line 101
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->language:Ljava/lang/String;
 
-    .line 102
     return-void
 .end method
 
@@ -167,7 +157,6 @@
     .param p3, "targetLength"    # I
 
     .prologue
-    .line 166
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v1
@@ -180,20 +169,17 @@
 
     move-result v0
 
-    .line 167
     .local v0, "bytesToRead":I
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
     invoke-virtual {p1, p2, v1, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
-    .line 168
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 169
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
     if-ne v1, p3, :cond_0
@@ -218,16 +204,13 @@
 
     const/16 v6, 0x100
 
-    .line 224
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 225
     .local v0, "adtsData":[B
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->getPosition()I
 
     move-result v3
 
-    .line 226
     .local v3, "position":I
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit()I
 
@@ -236,13 +219,11 @@
     .local v2, "endOffset":I
     move v4, v3
 
-    .line 227
     .end local v3    # "position":I
     .local v4, "position":I
     :goto_0
     if-ge v4, v2, :cond_3
 
-    .line 228
     add-int/lit8 v3, v4, 0x1
 
     .end local v4    # "position":I
@@ -251,7 +232,6 @@
 
     and-int/lit16 v1, v5, 0xff
 
-    .line 229
     .local v1, "data":I
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->matchState:I
 
@@ -265,7 +245,6 @@
 
     if-eq v1, v5, :cond_1
 
-    .line 230
     and-int/lit8 v5, v1, 0x1
 
     if-nez v5, :cond_0
@@ -275,25 +254,20 @@
     :goto_1
     iput-boolean v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->hasCrc:Z
 
-    .line 231
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setReadingAdtsHeaderState()V
 
-    .line 232
     invoke-virtual {p1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 260
     .end local v1    # "data":I
     :goto_2
     return-void
 
-    .line 230
     .restart local v1    # "data":I
     :cond_0
     const/4 v5, 0x0
 
     goto :goto_1
 
-    .line 235
     :cond_1
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->matchState:I
 
@@ -301,27 +275,22 @@
 
     sparse-switch v5, :sswitch_data_0
 
-    .line 250
     iget v5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->matchState:I
 
     if-eq v5, v6, :cond_2
 
-    .line 253
     iput v6, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->matchState:I
 
-    .line 254
     add-int/lit8 v3, v3, -0x1
 
     :cond_2
     :goto_3
     move v4, v3
 
-    .line 258
     .end local v3    # "position":I
     .restart local v4    # "position":I
     goto :goto_0
 
-    .line 237
     .end local v4    # "position":I
     .restart local v3    # "position":I
     :sswitch_0
@@ -329,7 +298,6 @@
 
     goto :goto_3
 
-    .line 240
     :sswitch_1
     const/16 v5, 0x300
 
@@ -337,7 +305,6 @@
 
     goto :goto_3
 
-    .line 243
     :sswitch_2
     const/16 v5, 0x400
 
@@ -345,16 +312,13 @@
 
     goto :goto_3
 
-    .line 246
     :sswitch_3
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setReadingId3HeaderState()V
 
-    .line 247
     invoke-virtual {p1, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
     goto :goto_2
 
-    .line 259
     .end local v1    # "data":I
     .end local v3    # "position":I
     .restart local v4    # "position":I
@@ -363,12 +327,10 @@
 
     move v3, v4
 
-    .line 260
     .end local v4    # "position":I
     .restart local v3    # "position":I
     goto :goto_2
 
-    .line 235
     :sswitch_data_0
     .sparse-switch
         0x149 -> :sswitch_1
@@ -382,7 +344,6 @@
     .locals 19
 
     .prologue
-    .line 276
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -391,14 +352,12 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
-    .line 278
     move-object/from16 v0, p0
 
     iget-boolean v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->hasOutputFormat:Z
 
     if-nez v2, :cond_2
 
-    .line 279
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -411,13 +370,11 @@
 
     add-int/lit8 v13, v2, 0x1
 
-    .line 280
     .local v13, "audioObjectType":I
     const/4 v2, 0x2
 
     if-eq v13, v2, :cond_0
 
-    .line 290
     const-string/jumbo v2, "AdtsReader"
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -446,10 +403,8 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->w(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 291
     const/4 v13, 0x2
 
-    .line 294
     :cond_0
     move-object/from16 v0, p0
 
@@ -461,7 +416,6 @@
 
     move-result v18
 
-    .line 295
     .local v18, "sampleRateIndex":I
     move-object/from16 v0, p0
 
@@ -471,7 +425,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 296
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -482,7 +435,6 @@
 
     move-result v16
 
-    .line 298
     .local v16, "channelConfig":I
     move/from16 v0, v18
 
@@ -492,13 +444,11 @@
 
     move-result-object v15
 
-    .line 300
     .local v15, "audioSpecificConfig":[B
     invoke-static {v15}, Lorg/telegram/messenger/exoplayer2/util/CodecSpecificDataUtil;->parseAacAudioSpecificConfig([B)Landroid/util/Pair;
 
     move-result-object v14
 
-    .line 303
     .local v14, "audioParams":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     const/4 v2, 0x0
 
@@ -514,7 +464,6 @@
 
     check-cast v8, Ljava/lang/Integer;
 
-    .line 304
     invoke-virtual {v8}, Ljava/lang/Integer;->intValue()I
 
     move-result v7
@@ -527,7 +476,6 @@
 
     move-result v8
 
-    .line 305
     invoke-static {v15}, Ljava/util/Collections;->singletonList(Ljava/lang/Object;)Ljava/util/List;
 
     move-result-object v9
@@ -540,12 +488,10 @@
 
     iget-object v12, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->language:Ljava/lang/String;
 
-    .line 303
     invoke-static/range {v2 .. v12}, Lorg/telegram/messenger/exoplayer2/Format;->createAudioSampleFormat(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIIILjava/util/List;Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;ILjava/lang/String;)Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v17
 
-    .line 308
     .local v17, "format":Lorg/telegram/messenger/exoplayer2/Format;
     const-wide/32 v2, 0x3d090000
 
@@ -561,7 +507,6 @@
 
     iput-wide v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->sampleDurationUs:J
 
-    .line 309
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
@@ -570,14 +515,12 @@
 
     invoke-interface {v2, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 310
     const/4 v2, 0x1
 
     move-object/from16 v0, p0
 
     iput-boolean v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->hasOutputFormat:Z
 
-    .line 315
     .end local v13    # "audioObjectType":I
     .end local v14    # "audioParams":Landroid/util/Pair;, "Landroid/util/Pair<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     .end local v15    # "audioSpecificConfig":[B
@@ -593,7 +536,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->skipBits(I)V
 
-    .line 316
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -608,7 +550,6 @@
 
     add-int/lit8 v7, v2, -0x5
 
-    .line 317
     .local v7, "sampleSize":I
     move-object/from16 v0, p0
 
@@ -616,10 +557,8 @@
 
     if-eqz v2, :cond_1
 
-    .line 318
     add-int/lit8 v7, v7, -0x2
 
-    .line 321
     :cond_1
     move-object/from16 v0, p0
 
@@ -635,10 +574,8 @@
 
     invoke-direct/range {v2 .. v7}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setReadingSampleState(Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;JII)V
 
-    .line 322
     return-void
 
-    .line 312
     .end local v7    # "sampleSize":I
     :cond_2
     move-object/from16 v0, p0
@@ -658,28 +595,24 @@
     .prologue
     const/16 v4, 0xa
 
-    .line 266
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3Output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-interface {v0, v1, v4}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 267
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     const/4 v1, 0x6
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 268
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3Output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     const-wide/16 v2, 0x0
 
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
-    .line 269
     invoke-virtual {v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readSynchSafeInt()I
 
     move-result v0
@@ -688,10 +621,8 @@
 
     move-object v0, p0
 
-    .line 268
     invoke-direct/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setReadingSampleState(Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;JII)V
 
-    .line 270
     return-void
 .end method
 
@@ -700,7 +631,6 @@
     .param p1, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 328
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v1
@@ -715,27 +645,23 @@
 
     move-result v0
 
-    .line 329
     .local v0, "bytesToRead":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->currentOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v1, p1, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 330
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
     add-int/2addr v1, v0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 331
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->sampleSize:I
 
     if-ne v1, v2, :cond_0
 
-    .line 332
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->currentOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->timeUs:J
@@ -750,7 +676,6 @@
 
     invoke-interface/range {v1 .. v7}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIII[B)V
 
-    .line 333
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->timeUs:J
 
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->currentSampleDuration:J
@@ -759,10 +684,8 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->timeUs:J
 
-    .line 334
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setFindingSampleState()V
 
-    .line 336
     :cond_0
     return-void
 .end method
@@ -773,18 +696,14 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 176
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->state:I
 
-    .line 177
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 178
     const/16 v0, 0x100
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->matchState:I
 
-    .line 179
     return-void
 .end method
 
@@ -792,17 +711,14 @@
     .locals 1
 
     .prologue
-    .line 213
     const/4 v0, 0x2
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->state:I
 
-    .line 214
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 215
     return-void
 .end method
 
@@ -812,27 +728,22 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 186
     const/4 v0, 0x1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->state:I
 
-    .line 187
     sget-object v0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->ID3_IDENTIFIER:[B
 
     array-length v0, v0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 188
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->sampleSize:I
 
-    .line 189
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 190
     return-void
 .end method
 
@@ -844,24 +755,18 @@
     .param p5, "sampleSize"    # I
 
     .prologue
-    .line 202
     const/4 v0, 0x3
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->state:I
 
-    .line 203
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->bytesRead:I
 
-    .line 204
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->currentOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 205
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->currentSampleDuration:J
 
-    .line 206
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->sampleSize:I
 
-    .line 207
     return-void
 .end method
 
@@ -872,7 +777,6 @@
     .param p1, "data"    # Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
     .prologue
-    .line 128
     :cond_0
     :goto_0
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
@@ -881,20 +785,17 @@
 
     if-lez v1, :cond_2
 
-    .line 129
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->state:I
 
     packed-switch v1, :pswitch_data_0
 
     goto :goto_0
 
-    .line 131
     :pswitch_0
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->findNextSample(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;)V
 
     goto :goto_0
 
-    .line 134
     :pswitch_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3HeaderBuffer:Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;
 
@@ -908,12 +809,10 @@
 
     if-eqz v1, :cond_0
 
-    .line 135
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->parseId3Header()V
 
     goto :goto_0
 
-    .line 139
     :pswitch_2
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->hasCrc:Z
 
@@ -921,7 +820,6 @@
 
     const/4 v0, 0x7
 
-    .line 140
     .local v0, "targetLength":I
     :goto_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->adtsScratch:Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;
@@ -934,29 +832,24 @@
 
     if-eqz v1, :cond_0
 
-    .line 141
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->parseAdtsHeader()V
 
     goto :goto_0
 
-    .line 139
     .end local v0    # "targetLength":I
     :cond_1
     const/4 v0, 0x5
 
     goto :goto_1
 
-    .line 145
     :pswitch_3
     invoke-direct {p0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->readSample(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;)V
 
     goto :goto_0
 
-    .line 149
     :cond_2
     return-void
 
-    .line 129
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -974,7 +867,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 111
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getNextId()I
 
     move-result v0
@@ -985,12 +877,10 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 112
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->exposeId3:Z
 
     if-eqz v0, :cond_0
 
-    .line 113
     invoke-virtual {p2}, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->getNextId()I
 
     move-result v0
@@ -1001,7 +891,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3Output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->id3Output:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     const-string/jumbo v1, "application/id3"
@@ -1014,11 +903,9 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 119
     :goto_0
     return-void
 
-    .line 117
     :cond_0
     new-instance v0, Lorg/telegram/messenger/exoplayer2/extractor/DummyTrackOutput;
 
@@ -1033,7 +920,6 @@
     .locals 0
 
     .prologue
-    .line 154
     return-void
 .end method
 
@@ -1043,10 +929,8 @@
     .param p3, "dataAlignmentIndicator"    # Z
 
     .prologue
-    .line 123
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->timeUs:J
 
-    .line 124
     return-void
 .end method
 
@@ -1054,9 +938,7 @@
     .locals 0
 
     .prologue
-    .line 106
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/extractor/ts/AdtsReader;->setFindingSampleState()V
 
-    .line 107
     return-void
 .end method

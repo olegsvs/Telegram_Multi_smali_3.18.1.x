@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
     .prologue
-    .line 955
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animator"    # Landroid/animation/Animator;
 
     .prologue
-    .line 958
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$12;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -67,7 +65,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 959
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$12$1;->this$1:Lorg/telegram/ui/Components/ChatAttachAlert$12;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatAttachAlert$12;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -100,10 +97,8 @@
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 960
     return-void
 
-    .line 958
     :cond_0
     const v0, 0x7f020047
 

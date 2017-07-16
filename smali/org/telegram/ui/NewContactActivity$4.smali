@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/NewContactActivity;
 
     .prologue
-    .line 254
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "editable"    # Landroid/text/Editable;
 
     .prologue
-    .line 267
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$700(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -83,7 +81,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 268
     iget-object v0, p0, Lorg/telegram/ui/NewContactActivity$4;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/NewContactActivity;->access$800(Lorg/telegram/ui/NewContactActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -92,7 +89,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->invalidate()V
 
-    .line 269
     return-void
 .end method
 
@@ -104,7 +100,6 @@
     .param p4, "i2"    # I
 
     .prologue
-    .line 258
     return-void
 .end method
 
@@ -116,6 +111,5 @@
     .param p4, "i2"    # I
 
     .prologue
-    .line 263
     return-void
 .end method

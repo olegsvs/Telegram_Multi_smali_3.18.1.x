@@ -16,16 +16,12 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 13
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 14
     iput p1, p0, Lorg/telegram/messenger/camera/Size;->mWidth:I
 
-    .line 15
     iput p2, p0, Lorg/telegram/messenger/camera/Size;->mHeight:I
 
-    .line 16
     return-void
 .end method
 
@@ -34,7 +30,6 @@
     .param p0, "s"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     new-instance v0, Ljava/lang/NumberFormatException;
 
     new-instance v1, Ljava/lang/StringBuilder;
@@ -76,36 +71,30 @@
     .end annotation
 
     .prologue
-    .line 51
     const/16 v2, 0x2a
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 52
     .local v1, "sep_ix":I
     if-gez v1, :cond_0
 
-    .line 53
     const/16 v2, 0x78
 
     invoke-virtual {p0, v2}, Ljava/lang/String;->indexOf(I)I
 
     move-result v1
 
-    .line 55
     :cond_0
     if-gez v1, :cond_1
 
-    .line 56
     invoke-static {p0}, Lorg/telegram/messenger/camera/Size;->invalidSize(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
     move-result-object v2
 
     throw v2
 
-    .line 59
     :cond_1
     :try_start_0
     new-instance v2, Lorg/telegram/messenger/camera/Size;
@@ -136,11 +125,9 @@
 
     return-object v2
 
-    .line 60
     :catch_0
     move-exception v0
 
-    .line 61
     .local v0, "e":Ljava/lang/NumberFormatException;
     invoke-static {p0}, Lorg/telegram/messenger/camera/Size;->invalidSize(Ljava/lang/String;)Ljava/lang/NumberFormatException;
 
@@ -160,24 +147,19 @@
 
     const/4 v2, 0x0
 
-    .line 28
     if-nez p1, :cond_1
 
-    .line 38
     :cond_0
     :goto_0
     return v2
 
-    .line 31
     :cond_1
     if-ne p0, p1, :cond_2
 
     move v2, v1
 
-    .line 32
     goto :goto_0
 
-    .line 34
     :cond_2
     instance-of v3, p1, Lorg/telegram/messenger/camera/Size;
 
@@ -185,10 +167,8 @@
 
     move-object v0, p1
 
-    .line 35
     check-cast v0, Lorg/telegram/messenger/camera/Size;
 
-    .line 36
     .local v0, "other":Lorg/telegram/messenger/camera/Size;
     iget v3, p0, Lorg/telegram/messenger/camera/Size;->mWidth:I
 
@@ -217,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 23
     iget v0, p0, Lorg/telegram/messenger/camera/Size;->mHeight:I
 
     return v0
@@ -227,7 +206,6 @@
     .locals 1
 
     .prologue
-    .line 19
     iget v0, p0, Lorg/telegram/messenger/camera/Size;->mWidth:I
 
     return v0
@@ -237,7 +215,6 @@
     .locals 3
 
     .prologue
-    .line 67
     iget v0, p0, Lorg/telegram/messenger/camera/Size;->mHeight:I
 
     iget v1, p0, Lorg/telegram/messenger/camera/Size;->mWidth:I
@@ -259,7 +236,6 @@
     .locals 2
 
     .prologue
-    .line 43
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$3;
 
     .prologue
-    .line 549
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$3$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "shortName"    # Ljava/lang/String;
 
     .prologue
-    .line 552
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$3$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$3;->this$0:Lorg/telegram/ui/PaymentFormActivity;
@@ -58,13 +56,11 @@
 
     invoke-virtual {v0, p1}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
-    .line 553
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$3$1;->this$1:Lorg/telegram/ui/PaymentFormActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$3;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, p2}, Lorg/telegram/ui/PaymentFormActivity;->access$1302(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 554
     return-void
 .end method

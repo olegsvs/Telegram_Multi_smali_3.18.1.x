@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;
 
     .prologue
-    .line 820
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;->val$toRelease:Landroid/media/AudioTrack;
@@ -42,20 +41,17 @@
     .locals 2
 
     .prologue
-    .line 824
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;->val$toRelease:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->flush()V
 
-    .line 825
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;->val$toRelease:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 827
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;->access$100(Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;)Landroid/os/ConditionVariable;
@@ -64,10 +60,8 @@
 
     invoke-virtual {v0}, Landroid/os/ConditionVariable;->open()V
 
-    .line 829
     return-void
 
-    .line 827
     :catchall_0
     move-exception v0
 

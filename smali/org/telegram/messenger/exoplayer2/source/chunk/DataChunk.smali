@@ -27,7 +27,6 @@
     .param p7, "data"    # [B
 
     .prologue
-    .line 49
     const-wide v10, -0x7fffffffffffffffL    # -4.9E-324
 
     const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
@@ -48,12 +47,10 @@
 
     invoke-direct/range {v3 .. v13}, Lorg/telegram/messenger/exoplayer2/source/chunk/Chunk;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;ILorg/telegram/messenger/exoplayer2/Format;ILjava/lang/Object;JJ)V
 
-    .line 51
     move-object/from16 v0, p7
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
-    .line 52
     return-void
 .end method
 
@@ -61,24 +58,20 @@
     .locals 2
 
     .prologue
-    .line 114
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
     if-nez v0, :cond_1
 
-    .line 115
     const/16 v0, 0x4000
 
     new-array v0, v0, [B
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
-    .line 121
     :cond_0
     :goto_0
     return-void
 
-    .line 116
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
@@ -90,7 +83,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 119
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
@@ -114,7 +106,6 @@
     .locals 2
 
     .prologue
-    .line 67
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->limit:I
 
     int-to-long v0, v0
@@ -126,12 +117,10 @@
     .locals 1
 
     .prologue
-    .line 74
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->loadCanceled:Z
 
-    .line 75
     return-void
 .end method
 
@@ -147,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 62
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
     return-object v0
@@ -157,7 +145,6 @@
     .locals 1
 
     .prologue
-    .line 79
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->loadCanceled:Z
 
     return v0
@@ -175,7 +162,6 @@
     .prologue
     const/4 v5, -0x1
 
-    .line 85
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
@@ -183,15 +169,12 @@
 
     invoke-interface {v1, v2}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource;->open(Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;)J
 
-    .line 86
     const/4 v1, 0x0
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->limit:I
 
-    .line 87
     const/4 v0, 0x0
 
-    .line 88
     .local v0, "bytesRead":I
     :cond_0
     :goto_0
@@ -201,10 +184,8 @@
 
     if-nez v1, :cond_1
 
-    .line 89
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->maybeExpandData()V
 
-    .line 90
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
@@ -217,10 +198,8 @@
 
     move-result v0
 
-    .line 91
     if-eq v0, v5, :cond_0
 
-    .line 92
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->limit:I
 
     add-int/2addr v1, v0
@@ -231,7 +210,6 @@
 
     goto :goto_0
 
-    .line 99
     .end local v0    # "bytesRead":I
     :catchall_0
     move-exception v1
@@ -242,7 +220,6 @@
 
     throw v1
 
-    .line 95
     .restart local v0    # "bytesRead":I
     :cond_1
     :try_start_1
@@ -250,7 +227,6 @@
 
     if-nez v1, :cond_2
 
-    .line 96
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->data:[B
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->limit:I
@@ -259,12 +235,10 @@
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 99
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/DataChunk;->dataSource:Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     invoke-interface {v1}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource;->close()V
 
-    .line 101
     return-void
 .end method

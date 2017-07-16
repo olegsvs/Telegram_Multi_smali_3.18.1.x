@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     .prologue
-    .line 248
     iput-object p1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$6;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$6;->val$buttonClicked:[Z
@@ -46,7 +45,6 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$6;->val$buttonClicked:[Z
 
     const/4 v1, 0x0
@@ -55,12 +53,10 @@
 
     if-nez v0, :cond_0
 
-    .line 252
     iget-object v0, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$6;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/MentionsAdapter;->access$400(Lorg/telegram/ui/Adapters/MentionsAdapter;)V
 
-    .line 254
     :cond_0
     return-void
 .end method

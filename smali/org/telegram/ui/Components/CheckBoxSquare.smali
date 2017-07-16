@@ -38,22 +38,18 @@
     .prologue
     const/high16 v1, 0x41900000    # 18.0f
 
-    .line 45
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 40
     sget v0, Lorg/telegram/ui/ActionBar/Theme;->defColor:I
 
     iput v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->color:I
 
-    .line 46
     new-instance v0, Landroid/graphics/RectF;
 
     invoke-direct {v0}, Landroid/graphics/RectF;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->rectF:Landroid/graphics/RectF;
 
-    .line 47
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
@@ -70,7 +66,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawBitmap:Landroid/graphics/Bitmap;
 
-    .line 48
     new-instance v0, Landroid/graphics/Canvas;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawBitmap:Landroid/graphics/Bitmap;
@@ -79,7 +74,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawCanvas:Landroid/graphics/Canvas;
 
-    .line 49
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .param p1, "newCheckedState"    # Z
 
     .prologue
-    .line 75
     const-string/jumbo v1, "progress"
 
     const/4 v0, 0x1
@@ -110,22 +103,18 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->checkAnimator:Landroid/animation/ObjectAnimator;
 
-    .line 76
     iget-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->checkAnimator:Landroid/animation/ObjectAnimator;
 
     const-wide/16 v2, 0x12c
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
 
-    .line 77
     iget-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->checkAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->start()V
 
-    .line 78
     return-void
 
-    .line 75
     :cond_0
     const/4 v0, 0x0
 
@@ -136,17 +125,14 @@
     .locals 1
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->checkAnimator:Landroid/animation/ObjectAnimator;
 
     if-eqz v0, :cond_0
 
-    .line 70
     iget-object v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->checkAnimator:Landroid/animation/ObjectAnimator;
 
     invoke-virtual {v0}, Landroid/animation/ObjectAnimator;->cancel()V
 
-    .line 72
     :cond_0
     return-void
 .end method
@@ -157,7 +143,6 @@
     .locals 1
 
     .prologue
-    .line 61
     iget v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->progress:F
 
     return v0
@@ -167,7 +152,6 @@
     .locals 1
 
     .prologue
-    .line 116
     iget-boolean v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->isChecked:Z
 
     return v0
@@ -177,15 +161,12 @@
     .locals 1
 
     .prologue
-    .line 82
     invoke-super {p0}, Landroid/view/View;->onAttachedToWindow()V
 
-    .line 83
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->attachedToWindow:Z
 
-    .line 84
     return-void
 .end method
 
@@ -193,15 +174,12 @@
     .locals 1
 
     .prologue
-    .line 88
     invoke-super {p0}, Landroid/view/View;->onDetachedFromWindow()V
 
-    .line 89
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->attachedToWindow:Z
 
-    .line 90
     return-void
 .end method
 
@@ -210,18 +188,15 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 121
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/CheckBoxSquare;->getVisibility()I
 
     move-result v1
 
     if-eqz v1, :cond_0
 
-    .line 166
     :goto_0
     return-void
 
-    .line 127
     :cond_0
     move-object/from16 v0, p0
 
@@ -236,7 +211,6 @@
 
     move-result v18
 
-    .line 128
     .local v18, "uncheckedColor":I
     move-object/from16 v0, p0
 
@@ -251,7 +225,6 @@
 
     move-result v12
 
-    .line 129
     .local v12, "color":I
     move-object/from16 v0, p0
 
@@ -263,7 +236,6 @@
 
     if-gtz v1, :cond_6
 
-    .line 130
     move-object/from16 v0, p0
 
     iget v1, v0, Lorg/telegram/ui/Components/CheckBoxSquare;->progress:F
@@ -275,7 +247,6 @@
     .local v11, "checkProgress":F
     move v9, v11
 
-    .line 131
     .local v9, "bounceProgress":F
     invoke-static {v12}, Landroid/graphics/Color;->red(I)I
 
@@ -295,7 +266,6 @@
 
     move/from16 v16, v0
 
-    .line 132
     .local v16, "rD":I
     invoke-static {v12}, Landroid/graphics/Color;->green(I)I
 
@@ -313,7 +283,6 @@
 
     float-to-int v15, v1
 
-    .line 133
     .local v15, "gD":I
     invoke-static {v12}, Landroid/graphics/Color;->blue(I)I
 
@@ -331,7 +300,6 @@
 
     float-to-int v7, v1
 
-    .line 134
     .local v7, "bD":I
     invoke-static/range {v18 .. v18}, Landroid/graphics/Color;->red(I)I
 
@@ -355,13 +323,11 @@
 
     move-result v10
 
-    .line 135
     .local v10, "c":I
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->checkboxSquare_backgroundPaint:Landroid/graphics/Paint;
 
     invoke-virtual {v1, v10}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 141
     .end local v7    # "bD":I
     .end local v10    # "c":I
     .end local v15    # "gD":I
@@ -373,7 +339,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 142
     sget-object v2, Lorg/telegram/ui/ActionBar/Theme;->checkboxSquare_backgroundPaint:Landroid/graphics/Paint;
 
     move-object/from16 v0, p0
@@ -391,7 +356,6 @@
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 144
     :cond_1
     const/high16 v1, 0x3f800000    # 1.0f
 
@@ -403,7 +367,6 @@
 
     mul-float v8, v1, v9
 
-    .line 145
     .local v8, "bounce":F
     move-object/from16 v0, p0
 
@@ -431,7 +394,6 @@
 
     invoke-virtual {v1, v8, v8, v2, v3}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 147
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawBitmap:Landroid/graphics/Bitmap;
@@ -440,7 +402,6 @@
 
     invoke-virtual {v1, v2}, Landroid/graphics/Bitmap;->eraseColor(I)V
 
-    .line 148
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawCanvas:Landroid/graphics/Canvas;
@@ -469,14 +430,12 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawRoundRect(Landroid/graphics/RectF;FFLandroid/graphics/Paint;)V
 
-    .line 150
     const/high16 v1, 0x3f800000    # 1.0f
 
     cmpl-float v1, v11, v1
 
     if-eqz v1, :cond_2
 
-    .line 151
     const/high16 v1, 0x40e00000    # 7.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -501,7 +460,6 @@
 
     move-result v17
 
-    .line 152
     .local v17, "rad":F
     move-object/from16 v0, p0
 
@@ -549,7 +507,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Landroid/graphics/RectF;->set(FFFF)V
 
-    .line 153
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawCanvas:Landroid/graphics/Canvas;
@@ -562,7 +519,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/Canvas;->drawRect(Landroid/graphics/RectF;Landroid/graphics/Paint;)V
 
-    .line 156
     .end local v17    # "rad":F
     :cond_2
     move-object/from16 v0, p0
@@ -575,7 +531,6 @@
 
     if-lez v1, :cond_3
 
-    .line 157
     sget-object v2, Lorg/telegram/ui/ActionBar/Theme;->checkboxSquare_checkPaint:Landroid/graphics/Paint;
 
     move-object/from16 v0, p0
@@ -593,7 +548,6 @@
 
     invoke-virtual {v2, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 158
     const/high16 v1, 0x40f00000    # 7.5f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -620,7 +574,6 @@
 
     float-to-int v13, v1
 
-    .line 159
     .local v13, "endX":I
     const/high16 v1, 0x41580000    # 13.5f
 
@@ -646,7 +599,6 @@
 
     float-to-int v14, v1
 
-    .line 160
     .local v14, "endY":I
     move-object/from16 v0, p0
 
@@ -678,7 +630,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 161
     const/high16 v1, 0x40d00000    # 6.5f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
@@ -703,7 +654,6 @@
 
     float-to-int v13, v1
 
-    .line 162
     const/high16 v1, 0x41580000    # 13.5f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dpf2(F)F
@@ -728,7 +678,6 @@
 
     float-to-int v14, v1
 
-    .line 163
     move-object/from16 v0, p0
 
     iget-object v1, v0, Lorg/telegram/ui/Components/CheckBoxSquare;->drawCanvas:Landroid/graphics/Canvas;
@@ -761,7 +710,6 @@
 
     invoke-virtual/range {v1 .. v6}, Landroid/graphics/Canvas;->drawLine(FFFFLandroid/graphics/Paint;)V
 
-    .line 165
     .end local v13    # "endX":I
     .end local v14    # "endY":I
     :cond_3
@@ -781,7 +729,6 @@
 
     goto/16 :goto_0
 
-    .line 127
     .end local v8    # "bounce":F
     .end local v9    # "bounceProgress":F
     .end local v11    # "checkProgress":F
@@ -792,14 +739,12 @@
 
     goto/16 :goto_1
 
-    .line 128
     .restart local v18    # "uncheckedColor":I
     :cond_5
     const-string/jumbo v1, "checkboxSquareBackground"
 
     goto/16 :goto_2
 
-    .line 137
     .restart local v12    # "color":I
     :cond_6
     const/high16 v1, 0x40000000    # 2.0f
@@ -814,11 +759,9 @@
 
     sub-float v9, v1, v2
 
-    .line 138
     .restart local v9    # "bounceProgress":F
     const/high16 v11, 0x3f800000    # 1.0f
 
-    .line 139
     .restart local v11    # "checkProgress":F
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->checkboxSquare_backgroundPaint:Landroid/graphics/Paint;
 
@@ -826,13 +769,11 @@
 
     goto/16 :goto_3
 
-    .line 142
     :cond_7
     const-string/jumbo v1, "checkboxSquareDisabled"
 
     goto/16 :goto_4
 
-    .line 157
     .restart local v8    # "bounce":F
     :cond_8
     const-string/jumbo v1, "checkboxSquareCheck"
@@ -849,10 +790,8 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 94
     invoke-super/range {p0 .. p5}, Landroid/view/View;->onLayout(ZIIII)V
 
-    .line 95
     return-void
 .end method
 
@@ -862,36 +801,29 @@
     .param p2, "animated"    # Z
 
     .prologue
-    .line 98
     iget-boolean v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->isChecked:Z
 
     if-ne p1, v0, :cond_0
 
-    .line 108
     :goto_0
     return-void
 
-    .line 101
     :cond_0
     iput-boolean p1, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->isChecked:Z
 
-    .line 102
     iget-boolean v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->attachedToWindow:Z
 
     if-eqz v0, :cond_1
 
     if-eqz p2, :cond_1
 
-    .line 103
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/CheckBoxSquare;->animateToCheckedState(Z)V
 
     goto :goto_0
 
-    .line 105
     :cond_1
     invoke-direct {p0}, Lorg/telegram/ui/Components/CheckBoxSquare;->cancelCheckAnimator()V
 
-    .line 106
     if-eqz p1, :cond_2
 
     const/high16 v0, 0x3f800000    # 1.0f
@@ -912,10 +844,8 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 65
     iput p1, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->color:I
 
-    .line 66
     return-void
 .end method
 
@@ -924,13 +854,10 @@
     .param p1, "disabled"    # Z
 
     .prologue
-    .line 111
     iput-boolean p1, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->isDisabled:Z
 
-    .line 112
     invoke-virtual {p0}, Lorg/telegram/ui/Components/CheckBoxSquare;->invalidate()V
 
-    .line 113
     return-void
 .end method
 
@@ -941,22 +868,18 @@
     .end annotation
 
     .prologue
-    .line 53
     iget v0, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->progress:F
 
     cmpl-float v0, v0, p1
 
     if-nez v0, :cond_0
 
-    .line 58
     :goto_0
     return-void
 
-    .line 56
     :cond_0
     iput p1, p0, Lorg/telegram/ui/Components/CheckBoxSquare;->progress:F
 
-    .line 57
     invoke-virtual {p0}, Lorg/telegram/ui/Components/CheckBoxSquare;->invalidate()V
 
     goto :goto_0

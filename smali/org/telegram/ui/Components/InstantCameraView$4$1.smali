@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/InstantCameraView$4;
 
     .prologue
-    .line 202
     iput-object p1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 205
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -65,12 +63,10 @@
 
     if-nez v1, :cond_1
 
-    .line 217
     :cond_0
     :goto_0
     return-void
 
-    .line 208
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
@@ -86,18 +82,15 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->addMediaToGallery(Ljava/lang/String;)V
 
-    .line 209
     new-instance v0, Lorg/telegram/messenger/VideoEditedInfo;
 
     invoke-direct {v0}, Lorg/telegram/messenger/VideoEditedInfo;-><init>()V
 
-    .line 210
     .local v0, "videoEditedInfo":Lorg/telegram/messenger/VideoEditedInfo;
     const/4 v1, -0x1
 
     iput v1, v0, Lorg/telegram/messenger/VideoEditedInfo;->bitrate:I
 
-    .line 211
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -112,14 +105,12 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/VideoEditedInfo;->originalPath:Ljava/lang/String;
 
-    .line 212
     const-wide/16 v4, -0x1
 
     iput-wide v4, v0, Lorg/telegram/messenger/VideoEditedInfo;->endTime:J
 
     iput-wide v4, v0, Lorg/telegram/messenger/VideoEditedInfo;->startTime:J
 
-    .line 213
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;
@@ -134,7 +125,6 @@
 
     iput-wide v4, v0, Lorg/telegram/messenger/VideoEditedInfo;->estimatedSize:J
 
-    .line 216
     iget-object v1, p0, Lorg/telegram/ui/Components/InstantCameraView$4$1;->this$1:Lorg/telegram/ui/Components/InstantCameraView$4;
 
     iget-object v1, v1, Lorg/telegram/ui/Components/InstantCameraView$4;->this$0:Lorg/telegram/ui/Components/InstantCameraView;

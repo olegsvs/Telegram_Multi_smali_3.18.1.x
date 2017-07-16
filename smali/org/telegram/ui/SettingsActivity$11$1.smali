@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$11;
 
     .prologue
-    .line 1121
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iput-object p2, p0, Lorg/telegram/ui/SettingsActivity$11$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,26 +52,22 @@
 
     const/4 v2, 0x1
 
-    .line 1124
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$11;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v0, v4}, Lorg/telegram/ui/SettingsActivity;->access$4102(Lorg/telegram/ui/SettingsActivity;I)I
 
-    .line 1125
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_0
 
-    .line 1126
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
 
     if-eqz v0, :cond_0
 
-    .line 1127
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iget-object v1, v0, Lorg/telegram/ui/SettingsActivity$11;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -85,7 +80,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/SettingsActivity;->access$4202(Lorg/telegram/ui/SettingsActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 1128
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$11;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -98,7 +92,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 1129
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$11;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -115,7 +108,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/SettingsActivity;->access$4302(Lorg/telegram/ui/SettingsActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 1131
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -136,12 +128,10 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1145
     :cond_0
     :goto_0
     return-void
 
-    .line 1133
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
@@ -153,14 +143,12 @@
 
     if-eq v0, v2, :cond_0
 
-    .line 1134
     iget-object v0, p0, Lorg/telegram/ui/SettingsActivity$11$1;->this$1:Lorg/telegram/ui/SettingsActivity$11;
 
     iget-object v0, v0, Lorg/telegram/ui/SettingsActivity$11;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/SettingsActivity;->access$4402(Lorg/telegram/ui/SettingsActivity;I)I
 
-    .line 1135
     new-instance v0, Lorg/telegram/ui/SettingsActivity$11$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/SettingsActivity$11$1$1;-><init>(Lorg/telegram/ui/SettingsActivity$11$1;)V

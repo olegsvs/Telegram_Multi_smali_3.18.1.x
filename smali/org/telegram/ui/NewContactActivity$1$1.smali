@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/NewContactActivity$1;
 
     .prologue
-    .line 151
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$1$1;->this$1:Lorg/telegram/ui/NewContactActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/NewContactActivity$1$1;->val$inputPhoneContact:Lorg/telegram/tgnet/TLRPC$TL_inputPhoneContact;
@@ -51,12 +50,10 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 154
     move-object v0, p1
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;
 
-    .line 155
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_importedContacts;
     new-instance v1, Lorg/telegram/ui/NewContactActivity$1$1$1;
 
@@ -64,6 +61,5 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 192
     return-void
 .end method

@@ -49,20 +49,16 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 742
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
-    .line 743
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 727
     new-instance v0, Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/AvatarDrawable;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
-    .line 745
     sget-object v0, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v1, "theme"
@@ -73,7 +69,6 @@
 
     move-result-object v7
 
-    .line 746
     .local v7, "themePrefs":Landroid/content/SharedPreferences;
     new-instance v0, Lorg/telegram/ui/Components/BackupImageView;
 
@@ -81,7 +76,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
-    .line 747
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     const/high16 v1, 0x42580000    # 54.0f
@@ -92,7 +86,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/BackupImageView;->setRoundRadius(I)V
 
-    .line 748
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     const/high16 v1, 0x42580000    # 54.0f
@@ -103,7 +96,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/AvatarDrawable;->setRadius(I)V
 
-    .line 749
     iget-object v8, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatDialogsView;->access$2200(Lorg/telegram/ui/Components/ChatDialogsView;)I
@@ -132,14 +124,12 @@
 
     invoke-virtual {p0, v8, v0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 751
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
-    .line 752
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -151,7 +141,6 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 753
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -164,35 +153,30 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 754
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 755
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     const/16 v1, 0x31
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 756
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v1, 0x2
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 757
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     sget-object v1, Landroid/text/TextUtils$TruncateAt;->END:Landroid/text/TextUtils$TruncateAt;
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setEllipsize(Landroid/text/TextUtils$TruncateAt;)V
 
-    .line 758
     iget-object v8, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     const/4 v0, -0x1
@@ -221,12 +205,10 @@
 
     invoke-virtual {p0, v8, v0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 760
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawable:Landroid/graphics/drawable/Drawable;
 
     if-nez v0, :cond_0
 
-    .line 761
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -239,7 +221,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 762
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -252,7 +233,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawableGrey:Landroid/graphics/drawable/Drawable;
 
-    .line 763
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawable:Landroid/graphics/drawable/Drawable;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -272,7 +252,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 764
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawableGrey:Landroid/graphics/drawable/Drawable;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -298,7 +277,6 @@
 
     invoke-virtual {v1, v0, v2}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 765
     new-instance v0, Landroid/text/TextPaint;
 
     const/4 v1, 0x1
@@ -307,7 +285,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countPaint:Landroid/text/TextPaint;
 
-    .line 766
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countPaint:Landroid/text/TextPaint;
 
     const/high16 v1, 0x41300000    # 11.0f
@@ -320,7 +297,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 767
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countPaint:Landroid/text/TextPaint;
 
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -338,7 +314,6 @@
     :goto_3
     invoke-virtual {v1, v0}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 768
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countPaint:Landroid/text/TextPaint;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -349,7 +324,6 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTypeface(Landroid/graphics/Typeface;)Landroid/graphics/Typeface;
 
-    .line 771
     :cond_0
     new-instance v0, Landroid/widget/ImageView;
 
@@ -357,14 +331,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
-    .line 772
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 773
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     const/16 v1, 0x10
@@ -379,10 +351,8 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 775
     return-void
 
-    .line 752
     :cond_1
     const-string/jumbo v0, "chat_goDownButtonIcon"
 
@@ -392,7 +362,6 @@
 
     goto/16 :goto_0
 
-    .line 763
     :cond_2
     const-string/jumbo v0, "chat_goDownButtonCounterBackground"
 
@@ -402,7 +371,6 @@
 
     goto :goto_1
 
-    .line 764
     :cond_3
     const-string/jumbo v0, "chat_goDownButtonCounterBackground"
 
@@ -412,7 +380,6 @@
 
     goto :goto_2
 
-    .line 767
     :cond_4
     const-string/jumbo v0, "chat_goDownButtonCounter"
 
@@ -432,7 +399,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 801
     if-eqz p1, :cond_1
 
     and-int/lit16 v0, p1, 0x100
@@ -443,12 +409,10 @@
 
     if-nez v0, :cond_1
 
-    .line 826
     :cond_0
     :goto_0
     return-void
 
-    .line 804
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -468,7 +432,6 @@
 
     check-cast v8, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 805
     .local v8, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v8, :cond_3
 
@@ -476,19 +439,16 @@
 
     if-eqz v0, :cond_3
 
-    .line 806
     iget v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->lastUnreadCount:I
 
     iget v2, v8, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
     if-eq v0, v2, :cond_0
 
-    .line 807
     iget v0, v8, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->lastUnreadCount:I
 
-    .line 808
     const-string/jumbo v0, "%d"
 
     const/4 v2, 0x1
@@ -507,7 +467,6 @@
 
     move-result-object v1
 
-    .line 809
     .local v1, "countString":Ljava/lang/String;
     iget v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->lastUnreadCount:I
 
@@ -515,10 +474,8 @@
 
     if-le v0, v2, :cond_2
 
-    .line 810
     const-string/jumbo v1, "+99"
 
-    .line 813
     :cond_2
     const/high16 v0, 0x40a00000    # 5.0f
 
@@ -546,7 +503,6 @@
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countWidth:I
 
-    .line 814
     new-instance v0, Landroid/text/StaticLayout;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countPaint:Landroid/text/TextPaint;
@@ -563,32 +519,25 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countLayout:Landroid/text/StaticLayout;
 
-    .line 815
     if-eqz p1, :cond_0
 
-    .line 816
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->invalidate()V
 
     goto :goto_0
 
-    .line 819
     .end local v1    # "countString":Ljava/lang/String;
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_0
 
-    .line 820
     if-eqz p1, :cond_4
 
-    .line 821
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->invalidate()V
 
-    .line 823
     :cond_4
     iput v7, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->lastUnreadCount:I
 
-    .line 824
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countLayout:Landroid/text/StaticLayout;
@@ -609,28 +558,23 @@
 
     const/high16 v5, 0x40000000    # 2.0f
 
-    .line 872
     invoke-super {p0, p1, p2, p3, p4}, Landroid/widget/FrameLayout;->drawChild(Landroid/graphics/Canvas;Landroid/view/View;J)Z
 
     move-result v1
 
-    .line 873
     .local v1, "result":Z
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
 
     if-ne p2, v4, :cond_0
 
-    .line 874
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countLayout:Landroid/text/StaticLayout;
 
     if-eqz v4, :cond_0
 
-    .line 875
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
-    .line 876
     .local v2, "top":I
     const/high16 v4, 0x41000000    # 8.0f
 
@@ -638,7 +582,6 @@
 
     move-result v0
 
-    .line 877
     .local v0, "left":I
     const/high16 v4, 0x40b00000    # 5.5f
 
@@ -648,7 +591,6 @@
 
     sub-int v3, v0, v4
 
-    .line 878
     .local v3, "x":I
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -662,7 +604,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 879
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawableGrey:Landroid/graphics/drawable/Drawable;
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -697,16 +638,13 @@
 
     invoke-virtual {v4, v3, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 880
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawableGrey:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 885
     :goto_0
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 886
     int-to-float v4, v0
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -719,22 +657,18 @@
 
     invoke-virtual {p1, v4, v5}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 887
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v4, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 888
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 891
     .end local v0    # "left":I
     .end local v2    # "top":I
     .end local v3    # "x":I
     :cond_0
     return v1
 
-    .line 882
     .restart local v0    # "left":I
     .restart local v2    # "top":I
     .restart local v3    # "x":I
@@ -773,7 +707,6 @@
 
     invoke-virtual {v4, v3, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 883
     iget-object v4, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->countDrawable:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v4, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
@@ -785,7 +718,6 @@
     .locals 2
 
     .prologue
-    .line 895
     iget-wide v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->dialog_id:J
 
     return-wide v0
@@ -796,10 +728,8 @@
     .param p1, "hide"    # Z
 
     .prologue
-    .line 829
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->hideCounter:Z
 
-    .line 830
     return-void
 .end method
 
@@ -808,7 +738,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 792
     sget v0, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v1, 0x15
@@ -821,7 +750,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 793
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -836,7 +764,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 794
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->getBackground()Landroid/graphics/drawable/Drawable;
 
@@ -852,7 +779,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/graphics/drawable/Drawable;->setHotspot(FF)V
 
-    .line 797
     :cond_1
     invoke-super {p0, p1}, Landroid/widget/FrameLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -866,17 +792,13 @@
     .param p1, "id"    # J
 
     .prologue
-    .line 833
     iput-wide p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->dialog_id:J
 
-    .line 834
     const/4 v4, 0x0
 
-    .line 835
     .local v4, "photo":Lorg/telegram/tgnet/TLRPC$FileLocation;
     long-to-int v3, p1
 
-    .line 836
     .local v3, "lower_id":I
     const/16 v6, 0x20
 
@@ -884,22 +806,17 @@
 
     long-to-int v2, v6
 
-    .line 837
     .local v2, "high_id":I
     const/4 v5, 0x0
 
-    .line 838
     .local v5, "user":Lorg/telegram/tgnet/TLRPC$User;
     const/4 v0, 0x0
 
-    .line 839
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v3, :cond_4
 
-    .line 840
     if-lez v3, :cond_3
 
-    .line 841
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -912,12 +829,10 @@
 
     move-result-object v5
 
-    .line 851
     :cond_0
     :goto_0
     if-eqz v5, :cond_5
 
-    .line 852
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     iget-object v7, v5, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
@@ -930,22 +845,18 @@
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 853
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v6, v5}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 854
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     if-eqz v6, :cond_1
 
-    .line 855
     iget-object v6, v5, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v4, v6, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 866
     :cond_1
     :goto_1
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->imageView:Lorg/telegram/ui/Components/BackupImageView;
@@ -956,7 +867,6 @@
 
     invoke-virtual {v6, v4, v7, v8}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 867
     iget-boolean v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->hideCounter:Z
 
     if-nez v6, :cond_2
@@ -965,11 +875,9 @@
 
     invoke-virtual {p0, v6}, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->checkUnreadCounter(I)V
 
-    .line 868
     :cond_2
     return-void
 
-    .line 843
     :cond_3
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -987,7 +895,6 @@
 
     goto :goto_0
 
-    .line 846
     :cond_4
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -1001,11 +908,9 @@
 
     move-result-object v1
 
-    .line 847
     .local v1, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     if-eqz v1, :cond_0
 
-    .line 848
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -1022,36 +927,30 @@
 
     goto :goto_0
 
-    .line 857
     .end local v1    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     :cond_5
     if-eqz v0, :cond_6
 
-    .line 858
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
     iget-object v7, v0, Lorg/telegram/tgnet/TLRPC$Chat;->title:Ljava/lang/String;
 
     invoke-virtual {v6, v7}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 859
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->avatarDrawable:Lorg/telegram/ui/Components/AvatarDrawable;
 
     invoke-virtual {v6, v0}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(Lorg/telegram/tgnet/TLRPC$Chat;)V
 
-    .line 860
     iget-object v6, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
     if-eqz v6, :cond_1
 
-    .line 861
     iget-object v6, v0, Lorg/telegram/tgnet/TLRPC$Chat;->photo:Lorg/telegram/tgnet/TLRPC$ChatPhoto;
 
     iget-object v4, v6, Lorg/telegram/tgnet/TLRPC$ChatPhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     goto :goto_1
 
-    .line 864
     :cond_6
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->nameTextView:Landroid/widget/TextView;
 
@@ -1069,17 +968,14 @@
     .prologue
     const v2, 0x7f020003
 
-    .line 778
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     if-nez v0, :cond_1
 
-    .line 789
     :cond_0
     :goto_0
     return-void
 
-    .line 781
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
@@ -1090,17 +986,14 @@
     :goto_1
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 782
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_3
 
-    .line 783
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 784
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->profileRowCreatorStarColor:I
@@ -1111,24 +1004,20 @@
 
     goto :goto_0
 
-    .line 781
     :cond_2
     const/16 v0, 0x8
 
     goto :goto_1
 
-    .line 785
     :cond_3
     const/4 v0, 0x2
 
     if-ne p1, v0, :cond_0
 
-    .line 786
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 787
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$ChatDialogCell;->adminImage:Landroid/widget/ImageView;
 
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->profileRowAdminStarColor:I

@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/PlusSettingsActivity$8$1;
 
     .prologue
-    .line 1682
     iput-object p1, p0, Lorg/telegram/ui/PlusSettingsActivity$8$1$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$8$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 1687
     iget-object v0, p0, Lorg/telegram/ui/PlusSettingsActivity$8$1$1;->this$2:Lorg/telegram/ui/PlusSettingsActivity$8$1;
 
     iget-object v0, v0, Lorg/telegram/ui/PlusSettingsActivity$8$1;->this$1:Lorg/telegram/ui/PlusSettingsActivity$8;
@@ -50,6 +48,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/PlusSettingsActivity;->getUserAbout()V
 
-    .line 1688
     return-void
 .end method

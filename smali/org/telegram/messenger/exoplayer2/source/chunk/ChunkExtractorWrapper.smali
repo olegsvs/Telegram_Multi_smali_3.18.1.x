@@ -46,22 +46,16 @@
     .param p4, "resendFormatOnInit"    # Z
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
-    .line 76
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->manifestFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 77
     iput-boolean p3, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->preferManifestDrmInitData:Z
 
-    .line 78
     iput-boolean p4, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->resendFormatOnInit:Z
 
-    .line 79
     return-void
 .end method
 
@@ -71,12 +65,10 @@
     .locals 1
 
     .prologue
-    .line 128
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->seenTrack:Z
 
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 129
     return-void
 .end method
 
@@ -85,7 +77,6 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->manifestFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->preferManifestDrmInitData:Z
@@ -96,14 +87,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->sentFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 141
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->sentFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
 
-    .line 142
     return-void
 .end method
 
@@ -113,33 +102,26 @@
     .param p2, "trackOutput"    # Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->metadataOutput:Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper$SingleTrackMetadataOutput;
 
-    .line 90
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
-    .line 91
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractorInitialized:Z
 
     if-nez v0, :cond_1
 
-    .line 92
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     invoke-interface {v0, p0}, Lorg/telegram/messenger/exoplayer2/extractor/Extractor;->init(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;)V
 
-    .line 93
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractorInitialized:Z
 
-    .line 100
     :cond_0
     :goto_0
     return-void
 
-    .line 95
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
@@ -147,7 +129,6 @@
 
     invoke-interface {v0, v2, v3}, Lorg/telegram/messenger/exoplayer2/extractor/Extractor;->seek(J)V
 
-    .line 96
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->resendFormatOnInit:Z
 
     if-eqz v0, :cond_0
@@ -156,7 +137,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 97
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->sentFormat:Lorg/telegram/messenger/exoplayer2/Format;
 
     invoke-interface {p2, v0}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->format(Lorg/telegram/messenger/exoplayer2/Format;)V
@@ -177,7 +157,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 111
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     const/4 v3, 0x0
@@ -186,17 +165,14 @@
 
     move-result v0
 
-    .line 112
     .local v0, "result":I
     if-eq v0, v1, :cond_0
 
     :goto_0
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 113
     return v0
 
-    .line 112
     :cond_0
     const/4 v1, 0x0
 
@@ -216,7 +192,6 @@
     .end annotation
 
     .prologue
-    .line 147
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v0, p1, p2, p3}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;IZ)I
@@ -232,12 +207,10 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 152
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     invoke-interface {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleData(Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;I)V
 
-    .line 153
     return-void
 .end method
 
@@ -250,7 +223,6 @@
     .param p6, "encryptionKey"    # [B
 
     .prologue
-    .line 158
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->trackOutput:Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;
 
     move-wide v2, p1
@@ -265,7 +237,6 @@
 
     invoke-interface/range {v1 .. v7}, Lorg/telegram/messenger/exoplayer2/extractor/TrackOutput;->sampleMetadata(JIII[B)V
 
-    .line 159
     return-void
 .end method
 
@@ -274,12 +245,10 @@
     .param p1, "seekMap"    # Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->metadataOutput:Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper$SingleTrackMetadataOutput;
 
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper$SingleTrackMetadataOutput;->seekMap(Lorg/telegram/messenger/exoplayer2/extractor/SeekMap;)V
 
-    .line 134
     return-void
 .end method
 
@@ -290,7 +259,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 120
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->seenTrack:Z
 
     if-eqz v0, :cond_0
@@ -305,16 +273,12 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkState(Z)V
 
-    .line 121
     iput-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->seenTrack:Z
 
-    .line 122
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/source/chunk/ChunkExtractorWrapper;->seenTrackId:I
 
-    .line 123
     return-object p0
 
-    .line 120
     :cond_1
     const/4 v0, 0x0
 

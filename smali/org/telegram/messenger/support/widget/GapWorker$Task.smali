@@ -31,7 +31,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -45,23 +44,17 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 44
     iput-boolean v1, p0, Lorg/telegram/messenger/support/widget/GapWorker$Task;->immediate:Z
 
-    .line 45
     iput v1, p0, Lorg/telegram/messenger/support/widget/GapWorker$Task;->viewVelocity:I
 
-    .line 46
     iput v1, p0, Lorg/telegram/messenger/support/widget/GapWorker$Task;->distanceToItem:I
 
-    .line 47
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/support/widget/GapWorker$Task;->view:Lorg/telegram/messenger/support/widget/RecyclerView;
 
-    .line 48
     iput v1, p0, Lorg/telegram/messenger/support/widget/GapWorker$Task;->position:I
 
-    .line 49
     return-void
 .end method

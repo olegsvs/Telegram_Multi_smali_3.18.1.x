@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;
 
     .prologue
-    .line 1372
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$4;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +42,5 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1376
     return-void
 .end method

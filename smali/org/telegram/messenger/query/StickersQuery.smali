@@ -176,7 +176,6 @@
 
     const/4 v2, 0x2
 
-    .line 47
     new-array v0, v2, [Ljava/util/ArrayList;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -193,60 +192,50 @@
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
-    .line 48
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
-    .line 49
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
-    .line 50
     new-array v0, v2, [Z
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
-    .line 51
     new-array v0, v2, [Z
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickersLoaded:[Z
 
-    .line 52
     new-array v0, v2, [I
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
 
-    .line 53
     new-array v0, v2, [I
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadDate:[I
 
-    .line 55
     new-array v0, v2, [I
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->archivedStickersCount:[I
 
-    .line 57
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
-    .line 58
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
-    .line 60
     new-array v0, v2, [Ljava/util/ArrayList;
 
     new-instance v1, Ljava/util/ArrayList;
@@ -263,45 +252,38 @@
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
-    .line 61
     new-array v0, v2, [Z
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentStickers:[Z
 
-    .line 62
     new-array v0, v2, [Z
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentStickersLoaded:[Z
 
-    .line 64
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
-    .line 70
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
-    .line 71
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSetsById:Ljava/util/HashMap;
 
-    .line 72
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     sput-object v0, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
-    .line 73
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -315,7 +297,6 @@
     .locals 0
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -326,7 +307,6 @@
     .param p0, "x0"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     return-object p0
@@ -337,7 +317,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 42
     sput-boolean p0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickersLoaded:Z
 
     return p0
@@ -348,7 +327,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 42
     sput-boolean p0, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentGifs:Z
 
     return p0
@@ -358,7 +336,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget v0, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedHash:I
 
     return v0
@@ -369,7 +346,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 42
     sput p0, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedHash:I
 
     return p0
@@ -383,7 +359,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 42
     invoke-static {p0, p1, p2, p3}, Lorg/telegram/messenger/query/StickersQuery;->putFeaturedStickersToCache(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
     return-void
@@ -393,7 +368,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     return-object v0
@@ -404,7 +378,6 @@
     .param p0, "x0"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     return-object p0
@@ -415,7 +388,6 @@
     .param p0, "x0"    # Ljava/util/HashMap;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSetsById:Ljava/util/HashMap;
 
     return-object p0
@@ -425,7 +397,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     return-object v0
@@ -436,7 +407,6 @@
     .param p0, "x0"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     return-object p0
@@ -446,7 +416,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget v0, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedDate:I
 
     return v0
@@ -457,7 +426,6 @@
     .param p0, "x0"    # I
 
     .prologue
-    .line 42
     sput p0, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedDate:I
 
     return p0
@@ -467,7 +435,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->readingStickerSets:Ljava/util/ArrayList;
 
     return-object v0
@@ -477,7 +444,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->archivedStickersCount:[I
 
     return-object v0
@@ -488,7 +454,6 @@
     .param p0, "x0"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 42
     invoke-static {p0}, Lorg/telegram/messenger/query/StickersQuery;->calcStickersHash(Ljava/util/ArrayList;)I
 
     move-result v0
@@ -505,7 +470,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 42
     invoke-static {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/query/StickersQuery;->processLoadedStickers(ILjava/util/ArrayList;ZII)V
 
     return-void
@@ -516,7 +480,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 42
     sput-boolean p0, Lorg/telegram/messenger/query/StickersQuery;->recentGifsLoaded:Z
 
     return p0
@@ -526,7 +489,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     return-object v0
@@ -536,7 +498,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     return-object v0
@@ -546,7 +507,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickersLoaded:[Z
 
     return-object v0
@@ -556,7 +516,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
 
     return-object v0
@@ -570,7 +529,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 42
     invoke-static {p0, p1, p2, p3}, Lorg/telegram/messenger/query/StickersQuery;->putStickersToCache(ILjava/util/ArrayList;II)V
 
     return-void
@@ -580,7 +538,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     return-object v0
@@ -590,7 +547,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     return-object v0
@@ -600,7 +556,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadDate:[I
 
     return-object v0
@@ -611,7 +566,6 @@
     .param p0, "x0"    # Ljava/util/HashMap;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
     return-object p0
@@ -621,7 +575,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     return-object v0
@@ -632,7 +585,6 @@
     .param p0, "x0"    # Ljava/util/HashMap;
 
     .prologue
-    .line 42
     sput-object p0, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
     return-object p0
@@ -642,7 +594,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentStickers:[Z
 
     return-object v0
@@ -652,7 +603,6 @@
     .locals 1
 
     .prologue
-    .line 42
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentStickersLoaded:[Z
 
     return-object v0
@@ -666,7 +616,6 @@
     .param p3, "x3"    # I
 
     .prologue
-    .line 42
     invoke-static {p0, p1, p2, p3}, Lorg/telegram/messenger/query/StickersQuery;->processLoadedRecentDocuments(ILjava/util/ArrayList;ZI)V
 
     return-void
@@ -677,7 +626,6 @@
     .param p0, "x0"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 42
     invoke-static {p0}, Lorg/telegram/messenger/query/StickersQuery;->calcFeaturedStickersHash(Ljava/util/ArrayList;)I
 
     move-result v0
@@ -694,7 +642,6 @@
     .param p4, "x4"    # I
 
     .prologue
-    .line 42
     invoke-static {p0, p1, p2, p3, p4}, Lorg/telegram/messenger/query/StickersQuery;->processLoadedFeaturedStickers(Ljava/util/ArrayList;Ljava/util/ArrayList;ZII)V
 
     return-void
@@ -705,7 +652,6 @@
     .param p0, "x0"    # Z
 
     .prologue
-    .line 42
     sput-boolean p0, Lorg/telegram/messenger/query/StickersQuery;->loadingFeaturedStickers:Z
 
     return p0
@@ -720,7 +666,6 @@
 
     const/4 v10, 0x0
 
-    .line 481
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     iget-object v12, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -749,12 +694,10 @@
 
     if-eqz v11, :cond_1
 
-    .line 515
     :cond_0
     :goto_0
     return-void
 
-    .line 484
     :cond_1
     iget-object v11, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -764,7 +707,6 @@
 
     move v8, v9
 
-    .line 485
     .local v8, "type":I
     :goto_1
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
@@ -773,7 +715,6 @@
 
     invoke-virtual {v11, v10, p0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 486
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     iget-object v12, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -786,7 +727,6 @@
 
     invoke-virtual {v11, v12, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 487
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     iget-object v12, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -795,12 +735,10 @@
 
     invoke-virtual {v11, v12, p0}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 488
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 489
     .local v7, "stickersById":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$Document;>;"
     const/4 v0, 0x0
 
@@ -814,7 +752,6 @@
 
     if-ge v0, v11, :cond_3
 
-    .line 490
     iget-object v11, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->documents:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -823,7 +760,6 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 491
     .local v3, "document":Lorg/telegram/tgnet/TLRPC$Document;
     iget-wide v12, v3, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
@@ -833,7 +769,6 @@
 
     invoke-virtual {v7, v11, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 489
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -845,10 +780,8 @@
     :cond_2
     move v8, v10
 
-    .line 484
     goto :goto_1
 
-    .line 493
     .restart local v0    # "a":I
     .restart local v7    # "stickersById":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$Document;>;"
     .restart local v8    # "type":I
@@ -864,7 +797,6 @@
 
     if-ge v0, v11, :cond_8
 
-    .line 494
     iget-object v11, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->packs:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -873,7 +805,6 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;
 
-    .line 495
     .local v6, "stickerPack":Lorg/telegram/tgnet/TLRPC$TL_stickerPack;
     iget-object v11, v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;->emoticon:Ljava/lang/String;
 
@@ -887,7 +818,6 @@
 
     iput-object v11, v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;->emoticon:Ljava/lang/String;
 
-    .line 496
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
     iget-object v12, v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;->emoticon:Ljava/lang/String;
@@ -898,17 +828,14 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 497
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     if-nez v1, :cond_4
 
-    .line 498
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 499
     .restart local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
@@ -916,7 +843,6 @@
 
     invoke-virtual {v11, v12, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 501
     :cond_4
     const/4 v2, 0x0
 
@@ -930,7 +856,6 @@
 
     if-ge v2, v11, :cond_7
 
-    .line 502
     iget-object v11, v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;->documents:Ljava/util/ArrayList;
 
     invoke-virtual {v11, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -939,7 +864,6 @@
 
     check-cast v4, Ljava/lang/Long;
 
-    .line 503
     .local v4, "id":Ljava/lang/Long;
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
@@ -949,14 +873,12 @@
 
     if-nez v11, :cond_5
 
-    .line 504
     sget-object v11, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
     iget-object v12, v6, Lorg/telegram/tgnet/TLRPC$TL_stickerPack;->emoticon:Ljava/lang/String;
 
     invoke-virtual {v11, v4, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 506
     :cond_5
     invoke-virtual {v7, v4}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -964,20 +886,16 @@
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 507
     .local v5, "sticker":Lorg/telegram/tgnet/TLRPC$Document;
     if-eqz v5, :cond_6
 
-    .line 508
     invoke-virtual {v1, v5}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 501
     :cond_6
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_4
 
-    .line 493
     .end local v4    # "id":Ljava/lang/Long;
     .end local v5    # "sticker":Lorg/telegram/tgnet/TLRPC$Document;
     :cond_7
@@ -985,7 +903,6 @@
 
     goto :goto_3
 
-    .line 512
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     .end local v2    # "c":I
     .end local v6    # "stickerPack":Lorg/telegram/tgnet/TLRPC$TL_stickerPack;
@@ -1002,7 +919,6 @@
 
     aput v12, v11, v8
 
-    .line 513
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v11
@@ -1019,7 +935,6 @@
 
     invoke-virtual {v11, v12, v13}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 514
     invoke-static {v8, v10, v9}, Lorg/telegram/messenger/query/StickersQuery;->loadStickers(IZZ)V
 
     goto/16 :goto_0
@@ -1033,10 +948,8 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 185
     const/4 v2, 0x0
 
-    .line 186
     .local v2, "found":Z
     const/4 v0, 0x0
 
@@ -1050,7 +963,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 187
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -1059,7 +971,6 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 188
     .local v3, "image":Lorg/telegram/tgnet/TLRPC$Document;
     iget-wide v6, v3, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
@@ -1069,36 +980,29 @@
 
     if-nez v5, :cond_0
 
-    .line 189
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 190
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v10, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 191
     const/4 v2, 0x1
 
-    .line 186
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 194
     .end local v3    # "image":Lorg/telegram/tgnet/TLRPC$Document;
     :cond_1
     if-nez v2, :cond_2
 
-    .line 195
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v5, v10, p0}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 197
     :cond_2
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
@@ -1114,7 +1018,6 @@
 
     if-le v5, v6, :cond_3
 
-    .line 198
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
@@ -1131,7 +1034,6 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 199
     .local v4, "old":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -1147,23 +1049,19 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 210
     .end local v4    # "old":Lorg/telegram/tgnet/TLRPC$Document;
     :cond_3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 211
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 212
     const/4 v5, 0x1
 
     invoke-static {v10, v1, v5, p1}, Lorg/telegram/messenger/query/StickersQuery;->processLoadedRecentDocuments(ILjava/util/ArrayList;ZI)V
 
-    .line 213
     return-void
 .end method
 
@@ -1176,10 +1074,8 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 125
     const/4 v2, 0x0
 
-    .line 126
     .local v2, "found":Z
     const/4 v0, 0x0
 
@@ -1195,7 +1091,6 @@
 
     if-ge v0, v5, :cond_1
 
-    .line 127
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v5, v5, p0
@@ -1206,7 +1101,6 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 128
     .local v3, "image":Lorg/telegram/tgnet/TLRPC$Document;
     iget-wide v6, v3, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
@@ -1216,42 +1110,35 @@
 
     if-nez v5, :cond_0
 
-    .line 129
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v5, v5, p0
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 130
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v5, v5, p0
 
     invoke-virtual {v5, v10, v3}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 131
     const/4 v2, 0x1
 
-    .line 126
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 134
     .end local v3    # "image":Lorg/telegram/tgnet/TLRPC$Document;
     :cond_1
     if-nez v2, :cond_2
 
-    .line 135
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v5, v5, p0
 
     invoke-virtual {v5, v10, p1}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 137
     :cond_2
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
@@ -1269,7 +1156,6 @@
 
     if-le v5, v6, :cond_3
 
-    .line 138
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v5, v5, p0
@@ -1290,7 +1176,6 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 139
     .local v4, "old":Lorg/telegram/tgnet/TLRPC$Document;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -1306,21 +1191,17 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 150
     .end local v4    # "old":Lorg/telegram/tgnet/TLRPC$Document;
     :cond_3
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 151
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     invoke-virtual {v1, p1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 152
     invoke-static {p0, v1, v10, p2}, Lorg/telegram/messenger/query/StickersQuery;->processLoadedRecentDocuments(ILjava/util/ArrayList;ZI)V
 
-    .line 153
     return-void
 .end method
 
@@ -1342,21 +1223,16 @@
 
     const-wide v10, 0x80000000L
 
-    .line 261
     if-nez p0, :cond_0
 
-    .line 262
     const/4 v6, 0x0
 
-    .line 275
     :goto_0
     return v6
 
-    .line 264
     :cond_0
     const-wide/16 v2, 0x0
 
-    .line 265
     .local v2, "acc":J
     const/4 v0, 0x0
 
@@ -1374,24 +1250,20 @@
 
     if-ge v0, v6, :cond_2
 
-    .line 266
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 267
     .local v1, "document":Lorg/telegram/tgnet/TLRPC$Document;
     if-nez v1, :cond_1
 
-    .line 265
     :goto_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 270
     :cond_1
     iget-wide v6, v1, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
@@ -1401,13 +1273,11 @@
 
     long-to-int v4, v6
 
-    .line 271
     .local v4, "high_id":I
     iget-wide v6, v1, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     long-to-int v5, v6
 
-    .line 272
     .local v5, "lower_id":I
     mul-long v6, v2, v12
 
@@ -1419,7 +1289,6 @@
 
     rem-long v2, v6, v10
 
-    .line 273
     mul-long v6, v2, v12
 
     add-long/2addr v6, v10
@@ -1432,7 +1301,6 @@
 
     goto :goto_2
 
-    .line 275
     .end local v1    # "document":Lorg/telegram/tgnet/TLRPC$Document;
     .end local v4    # "high_id":I
     .end local v5    # "lower_id":I
@@ -1460,10 +1328,8 @@
 
     const-wide v10, 0x80000000L
 
-    .line 700
     const-wide/16 v2, 0x0
 
-    .line 701
     .local v2, "acc":J
     const/4 v0, 0x0
 
@@ -1475,7 +1341,6 @@
 
     if-ge v0, v6, :cond_2
 
-    .line 702
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v6
@@ -1484,20 +1349,17 @@
 
     iget-object v5, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 703
     .local v5, "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     iget-boolean v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
     if-eqz v6, :cond_1
 
-    .line 701
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 706
     :cond_1
     iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
@@ -1507,13 +1369,11 @@
 
     long-to-int v1, v6
 
-    .line 707
     .local v1, "high_id":I
     iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
     long-to-int v4, v6
 
-    .line 708
     .local v4, "lower_id":I
     mul-long v6, v2, v12
 
@@ -1525,7 +1385,6 @@
 
     rem-long v2, v6, v10
 
-    .line 709
     mul-long v6, v2, v12
 
     add-long/2addr v6, v10
@@ -1536,7 +1395,6 @@
 
     rem-long v2, v6, v10
 
-    .line 710
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     iget-wide v8, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
@@ -1551,7 +1409,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 711
     mul-long v6, v2, v12
 
     add-long/2addr v6, v10
@@ -1564,7 +1421,6 @@
 
     goto :goto_1
 
-    .line 714
     .end local v1    # "high_id":I
     .end local v4    # "lower_id":I
     .end local v5    # "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -1579,7 +1435,6 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 477
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
 
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
@@ -1592,7 +1447,6 @@
 
     aput v1, v0, p0
 
-    .line 478
     return-void
 .end method
 
@@ -1612,10 +1466,8 @@
     .local p0, "sets":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     const-wide v8, 0x80000000L
 
-    .line 1001
     const-wide/16 v2, 0x0
 
-    .line 1002
     .local v2, "acc":J
     const/4 v0, 0x0
 
@@ -1627,7 +1479,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 1003
     invoke-virtual {p0, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
@@ -1636,19 +1487,16 @@
 
     iget-object v1, v4, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 1004
     .local v1, "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     iget-boolean v4, v1, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
     if-eqz v4, :cond_0
 
-    .line 1002
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1007
     :cond_0
     const-wide/16 v4, 0x4f25
 
@@ -1666,7 +1514,6 @@
 
     goto :goto_1
 
-    .line 1009
     .end local v1    # "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     :cond_1
     long-to-int v4, v2
@@ -1678,7 +1525,6 @@
     .locals 4
 
     .prologue
-    .line 111
     sget-boolean v0, Lorg/telegram/messenger/query/StickersQuery;->loadingFeaturedStickers:Z
 
     if-nez v0, :cond_1
@@ -1711,7 +1557,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 112
     :cond_0
     const/4 v0, 0x1
 
@@ -1719,7 +1564,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturesStickers(ZZ)V
 
-    .line 114
     :cond_1
     return-void
 .end method
@@ -1729,7 +1573,6 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 105
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     aget-boolean v0, v0, p0
@@ -1768,7 +1611,6 @@
 
     if-ltz v0, :cond_1
 
-    .line 106
     :cond_0
     const/4 v0, 0x1
 
@@ -1776,7 +1618,6 @@
 
     invoke-static {p0, v0, v1}, Lorg/telegram/messenger/query/StickersQuery;->loadStickers(IZZ)V
 
-    .line 108
     :cond_1
     return-void
 .end method
@@ -1787,7 +1628,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 78
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -1796,115 +1636,91 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 79
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
 
     aput v2, v1, v0
 
-    .line 80
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->loadDate:[I
 
     aput v2, v1, v0
 
-    .line 81
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 82
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v1, v1, v0
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 83
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     aput-boolean v2, v1, v0
 
-    .line 84
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickersLoaded:[Z
 
     aput-boolean v2, v1, v0
 
-    .line 85
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentStickers:[Z
 
     aput-boolean v2, v1, v0
 
-    .line 86
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentStickersLoaded:[Z
 
     aput-boolean v2, v1, v0
 
-    .line 78
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 88
     :cond_0
     sput v2, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedDate:I
 
-    .line 89
     sput v2, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedHash:I
 
-    .line 90
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 91
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 92
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSetsById:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 93
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 94
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 95
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 96
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 97
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 98
     sput-boolean v2, Lorg/telegram/messenger/query/StickersQuery;->loadingFeaturedStickers:Z
 
-    .line 99
     sput-boolean v2, Lorg/telegram/messenger/query/StickersQuery;->featuredStickersLoaded:Z
 
-    .line 100
     sput-boolean v2, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentGifs:Z
 
-    .line 101
     sput-boolean v2, Lorg/telegram/messenger/query/StickersQuery;->recentGifsLoaded:Z
 
-    .line 102
     return-void
 .end method
 
@@ -1924,7 +1740,6 @@
     .end annotation
 
     .prologue
-    .line 228
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->allStickers:Ljava/util/HashMap;
 
     return-object v0
@@ -1935,7 +1750,6 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 777
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->archivedStickersCount:[I
 
     aget v0, v0, p0
@@ -1948,7 +1762,6 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 256
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickersByEmoji:Ljava/util/HashMap;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -1961,7 +1774,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 257
     .local v0, "value":Ljava/lang/String;
     if-eqz v0, :cond_0
 
@@ -1989,7 +1801,6 @@
     .end annotation
 
     .prologue
-    .line 236
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     return-object v0
@@ -2003,10 +1814,8 @@
 
     const-wide v10, 0x80000000L
 
-    .line 737
     const-wide/16 v2, 0x0
 
-    .line 738
     .local v2, "acc":J
     const/4 v0, 0x0
 
@@ -2020,7 +1829,6 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 739
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     invoke-virtual {v6, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2031,19 +1839,16 @@
 
     iget-object v5, v6, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
-    .line 740
     .local v5, "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
     iget-boolean v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
     if-eqz v6, :cond_0
 
-    .line 738
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 743
     :cond_0
     iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
@@ -2053,13 +1858,11 @@
 
     long-to-int v1, v6
 
-    .line 744
     .local v1, "high_id":I
     iget-wide v6, v5, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
     long-to-int v4, v6
 
-    .line 745
     .local v4, "lower_id":I
     mul-long v6, v2, v12
 
@@ -2071,7 +1874,6 @@
 
     rem-long v2, v6, v10
 
-    .line 746
     mul-long v6, v2, v12
 
     add-long/2addr v6, v10
@@ -2084,7 +1886,6 @@
 
     goto :goto_1
 
-    .line 748
     .end local v1    # "high_id":I
     .end local v4    # "lower_id":I
     .end local v5    # "set":Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -2107,7 +1908,6 @@
     .end annotation
 
     .prologue
-    .line 156
     new-instance v0, Ljava/util/ArrayList;
 
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
@@ -2131,7 +1931,6 @@
     .end annotation
 
     .prologue
-    .line 117
     new-instance v0, Ljava/util/ArrayList;
 
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
@@ -2157,7 +1956,6 @@
     .end annotation
 
     .prologue
-    .line 121
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
     aget-object v0, v0, p0
@@ -2170,7 +1968,6 @@
     .param p0, "id"    # Ljava/lang/Long;
 
     .prologue
-    .line 224
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2187,7 +1984,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 220
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -2204,7 +2000,6 @@
     .param p0, "document"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 988
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -2217,7 +2012,6 @@
 
     if-ge v0, v2, :cond_1
 
-    .line 989
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$Document;->attributes:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -2226,37 +2020,31 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
 
-    .line 990
     .local v1, "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     instance-of v2, v1, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeSticker;
 
     if-eqz v2, :cond_0
 
-    .line 991
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
     instance-of v2, v2, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
     if-eqz v2, :cond_1
 
-    .line 992
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$DocumentAttribute;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
     iget-wide v2, v2, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
-    .line 997
     .end local v1    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     :goto_1
     return-wide v2
 
-    .line 988
     .restart local v1    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 997
     .end local v1    # "attribute":Lorg/telegram/tgnet/TLRPC$DocumentAttribute;
     :cond_1
     const-wide/16 v2, -0x1
@@ -2269,7 +2057,6 @@
     .param p0, "setId"    # J
 
     .prologue
-    .line 975
     sget-object v2, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2282,20 +2069,16 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 976
     .local v0, "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     if-eqz v0, :cond_0
 
-    .line 977
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
 
-    .line 984
     :goto_0
     return-object v2
 
-    .line 980
     :cond_0
     sget-object v2, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSetsById:Ljava/util/HashMap;
 
@@ -2309,18 +2092,15 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 981
     .local v1, "stickerSetCovered":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     if-eqz v1, :cond_1
 
-    .line 982
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$StickerSet;->short_name:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 984
     :cond_1
     const/4 v2, 0x0
 
@@ -2341,7 +2121,6 @@
     .end annotation
 
     .prologue
-    .line 232
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v0, v0, p0
@@ -2362,7 +2141,6 @@
     .end annotation
 
     .prologue
-    .line 240
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     return-object v0
@@ -2373,7 +2151,6 @@
     .param p0, "type"    # I
 
     .prologue
-    .line 216
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     aget-boolean v0, v0, p0
@@ -2386,7 +2163,6 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 244
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsById:Ljava/util/HashMap;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2405,7 +2181,6 @@
     .param p0, "name"    # Ljava/lang/String;
 
     .prologue
-    .line 252
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     invoke-virtual {v0, p0}, Ljava/util/HashMap;->containsKey(Ljava/lang/Object;)Z
@@ -2420,7 +2195,6 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 248
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -2446,10 +2220,8 @@
 
     const/4 v4, 0x0
 
-    .line 781
     if-eqz p1, :cond_1
 
-    .line 782
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v6, "Notifications"
@@ -2458,7 +2230,6 @@
 
     move-result-object v1
 
-    .line 783
     .local v1, "preferences":Landroid/content/SharedPreferences;
     new-instance v5, Ljava/lang/StringBuilder;
 
@@ -2482,20 +2253,16 @@
 
     move-result v0
 
-    .line 784
     .local v0, "count":I
     if-ne v0, v7, :cond_0
 
-    .line 785
     invoke-static {p0, v4}, Lorg/telegram/messenger/query/StickersQuery;->loadArchivedStickersCount(IZ)V
 
-    .line 812
     .end local v0    # "count":I
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :goto_0
     return-void
 
-    .line 787
     .restart local v0    # "count":I
     .restart local v1    # "preferences":Landroid/content/SharedPreferences;
     :cond_0
@@ -2503,7 +2270,6 @@
 
     aput v0, v5, p0
 
-    .line 788
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v5
@@ -2522,7 +2288,6 @@
 
     goto :goto_0
 
-    .line 791
     .end local v0    # "count":I
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     :cond_1
@@ -2530,17 +2295,14 @@
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;-><init>()V
 
-    .line 792
     .local v2, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;
     iput v4, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;->limit:I
 
-    .line 793
     if-ne p0, v3, :cond_2
 
     :goto_1
     iput-boolean v3, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getArchivedStickers;->masks:Z
 
-    .line 794
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -2556,7 +2318,6 @@
     :cond_2
     move v3, v4
 
-    .line 793
     goto :goto_1
 .end method
 
@@ -2566,25 +2327,20 @@
     .param p1, "force"    # Z
 
     .prologue
-    .line 518
     sget-boolean v1, Lorg/telegram/messenger/query/StickersQuery;->loadingFeaturedStickers:Z
 
     if-eqz v1, :cond_0
 
-    .line 585
     :goto_0
     return-void
 
-    .line 521
     :cond_0
     const/4 v1, 0x1
 
     sput-boolean v1, Lorg/telegram/messenger/query/StickersQuery;->loadingFeaturedStickers:Z
 
-    .line 522
     if-eqz p0, :cond_1
 
-    .line 523
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -2601,13 +2357,11 @@
 
     goto :goto_0
 
-    .line 566
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getFeaturedStickers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_getFeaturedStickers;-><init>()V
 
-    .line 567
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getFeaturedStickers;
     if-eqz p1, :cond_2
 
@@ -2616,7 +2370,6 @@
     :goto_1
     iput v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getFeaturedStickers;->hash:I
 
-    .line 568
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -2629,7 +2382,6 @@
 
     goto :goto_0
 
-    .line 567
     :cond_2
     sget v1, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedHash:I
 
@@ -2649,37 +2401,29 @@
 
     const/4 v4, 0x1
 
-    .line 279
     if-eqz p1, :cond_3
 
-    .line 280
     sget-boolean v6, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentGifs:Z
 
     if-eqz v6, :cond_1
 
-    .line 379
     :cond_0
     :goto_0
     return-void
 
-    .line 283
     :cond_1
     sput-boolean v4, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentGifs:Z
 
-    .line 284
     sget-boolean v6, Lorg/telegram/messenger/query/StickersQuery;->recentGifsLoaded:Z
 
     if-eqz v6, :cond_2
 
-    .line 285
     const/4 p2, 0x0
 
-    .line 296
     :cond_2
     :goto_1
     if-eqz p2, :cond_4
 
-    .line 297
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -2696,7 +2440,6 @@
 
     goto :goto_0
 
-    .line 288
     :cond_3
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentStickers:[Z
 
@@ -2704,24 +2447,20 @@
 
     if-nez v6, :cond_0
 
-    .line 291
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->loadingRecentStickers:[Z
 
     aput-boolean v4, v6, p0
 
-    .line 292
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->recentStickersLoaded:[Z
 
     aget-boolean v6, v6, p0
 
     if-eqz v6, :cond_2
 
-    .line 293
     const/4 p2, 0x0
 
     goto :goto_1
 
-    .line 338
     :cond_4
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -2731,18 +2470,15 @@
 
     move-result-object v2
 
-    .line 340
     .local v2, "preferences":Landroid/content/SharedPreferences;
     if-eqz p1, :cond_5
 
-    .line 341
     const-string/jumbo v6, "lastGifLoadTime"
 
     invoke-interface {v2, v6, v8, v9}, Landroid/content/SharedPreferences;->getLong(Ljava/lang/String;J)J
 
     move-result-wide v0
 
-    .line 345
     .local v0, "lastLoadTime":J
     :goto_2
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -2761,15 +2497,12 @@
 
     if-ltz v6, :cond_0
 
-    .line 348
     if-eqz p1, :cond_6
 
-    .line 349
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_messages_getSavedGifs;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_messages_getSavedGifs;-><init>()V
 
-    .line 350
     .local v3, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getSavedGifs;
     sget-object v4, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
@@ -2779,7 +2512,6 @@
 
     iput v4, v3, Lorg/telegram/tgnet/TLRPC$TL_messages_getSavedGifs;->hash:I
 
-    .line 351
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -2792,7 +2524,6 @@
 
     goto :goto_0
 
-    .line 343
     .end local v0    # "lastLoadTime":J
     .end local v3    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getSavedGifs;
     :cond_5
@@ -2805,13 +2536,11 @@
     .restart local v0    # "lastLoadTime":J
     goto :goto_2
 
-    .line 363
     :cond_6
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_messages_getRecentStickers;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_messages_getRecentStickers;-><init>()V
 
-    .line 364
     .local v3, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getRecentStickers;
     sget-object v6, Lorg/telegram/messenger/query/StickersQuery;->recentStickers:[Ljava/util/ArrayList;
 
@@ -2823,13 +2552,11 @@
 
     iput v6, v3, Lorg/telegram/tgnet/TLRPC$TL_messages_getRecentStickers;->hash:I
 
-    .line 365
     if-ne p0, v4, :cond_7
 
     :goto_3
     iput-boolean v4, v3, Lorg/telegram/tgnet/TLRPC$TL_messages_getRecentStickers;->attached:Z
 
-    .line 366
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
@@ -2845,7 +2572,6 @@
     :cond_7
     move v4, v5
 
-    .line 365
     goto :goto_3
 .end method
 
@@ -2858,32 +2584,26 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 815
     sget-object v2, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     aget-boolean v2, v2, p0
 
     if-eqz v2, :cond_0
 
-    .line 933
     :goto_0
     return-void
 
-    .line 818
     :cond_0
     invoke-static {p0, p1}, Lorg/telegram/messenger/query/StickersQuery;->loadArchivedStickersCount(IZ)V
 
-    .line 819
     sget-object v2, Lorg/telegram/messenger/query/StickersQuery;->loadingStickers:[Z
 
     const/4 v3, 0x1
 
     aput-boolean v3, v2, p0
 
-    .line 820
     if-eqz p1, :cond_1
 
-    .line 821
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -2900,11 +2620,9 @@
 
     goto :goto_0
 
-    .line 857
     :cond_1
     if-nez p0, :cond_3
 
-    .line 858
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_getAllStickers;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_getAllStickers;-><init>()V
@@ -2912,7 +2630,6 @@
     .local v1, "req":Lorg/telegram/tgnet/TLObject;
     move-object v2, v1
 
-    .line 859
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getAllStickers;
 
     if-eqz p2, :cond_2
@@ -2920,7 +2637,6 @@
     :goto_1
     iput v0, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getAllStickers;->hash:I
 
-    .line 864
     .local v0, "hash":I
     :goto_2
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -2935,7 +2651,6 @@
 
     goto :goto_0
 
-    .line 859
     .end local v0    # "hash":I
     :cond_2
     sget-object v3, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
@@ -2944,7 +2659,6 @@
 
     goto :goto_1
 
-    .line 861
     .end local v1    # "req":Lorg/telegram/tgnet/TLObject;
     :cond_3
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_getMaskStickers;
@@ -2954,7 +2668,6 @@
     .restart local v1    # "req":Lorg/telegram/tgnet/TLObject;
     move-object v2, v1
 
-    .line 862
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_messages_getMaskStickers;
 
     if-eqz p2, :cond_4
@@ -2979,7 +2692,6 @@
     .param p0, "query"    # Z
 
     .prologue
-    .line 718
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -2988,18 +2700,15 @@
 
     if-eqz v1, :cond_1
 
-    .line 734
     :cond_0
     :goto_0
     return-void
 
-    .line 721
     :cond_1
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 722
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     invoke-static {v1}, Lorg/telegram/messenger/query/StickersQuery;->calcFeaturedStickersHash(Ljava/util/ArrayList;)I
@@ -3008,7 +2717,6 @@
 
     sput v1, Lorg/telegram/messenger/query/StickersQuery;->loadFeaturedHash:I
 
-    .line 723
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -3021,7 +2729,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 724
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->featuredStickerSets:Ljava/util/ArrayList;
 
     sget-object v2, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
@@ -3032,15 +2739,12 @@
 
     invoke-static {v1, v2, v3, v4}, Lorg/telegram/messenger/query/StickersQuery;->putFeaturedStickersToCache(Ljava/util/ArrayList;Ljava/util/ArrayList;II)V
 
-    .line 725
     if-eqz p0, :cond_0
 
-    .line 726
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;-><init>()V
 
-    .line 727
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -3060,7 +2764,6 @@
     .param p0, "id"    # J
 
     .prologue
-    .line 752
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->unreadStickerSets:Ljava/util/ArrayList;
 
     invoke-static {p0, p1}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -3085,12 +2788,10 @@
 
     if-eqz v1, :cond_1
 
-    .line 774
     :cond_0
     :goto_0
     return-void
 
-    .line 755
     :cond_1
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->readingStickerSets:Ljava/util/ArrayList;
 
@@ -3100,12 +2801,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 756
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;-><init>()V
 
-    .line 757
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_readFeaturedStickers;->id:Ljava/util/ArrayList;
 
@@ -3115,7 +2814,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 758
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -3126,7 +2824,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 764
     new-instance v1, Lorg/telegram/messenger/query/StickersQuery$18;
 
     invoke-direct {v1, p0, p1}, Lorg/telegram/messenger/query/StickersQuery$18;-><init>(J)V
@@ -3158,7 +2855,6 @@
     .end annotation
 
     .prologue
-    .line 588
     .local p0, "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     .local p1, "unreadStickers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$13;
@@ -3167,7 +2863,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 595
     sget-object v6, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$14;
@@ -3186,7 +2881,6 @@
 
     invoke-virtual {v6, v0}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 651
     return-void
 .end method
 
@@ -3206,11 +2900,9 @@
     .end annotation
 
     .prologue
-    .line 382
     .local p1, "documents":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Document;>;"
     if-eqz p1, :cond_0
 
-    .line 383
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -3225,18 +2917,15 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 430
     :cond_0
     if-nez p3, :cond_1
 
-    .line 431
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$9;
 
     invoke-direct {v0, p2, p0, p1}, Lorg/telegram/messenger/query/StickersQuery$9;-><init>(ZILjava/util/ArrayList;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 455
     :cond_1
     return-void
 .end method
@@ -3258,7 +2947,6 @@
     .end annotation
 
     .prologue
-    .line 1013
     .local p1, "res":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$23;
 
@@ -3266,7 +2954,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1020
     sget-object v6, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v0, Lorg/telegram/messenger/query/StickersQuery$24;
@@ -3285,7 +2972,6 @@
 
     invoke-virtual {v6, v0}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 1125
     return-void
 .end method
 
@@ -3308,7 +2994,6 @@
     .end annotation
 
     .prologue
-    .line 654
     .local p0, "stickers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     .local p1, "unreadStickers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     if-eqz p0, :cond_0
@@ -3317,7 +3002,6 @@
 
     invoke-direct {v0, p0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 655
     .local v0, "stickersFinal":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -3334,10 +3018,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 697
     return-void
 
-    .line 654
     .end local v0    # "stickersFinal":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$StickerSetCovered;>;"
     :cond_0
     const/4 v0, 0x0
@@ -3361,7 +3043,6 @@
     .end annotation
 
     .prologue
-    .line 936
     .local p1, "stickers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     if-eqz p1, :cond_0
 
@@ -3369,7 +3050,6 @@
 
     invoke-direct {v0, p1}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 937
     .local v0, "stickersFinal":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -3386,10 +3066,8 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 972
     return-void
 
-    .line 936
     .end local v0    # "stickersFinal":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;>;"
     :cond_0
     const/4 v0, 0x0
@@ -3402,17 +3080,14 @@
     .param p0, "document"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 160
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->recentGifs:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p0}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 161
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;-><init>()V
 
-    .line 162
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_inputDocument;
 
@@ -3420,26 +3095,22 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;->id:Lorg/telegram/tgnet/TLRPC$InputDocument;
 
-    .line 163
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;->id:Lorg/telegram/tgnet/TLRPC$InputDocument;
 
     iget-wide v2, p0, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$InputDocument;->id:J
 
-    .line 164
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;->id:Lorg/telegram/tgnet/TLRPC$InputDocument;
 
     iget-wide v2, p0, Lorg/telegram/tgnet/TLRPC$Document;->access_hash:J
 
     iput-wide v2, v1, Lorg/telegram/tgnet/TLRPC$InputDocument;->access_hash:J
 
-    .line 165
     const/4 v1, 0x1
 
     iput-boolean v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_saveGif;->unsave:Z
 
-    .line 166
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v1
@@ -3450,7 +3121,6 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 172
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -3465,7 +3135,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 182
     return-void
 .end method
 
@@ -3478,35 +3147,29 @@
     .param p4, "showSettings"    # Z
 
     .prologue
-    .line 1128
     iget-boolean v5, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->masks:Z
 
     if-eqz v5, :cond_1
 
     const/4 v4, 0x1
 
-    .line 1129
     .local v4, "type":I
     :goto_0
     new-instance v3, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
 
     invoke-direct {v3}, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;-><init>()V
 
-    .line 1130
     .local v3, "stickerSetID":Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
     iget-wide v6, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->access_hash:J
 
     iput-wide v6, v3, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;->access_hash:J
 
-    .line 1131
     iget-wide v6, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->id:J
 
     iput-wide v6, v3, Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;->id:J
 
-    .line 1132
     if-eqz p2, :cond_6
 
-    .line 1133
     const/4 v5, 0x1
 
     if-ne p2, v5, :cond_2
@@ -3516,7 +3179,6 @@
     :goto_1
     iput-boolean v5, p1, Lorg/telegram/tgnet/TLRPC$StickerSet;->archived:Z
 
-    .line 1134
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -3531,7 +3193,6 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 1135
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v5, v5, v4
@@ -3542,7 +3203,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 1136
     .local v2, "set":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
 
@@ -3554,19 +3214,16 @@
 
     if-nez v5, :cond_4
 
-    .line 1137
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v5, v5, v4
 
     invoke-virtual {v5, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 1138
     const/4 v5, 0x2
 
     if-ne p2, v5, :cond_3
 
-    .line 1139
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v5, v5, v4
@@ -3575,7 +3232,6 @@
 
     invoke-virtual {v5, v6, v2}, Ljava/util/ArrayList;->add(ILjava/lang/Object;)V
 
-    .line 1147
     .end local v2    # "set":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :cond_0
     :goto_3
@@ -3591,7 +3247,6 @@
 
     aput v6, v5, v4
 
-    .line 1148
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v5, v5, v4
@@ -3606,7 +3261,6 @@
 
     invoke-static {v4, v5, v6, v7}, Lorg/telegram/messenger/query/StickersQuery;->putStickersToCache(ILjava/util/ArrayList;II)V
 
-    .line 1149
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v5
@@ -3627,16 +3281,13 @@
 
     invoke-virtual {v5, v6, v7}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1150
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;-><init>()V
 
-    .line 1151
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
-    .line 1152
     const/4 v5, 0x1
 
     if-ne p2, v5, :cond_5
@@ -3646,7 +3297,6 @@
     :goto_4
     iput-boolean v5, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;->archived:Z
 
-    .line 1153
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -3657,13 +3307,11 @@
 
     invoke-virtual {v5, v1, v6}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    .line 1204
     .end local v0    # "a":I
     .end local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;
     :goto_5
     return-void
 
-    .line 1128
     .end local v3    # "stickerSetID":Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
     .end local v4    # "type":I
     :cond_1
@@ -3671,7 +3319,6 @@
 
     goto/16 :goto_0
 
-    .line 1133
     .restart local v3    # "stickerSetID":Lorg/telegram/tgnet/TLRPC$TL_inputStickerSetID;
     .restart local v4    # "type":I
     :cond_2
@@ -3679,7 +3326,6 @@
 
     goto :goto_1
 
-    .line 1141
     .restart local v0    # "a":I
     .restart local v2    # "set":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :cond_3
@@ -3695,7 +3341,6 @@
 
     invoke-virtual {v5, v6}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1142
     sget-object v5, Lorg/telegram/messenger/query/StickersQuery;->stickerSetsByName:Ljava/util/HashMap;
 
     iget-object v6, v2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -3706,13 +3351,11 @@
 
     goto :goto_3
 
-    .line 1134
     :cond_4
     add-int/lit8 v0, v0, 0x1
 
     goto/16 :goto_2
 
-    .line 1152
     .end local v2    # "set":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     .restart local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;
     :cond_5
@@ -3720,7 +3363,6 @@
 
     goto :goto_4
 
-    .line 1177
     .end local v0    # "a":I
     .end local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_messages_installStickerSet;
     :cond_6
@@ -3728,11 +3370,9 @@
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_uninstallStickerSet;-><init>()V
 
-    .line 1178
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_uninstallStickerSet;
     iput-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_uninstallStickerSet;->stickerset:Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
-    .line 1179
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v5
@@ -3765,7 +3405,6 @@
 
     const/4 v4, 0x0
 
-    .line 458
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
 
     aget-object v0, v0, p0
@@ -3776,7 +3415,6 @@
 
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
-    .line 471
     sget-object v0, Lorg/telegram/messenger/query/StickersQuery;->loadHash:[I
 
     sget-object v1, Lorg/telegram/messenger/query/StickersQuery;->stickerSets:[Ljava/util/ArrayList;
@@ -3789,7 +3427,6 @@
 
     aput v1, v0, p0
 
-    .line 472
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -3806,9 +3443,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 473
     invoke-static {p0, v4, v5}, Lorg/telegram/messenger/query/StickersQuery;->loadStickers(IZZ)V
 
-    .line 474
     return-void
 .end method

@@ -14,13 +14,10 @@
     .param p2, "priority"    # I
 
     .prologue
-    .line 33
     invoke-direct {p0, p1}, Landroid/os/HandlerThread;-><init>(Ljava/lang/String;)V
 
-    .line 34
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/util/PriorityHandlerThread;->priority:I
 
-    .line 35
     return-void
 .end method
 
@@ -30,14 +27,11 @@
     .locals 1
 
     .prologue
-    .line 39
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/PriorityHandlerThread;->priority:I
 
     invoke-static {v0}, Landroid/os/Process;->setThreadPriority(I)V
 
-    .line 40
     invoke-super {p0}, Landroid/os/HandlerThread;->run()V
 
-    .line 41
     return-void
 .end method

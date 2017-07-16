@@ -22,7 +22,6 @@
     .locals 0
 
     .prologue
-    .line 329
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,19 +35,16 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 332
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;
 
     if-eqz v0, :cond_0
 
-    .line 333
     new-instance v0, Lorg/telegram/messenger/query/SearchQuery$3$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/query/SearchQuery$3$1;-><init>(Lorg/telegram/messenger/query/SearchQuery$3;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 406
     :cond_0
     return-void
 .end method

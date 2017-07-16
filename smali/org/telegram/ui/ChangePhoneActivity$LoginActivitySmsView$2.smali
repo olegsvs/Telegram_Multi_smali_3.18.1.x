@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     .prologue
-    .line 933
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$2;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$2;->val$this$0:Lorg/telegram/ui/ChangePhoneActivity;
@@ -48,20 +47,16 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 936
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 937
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$2;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->onNextPressed()V
 
-    .line 938
     const/4 v0, 0x1
 
-    .line 940
     :goto_0
     return v0
 

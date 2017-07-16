@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 71
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame$1;->createFromParcel(Landroid/os/Parcel;)Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame;
 
     move-result-object v0
@@ -57,7 +55,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 75
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame;
 
     invoke-direct {v0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame;-><init>(Landroid/os/Parcel;)V
@@ -69,7 +66,6 @@
     .locals 1
 
     .prologue
-    .line 71
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame$1;->newArray(I)[Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame;
 
     move-result-object v0
@@ -82,7 +78,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 80
     new-array v0, p1, [Lorg/telegram/messenger/exoplayer2/metadata/id3/PrivFrame;
 
     return-object v0

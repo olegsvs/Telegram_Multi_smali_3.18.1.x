@@ -24,7 +24,6 @@
     .param p1, "x0"    # Landroid/os/Handler;
 
     .prologue
-    .line 758
     iput-object p2, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$number:Ljava/lang/String;
 
     invoke-direct {p0, p1}, Landroid/database/ContentObserver;-><init>(Landroid/os/Handler;)V
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 761
     const/4 v0, 0x1
 
     return v0
@@ -51,16 +49,13 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 766
     iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$number:Ljava/lang/String;
 
     invoke-static {v1, v0}, Lorg/telegram/messenger/AndroidUtilities;->access$000(ZLjava/lang/String;)V
 
-    .line 767
     iget-object v0, p0, Lorg/telegram/messenger/AndroidUtilities$2;->val$number:Ljava/lang/String;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/AndroidUtilities;->removeLoginPhoneCall(Ljava/lang/String;Z)V
 
-    .line 768
     return-void
 .end method

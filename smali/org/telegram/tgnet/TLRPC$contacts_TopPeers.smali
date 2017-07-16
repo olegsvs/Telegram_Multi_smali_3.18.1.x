@@ -54,24 +54,20 @@
     .locals 1
 
     .prologue
-    .line 14868
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 14869
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;->categories:Ljava/util/ArrayList;
 
-    .line 14870
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;->chats:Ljava/util/ArrayList;
 
-    .line 14871
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -88,20 +84,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 14874
     const/4 v0, 0x0
 
-    .line 14875
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;
     sparse-switch p1, :sswitch_data_0
 
-    .line 14883
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 14884
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in contacts_TopPeers"
@@ -126,18 +118,15 @@
 
     throw v1
 
-    .line 14877
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeers;-><init>()V
 
-    .line 14878
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;
     goto :goto_0
 
-    .line 14880
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_topPeersNotModified;
 
@@ -147,18 +136,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;
     goto :goto_0
 
-    .line 14886
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 14887
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$contacts_TopPeers;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 14889
     :cond_1
     return-object v0
 
-    .line 14875
     nop
 
     :sswitch_data_0

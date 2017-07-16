@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/HexSelectorView;
 
     .prologue
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/Components/HexSelectorView$3;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Components/HexSelectorView$3;->this$0:Lorg/telegram/ui/Components/HexSelectorView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/HexSelectorView;->validateColorInTextView()V
 
-    .line 100
     return-void
 .end method
 
@@ -59,7 +56,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 96
     return-void
 .end method
 
@@ -71,6 +67,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 92
     return-void
 .end method

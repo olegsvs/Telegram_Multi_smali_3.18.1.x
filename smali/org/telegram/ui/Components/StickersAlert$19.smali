@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersAlert;
 
     .prologue
-    .line 593
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$19;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 596
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$19;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$3500(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/StickersAlert$StickersAlertInstallDelegate;
@@ -51,7 +49,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 597
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$19;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$3500(Lorg/telegram/ui/Components/StickersAlert;)Lorg/telegram/ui/Components/StickersAlert$StickersAlertInstallDelegate;
@@ -60,13 +57,11 @@
 
     invoke-interface {v0}, Lorg/telegram/ui/Components/StickersAlert$StickersAlertInstallDelegate;->onStickerSetUninstalled()V
 
-    .line 599
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$19;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert;->dismiss()V
 
-    .line 600
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$19;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert;->getContext()Landroid/content/Context;
@@ -93,6 +88,5 @@
 
     invoke-static {v0, v1, v2, v3, v4}, Lorg/telegram/messenger/query/StickersQuery;->removeStickersSet(Landroid/content/Context;Lorg/telegram/tgnet/TLRPC$StickerSet;ILorg/telegram/ui/ActionBar/BaseFragment;Z)V
 
-    .line 601
     return-void
 .end method

@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/Adapters/SearchAdapterHelper$2$1;->this$1:Lorg/telegram/ui/Adapters/SearchAdapterHelper$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 122
     check-cast p1, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
 
     check-cast p2, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
@@ -69,21 +67,17 @@
     .param p2, "rhs"    # Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;
 
     .prologue
-    .line 125
     iget v0, p1, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;->date:I
 
     iget v1, p2, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;->date:I
 
     if-ge v0, v1, :cond_0
 
-    .line 126
     const/4 v0, 0x1
 
-    .line 130
     :goto_0
     return v0
 
-    .line 127
     :cond_0
     iget v0, p1, Lorg/telegram/ui/Adapters/SearchAdapterHelper$HashtagObject;->date:I
 
@@ -91,12 +85,10 @@
 
     if-le v0, v1, :cond_1
 
-    .line 128
     const/4 v0, -0x1
 
     goto :goto_0
 
-    .line 130
     :cond_1
     const/4 v0, 0x0
 

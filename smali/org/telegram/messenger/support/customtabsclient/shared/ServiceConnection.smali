@@ -22,17 +22,14 @@
     .param p1, "connectionCallback"    # Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;
 
     .prologue
-    .line 27
     invoke-direct {p0}, Lorg/telegram/messenger/support/customtabs/CustomTabsServiceConnection;-><init>()V
 
-    .line 28
     new-instance v0, Ljava/lang/ref/WeakReference;
 
     invoke-direct {v0, p1}, Ljava/lang/ref/WeakReference;-><init>(Ljava/lang/Object;)V
 
     iput-object v0, p0, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnection;->mConnectionCallback:Ljava/lang/ref/WeakReference;
 
-    .line 29
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p2, "client"    # Lorg/telegram/messenger/support/customtabs/CustomTabsClient;
 
     .prologue
-    .line 33
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnection;->mConnectionCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -53,13 +49,11 @@
 
     check-cast v0, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;
 
-    .line 34
     .local v0, "connectionCallback":Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;
     if-eqz v0, :cond_0
 
     invoke-interface {v0, p2}, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;->onServiceConnected(Lorg/telegram/messenger/support/customtabs/CustomTabsClient;)V
 
-    .line 35
     :cond_0
     return-void
 .end method
@@ -69,7 +63,6 @@
     .param p1, "name"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 39
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnection;->mConnectionCallback:Ljava/lang/ref/WeakReference;
 
     invoke-virtual {v1}, Ljava/lang/ref/WeakReference;->get()Ljava/lang/Object;
@@ -78,13 +71,11 @@
 
     check-cast v0, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;
 
-    .line 40
     .local v0, "connectionCallback":Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;
     if-eqz v0, :cond_0
 
     invoke-interface {v0}, Lorg/telegram/messenger/support/customtabsclient/shared/ServiceConnectionCallback;->onServiceDisconnected()V
 
-    .line 41
     :cond_0
     return-void
 .end method

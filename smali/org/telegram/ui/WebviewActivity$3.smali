@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 177
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-direct {p0}, Landroid/webkit/WebViewClient;-><init>()V
@@ -40,10 +39,8 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 180
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 181
     return-void
 .end method
 
@@ -59,10 +56,8 @@
 
     const/4 v6, 0x2
 
-    .line 185
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 187
     iget-object v1, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/WebviewActivity;->access$600(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -75,7 +70,6 @@
 
     invoke-virtual {v1, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 188
     iget-object v1, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/WebviewActivity;->access$600(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -84,12 +78,10 @@
 
     invoke-virtual {v1, v7}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->setEnabled(Z)V
 
-    .line 189
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 190
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     const/4 v1, 0x6
 
@@ -97,7 +89,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 191
     invoke-static {v2}, Lorg/telegram/ui/WebviewActivity;->access$700(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/Components/ContextProgressView;
 
     move-result-object v2
@@ -116,7 +107,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 192
     invoke-static {v2}, Lorg/telegram/ui/WebviewActivity;->access$700(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/Components/ContextProgressView;
 
     move-result-object v2
@@ -135,7 +125,6 @@
 
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 193
     invoke-static {v2}, Lorg/telegram/ui/WebviewActivity;->access$700(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/Components/ContextProgressView;
 
     move-result-object v2
@@ -156,7 +145,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 194
     invoke-static {v3}, Lorg/telegram/ui/WebviewActivity;->access$600(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v3
@@ -181,7 +169,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 195
     invoke-static {v3}, Lorg/telegram/ui/WebviewActivity;->access$600(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v3
@@ -206,7 +193,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/WebviewActivity$3;->this$0:Lorg/telegram/ui/WebviewActivity;
 
-    .line 196
     invoke-static {v3}, Lorg/telegram/ui/WebviewActivity;->access$600(Lorg/telegram/ui/WebviewActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v3
@@ -227,28 +213,22 @@
 
     aput-object v3, v1, v2
 
-    .line 190
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 197
     new-instance v1, Lorg/telegram/ui/WebviewActivity$3$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/WebviewActivity$3$1;-><init>(Lorg/telegram/ui/WebviewActivity$3;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 203
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 204
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 205
     return-void
 
-    .line 191
     nop
 
     :array_0
@@ -257,35 +237,30 @@
         0x3dcccccd    # 0.1f
     .end array-data
 
-    .line 192
     :array_1
     .array-data 4
         0x3f800000    # 1.0f
         0x3dcccccd    # 0.1f
     .end array-data
 
-    .line 193
     :array_2
     .array-data 4
         0x3f800000    # 1.0f
         0x0
     .end array-data
 
-    .line 194
     :array_3
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 195
     :array_4
     .array-data 4
         0x0
         0x3f800000    # 1.0f
     .end array-data
 
-    .line 196
     :array_5
     .array-data 4
         0x0

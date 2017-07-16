@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 9665
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,10 +37,8 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 9715
     invoke-virtual {p1, v0, v0, v0, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 9716
     return-void
 .end method
 
@@ -53,7 +50,6 @@
     .param p4, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 9739
     invoke-virtual {p2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v0
@@ -66,7 +62,6 @@
 
     invoke-virtual {p0, p1, v0, p3}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;->getItemOffsets(Landroid/graphics/Rect;ILorg/telegram/messenger/support/widget/RecyclerView;)V
 
-    .line 9741
     return-void
 .end method
 
@@ -78,7 +73,6 @@
     .end annotation
 
     .prologue
-    .line 9685
     return-void
 .end method
 
@@ -89,10 +83,8 @@
     .param p3, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 9676
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;->onDraw(Landroid/graphics/Canvas;Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
-    .line 9677
     return-void
 .end method
 
@@ -104,7 +96,6 @@
     .end annotation
 
     .prologue
-    .line 9706
     return-void
 .end method
 
@@ -115,9 +106,7 @@
     .param p3, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 9697
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;->onDrawOver(Landroid/graphics/Canvas;Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
-    .line 9698
     return-void
 .end method

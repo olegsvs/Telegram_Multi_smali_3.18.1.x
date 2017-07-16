@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     .prologue
-    .line 483
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 502
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 487
     return-void
 .end method
 
@@ -66,7 +63,6 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 491
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;
@@ -75,7 +71,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 492
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$700(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;
@@ -90,7 +85,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;->onTextChanged(Landroid/widget/EditText;)V
 
-    .line 494
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -100,7 +94,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 495
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$8;->this$0:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->access$800(Lorg/telegram/ui/ActionBar/ActionBarMenuItem;)Landroid/widget/ImageView;
@@ -121,11 +114,9 @@
     :goto_0
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 497
     :cond_2
     return-void
 
-    .line 495
     :cond_3
     const/high16 v0, 0x3f800000    # 1.0f
 

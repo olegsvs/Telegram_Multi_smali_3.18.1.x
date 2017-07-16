@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 67
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -40,7 +39,6 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 70
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-static {v2}, Lorg/telegram/messenger/camera/CameraSession;->access$000(Lorg/telegram/messenger/camera/CameraSession;)Landroid/view/OrientationEventListener;
@@ -61,12 +59,10 @@
 
     if-ne p1, v2, :cond_1
 
-    .line 83
     :cond_0
     :goto_0
     return-void
 
-    .line 73
     :cond_1
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -84,7 +80,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/camera/CameraSession;->access$202(Lorg/telegram/messenger/camera/CameraSession;I)I
 
-    .line 74
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "window"
@@ -95,7 +90,6 @@
 
     check-cast v0, Landroid/view/WindowManager;
 
-    .line 75
     .local v0, "mgr":Landroid/view/WindowManager;
     invoke-interface {v0}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -105,7 +99,6 @@
 
     move-result v1
 
-    .line 76
     .local v1, "rotation":I
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -129,7 +122,6 @@
 
     if-eq v1, v2, :cond_0
 
-    .line 77
     :cond_2
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
@@ -139,18 +131,15 @@
 
     if-nez v2, :cond_3
 
-    .line 78
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/camera/CameraSession;->configurePhotoCamera()V
 
-    .line 80
     :cond_3
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     invoke-static {v2, v1}, Lorg/telegram/messenger/camera/CameraSession;->access$502(Lorg/telegram/messenger/camera/CameraSession;I)I
 
-    .line 81
     iget-object v2, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;
 
     iget-object v3, p0, Lorg/telegram/messenger/camera/CameraSession$2;->this$0:Lorg/telegram/messenger/camera/CameraSession;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PasscodeView;
 
     .prologue
-    .line 509
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$1;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,20 +45,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 512
     const/4 v1, 0x6
 
     if-ne p2, v1, :cond_0
 
-    .line 513
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$1;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-static {v1, v0}, Lorg/telegram/ui/Components/PasscodeView;->access$400(Lorg/telegram/ui/Components/PasscodeView;Z)V
 
-    .line 514
     const/4 v0, 0x1
 
-    .line 516
     :cond_0
     return v0
 .end method

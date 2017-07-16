@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 25
     invoke-virtual {p0}, Lorg/telegram/messenger/Bitmaps$1;->initialValue()[B
 
     move-result-object v0
@@ -50,7 +48,6 @@
     .locals 1
 
     .prologue
-    .line 28
     const/16 v0, 0x21f
 
     new-array v0, v0, [B

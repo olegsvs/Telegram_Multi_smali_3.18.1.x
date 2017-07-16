@@ -15,5 +15,4 @@
 
 
 # virtual methods
-.method public abstract onSourceInfoRefreshed(Lorg/telegram/messenger/exoplayer2/Timeline;Ljava/lang/Object;)V
 .end method

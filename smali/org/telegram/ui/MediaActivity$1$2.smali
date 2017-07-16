@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$1;
 
     .prologue
-    .line 396
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$1$2;->val$deleteForAll:[Z
@@ -47,14 +46,12 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 399
     const/4 v6, 0x1
 
     .local v6, "a":I
     :goto_0
     if-ltz v6, :cond_4
 
-    .line 400
     new-instance v1, Ljava/util/ArrayList;
 
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
@@ -73,19 +70,15 @@
 
     invoke-direct {v1, v0}, Ljava/util/ArrayList;-><init>(Ljava/util/Collection;)V
 
-    .line 401
     .local v1, "ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     const/4 v2, 0x0
 
-    .line 402
     .local v2, "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     const/4 v3, 0x0
 
-    .line 403
     .local v3, "currentEncryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     const/4 v4, 0x0
 
-    .line 404
     .local v4, "channelId":I
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -93,7 +86,6 @@
 
     if-nez v0, :cond_0
 
-    .line 405
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$1;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -116,7 +108,6 @@
 
     check-cast v8, Lorg/telegram/messenger/MessageObject;
 
-    .line 406
     .local v8, "msg":Lorg/telegram/messenger/MessageObject;
     if-nez v4, :cond_0
 
@@ -128,14 +119,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 407
     iget-object v0, v8, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     iget v4, v0, Lorg/telegram/tgnet/TLRPC$Peer;->channel_id:I
 
-    .line 410
     .end local v8    # "msg":Lorg/telegram/messenger/MessageObject;
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
@@ -150,7 +139,6 @@
 
     if-nez v0, :cond_1
 
-    .line 411
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -177,17 +165,14 @@
 
     move-result-object v3
 
-    .line 413
     :cond_1
     if-eqz v3, :cond_3
 
-    .line 414
     new-instance v2, Ljava/util/ArrayList;
 
     .end local v2    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 415
     .restart local v2    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
@@ -221,7 +206,6 @@
 
     check-cast v7, Ljava/util/Map$Entry;
 
-    .line 416
     .local v7, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lorg/telegram/messenger/MessageObject;>;"
     invoke-interface {v7}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -229,7 +213,6 @@
 
     check-cast v8, Lorg/telegram/messenger/MessageObject;
 
-    .line 417
     .restart local v8    # "msg":Lorg/telegram/messenger/MessageObject;
     iget-object v5, v8, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -247,7 +230,6 @@
 
     if-eq v5, v9, :cond_2
 
-    .line 418
     iget-object v5, v8, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v10, v5, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -260,7 +242,6 @@
 
     goto :goto_1
 
-    .line 422
     .end local v7    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Lorg/telegram/messenger/MessageObject;>;"
     .end local v8    # "msg":Lorg/telegram/messenger/MessageObject;
     :cond_3
@@ -276,7 +257,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesController;->deleteMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$EncryptedChat;IZ)V
 
-    .line 423
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$1;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -289,12 +269,10 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 399
     add-int/lit8 v6, v6, -0x1
 
     goto/16 :goto_0
 
-    .line 425
     .end local v1    # "ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v2    # "random_ids":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
     .end local v3    # "currentEncryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -310,7 +288,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->hideActionMode()V
 
-    .line 426
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$1;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -321,7 +298,6 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBar;->closeSearchField()V
 
-    .line 427
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$1$2;->this$1:Lorg/telegram/ui/MediaActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$1;->this$0:Lorg/telegram/ui/MediaActivity;
@@ -330,6 +306,5 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/MediaActivity;->access$702(Lorg/telegram/ui/MediaActivity;I)I
 
-    .line 428
     return-void
 .end method

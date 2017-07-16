@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 966
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 969
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$2600(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/widget/LinearLayout;
@@ -53,7 +51,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 970
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$2600(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/widget/LinearLayout;
@@ -64,7 +61,6 @@
 
     move-result v2
 
-    .line 971
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -72,7 +68,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 972
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$2600(Lorg/telegram/ui/ChannelCreateActivity;)Landroid/widget/LinearLayout;
@@ -83,25 +78,21 @@
 
     move-result-object v1
 
-    .line 973
     .local v1, "child":Landroid/view/View;
     instance-of v3, v1, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     if-eqz v3, :cond_0
 
-    .line 974
     check-cast v1, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
     .end local v1    # "child":Landroid/view/View;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/AdminedChannelCell;->update()V
 
-    .line 971
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 978
     .end local v0    # "a":I
     .end local v2    # "count":I
     :cond_1
@@ -113,7 +104,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 979
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$1500(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -153,7 +143,6 @@
 
     invoke-virtual {v5, v6, v3, v4, v7}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 980
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$15;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ChannelCreateActivity;->access$1600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -162,13 +151,11 @@
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/BackupImageView;->invalidate()V
 
-    .line 982
     :cond_2
     return-void
 
     :cond_3
     move-object v3, v4
 
-    .line 979
     goto :goto_1
 .end method

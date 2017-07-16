@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 16
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -24,7 +23,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 20
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "Notifications"
@@ -33,7 +31,6 @@
 
     move-result-object v0
 
-    .line 21
     .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -53,6 +50,5 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 22
     return-void
 .end method

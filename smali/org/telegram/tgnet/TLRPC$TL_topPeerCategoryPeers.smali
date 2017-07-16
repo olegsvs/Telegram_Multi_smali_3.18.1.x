@@ -40,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 5502
     const v0, -0x47cbd6f
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->constructor:I
@@ -52,10 +51,8 @@
     .locals 1
 
     .prologue
-    .line 5501
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 5506
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -72,15 +69,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 5509
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 5510
     if-eqz p2, :cond_0
 
-    .line 5511
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_topPeerCategoryPeers"
@@ -105,21 +99,17 @@
 
     throw v1
 
-    .line 5513
     :cond_0
     const/4 v0, 0x0
 
-    .line 5518
     :goto_0
     return-object v0
 
-    .line 5516
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;-><init>()V
 
-    .line 5517
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -134,7 +124,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 5522
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -145,28 +134,23 @@
 
     iput-object v4, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->category:Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
 
-    .line 5523
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
 
     iput v4, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->count:I
 
-    .line 5524
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 5525
     .local v2, "magic":I
     const v4, 0x1cb5c415
 
     if-eq v2, v4, :cond_0
 
-    .line 5526
     if-eqz p2, :cond_1
 
-    .line 5527
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -191,13 +175,11 @@
 
     throw v4
 
-    .line 5531
     :cond_0
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 5532
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -205,7 +187,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 5533
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -214,18 +195,15 @@
 
     move-result-object v3
 
-    .line 5534
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     if-nez v3, :cond_2
 
-    .line 5539
     .end local v0    # "a":I
     .end local v1    # "count":I
     .end local v3    # "object":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     :cond_1
     return-void
 
-    .line 5537
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     .restart local v3    # "object":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
@@ -234,7 +212,6 @@
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5532
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -245,45 +222,37 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 5542
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5543
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->category:Lorg/telegram/tgnet/TLRPC$TopPeerCategory;
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$TopPeerCategory;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 5544
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->count:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5545
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5546
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->peers:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 5547
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 5548
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 5549
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeerCategoryPeers;->peers:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -294,12 +263,10 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 5548
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 5551
     :cond_0
     return-void
 .end method

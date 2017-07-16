@@ -29,14 +29,12 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 504
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iput-object p3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->val$this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 506
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->ignoreLayout:Z
@@ -51,7 +49,6 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 565
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1300(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Landroid/graphics/drawable/Drawable;
@@ -82,7 +79,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 566
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1300(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Landroid/graphics/drawable/Drawable;
@@ -91,7 +87,6 @@
 
     invoke-virtual {v0, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 567
     return-void
 .end method
 
@@ -100,7 +95,6 @@
     .param p1, "ev"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 510
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v0
@@ -131,15 +125,12 @@
 
     if-gez v0, :cond_0
 
-    .line 511
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->dismiss()V
 
-    .line 512
     const/4 v0, 0x1
 
-    .line 514
     :goto_0
     return v0
 
@@ -160,15 +151,12 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 551
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 552
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1100(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)V
 
-    .line 553
     return-void
 .end method
 
@@ -180,18 +168,15 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 524
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v4
 
-    .line 525
     .local v4, "width":I
     invoke-static {p2}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 526
     .local v0, "height":I
     sget v5, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -199,22 +184,18 @@
 
     if-lt v5, v6, :cond_0
 
-    .line 527
     sget v5, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     sub-int/2addr v0, v5
 
-    .line 530
     :cond_0
     invoke-static {v4, v0}, Ljava/lang/Math;->min(II)I
 
     move-result v2
 
-    .line 532
     .local v2, "pickerSize":I
     sub-int v1, v0, v2
 
-    .line 533
     .local v1, "padding":I
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
@@ -228,12 +209,10 @@
 
     if-eq v5, v1, :cond_2
 
-    .line 534
     const/4 v5, 0x1
 
     iput-boolean v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->ignoreLayout:Z
 
-    .line 535
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$800(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -244,7 +223,6 @@
 
     move-result v3
 
-    .line 536
     .local v3, "previousPadding":I
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
@@ -260,7 +238,6 @@
 
     invoke-virtual {v5, v7, v1, v7, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 537
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$900(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
@@ -273,7 +250,6 @@
 
     if-nez v5, :cond_1
 
-    .line 539
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     iget-object v6, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
@@ -288,7 +264,6 @@
 
     invoke-static {v5, v6}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$702(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;I)I
 
-    .line 540
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$800(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -303,7 +278,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setTopGlowOffset(I)V
 
-    .line 541
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$900(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
@@ -320,16 +294,13 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setTranslationY(F)V
 
-    .line 542
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-static {v5, v7}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->access$1002(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;I)I
 
-    .line 544
     :cond_1
     iput-boolean v7, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->ignoreLayout:Z
 
-    .line 546
     .end local v3    # "previousPadding":I
     :cond_2
     const/high16 v5, 0x40000000    # 2.0f
@@ -340,7 +311,6 @@
 
     invoke-super {p0, p1, v5}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 547
     return-void
 .end method
 
@@ -349,7 +319,6 @@
     .param p1, "e"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 519
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->this$1:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->isDismissed()Z
@@ -379,16 +348,13 @@
     .locals 1
 
     .prologue
-    .line 557
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;->ignoreLayout:Z
 
     if-eqz v0, :cond_0
 
-    .line 561
     :goto_0
     return-void
 
-    .line 560
     :cond_0
     invoke-super {p0}, Landroid/widget/FrameLayout;->requestLayout()V
 

@@ -34,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 307
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$stringBuilder:Ljava/lang/StringBuilder;
 
     iput-wide p2, p0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$dialogId:J
@@ -56,37 +55,31 @@
     .locals 18
 
     .prologue
-    .line 311
     :try_start_0
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 312
     .local v2, "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 313
     .local v4, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 314
     .local v5, "chats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
     new-instance v15, Ljava/util/ArrayList;
 
     invoke-direct {v15}, Ljava/util/ArrayList;-><init>()V
 
-    .line 315
     .local v15, "usersToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     new-instance v9, Ljava/util/ArrayList;
 
     invoke-direct {v9}, Ljava/util/ArrayList;-><init>()V
 
-    .line 317
     .local v9, "chatsToLoad":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -130,7 +123,6 @@
 
     move-result-object v10
 
-    .line 318
     .local v10, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_0
     :goto_0
@@ -140,18 +132,15 @@
 
     if-eqz v3, :cond_2
 
-    .line 319
     const/4 v3, 0x0
 
     invoke-virtual {v10, v3}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v11
 
-    .line 320
     .local v11, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v11, :cond_0
 
-    .line 321
     const/4 v3, 0x0
 
     invoke-virtual {v11, v3}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -164,11 +153,9 @@
 
     move-result-object v13
 
-    .line 322
     .local v13, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual {v11}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 323
     const/4 v3, 0x1
 
     invoke-virtual {v10, v3}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -177,7 +164,6 @@
 
     iput v3, v13, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 324
     const/4 v3, 0x2
 
     invoke-virtual {v10, v3}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -186,20 +172,16 @@
 
     iput v3, v13, Lorg/telegram/tgnet/TLRPC$Message;->date:I
 
-    .line 325
     move-object/from16 v0, p0
 
     iget-wide v6, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$dialogId:J
 
     iput-wide v6, v13, Lorg/telegram/tgnet/TLRPC$Message;->dialog_id:J
 
-    .line 326
     invoke-static {v13, v15, v9}, Lorg/telegram/messenger/MessagesStorage;->addUsersAndChatsFromMessage(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
 
-    .line 327
     invoke-virtual {v2, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 328
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$replyMessages:Ljava/util/ArrayList;
@@ -216,7 +198,6 @@
 
     goto :goto_0
 
-    .line 375
     .end local v2    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     .end local v4    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     .end local v5    # "chats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
@@ -228,17 +209,14 @@
     :catch_0
     move-exception v12
 
-    .line 376
     .local v12, "e":Ljava/lang/Exception;
     invoke-static {v12}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 378
     .end local v12    # "e":Ljava/lang/Exception;
     :cond_1
     :goto_1
     return-void
 
-    .line 331
     .restart local v2    # "result":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Message;>;"
     .restart local v4    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     .restart local v5    # "chats":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
@@ -249,14 +227,12 @@
     :try_start_1
     invoke-virtual {v10}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 333
     invoke-virtual {v15}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v3
 
     if-nez v3, :cond_3
 
-    .line 334
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -269,7 +245,6 @@
 
     invoke-virtual {v3, v6, v4}, Lorg/telegram/messenger/MessagesStorage;->getUsersInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 336
     :cond_3
     invoke-virtual {v9}, Ljava/util/ArrayList;->isEmpty()Z
 
@@ -277,7 +252,6 @@
 
     if-nez v3, :cond_4
 
-    .line 337
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -290,7 +264,6 @@
 
     invoke-virtual {v3, v6, v5}, Lorg/telegram/messenger/MessagesStorage;->getChatsInternal(Ljava/lang/String;Ljava/util/ArrayList;)V
 
-    .line 339
     :cond_4
     move-object/from16 v0, p0
 
@@ -304,7 +277,6 @@
 
     invoke-static/range {v2 .. v8}, Lorg/telegram/messenger/query/MessagesQuery;->access$300(Ljava/util/ArrayList;Ljava/util/HashMap;Ljava/util/ArrayList;Ljava/util/ArrayList;JZ)V
 
-    .line 341
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$replyMessages:Ljava/util/ArrayList;
@@ -315,19 +287,16 @@
 
     if-nez v3, :cond_1
 
-    .line 342
     move-object/from16 v0, p0
 
     iget v3, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$channelIdFinal:I
 
     if-eqz v3, :cond_5
 
-    .line 343
     new-instance v14, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
 
     invoke-direct {v14}, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;-><init>()V
 
-    .line 344
     .local v14, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
     move-object/from16 v0, p0
 
@@ -339,14 +308,12 @@
 
     iput-object v3, v14, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 345
     move-object/from16 v0, p0
 
     iget-object v3, v0, Lorg/telegram/messenger/query/MessagesQuery$7;->val$replyMessages:Ljava/util/ArrayList;
 
     iput-object v3, v14, Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;->id:Ljava/util/ArrayList;
 
-    .line 346
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3
@@ -361,14 +328,12 @@
 
     goto :goto_1
 
-    .line 359
     .end local v14    # "req":Lorg/telegram/tgnet/TLRPC$TL_channels_getMessages;
     :cond_5
     new-instance v14, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;
 
     invoke-direct {v14}, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;-><init>()V
 
-    .line 360
     .local v14, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;
     move-object/from16 v0, p0
 
@@ -376,7 +341,6 @@
 
     iput-object v3, v14, Lorg/telegram/tgnet/TLRPC$TL_messages_getMessages;->id:Ljava/util/ArrayList;
 
-    .line 361
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v3

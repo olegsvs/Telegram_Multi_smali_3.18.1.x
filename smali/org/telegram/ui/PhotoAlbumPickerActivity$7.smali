@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     .prologue
-    .line 478
     iput-object p1, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,20 +41,16 @@
     .param p1, "canceled"    # Z
 
     .prologue
-    .line 488
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->removeSelfFromStack()V
 
-    .line 489
     if-nez p1, :cond_0
 
-    .line 490
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$600(Lorg/telegram/ui/PhotoAlbumPickerActivity;)V
 
-    .line 492
     :cond_0
     return-void
 .end method
@@ -69,12 +64,10 @@
     .param p7, "caption"    # Ljava/lang/String;
 
     .prologue
-    .line 496
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->removeSelfFromStack()V
 
-    .line 497
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$000(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Lorg/telegram/ui/PhotoAlbumPickerActivity$PhotoAlbumPickerActivityDelegate;
@@ -93,7 +86,6 @@
 
     invoke-interface/range {v1 .. v8}, Lorg/telegram/ui/PhotoAlbumPickerActivity$PhotoAlbumPickerActivityDelegate;->didSelectVideo(Ljava/lang/String;Lorg/telegram/messenger/VideoEditedInfo;JJLjava/lang/String;)V
 
-    .line 498
     return-void
 .end method
 
@@ -101,7 +93,6 @@
     .locals 3
 
     .prologue
-    .line 481
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$900(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Lorg/telegram/ui/Components/PickerBottomLayout;
@@ -110,7 +101,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 482
     iget-object v0, p0, Lorg/telegram/ui/PhotoAlbumPickerActivity$7;->this$0:Lorg/telegram/ui/PhotoAlbumPickerActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoAlbumPickerActivity;->access$900(Lorg/telegram/ui/PhotoAlbumPickerActivity;)Lorg/telegram/ui/Components/PickerBottomLayout;
@@ -143,7 +133,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Components/PickerBottomLayout;->updateSelectedCount(IZ)V
 
-    .line 484
     :cond_0
     return-void
 .end method

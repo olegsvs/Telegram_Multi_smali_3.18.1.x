@@ -86,38 +86,32 @@
     .locals 1
 
     .prologue
-    .line 1876
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 1877
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$updates_Difference;->new_messages:Ljava/util/ArrayList;
 
-    .line 1878
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$updates_Difference;->new_encrypted_messages:Ljava/util/ArrayList;
 
-    .line 1879
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$updates_Difference;->other_updates:Ljava/util/ArrayList;
 
-    .line 1880
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$updates_Difference;->chats:Ljava/util/ArrayList;
 
-    .line 1881
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -134,20 +128,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 1889
     const/4 v0, 0x0
 
-    .line 1890
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     sparse-switch p1, :sswitch_data_0
 
-    .line 1904
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 1905
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in updates_Difference"
@@ -172,40 +162,33 @@
 
     throw v1
 
-    .line 1892
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates_difference;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updates_difference;-><init>()V
 
-    .line 1893
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     goto :goto_0
 
-    .line 1895
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceSlice;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceSlice;-><init>()V
 
-    .line 1896
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     goto :goto_0
 
-    .line 1898
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceTooLong;-><init>()V
 
-    .line 1899
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     goto :goto_0
 
-    .line 1901
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates_differenceEmpty;
 
@@ -215,18 +198,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$updates_Difference;
     goto :goto_0
 
-    .line 1907
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 1908
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$updates_Difference;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 1910
     :cond_1
     return-object v0
 
-    .line 1890
     nop
 
     :sswitch_data_0

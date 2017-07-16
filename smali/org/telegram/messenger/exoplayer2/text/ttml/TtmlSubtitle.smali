@@ -58,21 +58,16 @@
     .end annotation
 
     .prologue
-    .line 37
     .local p2, "globalStyles":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;>;"
     .local p3, "regionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 38
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->root:Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
-    .line 39
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->regionMap:Ljava/util/Map;
 
-    .line 40
     if-eqz p2, :cond_0
 
-    .line 41
     invoke-static {p2}, Ljava/util/Collections;->unmodifiableMap(Ljava/util/Map;)Ljava/util/Map;
 
     move-result-object v0
@@ -80,17 +75,14 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
 
-    .line 42
     invoke-virtual {p1}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getEventTimesUs()[J
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
-    .line 43
     return-void
 
-    .line 41
     :cond_0
     invoke-static {}, Ljava/util/Collections;->emptyMap()Ljava/util/Map;
 
@@ -115,7 +107,6 @@
     .end annotation
 
     .prologue
-    .line 68
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->root:Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
@@ -134,7 +125,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 58
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     aget-wide v0, v0, p1
@@ -146,7 +136,6 @@
     .locals 1
 
     .prologue
-    .line 53
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     array-length v0, v0
@@ -168,7 +157,6 @@
     .end annotation
 
     .prologue
-    .line 73
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->globalStyles:Ljava/util/Map;
 
     return-object v0
@@ -181,14 +169,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 47
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
     invoke-static {v1, p1, p2, v2, v2}, Lorg/telegram/messenger/exoplayer2/util/Util;->binarySearchCeil([JJZZ)I
 
     move-result v0
 
-    .line 48
     .local v0, "index":I
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->eventTimesUs:[J
 
@@ -211,7 +197,6 @@
     .locals 1
 
     .prologue
-    .line 63
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlSubtitle;->root:Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     return-object v0

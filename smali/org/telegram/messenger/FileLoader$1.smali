@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoader;
 
     .prologue
-    .line 104
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/FileLoader$1;->val$enc:Z
@@ -49,12 +48,10 @@
     .locals 3
 
     .prologue
-    .line 108
     iget-boolean v1, p0, Lorg/telegram/messenger/FileLoader$1;->val$enc:Z
 
     if-nez v1, :cond_1
 
-    .line 109
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$000(Lorg/telegram/messenger/FileLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -69,7 +66,6 @@
 
     check-cast v0, Lorg/telegram/messenger/FileUploadOperation;
 
-    .line 113
     .local v0, "operation":Lorg/telegram/messenger/FileUploadOperation;
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -82,10 +78,8 @@
 
     invoke-virtual {v1, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 114
     if-eqz v0, :cond_0
 
-    .line 115
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$100(Lorg/telegram/messenger/FileLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -96,7 +90,6 @@
 
     invoke-virtual {v1, v2}, Ljava/util/concurrent/ConcurrentHashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 116
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$300(Lorg/telegram/messenger/FileLoader;)Ljava/util/LinkedList;
@@ -105,7 +98,6 @@
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 117
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$400(Lorg/telegram/messenger/FileLoader;)Ljava/util/LinkedList;
@@ -114,14 +106,11 @@
 
     invoke-virtual {v1, v0}, Ljava/util/LinkedList;->remove(Ljava/lang/Object;)Z
 
-    .line 118
     invoke-virtual {v0}, Lorg/telegram/messenger/FileUploadOperation;->cancel()V
 
-    .line 120
     :cond_0
     return-void
 
-    .line 111
     .end local v0    # "operation":Lorg/telegram/messenger/FileUploadOperation;
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$1;->this$0:Lorg/telegram/messenger/FileLoader;

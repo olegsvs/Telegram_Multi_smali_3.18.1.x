@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     .prologue
-    .line 1957
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$1;->val$this$0:Lorg/telegram/ui/LoginActivity;
@@ -48,20 +47,16 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1960
     const/4 v0, 0x5
 
     if-ne p2, v0, :cond_0
 
-    .line 1961
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView$1;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LoginActivity$LoginActivityPasswordView;->onNextPressed()V
 
-    .line 1962
     const/4 v0, 0x1
 
-    .line 1964
     :goto_0
     return v0
 

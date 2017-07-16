@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 135
     invoke-direct {p0}, Lorg/telegram/messenger/support/customtabs/CustomTabsCallback;-><init>()V
 
     return-void
@@ -30,7 +29,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/browser/Browser$1;
 
     .prologue
-    .line 135
     invoke-direct {p0}, Lorg/telegram/messenger/browser/Browser$NavigationCallback;-><init>()V
 
     return-void
@@ -44,6 +42,5 @@
     .param p2, "extras"    # Landroid/os/Bundle;
 
     .prologue
-    .line 139
     return-void
 .end method

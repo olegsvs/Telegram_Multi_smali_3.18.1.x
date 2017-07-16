@@ -29,17 +29,13 @@
     .param p3, "cell"    # Lorg/telegram/ui/Cells/ProfileSearchCell;
 
     .prologue
-    .line 578
     iput-object p1, p0, Lorg/telegram/ui/CallLogActivity$ViewItem;->this$0:Lorg/telegram/ui/CallLogActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 579
     iput-object p2, p0, Lorg/telegram/ui/CallLogActivity$ViewItem;->button:Landroid/widget/ImageView;
 
-    .line 580
     iput-object p3, p0, Lorg/telegram/ui/CallLogActivity$ViewItem;->cell:Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    .line 581
     return-void
 .end method

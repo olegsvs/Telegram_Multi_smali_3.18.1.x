@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     .prologue
-    .line 137
     iput-object p1, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$3;->this$0:Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     iput p2, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$3;->val$position:I
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 140
     iget-object v0, p0, Lorg/telegram/ui/Components/PagerSlidingTabStrip$3;->this$0:Lorg/telegram/ui/Components/PagerSlidingTabStrip;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PagerSlidingTabStrip;->access$200(Lorg/telegram/ui/Components/PagerSlidingTabStrip;)Landroid/support/v4/view/ViewPager;
@@ -57,6 +55,5 @@
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 141
     return-void
 .end method

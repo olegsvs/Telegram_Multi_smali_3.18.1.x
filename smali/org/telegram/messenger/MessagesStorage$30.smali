@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1821
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$30;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$30;->val$participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
@@ -45,7 +44,6 @@
     .locals 10
 
     .prologue
-    .line 1825
     :try_start_0
     iget-object v7, p0, Lorg/telegram/messenger/MessagesStorage$30;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -83,17 +81,14 @@
 
     move-result-object v0
 
-    .line 1826
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     const/4 v4, 0x0
 
-    .line 1827
     .local v4, "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1828
     .local v5, "loadedUsers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -101,18 +96,15 @@
 
     if-eqz v7, :cond_0
 
-    .line 1829
     const/4 v7, 0x0
 
     invoke-virtual {v0, v7}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 1830
     .local v1, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v1, :cond_0
 
-    .line 1831
     const/4 v7, 0x0
 
     invoke-virtual {v1, v7}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -125,10 +117,8 @@
 
     move-result-object v4
 
-    .line 1832
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1833
     const/4 v7, 0x1
 
     invoke-virtual {v0, v7}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -137,25 +127,20 @@
 
     iput v7, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->pinned_msg_id:I
 
-    .line 1836
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1837
     instance-of v7, v4, Lorg/telegram/tgnet/TLRPC$TL_chatFull;
 
     if-eqz v7, :cond_1
 
-    .line 1838
     iget-object v7, p0, Lorg/telegram/messenger/MessagesStorage$30;->val$participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
 
     iput-object v7, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
 
-    .line 1839
     move-object v3, v4
 
-    .line 1840
     .local v3, "finalInfo":Lorg/telegram/tgnet/TLRPC$ChatFull;
     new-instance v7, Lorg/telegram/messenger/MessagesStorage$30$1;
 
@@ -163,7 +148,6 @@
 
     invoke-static {v7}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1847
     iget-object v7, p0, Lorg/telegram/messenger/MessagesStorage$30;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v7}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -176,7 +160,6 @@
 
     move-result-object v6
 
-    .line 1848
     .local v6, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     new-instance v1, Lorg/telegram/tgnet/NativeByteBuffer;
 
@@ -186,41 +169,33 @@
 
     invoke-direct {v1, v7}, Lorg/telegram/tgnet/NativeByteBuffer;-><init>(I)V
 
-    .line 1849
     .restart local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     invoke-virtual {v4, v1}, Lorg/telegram/tgnet/TLRPC$ChatFull;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 1850
     const/4 v7, 0x1
 
     iget v8, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->id:I
 
     invoke-virtual {v6, v7, v8}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 1851
     const/4 v7, 0x2
 
     invoke-virtual {v6, v7, v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindByteBuffer(ILorg/telegram/tgnet/NativeByteBuffer;)V
 
-    .line 1852
     const/4 v7, 0x3
 
     iget v8, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->pinned_msg_id:I
 
     invoke-virtual {v6, v7, v8}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 1853
     invoke-virtual {v6}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 1854
     invoke-virtual {v6}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 1855
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1860
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v3    # "finalInfo":Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -231,11 +206,9 @@
     :goto_0
     return-void
 
-    .line 1857
     :catch_0
     move-exception v2
 
-    .line 1858
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

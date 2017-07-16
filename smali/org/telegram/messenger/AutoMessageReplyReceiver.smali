@@ -8,7 +8,6 @@
     .locals 0
 
     .prologue
-    .line 17
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
 
     return-void
@@ -22,24 +21,19 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 21
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->postInitApplication()V
 
-    .line 22
     invoke-static {p2}, Landroid/support/v4/app/RemoteInput;->getResultsFromIntent(Landroid/content/Intent;)Landroid/os/Bundle;
 
     move-result-object v11
 
-    .line 23
     .local v11, "remoteInput":Landroid/os/Bundle;
     if-nez v11, :cond_1
 
-    .line 37
     :cond_0
     :goto_0
     return-void
 
-    .line 26
     :cond_1
     const-string/jumbo v0, "extra_voice_reply"
 
@@ -47,7 +41,6 @@
 
     move-result-object v12
 
-    .line 27
     .local v12, "text":Ljava/lang/CharSequence;
     if-eqz v12, :cond_0
 
@@ -57,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 30
     const-string/jumbo v0, "dialog_id"
 
     const-wide/16 v4, 0x0
@@ -66,7 +58,6 @@
 
     move-result-wide v2
 
-    .line 31
     .local v2, "dialog_id":J
     const-string/jumbo v0, "max_id"
 
@@ -76,7 +67,6 @@
 
     move-result v10
 
-    .line 32
     .local v10, "max_id":I
     const-wide/16 v0, 0x0
 
@@ -86,7 +76,6 @@
 
     if-eqz v10, :cond_0
 
-    .line 35
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v0
@@ -109,7 +98,6 @@
 
     invoke-virtual/range {v0 .. v9}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$WebPage;ZLjava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 36
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1

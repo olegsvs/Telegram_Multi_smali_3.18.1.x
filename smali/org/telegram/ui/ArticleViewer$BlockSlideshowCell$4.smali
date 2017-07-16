@@ -27,7 +27,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 3715
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     iput-object p3, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;->val$this$0:Lorg/telegram/ui/ArticleViewer;
@@ -46,7 +45,6 @@
     .prologue
     const/high16 v8, 0x40a00000    # 5.0f
 
-    .line 3718
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
     invoke-static {v4}, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;->access$8500(Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;)Lorg/telegram/tgnet/TLRPC$TL_pageBlockSlideshow;
@@ -55,11 +53,9 @@
 
     if-nez v4, :cond_1
 
-    .line 3728
     :cond_0
     return-void
 
-    .line 3721
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;
 
@@ -71,7 +67,6 @@
 
     move-result v3
 
-    .line 3722
     .local v3, "selected":I
     const/4 v0, 0x0
 
@@ -91,7 +86,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 3723
     const/high16 v4, 0x40800000    # 4.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -108,7 +102,6 @@
 
     add-int v1, v4, v5
 
-    .line 3724
     .local v1, "cx":I
     if-ne v3, v0, :cond_2
 
@@ -120,7 +113,6 @@
 
     move-result-object v2
 
-    .line 3725
     .local v2, "drawable":Landroid/graphics/drawable/Drawable;
     :goto_1
     invoke-static {v8}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -145,15 +137,12 @@
 
     invoke-virtual {v2, v4, v5, v6, v7}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 3726
     invoke-virtual {v2, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 3722
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 3724
     .end local v2    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell$4;->this$1:Lorg/telegram/ui/ArticleViewer$BlockSlideshowCell;

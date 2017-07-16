@@ -29,7 +29,6 @@
     .locals 0
 
     .prologue
-    .line 3893
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -42,20 +41,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 3900
     const/4 v0, 0x0
 
-    .line 3901
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     sparse-switch p1, :sswitch_data_0
 
-    .line 3909
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 3910
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_DhConfig"
@@ -80,18 +75,15 @@
 
     throw v1
 
-    .line 3903
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfigNotModified;-><init>()V
 
-    .line 3904
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     goto :goto_0
 
-    .line 3906
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_dhConfig;
 
@@ -101,18 +93,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     goto :goto_0
 
-    .line 3912
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 3913
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 3915
     :cond_1
     return-object v0
 
-    .line 3901
     nop
 
     :sswitch_data_0

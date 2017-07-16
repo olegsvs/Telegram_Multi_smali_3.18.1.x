@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/WebPlayerView;
 
     .prologue
-    .line 1375
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$6;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 1378
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$6;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$1700(Lorg/telegram/ui/Components/WebPlayerView;)Z
@@ -77,12 +75,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1383
     :cond_0
     :goto_0
     return-void
 
-    .line 1381
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/Components/WebPlayerView$6;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -99,14 +95,12 @@
     :goto_1
     invoke-static {v2, v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$4302(Lorg/telegram/ui/Components/WebPlayerView;Z)Z
 
-    .line 1382
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$6;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$5100(Lorg/telegram/ui/Components/WebPlayerView;Z)V
 
     goto :goto_0
 
-    .line 1381
     :cond_2
     const/4 v0, 0x0
 

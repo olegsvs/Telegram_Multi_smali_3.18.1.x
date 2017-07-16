@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/DocumentSelectActivity$1;
 
     .prologue
-    .line 110
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$1$1;->this$1:Lorg/telegram/ui/DocumentSelectActivity$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 3
 
     .prologue
-    .line 113
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$1$1;->this$1:Lorg/telegram/ui/DocumentSelectActivity$1;
 
@@ -53,18 +51,15 @@
 
     if-nez v1, :cond_0
 
-    .line 114
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$1$1;->this$1:Lorg/telegram/ui/DocumentSelectActivity$1;
 
     iget-object v1, v1, Lorg/telegram/ui/DocumentSelectActivity$1;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DocumentSelectActivity;->access$100(Lorg/telegram/ui/DocumentSelectActivity;)V
 
-    .line 121
     :goto_0
     return-void
 
-    .line 116
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$1$1;->this$1:Lorg/telegram/ui/DocumentSelectActivity$1;
 
@@ -84,11 +79,9 @@
 
     goto :goto_0
 
-    .line 118
     :catch_0
     move-exception v0
 
-    .line 119
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

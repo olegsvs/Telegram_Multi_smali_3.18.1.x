@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     .prologue
-    .line 767
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iput-object p2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -49,19 +48,16 @@
 
     const/4 v6, 0x1
 
-    .line 770
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$400(Lorg/telegram/ui/TwoStepVerificationActivity;)V
 
-    .line 771
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v2, :cond_0
 
-    .line 772
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -74,14 +70,12 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$1102(Lorg/telegram/ui/TwoStepVerificationActivity;[B)[B
 
-    .line 773
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2, v6}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$1902(Lorg/telegram/ui/TwoStepVerificationActivity;Z)Z
 
-    .line 774
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -92,18 +86,15 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 775
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$2400(Lorg/telegram/ui/TwoStepVerificationActivity;)V
 
-    .line 792
     :goto_0
     return-void
 
-    .line 777
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -117,7 +108,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 778
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
 
     iget-object v2, v2, Lorg/telegram/ui/TwoStepVerificationActivity$10;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -126,7 +116,6 @@
 
     goto :goto_0
 
-    .line 779
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -140,7 +129,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 780
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -153,20 +141,17 @@
 
     move-result v0
 
-    .line 782
     .local v0, "time":I
     const/16 v2, 0x3c
 
     if-ge v0, v2, :cond_2
 
-    .line 783
     const-string/jumbo v2, "Seconds"
 
     invoke-static {v2, v0}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 787
     .local v1, "timeString":Ljava/lang/String;
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$10$1;->this$1:Lorg/telegram/ui/TwoStepVerificationActivity$10;
@@ -197,7 +182,6 @@
 
     goto :goto_0
 
-    .line 785
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_2
     const-string/jumbo v2, "Minutes"
@@ -211,7 +195,6 @@
     .restart local v1    # "timeString":Ljava/lang/String;
     goto :goto_1
 
-    .line 789
     .end local v0    # "time":I
     .end local v1    # "timeString":Ljava/lang/String;
     :cond_3

@@ -31,20 +31,16 @@
     .param p2, "height"    # I
 
     .prologue
-    .line 1093
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(II)V
 
-    .line 1084
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1086
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 1094
     return-void
 .end method
 
@@ -54,20 +50,16 @@
     .param p2, "attrs"    # Landroid/util/AttributeSet;
 
     .prologue
-    .line 1089
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 1084
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1086
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 1090
     return-void
 .end method
 
@@ -76,20 +68,16 @@
     .param p1, "source"    # Landroid/view/ViewGroup$LayoutParams;
 
     .prologue
-    .line 1101
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1084
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1086
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 1102
     return-void
 .end method
 
@@ -98,20 +86,16 @@
     .param p1, "source"    # Landroid/view/ViewGroup$MarginLayoutParams;
 
     .prologue
-    .line 1097
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Landroid/view/ViewGroup$MarginLayoutParams;)V
 
-    .line 1084
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1086
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 1098
     return-void
 .end method
 
@@ -120,20 +104,16 @@
     .param p1, "source"    # Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
 
     .prologue
-    .line 1105
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;-><init>(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;)V
 
-    .line 1084
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
-    .line 1086
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
-    .line 1106
     return-void
 .end method
 
@@ -143,7 +123,6 @@
     .locals 1
 
     .prologue
-    .line 1123
     iget v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanIndex:I
 
     return v0
@@ -153,7 +132,6 @@
     .locals 1
 
     .prologue
-    .line 1133
     iget v0, p0, Lorg/telegram/messenger/support/widget/GridLayoutManager$LayoutParams;->mSpanSize:I
 
     return v0

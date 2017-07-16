@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ThemingActivity$3$5;
 
     .prologue
-    .line 374
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$5$2;->this$2:Lorg/telegram/ui/ThemingActivity$3$5;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 377
     iget-object v1, p0, Lorg/telegram/ui/ThemingActivity$3$5$2;->this$2:Lorg/telegram/ui/ThemingActivity$3$5;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingActivity$3$5;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -54,7 +52,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 378
     iget-object v1, p0, Lorg/telegram/ui/ThemingActivity$3$5$2;->this$2:Lorg/telegram/ui/ThemingActivity$3$5;
 
     iget-object v1, v1, Lorg/telegram/ui/ThemingActivity$3$5;->this$1:Lorg/telegram/ui/ThemingActivity$3;
@@ -79,11 +76,9 @@
 
     move-result-object v0
 
-    .line 379
     .local v0, "toast":Landroid/widget/Toast;
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 381
     .end local v0    # "toast":Landroid/widget/Toast;
     :cond_0
     return-void

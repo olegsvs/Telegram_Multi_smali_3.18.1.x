@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/TwoStepVerificationActivity;
 
     .prologue
-    .line 323
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 326
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$900(Lorg/telegram/ui/TwoStepVerificationActivity;)I
@@ -62,13 +60,11 @@
 
     if-ne p2, v2, :cond_2
 
-    .line 327
     :cond_0
     new-instance v1, Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {v1, v3}, Lorg/telegram/ui/TwoStepVerificationActivity;-><init>(I)V
 
-    .line 328
     .local v1, "fragment":Lorg/telegram/ui/TwoStepVerificationActivity;
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
@@ -78,7 +74,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$1102(Lorg/telegram/ui/TwoStepVerificationActivity;[B)[B
 
-    .line 329
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$200(Lorg/telegram/ui/TwoStepVerificationActivity;)Lorg/telegram/tgnet/TLRPC$account_Password;
@@ -87,18 +82,15 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$202(Lorg/telegram/ui/TwoStepVerificationActivity;Lorg/telegram/tgnet/TLRPC$account_Password;)Lorg/telegram/tgnet/TLRPC$account_Password;
 
-    .line 330
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 351
     .end local v1    # "fragment":Lorg/telegram/ui/TwoStepVerificationActivity;
     :cond_1
     :goto_0
     return-void
 
-    .line 331
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
@@ -116,13 +108,11 @@
 
     if-ne p2, v2, :cond_4
 
-    .line 332
     :cond_3
     new-instance v1, Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {v1, v3}, Lorg/telegram/ui/TwoStepVerificationActivity;-><init>(I)V
 
-    .line 333
     .restart local v1    # "fragment":Lorg/telegram/ui/TwoStepVerificationActivity;
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
@@ -132,7 +122,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$1102(Lorg/telegram/ui/TwoStepVerificationActivity;[B)[B
 
-    .line 334
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$200(Lorg/telegram/ui/TwoStepVerificationActivity;)Lorg/telegram/tgnet/TLRPC$account_Password;
@@ -141,22 +130,18 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$202(Lorg/telegram/ui/TwoStepVerificationActivity;Lorg/telegram/tgnet/TLRPC$account_Password;)Lorg/telegram/tgnet/TLRPC$account_Password;
 
-    .line 335
     invoke-static {v1, v3}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$1402(Lorg/telegram/ui/TwoStepVerificationActivity;Z)Z
 
-    .line 336
     const/4 v2, 0x3
 
     invoke-static {v1, v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$502(Lorg/telegram/ui/TwoStepVerificationActivity;I)I
 
-    .line 337
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-virtual {v2, v1}, Lorg/telegram/ui/TwoStepVerificationActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
     goto :goto_0
 
-    .line 338
     .end local v1    # "fragment":Lorg/telegram/ui/TwoStepVerificationActivity;
     :cond_4
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
@@ -175,7 +160,6 @@
 
     if-ne p2, v2, :cond_1
 
-    .line 339
     :cond_5
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -187,7 +171,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 340
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "TurnPasswordOffQuestion"
 
@@ -199,7 +182,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 341
     const-string/jumbo v2, "AppName"
 
     const v3, 0x7f070078
@@ -210,7 +192,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 342
     const-string/jumbo v2, "OK"
 
     const v3, 0x7f070452
@@ -225,7 +206,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 348
     const-string/jumbo v2, "Cancel"
 
     const v3, 0x7f0700f0
@@ -238,7 +218,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 349
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$5;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;

@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 476
     iput-wide p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$9;->val$uid:J
 
     iput p3, p0, Lorg/telegram/messenger/query/SharedMediaQuery$9;->val$max_id:I
@@ -44,12 +43,10 @@
     .locals 12
 
     .prologue
-    .line 479
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 481
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -110,7 +107,6 @@
 
     move-result-object v1
 
-    .line 483
     .local v1, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_0
     :goto_0
@@ -120,18 +116,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 484
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v2
 
-    .line 485
     .local v2, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v2, :cond_0
 
-    .line 486
     const/4 v5, 0x0
 
     invoke-virtual {v2, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -144,18 +137,15 @@
 
     move-result-object v4
 
-    .line 487
     .local v4, "message":Lorg/telegram/tgnet/TLRPC$Message;
     invoke-virtual {v2}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 488
     invoke-static {v4}, Lorg/telegram/messenger/MessageObject;->isMusicMessage(Lorg/telegram/tgnet/TLRPC$Message;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 489
     const/4 v5, 0x1
 
     invoke-virtual {v1, v5}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
@@ -164,12 +154,10 @@
 
     iput v5, v4, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 490
     iget-wide v6, p0, Lorg/telegram/messenger/query/SharedMediaQuery$9;->val$uid:J
 
     iput-wide v6, v4, Lorg/telegram/tgnet/TLRPC$Message;->dialog_id:J
 
-    .line 491
     const/4 v5, 0x0
 
     new-instance v6, Lorg/telegram/messenger/MessageObject;
@@ -186,18 +174,15 @@
 
     goto :goto_0
 
-    .line 496
     .end local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v2    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v4    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :catch_0
     move-exception v3
 
-    .line 497
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 499
     .end local v3    # "e":Ljava/lang/Exception;
     :goto_1
     new-instance v5, Lorg/telegram/messenger/query/SharedMediaQuery$9$1;
@@ -206,10 +191,8 @@
 
     invoke-static {v5}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 505
     return-void
 
-    .line 495
     .restart local v1    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :cond_1
     :try_start_1

@@ -28,7 +28,6 @@
     .locals 1
 
     .prologue
-    .line 295
     iput-wide p1, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$dialog_id:J
 
     iput-object p3, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -46,17 +45,14 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 298
     const/4 v2, 0x3
 
     if-ne p2, v2, :cond_0
 
-    .line 299
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 300
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v2, "dialog_id"
 
@@ -64,7 +60,6 @@
 
     invoke-virtual {v0, v2, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 301
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     new-instance v3, Lorg/telegram/ui/ReportOtherActivity;
@@ -73,18 +68,15 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 319
     .end local v0    # "args":Landroid/os/Bundle;
     :goto_0
     return-void
 
-    .line 304
     :cond_0
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;-><init>()V
 
-    .line 305
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;
     iget-wide v2, p0, Lorg/telegram/ui/Components/AlertsCreator$2;->val$dialog_id:J
 
@@ -96,17 +88,14 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
-    .line 306
     if-nez p2, :cond_2
 
-    .line 307
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonSpam;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonSpam;-><init>()V
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_account_reportPeer;->reason:Lorg/telegram/tgnet/TLRPC$ReportReason;
 
-    .line 313
     :cond_1
     :goto_1
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
@@ -121,13 +110,11 @@
 
     goto :goto_0
 
-    .line 308
     :cond_2
     const/4 v2, 0x1
 
     if-ne p2, v2, :cond_3
 
-    .line 309
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonViolence;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonViolence;-><init>()V
@@ -136,13 +123,11 @@
 
     goto :goto_1
 
-    .line 310
     :cond_3
     const/4 v2, 0x2
 
     if-ne p2, v2, :cond_1
 
-    .line 311
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonPornography;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_inputReportReasonPornography;-><init>()V

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper$19;
 
     .prologue
-    .line 3735
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$19$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$19;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$19$1;->val$videoFinal:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -53,7 +52,6 @@
     .locals 9
 
     .prologue
-    .line 3738
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v0
@@ -80,6 +78,5 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Lorg/telegram/tgnet/TLRPC$TL_document;Lorg/telegram/messenger/VideoEditedInfo;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 3739
     return-void
 .end method

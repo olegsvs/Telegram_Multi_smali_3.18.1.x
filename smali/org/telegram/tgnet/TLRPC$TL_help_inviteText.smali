@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 4075
     const v0, 0x18cb9f78
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 4074
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -52,15 +50,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4080
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 4081
     if-eqz p2, :cond_0
 
-    .line 4082
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_help_inviteText"
@@ -85,21 +80,17 @@
 
     throw v1
 
-    .line 4084
     :cond_0
     const/4 v0, 0x0
 
-    .line 4089
     :goto_0
     return-object v0
 
-    .line 4087
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;-><init>()V
 
-    .line 4088
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -114,14 +105,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 4093
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readString(Z)Ljava/lang/String;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->message:Ljava/lang/String;
 
-    .line 4094
     return-void
 .end method
 
@@ -130,16 +119,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 4097
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 4098
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;->message:Ljava/lang/String;
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeString(Ljava/lang/String;)V
 
-    .line 4099
     return-void
 .end method

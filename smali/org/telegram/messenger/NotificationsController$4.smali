@@ -8,7 +8,6 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/NotificationsController;->setLastOnlineFromOtherDevice(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -29,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationsController;
 
     .prologue
-    .line 190
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$4;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iput p2, p0, Lorg/telegram/messenger/NotificationsController$4;->val$time:I
@@ -45,12 +43,10 @@
     .locals 2
 
     .prologue
-    .line 193
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v1, "set last online from other device = "
 
     invoke-virtual {v0, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -68,13 +64,11 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;)V
 
-    .line 194
     iget-object v0, p0, Lorg/telegram/messenger/NotificationsController$4;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     iget v1, p0, Lorg/telegram/messenger/NotificationsController$4;->val$time:I
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/NotificationsController;->access$1302(Lorg/telegram/messenger/NotificationsController;I)I
 
-    .line 195
     return-void
 .end method

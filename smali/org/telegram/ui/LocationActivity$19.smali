@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 733
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$19;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .end annotation
 
     .prologue
-    .line 737
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$19;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
@@ -55,11 +53,9 @@
 
     if-nez v2, :cond_0
 
-    .line 747
     :goto_0
     return-void
 
-    .line 741
     :cond_0
     :try_start_0
     new-instance v1, Landroid/content/Intent;
@@ -68,7 +64,6 @@
 
     invoke-direct {v1, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 742
     .local v1, "intent":Landroid/content/Intent;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -100,7 +95,6 @@
 
     invoke-virtual {v1, v2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 743
     iget-object v2, p0, Lorg/telegram/ui/LocationActivity$19;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
@@ -113,12 +107,10 @@
 
     goto :goto_0
 
-    .line 744
     .end local v1    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v0
 
-    .line 745
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

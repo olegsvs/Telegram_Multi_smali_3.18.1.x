@@ -27,15 +27,12 @@
     .param p2, "callJavaResult"    # Lorg/telegram/ui/Components/WebPlayerView$CallJavaResultInterface;
 
     .prologue
-    .line 413
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$JavaScriptInterface;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 414
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$JavaScriptInterface;->callJavaResultInterface:Lorg/telegram/ui/Components/WebPlayerView$CallJavaResultInterface;
 
-    .line 415
     return-void
 .end method
 
@@ -48,11 +45,9 @@
     .end annotation
 
     .prologue
-    .line 419
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$JavaScriptInterface;->callJavaResultInterface:Lorg/telegram/ui/Components/WebPlayerView$CallJavaResultInterface;
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView$CallJavaResultInterface;->jsCallFinished(Ljava/lang/String;)V
 
-    .line 420
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 801
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$8;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -52,7 +51,6 @@
 
     const/4 v7, 0x0
 
-    .line 804
     iget-object v5, p0, Lorg/telegram/ui/SettingsActivity$8;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v5}, Lorg/telegram/ui/SettingsActivity;->getParentActivity()Landroid/app/Activity;
@@ -61,12 +59,10 @@
 
     if-nez v5, :cond_1
 
-    .line 840
     :cond_0
     :goto_0
     return-void
 
-    .line 807
     :cond_1
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -78,7 +74,6 @@
 
     invoke-direct {v0, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 811
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -96,23 +91,18 @@
 
     move-result-object v4
 
-    .line 812
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v4, :cond_2
 
-    .line 813
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v4
 
-    .line 815
     :cond_2
     if-eqz v4, :cond_0
 
-    .line 818
     const/4 v2, 0x0
 
-    .line 819
     .local v2, "fullMenu":Z
     iget-object v5, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
@@ -130,7 +120,6 @@
 
     if-nez v5, :cond_3
 
-    .line 820
     const/4 v5, 0x3
 
     new-array v3, v5, [Ljava/lang/CharSequence;
@@ -161,15 +150,12 @@
 
     aput-object v5, v3, v9
 
-    .line 821
     .local v3, "items":[Ljava/lang/CharSequence;
     const/4 v2, 0x1
 
-    .line 826
     :goto_1
     move v1, v2
 
-    .line 827
     .local v1, "full":Z
     new-instance v5, Lorg/telegram/ui/SettingsActivity$8$1;
 
@@ -177,7 +163,6 @@
 
     invoke-virtual {v0, v3, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 839
     iget-object v5, p0, Lorg/telegram/ui/SettingsActivity$8;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -188,7 +173,6 @@
 
     goto :goto_0
 
-    .line 823
     .end local v1    # "full":Z
     .end local v3    # "items":[Ljava/lang/CharSequence;
     :cond_3

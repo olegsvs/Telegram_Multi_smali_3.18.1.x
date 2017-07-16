@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DocumentSelectActivity;
 
     .prologue
-    .line 107
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$1;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Landroid/content/BroadcastReceiver;-><init>()V
@@ -40,12 +39,10 @@
     .param p2, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 110
     new-instance v0, Lorg/telegram/ui/DocumentSelectActivity$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/DocumentSelectActivity$1$1;-><init>(Lorg/telegram/ui/DocumentSelectActivity$1;)V
 
-    .line 123
     .local v0, "r":Ljava/lang/Runnable;
     const-string/jumbo v1, "android.intent.action.MEDIA_UNMOUNTED"
 
@@ -59,7 +56,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 124
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$1;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DocumentSelectActivity;->access$300(Lorg/telegram/ui/DocumentSelectActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -70,11 +66,9 @@
 
     invoke-virtual {v1, v0, v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 128
     :goto_0
     return-void
 
-    .line 126
     :cond_0
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 

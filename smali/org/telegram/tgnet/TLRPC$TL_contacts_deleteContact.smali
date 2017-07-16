@@ -27,7 +27,6 @@
     .locals 1
 
     .prologue
-    .line 20806
     const v0, -0x716ac8bc
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_deleteContact;->constructor:I
@@ -39,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 20805
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,7 +52,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 20811
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_contacts_link;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_contacts_link;
 
     move-result-object v0
@@ -67,16 +64,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20815
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_deleteContact;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20816
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_contacts_deleteContact;->id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputUser;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 20817
     return-void
 .end method

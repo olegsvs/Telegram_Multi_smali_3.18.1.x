@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/TwoStepVerificationActivity;
 
     .prologue
-    .line 145
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$1;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,28 +38,23 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 148
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 149
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$1;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->finishFragment()V
 
-    .line 153
     :cond_0
     :goto_0
     return-void
 
-    .line 150
     :cond_1
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 151
     iget-object v0, p0, Lorg/telegram/ui/TwoStepVerificationActivity$1;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$000(Lorg/telegram/ui/TwoStepVerificationActivity;)V

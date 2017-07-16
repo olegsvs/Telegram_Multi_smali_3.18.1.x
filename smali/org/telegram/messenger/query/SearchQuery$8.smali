@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 575
     iput p1, p0, Lorg/telegram/messenger/query/SearchQuery$8;->val$did:I
 
     iput p2, p0, Lorg/telegram/messenger/query/SearchQuery$8;->val$type:I
@@ -48,7 +47,6 @@
     .locals 6
 
     .prologue
-    .line 579
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -64,32 +62,27 @@
 
     move-result-object v1
 
-    .line 580
     .local v1, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 581
     const/4 v2, 0x1
 
     iget v3, p0, Lorg/telegram/messenger/query/SearchQuery$8;->val$did:I
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 582
     const/4 v2, 0x2
 
     iget v3, p0, Lorg/telegram/messenger/query/SearchQuery$8;->val$type:I
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 583
     const/4 v2, 0x3
 
     iget-wide v4, p0, Lorg/telegram/messenger/query/SearchQuery$8;->val$rating:D
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindDouble(ID)V
 
-    .line 584
     const/4 v2, 0x4
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -102,24 +95,19 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 585
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 586
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 590
     .end local v1    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_0
     return-void
 
-    .line 587
     :catch_0
     move-exception v0
 
-    .line 588
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatAttachAlert;
 
     .prologue
-    .line 2321
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$22;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatAttachAlert$22;->val$animatorSetInner:Landroid/animation/AnimatorSet;
@@ -43,17 +42,14 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2324
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$22;->val$animatorSetInner:Landroid/animation/AnimatorSet;
 
     if-eqz v0, :cond_0
 
-    .line 2325
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatAttachAlert$22;->val$animatorSetInner:Landroid/animation/AnimatorSet;
 
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 2327
     :cond_0
     return-void
 .end method

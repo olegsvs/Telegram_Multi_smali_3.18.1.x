@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$11;
 
     .prologue
-    .line 2049
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$11$1;->this$1:Lorg/telegram/messenger/ImageLoader$11;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$11$1;->val$newTask:Lorg/telegram/messenger/ImageLoader$HttpFileTask;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 2052
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$11$1;->this$1:Lorg/telegram/messenger/ImageLoader$11;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Ljava/util/LinkedList;->add(Ljava/lang/Object;)Z
 
-    .line 2053
     iget-object v0, p0, Lorg/telegram/messenger/ImageLoader$11$1;->this$1:Lorg/telegram/messenger/ImageLoader$11;
 
     iget-object v0, v0, Lorg/telegram/messenger/ImageLoader$11;->this$0:Lorg/telegram/messenger/ImageLoader;
@@ -69,6 +66,5 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/messenger/ImageLoader;->access$200(Lorg/telegram/messenger/ImageLoader;Lorg/telegram/messenger/ImageLoader$HttpFileTask;I)V
 
-    .line 2054
     return-void
 .end method

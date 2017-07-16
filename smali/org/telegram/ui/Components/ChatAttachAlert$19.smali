@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatAttachAlert;
 
     .prologue
-    .line 1472
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "camera"    # Landroid/hardware/Camera;
 
     .prologue
-    .line 1476
     return-void
 .end method
 
@@ -58,7 +56,6 @@
 
     const/4 v8, 0x0
 
-    .line 1480
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3600(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -69,7 +66,6 @@
 
     move-result v2
 
-    .line 1481
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -77,7 +73,6 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 1482
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$3600(Lorg/telegram/ui/Components/ChatAttachAlert;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -88,16 +83,13 @@
 
     move-result-object v1
 
-    .line 1483
     .local v1, "child":Landroid/view/View;
     instance-of v5, v1, Lorg/telegram/ui/Cells/PhotoAttachCameraCell;
 
     if-eqz v5, :cond_1
 
-    .line 1484
     invoke-virtual {v1, v7}, Landroid/view/View;->setVisibility(I)V
 
-    .line 1489
     .end local v1    # "child":Landroid/view/View;
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
@@ -114,7 +106,6 @@
 
     move-result-object v3
 
-    .line 1490
     .local v3, "current":Ljava/lang/String;
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -130,7 +121,6 @@
 
     move-result-object v4
 
-    .line 1491
     .local v4, "next":Ljava/lang/String;
     invoke-virtual {v3, v4}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -138,13 +128,11 @@
 
     if-eqz v5, :cond_2
 
-    .line 1492
     const/4 v0, 0x0
 
     :goto_1
     if-ge v0, v11, :cond_5
 
-    .line 1493
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -155,7 +143,6 @@
 
     invoke-virtual {v5, v7}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1494
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -166,7 +153,6 @@
 
     invoke-virtual {v5, v8}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 1495
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -177,12 +163,10 @@
 
     invoke-virtual {v5, v8}, Landroid/widget/ImageView;->setTranslationY(F)V
 
-    .line 1492
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 1481
     .end local v3    # "current":Ljava/lang/String;
     .end local v4    # "next":Ljava/lang/String;
     .restart local v1    # "child":Landroid/view/View;
@@ -191,7 +175,6 @@
 
     goto :goto_0
 
-    .line 1498
     .end local v1    # "child":Landroid/view/View;
     .restart local v3    # "current":Ljava/lang/String;
     .restart local v4    # "next":Ljava/lang/String;
@@ -222,13 +205,11 @@
 
     invoke-static {v5, v9, v10}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$5900(Lorg/telegram/ui/Components/ChatAttachAlert;Landroid/widget/ImageView;Ljava/lang/String;)V
 
-    .line 1499
     const/4 v0, 0x0
 
     :goto_2
     if-ge v0, v11, :cond_5
 
-    .line 1500
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -244,7 +225,6 @@
     :goto_3
     invoke-virtual {v9, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1501
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -268,7 +248,6 @@
     :goto_4
     invoke-virtual {v9, v5}, Landroid/widget/ImageView;->setAlpha(F)V
 
-    .line 1502
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4600(Lorg/telegram/ui/Components/ChatAttachAlert;)[Landroid/widget/ImageView;
@@ -279,7 +258,6 @@
 
     invoke-virtual {v5, v8}, Landroid/widget/ImageView;->setTranslationY(F)V
 
-    .line 1499
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
@@ -287,16 +265,13 @@
     :cond_3
     move v5, v7
 
-    .line 1500
     goto :goto_3
 
     :cond_4
     move v5, v8
 
-    .line 1501
     goto :goto_4
 
-    .line 1505
     :cond_5
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
@@ -321,7 +296,6 @@
     :goto_5
     invoke-virtual {v8, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 1506
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatAttachAlert$19;->this$0:Lorg/telegram/ui/Components/ChatAttachAlert;
 
     invoke-static {v5}, Lorg/telegram/ui/Components/ChatAttachAlert;->access$4500(Lorg/telegram/ui/Components/ChatAttachAlert;)Landroid/widget/ImageView;
@@ -343,10 +317,8 @@
     :goto_6
     invoke-virtual {v5, v6}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 1507
     return-void
 
-    .line 1505
     :cond_6
     const v5, 0x7f020047
 
@@ -355,6 +327,5 @@
     :cond_7
     move v6, v7
 
-    .line 1506
     goto :goto_6
 .end method

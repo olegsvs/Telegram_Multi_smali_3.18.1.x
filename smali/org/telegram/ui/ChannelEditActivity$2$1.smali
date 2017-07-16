@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelEditActivity$2;
 
     .prologue
-    .line 196
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,14 +44,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 199
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$2;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/ChannelEditActivity;->access$502(Lorg/telegram/ui/ChannelEditActivity;Z)Z
 
-    .line 200
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$2;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
@@ -61,28 +58,23 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelEditActivity;->access$602(Lorg/telegram/ui/ChannelEditActivity;Lorg/telegram/ui/ActionBar/AlertDialog;)Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 201
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$2$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$2;
 
     iget-object v1, v1, Lorg/telegram/ui/ChannelEditActivity$2;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v1, v3}, Lorg/telegram/ui/ChannelEditActivity;->access$202(Lorg/telegram/ui/ChannelEditActivity;Z)Z
 
-    .line 203
     :try_start_0
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 207
     :goto_0
     return-void
 
-    .line 204
     :catch_0
     move-exception v0
 
-    .line 205
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

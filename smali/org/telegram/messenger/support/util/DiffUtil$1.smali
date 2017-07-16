@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 72
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 72
     check-cast p1, Lorg/telegram/messenger/support/util/DiffUtil$Snake;
 
     check-cast p2, Lorg/telegram/messenger/support/util/DiffUtil$Snake;
@@ -62,14 +60,12 @@
     .param p2, "o2"    # Lorg/telegram/messenger/support/util/DiffUtil$Snake;
 
     .prologue
-    .line 75
     iget v1, p1, Lorg/telegram/messenger/support/util/DiffUtil$Snake;->x:I
 
     iget v2, p2, Lorg/telegram/messenger/support/util/DiffUtil$Snake;->x:I
 
     sub-int v0, v1, v2
 
-    .line 76
     .local v0, "cmpX":I
     if-nez v0, :cond_0
 

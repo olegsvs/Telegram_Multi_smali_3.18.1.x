@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 122
     iput-object p1, p0, Lorg/telegram/ui/Components/voip/VoIPHelper$3;->val$activity:Landroid/app/Activity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 125
     new-instance v0, Landroid/content/Intent;
 
     const-string/jumbo v2, "android.settings.APPLICATION_DETAILS_SETTINGS"
 
     invoke-direct {v0, v2}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 126
     .local v0, "intent":Landroid/content/Intent;
     const-string/jumbo v2, "package"
 
@@ -65,15 +62,12 @@
 
     move-result-object v1
 
-    .line 127
     .local v1, "uri":Landroid/net/Uri;
     invoke-virtual {v0, v1}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 128
     iget-object v2, p0, Lorg/telegram/ui/Components/voip/VoIPHelper$3;->val$activity:Landroid/app/Activity;
 
     invoke-virtual {v2, v0}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
 
-    .line 129
     return-void
 .end method

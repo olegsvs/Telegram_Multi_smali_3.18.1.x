@@ -75,16 +75,12 @@
     .param p2, "startAnimationBundle"    # Landroid/os/Bundle;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
-    .line 77
     iput-object p2, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;->startAnimationBundle:Landroid/os/Bundle;
 
-    .line 78
     return-void
 .end method
 
@@ -95,7 +91,6 @@
     .param p3, "x2"    # Lorg/telegram/messenger/support/customtabs/CustomTabsIntent$1;
 
     .prologue
-    .line 43
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;-><init>(Landroid/content/Intent;Landroid/os/Bundle;)V
 
     return-void
@@ -105,7 +100,6 @@
     .locals 1
 
     .prologue
-    .line 81
     const/4 v0, 0x5
 
     return v0
@@ -119,18 +113,15 @@
     .param p2, "url"    # Landroid/net/Uri;
 
     .prologue
-    .line 71
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
     invoke-virtual {v0, p2}, Landroid/content/Intent;->setData(Landroid/net/Uri;)Landroid/content/Intent;
 
-    .line 72
     iget-object v0, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;->intent:Landroid/content/Intent;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsIntent;->startAnimationBundle:Landroid/os/Bundle;
 
     invoke-static {p1, v0, v1}, Landroid/support/v4/app/ActivityCompat;->startActivity(Landroid/content/Context;Landroid/content/Intent;Landroid/os/Bundle;)V
 
-    .line 73
     return-void
 .end method

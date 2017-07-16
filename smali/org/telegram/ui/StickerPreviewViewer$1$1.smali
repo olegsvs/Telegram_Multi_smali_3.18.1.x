@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/StickerPreviewViewer$1;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$1$1;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$1;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/StickerPreviewViewer$1;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -54,12 +52,10 @@
 
     if-nez v0, :cond_1
 
-    .line 109
     :cond_0
     :goto_0
     return-void
 
-    .line 102
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$1;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
@@ -71,10 +67,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 103
     if-nez p2, :cond_2
 
-    .line 104
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$1;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/StickerPreviewViewer$1;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
@@ -95,13 +89,11 @@
 
     goto :goto_0
 
-    .line 105
     :cond_2
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_0
 
-    .line 106
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$1$1;->this$1:Lorg/telegram/ui/StickerPreviewViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/StickerPreviewViewer$1;->this$0:Lorg/telegram/ui/StickerPreviewViewer;

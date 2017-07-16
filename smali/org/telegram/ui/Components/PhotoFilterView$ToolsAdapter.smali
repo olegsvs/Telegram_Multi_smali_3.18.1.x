@@ -27,15 +27,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 2530
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 2531
     iput-object p2, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->mContext:Landroid/content/Context;
 
-    .line 2532
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .locals 1
 
     .prologue
-    .line 2536
     const/16 v0, 0xe
 
     return v0
@@ -56,7 +52,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 2541
     int-to-long v0, p1
 
     return-wide v0
@@ -67,7 +62,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 2552
     const/4 v0, 0x0
 
     return v0
@@ -79,7 +73,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2557
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/PhotoFilterView;->access$5300(Lorg/telegram/ui/Components/PhotoFilterView;)I
@@ -88,7 +81,6 @@
 
     if-ne p2, v1, :cond_1
 
-    .line 2558
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -111,12 +103,10 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/ui/Cells/PhotoEditToolCell;->setIconAndTextAndValue(ILjava/lang/String;F)V
 
-    .line 2592
     :cond_0
     :goto_0
     return-void
 
-    .line 2559
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -126,7 +116,6 @@
 
     if-ne p2, v1, :cond_2
 
-    .line 2560
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -151,7 +140,6 @@
 
     goto :goto_0
 
-    .line 2561
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -161,7 +149,6 @@
 
     if-ne p2, v1, :cond_3
 
-    .line 2562
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -186,7 +173,6 @@
 
     goto :goto_0
 
-    .line 2563
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -196,7 +182,6 @@
 
     if-ne p2, v1, :cond_4
 
-    .line 2564
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -221,7 +206,6 @@
 
     goto :goto_0
 
-    .line 2565
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -231,7 +215,6 @@
 
     if-ne p2, v1, :cond_5
 
-    .line 2566
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -256,7 +239,6 @@
 
     goto/16 :goto_0
 
-    .line 2567
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -266,7 +248,6 @@
 
     if-ne p2, v1, :cond_6
 
-    .line 2568
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -291,7 +272,6 @@
 
     goto/16 :goto_0
 
-    .line 2569
     :cond_6
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -301,7 +281,6 @@
 
     if-ne p2, v1, :cond_7
 
-    .line 2570
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -326,7 +305,6 @@
 
     goto/16 :goto_0
 
-    .line 2571
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -336,7 +314,6 @@
 
     if-ne p2, v1, :cond_8
 
-    .line 2572
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -361,7 +338,6 @@
 
     goto/16 :goto_0
 
-    .line 2573
     :cond_8
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -371,7 +347,6 @@
 
     if-ne p2, v1, :cond_9
 
-    .line 2574
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -396,7 +371,6 @@
 
     goto/16 :goto_0
 
-    .line 2575
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -406,7 +380,6 @@
 
     if-ne p2, v1, :cond_a
 
-    .line 2576
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -431,7 +404,6 @@
 
     goto/16 :goto_0
 
-    .line 2577
     :cond_a
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -441,7 +413,6 @@
 
     if-ne p2, v1, :cond_d
 
-    .line 2578
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -485,7 +456,6 @@
 
     goto :goto_1
 
-    .line 2579
     :cond_d
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -495,7 +465,6 @@
 
     if-ne p2, v1, :cond_e
 
-    .line 2580
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -520,7 +489,6 @@
 
     goto/16 :goto_0
 
-    .line 2581
     :cond_e
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -530,7 +498,6 @@
 
     if-ne p2, v1, :cond_10
 
-    .line 2582
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/PhotoEditToolCell;
@@ -569,7 +536,6 @@
 
     goto :goto_2
 
-    .line 2583
     :cond_10
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -579,10 +545,8 @@
 
     if-ne p2, v1, :cond_0
 
-    .line 2584
     const-string/jumbo v0, ""
 
-    .line 2585
     .local v0, "value":Ljava/lang/String;
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -594,10 +558,8 @@
 
     if-ne v1, v2, :cond_12
 
-    .line 2586
     const-string/jumbo v0, "R"
 
-    .line 2590
     :cond_11
     :goto_3
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -618,7 +580,6 @@
 
     goto/16 :goto_0
 
-    .line 2587
     :cond_12
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
@@ -630,7 +591,6 @@
 
     if-ne v1, v2, :cond_11
 
-    .line 2588
     const-string/jumbo v0, "L"
 
     goto :goto_3
@@ -642,7 +602,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2546
     new-instance v0, Lorg/telegram/ui/Cells/PhotoEditToolCell;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->mContext:Landroid/content/Context;
@@ -655,7 +614,6 @@
 
     invoke-direct {v0, v1, v2}, Lorg/telegram/ui/Cells/PhotoEditToolCell;-><init>(Landroid/content/Context;I)V
 
-    .line 2547
     .local v0, "view":Lorg/telegram/ui/Cells/PhotoEditToolCell;
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 

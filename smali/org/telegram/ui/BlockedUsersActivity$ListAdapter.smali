@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 214
     iput-object p1, p0, Lorg/telegram/ui/BlockedUsersActivity$ListAdapter;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 215
     iput-object p2, p0, Lorg/telegram/ui/BlockedUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 216
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 220
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -57,10 +53,8 @@
 
     if-eqz v0, :cond_0
 
-    .line 221
     const/4 v0, 0x0
 
-    .line 223
     :goto_0
     return v0
 
@@ -85,7 +79,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 271
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -98,10 +91,8 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 272
     const/4 v0, 0x1
 
-    .line 274
     :goto_0
     return v0
 
@@ -116,7 +107,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 228
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -146,14 +136,12 @@
 
     const/4 v6, 0x0
 
-    .line 249
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v3
 
     if-nez v3, :cond_0
 
-    .line 250
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -174,16 +162,13 @@
 
     move-result-object v2
 
-    .line 251
     .local v2, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v2, :cond_0
 
-    .line 253
     iget-boolean v3, v2, Lorg/telegram/tgnet/TLRPC$User;->bot:Z
 
     if-eqz v3, :cond_1
 
-    .line 254
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -224,7 +209,6 @@
 
     move-result-object v0
 
-    .line 260
     .local v0, "number":Ljava/lang/String;
     :goto_0
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
@@ -235,14 +219,12 @@
 
     invoke-virtual {v3, v2, v4, v0, v6}, Lorg/telegram/ui/Cells/UserCell;->setData(Lorg/telegram/tgnet/TLObject;Ljava/lang/CharSequence;Ljava/lang/CharSequence;I)V
 
-    .line 261
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     const-string/jumbo v4, "Pref"
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 262
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "theme"
@@ -251,7 +233,6 @@
 
     move-result-object v1
 
-    .line 263
     .local v1, "preferences":Landroid/content/SharedPreferences;
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -267,7 +248,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Cells/UserCell;->setNameColor(I)V
 
-    .line 264
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v3, Lorg/telegram/ui/Cells/UserCell;
@@ -282,14 +262,12 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Cells/UserCell;->setStatusColor(I)V
 
-    .line 267
     .end local v0    # "number":Ljava/lang/String;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v2    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     return-void
 
-    .line 255
     .restart local v2    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
     iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
@@ -304,7 +282,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 256
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
 
     move-result-object v3
@@ -336,7 +313,6 @@
     .restart local v0    # "number":Ljava/lang/String;
     goto :goto_0
 
-    .line 258
     .end local v0    # "number":Ljava/lang/String;
     :cond_2
     const-string/jumbo v3, "NumberUnknown"
@@ -359,10 +335,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 234
     packed-switch p2, :pswitch_data_0
 
-    .line 240
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoCell;
 
     iget-object v1, p0, Lorg/telegram/ui/BlockedUsersActivity$ListAdapter;->mContext:Landroid/content/Context;
@@ -372,7 +346,6 @@
     .local v0, "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 241
     check-cast v1, Lorg/telegram/ui/Cells/TextInfoCell;
 
     const-string/jumbo v2, "UnblockText"
@@ -385,7 +358,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextInfoCell;->setText(Ljava/lang/String;)V
 
-    .line 244
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -393,7 +365,6 @@
 
     return-object v1
 
-    .line 236
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/UserCell;
@@ -404,11 +375,9 @@
 
     invoke-direct {v0, v1, v2, v3, v3}, Lorg/telegram/ui/Cells/UserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    .line 237
     .restart local v0    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 234
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/AudioPlayerActivity;
 
     .prologue
-    .line 283
     iput-object p1, p0, Lorg/telegram/ui/AudioPlayerActivity$5;->this$0:Lorg/telegram/ui/AudioPlayerActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,13 +41,11 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 286
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
 
     invoke-virtual {v0}, Lorg/telegram/messenger/MediaController;->playPreviousMessage()V
 
-    .line 287
     return-void
 .end method

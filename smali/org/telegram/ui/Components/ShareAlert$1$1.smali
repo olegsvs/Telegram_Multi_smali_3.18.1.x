@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ShareAlert$1;
 
     .prologue
-    .line 129
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,12 +44,10 @@
     .locals 2
 
     .prologue
-    .line 132
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v0, :cond_0
 
-    .line 133
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v1, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -61,7 +58,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/Components/ShareAlert;->access$002(Lorg/telegram/ui/Components/ShareAlert;Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;)Lorg/telegram/tgnet/TLRPC$TL_exportedMessageLink;
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -72,7 +68,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 135
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ShareAlert$1;->this$0:Lorg/telegram/ui/Components/ShareAlert;
@@ -83,7 +78,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$200(Lorg/telegram/ui/Components/ShareAlert;Landroid/content/Context;)V
 
-    .line 138
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/ShareAlert$1$1;->this$1:Lorg/telegram/ui/Components/ShareAlert$1;
 
@@ -93,6 +87,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/ShareAlert;->access$302(Lorg/telegram/ui/Components/ShareAlert;Z)Z
 
-    .line 139
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/StickerPreviewViewer;
 
     .prologue
-    .line 162
     iput-object p1, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->this$0:Lorg/telegram/ui/StickerPreviewViewer;
 
     iput-object p2, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->val$listView:Landroid/view/View;
@@ -49,14 +48,12 @@
     .locals 2
 
     .prologue
-    .line 165
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->val$listView:Landroid/view/View;
 
     instance-of v0, v0, Landroid/widget/AbsListView;
 
     if-eqz v0, :cond_1
 
-    .line 166
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->val$listView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/AbsListView;
@@ -67,12 +64,10 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/AbsListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 170
     :cond_0
     :goto_0
     return-void
 
-    .line 167
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->val$listView:Landroid/view/View;
 
@@ -80,7 +75,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 168
     iget-object v0, p0, Lorg/telegram/ui/StickerPreviewViewer$2;->val$listView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Components/RecyclerListView;

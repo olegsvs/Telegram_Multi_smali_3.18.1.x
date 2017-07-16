@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditActivity;
 
     .prologue
-    .line 434
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$8;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 437
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 438
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v1, "chat_id"
 
@@ -59,14 +56,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 439
     const-string/jumbo v1, "type"
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 440
     iget-object v1, p0, Lorg/telegram/ui/ChannelEditActivity$8;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     new-instance v2, Lorg/telegram/ui/ChannelUsersActivity;
@@ -75,6 +70,5 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ChannelEditActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 441
     return-void
 .end method

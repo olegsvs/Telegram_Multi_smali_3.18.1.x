@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1806
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$29;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$29;->val$inbox:Landroid/util/SparseArray;
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 1809
     iget-object v0, p0, Lorg/telegram/messenger/MessagesStorage$29;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     const/4 v1, 0x0
@@ -60,6 +58,5 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->access$900(Lorg/telegram/messenger/MessagesStorage;Ljava/util/ArrayList;Landroid/util/SparseArray;Landroid/util/SparseArray;)V
 
-    .line 1810
     return-void
 .end method

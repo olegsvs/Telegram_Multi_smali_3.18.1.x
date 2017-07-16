@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/EmojiView;
 
     .prologue
-    .line 93
     iput-object p1, p0, Lorg/telegram/ui/Components/EmojiView$1;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,11 @@
     .param p1, "set"    # Lorg/telegram/tgnet/TLRPC$InputStickerSet;
 
     .prologue
-    .line 101
     if-nez p1, :cond_0
 
-    .line 123
     :goto_0
     return-void
 
-    .line 105
     :cond_0
     iget-wide v2, p1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
@@ -59,7 +55,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 106
     iget-wide v2, p1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->id:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -70,12 +65,10 @@
 
     move-result-object v1
 
-    .line 113
     .local v1, "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :goto_1
     if-eqz v1, :cond_3
 
-    .line 114
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$1;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/EmojiView;->access$100(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$StickersGridAdapter;
@@ -86,14 +79,12 @@
 
     move-result v0
 
-    .line 118
     .local v0, "position":I
     :goto_2
     const/4 v2, -0x1
 
     if-eq v0, v2, :cond_4
 
-    .line 119
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$1;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/EmojiView;->access$200(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -106,7 +97,6 @@
 
     goto :goto_0
 
-    .line 107
     .end local v0    # "position":I
     .end local v1    # "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :cond_1
@@ -114,7 +104,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 108
     iget-object v2, p1, Lorg/telegram/tgnet/TLRPC$InputStickerSet;->short_name:Ljava/lang/String;
 
     invoke-static {v2}, Lorg/telegram/messenger/query/StickersQuery;->getStickerSetByName(Ljava/lang/String;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
@@ -124,7 +113,6 @@
     .restart local v1    # "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     goto :goto_1
 
-    .line 110
     .end local v1    # "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     :cond_2
     const/4 v1, 0x0
@@ -132,14 +120,12 @@
     .restart local v1    # "stickerSet":Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
     goto :goto_1
 
-    .line 116
     :cond_3
     const/4 v0, -0x1
 
     .restart local v0    # "position":I
     goto :goto_2
 
-    .line 121
     :cond_4
     iget-object v2, p0, Lorg/telegram/ui/Components/EmojiView$1;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
@@ -159,7 +145,6 @@
     .param p1, "sticker"    # Lorg/telegram/tgnet/TLRPC$Document;
 
     .prologue
-    .line 96
     iget-object v0, p0, Lorg/telegram/ui/Components/EmojiView$1;->this$0:Lorg/telegram/ui/Components/EmojiView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmojiView;->access$000(Lorg/telegram/ui/Components/EmojiView;)Lorg/telegram/ui/Components/EmojiView$Listener;
@@ -168,6 +153,5 @@
 
     invoke-interface {v0, p1}, Lorg/telegram/ui/Components/EmojiView$Listener;->onStickerSelected(Lorg/telegram/tgnet/TLRPC$Document;)V
 
-    .line 97
     return-void
 .end method

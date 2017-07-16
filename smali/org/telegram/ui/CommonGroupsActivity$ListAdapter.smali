@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 192
     iput-object p1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 193
     iput-object p2, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 194
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 2
 
     .prologue
-    .line 203
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/CommonGroupsActivity;->access$000(Lorg/telegram/ui/CommonGroupsActivity;)Ljava/util/ArrayList;
@@ -55,7 +51,6 @@
 
     move-result v0
 
-    .line 204
     .local v0, "count":I
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
@@ -69,10 +64,8 @@
 
     if-nez v1, :cond_0
 
-    .line 205
     add-int/lit8 v0, v0, 0x1
 
-    .line 206
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/CommonGroupsActivity;->access$300(Lorg/telegram/ui/CommonGroupsActivity;)Z
@@ -81,10 +74,8 @@
 
     if-nez v1, :cond_0
 
-    .line 207
     add-int/lit8 v0, v0, 0x1
 
-    .line 210
     :cond_0
     return v0
 .end method
@@ -94,7 +85,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 246
     iget-object v0, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CommonGroupsActivity;->access$000(Lorg/telegram/ui/CommonGroupsActivity;)Ljava/util/ArrayList;
@@ -107,14 +97,11 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 247
     const/4 v0, 0x0
 
-    .line 251
     :goto_0
     return v0
 
-    .line 248
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
@@ -136,12 +123,10 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 249
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 251
     :cond_1
     const/4 v0, 0x2
 
@@ -153,7 +138,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 198
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
@@ -191,19 +175,16 @@
 
     const/4 v2, 0x0
 
-    .line 236
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v3
 
     if-nez v3, :cond_2
 
-    .line 237
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/ProfileSearchCell;
 
-    .line 238
     .local v0, "cell":Lorg/telegram/ui/Cells/ProfileSearchCell;
     iget-object v3, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
@@ -222,10 +203,8 @@
 
     move-object v4, v2
 
-    .line 239
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Cells/ProfileSearchCell;->setData(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$EncryptedChat;Ljava/lang/CharSequence;Ljava/lang/CharSequence;Z)V
 
-    .line 240
     iget-object v2, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/CommonGroupsActivity;->access$000(Lorg/telegram/ui/CommonGroupsActivity;)Ljava/util/ArrayList;
@@ -254,7 +233,6 @@
     :cond_1
     iput-boolean v5, v0, Lorg/telegram/ui/Cells/ProfileSearchCell;->useSeparator:Z
 
-    .line 242
     .end local v0    # "cell":Lorg/telegram/ui/Cells/ProfileSearchCell;
     .end local v1    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_2
@@ -267,17 +245,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 216
     packed-switch p2, :pswitch_data_0
 
-    .line 227
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 228
     .local v0, "view":Landroid/view/View;
     iget-object v1, p0, Lorg/telegram/ui/CommonGroupsActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -291,7 +266,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 231
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -299,7 +273,6 @@
 
     return-object v1
 
-    .line 218
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/ProfileSearchCell;
@@ -308,7 +281,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/ProfileSearchCell;-><init>(Landroid/content/Context;)V
 
-    .line 219
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -320,7 +292,6 @@
 
     goto :goto_0
 
-    .line 222
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/LoadingCell;
@@ -329,7 +300,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/LoadingCell;-><init>(Landroid/content/Context;)V
 
-    .line 223
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -341,7 +311,6 @@
 
     goto :goto_0
 
-    .line 216
     nop
 
     :pswitch_data_0

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/AudioSelectActivity;
 
     .prologue
-    .line 191
     iput-object p1, p0, Lorg/telegram/ui/AudioSelectActivity$5;->this$0:Lorg/telegram/ui/AudioSelectActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 18
 
     .prologue
-    .line 194
     const/4 v2, 0x6
 
     new-array v4, v2, [Ljava/lang/String;
@@ -82,17 +80,14 @@
 
     aput-object v3, v4, v2
 
-    .line 203
     .local v4, "projection":[Ljava/lang/String;
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 204
     .local v17, "newAudioEntries":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MediaController$AudioEntry;>;"
     const/4 v10, 0x0
 
-    .line 206
     .local v10, "cursor":Landroid/database/Cursor;
     :try_start_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -113,10 +108,8 @@
 
     move-result-object v10
 
-    .line 207
     const v15, -0x77359400
 
-    .line 208
     .local v15, "id":I
     :goto_0
     invoke-interface {v10}, Landroid/database/Cursor;->moveToNext()Z
@@ -125,12 +118,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 209
     new-instance v9, Lorg/telegram/messenger/MediaController$AudioEntry;
 
     invoke-direct {v9}, Lorg/telegram/messenger/MediaController$AudioEntry;-><init>()V
 
-    .line 210
     .local v9, "audioEntry":Lorg/telegram/messenger/MediaController$AudioEntry;
     const/4 v2, 0x0
 
@@ -142,7 +133,6 @@
 
     iput-wide v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->id:J
 
-    .line 211
     const/4 v2, 0x1
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -151,7 +141,6 @@
 
     iput-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->author:Ljava/lang/String;
 
-    .line 212
     const/4 v2, 0x2
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -160,7 +149,6 @@
 
     iput-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->title:Ljava/lang/String;
 
-    .line 213
     const/4 v2, 0x3
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -169,7 +157,6 @@
 
     iput-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->path:Ljava/lang/String;
 
-    .line 214
     const/4 v2, 0x4
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getLong(I)J
@@ -184,7 +171,6 @@
 
     iput v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->duration:I
 
-    .line 215
     const/4 v2, 0x5
 
     invoke-interface {v10, v2}, Landroid/database/Cursor;->getString(I)Ljava/lang/String;
@@ -193,20 +179,17 @@
 
     iput-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->genre:Ljava/lang/String;
 
-    .line 217
     new-instance v13, Ljava/io/File;
 
     iget-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->path:Ljava/lang/String;
 
     invoke-direct {v13, v2}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 219
     .local v13, "file":Ljava/io/File;
     new-instance v16, Lorg/telegram/tgnet/TLRPC$TL_message;
 
     invoke-direct/range {v16 .. v16}, Lorg/telegram/tgnet/TLRPC$TL_message;-><init>()V
 
-    .line 220
     .local v16, "message":Lorg/telegram/tgnet/TLRPC$TL_message;
     const/4 v2, 0x1
 
@@ -214,12 +197,10 @@
 
     iput-boolean v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->out:Z
 
-    .line 221
     move-object/from16 v0, v16
 
     iput v15, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->id:I
 
-    .line 222
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_peerUser;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_peerUser;-><init>()V
@@ -228,7 +209,6 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 223
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
@@ -243,7 +223,6 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$Peer;->user_id:I
 
-    .line 224
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -258,21 +237,18 @@
 
     iput v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->date:I
 
-    .line 225
     const-string/jumbo v2, "-1"
 
     move-object/from16 v0, v16
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->message:Ljava/lang/String;
 
-    .line 226
     iget-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->path:Ljava/lang/String;
 
     move-object/from16 v0, v16
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->attachPath:Ljava/lang/String;
 
-    .line 227
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaDocument;-><init>()V
@@ -281,7 +257,6 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
 
-    .line 228
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -292,7 +267,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$MessageMedia;->document:Lorg/telegram/tgnet/TLRPC$Document;
 
-    .line 229
     move-object/from16 v0, v16
 
     iget v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->flags:I
@@ -303,12 +277,10 @@
 
     iput v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->flags:I
 
-    .line 231
     invoke-static {v13}, Lorg/telegram/messenger/FileLoader;->getFileExtension(Ljava/io/File;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 233
     .local v12, "ext":Ljava/lang/String;
     move-object/from16 v0, v16
 
@@ -320,7 +292,6 @@
 
     iput-wide v6, v2, Lorg/telegram/tgnet/TLRPC$Document;->id:J
 
-    .line 234
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -331,7 +302,6 @@
 
     iput-wide v6, v2, Lorg/telegram/tgnet/TLRPC$Document;->access_hash:J
 
-    .line 235
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -344,7 +314,6 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->date:I
 
-    .line 236
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -379,7 +348,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->mime_type:Ljava/lang/String;
 
-    .line 237
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -394,7 +362,6 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->size:I
 
-    .line 238
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -407,7 +374,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->thumb:Lorg/telegram/tgnet/TLRPC$PhotoSize;
 
-    .line 239
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -420,7 +386,6 @@
 
     iput-object v3, v2, Lorg/telegram/tgnet/TLRPC$PhotoSize;->type:Ljava/lang/String;
 
-    .line 240
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -431,35 +396,29 @@
 
     iput v3, v2, Lorg/telegram/tgnet/TLRPC$Document;->dc_id:I
 
-    .line 242
     new-instance v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
 
     invoke-direct {v8}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;-><init>()V
 
-    .line 243
     .local v8, "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
     iget v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->duration:I
 
     iput v2, v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->duration:I
 
-    .line 244
     iget-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->title:Ljava/lang/String;
 
     iput-object v2, v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->title:Ljava/lang/String;
 
-    .line 245
     iget-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->author:Ljava/lang/String;
 
     iput-object v2, v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->performer:Ljava/lang/String;
 
-    .line 246
     iget v2, v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
     or-int/lit8 v2, v2, 0x3
 
     iput v2, v8, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;->flags:I
 
-    .line 247
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -470,12 +429,10 @@
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 249
     new-instance v14, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
 
     invoke-direct {v14}, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;-><init>()V
 
-    .line 250
     .local v14, "fileName":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
     invoke-virtual {v13}, Ljava/io/File;->getName()Ljava/lang/String;
 
@@ -483,7 +440,6 @@
 
     iput-object v2, v14, Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;->file_name:Ljava/lang/String;
 
-    .line 251
     move-object/from16 v0, v16
 
     iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$TL_message;->media:Lorg/telegram/tgnet/TLRPC$MessageMedia;
@@ -494,7 +450,6 @@
 
     invoke-virtual {v2, v14}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 253
     new-instance v2, Lorg/telegram/messenger/MessageObject;
 
     const/4 v3, 0x0
@@ -507,18 +462,14 @@
 
     iput-object v2, v9, Lorg/telegram/messenger/MediaController$AudioEntry;->messageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 255
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 256
     add-int/lit8 v15, v15, -0x1
 
-    .line 257
     goto/16 :goto_0
 
-    .line 236
     .end local v8    # "attributeAudio":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeAudio;
     .end local v14    # "fileName":Lorg/telegram/tgnet/TLRPC$TL_documentAttributeFilename;
     .restart local v12    # "ext":Ljava/lang/String;
@@ -530,7 +481,6 @@
 
     goto/16 :goto_1
 
-    .line 261
     .end local v9    # "audioEntry":Lorg/telegram/messenger/MediaController$AudioEntry;
     .end local v12    # "ext":Ljava/lang/String;
     .end local v13    # "file":Ljava/io/File;
@@ -538,10 +488,8 @@
     :cond_1
     if-eqz v10, :cond_2
 
-    .line 262
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
-    .line 265
     .end local v15    # "id":I
     :cond_2
     :goto_2
@@ -555,36 +503,29 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 273
     return-void
 
-    .line 258
     :catch_0
     move-exception v11
 
-    .line 259
     .local v11, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v11}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 261
     if-eqz v10, :cond_2
 
-    .line 262
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     goto :goto_2
 
-    .line 261
     .end local v11    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
 
     if-eqz v10, :cond_3
 
-    .line 262
     invoke-interface {v10}, Landroid/database/Cursor;->close()V
 
     :cond_3

@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 98
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity$1;->this$0:Lorg/telegram/ui/ThemePreviewActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem$ActionBarMenuItemSearchListener;-><init>()V
@@ -38,7 +37,6 @@
     .locals 1
 
     .prologue
-    .line 106
     const/4 v0, 0x1
 
     return v0
@@ -48,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 112
     return-void
 .end method
 
@@ -56,7 +53,6 @@
     .locals 0
 
     .prologue
-    .line 102
     return-void
 .end method
 
@@ -65,6 +61,5 @@
     .param p1, "editText"    # Landroid/widget/EditText;
 
     .prologue
-    .line 117
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PopupNotificationActivity;
 
     .prologue
-    .line 968
     iput-object p1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v2, -0x1
 
-    .line 971
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1400(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/view/ViewGroup;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v1, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 972
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/PopupNotificationActivity;->checkTransitionAnimation()Z
@@ -73,7 +70,6 @@
 
     if-nez v1, :cond_0
 
-    .line 973
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1400(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/view/ViewGroup;
@@ -86,7 +82,6 @@
 
     check-cast v0, Landroid/view/ViewGroup$MarginLayoutParams;
 
-    .line 974
     .local v0, "layoutParams":Landroid/view/ViewGroup$MarginLayoutParams;
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
 
@@ -94,7 +89,6 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->topMargin:I
 
-    .line 975
     const/high16 v1, 0x42400000    # 48.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -103,13 +97,10 @@
 
     iput v1, v0, Landroid/view/ViewGroup$MarginLayoutParams;->bottomMargin:I
 
-    .line 976
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->width:I
 
-    .line 977
     iput v2, v0, Landroid/view/ViewGroup$MarginLayoutParams;->height:I
 
-    .line 978
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/PopupNotificationActivity;->access$1400(Lorg/telegram/ui/PopupNotificationActivity;)Landroid/view/ViewGroup;
@@ -118,14 +109,12 @@
 
     invoke-virtual {v1, v0}, Landroid/view/ViewGroup;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 979
     iget-object v1, p0, Lorg/telegram/ui/PopupNotificationActivity$12;->this$0:Lorg/telegram/ui/PopupNotificationActivity;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lorg/telegram/ui/PopupNotificationActivity;->access$1200(Lorg/telegram/ui/PopupNotificationActivity;I)V
 
-    .line 981
     .end local v0    # "layoutParams":Landroid/view/ViewGroup$MarginLayoutParams;
     :cond_0
     const/4 v1, 0x1

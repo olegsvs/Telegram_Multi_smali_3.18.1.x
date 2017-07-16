@@ -26,15 +26,12 @@
     .param p2, "adapter"    # Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperAdapter;
 
     .prologue
-    .line 310
     iput-object p1, p0, Lorg/telegram/ui/PlusManageTabsActivity$SimpleItemTouchHelperCallback;->this$0:Lorg/telegram/ui/PlusManageTabsActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$Callback;-><init>()V
 
-    .line 311
     iput-object p2, p0, Lorg/telegram/ui/PlusManageTabsActivity$SimpleItemTouchHelperCallback;->mAdapter:Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperAdapter;
 
-    .line 312
     return-void
 .end method
 
@@ -46,19 +43,15 @@
     .param p2, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 349
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$Callback;->clearView(Lorg/telegram/messenger/support/widget/RecyclerView;Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;)V
 
     move-object v0, p2
 
-    .line 351
     check-cast v0, Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;
 
-    .line 352
     .local v0, "itemViewHolder":Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;
     invoke-interface {v0}, Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;->onItemClear()V
 
-    .line 353
     return-void
 .end method
 
@@ -68,10 +61,8 @@
     .param p2, "viewHolder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 321
     const/4 v0, 0x3
 
-    .line 323
     .local v0, "dragFlags":I
     const/4 v1, 0x3
 
@@ -88,7 +79,6 @@
     .locals 1
 
     .prologue
-    .line 316
     const/4 v0, 0x1
 
     return v0
@@ -101,7 +91,6 @@
     .param p3, "target"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 329
     iget-object v0, p0, Lorg/telegram/ui/PlusManageTabsActivity$SimpleItemTouchHelperCallback;->mAdapter:Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperAdapter;
 
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
@@ -114,7 +103,6 @@
 
     invoke-interface {v0, v1, v2}, Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperAdapter;->swapElements(II)V
 
-    .line 330
     const/4 v0, 0x1
 
     return v0
@@ -126,24 +114,19 @@
     .param p2, "actionState"    # I
 
     .prologue
-    .line 340
     if-eqz p2, :cond_0
 
     move-object v0, p1
 
-    .line 341
     check-cast v0, Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;
 
-    .line 342
     .local v0, "itemViewHolder":Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;
     invoke-interface {v0}, Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;->onItemSelected()V
 
-    .line 344
     .end local v0    # "itemViewHolder":Lorg/telegram/ui/PlusManageTabsActivity$ItemTouchHelperViewHolder;
     :cond_0
     invoke-super {p0, p1, p2}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$Callback;->onSelectedChanged(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;I)V
 
-    .line 345
     return-void
 .end method
 
@@ -153,6 +136,5 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 336
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 37
     iput-object p1, p0, Lorg/telegram/messenger/query/BotQuery$1;->val$messages:Ljava/util/ArrayList;
 
     iput-wide p2, p0, Lorg/telegram/messenger/query/BotQuery$1;->val$did:J
@@ -52,12 +51,10 @@
 
     const/4 v6, 0x0
 
-    .line 40
     iget-object v2, p0, Lorg/telegram/messenger/query/BotQuery$1;->val$messages:Ljava/util/ArrayList;
 
     if-eqz v2, :cond_1
 
-    .line 41
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -70,7 +67,6 @@
 
     if-ge v0, v2, :cond_2
 
-    .line 42
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$000()Ljava/util/HashMap;
 
     move-result-object v2
@@ -87,18 +83,15 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 43
     .local v1, "did":Ljava/lang/Long;
     if-eqz v1, :cond_0
 
-    .line 44
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$100()Ljava/util/HashMap;
 
     move-result-object v2
 
     invoke-virtual {v2, v1}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 45
     invoke-static {}, Lorg/telegram/messenger/query/BotQuery;->access$000()Ljava/util/HashMap;
 
     move-result-object v2
@@ -111,7 +104,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 46
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -126,13 +118,11 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 41
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 50
     .end local v0    # "a":I
     .end local v1    # "did":Ljava/lang/Long;
     :cond_1
@@ -148,7 +138,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 51
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -169,7 +158,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 53
     :cond_2
     return-void
 .end method

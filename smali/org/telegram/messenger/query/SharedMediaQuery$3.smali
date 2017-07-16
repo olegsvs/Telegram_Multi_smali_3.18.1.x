@@ -38,7 +38,6 @@
     .locals 1
 
     .prologue
-    .line 211
     iput-object p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$3;->val$res:Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$3;->val$fromCache:Z
@@ -64,12 +63,10 @@
     .locals 8
 
     .prologue
-    .line 214
     iget-object v1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$3;->val$res:Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
     iget v0, v1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->count:I
 
-    .line 215
     .local v0, "totalCount":I
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -83,7 +80,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 216
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -96,7 +92,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 217
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -163,6 +158,5 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 218
     return-void
 .end method

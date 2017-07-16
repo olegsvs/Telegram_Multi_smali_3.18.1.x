@@ -43,10 +43,8 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 286
     return-void
 .end method
 
@@ -55,7 +53,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searching:Z
 
     return v0
@@ -67,7 +64,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 45
     iput-boolean p1, p0, Lorg/telegram/ui/LanguageSelectActivity;->searching:Z
 
     return p1
@@ -78,7 +74,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-boolean v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchWas:Z
 
     return v0
@@ -90,7 +85,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 45
     iput-boolean p1, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchWas:Z
 
     return p1
@@ -101,7 +95,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -112,7 +105,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     return-object v0
@@ -123,7 +115,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->listAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     return-object v0
@@ -134,7 +125,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchListViewAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     return-object v0
@@ -145,7 +135,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -156,7 +145,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/LanguageSelectActivity;
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
     return-object v0
@@ -168,7 +156,6 @@
     .param p1, "x1"    # Ljava/util/Timer;
 
     .prologue
-    .line 45
     iput-object p1, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
     return-object p1
@@ -180,7 +167,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1}, Lorg/telegram/ui/LanguageSelectActivity;->processSearch(Ljava/lang/String;)V
 
     return-void
@@ -192,7 +178,6 @@
     .param p1, "x1"    # Ljava/util/ArrayList;
 
     .prologue
-    .line 45
     invoke-direct {p0, p1}, Lorg/telegram/ui/LanguageSelectActivity;->updateSearchResults(Ljava/util/ArrayList;)V
 
     return-void
@@ -203,7 +188,6 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 253
     sget-object v0, Lorg/telegram/messenger/Utilities;->searchQueue:Lorg/telegram/messenger/DispatchQueue;
 
     new-instance v1, Lorg/telegram/ui/LanguageSelectActivity$7;
@@ -212,7 +196,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 274
     return-void
 .end method
 
@@ -229,7 +212,6 @@
     .end annotation
 
     .prologue
-    .line 277
     .local p1, "arrCounties":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/LocaleController$LocaleInfo;>;"
     new-instance v0, Lorg/telegram/ui/LanguageSelectActivity$8;
 
@@ -237,7 +219,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 284
     return-void
 .end method
 
@@ -245,21 +226,18 @@
     .locals 4
 
     .prologue
-    .line 216
     iget-object v2, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarColor:I
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    .line 217
     iget-object v2, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     sget v3, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarTitleColor:I
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitleColor(I)V
 
-    .line 218
     invoke-virtual {p0}, Lorg/telegram/ui/LanguageSelectActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -274,7 +252,6 @@
 
     move-result-object v0
 
-    .line 219
     .local v0, "back":Landroid/graphics/drawable/Drawable;
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -282,12 +259,10 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 220
     iget-object v2, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 221
     invoke-virtual {p0}, Lorg/telegram/ui/LanguageSelectActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v2
@@ -302,7 +277,6 @@
 
     move-result-object v1
 
-    .line 222
     .local v1, "search":Landroid/graphics/drawable/Drawable;
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefActionbarIconsColor:I
 
@@ -310,7 +284,6 @@
 
     invoke-virtual {v1, v2, v3}, Landroid/graphics/drawable/Drawable;->setColorFilter(ILandroid/graphics/PorterDuff$Mode;)V
 
-    .line 223
     return-void
 .end method
 
@@ -329,25 +302,20 @@
 
     const/4 v8, 0x0
 
-    .line 60
     iput-boolean v8, p0, Lorg/telegram/ui/LanguageSelectActivity;->searching:Z
 
-    .line 61
     iput-boolean v8, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchWas:Z
 
-    .line 63
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v6, 0x7f0200b6
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 64
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v5, v9}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 65
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v6, "Language"
@@ -360,7 +328,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 67
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v6, Lorg/telegram/ui/LanguageSelectActivity$1;
@@ -369,14 +336,12 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 76
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v5}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v2
 
-    .line 78
     .local v2, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     invoke-virtual {p0}, Lorg/telegram/ui/LanguageSelectActivity;->getParentActivity()Landroid/app/Activity;
 
@@ -392,7 +357,6 @@
 
     move-result-object v4
 
-    .line 79
     .local v4, "search":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v2, v8, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(ILandroid/graphics/drawable/Drawable;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
@@ -410,7 +374,6 @@
 
     move-result-object v1
 
-    .line 108
     .local v1, "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
 
@@ -426,33 +389,28 @@
 
     invoke-virtual {v5, v6}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 110
     new-instance v5, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     invoke-direct {v5, p0, p1, v8}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;-><init>(Lorg/telegram/ui/LanguageSelectActivity;Landroid/content/Context;Z)V
 
     iput-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
-    .line 111
     new-instance v5, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     invoke-direct {v5, p0, p1, v9}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;-><init>(Lorg/telegram/ui/LanguageSelectActivity;Landroid/content/Context;Z)V
 
     iput-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchListViewAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
-    .line 113
     new-instance v5, Landroid/widget/FrameLayout;
 
     invoke-direct {v5, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->fragmentView:Landroid/view/View;
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 116
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v5, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -460,7 +418,6 @@
 
     iput-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 117
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const-string/jumbo v6, "NoResult"
@@ -473,17 +430,14 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 118
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 119
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v5, v9}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setShowAtCenter(Z)V
 
-    .line 120
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-static {v11, v10}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -492,14 +446,12 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 122
     new-instance v5, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v5, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 123
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v6, "theme"
@@ -508,7 +460,6 @@
 
     move-result-object v3
 
-    .line 124
     .local v3, "preferences":Landroid/content/SharedPreferences;
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -516,14 +467,12 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setBackgroundColor(I)V
 
-    .line 125
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v6, p0, Lorg/telegram/ui/LanguageSelectActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 126
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v6, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -532,19 +481,16 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 127
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v5, v8}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 128
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v6, p0, Lorg/telegram/ui/LanguageSelectActivity;->listAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 129
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v11, v10}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -553,7 +499,6 @@
 
     invoke-virtual {v0, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 131
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v6, Lorg/telegram/ui/LanguageSelectActivity$3;
@@ -562,7 +507,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 152
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v6, Lorg/telegram/ui/LanguageSelectActivity$4;
@@ -571,7 +515,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemLongClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;)V
 
-    .line 194
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v6, Lorg/telegram/ui/LanguageSelectActivity$5;
@@ -580,7 +523,6 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 203
     iget-object v5, p0, Lorg/telegram/ui/LanguageSelectActivity;->fragmentView:Landroid/view/View;
 
     return-object v5
@@ -596,7 +538,6 @@
 
     const/4 v3, 0x0
 
-    .line 344
     const/16 v0, 0xc
 
     new-array v13, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -862,20 +803,16 @@
     .locals 1
 
     .prologue
-    .line 208
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 209
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->listAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 210
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->listAdapter:Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/LanguageSelectActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 212
     :cond_0
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -883,7 +820,6 @@
 
     invoke-direct {p0}, Lorg/telegram/ui/LanguageSelectActivity;->updateTheme()V
 
-    .line 213
     :cond_1
     return-void
 .end method
@@ -893,33 +829,27 @@
     .param p1, "query"    # Ljava/lang/String;
 
     .prologue
-    .line 226
     if-nez p1, :cond_0
 
-    .line 227
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchResult:Ljava/util/ArrayList;
 
-    .line 250
     :goto_0
     return-void
 
-    .line 230
     :cond_0
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
     if-eqz v0, :cond_1
 
-    .line 231
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
     invoke-virtual {v0}, Ljava/util/Timer;->cancel()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 236
     :cond_1
     :goto_1
     new-instance v0, Ljava/util/Timer;
@@ -928,7 +858,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
-    .line 237
     iget-object v0, p0, Lorg/telegram/ui/LanguageSelectActivity;->searchTimer:Ljava/util/Timer;
 
     new-instance v1, Lorg/telegram/ui/LanguageSelectActivity$6;
@@ -943,11 +872,9 @@
 
     goto :goto_0
 
-    .line 233
     :catch_0
     move-exception v6
 
-    .line 234
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

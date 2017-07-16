@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 536
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/BottomSheet$1;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ActionBar/BottomSheet$ContainerView;-><init>(Lorg/telegram/ui/ActionBar/BottomSheet;Landroid/content/Context;)V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 540
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/ActionBar/BottomSheet$1;->this$0:Lorg/telegram/ui/ActionBar/BottomSheet;
 
@@ -62,21 +60,17 @@
 
     if-eqz v2, :cond_0
 
-    .line 544
     :goto_0
     return v1
 
-    .line 540
     :cond_0
     const/4 v1, 0x0
 
     goto :goto_0
 
-    .line 541
     :catch_0
     move-exception v0
 
-    .line 542
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

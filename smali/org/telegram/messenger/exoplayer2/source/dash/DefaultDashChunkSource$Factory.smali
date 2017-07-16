@@ -29,12 +29,10 @@
     .param p1, "dataSourceFactory"    # Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
     .prologue
-    .line 61
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$Factory;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;I)V
 
-    .line 62
     return-void
 .end method
 
@@ -44,16 +42,12 @@
     .param p2, "maxSegmentsPerLoad"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 65
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$Factory;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
-    .line 66
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$Factory;->maxSegmentsPerLoad:I
 
-    .line 67
     return-void
 .end method
 
@@ -69,14 +63,12 @@
     .param p6, "elapsedRealtimeOffsetMs"    # J
 
     .prologue
-    .line 73
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource$Factory;->dataSourceFactory:Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSource$Factory;->createDataSource()Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
 
     move-result-object v7
 
-    .line 74
     .local v7, "dataSource":Lorg/telegram/messenger/exoplayer2/upstream/DataSource;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/dash/DefaultDashChunkSource;
 

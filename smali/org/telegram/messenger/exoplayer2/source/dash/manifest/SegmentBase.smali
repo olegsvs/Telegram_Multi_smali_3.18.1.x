@@ -6,7 +6,6 @@
 # annotations
 .annotation system Ldalvik/annotation/MemberClasses;
     value = {
-        Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;,
         Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;,
         Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;,
         Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$MultiSegmentBase;,
@@ -31,19 +30,14 @@
     .param p4, "presentationTimeOffset"    # J
 
     .prologue
-    .line 39
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 40
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;->initialization:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
-    .line 41
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;->timescale:J
 
-    .line 42
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;->presentationTimeOffset:J
 
-    .line 43
     return-void
 .end method
 
@@ -54,7 +48,6 @@
     .param p1, "representation"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;
 
     .prologue
-    .line 53
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;->initialization:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     return-object v0
@@ -64,7 +57,6 @@
     .locals 6
 
     .prologue
-    .line 60
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;->presentationTimeOffset:J
 
     const-wide/32 v2, 0xf4240

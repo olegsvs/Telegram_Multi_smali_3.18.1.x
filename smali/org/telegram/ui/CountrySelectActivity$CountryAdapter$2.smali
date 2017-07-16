@@ -39,7 +39,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     .prologue
-    .line 251
     iput-object p1, p0, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$2;->this$1:Lorg/telegram/ui/CountrySelectActivity$CountryAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/CountrySelectActivity$CountryAdapter$2;->val$this$0:Lorg/telegram/ui/CountrySelectActivity;
@@ -55,7 +54,6 @@
     .locals 1
 
     .prologue
-    .line 251
     check-cast p1, Lorg/telegram/ui/CountrySelectActivity$Country;
 
     check-cast p2, Lorg/telegram/ui/CountrySelectActivity$Country;
@@ -73,7 +71,6 @@
     .param p2, "country2"    # Lorg/telegram/ui/CountrySelectActivity$Country;
 
     .prologue
-    .line 254
     iget-object v0, p1, Lorg/telegram/ui/CountrySelectActivity$Country;->name:Ljava/lang/String;
 
     iget-object v1, p2, Lorg/telegram/ui/CountrySelectActivity$Country;->name:Ljava/lang/String;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ArticleViewer;
 
     .prologue
-    .line 5518
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$31;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v0, 0x4
 
-    .line 5521
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$31;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$10700(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/TextView;
@@ -54,7 +52,6 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 5522
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$31;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$10700(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/TextView;
@@ -63,7 +60,6 @@
 
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 5523
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$31;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$10800(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/TextView;
@@ -87,6 +83,5 @@
     :cond_0
     invoke-virtual {v1, v0}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 5524
     return-void
 .end method

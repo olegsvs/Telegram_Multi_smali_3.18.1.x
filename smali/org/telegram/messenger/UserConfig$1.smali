@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 190
     iput-object p1, p0, Lorg/telegram/messenger/UserConfig$1;->val$configFile:Ljava/io/File;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -40,13 +39,11 @@
     .locals 2
 
     .prologue
-    .line 193
     const/4 v0, 0x1
 
     iget-object v1, p0, Lorg/telegram/messenger/UserConfig$1;->val$configFile:Ljava/io/File;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/UserConfig;->saveConfig(ZLjava/io/File;)V
 
-    .line 194
     return-void
 .end method

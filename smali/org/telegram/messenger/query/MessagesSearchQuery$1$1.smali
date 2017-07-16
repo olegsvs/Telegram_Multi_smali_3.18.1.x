@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/MessagesSearchQuery$1;
 
     .prologue
-    .line 132
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 135
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$000()J
 
     move-result-wide v2
@@ -60,22 +58,18 @@
 
     if-nez v1, :cond_0
 
-    .line 136
     const/4 v1, 0x0
 
     invoke-static {v1}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$102(I)I
 
-    .line 137
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v1, :cond_0
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 139
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$200()[Z
 
@@ -89,7 +83,6 @@
 
     aput-boolean v2, v1, v8
 
-    .line 140
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$300()[I
 
     move-result-object v2
@@ -103,7 +96,6 @@
     :goto_0
     aput v1, v2, v8
 
-    .line 141
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$1$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$1;
 
     iget-object v1, v1, Lorg/telegram/messenger/query/MessagesSearchQuery$1;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_search;
@@ -128,12 +120,10 @@
 
     invoke-static/range {v1 .. v8}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$400(Ljava/lang/String;JJIIZ)V
 
-    .line 144
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_0
     return-void
 
-    .line 140
     .restart local v0    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_1
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;

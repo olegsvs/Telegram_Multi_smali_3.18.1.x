@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper$15;
 
     .prologue
-    .line 3217
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalDocument:Lorg/telegram/tgnet/TLRPC$TL_document;
@@ -57,25 +56,19 @@
     .locals 9
 
     .prologue
-    .line 3220
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalDocument:Lorg/telegram/tgnet/TLRPC$TL_document;
 
     if-eqz v0, :cond_1
 
-    .line 3221
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalDocument:Lorg/telegram/tgnet/TLRPC$TL_document;
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v1, v1, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->caption:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_document;->caption:Ljava/lang/String;
 
-    .line 3222
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v0
@@ -96,11 +89,8 @@
 
     iget-object v7, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v7, v7, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->reply_markup:Lorg/telegram/tgnet/TLRPC$ReplyMarkup;
 
     iget-object v8, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
@@ -108,31 +98,24 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Lorg/telegram/tgnet/TLRPC$TL_document;Lorg/telegram/messenger/VideoEditedInfo;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 3229
     :cond_0
     :goto_0
     return-void
 
-    .line 3223
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalPhoto:Lorg/telegram/tgnet/TLRPC$TL_photo;
 
     if-eqz v0, :cond_2
 
-    .line 3224
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalPhoto:Lorg/telegram/tgnet/TLRPC$TL_photo;
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v1, v1, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->caption:Ljava/lang/String;
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_photo;->caption:Ljava/lang/String;
 
-    .line 3225
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v1
@@ -141,9 +124,7 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v3, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->content_url:Ljava/lang/String;
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
@@ -155,11 +136,8 @@
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v0, v0, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v7, v0, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->reply_markup:Lorg/telegram/tgnet/TLRPC$ReplyMarkup;
 
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
@@ -169,13 +147,11 @@
 
     goto :goto_0
 
-    .line 3226
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->val$finalGame:Lorg/telegram/tgnet/TLRPC$TL_game;
 
     if-eqz v0, :cond_0
 
-    .line 3227
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v0
@@ -188,11 +164,8 @@
 
     iget-object v4, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 
-    iget-object v4, v4, Lorg/telegram/messenger/SendMessagesHelper$15;->val$result:Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineResult;->send_message:Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 
-    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->reply_markup:Lorg/telegram/tgnet/TLRPC$ReplyMarkup;
 
     iget-object v5, p0, Lorg/telegram/messenger/SendMessagesHelper$15$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$15;
 

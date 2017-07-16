@@ -27,7 +27,6 @@
     .param p4, "window"    # Landroid/view/View;
 
     .prologue
-    .line 2208
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$32;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-direct {p0, p2, p3, p4}, Lorg/telegram/ui/Components/PhotoViewerCaptionEnterView;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/SizeNotifierFrameLayoutPhoto;Landroid/view/View;)V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2212
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$32;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -64,16 +62,13 @@
 
     const/4 v1, 0x1
 
-    .line 2216
     :cond_0
     :goto_0
     return v1
 
-    .line 2213
     :catch_0
     move-exception v0
 
-    .line 2214
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -87,7 +82,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2222
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer$32;->this$0:Lorg/telegram/ui/PhotoViewer;
 
@@ -107,16 +101,13 @@
 
     const/4 v1, 0x1
 
-    .line 2226
     :cond_0
     :goto_0
     return v1
 
-    .line 2223
     :catch_0
     move-exception v0
 
-    .line 2224
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -128,7 +119,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 2231
     iget-object v0, p0, Lorg/telegram/ui/PhotoViewer$32;->this$0:Lorg/telegram/ui/PhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoViewer;->access$2800(Lorg/telegram/ui/PhotoViewer;)Z

@@ -34,13 +34,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3985
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 3986
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 3980
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -49,7 +46,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textX:I
 
-    .line 3981
     const/high16 v0, 0x41000000    # 8.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -58,7 +54,6 @@
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textY:I
 
-    .line 3987
     return-void
 .end method
 
@@ -69,26 +64,21 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 4022
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSubtitle;
 
     if-nez v0, :cond_1
 
-    .line 4032
     :cond_0
     :goto_0
     return-void
 
-    .line 4025
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v0, :cond_0
 
-    .line 4026
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 4027
     iget v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textX:I
 
     int-to-float v0, v0
@@ -99,19 +89,16 @@
 
     invoke-virtual {p1, v0, v1}, Landroid/graphics/Canvas;->translate(FF)V
 
-    .line 4028
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ArticleViewer;->access$6800(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;Landroid/text/StaticLayout;)V
 
-    .line 4029
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
 
     invoke-virtual {v0, p1}, Landroid/text/StaticLayout;->draw(Landroid/graphics/Canvas;)V
 
-    .line 4030
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
     goto :goto_0
@@ -123,27 +110,22 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 4002
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v1
 
-    .line 4003
     .local v1, "width":I
     const/4 v0, 0x0
 
-    .line 4005
     .local v0, "height":I
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSubtitle;
 
     if-eqz v2, :cond_1
 
-    .line 4006
     iget v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->lastCreatedWidth:I
 
     if-eq v2, v1, :cond_0
 
-    .line 4007
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     const/4 v3, 0x0
@@ -168,12 +150,10 @@
 
     iput-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
 
-    .line 4008
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
 
     if-eqz v2, :cond_0
 
-    .line 4009
     const/high16 v2, 0x41800000    # 16.0f
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -190,15 +170,12 @@
 
     add-int/2addr v0, v2
 
-    .line 4017
     :cond_0
     :goto_0
     invoke-virtual {p0, v1, v0}, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->setMeasuredDimension(II)V
 
-    .line 4018
     return-void
 
-    .line 4014
     :cond_1
     const/4 v0, 0x1
 
@@ -210,7 +187,6 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 3997
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     iget-object v3, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->textLayout:Landroid/text/StaticLayout;
@@ -252,17 +228,13 @@
     .param p1, "block"    # Lorg/telegram/tgnet/TLRPC$TL_pageBlockSubtitle;
 
     .prologue
-    .line 3990
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->currentBlock:Lorg/telegram/tgnet/TLRPC$TL_pageBlockSubtitle;
 
-    .line 3991
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->lastCreatedWidth:I
 
-    .line 3992
     invoke-virtual {p0}, Lorg/telegram/ui/ArticleViewer$BlockSubtitleCell;->requestLayout()V
 
-    .line 3993
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$67;
 
     .prologue
-    .line 4404
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$67$1;->this$1:Lorg/telegram/ui/ChatActivity$67;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
 
     const/4 v2, 0x0
 
-    .line 4407
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$1;->this$1:Lorg/telegram/ui/ChatActivity$67;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -56,7 +54,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 4408
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$1;->this$1:Lorg/telegram/ui/ChatActivity$67;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -75,14 +72,12 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4409
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$1;->this$1:Lorg/telegram/ui/ChatActivity$67;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$12802(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 4411
     :cond_0
     return-void
 .end method

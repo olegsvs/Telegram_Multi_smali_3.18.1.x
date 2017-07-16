@@ -37,7 +37,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/SecretChatHelper$7;
 
     .prologue
-    .line 1339
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$7$1;->this$1:Lorg/telegram/messenger/SecretChatHelper$7;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1339
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Message;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$Message;
@@ -69,7 +67,6 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$Message;
 
     .prologue
-    .line 1342
     iget v0, p1, Lorg/telegram/tgnet/TLRPC$Message;->seq_out:I
 
     iget v1, p2, Lorg/telegram/tgnet/TLRPC$Message;->seq_out:I

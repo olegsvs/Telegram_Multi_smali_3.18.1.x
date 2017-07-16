@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 684
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-direct {p0, p2}, Landroid/view/OrientationEventListener;-><init>(Landroid/content/Context;)V
@@ -42,7 +41,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 687
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$3900(Lorg/telegram/ui/Components/EmbedBottomSheet;)Landroid/view/OrientationEventListener;
@@ -63,12 +61,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 699
     :cond_0
     :goto_0
     return-void
 
-    .line 690
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -98,7 +94,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 691
     const/16 v0, 0xf0
 
     if-lt p1, v0, :cond_2
@@ -107,7 +102,6 @@
 
     if-gt p1, v0, :cond_2
 
-    .line 692
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     const/4 v1, 0x1
@@ -116,7 +110,6 @@
 
     goto :goto_0
 
-    .line 693
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -134,7 +127,6 @@
 
     if-gt p1, v0, :cond_0
 
-    .line 694
     :cond_3
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
@@ -150,12 +142,10 @@
 
     invoke-virtual {v0, v1}, Landroid/app/Activity;->setRequestedOrientation(I)V
 
-    .line 695
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$1302(Lorg/telegram/ui/Components/EmbedBottomSheet;Z)Z
 
-    .line 696
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$12;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/EmbedBottomSheet;->access$1202(Lorg/telegram/ui/Components/EmbedBottomSheet;Z)Z

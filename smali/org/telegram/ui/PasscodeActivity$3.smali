@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PasscodeActivity;
 
     .prologue
-    .line 204
     iput-object p1, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$500(Lorg/telegram/ui/PasscodeActivity;)Landroid/widget/EditText;
@@ -59,7 +57,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 218
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$600(Lorg/telegram/ui/PasscodeActivity;)I
@@ -74,17 +71,14 @@
 
     if-nez v0, :cond_1
 
-    .line 219
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$200(Lorg/telegram/ui/PasscodeActivity;)V
 
-    .line 228
     :cond_0
     :goto_0
     return-void
 
-    .line 220
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
@@ -102,7 +96,6 @@
 
     if-nez v0, :cond_0
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$000(Lorg/telegram/ui/PasscodeActivity;)I
@@ -111,14 +104,12 @@
 
     if-nez v0, :cond_2
 
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$100(Lorg/telegram/ui/PasscodeActivity;)V
 
     goto :goto_0
 
-    .line 223
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
@@ -128,7 +119,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 224
     iget-object v0, p0, Lorg/telegram/ui/PasscodeActivity$3;->this$0:Lorg/telegram/ui/PasscodeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PasscodeActivity;->access$200(Lorg/telegram/ui/PasscodeActivity;)V
@@ -144,7 +134,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 208
     return-void
 .end method
 
@@ -156,6 +145,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 213
     return-void
 .end method

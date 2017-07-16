@@ -1,4 +1,3 @@
-.class public Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
 .super Lorg/telegram/tgnet/TLObject;
 .source "TLRPC.java"
 
@@ -10,7 +9,6 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
-    name = "BotInlineMessage"
 .end annotation
 
 
@@ -58,43 +56,33 @@
     .locals 1
 
     .prologue
-    .line 5783
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 5790
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->entities:Ljava/util/ArrayList;
 
     return-void
 .end method
 
-.method public static TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     .locals 6
     .param p0, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
     .param p1, "constructor"    # I
     .param p2, "exception"    # Z
 
     .prologue
-    .line 5800
     const/4 v0, 0x0
 
-    .line 5801
-    .local v0, "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     sparse-switch p1, :sswitch_data_0
 
-    .line 5818
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 5819
     new-instance v1, Ljava/lang/RuntimeException;
 
-    const-string/jumbo v2, "can\'t parse magic %x in BotInlineMessage"
 
     const/4 v3, 0x1
 
@@ -116,72 +104,38 @@
 
     throw v1
 
-    .line 5803
     :sswitch_0
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaGeo;
 
-    .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaGeo;-><init>()V
 
-    .line 5804
-    .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     goto :goto_0
 
-    .line 5806
     :sswitch_1
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaAuto;
 
-    .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaAuto;-><init>()V
 
-    .line 5807
-    .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     goto :goto_0
 
-    .line 5809
     :sswitch_2
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageText;
 
-    .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageText;-><init>()V
 
-    .line 5810
-    .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     goto :goto_0
 
-    .line 5812
     :sswitch_3
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaContact;
 
-    .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaContact;-><init>()V
 
-    .line 5813
-    .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     goto :goto_0
 
-    .line 5815
     :sswitch_4
-    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaVenue;
 
-    .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
-    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_botInlineMessageMediaVenue;-><init>()V
 
-    .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$BotInlineMessage;
     goto :goto_0
 
-    .line 5821
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 5822
-    invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$BotInlineMessage;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 5824
     :cond_1
     return-object v0
 
-    .line 5801
     nop
 
     :sswitch_data_0

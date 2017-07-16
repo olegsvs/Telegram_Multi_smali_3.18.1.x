@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 818
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$16;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,14 +50,11 @@
 
     const/4 v1, 0x0
 
-    .line 821
     packed-switch p2, :pswitch_data_0
 
-    .line 853
     :goto_0
     return-void
 
-    .line 823
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$16;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -82,7 +78,6 @@
 
     goto :goto_0
 
-    .line 832
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$16;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -104,7 +99,6 @@
 
     goto :goto_0
 
-    .line 841
     :pswitch_2
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -114,7 +108,6 @@
 
     goto :goto_0
 
-    .line 844
     :pswitch_3
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -124,7 +117,6 @@
 
     goto :goto_0
 
-    .line 847
     :pswitch_4
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -134,7 +126,6 @@
 
     goto :goto_0
 
-    .line 850
     :pswitch_5
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
@@ -144,7 +135,6 @@
 
     goto :goto_0
 
-    .line 821
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

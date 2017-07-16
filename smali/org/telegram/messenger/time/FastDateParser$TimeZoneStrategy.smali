@@ -58,12 +58,10 @@
 
     const/4 v6, 0x0
 
-    .line 783
     const/4 v5, 0x0
 
     invoke-direct {p0, v5}, Lorg/telegram/messenger/time/FastDateParser$Strategy;-><init>(Lorg/telegram/messenger/time/FastDateParser$1;)V
 
-    .line 755
     new-instance v5, Ljava/util/TreeMap;
 
     sget-object v7, Ljava/lang/String;->CASE_INSENSITIVE_ORDER:Ljava/util/Comparator;
@@ -72,7 +70,6 @@
 
     iput-object v5, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
-    .line 784
     invoke-static {p1}, Ljava/text/DateFormatSymbols;->getInstance(Ljava/util/Locale;)Ljava/text/DateFormatSymbols;
 
     move-result-object v5
@@ -81,7 +78,6 @@
 
     move-result-object v4
 
-    .line 785
     .local v4, "zones":[[Ljava/lang/String;
     array-length v7, v4
 
@@ -92,7 +88,6 @@
 
     aget-object v3, v4, v5
 
-    .line 786
     .local v3, "zone":[Ljava/lang/String;
     aget-object v8, v3, v6
 
@@ -104,14 +99,12 @@
 
     if-eqz v8, :cond_1
 
-    .line 785
     :cond_0
     :goto_1
     add-int/lit8 v5, v5, 0x1
 
     goto :goto_0
 
-    .line 789
     :cond_1
     aget-object v8, v3, v6
 
@@ -119,7 +112,6 @@
 
     move-result-object v2
 
-    .line 790
     .local v2, "tz":Ljava/util/TimeZone;
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
@@ -131,14 +123,12 @@
 
     if-nez v8, :cond_2
 
-    .line 791
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     aget-object v9, v3, v10
 
     invoke-interface {v8, v9, v2}, Ljava/util/SortedMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 793
     :cond_2
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
@@ -150,14 +140,12 @@
 
     if-nez v8, :cond_3
 
-    .line 794
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     aget-object v9, v3, v11
 
     invoke-interface {v8, v9, v2}, Ljava/util/SortedMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 796
     :cond_3
     invoke-virtual {v2}, Ljava/util/TimeZone;->useDaylightTime()Z
 
@@ -165,7 +153,6 @@
 
     if-eqz v8, :cond_0
 
-    .line 797
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     aget-object v9, v3, v12
@@ -176,14 +163,12 @@
 
     if-nez v8, :cond_4
 
-    .line 798
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     aget-object v9, v3, v12
 
     invoke-interface {v8, v9, v2}, Ljava/util/SortedMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 800
     :cond_4
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
@@ -195,7 +180,6 @@
 
     if-nez v8, :cond_0
 
-    .line 801
     iget-object v8, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     aget-object v9, v3, v13
@@ -204,7 +188,6 @@
 
     goto :goto_1
 
-    .line 806
     .end local v2    # "tz":Ljava/util/TimeZone;
     .end local v3    # "zone":[Ljava/lang/String;
     :cond_5
@@ -212,13 +195,11 @@
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 807
     .local v1, "sb":Ljava/lang/StringBuilder;
     const-string/jumbo v5, "(GMT[+\\-]\\d{0,1}\\d{2}|[+\\-]\\d{2}:?\\d{2}|"
 
     invoke-virtual {v1, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 808
     iget-object v5, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
 
     invoke-interface {v5}, Ljava/util/SortedMap;->keySet()Ljava/util/Set;
@@ -242,7 +223,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 809
     .local v0, "id":Ljava/lang/String;
     invoke-static {v1, v0, v6}, Lorg/telegram/messenger/time/FastDateParser;->access$100(Ljava/lang/StringBuilder;Ljava/lang/String;Z)Ljava/lang/StringBuilder;
 
@@ -254,7 +234,6 @@
 
     goto :goto_2
 
-    .line 811
     .end local v0    # "id":Ljava/lang/String;
     :cond_6
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->length()I
@@ -267,14 +246,12 @@
 
     invoke-virtual {v1, v5, v6}, Ljava/lang/StringBuilder;->setCharAt(IC)V
 
-    .line 812
     invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
     move-result-object v5
 
     iput-object v5, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->validTimeZoneChars:Ljava/lang/String;
 
-    .line 813
     return-void
 .end method
 
@@ -286,12 +263,10 @@
     .param p2, "regex"    # Ljava/lang/StringBuilder;
 
     .prologue
-    .line 820
     iget-object v0, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->validTimeZoneChars:Ljava/lang/String;
 
     invoke-virtual {p2, v0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
-    .line 821
     const/4 v0, 0x1
 
     return v0
@@ -306,7 +281,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 830
     invoke-virtual {p3, v3}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
@@ -323,7 +297,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 831
     :cond_0
     new-instance v1, Ljava/lang/StringBuilder;
 
@@ -347,16 +320,13 @@
 
     move-result-object v0
 
-    .line 840
     .local v0, "tz":Ljava/util/TimeZone;
     :cond_1
     :goto_0
     invoke-virtual {p2, v0}, Ljava/util/Calendar;->setTimeZone(Ljava/util/TimeZone;)V
 
-    .line 841
     return-void
 
-    .line 832
     .end local v0    # "tz":Ljava/util/TimeZone;
     :cond_2
     const-string/jumbo v1, "GMT"
@@ -367,7 +337,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 833
     invoke-static {p3}, Ljava/util/TimeZone;->getTimeZone(Ljava/lang/String;)Ljava/util/TimeZone;
 
     move-result-object v0
@@ -375,7 +344,6 @@
     .restart local v0    # "tz":Ljava/util/TimeZone;
     goto :goto_0
 
-    .line 835
     .end local v0    # "tz":Ljava/util/TimeZone;
     :cond_3
     iget-object v1, p0, Lorg/telegram/messenger/time/FastDateParser$TimeZoneStrategy;->tzNames:Ljava/util/SortedMap;
@@ -386,11 +354,9 @@
 
     check-cast v0, Ljava/util/TimeZone;
 
-    .line 836
     .restart local v0    # "tz":Ljava/util/TimeZone;
     if-nez v0, :cond_1
 
-    .line 837
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;

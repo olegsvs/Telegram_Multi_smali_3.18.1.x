@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     .prologue
-    .line 3255
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$3;->this$1:Lorg/telegram/ui/ArticleViewer$BlockEmbedCell;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$BlockEmbedCell$3;->val$this$0:Lorg/telegram/ui/ArticleViewer;
@@ -44,10 +43,8 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 3258
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onLoadResource(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 3259
     return-void
 .end method
 
@@ -57,9 +54,7 @@
     .param p2, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 3264
     invoke-super {p0, p1, p2}, Landroid/webkit/WebViewClient;->onPageFinished(Landroid/webkit/WebView;Ljava/lang/String;)V
 
-    .line 3266
     return-void
 .end method

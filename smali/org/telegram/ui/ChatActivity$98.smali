@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 9575
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$98;->this$0:Lorg/telegram/ui/ChatActivity;
 
     iput p2, p0, Lorg/telegram/ui/ChatActivity$98;->val$mid:I
@@ -51,7 +50,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 9578
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -70,6 +68,5 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->pinChannelMessage(Lorg/telegram/tgnet/TLRPC$Chat;IZ)V
 
-    .line 9579
     return-void
 .end method

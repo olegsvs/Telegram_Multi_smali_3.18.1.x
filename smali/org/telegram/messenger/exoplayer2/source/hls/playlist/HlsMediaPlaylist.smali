@@ -56,39 +56,31 @@
     .end annotation
 
     .prologue
-    .line 82
     .local p6, "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;>;"
     const/4 v2, 0x1
 
     invoke-direct {p0, p1, v2}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsPlaylist;-><init>(Ljava/lang/String;I)V
 
-    .line 83
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->mediaSequence:I
 
-    .line 84
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->version:I
 
-    .line 85
     iput-boolean p4, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->hasEndTag:Z
 
-    .line 86
     iput-object p5, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->initializationSegment:Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
-    .line 87
     invoke-static {p6}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v2
 
     iput-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
-    .line 89
     invoke-interface {p6}, Ljava/util/List;->isEmpty()Z
 
     move-result v2
 
     if-nez v2, :cond_0
 
-    .line 90
     const/4 v2, 0x0
 
     invoke-interface {p6, v2}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -97,7 +89,6 @@
 
     check-cast v0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
-    .line 91
     .local v0, "first":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     invoke-interface {p6}, Ljava/util/List;->size()I
 
@@ -111,7 +102,6 @@
 
     check-cast v1, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
-    .line 92
     .local v1, "last":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     iget-wide v2, v1, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->startTimeUs:J
 
@@ -125,13 +115,11 @@
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->durationUs:J
 
-    .line 96
     .end local v0    # "first":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     .end local v1    # "last":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     :goto_0
     return-void
 
-    .line 94
     :cond_0
     const-wide/16 v2, 0x0
 
@@ -156,7 +144,6 @@
     .end annotation
 
     .prologue
-    .line 118
     .local p1, "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
 
@@ -182,14 +169,12 @@
     .param p1, "newStartTimeUs"    # J
 
     .prologue
-    .line 107
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->getStartTimeUs()J
 
     move-result-wide v6
 
     sub-long v4, p1, v6
 
-    .line 108
     .local v4, "startTimeOffsetUs":J
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
@@ -197,13 +182,11 @@
 
     move-result v3
 
-    .line 109
     .local v3, "segmentsSize":I
     new-instance v1, Ljava/util/ArrayList;
 
     invoke-direct {v1, v3}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 110
     .local v1, "newSegments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;>;"
     const/4 v0, 0x0
 
@@ -211,7 +194,6 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 111
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
     invoke-interface {v6, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -220,7 +202,6 @@
 
     check-cast v2, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
 
-    .line 112
     .local v2, "segment":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     iget-wide v6, v2, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;->startTimeUs:J
 
@@ -232,12 +213,10 @@
 
     invoke-interface {v1, v6}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 110
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 114
     .end local v2    # "segment":Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist$Segment;
     :cond_0
     invoke-virtual {p0, v1}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->copyWithSegments(Ljava/util/List;)Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;
@@ -251,7 +230,6 @@
     .locals 4
 
     .prologue
-    .line 103
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->getStartTimeUs()J
 
     move-result-wide v0
@@ -267,7 +245,6 @@
     .locals 2
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/hls/playlist/HlsMediaPlaylist;->segments:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->isEmpty()Z

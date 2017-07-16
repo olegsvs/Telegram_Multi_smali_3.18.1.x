@@ -43,43 +43,36 @@
     .locals 2
 
     .prologue
-    .line 290
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 277
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->luminanceCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
-    .line 278
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->redCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
-    .line 279
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->greenCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
-    .line 280
     new-instance v0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->blueCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
-    .line 281
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
-    .line 291
     const/16 v0, 0x320
 
     invoke-static {v0}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
@@ -88,14 +81,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
-    .line 292
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     sget-object v1, Ljava/nio/ByteOrder;->LITTLE_ENDIAN:Ljava/nio/ByteOrder;
 
     invoke-virtual {v0, v1}, Ljava/nio/ByteBuffer;->order(Ljava/nio/ByteOrder;)Ljava/nio/ByteBuffer;
 
-    .line 293
     return-void
 .end method
 
@@ -109,19 +100,16 @@
 
     const/high16 v7, 0x437f0000    # 255.0f
 
-    .line 296
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v5, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 297
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->luminanceCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-virtual {v5}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->getDataPoints()[F
 
     move-result-object v3
 
-    .line 298
     .local v3, "luminanceCurveData":[F
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->redCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
@@ -129,7 +117,6 @@
 
     move-result-object v4
 
-    .line 299
     .local v4, "redCurveData":[F
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->greenCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
@@ -137,7 +124,6 @@
 
     move-result-object v2
 
-    .line 300
     .local v2, "greenCurveData":[F
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->blueCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
@@ -145,7 +131,6 @@
 
     move-result-object v1
 
-    .line 301
     .local v1, "blueCurveData":[F
     const/4 v0, 0x0
 
@@ -155,7 +140,6 @@
 
     if-ge v0, v5, :cond_0
 
-    .line 302
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     aget v6, v4, v0
@@ -168,7 +152,6 @@
 
     invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 303
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     aget v6, v2, v0
@@ -181,7 +164,6 @@
 
     invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 304
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     aget v6, v1, v0
@@ -194,7 +176,6 @@
 
     invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 305
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     aget v6, v3, v0
@@ -207,18 +188,15 @@
 
     invoke-virtual {v5, v6}, Ljava/nio/ByteBuffer;->put(B)Ljava/nio/ByteBuffer;
 
-    .line 301
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 307
     :cond_0
     iget-object v5, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->curveBuffer:Ljava/nio/ByteBuffer;
 
     invoke-virtual {v5, v8}, Ljava/nio/ByteBuffer;->position(I)Ljava/nio/Buffer;
 
-    .line 308
     return-void
 .end method
 
@@ -226,7 +204,6 @@
     .locals 1
 
     .prologue
-    .line 311
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$CurvesToolValue;->luminanceCurve:Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PhotoFilterView$CurvesValue;->isDefault()Z

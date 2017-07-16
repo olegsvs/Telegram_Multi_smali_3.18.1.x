@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraController;
 
     .prologue
-    .line 520
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraController$8;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     iput-object p2, p0, Lorg/telegram/messenger/camera/CameraController$8;->val$bitmap:Landroid/graphics/Bitmap;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 523
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraController$8;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     invoke-static {v0}, Lorg/telegram/messenger/camera/CameraController;->access$400(Lorg/telegram/messenger/camera/CameraController;)Lorg/telegram/messenger/camera/CameraController$VideoTakeCallback;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 524
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraController$8;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     invoke-static {v0}, Lorg/telegram/messenger/camera/CameraController;->access$400(Lorg/telegram/messenger/camera/CameraController;)Lorg/telegram/messenger/camera/CameraController$VideoTakeCallback;
@@ -65,14 +62,12 @@
 
     invoke-interface {v0, v1}, Lorg/telegram/messenger/camera/CameraController$VideoTakeCallback;->onFinishVideoRecording(Landroid/graphics/Bitmap;)V
 
-    .line 525
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraController$8;->this$0:Lorg/telegram/messenger/camera/CameraController;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/camera/CameraController;->access$402(Lorg/telegram/messenger/camera/CameraController;Lorg/telegram/messenger/camera/CameraController$VideoTakeCallback;)Lorg/telegram/messenger/camera/CameraController$VideoTakeCallback;
 
-    .line 527
     :cond_0
     return-void
 .end method

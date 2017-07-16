@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateFinalActivity;
 
     .prologue
-    .line 324
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->val$file:Lorg/telegram/tgnet/TLRPC$InputFile;
@@ -49,14 +48,12 @@
     .locals 6
 
     .prologue
-    .line 327
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->val$file:Lorg/telegram/tgnet/TLRPC$InputFile;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1202(Lorg/telegram/ui/GroupCreateFinalActivity;Lorg/telegram/tgnet/TLRPC$InputFile;)Lorg/telegram/tgnet/TLRPC$InputFile;
 
-    .line 328
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->val$small:Lorg/telegram/tgnet/TLRPC$PhotoSize;
@@ -65,7 +62,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1102(Lorg/telegram/ui/GroupCreateFinalActivity;Lorg/telegram/tgnet/TLRPC$FileLocation;)Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 329
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1400(Lorg/telegram/ui/GroupCreateFinalActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -88,7 +84,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 330
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$7;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$300(Lorg/telegram/ui/GroupCreateFinalActivity;)Z
@@ -97,7 +92,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 331
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -134,7 +128,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesController;->createChat(Ljava/lang/String;Ljava/util/ArrayList;Ljava/lang/String;ILorg/telegram/ui/ActionBar/BaseFragment;)I
 
-    .line 333
     :cond_0
     return-void
 .end method

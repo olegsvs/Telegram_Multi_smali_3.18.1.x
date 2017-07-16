@@ -27,12 +27,10 @@
     .locals 1
 
     .prologue
-    .line 34
     const/4 v0, 0x1
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/decoder/DecoderInputBuffer;-><init>(I)V
 
-    .line 35
     return-void
 .end method
 
@@ -42,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 24
     check-cast p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->compareTo(Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;)I
@@ -59,23 +56,19 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 39
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->timeUs:J
 
     iget-wide v4, p1, Lorg/telegram/messenger/exoplayer2/text/SubtitleInputBuffer;->timeUs:J
 
     sub-long v0, v2, v4
 
-    .line 40
     .local v0, "delta":J
     cmp-long v2, v0, v6
 
     if-nez v2, :cond_0
 
-    .line 41
     const/4 v2, 0x0
 
-    .line 43
     :goto_0
     return v2
 

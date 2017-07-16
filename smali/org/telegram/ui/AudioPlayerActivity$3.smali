@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 253
     iput-object p1, p0, Lorg/telegram/ui/AudioPlayerActivity$3;->this$0:Lorg/telegram/ui/AudioPlayerActivity;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -44,7 +43,6 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 256
     sub-int v4, p4, p2
 
     const/high16 v5, 0x43870000    # 270.0f
@@ -57,7 +55,6 @@
 
     div-int/lit8 v1, v4, 0x4
 
-    .line 257
     .local v1, "dist":I
     const/4 v0, 0x0
 
@@ -67,7 +64,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 258
     mul-int/lit8 v4, v0, 0x30
 
     add-int/lit8 v4, v4, 0xf
@@ -82,7 +78,6 @@
 
     add-int v2, v4, v5
 
-    .line 259
     .local v2, "l":I
     const/high16 v4, 0x41100000    # 9.0f
 
@@ -90,7 +85,6 @@
 
     move-result v3
 
-    .line 260
     .local v3, "t":I
     iget-object v4, p0, Lorg/telegram/ui/AudioPlayerActivity$3;->this$0:Lorg/telegram/ui/AudioPlayerActivity;
 
@@ -130,12 +124,10 @@
 
     invoke-virtual {v4, v2, v3, v5, v6}, Landroid/widget/ImageView;->layout(IIII)V
 
-    .line 257
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 262
     .end local v2    # "l":I
     .end local v3    # "t":I
     :cond_0

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 2681
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$18;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$18;->val$path:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 3
 
     .prologue
-    .line 2684
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v1
@@ -60,7 +58,6 @@
 
     move-result-object v0
 
-    .line 2685
     .local v0, "waveform":[B
     new-instance v1, Lorg/telegram/messenger/MediaController$18$1;
 
@@ -68,6 +65,5 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 2710
     return-void
 .end method

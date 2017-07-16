@@ -26,13 +26,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 70
     iput-object p1, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
-    .line 71
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 68
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -41,7 +38,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->paint:Landroid/graphics/Paint;
 
-    .line 72
     return-void
 .end method
 
@@ -56,7 +52,6 @@
 
     const/high16 v7, 0x42040000    # 33.0f
 
-    .line 76
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->isCustomTheme()Z
 
     move-result v3
@@ -69,7 +64,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 77
     iget-object v4, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->paint:Landroid/graphics/Paint;
 
     sget-boolean v3, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
@@ -81,7 +75,6 @@
     :goto_0
     invoke-virtual {v4, v3}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 81
     :goto_1
     const-string/jumbo v3, "chats_menuCloud"
 
@@ -89,7 +82,6 @@
 
     move-result v1
 
-    .line 82
     .local v1, "newColor":I
     iget-object v3, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
@@ -99,7 +91,6 @@
 
     if-eq v3, v1, :cond_0
 
-    .line 83
     iget-object v3, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/DrawerProfileCell;->access$100(Lorg/telegram/ui/Cells/DrawerProfileCell;)Landroid/graphics/drawable/Drawable;
@@ -126,7 +117,6 @@
 
     invoke-virtual {v3, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 85
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->getMeasuredWidth()I
 
@@ -158,7 +148,6 @@
 
     invoke-virtual {p1, v3, v4, v5, v6}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 86
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->getMeasuredWidth()I
 
     move-result v3
@@ -171,7 +160,6 @@
 
     div-int/lit8 v0, v3, 0x2
 
-    .line 87
     .local v0, "l":I
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->getMeasuredHeight()I
 
@@ -185,7 +173,6 @@
 
     div-int/lit8 v2, v3, 0x2
 
-    .line 88
     .local v2, "t":I
     iget-object v3, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
@@ -207,7 +194,6 @@
 
     invoke-virtual {v3, v0, v2, v4, v5}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 89
     iget-object v3, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->this$0:Lorg/telegram/ui/Cells/DrawerProfileCell;
 
     invoke-static {v3}, Lorg/telegram/ui/Cells/DrawerProfileCell;->access$100(Lorg/telegram/ui/Cells/DrawerProfileCell;)Landroid/graphics/drawable/Drawable;
@@ -216,10 +202,8 @@
 
     invoke-virtual {v3, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 90
     return-void
 
-    .line 77
     .end local v0    # "l":I
     .end local v1    # "newColor":I
     .end local v2    # "t":I
@@ -230,7 +214,6 @@
 
     goto :goto_0
 
-    .line 79
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/Cells/DrawerProfileCell$CloudView;->paint:Landroid/graphics/Paint;
 

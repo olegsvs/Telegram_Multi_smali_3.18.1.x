@@ -20,7 +20,6 @@
     .param p1, "fieldName"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -41,6 +40,5 @@
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/ParserException;-><init>(Ljava/lang/String;)V
 
-    .line 84
     return-void
 .end method

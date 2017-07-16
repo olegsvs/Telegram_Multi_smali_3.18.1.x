@@ -49,32 +49,24 @@
     .param p5, "messageObject"    # Lorg/telegram/messenger/MessageObject;
 
     .prologue
-    .line 104
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 92
     new-instance v0, Lorg/telegram/ui/WebviewActivity$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/WebviewActivity$1;-><init>(Lorg/telegram/ui/WebviewActivity;)V
 
     iput-object v0, p0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;
 
-    .line 105
     iput-object p1, p0, Lorg/telegram/ui/WebviewActivity;->currentUrl:Ljava/lang/String;
 
-    .line 106
     iput-object p2, p0, Lorg/telegram/ui/WebviewActivity;->currentBot:Ljava/lang/String;
 
-    .line 107
     iput-object p3, p0, Lorg/telegram/ui/WebviewActivity;->currentGame:Ljava/lang/String;
 
-    .line 108
     iput-object p5, p0, Lorg/telegram/ui/WebviewActivity;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 109
     iput-object p4, p0, Lorg/telegram/ui/WebviewActivity;->short_param:Ljava/lang/String;
 
-    .line 110
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -126,10 +118,8 @@
 
     iput-object v0, p0, Lorg/telegram/ui/WebviewActivity;->linkToCopy:Ljava/lang/String;
 
-    .line 111
     return-void
 
-    .line 110
     :cond_0
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -157,7 +147,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->currentMessageObject:Lorg/telegram/messenger/MessageObject;
 
     return-object v0
@@ -168,7 +157,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->linkToCopy:Ljava/lang/String;
 
     return-object v0
@@ -179,7 +167,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->currentUrl:Ljava/lang/String;
 
     return-object v0
@@ -190,7 +177,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->short_param:Ljava/lang/String;
 
     return-object v0
@@ -201,7 +187,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->currentBot:Ljava/lang/String;
 
     return-object v0
@@ -212,7 +197,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->progressItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     return-object v0
@@ -223,7 +207,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/WebviewActivity;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->progressView:Lorg/telegram/ui/Components/ContextProgressView;
 
     return-object v0
@@ -238,10 +221,8 @@
     .param p4, "username"    # Ljava/lang/String;
 
     .prologue
-    .line 240
     move-object/from16 v13, p0
 
-    .line 241
     .local v13, "url":Ljava/lang/String;
     :try_start_0
     sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -254,7 +235,6 @@
 
     move-result-object v12
 
-    .line 242
     .local v12, "sharedPreferences":Landroid/content/SharedPreferences;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -284,7 +264,6 @@
 
     move-result-object v7
 
-    .line 243
     .local v7, "existing":Ljava/lang/String;
     new-instance v8, Ljava/lang/StringBuilder;
 
@@ -295,7 +274,6 @@
     :goto_0
     invoke-direct {v8, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 244
     .local v8, "hash":Ljava/lang/StringBuilder;
     new-instance v2, Ljava/lang/StringBuilder;
 
@@ -327,18 +305,15 @@
 
     invoke-direct {v2, v14}, Ljava/lang/StringBuilder;-><init>(Ljava/lang/String;)V
 
-    .line 245
     .local v2, "addHash":Ljava/lang/StringBuilder;
     if-nez v7, :cond_1
 
-    .line 246
     const-string/jumbo v14, "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     invoke-virtual {v14}, Ljava/lang/String;->toCharArray()[C
 
     move-result-object v3
 
-    .line 247
     .local v3, "chars":[C
     const/4 v9, 0x0
 
@@ -348,7 +323,6 @@
 
     if-ge v9, v14, :cond_1
 
-    .line 248
     sget-object v14, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     array-length v15, v3
@@ -361,12 +335,10 @@
 
     invoke-virtual {v8, v14}, Ljava/lang/StringBuilder;->append(C)Ljava/lang/StringBuilder;
 
-    .line 247
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 243
     .end local v2    # "addHash":Ljava/lang/StringBuilder;
     .end local v3    # "chars":[C
     .end local v8    # "hash":Ljava/lang/StringBuilder;
@@ -376,24 +348,20 @@
 
     goto :goto_0
 
-    .line 251
     .restart local v2    # "addHash":Ljava/lang/StringBuilder;
     .restart local v8    # "hash":Ljava/lang/StringBuilder;
     :cond_1
     invoke-virtual {v2, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/CharSequence;)Ljava/lang/StringBuilder;
 
-    .line 252
     const/16 v14, 0x23
 
     invoke-virtual {v13, v14}, Ljava/lang/String;->indexOf(I)I
 
     move-result v10
 
-    .line 253
     .local v10, "index":I
     if-gez v10, :cond_2
 
-    .line 254
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -416,13 +384,11 @@
 
     move-result-object v13
 
-    .line 267
     :goto_2
     invoke-interface {v12}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v6
 
-    .line 268
     .local v6, "editor":Landroid/content/SharedPreferences$Editor;
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -456,7 +422,6 @@
 
     invoke-interface {v6, v14, v15}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 269
     new-instance v11, Lorg/telegram/tgnet/SerializedData;
 
     move-object/from16 v0, p1
@@ -469,7 +434,6 @@
 
     invoke-direct {v11, v14}, Lorg/telegram/tgnet/SerializedData;-><init>(I)V
 
-    .line 270
     .local v11, "serializedData":Lorg/telegram/tgnet/SerializedData;
     move-object/from16 v0, p1
 
@@ -477,7 +441,6 @@
 
     invoke-virtual {v14, v11}, Lorg/telegram/tgnet/TLRPC$Message;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 271
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -506,7 +469,6 @@
 
     invoke-interface {v6, v14, v15}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 272
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -588,17 +550,14 @@
 
     invoke-interface {v6, v15, v14}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 273
     invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 274
     const/4 v14, 0x0
 
     move-object/from16 v0, p2
 
     invoke-static {v0, v13, v14}, Lorg/telegram/messenger/browser/Browser;->openUrl(Landroid/content/Context;Ljava/lang/String;Z)V
 
-    .line 278
     .end local v2    # "addHash":Ljava/lang/StringBuilder;
     .end local v6    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v7    # "existing":Ljava/lang/String;
@@ -609,7 +568,6 @@
     :goto_4
     return-void
 
-    .line 256
     .restart local v2    # "addHash":Ljava/lang/StringBuilder;
     .restart local v7    # "existing":Ljava/lang/String;
     .restart local v8    # "hash":Ljava/lang/StringBuilder;
@@ -622,7 +580,6 @@
 
     move-result-object v4
 
-    .line 257
     .local v4, "curHash":Ljava/lang/String;
     const/16 v14, 0x3d
 
@@ -640,7 +597,6 @@
 
     if-ltz v14, :cond_4
 
-    .line 258
     :cond_3
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -666,7 +622,6 @@
 
     goto/16 :goto_2
 
-    .line 260
     :cond_4
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
@@ -674,7 +629,6 @@
 
     if-lez v14, :cond_5
 
-    .line 261
     new-instance v14, Ljava/lang/StringBuilder;
 
     invoke-direct {v14}, Ljava/lang/StringBuilder;-><init>()V
@@ -699,7 +653,6 @@
 
     goto/16 :goto_2
 
-    .line 263
     :cond_5
     new-instance v14, Ljava/lang/StringBuilder;
 
@@ -719,7 +672,6 @@
 
     goto/16 :goto_2
 
-    .line 272
     .end local v4    # "curHash":Ljava/lang/String;
     .restart local v6    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v11    # "serializedData":Lorg/telegram/tgnet/SerializedData;
@@ -750,7 +702,6 @@
 
     goto/16 :goto_3
 
-    .line 275
     .end local v2    # "addHash":Ljava/lang/StringBuilder;
     .end local v6    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v7    # "existing":Ljava/lang/String;
@@ -761,7 +712,6 @@
     :catch_0
     move-exception v5
 
-    .line 276
     .local v5, "e":Ljava/lang/Exception;
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -772,14 +722,11 @@
     .locals 3
 
     .prologue
-    .line 228
     sget-object v0, Landroid/os/Build;->MANUFACTURER:Ljava/lang/String;
 
-    .line 229
     .local v0, "manufacturer":Ljava/lang/String;
     sget-object v1, Landroid/os/Build;->MODEL:Ljava/lang/String;
 
-    .line 230
     .local v1, "model":Ljava/lang/String;
     const-string/jumbo v2, "samsung"
 
@@ -789,7 +736,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 231
     const-string/jumbo v2, "GT-I9500"
 
     invoke-virtual {v2, v1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -798,10 +744,8 @@
 
     if-eqz v2, :cond_0
 
-    .line 232
     const/4 v2, 0x0
 
-    .line 235
     :goto_0
     return v2
 
@@ -832,29 +776,24 @@
 
     const/4 v7, 0x1
 
-    .line 136
     iput-boolean v8, p0, Lorg/telegram/ui/WebviewActivity;->swipeBackEnabled:Z
 
-    .line 137
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v5, 0x7f0200b6
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 138
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v4, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 139
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     iget-object v5, p0, Lorg/telegram/ui/WebviewActivity;->currentGame:Ljava/lang/String;
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 140
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -879,7 +818,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    .line 141
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v5, Lorg/telegram/ui/WebviewActivity$2;
@@ -888,14 +826,12 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 154
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v2
 
-    .line 155
     .local v2, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const v4, 0x7f020246
 
@@ -911,14 +847,12 @@
 
     iput-object v4, p0, Lorg/telegram/ui/WebviewActivity;->progressItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 156
     new-instance v4, Lorg/telegram/ui/Components/ContextProgressView;
 
     invoke-direct {v4, p1, v7}, Lorg/telegram/ui/Components/ContextProgressView;-><init>(Landroid/content/Context;I)V
 
     iput-object v4, p0, Lorg/telegram/ui/WebviewActivity;->progressView:Lorg/telegram/ui/Components/ContextProgressView;
 
-    .line 157
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->progressItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     iget-object v5, p0, Lorg/telegram/ui/WebviewActivity;->progressView:Lorg/telegram/ui/Components/ContextProgressView;
@@ -929,7 +863,6 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 158
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->progressItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getImageView()Landroid/widget/ImageView;
@@ -940,14 +873,12 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 160
     const v4, 0x7f0200bd
 
     invoke-virtual {v2, v8, v4}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
     move-result-object v3
 
-    .line 161
     .local v3, "menuItem":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     const/4 v4, 0x2
 
@@ -961,14 +892,12 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->addSubItem(ILjava/lang/String;)Landroid/widget/TextView;
 
-    .line 163
     new-instance v4, Landroid/webkit/WebView;
 
     invoke-direct {v4, p1}, Landroid/webkit/WebView;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
-    .line 164
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -977,7 +906,6 @@
 
     invoke-virtual {v4, v7}, Landroid/webkit/WebSettings;->setJavaScriptEnabled(Z)V
 
-    .line 165
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -986,19 +914,16 @@
 
     invoke-virtual {v4, v7}, Landroid/webkit/WebSettings;->setDomStorageEnabled(Z)V
 
-    .line 167
     new-instance v4, Landroid/widget/FrameLayout;
 
     invoke-direct {v4, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v4, p0, Lorg/telegram/ui/WebviewActivity;->fragmentView:Landroid/view/View;
 
-    .line 168
     iget-object v1, p0, Lorg/telegram/ui/WebviewActivity;->fragmentView:Landroid/view/View;
 
     check-cast v1, Landroid/widget/FrameLayout;
 
-    .line 170
     .local v1, "frameLayout":Landroid/widget/FrameLayout;
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1006,7 +931,6 @@
 
     if-lt v4, v5, :cond_0
 
-    .line 171
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v4}, Landroid/webkit/WebView;->getSettings()Landroid/webkit/WebSettings;
@@ -1015,18 +939,15 @@
 
     invoke-virtual {v4, v8}, Landroid/webkit/WebSettings;->setMixedContentMode(I)V
 
-    .line 172
     invoke-static {}, Landroid/webkit/CookieManager;->getInstance()Landroid/webkit/CookieManager;
 
     move-result-object v0
 
-    .line 173
     .local v0, "cookieManager":Landroid/webkit/CookieManager;
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v0, v4, v7}, Landroid/webkit/CookieManager;->setAcceptThirdPartyCookies(Landroid/webkit/WebView;Z)V
 
-    .line 174
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     new-instance v5, Lorg/telegram/ui/WebviewActivity$TelegramWebviewProxy;
@@ -1039,7 +960,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/webkit/WebView;->addJavascriptInterface(Ljava/lang/Object;Ljava/lang/String;)V
 
-    .line 177
     .end local v0    # "cookieManager":Landroid/webkit/CookieManager;
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
@@ -1050,7 +970,6 @@
 
     invoke-virtual {v4, v5}, Landroid/webkit/WebView;->setWebViewClient(Landroid/webkit/WebViewClient;)V
 
-    .line 208
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-static {v10, v9}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -1059,7 +978,6 @@
 
     invoke-virtual {v1, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 210
     iget-object v4, p0, Lorg/telegram/ui/WebviewActivity;->fragmentView:Landroid/view/View;
 
     return-object v4
@@ -1073,7 +991,6 @@
 
     const/4 v3, 0x0
 
-    .line 282
     const/16 v0, 0x9
 
     new-array v8, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -1265,18 +1182,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 115
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 116
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 117
     iput-object v3, p0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;
 
-    .line 119
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
@@ -1284,11 +1197,9 @@
 
     move-result-object v1
 
-    .line 120
     .local v1, "parent":Landroid/view/ViewParent;
     if-eqz v1, :cond_0
 
-    .line 121
     check-cast v1, Landroid/widget/FrameLayout;
 
     .end local v1    # "parent":Landroid/view/ViewParent;
@@ -1296,45 +1207,37 @@
 
     invoke-virtual {v1, v2}, Landroid/widget/FrameLayout;->removeView(Landroid/view/View;)V
 
-    .line 123
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->stopLoading()V
 
-    .line 124
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     const-string/jumbo v3, "about:blank"
 
     invoke-virtual {v2, v3}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 125
     iget-object v2, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     invoke-virtual {v2}, Landroid/webkit/WebView;->destroy()V
 
-    .line 126
     const/4 v2, 0x0
 
     iput-object v2, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 130
     :goto_0
     const/4 v2, 0x0
 
     sput-boolean v2, Lorg/telegram/messenger/AndroidUtilities;->playingAGame:Z
 
-    .line 131
     return-void
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -1345,20 +1248,16 @@
     .locals 1
 
     .prologue
-    .line 215
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 216
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->cancelRunOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->typingRunnable:Ljava/lang/Runnable;
 
     invoke-interface {v0}, Ljava/lang/Runnable;->run()V
 
-    .line 218
     return-void
 .end method
 
@@ -1368,7 +1267,6 @@
     .param p2, "backward"    # Z
 
     .prologue
-    .line 222
     if-eqz p1, :cond_0
 
     if-nez p2, :cond_0
@@ -1377,14 +1275,12 @@
 
     if-eqz v0, :cond_0
 
-    .line 223
     iget-object v0, p0, Lorg/telegram/ui/WebviewActivity;->webView:Landroid/webkit/WebView;
 
     iget-object v1, p0, Lorg/telegram/ui/WebviewActivity;->currentUrl:Ljava/lang/String;
 
     invoke-virtual {v0, v1}, Landroid/webkit/WebView;->loadUrl(Ljava/lang/String;)V
 
-    .line 225
     :cond_0
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     .prologue
-    .line 559
     iput-object p1, p0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener$2;->this$1:Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 562
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener$2;->this$1:Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
@@ -62,7 +60,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 563
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener$2;->this$1:Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
@@ -75,7 +72,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setPressed(Z)V
 
-    .line 564
     iget-object v0, p0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener$2;->this$1:Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/RecyclerListView$RecyclerListViewItemClickListener;->this$0:Lorg/telegram/ui/Components/RecyclerListView;
@@ -84,7 +80,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->access$702(Lorg/telegram/ui/Components/RecyclerListView;Ljava/lang/Runnable;)Ljava/lang/Runnable;
 
-    .line 566
     :cond_0
     return-void
 .end method

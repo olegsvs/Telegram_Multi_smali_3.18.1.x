@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 1520
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$16;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput p2, p0, Lorg/telegram/ui/ProfileActivity$16;->val$position:I
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 1525
     :try_start_0
     iget v5, p0, Lorg/telegram/ui/ProfileActivity$16;->val$position:I
 
@@ -59,7 +57,6 @@
 
     if-ne v5, v6, :cond_0
 
-    .line 1526
     iget-object v5, p0, Lorg/telegram/ui/ProfileActivity$16;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/ProfileActivity;->access$1000(Lorg/telegram/ui/ProfileActivity;)Lorg/telegram/tgnet/TLRPC$ChatFull;
@@ -68,17 +65,14 @@
 
     iget-object v0, v5, Lorg/telegram/tgnet/TLRPC$ChatFull;->about:Ljava/lang/String;
 
-    .line 1531
     .local v0, "about":Ljava/lang/String;
     :goto_0
     if-nez v0, :cond_2
 
-    .line 1548
     .end local v0    # "about":Ljava/lang/String;
     :goto_1
     return-void
 
-    .line 1528
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -96,7 +90,6 @@
 
     move-result-object v4
 
-    .line 1529
     .local v4, "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     if-eqz v4, :cond_1
 
@@ -112,7 +105,6 @@
 
     goto :goto_2
 
-    .line 1542
     .end local v4    # "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     .restart local v0    # "about":Ljava/lang/String;
     :cond_2
@@ -126,7 +118,6 @@
 
     check-cast v2, Landroid/content/ClipboardManager;
 
-    .line 1543
     .local v2, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v5, "label"
 
@@ -134,7 +125,6 @@
 
     move-result-object v1
 
-    .line 1544
     .local v1, "clip":Landroid/content/ClipData;
     invoke-virtual {v2, v1}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
@@ -142,14 +132,12 @@
 
     goto :goto_1
 
-    .line 1545
     .end local v0    # "about":Ljava/lang/String;
     .end local v1    # "clip":Landroid/content/ClipData;
     .end local v2    # "clipboard":Landroid/content/ClipboardManager;
     :catch_0
     move-exception v3
 
-    .line 1546
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

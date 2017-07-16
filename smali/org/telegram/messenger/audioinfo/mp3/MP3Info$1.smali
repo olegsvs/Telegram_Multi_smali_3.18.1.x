@@ -31,14 +31,12 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/audioinfo/mp3/MP3Info;
 
     .prologue
-    .line 65
     iput-object p1, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Info$1;->this$0:Lorg/telegram/messenger/audioinfo/mp3/MP3Info;
 
     iput-wide p2, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Info$1;->val$fileLength:J
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 66
     iget-wide v0, p0, Lorg/telegram/messenger/audioinfo/mp3/MP3Info$1;->val$fileLength:J
 
     const-wide/16 v2, 0x80
@@ -62,7 +60,6 @@
     .end annotation
 
     .prologue
-    .line 70
     invoke-virtual {p1}, Lorg/telegram/messenger/audioinfo/mp3/MP3Input;->getPosition()J
 
     move-result-wide v0

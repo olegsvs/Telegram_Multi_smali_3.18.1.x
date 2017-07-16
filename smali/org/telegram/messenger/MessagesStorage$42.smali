@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 2396
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$42;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesStorage$42;->val$adds:Ljava/lang/String;
@@ -49,7 +48,6 @@
     .locals 7
 
     .prologue
-    .line 2400
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$42;->val$adds:Ljava/lang/String;
 
@@ -59,7 +57,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 2401
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$42;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -94,7 +91,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
 
-    .line 2403
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$42;->val$deletes:Ljava/lang/String;
 
@@ -104,7 +100,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 2404
     iget-object v1, p0, Lorg/telegram/messenger/MessagesStorage$42;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-static {v1}, Lorg/telegram/messenger/MessagesStorage;->access$000(Lorg/telegram/messenger/MessagesStorage;)Lorg/telegram/SQLite/SQLiteDatabase;
@@ -141,16 +136,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 2409
     :cond_1
     :goto_0
     return-void
 
-    .line 2406
     :catch_0
     move-exception v0
 
-    .line 2407
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

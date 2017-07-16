@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/EmbedBottomSheet$1;
 
     .prologue
-    .line 96
     iput-object p1, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$1$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 99
     iget-object v0, p0, Lorg/telegram/ui/Components/EmbedBottomSheet$1$1;->this$1:Lorg/telegram/ui/Components/EmbedBottomSheet$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/EmbedBottomSheet$1;->this$0:Lorg/telegram/ui/Components/EmbedBottomSheet;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 106
     const/4 v0, 0x1
 
     return v0

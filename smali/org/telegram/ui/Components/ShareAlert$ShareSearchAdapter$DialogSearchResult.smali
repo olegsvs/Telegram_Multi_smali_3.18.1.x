@@ -31,12 +31,10 @@
     .locals 1
 
     .prologue
-    .line 648
     iput-object p1, p0, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;->this$1:Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 649
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_dialog;-><init>()V
@@ -52,7 +50,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Components/ShareAlert$1;
 
     .prologue
-    .line 648
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter$DialogSearchResult;-><init>(Lorg/telegram/ui/Components/ShareAlert$ShareSearchAdapter;)V
 
     return-void

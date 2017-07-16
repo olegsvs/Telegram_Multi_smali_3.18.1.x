@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/ThreadLocal;-><init>()V
 
     return-void
@@ -40,7 +39,6 @@
     .locals 4
 
     .prologue
-    .line 41
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
@@ -60,7 +58,6 @@
     .locals 1
 
     .prologue
-    .line 38
     invoke-virtual {p0}, Lorg/telegram/messenger/StatsController$1;->initialValue()Ljava/lang/Long;
 
     move-result-object v0

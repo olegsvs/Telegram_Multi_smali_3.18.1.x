@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SecretChatHelper;
 
     .prologue
-    .line 1646
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$13;->this$0:Lorg/telegram/messenger/SecretChatHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$13;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -47,15 +46,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1649
     if-nez p2, :cond_8
 
     move-object/from16 v12, p1
 
-    .line 1650
     check-cast v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
 
-    .line 1651
     .local v12, "res":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     move-object/from16 v0, p1
 
@@ -63,7 +59,6 @@
 
     if-eqz v14, :cond_1
 
-    .line 1652
     iget-object v14, v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->p:[B
 
     iget v15, v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->g:I
@@ -74,7 +69,6 @@
 
     if-nez v14, :cond_0
 
-    .line 1653
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->this$0:Lorg/telegram/messenger/SecretChatHelper;
@@ -95,7 +89,6 @@
 
     invoke-virtual {v14, v15}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1654
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->this$0:Lorg/telegram/messenger/SecretChatHelper;
@@ -106,31 +99,25 @@
 
     iget v15, v15, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->id:I
 
-    invoke-virtual {v14, v15}, Lorg/telegram/messenger/SecretChatHelper;->declineSecretChat(I)V
 
-    .line 1743
     .end local v12    # "res":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     :goto_0
     return-void
 
-    .line 1658
     .restart local v12    # "res":Lorg/telegram/tgnet/TLRPC$messages_DhConfig;
     :cond_0
     iget-object v14, v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->p:[B
 
     sput-object v14, Lorg/telegram/messenger/MessagesStorage;->secretPBytes:[B
 
-    .line 1659
     iget v14, v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->g:I
 
     sput v14, Lorg/telegram/messenger/MessagesStorage;->secretG:I
 
-    .line 1660
     iget v14, v12, Lorg/telegram/tgnet/TLRPC$messages_DhConfig;->version:I
 
     sput v14, Lorg/telegram/messenger/MessagesStorage;->lastSecretVersion:I
 
-    .line 1661
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v14
@@ -143,13 +130,11 @@
 
     invoke-virtual/range {v14 .. v17}, Lorg/telegram/messenger/MessagesStorage;->saveSecretParams(II[B)V
 
-    .line 1663
     :cond_1
     const/16 v14, 0x100
 
     new-array v13, v14, [B
 
-    .line 1664
     .local v13, "salt":[B
     const/4 v2, 0x0
 
@@ -159,7 +144,6 @@
 
     if-ge v2, v14, :cond_2
 
-    .line 1665
     sget-object v14, Lorg/telegram/messenger/Utilities;->random:Ljava/security/SecureRandom;
 
     invoke-virtual {v14}, Ljava/security/SecureRandom;->nextDouble()D
@@ -184,12 +168,10 @@
 
     aput-byte v14, v13, v2
 
-    .line 1664
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 1667
     :cond_2
     move-object/from16 v0, p0
 
@@ -197,7 +179,6 @@
 
     iput-object v13, v14, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->a_or_b:[B
 
-    .line 1668
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -206,7 +187,6 @@
 
     iput v15, v14, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->seq_in:I
 
-    .line 1669
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -215,7 +195,6 @@
 
     iput v15, v14, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->seq_out:I
 
-    .line 1670
     new-instance v10, Ljava/math/BigInteger;
 
     const/4 v14, 0x1
@@ -224,7 +203,6 @@
 
     invoke-direct {v10, v14, v15}, Ljava/math/BigInteger;-><init>(I[B)V
 
-    .line 1671
     .local v10, "p":Ljava/math/BigInteger;
     sget v14, Lorg/telegram/messenger/MessagesStorage;->secretG:I
 
@@ -234,7 +212,6 @@
 
     move-result-object v8
 
-    .line 1672
     .local v8, "g_b":Ljava/math/BigInteger;
     new-instance v14, Ljava/math/BigInteger;
 
@@ -246,7 +223,6 @@
 
     move-result-object v8
 
-    .line 1673
     new-instance v7, Ljava/math/BigInteger;
 
     const/4 v14, 0x1
@@ -259,7 +235,6 @@
 
     invoke-direct {v7, v14, v15}, Ljava/math/BigInteger;-><init>(I[B)V
 
-    .line 1675
     .local v7, "g_a":Ljava/math/BigInteger;
     invoke-static {v7, v10}, Lorg/telegram/messenger/Utilities;->isGoodGaAndGb(Ljava/math/BigInteger;Ljava/math/BigInteger;)Z
 
@@ -267,7 +242,6 @@
 
     if-nez v14, :cond_3
 
-    .line 1676
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->this$0:Lorg/telegram/messenger/SecretChatHelper;
@@ -288,7 +262,6 @@
 
     invoke-virtual {v14, v15}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1677
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->this$0:Lorg/telegram/messenger/SecretChatHelper;
@@ -299,17 +272,14 @@
 
     iget v15, v15, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->id:I
 
-    invoke-virtual {v14, v15}, Lorg/telegram/messenger/SecretChatHelper;->declineSecretChat(I)V
 
     goto/16 :goto_0
 
-    .line 1681
     :cond_3
     invoke-virtual {v8}, Ljava/math/BigInteger;->toByteArray()[B
 
     move-result-object v9
 
-    .line 1682
     .local v9, "g_b_bytes":[B
     array-length v14, v9
 
@@ -317,12 +287,10 @@
 
     if-le v14, v15, :cond_4
 
-    .line 1683
     const/16 v14, 0x100
 
     new-array v6, v14, [B
 
-    .line 1684
     .local v6, "correctedAuth":[B
     const/4 v14, 0x1
 
@@ -334,10 +302,8 @@
 
     invoke-static {v9, v14, v6, v15, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1685
     move-object v9, v6
 
-    .line 1688
     .end local v6    # "correctedAuth":[B
     :cond_4
     new-instance v14, Ljava/math/BigInteger;
@@ -350,12 +316,10 @@
 
     move-result-object v7
 
-    .line 1690
     invoke-virtual {v7}, Ljava/math/BigInteger;->toByteArray()[B
 
     move-result-object v3
 
-    .line 1691
     .local v3, "authKey":[B
     array-length v14, v3
 
@@ -363,12 +327,10 @@
 
     if-le v14, v15, :cond_6
 
-    .line 1692
     const/16 v14, 0x100
 
     new-array v6, v14, [B
 
-    .line 1693
     .restart local v6    # "correctedAuth":[B
     array-length v14, v3
 
@@ -382,10 +344,8 @@
 
     invoke-static {v3, v14, v6, v15, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1694
     move-object v3, v6
 
-    .line 1703
     .end local v6    # "correctedAuth":[B
     :cond_5
     :goto_2
@@ -393,13 +353,11 @@
 
     move-result-object v4
 
-    .line 1704
     .local v4, "authKeyHash":[B
     const/16 v14, 0x8
 
     new-array v5, v14, [B
 
-    .line 1705
     .local v5, "authKeyId":[B
     array-length v14, v4
 
@@ -413,14 +371,12 @@
 
     invoke-static {v4, v14, v5, v15, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1706
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
     iput-object v3, v14, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->auth_key:[B
 
-    .line 1707
     move-object/from16 v0, p0
 
     iget-object v14, v0, Lorg/telegram/messenger/SecretChatHelper$13;->val$encryptedChat:Lorg/telegram/tgnet/TLRPC$EncryptedChat;
@@ -435,23 +391,19 @@
 
     iput v15, v14, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_create_date:I
 
-    .line 1709
     new-instance v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;
 
     invoke-direct {v11}, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;-><init>()V
 
-    .line 1710
     .local v11, "req2":Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;
     iput-object v9, v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->g_b:[B
 
-    .line 1711
     new-instance v14, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
     invoke-direct {v14}, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;-><init>()V
 
     iput-object v14, v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
-    .line 1712
     iget-object v14, v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
     move-object/from16 v0, p0
@@ -462,7 +414,6 @@
 
     iput v15, v14, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;->chat_id:I
 
-    .line 1713
     iget-object v14, v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->peer:Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;
 
     move-object/from16 v0, p0
@@ -477,14 +428,12 @@
 
     iput-wide v0, v14, Lorg/telegram/tgnet/TLRPC$TL_inputEncryptedChat;->access_hash:J
 
-    .line 1714
     invoke-static {v5}, Lorg/telegram/messenger/Utilities;->bytesToLong([B)J
 
     move-result-wide v14
 
     iput-wide v14, v11, Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;->key_fingerprint:J
 
-    .line 1715
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v14
@@ -499,7 +448,6 @@
 
     goto/16 :goto_0
 
-    .line 1695
     .end local v4    # "authKeyHash":[B
     .end local v5    # "authKeyId":[B
     .end local v11    # "req2":Lorg/telegram/tgnet/TLRPC$TL_messages_acceptEncryption;
@@ -510,12 +458,10 @@
 
     if-ge v14, v15, :cond_5
 
-    .line 1696
     const/16 v14, 0x100
 
     new-array v6, v14, [B
 
-    .line 1697
     .restart local v6    # "correctedAuth":[B
     const/4 v14, 0x0
 
@@ -531,7 +477,6 @@
 
     invoke-static {v3, v14, v6, v15, v0}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 1698
     const/4 v2, 0x0
 
     :goto_3
@@ -541,23 +486,19 @@
 
     if-ge v2, v14, :cond_7
 
-    .line 1699
     const/4 v14, 0x0
 
     aput-byte v14, v3, v2
 
-    .line 1698
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_3
 
-    .line 1701
     :cond_7
     move-object v3, v6
 
     goto/16 :goto_2
 
-    .line 1741
     .end local v2    # "a":I
     .end local v3    # "authKey":[B
     .end local v6    # "correctedAuth":[B

@@ -16,16 +16,12 @@
     .param p2, "offset"    # I
 
     .prologue
-    .line 38
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 39
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/Allocation;->data:[B
 
-    .line 40
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/Allocation;->offset:I
 
-    .line 41
     return-void
 .end method
 
@@ -36,7 +32,6 @@
     .param p1, "offset"    # I
 
     .prologue
-    .line 50
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/Allocation;->offset:I
 
     add-int/2addr v0, p1

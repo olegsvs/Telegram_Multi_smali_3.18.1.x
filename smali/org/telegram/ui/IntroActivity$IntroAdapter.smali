@@ -23,7 +23,6 @@
     .locals 0
 
     .prologue
-    .line 266
     iput-object p1, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-direct {p0}, Landroid/support/v4/view/PagerAdapter;-><init>()V
@@ -37,7 +36,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/IntroActivity$1;
 
     .prologue
-    .line 266
     invoke-direct {p0, p1}, Lorg/telegram/ui/IntroActivity$IntroAdapter;-><init>(Lorg/telegram/ui/IntroActivity;)V
 
     return-void
@@ -52,13 +50,11 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 287
     check-cast p3, Landroid/view/View;
 
     .end local p3    # "object":Ljava/lang/Object;
     invoke-virtual {p1, p3}, Landroid/view/ViewGroup;->removeView(Landroid/view/View;)V
 
-    .line 288
     return-void
 .end method
 
@@ -66,7 +62,6 @@
     .locals 1
 
     .prologue
-    .line 269
     const/4 v0, 0x7
 
     return v0
@@ -78,7 +73,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 274
     invoke-virtual {p1}, Landroid/view/ViewGroup;->getContext()Landroid/content/Context;
 
     move-result-object v3
@@ -91,7 +85,6 @@
 
     move-result-object v2
 
-    .line 275
     .local v2, "view":Landroid/view/View;
     const v3, 0x7f0c0051
 
@@ -101,7 +94,6 @@
 
     check-cast v0, Landroid/widget/TextView;
 
-    .line 276
     .local v0, "headerTextView":Landroid/widget/TextView;
     const v3, 0x7f0c0052
 
@@ -111,13 +103,11 @@
 
     check-cast v1, Landroid/widget/TextView;
 
-    .line 277
     .local v1, "messageTextView":Landroid/widget/TextView;
     const/4 v3, 0x0
 
     invoke-virtual {p1, v2, v3}, Landroid/view/ViewGroup;->addView(Landroid/view/View;I)V
 
-    .line 279
     iget-object v3, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
 
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
@@ -134,7 +124,6 @@
 
     invoke-virtual {v0, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 280
     iget-object v3, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
 
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
@@ -155,7 +144,6 @@
 
     invoke-virtual {v1, v3}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 282
     return-object v2
 .end method
 
@@ -165,7 +153,6 @@
     .param p2, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 307
     invoke-virtual {p1, p2}, Ljava/lang/Object;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -179,7 +166,6 @@
     .param p2, "arg1"    # Ljava/lang/ClassLoader;
 
     .prologue
-    .line 312
     return-void
 .end method
 
@@ -187,7 +173,6 @@
     .locals 1
 
     .prologue
-    .line 316
     const/4 v0, 0x0
 
     return-object v0
@@ -200,10 +185,8 @@
     .param p3, "object"    # Ljava/lang/Object;
 
     .prologue
-    .line 292
     invoke-super {p0, p1, p2, p3}, Landroid/support/v4/view/PagerAdapter;->setPrimaryItem(Landroid/view/ViewGroup;ILjava/lang/Object;)V
 
-    .line 293
     iget-object v3, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/IntroActivity;->access$900(Lorg/telegram/ui/IntroActivity;)Landroid/view/ViewGroup;
@@ -214,7 +197,6 @@
 
     move-result v2
 
-    .line 294
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -222,7 +204,6 @@
     :goto_0
     if-ge v0, v2, :cond_1
 
-    .line 295
     iget-object v3, p0, Lorg/telegram/ui/IntroActivity$IntroAdapter;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/IntroActivity;->access$900(Lorg/telegram/ui/IntroActivity;)Landroid/view/ViewGroup;
@@ -233,22 +214,18 @@
 
     move-result-object v1
 
-    .line 296
     .local v1, "child":Landroid/view/View;
     if-ne v0, p2, :cond_0
 
-    .line 298
     const v3, -0xff6978
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 294
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 300
     :cond_0
     const v3, -0x444445
 
@@ -256,7 +233,6 @@
 
     goto :goto_1
 
-    .line 303
     .end local v1    # "child":Landroid/view/View;
     :cond_1
     return-void
@@ -267,13 +243,10 @@
     .param p1, "observer"    # Landroid/database/DataSetObserver;
 
     .prologue
-    .line 321
     if-eqz p1, :cond_0
 
-    .line 322
     invoke-super {p0, p1}, Landroid/support/v4/view/PagerAdapter;->unregisterDataSetObserver(Landroid/database/DataSetObserver;)V
 
-    .line 324
     :cond_0
     return-void
 .end method

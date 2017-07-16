@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$114;
 
     .prologue
-    .line 7724
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,10 +40,8 @@
     .locals 22
 
     .prologue
-    .line 7727
     const/16 v21, 0x0
 
-    .line 7728
     .local v21, "updateMask":I
     move-object/from16 v0, p0
 
@@ -70,7 +67,6 @@
 
     if-eqz v2, :cond_4
 
-    .line 7729
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -104,7 +100,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7730
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v2
@@ -125,7 +120,6 @@
 
     invoke-virtual/range {v2 .. v8}, Lorg/telegram/messenger/NotificationsController;->processReadMessages(Landroid/util/SparseArray;JIIZ)V
 
-    .line 7731
     const/4 v11, 0x0
 
     .local v11, "b":I
@@ -142,7 +136,6 @@
 
     if-ge v11, v2, :cond_2
 
-    .line 7732
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -153,7 +146,6 @@
 
     move-result v17
 
-    .line 7733
     .local v17, "key":I
     move-object/from16 v0, p0
 
@@ -177,7 +169,6 @@
 
     move/from16 v19, v0
 
-    .line 7734
     .local v19, "messageId":I
     move-object/from16 v0, p0
 
@@ -201,7 +192,6 @@
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 7735
     .local v12, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v12, :cond_1
 
@@ -211,7 +201,6 @@
 
     if-gt v2, v0, :cond_1
 
-    .line 7736
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -232,7 +221,6 @@
 
     check-cast v20, Lorg/telegram/messenger/MessageObject;
 
-    .line 7737
     .local v20, "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v20, :cond_1
 
@@ -242,24 +230,20 @@
 
     if-nez v2, :cond_1
 
-    .line 7738
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/MessageObject;->setIsRead()V
 
-    .line 7739
     move/from16 v0, v21
 
     or-int/lit16 v0, v0, 0x100
 
     move/from16 v21, v0
 
-    .line 7731
     .end local v20    # "obj":Lorg/telegram/messenger/MessageObject;
     :cond_1
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_0
 
-    .line 7743
     .end local v12    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v17    # "key":I
     .end local v19    # "messageId":I
@@ -279,7 +263,6 @@
 
     if-ge v11, v2, :cond_4
 
-    .line 7744
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -290,7 +273,6 @@
 
     move-result v17
 
-    .line 7745
     .restart local v17    # "key":I
     move-object/from16 v0, p0
 
@@ -314,7 +296,6 @@
 
     move/from16 v19, v0
 
-    .line 7746
     .restart local v19    # "messageId":I
     move-object/from16 v0, p0
 
@@ -338,7 +319,6 @@
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 7747
     .restart local v12    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v12, :cond_3
 
@@ -348,7 +328,6 @@
 
     if-gt v2, v0, :cond_3
 
-    .line 7748
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -369,7 +348,6 @@
 
     check-cast v20, Lorg/telegram/messenger/MessageObject;
 
-    .line 7749
     .restart local v20    # "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v20, :cond_3
 
@@ -379,24 +357,20 @@
 
     if-eqz v2, :cond_3
 
-    .line 7750
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/MessageObject;->setIsRead()V
 
-    .line 7751
     move/from16 v0, v21
 
     or-int/lit16 v0, v0, 0x100
 
     move/from16 v21, v0
 
-    .line 7743
     .end local v20    # "obj":Lorg/telegram/messenger/MessageObject;
     :cond_3
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_1
 
-    .line 7756
     .end local v11    # "b":I
     .end local v12    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v17    # "key":I
@@ -414,7 +388,6 @@
 
     if-nez v2, :cond_6
 
-    .line 7757
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -443,7 +416,6 @@
 
     check-cast v13, Ljava/util/Map$Entry;
 
-    .line 7758
     .local v13, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -473,7 +445,6 @@
 
     invoke-virtual {v2, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7759
     invoke-interface {v13}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
     move-result-object v2
@@ -490,7 +461,6 @@
 
     shl-long v14, v4, v2
 
-    .line 7760
     .local v14, "dialog_id":J
     move-object/from16 v0, p0
 
@@ -510,11 +480,9 @@
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 7761
     .restart local v12    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v12, :cond_5
 
-    .line 7762
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -533,7 +501,6 @@
 
     check-cast v18, Lorg/telegram/messenger/MessageObject;
 
-    .line 7763
     .local v18, "message":Lorg/telegram/messenger/MessageObject;
     if-eqz v18, :cond_5
 
@@ -555,10 +522,8 @@
 
     if-gt v4, v2, :cond_5
 
-    .line 7764
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/messenger/MessageObject;->setIsRead()V
 
-    .line 7765
     move/from16 v0, v21
 
     or-int/lit16 v0, v0, 0x100
@@ -567,7 +532,6 @@
 
     goto :goto_2
 
-    .line 7770
     .end local v12    # "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v13    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;Ljava/lang/Integer;>;"
     .end local v14    # "dialog_id":J
@@ -585,7 +549,6 @@
 
     if-nez v2, :cond_7
 
-    .line 7771
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -608,7 +571,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7773
     :cond_7
     move-object/from16 v0, p0
 
@@ -622,7 +584,6 @@
 
     if-eqz v2, :cond_e
 
-    .line 7774
     const/4 v9, 0x0
 
     .local v9, "a":I
@@ -639,7 +600,6 @@
 
     if-ge v9, v2, :cond_d
 
-    .line 7775
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$114$1;->this$1:Lorg/telegram/messenger/MessagesController$114;
@@ -650,7 +610,6 @@
 
     move-result v17
 
-    .line 7776
     .restart local v17    # "key":I
     move-object/from16 v0, p0
 
@@ -666,18 +625,15 @@
 
     check-cast v10, Ljava/util/ArrayList;
 
-    .line 7777
     .local v10, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     if-nez v10, :cond_9
 
-    .line 7774
     :cond_8
     :goto_4
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 7780
     :cond_9
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -703,10 +659,8 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7781
     if-nez v17, :cond_b
 
-    .line 7782
     const/4 v11, 0x0
 
     .restart local v11    # "b":I
@@ -717,14 +671,12 @@
 
     if-ge v11, v2, :cond_8
 
-    .line 7783
     invoke-virtual {v10, v11}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v16
 
     check-cast v16, Ljava/lang/Integer;
 
-    .line 7784
     .local v16, "id":Ljava/lang/Integer;
     move-object/from16 v0, p0
 
@@ -742,24 +694,20 @@
 
     check-cast v20, Lorg/telegram/messenger/MessageObject;
 
-    .line 7785
     .restart local v20    # "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v20, :cond_a
 
-    .line 7786
     const/4 v2, 0x1
 
     move-object/from16 v0, v20
 
     iput-boolean v2, v0, Lorg/telegram/messenger/MessageObject;->deleted:Z
 
-    .line 7782
     :cond_a
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_5
 
-    .line 7790
     .end local v11    # "b":I
     .end local v16    # "id":Ljava/lang/Integer;
     .end local v20    # "obj":Lorg/telegram/messenger/MessageObject;
@@ -788,11 +736,9 @@
 
     check-cast v20, Lorg/telegram/messenger/MessageObject;
 
-    .line 7791
     .restart local v20    # "obj":Lorg/telegram/messenger/MessageObject;
     if-eqz v20, :cond_8
 
-    .line 7792
     const/4 v11, 0x0
 
     .restart local v11    # "b":I
@@ -803,7 +749,6 @@
 
     if-ge v11, v2, :cond_8
 
-    .line 7793
     invoke-virtual/range {v20 .. v20}, Lorg/telegram/messenger/MessageObject;->getId()I
 
     move-result v3
@@ -820,7 +765,6 @@
 
     if-ne v3, v2, :cond_c
 
-    .line 7794
     const/4 v2, 0x1
 
     move-object/from16 v0, v20
@@ -829,13 +773,11 @@
 
     goto :goto_4
 
-    .line 7792
     :cond_c
     add-int/lit8 v11, v11, 0x1
 
     goto :goto_6
 
-    .line 7801
     .end local v10    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     .end local v11    # "b":I
     .end local v17    # "key":I
@@ -853,12 +795,10 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/NotificationsController;->removeDeletedMessagesFromNotifications(Landroid/util/SparseArray;)V
 
-    .line 7803
     .end local v9    # "a":I
     :cond_e
     if-eqz v21, :cond_f
 
-    .line 7804
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -879,7 +819,6 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 7806
     :cond_f
     return-void
 .end method

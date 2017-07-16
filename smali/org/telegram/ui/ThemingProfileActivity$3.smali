@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ThemingProfileActivity;
 
     .prologue
-    .line 188
     iput-object p1, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,7 +52,6 @@
     .end annotation
 
     .prologue
-    .line 193
     .local p1, "adapterView":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     invoke-virtual/range {p2 .. p2}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
@@ -69,7 +67,6 @@
 
     move-result-object v10
 
-    .line 195
     .local v10, "key":Ljava/lang/String;
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -82,7 +79,6 @@
 
     if-ne v0, v2, :cond_3
 
-    .line 196
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -91,19 +87,16 @@
 
     if-nez v2, :cond_2
 
-    .line 528
     :cond_0
     :goto_1
     return-void
 
-    .line 193
     .end local v10    # "key":Ljava/lang/String;
     :cond_1
     const-string/jumbo v10, ""
 
     goto :goto_0
 
-    .line 199
     .restart local v10    # "key":Ljava/lang/String;
     :cond_2
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -120,7 +113,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 200
     .local v11, "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -130,7 +122,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 201
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -153,13 +144,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 210
     .local v1, "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto :goto_1
 
-    .line 211
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_3
@@ -173,7 +162,6 @@
 
     if-ne v0, v2, :cond_4
 
-    .line 212
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -184,7 +172,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 213
     .local v9, "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "RowGradient"
 
@@ -196,12 +183,10 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 214
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 215
     .local v8, "array":Ljava/util/List;, "Ljava/util/List<Ljava/lang/CharSequence;>;"
     const-string/jumbo v2, "RowGradientDisabled"
 
@@ -213,7 +198,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 216
     const-string/jumbo v2, "RowGradientTopBottom"
 
     const v3, 0x7f070554
@@ -224,7 +208,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 217
     const-string/jumbo v2, "RowGradientLeftRight"
 
     const v3, 0x7f070551
@@ -235,7 +218,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 218
     const-string/jumbo v2, "RowGradientTLBR"
 
     const v3, 0x7f070553
@@ -246,7 +228,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 219
     const-string/jumbo v2, "RowGradientBLTR"
 
     const v3, 0x7f07054e
@@ -257,14 +238,12 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 220
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v2
 
     new-array v13, v2, [Ljava/lang/String;
 
-    .line 221
     .local v13, "simpleArray":[Ljava/lang/String;
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -274,7 +253,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 222
     invoke-interface {v8, v13}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -287,7 +265,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 232
     const-string/jumbo v2, "Cancel"
 
     const v3, 0x7f0700f0
@@ -300,7 +277,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 233
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -311,7 +287,6 @@
 
     goto/16 :goto_1
 
-    .line 234
     .end local v8    # "array":Ljava/util/List;, "Ljava/util/List<Ljava/lang/CharSequence;>;"
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v13    # "simpleArray":[Ljava/lang/String;
@@ -326,7 +301,6 @@
 
     if-ne v0, v2, :cond_5
 
-    .line 235
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -337,7 +311,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 236
     .restart local v9    # "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "RowGradient"
 
@@ -349,12 +322,10 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 237
     new-instance v8, Ljava/util/ArrayList;
 
     invoke-direct {v8}, Ljava/util/ArrayList;-><init>()V
 
-    .line 238
     .restart local v8    # "array":Ljava/util/List;, "Ljava/util/List<Ljava/lang/CharSequence;>;"
     const-string/jumbo v2, "RowGradientDisabled"
 
@@ -366,7 +337,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 239
     const-string/jumbo v2, "RowGradientTopBottom"
 
     const v3, 0x7f070554
@@ -377,7 +347,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 240
     const-string/jumbo v2, "RowGradientLeftRight"
 
     const v3, 0x7f070551
@@ -388,7 +357,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 241
     const-string/jumbo v2, "RowGradientTLBR"
 
     const v3, 0x7f070553
@@ -399,7 +367,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 242
     const-string/jumbo v2, "RowGradientBLTR"
 
     const v3, 0x7f07054e
@@ -410,14 +377,12 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 243
     invoke-interface {v8}, Ljava/util/List;->size()I
 
     move-result v2
 
     new-array v13, v2, [Ljava/lang/String;
 
-    .line 244
     .restart local v13    # "simpleArray":[Ljava/lang/String;
     invoke-interface {v8}, Ljava/util/List;->size()I
 
@@ -427,7 +392,6 @@
 
     invoke-interface {v8, v2}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
-    .line 245
     invoke-interface {v8, v13}, Ljava/util/List;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
 
     move-result-object v2
@@ -440,7 +404,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 255
     const-string/jumbo v2, "Cancel"
 
     const v3, 0x7f0700f0
@@ -453,7 +416,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 256
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -464,7 +426,6 @@
 
     goto/16 :goto_1
 
-    .line 266
     .end local v8    # "array":Ljava/util/List;, "Ljava/util/List<Ljava/lang/CharSequence;>;"
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v13    # "simpleArray":[Ljava/lang/String;
@@ -479,7 +440,6 @@
 
     if-ne v0, v2, :cond_6
 
-    .line 267
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -488,7 +448,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 270
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -503,7 +462,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 271
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -513,7 +471,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 272
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -536,13 +493,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 280
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 281
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_6
@@ -556,7 +511,6 @@
 
     if-ne v0, v2, :cond_7
 
-    .line 282
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -565,7 +519,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 285
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -580,7 +533,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 286
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -590,7 +542,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 287
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -613,13 +564,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 294
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 295
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_7
@@ -633,7 +582,6 @@
 
     if-ne v0, v2, :cond_8
 
-    .line 296
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -642,7 +590,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 299
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -657,7 +604,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 300
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -667,7 +613,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 301
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -690,13 +635,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 308
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 309
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_8
@@ -710,7 +653,6 @@
 
     if-ne v0, v2, :cond_9
 
-    .line 310
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -719,7 +661,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 313
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -734,7 +675,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 314
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -744,7 +684,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 315
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -767,13 +706,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 322
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 323
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_9
@@ -787,7 +724,6 @@
 
     if-ne v0, v2, :cond_a
 
-    .line 324
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -796,7 +732,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 327
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -811,7 +746,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 328
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -821,7 +755,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 329
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -844,13 +777,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 336
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 337
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_a
@@ -864,7 +795,6 @@
 
     if-ne v0, v2, :cond_b
 
-    .line 338
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -873,7 +803,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 341
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -888,7 +817,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 342
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -898,7 +826,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 343
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -921,13 +848,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 350
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 351
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_b
@@ -941,7 +866,6 @@
 
     if-ne v0, v2, :cond_c
 
-    .line 352
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -950,7 +874,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 355
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -965,7 +888,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 356
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -975,7 +897,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 357
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -998,13 +919,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 366
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 367
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_c
@@ -1018,7 +937,6 @@
 
     if-ne v0, v2, :cond_d
 
-    .line 368
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1027,7 +945,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 371
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1038,7 +955,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 372
     .restart local v9    # "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "NameSize"
 
@@ -1050,7 +966,6 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 373
     new-instance v12, Lorg/telegram/ui/Components/NumberPicker;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1061,26 +976,21 @@
 
     invoke-direct {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
 
-    .line 375
     .local v12, "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     const/16 v2, 0xc
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMinValue(I)V
 
-    .line 376
     const/16 v2, 0x1e
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMaxValue(I)V
 
-    .line 377
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->profileActionbarNameSize:I
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setValue(I)V
 
-    .line 378
     invoke-virtual {v9, v12}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 379
     const-string/jumbo v2, "Done"
 
     const v3, 0x7f070207
@@ -1095,7 +1005,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 388
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -1106,7 +1015,6 @@
 
     goto/16 :goto_1
 
-    .line 389
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     :cond_d
@@ -1120,7 +1028,6 @@
 
     if-ne v0, v2, :cond_e
 
-    .line 390
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1129,7 +1036,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 393
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1140,7 +1046,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 394
     .restart local v9    # "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "StatusSize"
 
@@ -1152,7 +1057,6 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 395
     new-instance v12, Lorg/telegram/ui/Components/NumberPicker;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1163,26 +1067,21 @@
 
     invoke-direct {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
 
-    .line 397
     .restart local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     const/16 v2, 0x8
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMinValue(I)V
 
-    .line 398
     const/16 v2, 0x16
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMaxValue(I)V
 
-    .line 399
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->profileActionbarStatusSize:I
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setValue(I)V
 
-    .line 400
     invoke-virtual {v9, v12}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 401
     const-string/jumbo v2, "Done"
 
     const v3, 0x7f070207
@@ -1197,7 +1096,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 410
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -1208,7 +1106,6 @@
 
     goto/16 :goto_1
 
-    .line 411
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     :cond_e
@@ -1222,7 +1119,6 @@
 
     if-ne v0, v2, :cond_f
 
-    .line 412
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1231,7 +1127,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 415
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1246,7 +1141,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 416
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -1256,7 +1150,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 417
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1279,13 +1172,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 425
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 426
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_f
@@ -1299,7 +1190,6 @@
 
     if-ne v0, v2, :cond_10
 
-    .line 427
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1308,7 +1198,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 430
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1323,7 +1212,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 431
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -1333,7 +1221,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 432
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1356,13 +1243,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 440
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 441
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_10
@@ -1376,7 +1261,6 @@
 
     if-ne v0, v2, :cond_11
 
-    .line 442
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1385,7 +1269,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 445
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1396,7 +1279,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 446
     .restart local v9    # "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "AvatarRadius"
 
@@ -1408,7 +1290,6 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 447
     new-instance v12, Lorg/telegram/ui/Components/NumberPicker;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1419,26 +1300,21 @@
 
     invoke-direct {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
 
-    .line 449
     .restart local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     const/4 v2, 0x1
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMinValue(I)V
 
-    .line 450
     const/16 v2, 0x20
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMaxValue(I)V
 
-    .line 451
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->profileActionbarAvatarRadius:I
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setValue(I)V
 
-    .line 452
     invoke-virtual {v9, v12}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 453
     const-string/jumbo v2, "Done"
 
     const v3, 0x7f070207
@@ -1453,7 +1329,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 462
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -1464,7 +1339,6 @@
 
     goto/16 :goto_1
 
-    .line 463
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     :cond_11
@@ -1478,7 +1352,6 @@
 
     if-ne v0, v2, :cond_12
 
-    .line 464
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1487,7 +1360,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 467
     new-instance v9, Landroid/app/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1498,7 +1370,6 @@
 
     invoke-direct {v9, v2}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 468
     .restart local v9    # "builder":Landroid/app/AlertDialog$Builder;
     const-string/jumbo v2, "AvatarRadius"
 
@@ -1510,7 +1381,6 @@
 
     invoke-virtual {v9, v2}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
-    .line 469
     new-instance v12, Lorg/telegram/ui/Components/NumberPicker;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1521,26 +1391,21 @@
 
     invoke-direct {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;-><init>(Landroid/content/Context;)V
 
-    .line 471
     .restart local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     const/4 v2, 0x1
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMinValue(I)V
 
-    .line 472
     const/16 v2, 0x20
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setMaxValue(I)V
 
-    .line 473
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->profileRowAvatarRadius:I
 
     invoke-virtual {v12, v2}, Lorg/telegram/ui/Components/NumberPicker;->setValue(I)V
 
-    .line 474
     invoke-virtual {v9, v12}, Landroid/app/AlertDialog$Builder;->setView(Landroid/view/View;)Landroid/app/AlertDialog$Builder;
 
-    .line 475
     const-string/jumbo v2, "Done"
 
     const v3, 0x7f070207
@@ -1555,7 +1420,6 @@
 
     invoke-virtual {v9, v2, v3}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
-    .line 484
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v9}, Landroid/app/AlertDialog$Builder;->create()Landroid/app/AlertDialog;
@@ -1566,7 +1430,6 @@
 
     goto/16 :goto_1
 
-    .line 485
     .end local v9    # "builder":Landroid/app/AlertDialog$Builder;
     .end local v12    # "numberPicker":Lorg/telegram/ui/Components/NumberPicker;
     :cond_12
@@ -1580,7 +1443,6 @@
 
     if-ne v0, v2, :cond_13
 
-    .line 486
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1589,7 +1451,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 489
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1604,7 +1465,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 490
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -1614,7 +1474,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 491
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1637,13 +1496,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 498
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 499
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_13
@@ -1657,7 +1514,6 @@
 
     if-ne v0, v2, :cond_14
 
-    .line 500
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1666,7 +1522,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 503
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1681,7 +1536,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 504
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -1691,7 +1545,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 505
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1714,13 +1567,11 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 512
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 
     goto/16 :goto_1
 
-    .line 513
     .end local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     .end local v11    # "li":Landroid/view/LayoutInflater;
     :cond_14
@@ -1734,7 +1585,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 514
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1743,7 +1593,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 517
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ThemingProfileActivity;->getParentActivity()Landroid/app/Activity;
@@ -1758,7 +1607,6 @@
 
     check-cast v11, Landroid/view/LayoutInflater;
 
-    .line 518
     .restart local v11    # "li":Landroid/view/LayoutInflater;
     const v2, 0x7f030006
 
@@ -1768,7 +1616,6 @@
 
     invoke-virtual {v11, v2, v3, v4}, Landroid/view/LayoutInflater;->inflate(ILandroid/view/ViewGroup;Z)Landroid/view/View;
 
-    .line 519
     new-instance v1, Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     iget-object v2, p0, Lorg/telegram/ui/ThemingProfileActivity$3;->this$0:Lorg/telegram/ui/ThemingProfileActivity;
@@ -1781,7 +1628,6 @@
 
     invoke-direct {v3, p0, v10}, Lorg/telegram/ui/ThemingProfileActivity$3$19;-><init>(Lorg/telegram/ui/ThemingProfileActivity$3;Ljava/lang/String;)V
 
-    sget v4, Lorg/telegram/ui/ActionBar/Theme;->profileRowOnlineColor:I
 
     const/4 v5, 0x0
 
@@ -1791,7 +1637,6 @@
 
     invoke-direct/range {v1 .. v7}, Lorg/telegram/ui/Components/ColorSelectorDialog;-><init>(Landroid/content/Context;Lorg/telegram/ui/Components/ColorSelectorDialog$OnColorChangedListener;IIIZ)V
 
-    .line 526
     .restart local v1    # "colorDialog":Lorg/telegram/ui/Components/ColorSelectorDialog;
     invoke-virtual {v1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->show()V
 

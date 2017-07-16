@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 1281
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$3;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-direct {p0, p1, p2}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;-><init>(Lorg/telegram/ui/ArticleViewer;Landroid/content/Context;)V
@@ -44,10 +43,8 @@
     .param p5, "bottom"    # I
 
     .prologue
-    .line 1284
     invoke-super/range {p0 .. p5}, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->onLayout(ZIIII)V
 
-    .line 1285
     sub-int v1, p5, p3
 
     iget-object v2, p0, Lorg/telegram/ui/ArticleViewer$3;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -62,7 +59,6 @@
 
     sub-int v0, v1, v2
 
-    .line 1286
     .local v0, "y":I
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$3;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -76,7 +72,6 @@
 
     if-nez v1, :cond_0
 
-    .line 1287
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$3;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v1}, Lorg/telegram/ui/ArticleViewer;->access$3500(Lorg/telegram/ui/ArticleViewer;)Landroid/widget/FrameLayout;
@@ -89,7 +84,6 @@
 
     sub-int/2addr v0, v1
 
-    .line 1289
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/ArticleViewer$3;->this$0:Lorg/telegram/ui/ArticleViewer;
 
@@ -123,6 +117,5 @@
 
     invoke-virtual {v1, v2, v0, v3, v4}, Landroid/widget/TextView;->layout(IIII)V
 
-    .line 1290
     return-void
 .end method

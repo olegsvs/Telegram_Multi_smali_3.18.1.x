@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 412
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 503
     const/4 v0, 0x1
 
     return v0
@@ -51,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 475
     const/4 v0, 0x0
 
     return v0
@@ -68,7 +65,6 @@
 
     const/4 v8, 0x0
 
-    .line 416
     if-ltz p3, :cond_0
 
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -83,12 +79,10 @@
 
     if-lt p3, v9, :cond_1
 
-    .line 445
     :cond_0
     :goto_0
     return-object v5
 
-    .line 419
     :cond_1
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -100,7 +94,6 @@
 
     move-result v3
 
-    .line 420
     .local v3, "count":I
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -112,7 +105,6 @@
 
     move-result-object v6
 
-    .line 422
     .local v6, "result":Ljava/lang/Object;
     const/4 v0, 0x0
 
@@ -120,10 +112,8 @@
     :goto_1
     if-ge v0, v3, :cond_0
 
-    .line 423
     const/4 v4, 0x0
 
-    .line 424
     .local v4, "imageReceiver":Lorg/telegram/messenger/ImageReceiver;
     iget-object v9, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -135,7 +125,6 @@
 
     move-result-object v7
 
-    .line 425
     .local v7, "view":Landroid/view/View;
     instance-of v9, v7, Lorg/telegram/ui/Cells/ContextLinkCell;
 
@@ -143,48 +132,38 @@
 
     move-object v1, v7
 
-    .line 426
     check-cast v1, Lorg/telegram/ui/Cells/ContextLinkCell;
 
-    .line 427
     .local v1, "cell":Lorg/telegram/ui/Cells/ContextLinkCell;
-    invoke-virtual {v1}, Lorg/telegram/ui/Cells/ContextLinkCell;->getResult()Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
     move-result-object v9
 
     if-ne v9, v6, :cond_2
 
-    .line 428
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/ContextLinkCell;->getPhotoImage()Lorg/telegram/messenger/ImageReceiver;
 
     move-result-object v4
 
-    .line 432
     .end local v1    # "cell":Lorg/telegram/ui/Cells/ContextLinkCell;
     :cond_2
     if-eqz v4, :cond_4
 
-    .line 433
     const/4 v9, 0x2
 
     new-array v2, v9, [I
 
-    .line 434
     .local v2, "coords":[I
     invoke-virtual {v7, v2}, Landroid/view/View;->getLocationInWindow([I)V
 
-    .line 435
     new-instance v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
 
     invoke-direct {v5}, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;-><init>()V
 
-    .line 436
     .local v5, "object":Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
     aget v9, v2, v8
 
     iput v9, v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewX:I
 
-    .line 437
     const/4 v9, 0x1
 
     aget v9, v2, v9
@@ -200,7 +179,6 @@
 
     iput v8, v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->viewY:I
 
-    .line 438
     iget-object v8, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v8}, Lorg/telegram/ui/ChatActivity;->access$500(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/RecyclerListView;
@@ -209,17 +187,14 @@
 
     iput-object v8, v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->parentView:Landroid/view/View;
 
-    .line 439
     iput-object v4, v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->imageReceiver:Lorg/telegram/messenger/ImageReceiver;
 
-    .line 440
     invoke-virtual {v4}, Lorg/telegram/messenger/ImageReceiver;->getBitmap()Landroid/graphics/Bitmap;
 
     move-result-object v8
 
     iput-object v8, v5, Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;->thumb:Landroid/graphics/Bitmap;
 
-    .line 441
     invoke-virtual {v4}, Lorg/telegram/messenger/ImageReceiver;->getRoundRadius()I
 
     move-result v8
@@ -228,13 +203,11 @@
 
     goto :goto_0
 
-    .line 437
     :cond_3
     sget v8, Lorg/telegram/messenger/AndroidUtilities;->statusBarHeight:I
 
     goto :goto_2
 
-    .line 422
     .end local v2    # "coords":[I
     .end local v5    # "object":Lorg/telegram/ui/PhotoViewer$PlaceProviderObject;
     :cond_4
@@ -247,7 +220,6 @@
     .locals 1
 
     .prologue
-    .line 488
     const/4 v0, 0x0
 
     return v0
@@ -260,7 +232,6 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 450
     const/4 v0, 0x0
 
     return-object v0
@@ -271,7 +242,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 465
     const/4 v0, 0x0
 
     return v0
@@ -281,7 +251,6 @@
     .locals 1
 
     .prologue
-    .line 498
     const/4 v0, 0x0
 
     return v0
@@ -293,7 +262,6 @@
     .param p2, "videoEditedInfo"    # Lorg/telegram/messenger/VideoEditedInfo;
 
     .prologue
-    .line 480
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -308,12 +276,10 @@
 
     if-lt p1, v0, :cond_1
 
-    .line 484
     :cond_0
     :goto_0
     return-void
 
-    .line 483
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$2;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -327,9 +293,7 @@
 
     move-result-object v0
 
-    check-cast v0, Lorg/telegram/tgnet/TLRPC$BotInlineResult;
 
-    invoke-static {v1, v0}, Lorg/telegram/ui/ChatActivity;->access$600(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$BotInlineResult;)V
 
     goto :goto_0
 .end method
@@ -339,7 +303,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 471
     return-void
 .end method
 
@@ -348,7 +311,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 494
     return-void
 .end method
 
@@ -356,7 +318,6 @@
     .locals 0
 
     .prologue
-    .line 461
     return-void
 .end method
 
@@ -367,6 +328,5 @@
     .param p3, "index"    # I
 
     .prologue
-    .line 456
     return-void
 .end method

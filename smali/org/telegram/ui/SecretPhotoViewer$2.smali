@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SecretPhotoViewer;
 
     .prologue
-    .line 324
     iput-object p1, p0, Lorg/telegram/ui/SecretPhotoViewer$2;->this$0:Lorg/telegram/ui/SecretPhotoViewer;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 327
     iget-object v0, p0, Lorg/telegram/ui/SecretPhotoViewer$2;->this$0:Lorg/telegram/ui/SecretPhotoViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/SecretPhotoViewer;->access$200(Lorg/telegram/ui/SecretPhotoViewer;)Lorg/telegram/messenger/ImageReceiver;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/messenger/ImageReceiver;->setImageBitmap(Landroid/graphics/Bitmap;)V
 
-    .line 328
     return-void
 .end method

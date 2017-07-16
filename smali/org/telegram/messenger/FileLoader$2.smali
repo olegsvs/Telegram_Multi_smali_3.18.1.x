@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoader;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$2;->this$0:Lorg/telegram/messenger/FileLoader;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/FileLoader$2;->val$encrypted:Z
@@ -53,12 +52,10 @@
     .locals 6
 
     .prologue
-    .line 129
     iget-boolean v1, p0, Lorg/telegram/messenger/FileLoader$2;->val$encrypted:Z
 
     if-eqz v1, :cond_1
 
-    .line 130
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$2;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$100(Lorg/telegram/messenger/FileLoader;)Ljava/util/concurrent/ConcurrentHashMap;
@@ -73,22 +70,18 @@
 
     check-cast v0, Lorg/telegram/messenger/FileUploadOperation;
 
-    .line 134
     .local v0, "operation":Lorg/telegram/messenger/FileUploadOperation;
     :goto_0
     if-eqz v0, :cond_2
 
-    .line 135
     iget-wide v2, p0, Lorg/telegram/messenger/FileLoader$2;->val$finalSize:J
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/messenger/FileUploadOperation;->checkNewDataAvailable(J)V
 
-    .line 139
     :cond_0
     :goto_1
     return-void
 
-    .line 132
     .end local v0    # "operation":Lorg/telegram/messenger/FileUploadOperation;
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$2;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -108,7 +101,6 @@
     .restart local v0    # "operation":Lorg/telegram/messenger/FileUploadOperation;
     goto :goto_0
 
-    .line 136
     :cond_2
     iget-wide v2, p0, Lorg/telegram/messenger/FileLoader$2;->val$finalSize:J
 
@@ -118,7 +110,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 137
     iget-object v1, p0, Lorg/telegram/messenger/FileLoader$2;->this$0:Lorg/telegram/messenger/FileLoader;
 
     invoke-static {v1}, Lorg/telegram/messenger/FileLoader;->access$200(Lorg/telegram/messenger/FileLoader;)Ljava/util/HashMap;

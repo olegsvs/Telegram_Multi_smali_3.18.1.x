@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/NewContactActivity;
 
     .prologue
-    .line 325
     iput-object p1, p0, Lorg/telegram/ui/NewContactActivity$7;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +41,12 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 328
     new-instance v0, Lorg/telegram/ui/CountrySelectActivity;
 
     const/4 v1, 0x1
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/CountrySelectActivity;-><init>(Z)V
 
-    .line 329
     .local v0, "fragment":Lorg/telegram/ui/CountrySelectActivity;
     new-instance v1, Lorg/telegram/ui/NewContactActivity$7$1;
 
@@ -57,11 +54,9 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/CountrySelectActivity;->setCountrySelectActivityDelegate(Lorg/telegram/ui/CountrySelectActivity$CountrySelectActivityDelegate;)V
 
-    .line 343
     iget-object v1, p0, Lorg/telegram/ui/NewContactActivity$7;->this$0:Lorg/telegram/ui/NewContactActivity;
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/NewContactActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 344
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ConvertGroupActivity$2;
 
     .prologue
-    .line 103
     iput-object p1, p0, Lorg/telegram/ui/ConvertGroupActivity$2$1;->this$1:Lorg/telegram/ui/ConvertGroupActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 106
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -66,6 +64,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->convertToMegaGroup(Landroid/content/Context;I)V
 
-    .line 107
     return-void
 .end method

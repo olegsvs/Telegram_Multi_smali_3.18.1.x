@@ -39,14 +39,12 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     .prologue
-    .line 139
     iput-object p1, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->val$url:Ljava/lang/String;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 141
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->canRetry:Z
@@ -59,26 +57,20 @@
     .param p1, "url"    # Ljava/lang/String;
 
     .prologue
-    .line 144
     const/4 v3, 0x1
 
-    .line 145
     .local v3, "canRetry":Z
     const/4 v11, 0x0
 
-    .line 146
     .local v11, "httpConnectionStream":Ljava/io/InputStream;
     const/4 v7, 0x0
 
-    .line 147
     .local v7, "done":Z
     const/4 v15, 0x0
 
-    .line 148
     .local v15, "result":Ljava/lang/StringBuilder;
     const/4 v10, 0x0
 
-    .line 150
     .local v10, "httpConnection":Ljava/net/URLConnection;
     :try_start_0
     new-instance v8, Ljava/net/URL;
@@ -87,13 +79,11 @@
 
     invoke-direct {v8, v0}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 151
     .local v8, "downloadUrl":Ljava/net/URL;
     invoke-virtual {v8}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v10
 
-    .line 152
     const-string/jumbo v18, "User-Agent"
 
     const-string/jumbo v19, "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20150101 Firefox/47.0 (Chrome)"
@@ -104,7 +94,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 153
     const-string/jumbo v18, "Accept-Language"
 
     const-string/jumbo v19, "en-us,en;q=0.5"
@@ -115,7 +104,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 154
     const-string/jumbo v18, "Accept"
 
     const-string/jumbo v19, "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
@@ -126,7 +114,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 155
     const-string/jumbo v18, "Accept-Charset"
 
     const-string/jumbo v19, "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
@@ -137,35 +124,30 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 156
     const/16 v18, 0x1388
 
     move/from16 v0, v18
 
     invoke-virtual {v10, v0}, Ljava/net/URLConnection;->setConnectTimeout(I)V
 
-    .line 157
     const/16 v18, 0x1388
 
     move/from16 v0, v18
 
     invoke-virtual {v10, v0}, Ljava/net/URLConnection;->setReadTimeout(I)V
 
-    .line 158
     instance-of v0, v10, Ljava/net/HttpURLConnection;
 
     move/from16 v18, v0
 
     if-eqz v18, :cond_1
 
-    .line 159
     move-object v0, v10
 
     check-cast v0, Ljava/net/HttpURLConnection;
 
     move-object v12, v0
 
-    .line 160
     .local v12, "httpURLConnection":Ljava/net/HttpURLConnection;
     const/16 v18, 0x1
 
@@ -173,12 +155,10 @@
 
     invoke-virtual {v12, v0}, Ljava/net/HttpURLConnection;->setInstanceFollowRedirects(Z)V
 
-    .line 161
     invoke-virtual {v12}, Ljava/net/HttpURLConnection;->getResponseCode()I
 
     move-result v17
 
-    .line 162
     .local v17, "status":I
     const/16 v18, 0x12e
 
@@ -204,7 +184,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 163
     :cond_0
     const-string/jumbo v18, "Location"
 
@@ -214,7 +193,6 @@
 
     move-result-object v13
 
-    .line 164
     .local v13, "newUrl":Ljava/lang/String;
     const-string/jumbo v18, "Set-Cookie"
 
@@ -224,27 +202,23 @@
 
     move-result-object v5
 
-    .line 165
     .local v5, "cookies":Ljava/lang/String;
     new-instance v8, Ljava/net/URL;
 
     .end local v8    # "downloadUrl":Ljava/net/URL;
     invoke-direct {v8, v13}, Ljava/net/URL;-><init>(Ljava/lang/String;)V
 
-    .line 166
     .restart local v8    # "downloadUrl":Ljava/net/URL;
     invoke-virtual {v8}, Ljava/net/URL;->openConnection()Ljava/net/URLConnection;
 
     move-result-object v10
 
-    .line 167
     const-string/jumbo v18, "Cookie"
 
     move-object/from16 v0, v18
 
     invoke-virtual {v10, v0, v5}, Ljava/net/URLConnection;->setRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 168
     const-string/jumbo v18, "User-Agent"
 
     const-string/jumbo v19, "Mozilla/5.0 (X11; Linux x86_64; rv:10.0) Gecko/20150101 Firefox/47.0 (Chrome)"
@@ -255,7 +229,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 169
     const-string/jumbo v18, "Accept-Language"
 
     const-string/jumbo v19, "en-us,en;q=0.5"
@@ -266,7 +239,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 170
     const-string/jumbo v18, "Accept"
 
     const-string/jumbo v19, "text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8"
@@ -277,7 +249,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 171
     const-string/jumbo v18, "Accept-Charset"
 
     const-string/jumbo v19, "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
@@ -288,7 +259,6 @@
 
     invoke-virtual {v10, v0, v1}, Ljava/net/URLConnection;->addRequestProperty(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 174
     .end local v5    # "cookies":Ljava/lang/String;
     .end local v12    # "httpURLConnection":Ljava/net/HttpURLConnection;
     .end local v13    # "newUrl":Ljava/lang/String;
@@ -296,19 +266,16 @@
     :cond_1
     invoke-virtual {v10}, Ljava/net/URLConnection;->connect()V
 
-    .line 175
     invoke-virtual {v10}, Ljava/net/URLConnection;->getInputStream()Ljava/io/InputStream;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v11
 
-    .line 193
     .end local v8    # "downloadUrl":Ljava/net/URL;
     :goto_0
     if-eqz v3, :cond_4
 
-    .line 195
     if-eqz v10, :cond_2
 
     :try_start_1
@@ -318,7 +285,6 @@
 
     if-eqz v18, :cond_2
 
-    .line 196
     check-cast v10, Ljava/net/HttpURLConnection;
 
     .end local v10    # "httpConnection":Ljava/net/URLConnection;
@@ -328,7 +294,6 @@
 
     move-result v4
 
-    .line 197
     .local v4, "code":I
     const/16 v18, 0xc8
 
@@ -348,13 +313,11 @@
 
     if-eq v4, v0, :cond_2
 
-    .line 205
     .end local v4    # "code":I
     :cond_2
     :goto_1
     if-eqz v11, :cond_3
 
-    .line 207
     const v18, 0x8000
 
     :try_start_2
@@ -367,7 +330,6 @@
     .local v6, "data":[B
     move-object/from16 v16, v15
 
-    .line 209
     .end local v15    # "result":Ljava/lang/StringBuilder;
     .local v16, "result":Ljava/lang/StringBuilder;
     :goto_2
@@ -382,7 +344,6 @@
 
     move-object/from16 v15, v16
 
-    .line 236
     .end local v6    # "data":[B
     .end local v16    # "result":Ljava/lang/StringBuilder;
     .restart local v15    # "result":Ljava/lang/StringBuilder;
@@ -390,13 +351,11 @@
     :goto_3
     if-eqz v11, :cond_4
 
-    .line 237
     :try_start_4
     invoke-virtual {v11}, Ljava/io/InputStream;->close()V
     :try_end_4
     .catch Ljava/lang/Throwable; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 243
     :cond_4
     :goto_4
     if-eqz v7, :cond_c
@@ -408,12 +367,10 @@
     :goto_5
     return-object v18
 
-    .line 176
     .restart local v10    # "httpConnection":Ljava/net/URLConnection;
     :catch_0
     move-exception v9
 
-    .line 177
     .local v9, "e":Ljava/lang/Throwable;
     instance-of v0, v9, Ljava/net/SocketTimeoutException;
 
@@ -421,24 +378,19 @@
 
     if-eqz v18, :cond_6
 
-    .line 178
-    invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->isNetworkOnline()Z
 
     move-result v18
 
     if-eqz v18, :cond_5
 
-    .line 179
     const/4 v3, 0x0
 
-    .line 190
     :cond_5
     :goto_6
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 181
     :cond_6
     instance-of v0, v9, Ljava/net/UnknownHostException;
 
@@ -446,12 +398,10 @@
 
     if-eqz v18, :cond_7
 
-    .line 182
     const/4 v3, 0x0
 
     goto :goto_6
 
-    .line 183
     :cond_7
     instance-of v0, v9, Ljava/net/SocketException;
 
@@ -459,7 +409,6 @@
 
     if-eqz v18, :cond_8
 
-    .line 184
     invoke-virtual {v9}, Ljava/lang/Throwable;->getMessage()Ljava/lang/String;
 
     move-result-object v18
@@ -478,12 +427,10 @@
 
     if-eqz v18, :cond_5
 
-    .line 185
     const/4 v3, 0x0
 
     goto :goto_6
 
-    .line 187
     :cond_8
     instance-of v0, v9, Ljava/io/FileNotFoundException;
 
@@ -491,24 +438,20 @@
 
     if-eqz v18, :cond_5
 
-    .line 188
     const/4 v3, 0x0
 
     goto :goto_6
 
-    .line 201
     .end local v9    # "e":Ljava/lang/Throwable;
     .end local v10    # "httpConnection":Ljava/net/URLConnection;
     :catch_1
     move-exception v9
 
-    .line 202
     .local v9, "e":Ljava/lang/Exception;
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 213
     .end local v9    # "e":Ljava/lang/Exception;
     .end local v15    # "result":Ljava/lang/StringBuilder;
     .restart local v6    # "data":[B
@@ -519,14 +462,11 @@
 
     move-result v14
 
-    .line 214
     .local v14, "read":I
     if-lez v14, :cond_a
 
-    .line 215
     if-nez v16, :cond_d
 
-    .line 216
     new-instance v15, Ljava/lang/StringBuilder;
 
     invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
@@ -534,7 +474,6 @@
     .catch Ljava/lang/Exception; {:try_start_5 .. :try_end_5} :catch_2
     .catch Ljava/lang/Throwable; {:try_start_5 .. :try_end_5} :catch_5
 
-    .line 218
     .end local v16    # "result":Ljava/lang/StringBuilder;
     .restart local v15    # "result":Ljava/lang/StringBuilder;
     :goto_7
@@ -562,12 +501,10 @@
 
     move-object/from16 v16, v15
 
-    .line 228
     .end local v15    # "result":Ljava/lang/StringBuilder;
     .restart local v16    # "result":Ljava/lang/StringBuilder;
     goto :goto_2
 
-    .line 219
     :cond_a
     const/16 v18, -0x1
 
@@ -575,12 +512,10 @@
 
     if-ne v14, v0, :cond_b
 
-    .line 220
     const/4 v7, 0x1
 
     move-object/from16 v15, v16
 
-    .line 221
     .end local v16    # "result":Ljava/lang/StringBuilder;
     .restart local v15    # "result":Ljava/lang/StringBuilder;
     goto :goto_3
@@ -590,12 +525,10 @@
     :cond_b
     move-object/from16 v15, v16
 
-    .line 223
     .end local v16    # "result":Ljava/lang/StringBuilder;
     .restart local v15    # "result":Ljava/lang/StringBuilder;
     goto :goto_3
 
-    .line 225
     .end local v14    # "read":I
     .end local v15    # "result":Ljava/lang/StringBuilder;
     .restart local v16    # "result":Ljava/lang/StringBuilder;
@@ -604,7 +537,6 @@
 
     move-object/from16 v15, v16
 
-    .line 226
     .end local v16    # "result":Ljava/lang/StringBuilder;
     .restart local v9    # "e":Ljava/lang/Exception;
     .restart local v15    # "result":Ljava/lang/StringBuilder;
@@ -616,38 +548,32 @@
 
     goto/16 :goto_3
 
-    .line 230
     .end local v6    # "data":[B
     .end local v9    # "e":Ljava/lang/Exception;
     :catch_3
     move-exception v9
 
-    .line 231
     .local v9, "e":Ljava/lang/Throwable;
     :goto_9
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_3
 
-    .line 239
     .end local v9    # "e":Ljava/lang/Throwable;
     :catch_4
     move-exception v9
 
-    .line 240
     .restart local v9    # "e":Ljava/lang/Throwable;
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_4
 
-    .line 243
     .end local v9    # "e":Ljava/lang/Throwable;
     :cond_c
     const/16 v18, 0x0
 
     goto/16 :goto_5
 
-    .line 230
     .end local v15    # "result":Ljava/lang/StringBuilder;
     .restart local v6    # "data":[B
     .restart local v16    # "result":Ljava/lang/StringBuilder;
@@ -660,7 +586,6 @@
     .restart local v15    # "result":Ljava/lang/StringBuilder;
     goto :goto_9
 
-    .line 225
     .restart local v14    # "read":I
     :catch_6
     move-exception v9
@@ -683,7 +608,6 @@
     .locals 1
 
     .prologue
-    .line 139
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->doInBackground([Ljava/lang/Void;)Lorg/json/JSONObject;
@@ -700,14 +624,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 247
     iget-object v3, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->val$url:Ljava/lang/String;
 
     invoke-direct {p0, v3}, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->downloadUrlContent(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 248
     .local v0, "code":Ljava/lang/String;
     invoke-virtual {p0}, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->isCancelled()Z
 
@@ -715,11 +637,9 @@
 
     if-eqz v3, :cond_0
 
-    .line 256
     :goto_0
     return-object v2
 
-    .line 252
     :cond_0
     :try_start_0
     new-instance v3, Lorg/json/JSONObject;
@@ -732,11 +652,9 @@
 
     goto :goto_0
 
-    .line 253
     :catch_0
     move-exception v1
 
-    .line 254
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -747,7 +665,6 @@
     .locals 0
 
     .prologue
-    .line 139
     check-cast p1, Lorg/json/JSONObject;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->onPostExecute(Lorg/json/JSONObject;)V
@@ -760,10 +677,8 @@
     .param p1, "response"    # Lorg/json/JSONObject;
 
     .prologue
-    .line 261
     if-eqz p1, :cond_8
 
-    .line 263
     :try_start_0
     move-object/from16 v0, p0
 
@@ -773,7 +688,6 @@
 
     invoke-virtual {v12}, Ljava/util/ArrayList;->clear()V
 
-    .line 264
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -782,7 +696,6 @@
 
     invoke-virtual {v12}, Ljava/util/ArrayList;->clear()V
 
-    .line 266
     const-string/jumbo v12, "response"
 
     move-object/from16 v0, p1
@@ -797,7 +710,6 @@
 
     move-result-object v10
 
-    .line 268
     .local v10, "result":Lorg/json/JSONArray;
     const/4 v2, 0x0
 
@@ -811,17 +723,14 @@
 
     if-ge v2, v12, :cond_3
 
-    .line 270
     :try_start_1
     invoke-virtual {v10, v2}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v9
 
-    .line 271
     .local v9, "object":Lorg/json/JSONObject;
     const/4 v7, 0x0
 
-    .line 272
     .local v7, "iconUrl":Ljava/lang/String;
     const-string/jumbo v12, "categories"
 
@@ -831,14 +740,12 @@
 
     if-eqz v12, :cond_0
 
-    .line 273
     const-string/jumbo v12, "categories"
 
     invoke-virtual {v9, v12}, Lorg/json/JSONObject;->getJSONArray(Ljava/lang/String;)Lorg/json/JSONArray;
 
     move-result-object v3
 
-    .line 274
     .local v3, "categories":Lorg/json/JSONArray;
     invoke-virtual {v3}, Lorg/json/JSONArray;->length()I
 
@@ -846,14 +753,12 @@
 
     if-lez v12, :cond_0
 
-    .line 275
     const/4 v12, 0x0
 
     invoke-virtual {v3, v12}, Lorg/json/JSONArray;->getJSONObject(I)Lorg/json/JSONObject;
 
     move-result-object v4
 
-    .line 276
     .local v4, "category":Lorg/json/JSONObject;
     const-string/jumbo v12, "icon"
 
@@ -863,14 +768,12 @@
 
     if-eqz v12, :cond_0
 
-    .line 277
     const-string/jumbo v12, "icon"
 
     invoke-virtual {v4, v12}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v6
 
-    .line 278
     .local v6, "icon":Lorg/json/JSONObject;
     sget-object v12, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -908,7 +811,6 @@
 
     move-result-object v7
 
-    .line 282
     .end local v3    # "categories":Lorg/json/JSONArray;
     .end local v4    # "category":Lorg/json/JSONObject;
     .end local v6    # "icon":Lorg/json/JSONObject;
@@ -921,20 +823,17 @@
 
     invoke-virtual {v12, v7}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 284
     const-string/jumbo v12, "location"
 
     invoke-virtual {v9, v12}, Lorg/json/JSONObject;->getJSONObject(Ljava/lang/String;)Lorg/json/JSONObject;
 
     move-result-object v8
 
-    .line 285
     .local v8, "location":Lorg/json/JSONObject;
     new-instance v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;
 
     invoke-direct {v11}, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;-><init>()V
 
-    .line 286
     .local v11, "venue":Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;
     new-instance v12, Lorg/telegram/tgnet/TLRPC$TL_geoPoint;
 
@@ -942,7 +841,6 @@
 
     iput-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
-    .line 287
     iget-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     const-string/jumbo v13, "lat"
@@ -953,7 +851,6 @@
 
     iput-wide v14, v12, Lorg/telegram/tgnet/TLRPC$GeoPoint;->lat:D
 
-    .line 288
     iget-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->geo:Lorg/telegram/tgnet/TLRPC$GeoPoint;
 
     const-string/jumbo v13, "lng"
@@ -964,7 +861,6 @@
 
     iput-wide v14, v12, Lorg/telegram/tgnet/TLRPC$GeoPoint;->_long:D
 
-    .line 289
     const-string/jumbo v12, "address"
 
     invoke-virtual {v8, v12}, Lorg/json/JSONObject;->has(Ljava/lang/String;)Z
@@ -973,7 +869,6 @@
 
     if-eqz v12, :cond_2
 
-    .line 290
     const-string/jumbo v12, "address"
 
     invoke-virtual {v8, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -982,7 +877,6 @@
 
     iput-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->address:Ljava/lang/String;
 
-    .line 300
     :goto_1
     const-string/jumbo v12, "name"
 
@@ -992,7 +886,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 301
     const-string/jumbo v12, "name"
 
     invoke-virtual {v9, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1001,7 +894,6 @@
 
     iput-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->title:Ljava/lang/String;
 
-    .line 303
     :cond_1
     const-string/jumbo v12, "id"
 
@@ -1011,12 +903,10 @@
 
     iput-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->venue_id:Ljava/lang/String;
 
-    .line 304
     const-string/jumbo v12, "foursquare"
 
     iput-object v12, v11, Lorg/telegram/tgnet/TLRPC$TL_messageMediaVenue;->provider:Ljava/lang/String;
 
-    .line 305
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -1025,7 +915,6 @@
 
     invoke-virtual {v12, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 268
     .end local v7    # "iconUrl":Ljava/lang/String;
     .end local v8    # "location":Lorg/json/JSONObject;
     .end local v9    # "object":Lorg/json/JSONObject;
@@ -1035,7 +924,6 @@
 
     goto/16 :goto_0
 
-    .line 291
     .restart local v7    # "iconUrl":Ljava/lang/String;
     .restart local v8    # "location":Lorg/json/JSONObject;
     .restart local v9    # "object":Lorg/json/JSONObject;
@@ -1049,7 +937,6 @@
 
     if-eqz v12, :cond_5
 
-    .line 292
     const-string/jumbo v12, "city"
 
     invoke-virtual {v8, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1062,7 +949,6 @@
 
     goto :goto_1
 
-    .line 306
     .end local v7    # "iconUrl":Ljava/lang/String;
     .end local v8    # "location":Lorg/json/JSONObject;
     .end local v9    # "object":Lorg/json/JSONObject;
@@ -1070,7 +956,6 @@
     :catch_0
     move-exception v5
 
-    .line 307
     .local v5, "e":Ljava/lang/Exception;
     :try_start_2
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
@@ -1079,18 +964,15 @@
 
     goto :goto_2
 
-    .line 310
     .end local v2    # "a":I
     .end local v5    # "e":Ljava/lang/Exception;
     .end local v10    # "result":Lorg/json/JSONArray;
     :catch_1
     move-exception v5
 
-    .line 311
     .restart local v5    # "e":Ljava/lang/Exception;
     invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 313
     .end local v5    # "e":Ljava/lang/Exception;
     :cond_3
     move-object/from16 v0, p0
@@ -1101,14 +983,12 @@
 
     iput-boolean v13, v12, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->searching:Z
 
-    .line 314
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     invoke-virtual {v12}, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->notifyDataSetChanged()V
 
-    .line 315
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -1119,7 +999,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 316
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -1136,12 +1015,10 @@
 
     invoke-interface {v12, v13}, Lorg/telegram/ui/Adapters/BaseLocationAdapter$BaseLocationAdapterDelegate;->didLoadedSearchResult(Ljava/util/ArrayList;)V
 
-    .line 325
     :cond_4
     :goto_3
     return-void
 
-    .line 293
     .restart local v2    # "a":I
     .restart local v7    # "iconUrl":Ljava/lang/String;
     .restart local v8    # "location":Lorg/json/JSONObject;
@@ -1158,7 +1035,6 @@
 
     if-eqz v12, :cond_6
 
-    .line 294
     const-string/jumbo v12, "state"
 
     invoke-virtual {v8, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1169,7 +1045,6 @@
 
     goto/16 :goto_1
 
-    .line 295
     :cond_6
     const-string/jumbo v12, "country"
 
@@ -1179,7 +1054,6 @@
 
     if-eqz v12, :cond_7
 
-    .line 296
     const-string/jumbo v12, "country"
 
     invoke-virtual {v8, v12}, Lorg/json/JSONObject;->getString(Ljava/lang/String;)Ljava/lang/String;
@@ -1190,7 +1064,6 @@
 
     goto/16 :goto_1
 
-    .line 298
     :cond_7
     sget-object v12, Ljava/util/Locale;->US:Ljava/util/Locale;
 
@@ -1246,7 +1119,6 @@
 
     goto/16 :goto_1
 
-    .line 319
     .end local v2    # "a":I
     .end local v7    # "iconUrl":Ljava/lang/String;
     .end local v8    # "location":Lorg/json/JSONObject;
@@ -1262,14 +1134,12 @@
 
     iput-boolean v13, v12, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->searching:Z
 
-    .line 320
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     invoke-virtual {v12}, Lorg/telegram/ui/Adapters/BaseLocationAdapter;->notifyDataSetChanged()V
 
-    .line 321
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
@@ -1280,7 +1150,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 322
     move-object/from16 v0, p0
 
     iget-object v12, v0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$2;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;

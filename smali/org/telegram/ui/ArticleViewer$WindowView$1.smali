@@ -26,7 +26,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$WindowView;
 
     .prologue
-    .line 467
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->this$1:Lorg/telegram/ui/ArticleViewer$WindowView;
 
     iput-boolean p2, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->val$backAnimation:Z
@@ -45,36 +44,30 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 470
     iget-boolean v0, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->val$backAnimation:Z
 
     if-nez v0, :cond_0
 
-    .line 471
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->this$1:Lorg/telegram/ui/ArticleViewer$WindowView;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$WindowView;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$2000(Lorg/telegram/ui/ArticleViewer;)V
 
-    .line 472
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->this$1:Lorg/telegram/ui/ArticleViewer$WindowView;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$WindowView;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$2100(Lorg/telegram/ui/ArticleViewer;)V
 
-    .line 474
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->this$1:Lorg/telegram/ui/ArticleViewer$WindowView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer$WindowView;->access$2202(Lorg/telegram/ui/ArticleViewer$WindowView;Z)Z
 
-    .line 475
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$WindowView$1;->this$1:Lorg/telegram/ui/ArticleViewer$WindowView;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer$WindowView;->access$2302(Lorg/telegram/ui/ArticleViewer$WindowView;Z)Z
 
-    .line 476
     return-void
 .end method

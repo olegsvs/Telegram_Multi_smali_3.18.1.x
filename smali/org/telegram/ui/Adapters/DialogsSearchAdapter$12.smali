@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 1018
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$12;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 1021
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$12;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$200(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -52,7 +50,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1022
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$12;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     invoke-static {v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter;->access$200(Lorg/telegram/ui/Adapters/DialogsSearchAdapter;)Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;
@@ -71,7 +68,6 @@
 
     invoke-interface {v1, v0}, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$DialogsSearchAdapterDelegate;->needRemoveHint(I)V
 
-    .line 1024
     :cond_0
     const/4 v0, 0x1
 

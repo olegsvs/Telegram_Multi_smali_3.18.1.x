@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 7733
     const v0, -0x4d7a5f3a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_channelRoleEmpty;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 7732
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$ChannelParticipantRole;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 7737
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channelRoleEmpty;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 7738
     return-void
 .end method

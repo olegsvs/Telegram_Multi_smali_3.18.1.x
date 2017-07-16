@@ -24,7 +24,6 @@
     .locals 3
 
     .prologue
-    .line 46
     const/4 v0, 0x1
 
     new-array v0, v0, [I
@@ -46,24 +45,20 @@
     .param p2, "orientation"    # I
 
     .prologue
-    .line 64
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
 
-    .line 55
     new-instance v1, Landroid/graphics/Rect;
 
     invoke-direct {v1}, Landroid/graphics/Rect;-><init>()V
 
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
-    .line 65
     sget-object v1, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->ATTRS:[I
 
     invoke-virtual {p1, v1}, Landroid/content/Context;->obtainStyledAttributes([I)Landroid/content/res/TypedArray;
 
     move-result-object v0
 
-    .line 66
     .local v0, "a":Landroid/content/res/TypedArray;
     const/4 v1, 0x0
 
@@ -73,13 +68,10 @@
 
     iput-object v1, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    .line 67
     invoke-virtual {v0}, Landroid/content/res/TypedArray;->recycle()V
 
-    .line 68
     invoke-virtual {p0, p2}, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->setOrientation(I)V
 
-    .line 69
     return-void
 .end method
 
@@ -94,22 +86,18 @@
     .end annotation
 
     .prologue
-    .line 138
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 141
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getClipToPadding()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 142
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getPaddingTop()I
 
     move-result v6
 
-    .line 143
     .local v6, "top":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getHeight()I
 
@@ -121,13 +109,11 @@
 
     sub-int v0, v7, v8
 
-    .line 144
     .local v0, "bottom":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getPaddingLeft()I
 
     move-result v7
 
-    .line 145
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getWidth()I
 
     move-result v8
@@ -138,16 +124,13 @@
 
     sub-int/2addr v8, v9
 
-    .line 144
     invoke-virtual {p1, v7, v6, v8, v0}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 151
     :goto_0
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildCount()I
 
     move-result v2
 
-    .line 152
     .local v2, "childCount":I
     const/4 v3, 0x0
 
@@ -155,12 +138,10 @@
     :goto_1
     if-ge v3, v2, :cond_1
 
-    .line 153
     invoke-virtual {p2, v3}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 154
     .local v1, "child":Landroid/view/View;
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getLayoutManager()Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
@@ -170,7 +151,6 @@
 
     invoke-virtual {v7, v1, v8}, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 155
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->right:I
@@ -185,7 +165,6 @@
 
     add-int v5, v7, v8
 
-    .line 156
     .local v5, "right":I
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
@@ -195,23 +174,19 @@
 
     sub-int v4, v5, v7
 
-    .line 157
     .local v4, "left":I
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7, v4, v6, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 158
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 152
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 147
     .end local v0    # "bottom":I
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childCount":I
@@ -222,7 +197,6 @@
     :cond_0
     const/4 v6, 0x0
 
-    .line 148
     .restart local v6    # "top":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getHeight()I
 
@@ -231,13 +205,11 @@
     .restart local v0    # "bottom":I
     goto :goto_0
 
-    .line 160
     .restart local v2    # "childCount":I
     .restart local v3    # "i":I
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 161
     return-void
 .end method
 
@@ -252,22 +224,18 @@
     .end annotation
 
     .prologue
-    .line 111
     invoke-virtual {p1}, Landroid/graphics/Canvas;->save()I
 
-    .line 114
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getClipToPadding()Z
 
     move-result v7
 
     if-eqz v7, :cond_0
 
-    .line 115
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getPaddingLeft()I
 
     move-result v4
 
-    .line 116
     .local v4, "left":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getWidth()I
 
@@ -279,13 +247,11 @@
 
     sub-int v5, v7, v8
 
-    .line 117
     .local v5, "right":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getPaddingTop()I
 
     move-result v7
 
-    .line 118
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getHeight()I
 
     move-result v8
@@ -296,16 +262,13 @@
 
     sub-int/2addr v8, v9
 
-    .line 117
     invoke-virtual {p1, v4, v7, v5, v8}, Landroid/graphics/Canvas;->clipRect(IIII)Z
 
-    .line 124
     :goto_0
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildCount()I
 
     move-result v2
 
-    .line 125
     .local v2, "childCount":I
     const/4 v3, 0x0
 
@@ -313,18 +276,15 @@
     :goto_1
     if-ge v3, v2, :cond_1
 
-    .line 126
     invoke-virtual {p2, v3}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 127
     .local v1, "child":Landroid/view/View;
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     invoke-virtual {p2, v1, v7}, Lorg/telegram/messenger/support/widget/RecyclerView;->getDecoratedBoundsWithMargins(Landroid/view/View;Landroid/graphics/Rect;)V
 
-    .line 128
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mBounds:Landroid/graphics/Rect;
 
     iget v7, v7, Landroid/graphics/Rect;->bottom:I
@@ -339,7 +299,6 @@
 
     add-int v0, v7, v8
 
-    .line 129
     .local v0, "bottom":I
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
@@ -349,23 +308,19 @@
 
     sub-int v6, v0, v7
 
-    .line 130
     .local v6, "top":I
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7, v4, v6, v5, v0}, Landroid/graphics/drawable/Drawable;->setBounds(IIII)V
 
-    .line 131
     iget-object v7, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v7, p1}, Landroid/graphics/drawable/Drawable;->draw(Landroid/graphics/Canvas;)V
 
-    .line 125
     add-int/lit8 v3, v3, 0x1
 
     goto :goto_1
 
-    .line 120
     .end local v0    # "bottom":I
     .end local v1    # "child":Landroid/view/View;
     .end local v2    # "childCount":I
@@ -376,7 +331,6 @@
     :cond_0
     const/4 v4, 0x0
 
-    .line 121
     .restart local v4    # "left":I
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getWidth()I
 
@@ -385,13 +339,11 @@
     .restart local v5    # "right":I
     goto :goto_0
 
-    .line 133
     .restart local v2    # "childCount":I
     .restart local v3    # "i":I
     :cond_1
     invoke-virtual {p1}, Landroid/graphics/Canvas;->restore()V
 
-    .line 134
     return-void
 .end method
 
@@ -407,14 +359,12 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 166
     iget v0, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mOrientation:I
 
     const/4 v1, 0x1
 
     if-ne v0, v1, :cond_0
 
-    .line 167
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v0}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
@@ -423,11 +373,9 @@
 
     invoke-virtual {p1, v2, v2, v2, v0}, Landroid/graphics/Rect;->set(IIII)V
 
-    .line 171
     :goto_0
     return-void
 
-    .line 169
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
@@ -447,18 +395,15 @@
     .param p3, "state"    # Lorg/telegram/messenger/support/widget/RecyclerView$State;
 
     .prologue
-    .line 99
     invoke-virtual {p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getLayoutManager()Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     move-result-object v0
 
     if-nez v0, :cond_0
 
-    .line 107
     :goto_0
     return-void
 
-    .line 102
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mOrientation:I
 
@@ -466,12 +411,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 103
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->drawVertical(Landroid/graphics/Canvas;Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
     goto :goto_0
 
-    .line 105
     :cond_1
     invoke-direct {p0, p1, p2}, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->drawHorizontal(Landroid/graphics/Canvas;Lorg/telegram/messenger/support/widget/RecyclerView;)V
 
@@ -486,10 +429,8 @@
     .end param
 
     .prologue
-    .line 91
     if-nez p1, :cond_0
 
-    .line 92
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Drawable cannot be null."
@@ -498,11 +439,9 @@
 
     throw v0
 
-    .line 94
     :cond_0
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mDivider:Landroid/graphics/drawable/Drawable;
 
-    .line 95
     return-void
 .end method
 
@@ -511,14 +450,12 @@
     .param p1, "orientation"    # I
 
     .prologue
-    .line 78
     if-eqz p1, :cond_0
 
     const/4 v0, 0x1
 
     if-eq p1, v0, :cond_0
 
-    .line 79
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "Invalid orientation. It should be either HORIZONTAL or VERTICAL"
@@ -527,10 +464,8 @@
 
     throw v0
 
-    .line 82
     :cond_0
     iput p1, p0, Lorg/telegram/messenger/support/widget/DividerItemDecoration;->mOrientation:I
 
-    .line 83
     return-void
 .end method

@@ -28,7 +28,6 @@
     .locals 0
 
     .prologue
-    .line 95
     iput-object p1, p0, Lorg/telegram/messenger/FileLog$1;->val$message:Ljava/lang/String;
 
     iput-object p2, p0, Lorg/telegram/messenger/FileLog$1;->val$exception:Ljava/lang/Throwable;
@@ -44,7 +43,6 @@
     .locals 6
 
     .prologue
-    .line 99
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
@@ -102,7 +100,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 100
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v1
@@ -119,7 +116,6 @@
 
     invoke-virtual {v1, v2}, Ljava/io/OutputStreamWriter;->write(Ljava/lang/String;)V
 
-    .line 101
     invoke-static {}, Lorg/telegram/messenger/FileLog;->getInstance()Lorg/telegram/messenger/FileLog;
 
     move-result-object v1
@@ -132,15 +128,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 105
     :goto_0
     return-void
 
-    .line 102
     :catch_0
     move-exception v0
 
-    .line 103
     .local v0, "e":Ljava/lang/Exception;
     invoke-virtual {v0}, Ljava/lang/Exception;->printStackTrace()V
 

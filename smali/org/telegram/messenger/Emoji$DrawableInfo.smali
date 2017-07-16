@@ -33,21 +33,15 @@
     .param p4, "index"    # I
 
     .prologue
-    .line 312
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 313
     iput-object p1, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->rect:Landroid/graphics/Rect;
 
-    .line 314
     iput-byte p2, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->page:B
 
-    .line 315
     iput-byte p3, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->page2:B
 
-    .line 316
     iput p4, p0, Lorg/telegram/messenger/Emoji$DrawableInfo;->emojiIndex:I
 
-    .line 317
     return-void
 .end method

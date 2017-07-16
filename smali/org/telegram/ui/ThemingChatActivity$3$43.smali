@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ThemingChatActivity$3;
 
     .prologue
-    .line 1103
     iput-object p1, p0, Lorg/telegram/ui/ThemingChatActivity$3$43;->this$1:Lorg/telegram/ui/ThemingChatActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,10 +41,8 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 1106
     sput p1, Lorg/telegram/ui/ActionBar/Theme;->chatDateColor:I
 
-    .line 1107
     iget-object v0, p0, Lorg/telegram/ui/ThemingChatActivity$3$43;->this$1:Lorg/telegram/ui/ThemingChatActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingChatActivity$3;->this$0:Lorg/telegram/ui/ThemingChatActivity;
@@ -54,6 +51,5 @@
 
     invoke-static {v0, v1, p1}, Lorg/telegram/ui/ThemingChatActivity;->access$300(Lorg/telegram/ui/ThemingChatActivity;Ljava/lang/String;I)V
 
-    .line 1108
     return-void
 .end method

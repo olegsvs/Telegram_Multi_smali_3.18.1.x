@@ -27,15 +27,12 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 83
     iput-object p1, p0, Lorg/telegram/ui/ChangeUsernameActivity$LinkSpan;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-direct {p0}, Landroid/text/style/ClickableSpan;-><init>()V
 
-    .line 84
     iput-object p2, p0, Lorg/telegram/ui/ChangeUsernameActivity$LinkSpan;->url:Ljava/lang/String;
 
-    .line 85
     return-void
 .end method
 
@@ -46,7 +43,6 @@
     .param p1, "widget"    # Landroid/view/View;
 
     .prologue
-    .line 96
     :try_start_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -58,7 +54,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 97
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -68,11 +63,9 @@
 
     move-result-object v0
 
-    .line 98
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
 
-    .line 99
     iget-object v3, p0, Lorg/telegram/ui/ChangeUsernameActivity$LinkSpan;->this$0:Lorg/telegram/ui/ChangeUsernameActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/ChangeUsernameActivity;->getParentActivity()Landroid/app/Activity;
@@ -97,17 +90,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 103
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :goto_0
     return-void
 
-    .line 100
     :catch_0
     move-exception v2
 
-    .line 101
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -119,14 +109,10 @@
     .param p1, "ds"    # Landroid/text/TextPaint;
 
     .prologue
-    .line 89
     invoke-super {p0, p1}, Landroid/text/style/ClickableSpan;->updateDrawState(Landroid/text/TextPaint;)V
 
-    .line 90
     const/4 v0, 0x0
 
-    invoke-virtual {p1, v0}, Landroid/text/TextPaint;->setUnderlineText(Z)V
 
-    .line 91
     return-void
 .end method

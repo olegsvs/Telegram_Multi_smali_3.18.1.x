@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$2;
 
     .prologue
-    .line 194
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$2$1;->this$1:Lorg/telegram/messenger/ContactsController$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$2$1;->val$res:Lorg/telegram/tgnet/TLRPC$TL_help_inviteText;
@@ -47,14 +46,12 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 197
     iget-object v2, p0, Lorg/telegram/messenger/ContactsController$2$1;->this$1:Lorg/telegram/messenger/ContactsController$2;
 
     iget-object v2, v2, Lorg/telegram/messenger/ContactsController$2;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-static {v2, v5}, Lorg/telegram/messenger/ContactsController;->access$102(Lorg/telegram/messenger/ContactsController;Z)Z
 
-    .line 198
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -83,13 +80,11 @@
 
     move-result-object v1
 
-    .line 199
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 200
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "invitetext"
 
@@ -99,7 +94,6 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 201
     const-string/jumbo v2, "invitetexttime"
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -114,9 +108,7 @@
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 202
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 203
     return-void
 .end method

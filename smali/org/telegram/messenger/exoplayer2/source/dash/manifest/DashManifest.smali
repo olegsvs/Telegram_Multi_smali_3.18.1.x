@@ -59,40 +59,29 @@
     .end annotation
 
     .prologue
-    .line 51
     .local p16, "periods":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 52
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->availabilityStartTime:J
 
-    .line 53
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->duration:J
 
-    .line 54
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->minBufferTime:J
 
-    .line 55
     iput-boolean p7, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->dynamic:Z
 
-    .line 56
     iput-wide p8, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->minUpdatePeriod:J
 
-    .line 57
     iput-wide p10, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->timeShiftBufferDepth:J
 
-    .line 58
     iput-wide p12, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->suggestedPresentationDelay:J
 
-    .line 59
     iput-object p14, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->utcTiming:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
 
-    .line 60
     move-object/from16 v0, p15
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->location:Landroid/net/Uri;
 
-    .line 61
     if-nez p16, :cond_0
 
     invoke-static {}, Ljava/util/Collections;->emptyList()Ljava/util/List;
@@ -105,7 +94,6 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->periods:Ljava/util/List;
 
-    .line 62
     return-void
 .end method
 
@@ -116,7 +104,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 69
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->periods:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -132,7 +119,6 @@
     .locals 1
 
     .prologue
-    .line 65
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->periods:Ljava/util/List;
 
     invoke-interface {v0}, Ljava/util/List;->size()I
@@ -149,7 +135,6 @@
     .prologue
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 73
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->periods:Ljava/util/List;
 
     invoke-interface {v2}, Ljava/util/List;->size()I
@@ -166,17 +151,14 @@
 
     if-nez v2, :cond_0
 
-    .line 75
     :goto_0
     return-wide v0
 
-    .line 73
     :cond_0
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->duration:J
 
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->periods:Ljava/util/List;
 
-    .line 74
     invoke-interface {v0, p1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -194,7 +176,6 @@
 
     add-int/lit8 v1, p1, 0x1
 
-    .line 75
     invoke-interface {v0, v1}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -223,7 +204,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 79
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;->getPeriodDurationMs(I)J
 
     move-result-wide v0

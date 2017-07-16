@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 5196
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$93;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$93;->val$channelId:I
@@ -55,21 +54,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 5199
     if-nez p2, :cond_6
 
     move-object/from16 v5, p1
 
-    .line 5200
     check-cast v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;
 
-    .line 5202
     .local v5, "res":Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 5203
     .local v7, "usersDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$User;>;"
     const/4 v8, 0x0
 
@@ -83,7 +78,6 @@
 
     if-ge v8, v2, :cond_0
 
-    .line 5204
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -92,7 +86,6 @@
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 5205
     .local v12, "user":Lorg/telegram/tgnet/TLRPC$User;
     iget v2, v12, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -102,17 +95,14 @@
 
     invoke-virtual {v7, v2, v12}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5203
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_0
 
-    .line 5207
     .end local v12    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     const/4 v9, 0x0
 
-    .line 5208
     .local v9, "channel":Lorg/telegram/tgnet/TLRPC$Chat;
     const/4 v8, 0x0
 
@@ -125,7 +115,6 @@
 
     if-ge v8, v2, :cond_1
 
-    .line 5209
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -134,7 +123,6 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 5210
     .local v10, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     iget v2, v10, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
 
@@ -144,21 +132,17 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 5211
     move-object v9, v10
 
-    .line 5215
     .end local v10    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_1
     move-object v6, v9
 
-    .line 5217
     .local v6, "channelFinal":Lorg/telegram/tgnet/TLRPC$Chat;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 5218
     .local v4, "msgUpdates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;>;"
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;->other_updates:Ljava/util/ArrayList;
 
@@ -168,7 +152,6 @@
 
     if-nez v2, :cond_4
 
-    .line 5219
     const/4 v8, 0x0
 
     :goto_2
@@ -180,7 +163,6 @@
 
     if-ge v8, v2, :cond_4
 
-    .line 5220
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;->other_updates:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -189,33 +171,27 @@
 
     check-cast v11, Lorg/telegram/tgnet/TLRPC$Update;
 
-    .line 5221
     .local v11, "upd":Lorg/telegram/tgnet/TLRPC$Update;
     instance-of v2, v11, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
 
     if-eqz v2, :cond_2
 
-    .line 5222
     check-cast v11, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
 
     .end local v11    # "upd":Lorg/telegram/tgnet/TLRPC$Update;
     invoke-virtual {v4, v11}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 5223
     iget-object v2, v5, Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;->other_updates:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v8}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 5224
     add-int/lit8 v8, v8, -0x1
 
-    .line 5219
     :cond_2
     add-int/lit8 v8, v8, 0x1
 
     goto :goto_2
 
-    .line 5208
     .end local v4    # "msgUpdates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;>;"
     .end local v6    # "channelFinal":Lorg/telegram/tgnet/TLRPC$Chat;
     .restart local v10    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
@@ -224,7 +200,6 @@
 
     goto :goto_1
 
-    .line 5229
     .end local v10    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .restart local v4    # "msgUpdates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;>;"
     .restart local v6    # "channelFinal":Lorg/telegram/tgnet/TLRPC$Chat;
@@ -243,7 +218,6 @@
 
     invoke-virtual {v2, v3, v13, v14, v15}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 5230
     new-instance v2, Lorg/telegram/messenger/MessagesController$93$1;
 
     move-object/from16 v0, p0
@@ -252,7 +226,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5238
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -269,7 +242,6 @@
 
     invoke-virtual {v13, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 5397
     .end local v4    # "msgUpdates":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;>;"
     .end local v5    # "res":Lorg/telegram/tgnet/TLRPC$updates_ChannelDifference;
     .end local v6    # "channelFinal":Lorg/telegram/tgnet/TLRPC$Chat;
@@ -280,7 +252,6 @@
     :goto_3
     return-void
 
-    .line 5386
     :cond_6
     new-instance v2, Lorg/telegram/messenger/MessagesController$93$3;
 
@@ -292,7 +263,6 @@
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5392
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/messenger/MessagesController$93;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -311,7 +281,6 @@
 
     invoke-virtual {v2, v3}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5393
     move-object/from16 v0, p0
 
     iget-wide v2, v0, Lorg/telegram/messenger/MessagesController$93;->val$newTaskId:J
@@ -322,7 +291,6 @@
 
     if-eqz v2, :cond_5
 
-    .line 5394
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2

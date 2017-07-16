@@ -24,7 +24,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;
 
     .prologue
-    .line 193
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1$1;->this$2:Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 196
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1$1;->this$2:Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;->this$1:Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 197
     iget-object v0, p0, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1$1;->this$2:Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView$1;->this$1:Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView;
@@ -73,7 +70,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView;->access$302(Lorg/telegram/ui/Components/PasscodeView$AnimatingTextView;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 199
     :cond_0
     return-void
 .end method

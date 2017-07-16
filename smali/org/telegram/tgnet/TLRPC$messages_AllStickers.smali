@@ -56,24 +56,20 @@
     .locals 1
 
     .prologue
-    .line 13448
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 13450
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_AllStickers;->sets:Ljava/util/ArrayList;
 
-    .line 13451
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$messages_AllStickers;->packs:Ljava/util/ArrayList;
 
-    .line 13452
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -90,20 +86,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 13455
     const/4 v0, 0x0
 
-    .line 13456
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$messages_AllStickers;
     sparse-switch p1, :sswitch_data_0
 
-    .line 13464
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 13465
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in messages_AllStickers"
@@ -128,18 +120,15 @@
 
     throw v1
 
-    .line 13458
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_AllStickers;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_allStickers;-><init>()V
 
-    .line 13459
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_AllStickers;
     goto :goto_0
 
-    .line 13461
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_messages_allStickersNotModified;
 
@@ -149,18 +138,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$messages_AllStickers;
     goto :goto_0
 
-    .line 13467
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 13468
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$messages_AllStickers;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 13470
     :cond_1
     return-object v0
 
-    .line 13456
     nop
 
     :sswitch_data_0

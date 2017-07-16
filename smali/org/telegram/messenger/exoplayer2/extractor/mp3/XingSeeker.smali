@@ -28,7 +28,6 @@
     .param p5, "inputLength"    # J
 
     .prologue
-    .line 85
     const/4 v8, 0x0
 
     const-wide/16 v9, 0x0
@@ -45,7 +44,6 @@
 
     invoke-direct/range {v1 .. v11}, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;-><init>(JJJ[JJI)V
 
-    .line 86
     return-void
 .end method
 
@@ -59,28 +57,20 @@
     .param p10, "headerSize"    # I
 
     .prologue
-    .line 89
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 90
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->firstFramePosition:J
 
-    .line 91
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
-    .line 92
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->inputLength:J
 
-    .line 93
     iput-object p7, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
 
-    .line 94
     iput-wide p8, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->sizeBytes:J
 
-    .line 95
     iput p10, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->headerSize:I
 
-    .line 96
     return-void
 .end method
 
@@ -92,14 +82,12 @@
     .param p4, "inputLength"    # J
 
     .prologue
-    .line 43
     move-object/from16 v0, p0
 
     iget v0, v0, Lorg/telegram/messenger/exoplayer2/extractor/MpegAudioHeader;->samplesPerFrame:I
 
     move/from16 v20, v0
 
-    .line 44
     .local v20, "samplesPerFrame":I
     move-object/from16 v0, p0
 
@@ -107,7 +95,6 @@
 
     move/from16 v19, v0
 
-    .line 45
     .local v19, "sampleRate":I
     move-object/from16 v0, p0
 
@@ -117,13 +104,11 @@
 
     add-long v14, p2, v2
 
-    .line 47
     .local v14, "firstFramePosition":J
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v16
 
-    .line 49
     .local v16, "flags":I
     and-int/lit8 v2, v16, 0x1
 
@@ -138,16 +123,13 @@
     .local v17, "frameCount":I
     if-nez v17, :cond_1
 
-    .line 51
     .end local v17    # "frameCount":I
     :cond_0
     const/4 v3, 0x0
 
-    .line 70
     :goto_0
     return-object v3
 
-    .line 53
     .restart local v17    # "frameCount":I
     :cond_1
     move/from16 v0, v17
@@ -170,7 +152,6 @@
 
     move-result-wide v6
 
-    .line 55
     .local v6, "durationUs":J
     and-int/lit8 v2, v16, 0x6
 
@@ -178,7 +159,6 @@
 
     if-eq v2, v3, :cond_2
 
-    .line 57
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;
 
     move-wide v4, v14
@@ -189,7 +169,6 @@
 
     goto :goto_0
 
-    .line 60
     :cond_2
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedIntToInt()I
 
@@ -197,7 +176,6 @@
 
     int-to-long v11, v2
 
-    .line 61
     .local v11, "sizeBytes":J
     const/4 v2, 0x1
 
@@ -205,12 +183,10 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->skipBytes(I)V
 
-    .line 62
     const/16 v2, 0x63
 
     new-array v10, v2, [J
 
-    .line 63
     .local v10, "tableOfContents":[J
     const/16 v18, 0x0
 
@@ -222,7 +198,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 64
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v2
@@ -231,12 +206,10 @@
 
     aput-wide v2, v10, v18
 
-    .line 63
     add-int/lit8 v18, v18, 0x1
 
     goto :goto_1
 
-    .line 70
     :cond_3
     new-instance v3, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;
 
@@ -258,7 +231,6 @@
     .param p1, "tocPosition"    # I
 
     .prologue
-    .line 165
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     int-to-long v2, p1
@@ -278,7 +250,6 @@
     .locals 2
 
     .prologue
-    .line 157
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->durationUs:J
 
     return-wide v0
@@ -289,23 +260,19 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 105
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->isSeekable()Z
 
     move-result v9
 
     if-nez v9, :cond_0
 
-    .line 106
     move-object/from16 v0, p0
 
     iget-wide v12, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->firstFramePosition:J
 
-    .line 133
     :goto_0
     return-wide v12
 
-    .line 108
     :cond_0
     move-wide/from16 v0, p1
 
@@ -323,7 +290,6 @@
 
     div-float v8, v9, v12
 
-    .line 110
     .local v8, "percent":F
     const/4 v9, 0x0
 
@@ -331,10 +297,8 @@
 
     if-gtz v9, :cond_1
 
-    .line 111
     const/4 v5, 0x0
 
-    .line 130
     .local v5, "fx":F
     :goto_1
     const-wide/high16 v12, 0x3f70000000000000L    # 0.00390625
@@ -361,7 +325,6 @@
 
     add-long v10, v12, v14
 
-    .line 131
     .local v10, "position":J
     move-object/from16 v0, p0
 
@@ -381,7 +344,6 @@
 
     sub-long v6, v12, v14
 
-    .line 133
     .local v6, "maximumPosition":J
     :goto_2
     invoke-static {v10, v11, v6, v7}, Ljava/lang/Math;->min(JJ)J
@@ -390,7 +352,6 @@
 
     goto :goto_0
 
-    .line 112
     .end local v5    # "fx":F
     .end local v6    # "maximumPosition":J
     .end local v10    # "position":J
@@ -401,32 +362,26 @@
 
     if-ltz v9, :cond_2
 
-    .line 113
     const/high16 v5, 0x43800000    # 256.0f
 
     .restart local v5    # "fx":F
     goto :goto_1
 
-    .line 115
     .end local v5    # "fx":F
     :cond_2
     float-to-int v2, v8
 
-    .line 117
     .local v2, "a":I
     if-nez v2, :cond_3
 
-    .line 118
     const/4 v3, 0x0
 
-    .line 122
     .local v3, "fa":F
     :goto_3
     const/16 v9, 0x63
 
     if-ge v2, v9, :cond_4
 
-    .line 123
     move-object/from16 v0, p0
 
     iget-object v9, v0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
@@ -435,7 +390,6 @@
 
     long-to-float v4, v12
 
-    .line 127
     .local v4, "fb":F
     :goto_4
     sub-float v9, v4, v3
@@ -451,7 +405,6 @@
     .restart local v5    # "fx":F
     goto :goto_1
 
-    .line 120
     .end local v3    # "fa":F
     .end local v4    # "fb":F
     .end local v5    # "fx":F
@@ -469,14 +422,12 @@
     .restart local v3    # "fa":F
     goto :goto_3
 
-    .line 125
     :cond_4
     const/high16 v4, 0x43800000    # 256.0f
 
     .restart local v4    # "fb":F
     goto :goto_4
 
-    .line 131
     .end local v2    # "a":I
     .end local v3    # "fa":F
     .end local v4    # "fb":F
@@ -513,7 +464,6 @@
     .param p1, "position"    # J
 
     .prologue
-    .line 138
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->isSeekable()Z
 
     move-result v15
@@ -530,15 +480,12 @@
 
     if-gez v15, :cond_1
 
-    .line 139
     :cond_0
     const-wide/16 v18, 0x0
 
-    .line 152
     :goto_0
     return-wide v18
 
-    .line 141
     :cond_1
     const-wide/high16 v18, 0x4070000000000000L    # 256.0
 
@@ -572,7 +519,6 @@
 
     div-double v8, v18, v20
 
-    .line 142
     .local v8, "offsetByte":D
     move-object/from16 v0, p0
 
@@ -586,7 +532,6 @@
 
     const/16 v21, 0x0
 
-    .line 143
     move-wide/from16 v0, v18
 
     move/from16 v2, v20
@@ -599,7 +544,6 @@
 
     add-int/lit8 v14, v15, 0x1
 
-    .line 144
     .local v14, "previousTocPosition":I
     move-object/from16 v0, p0
 
@@ -607,13 +551,11 @@
 
     move-result-wide v12
 
-    .line 147
     .local v12, "previousTime":J
     if-nez v14, :cond_2
 
     const-wide/16 v10, 0x0
 
-    .line 148
     .local v10, "previousByte":J
     :goto_1
     const/16 v15, 0x63
@@ -622,7 +564,6 @@
 
     const-wide/16 v4, 0x100
 
-    .line 149
     .local v4, "nextByte":J
     :goto_2
     add-int/lit8 v15, v14, 0x1
@@ -633,7 +574,6 @@
 
     move-result-wide v6
 
-    .line 150
     .local v6, "nextTime":J
     cmp-long v15, v4, v10
 
@@ -641,14 +581,12 @@
 
     const-wide/16 v16, 0x0
 
-    .line 152
     .local v16, "timeOffset":J
     :goto_3
     add-long v18, v12, v16
 
     goto :goto_0
 
-    .line 147
     .end local v4    # "nextByte":J
     .end local v6    # "nextTime":J
     .end local v10    # "previousByte":J
@@ -664,7 +602,6 @@
 
     goto :goto_1
 
-    .line 148
     .restart local v10    # "previousByte":J
     :cond_3
     move-object/from16 v0, p0
@@ -675,7 +612,6 @@
 
     goto :goto_2
 
-    .line 150
     .restart local v4    # "nextByte":J
     .restart local v6    # "nextTime":J
     :cond_4
@@ -718,7 +654,6 @@
     .locals 1
 
     .prologue
-    .line 100
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/mp3/XingSeeker;->tableOfContents:[J
 
     if-eqz v0, :cond_0

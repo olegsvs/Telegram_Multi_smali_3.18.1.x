@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$10;
 
     .prologue
-    .line 1011
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$10$2;->this$1:Lorg/telegram/ui/SettingsActivity$10;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1015
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/SettingsActivity$10$2;->this$1:Lorg/telegram/ui/SettingsActivity$10;
 
@@ -51,15 +49,12 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1019
     :goto_0
     return-void
 
-    .line 1016
     :catch_0
     move-exception v0
 
-    .line 1017
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

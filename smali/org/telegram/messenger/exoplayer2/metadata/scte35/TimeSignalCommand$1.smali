@@ -32,7 +32,6 @@
     .locals 0
 
     .prologue
-    .line 67
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -44,7 +43,6 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand$1;->createFromParcel(Landroid/os/Parcel;)Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand;
 
     move-result-object v0
@@ -57,7 +55,6 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 71
     new-instance v0, Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand;
 
     invoke-virtual {p1}, Landroid/os/Parcel;->readLong()J
@@ -75,7 +72,6 @@
     .locals 1
 
     .prologue
-    .line 67
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand$1;->newArray(I)[Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand;
 
     move-result-object v0
@@ -88,7 +84,6 @@
     .param p1, "size"    # I
 
     .prologue
-    .line 76
     new-array v0, p1, [Lorg/telegram/messenger/exoplayer2/metadata/scte35/TimeSignalCommand;
 
     return-object v0

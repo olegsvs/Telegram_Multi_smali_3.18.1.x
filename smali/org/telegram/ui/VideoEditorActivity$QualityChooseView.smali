@@ -19,7 +19,6 @@
 
 .field private gapSize:I
 
-.field private lineSize:I
 
 .field private moving:Z
 
@@ -46,27 +45,22 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 245
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
-    .line 246
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 248
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0, v1}, Landroid/graphics/Paint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->paint:Landroid/graphics/Paint;
 
-    .line 249
     new-instance v0, Landroid/text/TextPaint;
 
     invoke-direct {v0, v1}, Landroid/text/TextPaint;-><init>(I)V
 
     iput-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->textPaint:Landroid/text/TextPaint;
 
-    .line 250
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->textPaint:Landroid/text/TextPaint;
 
     const/high16 v1, 0x41400000    # 12.0f
@@ -79,14 +73,12 @@
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setTextSize(F)V
 
-    .line 251
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->textPaint:Landroid/text/TextPaint;
 
     const v1, -0x323233
 
     invoke-virtual {v0, v1}, Landroid/text/TextPaint;->setColor(I)V
 
-    .line 252
     return-void
 .end method
 
@@ -99,7 +91,6 @@
     .prologue
     const/high16 v12, 0x40000000    # 2.0f
 
-    .line 324
     invoke-virtual {p0}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->getMeasuredHeight()I
 
     move-result v0
@@ -114,7 +105,6 @@
 
     add-int v8, v0, v1
 
-    .line 325
     .local v8, "cy":I
     const/4 v6, 0x0
 
@@ -128,10 +118,8 @@
 
     if-ge v6, v0, :cond_7
 
-    .line 326
     iget v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->sideSide:I
 
-    iget v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     iget v2, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->gapSize:I
 
@@ -153,7 +141,6 @@
 
     add-int v7, v0, v1
 
-    .line 327
     .local v7, "cx":I
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -163,14 +150,12 @@
 
     if-gt v6, v0, :cond_1
 
-    .line 328
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->paint:Landroid/graphics/Paint;
 
     const v1, -0xac5111
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 333
     :goto_1
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
@@ -182,7 +167,6 @@
 
     if-ne v6, v0, :cond_2
 
-    .line 334
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -207,7 +191,6 @@
 
     move-result-object v9
 
-    .line 344
     .local v9, "text":Ljava/lang/String;
     :goto_2
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->textPaint:Landroid/text/TextPaint;
@@ -216,7 +199,6 @@
 
     move-result v10
 
-    .line 345
     .local v10, "width":F
     int-to-float v1, v7
 
@@ -243,7 +225,6 @@
 
     invoke-virtual {p1, v1, v2, v0, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 346
     int-to-float v0, v7
 
     div-float v1, v10, v12
@@ -264,10 +245,8 @@
 
     invoke-virtual {p1, v9, v0, v1, v2}, Landroid/graphics/Canvas;->drawText(Ljava/lang/String;FFLandroid/graphics/Paint;)V
 
-    .line 347
     if-eqz v6, :cond_0
 
-    .line 348
     iget v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->circleSize:I
 
     div-int/lit8 v0, v0, 0x2
@@ -278,11 +257,9 @@
 
     sub-int/2addr v0, v1
 
-    iget v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     sub-int v11, v0, v1
 
-    .line 349
     .local v11, "x":I
     int-to-float v1, v11
 
@@ -296,7 +273,6 @@
 
     int-to-float v2, v0
 
-    iget v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     add-int/2addr v0, v11
 
@@ -316,14 +292,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 325
     .end local v11    # "x":I
     :cond_0
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_0
 
-    .line 330
     .end local v9    # "text":Ljava/lang/String;
     .end local v10    # "width":F
     :cond_1
@@ -335,43 +309,36 @@
 
     goto/16 :goto_1
 
-    .line 335
     :cond_2
     if-nez v6, :cond_3
 
-    .line 336
     const-string/jumbo v9, "240p"
 
     .restart local v9    # "text":Ljava/lang/String;
     goto :goto_2
 
-    .line 337
     .end local v9    # "text":Ljava/lang/String;
     :cond_3
     const/4 v0, 0x1
 
     if-ne v6, v0, :cond_4
 
-    .line 338
     const-string/jumbo v9, "360p"
 
     .restart local v9    # "text":Ljava/lang/String;
     goto :goto_2
 
-    .line 339
     .end local v9    # "text":Ljava/lang/String;
     :cond_4
     const/4 v0, 0x2
 
     if-ne v6, v0, :cond_5
 
-    .line 340
     const-string/jumbo v9, "480p"
 
     .restart local v9    # "text":Ljava/lang/String;
     goto :goto_2
 
-    .line 342
     .end local v9    # "text":Ljava/lang/String;
     :cond_5
     const-string/jumbo v9, "720p"
@@ -379,7 +346,6 @@
     .restart local v9    # "text":Ljava/lang/String;
     goto :goto_2
 
-    .line 345
     .restart local v10    # "width":F
     :cond_6
     iget v0, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->circleSize:I
@@ -390,7 +356,6 @@
 
     goto :goto_3
 
-    .line 352
     .end local v7    # "cx":I
     .end local v9    # "text":Ljava/lang/String;
     .end local v10    # "width":F
@@ -404,15 +369,12 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 314
     invoke-super {p0, p1, p2}, Landroid/view/View;->onMeasure(II)V
 
-    .line 315
     invoke-static {p1}, Landroid/view/View$MeasureSpec;->getSize(I)I
 
     move-result v0
 
-    .line 316
     .local v0, "width":I
     const/high16 v1, 0x41400000    # 12.0f
 
@@ -422,7 +384,6 @@
 
     iput v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->circleSize:I
 
-    .line 317
     const/high16 v1, 0x40000000    # 2.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -431,7 +392,6 @@
 
     iput v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->gapSize:I
 
-    .line 318
     const/high16 v1, 0x41900000    # 18.0f
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -440,7 +400,6 @@
 
     iput v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->sideSide:I
 
-    .line 319
     invoke-virtual {p0}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->getMeasuredWidth()I
 
     move-result v1
@@ -479,9 +438,7 @@
 
     div-int/2addr v1, v2
 
-    iput v1, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
-    .line 320
     return-void
 .end method
 
@@ -496,12 +453,10 @@
 
     const/4 v5, 0x1
 
-    .line 256
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v3
 
-    .line 257
     .local v3, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -509,14 +464,12 @@
 
     if-nez v6, :cond_3
 
-    .line 258
     invoke-virtual {p0}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v6
 
     invoke-interface {v6, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 259
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -529,10 +482,8 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 260
     iget v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->sideSide:I
 
-    iget v7, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     iget v8, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->gapSize:I
 
@@ -554,7 +505,6 @@
 
     add-int v1, v6, v7
 
-    .line 261
     .local v1, "cx":I
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -580,7 +530,6 @@
 
     if-gez v6, :cond_2
 
-    .line 262
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/VideoEditorActivity;->access$1100(Lorg/telegram/ui/VideoEditorActivity;)I
@@ -594,10 +543,8 @@
     :cond_0
     iput-boolean v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startMoving:Z
 
-    .line 263
     iput v3, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startX:F
 
-    .line 264
     iget-object v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/VideoEditorActivity;->access$1100(Lorg/telegram/ui/VideoEditorActivity;)I
@@ -606,14 +553,12 @@
 
     iput v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startMovingQuality:I
 
-    .line 309
     .end local v0    # "a":I
     .end local v1    # "cx":I
     :cond_1
     :goto_1
     return v5
 
-    .line 259
     .restart local v0    # "a":I
     .restart local v1    # "cx":I
     :cond_2
@@ -621,7 +566,6 @@
 
     goto :goto_0
 
-    .line 268
     .end local v0    # "a":I
     .end local v1    # "cx":I
     :cond_3
@@ -633,12 +577,10 @@
 
     if-ne v6, v7, :cond_6
 
-    .line 269
     iget-boolean v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startMoving:Z
 
     if-eqz v6, :cond_4
 
-    .line 270
     iget v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startX:F
 
     sub-float/2addr v6, v3
@@ -657,21 +599,17 @@
 
     if-ltz v6, :cond_1
 
-    .line 271
     iput-boolean v5, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->moving:Z
 
-    .line 272
     iput-boolean v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startMoving:Z
 
     goto :goto_1
 
-    .line 274
     :cond_4
     iget-boolean v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->moving:Z
 
     if-eqz v6, :cond_1
 
-    .line 275
     const/4 v0, 0x0
 
     .restart local v0    # "a":I
@@ -684,10 +622,8 @@
 
     if-ge v0, v6, :cond_1
 
-    .line 276
     iget v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->sideSide:I
 
-    iget v7, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     iget v8, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->gapSize:I
 
@@ -709,9 +645,7 @@
 
     add-int v1, v6, v7
 
-    .line 277
     .restart local v1    # "cx":I
-    iget v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     div-int/lit8 v6, v6, 0x2
 
@@ -725,7 +659,6 @@
 
     add-int v2, v6, v7
 
-    .line 278
     .local v2, "diff":I
     sub-int v6, v1, v2
 
@@ -743,7 +676,6 @@
 
     if-gez v6, :cond_5
 
-    .line 279
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/VideoEditorActivity;->access$1100(Lorg/telegram/ui/VideoEditorActivity;)I
@@ -752,28 +684,23 @@
 
     if-eq v6, v0, :cond_1
 
-    .line 280
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6, v0}, Lorg/telegram/ui/VideoEditorActivity;->access$1102(Lorg/telegram/ui/VideoEditorActivity;I)I
 
-    .line 281
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6, v4}, Lorg/telegram/ui/VideoEditorActivity;->access$1200(Lorg/telegram/ui/VideoEditorActivity;Z)V
 
-    .line 282
     invoke-virtual {p0}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->invalidate()V
 
     goto :goto_1
 
-    .line 275
     :cond_5
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 288
     .end local v0    # "a":I
     .end local v1    # "cx":I
     .end local v2    # "diff":I
@@ -792,13 +719,11 @@
 
     if-ne v6, v7, :cond_1
 
-    .line 289
     :cond_7
     iget-boolean v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->moving:Z
 
     if-nez v6, :cond_a
 
-    .line 290
     const/4 v0, 0x0
 
     .restart local v0    # "a":I
@@ -811,10 +736,8 @@
 
     if-ge v0, v6, :cond_8
 
-    .line 291
     iget v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->sideSide:I
 
-    iget v7, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->lineSize:I
 
     iget v8, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->gapSize:I
 
@@ -836,7 +759,6 @@
 
     add-int v1, v6, v7
 
-    .line 292
     .restart local v1    # "cx":I
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -862,7 +784,6 @@
 
     if-gez v6, :cond_9
 
-    .line 293
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6}, Lorg/telegram/ui/VideoEditorActivity;->access$1100(Lorg/telegram/ui/VideoEditorActivity;)I
@@ -871,32 +792,26 @@
 
     if-eq v6, v0, :cond_8
 
-    .line 294
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6, v0}, Lorg/telegram/ui/VideoEditorActivity;->access$1102(Lorg/telegram/ui/VideoEditorActivity;I)I
 
-    .line 295
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6, v5}, Lorg/telegram/ui/VideoEditorActivity;->access$1200(Lorg/telegram/ui/VideoEditorActivity;Z)V
 
-    .line 296
     invoke-virtual {p0}, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->invalidate()V
 
-    .line 306
     .end local v0    # "a":I
     .end local v1    # "cx":I
     :cond_8
     :goto_4
     iput-boolean v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->startMoving:Z
 
-    .line 307
     iput-boolean v4, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->moving:Z
 
     goto/16 :goto_1
 
-    .line 290
     .restart local v0    # "a":I
     .restart local v1    # "cx":I
     :cond_9
@@ -904,7 +819,6 @@
 
     goto :goto_3
 
-    .line 302
     .end local v0    # "a":I
     .end local v1    # "cx":I
     :cond_a
@@ -918,7 +832,6 @@
 
     if-eq v6, v7, :cond_8
 
-    .line 303
     iget-object v6, p0, Lorg/telegram/ui/VideoEditorActivity$QualityChooseView;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v6, v5}, Lorg/telegram/ui/VideoEditorActivity;->access$1300(Lorg/telegram/ui/VideoEditorActivity;I)V

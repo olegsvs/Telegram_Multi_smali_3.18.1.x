@@ -30,13 +30,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 353
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
-    .line 354
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 355
     invoke-static {p1}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/graphics/Paint;
 
     move-result-object v0
@@ -49,7 +46,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 356
     return-void
 .end method
 
@@ -68,7 +64,6 @@
 
     const/high16 v6, 0x40a00000    # 5.0f
 
-    .line 367
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/graphics/Paint;
@@ -85,7 +80,6 @@
 
     invoke-virtual {v2, v3}, Landroid/graphics/Paint;->setAlpha(I)V
 
-    .line 368
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v2
@@ -94,13 +88,11 @@
 
     sub-long v0, v2, v4
 
-    .line 369
     .local v0, "dt":J
     iget-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
     if-nez v2, :cond_1
 
-    .line 370
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     long-to-float v3, v0
@@ -111,22 +103,18 @@
 
     iput v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 371
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     cmpg-float v2, v2, v7
 
     if-gtz v2, :cond_0
 
-    .line 372
     iput v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 373
     const/4 v2, 0x1
 
     iput-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
-    .line 382
     :cond_0
     :goto_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -135,7 +123,6 @@
 
     iput-wide v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->lastUpdateTime:J
 
-    .line 383
     invoke-static {v6}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -162,13 +149,10 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 384
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->invalidate()V
 
-    .line 385
     return-void
 
-    .line 376
     :cond_1
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
@@ -180,17 +164,14 @@
 
     iput v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 377
     iget v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
     cmpl-float v2, v2, v8
 
     if-ltz v2, :cond_0
 
-    .line 378
     iput v8, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 379
     const/4 v2, 0x0
 
     iput-boolean v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
@@ -202,26 +183,21 @@
     .locals 2
 
     .prologue
-    .line 359
     const/high16 v0, 0x3f800000    # 1.0f
 
     iput v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->alpha:F
 
-    .line 360
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->lastUpdateTime:J
 
-    .line 361
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->isIncr:Z
 
-    .line 362
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ChatActivityEnterView$RecordDot;->invalidate()V
 
-    .line 363
     return-void
 .end method

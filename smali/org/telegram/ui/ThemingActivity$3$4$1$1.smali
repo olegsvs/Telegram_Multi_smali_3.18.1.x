@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ThemingActivity$3$4$1;
 
     .prologue
-    .line 312
     iput-object p1, p0, Lorg/telegram/ui/ThemingActivity$3$4$1$1;->this$3:Lorg/telegram/ui/ThemingActivity$3$4$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 315
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$3$4$1$1;->this$3:Lorg/telegram/ui/ThemingActivity$3$4$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingActivity$3$4$1;->this$2:Lorg/telegram/ui/ThemingActivity$3$4;
@@ -66,17 +64,14 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 317
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$3$4$1$1;->this$3:Lorg/telegram/ui/ThemingActivity$3$4$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ThemingActivity$3$4$1;->val$wName:Ljava/lang/String;
 
     invoke-static {v0}, Lorg/telegram/messenger/Utilities;->applyWallpaper(Ljava/lang/String;)V
 
-    .line 318
     invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
 
-    .line 320
     :cond_0
     return-void
 .end method

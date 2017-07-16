@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ImageLoader$4;
 
     .prologue
-    .line 1285
     iput-object p1, p0, Lorg/telegram/messenger/ImageLoader$4$1;->this$1:Lorg/telegram/messenger/ImageLoader$4;
 
     iput-object p2, p0, Lorg/telegram/messenger/ImageLoader$4$1;->val$paths:Ljava/util/HashMap;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 1288
     invoke-static {}, Lorg/telegram/messenger/FileLoader;->getInstance()Lorg/telegram/messenger/FileLoader;
 
     move-result-object v0
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/FileLoader;->setMediaDirs(Ljava/util/HashMap;)V
 
-    .line 1289
     return-void
 .end method

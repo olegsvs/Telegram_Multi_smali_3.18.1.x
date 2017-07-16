@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 3538
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$58;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesStorage$58;->val$date:I
@@ -53,7 +52,6 @@
     .locals 8
 
     .prologue
-    .line 3542
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$58;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -91,7 +89,6 @@
 
     move-result-object v0
 
-    .line 3543
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$58;->val$result:[Z
 
@@ -103,34 +100,28 @@
 
     aput-boolean v4, v2, v3
 
-    .line 3544
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 3548
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$58;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 3550
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     :goto_0
     return-void
 
-    .line 3545
     :catch_0
     move-exception v1
 
-    .line 3546
     .local v1, "e":Ljava/lang/Exception;
     :try_start_1
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
     :try_end_1
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 3548
     iget-object v2, p0, Lorg/telegram/messenger/MessagesStorage$58;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v2}, Ljava/util/concurrent/Semaphore;->release()V

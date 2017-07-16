@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChatActivity$67$4;
 
     .prologue
-    .line 4469
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -53,7 +52,6 @@
 
     const/4 v2, 0x0
 
-    .line 4472
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -62,19 +60,16 @@
 
     invoke-static {v0, v5}, Lorg/telegram/ui/ChatActivity;->access$14802(Lorg/telegram/ui/ChatActivity;I)I
 
-    .line 4473
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_3
 
-    .line 4474
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
 
     if-eqz v0, :cond_5
 
-    .line 4475
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -89,7 +84,6 @@
 
     invoke-static {v1, v0}, Lorg/telegram/ui/ChatActivity;->access$12802(Lorg/telegram/ui/ChatActivity;Lorg/telegram/tgnet/TLRPC$WebPage;)Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 4476
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -118,7 +112,6 @@
 
     if-eqz v0, :cond_4
 
-    .line 4477
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
@@ -134,7 +127,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 4478
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -149,7 +141,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$15002(Lorg/telegram/ui/ChatActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 4480
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
@@ -175,7 +166,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 4481
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -194,7 +184,6 @@
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$WebPage;->url:Ljava/lang/String;
 
-    .line 4483
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
@@ -218,12 +207,10 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4497
     :cond_3
     :goto_0
     return-void
 
-    .line 4485
     :cond_4
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
@@ -237,7 +224,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4486
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -260,7 +246,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4487
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -271,7 +256,6 @@
 
     goto :goto_0
 
-    .line 4491
     :cond_5
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
@@ -285,7 +269,6 @@
 
     if-eqz v0, :cond_3
 
-    .line 4492
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
@@ -308,7 +291,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/ChatActivity;->showReplyPanel(ZLorg/telegram/messenger/MessageObject;Ljava/util/ArrayList;Lorg/telegram/tgnet/TLRPC$WebPage;Z)V
 
-    .line 4493
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$67$4$1;->this$2:Lorg/telegram/ui/ChatActivity$67$4;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;

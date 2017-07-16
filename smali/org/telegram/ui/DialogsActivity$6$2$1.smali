@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/DialogsActivity$6$2;
 
     .prologue
-    .line 795
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$6$2$1;->this$2:Lorg/telegram/ui/DialogsActivity$6$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 798
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -62,6 +60,5 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lorg/telegram/messenger/MessagesController;->deleteDialog(JI)V
 
-    .line 799
     return-void
 .end method

@@ -33,7 +33,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoader;
 
     .prologue
-    .line 334
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$5;->this$0:Lorg/telegram/messenger/FileLoader;
 
     iput-object p2, p0, Lorg/telegram/messenger/FileLoader$5;->val$result:[Ljava/lang/Boolean;
@@ -53,7 +52,6 @@
     .locals 4
 
     .prologue
-    .line 337
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$5;->val$result:[Ljava/lang/Boolean;
 
     const/4 v1, 0x0
@@ -76,11 +74,9 @@
 
     aput-object v2, v0, v1
 
-    .line 338
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$5;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 339
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     .prologue
-    .line 142
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$3;->this$0:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$3;->val$extractorHolder:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;
@@ -45,12 +44,10 @@
     .locals 3
 
     .prologue
-    .line 145
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$3;->val$extractorHolder:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->release()V
 
-    .line 146
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$3;->this$0:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;->access$300(Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;)Landroid/util/SparseArray;
@@ -61,7 +58,6 @@
 
     move-result v1
 
-    .line 147
     .local v1, "trackCount":I
     const/4 v0, 0x0
 
@@ -69,7 +65,6 @@
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 148
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$3;->this$0:Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;->access$300(Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod;)Landroid/util/SparseArray;
@@ -84,12 +79,10 @@
 
     invoke-virtual {v2}, Lorg/telegram/messenger/exoplayer2/extractor/DefaultTrackOutput;->disable()V
 
-    .line 147
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 150
     :cond_0
     return-void
 .end method

@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     .prologue
-    .line 1065
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->val$users:Ljava/util/ArrayList;
@@ -49,25 +48,21 @@
     .locals 2
 
     .prologue
-    .line 1068
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->val$users:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->access$3002(Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 1069
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     iget-object v1, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->val$names:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->access$3102(Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 1070
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter$3;->this$1:Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupCreateActivity$GroupCreateAdapter;->notifyDataSetChanged()V
 
-    .line 1071
     return-void
 .end method

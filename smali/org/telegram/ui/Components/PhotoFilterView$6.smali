@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoFilterView;
 
     .prologue
-    .line 1911
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoFilterView$6;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 1914
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$6;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->access$8400(Lorg/telegram/ui/Components/PhotoFilterView;)Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;
@@ -51,11 +49,9 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PhotoFilterView$ToolsAdapter;->notifyDataSetChanged()V
 
-    .line 1915
     iget-object v0, p0, Lorg/telegram/ui/Components/PhotoFilterView$6;->this$0:Lorg/telegram/ui/Components/PhotoFilterView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/PhotoFilterView;->switchToOrFromEditMode()V
 
-    .line 1916
     return-void
 .end method

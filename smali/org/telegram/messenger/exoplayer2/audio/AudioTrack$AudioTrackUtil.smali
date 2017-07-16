@@ -39,7 +39,6 @@
     .locals 0
 
     .prologue
-    .line 1146
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -50,7 +49,6 @@
     .param p1, "x0"    # Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$1;
 
     .prologue
-    .line 1146
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;-><init>()V
 
     return-void
@@ -64,7 +62,6 @@
     .prologue
     const-wide/16 v8, 0x0
 
-    .line 1215
     iget-wide v10, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->stopTimestampUs:J
 
     const-wide v12, -0x7fffffffffffffffL    # -4.9E-324
@@ -73,7 +70,6 @@
 
     if-eqz v7, :cond_1
 
-    .line 1217
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v8
@@ -86,7 +82,6 @@
 
     sub-long v0, v8, v10
 
-    .line 1218
     .local v0, "elapsedTimeSinceStopUs":J
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->sampleRate:I
 
@@ -98,7 +93,6 @@
 
     div-long v2, v8, v10
 
-    .line 1219
     .local v2, "framesSinceStop":J
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->endPlaybackHeadPosition:J
 
@@ -110,14 +104,12 @@
 
     move-result-wide v8
 
-    .line 1243
     .end local v0    # "elapsedTimeSinceStopUs":J
     .end local v2    # "framesSinceStop":J
     :cond_0
     :goto_0
     return-wide v8
 
-    .line 1222
     :cond_1
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->audioTrack:Landroid/media/AudioTrack;
 
@@ -125,13 +117,11 @@
 
     move-result v6
 
-    .line 1223
     .local v6, "state":I
     const/4 v7, 0x1
 
     if-eq v6, v7, :cond_0
 
-    .line 1228
     const-wide v10, 0xffffffffL
 
     iget-object v7, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->audioTrack:Landroid/media/AudioTrack;
@@ -144,13 +134,11 @@
 
     and-long v4, v10, v12
 
-    .line 1229
     .local v4, "rawPlaybackHeadPosition":J
     iget-boolean v7, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->needsPassthroughWorkaround:Z
 
     if-eqz v7, :cond_3
 
-    .line 1233
     const/4 v7, 0x2
 
     if-ne v6, v7, :cond_2
@@ -159,18 +147,15 @@
 
     if-nez v7, :cond_2
 
-    .line 1234
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->lastRawPlaybackHeadPosition:J
 
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->passthroughWorkaroundPauseOffset:J
 
-    .line 1236
     :cond_2
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->passthroughWorkaroundPauseOffset:J
 
     add-long/2addr v4, v8
 
-    .line 1238
     :cond_3
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->lastRawPlaybackHeadPosition:J
 
@@ -178,7 +163,6 @@
 
     if-lez v7, :cond_4
 
-    .line 1240
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->rawPlaybackHeadWrapCount:J
 
     const-wide/16 v10, 0x1
@@ -187,11 +171,9 @@
 
     iput-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->rawPlaybackHeadWrapCount:J
 
-    .line 1242
     :cond_4
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->lastRawPlaybackHeadPosition:J
 
-    .line 1243
     iget-wide v8, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->rawPlaybackHeadWrapCount:J
 
     const/16 v7, 0x20
@@ -207,7 +189,6 @@
     .locals 4
 
     .prologue
-    .line 1250
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->getPlaybackHeadPosition()J
 
     move-result-wide v0
@@ -229,7 +210,6 @@
     .locals 1
 
     .prologue
-    .line 1312
     const/high16 v0, 0x3f800000    # 1.0f
 
     return v0
@@ -239,7 +219,6 @@
     .locals 1
 
     .prologue
-    .line 1290
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -251,7 +230,6 @@
     .locals 1
 
     .prologue
-    .line 1274
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -264,14 +242,12 @@
     .param p1, "submittedFrames"    # J
 
     .prologue
-    .line 1187
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->getPlaybackHeadPosition()J
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->stopPlaybackHeadPosition:J
 
-    .line 1188
     invoke-static {}, Landroid/os/SystemClock;->elapsedRealtime()J
 
     move-result-wide v0
@@ -282,15 +258,12 @@
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->stopTimestampUs:J
 
-    .line 1189
     iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->endPlaybackHeadPosition:J
 
-    .line 1190
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->audioTrack:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->stop()V
 
-    .line 1191
     return-void
 .end method
 
@@ -298,7 +271,6 @@
     .locals 4
 
     .prologue
-    .line 1198
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->stopTimestampUs:J
 
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
@@ -307,11 +279,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 1203
     :goto_0
     return-void
 
-    .line 1202
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->audioTrack:Landroid/media/AudioTrack;
 
@@ -328,37 +298,28 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 1168
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->audioTrack:Landroid/media/AudioTrack;
 
-    .line 1169
     iput-boolean p2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->needsPassthroughWorkaround:Z
 
-    .line 1170
     const-wide v0, -0x7fffffffffffffffL    # -4.9E-324
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->stopTimestampUs:J
 
-    .line 1171
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->lastRawPlaybackHeadPosition:J
 
-    .line 1172
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->rawPlaybackHeadWrapCount:J
 
-    .line 1173
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->passthroughWorkaroundPauseOffset:J
 
-    .line 1174
     if-eqz p1, :cond_0
 
-    .line 1175
     invoke-virtual {p1}, Landroid/media/AudioTrack;->getSampleRate()I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$AudioTrackUtil;->sampleRate:I
 
-    .line 1177
     :cond_0
     return-void
 .end method
@@ -368,7 +329,6 @@
     .param p1, "playbackParams"    # Landroid/media/PlaybackParams;
 
     .prologue
-    .line 1302
     new-instance v0, Ljava/lang/UnsupportedOperationException;
 
     invoke-direct {v0}, Ljava/lang/UnsupportedOperationException;-><init>()V
@@ -380,7 +340,6 @@
     .locals 1
 
     .prologue
-    .line 1260
     const/4 v0, 0x0
 
     return v0

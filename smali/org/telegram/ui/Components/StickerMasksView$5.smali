@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 132
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,10 +43,8 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 135
     if-nez p1, :cond_2
 
-    .line 136
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$600(Lorg/telegram/ui/Components/StickerMasksView;)I
@@ -56,14 +53,12 @@
 
     if-nez v1, :cond_1
 
-    .line 137
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     const/4 v2, 0x1
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/StickerMasksView;->access$602(Lorg/telegram/ui/Components/StickerMasksView;I)I
 
-    .line 141
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -73,7 +68,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 142
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$500(Lorg/telegram/ui/Components/StickerMasksView;)Lorg/telegram/ui/Components/StickerMasksView$Listener;
@@ -82,7 +76,6 @@
 
     invoke-interface {v1}, Lorg/telegram/ui/Components/StickerMasksView$Listener;->onTypeChanged()V
 
-    .line 144
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -108,7 +101,6 @@
 
     aput-object v3, v1, v2
 
-    .line 145
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$800(Lorg/telegram/ui/Components/StickerMasksView;)Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -117,31 +109,25 @@
 
     invoke-virtual {v1, v5, v5}, Lorg/telegram/messenger/support/widget/GridLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 146
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$900(Lorg/telegram/ui/Components/StickerMasksView;)V
 
-    .line 147
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$1000(Lorg/telegram/ui/Components/StickerMasksView;)V
 
-    .line 148
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$1100(Lorg/telegram/ui/Components/StickerMasksView;)V
 
-    .line 149
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$1200(Lorg/telegram/ui/Components/StickerMasksView;)V
 
-    .line 162
     :goto_1
     return-void
 
-    .line 139
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -149,7 +135,6 @@
 
     goto :goto_0
 
-    .line 152
     :cond_2
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -161,7 +146,6 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 153
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$800(Lorg/telegram/ui/Components/StickerMasksView;)Lorg/telegram/messenger/support/widget/GridLayoutManager;
@@ -172,7 +156,6 @@
 
     goto :goto_1
 
-    .line 156
     :cond_3
     add-int/lit8 v1, p1, -0x1
 
@@ -184,7 +167,6 @@
 
     sub-int v0, v1, v2
 
-    .line 157
     .local v0, "index":I
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -206,7 +188,6 @@
 
     if-lt v0, v1, :cond_4
 
-    .line 158
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$1500(Lorg/telegram/ui/Components/StickerMasksView;)[Ljava/util/ArrayList;
@@ -227,7 +208,6 @@
 
     add-int/lit8 v0, v1, -0x1
 
-    .line 160
     :cond_4
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
@@ -267,7 +247,6 @@
 
     invoke-virtual {v2, v1, v5}, Lorg/telegram/messenger/support/widget/GridLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 161
     iget-object v1, p0, Lorg/telegram/ui/Components/StickerMasksView$5;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/StickerMasksView;->access$1600(Lorg/telegram/ui/Components/StickerMasksView;)V

@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper$18;
 
     .prologue
-    .line 3569
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$18$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper$18;
 
     iput-object p2, p0, Lorg/telegram/messenger/SendMessagesHelper$18$1;->val$photoFinal:Lorg/telegram/tgnet/TLRPC$TL_photo;
@@ -51,7 +50,6 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3572
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
     move-result-object v1
@@ -72,6 +70,5 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/SendMessagesHelper;->sendMessage(Lorg/telegram/tgnet/TLRPC$TL_photo;Ljava/lang/String;JLorg/telegram/messenger/MessageObject;Lorg/telegram/tgnet/TLRPC$ReplyMarkup;Ljava/util/HashMap;)V
 
-    .line 3573
     return-void
 .end method

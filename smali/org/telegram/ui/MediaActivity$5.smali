@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 643
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$5;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 646
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$5;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/MediaActivity;->access$1000(Lorg/telegram/ui/MediaActivity;)I
@@ -71,7 +69,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 647
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$5;->this$0:Lorg/telegram/ui/MediaActivity;
 
     move-object v0, p1
@@ -84,12 +81,10 @@
 
     invoke-static {v1, p2, p1, v0, v2}, Lorg/telegram/ui/MediaActivity;->access$2100(Lorg/telegram/ui/MediaActivity;ILandroid/view/View;Lorg/telegram/messenger/MessageObject;I)V
 
-    .line 651
     :cond_1
     :goto_0
     return-void
 
-    .line 648
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$5;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -105,7 +100,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 649
     iget-object v1, p0, Lorg/telegram/ui/MediaActivity$5;->this$0:Lorg/telegram/ui/MediaActivity;
 
     move-object v0, p1

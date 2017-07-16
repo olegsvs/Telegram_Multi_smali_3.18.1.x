@@ -33,7 +33,6 @@
     .locals 1
 
     .prologue
-    .line 24096
     const v0, -0x58d212ae
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->constructor:I
@@ -45,7 +44,6 @@
     .locals 0
 
     .prologue
-    .line 24095
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,7 +58,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 24104
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$Updates;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$Updates;
 
     move-result-object v0
@@ -73,12 +70,10 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 24108
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24109
     iget-boolean v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->silent:Z
 
     if-eqz v0, :cond_0
@@ -90,25 +85,20 @@
     :goto_0
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->flags:I
 
-    .line 24110
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->flags:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24111
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputChannel;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 24112
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 24113
     return-void
 
-    .line 24109
     :cond_0
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_channels_updatePinnedMessage;->flags:I
 

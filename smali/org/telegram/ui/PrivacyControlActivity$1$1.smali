@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PrivacyControlActivity$1;
 
     .prologue
-    .line 153
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacyControlActivity$1$1;->val$preferences:Landroid/content/SharedPreferences;
@@ -47,14 +46,12 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 156
     iget-object v0, p0, Lorg/telegram/ui/PrivacyControlActivity$1$1;->this$1:Lorg/telegram/ui/PrivacyControlActivity$1;
 
     iget-object v0, v0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PrivacyControlActivity;->access$200(Lorg/telegram/ui/PrivacyControlActivity;)V
 
-    .line 157
     iget-object v0, p0, Lorg/telegram/ui/PrivacyControlActivity$1$1;->val$preferences:Landroid/content/SharedPreferences;
 
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
@@ -71,6 +68,5 @@
 
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 158
     return-void
 .end method

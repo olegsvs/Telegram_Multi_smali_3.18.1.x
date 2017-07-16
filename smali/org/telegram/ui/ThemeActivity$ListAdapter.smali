@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 226
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->this$0:Lorg/telegram/ui/ThemeActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 227
     iput-object p2, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 228
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 232
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->themes:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->size()I
@@ -63,23 +59,18 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 376
     if-nez p1, :cond_0
 
-    .line 383
     :goto_0
     return v0
 
-    .line 378
     :cond_0
     if-ne p1, v0, :cond_1
 
-    .line 379
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 380
     :cond_1
     sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->themes:Ljava/util/ArrayList;
 
@@ -91,12 +82,10 @@
 
     if-ne p1, v0, :cond_2
 
-    .line 381
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 383
     :cond_2
     const/4 v0, 0x0
 
@@ -110,12 +99,10 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 237
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
 
-    .line 238
     .local v0, "type":I
     if-eqz v0, :cond_0
 
@@ -137,17 +124,14 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 367
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 368
     add-int/lit8 p2, p2, -0x2
 
-    .line 369
     sget-object v1, Lorg/telegram/ui/ActionBar/Theme;->themes:Ljava/util/ArrayList;
 
     invoke-virtual {v1, p2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -156,7 +140,6 @@
 
     check-cast v0, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 370
     .local v0, "themeInfo":Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
@@ -177,12 +160,10 @@
     :goto_0
     invoke-virtual {v1, v0, v2}, Lorg/telegram/ui/Cells/ThemeCell;->setTheme(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;Z)V
 
-    .line 372
     .end local v0    # "themeInfo":Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
     :cond_0
     return-void
 
-    .line 370
     .restart local v0    # "themeInfo":Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
     :cond_1
     const/4 v2, 0x0
@@ -196,17 +177,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 244
     packed-switch p2, :pswitch_data_0
 
-    .line 358
     new-instance v0, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
     iget-object v1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;)V
 
-    .line 359
     .local v0, "view":Landroid/view/View;
     iget-object v1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -220,7 +198,6 @@
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 362
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
@@ -228,7 +205,6 @@
 
     return-object v1
 
-    .line 246
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/ThemeCell;
@@ -237,7 +213,6 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/ThemeCell;-><init>(Landroid/content/Context;)V
 
-    .line 247
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -249,7 +224,6 @@
 
     move-object v1, v0
 
-    .line 248
     check-cast v1, Lorg/telegram/ui/Cells/ThemeCell;
 
     new-instance v2, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
@@ -260,7 +234,6 @@
 
     goto :goto_0
 
-    .line 347
     .end local v0    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v0, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -272,7 +245,6 @@
     .restart local v0    # "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 348
     check-cast v1, Lorg/telegram/ui/Cells/TextSettingsCell;
 
     const-string/jumbo v2, "CreateNewTheme"
@@ -287,7 +259,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/Cells/TextSettingsCell;->setText(Ljava/lang/String;Z)V
 
-    .line 349
     const-string/jumbo v1, "windowBackgroundWhite"
 
     invoke-static {v1}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -298,7 +269,6 @@
 
     goto :goto_0
 
-    .line 352
     .end local v0    # "view":Landroid/view/View;
     :pswitch_2
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -310,7 +280,6 @@
     .restart local v0    # "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 353
     check-cast v1, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     const-string/jumbo v2, "CreateNewThemeInfo"
@@ -323,7 +292,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 354
     iget-object v1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v2, 0x7f0200ae
@@ -338,7 +306,6 @@
 
     goto :goto_0
 
-    .line 244
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

@@ -27,10 +27,8 @@
     .param p2, "listener"    # Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     .prologue
-    .line 120
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 121
     if-eqz p2, :cond_0
 
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
@@ -42,13 +40,10 @@
     :goto_0
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
-    .line 122
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
-    .line 123
     return-void
 
-    .line 121
     :cond_0
     const/4 v0, 0x0
 
@@ -60,7 +55,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;
 
     .prologue
-    .line 110
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     return-object v0
@@ -75,12 +69,10 @@
     .param p4, "initializationDurationMs"    # J
 
     .prologue
-    .line 144
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 145
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$2;
@@ -97,7 +89,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 153
     :cond_0
     return-void
 .end method
@@ -107,12 +98,10 @@
     .param p1, "counters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 217
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 218
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$7;
@@ -121,7 +110,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 226
     :cond_0
     return-void
 .end method
@@ -132,12 +120,10 @@
     .param p2, "elapsedMs"    # J
 
     .prologue
-    .line 173
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 174
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$4;
@@ -146,7 +132,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 181
     :cond_0
     return-void
 .end method
@@ -156,12 +141,10 @@
     .param p1, "decoderCounters"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 129
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 130
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$1;
@@ -170,7 +153,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 137
     :cond_0
     return-void
 .end method
@@ -180,12 +162,10 @@
     .param p1, "format"    # Lorg/telegram/messenger/exoplayer2/Format;
 
     .prologue
-    .line 159
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 160
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$3;
@@ -194,7 +174,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 167
     :cond_0
     return-void
 .end method
@@ -204,12 +183,10 @@
     .param p1, "surface"    # Landroid/view/Surface;
 
     .prologue
-    .line 203
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 204
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v1, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$6;
@@ -218,7 +195,6 @@
 
     invoke-virtual {v0, v1}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 211
     :cond_0
     return-void
 .end method
@@ -231,12 +207,10 @@
     .param p4, "pixelWidthHeightRatio"    # F
 
     .prologue
-    .line 188
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->listener:Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener;
 
     if-eqz v0, :cond_0
 
-    .line 189
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher;->handler:Landroid/os/Handler;
 
     new-instance v0, Lorg/telegram/messenger/exoplayer2/video/VideoRendererEventListener$EventDispatcher$5;
@@ -255,7 +229,6 @@
 
     invoke-virtual {v6, v0}, Landroid/os/Handler;->post(Ljava/lang/Runnable;)Z
 
-    .line 197
     :cond_0
     return-void
 .end method

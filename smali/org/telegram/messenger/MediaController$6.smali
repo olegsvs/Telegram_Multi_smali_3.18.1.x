@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MediaController;
 
     .prologue
-    .line 1185
     iput-object p1, p0, Lorg/telegram/messenger/MediaController$6;->this$0:Lorg/telegram/messenger/MediaController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MediaController$6;->val$screenshotDates:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 1188
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -58,13 +56,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1189
     iget-object v0, p0, Lorg/telegram/messenger/MediaController$6;->this$0:Lorg/telegram/messenger/MediaController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MediaController$6;->val$screenshotDates:Ljava/util/ArrayList;
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MediaController;->access$3100(Lorg/telegram/messenger/MediaController;Ljava/util/ArrayList;)V
 
-    .line 1190
     return-void
 .end method

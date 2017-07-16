@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;
 
     .prologue
-    .line 1551
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1554
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -54,7 +52,6 @@
 
     if-gt v0, v1, :cond_0
 
-    .line 1555
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
@@ -67,14 +64,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setVisibility(I)V
 
-    .line 1556
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;
 
     iget-object v0, v0, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView$6;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;
 
     invoke-static {v0}, Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;->access$3700(Lorg/telegram/ui/LoginActivity$LoginActivitySmsView;)V
 
-    .line 1558
     :cond_0
     return-void
 .end method

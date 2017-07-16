@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatActivityEnterView$34;
 
     .prologue
-    .line 2597
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$34;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 2600
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$34$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$34;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$34;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -54,6 +52,5 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/EmojiView;->clearRecentEmoji()V
 
-    .line 2601
     return-void
 .end method

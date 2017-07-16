@@ -71,17 +71,14 @@
     .locals 1
 
     .prologue
-    .line 10838
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 10846
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$InputMedia;->attributes:Ljava/util/ArrayList;
 
-    .line 10848
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -98,20 +95,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 10857
     const/4 v0, 0x0
 
-    .line 10858
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     sparse-switch p1, :sswitch_data_0
 
-    .line 10899
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 10900
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in InputMedia"
@@ -136,139 +129,114 @@
 
     throw v1
 
-    .line 10860
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaContact;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaContact;-><init>()V
 
-    .line 10861
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10863
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedThumbDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedThumbDocument;-><init>()V
 
-    .line 10864
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10866
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaDocument;-><init>()V
 
-    .line 10867
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10869
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGame;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGame;-><init>()V
 
-    .line 10870
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10872
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGifExternal;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGifExternal;-><init>()V
 
-    .line 10873
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10875
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaGeoPoint;-><init>()V
 
-    .line 10876
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10878
     :sswitch_6
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaDocumentExternal;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaDocumentExternal;-><init>()V
 
-    .line 10879
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10881
     :sswitch_7
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaEmpty;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaEmpty;-><init>()V
 
-    .line 10882
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10884
     :sswitch_8
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedPhoto;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedPhoto;-><init>()V
 
-    .line 10885
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10887
     :sswitch_9
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaVenue;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaVenue;-><init>()V
 
-    .line 10888
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10890
     :sswitch_a
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedDocument;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaUploadedDocument;-><init>()V
 
-    .line 10891
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10893
     :sswitch_b
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhotoExternal;-><init>()V
 
-    .line 10894
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10896
     :sswitch_c
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_inputMediaPhoto;
 
@@ -278,18 +246,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$InputMedia;
     goto :goto_0
 
-    .line 10902
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 10903
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$InputMedia;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 10905
     :cond_1
     return-object v0
 
-    .line 10858
     nop
 
     :sswitch_data_0

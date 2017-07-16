@@ -43,12 +43,10 @@
     .param p2, "maxCacheFileSize"    # J
 
     .prologue
-    .line 65
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, p2, p3, v0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;-><init>(Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;JI)V
 
-    .line 66
     return-void
 .end method
 
@@ -59,10 +57,8 @@
     .param p4, "bufferSize"    # I
 
     .prologue
-    .line 76
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 77
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -71,13 +67,10 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
-    .line 78
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->maxCacheFileSize:J
 
-    .line 79
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferSize:I
 
-    .line 80
     return-void
 .end method
 
@@ -92,27 +85,22 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 152
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
     if-nez v2, :cond_0
 
-    .line 172
     :goto_0
     return-void
 
-    .line 156
     :cond_0
     const/4 v1, 0x0
 
-    .line 158
     .local v1, "success":Z
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
     invoke-virtual {v2}, Ljava/io/OutputStream;->flush()V
 
-    .line 159
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->underlyingFileOutputStream:Ljava/io/FileOutputStream;
 
     invoke-virtual {v2}, Ljava/io/FileOutputStream;->getFD()Ljava/io/FileDescriptor;
@@ -123,41 +111,32 @@
     :try_end_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 160
     const/4 v1, 0x1
 
-    .line 162
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/util/Util;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 163
     iput-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
 
-    .line 165
     .local v0, "fileToCommit":Ljava/io/File;
     iput-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
 
-    .line 166
     if-eqz v1, :cond_1
 
-    .line 167
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
     invoke-interface {v2, v0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;->commitFile(Ljava/io/File;)V
 
     goto :goto_0
 
-    .line 169
     :cond_1
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
     goto :goto_0
 
-    .line 162
     .end local v0    # "fileToCommit":Ljava/io/File;
     :catchall_0
     move-exception v2
@@ -166,29 +145,22 @@
 
     invoke-static {v3}, Lorg/telegram/messenger/exoplayer2/util/Util;->closeQuietly(Ljava/io/Closeable;)V
 
-    .line 163
     iput-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
-    .line 164
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
 
-    .line 165
     .restart local v0    # "fileToCommit":Ljava/io/File;
     iput-object v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
 
-    .line 166
     if-eqz v1, :cond_2
 
-    .line 167
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
     invoke-interface {v3, v0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;->commitFile(Ljava/io/File;)V
 
-    .line 171
     :goto_1
     throw v2
 
-    .line 169
     :cond_2
     invoke-virtual {v0}, Ljava/io/File;->delete()Z
 
@@ -204,7 +176,6 @@
     .end annotation
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->cache:Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
@@ -229,19 +200,16 @@
 
     iget-wide v6, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->maxCacheFileSize:J
 
-    .line 134
     invoke-static {v4, v5, v6, v7}, Ljava/lang/Math;->min(JJ)J
 
     move-result-wide v4
 
-    .line 133
     invoke-interface/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/upstream/cache/Cache;->startFile(Ljava/lang/String;JJ)Ljava/io/File;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
 
-    .line 135
     new-instance v0, Ljava/io/FileOutputStream;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->file:Ljava/io/File;
@@ -250,17 +218,14 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->underlyingFileOutputStream:Ljava/io/FileOutputStream;
 
-    .line 136
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferSize:I
 
     if-lez v0, :cond_1
 
-    .line 137
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferedOutputStream:Lorg/telegram/messenger/exoplayer2/util/ReusableBufferedOutputStream;
 
     if-nez v0, :cond_0
 
-    .line 138
     new-instance v0, Lorg/telegram/messenger/exoplayer2/util/ReusableBufferedOutputStream;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->underlyingFileOutputStream:Ljava/io/FileOutputStream;
@@ -271,22 +236,18 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferedOutputStream:Lorg/telegram/messenger/exoplayer2/util/ReusableBufferedOutputStream;
 
-    .line 143
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferedOutputStream:Lorg/telegram/messenger/exoplayer2/util/ReusableBufferedOutputStream;
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
-    .line 147
     :goto_1
     const-wide/16 v0, 0x0
 
     iput-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStreamBytesWritten:J
 
-    .line 148
     return-void
 
-    .line 141
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->bufferedOutputStream:Lorg/telegram/messenger/exoplayer2/util/ReusableBufferedOutputStream;
 
@@ -296,7 +257,6 @@
 
     goto :goto_0
 
-    .line 145
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->underlyingFileOutputStream:Ljava/io/FileOutputStream;
 
@@ -316,7 +276,6 @@
     .end annotation
 
     .prologue
-    .line 122
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
     if-eqz v1, :cond_0
@@ -331,12 +290,10 @@
 
     if-nez v1, :cond_1
 
-    .line 130
     :cond_0
     :goto_0
     return-void
 
-    .line 126
     :cond_1
     :try_start_0
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->closeCurrentOutputStream()V
@@ -345,11 +302,9 @@
 
     goto :goto_0
 
-    .line 127
     :catch_0
     move-exception v0
 
-    .line 128
     .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
 
@@ -368,10 +323,8 @@
     .end annotation
 
     .prologue
-    .line 84
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
-    .line 85
     iget-wide v2, p1, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
     const-wide/16 v4, -0x1
@@ -380,17 +333,14 @@
 
     if-nez v1, :cond_0
 
-    .line 94
     :goto_0
     return-void
 
-    .line 88
     :cond_0
     const-wide/16 v2, 0x0
 
     iput-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpecBytesWritten:J
 
-    .line 90
     :try_start_0
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->openNextOutputStream()V
     :try_end_0
@@ -398,11 +348,9 @@
 
     goto :goto_0
 
-    .line 91
     :catch_0
     move-exception v0
 
-    .line 92
     .local v0, "e":Ljava/io/IOException;
     new-instance v1, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
 
@@ -423,7 +371,6 @@
     .end annotation
 
     .prologue
-    .line 98
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpec:Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
     iget-wide v4, v3, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
@@ -434,20 +381,16 @@
 
     if-nez v3, :cond_1
 
-    .line 118
     :cond_0
     return-void
 
-    .line 102
     :cond_1
     const/4 v1, 0x0
 
-    .line 103
     .local v1, "bytesWritten":I
     :goto_0
     if-ge v1, p3, :cond_0
 
-    .line 104
     :try_start_0
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStreamBytesWritten:J
 
@@ -457,13 +400,10 @@
 
     if-nez v3, :cond_2
 
-    .line 105
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->closeCurrentOutputStream()V
 
-    .line 106
     invoke-direct {p0}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->openNextOutputStream()V
 
-    .line 108
     :cond_2
     sub-int v3, p3, v1
 
@@ -481,7 +421,6 @@
 
     long-to-int v0, v4
 
-    .line 110
     .local v0, "bytesToWrite":I
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStream:Ljava/io/OutputStream;
 
@@ -489,10 +428,8 @@
 
     invoke-virtual {v3, p1, v4, v0}, Ljava/io/OutputStream;->write([BII)V
 
-    .line 111
     add-int/2addr v1, v0
 
-    .line 112
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStreamBytesWritten:J
 
     int-to-long v6, v0
@@ -501,7 +438,6 @@
 
     iput-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->outputStreamBytesWritten:J
 
-    .line 113
     iget-wide v4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink;->dataSpecBytesWritten:J
 
     int-to-long v6, v0
@@ -514,12 +450,10 @@
 
     goto :goto_0
 
-    .line 115
     .end local v0    # "bytesToWrite":I
     :catch_0
     move-exception v2
 
-    .line 116
     .local v2, "e":Ljava/io/IOException;
     new-instance v3, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheDataSink$CacheDataSinkException;
 

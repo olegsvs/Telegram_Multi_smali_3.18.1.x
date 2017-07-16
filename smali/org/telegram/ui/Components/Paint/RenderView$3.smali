@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/RenderView;
 
     .prologue
-    .line 251
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/RenderView$3;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 254
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$3;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView;->access$200(Lorg/telegram/ui/Components/Paint/RenderView;)Lorg/telegram/ui/Components/Paint/Painting;
@@ -56,7 +54,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/Paint/Painting;->cleanResources(Z)V
 
-    .line 255
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$3;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/RenderView;->access$000(Lorg/telegram/ui/Components/Paint/RenderView;)Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
@@ -65,13 +62,11 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;->shutdown()V
 
-    .line 256
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/RenderView$3;->this$0:Lorg/telegram/ui/Components/Paint/RenderView;
 
     const/4 v1, 0x0
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/Paint/RenderView;->access$002(Lorg/telegram/ui/Components/Paint/RenderView;Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;)Lorg/telegram/ui/Components/Paint/RenderView$CanvasInternal;
 
-    .line 257
     return-void
 .end method

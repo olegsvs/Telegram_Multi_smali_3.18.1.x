@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/SettingsActivity$4;
 
     .prologue
-    .line 621
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$4$6;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iput-object p2, p0, Lorg/telegram/ui/SettingsActivity$4$6;->val$maskValues:[Z
@@ -52,7 +51,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 625
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$6;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
@@ -64,7 +62,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 626
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$6;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iget-object v2, v2, Lorg/telegram/ui/SettingsActivity$4;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -77,7 +74,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 631
     :cond_0
     :goto_0
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
@@ -92,7 +88,6 @@
 
     move-result-object v1
 
-    .line 632
     .local v1, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v2, "allowBigEmoji"
 
@@ -108,7 +103,6 @@
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 633
     const-string/jumbo v2, "useSystemEmoji"
 
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -125,10 +119,8 @@
 
     invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 634
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 635
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$6;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iget-object v2, v2, Lorg/telegram/ui/SettingsActivity$4;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -139,7 +131,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 636
     iget-object v2, p0, Lorg/telegram/ui/SettingsActivity$4$6;->this$1:Lorg/telegram/ui/SettingsActivity$4;
 
     iget-object v2, v2, Lorg/telegram/ui/SettingsActivity$4;->this$0:Lorg/telegram/ui/SettingsActivity;
@@ -152,16 +143,13 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/SettingsActivity$ListAdapter;->notifyItemChanged(I)V
 
-    .line 638
     :cond_1
     return-void
 
-    .line 628
     .end local v1    # "editor":Landroid/content/SharedPreferences$Editor;
     :catch_0
     move-exception v0
 
-    .line 629
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 10300
     const v0, 0x13567e8a
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockUnsupported;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 10299
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$PageBlock;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 10304
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_pageBlockUnsupported;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 10305
     return-void
 .end method

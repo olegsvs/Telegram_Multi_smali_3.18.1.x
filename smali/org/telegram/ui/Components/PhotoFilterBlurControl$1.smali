@@ -23,7 +23,6 @@
     .locals 3
 
     .prologue
-    .line 254
     invoke-static {}, Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;->values()[Lorg/telegram/ui/Components/PhotoFilterBlurControl$BlurViewActiveControl;
 
     move-result-object v0

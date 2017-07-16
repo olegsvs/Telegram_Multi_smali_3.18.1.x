@@ -20,7 +20,6 @@
     .param p1, "cause"    # Ljava/lang/Exception;
 
     .prologue
-    .line 41
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -63,6 +62,5 @@
 
     invoke-direct {p0, v0, p1}, Ljava/io/IOException;-><init>(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 42
     return-void
 .end method

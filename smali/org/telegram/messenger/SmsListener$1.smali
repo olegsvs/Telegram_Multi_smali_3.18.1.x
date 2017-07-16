@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SmsListener;
 
     .prologue
-    .line 49
     iput-object p1, p0, Lorg/telegram/messenger/SmsListener$1;->this$0:Lorg/telegram/messenger/SmsListener;
 
     iput-object p2, p0, Lorg/telegram/messenger/SmsListener$1;->val$matcher:Ljava/util/regex/Matcher;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 52
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -68,6 +66,5 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 53
     return-void
 .end method

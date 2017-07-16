@@ -52,7 +52,6 @@
     .locals 1
 
     .prologue
-    .line 142
     new-instance v0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$1;
 
     invoke-direct {v0}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$1;-><init>()V
@@ -67,10 +66,8 @@
     .param p1, "in"    # Landroid/os/Parcel;
 
     .prologue
-    .line 75
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 76
     sget-object v0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;->CREATOR:Landroid/os/Parcelable$Creator;
 
     invoke-virtual {p1, v0}, Landroid/os/Parcel;->createTypedArray(Landroid/os/Parcelable$Creator;)[Ljava/lang/Object;
@@ -81,14 +78,12 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
-    .line 77
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     array-length v0, v0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDataCount:I
 
-    .line 78
     return-void
 .end method
 
@@ -105,7 +100,6 @@
     .end annotation
 
     .prologue
-    .line 48
     .local p1, "schemeDatas":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     const/4 v1, 0x0
 
@@ -123,7 +117,6 @@
 
     invoke-direct {p0, v1, v0}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;-><init>(Z[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;)V
 
-    .line 49
     return-void
 .end method
 
@@ -133,13 +126,10 @@
     .param p2, "schemeDatas"    # [Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     .prologue
-    .line 58
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 59
     if-eqz p1, :cond_0
 
-    .line 60
     invoke-virtual {p2}, [Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;->clone()Ljava/lang/Object;
 
     move-result-object p2
@@ -147,12 +137,10 @@
     .end local p2    # "schemeDatas":[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     check-cast p2, [Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
-    .line 64
     .restart local p2    # "schemeDatas":[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     :cond_0
     invoke-static {p2, p0}, Ljava/util/Arrays;->sort([Ljava/lang/Object;Ljava/util/Comparator;)V
 
-    .line 66
     const/4 v0, 0x1
 
     .local v0, "i":I
@@ -161,7 +149,6 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 67
     add-int/lit8 v1, v0, -0x1
 
     aget-object v1, p2, v1
@@ -182,7 +169,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 68
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -213,22 +199,18 @@
 
     throw v1
 
-    .line 66
     :cond_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 71
     :cond_2
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
-    .line 72
     array-length v1, p2
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDataCount:I
 
-    .line 73
     return-void
 .end method
 
@@ -237,12 +219,10 @@
     .param p1, "schemeDatas"    # [Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     .prologue
-    .line 55
     const/4 v0, 0x1
 
     invoke-direct {p0, v0, p1}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;-><init>(Z[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;)V
 
-    .line 56
     return-void
 .end method
 
@@ -252,7 +232,6 @@
     .locals 1
 
     .prologue
-    .line 32
     check-cast p1, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     check-cast p2, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
@@ -270,7 +249,6 @@
     .param p2, "second"    # Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     .prologue
-    .line 126
     sget-object v0, Lorg/telegram/messenger/exoplayer2/C;->UUID_NIL:Ljava/util/UUID;
 
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;->access$000(Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;)Ljava/util/UUID;
@@ -297,17 +275,14 @@
 
     const/4 v0, 0x0
 
-    .line 127
     :goto_0
     return v0
 
-    .line 126
     :cond_0
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 127
     :cond_1
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;->access$000(Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;)Ljava/util/UUID;
 
@@ -328,7 +303,6 @@
     .locals 1
 
     .prologue
-    .line 134
     const/4 v0, 0x0
 
     return v0
@@ -339,18 +313,14 @@
     .param p1, "obj"    # Ljava/lang/Object;
 
     .prologue
-    .line 115
     if-ne p0, p1, :cond_0
 
-    .line 116
     const/4 v0, 0x1
 
-    .line 121
     .end local p1    # "obj":Ljava/lang/Object;
     :goto_0
     return v0
 
-    .line 118
     .restart local p1    # "obj":Ljava/lang/Object;
     :cond_0
     if-eqz p1, :cond_1
@@ -365,13 +335,11 @@
 
     if-eq v0, v1, :cond_2
 
-    .line 119
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 121
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
@@ -392,7 +360,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 102
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     aget-object v0, v0, p1
@@ -405,7 +372,6 @@
     .param p1, "uuid"    # Ljava/util/UUID;
 
     .prologue
-    .line 87
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     array-length v3, v2
@@ -417,7 +383,6 @@
 
     aget-object v0, v2, v1
 
-    .line 88
     .local v0, "schemeData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     invoke-virtual {v0, p1}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;->matches(Ljava/util/UUID;)Z
 
@@ -425,19 +390,16 @@
 
     if-eqz v4, :cond_0
 
-    .line 92
     .end local v0    # "schemeData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     :goto_1
     return-object v0
 
-    .line 87
     .restart local v0    # "schemeData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 92
     .end local v0    # "schemeData":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     :cond_1
     const/4 v0, 0x0
@@ -449,12 +411,10 @@
     .locals 1
 
     .prologue
-    .line 107
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->hashCode:I
 
     if-nez v0, :cond_0
 
-    .line 108
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     invoke-static {v0}, Ljava/util/Arrays;->hashCode([Ljava/lang/Object;)I
@@ -463,7 +423,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->hashCode:I
 
-    .line 110
     :cond_0
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->hashCode:I
 
@@ -476,13 +435,11 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 139
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;->schemeDatas:[Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     const/4 v1, 0x0
 
     invoke-virtual {p1, v0, v1}, Landroid/os/Parcel;->writeTypedArray([Landroid/os/Parcelable;I)V
 
-    .line 140
     return-void
 .end method

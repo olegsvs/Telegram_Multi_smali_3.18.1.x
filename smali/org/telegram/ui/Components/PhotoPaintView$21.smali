@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PhotoPaintView;
 
     .prologue
-    .line 1185
     iput-object p1, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     const/4 v5, 0x1
 
-    .line 1188
     iget-object v7, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     const v8, 0x7f020201
@@ -69,7 +67,6 @@
 
     move-result-object v3
 
-    .line 1189
     .local v3, "radial":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
@@ -79,28 +76,23 @@
 
     invoke-virtual {v4, v3}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->addView(Landroid/view/View;)V
 
-    .line 1191
     invoke-virtual {v3}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
 
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1192
     .local v1, "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     iput v10, v1, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 1193
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     iput v4, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 1194
     invoke-virtual {v3, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1196
     iget-object v7, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     const v8, 0x7f0201fd
@@ -118,7 +110,6 @@
 
     move-result-object v0
 
-    .line 1197
     .local v0, "elliptical":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
@@ -128,7 +119,6 @@
 
     invoke-virtual {v4, v0}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->addView(Landroid/view/View;)V
 
-    .line 1199
     invoke-virtual {v0}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -136,21 +126,17 @@
     .end local v1    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1200
     .restart local v1    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     iput v10, v1, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 1201
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     iput v4, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 1202
     invoke-virtual {v0, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1204
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
     const v7, 0x7f0201ff
@@ -166,7 +152,6 @@
 
     move-result-object v2
 
-    .line 1205
     .local v2, "neon":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/Components/PhotoPaintView$21;->this$0:Lorg/telegram/ui/Components/PhotoPaintView;
 
@@ -176,7 +161,6 @@
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/ActionBar/ActionBarPopupWindow$ActionBarPopupWindowLayout;->addView(Landroid/view/View;)V
 
-    .line 1207
     invoke-virtual {v2}, Landroid/view/View;->getLayoutParams()Landroid/view/ViewGroup$LayoutParams;
 
     move-result-object v1
@@ -184,21 +168,17 @@
     .end local v1    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     check-cast v1, Landroid/widget/LinearLayout$LayoutParams;
 
-    .line 1208
     .restart local v1    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
     iput v10, v1, Landroid/widget/LinearLayout$LayoutParams;->width:I
 
-    .line 1209
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v4
 
     iput v4, v1, Landroid/widget/LinearLayout$LayoutParams;->height:I
 
-    .line 1210
     invoke-virtual {v2, v1}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1211
     return-void
 
     .end local v0    # "elliptical":Landroid/view/View;
@@ -208,7 +188,6 @@
     :cond_0
     move v4, v6
 
-    .line 1188
     goto :goto_0
 
     .restart local v1    # "layoutParams":Landroid/widget/LinearLayout$LayoutParams;
@@ -216,13 +195,11 @@
     :cond_1
     move v4, v6
 
-    .line 1196
     goto :goto_1
 
     .restart local v0    # "elliptical":Landroid/view/View;
     :cond_2
     move v5, v6
 
-    .line 1204
     goto :goto_2
 .end method

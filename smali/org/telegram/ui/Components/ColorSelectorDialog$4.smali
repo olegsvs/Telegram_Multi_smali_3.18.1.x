@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     .prologue
-    .line 134
     iput-object p1, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$4;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 137
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$4;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/ColorSelectorDialog;->access$300(Lorg/telegram/ui/Components/ColorSelectorDialog;I)V
 
-    .line 138
     iget-object v0, p0, Lorg/telegram/ui/Components/ColorSelectorDialog$4;->this$0:Lorg/telegram/ui/Components/ColorSelectorDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/ColorSelectorDialog;->access$400(Lorg/telegram/ui/Components/ColorSelectorDialog;)Lorg/telegram/ui/Components/ColorSelectorView;
@@ -56,6 +53,5 @@
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/ColorSelectorView;->setColor(I)V
 
-    .line 139
     return-void
 .end method

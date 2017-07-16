@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     .prologue
-    .line 3299
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,7 +47,6 @@
 
     const/4 v4, 0x0
 
-    .line 3302
     const-string/jumbo v2, "@"
 
     invoke-virtual {p1, v2}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -57,7 +55,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 3303
     invoke-virtual {p1, v3}, Ljava/lang/String;->substring(I)Ljava/lang/String;
 
     move-result-object v2
@@ -68,12 +65,10 @@
 
     invoke-static {v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->openByUserName(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;I)V
 
-    .line 3317
     :cond_0
     :goto_0
     return-void
 
-    .line 3304
     :cond_1
     const-string/jumbo v2, "#"
 
@@ -83,16 +78,13 @@
 
     if-eqz v2, :cond_2
 
-    .line 3305
     new-instance v0, Lorg/telegram/ui/DialogsActivity;
 
     invoke-direct {v0, v5}, Lorg/telegram/ui/DialogsActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 3306
     .local v0, "fragment":Lorg/telegram/ui/DialogsActivity;
     invoke-virtual {v0, p1}, Lorg/telegram/ui/DialogsActivity;->setSearchString(Ljava/lang/String;)V
 
-    .line 3307
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -101,7 +93,6 @@
 
     goto :goto_0
 
-    .line 3308
     .end local v0    # "fragment":Lorg/telegram/ui/DialogsActivity;
     :cond_2
     const-string/jumbo v2, "/"
@@ -112,7 +103,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 3309
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -129,7 +119,6 @@
 
     if-le v2, v3, :cond_0
 
-    .line 3310
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -162,20 +151,17 @@
 
     check-cast v1, Lorg/telegram/ui/ActionBar/BaseFragment;
 
-    .line 3311
     .local v1, "previousFragment":Lorg/telegram/ui/ActionBar/BaseFragment;
     instance-of v2, v1, Lorg/telegram/ui/ChatActivity;
 
     if-eqz v2, :cond_0
 
-    .line 3312
     iget-object v2, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ProfileActivity$ListAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/ProfileActivity;->finishFragment()V
 
-    .line 3313
     check-cast v1, Lorg/telegram/ui/ChatActivity;
 
     .end local v1    # "previousFragment":Lorg/telegram/ui/ActionBar/BaseFragment;

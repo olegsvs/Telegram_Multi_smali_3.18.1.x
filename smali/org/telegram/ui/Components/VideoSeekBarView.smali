@@ -39,17 +39,14 @@
 
     const/high16 v2, 0x41400000    # 12.0f
 
-    .line 35
     invoke-direct {p0, p1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 21
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->paint:Landroid/graphics/Paint;
 
-    .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     const/4 v1, 0x1
@@ -58,46 +55,38 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->paint2:Landroid/graphics/Paint;
 
-    .line 23
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbWidth:I
 
-    .line 24
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbHeight:I
 
-    .line 25
     iput v3, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbDX:I
 
-    .line 26
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->progress:F
 
-    .line 27
     iput-boolean v3, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->pressed:Z
 
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->paint:Landroid/graphics/Paint;
 
     const v1, -0xa3a3a4
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 37
     iget-object v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->paint2:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 38
     return-void
 .end method
 
@@ -107,7 +96,6 @@
     .locals 1
 
     .prologue
-    .line 97
     iget v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->progress:F
 
     return v0
@@ -120,7 +108,6 @@
     .prologue
     const/high16 v4, 0x3f800000    # 1.0f
 
-    .line 102
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredHeight()I
 
     move-result v0
@@ -131,7 +118,6 @@
 
     div-int/lit8 v7, v0, 0x2
 
-    .line 103
     .local v7, "y":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
 
@@ -149,7 +135,6 @@
 
     float-to-int v6, v0
 
-    .line 104
     .local v6, "thumbX":I
     iget v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbWidth:I
 
@@ -203,7 +188,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 105
     iget v0, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbWidth:I
 
     div-int/lit8 v0, v0, 0x2
@@ -230,7 +214,6 @@
 
     invoke-virtual {p1, v0, v1, v2, v3}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 106
     return-void
 .end method
 
@@ -245,27 +228,22 @@
 
     const/4 v5, 0x1
 
-    .line 46
     if-nez p1, :cond_1
 
-    .line 83
     :cond_0
     :goto_0
     return v4
 
-    .line 49
     :cond_1
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getX()F
 
     move-result v2
 
-    .line 50
     .local v2, "x":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v3
 
-    .line 51
     .local v3, "y":F
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
 
@@ -285,7 +263,6 @@
 
     int-to-float v1, v6
 
-    .line 52
     .local v1, "thumbX":F
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -293,7 +270,6 @@
 
     if-nez v6, :cond_2
 
-    .line 53
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredHeight()I
 
     move-result v6
@@ -304,7 +280,6 @@
 
     div-int/lit8 v0, v6, 0x2
 
-    .line 54
     .local v0, "additionWidth":I
     int-to-float v6, v0
 
@@ -342,32 +317,26 @@
 
     if-gtz v6, :cond_0
 
-    .line 55
     iput-boolean v5, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->pressed:Z
 
-    .line 56
     sub-float v4, v2, v1
 
     float-to-int v4, v4
 
     iput v4, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbDX:I
 
-    .line 57
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getParent()Landroid/view/ViewParent;
 
     move-result-object v4
 
     invoke-interface {v4, v5}, Landroid/view/ViewParent;->requestDisallowInterceptTouchEvent(Z)V
 
-    .line 58
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->invalidate()V
 
     move v4, v5
 
-    .line 59
     goto :goto_0
 
-    .line 61
     .end local v0    # "additionWidth":I
     :cond_2
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
@@ -384,13 +353,11 @@
 
     if-ne v6, v7, :cond_5
 
-    .line 62
     :cond_3
     iget-boolean v6, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->pressed:Z
 
     if-eqz v6, :cond_0
 
-    .line 63
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v6
@@ -401,7 +368,6 @@
 
     if-eqz v6, :cond_4
 
-    .line 64
     iget-object v6, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->delegate:Lorg/telegram/ui/Components/VideoSeekBarView$SeekBarDelegate;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
@@ -418,19 +384,15 @@
 
     invoke-interface {v6, v7}, Lorg/telegram/ui/Components/VideoSeekBarView$SeekBarDelegate;->onSeekBarDrag(F)V
 
-    .line 66
     :cond_4
     iput-boolean v4, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->pressed:Z
 
-    .line 67
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->invalidate()V
 
     move v4, v5
 
-    .line 68
     goto/16 :goto_0
 
-    .line 70
     :cond_5
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -440,12 +402,10 @@
 
     if-ne v6, v7, :cond_0
 
-    .line 71
     iget-boolean v6, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->pressed:Z
 
     if-eqz v6, :cond_0
 
-    .line 72
     iget v4, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->thumbDX:I
 
     int-to-float v4, v4
@@ -456,15 +416,12 @@
 
     int-to-float v1, v4
 
-    .line 73
     cmpg-float v4, v1, v8
 
     if-gez v4, :cond_7
 
-    .line 74
     const/4 v1, 0x0
 
-    .line 78
     :cond_6
     :goto_1
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
@@ -481,15 +438,12 @@
 
     iput v4, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->progress:F
 
-    .line 79
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->invalidate()V
 
     move v4, v5
 
-    .line 80
     goto/16 :goto_0
 
-    .line 75
     :cond_7
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
 
@@ -505,7 +459,6 @@
 
     if-lez v4, :cond_6
 
-    .line 76
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->getMeasuredWidth()I
 
     move-result v4
@@ -524,10 +477,8 @@
     .param p1, "seekBarDelegate"    # Lorg/telegram/ui/Components/VideoSeekBarView$SeekBarDelegate;
 
     .prologue
-    .line 41
     iput-object p1, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->delegate:Lorg/telegram/ui/Components/VideoSeekBarView$SeekBarDelegate;
 
-    .line 42
     return-void
 .end method
 
@@ -536,28 +487,22 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 87
     const/4 v0, 0x0
 
     cmpg-float v0, p1, v0
 
     if-gez v0, :cond_1
 
-    .line 88
     const/4 p1, 0x0
 
-    .line 92
     :cond_0
     :goto_0
     iput p1, p0, Lorg/telegram/ui/Components/VideoSeekBarView;->progress:F
 
-    .line 93
     invoke-virtual {p0}, Lorg/telegram/ui/Components/VideoSeekBarView;->invalidate()V
 
-    .line 94
     return-void
 
-    .line 89
     :cond_1
     const/high16 v0, 0x3f800000    # 1.0f
 
@@ -565,7 +510,6 @@
 
     if-lez v0, :cond_0
 
-    .line 90
     const/high16 p1, 0x3f800000    # 1.0f
 
     goto :goto_0

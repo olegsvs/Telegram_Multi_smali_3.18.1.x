@@ -40,10 +40,8 @@
     .locals 1
 
     .prologue
-    .line 19071
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
-    .line 19074
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -60,20 +58,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 19079
     const/4 v0, 0x0
 
-    .line 19080
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$WallPaper;
     sparse-switch p1, :sswitch_data_0
 
-    .line 19088
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 19089
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in WallPaper"
@@ -98,18 +92,15 @@
 
     throw v1
 
-    .line 19082
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$WallPaper;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_wallPaper;-><init>()V
 
-    .line 19083
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WallPaper;
     goto :goto_0
 
-    .line 19085
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_wallPaperSolid;
 
@@ -119,18 +110,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$WallPaper;
     goto :goto_0
 
-    .line 19091
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 19092
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$WallPaper;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 19094
     :cond_1
     return-object v0
 
-    .line 19080
     nop
 
     :sswitch_data_0

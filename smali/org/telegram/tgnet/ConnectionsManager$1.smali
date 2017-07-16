@@ -43,7 +43,6 @@
     .param p1, "this$0"    # Lorg/telegram/tgnet/ConnectionsManager;
 
     .prologue
-    .line 127
     iput-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$1;->this$0:Lorg/telegram/tgnet/ConnectionsManager;
 
     iput-object p2, p0, Lorg/telegram/tgnet/ConnectionsManager$1;->val$object:Lorg/telegram/tgnet/TLObject;
@@ -73,7 +72,6 @@
     .locals 10
 
     .prologue
-    .line 130
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -108,7 +106,6 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->d(Ljava/lang/String;)V
 
-    .line 132
     :try_start_0
     new-instance v8, Lorg/telegram/tgnet/NativeByteBuffer;
 
@@ -120,18 +117,15 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/tgnet/NativeByteBuffer;-><init>(I)V
 
-    .line 133
     .local v8, "buffer":Lorg/telegram/tgnet/NativeByteBuffer;
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$1;->val$object:Lorg/telegram/tgnet/TLObject;
 
     invoke-virtual {v0, v8}, Lorg/telegram/tgnet/TLObject;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 134
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$1;->val$object:Lorg/telegram/tgnet/TLObject;
 
     invoke-virtual {v0}, Lorg/telegram/tgnet/TLObject;->freeResources()V
 
-    .line 136
     iget v0, v8, Lorg/telegram/tgnet/NativeByteBuffer;->address:I
 
     new-instance v1, Lorg/telegram/tgnet/ConnectionsManager$1$1;
@@ -154,16 +148,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 175
     .end local v8    # "buffer":Lorg/telegram/tgnet/NativeByteBuffer;
     :goto_0
     return-void
 
-    .line 172
     :catch_0
     move-exception v9
 
-    .line 173
     .local v9, "e":Ljava/lang/Exception;
     invoke-static {v9}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

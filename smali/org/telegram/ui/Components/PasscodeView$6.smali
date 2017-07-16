@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/PasscodeView;
 
     .prologue
-    .line 675
     iput-object p1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 678
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
 
     move-result-object v1
@@ -53,11 +51,9 @@
 
     move-result v0
 
-    .line 679
     .local v0, "tag":I
     packed-switch v0, :pswitch_data_0
 
-    .line 714
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -73,18 +69,15 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 715
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
     const/4 v2, 0x0
 
     invoke-static {v1, v2}, Lorg/telegram/ui/Components/PasscodeView;->access$400(Lorg/telegram/ui/Components/PasscodeView;Z)V
 
-    .line 717
     :cond_0
     return-void
 
-    .line 681
     :pswitch_0
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -98,7 +91,6 @@
 
     goto :goto_0
 
-    .line 684
     :pswitch_1
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -112,7 +104,6 @@
 
     goto :goto_0
 
-    .line 687
     :pswitch_2
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -126,7 +117,6 @@
 
     goto :goto_0
 
-    .line 690
     :pswitch_3
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -140,7 +130,6 @@
 
     goto :goto_0
 
-    .line 693
     :pswitch_4
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -154,7 +143,6 @@
 
     goto :goto_0
 
-    .line 696
     :pswitch_5
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -168,7 +156,6 @@
 
     goto :goto_0
 
-    .line 699
     :pswitch_6
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -182,7 +169,6 @@
 
     goto :goto_0
 
-    .line 702
     :pswitch_7
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -196,7 +182,6 @@
 
     goto :goto_0
 
-    .line 705
     :pswitch_8
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -210,7 +195,6 @@
 
     goto/16 :goto_0
 
-    .line 708
     :pswitch_9
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -224,7 +208,6 @@
 
     goto/16 :goto_0
 
-    .line 711
     :pswitch_a
     iget-object v1, p0, Lorg/telegram/ui/Components/PasscodeView$6;->this$0:Lorg/telegram/ui/Components/PasscodeView;
 
@@ -236,7 +219,6 @@
 
     goto/16 :goto_0
 
-    .line 679
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

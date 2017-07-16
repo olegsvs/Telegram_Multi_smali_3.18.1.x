@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelUsersActivity;
 
     .prologue
-    .line 326
     iput-object p1, p0, Lorg/telegram/ui/ChannelUsersActivity$4;->this$0:Lorg/telegram/ui/ChannelUsersActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelUsersActivity$4;->val$req:Lorg/telegram/tgnet/TLRPC$TL_channels_editAdmin;
@@ -47,10 +46,8 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 329
     if-nez p2, :cond_0
 
-    .line 330
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -62,7 +59,6 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 331
     new-instance v0, Lorg/telegram/ui/ChannelUsersActivity$4$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/ChannelUsersActivity$4$1;-><init>(Lorg/telegram/ui/ChannelUsersActivity$4;)V
@@ -71,11 +67,9 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 345
     :goto_0
     return-void
 
-    .line 338
     .restart local p1    # "response":Lorg/telegram/tgnet/TLObject;
     :cond_0
     new-instance v0, Lorg/telegram/ui/ChannelUsersActivity$4$2;

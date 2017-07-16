@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/VideoEditorActivity$17;
 
     .prologue
-    .line 1115
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$17$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$17;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 1118
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$17$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1119
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$17$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -77,7 +74,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 1120
     iget-object v0, p0, Lorg/telegram/ui/VideoEditorActivity$17$2;->this$1:Lorg/telegram/ui/VideoEditorActivity$17;
 
     iget-object v0, v0, Lorg/telegram/ui/VideoEditorActivity$17;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -86,7 +82,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/VideoEditorActivity;->access$5202(Lorg/telegram/ui/VideoEditorActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 1122
     :cond_0
     return-void
 .end method

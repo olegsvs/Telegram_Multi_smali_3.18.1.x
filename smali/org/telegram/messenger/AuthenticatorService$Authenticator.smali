@@ -24,13 +24,10 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 28
     invoke-direct {p0, p1}, Landroid/accounts/AbstractAccountAuthenticator;-><init>(Landroid/content/Context;)V
 
-    .line 29
     iput-object p1, p0, Lorg/telegram/messenger/AuthenticatorService$Authenticator;->context:Landroid/content/Context;
 
-    .line 30
     return-void
 .end method
 
@@ -50,7 +47,6 @@
     .end annotation
 
     .prologue
-    .line 35
     const/4 v0, 0x0
 
     return-object v0
@@ -68,7 +64,6 @@
     .end annotation
 
     .prologue
-    .line 45
     const/4 v0, 0x0
 
     return-object v0
@@ -80,7 +75,6 @@
     .param p2, "accountType"    # Ljava/lang/String;
 
     .prologue
-    .line 50
     const/4 v0, 0x0
 
     return-object v0
@@ -97,7 +91,6 @@
     .end annotation
 
     .prologue
-    .line 40
     invoke-super {p0, p1, p2}, Landroid/accounts/AbstractAccountAuthenticator;->getAccountRemovalAllowed(Landroid/accounts/AccountAuthenticatorResponse;Landroid/accounts/Account;)Landroid/os/Bundle;
 
     move-result-object v0
@@ -118,7 +111,6 @@
     .end annotation
 
     .prologue
-    .line 56
     const/4 v0, 0x0
 
     return-object v0
@@ -129,7 +121,6 @@
     .param p1, "authTokenType"    # Ljava/lang/String;
 
     .prologue
-    .line 61
     const/4 v0, 0x0
 
     return-object v0
@@ -147,7 +138,6 @@
     .end annotation
 
     .prologue
-    .line 68
     const/4 v0, 0x0
 
     return-object v0
@@ -166,7 +156,6 @@
     .end annotation
 
     .prologue
-    .line 74
     const/4 v0, 0x0
 
     return-object v0

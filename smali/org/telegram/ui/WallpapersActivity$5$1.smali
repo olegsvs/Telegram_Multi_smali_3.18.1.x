@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/WallpapersActivity$5;
 
     .prologue
-    .line 429
     iput-object p1, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
     iput-object p2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,7 +44,6 @@
     .locals 5
 
     .prologue
-    .line 432
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/WallpapersActivity$5;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -56,12 +54,10 @@
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->clear()V
 
-    .line 433
     iget-object v1, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Vector;
 
-    .line 434
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$Vector;
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
@@ -73,7 +69,6 @@
 
     invoke-virtual {v2}, Ljava/util/HashMap;->clear()V
 
-    .line 435
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$Vector;->objects:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -91,7 +86,6 @@
 
     move-result-object v0
 
-    .line 436
     .local v0, "obj":Ljava/lang/Object;
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
@@ -107,7 +101,6 @@
 
     invoke-virtual {v4, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 437
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/WallpapersActivity$5;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -133,7 +126,6 @@
 
     goto :goto_0
 
-    .line 439
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
@@ -145,7 +137,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 440
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/WallpapersActivity$5;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -156,7 +147,6 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 442
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
@@ -168,14 +158,12 @@
 
     if-eqz v2, :cond_2
 
-    .line 443
     iget-object v2, p0, Lorg/telegram/ui/WallpapersActivity$5$1;->this$1:Lorg/telegram/ui/WallpapersActivity$5;
 
     iget-object v2, v2, Lorg/telegram/ui/WallpapersActivity$5;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/WallpapersActivity;->access$800(Lorg/telegram/ui/WallpapersActivity;)V
 
-    .line 445
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -191,6 +179,5 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/MessagesStorage;->putWallpapers(Ljava/util/ArrayList;)V
 
-    .line 446
     return-void
 .end method

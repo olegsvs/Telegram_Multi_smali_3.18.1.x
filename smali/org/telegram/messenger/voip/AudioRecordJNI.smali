@@ -29,13 +29,10 @@
     .param p1, "nativeInst"    # J
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 37
     iput-wide p1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->nativeInst:J
 
-    .line 38
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     .prologue
-    .line 24
     iget-boolean v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->running:Z
 
     return v0
@@ -55,7 +51,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->buffer:Ljava/nio/ByteBuffer;
 
     return-object v0
@@ -66,7 +61,6 @@
     .param p0, "x0"    # Lorg/telegram/messenger/voip/AudioRecordJNI;
 
     .prologue
-    .line 24
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     return-object v0
@@ -78,7 +72,6 @@
     .param p1, "x1"    # Ljava/nio/ByteBuffer;
 
     .prologue
-    .line 24
     invoke-direct {p0, p1}, Lorg/telegram/messenger/voip/AudioRecordJNI;->nativeCallback(Ljava/nio/ByteBuffer;)V
 
     return-void
@@ -89,7 +82,6 @@
     .param p1, "min"    # I
 
     .prologue
-    .line 41
     const v0, 0xbb80
 
     const/16 v1, 0x10
@@ -114,12 +106,10 @@
     .locals 2
 
     .prologue
-    .line 144
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
     if-eqz v0, :cond_0
 
-    .line 145
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "thread already started"
@@ -128,13 +118,11 @@
 
     throw v0
 
-    .line 147
     :cond_0
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->running:Z
 
-    .line 148
     new-instance v0, Ljava/lang/Thread;
 
     new-instance v1, Lorg/telegram/messenger/voip/AudioRecordJNI$1;
@@ -145,12 +133,10 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
-    .line 166
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
     invoke-virtual {v0}, Ljava/lang/Thread;->start()V
 
-    .line 167
     return-void
 .end method
 
@@ -164,12 +150,10 @@
     .param p4, "bufferSize"    # I
 
     .prologue
-    .line 45
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     if-eqz v0, :cond_0
 
-    .line 46
     new-instance v0, Ljava/lang/IllegalStateException;
 
     const-string/jumbo v1, "already inited"
@@ -178,17 +162,14 @@
 
     throw v0
 
-    .line 48
     :cond_0
     invoke-direct {p0, p4}, Lorg/telegram/messenger/voip/AudioRecordJNI;->getBufferSize(I)I
 
     move-result v5
 
-    .line 49
     .local v5, "size":I
     iput p4, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->bufferSize:I
 
-    .line 51
     :try_start_0
     new-instance v0, Landroid/media/AudioRecord;
 
@@ -211,7 +192,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 55
     :goto_1
     invoke-static {p4}, Ljava/nio/ByteBuffer;->allocateDirect(I)Ljava/nio/ByteBuffer;
 
@@ -219,20 +199,16 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->buffer:Ljava/nio/ByteBuffer;
 
-    .line 56
     return-void
 
-    .line 51
     :cond_1
     const/16 v3, 0xc
 
     goto :goto_0
 
-    .line 52
     :catch_0
     move-exception v6
 
-    .line 53
     .local v6, "x":Ljava/lang/Exception;
     const-string/jumbo v0, "AudioRecord init failed!"
 
@@ -247,17 +223,14 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 64
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->running:Z
 
-    .line 65
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
     if-eqz v1, :cond_0
 
-    .line 67
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
@@ -265,75 +238,59 @@
     :try_end_0
     .catch Ljava/lang/InterruptedException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 71
     :goto_0
     iput-object v2, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
-    .line 73
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     if-eqz v1, :cond_1
 
-    .line 74
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v1}, Landroid/media/AudioRecord;->release()V
 
-    .line 75
     iput-object v2, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
-    .line 77
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
     if-eqz v1, :cond_2
 
-    .line 78
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
     invoke-virtual {v1}, Landroid/media/audiofx/AutomaticGainControl;->release()V
 
-    .line 79
     iput-object v2, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
-    .line 81
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
     if-eqz v1, :cond_3
 
-    .line 82
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
     invoke-virtual {v1}, Landroid/media/audiofx/NoiseSuppressor;->release()V
 
-    .line 83
     iput-object v2, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
-    .line 85
     :cond_3
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
     if-eqz v1, :cond_4
 
-    .line 86
     iget-object v1, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
     invoke-virtual {v1}, Landroid/media/audiofx/AcousticEchoCanceler;->release()V
 
-    .line 87
     iput-object v2, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
-    .line 89
     :cond_4
     return-void
 
-    .line 68
     :catch_0
     move-exception v0
 
-    .line 69
     .local v0, "e":Ljava/lang/InterruptedException;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
@@ -348,28 +305,23 @@
 
     const/4 v1, 0x0
 
-    .line 93
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->thread:Ljava/lang/Thread;
 
     if-nez v3, :cond_7
 
-    .line 94
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     if-nez v3, :cond_0
 
-    .line 140
     :goto_0
     return v1
 
-    .line 96
     :cond_0
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v3}, Landroid/media/AudioRecord;->startRecording()V
 
-    .line 97
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
@@ -378,7 +330,6 @@
 
     if-lt v3, v4, :cond_3
 
-    .line 99
     :try_start_1
     invoke-static {}, Landroid/media/audiofx/AutomaticGainControl;->isAvailable()Z
 
@@ -386,7 +337,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 100
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v3}, Landroid/media/AudioRecord;->getAudioSessionId()I
@@ -399,12 +349,10 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
-    .line 101
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
     if-eqz v3, :cond_1
 
-    .line 102
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->agc:Landroid/media/audiofx/AutomaticGainControl;
 
     const/4 v4, 0x0
@@ -414,7 +362,6 @@
     .catch Ljava/lang/Throwable; {:try_start_1 .. :try_end_1} :catch_0
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 110
     :cond_1
     :goto_1
     :try_start_2
@@ -424,7 +371,6 @@
 
     if-eqz v3, :cond_5
 
-    .line 111
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v3}, Landroid/media/AudioRecord;->getAudioSessionId()I
@@ -437,12 +383,10 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
-    .line 112
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
     if-eqz v3, :cond_2
 
-    .line 113
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->ns:Landroid/media/audiofx/NoiseSuppressor;
 
     const-string/jumbo v4, "user_system_ns"
@@ -458,7 +402,6 @@
     .catch Ljava/lang/Throwable; {:try_start_2 .. :try_end_2} :catch_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
 
-    .line 121
     :cond_2
     :goto_2
     :try_start_3
@@ -468,7 +411,6 @@
 
     if-eqz v3, :cond_6
 
-    .line 122
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v3}, Landroid/media/AudioRecord;->getAudioSessionId()I
@@ -481,12 +423,10 @@
 
     iput-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
-    .line 123
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
     if-eqz v3, :cond_3
 
-    .line 124
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->aec:Landroid/media/audiofx/AcousticEchoCanceler;
 
     const-string/jumbo v4, "use_system_aec"
@@ -502,7 +442,6 @@
     .catch Ljava/lang/Throwable; {:try_start_3 .. :try_end_3} :catch_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_1
 
-    .line 132
     :cond_3
     :goto_3
     :try_start_4
@@ -513,10 +452,8 @@
     :goto_4
     move v1, v2
 
-    .line 136
     goto :goto_0
 
-    .line 104
     :cond_4
     :try_start_5
     const-string/jumbo v3, "AutomaticGainControl is not available on this device :("
@@ -528,11 +465,9 @@
 
     goto :goto_1
 
-    .line 106
     :catch_0
     move-exception v0
 
-    .line 107
     .local v0, "x":Ljava/lang/Throwable;
     :try_start_6
     const-string/jumbo v3, "error creating AutomaticGainControl"
@@ -543,12 +478,10 @@
 
     goto :goto_1
 
-    .line 137
     .end local v0    # "x":Ljava/lang/Throwable;
     :catch_1
     move-exception v0
 
-    .line 138
     .local v0, "x":Ljava/lang/Exception;
     const-string/jumbo v2, "Error initializing AudioRecord"
 
@@ -556,7 +489,6 @@
 
     goto/16 :goto_0
 
-    .line 115
     .end local v0    # "x":Ljava/lang/Exception;
     :cond_5
     :try_start_7
@@ -569,11 +501,9 @@
 
     goto :goto_2
 
-    .line 117
     :catch_2
     move-exception v0
 
-    .line 118
     .local v0, "x":Ljava/lang/Throwable;
     :try_start_8
     const-string/jumbo v3, "error creating NoiseSuppressor"
@@ -584,7 +514,6 @@
 
     goto :goto_2
 
-    .line 126
     .end local v0    # "x":Ljava/lang/Throwable;
     :cond_6
     :try_start_9
@@ -597,11 +526,9 @@
 
     goto :goto_3
 
-    .line 128
     :catch_3
     move-exception v0
 
-    .line 129
     .restart local v0    # "x":Ljava/lang/Throwable;
     :try_start_a
     const-string/jumbo v3, "error creating AcousticEchoCanceler"
@@ -610,7 +537,6 @@
 
     goto :goto_3
 
-    .line 134
     .end local v0    # "x":Ljava/lang/Throwable;
     :cond_7
     iget-object v3, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
@@ -626,17 +552,14 @@
     .locals 1
 
     .prologue
-    .line 59
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     if-eqz v0, :cond_0
 
-    .line 60
     iget-object v0, p0, Lorg/telegram/messenger/voip/AudioRecordJNI;->audioRecord:Landroid/media/AudioRecord;
 
     invoke-virtual {v0}, Landroid/media/AudioRecord;->stop()V
 
-    .line 61
     :cond_0
     return-void
 .end method

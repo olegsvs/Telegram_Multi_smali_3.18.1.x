@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
     .prologue
-    .line 673
     iput-object p1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
     iput-object p2, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->val$anim:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;
@@ -49,7 +48,6 @@
     .locals 4
 
     .prologue
-    .line 676
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
     iget-object v1, v1, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
@@ -76,7 +74,6 @@
 
     iget-object v1, v1, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$RecoverAnimation;->mViewHolder:Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
-    .line 678
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v1
@@ -85,7 +82,6 @@
 
     if-eq v1, v2, :cond_1
 
-    .line 679
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
     iget-object v1, v1, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;->mRecyclerView:Lorg/telegram/messenger/support/widget/RecyclerView;
@@ -94,7 +90,6 @@
 
     move-result-object v0
 
-    .line 683
     .local v0, "animator":Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;
     if-eqz v0, :cond_0
 
@@ -109,14 +104,12 @@
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
-    .line 684
     invoke-virtual {v1}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;->hasRunningRecoverAnim()Z
 
     move-result v1
 
     if-nez v1, :cond_2
 
-    .line 685
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;
 
     iget-object v1, v1, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;->mCallback:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$Callback;
@@ -129,13 +122,11 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$Callback;->onSwiped(Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;I)V
 
-    .line 690
     .end local v0    # "animator":Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;
     :cond_1
     :goto_0
     return-void
 
-    .line 687
     .restart local v0    # "animator":Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper$4;->this$0:Lorg/telegram/messenger/support/widget/helper/ItemTouchHelper;

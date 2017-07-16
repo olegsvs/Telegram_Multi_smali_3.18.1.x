@@ -52,27 +52,20 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 86
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 87
     iput-boolean v1, p0, Lorg/telegram/ui/ThemePreviewActivity;->swipeBackEnabled:Z
 
-    .line 88
     iput-object p2, p0, Lorg/telegram/ui/ThemePreviewActivity;->applyingTheme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
-    .line 89
     iput-object p1, p0, Lorg/telegram/ui/ThemePreviewActivity;->themeFile:Ljava/io/File;
 
-    .line 90
     sget-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     iput-boolean v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->previousPlusValue:Z
 
-    .line 91
     sput-boolean v1, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
-    .line 92
     return-void
 .end method
 
@@ -81,7 +74,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -92,7 +84,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -103,7 +94,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar2:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -114,7 +104,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -125,7 +114,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -136,7 +124,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -147,7 +134,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->dotsContainer:Landroid/view/View;
 
     return-object v0
@@ -158,7 +144,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->page1:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -169,7 +154,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->page2:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
     return-object v0
@@ -180,7 +164,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -192,7 +175,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 66
     iput-boolean p1, p0, Lorg/telegram/ui/ThemePreviewActivity;->previousPlusValue:Z
 
     return p1
@@ -204,7 +186,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 66
     iput-boolean p1, p0, Lorg/telegram/ui/ThemePreviewActivity;->applied:Z
 
     return p1
@@ -215,7 +196,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -226,7 +206,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -237,7 +216,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->themeFile:Ljava/io/File;
 
     return-object v0
@@ -248,7 +226,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->applyingTheme:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     return-object v0
@@ -259,7 +236,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -270,7 +246,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
 
     return-object v0
@@ -281,7 +256,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -292,7 +266,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -303,7 +276,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -314,7 +286,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     return-object v0
@@ -325,7 +296,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/ThemePreviewActivity;
 
     .prologue
-    .line 66
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     return-object v0
@@ -338,7 +308,6 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 96
     new-instance v4, Landroid/widget/FrameLayout;
 
     move-object/from16 v0, p1
@@ -349,7 +318,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page1:Landroid/widget/FrameLayout;
 
-    .line 97
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -358,7 +326,6 @@
 
     move-result-object v19
 
-    .line 98
     .local v19, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const/4 v4, 0x0
 
@@ -386,7 +353,6 @@
 
     move-result-object v18
 
-    .line 119
     .local v18, "item":Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
     invoke-virtual/range {v18 .. v18}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
 
@@ -402,7 +368,6 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/EditText;->setHint(Ljava/lang/CharSequence;)V
 
-    .line 121
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -413,7 +378,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 122
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -422,7 +386,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setAddToContainer(Z)V
 
-    .line 123
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -437,7 +400,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 125
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$2;
 
     move-object/from16 v0, p0
@@ -450,7 +412,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page1:Landroid/widget/FrameLayout;
 
-    .line 154
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page1:Landroid/widget/FrameLayout;
@@ -469,7 +430,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 156
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     move-object/from16 v0, p1
@@ -480,7 +440,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 157
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -489,7 +448,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 158
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -498,7 +456,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setItemAnimator(Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;)V
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -507,7 +464,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 160
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -524,7 +480,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 161
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -538,7 +493,6 @@
     :goto_0
     invoke-virtual {v5, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollbarPosition(I)V
 
-    .line 162
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page1:Landroid/widget/FrameLayout;
@@ -559,7 +513,6 @@
 
     invoke-virtual {v4, v5, v6}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 164
     new-instance v4, Landroid/widget/ImageView;
 
     move-object/from16 v0, p1
@@ -570,7 +523,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
 
-    .line 165
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
@@ -579,7 +531,6 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 167
     const/high16 v4, 0x42600000    # 56.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -602,7 +553,6 @@
 
     move-result-object v16
 
-    .line 168
     .local v16, "drawable":Landroid/graphics/drawable/Drawable;
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -610,7 +560,6 @@
 
     if-ge v4, v5, :cond_0
 
-    .line 169
     invoke-virtual/range {p1 .. p1}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v4
@@ -625,7 +574,6 @@
 
     move-result-object v21
 
-    .line 170
     .local v21, "shadowDrawable":Landroid/graphics/drawable/Drawable;
     new-instance v4, Landroid/graphics/PorterDuffColorFilter;
 
@@ -639,7 +587,6 @@
 
     invoke-virtual {v0, v4}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 171
     new-instance v14, Lorg/telegram/ui/Components/CombinedDrawable;
 
     const/4 v4, 0x0
@@ -652,7 +599,6 @@
 
     invoke-direct {v14, v0, v1, v4, v5}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;II)V
 
-    .line 172
     .local v14, "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     const/high16 v4, 0x42600000    # 56.0f
 
@@ -668,10 +614,8 @@
 
     invoke-virtual {v14, v4, v5}, Lorg/telegram/ui/Components/CombinedDrawable;->setIconSize(II)V
 
-    .line 173
     move-object/from16 v16, v14
 
-    .line 175
     .end local v14    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     .end local v21    # "shadowDrawable":Landroid/graphics/drawable/Drawable;
     :cond_0
@@ -683,7 +627,6 @@
 
     invoke-virtual {v4, v0}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 176
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
@@ -702,7 +645,6 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 177
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
@@ -711,19 +653,16 @@
 
     invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 178
     sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v5, 0x15
 
     if-lt v4, v5, :cond_1
 
-    .line 179
     new-instance v11, Landroid/animation/StateListAnimator;
 
     invoke-direct {v11}, Landroid/animation/StateListAnimator;-><init>()V
 
-    .line 180
     .local v11, "animator":Landroid/animation/StateListAnimator;
     const/4 v4, 0x1
 
@@ -781,7 +720,6 @@
 
     invoke-virtual {v11, v4, v5}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 181
     const/4 v4, 0x0
 
     new-array v4, v4, [I
@@ -832,14 +770,12 @@
 
     invoke-virtual {v11, v4, v5}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
-    .line 182
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
 
     invoke-virtual {v4, v11}, Landroid/widget/ImageView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
-    .line 183
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->floatingButton:Landroid/widget/ImageView;
@@ -850,9 +786,7 @@
 
     invoke-direct {v5, v0}, Lorg/telegram/ui/ThemePreviewActivity$3;-><init>(Lorg/telegram/ui/ThemePreviewActivity;)V
 
-    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setOutlineProvider(Landroid/view/ViewOutlineProvider;)V
 
-    .line 191
     .end local v11    # "animator":Landroid/animation/StateListAnimator;
     :cond_1
     move-object/from16 v0, p0
@@ -922,7 +856,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 193
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;
 
     move-object/from16 v0, p0
@@ -935,7 +868,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->dialogsAdapter:Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;
 
-    .line 194
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -946,7 +878,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 196
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$4;
 
     move-object/from16 v0, p0
@@ -959,7 +890,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page2:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
 
-    .line 223
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page2:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -970,7 +900,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->setBackgroundImage(Landroid/graphics/drawable/Drawable;)V
 
-    .line 225
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/ui/ThemePreviewActivity;->createActionBar(Landroid/content/Context;)Lorg/telegram/ui/ActionBar/ActionBar;
 
     move-result-object v4
@@ -979,7 +908,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar2:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    .line 226
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar2:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -992,7 +920,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 227
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar2:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1001,7 +928,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 228
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->actionBar2:Lorg/telegram/ui/ActionBar/ActionBar;
@@ -1018,13 +944,11 @@
 
     sub-long/2addr v6, v8
 
-    invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->formatDateOnline(J)Ljava/lang/String;
 
     move-result-object v5
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/ActionBar/ActionBar;->setSubtitle(Ljava/lang/CharSequence;)V
 
-    .line 229
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page2:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -1043,7 +967,6 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 231
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView;
 
     move-object/from16 v0, p1
@@ -1054,7 +977,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 232
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1063,7 +985,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 233
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1072,7 +993,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setItemAnimator(Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;)V
 
-    .line 234
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1081,7 +1001,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 235
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1104,7 +1023,6 @@
 
     invoke-virtual {v4, v5, v6, v7, v8}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 236
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1113,7 +1031,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setClipToPadding(Z)V
 
-    .line 237
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1130,7 +1047,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 238
     move-object/from16 v0, p0
 
     iget-object v5, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1144,7 +1060,6 @@
     :goto_6
     invoke-virtual {v5, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollbarPosition(I)V
 
-    .line 239
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->page2:Lorg/telegram/ui/Components/SizeNotifierFrameLayout;
@@ -1165,7 +1080,6 @@
 
     invoke-virtual {v4, v5, v6}, Lorg/telegram/ui/Components/SizeNotifierFrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 241
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     move-object/from16 v0, p0
@@ -1178,7 +1092,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->messagesAdapter:Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
-    .line 242
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->listView2:Lorg/telegram/ui/Components/RecyclerListView;
@@ -1189,7 +1102,6 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 244
     new-instance v4, Landroid/widget/FrameLayout;
 
     move-object/from16 v0, p1
@@ -1200,7 +1112,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->fragmentView:Landroid/view/View;
 
-    .line 245
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ThemePreviewActivity;->fragmentView:Landroid/view/View;
@@ -1209,7 +1120,6 @@
 
     check-cast v17, Landroid/widget/FrameLayout;
 
-    .line 247
     .local v17, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v22, Landroid/support/v4/view/ViewPager;
 
@@ -1219,7 +1129,6 @@
 
     invoke-direct {v0, v1}, Landroid/support/v4/view/ViewPager;-><init>(Landroid/content/Context;)V
 
-    .line 248
     .local v22, "viewPager":Landroid/support/v4/view/ViewPager;
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$5;
 
@@ -1231,7 +1140,6 @@
 
     invoke-virtual {v0, v4}, Landroid/support/v4/view/ViewPager;->addOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
 
-    .line 264
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$6;
 
     move-object/from16 v0, p0
@@ -1242,7 +1150,6 @@
 
     invoke-virtual {v0, v4}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
 
-    .line 300
     const-string/jumbo v4, "actionBarDefault"
 
     invoke-static {v4}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -1253,7 +1160,6 @@
 
     invoke-static {v0, v4}, Lorg/telegram/messenger/AndroidUtilities;->setViewPagerEdgeEffectColor(Landroid/support/v4/view/ViewPager;I)V
 
-    .line 301
     const/4 v4, -0x1
 
     const/high16 v5, -0x40800000    # -1.0f
@@ -1278,7 +1184,6 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 303
     new-instance v20, Landroid/view/View;
 
     move-object/from16 v0, v20
@@ -1287,7 +1192,6 @@
 
     invoke-direct {v0, v1}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 304
     .local v20, "shadow":Landroid/view/View;
     const v4, 0x7f0200b2
 
@@ -1295,7 +1199,6 @@
 
     invoke-virtual {v0, v4}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 305
     const/4 v4, -0x1
 
     const/high16 v5, 0x40400000    # 3.0f
@@ -1320,20 +1223,17 @@
 
     invoke-virtual {v0, v1, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 307
     new-instance v12, Landroid/widget/FrameLayout;
 
     move-object/from16 v0, p1
 
     invoke-direct {v12, v0}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 308
     .local v12, "bottomLayout":Landroid/widget/FrameLayout;
     const/4 v4, -0x1
 
     invoke-virtual {v12, v4}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 309
     const/4 v4, -0x1
 
     const/16 v5, 0x30
@@ -1348,7 +1248,6 @@
 
     invoke-virtual {v0, v12, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 311
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$7;
 
     move-object/from16 v0, p0
@@ -1363,7 +1262,6 @@
 
     iput-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->dotsContainer:Landroid/view/View;
 
-    .line 324
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->dotsContainer:Landroid/view/View;
@@ -1380,14 +1278,12 @@
 
     invoke-virtual {v12, v4, v5}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 326
     new-instance v13, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
 
     invoke-direct {v13, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 327
     .local v13, "cancelButton":Landroid/widget/TextView;
     const/4 v4, 0x1
 
@@ -1395,17 +1291,14 @@
 
     invoke-virtual {v13, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 328
     const v4, -0xe65818
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 329
     const/16 v4, 0x11
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 330
     const/high16 v4, 0x2f000000
 
     const/4 v5, 0x0
@@ -1416,7 +1309,6 @@
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 331
     const/high16 v4, 0x41e80000    # 29.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1435,7 +1327,6 @@
 
     invoke-virtual {v13, v4, v5, v6, v7}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 332
     const-string/jumbo v4, "Cancel"
 
     const v5, 0x7f0700f0
@@ -1450,7 +1341,6 @@
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 333
     const-string/jumbo v4, "fonts/rmedium.ttf"
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -1459,7 +1349,6 @@
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 334
     const/4 v4, -0x2
 
     const/4 v5, -0x1
@@ -1472,7 +1361,6 @@
 
     invoke-virtual {v12, v13, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 335
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$8;
 
     move-object/from16 v0, p0
@@ -1481,14 +1369,12 @@
 
     invoke-virtual {v13, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 344
     new-instance v15, Landroid/widget/TextView;
 
     move-object/from16 v0, p1
 
     invoke-direct {v15, v0}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 345
     .local v15, "doneButton":Landroid/widget/TextView;
     const/4 v4, 0x1
 
@@ -1496,17 +1382,14 @@
 
     invoke-virtual {v15, v4, v5}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 346
     const v4, -0xe65818
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 347
     const/16 v4, 0x11
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 348
     const/high16 v4, 0x2f000000
 
     const/4 v5, 0x0
@@ -1517,7 +1400,6 @@
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 349
     const/high16 v4, 0x41e80000    # 29.0f
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1536,7 +1418,6 @@
 
     invoke-virtual {v15, v4, v5, v6, v7}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 350
     const-string/jumbo v4, "ApplyTheme"
 
     const v5, 0x7f07007b
@@ -1551,7 +1432,6 @@
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 351
     const-string/jumbo v4, "fonts/rmedium.ttf"
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -1560,7 +1440,6 @@
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 352
     const/4 v4, -0x2
 
     const/4 v5, -0x1
@@ -1573,7 +1452,6 @@
 
     invoke-virtual {v12, v15, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 353
     new-instance v4, Lorg/telegram/ui/ThemePreviewActivity$9;
 
     move-object/from16 v0, p0
@@ -1582,14 +1460,12 @@
 
     invoke-virtual {v15, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 371
     move-object/from16 v0, p0
 
     iget-object v4, v0, Lorg/telegram/ui/ThemePreviewActivity;->fragmentView:Landroid/view/View;
 
     return-object v4
 
-    .line 161
     .end local v12    # "bottomLayout":Landroid/widget/FrameLayout;
     .end local v13    # "cancelButton":Landroid/widget/TextView;
     .end local v15    # "doneButton":Landroid/widget/TextView;
@@ -1602,7 +1478,6 @@
 
     goto/16 :goto_0
 
-    .line 191
     .restart local v16    # "drawable":Landroid/graphics/drawable/Drawable;
     :cond_3
     const/16 v4, 0x3c
@@ -1629,7 +1504,6 @@
 
     goto/16 :goto_5
 
-    .line 238
     :cond_8
     const/4 v4, 0x2
 
@@ -1642,21 +1516,17 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 408
     sget v4, Lorg/telegram/messenger/NotificationCenter;->emojiDidLoaded:I
 
     if-ne p1, v4, :cond_0
 
-    .line 409
     iget-object v4, p0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-nez v4, :cond_1
 
-    .line 421
     :cond_0
     return-void
 
-    .line 412
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1664,7 +1534,6 @@
 
     move-result v3
 
-    .line 413
     .local v3, "count":I
     const/4 v0, 0x0
 
@@ -1672,14 +1541,12 @@
     :goto_0
     if-ge v0, v3, :cond_0
 
-    .line 414
     iget-object v4, p0, Lorg/telegram/ui/ThemePreviewActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4, v0}, Lorg/telegram/ui/Components/RecyclerListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v2
 
-    .line 415
     .local v2, "child":Landroid/view/View;
     instance-of v4, v2, Lorg/telegram/ui/Cells/DialogCell;
 
@@ -1687,16 +1554,13 @@
 
     move-object v1, v2
 
-    .line 416
     check-cast v1, Lorg/telegram/ui/Cells/DialogCell;
 
-    .line 417
     .local v1, "cell":Lorg/telegram/ui/Cells/DialogCell;
     const/4 v4, 0x0
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Cells/DialogCell;->update(I)V
 
-    .line 413
     .end local v1    # "cell":Lorg/telegram/ui/Cells/DialogCell;
     :cond_2
     add-int/lit8 v0, v0, 0x1
@@ -1708,17 +1572,14 @@
     .locals 2
 
     .prologue
-    .line 400
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->applyPreviousTheme()V
 
-    .line 401
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->parentLayout:Lorg/telegram/ui/ActionBar/ActionBarLayout;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->rebuildAllFragmentViews(Z)V
 
-    .line 402
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onBackPressed()Z
 
     move-result v0
@@ -1730,7 +1591,6 @@
     .locals 2
 
     .prologue
-    .line 376
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1739,7 +1599,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 377
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
     move-result v0
@@ -1751,12 +1610,10 @@
     .locals 2
 
     .prologue
-    .line 382
     iget-boolean v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->previousPlusValue:Z
 
     sput-boolean v0, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
-    .line 383
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1765,10 +1622,8 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 384
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 385
     return-void
 .end method
 
@@ -1776,31 +1631,25 @@
     .locals 1
 
     .prologue
-    .line 389
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 390
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->dialogsAdapter:Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 391
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->dialogsAdapter:Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ThemePreviewActivity$DialogsAdapter;->notifyDataSetChanged()V
 
-    .line 393
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->messagesAdapter:Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     if-eqz v0, :cond_1
 
-    .line 394
     iget-object v0, p0, Lorg/telegram/ui/ThemePreviewActivity;->messagesAdapter:Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ThemePreviewActivity$MessagesAdapter;->notifyDataSetChanged()V
 
-    .line 396
     :cond_1
     return-void
 .end method

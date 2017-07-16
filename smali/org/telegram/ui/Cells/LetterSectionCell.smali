@@ -13,10 +13,8 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 27
     invoke-direct {p0, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 28
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     const/high16 v1, 0x42580000    # 54.0f
@@ -35,7 +33,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/LetterSectionCell;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 30
     new-instance v0, Landroid/widget/TextView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Cells/LetterSectionCell;->getContext()Landroid/content/Context;
@@ -46,7 +43,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
-    .line 31
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -55,7 +51,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 32
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -66,7 +61,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 33
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     const-string/jumbo v1, "windowBackgroundWhiteGrayText4"
@@ -77,14 +71,12 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 34
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 35
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     const/4 v1, -0x1
@@ -97,7 +89,6 @@
 
     invoke-virtual {p0, v0, v1}, Lorg/telegram/ui/Cells/LetterSectionCell;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 36
     return-void
 .end method
 
@@ -108,7 +99,6 @@
     .param p1, "height"    # I
 
     .prologue
-    .line 43
     new-instance v0, Landroid/view/ViewGroup$LayoutParams;
 
     const/high16 v1, 0x42580000    # 54.0f
@@ -121,7 +111,6 @@
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/Cells/LetterSectionCell;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 44
     return-void
 .end method
 
@@ -130,7 +119,6 @@
     .param p1, "letter"    # Ljava/lang/String;
 
     .prologue
-    .line 39
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {p1}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
@@ -139,7 +127,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 40
     return-void
 .end method
 
@@ -148,11 +135,9 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/Cells/LetterSectionCell;->textView:Landroid/widget/TextView;
 
     invoke-virtual {v0, p1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 48
     return-void
 .end method

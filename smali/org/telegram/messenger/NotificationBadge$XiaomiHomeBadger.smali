@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 557
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -43,7 +42,6 @@
     .param p1, "badgeCount"    # I
 
     .prologue
-    .line 566
     :try_start_0
     const-string/jumbo v5, "android.app.MiuiNotification"
 
@@ -51,13 +49,11 @@
 
     move-result-object v4
 
-    .line 567
     .local v4, "miuiNotificationClass":Ljava/lang/Class;
     invoke-virtual {v4}, Ljava/lang/Class;->newInstance()Ljava/lang/Object;
 
     move-result-object v3
 
-    .line 568
     .local v3, "miuiNotification":Ljava/lang/Object;
     invoke-virtual {v3}, Ljava/lang/Object;->getClass()Ljava/lang/Class;
 
@@ -69,13 +65,11 @@
 
     move-result-object v1
 
-    .line 569
     .local v1, "field":Ljava/lang/reflect/Field;
     const/4 v5, 0x1
 
     invoke-virtual {v1, v5}, Ljava/lang/reflect/Field;->setAccessible(Z)V
 
-    .line 570
     if-nez p1, :cond_1
 
     const-string/jumbo v5, ""
@@ -87,7 +81,6 @@
 
     invoke-virtual {v1, v3, v5}, Ljava/lang/reflect/Field;->set(Ljava/lang/Object;Ljava/lang/Object;)V
 
-    .line 584
     .end local v1    # "field":Ljava/lang/reflect/Field;
     .end local v3    # "miuiNotification":Ljava/lang/Object;
     .end local v4    # "miuiNotificationClass":Ljava/lang/Class;
@@ -95,7 +88,6 @@
     :goto_1
     return-void
 
-    .line 570
     .restart local v1    # "field":Ljava/lang/reflect/Field;
     .restart local v3    # "miuiNotification":Ljava/lang/Object;
     .restart local v4    # "miuiNotificationClass":Ljava/lang/Class;
@@ -108,14 +100,12 @@
 
     goto :goto_0
 
-    .line 571
     .end local v1    # "field":Ljava/lang/reflect/Field;
     .end local v3    # "miuiNotification":Ljava/lang/Object;
     .end local v4    # "miuiNotificationClass":Ljava/lang/Class;
     :catch_0
     move-exception v0
 
-    .line 572
     .local v0, "e":Ljava/lang/Throwable;
     new-instance v2, Landroid/content/Intent;
 
@@ -123,7 +113,6 @@
 
     invoke-direct {v2, v5}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 573
     .local v2, "localIntent":Landroid/content/Intent;
     const-string/jumbo v5, "android.intent.extra.update_application_component_name"
 
@@ -167,7 +156,6 @@
 
     invoke-virtual {v2, v5, v6}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 574
     const-string/jumbo v6, "android.intent.extra.update_application_message_text"
 
     if-nez p1, :cond_2
@@ -181,14 +169,12 @@
 
     invoke-virtual {v2, v6, v5}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 575
     invoke-static {v2}, Lorg/telegram/messenger/NotificationBadge;->access$100(Landroid/content/Intent;)Z
 
     move-result v5
 
     if-eqz v5, :cond_0
 
-    .line 576
     new-instance v5, Lorg/telegram/messenger/NotificationBadge$XiaomiHomeBadger$1;
 
     invoke-direct {v5, p0, v2}, Lorg/telegram/messenger/NotificationBadge$XiaomiHomeBadger$1;-><init>(Lorg/telegram/messenger/NotificationBadge$XiaomiHomeBadger;Landroid/content/Intent;)V
@@ -197,7 +183,6 @@
 
     goto :goto_1
 
-    .line 574
     :cond_2
     invoke-static {p1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
@@ -219,7 +204,6 @@
     .end annotation
 
     .prologue
-    .line 588
     const/4 v0, 0x6
 
     new-array v0, v0, [Ljava/lang/String;

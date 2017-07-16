@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 872
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$17;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
 
     const-wide/16 v8, 0x3c
 
-    .line 875
     iget-object v2, p0, Lorg/telegram/ui/VoIPActivity$17;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v2}, Lorg/telegram/ui/VoIPActivity;->isFinishing()Z
@@ -66,12 +64,10 @@
 
     if-nez v2, :cond_1
 
-    .line 883
     :cond_0
     :goto_0
     return-void
 
-    .line 878
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/VoIPActivity$17;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -83,7 +79,6 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 879
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v2
@@ -96,7 +91,6 @@
 
     div-long v0, v2, v4
 
-    .line 880
     .local v0, "duration":J
     iget-object v2, p0, Lorg/telegram/ui/VoIPActivity$17;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -147,7 +141,6 @@
     :goto_1
     invoke-virtual {v3, v2}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 881
     iget-object v2, p0, Lorg/telegram/ui/VoIPActivity$17;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VoIPActivity;->access$2600(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/TextView;
@@ -160,7 +153,6 @@
 
     goto :goto_0
 
-    .line 880
     :cond_2
     const-string/jumbo v2, "%d:%02d"
 

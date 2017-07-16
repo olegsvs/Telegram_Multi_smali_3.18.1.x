@@ -32,7 +32,6 @@
     .locals 2
 
     .prologue
-    .line 1173
     new-instance v0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;
 
     const/4 v1, 0x1
@@ -41,7 +40,6 @@
 
     sput-object v0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;->INSTANCE_COLON:Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;
 
-    .line 1174
     new-instance v0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;
 
     const/4 v1, 0x0
@@ -58,13 +56,10 @@
     .param p1, "colon"    # Z
 
     .prologue
-    .line 1183
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 1184
     iput-boolean p1, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;->mColon:Z
 
-    .line 1185
     return-void
 .end method
 
@@ -76,7 +71,6 @@
     .param p2, "calendar"    # Ljava/util/Calendar;
 
     .prologue
-    .line 1200
     const/16 v3, 0xf
 
     invoke-virtual {p2, v3}, Ljava/util/Calendar;->get(I)I
@@ -91,25 +85,20 @@
 
     add-int v2, v3, v4
 
-    .line 1202
     .local v2, "offset":I
     if-gez v2, :cond_1
 
-    .line 1203
     const/16 v3, 0x2d
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1204
     neg-int v2, v2
 
-    .line 1209
     :goto_0
     const v3, 0x36ee80
 
     div-int v0, v2, v3
 
-    .line 1210
     .local v0, "hours":I
     div-int/lit8 v3, v0, 0xa
 
@@ -119,7 +108,6 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1211
     rem-int/lit8 v3, v0, 0xa
 
     add-int/lit8 v3, v3, 0x30
@@ -128,17 +116,14 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1213
     iget-boolean v3, p0, Lorg/telegram/messenger/time/FastDatePrinter$TimeZoneNumberRule;->mColon:Z
 
     if-eqz v3, :cond_0
 
-    .line 1214
     const/16 v3, 0x3a
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1217
     :cond_0
     const v3, 0xea60
 
@@ -148,7 +133,6 @@
 
     sub-int v1, v3, v4
 
-    .line 1218
     .local v1, "minutes":I
     div-int/lit8 v3, v1, 0xa
 
@@ -158,7 +142,6 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1219
     rem-int/lit8 v3, v1, 0xa
 
     add-int/lit8 v3, v3, 0x30
@@ -167,10 +150,8 @@
 
     invoke-virtual {p1, v3}, Ljava/lang/StringBuffer;->append(C)Ljava/lang/StringBuffer;
 
-    .line 1220
     return-void
 
-    .line 1206
     .end local v0    # "hours":I
     .end local v1    # "minutes":I
     :cond_1
@@ -185,7 +166,6 @@
     .locals 1
 
     .prologue
-    .line 1192
     const/4 v0, 0x5
 
     return v0

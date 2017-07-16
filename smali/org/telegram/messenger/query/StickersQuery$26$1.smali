@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$26;
 
     .prologue
-    .line 1182
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$26;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -47,13 +46,11 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 1186
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_1
 
-    .line 1187
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$26;
 
     iget-object v1, v1, Lorg/telegram/messenger/query/StickersQuery$26;->val$stickerSet:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -62,7 +59,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 1188
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$26;
 
     iget-object v1, v1, Lorg/telegram/messenger/query/StickersQuery$26;->val$context:Landroid/content/Context;
@@ -85,7 +81,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1198
     :goto_0
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$26;
 
@@ -95,10 +90,8 @@
 
     invoke-static {v1, v4, v2}, Lorg/telegram/messenger/query/StickersQuery;->loadStickers(IZZ)V
 
-    .line 1199
     return-void
 
-    .line 1190
     :cond_0
     :try_start_1
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$26$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$26;
@@ -125,17 +118,14 @@
 
     goto :goto_0
 
-    .line 1195
     :catch_0
     move-exception v0
 
-    .line 1196
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_0
 
-    .line 1193
     .end local v0    # "e":Ljava/lang/Exception;
     :cond_1
     :try_start_2

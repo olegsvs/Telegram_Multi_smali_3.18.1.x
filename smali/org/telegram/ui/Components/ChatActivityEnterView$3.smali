@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 506
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0, p2}, Landroid/widget/ImageView;-><init>(Landroid/content/Context;)V
@@ -40,10 +39,8 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 509
     invoke-super {p0, p1}, Landroid/widget/ImageView;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 510
     iget-object v2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$3;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v2}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$2000(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/LinearLayout;
@@ -91,7 +88,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 511
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getWidth()I
 
     move-result v2
@@ -106,7 +102,6 @@
 
     add-int v0, v2, v3
 
-    .line 512
     .local v0, "x":I
     invoke-virtual {p1}, Landroid/graphics/Canvas;->getHeight()I
 
@@ -122,7 +117,6 @@
 
     sub-int v1, v2, v3
 
-    .line 513
     .local v1, "y":I
     int-to-float v2, v0
 
@@ -144,7 +138,6 @@
 
     invoke-virtual {p1, v2, v3, v4, v5}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 515
     .end local v0    # "x":I
     .end local v1    # "y":I
     :cond_1

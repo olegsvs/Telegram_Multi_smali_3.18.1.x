@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 10532
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .prologue
     const-wide/16 v2, 0x0
 
-    .line 10535
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatActionCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v1
 
-    .line 10536
     .local v1, "message":Lorg/telegram/messenger/MessageObject;
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
@@ -65,7 +62,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/ui/PhotoViewer;->setParentActivity(Landroid/app/Activity;)V
 
-    .line 10537
     iget-object v0, v1, Lorg/telegram/messenger/MessageObject;->photoThumbs:Ljava/util/ArrayList;
 
     const/16 v4, 0x280
@@ -74,11 +70,9 @@
 
     move-result-object v7
 
-    .line 10538
     .local v7, "photoSize":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     if-eqz v7, :cond_0
 
-    .line 10539
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
     move-result-object v0
@@ -91,11 +85,9 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/PhotoViewer;->openPhoto(Lorg/telegram/tgnet/TLRPC$FileLocation;Lorg/telegram/ui/PhotoViewer$PhotoViewerProvider;)Z
 
-    .line 10543
     :goto_0
     return-void
 
-    .line 10541
     :cond_0
     invoke-static {}, Lorg/telegram/ui/PhotoViewer;->getInstance()Lorg/telegram/ui/PhotoViewer;
 
@@ -117,7 +109,6 @@
     .param p1, "cell"    # Lorg/telegram/ui/Cells/ChatActionCell;
 
     .prologue
-    .line 10547
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -126,7 +117,6 @@
 
     invoke-static {v0, p1, v1}, Lorg/telegram/ui/ChatActivity;->access$800(Lorg/telegram/ui/ChatActivity;Landroid/view/View;Z)V
 
-    .line 10548
     return-void
 .end method
 
@@ -136,7 +126,6 @@
     .param p2, "button"    # Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     .prologue
-    .line 10578
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -161,7 +150,6 @@
 
     if-nez v0, :cond_1
 
-    instance-of v0, p2, Lorg/telegram/tgnet/TLRPC$TL_keyboardButtonSwitchInline;
 
     if-nez v0, :cond_1
 
@@ -181,12 +169,10 @@
 
     if-nez v0, :cond_1
 
-    .line 10585
     :cond_0
     :goto_0
     return-void
 
-    .line 10584
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
@@ -207,12 +193,10 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 10572
     invoke-virtual {p1}, Lorg/telegram/ui/Cells/ChatActionCell;->getMessageObject()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v0
 
-    .line 10573
     .local v0, "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
@@ -243,10 +227,8 @@
     :goto_0
     invoke-static {v3, p2, v4, v2, v1}, Lorg/telegram/ui/ChatActivity;->access$3300(Lorg/telegram/ui/ChatActivity;IIZI)V
 
-    .line 10574
     return-void
 
-    .line 10573
     :cond_0
     const/4 v1, 0x0
 
@@ -260,15 +242,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 10552
     if-gez p1, :cond_1
 
-    .line 10553
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 10554
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v3, "chat_id"
 
@@ -276,7 +255,6 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 10555
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v3, v3, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -287,7 +265,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 10556
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v3, v3, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -298,13 +275,11 @@
 
     invoke-virtual {v3, v4, v2}, Lorg/telegram/ui/ChatActivity;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
-    .line 10568
     .end local v0    # "args":Landroid/os/Bundle;
     :cond_0
     :goto_0
     return-void
 
-    .line 10558
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
 
@@ -312,18 +287,15 @@
 
     if-eq p1, v3, :cond_0
 
-    .line 10559
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 10560
     .restart local v0    # "args":Landroid/os/Bundle;
     const-string/jumbo v3, "user_id"
 
     invoke-virtual {v0, v3, p1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 10561
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v3, v3, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -342,7 +314,6 @@
 
     if-ne p1, v3, :cond_2
 
-    .line 10562
     const-string/jumbo v3, "dialog_id"
 
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
@@ -355,13 +326,11 @@
 
     invoke-virtual {v0, v3, v4, v5}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 10564
     :cond_2
     new-instance v1, Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {v1, v0}, Lorg/telegram/ui/ProfileActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 10565
     .local v1, "fragment":Lorg/telegram/ui/ProfileActivity;
     iget-object v3, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
@@ -384,7 +353,6 @@
     :goto_1
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ProfileActivity;->setPlayProfileAnimation(Z)V
 
-    .line 10566
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$2;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v2, v2, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -393,7 +361,6 @@
 
     goto :goto_0
 
-    .line 10565
     :cond_3
     const/4 v2, 0x0
 

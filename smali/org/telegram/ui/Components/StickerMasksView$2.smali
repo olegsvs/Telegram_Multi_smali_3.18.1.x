@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickerMasksView;
 
     .prologue
-    .line 79
     iput-object p1, p0, Lorg/telegram/ui/Components/StickerMasksView$2;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/GridLayoutManager$SpanSizeLookup;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 82
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView$2;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickerMasksView;->access$100(Lorg/telegram/ui/Components/StickerMasksView;)Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
@@ -52,7 +50,6 @@
 
     if-ne p1, v0, :cond_0
 
-    .line 83
     iget-object v0, p0, Lorg/telegram/ui/Components/StickerMasksView$2;->this$0:Lorg/telegram/ui/Components/StickerMasksView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickerMasksView;->access$100(Lorg/telegram/ui/Components/StickerMasksView;)Lorg/telegram/ui/Components/StickerMasksView$StickersGridAdapter;
@@ -63,7 +60,6 @@
 
     move-result v0
 
-    .line 85
     :goto_0
     return v0
 

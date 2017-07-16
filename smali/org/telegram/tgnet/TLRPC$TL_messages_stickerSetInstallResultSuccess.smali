@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2845
     const v0, 0x38641628
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultSuccess;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2844
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$messages_StickerSetInstallResult;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2849
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSetInstallResultSuccess;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2850
     return-void
 .end method

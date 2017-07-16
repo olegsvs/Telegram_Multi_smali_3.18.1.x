@@ -41,7 +41,6 @@
     .locals 0
 
     .prologue
-    .line 120
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->this$0:Lorg/telegram/ui/Cells/ChatMessageCell;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -55,7 +54,6 @@
     .param p2, "x1"    # Lorg/telegram/ui/Cells/ChatMessageCell$1;
 
     .prologue
-    .line 120
     invoke-direct {p0, p1}, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;-><init>(Lorg/telegram/ui/Cells/ChatMessageCell;)V
 
     return-void
@@ -66,7 +64,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->button:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     return-object v0
@@ -78,7 +75,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     .prologue
-    .line 120
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->button:Lorg/telegram/tgnet/TLRPC$KeyboardButton;
 
     return-object p1
@@ -89,7 +85,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->y:I
 
     return v0
@@ -101,7 +96,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->y:I
 
     return p1
@@ -112,7 +106,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->x:I
 
     return v0
@@ -124,7 +117,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->x:I
 
     return p1
@@ -135,7 +127,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->width:I
 
     return v0
@@ -147,7 +138,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->width:I
 
     return p1
@@ -158,7 +148,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->height:I
 
     return v0
@@ -170,7 +159,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->height:I
 
     return p1
@@ -181,7 +169,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->progressAlpha:F
 
     return v0
@@ -193,7 +180,6 @@
     .param p1, "x1"    # F
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->progressAlpha:F
 
     return p1
@@ -204,7 +190,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->angle:I
 
     return v0
@@ -216,7 +201,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 120
     iput p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->angle:I
 
     return p1
@@ -227,7 +211,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget-wide v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->lastUpdateTime:J
 
     return-wide v0
@@ -239,7 +222,6 @@
     .param p1, "x1"    # J
 
     .prologue
-    .line 120
     iput-wide p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->lastUpdateTime:J
 
     return-wide p1
@@ -250,7 +232,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;
 
     .prologue
-    .line 120
     iget-object v0, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->title:Landroid/text/StaticLayout;
 
     return-object v0
@@ -262,7 +243,6 @@
     .param p1, "x1"    # Landroid/text/StaticLayout;
 
     .prologue
-    .line 120
     iput-object p1, p0, Lorg/telegram/ui/Cells/ChatMessageCell$BotButton;->title:Landroid/text/StaticLayout;
 
     return-object p1

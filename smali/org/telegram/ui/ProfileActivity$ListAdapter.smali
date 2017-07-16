@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 3228
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 3229
     iput-object p2, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 3230
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 3619
     iget-object v0, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ProfileActivity;->access$8600(Lorg/telegram/ui/ProfileActivity;)I
@@ -61,7 +57,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 3624
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ProfileActivity;->access$8700(Lorg/telegram/ui/ProfileActivity;)I
@@ -86,12 +81,10 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 3643
     :cond_0
     :goto_0
     return v0
 
-    .line 3626
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -109,13 +102,11 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 3627
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 3628
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -141,13 +132,11 @@
 
     if-ne p1, v1, :cond_5
 
-    .line 3629
     :cond_4
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 3630
     :cond_5
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -269,13 +258,11 @@
 
     if-ne p1, v1, :cond_7
 
-    .line 3631
     :cond_6
     const/4 v0, 0x3
 
     goto/16 :goto_0
 
-    .line 3632
     :cond_7
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -293,12 +280,10 @@
 
     if-ge p1, v1, :cond_8
 
-    .line 3633
     const/4 v0, 0x4
 
     goto/16 :goto_0
 
-    .line 3634
     :cond_8
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -308,12 +293,10 @@
 
     if-ne p1, v1, :cond_9
 
-    .line 3635
     const/4 v0, 0x5
 
     goto/16 :goto_0
 
-    .line 3636
     :cond_9
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -323,12 +306,10 @@
 
     if-ne p1, v1, :cond_a
 
-    .line 3637
     const/4 v0, 0x6
 
     goto/16 :goto_0
 
-    .line 3638
     :cond_a
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -338,12 +319,10 @@
 
     if-ne p1, v1, :cond_b
 
-    .line 3639
     const/4 v0, 0x7
 
     goto/16 :goto_0
 
-    .line 3640
     :cond_b
     iget-object v1, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -361,7 +340,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 3641
     :cond_c
     const/16 v0, 0x8
 
@@ -377,12 +355,10 @@
 
     const/4 v1, 0x0
 
-    .line 3604
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 3605
     .local v0, "i":I
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -392,7 +368,6 @@
 
     if-eqz v3, :cond_2
 
-    .line 3606
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$2700(Lorg/telegram/ui/ProfileActivity;)I
@@ -427,7 +402,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 3607
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$1400(Lorg/telegram/ui/ProfileActivity;)I
 
     move-result v3
@@ -468,7 +442,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 3608
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$1800(Lorg/telegram/ui/ProfileActivity;)I
 
     move-result v3
@@ -494,12 +467,10 @@
     :cond_0
     move v1, v2
 
-    .line 3614
     :cond_1
     :goto_0
     return v1
 
-    .line 3609
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
@@ -509,7 +480,6 @@
 
     if-eqz v3, :cond_1
 
-    .line 3610
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$4000(Lorg/telegram/ui/ProfileActivity;)I
@@ -553,7 +523,6 @@
     :cond_3
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 3611
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$3100(Lorg/telegram/ui/ProfileActivity;)I
 
     move-result v3
@@ -594,7 +563,6 @@
 
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
 
-    .line 3612
     invoke-static {v3}, Lorg/telegram/ui/ProfileActivity;->access$3600(Lorg/telegram/ui/ProfileActivity;)I
 
     move-result v3
@@ -645,10 +613,8 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 3327
     const/4 v9, 0x1
 
-    .line 3328
     .local v9, "checkBackground":Z
     sget-object v30, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -660,7 +626,6 @@
 
     move-result-object v23
 
-    .line 3329
     .local v23, "themePrefs":Landroid/content/SharedPreferences;
     invoke-virtual/range {p1 .. p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
@@ -668,13 +633,11 @@
 
     packed-switch v30, :pswitch_data_0
 
-    .line 3600
     :cond_0
     :goto_0
     :pswitch_0
     return-void
 
-    .line 3331
     :pswitch_1
     move-object/from16 v0, p0
 
@@ -708,7 +671,6 @@
 
     if-ne v0, v1, :cond_2
 
-    .line 3332
     :cond_1
     move-object/from16 v0, p1
 
@@ -728,7 +690,6 @@
 
     goto :goto_0
 
-    .line 3334
     :cond_2
     move-object/from16 v0, p1
 
@@ -748,7 +709,6 @@
 
     goto :goto_0
 
-    .line 3338
     :pswitch_2
     move-object/from16 v0, p1
 
@@ -758,13 +718,11 @@
 
     check-cast v22, Lorg/telegram/ui/Cells/TextDetailCell;
 
-    .line 3339
     .local v22, "textDetailCell":Lorg/telegram/ui/Cells/TextDetailCell;
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_3
 
-    .line 3340
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
 
     move-object/from16 v0, v22
@@ -773,7 +731,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextDetailCell;->setTextColor(I)V
 
-    .line 3341
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowStatusColor:I
 
     move-object/from16 v0, v22
@@ -782,7 +739,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextDetailCell;->setValueColor(I)V
 
-    .line 3342
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowIconsColor:I
 
     move-object/from16 v0, v22
@@ -791,7 +747,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextDetailCell;->setIconColor(I)V
 
-    .line 3344
     :cond_3
     move-object/from16 v0, p0
 
@@ -809,7 +764,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 3346
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v30
@@ -832,7 +786,6 @@
 
     move-result-object v24
 
-    .line 3347
     .local v24, "user":Lorg/telegram/tgnet/TLRPC$User;
     move-object/from16 v0, v24
 
@@ -854,7 +807,6 @@
 
     if-eqz v30, :cond_4
 
-    .line 3348
     invoke-static {}, Lorg/telegram/PhoneFormat/PhoneFormat;->getInstance()Lorg/telegram/PhoneFormat/PhoneFormat;
 
     move-result-object v30
@@ -887,7 +839,6 @@
 
     move-result-object v20
 
-    .line 3352
     .local v20, "text":Ljava/lang/String;
     :goto_1
     const-string/jumbo v30, "PhoneMobile"
@@ -912,7 +863,6 @@
 
     goto/16 :goto_0
 
-    .line 3350
     .end local v20    # "text":Ljava/lang/String;
     :cond_4
     const-string/jumbo v30, "NumberUnknown"
@@ -926,7 +876,6 @@
     .restart local v20    # "text":Ljava/lang/String;
     goto :goto_1
 
-    .line 3353
     .end local v20    # "text":Ljava/lang/String;
     .end local v24    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_5
@@ -946,7 +895,6 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 3355
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v30
@@ -969,7 +917,6 @@
 
     move-result-object v24
 
-    .line 3356
     .restart local v24    # "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v24, :cond_6
 
@@ -993,7 +940,6 @@
 
     if-eqz v30, :cond_6
 
-    .line 3357
     new-instance v30, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
@@ -1018,7 +964,6 @@
 
     move-result-object v20
 
-    .line 3361
     .restart local v20    # "text":Ljava/lang/String;
     :goto_2
     const-string/jumbo v30, "Username"
@@ -1039,7 +984,6 @@
 
     goto/16 :goto_0
 
-    .line 3359
     .end local v20    # "text":Ljava/lang/String;
     :cond_6
     const-string/jumbo v20, "-"
@@ -1047,7 +991,6 @@
     .restart local v20    # "text":Ljava/lang/String;
     goto :goto_2
 
-    .line 3362
     .end local v20    # "text":Ljava/lang/String;
     .end local v24    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_7
@@ -1067,7 +1010,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3364
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1120,7 +1062,6 @@
 
     if-eqz v30, :cond_8
 
-    .line 3365
     new-instance v30, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v30 .. v30}, Ljava/lang/StringBuilder;-><init>()V
@@ -1155,7 +1096,6 @@
 
     move-result-object v20
 
-    .line 3369
     .restart local v20    # "text":Ljava/lang/String;
     :goto_3
     new-instance v30, Ljava/lang/StringBuilder;
@@ -1216,7 +1156,6 @@
 
     goto/16 :goto_0
 
-    .line 3367
     .end local v20    # "text":Ljava/lang/String;
     :cond_8
     const-string/jumbo v20, "-"
@@ -1224,7 +1163,6 @@
     .restart local v20    # "text":Ljava/lang/String;
     goto :goto_3
 
-    .line 3373
     .end local v20    # "text":Ljava/lang/String;
     .end local v22    # "textDetailCell":Lorg/telegram/ui/Cells/TextDetailCell;
     :pswitch_3
@@ -1236,7 +1174,6 @@
 
     check-cast v21, Lorg/telegram/ui/Cells/TextCell;
 
-    .line 3374
     .local v21, "textCell":Lorg/telegram/ui/Cells/TextCell;
     const-string/jumbo v30, "windowBackgroundWhiteBlackText"
 
@@ -1250,7 +1187,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTextColor(I)V
 
-    .line 3375
     const-string/jumbo v30, "windowBackgroundWhiteBlackText"
 
     move-object/from16 v0, v21
@@ -1259,7 +1195,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTag(Ljava/lang/Object;)V
 
-    .line 3376
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_9
@@ -1272,7 +1207,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTextColor(I)V
 
-    .line 3377
     :cond_9
     const-string/jumbo v30, "profileTitleColor"
 
@@ -1288,7 +1222,6 @@
 
     move-result v27
 
-    .line 3378
     .local v27, "vColor":I
     move-object/from16 v0, p0
 
@@ -1306,7 +1239,6 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 3380
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1325,7 +1257,6 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 3381
     const-string/jumbo v30, "Loading"
 
     const v31, 0x7f070356
@@ -1334,7 +1265,6 @@
 
     move-result-object v29
 
-    .line 3385
     .local v29, "value":Ljava/lang/String;
     :goto_4
     move-object/from16 v0, p0
@@ -1369,7 +1299,6 @@
 
     if-ne v0, v1, :cond_c
 
-    .line 3386
     const-string/jumbo v30, "SharedMedia"
 
     const v31, 0x7f0705c9
@@ -1390,7 +1319,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 3390
     :goto_5
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -1404,7 +1332,6 @@
 
     goto/16 :goto_0
 
-    .line 3383
     .end local v29    # "value":Ljava/lang/String;
     :cond_a
     const-string/jumbo v31, "%d"
@@ -1479,7 +1406,6 @@
 
     goto :goto_6
 
-    .line 3388
     .restart local v29    # "value":Ljava/lang/String;
     :cond_c
     const-string/jumbo v30, "SharedMedia"
@@ -1500,7 +1426,6 @@
 
     goto :goto_5
 
-    .line 3391
     .end local v29    # "value":Ljava/lang/String;
     :cond_d
     move-object/from16 v0, p0
@@ -1519,7 +1444,6 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 3393
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1538,7 +1462,6 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 3394
     const-string/jumbo v30, "Loading"
 
     const v31, 0x7f070356
@@ -1547,7 +1470,6 @@
 
     move-result-object v29
 
-    .line 3398
     .restart local v29    # "value":Ljava/lang/String;
     :goto_7
     const-string/jumbo v30, "DocumentsTitle"
@@ -1566,7 +1488,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3399
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -1579,7 +1500,6 @@
 
     goto/16 :goto_0
 
-    .line 3396
     .end local v29    # "value":Ljava/lang/String;
     :cond_e
     const-string/jumbo v31, "%d"
@@ -1654,7 +1574,6 @@
 
     goto :goto_8
 
-    .line 3400
     :cond_10
     move-object/from16 v0, p0
 
@@ -1672,7 +1591,6 @@
 
     if-ne v0, v1, :cond_13
 
-    .line 3402
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1691,7 +1609,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 3403
     const-string/jumbo v30, "Loading"
 
     const v31, 0x7f070356
@@ -1700,7 +1617,6 @@
 
     move-result-object v29
 
-    .line 3407
     .restart local v29    # "value":Ljava/lang/String;
     :goto_9
     const-string/jumbo v30, "AudioTitle"
@@ -1719,7 +1635,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3408
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -1732,7 +1647,6 @@
 
     goto/16 :goto_0
 
-    .line 3405
     .end local v29    # "value":Ljava/lang/String;
     :cond_11
     const-string/jumbo v31, "%d"
@@ -1807,7 +1721,6 @@
 
     goto :goto_a
 
-    .line 3409
     :cond_13
     move-object/from16 v0, p0
 
@@ -1825,7 +1738,6 @@
 
     if-ne v0, v1, :cond_16
 
-    .line 3411
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1844,7 +1756,6 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 3412
     const-string/jumbo v30, "Loading"
 
     const v31, 0x7f070356
@@ -1853,7 +1764,6 @@
 
     move-result-object v29
 
-    .line 3416
     .restart local v29    # "value":Ljava/lang/String;
     :goto_b
     const-string/jumbo v30, "LinksTitle"
@@ -1872,7 +1782,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3417
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -1885,7 +1794,6 @@
 
     goto/16 :goto_0
 
-    .line 3414
     .end local v29    # "value":Ljava/lang/String;
     :cond_14
     const-string/jumbo v31, "%d"
@@ -1960,7 +1868,6 @@
 
     goto :goto_c
 
-    .line 3418
     :cond_16
     move-object/from16 v0, p0
 
@@ -1978,7 +1885,6 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 3419
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v30
@@ -1997,7 +1903,6 @@
 
     move-result-object v26
 
-    .line 3420
     .local v26, "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     const-string/jumbo v30, "GroupsInCommon"
 
@@ -2046,7 +1951,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3421
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -2059,13 +1963,11 @@
 
     goto/16 :goto_0
 
-    .line 3420
     :cond_17
     const/16 v30, 0x0
 
     goto :goto_d
 
-    .line 3422
     .end local v26    # "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     :cond_18
     move-object/from16 v0, p0
@@ -2084,7 +1986,6 @@
 
     if-ne v0, v1, :cond_1a
 
-    .line 3423
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v30
@@ -2117,7 +2018,6 @@
 
     move-result-object v15
 
-    .line 3425
     .local v15, "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     iget v0, v15, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->ttl:I
 
@@ -2125,7 +2025,6 @@
 
     if-nez v30, :cond_19
 
-    .line 3426
     const-string/jumbo v30, "ShortMessageLifetimeForever"
 
     const v31, 0x7f0705cd
@@ -2134,7 +2033,6 @@
 
     move-result-object v29
 
-    .line 3430
     .restart local v29    # "value":Ljava/lang/String;
     :goto_e
     const-string/jumbo v30, "MessageLifetime"
@@ -2153,7 +2051,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3431
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -2166,7 +2063,6 @@
 
     goto/16 :goto_0
 
-    .line 3428
     .end local v29    # "value":Ljava/lang/String;
     :cond_19
     iget v0, v15, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->ttl:I
@@ -2180,7 +2076,6 @@
     .restart local v29    # "value":Ljava/lang/String;
     goto :goto_e
 
-    .line 3432
     .end local v15    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v29    # "value":Ljava/lang/String;
     :cond_1a
@@ -2200,7 +2095,6 @@
 
     if-ne v0, v1, :cond_2b
 
-    .line 3433
     sget-object v30, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v31, "Notifications"
@@ -2211,7 +2105,6 @@
 
     move-result-object v19
 
-    .line 3436
     .local v19, "preferences":Landroid/content/SharedPreferences;
     move-object/from16 v0, p0
 
@@ -2229,7 +2122,6 @@
 
     if-eqz v30, :cond_1b
 
-    .line 3437
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2240,7 +2132,6 @@
 
     move-result-wide v12
 
-    .line 3444
     .local v12, "did":J
     :goto_f
     new-instance v30, Ljava/lang/StringBuilder;
@@ -2275,7 +2166,6 @@
 
     move-result v10
 
-    .line 3445
     .local v10, "custom":Z
     new-instance v30, Ljava/lang/StringBuilder;
 
@@ -2305,7 +2195,6 @@
 
     move-result v16
 
-    .line 3446
     .local v16, "hasOverride":Z
     new-instance v30, Ljava/lang/StringBuilder;
 
@@ -2339,7 +2228,6 @@
 
     move-result v29
 
-    .line 3447
     .local v29, "value":I
     new-instance v30, Ljava/lang/StringBuilder;
 
@@ -2373,7 +2261,6 @@
 
     move-result v11
 
-    .line 3449
     .local v11, "delta":I
     const/16 v30, 0x3
 
@@ -2389,7 +2276,6 @@
 
     if-eq v11, v0, :cond_22
 
-    .line 3450
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v30
@@ -2400,13 +2286,10 @@
 
     sub-int v11, v11, v30
 
-    .line 3451
     if-gtz v11, :cond_1e
 
-    .line 3452
     if-eqz v10, :cond_1d
 
-    .line 3453
     const-string/jumbo v30, "NotificationsCustom"
 
     const v31, 0x7f07043b
@@ -2415,12 +2298,10 @@
 
     move-result-object v28
 
-    .line 3490
     .local v28, "val":Ljava/lang/String;
     :goto_10
     if-eqz v28, :cond_2a
 
-    .line 3491
     const-string/jumbo v30, "Notifications"
 
     const v31, 0x7f070439
@@ -2441,13 +2322,11 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValueAndIcon(Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 3495
     :goto_11
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
 
-    .line 3496
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowIconsColor:I
 
     move-object/from16 v0, v21
@@ -2456,7 +2335,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setIconColor(I)V
 
-    .line 3497
     move-object/from16 v0, v21
 
     move/from16 v1, v27
@@ -2465,7 +2343,6 @@
 
     goto/16 :goto_0
 
-    .line 3438
     .end local v10    # "custom":Z
     .end local v11    # "delta":I
     .end local v12    # "did":J
@@ -2485,7 +2362,6 @@
 
     if-eqz v30, :cond_1c
 
-    .line 3439
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2503,7 +2379,6 @@
     .restart local v12    # "did":J
     goto/16 :goto_f
 
-    .line 3441
     .end local v12    # "did":J
     :cond_1c
     move-object/from16 v0, p0
@@ -2529,7 +2404,6 @@
     .restart local v12    # "did":J
     goto/16 :goto_f
 
-    .line 3455
     .restart local v10    # "custom":Z
     .restart local v11    # "delta":I
     .restart local v16    # "hasOverride":Z
@@ -2546,7 +2420,6 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto :goto_10
 
-    .line 3457
     .end local v28    # "val":Ljava/lang/String;
     :cond_1e
     const/16 v30, 0xe10
@@ -2555,7 +2428,6 @@
 
     if-ge v11, v0, :cond_1f
 
-    .line 3458
     const-string/jumbo v30, "WillUnmuteIn"
 
     const v31, 0x7f0706ad
@@ -2587,7 +2459,6 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto/16 :goto_10
 
-    .line 3459
     .end local v28    # "val":Ljava/lang/String;
     :cond_1f
     const v30, 0x15180
@@ -2596,7 +2467,6 @@
 
     if-ge v11, v0, :cond_20
 
-    .line 3460
     const-string/jumbo v30, "WillUnmuteIn"
 
     const v31, 0x7f0706ad
@@ -2654,7 +2524,6 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto/16 :goto_10
 
-    .line 3461
     .end local v28    # "val":Ljava/lang/String;
     :cond_20
     const v30, 0x1e13380
@@ -2663,7 +2532,6 @@
 
     if-ge v11, v0, :cond_21
 
-    .line 3462
     const-string/jumbo v30, "WillUnmuteIn"
 
     const v31, 0x7f0706ad
@@ -2725,7 +2593,6 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto/16 :goto_10
 
-    .line 3464
     .end local v28    # "val":Ljava/lang/String;
     :cond_21
     const/16 v28, 0x0
@@ -2733,25 +2600,20 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto/16 :goto_10
 
-    .line 3467
     .end local v28    # "val":Ljava/lang/String;
     :cond_22
     if-nez v29, :cond_25
 
-    .line 3468
     if-eqz v16, :cond_23
 
-    .line 3469
     const/4 v14, 0x1
 
-    .line 3484
     .local v14, "enabled":Z
     :goto_12
     if-eqz v14, :cond_28
 
     if-eqz v10, :cond_28
 
-    .line 3485
     const-string/jumbo v30, "NotificationsCustom"
 
     const v31, 0x7f07043b
@@ -2763,7 +2625,6 @@
     .restart local v28    # "val":Ljava/lang/String;
     goto/16 :goto_10
 
-    .line 3471
     .end local v14    # "enabled":Z
     .end local v28    # "val":Ljava/lang/String;
     :cond_23
@@ -2773,7 +2634,6 @@
 
     if-gez v30, :cond_24
 
-    .line 3472
     const-string/jumbo v30, "EnableGroup"
 
     const/16 v31, 0x1
@@ -2791,7 +2651,6 @@
     .restart local v14    # "enabled":Z
     goto :goto_12
 
-    .line 3474
     .end local v14    # "enabled":Z
     :cond_24
     const-string/jumbo v30, "EnableAll"
@@ -2811,7 +2670,6 @@
     .restart local v14    # "enabled":Z
     goto :goto_12
 
-    .line 3477
     .end local v14    # "enabled":Z
     :cond_25
     const/16 v30, 0x1
@@ -2822,13 +2680,11 @@
 
     if-ne v0, v1, :cond_26
 
-    .line 3478
     const/4 v14, 0x1
 
     .restart local v14    # "enabled":Z
     goto :goto_12
 
-    .line 3479
     .end local v14    # "enabled":Z
     :cond_26
     const/16 v30, 0x2
@@ -2839,13 +2695,11 @@
 
     if-ne v0, v1, :cond_27
 
-    .line 3480
     const/4 v14, 0x0
 
     .restart local v14    # "enabled":Z
     goto :goto_12
 
-    .line 3482
     .end local v14    # "enabled":Z
     :cond_27
     const/4 v14, 0x0
@@ -2853,7 +2707,6 @@
     .restart local v14    # "enabled":Z
     goto :goto_12
 
-    .line 3487
     :cond_28
     if-eqz v14, :cond_29
 
@@ -2881,7 +2734,6 @@
 
     goto :goto_13
 
-    .line 3493
     .end local v14    # "enabled":Z
     .restart local v28    # "val":Ljava/lang/String;
     :cond_2a
@@ -2915,7 +2767,6 @@
 
     goto/16 :goto_11
 
-    .line 3499
     .end local v10    # "custom":Z
     .end local v11    # "delta":I
     .end local v12    # "did":J
@@ -2940,7 +2791,6 @@
 
     if-ne v0, v1, :cond_2c
 
-    .line 3500
     const-string/jumbo v30, "StartEncryptedChat"
 
     const v31, 0x7f0705f9
@@ -2955,7 +2805,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setText(Ljava/lang/String;)V
 
-    .line 3501
     const-string/jumbo v30, "windowBackgroundWhiteGreenText2"
 
     move-object/from16 v0, v21
@@ -2964,7 +2813,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTag(Ljava/lang/Object;)V
 
-    .line 3502
     const-string/jumbo v30, "windowBackgroundWhiteGreenText2"
 
     invoke-static/range {v30 .. v30}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -2977,7 +2825,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTextColor(I)V
 
-    .line 3503
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -3004,7 +2851,6 @@
 
     goto/16 :goto_0
 
-    .line 3504
     :cond_2c
     move-object/from16 v0, p0
 
@@ -3022,12 +2868,10 @@
 
     if-ne v0, v1, :cond_2d
 
-    .line 3505
     new-instance v17, Lorg/telegram/ui/Components/IdenticonDrawable;
 
     invoke-direct/range {v17 .. v17}, Lorg/telegram/ui/Components/IdenticonDrawable;-><init>()V
 
-    .line 3506
     .local v17, "identiconDrawable":Lorg/telegram/ui/Components/IdenticonDrawable;
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -3061,13 +2905,11 @@
 
     move-result-object v15
 
-    .line 3507
     .restart local v15    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     move-object/from16 v0, v17
 
     invoke-virtual {v0, v15}, Lorg/telegram/ui/Components/IdenticonDrawable;->setEncryptedChat(Lorg/telegram/tgnet/TLRPC$EncryptedChat;)V
 
-    .line 3508
     const-string/jumbo v30, "EncryptionKey"
 
     const v31, 0x7f070230
@@ -3086,7 +2928,6 @@
 
     goto/16 :goto_0
 
-    .line 3509
     .end local v15    # "encryptedChat":Lorg/telegram/tgnet/TLRPC$EncryptedChat;
     .end local v17    # "identiconDrawable":Lorg/telegram/ui/Components/IdenticonDrawable;
     :cond_2d
@@ -3106,7 +2947,6 @@
 
     if-ne v0, v1, :cond_2e
 
-    .line 3510
     const-string/jumbo v30, "windowBackgroundWhiteRedText5"
 
     move-object/from16 v0, v21
@@ -3115,7 +2955,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTag(Ljava/lang/Object;)V
 
-    .line 3511
     const-string/jumbo v30, "windowBackgroundWhiteRedText5"
 
     invoke-static/range {v30 .. v30}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3128,7 +2967,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTextColor(I)V
 
-    .line 3512
     const-string/jumbo v30, "LeaveChannel"
 
     const v31, 0x7f07033d
@@ -3143,7 +2981,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setText(Ljava/lang/String;)V
 
-    .line 3513
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -3170,7 +3007,6 @@
 
     goto/16 :goto_0
 
-    .line 3514
     :cond_2e
     move-object/from16 v0, p0
 
@@ -3188,7 +3024,6 @@
 
     if-ne v0, v1, :cond_2f
 
-    .line 3515
     const-string/jumbo v30, "UpgradeGroup"
 
     const v31, 0x7f070653
@@ -3203,7 +3038,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setText(Ljava/lang/String;)V
 
-    .line 3516
     const-string/jumbo v30, "windowBackgroundWhiteGreenText2"
 
     move-object/from16 v0, v21
@@ -3212,7 +3046,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextCell;->setTag(Ljava/lang/Object;)V
 
-    .line 3517
     const-string/jumbo v30, "windowBackgroundWhiteGreenText2"
 
     invoke-static/range {v30 .. v30}, Lorg/telegram/ui/ActionBar/Theme;->getColor(Ljava/lang/String;)I
@@ -3227,7 +3060,6 @@
 
     goto/16 :goto_0
 
-    .line 3518
     :cond_2f
     move-object/from16 v0, p0
 
@@ -3245,7 +3077,6 @@
 
     if-ne v0, v1, :cond_31
 
-    .line 3519
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -3258,7 +3089,6 @@
 
     if-eqz v30, :cond_30
 
-    .line 3520
     const-string/jumbo v30, "ChannelMembers"
 
     const v31, 0x7f070127
@@ -3313,7 +3143,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3521
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -3326,7 +3155,6 @@
 
     goto/16 :goto_0
 
-    .line 3523
     :cond_30
     const-string/jumbo v30, "ChannelMembers"
 
@@ -3344,7 +3172,6 @@
 
     goto/16 :goto_0
 
-    .line 3525
     :cond_31
     move-object/from16 v0, p0
 
@@ -3362,7 +3189,6 @@
 
     if-ne v0, v1, :cond_33
 
-    .line 3526
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -3375,7 +3201,6 @@
 
     if-eqz v30, :cond_32
 
-    .line 3527
     const-string/jumbo v30, "ChannelAdministrators"
 
     const v31, 0x7f07010b
@@ -3430,7 +3255,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3528
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -3443,7 +3267,6 @@
 
     goto/16 :goto_0
 
-    .line 3530
     :cond_32
     const-string/jumbo v30, "ChannelAdministrators"
 
@@ -3461,7 +3284,6 @@
 
     goto/16 :goto_0
 
-    .line 3532
     :cond_33
     move-object/from16 v0, p0
 
@@ -3479,7 +3301,6 @@
 
     if-ne v0, v1, :cond_35
 
-    .line 3533
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -3492,7 +3313,6 @@
 
     if-eqz v30, :cond_34
 
-    .line 3534
     const-string/jumbo v30, "ChannelBlockedUsers"
 
     const v31, 0x7f070110
@@ -3547,7 +3367,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/Cells/TextCell;->setTextAndValue(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 3535
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -3560,7 +3379,6 @@
 
     goto/16 :goto_0
 
-    .line 3537
     :cond_34
     const-string/jumbo v30, "ChannelBlockedUsers"
 
@@ -3578,7 +3396,6 @@
 
     goto/16 :goto_0
 
-    .line 3539
     :cond_35
     move-object/from16 v0, p0
 
@@ -3596,7 +3413,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3540
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -3609,7 +3425,6 @@
 
     if-lez v30, :cond_36
 
-    .line 3541
     const-string/jumbo v30, "AddMember"
 
     const v31, 0x7f07004c
@@ -3626,7 +3441,6 @@
 
     goto/16 :goto_0
 
-    .line 3543
     :cond_36
     const-string/jumbo v30, "AddRecipient"
 
@@ -3644,7 +3458,6 @@
 
     goto/16 :goto_0
 
-    .line 3548
     .end local v21    # "textCell":Lorg/telegram/ui/Cells/TextCell;
     .end local v27    # "vColor":I
     :pswitch_4
@@ -3656,7 +3469,6 @@
 
     check-cast v25, Lorg/telegram/ui/Cells/UserCell;
 
-    .line 3550
     .local v25, "userCell":Lorg/telegram/ui/Cells/UserCell;
     move-object/from16 v0, p0
 
@@ -3674,7 +3486,6 @@
 
     if-nez v30, :cond_37
 
-    .line 3551
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -3745,12 +3556,10 @@
 
     check-cast v18, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 3555
     .local v18, "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :goto_14
     if-eqz v18, :cond_0
 
-    .line 3556
     move-object/from16 v0, v18
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
@@ -3761,14 +3570,12 @@
 
     move-object/from16 v30, v18
 
-    .line 3557
     check-cast v30, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;
 
     move-object/from16 v0, v30
 
     iget-object v8, v0, Lorg/telegram/tgnet/TLRPC$TL_chatChannelParticipant;->channelParticipant:Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
 
-    .line 3558
     .local v8, "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     instance-of v0, v8, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantCreator;
 
@@ -3776,7 +3583,6 @@
 
     if-eqz v30, :cond_38
 
-    .line 3559
     const/16 v30, 0x1
 
     move-object/from16 v0, v25
@@ -3785,7 +3591,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/UserCell;->setIsAdmin(I)V
 
-    .line 3574
     .end local v8    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :goto_15
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
@@ -3845,7 +3650,6 @@
 
     goto/16 :goto_0
 
-    .line 3553
     .end local v18    # "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_37
     move-object/from16 v0, p0
@@ -3893,7 +3697,6 @@
     .restart local v18    # "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     goto/16 :goto_14
 
-    .line 3560
     .restart local v8    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :cond_38
     instance-of v0, v8, Lorg/telegram/tgnet/TLRPC$TL_channelParticipantEditor;
@@ -3908,7 +3711,6 @@
 
     if-eqz v30, :cond_3a
 
-    .line 3561
     :cond_39
     const/16 v30, 0x2
 
@@ -3920,7 +3722,6 @@
 
     goto :goto_15
 
-    .line 3563
     :cond_3a
     const/16 v30, 0x0
 
@@ -3932,7 +3733,6 @@
 
     goto/16 :goto_15
 
-    .line 3566
     .end local v8    # "channelParticipant":Lorg/telegram/tgnet/TLRPC$ChannelParticipant;
     :cond_3b
     move-object/from16 v0, v18
@@ -3943,7 +3743,6 @@
 
     if-eqz v30, :cond_3c
 
-    .line 3567
     const/16 v30, 0x1
 
     move-object/from16 v0, v25
@@ -3954,7 +3753,6 @@
 
     goto/16 :goto_15
 
-    .line 3568
     :cond_3c
     move-object/from16 v0, p0
 
@@ -3982,7 +3780,6 @@
 
     if-eqz v30, :cond_3d
 
-    .line 3569
     const/16 v30, 0x2
 
     move-object/from16 v0, v25
@@ -3993,7 +3790,6 @@
 
     goto/16 :goto_15
 
-    .line 3571
     :cond_3d
     const/16 v30, 0x0
 
@@ -4005,13 +3801,11 @@
 
     goto/16 :goto_15
 
-    .line 3574
     :cond_3e
     const/16 v30, 0x0
 
     goto/16 :goto_16
 
-    .line 3578
     .end local v18    # "part":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     .end local v25    # "userCell":Lorg/telegram/ui/Cells/UserCell;
     :pswitch_5
@@ -4021,20 +3815,17 @@
 
     check-cast v7, Lorg/telegram/ui/Cells/AboutLinkCell;
 
-    .line 3579
     .local v7, "aboutLinkCell":Lorg/telegram/ui/Cells/AboutLinkCell;
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_3f
 
-    .line 3580
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
 
     move/from16 v0, v30
 
     invoke-virtual {v7, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->setTextColor(I)V
 
-    .line 3581
     const-string/jumbo v30, "profileSummaryColor"
 
     sget v31, Lorg/telegram/ui/ActionBar/Theme;->defColor:I
@@ -4053,14 +3844,12 @@
 
     invoke-virtual {v7, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->setLinkColor(I)V
 
-    .line 3582
     sget v30, Lorg/telegram/ui/ActionBar/Theme;->profileRowIconsColor:I
 
     move/from16 v0, v30
 
     invoke-virtual {v7, v0}, Lorg/telegram/ui/Cells/AboutLinkCell;->setIconColor(I)V
 
-    .line 3584
     :cond_3f
     move-object/from16 v0, p0
 
@@ -4078,7 +3867,6 @@
 
     if-ne v0, v1, :cond_42
 
-    .line 3585
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v30
@@ -4097,7 +3885,6 @@
 
     move-result-object v26
 
-    .line 3586
     .restart local v26    # "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     if-eqz v26, :cond_41
 
@@ -4105,7 +3892,6 @@
 
     iget-object v6, v0, Lorg/telegram/tgnet/TLRPC$TL_userFull;->about:Ljava/lang/String;
 
-    .line 3588
     .local v6, "about":Ljava/lang/String;
     :goto_17
     if-nez v6, :cond_40
@@ -4130,13 +3916,11 @@
 
     goto/16 :goto_0
 
-    .line 3586
     :cond_41
     const/4 v6, 0x0
 
     goto :goto_17
 
-    .line 3590
     .end local v26    # "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     :cond_42
     move-object/from16 v0, p0
@@ -4155,7 +3939,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 3591
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -4172,7 +3955,6 @@
 
     move-object/from16 v20, v0
 
-    .line 3592
     .restart local v20    # "text":Ljava/lang/String;
     :goto_18
     const-string/jumbo v30, "\n\n\n"
@@ -4187,7 +3969,6 @@
 
     if-eqz v30, :cond_43
 
-    .line 3593
     const-string/jumbo v30, "\n\n\n"
 
     const-string/jumbo v31, "\n\n"
@@ -4204,7 +3985,6 @@
 
     goto :goto_18
 
-    .line 3595
     :cond_43
     const v30, 0x7f02022d
 
@@ -4214,7 +3994,6 @@
 
     invoke-virtual {v7, v0, v1}, Lorg/telegram/ui/Cells/AboutLinkCell;->setTextAndIcon(Ljava/lang/String;I)V
 
-    .line 3596
     sget-boolean v30, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v30, :cond_0
@@ -4227,7 +4006,6 @@
 
     goto/16 :goto_0
 
-    .line 3329
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_1
@@ -4256,14 +4034,11 @@
 
     const/4 v9, 0x0
 
-    .line 3234
     const/4 v3, 0x0
 
-    .line 3235
     .local v3, "view":Landroid/view/View;
     packed-switch p2, :pswitch_data_0
 
-    .line 3321
     :cond_0
     :goto_0
     new-instance v4, Lorg/telegram/messenger/support/widget/RecyclerView$LayoutParams;
@@ -4274,14 +4049,12 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 3322
     new-instance v4, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
     invoke-direct {v4, v3}, Lorg/telegram/ui/Components/RecyclerListView$Holder;-><init>(Landroid/view/View;)V
 
     return-object v4
 
-    .line 3237
     :pswitch_0
     new-instance v3, Lorg/telegram/ui/Cells/EmptyCell;
 
@@ -4290,7 +4063,6 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/EmptyCell;-><init>(Landroid/content/Context;)V
 
-    .line 3238
     .restart local v3    # "view":Landroid/view/View;
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -4300,7 +4072,6 @@
 
     goto :goto_0
 
-    .line 3241
     :pswitch_1
     new-instance v3, Lorg/telegram/ui/Cells/DividerCell;
 
@@ -4309,7 +4080,6 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/DividerCell;-><init>(Landroid/content/Context;)V
 
-    .line 3242
     .restart local v3    # "view":Landroid/view/View;
     const/high16 v4, 0x42900000    # 72.0f
 
@@ -4319,20 +4089,16 @@
 
     invoke-virtual {v3, v4, v9, v9, v9}, Landroid/view/View;->setPadding(IIII)V
 
-    .line 3243
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
 
-    .line 3244
     const-string/jumbo v4, "profileRowColor"
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
-    .line 3245
     invoke-virtual {v3, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 3246
     sget v4, Lorg/telegram/ui/ActionBar/Theme;->profileRowGradientList:I
 
     if-lez v4, :cond_0
@@ -4343,7 +4109,6 @@
 
     goto :goto_0
 
-    .line 3250
     :pswitch_2
     new-instance v3, Lorg/telegram/ui/Cells/TextDetailCell;
 
@@ -4352,7 +4117,6 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/TextDetailCell;-><init>(Landroid/content/Context;)V
 
-    .line 3251
     .restart local v3    # "view":Landroid/view/View;
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -4360,7 +4124,6 @@
 
     move-object v4, v3
 
-    .line 3252
     check-cast v4, Lorg/telegram/ui/Cells/TextDetailCell;
 
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
@@ -4369,19 +4132,16 @@
 
     move-object v4, v3
 
-    .line 3253
     check-cast v4, Lorg/telegram/ui/Cells/TextDetailCell;
 
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->profileRowStatusColor:I
 
     invoke-virtual {v4, v5}, Lorg/telegram/ui/Cells/TextDetailCell;->setValueColor(I)V
 
-    .line 3255
     invoke-virtual {v3, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
     goto :goto_0
 
-    .line 3259
     :pswitch_3
     new-instance v3, Lorg/telegram/ui/Cells/TextCell;
 
@@ -4390,18 +4150,15 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/TextCell;-><init>(Landroid/content/Context;)V
 
-    .line 3260
     .restart local v3    # "view":Landroid/view/View;
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
 
-    .line 3261
     invoke-virtual {v3, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
     move-object v4, v3
 
-    .line 3262
     check-cast v4, Lorg/telegram/ui/Cells/TextCell;
 
     sget v5, Lorg/telegram/ui/ActionBar/Theme;->profileRowTitleColor:I
@@ -4410,7 +4167,6 @@
 
     goto :goto_0
 
-    .line 3266
     :pswitch_4
     new-instance v3, Lorg/telegram/ui/Cells/UserCell;
 
@@ -4421,23 +4177,19 @@
 
     invoke-direct {v3, v4, v5, v9, v6}, Lorg/telegram/ui/Cells/UserCell;-><init>(Landroid/content/Context;IIZ)V
 
-    .line 3267
     .restart local v3    # "view":Landroid/view/View;
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
 
-    .line 3268
     invoke-virtual {v3, v9}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 3269
     const-string/jumbo v4, "Profile"
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setTag(Ljava/lang/Object;)V
 
     goto/16 :goto_0
 
-    .line 3274
     :pswitch_5
     new-instance v3, Lorg/telegram/ui/Cells/ShadowSectionCell;
 
@@ -4446,7 +4198,6 @@
 
     invoke-direct {v3, v4, v9}, Lorg/telegram/ui/Cells/ShadowSectionCell;-><init>(Landroid/content/Context;Z)V
 
-    .line 3275
     .restart local v3    # "view":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -4456,7 +4207,6 @@
 
     move-result-object v2
 
-    .line 3276
     .local v2, "drawable":Landroid/graphics/drawable/Drawable;
     new-instance v1, Lorg/telegram/ui/Components/CombinedDrawable;
 
@@ -4472,14 +4222,11 @@
 
     invoke-direct {v1, v4, v2}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 3277
     .local v1, "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/CombinedDrawable;->setFullsize(Z)V
 
-    .line 3278
     invoke-virtual {v3, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3279
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
@@ -4497,7 +4244,6 @@
 
     goto/16 :goto_0
 
-    .line 3283
     .end local v1    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     .end local v2    # "drawable":Landroid/graphics/drawable/Drawable;
     :pswitch_6
@@ -4511,10 +4257,8 @@
     .restart local v3    # "view":Landroid/view/View;
     move-object v0, v3
 
-    .line 3284
     check-cast v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 3285
     .local v0, "cell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v4, p0, Lorg/telegram/ui/ProfileActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -4524,7 +4268,6 @@
 
     move-result-object v2
 
-    .line 3286
     .restart local v2    # "drawable":Landroid/graphics/drawable/Drawable;
     new-instance v1, Lorg/telegram/ui/Components/CombinedDrawable;
 
@@ -4540,14 +4283,11 @@
 
     invoke-direct {v1, v4, v2}, Lorg/telegram/ui/Components/CombinedDrawable;-><init>(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 3287
     .restart local v1    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/CombinedDrawable;->setFullsize(Z)V
 
-    .line 3288
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 3289
     const-string/jumbo v4, "ConvertGroupInfo"
 
     const v5, 0x7f07019f
@@ -4578,7 +4318,6 @@
 
     invoke-virtual {v0, v4}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3290
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v4, :cond_0
@@ -4596,7 +4335,6 @@
 
     goto/16 :goto_0
 
-    .line 3294
     .end local v0    # "cell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     .end local v1    # "combinedDrawable":Lorg/telegram/ui/Components/CombinedDrawable;
     .end local v2    # "drawable":Landroid/graphics/drawable/Drawable;
@@ -4608,11 +4346,9 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/LoadingCell;-><init>(Landroid/content/Context;)V
 
-    .line 3295
     .restart local v3    # "view":Landroid/view/View;
     goto/16 :goto_0
 
-    .line 3297
     :pswitch_8
     new-instance v3, Lorg/telegram/ui/Cells/AboutLinkCell;
 
@@ -4621,7 +4357,6 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/AboutLinkCell;-><init>(Landroid/content/Context;)V
 
-    .line 3298
     .restart local v3    # "view":Landroid/view/View;
     sget-boolean v4, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
@@ -4641,7 +4376,6 @@
     :cond_4
     move-object v4, v3
 
-    .line 3299
     check-cast v4, Lorg/telegram/ui/Cells/AboutLinkCell;
 
     new-instance v5, Lorg/telegram/ui/ProfileActivity$ListAdapter$1;
@@ -4652,7 +4386,6 @@
 
     goto/16 :goto_0
 
-    .line 3235
     nop
 
     :pswitch_data_0

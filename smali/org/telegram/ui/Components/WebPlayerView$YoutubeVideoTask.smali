@@ -47,15 +47,12 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 536
     iput-object p1, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-direct {p0}, Landroid/os/AsyncTask;-><init>()V
 
-    .line 531
     iput-boolean v2, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->canRetry:Z
 
-    .line 532
     new-instance v0, Ljava/util/concurrent/Semaphore;
 
     const/4 v1, 0x0
@@ -64,15 +61,12 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->semaphore:Ljava/util/concurrent/Semaphore;
 
-    .line 533
     new-array v0, v2, [Ljava/lang/String;
 
     iput-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
 
-    .line 537
     iput-object p2, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->videoId:Ljava/lang/String;
 
-    .line 538
     return-void
 .end method
 
@@ -81,7 +75,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     .prologue
-    .line 528
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
 
     return-object v0
@@ -92,7 +85,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     .prologue
-    .line 528
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->sig:Ljava/lang/String;
 
     return-object v0
@@ -103,7 +95,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;
 
     .prologue
-    .line 528
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->semaphore:Ljava/util/concurrent/Semaphore;
 
     return-object v0
@@ -115,7 +106,6 @@
     .param p1, "x1"    # Ljava/lang/String;
 
     .prologue
-    .line 528
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->onInterfaceResult(Ljava/lang/String;)V
 
     return-void
@@ -128,7 +118,6 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 713
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
@@ -161,12 +150,10 @@
 
     aput-object v1, v0, v5
 
-    .line 714
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 715
     return-void
 .end method
 
@@ -176,7 +163,6 @@
     .locals 1
 
     .prologue
-    .line 528
     check-cast p1, [Ljava/lang/Void;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->doInBackground([Ljava/lang/Void;)Ljava/lang/String;
@@ -191,7 +177,6 @@
     .param p1, "voids"    # [Ljava/lang/Void;
 
     .prologue
-    .line 543
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
@@ -232,7 +217,6 @@
 
     move-result-object v7
 
-    .line 544
     .local v7, "embedCode":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->isCancelled()Z
 
@@ -240,14 +224,11 @@
 
     if-eqz v27, :cond_0
 
-    .line 545
     const/16 v27, 0x0
 
-    .line 709
     :goto_0
     return-object v27
 
-    .line 547
     :cond_0
     new-instance v27, Ljava/lang/StringBuilder;
 
@@ -279,7 +260,6 @@
 
     move-result-object v21
 
-    .line 549
     .local v21, "params":Ljava/lang/String;
     :try_start_0
     new-instance v27, Ljava/lang/StringBuilder;
@@ -340,11 +320,9 @@
 
     move-result-object v21
 
-    .line 553
     :goto_1
     if-eqz v7, :cond_1
 
-    .line 554
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$600()Ljava/util/regex/Pattern;
 
     move-result-object v27
@@ -355,7 +333,6 @@
 
     move-result-object v20
 
-    .line 555
     .local v20, "matcher":Ljava/util/regex/Matcher;
     invoke-virtual/range {v20 .. v20}, Ljava/util/regex/Matcher;->find()Z
 
@@ -363,7 +340,6 @@
 
     if-eqz v27, :cond_2
 
-    .line 556
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -408,13 +384,11 @@
 
     move-result-object v21
 
-    .line 562
     .end local v20    # "matcher":Ljava/util/regex/Matcher;
     :cond_1
     :goto_2
     const/4 v8, 0x0
 
-    .line 563
     .local v8, "encrypted":Z
     const/16 v27, 0x5
 
@@ -452,7 +426,6 @@
 
     aput-object v28, v10, v27
 
-    .line 564
     .local v10, "extra":[Ljava/lang/String;
     const/4 v15, 0x0
 
@@ -466,7 +439,6 @@
 
     if-ge v15, v0, :cond_7
 
-    .line 565
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
@@ -511,7 +483,6 @@
 
     move-result-object v26
 
-    .line 566
     .local v26, "videoInfo":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->isCancelled()Z
 
@@ -519,12 +490,10 @@
 
     if-eqz v27, :cond_3
 
-    .line 567
     const/16 v27, 0x0
 
     goto/16 :goto_0
 
-    .line 550
     .end local v8    # "encrypted":Z
     .end local v10    # "extra":[Ljava/lang/String;
     .end local v15    # "i":I
@@ -532,13 +501,11 @@
     :catch_0
     move-exception v6
 
-    .line 551
     .local v6, "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
-    .line 558
     .end local v6    # "e":Ljava/lang/Exception;
     .restart local v20    # "matcher":Ljava/util/regex/Matcher;
     :cond_2
@@ -566,7 +533,6 @@
 
     goto/16 :goto_2
 
-    .line 569
     .end local v20    # "matcher":Ljava/util/regex/Matcher;
     .restart local v8    # "encrypted":Z
     .restart local v10    # "extra":[Ljava/lang/String;
@@ -575,18 +541,15 @@
     :cond_3
     const/4 v9, 0x0
 
-    .line 570
     .local v9, "exists":Z
     if-eqz v26, :cond_6
 
-    .line 571
     const-string/jumbo v27, "&"
 
     invoke-virtual/range {v26 .. v27}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v4
 
-    .line 572
     .local v4, "args":[Ljava/lang/String;
     const/4 v3, 0x0
 
@@ -600,7 +563,6 @@
 
     if-ge v3, v0, :cond_6
 
-    .line 573
     aget-object v27, v4, v3
 
     const-string/jumbo v28, "dashmpd"
@@ -611,10 +573,8 @@
 
     if-eqz v27, :cond_5
 
-    .line 574
     const/4 v9, 0x1
 
-    .line 575
     aget-object v27, v4, v3
 
     const-string/jumbo v28, "="
@@ -623,7 +583,6 @@
 
     move-result-object v5
 
-    .line 576
     .local v5, "args2":[Ljava/lang/String;
     array-length v0, v5
 
@@ -637,7 +596,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 578
     :try_start_1
     move-object/from16 v0, p0
 
@@ -661,7 +619,6 @@
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
 
-    .line 572
     .end local v5    # "args2":[Ljava/lang/String;
     :cond_4
     :goto_5
@@ -669,18 +626,15 @@
 
     goto :goto_4
 
-    .line 579
     .restart local v5    # "args2":[Ljava/lang/String;
     :catch_1
     move-exception v6
 
-    .line 580
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_5
 
-    .line 583
     .end local v5    # "args2":[Ljava/lang/String;
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_5
@@ -694,7 +648,6 @@
 
     if-eqz v27, :cond_4
 
-    .line 584
     aget-object v27, v4, v3
 
     const-string/jumbo v28, "="
@@ -703,7 +656,6 @@
 
     move-result-object v5
 
-    .line 585
     .restart local v5    # "args2":[Ljava/lang/String;
     array-length v0, v5
 
@@ -717,7 +669,6 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 586
     const/16 v27, 0x1
 
     aget-object v27, v5, v27
@@ -734,19 +685,16 @@
 
     if-eqz v27, :cond_4
 
-    .line 587
     const/4 v8, 0x1
 
     goto :goto_5
 
-    .line 593
     .end local v3    # "a":I
     .end local v4    # "args":[Ljava/lang/String;
     .end local v5    # "args2":[Ljava/lang/String;
     :cond_6
     if-eqz v9, :cond_d
 
-    .line 598
     .end local v9    # "exists":Z
     .end local v26    # "videoInfo":Ljava/lang/String;
     :cond_7
@@ -785,10 +733,8 @@
     :cond_8
     if-eqz v7, :cond_13
 
-    .line 599
     const/4 v8, 0x1
 
-    .line 600
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
@@ -805,7 +751,6 @@
 
     move-result v16
 
-    .line 601
     .local v16, "index":I
     move-object/from16 v0, p0
 
@@ -825,7 +770,6 @@
 
     move-result v17
 
-    .line 602
     .local v17, "index2":I
     const/16 v27, -0x1
 
@@ -835,7 +779,6 @@
 
     if-eq v0, v1, :cond_13
 
-    .line 603
     const/16 v27, -0x1
 
     move/from16 v0, v17
@@ -844,7 +787,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 604
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->result:[Ljava/lang/String;
@@ -859,7 +801,6 @@
 
     move-result v17
 
-    .line 606
     :cond_9
     move-object/from16 v0, p0
 
@@ -887,10 +828,8 @@
 
     iput-object v0, v1, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->sig:Ljava/lang/String;
 
-    .line 607
     const/16 v19, 0x0
 
-    .line 608
     .local v19, "jsUrl":Ljava/lang/String;
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$700()Ljava/util/regex/Pattern;
 
@@ -902,7 +841,6 @@
 
     move-result-object v20
 
-    .line 609
     .restart local v20    # "matcher":Ljava/util/regex/Matcher;
     invoke-virtual/range {v20 .. v20}, Ljava/util/regex/Matcher;->find()Z
 
@@ -910,7 +848,6 @@
 
     if-eqz v27, :cond_a
 
-    .line 611
     :try_start_2
     new-instance v24, Lorg/json/JSONTokener;
 
@@ -930,13 +867,11 @@
 
     invoke-direct {v0, v1}, Lorg/json/JSONTokener;-><init>(Ljava/lang/String;)V
 
-    .line 612
     .local v24, "tokener":Lorg/json/JSONTokener;
     invoke-virtual/range {v24 .. v24}, Lorg/json/JSONTokener;->nextValue()Ljava/lang/Object;
 
     move-result-object v25
 
-    .line 613
     .local v25, "value":Ljava/lang/Object;
     move-object/from16 v0, v25
 
@@ -946,7 +881,6 @@
 
     if-eqz v27, :cond_a
 
-    .line 614
     move-object/from16 v0, v25
 
     check-cast v0, Ljava/lang/String;
@@ -955,14 +889,12 @@
     :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
-    .line 621
     .end local v24    # "tokener":Lorg/json/JSONTokener;
     .end local v25    # "value":Ljava/lang/Object;
     :cond_a
     :goto_6
     if-eqz v19, :cond_13
 
-    .line 622
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$800()Ljava/util/regex/Pattern;
 
     move-result-object v27
@@ -975,14 +907,12 @@
 
     move-result-object v20
 
-    .line 624
     invoke-virtual/range {v20 .. v20}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v27
 
     if-eqz v27, :cond_e
 
-    .line 625
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1019,16 +949,13 @@
 
     move-result-object v22
 
-    .line 629
     .local v22, "playerId":Ljava/lang/String;
     :goto_7
     const/4 v12, 0x0
 
-    .line 630
     .local v12, "functionCode":Ljava/lang/String;
     const/4 v14, 0x0
 
-    .line 631
     .local v14, "functionName":Ljava/lang/String;
     sget-object v27, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -1040,11 +967,9 @@
 
     move-result-object v23
 
-    .line 632
     .local v23, "preferences":Landroid/content/SharedPreferences;
     if-eqz v22, :cond_b
 
-    .line 633
     const/16 v27, 0x0
 
     move-object/from16 v0, v23
@@ -1057,7 +982,6 @@
 
     move-result-object v12
 
-    .line 634
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1092,11 +1016,9 @@
 
     move-result-object v14
 
-    .line 636
     :cond_b
     if-nez v12, :cond_12
 
-    .line 637
     const-string/jumbo v27, "//"
 
     move-object/from16 v0, v19
@@ -1109,7 +1031,6 @@
 
     if-eqz v27, :cond_f
 
-    .line 638
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1132,7 +1053,6 @@
 
     move-result-object v19
 
-    .line 642
     :cond_c
     :goto_8
     move-object/from16 v0, p0
@@ -1151,7 +1071,6 @@
 
     move-result-object v18
 
-    .line 643
     .local v18, "jsCode":Ljava/lang/String;
     invoke-virtual/range {p0 .. p0}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->isCancelled()Z
 
@@ -1159,12 +1078,10 @@
 
     if-eqz v27, :cond_10
 
-    .line 644
     const/16 v27, 0x0
 
     goto/16 :goto_0
 
-    .line 564
     .end local v12    # "functionCode":Ljava/lang/String;
     .end local v14    # "functionName":Ljava/lang/String;
     .end local v16    # "index":I
@@ -1181,7 +1098,6 @@
 
     goto/16 :goto_3
 
-    .line 616
     .end local v9    # "exists":Z
     .end local v26    # "videoInfo":Ljava/lang/String;
     .restart local v16    # "index":I
@@ -1191,13 +1107,11 @@
     :catch_2
     move-exception v6
 
-    .line 617
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_6
 
-    .line 627
     .end local v6    # "e":Ljava/lang/Exception;
     :cond_e
     const/16 v22, 0x0
@@ -1205,7 +1119,6 @@
     .restart local v22    # "playerId":Ljava/lang/String;
     goto/16 :goto_7
 
-    .line 639
     .restart local v12    # "functionCode":Ljava/lang/String;
     .restart local v14    # "functionName":Ljava/lang/String;
     .restart local v23    # "preferences":Landroid/content/SharedPreferences;
@@ -1222,7 +1135,6 @@
 
     if-eqz v27, :cond_c
 
-    .line 640
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1247,12 +1159,10 @@
 
     goto :goto_8
 
-    .line 646
     .restart local v18    # "jsCode":Ljava/lang/String;
     :cond_10
     if-eqz v18, :cond_12
 
-    .line 647
     invoke-static {}, Lorg/telegram/ui/Components/WebPlayerView;->access$900()Ljava/util/regex/Pattern;
 
     move-result-object v27
@@ -1265,14 +1175,12 @@
 
     move-result-object v20
 
-    .line 648
     invoke-virtual/range {v20 .. v20}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v27
 
     if-eqz v27, :cond_15
 
-    .line 649
     const/16 v27, 0x1
 
     move-object/from16 v0, v20
@@ -1283,12 +1191,10 @@
 
     move-result-object v14
 
-    .line 656
     :cond_11
     :goto_9
     if-eqz v14, :cond_12
 
-    .line 658
     :try_start_3
     new-instance v11, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;
 
@@ -1304,13 +1210,11 @@
 
     invoke-direct {v11, v0, v1}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;-><init>(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)V
 
-    .line 659
     .local v11, "extractor":Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;
     invoke-static {v11, v14}, Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;->access$1100(Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v12
 
-    .line 660
     invoke-static {v12}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v27
@@ -1319,7 +1223,6 @@
 
     if-eqz v22, :cond_12
 
-    .line 661
     invoke-interface/range {v23 .. v23}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v27
@@ -1366,7 +1269,6 @@
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
-    .line 669
     .end local v11    # "extractor":Lorg/telegram/ui/Components/WebPlayerView$JSExtractor;
     .end local v18    # "jsCode":Ljava/lang/String;
     :cond_12
@@ -1377,7 +1279,6 @@
 
     if-nez v27, :cond_13
 
-    .line 670
     sget v27, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v28, 0x15
@@ -1388,7 +1289,6 @@
 
     if-lt v0, v1, :cond_16
 
-    .line 671
     new-instance v27, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v27 .. v27}, Ljava/lang/StringBuilder;-><init>()V
@@ -1437,11 +1337,9 @@
 
     move-result-object v12
 
-    .line 675
     :goto_b
     move-object v13, v12
 
-    .line 677
     .local v13, "functionCodeFinal":Ljava/lang/String;
     :try_start_4
     new-instance v27, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask$1;
@@ -1454,7 +1352,6 @@
 
     invoke-static/range {v27 .. v27}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 700
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->semaphore:Ljava/util/concurrent/Semaphore;
@@ -1465,10 +1362,8 @@
     :try_end_4
     .catch Ljava/lang/Exception; {:try_start_4 .. :try_end_4} :catch_4
 
-    .line 701
     const/4 v8, 0x0
 
-    .line 709
     .end local v12    # "functionCode":Ljava/lang/String;
     .end local v13    # "functionCodeFinal":Ljava/lang/String;
     .end local v14    # "functionName":Ljava/lang/String;
@@ -1493,7 +1388,6 @@
 
     goto/16 :goto_0
 
-    .line 651
     .restart local v12    # "functionCode":Ljava/lang/String;
     .restart local v14    # "functionName":Ljava/lang/String;
     .restart local v16    # "index":I
@@ -1516,14 +1410,12 @@
 
     move-result-object v20
 
-    .line 652
     invoke-virtual/range {v20 .. v20}, Ljava/util/regex/Matcher;->find()Z
 
     move-result v27
 
     if-eqz v27, :cond_11
 
-    .line 653
     const/16 v27, 0x1
 
     move-object/from16 v0, v20
@@ -1536,17 +1428,14 @@
 
     goto/16 :goto_9
 
-    .line 663
     :catch_3
     move-exception v6
 
-    .line 664
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_a
 
-    .line 673
     .end local v6    # "e":Ljava/lang/Exception;
     .end local v18    # "jsCode":Ljava/lang/String;
     :cond_16
@@ -1626,18 +1515,15 @@
 
     goto/16 :goto_b
 
-    .line 702
     .restart local v13    # "functionCodeFinal":Ljava/lang/String;
     :catch_4
     move-exception v6
 
-    .line 703
     .restart local v6    # "e":Ljava/lang/Exception;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_c
 
-    .line 709
     .end local v6    # "e":Ljava/lang/Exception;
     .end local v12    # "functionCode":Ljava/lang/String;
     .end local v13    # "functionCodeFinal":Ljava/lang/String;
@@ -1666,7 +1552,6 @@
     .locals 0
 
     .prologue
-    .line 528
     check-cast p1, Ljava/lang/String;
 
     invoke-virtual {p0, p1}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->onPostExecute(Ljava/lang/String;)V
@@ -1681,27 +1566,22 @@
     .prologue
     const/4 v2, 0x1
 
-    .line 719
     if-eqz p1, :cond_2
 
-    .line 720
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$1702(Lorg/telegram/ui/Components/WebPlayerView;Z)Z
 
-    .line 721
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     const-string/jumbo v1, "dash"
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1802(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 722
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/Components/WebPlayerView;->access$1902(Lorg/telegram/ui/Components/WebPlayerView;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 723
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2000(Lorg/telegram/ui/Components/WebPlayerView;)Z
@@ -1710,12 +1590,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 724
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2100(Lorg/telegram/ui/Components/WebPlayerView;)V
 
-    .line 726
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
@@ -1723,7 +1601,6 @@
 
     invoke-static {v0, v1, v2}, Lorg/telegram/ui/Components/WebPlayerView;->access$2200(Lorg/telegram/ui/Components/WebPlayerView;ZZ)V
 
-    .line 727
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$100(Lorg/telegram/ui/Components/WebPlayerView;)Lorg/telegram/ui/Components/WebPlayerView$ControlsView;
@@ -1732,12 +1609,10 @@
 
     invoke-virtual {v0, v2, v2}, Lorg/telegram/ui/Components/WebPlayerView$ControlsView;->show(ZZ)V
 
-    .line 731
     :cond_1
     :goto_0
     return-void
 
-    .line 728
     :cond_2
     invoke-virtual {p0}, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->isCancelled()Z
 
@@ -1745,7 +1620,6 @@
 
     if-nez v0, :cond_1
 
-    .line 729
     iget-object v0, p0, Lorg/telegram/ui/Components/WebPlayerView$YoutubeVideoTask;->this$0:Lorg/telegram/ui/Components/WebPlayerView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/WebPlayerView;->access$2300(Lorg/telegram/ui/Components/WebPlayerView;)V

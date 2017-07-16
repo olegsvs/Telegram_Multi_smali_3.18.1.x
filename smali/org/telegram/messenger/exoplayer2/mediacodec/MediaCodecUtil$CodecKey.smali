@@ -27,16 +27,12 @@
     .param p2, "secure"    # Z
 
     .prologue
-    .line 532
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 533
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
-    .line 534
     iput-boolean p2, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->secure:Z
 
-    .line 535
     return-void
 .end method
 
@@ -51,15 +47,12 @@
 
     const/4 v2, 0x0
 
-    .line 548
     if-ne p0, p1, :cond_1
 
-    .line 555
     :cond_0
     :goto_0
     return v1
 
-    .line 551
     :cond_1
     if-eqz p1, :cond_2
 
@@ -74,16 +67,13 @@
     :cond_2
     move v1, v2
 
-    .line 552
     goto :goto_0
 
     :cond_3
     move-object v0, p1
 
-    .line 554
     check-cast v0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;
 
-    .line 555
     .local v0, "other":Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
@@ -111,14 +101,11 @@
     .locals 4
 
     .prologue
-    .line 539
     const/16 v0, 0x1f
 
-    .line 540
     .local v0, "prime":I
     const/4 v1, 0x1
 
-    .line 541
     .local v1, "result":I
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
@@ -129,7 +116,6 @@
     :goto_0
     add-int/lit8 v1, v2, 0x1f
 
-    .line 542
     mul-int/lit8 v3, v1, 0x1f
 
     iget-boolean v2, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->secure:Z
@@ -141,10 +127,8 @@
     :goto_1
     add-int v1, v3, v2
 
-    .line 543
     return v1
 
-    .line 541
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/mediacodec/MediaCodecUtil$CodecKey;->mimeType:Ljava/lang/String;
 
@@ -154,7 +138,6 @@
 
     goto :goto_0
 
-    .line 542
     :cond_1
     const/16 v2, 0x4d5
 

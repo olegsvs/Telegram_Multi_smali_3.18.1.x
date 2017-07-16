@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 475
     iput-object p1, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 476
     iput-object p2, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 477
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 2
 
     .prologue
-    .line 486
     iget-object v1, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/WallpapersActivity;->access$900(Lorg/telegram/ui/WallpapersActivity;)Ljava/util/ArrayList;
@@ -57,7 +53,6 @@
 
     add-int/lit8 v0, v1, 0x1
 
-    .line 487
     .local v0, "count":I
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->hasWallpaperFromTheme()Z
 
@@ -65,10 +60,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 488
     add-int/lit8 v0, v0, 0x1
 
-    .line 490
     :cond_0
     return v0
 .end method
@@ -78,7 +71,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 495
     int-to-long v0, p1
 
     return-wide v0
@@ -89,7 +81,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 481
     const/4 v0, 0x1
 
     return v0
@@ -109,16 +100,13 @@
 
     const/4 v4, 0x0
 
-    .line 506
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/WallpaperCell;
 
-    .line 507
     .local v0, "wallpaperCell":Lorg/telegram/ui/Cells/WallpaperCell;
     if-nez p2, :cond_2
 
-    .line 508
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->hasWallpaperFromTheme()Z
 
     move-result v1
@@ -143,17 +131,14 @@
     :goto_0
     invoke-virtual {v0, v4, v1, v4, v5}, Lorg/telegram/ui/Cells/WallpaperCell;->setWallpaper(Lorg/telegram/tgnet/TLRPC$WallPaper;ILandroid/graphics/drawable/Drawable;Z)V
 
-    .line 522
     :goto_1
     return-void
 
     :cond_1
     move v1, v2
 
-    .line 508
     goto :goto_0
 
-    .line 510
     :cond_2
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->hasWallpaperFromTheme()Z
 
@@ -161,10 +146,8 @@
 
     if-eqz v1, :cond_7
 
-    .line 511
     if-ne p2, v3, :cond_4
 
-    .line 512
     iget-object v1, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/WallpapersActivity;->access$100(Lorg/telegram/ui/WallpapersActivity;)Z
@@ -186,11 +169,9 @@
 
     goto :goto_1
 
-    .line 515
     :cond_4
     add-int/lit8 p2, p2, -0x2
 
-    .line 520
     :goto_2
     iget-object v1, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
@@ -230,7 +211,6 @@
 
     goto :goto_1
 
-    .line 518
     :cond_7
     add-int/lit8 p2, p2, -0x1
 
@@ -243,14 +223,12 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 500
     new-instance v0, Lorg/telegram/ui/Cells/WallpaperCell;
 
     iget-object v1, p0, Lorg/telegram/ui/WallpapersActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/WallpaperCell;-><init>(Landroid/content/Context;)V
 
-    .line 501
     .local v0, "view":Lorg/telegram/ui/Cells/WallpaperCell;
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 

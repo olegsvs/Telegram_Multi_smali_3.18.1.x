@@ -39,32 +39,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 52
     invoke-direct {p0, p1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 41
     iput v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->minOffset:I
 
-    .line 44
     iput v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
-    .line 45
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
-    .line 47
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->dirty:Z
 
-    .line 130
     iput-boolean v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->down:Z
 
-    .line 53
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->init()V
 
-    .line 54
     return-void
 .end method
 
@@ -76,32 +68,24 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 57
     invoke-direct {p0, p1, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;Landroid/util/AttributeSet;)V
 
-    .line 41
     iput v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->minOffset:I
 
-    .line 44
     iput v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
-    .line 45
     const/4 v0, -0x1
 
     iput v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
-    .line 47
     const/4 v0, 0x1
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->dirty:Z
 
-    .line 130
     iput-boolean v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->down:Z
 
-    .line 58
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->init()V
 
-    .line 59
     return-void
 .end method
 
@@ -113,18 +97,14 @@
 
     const/4 v5, 0x0
 
-    .line 75
     invoke-virtual {p0, v5}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setOrientation(I)V
 
-    .line 76
     const/4 v2, 0x1
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setGravity(I)V
 
-    .line 77
     invoke-virtual {p0, v5}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setWillNotDraw(Z)V
 
-    .line 79
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getContext()Landroid/content/Context;
@@ -135,19 +115,16 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgSeekSelector:Landroid/widget/ImageView;
 
-    .line 80
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgSeekSelector:Landroid/widget/ImageView;
 
     iget-object v3, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->seekSelector:Landroid/graphics/drawable/Drawable;
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setImageDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 81
     new-instance v1, Landroid/widget/LinearLayout$LayoutParams;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->seekSelector:Landroid/graphics/drawable/Drawable;
 
-    .line 82
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getIntrinsicWidth()I
 
     move-result v2
@@ -160,13 +137,11 @@
 
     invoke-direct {v1, v2, v3}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 83
     .local v1, "paramsSeek":Landroid/widget/LinearLayout$LayoutParams;
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgSeekSelector:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v2, v1}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 85
     new-instance v2, Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getContext()Landroid/content/Context;
@@ -177,7 +152,6 @@
 
     iput-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
-    .line 86
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getContext()Landroid/content/Context;
@@ -196,19 +170,16 @@
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 87
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     sget-object v3, Landroid/widget/ImageView$ScaleType;->FIT_XY:Landroid/widget/ImageView$ScaleType;
 
     invoke-virtual {v2, v3}, Landroid/widget/ImageView;->setScaleType(Landroid/widget/ImageView$ScaleType;)V
 
-    .line 88
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     invoke-direct {v0, v6, v6}, Landroid/widget/LinearLayout$LayoutParams;-><init>(II)V
 
-    .line 90
     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getOffset()I
 
@@ -220,12 +191,10 @@
 
     invoke-virtual {v0, v5, v2, v5, v3}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 91
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {p0, v2, v0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 92
     return-void
 .end method
 
@@ -233,12 +202,10 @@
     .locals 6
 
     .prologue
-    .line 126
     iget v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->minOffset:I
 
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->seekSelector:Landroid/graphics/drawable/Drawable;
 
-    .line 127
     invoke-virtual {v1}, Landroid/graphics/drawable/Drawable;->getIntrinsicHeight()I
 
     move-result v1
@@ -249,7 +216,6 @@
 
     div-double/2addr v2, v4
 
-    .line 126
     invoke-static {v2, v3}, Ljava/lang/Math;->ceil(D)D
 
     move-result-wide v2
@@ -267,7 +233,6 @@
     .locals 2
 
     .prologue
-    .line 122
     iget-object v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgSeekSelector:Landroid/widget/ImageView;
 
     invoke-virtual {v0}, Landroid/widget/ImageView;->getHeight()I
@@ -295,7 +260,6 @@
     .locals 2
 
     .prologue
-    .line 69
     invoke-virtual {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getContext()Landroid/content/Context;
 
     move-result-object v0
@@ -312,10 +276,8 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->seekSelector:Landroid/graphics/drawable/Drawable;
 
-    .line 71
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->buildUI()V
 
-    .line 72
     return-void
 .end method
 
@@ -323,19 +285,16 @@
     .locals 2
 
     .prologue
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->listener:Lorg/telegram/ui/Components/HsvAlphaSelectorView$OnAlphaChangedListener;
 
     if-eqz v0, :cond_0
 
-    .line 223
     iget-object v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->listener:Lorg/telegram/ui/Components/HsvAlphaSelectorView$OnAlphaChangedListener;
 
     iget v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
     invoke-interface {v0, p0, v1}, Lorg/telegram/ui/Components/HsvAlphaSelectorView$OnAlphaChangedListener;->alphaChanged(Lorg/telegram/ui/Components/HsvAlphaSelectorView;I)V
 
-    .line 224
     :cond_0
     return-void
 .end method
@@ -344,7 +303,6 @@
     .locals 9
 
     .prologue
-    .line 112
     iget v3, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
     rsub-int v3, v3, 0xff
@@ -367,13 +325,11 @@
 
     float-to-int v0, v3
 
-    .line 114
     .local v0, "alphaY":I
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getSelectorOffset()I
 
     move-result v1
 
-    .line 115
     .local v1, "halfHeight":I
     iget-object v3, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
@@ -381,7 +337,6 @@
 
     move-result v2
 
-    .line 117
     .local v2, "vertOffset":I
     iget-object v3, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgSeekSelector:Landroid/widget/ImageView;
 
@@ -411,7 +366,6 @@
 
     invoke-virtual {v3, v4, v5, v6, v7}, Landroid/widget/ImageView;->layout(IIII)V
 
-    .line 118
     return-void
 .end method
 
@@ -421,7 +375,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 186
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getHeight()I
@@ -430,41 +383,33 @@
 
     if-gtz v2, :cond_1
 
-    .line 188
     const/4 v1, 0x1
 
     iput-boolean v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->dirty:Z
 
-    .line 189
     invoke-virtual {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->invalidate()V
 
-    .line 213
     :cond_0
     :goto_0
     return-void
 
-    .line 192
     :cond_1
     new-instance v12, Landroid/graphics/Paint;
 
     invoke-direct {v12}, Landroid/graphics/Paint;-><init>()V
 
-    .line 194
     .local v12, "paint":Landroid/graphics/Paint;
     const/4 v13, 0x0
 
-    .line 195
     .local v13, "drawCache":Landroid/graphics/Bitmap;
     if-nez v13, :cond_0
 
-    .line 197
     iget v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
     const/high16 v3, -0x1000000
 
     or-int v6, v2, v3
 
-    .line 198
     .local v6, "colorFullAlpha":I
     iget v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
@@ -472,7 +417,6 @@
 
     and-int v5, v2, v3
 
-    .line 200
     .local v5, "colorNoAlpha":I
     new-instance v0, Landroid/graphics/LinearGradient;
 
@@ -492,11 +436,9 @@
 
     invoke-direct/range {v0 .. v7}, Landroid/graphics/LinearGradient;-><init>(FFFFIILandroid/graphics/Shader$TileMode;)V
 
-    .line 203
     .local v0, "shader":Landroid/graphics/Shader;
     invoke-virtual {v12, v0}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 205
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {v2}, Landroid/widget/ImageView;->getWidth()I
@@ -515,12 +457,10 @@
 
     move-result-object v13
 
-    .line 207
     new-instance v7, Landroid/graphics/Canvas;
 
     invoke-direct {v7, v13}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 208
     .local v7, "cacheCanvas":Landroid/graphics/Canvas;
     iget-object v2, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
@@ -544,7 +484,6 @@
 
     invoke-virtual/range {v7 .. v12}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 211
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v13}, Landroid/widget/ImageView;->setImageBitmap(Landroid/graphics/Bitmap;)V
@@ -557,7 +496,6 @@
     .param p1, "y"    # I
 
     .prologue
-    .line 155
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {v1}, Landroid/widget/ImageView;->getTop()I
@@ -566,7 +504,6 @@
 
     sub-int v0, p1, v1
 
-    .line 156
     .local v0, "alphaY":I
     const/16 v1, 0xff
 
@@ -602,13 +539,10 @@
 
     iput v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
-    .line 158
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->placeSelector()V
 
-    .line 160
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->onAlphaChanged()V
 
-    .line 161
     return-void
 .end method
 
@@ -618,7 +552,6 @@
     .locals 1
 
     .prologue
-    .line 173
     iget v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
     int-to-float v0, v0
@@ -631,24 +564,19 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 96
     iget-boolean v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->dirty:Z
 
     if-eqz v0, :cond_0
 
-    .line 98
     const/4 v0, 0x0
 
     iput-boolean v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->dirty:Z
 
-    .line 99
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setAlphaImage()V
 
-    .line 101
     :cond_0
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onDraw(Landroid/graphics/Canvas;)V
 
-    .line 102
     return-void
 .end method
 
@@ -661,13 +589,10 @@
     .param p5, "b"    # I
 
     .prologue
-    .line 106
     invoke-super/range {p0 .. p5}, Landroid/widget/LinearLayout;->onLayout(ZIIII)V
 
-    .line 107
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->placeSelector()V
 
-    .line 108
     return-void
 .end method
 
@@ -678,17 +603,14 @@
     .prologue
     const/4 v0, 0x1
 
-    .line 134
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 136
     iput-boolean v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->down:Z
 
-    .line 137
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -697,11 +619,9 @@
 
     invoke-direct {p0, v1}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setPosition(I)V
 
-    .line 150
     :goto_0
     return v0
 
-    .line 140
     :cond_0
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getAction()I
 
@@ -709,14 +629,12 @@
 
     if-ne v1, v0, :cond_1
 
-    .line 142
     const/4 v1, 0x0
 
     iput-boolean v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->down:Z
 
     goto :goto_0
 
-    .line 145
     :cond_1
     iget-boolean v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->down:Z
 
@@ -730,7 +648,6 @@
 
     if-ne v1, v2, :cond_2
 
-    .line 147
     invoke-virtual {p1}, Landroid/view/MotionEvent;->getY()F
 
     move-result v1
@@ -741,7 +658,6 @@
 
     goto :goto_0
 
-    .line 150
     :cond_2
     invoke-super {p0, p1}, Landroid/widget/LinearLayout;->onTouchEvent(Landroid/view/MotionEvent;)Z
 
@@ -755,20 +671,16 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 165
     iget v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
     if-ne v0, p1, :cond_0
 
-    .line 169
     :goto_0
     return-void
 
-    .line 167
     :cond_0
     iput p1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->alpha:I
 
-    .line 168
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->placeSelector()V
 
     goto :goto_0
@@ -779,20 +691,16 @@
     .param p1, "color"    # I
 
     .prologue
-    .line 178
     iget v0, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
     if-ne v0, p1, :cond_0
 
-    .line 182
     :goto_0
     return-void
 
-    .line 180
     :cond_0
     iput p1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->color:I
 
-    .line 181
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->setAlphaImage()V
 
     goto :goto_0
@@ -805,10 +713,8 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 62
     iput p1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->minOffset:I
 
-    .line 63
     new-instance v0, Landroid/widget/LinearLayout$LayoutParams;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
@@ -819,7 +725,6 @@
 
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout$LayoutParams;-><init>(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 64
     .local v0, "params":Landroid/widget/LinearLayout$LayoutParams;
     invoke-direct {p0}, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->getOffset()I
 
@@ -831,12 +736,10 @@
 
     invoke-virtual {v0, v3, v1, v3, v2}, Landroid/widget/LinearLayout$LayoutParams;->setMargins(IIII)V
 
-    .line 65
     iget-object v1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->imgAlpha:Landroid/widget/ImageView;
 
     invoke-virtual {v1, v0}, Landroid/widget/ImageView;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 66
     return-void
 .end method
 
@@ -845,9 +748,7 @@
     .param p1, "listener"    # Lorg/telegram/ui/Components/HsvAlphaSelectorView$OnAlphaChangedListener;
 
     .prologue
-    .line 217
     iput-object p1, p0, Lorg/telegram/ui/Components/HsvAlphaSelectorView;->listener:Lorg/telegram/ui/Components/HsvAlphaSelectorView$OnAlphaChangedListener;
 
-    .line 218
     return-void
 .end method

@@ -36,7 +36,6 @@
     .locals 0
 
     .prologue
-    .line 458
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$10;->val$order:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -50,7 +49,6 @@
     .locals 1
 
     .prologue
-    .line 458
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
@@ -68,7 +66,6 @@
     .param p2, "rhs"    # Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
     .prologue
-    .line 461
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$10;->val$order:Ljava/util/ArrayList;
 
     iget-object v3, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;->set:Lorg/telegram/tgnet/TLRPC$StickerSet;
@@ -83,7 +80,6 @@
 
     move-result v0
 
-    .line 462
     .local v0, "index1":I
     iget-object v2, p0, Lorg/telegram/messenger/query/StickersQuery$10;->val$order:Ljava/util/ArrayList;
 
@@ -99,27 +95,21 @@
 
     move-result v1
 
-    .line 463
     .local v1, "index2":I
     if-le v0, v1, :cond_0
 
-    .line 464
     const/4 v2, 0x1
 
-    .line 468
     :goto_0
     return v2
 
-    .line 465
     :cond_0
     if-ge v0, v1, :cond_1
 
-    .line 466
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 468
     :cond_1
     const/4 v2, 0x0
 

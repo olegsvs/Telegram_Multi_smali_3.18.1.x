@@ -56,36 +56,30 @@
     .locals 1
 
     .prologue
-    .line 29
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 30
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->countries:Ljava/util/ArrayList;
 
-    .line 31
     const-string/jumbo v0, ""
 
     iput-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->callingCode:Ljava/lang/String;
 
-    .line 32
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->trunkPrefixes:Ljava/util/ArrayList;
 
-    .line 33
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->intlPrefixes:Ljava/util/ArrayList;
 
-    .line 34
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -106,18 +100,14 @@
 
     const/4 v8, 0x0
 
-    .line 57
     move-object v3, p1
 
-    .line 58
     .local v3, "str":Ljava/lang/String;
     const/4 v5, 0x0
 
-    .line 59
     .local v5, "trunkPrefix":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 60
     .local v0, "intlPrefix":Ljava/lang/String;
     iget-object v6, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->callingCode:Ljava/lang/String;
 
@@ -127,10 +117,8 @@
 
     if-eqz v6, :cond_2
 
-    .line 61
     iget-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->callingCode:Ljava/lang/String;
 
-    .line 62
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -139,7 +127,6 @@
 
     move-result-object v3
 
-    .line 71
     :cond_0
     :goto_0
     iget-object v6, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->ruleSets:Ljava/util/ArrayList;
@@ -161,36 +148,29 @@
 
     check-cast v2, Lorg/telegram/PhoneFormat/RuleSet;
 
-    .line 72
     .local v2, "set":Lorg/telegram/PhoneFormat/RuleSet;
     invoke-virtual {v2, v3, v0, v5, v9}, Lorg/telegram/PhoneFormat/RuleSet;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 73
     .local v1, "phone":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 89
     .end local v1    # "phone":Ljava/lang/String;
     .end local v2    # "set":Lorg/telegram/PhoneFormat/RuleSet;
     :goto_1
     return-object v1
 
-    .line 64
     :cond_2
     invoke-virtual {p0, v3}, Lorg/telegram/PhoneFormat/CallingCodeInfo;->matchingTrunkCode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 65
     .local v4, "trunk":Ljava/lang/String;
     if-eqz v4, :cond_0
 
-    .line 66
     move-object v5, v4
 
-    .line 67
     invoke-virtual {v5}, Ljava/lang/String;->length()I
 
     move-result v6
@@ -201,7 +181,6 @@
 
     goto :goto_0
 
-    .line 78
     .end local v4    # "trunk":Ljava/lang/String;
     :cond_3
     iget-object v6, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->ruleSets:Ljava/util/ArrayList;
@@ -223,19 +202,16 @@
 
     check-cast v2, Lorg/telegram/PhoneFormat/RuleSet;
 
-    .line 79
     .restart local v2    # "set":Lorg/telegram/PhoneFormat/RuleSet;
     invoke-virtual {v2, v3, v0, v5, v8}, Lorg/telegram/PhoneFormat/RuleSet;->format(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 80
     .restart local v1    # "phone":Ljava/lang/String;
     if-eqz v1, :cond_4
 
     goto :goto_1
 
-    .line 85
     .end local v1    # "phone":Ljava/lang/String;
     .end local v2    # "set":Lorg/telegram/PhoneFormat/RuleSet;
     :cond_5
@@ -247,7 +223,6 @@
 
     if-eqz v6, :cond_6
 
-    .line 86
     const-string/jumbo v6, "%s %s"
 
     const/4 v7, 0x2
@@ -267,7 +242,6 @@
     :cond_6
     move-object v1, p1
 
-    .line 89
     goto :goto_1
 .end method
 
@@ -280,18 +254,14 @@
 
     const/4 v6, 0x1
 
-    .line 93
     move-object v2, p1
 
-    .line 94
     .local v2, "str":Ljava/lang/String;
     const/4 v4, 0x0
 
-    .line 95
     .local v4, "trunkPrefix":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 96
     .local v0, "intlPrefix":Ljava/lang/String;
     iget-object v8, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->callingCode:Ljava/lang/String;
 
@@ -301,10 +271,8 @@
 
     if-eqz v8, :cond_2
 
-    .line 97
     iget-object v0, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->callingCode:Ljava/lang/String;
 
-    .line 98
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
     move-result v8
@@ -313,7 +281,6 @@
 
     move-result-object v2
 
-    .line 107
     :cond_0
     :goto_0
     iget-object v8, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->ruleSets:Ljava/util/ArrayList;
@@ -335,36 +302,29 @@
 
     check-cast v1, Lorg/telegram/PhoneFormat/RuleSet;
 
-    .line 108
     .local v1, "set":Lorg/telegram/PhoneFormat/RuleSet;
     invoke-virtual {v1, v2, v0, v4, v6}, Lorg/telegram/PhoneFormat/RuleSet;->isValid(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v5
 
-    .line 109
     .local v5, "valid":Z
     if-eqz v5, :cond_1
 
-    .line 121
     .end local v1    # "set":Lorg/telegram/PhoneFormat/RuleSet;
     .end local v5    # "valid":Z
     :goto_1
     return v6
 
-    .line 100
     :cond_2
     invoke-virtual {p0, v2}, Lorg/telegram/PhoneFormat/CallingCodeInfo;->matchingTrunkCode(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v3
 
-    .line 101
     .local v3, "trunk":Ljava/lang/String;
     if-eqz v3, :cond_0
 
-    .line 102
     move-object v4, v3
 
-    .line 103
     invoke-virtual {v4}, Ljava/lang/String;->length()I
 
     move-result v8
@@ -375,7 +335,6 @@
 
     goto :goto_0
 
-    .line 114
     .end local v3    # "trunk":Ljava/lang/String;
     :cond_3
     iget-object v8, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->ruleSets:Ljava/util/ArrayList;
@@ -397,13 +356,11 @@
 
     check-cast v1, Lorg/telegram/PhoneFormat/RuleSet;
 
-    .line 115
     .restart local v1    # "set":Lorg/telegram/PhoneFormat/RuleSet;
     invoke-virtual {v1, v2, v0, v4, v7}, Lorg/telegram/PhoneFormat/RuleSet;->isValid(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Z)Z
 
     move-result v5
 
-    .line 116
     .restart local v5    # "valid":Z
     if-eqz v5, :cond_4
 
@@ -414,7 +371,6 @@
     :cond_5
     move v6, v7
 
-    .line 121
     goto :goto_1
 .end method
 
@@ -423,7 +379,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 38
     iget-object v1, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->intlPrefixes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -443,7 +398,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 39
     .local v0, "code":Ljava/lang/String;
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -451,7 +405,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 43
     .end local v0    # "code":Ljava/lang/String;
     :goto_0
     return-object v0
@@ -467,7 +420,6 @@
     .param p1, "str"    # Ljava/lang/String;
 
     .prologue
-    .line 47
     iget-object v1, p0, Lorg/telegram/PhoneFormat/CallingCodeInfo;->trunkPrefixes:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->iterator()Ljava/util/Iterator;
@@ -487,7 +439,6 @@
 
     check-cast v0, Ljava/lang/String;
 
-    .line 48
     .local v0, "code":Ljava/lang/String;
     invoke-virtual {p1, v0}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
 
@@ -495,7 +446,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 53
     .end local v0    # "code":Ljava/lang/String;
     :goto_0
     return-object v0

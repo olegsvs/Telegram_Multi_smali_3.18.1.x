@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PaymentFormActivity$23;
 
     .prologue
-    .line 2151
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
     iput-object p2, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,26 +54,22 @@
 
     const/4 v1, 0x0
 
-    .line 2154
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$23;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2155
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
     iget-object v0, v0, Lorg/telegram/ui/PaymentFormActivity$23;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$2400(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2156
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-eqz v0, :cond_1
 
-    .line 2157
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v6, v0, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -91,7 +86,6 @@
     :goto_0
     packed-switch v0, :pswitch_data_0
 
-    .line 2186
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v2, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
@@ -106,12 +100,10 @@
 
     invoke-static {v0, v2, v3, v1}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 2190
     :cond_1
     :goto_1
     return-void
 
-    .line 2157
     :sswitch_0
     const-string/jumbo v7, "REQ_INFO_NAME_INVALID"
 
@@ -229,7 +221,6 @@
 
     goto :goto_0
 
-    .line 2159
     :pswitch_0
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -241,7 +232,6 @@
 
     goto :goto_1
 
-    .line 2162
     :pswitch_1
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -253,7 +243,6 @@
 
     goto :goto_1
 
-    .line 2165
     :pswitch_2
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -265,7 +254,6 @@
 
     goto :goto_1
 
-    .line 2168
     :pswitch_3
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -275,7 +263,6 @@
 
     goto/16 :goto_1
 
-    .line 2171
     :pswitch_4
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -285,7 +272,6 @@
 
     goto/16 :goto_1
 
-    .line 2174
     :pswitch_5
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -297,7 +283,6 @@
 
     goto/16 :goto_1
 
-    .line 2177
     :pswitch_6
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -307,7 +292,6 @@
 
     goto/16 :goto_1
 
-    .line 2180
     :pswitch_7
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -317,7 +301,6 @@
 
     goto/16 :goto_1
 
-    .line 2183
     :pswitch_8
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$23$2;->this$1:Lorg/telegram/ui/PaymentFormActivity$23;
 
@@ -327,7 +310,6 @@
 
     goto/16 :goto_1
 
-    .line 2157
     nop
 
     :sswitch_data_0

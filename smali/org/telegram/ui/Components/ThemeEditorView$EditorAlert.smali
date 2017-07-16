@@ -69,15 +69,12 @@
     .param p3, "items"    # [Lorg/telegram/ui/ActionBar/ThemeDescription;
 
     .prologue
-    .line 499
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
-    .line 500
     const/4 v0, 0x1
 
     invoke-direct {p0, p2, v0}, Lorg/telegram/ui/ActionBar/BottomSheet;-><init>(Landroid/content/Context;Z)V
 
-    .line 502
     invoke-virtual {p2}, Landroid/content/Context;->getResources()Landroid/content/res/Resources;
 
     move-result-object v0
@@ -94,21 +91,18 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
-    .line 504
     new-instance v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$1;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Landroid/content/Context;Lorg/telegram/ui/Components/ThemeEditorView;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
-    .line 569
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/view/ViewGroup;->setWillNotDraw(Z)V
 
-    .line 570
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     sget v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->backgroundPaddingLeft:I
@@ -121,14 +115,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/view/ViewGroup;->setPadding(IIII)V
 
-    .line 572
     new-instance v0, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v0, p2}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 573
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
@@ -145,14 +137,12 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setPadding(IIII)V
 
-    .line 574
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setClipToPadding(Z)V
 
-    .line 575
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -167,21 +157,18 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 576
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setHorizontalScrollBarEnabled(Z)V
 
-    .line 577
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 578
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
@@ -198,7 +185,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 579
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;
@@ -209,28 +195,24 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 580
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const v1, -0xa0909
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setGlowColor(I)V
 
-    .line 581
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setItemAnimator(Lorg/telegram/messenger/support/widget/RecyclerView$ItemAnimator;)V
 
-    .line 582
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutAnimation(Landroid/view/animation/LayoutAnimationController;)V
 
-    .line 583
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$2;
@@ -239,7 +221,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 602
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$3;
@@ -248,21 +229,18 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnScrollListener(Lorg/telegram/messenger/support/widget/RecyclerView$OnScrollListener;)V
 
-    .line 609
     new-instance v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     invoke-direct {v0, p0, p2}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
-    .line 610
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setVisibility(I)V
 
-    .line 611
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
@@ -279,21 +257,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 613
     new-instance v0, Landroid/view/View;
 
     invoke-direct {v0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->shadow:Landroid/view/View;
 
-    .line 614
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->shadow:Landroid/view/View;
 
     const v1, 0x7f0200b2
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundResource(I)V
 
-    .line 615
     iget-object v10, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     iget-object v11, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->shadow:Landroid/view/View;
@@ -318,21 +293,18 @@
 
     invoke-virtual {v10, v11, v0}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 617
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
-    .line 618
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 619
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
@@ -349,12 +321,10 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 621
     new-instance v7, Landroid/widget/TextView;
 
     invoke-direct {v7, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 622
     .local v7, "closeButton":Landroid/widget/TextView;
     const/4 v0, 0x1
 
@@ -362,17 +332,14 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 623
     const v0, -0xe65818
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 624
     const/16 v0, 0x11
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 625
     const/high16 v0, 0x2f000000
 
     const/4 v1, 0x0
@@ -383,7 +350,6 @@
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 626
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -402,7 +368,6 @@
 
     invoke-virtual {v7, v0, v1, v2, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 627
     const-string/jumbo v0, "CloseEditor"
 
     const v1, 0x7f070184
@@ -417,7 +382,6 @@
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 628
     const-string/jumbo v0, "fonts/rmedium.ttf"
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -426,7 +390,6 @@
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 629
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
     const/4 v1, -0x2
@@ -441,19 +404,16 @@
 
     invoke-virtual {v0, v7, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 630
     new-instance v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$4;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$4;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Lorg/telegram/ui/Components/ThemeEditorView;)V
 
     invoke-virtual {v7, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 637
     new-instance v9, Landroid/widget/TextView;
 
     invoke-direct {v9, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 638
     .local v9, "saveButton":Landroid/widget/TextView;
     const/4 v0, 0x1
 
@@ -461,17 +421,14 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 639
     const v0, -0xe65818
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 640
     const/16 v0, 0x11
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 641
     const/high16 v0, 0x2f000000
 
     const/4 v1, 0x0
@@ -482,7 +439,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 642
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -501,7 +457,6 @@
 
     invoke-virtual {v9, v0, v1, v2, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 643
     const-string/jumbo v0, "SaveTheme"
 
     const v1, 0x7f07055d
@@ -516,7 +471,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 644
     const-string/jumbo v0, "fonts/rmedium.ttf"
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -525,7 +479,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 645
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
     const/4 v1, -0x2
@@ -540,35 +493,30 @@
 
     invoke-virtual {v0, v9, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 646
     new-instance v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$5;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Lorg/telegram/ui/Components/ThemeEditorView;)V
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 656
     new-instance v0, Landroid/widget/FrameLayout;
 
     invoke-direct {v0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
-    .line 657
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     const/16 v1, 0x8
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 658
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 659
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
@@ -585,14 +533,12 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/view/ViewGroup;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 661
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
-    .line 662
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -601,21 +547,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 663
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const v1, -0xe65818
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 664
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 665
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const/high16 v1, 0x2f000000
@@ -628,7 +571,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 666
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const/high16 v1, 0x41900000    # 18.0f
@@ -649,7 +591,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 667
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const-string/jumbo v1, "Cancel"
@@ -666,7 +607,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 668
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -677,7 +617,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 669
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
@@ -694,7 +633,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 670
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->cancelButton:Landroid/widget/TextView;
 
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$6;
@@ -703,18 +641,14 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 680
     new-instance v8, Landroid/widget/LinearLayout;
 
     invoke-direct {v8, p2}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 681
-    .local v8, "linearLayout":Landroid/widget/LinearLayout;
     const/4 v0, 0x0
 
     invoke-virtual {v8, v0}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 682
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     const/4 v1, -0x2
@@ -729,14 +663,12 @@
 
     invoke-virtual {v0, v8, v1}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 684
     new-instance v0, Landroid/widget/TextView;
 
     invoke-direct {v0, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
-    .line 685
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const/4 v1, 0x1
@@ -745,21 +677,18 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 686
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const v1, -0xe65818
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 687
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const/16 v1, 0x11
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 688
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const/high16 v1, 0x2f000000
@@ -772,7 +701,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 689
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const/high16 v1, 0x41900000    # 18.0f
@@ -793,7 +721,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 690
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const-string/jumbo v1, "Default"
@@ -810,7 +737,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 691
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const-string/jumbo v1, "fonts/rmedium.ttf"
@@ -821,7 +747,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 692
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     const/4 v1, -0x2
@@ -836,7 +761,6 @@
 
     invoke-virtual {v8, v0, v1}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 693
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->defaultButtom:Landroid/widget/TextView;
 
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$7;
@@ -845,13 +769,11 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 703
     new-instance v9, Landroid/widget/TextView;
 
     .end local v9    # "saveButton":Landroid/widget/TextView;
     invoke-direct {v9, p2}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 704
     .restart local v9    # "saveButton":Landroid/widget/TextView;
     const/4 v0, 0x1
 
@@ -859,17 +781,14 @@
 
     invoke-virtual {v9, v0, v1}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 705
     const v0, -0xe65818
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 706
     const/16 v0, 0x11
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 707
     const/high16 v0, 0x2f000000
 
     const/4 v1, 0x0
@@ -880,7 +799,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 708
     const/high16 v0, 0x41900000    # 18.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -899,7 +817,6 @@
 
     invoke-virtual {v9, v0, v1, v2, v3}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 709
     const-string/jumbo v0, "Save"
 
     const v1, 0x7f070559
@@ -914,7 +831,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 710
     const-string/jumbo v0, "fonts/rmedium.ttf"
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->getTypeface(Ljava/lang/String;)Landroid/graphics/Typeface;
@@ -923,7 +839,6 @@
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setTypeface(Landroid/graphics/Typeface;)V
 
-    .line 711
     const/4 v0, -0x2
 
     const/4 v1, -0x1
@@ -936,14 +851,12 @@
 
     invoke-virtual {v8, v9, v0}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 712
     new-instance v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$8;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$8;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;Lorg/telegram/ui/Components/ThemeEditorView;)V
 
     invoke-virtual {v9, v0}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 718
     return-void
 .end method
 
@@ -952,7 +865,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->ignoreTextChange:Z
 
     return v0
@@ -964,7 +876,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 125
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->ignoreTextChange:Z
 
     return p1
@@ -976,7 +887,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     iput p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->previousScrollPosition:I
 
     return p1
@@ -987,7 +897,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     invoke-direct {p0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->updateLayout()V
 
     return-void
@@ -997,7 +906,6 @@
     .locals 1
 
     .prologue
-    .line 125
     sget v0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->backgroundPaddingTop:I
 
     return v0
@@ -1008,7 +916,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->shadowDrawable:Landroid/graphics/drawable/Drawable;
 
     return-object v0
@@ -1019,7 +926,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listAdapter:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;
 
     return-object v0
@@ -1031,7 +937,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 125
     invoke-direct {p0, p1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->setColorPickerVisible(Z)V
 
     return-void
@@ -1042,7 +947,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -1054,7 +958,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 125
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->animationInProgress:Z
 
     return p1
@@ -1065,7 +968,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -1076,7 +978,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-boolean v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->startedColorChange:Z
 
     return v0
@@ -1088,7 +989,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 125
     iput-boolean p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->startedColorChange:Z
 
     return p1
@@ -1099,7 +999,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorChangeAnimation:Landroid/animation/AnimatorSet;
 
     return-object v0
@@ -1111,7 +1010,6 @@
     .param p1, "x1"    # Landroid/animation/AnimatorSet;
 
     .prologue
-    .line 125
     iput-object p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorChangeAnimation:Landroid/animation/AnimatorSet;
 
     return-object p1
@@ -1122,7 +1020,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->backDrawable:Landroid/graphics/drawable/ColorDrawable;
 
     return-object v0
@@ -1133,7 +1030,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     return-object v0
@@ -1144,7 +1040,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     return v0
@@ -1156,7 +1051,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 125
     iput p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     return p1
@@ -1167,7 +1061,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -1178,7 +1071,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;
 
     .prologue
-    .line 125
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     return-object v0
@@ -1190,7 +1082,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 780
     iget-object v3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/RecyclerListView;->getChildCount()I
@@ -1199,14 +1090,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 781
     iget-object v3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v2}, Lorg/telegram/ui/Components/RecyclerListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v0
 
-    .line 782
     .local v0, "child":Landroid/view/View;
     iget-object v3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1216,11 +1105,9 @@
 
     check-cast v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 783
     .local v1, "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     if-eqz v1, :cond_1
 
-    .line 784
     iget-object v3, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/RecyclerListView;->getPaddingTop()I
@@ -1246,7 +1133,6 @@
     :cond_0
     sub-int v2, v3, v2
 
-    .line 787
     .end local v0    # "child":Landroid/view/View;
     .end local v1    # "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     :goto_0
@@ -1273,38 +1159,30 @@
 
     const/4 v6, 0x0
 
-    .line 721
     if-eqz p1, :cond_0
 
-    .line 722
     iput-boolean v7, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->animationInProgress:Z
 
-    .line 723
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setVisibility(I)V
 
-    .line 724
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v6}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 725
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     invoke-virtual {v1, v8}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setAlpha(F)V
 
-    .line 726
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v8}, Landroid/widget/FrameLayout;->setAlpha(F)V
 
-    .line 728
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 729
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     const/4 v1, 0x5
 
@@ -1318,7 +1196,6 @@
 
     aput v9, v4, v6
 
-    .line 730
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1333,7 +1210,6 @@
 
     aput v9, v4, v6
 
-    .line 731
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1348,7 +1224,6 @@
 
     aput v8, v4, v6
 
-    .line 732
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1365,7 +1240,6 @@
 
     aput v8, v5, v6
 
-    .line 733
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -1380,7 +1254,6 @@
 
     iget-object v5, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 734
     invoke-virtual {v5}, Lorg/telegram/ui/Components/RecyclerListView;->getPaddingTop()I
 
     move-result v5
@@ -1393,15 +1266,12 @@
 
     aput-object v3, v1, v2
 
-    .line 729
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 735
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 736
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ThemeEditorView;->access$1900(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/animation/DecelerateInterpolator;
@@ -1410,26 +1280,21 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 737
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$9;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 745
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 746
     iget v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     iput v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->previousScrollPosition:I
 
-    .line 777
     :goto_0
     return-void
 
-    .line 748
     .end local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -1440,7 +1305,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 749
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ThemeEditorView;->access$2200(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/app/Activity;
@@ -1451,7 +1315,6 @@
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/LaunchActivity;->rebuildAllFragments(Z)V
 
-    .line 751
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
@@ -1461,37 +1324,30 @@
 
     invoke-static {v1, v6}, Lorg/telegram/ui/ActionBar/Theme;->saveCurrentTheme(Ljava/lang/String;Z)V
 
-    .line 752
     invoke-virtual {p0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->getCurrentFocus()Landroid/view/View;
 
     move-result-object v1
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->hideKeyboard(Landroid/view/View;)V
 
-    .line 753
     iput-boolean v7, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->animationInProgress:Z
 
-    .line 754
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v6}, Lorg/telegram/ui/Components/RecyclerListView;->setVisibility(I)V
 
-    .line 755
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->bottomSaveLayout:Landroid/widget/FrameLayout;
 
     invoke-virtual {v1, v6}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 756
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v1, v8}, Lorg/telegram/ui/Components/RecyclerListView;->setAlpha(F)V
 
-    .line 757
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 758
     .restart local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     const/4 v1, 0x5
 
@@ -1505,7 +1361,6 @@
 
     aput v8, v4, v6
 
-    .line 759
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1520,7 +1375,6 @@
 
     aput v8, v4, v6
 
-    .line 760
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1535,7 +1389,6 @@
 
     aput v9, v4, v6
 
-    .line 761
     invoke-static {v2, v3, v4}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v2
@@ -1552,7 +1405,6 @@
 
     aput v9, v5, v6
 
-    .line 762
     invoke-static {v3, v4, v5}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
@@ -1569,22 +1421,18 @@
 
     aput v5, v4, v6
 
-    .line 763
     invoke-static {p0, v3, v4}, Landroid/animation/ObjectAnimator;->ofInt(Ljava/lang/Object;Ljava/lang/String;[I)Landroid/animation/ObjectAnimator;
 
     move-result-object v3
 
     aput-object v3, v1, v2
 
-    .line 758
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether([Landroid/animation/Animator;)V
 
-    .line 764
     const-wide/16 v2, 0x96
 
     invoke-virtual {v0, v2, v3}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 765
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-static {v1}, Lorg/telegram/ui/Components/ThemeEditorView;->access$1900(Lorg/telegram/ui/Components/ThemeEditorView;)Landroid/view/animation/DecelerateInterpolator;
@@ -1593,17 +1441,14 @@
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 766
     new-instance v1, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$10;
 
     invoke-direct {v1, p0}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$10;-><init>(Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;)V
 
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 774
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 775
     iget-object v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listAdapter:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ListAdapter;
 
     iget-object v2, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->this$0:Lorg/telegram/ui/Components/ThemeEditorView;
@@ -1628,7 +1473,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 797
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/RecyclerListView;->getChildCount()I
@@ -1649,12 +1493,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 812
     :cond_0
     :goto_0
     return-void
 
-    .line 800
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1662,7 +1504,6 @@
 
     move-result-object v0
 
-    .line 801
     .local v0, "child":Landroid/view/View;
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1672,7 +1513,6 @@
 
     check-cast v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
 
-    .line 803
     .local v1, "holder":Lorg/telegram/ui/Components/RecyclerListView$Holder;
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1686,7 +1526,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 804
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -1694,7 +1533,6 @@
 
     move-result v3
 
-    .line 808
     .local v3, "top":I
     :goto_1
     if-lez v3, :cond_3
@@ -1709,19 +1547,16 @@
 
     move v2, v3
 
-    .line 809
     .local v2, "newOffset":I
     :cond_3
     iget v4, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     if-eq v4, v2, :cond_0
 
-    .line 810
     invoke-virtual {p0, v2}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->setScrollOffsetY(I)V
 
     goto :goto_0
 
-    .line 806
     .end local v2    # "newOffset":I
     .end local v3    # "top":I
     :cond_4
@@ -1747,7 +1582,6 @@
     .locals 1
 
     .prologue
-    .line 792
     const/4 v0, 0x0
 
     return v0
@@ -1757,7 +1591,6 @@
     .locals 1
 
     .prologue
-    .line 815
     iget v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     return v0
@@ -1770,14 +1603,12 @@
     .end annotation
 
     .prologue
-    .line 820
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iput p1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/RecyclerListView;->setTopGlowOffset(I)V
 
-    .line 821
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->colorPicker:Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;
 
     iget v1, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->scrollOffsetY:I
@@ -1786,11 +1617,9 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert$ColorPicker;->setTranslationY(F)V
 
-    .line 822
     iget-object v0, p0, Lorg/telegram/ui/Components/ThemeEditorView$EditorAlert;->containerView:Landroid/view/ViewGroup;
 
     invoke-virtual {v0}, Landroid/view/ViewGroup;->invalidate()V
 
-    .line 823
     return-void
 .end method

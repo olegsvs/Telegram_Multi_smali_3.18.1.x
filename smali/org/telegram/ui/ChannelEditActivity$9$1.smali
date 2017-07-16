@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelEditActivity$9;
 
     .prologue
-    .line 476
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$9;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 479
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -54,14 +52,12 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 480
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
     move-result v0
 
     if-eqz v0, :cond_0
 
-    .line 481
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -92,7 +88,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 485
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -132,17 +127,14 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->deleteUserFromChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 486
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$9$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$9;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$9;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChannelEditActivity;->finishFragment()V
 
-    .line 487
     return-void
 
-    .line 483
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 

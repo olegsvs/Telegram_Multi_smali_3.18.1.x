@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/SendMessagesHelper;
 
     .prologue
-    .line 64
     iput-object p1, p0, Lorg/telegram/messenger/SendMessagesHelper$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,12 +41,10 @@
     .param p1, "location"    # Landroid/location/Location;
 
     .prologue
-    .line 67
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/SendMessagesHelper;->access$000(Lorg/telegram/messenger/SendMessagesHelper;Landroid/location/Location;)V
 
-    .line 68
     iget-object v0, p0, Lorg/telegram/messenger/SendMessagesHelper$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-static {v0}, Lorg/telegram/messenger/SendMessagesHelper;->access$100(Lorg/telegram/messenger/SendMessagesHelper;)Ljava/util/HashMap;
@@ -56,7 +53,6 @@
 
     invoke-virtual {v0}, Ljava/util/HashMap;->clear()V
 
-    .line 69
     return-void
 .end method
 
@@ -64,7 +60,6 @@
     .locals 5
 
     .prologue
-    .line 73
     new-instance v0, Ljava/util/HashMap;
 
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
@@ -75,7 +70,6 @@
 
     invoke-direct {v0, v1}, Ljava/util/HashMap;-><init>(Ljava/util/Map;)V
 
-    .line 74
     .local v0, "waitingForLocationCopy":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/String;Lorg/telegram/messenger/MessageObject;>;"
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -93,7 +87,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 75
     iget-object v1, p0, Lorg/telegram/messenger/SendMessagesHelper$1;->this$0:Lorg/telegram/messenger/SendMessagesHelper;
 
     invoke-static {v1}, Lorg/telegram/messenger/SendMessagesHelper;->access$100(Lorg/telegram/messenger/SendMessagesHelper;)Ljava/util/HashMap;
@@ -102,6 +95,5 @@
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 76
     return-void
 .end method

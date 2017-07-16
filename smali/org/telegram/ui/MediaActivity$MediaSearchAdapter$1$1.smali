@@ -29,7 +29,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
     .prologue
-    .line 1980
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->this$2:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
     iput-object p2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->val$messageObjects:Ljava/util/ArrayList;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 1983
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->this$2:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
     iget v0, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->val$currentReqId:I
@@ -60,7 +58,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 1984
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->this$2:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
@@ -69,14 +66,12 @@
 
     iput-object v1, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->globalSearch:Ljava/util/ArrayList;
 
-    .line 1985
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->this$2:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
     iget-object v0, v0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->notifyDataSetChanged()V
 
-    .line 1987
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1$1;->this$2:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;
 
@@ -86,6 +81,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;->access$4402(Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;I)I
 
-    .line 1988
     return-void
 .end method

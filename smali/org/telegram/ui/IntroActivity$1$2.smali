@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/IntroActivity$1;
 
     .prologue
-    .line 193
     iput-object p1, p0, Lorg/telegram/ui/IntroActivity$1$2;->this$1:Lorg/telegram/ui/IntroActivity$1;
 
     iput-object p2, p0, Lorg/telegram/ui/IntroActivity$1$2;->val$fadeinImage:Landroid/widget/ImageView;
@@ -46,7 +45,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 201
     return-void
 .end method
 
@@ -55,7 +53,6 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 206
     return-void
 .end method
 
@@ -64,13 +61,11 @@
     .param p1, "animation"    # Landroid/view/animation/Animation;
 
     .prologue
-    .line 196
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity$1$2;->val$fadeinImage:Landroid/widget/ImageView;
 
     const/4 v1, 0x0
 
     invoke-virtual {v0, v1}, Landroid/widget/ImageView;->setVisibility(I)V
 
-    .line 197
     return-void
 .end method

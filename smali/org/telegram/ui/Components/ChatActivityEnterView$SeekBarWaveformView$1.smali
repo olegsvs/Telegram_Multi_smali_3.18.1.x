@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView$1;->val$this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -46,7 +45,6 @@
     .param p1, "progress"    # F
 
     .prologue
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -57,7 +55,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 117
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView$1;->this$1:Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/ChatActivityEnterView$SeekBarWaveformView;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -68,7 +65,6 @@
 
     iput p1, v0, Lorg/telegram/messenger/MessageObject;->audioProgress:F
 
-    .line 118
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v0
@@ -83,7 +79,6 @@
 
     invoke-virtual {v0, v1, p1}, Lorg/telegram/messenger/MediaController;->seekToProgress(Lorg/telegram/messenger/MessageObject;F)Z
 
-    .line 120
     :cond_0
     return-void
 .end method

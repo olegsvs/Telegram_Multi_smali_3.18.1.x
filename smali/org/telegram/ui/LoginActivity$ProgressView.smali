@@ -30,27 +30,22 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 111
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->this$0:Lorg/telegram/ui/LoginActivity;
 
-    .line 112
     invoke-direct {p0, p2}, Landroid/view/View;-><init>(Landroid/content/Context;)V
 
-    .line 107
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->paint:Landroid/graphics/Paint;
 
-    .line 108
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->paint2:Landroid/graphics/Paint;
 
-    .line 113
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->paint:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "login_progressInner"
@@ -61,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 114
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->paint2:Landroid/graphics/Paint;
 
     const-string/jumbo v1, "login_progressOuter"
@@ -72,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 115
     return-void
 .end method
 
@@ -85,7 +78,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 124
     invoke-virtual {p0}, Lorg/telegram/ui/LoginActivity$ProgressView;->getMeasuredWidth()I
 
     move-result v0
@@ -98,7 +90,6 @@
 
     float-to-int v8, v0
 
-    .line 125
     .local v8, "start":I
     int-to-float v3, v8
 
@@ -116,7 +107,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 126
     int-to-float v3, v8
 
     invoke-virtual {p0}, Lorg/telegram/ui/LoginActivity$ProgressView;->getMeasuredWidth()I
@@ -139,7 +129,6 @@
 
     invoke-virtual/range {v2 .. v7}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 127
     return-void
 .end method
 
@@ -148,12 +137,9 @@
     .param p1, "value"    # F
 
     .prologue
-    .line 118
     iput p1, p0, Lorg/telegram/ui/LoginActivity$ProgressView;->progress:F
 
-    .line 119
     invoke-virtual {p0}, Lorg/telegram/ui/LoginActivity$ProgressView;->invalidate()V
 
-    .line 120
     return-void
 .end method

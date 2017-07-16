@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/SecretChatHelper$4$1;
 
     .prologue
-    .line 709
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$4$1$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$4$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/SecretChatHelper$4$1$1;->val$res:Lorg/telegram/tgnet/TLRPC$messages_SentEncryptedMessage;
@@ -51,7 +50,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 712
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$4$1$1;->this$2:Lorg/telegram/messenger/SecretChatHelper$4$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/SecretChatHelper$4$1;->this$1:Lorg/telegram/messenger/SecretChatHelper$4;
@@ -64,12 +62,10 @@
 
     if-eqz v0, :cond_0
 
-    .line 713
     iget-object v0, p0, Lorg/telegram/messenger/SecretChatHelper$4$1$1;->val$res:Lorg/telegram/tgnet/TLRPC$messages_SentEncryptedMessage;
 
     iput v7, v0, Lorg/telegram/tgnet/TLRPC$messages_SentEncryptedMessage;->date:I
 
-    .line 715
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -111,13 +107,11 @@
 
     invoke-virtual/range {v1 .. v8}, Lorg/telegram/messenger/MessagesStorage;->updateMessageStateAndId(JLjava/lang/Integer;IIZI)[J
 
-    .line 716
     new-instance v0, Lorg/telegram/messenger/SecretChatHelper$4$1$1$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/SecretChatHelper$4$1$1$1;-><init>(Lorg/telegram/messenger/SecretChatHelper$4$1$1;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 728
     return-void
 .end method

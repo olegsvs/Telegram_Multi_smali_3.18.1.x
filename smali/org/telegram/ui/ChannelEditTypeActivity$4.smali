@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditTypeActivity;
 
     .prologue
-    .line 231
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 234
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$500(Lorg/telegram/ui/ChannelEditTypeActivity;)Z
@@ -51,11 +49,9 @@
 
     if-nez v0, :cond_0
 
-    .line 239
     :goto_0
     return-void
 
-    .line 237
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
@@ -63,7 +59,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$502(Lorg/telegram/ui/ChannelEditTypeActivity;Z)Z
 
-    .line 238
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditTypeActivity$4;->this$0:Lorg/telegram/ui/ChannelEditTypeActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChannelEditTypeActivity;->access$900(Lorg/telegram/ui/ChannelEditTypeActivity;)V

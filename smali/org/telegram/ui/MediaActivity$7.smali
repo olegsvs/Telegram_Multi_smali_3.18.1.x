@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/MediaActivity;
 
     .prologue
-    .line 694
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$7;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 697
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$7;->this$0:Lorg/telegram/ui/MediaActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/MediaActivity;->access$1000(Lorg/telegram/ui/MediaActivity;)I
@@ -73,16 +71,13 @@
 
     move-object v0, p1
 
-    .line 698
     check-cast v0, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
-    .line 699
     .local v0, "cell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/SharedDocumentCell;->getMessage()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v1
 
-    .line 700
     .local v1, "message":Lorg/telegram/messenger/MessageObject;
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$7;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -90,14 +85,12 @@
 
     move-result v2
 
-    .line 706
     .end local v0    # "cell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     .end local v1    # "message":Lorg/telegram/messenger/MessageObject;
     :cond_1
     :goto_0
     return v2
 
-    .line 701
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$7;->this$0:Lorg/telegram/ui/MediaActivity;
 
@@ -115,16 +108,13 @@
 
     move-object v0, p1
 
-    .line 702
     check-cast v0, Lorg/telegram/ui/Cells/SharedLinkCell;
 
-    .line 703
     .local v0, "cell":Lorg/telegram/ui/Cells/SharedLinkCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/SharedLinkCell;->getMessage()Lorg/telegram/messenger/MessageObject;
 
     move-result-object v1
 
-    .line 704
     .restart local v1    # "message":Lorg/telegram/messenger/MessageObject;
     iget-object v3, p0, Lorg/telegram/ui/MediaActivity$7;->this$0:Lorg/telegram/ui/MediaActivity;
 

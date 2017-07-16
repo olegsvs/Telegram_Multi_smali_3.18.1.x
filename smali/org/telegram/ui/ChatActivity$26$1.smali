@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$26;
 
     .prologue
-    .line 2269
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,7 +44,6 @@
     .prologue
     const/4 v7, 0x0
 
-    .line 2272
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2273
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -69,7 +66,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesController;->blockUser(I)V
 
-    .line 2275
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -103,14 +99,12 @@
 
     invoke-virtual/range {v1 .. v6}, Lorg/telegram/messenger/MessagesController;->reportSpam(JLorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$EncryptedChat;)V
 
-    .line 2276
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/ChatActivity;->access$9600(Lorg/telegram/ui/ChatActivity;)V
 
-    .line 2277
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -119,7 +113,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2278
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$26;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -132,7 +125,6 @@
 
     if-eqz v0, :cond_1
 
-    .line 2279
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -147,7 +139,6 @@
 
     invoke-virtual {v0, v2, v3, v7}, Lorg/telegram/messenger/MessagesController;->deleteDialog(JI)V
 
-    .line 2286
     :goto_0
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$26$1;->this$1:Lorg/telegram/ui/ChatActivity$26;
 
@@ -155,10 +146,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChatActivity;->finishFragment()V
 
-    .line 2287
     return-void
 
-    .line 2281
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -198,7 +187,6 @@
 
     goto :goto_0
 
-    .line 2284
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 

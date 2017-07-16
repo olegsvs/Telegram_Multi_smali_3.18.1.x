@@ -25,7 +25,6 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 785
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$GridAdapter;
 
     invoke-direct {p0, p2}, Lorg/telegram/ui/Cells/StickerEmojiCell;-><init>(Landroid/content/Context;)V
@@ -43,7 +42,6 @@
     .prologue
     const/high16 v2, 0x40000000    # 2.0f
 
-    .line 787
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$GridAdapter;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -68,6 +66,5 @@
 
     invoke-super {p0, v0, v1}, Lorg/telegram/ui/Cells/StickerEmojiCell;->onMeasure(II)V
 
-    .line 788
     return-void
 .end method

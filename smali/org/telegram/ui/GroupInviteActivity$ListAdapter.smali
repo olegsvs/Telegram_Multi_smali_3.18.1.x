@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 247
     iput-object p1, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 248
     iput-object p2, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 249
     return-void
 .end method
 
@@ -44,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 259
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupInviteActivity;->access$600(Lorg/telegram/ui/GroupInviteActivity;)Z
@@ -75,7 +71,6 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 324
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/GroupInviteActivity;->access$000(Lorg/telegram/ui/GroupInviteActivity;)I
@@ -100,12 +95,10 @@
 
     if-ne p1, v1, :cond_1
 
-    .line 331
     :cond_0
     :goto_0
     return v0
 
-    .line 326
     :cond_1
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -123,13 +116,11 @@
 
     if-ne p1, v1, :cond_3
 
-    .line 327
     :cond_2
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 328
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -139,7 +130,6 @@
 
     if-ne p1, v1, :cond_0
 
-    .line 329
     const/4 v0, 0x2
 
     goto :goto_0
@@ -150,12 +140,10 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 253
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 254
     .local v0, "position":I
     iget-object v1, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -211,25 +199,21 @@
 
     const/4 v6, 0x0
 
-    .line 289
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v4
 
     packed-switch v4, :pswitch_data_0
 
-    .line 320
     :cond_0
     :goto_0
     return-void
 
-    .line 291
     :pswitch_0
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v3, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 292
     .local v3, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -239,7 +223,6 @@
 
     if-ne p2, v4, :cond_1
 
-    .line 293
     const-string/jumbo v4, "CopyLink"
 
     const v5, 0x7f0701a5
@@ -252,7 +235,6 @@
 
     goto :goto_0
 
-    .line 294
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -262,7 +244,6 @@
 
     if-ne p2, v4, :cond_2
 
-    .line 295
     const-string/jumbo v4, "ShareLink"
 
     const v5, 0x7f0705be
@@ -275,7 +256,6 @@
 
     goto :goto_0
 
-    .line 296
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -285,7 +265,6 @@
 
     if-ne p2, v4, :cond_0
 
-    .line 297
     const-string/jumbo v4, "RevokeLink"
 
     const v5, 0x7f070547
@@ -298,14 +277,12 @@
 
     goto :goto_0
 
-    .line 301
     .end local v3    # "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     :pswitch_1
     iget-object v1, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v1, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 302
     .local v1, "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -315,12 +292,10 @@
 
     if-ne p2, v4, :cond_3
 
-    .line 303
     const-string/jumbo v4, ""
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 304
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const v5, 0x7f0200af
@@ -335,7 +310,6 @@
 
     goto :goto_0
 
-    .line 305
     :cond_3
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -345,7 +319,6 @@
 
     if-ne p2, v4, :cond_0
 
-    .line 306
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -364,7 +337,6 @@
 
     move-result-object v0
 
-    .line 307
     .local v0, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     invoke-static {v0}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
 
@@ -376,7 +348,6 @@
 
     if-nez v4, :cond_4
 
-    .line 308
     const-string/jumbo v4, "ChannelLinkInfo"
 
     const v5, 0x7f070124
@@ -387,7 +358,6 @@
 
     invoke-virtual {v1, v4}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 312
     :goto_1
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
@@ -403,7 +373,6 @@
 
     goto/16 :goto_0
 
-    .line 310
     :cond_4
     const-string/jumbo v4, "LinkInfo"
 
@@ -417,7 +386,6 @@
 
     goto :goto_1
 
-    .line 316
     .end local v0    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     .end local v1    # "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     :pswitch_2
@@ -425,7 +393,6 @@
 
     check-cast v2, Lorg/telegram/ui/Cells/TextBlockCell;
 
-    .line 317
     .local v2, "textBlockCell":Lorg/telegram/ui/Cells/TextBlockCell;
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->this$0:Lorg/telegram/ui/GroupInviteActivity;
 
@@ -453,7 +420,6 @@
 
     goto :goto_2
 
-    .line 289
     nop
 
     :pswitch_data_0
@@ -470,17 +436,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 265
     packed-switch p2, :pswitch_data_0
 
-    .line 275
     new-instance v3, Lorg/telegram/ui/Cells/TextBlockCell;
 
     iget-object v4, p0, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/TextBlockCell;-><init>(Landroid/content/Context;)V
 
-    .line 276
     .local v3, "view":Landroid/view/View;
     const-string/jumbo v4, "windowBackgroundWhite"
 
@@ -490,7 +453,6 @@
 
     invoke-virtual {v3, v4}, Landroid/view/View;->setBackgroundColor(I)V
 
-    .line 277
     sget-object v4, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v5, "theme"
@@ -501,7 +463,6 @@
 
     move-result-object v1
 
-    .line 278
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v4, "prefBGColor"
 
@@ -511,7 +472,6 @@
 
     move-result v0
 
-    .line 279
     .local v0, "bgColor":I
     const-string/jumbo v4, "prefTitleColor"
 
@@ -521,18 +481,15 @@
 
     move-result v2
 
-    .line 280
     .local v2, "titleColor":I
     invoke-virtual {v3, v0}, Landroid/view/View;->setBackgroundColor(I)V
 
     move-object v4, v3
 
-    .line 281
     check-cast v4, Lorg/telegram/ui/Cells/TextBlockCell;
 
     invoke-virtual {v4, v2}, Lorg/telegram/ui/Cells/TextBlockCell;->setTextColor(I)V
 
-    .line 284
     .end local v0    # "bgColor":I
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v2    # "titleColor":I
@@ -543,7 +500,6 @@
 
     return-object v4
 
-    .line 267
     .end local v3    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v3, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -552,7 +508,6 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 268
     .restart local v3    # "view":Landroid/view/View;
     const-string/jumbo v4, "windowBackgroundWhite"
 
@@ -564,7 +519,6 @@
 
     goto :goto_0
 
-    .line 271
     .end local v3    # "view":Landroid/view/View;
     :pswitch_1
     new-instance v3, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
@@ -573,11 +527,9 @@
 
     invoke-direct {v3, v4}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 272
     .restart local v3    # "view":Landroid/view/View;
     goto :goto_0
 
-    .line 265
     nop
 
     :pswitch_data_0

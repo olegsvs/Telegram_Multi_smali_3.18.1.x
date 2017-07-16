@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelEditActivity;
 
     .prologue
-    .line 112
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$1;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelEditActivity$1;->val$semaphore:Ljava/util/concurrent/Semaphore;
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 115
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$1;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -64,11 +62,9 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelEditActivity;->access$002(Lorg/telegram/ui/ChannelEditActivity;Lorg/telegram/tgnet/TLRPC$Chat;)Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 116
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$1;->val$semaphore:Ljava/util/concurrent/Semaphore;
 
     invoke-virtual {v0}, Ljava/util/concurrent/Semaphore;->release()V
 
-    .line 117
     return-void
 .end method

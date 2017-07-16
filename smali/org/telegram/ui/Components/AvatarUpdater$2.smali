@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/AvatarUpdater;
 
     .prologue
-    .line 170
     iput-object p1, p0, Lorg/telegram/ui/Components/AvatarUpdater$2;->this$0:Lorg/telegram/ui/Components/AvatarUpdater;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/AvatarUpdater$2;->val$arrayList:Ljava/util/ArrayList;
@@ -42,7 +41,6 @@
     .locals 1
 
     .prologue
-    .line 186
     const/4 v0, 0x0
 
     return v0
@@ -56,10 +54,8 @@
     .prologue
     const/high16 v5, 0x44480000    # 800.0f
 
-    .line 173
     const/4 v1, 0x0
 
-    .line 174
     .local v1, "path":Ljava/lang/String;
     iget-object v3, p0, Lorg/telegram/ui/Components/AvatarUpdater$2;->val$arrayList:Ljava/util/ArrayList;
 
@@ -71,16 +67,13 @@
 
     check-cast v2, Lorg/telegram/messenger/MediaController$PhotoEntry;
 
-    .line 175
     .local v2, "photoEntry":Lorg/telegram/messenger/MediaController$PhotoEntry;
     iget-object v3, v2, Lorg/telegram/messenger/MediaController$PhotoEntry;->imagePath:Ljava/lang/String;
 
     if-eqz v3, :cond_1
 
-    .line 176
     iget-object v1, v2, Lorg/telegram/messenger/MediaController$PhotoEntry;->imagePath:Ljava/lang/String;
 
-    .line 180
     :cond_0
     :goto_0
     const/4 v3, 0x0
@@ -91,23 +84,19 @@
 
     move-result-object v0
 
-    .line 181
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     iget-object v3, p0, Lorg/telegram/ui/Components/AvatarUpdater$2;->this$0:Lorg/telegram/ui/Components/AvatarUpdater;
 
     invoke-static {v3, v0}, Lorg/telegram/ui/Components/AvatarUpdater;->access$000(Lorg/telegram/ui/Components/AvatarUpdater;Landroid/graphics/Bitmap;)V
 
-    .line 182
     return-void
 
-    .line 177
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     :cond_1
     iget-object v3, v2, Lorg/telegram/messenger/MediaController$PhotoEntry;->path:Ljava/lang/String;
 
     if-eqz v3, :cond_0
 
-    .line 178
     iget-object v1, v2, Lorg/telegram/messenger/MediaController$PhotoEntry;->path:Ljava/lang/String;
 
     goto :goto_0

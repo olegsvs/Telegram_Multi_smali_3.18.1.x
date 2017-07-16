@@ -36,12 +36,10 @@
     .param p2, "ctx"    # Landroid/content/Context;
 
     .prologue
-    .line 903
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$OnSwipeTouchListener;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 904
     new-instance v0, Landroid/view/GestureDetector;
 
     new-instance v1, Lorg/telegram/ui/Components/ChatDialogsView$OnSwipeTouchListener$GestureListener;
@@ -54,7 +52,6 @@
 
     iput-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$OnSwipeTouchListener;->gestureDetector:Landroid/view/GestureDetector;
 
-    .line 905
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .locals 0
 
     .prologue
-    .line 967
     return-void
 .end method
 
@@ -72,7 +68,6 @@
     .locals 0
 
     .prologue
-    .line 959
     return-void
 .end method
 
@@ -80,7 +75,6 @@
     .locals 0
 
     .prologue
-    .line 955
     return-void
 .end method
 
@@ -88,7 +82,6 @@
     .locals 0
 
     .prologue
-    .line 963
     return-void
 .end method
 
@@ -98,7 +91,6 @@
     .param p2, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 909
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$OnSwipeTouchListener;->gestureDetector:Landroid/view/GestureDetector;
 
     invoke-virtual {v0, p2}, Landroid/view/GestureDetector;->onTouchEvent(Landroid/view/MotionEvent;)Z

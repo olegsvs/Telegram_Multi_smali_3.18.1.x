@@ -49,7 +49,6 @@
     .locals 0
 
     .prologue
-    .line 9044
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -62,20 +61,16 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 9061
     const/4 v0, 0x0
 
-    .line 9062
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$Video;
     sparse-switch p1, :sswitch_data_0
 
-    .line 9082
     :goto_0
     if-nez v0, :cond_0
 
     if-eqz p2, :cond_0
 
-    .line 9083
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in Video"
@@ -100,62 +95,51 @@
 
     throw v1
 
-    .line 9064
     :sswitch_0
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_video_old3;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_video_old3;-><init>()V
 
-    .line 9065
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9067
     :sswitch_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_video_layer45;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_video_layer45;-><init>()V
 
-    .line 9068
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9070
     :sswitch_2
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_videoEncrypted;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_videoEncrypted;-><init>()V
 
-    .line 9071
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9073
     :sswitch_3
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_video_old;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_video_old;-><init>()V
 
-    .line 9074
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9076
     :sswitch_4
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_video_old2;
 
     .end local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_video_old2;-><init>()V
 
-    .line 9077
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9079
     :sswitch_5
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_videoEmpty_layer45;
 
@@ -165,18 +149,14 @@
     .restart local v0    # "result":Lorg/telegram/tgnet/TLRPC$Video;
     goto :goto_0
 
-    .line 9085
     :cond_0
     if-eqz v0, :cond_1
 
-    .line 9086
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$Video;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
-    .line 9088
     :cond_1
     return-object v0
 
-    .line 9062
     nop
 
     :sswitch_data_0

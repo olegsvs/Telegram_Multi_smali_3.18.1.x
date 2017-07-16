@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/SettingsActivity;
 
     .prologue
-    .line 980
     iput-object p1, p0, Lorg/telegram/ui/SettingsActivity$10;->this$0:Lorg/telegram/ui/SettingsActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/SettingsActivity$10;->val$preferences:Landroid/content/SharedPreferences;
@@ -51,15 +50,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 983
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 985
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_help_support;
 
-    .line 986
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_help_support;
     new-instance v1, Lorg/telegram/ui/SettingsActivity$10$1;
 
@@ -67,12 +63,10 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1022
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_help_support;
     :goto_0
     return-void
 
-    .line 1011
     :cond_0
     new-instance v1, Lorg/telegram/ui/SettingsActivity$10$2;
 

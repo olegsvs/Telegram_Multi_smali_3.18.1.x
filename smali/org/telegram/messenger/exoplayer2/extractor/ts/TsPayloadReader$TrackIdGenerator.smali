@@ -29,16 +29,12 @@
     .param p2, "idIncrement"    # I
 
     .prologue
-    .line 88
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 89
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->firstId:I
 
-    .line 90
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->idIncrement:I
 
-    .line 91
     return-void
 .end method
 
@@ -48,7 +44,6 @@
     .locals 4
 
     .prologue
-    .line 94
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->firstId:I
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ts/TsPayloadReader$TrackIdGenerator;->idIncrement:I

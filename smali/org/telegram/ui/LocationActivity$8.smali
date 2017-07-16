@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 426
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$8;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,25 +43,21 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 429
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x17
 
     if-lt v3, v4, :cond_1
 
-    .line 430
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$8;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/LocationActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v0
 
-    .line 431
     .local v0, "activity":Landroid/app/Activity;
     if-eqz v0, :cond_1
 
-    .line 432
     const-string/jumbo v3, "android.permission.ACCESS_COARSE_LOCATION"
 
     invoke-virtual {v0, v3}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
@@ -71,18 +66,15 @@
 
     if-eqz v3, :cond_1
 
-    .line 433
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$8;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v3, v5}, Lorg/telegram/ui/LocationActivity;->access$1500(Lorg/telegram/ui/LocationActivity;Z)V
 
-    .line 446
     .end local v0    # "activity":Landroid/app/Activity;
     :cond_0
     :goto_0
     return-void
 
-    .line 438
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$8;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -92,7 +84,6 @@
 
     if-eqz v3, :cond_0
 
-    .line 440
     :try_start_0
     new-instance v2, Landroid/content/Intent;
 
@@ -196,7 +187,6 @@
 
     invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 441
     .local v2, "intent":Landroid/content/Intent;
     iget-object v3, p0, Lorg/telegram/ui/LocationActivity$8;->this$0:Lorg/telegram/ui/LocationActivity;
 
@@ -210,12 +200,10 @@
 
     goto :goto_0
 
-    .line 442
     .end local v2    # "intent":Landroid/content/Intent;
     :catch_0
     move-exception v1
 
-    .line 443
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

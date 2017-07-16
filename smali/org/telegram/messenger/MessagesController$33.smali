@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1984
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$33;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$33;->val$newTaskId:J
@@ -49,15 +48,12 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 1987
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 1988
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
 
-    .line 1989
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$33;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -67,7 +63,6 @@
 
     invoke-virtual {v1, v4, v2, v4, v3}, Lorg/telegram/messenger/MessagesController;->processNewDifferenceParams(IIII)V
 
-    .line 1991
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
     :cond_0
     iget-wide v2, p0, Lorg/telegram/messenger/MessagesController$33;->val$newTaskId:J
@@ -78,7 +73,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 1992
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
@@ -87,7 +81,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->removePendingTask(J)V
 
-    .line 1994
     :cond_1
     return-void
 .end method

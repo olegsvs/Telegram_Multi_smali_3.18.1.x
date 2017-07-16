@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 2059
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2076
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$4000(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -53,22 +51,18 @@
 
     if-eqz v0, :cond_0
 
-    .line 2086
     :goto_0
     return-void
 
-    .line 2079
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$2400(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2080
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$500(Lorg/telegram/ui/PaymentFormActivity;Z)V
 
-    .line 2081
     instance-of v0, p1, Lcom/stripe/android/exception/APIConnectionException;
 
     if-nez v0, :cond_1
@@ -77,7 +71,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 2082
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -93,7 +86,6 @@
 
     goto :goto_0
 
-    .line 2084
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -111,7 +103,6 @@
     .param p1, "token"    # Lcom/stripe/android/model/Token;
 
     .prologue
-    .line 2061
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$4000(Lorg/telegram/ui/PaymentFormActivity;)Z
@@ -120,11 +111,9 @@
 
     if-eqz v0, :cond_0
 
-    .line 2073
     :goto_0
     return-void
 
-    .line 2064
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$22;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
@@ -158,7 +147,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/PaymentFormActivity;->access$002(Lorg/telegram/ui/PaymentFormActivity;Ljava/lang/String;)Ljava/lang/String;
 
-    .line 2065
     new-instance v0, Lorg/telegram/ui/PaymentFormActivity$22$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PaymentFormActivity$22$1;-><init>(Lorg/telegram/ui/PaymentFormActivity$22;)V

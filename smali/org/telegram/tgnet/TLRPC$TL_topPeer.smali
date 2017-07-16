@@ -29,7 +29,6 @@
     .locals 1
 
     .prologue
-    .line 20003
     const v0, -0x12323fa5
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->constructor:I
@@ -41,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 20002
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -54,15 +52,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 20009
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 20010
     if-eqz p2, :cond_0
 
-    .line 20011
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_topPeer"
@@ -87,21 +82,17 @@
 
     throw v1
 
-    .line 20013
     :cond_0
     const/4 v0, 0x0
 
-    .line 20018
     :goto_0
     return-object v0
 
-    .line 20016
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_topPeer;-><init>()V
 
-    .line 20017
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_topPeer;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -116,7 +107,6 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 20022
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
@@ -127,14 +117,12 @@
 
     iput-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
-    .line 20023
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readDouble(Z)D
 
     move-result-wide v0
 
     iput-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
-    .line 20024
     return-void
 .end method
 
@@ -143,21 +131,17 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 20027
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 20028
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$Peer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 20029
     iget-wide v0, p0, Lorg/telegram/tgnet/TLRPC$TL_topPeer;->rating:D
 
     invoke-virtual {p1, v0, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeDouble(D)V
 
-    .line 20030
     return-void
 .end method

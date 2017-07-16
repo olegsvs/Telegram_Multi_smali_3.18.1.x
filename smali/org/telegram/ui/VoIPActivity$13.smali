@@ -26,12 +26,10 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 681
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$13;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
 
-    .line 682
     new-instance v0, Lorg/telegram/ui/VoIPActivity$13$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/VoIPActivity$13$1;-><init>(Lorg/telegram/ui/VoIPActivity$13;)V
@@ -48,7 +46,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 691
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$13;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VoIPActivity;->isFinishing()Z
@@ -57,7 +54,6 @@
 
     if-nez v0, :cond_0
 
-    .line 692
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$13;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/VoIPActivity;->access$2100(Lorg/telegram/ui/VoIPActivity;)Landroid/widget/FrameLayout;
@@ -70,7 +66,6 @@
 
     invoke-virtual {v0, v1, v2, v3}, Landroid/widget/FrameLayout;->postDelayed(Ljava/lang/Runnable;J)Z
 
-    .line 694
     :cond_0
     return-void
 .end method

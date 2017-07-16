@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/SecretChatHelper$14$2;
 
     .prologue
-    .line 1848
     iput-object p1, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$2;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 1851
     iget-object v2, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$2;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
 
     iget-object v2, v2, Lorg/telegram/messenger/SecretChatHelper$14$2;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
@@ -56,7 +54,6 @@
 
     if-nez v2, :cond_0
 
-    .line 1852
     iget-object v2, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$2;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
 
     iget-object v2, v2, Lorg/telegram/messenger/SecretChatHelper$14$2;->this$1:Lorg/telegram/messenger/SecretChatHelper$14;
@@ -67,7 +64,6 @@
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/SecretChatHelper;->access$402(Lorg/telegram/messenger/SecretChatHelper;Z)Z
 
-    .line 1854
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/SecretChatHelper$14$2$2;->this$2:Lorg/telegram/messenger/SecretChatHelper$14$2;
 
@@ -79,7 +75,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 1858
     :goto_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -91,7 +86,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1859
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "AppName"
 
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1860
     const-string/jumbo v2, "CreateEncryptedChatError"
 
     const v3, 0x7f0701ad
@@ -114,7 +107,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1861
     const-string/jumbo v2, "OK"
 
     const v3, 0x7f070452
@@ -127,7 +119,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1862
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object v2
@@ -136,16 +127,13 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 1864
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_0
     return-void
 
-    .line 1855
     :catch_0
     move-exception v1
 
-    .line 1856
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

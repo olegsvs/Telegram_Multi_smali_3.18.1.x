@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArticleViewer$1;
 
     .prologue
-    .line 1121
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ArticleViewer$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,7 +46,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 1124
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$1;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -58,12 +56,10 @@
 
     if-nez v0, :cond_1
 
-    .line 1136
     :cond_0
     :goto_0
     return-void
 
-    .line 1127
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
@@ -71,14 +67,12 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$3102(Lorg/telegram/ui/ArticleViewer;I)I
 
-    .line 1128
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$1;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ArticleViewer;->access$3200(Lorg/telegram/ui/ArticleViewer;Z)V
 
-    .line 1129
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ArticleViewer$1;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -89,7 +83,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 1130
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v0, v0, Lorg/telegram/tgnet/TLRPC$TL_webPage;
@@ -106,7 +99,6 @@
 
     if-eqz v0, :cond_2
 
-    .line 1131
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 
     iget-object v1, v0, Lorg/telegram/ui/ArticleViewer$1;->this$0:Lorg/telegram/ui/ArticleViewer;
@@ -123,7 +115,6 @@
 
     goto :goto_0
 
-    .line 1133
     :cond_2
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$1$1;->this$1:Lorg/telegram/ui/ArticleViewer$1;
 

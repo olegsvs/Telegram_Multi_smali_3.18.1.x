@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/DialogsActivity;
 
     .prologue
-    .line 2080
     iput-object p1, p0, Lorg/telegram/ui/DialogsActivity$16;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iput-wide p2, p0, Lorg/telegram/ui/DialogsActivity$16;->val$dialog_id:J
@@ -49,13 +48,11 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 2083
     iget-object v0, p0, Lorg/telegram/ui/DialogsActivity$16;->this$0:Lorg/telegram/ui/DialogsActivity;
 
     iget-wide v2, p0, Lorg/telegram/ui/DialogsActivity$16;->val$dialog_id:J
 
     invoke-static {v0, v2, v3, v1, v1}, Lorg/telegram/ui/DialogsActivity;->access$2200(Lorg/telegram/ui/DialogsActivity;JZZ)V
 
-    .line 2084
     return-void
 .end method

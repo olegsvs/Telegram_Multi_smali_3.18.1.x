@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
     .prologue
-    .line 453
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 457
     :try_start_0
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
@@ -51,7 +49,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 461
     :goto_0
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
@@ -67,7 +64,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 462
     new-instance v1, Ljava/io/File;
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
@@ -78,7 +74,6 @@
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 463
     .local v1, "file":Ljava/io/File;
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
@@ -94,7 +89,6 @@
 
     invoke-static {v2, v4, v5}, Lorg/telegram/ui/CacheControlActivity;->access$1502(Lorg/telegram/ui/CacheControlActivity;J)J
 
-    .line 464
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;
 
     iget-object v2, v2, Lorg/telegram/ui/CacheControlActivity$4$2$1;->this$2:Lorg/telegram/ui/CacheControlActivity$4$2;
@@ -109,16 +103,13 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 466
     .end local v1    # "file":Ljava/io/File;
     :cond_0
     return-void
 
-    .line 458
     :catch_0
     move-exception v0
 
-    .line 459
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -28,7 +28,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     .prologue
-    .line 75
     iput-object p1, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->val$query:Ljava/lang/String;
@@ -46,7 +45,6 @@
     .locals 3
 
     .prologue
-    .line 79
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
@@ -56,7 +54,6 @@
 
     invoke-virtual {v1}, Ljava/util/Timer;->cancel()V
 
-    .line 80
     iget-object v1, p0, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1;->this$0:Lorg/telegram/ui/Adapters/BaseLocationAdapter;
 
     const/4 v2, 0x0
@@ -65,7 +62,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 84
     :goto_0
     new-instance v1, Lorg/telegram/ui/Adapters/BaseLocationAdapter$1$1;
 
@@ -73,14 +69,11 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 91
     return-void
 
-    .line 81
     :catch_0
     move-exception v0
 
-    .line 82
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

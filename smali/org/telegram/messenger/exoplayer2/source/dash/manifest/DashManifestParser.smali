@@ -45,7 +45,6 @@
     .locals 1
 
     .prologue
-    .line 59
     const-string/jumbo v0, "(\\d+)(?:/(\\d+))?"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -54,7 +53,6 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->FRAME_RATE_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 61
     const-string/jumbo v0, "CC([1-4])=.*"
 
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
@@ -63,17 +61,14 @@
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->CEA_608_ACCESSIBILITY_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 62
     const-string/jumbo v0, "([1-9]|[1-5][0-9]|6[0-3])=.*"
 
-    .line 63
     invoke-static {v0}, Ljava/util/regex/Pattern;->compile(Ljava/lang/String;)Ljava/util/regex/Pattern;
 
     move-result-object v0
 
     sput-object v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->CEA_708_ACCESSIBILITY_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 62
     return-void
 .end method
 
@@ -81,12 +76,10 @@
     .locals 1
 
     .prologue
-    .line 72
     const/4 v0, 0x0
 
     invoke-direct {p0, v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;-><init>(Ljava/lang/String;)V
 
-    .line 73
     return-void
 .end method
 
@@ -95,13 +88,10 @@
     .param p1, "contentId"    # Ljava/lang/String;
 
     .prologue
-    .line 78
     invoke-direct {p0}, Lorg/xml/sax/helpers/DefaultHandler;-><init>()V
 
-    .line 79
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->contentId:Ljava/lang/String;
 
-    .line 81
     :try_start_0
     invoke-static {}, Lorg/xmlpull/v1/XmlPullParserFactory;->newInstance()Lorg/xmlpull/v1/XmlPullParserFactory;
 
@@ -111,14 +101,11 @@
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 85
     return-void
 
-    .line 82
     :catch_0
     move-exception v0
 
-    .line 83
     .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     new-instance v1, Ljava/lang/RuntimeException;
 
@@ -137,23 +124,19 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 731
     if-ne p0, v0, :cond_1
 
     move p0, p1
 
-    .line 737
     .end local p0    # "firstType":I
     :cond_0
     :goto_0
     return p0
 
-    .line 733
     .restart local p0    # "firstType":I
     :cond_1
     if-eq p1, v0, :cond_0
 
-    .line 736
     if-ne p0, p1, :cond_2
 
     const/4 v0, 0x1
@@ -175,23 +158,19 @@
     .param p1, "secondLanguage"    # Ljava/lang/String;
 
     .prologue
-    .line 709
     if-nez p0, :cond_1
 
     move-object p0, p1
 
-    .line 715
     .end local p0    # "firstLanguage":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 711
     .restart local p0    # "firstLanguage":Ljava/lang/String;
     :cond_1
     if-eqz p1, :cond_0
 
-    .line 714
     invoke-virtual {p0, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v0
@@ -209,25 +188,21 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 663
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 664
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getAudioMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
-    .line 685
     .end local p0    # "containerMimeType":Ljava/lang/String;
     :cond_0
     :goto_0
     return-object p0
 
-    .line 665
     .restart local p0    # "containerMimeType":Ljava/lang/String;
     :cond_1
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
@@ -236,14 +211,12 @@
 
     if-eqz v1, :cond_2
 
-    .line 666
     invoke-static {p1}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getVideoMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p0
 
     goto :goto_0
 
-    .line 667
     :cond_2
     const-string/jumbo v1, "application/x-rawcc"
 
@@ -253,10 +226,8 @@
 
     if-eqz v1, :cond_6
 
-    .line 668
     if-eqz p1, :cond_5
 
-    .line 669
     const-string/jumbo v1, "cea708"
 
     invoke-virtual {p1, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
@@ -265,12 +236,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 670
     const-string/jumbo p0, "application/cea-708"
 
     goto :goto_0
 
-    .line 671
     :cond_3
     const-string/jumbo v1, "eia608"
 
@@ -288,7 +257,6 @@
 
     if-eqz v1, :cond_5
 
-    .line 672
     :cond_4
     const-string/jumbo p0, "application/cea-608"
 
@@ -297,10 +265,8 @@
     :cond_5
     move-object p0, v0
 
-    .line 675
     goto :goto_0
 
-    .line 676
     :cond_6
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->mimeTypeIsRawText(Ljava/lang/String;)Z
 
@@ -308,7 +274,6 @@
 
     if-nez v1, :cond_0
 
-    .line 678
     const-string/jumbo v1, "application/mp4"
 
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -317,7 +282,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 679
     const-string/jumbo v1, "stpp"
 
     invoke-virtual {v1, p1}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
@@ -326,12 +290,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 680
     const-string/jumbo p0, "application/ttml+xml"
 
     goto :goto_0
 
-    .line 681
     :cond_7
     const-string/jumbo v1, "wvtt"
 
@@ -341,7 +303,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 682
     const-string/jumbo p0, "application/x-mp4vtt"
 
     goto :goto_0
@@ -349,7 +310,6 @@
     :cond_8
     move-object p0, v0
 
-    .line 685
     goto :goto_0
 .end method
 
@@ -358,7 +318,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 695
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
     move-result v0
@@ -398,14 +357,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 743
     const-string/jumbo v3, "schemeIdUri"
 
     invoke-static {p0, v3, v4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseString(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 744
     .local v1, "schemeIdUri":Ljava/lang/String;
     const-string/jumbo v3, "value"
 
@@ -413,23 +370,19 @@
 
     move-result-object v2
 
-    .line 746
     .local v2, "valueString":Ljava/lang/String;
     if-eqz v1, :cond_0
 
     if-nez v2, :cond_2
 
-    .line 747
     :cond_0
     const/4 v0, -0x1
 
-    .line 756
     .local v0, "accessibilityValue":I
     :cond_1
     :goto_0
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 757
     const-string/jumbo v3, "Accessibility"
 
     invoke-static {p0, v3}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isEndTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
@@ -438,10 +391,8 @@
 
     if-eqz v3, :cond_1
 
-    .line 758
     return v0
 
-    .line 748
     .end local v0    # "accessibilityValue":I
     :cond_2
     const-string/jumbo v3, "urn:scte:dash:cc:cea-608:2015"
@@ -452,7 +403,6 @@
 
     if-eqz v3, :cond_3
 
-    .line 749
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseCea608AccessibilityChannel(Ljava/lang/String;)I
 
     move-result v0
@@ -460,7 +410,6 @@
     .restart local v0    # "accessibilityValue":I
     goto :goto_0
 
-    .line 750
     .end local v0    # "accessibilityValue":I
     :cond_3
     const-string/jumbo v3, "urn:scte:dash:cc:cea-708:2015"
@@ -471,7 +420,6 @@
 
     if-eqz v3, :cond_4
 
-    .line 751
     invoke-static {v2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseCea708AccessibilityChannel(Ljava/lang/String;)I
 
     move-result v0
@@ -479,7 +427,6 @@
     .restart local v0    # "accessibilityValue":I
     goto :goto_0
 
-    .line 753
     .end local v0    # "accessibilityValue":I
     :cond_4
     const/4 v0, -0x1
@@ -500,10 +447,8 @@
     .end annotation
 
     .prologue
-    .line 828
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 829
     invoke-interface {p0}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v0
@@ -522,23 +467,18 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 762
     if-nez p0, :cond_0
 
-    .line 771
     :goto_0
     return v1
 
-    .line 765
     :cond_0
     sget-object v2, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->CEA_608_ACCESSIBILITY_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 766
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 767
     .local v0, "accessibilityValueMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -546,7 +486,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 768
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -559,7 +498,6 @@
 
     goto :goto_0
 
-    .line 770
     :cond_1
     const-string/jumbo v2, "MpdParser"
 
@@ -593,23 +531,18 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 776
     if-nez p0, :cond_0
 
-    .line 785
     :goto_0
     return v1
 
-    .line 779
     :cond_0
     sget-object v2, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->CEA_708_ACCESSIBILITY_PATTERN:Ljava/util/regex/Pattern;
 
-    .line 780
     invoke-virtual {v2, p0}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v0
 
-    .line 781
     .local v0, "accessibilityValueMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v0}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -617,7 +550,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 782
     const/4 v1, 0x1
 
     invoke-virtual {v0, v1}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -630,7 +562,6 @@
 
     goto :goto_0
 
-    .line 784
     :cond_1
     const-string/jumbo v2, "MpdParser"
 
@@ -669,18 +600,15 @@
     .end annotation
 
     .prologue
-    .line 818
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 819
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 822
     .end local p2    # "defaultValue":J
     :goto_0
     return-wide p2
@@ -701,18 +629,15 @@
     .param p2, "defaultValue"    # J
 
     .prologue
-    .line 808
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 809
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
-    .line 812
     .end local p2    # "defaultValue":J
     :goto_0
     return-wide p2
@@ -732,10 +657,8 @@
     .param p1, "defaultValue"    # F
 
     .prologue
-    .line 790
     move v1, p1
 
-    .line 791
     .local v1, "frameRate":F
     const/4 v5, 0x0
 
@@ -745,18 +668,15 @@
 
     move-result-object v2
 
-    .line 792
     .local v2, "frameRateAttribute":Ljava/lang/String;
     if-eqz v2, :cond_0
 
-    .line 793
     sget-object v5, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->FRAME_RATE_PATTERN:Ljava/util/regex/Pattern;
 
     invoke-virtual {v5, v2}, Ljava/util/regex/Pattern;->matcher(Ljava/lang/CharSequence;)Ljava/util/regex/Matcher;
 
     move-result-object v3
 
-    .line 794
     .local v3, "frameRateMatcher":Ljava/util/regex/Matcher;
     invoke-virtual {v3}, Ljava/util/regex/Matcher;->matches()Z
 
@@ -764,7 +684,6 @@
 
     if-eqz v5, :cond_0
 
-    .line 795
     const/4 v5, 0x1
 
     invoke-virtual {v3, v5}, Ljava/util/regex/Matcher;->group(I)Ljava/lang/String;
@@ -775,7 +694,6 @@
 
     move-result v4
 
-    .line 796
     .local v4, "numerator":I
     const/4 v5, 0x2
 
@@ -783,7 +701,6 @@
 
     move-result-object v0
 
-    .line 797
     .local v0, "denominatorString":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -791,7 +708,6 @@
 
     if-nez v5, :cond_1
 
-    .line 798
     int-to-float v5, v4
 
     invoke-static {v0}, Ljava/lang/Integer;->parseInt(Ljava/lang/String;)I
@@ -802,7 +718,6 @@
 
     div-float v1, v5, v6
 
-    .line 804
     .end local v0    # "denominatorString":Ljava/lang/String;
     .end local v3    # "frameRateMatcher":Ljava/util/regex/Matcher;
     .end local v4    # "numerator":I
@@ -810,7 +725,6 @@
     :goto_0
     return v1
 
-    .line 800
     .restart local v0    # "denominatorString":Ljava/lang/String;
     .restart local v3    # "frameRateMatcher":Ljava/util/regex/Matcher;
     .restart local v4    # "numerator":I
@@ -827,14 +741,12 @@
     .param p2, "defaultValue"    # I
 
     .prologue
-    .line 833
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 834
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -858,14 +770,12 @@
     .param p2, "defaultValue"    # J
 
     .prologue
-    .line 838
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 839
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -889,14 +799,12 @@
     .param p2, "defaultValue"    # Ljava/lang/String;
 
     .prologue
-    .line 843
     const/4 v1, 0x0
 
     invoke-interface {p0, v1, p1}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 844
     .local v0, "value":Ljava/lang/String;
     if-nez v0, :cond_0
 
@@ -929,7 +837,6 @@
     .end annotation
 
     .prologue
-    .line 294
     .local p3, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;
 
@@ -953,25 +860,21 @@
     .param p11, "codecs"    # Ljava/lang/String;
 
     .prologue
-    .line 425
     move-object/from16 v0, p11
 
     invoke-static {p2, v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->getSampleMimeType(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 426
     .local v4, "sampleMimeType":Ljava/lang/String;
     if-eqz v4, :cond_4
 
-    .line 427
     invoke-static {v4}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 428
     const/4 v10, 0x0
 
     move-object v2, p1
@@ -992,11 +895,9 @@
 
     move-result-object v2
 
-    .line 443
     :goto_0
     return-object v2
 
-    .line 430
     :cond_0
     invoke-static {v4}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
@@ -1004,7 +905,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 431
     const/4 v9, 0x0
 
     const/4 v10, 0x0
@@ -1029,7 +929,6 @@
 
     goto :goto_0
 
-    .line 433
     :cond_1
     invoke-static {v4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->mimeTypeIsRawText(Ljava/lang/String;)Z
 
@@ -1037,7 +936,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 434
     const/4 v7, 0x0
 
     move-object v2, p1
@@ -1058,7 +956,6 @@
 
     goto :goto_0
 
-    .line 436
     :cond_2
     const-string/jumbo v2, "application/x-rawcc"
 
@@ -1068,7 +965,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 437
     const/4 v7, 0x0
 
     move-object v2, p1
@@ -1089,7 +985,6 @@
 
     goto :goto_0
 
-    .line 440
     :cond_3
     move-object/from16 v0, p11
 
@@ -1101,7 +996,6 @@
 
     goto :goto_0
 
-    .line 443
     :cond_4
     move-object/from16 v0, p11
 
@@ -1139,7 +1033,6 @@
     .end annotation
 
     .prologue
-    .line 178
     .local p16, "periods":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
@@ -1186,7 +1079,6 @@
     .end annotation
 
     .prologue
-    .line 223
     .local p4, "adaptationSets":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
@@ -1202,7 +1094,6 @@
     .param p4, "rangeLength"    # J
 
     .prologue
-    .line 637
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-object v1, p1
@@ -1234,26 +1125,21 @@
     .end annotation
 
     .prologue
-    .line 449
     .local p3, "extraDrmSchemeDatas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     iget-object v4, p1, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 450
     .local v4, "format":Lorg/telegram/messenger/exoplayer2/Format;
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->drmSchemeDatas:Ljava/util/ArrayList;
 
-    .line 451
     .local v0, "drmSchemeDatas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     invoke-virtual {v0, p3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 452
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v1
 
     if-nez v1, :cond_0
 
-    .line 453
     new-instance v1, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;
 
     invoke-direct {v1, v0}, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData;-><init>(Ljava/util/List;)V
@@ -1262,7 +1148,6 @@
 
     move-result-object v4
 
-    .line 455
     :cond_0
     const-wide/16 v2, -0x1
 
@@ -1293,7 +1178,6 @@
             "JJIJ",
             "Ljava/util/List",
             "<",
-            "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;",
             ">;",
             "Ljava/util/List",
             "<",
@@ -1304,8 +1188,6 @@
     .end annotation
 
     .prologue
-    .line 535
-    .local p9, "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     .local p10, "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;
 
@@ -1344,7 +1226,6 @@
             "JJIJ",
             "Ljava/util/List",
             "<",
-            "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;",
             ">;",
             "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;",
             "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;",
@@ -1354,8 +1235,6 @@
     .end annotation
 
     .prologue
-    .line 576
-    .local p9, "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;
 
     move-object v1, p1
@@ -1379,16 +1258,12 @@
     return-object v0
 .end method
 
-.method protected buildSegmentTimelineElement(JJ)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;
     .locals 1
     .param p1, "elapsedTime"    # J
     .param p3, "duration"    # J
 
     .prologue
-    .line 600
-    new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;
 
-    invoke-direct {v0, p1, p2, p3, p4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;-><init>(JJ)V
 
     return-object v0
 .end method
@@ -1402,7 +1277,6 @@
     .param p8, "indexLength"    # J
 
     .prologue
-    .line 491
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
 
     move-object v1, p1
@@ -1426,7 +1300,6 @@
     .param p2, "value"    # Ljava/lang/String;
 
     .prologue
-    .line 190
     new-instance v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
 
     invoke-direct {v0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;-><init>(Ljava/lang/String;Ljava/lang/String;)V
@@ -1441,10 +1314,8 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 307
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/Format;->sampleMimeType:Ljava/lang/String;
 
-    .line 308
     .local v0, "sampleMimeType":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -1452,12 +1323,10 @@
 
     if-eqz v2, :cond_1
 
-    .line 318
     :cond_0
     :goto_0
     return v1
 
-    .line 310
     :cond_1
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -1465,12 +1334,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 311
     const/4 v1, 0x2
 
     goto :goto_0
 
-    .line 312
     :cond_2
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
@@ -1478,12 +1345,10 @@
 
     if-eqz v2, :cond_3
 
-    .line 313
     const/4 v1, 0x1
 
     goto :goto_0
 
-    .line 314
     :cond_3
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->mimeTypeIsRawText(Ljava/lang/String;)Z
 
@@ -1495,14 +1360,12 @@
 
     iget-object v3, p1, Lorg/telegram/messenger/exoplayer2/Format;->containerMimeType:Ljava/lang/String;
 
-    .line 315
     invoke-virtual {v2, v3}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
 
     if-eqz v2, :cond_0
 
-    .line 316
     :cond_4
     const/4 v1, 0x3
 
@@ -1518,7 +1381,6 @@
     .end annotation
 
     .prologue
-    .line 54
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parse(Landroid/net/Uri;Ljava/io/InputStream;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
     move-result-object v0
@@ -1537,7 +1399,6 @@
     .end annotation
 
     .prologue
-    .line 92
     :try_start_0
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->xmlParserFactory:Lorg/xmlpull/v1/XmlPullParserFactory;
 
@@ -1545,18 +1406,15 @@
 
     move-result-object v2
 
-    .line 93
     .local v2, "xpp":Lorg/xmlpull/v1/XmlPullParser;
     const/4 v3, 0x0
 
     invoke-interface {v2, p2, v3}, Lorg/xmlpull/v1/XmlPullParser;->setInput(Ljava/io/InputStream;Ljava/lang/String;)V
 
-    .line 94
     invoke-interface {v2}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
     move-result v1
 
-    .line 95
     .local v1, "eventType":I
     const/4 v3, 0x2
 
@@ -1574,7 +1432,6 @@
 
     if-nez v3, :cond_1
 
-    .line 96
     :cond_0
     new-instance v3, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -1586,13 +1443,11 @@
     :try_end_0
     .catch Lorg/xmlpull/v1/XmlPullParserException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 100
     .end local v1    # "eventType":I
     .end local v2    # "xpp":Lorg/xmlpull/v1/XmlPullParser;
     :catch_0
     move-exception v0
 
-    .line 101
     .local v0, "e":Lorg/xmlpull/v1/XmlPullParserException;
     new-instance v3, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -1600,7 +1455,6 @@
 
     throw v3
 
-    .line 99
     .end local v0    # "e":Lorg/xmlpull/v1/XmlPullParserException;
     .restart local v1    # "eventType":I
     .restart local v2    # "xpp":Lorg/xmlpull/v1/XmlPullParser;
@@ -1632,7 +1486,6 @@
     .end annotation
 
     .prologue
-    .line 230
     const-string/jumbo v4, "id"
 
     const/4 v5, -0x1
@@ -1643,13 +1496,11 @@
 
     move-result v21
 
-    .line 231
     .local v21, "id":I
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseContentType(Lorg/xmlpull/v1/XmlPullParser;)I
 
     move-result v18
 
-    .line 233
     .local v18, "contentType":I
     const/4 v4, 0x0
 
@@ -1661,7 +1512,6 @@
 
     move-result-object v7
 
-    .line 234
     .local v7, "mimeType":Ljava/lang/String;
     const/4 v4, 0x0
 
@@ -1673,7 +1523,6 @@
 
     move-result-object v8
 
-    .line 235
     .local v8, "codecs":Ljava/lang/String;
     const-string/jumbo v4, "width"
 
@@ -1685,7 +1534,6 @@
 
     move-result v9
 
-    .line 236
     .local v9, "width":I
     const-string/jumbo v4, "height"
 
@@ -1697,7 +1545,6 @@
 
     move-result v10
 
-    .line 237
     .local v10, "height":I
     const/high16 v4, -0x40800000    # -1.0f
 
@@ -1707,11 +1554,9 @@
 
     move-result v11
 
-    .line 238
     .local v11, "frameRate":F
     const/4 v12, -0x1
 
-    .line 239
     .local v12, "audioChannels":I
     const-string/jumbo v4, "audioSamplingRate"
 
@@ -1723,7 +1568,6 @@
 
     move-result v13
 
-    .line 240
     .local v13, "audioSamplingRate":I
     const/4 v4, 0x0
 
@@ -1735,32 +1579,26 @@
 
     move-result-object v14
 
-    .line 241
     .local v14, "language":Ljava/lang/String;
     const/4 v15, -0x1
 
-    .line 242
     .local v15, "accessibilityChannel":I
     new-instance v19, Ljava/util/ArrayList;
 
     invoke-direct/range {v19 .. v19}, Ljava/util/ArrayList;-><init>()V
 
-    .line 243
     .local v19, "drmSchemeDatas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     new-instance v23, Ljava/util/ArrayList;
 
     invoke-direct/range {v23 .. v23}, Ljava/util/ArrayList;-><init>()V
 
-    .line 245
     .local v23, "representationInfos":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;>;"
     const/16 v25, 0x0
 
-    .line 247
     .local v25, "seenFirstBaseUrl":Z
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 248
     const-string/jumbo v4, "BaseURL"
 
     move-object/from16 v0, p1
@@ -1771,18 +1609,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 249
     if-nez v25, :cond_1
 
-    .line 250
     invoke-static/range {p1 .. p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseBaseUrl(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 251
     const/16 v25, 0x1
 
-    .line 281
     :cond_1
     :goto_0
     const-string/jumbo v4, "AdaptationSet"
@@ -1795,7 +1629,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 283
     new-instance v24, Ljava/util/ArrayList;
 
     invoke-interface/range {v23 .. v23}, Ljava/util/List;->size()I
@@ -1806,7 +1639,6 @@
 
     invoke-direct {v0, v4}, Ljava/util/ArrayList;-><init>(I)V
 
-    .line 284
     .local v24, "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     const/16 v20, 0x0
 
@@ -1820,7 +1652,6 @@
 
     if-ge v0, v4, :cond_b
 
-    .line 285
     move-object/from16 v0, v23
 
     move/from16 v1, v20
@@ -1847,12 +1678,10 @@
 
     invoke-interface {v0, v4}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 284
     add-int/lit8 v20, v20, 0x1
 
     goto :goto_1
 
-    .line 253
     .end local v20    # "i":I
     .end local v24    # "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     :cond_2
@@ -1866,16 +1695,13 @@
 
     if-eqz v4, :cond_3
 
-    .line 254
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseContentProtection(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     move-result-object v17
 
-    .line 255
     .local v17, "contentProtection":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     if-eqz v17, :cond_1
 
-    .line 256
     move-object/from16 v0, v19
 
     move-object/from16 v1, v17
@@ -1884,7 +1710,6 @@
 
     goto :goto_0
 
-    .line 258
     .end local v17    # "contentProtection":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     :cond_3
     const-string/jumbo v4, "ContentComponent"
@@ -1897,7 +1722,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 259
     const/4 v4, 0x0
 
     const-string/jumbo v5, "lang"
@@ -1912,7 +1736,6 @@
 
     move-result-object v14
 
-    .line 260
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseContentType(Lorg/xmlpull/v1/XmlPullParser;)I
 
     move-result v4
@@ -1925,7 +1748,6 @@
 
     goto :goto_0
 
-    .line 261
     :cond_4
     const-string/jumbo v4, "Representation"
 
@@ -1945,32 +1767,27 @@
 
     move-object/from16 v16, p3
 
-    .line 262
     invoke-virtual/range {v4 .. v16}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseRepresentation(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;IIFIILjava/lang/String;ILorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;
 
     move-result-object v22
 
-    .line 265
     .local v22, "representationInfo":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;
     move-object/from16 v0, v22
 
     iget-object v4, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;->format:Lorg/telegram/messenger/exoplayer2/Format;
 
-    .line 266
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->getContentType(Lorg/telegram/messenger/exoplayer2/Format;)I
 
     move-result v4
 
-    .line 265
     move/from16 v0, v18
 
     invoke-static {v0, v4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->checkContentTypeConsistency(II)I
 
     move-result v18
 
-    .line 267
     move-object/from16 v0, v23
 
     move-object/from16 v1, v22
@@ -1979,7 +1796,6 @@
 
     goto/16 :goto_0
 
-    .line 268
     .end local v22    # "representationInfo":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;
     :cond_5
     const-string/jumbo v4, "AudioChannelConfiguration"
@@ -1992,14 +1808,12 @@
 
     if-eqz v4, :cond_6
 
-    .line 269
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseAudioChannelConfiguration(Lorg/xmlpull/v1/XmlPullParser;)I
 
     move-result v12
 
     goto/16 :goto_0
 
-    .line 270
     :cond_6
     const-string/jumbo v4, "Accessibility"
 
@@ -2011,14 +1825,12 @@
 
     if-eqz v4, :cond_7
 
-    .line 271
     invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseAccessibilityValue(Lorg/xmlpull/v1/XmlPullParser;)I
 
     move-result v15
 
     goto/16 :goto_0
 
-    .line 272
     :cond_7
     const-string/jumbo v4, "SegmentBase"
 
@@ -2030,7 +1842,6 @@
 
     if-eqz v4, :cond_8
 
-    .line 273
     check-cast p3, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
 
     .end local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -2047,7 +1858,6 @@
     .restart local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto/16 :goto_0
 
-    .line 274
     :cond_8
     const-string/jumbo v4, "SegmentList"
 
@@ -2059,7 +1869,6 @@
 
     if-eqz v4, :cond_9
 
-    .line 275
     check-cast p3, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;
 
     .end local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -2076,7 +1885,6 @@
     .restart local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto/16 :goto_0
 
-    .line 276
     :cond_9
     const-string/jumbo v4, "SegmentTemplate"
 
@@ -2088,7 +1896,6 @@
 
     if-eqz v4, :cond_a
 
-    .line 277
     check-cast p3, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;
 
     .end local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -2105,7 +1912,6 @@
     .restart local p3    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto/16 :goto_0
 
-    .line 278
     :cond_a
     invoke-static/range {p1 .. p1}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;)Z
 
@@ -2113,12 +1919,10 @@
 
     if-eqz v4, :cond_1
 
-    .line 279
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseAdaptationSetChild(Lorg/xmlpull/v1/XmlPullParser;)V
 
     goto/16 :goto_0
 
-    .line 289
     .restart local v20    # "i":I
     .restart local v24    # "representations":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Representation;>;"
     :cond_b
@@ -2148,7 +1952,6 @@
     .end annotation
 
     .prologue
-    .line 368
     return-void
 .end method
 
@@ -2165,7 +1968,6 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 644
     const-string/jumbo v2, "schemeIdUri"
 
     const/4 v3, 0x0
@@ -2174,7 +1976,6 @@
 
     move-result-object v1
 
-    .line 645
     .local v1, "schemeIdUri":Ljava/lang/String;
     const-string/jumbo v2, "urn:mpeg:dash:23003:3:audio_channel_configuration:2011"
 
@@ -2186,17 +1987,14 @@
 
     const-string/jumbo v2, "value"
 
-    .line 646
     invoke-static {p1, v2, v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseInt(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;I)I
 
     move-result v0
 
-    .line 648
     .local v0, "audioChannels":I
     :cond_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 649
     const-string/jumbo v2, "AudioChannelConfiguration"
 
     invoke-static {p1, v2}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isEndTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
@@ -2205,7 +2003,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 650
     return v0
 .end method
 
@@ -2224,27 +2021,21 @@
 
     const/4 v6, 0x0
 
-    .line 332
     const/4 v0, 0x0
 
-    .line 333
     .local v0, "data":[B
     const/4 v4, 0x0
 
-    .line 334
     .local v4, "uuid":Ljava/util/UUID;
     const/4 v3, 0x0
 
-    .line 335
     .local v3, "seenPsshElement":Z
     const/4 v1, 0x0
 
-    .line 337
     .local v1, "requiresSecureDecoder":Z
     :cond_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 339
     const-string/jumbo v7, "cenc:pssh"
 
     invoke-static {p1, v7}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
@@ -2261,10 +2052,8 @@
 
     if-ne v7, v8, :cond_2
 
-    .line 340
     const/4 v3, 0x1
 
-    .line 341
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->getText()Ljava/lang/String;
 
     move-result-object v7
@@ -2273,12 +2062,10 @@
 
     move-result-object v0
 
-    .line 342
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/extractor/mp4/PsshAtomUtil;->parseUuid([B)Ljava/util/UUID;
 
     move-result-object v4
 
-    .line 347
     :cond_1
     :goto_0
     const-string/jumbo v7, "ContentProtection"
@@ -2289,16 +2076,13 @@
 
     if-eqz v7, :cond_0
 
-    .line 348
     if-nez v3, :cond_4
 
     move-object v5, v6
 
-    .line 354
     :goto_1
     return-object v5
 
-    .line 343
     :cond_2
     const-string/jumbo v7, "widevine:license"
 
@@ -2308,14 +2092,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 344
     const-string/jumbo v7, "robustness_level"
 
     invoke-interface {p1, v6, v7}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 345
     .local v2, "robustnessLevel":Ljava/lang/String;
     if-eqz v2, :cond_3
 
@@ -2337,12 +2119,10 @@
 
     goto :goto_2
 
-    .line 350
     .end local v2    # "robustnessLevel":Ljava/lang/String;
     :cond_4
     if-eqz v4, :cond_5
 
-    .line 351
     new-instance v5, Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     const-string/jumbo v6, "video/mp4"
@@ -2351,7 +2131,6 @@
 
     goto :goto_1
 
-    .line 353
     :cond_5
     const-string/jumbo v5, "MpdParser"
 
@@ -2361,7 +2140,6 @@
 
     move-object v5, v6
 
-    .line 354
     goto :goto_1
 .end method
 
@@ -2372,7 +2150,6 @@
     .prologue
     const/4 v1, -0x1
 
-    .line 298
     const/4 v2, 0x0
 
     const-string/jumbo v3, "contentType"
@@ -2381,7 +2158,6 @@
 
     move-result-object v0
 
-    .line 299
     .local v0, "contentType":Ljava/lang/String;
     invoke-static {v0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -2389,16 +2165,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 302
     :cond_0
     :goto_0
     return v1
 
-    .line 299
     :cond_1
     const-string/jumbo v2, "audio"
 
-    .line 300
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2412,7 +2185,6 @@
     :cond_2
     const-string/jumbo v2, "video"
 
-    .line 301
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2426,7 +2198,6 @@
     :cond_3
     const-string/jumbo v2, "text"
 
-    .line 302
     invoke-virtual {v2, v0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v2
@@ -2443,7 +2214,6 @@
     .param p1, "xpp"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 613
     const-string/jumbo v0, "sourceURL"
 
     const-string/jumbo v1, "range"
@@ -2467,7 +2237,6 @@
     .end annotation
 
     .prologue
-    .line 107
     const-string/jumbo v6, "availabilityStartTime"
 
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
@@ -2480,7 +2249,6 @@
 
     move-result-wide v7
 
-    .line 108
     .local v7, "availabilityStartTime":J
     const-string/jumbo v6, "mediaPresentationDuration"
 
@@ -2494,7 +2262,6 @@
 
     move-result-wide v9
 
-    .line 109
     .local v9, "durationMs":J
     const-string/jumbo v6, "minBufferTime"
 
@@ -2508,7 +2275,6 @@
 
     move-result-wide v11
 
-    .line 110
     .local v11, "minBufferTimeMs":J
     const/4 v6, 0x0
 
@@ -2522,7 +2288,6 @@
 
     move-result-object v31
 
-    .line 111
     .local v31, "typeString":Ljava/lang/String;
     if-eqz v31, :cond_3
 
@@ -2538,7 +2303,6 @@
 
     const/4 v13, 0x1
 
-    .line 112
     .local v13, "dynamic":Z
     :goto_0
     if-eqz v13, :cond_4
@@ -2555,7 +2319,6 @@
 
     move-result-wide v14
 
-    .line 114
     .local v14, "minUpdateTimeMs":J
     :goto_1
     if-eqz v13, :cond_5
@@ -2564,7 +2327,6 @@
 
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 115
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v32
@@ -2573,7 +2335,6 @@
 
     move-result-wide v16
 
-    .line 116
     .local v16, "timeShiftBufferDepthMs":J
     :goto_2
     if-eqz v13, :cond_6
@@ -2582,7 +2343,6 @@
 
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 117
     move-object/from16 v0, p1
 
     move-wide/from16 v1, v32
@@ -2591,42 +2351,34 @@
 
     move-result-wide v18
 
-    .line 118
     .local v18, "suggestedPresentationDelayMs":J
     :goto_3
     const/16 v20, 0x0
 
-    .line 119
     .local v20, "utcTiming":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
     const/16 v21, 0x0
 
-    .line 121
     .local v21, "location":Landroid/net/Uri;
     new-instance v22, Ljava/util/ArrayList;
 
     invoke-direct/range {v22 .. v22}, Ljava/util/ArrayList;-><init>()V
 
-    .line 122
     .local v22, "periods":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;>;"
     if-eqz v13, :cond_7
 
     const-wide v24, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 123
     .local v24, "nextPeriodStartMs":J
     :goto_4
     const/16 v29, 0x0
 
-    .line 124
     .local v29, "seenEarlyAccessPeriod":Z
     const/16 v30, 0x0
 
-    .line 126
     .local v30, "seenFirstBaseUrl":Z
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 127
     const-string/jumbo v6, "BaseURL"
 
     move-object/from16 v0, p1
@@ -2637,18 +2389,14 @@
 
     if-eqz v6, :cond_8
 
-    .line 128
     if-nez v30, :cond_1
 
-    .line 129
     invoke-static/range {p1 .. p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseBaseUrl(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 130
     const/16 v30, 0x1
 
-    .line 154
     :cond_1
     :goto_5
     const-string/jumbo v6, "MPD"
@@ -2661,24 +2409,20 @@
 
     if-eqz v6, :cond_0
 
-    .line 156
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
 
     cmp-long v6, v9, v32
 
     if-nez v6, :cond_2
 
-    .line 157
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
 
     cmp-long v6, v24, v32
 
     if-eqz v6, :cond_e
 
-    .line 159
     move-wide/from16 v9, v24
 
-    .line 165
     :cond_2
     invoke-interface/range {v22 .. v22}, Ljava/util/List;->isEmpty()Z
 
@@ -2686,7 +2430,6 @@
 
     if-eqz v6, :cond_f
 
-    .line 166
     new-instance v6, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v32, "No periods found."
@@ -2697,7 +2440,6 @@
 
     throw v6
 
-    .line 111
     .end local v13    # "dynamic":Z
     .end local v14    # "minUpdateTimeMs":J
     .end local v16    # "timeShiftBufferDepthMs":J
@@ -2713,28 +2455,24 @@
 
     goto/16 :goto_0
 
-    .line 112
     .restart local v13    # "dynamic":Z
     :cond_4
     const-wide v14, -0x7fffffffffffffffL    # -4.9E-324
 
     goto/16 :goto_1
 
-    .line 115
     .restart local v14    # "minUpdateTimeMs":J
     :cond_5
     const-wide v16, -0x7fffffffffffffffL    # -4.9E-324
 
     goto :goto_2
 
-    .line 117
     .restart local v16    # "timeShiftBufferDepthMs":J
     :cond_6
     const-wide v18, -0x7fffffffffffffffL    # -4.9E-324
 
     goto :goto_3
 
-    .line 122
     .restart local v18    # "suggestedPresentationDelayMs":J
     .restart local v20    # "utcTiming":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
     .restart local v21    # "location":Landroid/net/Uri;
@@ -2744,7 +2482,6 @@
 
     goto :goto_4
 
-    .line 132
     .restart local v24    # "nextPeriodStartMs":J
     .restart local v29    # "seenEarlyAccessPeriod":Z
     .restart local v30    # "seenFirstBaseUrl":Z
@@ -2759,14 +2496,12 @@
 
     if-eqz v6, :cond_9
 
-    .line 133
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseUtcTiming(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
 
     move-result-object v20
 
     goto :goto_5
 
-    .line 134
     :cond_9
     const-string/jumbo v6, "Location"
 
@@ -2778,7 +2513,6 @@
 
     if-eqz v6, :cond_a
 
-    .line 135
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->nextText()Ljava/lang/String;
 
     move-result-object v6
@@ -2789,7 +2523,6 @@
 
     goto :goto_5
 
-    .line 136
     :cond_a
     const-string/jumbo v6, "Period"
 
@@ -2803,7 +2536,6 @@
 
     if-nez v29, :cond_1
 
-    .line 137
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -2816,7 +2548,6 @@
 
     move-result-object v28
 
-    .line 138
     .local v28, "periodWithDurationMs":Landroid/util/Pair;, "Landroid/util/Pair<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;Ljava/lang/Long;>;"
     move-object/from16 v0, v28
 
@@ -2826,7 +2557,6 @@
 
     check-cast v23, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
 
-    .line 139
     .local v23, "period":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
     move-object/from16 v0, v23
 
@@ -2840,15 +2570,12 @@
 
     if-nez v6, :cond_c
 
-    .line 140
     if-eqz v13, :cond_b
 
-    .line 143
     const/16 v29, 0x1
 
     goto/16 :goto_5
 
-    .line 145
     :cond_b
     new-instance v6, Lorg/telegram/messenger/exoplayer2/ParserException;
 
@@ -2880,7 +2607,6 @@
 
     throw v6
 
-    .line 148
     :cond_c
     move-object/from16 v0, v28
 
@@ -2892,7 +2618,6 @@
 
     move-result-wide v26
 
-    .line 149
     .local v26, "periodDurationMs":J
     const-wide v32, -0x7fffffffffffffffL    # -4.9E-324
 
@@ -2902,13 +2627,11 @@
 
     const-wide v24, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 151
     :goto_6
     invoke-interface/range {v22 .. v23}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
     goto/16 :goto_5
 
-    .line 149
     :cond_d
     move-object/from16 v0, v23
 
@@ -2920,14 +2643,12 @@
 
     goto :goto_6
 
-    .line 160
     .end local v23    # "period":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
     .end local v26    # "periodDurationMs":J
     .end local v28    # "periodWithDurationMs":Landroid/util/Pair;, "Landroid/util/Pair<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;Ljava/lang/Long;>;"
     :cond_e
     if-nez v13, :cond_2
 
-    .line 161
     new-instance v6, Lorg/telegram/messenger/exoplayer2/ParserException;
 
     const-string/jumbo v32, "Unable to determine duration of static manifest."
@@ -2941,7 +2662,6 @@
     :cond_f
     move-object/from16 v6, p0
 
-    .line 169
     invoke-virtual/range {v6 .. v22}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildMediaPresentationDescription(JJJZJJJLorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;Landroid/net/Uri;Ljava/util/List;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifest;
 
     move-result-object v6
@@ -2976,7 +2696,6 @@
     .end annotation
 
     .prologue
-    .line 195
     const/4 v12, 0x0
 
     const-string/jumbo v13, "id"
@@ -2987,7 +2706,6 @@
 
     move-result-object v5
 
-    .line 196
     .local v5, "id":Ljava/lang/String;
     const-string/jumbo v12, "start"
 
@@ -2999,7 +2717,6 @@
 
     move-result-wide v10
 
-    .line 197
     .local v10, "startMs":J
     const-string/jumbo v12, "duration"
 
@@ -3011,26 +2728,21 @@
 
     move-result-wide v6
 
-    .line 198
     .local v6, "durationMs":J
     const/4 v9, 0x0
 
-    .line 199
     .local v9, "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 200
     .local v4, "adaptationSets":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/AdaptationSet;>;"
     const/4 v8, 0x0
 
-    .line 202
     .local v8, "seenFirstBaseUrl":Z
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 203
     const-string/jumbo v12, "BaseURL"
 
     move-object/from16 v0, p1
@@ -3041,18 +2753,14 @@
 
     if-eqz v12, :cond_2
 
-    .line 204
     if-nez v8, :cond_1
 
-    .line 205
     invoke-static/range {p1 .. p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseBaseUrl(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 206
     const/4 v8, 0x1
 
-    .line 217
     :cond_1
     :goto_0
     const-string/jumbo v12, "Period"
@@ -3065,7 +2773,6 @@
 
     if-eqz v12, :cond_0
 
-    .line 219
     move-object/from16 v0, p0
 
     invoke-virtual {v0, v5, v10, v11, v4}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildPeriod(Ljava/lang/String;JLjava/util/List;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/Period;
@@ -3082,7 +2789,6 @@
 
     return-object v12
 
-    .line 208
     :cond_2
     const-string/jumbo v12, "AdaptationSet"
 
@@ -3094,7 +2800,6 @@
 
     if-eqz v12, :cond_3
 
-    .line 209
     move-object/from16 v0, p0
 
     move-object/from16 v1, p1
@@ -3109,7 +2814,6 @@
 
     goto :goto_0
 
-    .line 210
     :cond_3
     const-string/jumbo v12, "SegmentBase"
 
@@ -3121,7 +2825,6 @@
 
     if-eqz v12, :cond_4
 
-    .line 211
     const/4 v12, 0x0
 
     move-object/from16 v0, p0
@@ -3134,7 +2837,6 @@
 
     goto :goto_0
 
-    .line 212
     :cond_4
     const-string/jumbo v12, "SegmentList"
 
@@ -3146,7 +2848,6 @@
 
     if-eqz v12, :cond_5
 
-    .line 213
     const/4 v12, 0x0
 
     move-object/from16 v0, p0
@@ -3159,7 +2860,6 @@
 
     goto :goto_0
 
-    .line 214
     :cond_5
     const-string/jumbo v12, "SegmentTemplate"
 
@@ -3171,7 +2871,6 @@
 
     if-eqz v12, :cond_1
 
-    .line 215
     const/4 v12, 0x0
 
     move-object/from16 v0, p0
@@ -3194,37 +2893,30 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 622
     invoke-interface {p1, v0, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v1
 
-    .line 623
     .local v1, "urlText":Ljava/lang/String;
     const-wide/16 v2, 0x0
 
-    .line 624
     .local v2, "rangeStart":J
     const-wide/16 v4, -0x1
 
-    .line 625
     .local v4, "rangeLength":J
     invoke-interface {p1, v0, p3}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v6
 
-    .line 626
     .local v6, "rangeText":Ljava/lang/String;
     if-eqz v6, :cond_0
 
-    .line 627
     const-string/jumbo v0, "-"
 
     invoke-virtual {v6, v0}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v7
 
-    .line 628
     .local v7, "rangeTextArray":[Ljava/lang/String;
     const/4 v0, 0x0
 
@@ -3234,14 +2926,12 @@
 
     move-result-wide v2
 
-    .line 629
     array-length v0, v7
 
     const/4 v8, 0x2
 
     if-ne v0, v8, :cond_0
 
-    .line 630
     const/4 v0, 0x1
 
     aget-object v0, v7, v0
@@ -3260,7 +2950,6 @@
     :cond_0
     move-object v0, p0
 
-    .line 633
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildRangedUri(Ljava/lang/String;JJ)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v0
@@ -3290,7 +2979,6 @@
     .end annotation
 
     .prologue
-    .line 378
     const/4 v4, 0x0
 
     const-string/jumbo v13, "id"
@@ -3301,7 +2989,6 @@
 
     move-result-object v5
 
-    .line 379
     .local v5, "id":Ljava/lang/String;
     const-string/jumbo v4, "bandwidth"
 
@@ -3313,7 +3000,6 @@
 
     move-result v12
 
-    .line 381
     .local v12, "bandwidth":I
     const-string/jumbo v4, "mimeType"
 
@@ -3325,7 +3011,6 @@
 
     move-result-object v6
 
-    .line 382
     .local v6, "mimeType":Ljava/lang/String;
     const-string/jumbo v4, "codecs"
 
@@ -3337,7 +3022,6 @@
 
     move-result-object v15
 
-    .line 383
     .local v15, "codecs":Ljava/lang/String;
     const-string/jumbo v4, "width"
 
@@ -3349,7 +3033,6 @@
 
     move-result v7
 
-    .line 384
     .local v7, "width":I
     const-string/jumbo v4, "height"
 
@@ -3361,7 +3044,6 @@
 
     move-result v8
 
-    .line 385
     .local v8, "height":I
     move-object/from16 v0, p1
 
@@ -3371,11 +3053,9 @@
 
     move-result v9
 
-    .line 386
     .local v9, "frameRate":F
     move/from16 v10, p8
 
-    .line 387
     .local v10, "audioChannels":I
     const-string/jumbo v4, "audioSamplingRate"
 
@@ -3387,22 +3067,18 @@
 
     move-result v11
 
-    .line 388
     .local v11, "audioSamplingRate":I
     new-instance v17, Ljava/util/ArrayList;
 
     invoke-direct/range {v17 .. v17}, Ljava/util/ArrayList;-><init>()V
 
-    .line 390
     .local v17, "drmSchemeDatas":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;>;"
     const/16 v19, 0x0
 
-    .line 392
     .local v19, "seenFirstBaseUrl":Z
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 393
     const-string/jumbo v4, "BaseURL"
 
     move-object/from16 v0, p1
@@ -3413,18 +3089,14 @@
 
     if-eqz v4, :cond_2
 
-    .line 394
     if-nez v19, :cond_1
 
-    .line 395
     invoke-static/range {p1 .. p2}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseBaseUrl(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object p2
 
-    .line 396
     const/16 v19, 0x1
 
-    .line 412
     :cond_1
     :goto_0
     const-string/jumbo v4, "Representation"
@@ -3443,16 +3115,13 @@
 
     move/from16 v14, p11
 
-    .line 414
     invoke-virtual/range {v4 .. v15}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildFormat(Ljava/lang/String;Ljava/lang/String;IIFIIILjava/lang/String;ILjava/lang/String;)Lorg/telegram/messenger/exoplayer2/Format;
 
     move-result-object v18
 
-    .line 417
     .local v18, "format":Lorg/telegram/messenger/exoplayer2/Format;
     if-eqz p12, :cond_7
 
-    .line 419
     :goto_1
     new-instance v4, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser$RepresentationInfo;
 
@@ -3468,7 +3137,6 @@
 
     return-object v4
 
-    .line 398
     .end local v18    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :cond_2
     const-string/jumbo v4, "AudioChannelConfiguration"
@@ -3481,14 +3149,12 @@
 
     if-eqz v4, :cond_3
 
-    .line 399
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseAudioChannelConfiguration(Lorg/xmlpull/v1/XmlPullParser;)I
 
     move-result v10
 
     goto :goto_0
 
-    .line 400
     :cond_3
     const-string/jumbo v4, "SegmentBase"
 
@@ -3500,7 +3166,6 @@
 
     if-eqz v4, :cond_4
 
-    .line 401
     check-cast p12, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
 
     .end local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -3517,7 +3182,6 @@
     .restart local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto :goto_0
 
-    .line 402
     :cond_4
     const-string/jumbo v4, "SegmentList"
 
@@ -3529,7 +3193,6 @@
 
     if-eqz v4, :cond_5
 
-    .line 403
     check-cast p12, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;
 
     .end local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -3546,7 +3209,6 @@
     .restart local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto :goto_0
 
-    .line 404
     :cond_5
     const-string/jumbo v4, "SegmentTemplate"
 
@@ -3558,7 +3220,6 @@
 
     if-eqz v4, :cond_6
 
-    .line 405
     check-cast p12, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;
 
     .end local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
@@ -3575,7 +3236,6 @@
     .restart local p12    # "segmentBase":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase;
     goto :goto_0
 
-    .line 406
     :cond_6
     const-string/jumbo v4, "ContentProtection"
 
@@ -3587,16 +3247,13 @@
 
     if-eqz v4, :cond_1
 
-    .line 407
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseContentProtection(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
 
     move-result-object v16
 
-    .line 408
     .local v16, "contentProtection":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     if-eqz v16, :cond_1
 
-    .line 409
     move-object/from16 v0, v17
 
     move-object/from16 v1, v16
@@ -3605,7 +3262,6 @@
 
     goto/16 :goto_0
 
-    .line 417
     .end local v16    # "contentProtection":Lorg/telegram/messenger/exoplayer2/drm/DrmInitData$SchemeData;
     .restart local v18    # "format":Lorg/telegram/messenger/exoplayer2/Format;
     :cond_7
@@ -3633,7 +3289,6 @@
     .end annotation
 
     .prologue
-    .line 464
     const-string/jumbo v2, "timescale"
 
     if-eqz p2, :cond_3
@@ -3649,7 +3304,6 @@
 
     move-result-wide v4
 
-    .line 465
     .local v4, "timescale":J
     const-string/jumbo v2, "presentationTimeOffset"
 
@@ -3666,7 +3320,6 @@
 
     move-result-wide v6
 
-    .line 468
     .local v6, "presentationTimeOffset":J
     if-eqz p2, :cond_5
 
@@ -3674,7 +3327,6 @@
 
     iget-wide v8, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexStart:J
 
-    .line 469
     .local v8, "indexStart":J
     :goto_2
     if-eqz p2, :cond_6
@@ -3683,7 +3335,6 @@
 
     iget-wide v10, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->indexLength:J
 
-    .line 470
     .local v10, "indexLength":J
     :goto_3
     const/4 v2, 0x0
@@ -3696,18 +3347,15 @@
 
     move-result-object v13
 
-    .line 471
     .local v13, "indexRangeText":Ljava/lang/String;
     if-eqz v13, :cond_0
 
-    .line 472
     const-string/jumbo v2, "-"
 
     invoke-virtual {v13, v2}, Ljava/lang/String;->split(Ljava/lang/String;)[Ljava/lang/String;
 
     move-result-object v12
 
-    .line 473
     .local v12, "indexRange":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -3717,7 +3365,6 @@
 
     move-result-wide v8
 
-    .line 474
     const/4 v2, 0x1
 
     aget-object v2, v12, v2
@@ -3732,7 +3379,6 @@
 
     add-long v10, v14, v16
 
-    .line 477
     .end local v12    # "indexRange":[Ljava/lang/String;
     :cond_0
     if-eqz p2, :cond_7
@@ -3741,13 +3387,11 @@
 
     iget-object v3, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;->initialization:Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
-    .line 479
     .local v3, "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     :cond_1
     :goto_4
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 480
     const-string/jumbo v2, "Initialization"
 
     move-object/from16 v0, p1
@@ -3758,12 +3402,10 @@
 
     if-eqz v2, :cond_2
 
-    .line 481
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseInitialization(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v3
 
-    .line 483
     :cond_2
     const-string/jumbo v2, "SegmentBase"
 
@@ -3777,14 +3419,12 @@
 
     move-object/from16 v2, p0
 
-    .line 485
     invoke-virtual/range {v2 .. v11}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildSingleSegmentBase(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJJJ)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SingleSegmentBase;
 
     move-result-object v2
 
     return-object v2
 
-    .line 464
     .end local v3    # "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .end local v4    # "timescale":J
     .end local v6    # "presentationTimeOffset":J
@@ -3796,28 +3436,24 @@
 
     goto :goto_0
 
-    .line 465
     .restart local v4    # "timescale":J
     :cond_4
     const-wide/16 v14, 0x0
 
     goto :goto_1
 
-    .line 468
     .restart local v6    # "presentationTimeOffset":J
     :cond_5
     const-wide/16 v8, 0x0
 
     goto :goto_2
 
-    .line 469
     .restart local v8    # "indexStart":J
     :cond_6
     const-wide/16 v10, 0x0
 
     goto :goto_3
 
-    .line 477
     .restart local v10    # "indexLength":J
     .restart local v13    # "indexRangeText":Ljava/lang/String;
     :cond_7
@@ -3838,7 +3474,6 @@
     .end annotation
 
     .prologue
-    .line 498
     const-string/jumbo v2, "timescale"
 
     if-eqz p2, :cond_3
@@ -3854,7 +3489,6 @@
 
     move-result-wide v4
 
-    .line 499
     .local v4, "timescale":J
     const-string/jumbo v2, "presentationTimeOffset"
 
@@ -3871,7 +3505,6 @@
 
     move-result-wide v6
 
-    .line 501
     .local v6, "presentationTimeOffset":J
     const-string/jumbo v2, "duration"
 
@@ -3888,7 +3521,6 @@
 
     move-result-wide v9
 
-    .line 502
     .local v9, "duration":J
     const-string/jumbo v13, "startNumber"
 
@@ -3905,24 +3537,18 @@
 
     move-result v8
 
-    .line 504
     .local v8, "startNumber":I
     const/4 v3, 0x0
 
-    .line 505
     .local v3, "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     const/4 v11, 0x0
 
-    .line 506
-    .local v11, "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     const/4 v12, 0x0
 
-    .line 509
     .local v12, "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 510
     const-string/jumbo v2, "Initialization"
 
     move-object/from16 v0, p1
@@ -3933,12 +3559,10 @@
 
     if-eqz v2, :cond_7
 
-    .line 511
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseInitialization(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v3
 
-    .line 520
     :cond_1
     :goto_4
     const-string/jumbo v2, "SegmentList"
@@ -3951,17 +3575,13 @@
 
     if-eqz v2, :cond_0
 
-    .line 522
     if-eqz p2, :cond_2
 
-    .line 523
     if-eqz v3, :cond_a
 
-    .line 524
     :goto_5
     if-eqz v11, :cond_b
 
-    .line 525
     :goto_6
     if-eqz v12, :cond_c
 
@@ -3969,54 +3589,45 @@
     :goto_7
     move-object/from16 v2, p0
 
-    .line 528
     invoke-virtual/range {v2 .. v12}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildSegmentList(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJIJLjava/util/List;Ljava/util/List;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;
 
     move-result-object v2
 
     return-object v2
 
-    .line 498
     .end local v3    # "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .end local v4    # "timescale":J
     .end local v6    # "presentationTimeOffset":J
     .end local v8    # "startNumber":I
     .end local v9    # "duration":J
-    .end local v11    # "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     .end local v12    # "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     :cond_3
     const-wide/16 v14, 0x1
 
     goto :goto_0
 
-    .line 499
     .restart local v4    # "timescale":J
     :cond_4
     const-wide/16 v14, 0x0
 
     goto :goto_1
 
-    .line 501
     .restart local v6    # "presentationTimeOffset":J
     :cond_5
     const-wide v14, -0x7fffffffffffffffL    # -4.9E-324
 
     goto :goto_2
 
-    .line 502
     .restart local v9    # "duration":J
     :cond_6
     const/4 v2, 0x1
 
     goto :goto_3
 
-    .line 512
     .restart local v3    # "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .restart local v8    # "startNumber":I
-    .restart local v11    # "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     .restart local v12    # "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     :cond_7
-    const-string/jumbo v2, "SegmentTimeline"
 
     move-object/from16 v0, p1
 
@@ -4026,14 +3637,11 @@
 
     if-eqz v2, :cond_8
 
-    .line 513
-    invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseSegmentTimeline(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v11
 
     goto :goto_4
 
-    .line 514
     :cond_8
     const-string/jumbo v2, "SegmentURL"
 
@@ -4045,16 +3653,13 @@
 
     if-eqz v2, :cond_1
 
-    .line 515
     if-nez v12, :cond_9
 
-    .line 516
     new-instance v12, Ljava/util/ArrayList;
 
     .end local v12    # "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     invoke-direct {v12}, Ljava/util/ArrayList;-><init>()V
 
-    .line 518
     .restart local v12    # "segments":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;>;"
     :cond_9
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseSegmentUrl(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
@@ -4065,7 +3670,6 @@
 
     goto :goto_4
 
-    .line 523
     :cond_a
     move-object/from16 v0, p2
 
@@ -4073,15 +3677,12 @@
 
     goto :goto_5
 
-    .line 524
     :cond_b
     move-object/from16 v0, p2
 
-    iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentList;->segmentTimeline:Ljava/util/List;
 
     goto :goto_6
 
-    .line 525
     :cond_c
     move-object/from16 v0, p2
 
@@ -4102,7 +3703,6 @@
     .end annotation
 
     .prologue
-    .line 541
     const-string/jumbo v2, "timescale"
 
     if-eqz p2, :cond_3
@@ -4118,7 +3718,6 @@
 
     move-result-wide v4
 
-    .line 542
     .local v4, "timescale":J
     const-string/jumbo v2, "presentationTimeOffset"
 
@@ -4135,7 +3734,6 @@
 
     move-result-wide v6
 
-    .line 544
     .local v6, "presentationTimeOffset":J
     const-string/jumbo v2, "duration"
 
@@ -4152,7 +3750,6 @@
 
     move-result-wide v9
 
-    .line 545
     .local v9, "duration":J
     const-string/jumbo v14, "startNumber"
 
@@ -4169,7 +3766,6 @@
 
     move-result v8
 
-    .line 546
     .local v8, "startNumber":I
     const-string/jumbo v14, "media"
 
@@ -4188,7 +3784,6 @@
 
     move-result-object v13
 
-    .line 548
     .local v13, "mediaTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     const-string/jumbo v14, "initialization"
 
@@ -4207,20 +3802,15 @@
 
     move-result-object v12
 
-    .line 551
     .local v12, "initializationTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     const/4 v3, 0x0
 
-    .line 552
     .local v3, "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     const/4 v11, 0x0
 
-    .line 555
-    .local v11, "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     :cond_0
     invoke-interface/range {p1 .. p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 556
     const-string/jumbo v2, "Initialization"
 
     move-object/from16 v0, p1
@@ -4231,12 +3821,10 @@
 
     if-eqz v2, :cond_9
 
-    .line 557
     invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseInitialization(Lorg/xmlpull/v1/XmlPullParser;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
 
     move-result-object v3
 
-    .line 561
     :cond_1
     :goto_6
     const-string/jumbo v2, "SegmentTemplate"
@@ -4249,13 +3837,10 @@
 
     if-eqz v2, :cond_0
 
-    .line 563
     if-eqz p2, :cond_2
 
-    .line 564
     if-eqz v3, :cond_a
 
-    .line 565
     :goto_7
     if-eqz v11, :cond_b
 
@@ -4263,20 +3848,17 @@
     :goto_8
     move-object/from16 v2, p0
 
-    .line 568
     invoke-virtual/range {v2 .. v13}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildSegmentTemplate(Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;JJIJLjava/util/List;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;
 
     move-result-object v2
 
     return-object v2
 
-    .line 541
     .end local v3    # "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
     .end local v4    # "timescale":J
     .end local v6    # "presentationTimeOffset":J
     .end local v8    # "startNumber":I
     .end local v9    # "duration":J
-    .end local v11    # "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     .end local v12    # "initializationTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     .end local v13    # "mediaTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     :cond_3
@@ -4284,47 +3866,39 @@
 
     goto/16 :goto_0
 
-    .line 542
     .restart local v4    # "timescale":J
     :cond_4
     const-wide/16 v14, 0x0
 
     goto :goto_1
 
-    .line 544
     .restart local v6    # "presentationTimeOffset":J
     :cond_5
     const-wide v14, -0x7fffffffffffffffL    # -4.9E-324
 
     goto :goto_2
 
-    .line 545
     .restart local v9    # "duration":J
     :cond_6
     const/4 v2, 0x1
 
     goto :goto_3
 
-    .line 546
     .restart local v8    # "startNumber":I
     :cond_7
     const/4 v2, 0x0
 
     goto :goto_4
 
-    .line 548
     .restart local v13    # "mediaTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     :cond_8
     const/4 v2, 0x0
 
     goto :goto_5
 
-    .line 558
     .restart local v3    # "initialization":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/RangedUri;
-    .restart local v11    # "timeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     .restart local v12    # "initializationTemplate":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     :cond_9
-    const-string/jumbo v2, "SegmentTimeline"
 
     move-object/from16 v0, p1
 
@@ -4334,14 +3908,11 @@
 
     if-eqz v2, :cond_1
 
-    .line 559
-    invoke-virtual/range {p0 .. p1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseSegmentTimeline(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
 
     move-result-object v11
 
     goto :goto_6
 
-    .line 564
     :cond_a
     move-object/from16 v0, p2
 
@@ -4349,16 +3920,13 @@
 
     goto :goto_7
 
-    .line 565
     :cond_b
     move-object/from16 v0, p2
 
-    iget-object v11, v0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTemplate;->segmentTimeline:Ljava/util/List;
 
     goto :goto_8
 .end method
 
-.method protected parseSegmentTimeline(Lorg/xmlpull/v1/XmlPullParser;)Ljava/util/List;
     .locals 10
     .param p1, "xpp"    # Lorg/xmlpull/v1/XmlPullParser;
     .annotation system Ldalvik/annotation/Signature;
@@ -4368,7 +3936,6 @@
             ")",
             "Ljava/util/List",
             "<",
-            "Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;",
             ">;"
         }
     .end annotation
@@ -4381,21 +3948,16 @@
     .end annotation
 
     .prologue
-    .line 582
     new-instance v6, Ljava/util/ArrayList;
 
     invoke-direct {v6}, Ljava/util/ArrayList;-><init>()V
 
-    .line 583
-    .local v6, "segmentTimeline":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;>;"
     const-wide/16 v4, 0x0
 
-    .line 585
     .local v4, "elapsedTime":J
     :cond_0
     invoke-interface {p1}, Lorg/xmlpull/v1/XmlPullParser;->next()I
 
-    .line 586
     const-string/jumbo v7, "S"
 
     invoke-static {p1, v7}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isStartTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
@@ -4404,14 +3966,12 @@
 
     if-eqz v7, :cond_1
 
-    .line 587
     const-string/jumbo v7, "t"
 
     invoke-static {p1, v7, v4, v5}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->parseLong(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;J)J
 
     move-result-wide v4
 
-    .line 588
     const-string/jumbo v7, "d"
 
     const-wide v8, -0x7fffffffffffffffL    # -4.9E-324
@@ -4420,7 +3980,6 @@
 
     move-result-wide v2
 
-    .line 589
     .local v2, "duration":J
     const-string/jumbo v7, "r"
 
@@ -4432,7 +3991,6 @@
 
     add-int/lit8 v0, v7, 0x1
 
-    .line 590
     .local v0, "count":I
     const/4 v1, 0x0
 
@@ -4440,27 +3998,21 @@
     :goto_0
     if-ge v1, v0, :cond_1
 
-    .line 591
-    invoke-virtual {p0, v4, v5, v2, v3}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildSegmentTimelineElement(JJ)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;
 
     move-result-object v7
 
     invoke-interface {v6, v7}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 592
     add-long/2addr v4, v2
 
-    .line 590
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 595
     .end local v0    # "count":I
     .end local v1    # "i":I
     .end local v2    # "duration":J
     :cond_1
-    const-string/jumbo v7, "SegmentTimeline"
 
     invoke-static {p1, v7}, Lorg/telegram/messenger/exoplayer2/util/XmlPullParserUtil;->isEndTag(Lorg/xmlpull/v1/XmlPullParser;Ljava/lang/String;)Z
 
@@ -4468,7 +4020,6 @@
 
     if-eqz v7, :cond_0
 
-    .line 596
     return-object v6
 .end method
 
@@ -4477,7 +4028,6 @@
     .param p1, "xpp"    # Lorg/xmlpull/v1/XmlPullParser;
 
     .prologue
-    .line 617
     const-string/jumbo v0, "media"
 
     const-string/jumbo v1, "mediaRange"
@@ -4496,23 +4046,19 @@
     .param p3, "defaultValue"    # Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
     .prologue
-    .line 605
     const/4 v1, 0x0
 
     invoke-interface {p1, v1, p2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 606
     .local v0, "valueString":Ljava/lang/String;
     if-eqz v0, :cond_0
 
-    .line 607
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;->compile(Ljava/lang/String;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
 
     move-result-object p3
 
-    .line 609
     .end local p3    # "defaultValue":Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UrlTemplate;
     :cond_0
     return-object p3
@@ -4525,14 +4071,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 184
     const-string/jumbo v2, "schemeIdUri"
 
     invoke-interface {p1, v3, v2}, Lorg/xmlpull/v1/XmlPullParser;->getAttributeValue(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
 
-    .line 185
     .local v0, "schemeIdUri":Ljava/lang/String;
     const-string/jumbo v2, "value"
 
@@ -4540,7 +4084,6 @@
 
     move-result-object v1
 
-    .line 186
     .local v1, "value":Ljava/lang/String;
     invoke-virtual {p0, v0, v1}, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/DashManifestParser;->buildUtcTimingElement(Ljava/lang/String;Ljava/lang/String;)Lorg/telegram/messenger/exoplayer2/source/dash/manifest/UtcTimingElement;
 

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$67;
 
     .prologue
-    .line 4466
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$67$4;->this$1:Lorg/telegram/ui/ChatActivity$67;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$67$4;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_getWebPagePreview;
@@ -47,13 +46,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4469
     new-instance v0, Lorg/telegram/ui/ChatActivity$67$4$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/ChatActivity$67$4$1;-><init>(Lorg/telegram/ui/ChatActivity$67$4;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4499
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/FileLoader$3;
 
     .prologue
-    .line 177
     iput-object p1, p0, Lorg/telegram/messenger/FileLoader$3$1;->this$1:Lorg/telegram/messenger/FileLoader$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "progress"    # F
 
     .prologue
-    .line 252
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$3$1;->this$1:Lorg/telegram/messenger/FileLoader$3;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$3;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -54,7 +52,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 253
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$3$1;->this$1:Lorg/telegram/messenger/FileLoader$3;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$3;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -73,7 +70,6 @@
 
     invoke-interface {v0, v1, p2, v2}, Lorg/telegram/messenger/FileLoader$FileLoaderDelegate;->fileUploadProgressChanged(Ljava/lang/String;FZ)V
 
-    .line 255
     :cond_0
     return-void
 .end method
@@ -83,7 +79,6 @@
     .param p1, "operation"    # Lorg/telegram/messenger/FileUploadOperation;
 
     .prologue
-    .line 216
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$3$1;->this$1:Lorg/telegram/messenger/FileLoader$3;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$3;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -98,7 +93,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 248
     return-void
 .end method
 
@@ -111,7 +105,6 @@
     .param p5, "iv"    # [B
 
     .prologue
-    .line 180
     iget-object v0, p0, Lorg/telegram/messenger/FileLoader$3$1;->this$1:Lorg/telegram/messenger/FileLoader$3;
 
     iget-object v0, v0, Lorg/telegram/messenger/FileLoader$3;->this$0:Lorg/telegram/messenger/FileLoader;
@@ -138,6 +131,5 @@
 
     invoke-virtual {v7, v0}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 212
     return-void
 .end method

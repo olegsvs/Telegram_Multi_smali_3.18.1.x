@@ -40,7 +40,6 @@
     .locals 0
 
     .prologue
-    .line 430
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesQuery$9;->val$users:Ljava/util/ArrayList;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/query/MessagesQuery$9;->val$isCache:Z
@@ -72,7 +71,6 @@
 
     const/4 v10, 0x0
 
-    .line 433
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -83,7 +81,6 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 434
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v7
@@ -94,10 +91,8 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 435
     const/4 v3, 0x0
 
-    .line 436
     .local v3, "changed":Z
     const/4 v0, 0x0
 
@@ -111,7 +106,6 @@
 
     if-ge v0, v7, :cond_5
 
-    .line 437
     iget-object v7, p0, Lorg/telegram/messenger/query/MessagesQuery$9;->val$result:Ljava/util/ArrayList;
 
     invoke-virtual {v7, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -120,7 +114,6 @@
 
     check-cast v5, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 438
     .local v5, "message":Lorg/telegram/tgnet/TLRPC$Message;
     iget-object v7, p0, Lorg/telegram/messenger/query/MessagesQuery$9;->val$replyMessageOwners:Ljava/util/HashMap;
 
@@ -136,11 +129,9 @@
 
     check-cast v1, Ljava/util/ArrayList;
 
-    .line 439
     .local v1, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-eqz v1, :cond_4
 
-    .line 440
     new-instance v6, Lorg/telegram/messenger/MessageObject;
 
     iget-object v7, p0, Lorg/telegram/messenger/query/MessagesQuery$9;->val$usersDict:Ljava/util/HashMap;
@@ -149,7 +140,6 @@
 
     invoke-direct {v6, v5, v7, v8, v12}, Lorg/telegram/messenger/MessageObject;-><init>(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/AbstractMap;Ljava/util/AbstractMap;Z)V
 
-    .line 441
     .local v6, "messageObject":Lorg/telegram/messenger/MessageObject;
     const/4 v2, 0x0
 
@@ -161,18 +151,15 @@
 
     if-ge v2, v7, :cond_3
 
-    .line 442
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v4
 
     check-cast v4, Lorg/telegram/messenger/MessageObject;
 
-    .line 443
     .local v4, "m":Lorg/telegram/messenger/MessageObject;
     iput-object v6, v4, Lorg/telegram/messenger/MessageObject;->replyMessageObject:Lorg/telegram/messenger/MessageObject;
 
-    .line 444
     iget-object v7, v4, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-object v7, v7, Lorg/telegram/tgnet/TLRPC$Message;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
@@ -181,17 +168,14 @@
 
     if-eqz v7, :cond_1
 
-    .line 445
     invoke-virtual {v4, v10, v10}, Lorg/telegram/messenger/MessageObject;->generatePinMessageText(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;)V
 
-    .line 441
     :cond_0
     :goto_2
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 446
     :cond_1
     iget-object v7, v4, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -201,12 +185,10 @@
 
     if-eqz v7, :cond_2
 
-    .line 447
     invoke-virtual {v4, v10}, Lorg/telegram/messenger/MessageObject;->generateGameMessageText(Lorg/telegram/tgnet/TLRPC$User;)V
 
     goto :goto_2
 
-    .line 448
     :cond_2
     iget-object v7, v4, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
@@ -216,17 +198,14 @@
 
     if-eqz v7, :cond_0
 
-    .line 449
     invoke-virtual {v4, v10}, Lorg/telegram/messenger/MessageObject;->generatePaymentSentMessageText(Lorg/telegram/tgnet/TLRPC$User;)V
 
     goto :goto_2
 
-    .line 452
     .end local v4    # "m":Lorg/telegram/messenger/MessageObject;
     :cond_3
     const/4 v3, 0x1
 
-    .line 436
     .end local v2    # "b":I
     .end local v6    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_4
@@ -234,13 +213,11 @@
 
     goto :goto_0
 
-    .line 455
     .end local v1    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     .end local v5    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_5
     if-eqz v3, :cond_6
 
-    .line 456
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v7
@@ -261,7 +238,6 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 458
     :cond_6
     return-void
 .end method

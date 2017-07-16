@@ -27,7 +27,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ChannelCreateActivity$13$1;
 
     .prologue
-    .line 791
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$13$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -48,20 +47,17 @@
 
     const/4 v8, 0x0
 
-    .line 794
     invoke-virtual {p1}, Landroid/view/View;->getParent()Landroid/view/ViewParent;
 
     move-result-object v1
 
     check-cast v1, Lorg/telegram/ui/Cells/AdminedChannelCell;
 
-    .line 795
     .local v1, "cell":Lorg/telegram/ui/Cells/AdminedChannelCell;
     invoke-virtual {v1}, Lorg/telegram/ui/Cells/AdminedChannelCell;->getCurrentChannel()Lorg/telegram/tgnet/TLRPC$Chat;
 
     move-result-object v2
 
-    .line 796
     .local v2, "channel":Lorg/telegram/tgnet/TLRPC$Chat;
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -77,7 +73,6 @@
 
     invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 797
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v3, "AppName"
 
@@ -89,12 +84,10 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 798
     iget-boolean v3, v2, Lorg/telegram/tgnet/TLRPC$Chat;->megagroup:Z
 
     if-eqz v3, :cond_0
 
-    .line 799
     const-string/jumbo v3, "RevokeLinkAlert"
 
     const v4, 0x7f070548
@@ -147,7 +140,6 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 803
     :goto_0
     const-string/jumbo v3, "Cancel"
 
@@ -161,7 +153,6 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 804
     const-string/jumbo v3, "RevokeButton"
 
     const v4, 0x7f070546
@@ -176,7 +167,6 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 829
     iget-object v3, p0, Lorg/telegram/ui/ChannelCreateActivity$13$1$1;->this$2:Lorg/telegram/ui/ChannelCreateActivity$13$1;
 
     iget-object v3, v3, Lorg/telegram/ui/ChannelCreateActivity$13$1;->this$1:Lorg/telegram/ui/ChannelCreateActivity$13;
@@ -189,10 +179,8 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ChannelCreateActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
 
-    .line 830
     return-void
 
-    .line 801
     :cond_0
     const-string/jumbo v3, "RevokeLinkAlertChannel"
 

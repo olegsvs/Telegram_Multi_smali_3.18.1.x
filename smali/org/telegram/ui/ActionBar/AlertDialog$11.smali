@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ActionBar/AlertDialog;
 
     .prologue
-    .line 564
     iput-object p1, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     iput p2, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->val$num:I
@@ -43,7 +42,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 574
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$2000(Lorg/telegram/ui/ActionBar/AlertDialog;)[Landroid/animation/AnimatorSet;
@@ -72,7 +70,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 575
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$2000(Lorg/telegram/ui/ActionBar/AlertDialog;)[Landroid/animation/AnimatorSet;
@@ -85,7 +82,6 @@
 
     aput-object v2, v0, v1
 
-    .line 577
     :cond_0
     return-void
 .end method
@@ -95,7 +91,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 567
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$2000(Lorg/telegram/ui/ActionBar/AlertDialog;)[Landroid/animation/AnimatorSet;
@@ -124,7 +119,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 568
     iget-object v0, p0, Lorg/telegram/ui/ActionBar/AlertDialog$11;->this$0:Lorg/telegram/ui/ActionBar/AlertDialog;
 
     invoke-static {v0}, Lorg/telegram/ui/ActionBar/AlertDialog;->access$2000(Lorg/telegram/ui/ActionBar/AlertDialog;)[Landroid/animation/AnimatorSet;
@@ -137,7 +131,6 @@
 
     aput-object v2, v0, v1
 
-    .line 570
     :cond_0
     return-void
 .end method

@@ -24,7 +24,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$36;
 
     .prologue
-    .line 2616
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     invoke-direct {p0}, Landroid/animation/AnimatorListenerAdapter;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "animation"    # Landroid/animation/Animator;
 
     .prologue
-    .line 2628
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -64,7 +62,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2629
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -73,7 +70,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChatActivity;->access$10702(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2631
     :cond_0
     return-void
 .end method
@@ -85,7 +81,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 2619
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -110,7 +105,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 2620
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -123,7 +117,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setVisibility(I)V
 
-    .line 2621
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -134,14 +127,12 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setTag(Ljava/lang/Object;)V
 
-    .line 2622
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$36$2;->this$1:Lorg/telegram/ui/ChatActivity$36;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$36;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/ChatActivity;->access$10702(Lorg/telegram/ui/ChatActivity;Landroid/animation/AnimatorSet;)Landroid/animation/AnimatorSet;
 
-    .line 2624
     :cond_0
     return-void
 .end method

@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2569
     const v0, -0x229570b8
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageGamePlayAction;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2568
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$SendMessageAction;-><init>()V
 
     return-void
@@ -48,11 +46,9 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2573
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageGamePlayAction;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2574
     return-void
 .end method

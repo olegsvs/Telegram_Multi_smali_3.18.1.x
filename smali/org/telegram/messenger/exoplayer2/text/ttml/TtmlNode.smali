@@ -38,11 +38,8 @@
 
 .field public static final LEFT:Ljava/lang/String; = "left"
 
-.field public static final LINETHROUGH:Ljava/lang/String; = "linethrough"
 
-.field public static final NO_LINETHROUGH:Ljava/lang/String; = "nolinethrough"
 
-.field public static final NO_UNDERLINE:Ljava/lang/String; = "nounderline"
 
 .field public static final RIGHT:Ljava/lang/String; = "right"
 
@@ -78,7 +75,6 @@
 
 .field public static final TAG_TT:Ljava/lang/String; = "tt"
 
-.field public static final UNDERLINE:Ljava/lang/String; = "underline"
 
 
 # instance fields
@@ -146,22 +142,16 @@
     .param p9, "regionId"    # Ljava/lang/String;
 
     .prologue
-    .line 102
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 103
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->tag:Ljava/lang/String;
 
-    .line 104
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->text:Ljava/lang/String;
 
-    .line 105
     iput-object p7, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->style:Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;
 
-    .line 106
     iput-object p8, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->styleIds:[Ljava/lang/String;
 
-    .line 107
     if-eqz p2, :cond_0
 
     const/4 v0, 0x1
@@ -169,13 +159,10 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->isTextNode:Z
 
-    .line 108
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->startTimeUs:J
 
-    .line 109
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->endTimeUs:J
 
-    .line 110
     invoke-static {p9}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkNotNull(Ljava/lang/Object;)Ljava/lang/Object;
 
     move-result-object v0
@@ -184,24 +171,20 @@
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->regionId:Ljava/lang/String;
 
-    .line 111
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeStartsByRegion:Ljava/util/HashMap;
 
-    .line 112
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeEndsByRegion:Ljava/util/HashMap;
 
-    .line 113
     return-void
 
-    .line 107
     :cond_0
     const/4 v0, 0x0
 
@@ -227,11 +210,9 @@
     .end annotation
 
     .prologue
-    .line 241
     .local p1, "globalStyles":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;>;"
     if-eq p3, p4, :cond_0
 
-    .line 242
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->style:Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->styleIds:[Ljava/lang/String;
@@ -240,14 +221,11 @@
 
     move-result-object v0
 
-    .line 243
     .local v0, "resolvedStyle":Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;
     if-eqz v0, :cond_0
 
-    .line 244
     invoke-static {p2, p3, p4, v0}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRenderUtil;->applyStylesToSpan(Landroid/text/SpannableStringBuilder;IILorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;)V
 
-    .line 247
     .end local v0    # "resolvedStyle":Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;
     :cond_0
     return-void
@@ -263,7 +241,6 @@
     .param p7, "regionId"    # Ljava/lang/String;
 
     .prologue
-    .line 98
     new-instance v1, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     const/4 v3, 0x0
@@ -294,7 +271,6 @@
 
     const/4 v2, 0x0
 
-    .line 92
     new-instance v1, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRenderUtil;->applyTextElementSpacePolicy(Ljava/lang/String;)Ljava/lang/String;
@@ -325,12 +301,10 @@
 
     const/16 v6, 0x20
 
-    .line 252
     invoke-virtual {p1}, Landroid/text/SpannableStringBuilder;->length()I
 
     move-result v0
 
-    .line 253
     .local v0, "builderLength":I
     const/4 v1, 0x0
 
@@ -338,17 +312,14 @@
     :goto_0
     if-ge v1, v0, :cond_2
 
-    .line 254
     invoke-virtual {p1, v1}, Landroid/text/SpannableStringBuilder;->charAt(I)C
 
     move-result v4
 
     if-ne v4, v6, :cond_1
 
-    .line 255
     add-int/lit8 v2, v1, 0x1
 
-    .line 256
     .local v2, "j":I
     :goto_1
     invoke-virtual {p1}, Landroid/text/SpannableStringBuilder;->length()I
@@ -363,30 +334,24 @@
 
     if-ne v4, v6, :cond_0
 
-    .line 257
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 259
     :cond_0
     add-int/lit8 v4, v1, 0x1
 
     sub-int v3, v2, v4
 
-    .line 260
     .local v3, "spacesToDelete":I
     if-lez v3, :cond_1
 
-    .line 261
     add-int v4, v1, v3
 
     invoke-virtual {p1, v1, v4}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 262
     sub-int/2addr v0, v3
 
-    .line 253
     .end local v2    # "j":I
     .end local v3    # "spacesToDelete":I
     :cond_1
@@ -394,7 +359,6 @@
 
     goto :goto_0
 
-    .line 267
     :cond_2
     if-lez v0, :cond_3
 
@@ -404,15 +368,12 @@
 
     if-ne v4, v6, :cond_3
 
-    .line 268
     const/4 v4, 0x1
 
     invoke-virtual {p1, v5, v4}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 269
     add-int/lit8 v0, v0, -0x1
 
-    .line 271
     :cond_3
     const/4 v1, 0x0
 
@@ -421,7 +382,6 @@
 
     if-ge v1, v4, :cond_5
 
-    .line 272
     invoke-virtual {p1, v1}, Landroid/text/SpannableStringBuilder;->charAt(I)C
 
     move-result v4
@@ -436,23 +396,19 @@
 
     if-ne v4, v6, :cond_4
 
-    .line 273
     add-int/lit8 v4, v1, 0x1
 
     add-int/lit8 v5, v1, 0x2
 
     invoke-virtual {p1, v4, v5}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 274
     add-int/lit8 v0, v0, -0x1
 
-    .line 271
     :cond_4
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_2
 
-    .line 278
     :cond_5
     if-lez v0, :cond_6
 
@@ -464,15 +420,12 @@
 
     if-ne v4, v6, :cond_6
 
-    .line 279
     add-int/lit8 v4, v0, -0x1
 
     invoke-virtual {p1, v4, v0}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 280
     add-int/lit8 v0, v0, -0x1
 
-    .line 282
     :cond_6
     const/4 v1, 0x0
 
@@ -481,7 +434,6 @@
 
     if-ge v1, v4, :cond_8
 
-    .line 283
     invoke-virtual {p1, v1}, Landroid/text/SpannableStringBuilder;->charAt(I)C
 
     move-result v4
@@ -496,21 +448,17 @@
 
     if-ne v4, v7, :cond_7
 
-    .line 284
     add-int/lit8 v4, v1, 0x1
 
     invoke-virtual {p1, v1, v4}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 285
     add-int/lit8 v0, v0, -0x1
 
-    .line 282
     :cond_7
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_3
 
-    .line 289
     :cond_8
     if-lez v0, :cond_9
 
@@ -522,12 +470,10 @@
 
     if-ne v4, v7, :cond_9
 
-    .line 290
     add-int/lit8 v4, v0, -0x1
 
     invoke-virtual {p1, v4, v0}, Landroid/text/SpannableStringBuilder;->delete(II)Landroid/text/SpannableStringBuilder;
 
-    .line 293
     :cond_9
     return-object p1
 .end method
@@ -549,7 +495,6 @@
     .local p1, "out":Ljava/util/TreeSet;, "Ljava/util/TreeSet<Ljava/lang/Long;>;"
     const-wide v4, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 152
     const-string/jumbo v2, "p"
 
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->tag:Ljava/lang/String;
@@ -558,13 +503,11 @@
 
     move-result v1
 
-    .line 153
     .local v1, "isPNode":Z
     if-nez p2, :cond_0
 
     if-eqz v1, :cond_2
 
-    .line 154
     :cond_0
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->startTimeUs:J
 
@@ -572,7 +515,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 155
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->startTimeUs:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -581,7 +523,6 @@
 
     invoke-virtual {p1, v2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 157
     :cond_1
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->endTimeUs:J
 
@@ -589,7 +530,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 158
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->endTimeUs:J
 
     invoke-static {v2, v3}, Ljava/lang/Long;->valueOf(J)Ljava/lang/Long;
@@ -598,17 +538,14 @@
 
     invoke-virtual {p1, v2}, Ljava/util/TreeSet;->add(Ljava/lang/Object;)Z
 
-    .line 161
     :cond_2
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     if-nez v2, :cond_4
 
-    .line 167
     :cond_3
     return-void
 
-    .line 164
     :cond_4
     const/4 v0, 0x0
 
@@ -622,7 +559,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 165
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     invoke-interface {v2, v0}, Ljava/util/List;->get(I)Ljava/lang/Object;
@@ -641,12 +577,10 @@
     :goto_1
     invoke-direct {v2, p1, v3}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getEventTimes(Ljava/util/TreeSet;Z)V
 
-    .line 164
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 165
     :cond_6
     const/4 v3, 0x0
 
@@ -670,7 +604,6 @@
     .end annotation
 
     .prologue
-    .line 221
     .local p1, "regionOutputs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     invoke-interface {p1, p0}, Ljava/util/Map;->containsKey(Ljava/lang/Object;)Z
 
@@ -678,14 +611,12 @@
 
     if-nez v0, :cond_0
 
-    .line 222
     new-instance v0, Landroid/text/SpannableStringBuilder;
 
     invoke-direct {v0}, Landroid/text/SpannableStringBuilder;-><init>()V
 
     invoke-interface {p1, p0, v0}, Ljava/util/Map;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 224
     :cond_0
     invoke-interface {p1, p0}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
 
@@ -715,7 +646,6 @@
     .end annotation
 
     .prologue
-    .line 229
     .local p1, "globalStyles":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;>;"
     .local p2, "regionOutputs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeEndsByRegion:Ljava/util/HashMap;
@@ -741,7 +671,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 230
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -749,7 +678,6 @@
 
     check-cast v2, Ljava/lang/String;
 
-    .line 231
     .local v2, "regionId":Ljava/lang/String;
     iget-object v4, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeStartsByRegion:Ljava/util/HashMap;
 
@@ -771,7 +699,6 @@
 
     move-result v3
 
-    .line 232
     .local v3, "start":I
     :goto_0
     invoke-interface {p2, v2}, Ljava/util/Map;->get(Ljava/lang/Object;)Ljava/lang/Object;
@@ -792,7 +719,6 @@
 
     invoke-direct {p0, p1, v4, v3, v5}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->applyStyleToOutput(Ljava/util/Map;Landroid/text/SpannableStringBuilder;II)V
 
-    .line 233
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -803,19 +729,16 @@
 
     if-ge v1, v4, :cond_0
 
-    .line 234
     invoke-virtual {p0, v1}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getChild(I)Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     move-result-object v4
 
     invoke-direct {v4, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->traverseForStyle(Ljava/util/Map;Ljava/util/Map;)V
 
-    .line 233
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 231
     .end local v1    # "i":I
     .end local v3    # "start":I
     :cond_1
@@ -823,7 +746,6 @@
 
     goto :goto_0
 
-    .line 237
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     .end local v2    # "regionId":Ljava/lang/String;
     :cond_2
@@ -848,21 +770,17 @@
     .end annotation
 
     .prologue
-    .line 189
     .local p5, "regionOutputs":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeStartsByRegion:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 190
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeEndsByRegion:Ljava/util/HashMap;
 
     invoke-virtual {v1}, Ljava/util/HashMap;->clear()V
 
-    .line 191
     iget-object v5, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->regionId:Ljava/lang/String;
 
-    .line 192
     .local v5, "resolvedRegionId":Ljava/lang/String;
     const-string/jumbo v1, ""
 
@@ -872,10 +790,8 @@
 
     if-eqz v1, :cond_0
 
-    .line 193
     move-object v5, p4
 
-    .line 195
     :cond_0
     iget-boolean v1, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->isTextNode:Z
 
@@ -883,7 +799,6 @@
 
     if-eqz p3, :cond_2
 
-    .line 196
     invoke-static {v5, p5}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getRegionOutput(Ljava/lang/String;Ljava/util/Map;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v1
@@ -892,12 +807,10 @@
 
     invoke-virtual {v1, v2}, Landroid/text/SpannableStringBuilder;->append(Ljava/lang/CharSequence;)Landroid/text/SpannableStringBuilder;
 
-    .line 217
     :cond_1
     :goto_0
     return-void
 
-    .line 197
     :cond_2
     const-string/jumbo v1, "br"
 
@@ -911,7 +824,6 @@
 
     if-eqz p3, :cond_3
 
-    .line 198
     invoke-static {v5, p5}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getRegionOutput(Ljava/lang/String;Ljava/util/Map;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v1
@@ -922,7 +834,6 @@
 
     goto :goto_0
 
-    .line 199
     :cond_3
     const-string/jumbo v1, "metadata"
 
@@ -934,14 +845,12 @@
 
     if-nez v1, :cond_1
 
-    .line 201
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->isActive(J)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 202
     const-string/jumbo v1, "p"
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->tag:Ljava/lang/String;
@@ -950,7 +859,6 @@
 
     move-result v8
 
-    .line 203
     .local v8, "isPNode":Z
     invoke-interface {p5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -973,7 +881,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 204
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeStartsByRegion:Ljava/util/HashMap;
 
@@ -999,7 +906,6 @@
 
     goto :goto_1
 
-    .line 206
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     :cond_4
     const/4 v7, 0x0
@@ -1012,7 +918,6 @@
 
     if-ge v7, v1, :cond_7
 
-    .line 207
     invoke-virtual {p0, v7}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getChild(I)Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     move-result-object v1
@@ -1031,29 +936,24 @@
 
     invoke-direct/range {v1 .. v6}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->traverseForText(JZLjava/lang/String;Ljava/util/Map;)V
 
-    .line 206
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 207
     :cond_6
     const/4 v4, 0x0
 
     goto :goto_3
 
-    .line 210
     :cond_7
     if-eqz v8, :cond_8
 
-    .line 211
     invoke-static {v5, p5}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getRegionOutput(Ljava/lang/String;Ljava/util/Map;)Landroid/text/SpannableStringBuilder;
 
     move-result-object v1
 
     invoke-static {v1}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRenderUtil;->endParagraph(Landroid/text/SpannableStringBuilder;)V
 
-    .line 213
     :cond_8
     invoke-interface {p5}, Ljava/util/Map;->entrySet()Ljava/util/Set;
 
@@ -1076,7 +976,6 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 214
     .restart local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     iget-object v3, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->nodeEndsByRegion:Ljava/util/HashMap;
 
@@ -1110,25 +1009,21 @@
     .param p1, "child"    # Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;
 
     .prologue
-    .line 123
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 124
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
-    .line 126
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     invoke-interface {v0, p1}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 127
     return-void
 .end method
 
@@ -1137,19 +1032,16 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 130
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     if-nez v0, :cond_0
 
-    .line 131
     new-instance v0, Ljava/lang/IndexOutOfBoundsException;
 
     invoke-direct {v0}, Ljava/lang/IndexOutOfBoundsException;-><init>()V
 
     throw v0
 
-    .line 133
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
@@ -1166,7 +1058,6 @@
     .locals 1
 
     .prologue
-    .line 137
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->children:Ljava/util/List;
 
     if-nez v0, :cond_0
@@ -1210,14 +1101,12 @@
     .end annotation
 
     .prologue
-    .line 175
     .local p3, "globalStyles":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlStyle;>;"
     .local p4, "regionMap":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;>;"
     new-instance v8, Ljava/util/TreeMap;
 
     invoke-direct {v8}, Ljava/util/TreeMap;-><init>()V
 
-    .line 176
     .local v8, "regionOutputs":Ljava/util/TreeMap;, "Ljava/util/TreeMap<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     const/4 v6, 0x0
 
@@ -1231,19 +1120,16 @@
 
     invoke-direct/range {v3 .. v8}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->traverseForText(JZLjava/lang/String;Ljava/util/Map;)V
 
-    .line 177
     move-object/from16 v0, p0
 
     move-object/from16 v1, p3
 
     invoke-direct {v0, v1, v8}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->traverseForStyle(Ljava/util/Map;Ljava/util/Map;)V
 
-    .line 178
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 179
     .local v2, "cues":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/Cue;>;"
     invoke-virtual {v8}, Ljava/util/TreeMap;->entrySet()Ljava/util/Set;
 
@@ -1266,7 +1152,6 @@
 
     check-cast v18, Ljava/util/Map$Entry;
 
-    .line 180
     .local v18, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     invoke-interface/range {v18 .. v18}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -1280,7 +1165,6 @@
 
     check-cast v19, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;
 
-    .line 181
     .local v19, "region":Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;
     new-instance v9, Lorg/telegram/messenger/exoplayer2/text/Cue;
 
@@ -1300,11 +1184,9 @@
 
     move-object/from16 v0, v19
 
-    iget v12, v0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;->line:F
 
     move-object/from16 v0, v19
 
-    iget v13, v0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;->lineType:I
 
     const/high16 v14, -0x80000000
 
@@ -1326,7 +1208,6 @@
 
     goto :goto_0
 
-    .line 184
     .end local v18    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Landroid/text/SpannableStringBuilder;>;"
     .end local v19    # "region":Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlRegion;
     :cond_0
@@ -1337,29 +1218,24 @@
     .locals 8
 
     .prologue
-    .line 141
     new-instance v0, Ljava/util/TreeSet;
 
     invoke-direct {v0}, Ljava/util/TreeSet;-><init>()V
 
-    .line 142
     .local v0, "eventTimeSet":Ljava/util/TreeSet;, "Ljava/util/TreeSet<Ljava/lang/Long;>;"
     const/4 v6, 0x0
 
     invoke-direct {p0, v0, v6}, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->getEventTimes(Ljava/util/TreeSet;Z)V
 
-    .line 143
     invoke-virtual {v0}, Ljava/util/TreeSet;->size()I
 
     move-result v6
 
     new-array v1, v6, [J
 
-    .line 144
     .local v1, "eventTimes":[J
     const/4 v4, 0x0
 
-    .line 145
     .local v4, "i":I
     invoke-virtual {v0}, Ljava/util/TreeSet;->iterator()Ljava/util/Iterator;
 
@@ -1382,7 +1258,6 @@
 
     move-result-wide v2
 
-    .line 146
     .local v2, "eventTimeUs":J
     add-int/lit8 v5, v4, 0x1
 
@@ -1392,12 +1267,10 @@
 
     move v4, v5
 
-    .line 147
     .end local v5    # "i":I
     .restart local v4    # "i":I
     goto :goto_0
 
-    .line 148
     .end local v2    # "eventTimeUs":J
     :cond_0
     return-object v1
@@ -1407,7 +1280,6 @@
     .locals 1
 
     .prologue
-    .line 170
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->styleIds:[Ljava/lang/String;
 
     return-object v0
@@ -1420,7 +1292,6 @@
     .prologue
     const-wide v2, -0x7fffffffffffffffL    # -4.9E-324
 
-    .line 116
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/text/ttml/TtmlNode;->startTimeUs:J
 
     cmp-long v0, v0, v2

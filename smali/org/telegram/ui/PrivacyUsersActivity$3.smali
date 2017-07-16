@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 161
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity$3;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -47,7 +46,6 @@
 
     const/4 v4, 0x0
 
-    .line 164
     if-ltz p2, :cond_0
 
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$3;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -73,11 +71,9 @@
     :cond_0
     move v2, v4
 
-    .line 184
     :goto_0
     return v2
 
-    .line 167
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/PrivacyUsersActivity$3;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
@@ -99,7 +95,6 @@
 
     invoke-static {v5, v2}, Lorg/telegram/ui/PrivacyUsersActivity;->access$502(Lorg/telegram/ui/PrivacyUsersActivity;I)I
 
-    .line 169
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$3;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
@@ -110,7 +105,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 170
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     new-array v1, v3, [Ljava/lang/CharSequence;
 
@@ -124,7 +118,6 @@
 
     aput-object v2, v1, v4
 
-    .line 171
     .local v1, "items":[Ljava/lang/CharSequence;
     new-instance v2, Lorg/telegram/ui/PrivacyUsersActivity$3$1;
 
@@ -132,7 +125,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 183
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity$3;->this$0:Lorg/telegram/ui/PrivacyUsersActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -143,6 +135,5 @@
 
     move v2, v3
 
-    .line 184
     goto :goto_0
 .end method

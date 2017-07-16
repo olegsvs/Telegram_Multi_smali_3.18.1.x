@@ -37,7 +37,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/ContactsController;
 
     .prologue
-    .line 1249
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$9;->this$0:Lorg/telegram/messenger/ContactsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1249
     check-cast p1, Lorg/telegram/messenger/ContactsController$Contact;
 
     check-cast p2, Lorg/telegram/messenger/ContactsController$Contact;
@@ -69,10 +67,8 @@
     .param p2, "contact2"    # Lorg/telegram/messenger/ContactsController$Contact;
 
     .prologue
-    .line 1252
     iget-object v0, p1, Lorg/telegram/messenger/ContactsController$Contact;->first_name:Ljava/lang/String;
 
-    .line 1253
     .local v0, "toComapre1":Ljava/lang/String;
     invoke-virtual {v0}, Ljava/lang/String;->length()I
 
@@ -80,14 +76,11 @@
 
     if-nez v2, :cond_0
 
-    .line 1254
     iget-object v0, p1, Lorg/telegram/messenger/ContactsController$Contact;->last_name:Ljava/lang/String;
 
-    .line 1256
     :cond_0
     iget-object v1, p2, Lorg/telegram/messenger/ContactsController$Contact;->first_name:Ljava/lang/String;
 
-    .line 1257
     .local v1, "toComapre2":Ljava/lang/String;
     invoke-virtual {v1}, Ljava/lang/String;->length()I
 
@@ -95,10 +88,8 @@
 
     if-nez v2, :cond_1
 
-    .line 1258
     iget-object v1, p2, Lorg/telegram/messenger/ContactsController$Contact;->last_name:Ljava/lang/String;
 
-    .line 1260
     :cond_1
     invoke-virtual {v0, v1}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 

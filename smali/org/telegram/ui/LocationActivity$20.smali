@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 849
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$20;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 4
 
     .prologue
-    .line 852
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$20;->this$0:Lorg/telegram/ui/LocationActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/LocationActivity;->access$1800(Lorg/telegram/ui/LocationActivity;)Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -78,7 +76,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/support/widget/LinearLayoutManager;->scrollToPositionWithOffset(II)V
 
-    .line 853
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$20;->this$0:Lorg/telegram/ui/LocationActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/LocationActivity$20;->this$0:Lorg/telegram/ui/LocationActivity;
@@ -93,6 +90,5 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/LocationActivity;->access$1900(Lorg/telegram/ui/LocationActivity;I)V
 
-    .line 854
     return-void
 .end method

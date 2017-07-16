@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     .prologue
-    .line 432
     iput-object p1, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$4;->this$0:Lorg/telegram/ui/Adapters/DialogsSearchAdapter;
 
     iput-wide p2, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$4;->val$did:J
@@ -45,7 +44,6 @@
     .locals 8
 
     .prologue
-    .line 436
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -61,18 +59,15 @@
 
     move-result-object v1
 
-    .line 437
     .local v1, "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->requery()V
 
-    .line 438
     const/4 v2, 0x1
 
     iget-wide v4, p0, Lorg/telegram/ui/Adapters/DialogsSearchAdapter$4;->val$did:J
 
     invoke-virtual {v1, v2, v4, v5}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindLong(IJ)V
 
-    .line 439
     const/4 v2, 0x2
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -87,24 +82,19 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/SQLite/SQLitePreparedStatement;->bindInteger(II)V
 
-    .line 440
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->step()I
 
-    .line 441
     invoke-virtual {v1}, Lorg/telegram/SQLite/SQLitePreparedStatement;->dispose()V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 445
     .end local v1    # "state":Lorg/telegram/SQLite/SQLitePreparedStatement;
     :goto_0
     return-void
 
-    .line 442
     :catch_0
     move-exception v0
 
-    .line 443
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

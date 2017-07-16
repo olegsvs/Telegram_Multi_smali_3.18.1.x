@@ -24,15 +24,12 @@
     .param p1, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 33
     const/4 v0, 0x1
 
     invoke-direct {p0, p1, v0}, Landroid/content/AbstractThreadedSyncAdapter;-><init>(Landroid/content/Context;Z)V
 
-    .line 34
     iput-object p1, p0, Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;->mContext:Landroid/content/Context;
 
-    .line 35
     return-void
 .end method
 
@@ -47,7 +44,6 @@
     .param p5, "syncResult"    # Landroid/content/SyncResult;
 
     .prologue
-    .line 40
     :try_start_0
     iget-object v0, p0, Lorg/telegram/messenger/ContactsSyncAdapterService$SyncAdapterImpl;->mContext:Landroid/content/Context;
 
@@ -65,15 +61,12 @@
     :try_end_0
     .catch Landroid/accounts/OperationCanceledException; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 44
     :goto_0
     return-void
 
-    .line 41
     :catch_0
     move-exception v6
 
-    .line 42
     .local v6, "e":Landroid/accounts/OperationCanceledException;
     invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -25,7 +25,6 @@
     .param p2, "dataSpec"    # Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;
 
     .prologue
-    .line 113
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V
@@ -48,9 +47,7 @@
 
     invoke-direct {p0, v0, p2, v1}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;I)V
 
-    .line 114
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidContentTypeException;->contentType:Ljava/lang/String;
 
-    .line 115
     return-void
 .end method

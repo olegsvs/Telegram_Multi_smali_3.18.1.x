@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/LocationActivity;
 
     .prologue
-    .line 318
     iput-object p1, p0, Lorg/telegram/ui/LocationActivity$5;->this$0:Lorg/telegram/ui/LocationActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/LocationActivity$5;->val$map:Lcom/google/android/gms/maps/MapView;
@@ -45,7 +44,6 @@
     .locals 2
 
     .prologue
-    .line 322
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/LocationActivity$5;->val$map:Lcom/google/android/gms/maps/MapView;
 
@@ -55,7 +53,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 326
     :goto_0
     new-instance v0, Lorg/telegram/ui/LocationActivity$5$1;
 
@@ -63,10 +60,8 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 351
     return-void
 
-    .line 323
     :catch_0
     move-exception v0
 

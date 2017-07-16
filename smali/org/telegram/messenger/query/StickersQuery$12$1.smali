@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/StickersQuery$12;
 
     .prologue
-    .line 571
     iput-object p1, p0, Lorg/telegram/messenger/query/StickersQuery$12$1;->this$0:Lorg/telegram/messenger/query/StickersQuery$12;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/StickersQuery$12$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -51,19 +50,16 @@
 
     const/4 v6, 0x0
 
-    .line 574
     iget-object v1, p0, Lorg/telegram/messenger/query/StickersQuery$12$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     instance-of v1, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickers;
 
     if-eqz v1, :cond_0
 
-    .line 575
     iget-object v0, p0, Lorg/telegram/messenger/query/StickersQuery$12$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickers;
 
-    .line 576
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickers;
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickers;->sets:Ljava/util/ArrayList;
 
@@ -81,12 +77,10 @@
 
     invoke-static {v1, v2, v6, v3, v4}, Lorg/telegram/messenger/query/StickersQuery;->access$800(Ljava/util/ArrayList;Ljava/util/ArrayList;ZII)V
 
-    .line 580
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_featuredStickers;
     :goto_0
     return-void
 
-    .line 578
     :cond_0
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
 

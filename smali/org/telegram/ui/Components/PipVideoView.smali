@@ -30,7 +30,6 @@
     .locals 0
 
     .prologue
-    .line 36
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -41,7 +40,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->controlsView:Landroid/view/View;
 
     return-object v0
@@ -52,7 +50,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     return-object v0
@@ -63,7 +60,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget v0, p0, Lorg/telegram/ui/Components/PipVideoView;->videoWidth:I
 
     return v0
@@ -74,7 +70,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     return-object v0
@@ -85,7 +80,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
     return-object v0
@@ -96,7 +90,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     invoke-direct {p0}, Lorg/telegram/ui/Components/PipVideoView;->animateToBoundsMaybe()V
 
     return-void
@@ -107,7 +100,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/Components/PipVideoView;
 
     .prologue
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
     return-object v0
@@ -117,7 +109,6 @@
     .locals 14
 
     .prologue
-    .line 215
     const/4 v9, 0x1
 
     const/4 v10, 0x0
@@ -130,7 +121,6 @@
 
     move-result v7
 
-    .line 216
     .local v7, "startX":I
     const/4 v9, 0x1
 
@@ -144,7 +134,6 @@
 
     move-result v3
 
-    .line 217
     .local v3, "endX":I
     const/4 v9, 0x0
 
@@ -158,7 +147,6 @@
 
     move-result v8
 
-    .line 218
     .local v8, "startY":I
     const/4 v9, 0x0
 
@@ -172,11 +160,9 @@
 
     move-result v4
 
-    .line 219
     .local v4, "endY":I
     const/4 v1, 0x0
 
-    .line 220
     .local v1, "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -184,7 +170,6 @@
 
     move-result-object v2
 
-    .line 221
     .local v2, "editor":Landroid/content/SharedPreferences$Editor;
     const/high16 v9, 0x41a00000    # 20.0f
 
@@ -192,11 +177,9 @@
 
     move-result v5
 
-    .line 222
     .local v5, "maxDiff":I
     const/4 v6, 0x0
 
-    .line 223
     .local v6, "slideOut":Z
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -228,17 +211,14 @@
 
     if-le v9, v10, :cond_9
 
-    .line 224
     :cond_0
     if-nez v1, :cond_1
 
-    .line 225
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 227
     .restart local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     :cond_1
     const-string/jumbo v9, "sidex"
@@ -247,7 +227,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 228
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v9}, Landroid/widget/FrameLayout;->getAlpha()F
@@ -260,7 +239,6 @@
 
     if-eqz v9, :cond_2
 
-    .line 229
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     const-string/jumbo v10, "alpha"
@@ -281,7 +259,6 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 231
     :cond_2
     const-string/jumbo v9, "x"
 
@@ -299,11 +276,9 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 255
     :goto_0
     if-nez v6, :cond_5
 
-    .line 256
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v9, v9, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -326,17 +301,14 @@
 
     if-gt v9, v10, :cond_11
 
-    .line 257
     :cond_3
     if-nez v1, :cond_4
 
-    .line 258
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 260
     .restart local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     :cond_4
     const-string/jumbo v9, "sidey"
@@ -345,7 +317,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 261
     const-string/jumbo v9, "y"
 
     const/4 v10, 0x1
@@ -362,47 +333,38 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 272
     :goto_1
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 274
     :cond_5
     if-eqz v1, :cond_8
 
-    .line 275
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->decelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     if-nez v9, :cond_6
 
-    .line 276
     new-instance v9, Landroid/view/animation/DecelerateInterpolator;
 
     invoke-direct {v9}, Landroid/view/animation/DecelerateInterpolator;-><init>()V
 
     iput-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->decelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
-    .line 278
     :cond_6
     new-instance v0, Landroid/animation/AnimatorSet;
 
     invoke-direct {v0}, Landroid/animation/AnimatorSet;-><init>()V
 
-    .line 279
     .local v0, "animatorSet":Landroid/animation/AnimatorSet;
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->decelerateInterpolator:Landroid/view/animation/DecelerateInterpolator;
 
     invoke-virtual {v0, v9}, Landroid/animation/AnimatorSet;->setInterpolator(Landroid/animation/TimeInterpolator;)V
 
-    .line 280
     const-wide/16 v10, 0x96
 
     invoke-virtual {v0, v10, v11}, Landroid/animation/AnimatorSet;->setDuration(J)Landroid/animation/AnimatorSet;
 
-    .line 281
     if-eqz v6, :cond_7
 
-    .line 282
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     const-string/jumbo v10, "alpha"
@@ -423,26 +385,21 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 283
     new-instance v9, Lorg/telegram/ui/Components/PipVideoView$2;
 
     invoke-direct {v9, p0}, Lorg/telegram/ui/Components/PipVideoView$2;-><init>(Lorg/telegram/ui/Components/PipVideoView;)V
 
     invoke-virtual {v0, v9}, Landroid/animation/AnimatorSet;->addListener(Landroid/animation/Animator$AnimatorListener;)V
 
-    .line 290
     :cond_7
     invoke-virtual {v0, v1}, Landroid/animation/AnimatorSet;->playTogether(Ljava/util/Collection;)V
 
-    .line 291
     invoke-virtual {v0}, Landroid/animation/AnimatorSet;->start()V
 
-    .line 293
     .end local v0    # "animatorSet":Landroid/animation/AnimatorSet;
     :cond_8
     return-void
 
-    .line 232
     :cond_9
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -488,17 +445,14 @@
 
     if-ge v9, v10, :cond_d
 
-    .line 233
     :cond_a
     if-nez v1, :cond_b
 
-    .line 234
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 236
     .restart local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     :cond_b
     const-string/jumbo v9, "sidex"
@@ -507,7 +461,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 237
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     invoke-virtual {v9}, Landroid/widget/FrameLayout;->getAlpha()F
@@ -520,7 +473,6 @@
 
     if-eqz v9, :cond_c
 
-    .line 238
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     const-string/jumbo v10, "alpha"
@@ -541,7 +493,6 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 240
     :cond_c
     const-string/jumbo v9, "x"
 
@@ -561,7 +512,6 @@
 
     goto/16 :goto_0
 
-    .line 241
     :cond_d
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
@@ -575,16 +525,13 @@
 
     if-eqz v9, :cond_10
 
-    .line 242
     if-nez v1, :cond_e
 
-    .line 243
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 245
     .restart local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     :cond_e
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
@@ -593,7 +540,6 @@
 
     if-gez v9, :cond_f
 
-    .line 246
     const-string/jumbo v9, "x"
 
     const/4 v10, 0x1
@@ -614,13 +560,11 @@
 
     invoke-virtual {v1, v9}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 250
     :goto_2
     const/4 v6, 0x1
 
     goto/16 :goto_0
 
-    .line 248
     :cond_f
     const-string/jumbo v9, "x"
 
@@ -644,7 +588,6 @@
 
     goto :goto_2
 
-    .line 252
     :cond_10
     const-string/jumbo v9, "px"
 
@@ -664,7 +607,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 253
     const-string/jumbo v9, "sidex"
 
     const/4 v10, 0x2
@@ -673,7 +615,6 @@
 
     goto/16 :goto_0
 
-    .line 262
     :cond_11
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -687,16 +628,13 @@
 
     if-gt v9, v5, :cond_13
 
-    .line 263
     if-nez v1, :cond_12
 
-    .line 264
     new-instance v1, Ljava/util/ArrayList;
 
     .end local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     invoke-direct {v1}, Ljava/util/ArrayList;-><init>()V
 
-    .line 266
     .restart local v1    # "animators":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Landroid/animation/Animator;>;"
     :cond_12
     const-string/jumbo v9, "sidey"
@@ -705,7 +643,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 267
     const-string/jumbo v9, "y"
 
     const/4 v10, 0x1
@@ -724,7 +661,6 @@
 
     goto/16 :goto_1
 
-    .line 269
     :cond_13
     const-string/jumbo v9, "py"
 
@@ -744,7 +680,6 @@
 
     invoke-interface {v2, v9, v10}, Landroid/content/SharedPreferences$Editor;->putFloat(Ljava/lang/String;F)Landroid/content/SharedPreferences$Editor;
 
-    .line 270
     const-string/jumbo v9, "sidey"
 
     const/4 v10, 0x2
@@ -767,7 +702,6 @@
 
     const/4 v9, 0x0
 
-    .line 296
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v8, "pipconfig"
@@ -776,7 +710,6 @@
 
     move-result-object v0
 
-    .line 297
     .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v7, "sidex"
 
@@ -784,7 +717,6 @@
 
     move-result v3
 
-    .line 298
     .local v3, "sidex":I
     const-string/jumbo v7, "sidey"
 
@@ -792,7 +724,6 @@
 
     move-result v4
 
-    .line 299
     .local v4, "sidey":I
     const-string/jumbo v7, "px"
 
@@ -800,7 +731,6 @@
 
     move-result v1
 
-    .line 300
     .local v1, "px":F
     const-string/jumbo v7, "py"
 
@@ -808,7 +738,6 @@
 
     move-result v2
 
-    .line 304
     .local v2, "py":F
     const/high16 v7, 0x3f800000    # 1.0f
 
@@ -816,12 +745,10 @@
 
     if-lez v7, :cond_0
 
-    .line 305
     invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
 
-    .line 306
     .local v6, "videoWidth":I
     int-to-float v7, v6
 
@@ -829,7 +756,6 @@
 
     float-to-int v5, v7
 
-    .line 312
     .local v5, "videoHeight":I
     :goto_0
     new-instance v7, Lorg/telegram/ui/Components/Rect;
@@ -854,7 +780,6 @@
 
     return-object v7
 
-    .line 308
     .end local v5    # "videoHeight":I
     .end local v6    # "videoWidth":I
     :cond_0
@@ -862,7 +787,6 @@
 
     move-result v5
 
-    .line 309
     .restart local v5    # "videoHeight":I
     int-to-float v7, v5
 
@@ -884,43 +808,35 @@
     .prologue
     const/high16 v4, 0x41200000    # 10.0f
 
-    .line 175
     if-eqz p0, :cond_1
 
-    .line 176
     sget-object v2, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     iget v2, v2, Landroid/graphics/Point;->x:I
 
     sub-int v1, v2, p3
 
-    .line 181
     .local v1, "total":I
     :goto_0
     if-nez p1, :cond_2
 
-    .line 182
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v0
 
-    .line 188
     .local v0, "result":I
     :goto_1
     if-nez p0, :cond_0
 
-    .line 189
     invoke-static {}, Lorg/telegram/ui/ActionBar/ActionBar;->getCurrentActionBarHeight()I
 
     move-result v2
 
     add-int/2addr v0, v2
 
-    .line 191
     :cond_0
     return v0
 
-    .line 178
     .end local v0    # "result":I
     .end local v1    # "total":I
     :cond_1
@@ -939,13 +855,11 @@
     .restart local v1    # "total":I
     goto :goto_0
 
-    .line 183
     :cond_2
     const/4 v2, 0x1
 
     if-ne p1, v2, :cond_3
 
-    .line 184
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
@@ -955,7 +869,6 @@
     .restart local v0    # "result":I
     goto :goto_1
 
-    .line 186
     .end local v0    # "result":I
     :cond_3
     const/high16 v2, 0x41a00000    # 20.0f
@@ -992,7 +905,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 196
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
@@ -1002,17 +914,13 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 200
     :goto_0
     iput-object v2, p0, Lorg/telegram/ui/Components/PipVideoView;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
-    .line 201
     iput-object v2, p0, Lorg/telegram/ui/Components/PipVideoView;->parentActivity:Landroid/app/Activity;
 
-    .line 202
     return-void
 
-    .line 197
     :catch_0
     move-exception v0
 
@@ -1023,7 +931,6 @@
     .locals 1
 
     .prologue
-    .line 316
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->x:I
@@ -1035,7 +942,6 @@
     .locals 1
 
     .prologue
-    .line 320
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v0, v0, Landroid/view/WindowManager$LayoutParams;->y:I
@@ -1053,7 +959,6 @@
 
     const/4 v6, 0x0
 
-    .line 205
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v5, "sidex"
@@ -1062,7 +967,6 @@
 
     move-result v2
 
-    .line 206
     .local v2, "sidex":I
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1072,7 +976,6 @@
 
     move-result v3
 
-    .line 207
     .local v3, "sidey":I
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1082,7 +985,6 @@
 
     move-result v0
 
-    .line 208
     .local v0, "px":F
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1092,7 +994,6 @@
 
     move-result v1
 
-    .line 209
     .local v1, "py":F
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
@@ -1104,7 +1005,6 @@
 
     iput v5, v4, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 210
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v5, p0, Lorg/telegram/ui/Components/PipVideoView;->videoHeight:I
@@ -1115,7 +1015,6 @@
 
     iput v5, v4, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 211
     iget-object v4, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
     iget-object v5, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
@@ -1124,7 +1023,6 @@
 
     invoke-interface {v4, v5, v6}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 212
     return-void
 .end method
 
@@ -1133,12 +1031,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 324
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 325
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
@@ -1147,7 +1043,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 326
     return-void
 .end method
 
@@ -1156,12 +1051,10 @@
     .param p1, "value"    # I
 
     .prologue
-    .line 329
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iput p1, v0, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 330
     iget-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
@@ -1170,7 +1063,6 @@
 
     invoke-interface {v0, v1, v2}, Landroid/view/WindowManager;->updateViewLayout(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 331
     return-void
 .end method
 
@@ -1183,21 +1075,18 @@
     .param p5, "rotation"    # I
 
     .prologue
-    .line 51
     new-instance v9, Lorg/telegram/ui/Components/PipVideoView$1;
 
     invoke-direct {v9, p0, p1}, Lorg/telegram/ui/Components/PipVideoView$1;-><init>(Lorg/telegram/ui/Components/PipVideoView;Landroid/content/Context;)V
 
     iput-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
-    .line 125
     const/high16 v9, 0x3f800000    # 1.0f
 
     cmpl-float v9, p4, v9
 
     if-lez v9, :cond_0
 
-    .line 126
     const/high16 v9, 0x43400000    # 192.0f
 
     invoke-static {v9}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1206,7 +1095,6 @@
 
     iput v9, p0, Lorg/telegram/ui/Components/PipVideoView;->videoWidth:I
 
-    .line 127
     iget v9, p0, Lorg/telegram/ui/Components/PipVideoView;->videoWidth:I
 
     int-to-float v9, v9
@@ -1217,13 +1105,11 @@
 
     iput v9, p0, Lorg/telegram/ui/Components/PipVideoView;->videoHeight:I
 
-    .line 133
     :goto_0
     new-instance v2, Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;
 
     invoke-direct {v2, p1}, Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 134
     .local v2, "aspectRatioFrameLayout":Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;
     move/from16 v0, p4
 
@@ -1231,7 +1117,6 @@
 
     invoke-virtual {v2, v0, v1}, Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;->setAspectRatio(FI)V
 
-    .line 135
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     const/4 v10, -0x1
@@ -1246,12 +1131,10 @@
 
     invoke-virtual {v9, v2, v10}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 137
     new-instance v8, Landroid/view/TextureView;
 
     invoke-direct {v8, p1}, Landroid/view/TextureView;-><init>(Landroid/content/Context;)V
 
-    .line 138
     .local v8, "textureView":Landroid/view/TextureView;
     const/4 v9, -0x1
 
@@ -1263,12 +1146,10 @@
 
     invoke-virtual {v2, v8, v9}, Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 140
     move-object/from16 v0, p3
 
     iput-object v0, p0, Lorg/telegram/ui/Components/PipVideoView;->controlsView:Landroid/view/View;
 
-    .line 141
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/PipVideoView;->controlsView:Landroid/view/View;
@@ -1283,7 +1164,6 @@
 
     invoke-virtual {v9, v10, v11}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 143
     sget-object v9, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v10, "window"
@@ -1296,7 +1176,6 @@
 
     iput-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
-    .line 145
     sget-object v9, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v10, "pipconfig"
@@ -1309,7 +1188,6 @@
 
     iput-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
-    .line 147
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
     const-string/jumbo v10, "sidex"
@@ -1320,7 +1198,6 @@
 
     move-result v6
 
-    .line 148
     .local v6, "sidex":I
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1332,7 +1209,6 @@
 
     move-result v7
 
-    .line 149
     .local v7, "sidey":I
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1344,7 +1220,6 @@
 
     move-result v4
 
-    .line 150
     .local v4, "px":F
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->preferences:Landroid/content/SharedPreferences;
 
@@ -1356,7 +1231,6 @@
 
     move-result v5
 
-    .line 153
     .local v5, "py":F
     :try_start_0
     new-instance v9, Landroid/view/WindowManager$LayoutParams;
@@ -1365,21 +1239,18 @@
 
     iput-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
-    .line 154
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v10, p0, Lorg/telegram/ui/Components/PipVideoView;->videoWidth:I
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->width:I
 
-    .line 155
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     iget v10, p0, Lorg/telegram/ui/Components/PipVideoView;->videoHeight:I
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->height:I
 
-    .line 156
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v10, 0x1
@@ -1392,7 +1263,6 @@
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->x:I
 
-    .line 157
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v10, 0x0
@@ -1405,35 +1275,30 @@
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->y:I
 
-    .line 158
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/4 v10, -0x3
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->format:I
 
-    .line 159
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v10, 0x33
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->gravity:I
 
-    .line 160
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const/16 v10, 0x7d3
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->type:I
 
-    .line 161
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowLayoutParams:Landroid/view/WindowManager$LayoutParams;
 
     const v10, 0x1000208
 
     iput v10, v9, Landroid/view/WindowManager$LayoutParams;->flags:I
 
-    .line 162
     iget-object v9, p0, Lorg/telegram/ui/Components/PipVideoView;->windowManager:Landroid/view/WindowManager;
 
     iget-object v10, p0, Lorg/telegram/ui/Components/PipVideoView;->windowView:Landroid/widget/FrameLayout;
@@ -1444,18 +1309,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 167
     iput-object p2, p0, Lorg/telegram/ui/Components/PipVideoView;->parentSheet:Lorg/telegram/ui/Components/EmbedBottomSheet;
 
-    .line 168
     iput-object p1, p0, Lorg/telegram/ui/Components/PipVideoView;->parentActivity:Landroid/app/Activity;
 
-    .line 170
     .end local v8    # "textureView":Landroid/view/TextureView;
     :goto_1
     return-object v8
 
-    .line 129
     .end local v2    # "aspectRatioFrameLayout":Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;
     .end local v4    # "px":F
     .end local v5    # "py":F
@@ -1470,7 +1331,6 @@
 
     iput v9, p0, Lorg/telegram/ui/Components/PipVideoView;->videoHeight:I
 
-    .line 130
     iget v9, p0, Lorg/telegram/ui/Components/PipVideoView;->videoHeight:I
 
     int-to-float v9, v9
@@ -1483,7 +1343,6 @@
 
     goto/16 :goto_0
 
-    .line 163
     .restart local v2    # "aspectRatioFrameLayout":Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;
     .restart local v4    # "px":F
     .restart local v5    # "py":F
@@ -1493,11 +1352,9 @@
     :catch_0
     move-exception v3
 
-    .line 164
     .local v3, "e":Ljava/lang/Exception;
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 165
     const/4 v8, 0x0
 
     goto :goto_1

@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChannelEditActivity$3;
 
     .prologue
-    .line 279
     iput-object p1, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +44,8 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 282
     if-nez p2, :cond_1
 
-    .line 283
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
@@ -59,18 +56,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/AvatarUpdater;->openCamera()V
 
-    .line 291
     :cond_0
     :goto_0
     return-void
 
-    .line 284
     :cond_1
     const/4 v0, 0x1
 
     if-ne p2, v0, :cond_2
 
-    .line 285
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
@@ -83,27 +77,23 @@
 
     goto :goto_0
 
-    .line 286
     :cond_2
     const/4 v0, 0x2
 
     if-ne p2, v0, :cond_0
 
-    .line 287
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelEditActivity;->access$1102(Lorg/telegram/ui/ChannelEditActivity;Lorg/telegram/tgnet/TLRPC$FileLocation;)Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 288
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ChannelEditActivity;->access$1002(Lorg/telegram/ui/ChannelEditActivity;Lorg/telegram/tgnet/TLRPC$InputFile;)Lorg/telegram/tgnet/TLRPC$InputFile;
 
-    .line 289
     iget-object v0, p0, Lorg/telegram/ui/ChannelEditActivity$3$1;->this$1:Lorg/telegram/ui/ChannelEditActivity$3;
 
     iget-object v0, v0, Lorg/telegram/ui/ChannelEditActivity$3;->this$0:Lorg/telegram/ui/ChannelEditActivity;

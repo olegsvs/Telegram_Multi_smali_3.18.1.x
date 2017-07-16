@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPFeedbackActivity;
 
     .prologue
-    .line 98
     iput-object p1, p0, Lorg/telegram/ui/VoIPFeedbackActivity$3;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "dialog"    # Landroid/content/DialogInterface;
 
     .prologue
-    .line 101
     iget-object v0, p0, Lorg/telegram/ui/VoIPFeedbackActivity$3;->this$0:Lorg/telegram/ui/VoIPFeedbackActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VoIPFeedbackActivity;->finish()V
 
-    .line 102
     return-void
 .end method

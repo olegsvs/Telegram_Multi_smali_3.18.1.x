@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     .prologue
-    .line 912
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$1;->val$this$0:Lorg/telegram/ui/ChangePhoneActivity;
@@ -46,7 +45,6 @@
     .param p1, "s"    # Landroid/text/Editable;
 
     .prologue
-    .line 925
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-static {v0}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->access$1700(Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;)Z
@@ -55,12 +53,10 @@
 
     if-eqz v0, :cond_1
 
-    .line 931
     :cond_0
     :goto_0
     return-void
 
-    .line 928
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
@@ -88,7 +84,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 929
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView$1;->this$1:Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangePhoneActivity$LoginActivitySmsView;->onNextPressed()V
@@ -104,7 +99,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 916
     return-void
 .end method
 
@@ -116,6 +110,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 921
     return-void
 .end method

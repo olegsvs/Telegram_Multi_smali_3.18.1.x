@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/FileLoadOperation;
 
     .prologue
-    .line 335
     iput-object p1, p0, Lorg/telegram/messenger/FileLoadOperation$2;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 338
     iget-object v2, p0, Lorg/telegram/messenger/FileLoadOperation$2;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoadOperation;->access$500(Lorg/telegram/messenger/FileLoadOperation;)I
@@ -64,12 +62,10 @@
 
     if-ne v2, v3, :cond_1
 
-    .line 350
     :cond_0
     :goto_0
     return-void
 
-    .line 341
     :cond_1
     iget-object v2, p0, Lorg/telegram/messenger/FileLoadOperation$2;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
@@ -79,7 +75,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 342
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -96,7 +91,6 @@
 
     if-ge v0, v2, :cond_3
 
-    .line 343
     iget-object v2, p0, Lorg/telegram/messenger/FileLoadOperation$2;->this$0:Lorg/telegram/messenger/FileLoadOperation;
 
     invoke-static {v2}, Lorg/telegram/messenger/FileLoadOperation;->access$600(Lorg/telegram/messenger/FileLoadOperation;)Ljava/util/ArrayList;
@@ -109,7 +103,6 @@
 
     check-cast v1, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
 
-    .line 344
     .local v1, "requestInfo":Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
     invoke-static {v1}, Lorg/telegram/messenger/FileLoadOperation$RequestInfo;->access$700(Lorg/telegram/messenger/FileLoadOperation$RequestInfo;)I
 
@@ -117,7 +110,6 @@
 
     if-eqz v2, :cond_2
 
-    .line 345
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v2
@@ -128,13 +120,11 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
 
-    .line 342
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_1
 
-    .line 349
     .end local v0    # "a":I
     .end local v1    # "requestInfo":Lorg/telegram/messenger/FileLoadOperation$RequestInfo;
     :cond_3

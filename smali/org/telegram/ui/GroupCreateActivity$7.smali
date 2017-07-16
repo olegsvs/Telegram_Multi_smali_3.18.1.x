@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateActivity;
 
     .prologue
-    .line 518
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$7;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -46,7 +45,6 @@
     .prologue
     const/4 v1, 0x1
 
-    .line 521
     const/16 v0, 0x43
 
     if-ne p2, v0, :cond_0
@@ -81,7 +79,6 @@
 
     if-nez v0, :cond_0
 
-    .line 522
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$7;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1600(Lorg/telegram/ui/GroupCreateActivity;)Lorg/telegram/ui/GroupCreateActivity$SpansContainer;
@@ -114,19 +111,16 @@
 
     invoke-virtual {v2, v0}, Lorg/telegram/ui/GroupCreateActivity$SpansContainer;->removeSpan(Lorg/telegram/ui/Components/GroupCreateSpan;)V
 
-    .line 523
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$7;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1700(Lorg/telegram/ui/GroupCreateActivity;)V
 
-    .line 524
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateActivity$7;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateActivity;->access$1800(Lorg/telegram/ui/GroupCreateActivity;)V
 
     move v0, v1
 
-    .line 527
     :goto_0
     return v0
 

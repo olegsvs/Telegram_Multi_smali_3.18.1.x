@@ -30,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 260
     iput-wide p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$uid:J
 
     iput p3, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$type:I
@@ -50,10 +49,8 @@
     .prologue
     const/4 v12, -0x1
 
-    .line 264
     const/4 v1, -0x1
 
-    .line 265
     .local v1, "count":I
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -104,7 +101,6 @@
 
     move-result-object v0
 
-    .line 266
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
@@ -112,29 +108,24 @@
 
     if-eqz v2, :cond_0
 
-    .line 267
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v1
 
-    .line 269
     :cond_0
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 270
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$uid:J
 
     long-to-int v8, v2
 
-    .line 271
     .local v8, "lower_part":I
     if-ne v1, v12, :cond_2
 
     if-nez v8, :cond_2
 
-    .line 272
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -183,35 +174,29 @@
 
     move-result-object v0
 
-    .line 273
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->next()Z
 
     move-result v2
 
     if-eqz v2, :cond_1
 
-    .line 274
     const/4 v2, 0x0
 
     invoke-virtual {v0, v2}, Lorg/telegram/SQLite/SQLiteCursor;->intValue(I)I
 
     move-result v1
 
-    .line 276
     :cond_1
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 278
     if-eq v1, v12, :cond_2
 
-    .line 279
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$uid:J
 
     iget v4, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$type:I
 
     invoke-static {v2, v3, v4, v1}, Lorg/telegram/messenger/query/SharedMediaQuery;->access$200(JII)V
 
-    .line 282
     :cond_2
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$6;->val$uid:J
 
@@ -225,17 +210,14 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 286
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v8    # "lower_part":I
     :goto_0
     return-void
 
-    .line 283
     :catch_0
     move-exception v7
 
-    .line 284
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

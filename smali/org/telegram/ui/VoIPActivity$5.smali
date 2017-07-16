@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 274
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$5;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,23 +41,19 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 277
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v1
 
     if-nez v1, :cond_0
 
-    .line 278
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$5;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v1}, Lorg/telegram/ui/VoIPActivity;->finish()V
 
-    .line 284
     :goto_0
     return-void
 
-    .line 281
     :cond_0
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$5;->this$0:Lorg/telegram/ui/VoIPActivity;
 
@@ -74,7 +69,6 @@
 
     const/4 v0, 0x1
 
-    .line 282
     .local v0, "checked":Z
     :goto_1
     iget-object v1, p0, Lorg/telegram/ui/VoIPActivity$5;->this$0:Lorg/telegram/ui/VoIPActivity;
@@ -85,7 +79,6 @@
 
     invoke-virtual {v1, v0}, Lorg/telegram/ui/Components/voip/CheckableImageView;->setChecked(Z)V
 
-    .line 283
     invoke-static {}, Lorg/telegram/messenger/voip/VoIPService;->getSharedInstance()Lorg/telegram/messenger/voip/VoIPService;
 
     move-result-object v1
@@ -94,7 +87,6 @@
 
     goto :goto_0
 
-    .line 281
     .end local v0    # "checked":Z
     :cond_1
     const/4 v0, 0x0

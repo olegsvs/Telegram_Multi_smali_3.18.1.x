@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     .prologue
-    .line 290
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -49,7 +48,6 @@
 
     const/4 v6, 0x0
 
-    .line 293
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$500(Lorg/telegram/ui/Components/ChatActivityEnterView;)Lorg/telegram/ui/Components/ChatActivityEnterView$ChatActivityEnterViewDelegate;
@@ -66,18 +64,15 @@
 
     if-nez v7, :cond_1
 
-    .line 344
     :cond_0
     :goto_0
     return-void
 
-    .line 296
     :cond_1
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v7, v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$702(Lorg/telegram/ui/Components/ChatActivityEnterView;Z)Z
 
-    .line 297
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$800(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/ImageView;
@@ -98,12 +93,10 @@
 
     if-eqz v7, :cond_9
 
-    .line 298
     sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v7, v8, :cond_8
 
-    .line 299
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -120,7 +113,6 @@
 
     move v2, v5
 
-    .line 300
     .local v2, "hasAudio":Z
     :goto_1
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -139,14 +131,12 @@
 
     move v3, v5
 
-    .line 301
     .local v3, "hasVideo":Z
     :goto_2
     if-eqz v2, :cond_2
 
     if-nez v3, :cond_8
 
-    .line 302
     :cond_2
     if-nez v2, :cond_5
 
@@ -157,23 +147,19 @@
     :goto_3
     new-array v4, v7, [Ljava/lang/String;
 
-    .line 303
     .local v4, "permissions":[Ljava/lang/String;
     if-nez v2, :cond_6
 
     if-nez v3, :cond_6
 
-    .line 304
     const-string/jumbo v7, "android.permission.RECORD_AUDIO"
 
     aput-object v7, v4, v6
 
-    .line 305
     const-string/jumbo v6, "android.permission.CAMERA"
 
     aput-object v6, v4, v5
 
-    .line 311
     :goto_4
     iget-object v5, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -191,36 +177,30 @@
     :cond_3
     move v2, v6
 
-    .line 299
     goto :goto_1
 
     .restart local v2    # "hasAudio":Z
     :cond_4
     move v3, v6
 
-    .line 300
     goto :goto_2
 
     .restart local v3    # "hasVideo":Z
     :cond_5
     move v7, v5
 
-    .line 302
     goto :goto_3
 
-    .line 306
     .restart local v4    # "permissions":[Ljava/lang/String;
     :cond_6
     if-nez v2, :cond_7
 
-    .line 307
     const-string/jumbo v5, "android.permission.RECORD_AUDIO"
 
     aput-object v5, v4, v6
 
     goto :goto_4
 
-    .line 309
     :cond_7
     const-string/jumbo v5, "android.permission.CAMERA"
 
@@ -228,7 +208,6 @@
 
     goto :goto_4
 
-    .line 315
     .end local v2    # "hasAudio":Z
     .end local v3    # "hasVideo":Z
     .end local v4    # "permissions":[Ljava/lang/String;
@@ -243,7 +222,6 @@
 
     goto :goto_0
 
-    .line 317
     :cond_9
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -253,7 +231,6 @@
 
     if-eqz v7, :cond_b
 
-    .line 318
     sget v7, Landroid/os/Build$VERSION;->SDK_INT:I
 
     if-lt v7, v8, :cond_a
@@ -272,7 +249,6 @@
 
     if-eqz v7, :cond_a
 
-    .line 319
     iget-object v7, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$600(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/app/Activity;
@@ -289,7 +265,6 @@
 
     goto/16 :goto_0
 
-    .line 325
     :cond_a
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
@@ -301,7 +276,6 @@
 
     if-gez v6, :cond_d
 
-    .line 326
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v6
@@ -324,7 +298,6 @@
 
     move-result-object v1
 
-    .line 327
     .local v1, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v1, :cond_c
 
@@ -338,10 +311,8 @@
 
     if-le v6, v7, :cond_c
 
-    .line 328
     const-string/jumbo v0, "bigchat_upload_audio"
 
-    .line 335
     .end local v1    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     .local v0, "action":Ljava/lang/String;
     :goto_5
@@ -357,7 +328,6 @@
 
     if-eqz v6, :cond_0
 
-    .line 339
     .end local v0    # "action":Ljava/lang/String;
     :cond_b
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
@@ -366,7 +336,6 @@
 
     invoke-static {v6, v7}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1102(Lorg/telegram/ui/Components/ChatActivityEnterView;F)F
 
-    .line 340
     invoke-static {}, Lorg/telegram/messenger/MediaController;->getInstance()Lorg/telegram/messenger/MediaController;
 
     move-result-object v6
@@ -385,12 +354,10 @@
 
     invoke-virtual {v6, v8, v9, v7}, Lorg/telegram/messenger/MediaController;->startRecording(JLorg/telegram/messenger/MessageObject;)V
 
-    .line 341
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1300(Lorg/telegram/ui/Components/ChatActivityEnterView;)V
 
-    .line 342
     iget-object v6, p0, Lorg/telegram/ui/Components/ChatActivityEnterView$2;->this$0:Lorg/telegram/ui/Components/ChatActivityEnterView;
 
     invoke-static {v6}, Lorg/telegram/ui/Components/ChatActivityEnterView;->access$1400(Lorg/telegram/ui/Components/ChatActivityEnterView;)Landroid/widget/FrameLayout;
@@ -405,7 +372,6 @@
 
     goto/16 :goto_0
 
-    .line 330
     .restart local v1    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_c
     const-string/jumbo v0, "chat_upload_audio"
@@ -413,7 +379,6 @@
     .restart local v0    # "action":Ljava/lang/String;
     goto :goto_5
 
-    .line 333
     .end local v0    # "action":Ljava/lang/String;
     .end local v1    # "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_d

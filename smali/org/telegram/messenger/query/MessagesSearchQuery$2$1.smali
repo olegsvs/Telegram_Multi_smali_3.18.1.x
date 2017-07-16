@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/MessagesSearchQuery$2;
 
     .prologue
-    .line 170
     iput-object p1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -45,7 +44,6 @@
     .locals 13
 
     .prologue
-    .line 173
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$2;
 
     iget v1, v1, Lorg/telegram/messenger/query/MessagesSearchQuery$2;->val$currentReqId:I
@@ -56,22 +54,18 @@
 
     if-ne v1, v2, :cond_3
 
-    .line 174
     const/4 v1, 0x0
 
     invoke-static {v1}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$602(I)I
 
-    .line 175
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v1, :cond_3
 
-    .line 176
     iget-object v12, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v12, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 177
     .local v12, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -87,7 +81,6 @@
 
     invoke-virtual {v1, v2, v3, v4, v5}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 178
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -98,7 +91,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 179
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -109,7 +101,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 180
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$2;
 
     iget-object v1, v1, Lorg/telegram/messenger/query/MessagesSearchQuery$2;->val$req:Lorg/telegram/tgnet/TLRPC$TL_messages_search;
@@ -130,19 +121,16 @@
 
     if-nez v1, :cond_0
 
-    .line 181
     const/4 v1, 0x0
 
     invoke-static {v1}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$702(I)I
 
-    .line 182
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$800()Ljava/util/ArrayList;
 
     move-result-object v1
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->clear()V
 
-    .line 183
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$300()[I
 
     move-result-object v1
@@ -153,11 +141,9 @@
 
     aput v3, v1, v2
 
-    .line 185
     :cond_0
     const/4 v9, 0x0
 
-    .line 186
     .local v9, "added":Z
     const/4 v0, 0x0
 
@@ -177,7 +163,6 @@
 
     if-ge v0, v1, :cond_1
 
-    .line 187
     iget-object v1, v12, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -186,11 +171,9 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 188
     .local v10, "message":Lorg/telegram/tgnet/TLRPC$Message;
     const/4 v9, 0x1
 
-    .line 189
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$800()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -205,12 +188,10 @@
 
     invoke-virtual {v1, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 186
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 191
     .end local v10    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_1
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$200()[Z
@@ -247,7 +228,6 @@
     :goto_2
     aput-boolean v2, v3, v1
 
-    .line 192
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$300()[I
 
     move-result-object v3
@@ -276,7 +256,6 @@
     :goto_4
     aput v2, v3, v1
 
-    .line 193
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$800()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -287,7 +266,6 @@
 
     if-eqz v1, :cond_8
 
-    .line 194
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -364,7 +342,6 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 204
     :cond_2
     :goto_5
     iget-object v1, p0, Lorg/telegram/messenger/query/MessagesSearchQuery$2$1;->this$0:Lorg/telegram/messenger/query/MessagesSearchQuery$2;
@@ -409,7 +386,6 @@
 
     if-nez v1, :cond_3
 
-    .line 205
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$1000()Ljava/lang/String;
 
     move-result-object v1
@@ -432,14 +408,12 @@
 
     invoke-static/range {v1 .. v8}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$400(Ljava/lang/String;JJIIZ)V
 
-    .line 209
     .end local v0    # "a":I
     .end local v9    # "added":Z
     .end local v12    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_3
     return-void
 
-    .line 191
     .restart local v0    # "a":I
     .restart local v9    # "added":Z
     .restart local v12    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
@@ -453,7 +427,6 @@
 
     goto/16 :goto_2
 
-    .line 192
     :cond_6
     const/4 v1, 0x1
 
@@ -468,11 +441,9 @@
 
     goto/16 :goto_4
 
-    .line 196
     :cond_8
     if-eqz v9, :cond_2
 
-    .line 197
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$700()I
 
     move-result v1
@@ -487,7 +458,6 @@
 
     if-lt v1, v2, :cond_9
 
-    .line 198
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$800()Ljava/util/ArrayList;
 
     move-result-object v1
@@ -500,7 +470,6 @@
 
     invoke-static {v1}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$702(I)I
 
-    .line 200
     :cond_9
     invoke-static {}, Lorg/telegram/messenger/query/MessagesSearchQuery;->access$800()Ljava/util/ArrayList;
 
@@ -516,7 +485,6 @@
 
     check-cast v11, Lorg/telegram/messenger/MessageObject;
 
-    .line 201
     .local v11, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 

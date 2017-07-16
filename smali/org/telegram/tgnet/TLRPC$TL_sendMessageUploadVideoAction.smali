@@ -23,7 +23,6 @@
     .locals 1
 
     .prologue
-    .line 2651
     const v0, -0x1689c514
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction;->constructor:I
@@ -35,7 +34,6 @@
     .locals 0
 
     .prologue
-    .line 2650
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$SendMessageAction;-><init>()V
 
     return-void
@@ -49,14 +47,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 2655
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction;->progress:I
 
-    .line 2656
     return-void
 .end method
 
@@ -65,16 +61,13 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 2659
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2660
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_sendMessageUploadVideoAction;->progress:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 2661
     return-void
 .end method

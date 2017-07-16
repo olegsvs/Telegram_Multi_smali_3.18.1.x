@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/WallpapersActivity;
 
     .prologue
-    .line 131
     iput-object p1, p0, Lorg/telegram/ui/WallpapersActivity$2;->this$0:Lorg/telegram/ui/WallpapersActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,7 +38,6 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 134
     const/16 v17, -0x1
 
     move/from16 v0, p1
@@ -48,7 +46,6 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 135
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/WallpapersActivity$2;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -57,12 +54,10 @@
 
     invoke-virtual/range {v17 .. v17}, Lorg/telegram/ui/WallpapersActivity;->finishFragment()V
 
-    .line 190
     :cond_0
     :goto_0
     return-void
 
-    .line 136
     :cond_1
     const/16 v17, 0x1
 
@@ -72,7 +67,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 138
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/WallpapersActivity$2;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -103,7 +97,6 @@
 
     check-cast v15, Lorg/telegram/tgnet/TLRPC$WallPaper;
 
-    .line 139
     .local v15, "wallPaper":Lorg/telegram/tgnet/TLRPC$WallPaper;
     if-eqz v15, :cond_4
 
@@ -125,7 +118,6 @@
 
     if-eqz v17, :cond_4
 
-    .line 140
     sget-object v17, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
     move-object/from16 v0, v17
@@ -134,7 +126,6 @@
 
     move/from16 v16, v0
 
-    .line 141
     .local v16, "width":I
     sget-object v17, Lorg/telegram/messenger/AndroidUtilities;->displaySize:Landroid/graphics/Point;
 
@@ -142,23 +133,18 @@
 
     iget v9, v0, Landroid/graphics/Point;->y:I
 
-    .line 142
     .local v9, "height":I
     move/from16 v0, v16
 
     if-le v0, v9, :cond_2
 
-    .line 143
     move/from16 v12, v16
 
-    .line 144
     .local v12, "temp":I
     move/from16 v16, v9
 
-    .line 145
     move v9, v12
 
-    .line 147
     .end local v12    # "temp":I
     :cond_2
     iget-object v0, v15, Lorg/telegram/tgnet/TLRPC$WallPaper;->sizes:Ljava/util/ArrayList;
@@ -175,7 +161,6 @@
 
     move-result-object v11
 
-    .line 148
     .local v11, "size":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     new-instance v17, Ljava/lang/StringBuilder;
 
@@ -225,7 +210,6 @@
 
     move-result-object v7
 
-    .line 149
     .local v7, "fileName":Ljava/lang/String;
     new-instance v6, Ljava/io/File;
 
@@ -243,7 +227,6 @@
 
     invoke-direct {v6, v0, v7}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 150
     .local v6, "f":Ljava/io/File;
     new-instance v14, Ljava/io/File;
 
@@ -259,7 +242,6 @@
 
     invoke-direct {v14, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 152
     .local v14, "toFile":Ljava/io/File;
     :try_start_0
     invoke-static {v6, v14}, Lorg/telegram/messenger/AndroidUtilities;->copyFile(Ljava/io/File;Ljava/io/File;)Z
@@ -268,7 +250,6 @@
 
     move-result v2
 
-    .line 172
     .end local v6    # "f":Ljava/io/File;
     .end local v7    # "fileName":Ljava/lang/String;
     .end local v9    # "height":I
@@ -279,7 +260,6 @@
     :goto_1
     if-eqz v2, :cond_3
 
-    .line 173
     sget-object v17, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v18, "mainconfig"
@@ -290,13 +270,11 @@
 
     move-result-object v10
 
-    .line 174
     .local v10, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v10}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v5
 
-    .line 175
     .local v5, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v17, "selectedBackground"
 
@@ -316,7 +294,6 @@
 
     invoke-interface {v5, v0, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 176
     const-string/jumbo v17, "selectedColor"
 
     move-object/from16 v0, p0
@@ -335,7 +312,6 @@
 
     invoke-interface {v5, v0, v1}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 177
     const-string/jumbo v18, "overrideThemeWallpaper"
 
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->hasWallpaperFromTheme()Z
@@ -365,10 +341,8 @@
 
     invoke-interface {v5, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 178
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 180
     sget-object v17, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v18, "theme"
@@ -379,13 +353,11 @@
 
     move-result-object v13
 
-    .line 181
     .local v13, "themePrefs":Landroid/content/SharedPreferences;
     invoke-interface {v13}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v4
 
-    .line 182
     .local v4, "edit":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v17, "chatSolidBGColorCheck"
 
@@ -397,18 +369,14 @@
 
     invoke-interface {v4, v0, v1}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 183
     const/16 v17, 0x0
 
     sput-boolean v17, Lorg/telegram/ui/ActionBar/Theme;->chatSolidBGColorCheck:Z
 
-    .line 184
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 186
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->reloadWallpaper()V
 
-    .line 188
     .end local v4    # "edit":Landroid/content/SharedPreferences$Editor;
     .end local v5    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v10    # "preferences":Landroid/content/SharedPreferences;
@@ -424,7 +392,6 @@
 
     goto/16 :goto_0
 
-    .line 153
     .end local v2    # "done":Z
     .restart local v6    # "f":Ljava/io/File;
     .restart local v7    # "fileName":Ljava/lang/String;
@@ -435,17 +402,14 @@
     :catch_0
     move-exception v3
 
-    .line 154
     .local v3, "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
-    .line 155
     .restart local v2    # "done":Z
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
-    .line 158
     .end local v2    # "done":Z
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v6    # "f":Ljava/io/File;
@@ -473,7 +437,6 @@
 
     if-ne v0, v1, :cond_5
 
-    .line 159
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/WallpapersActivity$2;->this$0:Lorg/telegram/ui/WallpapersActivity;
@@ -488,7 +451,6 @@
 
     move-result-object v8
 
-    .line 160
     .local v8, "fromFile":Ljava/io/File;
     new-instance v14, Ljava/io/File;
 
@@ -504,7 +466,6 @@
 
     invoke-direct {v14, v0, v1}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 162
     .restart local v14    # "toFile":Ljava/io/File;
     :try_start_1
     invoke-static {v8, v14}, Lorg/telegram/messenger/AndroidUtilities;->copyFile(Ljava/io/File;Ljava/io/File;)Z
@@ -516,22 +477,18 @@
     .restart local v2    # "done":Z
     goto/16 :goto_1
 
-    .line 163
     .end local v2    # "done":Z
     :catch_1
     move-exception v3
 
-    .line 164
     .restart local v3    # "e":Ljava/lang/Exception;
     const/4 v2, 0x0
 
-    .line 165
     .restart local v2    # "done":Z
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_1
 
-    .line 168
     .end local v2    # "done":Z
     .end local v3    # "e":Ljava/lang/Exception;
     .end local v8    # "fromFile":Ljava/io/File;
@@ -542,7 +499,6 @@
     .restart local v2    # "done":Z
     goto/16 :goto_1
 
-    .line 177
     .restart local v5    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v10    # "preferences":Landroid/content/SharedPreferences;
     :cond_6

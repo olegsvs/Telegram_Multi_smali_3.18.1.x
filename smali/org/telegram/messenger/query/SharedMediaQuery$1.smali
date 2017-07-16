@@ -38,7 +38,6 @@
     .locals 0
 
     .prologue
-    .line 70
     iput p1, p0, Lorg/telegram/messenger/query/SharedMediaQuery$1;->val$count:I
 
     iput-wide p2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$1;->val$uid:J
@@ -66,15 +65,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 73
     if-nez p2, :cond_0
 
     move-object v1, p1
 
-    .line 74
     check-cast v1, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 76
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -86,10 +82,8 @@
 
     if-le v0, v2, :cond_1
 
-    .line 77
     const/4 v11, 0x0
 
-    .line 78
     .local v11, "topReached":Z
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -103,7 +97,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 82
     :goto_0
     iget-wide v2, p0, Lorg/telegram/messenger/query/SharedMediaQuery$1;->val$uid:J
 
@@ -123,13 +116,11 @@
 
     invoke-static/range {v1 .. v11}, Lorg/telegram/messenger/query/SharedMediaQuery;->access$000(Lorg/telegram/tgnet/TLRPC$messages_Messages;JIIIIZIZZ)V
 
-    .line 84
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     .end local v11    # "topReached":Z
     :cond_0
     return-void
 
-    .line 80
     .restart local v1    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_1
     const/4 v11, 0x1

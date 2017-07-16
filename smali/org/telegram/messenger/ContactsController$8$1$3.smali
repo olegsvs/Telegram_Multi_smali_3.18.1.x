@@ -37,7 +37,6 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/ContactsController$8$1;
 
     .prologue
-    .line 1111
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$8$1$3;->this$2:Lorg/telegram/messenger/ContactsController$8$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +50,6 @@
     .locals 1
 
     .prologue
-    .line 1111
     check-cast p1, Ljava/lang/String;
 
     check-cast p2, Ljava/lang/String;
@@ -73,38 +71,30 @@
 
     const/4 v2, 0x0
 
-    .line 1114
     invoke-virtual {p1, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v0
 
-    .line 1115
     .local v0, "cv1":C
     invoke-virtual {p2, v2}, Ljava/lang/String;->charAt(I)C
 
     move-result v1
 
-    .line 1116
     .local v1, "cv2":C
     if-ne v0, v3, :cond_0
 
-    .line 1117
     const/4 v2, 0x1
 
-    .line 1121
     :goto_0
     return v2
 
-    .line 1118
     :cond_0
     if-ne v1, v3, :cond_1
 
-    .line 1119
     const/4 v2, -0x1
 
     goto :goto_0
 
-    .line 1121
     :cond_1
     invoke-virtual {p1, p2}, Ljava/lang/String;->compareTo(Ljava/lang/String;)I
 

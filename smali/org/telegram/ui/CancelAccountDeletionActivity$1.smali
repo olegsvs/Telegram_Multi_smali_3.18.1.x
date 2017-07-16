@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     .prologue
-    .line 138
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$1;->this$0:Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -39,12 +38,10 @@
     .param p1, "id"    # I
 
     .prologue
-    .line 141
     const/4 v0, 0x1
 
     if-ne p1, v0, :cond_1
 
-    .line 142
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$1;->this$0:Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->access$000(Lorg/telegram/ui/CancelAccountDeletionActivity;)[Lorg/telegram/ui/Components/SlideView;
@@ -61,18 +58,15 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/SlideView;->onNextPressed()V
 
-    .line 146
     :cond_0
     :goto_0
     return-void
 
-    .line 143
     :cond_1
     const/4 v0, -0x1
 
     if-ne p1, v0, :cond_0
 
-    .line 144
     iget-object v0, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$1;->this$0:Lorg/telegram/ui/CancelAccountDeletionActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/CancelAccountDeletionActivity;->finishFragment()V

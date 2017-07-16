@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/ContactsController$20;
 
     .prologue
-    .line 1880
     iput-object p1, p0, Lorg/telegram/messenger/ContactsController$20$1;->this$1:Lorg/telegram/messenger/ContactsController$20;
 
     iput-object p2, p0, Lorg/telegram/messenger/ContactsController$20$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,17 +50,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1883
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$20$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v1, :cond_0
 
-    .line 1884
     iget-object v0, p0, Lorg/telegram/messenger/ContactsController$20$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
 
-    .line 1885
     .local v0, "ttl":Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$20$1;->this$1:Lorg/telegram/messenger/ContactsController$20;
 
@@ -71,7 +67,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/ContactsController;->access$1802(Lorg/telegram/messenger/ContactsController;I)I
 
-    .line 1886
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$20$1;->this$1:Lorg/telegram/messenger/ContactsController$20;
 
     iget-object v1, v1, Lorg/telegram/messenger/ContactsController$20;->this$0:Lorg/telegram/messenger/ContactsController;
@@ -80,7 +75,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/messenger/ContactsController;->access$1902(Lorg/telegram/messenger/ContactsController;I)I
 
-    .line 1890
     .end local v0    # "ttl":Lorg/telegram/tgnet/TLRPC$TL_accountDaysTTL;
     :goto_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
@@ -93,10 +87,8 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1891
     return-void
 
-    .line 1888
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/ContactsController$20$1;->this$1:Lorg/telegram/messenger/ContactsController$20;
 

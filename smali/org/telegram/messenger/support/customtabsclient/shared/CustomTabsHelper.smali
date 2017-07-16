@@ -26,7 +26,6 @@
     .locals 0
 
     .prologue
-    .line 45
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -38,12 +37,10 @@
     .param p1, "intent"    # Landroid/content/Intent;
 
     .prologue
-    .line 48
     new-instance v1, Landroid/content/Intent;
 
     invoke-direct {v1}, Landroid/content/Intent;-><init>()V
 
-    .line 49
     invoke-virtual {p0}, Landroid/content/Context;->getPackageName()Ljava/lang/String;
 
     move-result-object v2
@@ -54,18 +51,15 @@
 
     move-result-object v3
 
-    .line 48
     invoke-virtual {v1, v2, v3}, Landroid/content/Intent;->setClassName(Ljava/lang/String;Ljava/lang/String;)Landroid/content/Intent;
 
     move-result-object v0
 
-    .line 50
     .local v0, "keepAliveIntent":Landroid/content/Intent;
     const-string/jumbo v1, "android.support.customtabs.extra.KEEP_ALIVE"
 
     invoke-virtual {p1, v1, v0}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 51
     return-void
 .end method
 
@@ -76,24 +70,20 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 64
     sget-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     if-eqz v8, :cond_0
 
     sget-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
-    .line 106
     :goto_0
     return-object v8
 
-    .line 66
     :cond_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v5
 
-    .line 68
     .local v5, "pm":Landroid/content/pm/PackageManager;
     new-instance v0, Landroid/content/Intent;
 
@@ -107,38 +97,31 @@
 
     invoke-direct {v0, v8, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
-    .line 69
     .local v0, "activityIntent":Landroid/content/Intent;
     invoke-virtual {v5, v0, v10}, Landroid/content/pm/PackageManager;->resolveActivity(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v1
 
-    .line 70
     .local v1, "defaultViewHandlerInfo":Landroid/content/pm/ResolveInfo;
     const/4 v2, 0x0
 
-    .line 71
     .local v2, "defaultViewHandlerPackageName":Ljava/lang/String;
     if-eqz v1, :cond_1
 
-    .line 72
     iget-object v8, v1, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v2, v8, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
-    .line 76
     :cond_1
     invoke-virtual {v5, v0, v10}, Landroid/content/pm/PackageManager;->queryIntentActivities(Landroid/content/Intent;I)Ljava/util/List;
 
     move-result-object v6
 
-    .line 77
     .local v6, "resolvedActivityList":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 78
     .local v4, "packagesSupportingCustomTabs":Ljava/util/List;, "Ljava/util/List<Ljava/lang/String;>;"
     invoke-interface {v6}, Ljava/util/List;->iterator()Ljava/util/Iterator;
 
@@ -158,33 +141,28 @@
 
     check-cast v3, Landroid/content/pm/ResolveInfo;
 
-    .line 79
     .local v3, "info":Landroid/content/pm/ResolveInfo;
     new-instance v7, Landroid/content/Intent;
 
     invoke-direct {v7}, Landroid/content/Intent;-><init>()V
 
-    .line 80
     .local v7, "serviceIntent":Landroid/content/Intent;
     const-string/jumbo v9, "android.support.customtabs.action.CustomTabsService"
 
     invoke-virtual {v7, v9}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 81
     iget-object v9, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v9, v9, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
 
     invoke-virtual {v7, v9}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 82
     invoke-virtual {v5, v7, v10}, Landroid/content/pm/PackageManager;->resolveService(Landroid/content/Intent;I)Landroid/content/pm/ResolveInfo;
 
     move-result-object v9
 
     if-eqz v9, :cond_2
 
-    .line 83
     iget-object v9, v3, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
 
     iget-object v9, v9, Landroid/content/pm/ActivityInfo;->packageName:Ljava/lang/String;
@@ -193,7 +171,6 @@
 
     goto :goto_1
 
-    .line 89
     .end local v3    # "info":Landroid/content/pm/ResolveInfo;
     .end local v7    # "serviceIntent":Landroid/content/Intent;
     :cond_3
@@ -203,19 +180,16 @@
 
     if-eqz v8, :cond_5
 
-    .line 90
     const/4 v8, 0x0
 
     sput-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
-    .line 106
     :cond_4
     :goto_2
     sget-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     goto :goto_0
 
-    .line 91
     :cond_5
     invoke-interface {v4}, Ljava/util/List;->size()I
 
@@ -225,7 +199,6 @@
 
     if-ne v8, v9, :cond_6
 
-    .line 92
     invoke-interface {v4, v10}, Ljava/util/List;->get(I)Ljava/lang/Object;
 
     move-result-object v8
@@ -236,7 +209,6 @@
 
     goto :goto_2
 
-    .line 93
     :cond_6
     invoke-static {v2}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
@@ -244,26 +216,22 @@
 
     if-nez v8, :cond_7
 
-    .line 94
     invoke-static {p0, v0}, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->hasSpecializedHandlerIntents(Landroid/content/Context;Landroid/content/Intent;)Z
 
     move-result v8
 
     if-nez v8, :cond_7
 
-    .line 95
     invoke-interface {v4, v2}, Ljava/util/List;->contains(Ljava/lang/Object;)Z
 
     move-result v8
 
     if-eqz v8, :cond_7
 
-    .line 96
     sput-object v2, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 97
     :cond_7
     const-string/jumbo v8, "com.android.chrome"
 
@@ -273,14 +241,12 @@
 
     if-eqz v8, :cond_8
 
-    .line 98
     const-string/jumbo v8, "com.android.chrome"
 
     sput-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 99
     :cond_8
     const-string/jumbo v8, "com.chrome.beta"
 
@@ -290,14 +256,12 @@
 
     if-eqz v8, :cond_9
 
-    .line 100
     const-string/jumbo v8, "com.chrome.beta"
 
     sput-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 101
     :cond_9
     const-string/jumbo v8, "com.chrome.dev"
 
@@ -307,14 +271,12 @@
 
     if-eqz v8, :cond_a
 
-    .line 102
     const-string/jumbo v8, "com.chrome.dev"
 
     sput-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
 
     goto :goto_2
 
-    .line 103
     :cond_a
     const-string/jumbo v8, "com.google.android.apps.chrome"
 
@@ -324,7 +286,6 @@
 
     if-eqz v8, :cond_4
 
-    .line 104
     const-string/jumbo v8, "com.google.android.apps.chrome"
 
     sput-object v8, Lorg/telegram/messenger/support/customtabsclient/shared/CustomTabsHelper;->sPackageNameToUse:Ljava/lang/String;
@@ -336,7 +297,6 @@
     .locals 3
 
     .prologue
-    .line 140
     const/4 v0, 0x5
 
     new-array v0, v0, [Ljava/lang/String;
@@ -382,13 +342,11 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 116
     :try_start_0
     invoke-virtual {p0}, Landroid/content/Context;->getPackageManager()Landroid/content/pm/PackageManager;
 
     move-result-object v3
 
-    .line 117
     .local v3, "pm":Landroid/content/pm/PackageManager;
     const/16 v6, 0x40
 
@@ -396,7 +354,6 @@
 
     move-result-object v2
 
-    .line 120
     .local v2, "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     if-eqz v2, :cond_0
 
@@ -406,14 +363,12 @@
 
     if-nez v6, :cond_1
 
-    .line 133
     .end local v2    # "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
     :cond_0
     :goto_0
     return v5
 
-    .line 123
     .restart local v2    # "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .restart local v3    # "pm":Landroid/content/pm/PackageManager;
     :cond_1
@@ -434,15 +389,12 @@
 
     check-cast v4, Landroid/content/pm/ResolveInfo;
 
-    .line 124
     .local v4, "resolveInfo":Landroid/content/pm/ResolveInfo;
     iget-object v1, v4, Landroid/content/pm/ResolveInfo;->filter:Landroid/content/IntentFilter;
 
-    .line 125
     .local v1, "filter":Landroid/content/IntentFilter;
     if-eqz v1, :cond_2
 
-    .line 126
     invoke-virtual {v1}, Landroid/content/IntentFilter;->countDataAuthorities()I
 
     move-result v7
@@ -455,19 +407,16 @@
 
     if-eqz v7, :cond_2
 
-    .line 127
     iget-object v7, v4, Landroid/content/pm/ResolveInfo;->activityInfo:Landroid/content/pm/ActivityInfo;
     :try_end_0
     .catch Ljava/lang/RuntimeException; {:try_start_0 .. :try_end_0} :catch_0
 
     if-eqz v7, :cond_2
 
-    .line 128
     const/4 v5, 0x1
 
     goto :goto_0
 
-    .line 130
     .end local v1    # "filter":Landroid/content/IntentFilter;
     .end local v2    # "handlers":Ljava/util/List;, "Ljava/util/List<Landroid/content/pm/ResolveInfo;>;"
     .end local v3    # "pm":Landroid/content/pm/PackageManager;
@@ -475,7 +424,6 @@
     :catch_0
     move-exception v0
 
-    .line 131
     .local v0, "e":Ljava/lang/RuntimeException;
     const-string/jumbo v6, "CustomTabsHelper"
 

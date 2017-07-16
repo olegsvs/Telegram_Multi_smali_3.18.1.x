@@ -62,20 +62,15 @@
     .end annotation
 
     .prologue
-    .line 66
     .local p1, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Integer;>;"
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 67
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity;->uidArray:Ljava/util/ArrayList;
 
-    .line 68
     iput-boolean p3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isAlwaysShare:Z
 
-    .line 69
     iput-boolean p2, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isGroup:Z
 
-    .line 70
     return-void
 .end method
 
@@ -84,7 +79,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isAlwaysShare:Z
 
     return v0
@@ -95,7 +89,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-boolean v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isGroup:Z
 
     return v0
@@ -106,7 +99,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->uidArray:Ljava/util/ArrayList;
 
     return-object v0
@@ -117,7 +109,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listViewAdapter:Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;
 
     return-object v0
@@ -128,7 +119,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->delegate:Lorg/telegram/ui/PrivacyUsersActivity$PrivacyActivityDelegate;
 
     return-object v0
@@ -139,7 +129,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->selectedUserId:I
 
     return v0
@@ -151,7 +140,6 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 44
     iput p1, p0, Lorg/telegram/ui/PrivacyUsersActivity;->selectedUserId:I
 
     return p1
@@ -162,7 +150,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/PrivacyUsersActivity;
 
     .prologue
-    .line 44
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     return-object v0
@@ -173,16 +160,13 @@
     .param p1, "mask"    # I
 
     .prologue
-    .line 202
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     if-nez v3, :cond_1
 
-    .line 212
     :cond_0
     return-void
 
-    .line 205
     :cond_1
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
@@ -190,7 +174,6 @@
 
     move-result v2
 
-    .line 206
     .local v2, "count":I
     const/4 v0, 0x0
 
@@ -198,26 +181,22 @@
     :goto_0
     if-ge v0, v2, :cond_0
 
-    .line 207
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v0}, Lorg/telegram/ui/Components/RecyclerListView;->getChildAt(I)Landroid/view/View;
 
     move-result-object v1
 
-    .line 208
     .local v1, "child":Landroid/view/View;
     instance-of v3, v1, Lorg/telegram/ui/Cells/UserCell;
 
     if-eqz v3, :cond_2
 
-    .line 209
     check-cast v1, Lorg/telegram/ui/Cells/UserCell;
 
     .end local v1    # "child":Landroid/view/View;
     invoke-virtual {v1, p1}, Lorg/telegram/ui/Cells/UserCell;->update(I)V
 
-    .line 206
     :cond_2
     add-int/lit8 v0, v0, 0x1
 
@@ -239,29 +218,24 @@
 
     const/4 v2, 0x1
 
-    .line 87
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v4, 0x7f0200b6
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 88
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v3, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 89
     iget-boolean v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isGroup:Z
 
     if-eqz v3, :cond_1
 
-    .line 90
     iget-boolean v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isAlwaysShare:Z
 
     if-eqz v3, :cond_0
 
-    .line 91
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v4, "AlwaysAllow"
@@ -274,7 +248,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 102
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -284,32 +257,27 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 132
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/ActionBar;->createMenu()Lorg/telegram/ui/ActionBar/ActionBarMenu;
 
     move-result-object v1
 
-    .line 133
     .local v1, "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     const v3, 0x7f02022b
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/ui/ActionBar/ActionBarMenu;->addItem(II)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
 
-    .line 135
     new-instance v3, Landroid/widget/FrameLayout;
 
     invoke-direct {v3, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->fragmentView:Landroid/view/View;
 
-    .line 136
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 138
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     new-instance v3, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
@@ -317,12 +285,10 @@
 
     iput-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 139
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v3}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showTextView()V
 
-    .line 140
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     const-string/jumbo v4, "NoContacts"
@@ -335,7 +301,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/EmptyTextProgressView;->setText(Ljava/lang/String;)V
 
-    .line 141
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-static {v7, v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -344,26 +309,22 @@
 
     invoke-virtual {v0, v3, v4}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 143
     new-instance v3, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v3, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 144
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v4, p0, Lorg/telegram/ui/PrivacyUsersActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 145
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v3, v8}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 146
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -372,7 +333,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 147
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v4, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;
@@ -383,7 +343,6 @@
 
     invoke-virtual {v3, v4}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 148
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
@@ -393,7 +352,6 @@
     :goto_1
     invoke-virtual {v3, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollbarPosition(I)V
 
-    .line 149
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-static {v7, v6}, Lorg/telegram/ui/Components/LayoutHelper;->createFrame(IF)Landroid/widget/FrameLayout$LayoutParams;
@@ -402,7 +360,6 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 151
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v3, Lorg/telegram/ui/PrivacyUsersActivity$2;
@@ -411,7 +368,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 161
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v3, Lorg/telegram/ui/PrivacyUsersActivity$3;
@@ -420,12 +376,10 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemLongClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;)V
 
-    .line 188
     iget-object v2, p0, Lorg/telegram/ui/PrivacyUsersActivity;->fragmentView:Landroid/view/View;
 
     return-object v2
 
-    .line 93
     .end local v0    # "frameLayout":Landroid/widget/FrameLayout;
     .end local v1    # "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     :cond_0
@@ -443,13 +397,11 @@
 
     goto/16 :goto_0
 
-    .line 96
     :cond_1
     iget-boolean v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->isAlwaysShare:Z
 
     if-eqz v3, :cond_2
 
-    .line 97
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v4, "AlwaysShareWithTitle"
@@ -464,7 +416,6 @@
 
     goto/16 :goto_0
 
-    .line 99
     :cond_2
     iget-object v3, p0, Lorg/telegram/ui/PrivacyUsersActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
@@ -480,7 +431,6 @@
 
     goto/16 :goto_0
 
-    .line 148
     .restart local v0    # "frameLayout":Landroid/widget/FrameLayout;
     .restart local v1    # "menu":Lorg/telegram/ui/ActionBar/ActionBarMenu;
     :cond_3
@@ -495,12 +445,10 @@
     .param p2, "args"    # [Ljava/lang/Object;
 
     .prologue
-    .line 193
     sget v1, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
 
     if-ne p1, v1, :cond_1
 
-    .line 194
     const/4 v1, 0x0
 
     aget-object v1, p2, v1
@@ -511,7 +459,6 @@
 
     move-result v0
 
-    .line 195
     .local v0, "mask":I
     and-int/lit8 v1, v0, 0x2
 
@@ -521,11 +468,9 @@
 
     if-eqz v1, :cond_1
 
-    .line 196
     :cond_0
     invoke-direct {p0, v0}, Lorg/telegram/ui/PrivacyUsersActivity;->updateVisibleRows(I)V
 
-    .line 199
     .end local v0    # "mask":I
     :cond_1
     return-void
@@ -535,12 +480,10 @@
     .locals 12
 
     .prologue
-    .line 284
     new-instance v9, Lorg/telegram/ui/PrivacyUsersActivity$4;
 
     invoke-direct {v9, p0}, Lorg/telegram/ui/PrivacyUsersActivity$4;-><init>(Lorg/telegram/ui/PrivacyUsersActivity;)V
 
-    .line 297
     .local v9, "\u0441ellDelegate":Lorg/telegram/ui/ActionBar/ThemeDescription$ThemeDescriptionDelegate;
     const/16 v0, 0x13
 
@@ -1047,10 +990,8 @@
     .locals 2
 
     .prologue
-    .line 74
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 75
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1059,7 +1000,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 76
     const/4 v0, 0x1
 
     return v0
@@ -1069,10 +1009,8 @@
     .locals 2
 
     .prologue
-    .line 81
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentDestroy()V
 
-    .line 82
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1081,7 +1019,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 83
     return-void
 .end method
 
@@ -1089,20 +1026,16 @@
     .locals 1
 
     .prologue
-    .line 220
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listViewAdapter:Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 222
     iget-object v0, p0, Lorg/telegram/ui/PrivacyUsersActivity;->listViewAdapter:Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/PrivacyUsersActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 224
     :cond_0
     return-void
 .end method
@@ -1112,9 +1045,7 @@
     .param p1, "privacyActivityDelegate"    # Lorg/telegram/ui/PrivacyUsersActivity$PrivacyActivityDelegate;
 
     .prologue
-    .line 215
     iput-object p1, p0, Lorg/telegram/ui/PrivacyUsersActivity;->delegate:Lorg/telegram/ui/PrivacyUsersActivity$PrivacyActivityDelegate;
 
-    .line 216
     return-void
 .end method

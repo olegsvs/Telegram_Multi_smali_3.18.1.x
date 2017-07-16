@@ -29,16 +29,12 @@
     .param p2, "extractorOutput"    # Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
     .prologue
-    .line 663
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 664
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractors:[Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
-    .line 665
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractorOutput:Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;
 
-    .line 666
     return-void
 .end method
 
@@ -48,22 +44,18 @@
     .locals 1
 
     .prologue
-    .line 704
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     if-eqz v0, :cond_0
 
-    .line 705
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     invoke-interface {v0}, Lorg/telegram/messenger/exoplayer2/extractor/Extractor;->release()V
 
-    .line 706
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
-    .line 708
     :cond_0
     return-void
 .end method
@@ -79,19 +71,15 @@
     .end annotation
 
     .prologue
-    .line 681
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     if-eqz v1, :cond_0
 
-    .line 682
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
-    .line 700
     :goto_0
     return-object v1
 
-    .line 684
     :cond_0
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractors:[Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
@@ -104,7 +92,6 @@
 
     aget-object v0, v2, v1
 
-    .line 686
     .local v0, "extractor":Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
     :try_start_0
     invoke-interface {v0, p1}, Lorg/telegram/messenger/exoplayer2/extractor/Extractor;->sniff(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;)Z
@@ -113,23 +100,19 @@
 
     if-eqz v4, :cond_2
 
-    .line 687
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
     :try_end_0
     .catch Ljava/io/EOFException; {:try_start_0 .. :try_end_0} :catch_0
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 693
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
-    .line 696
     .end local v0    # "extractor":Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     if-nez v1, :cond_3
 
-    .line 697
     new-instance v1, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaSource$UnrecognizedInputFormatException;
 
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractors:[Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
@@ -138,22 +121,18 @@
 
     throw v1
 
-    .line 693
     .restart local v0    # "extractor":Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
     :cond_2
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
-    .line 684
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 690
     :catch_0
     move-exception v4
 
-    .line 693
     invoke-interface {p1}, Lorg/telegram/messenger/exoplayer2/extractor/ExtractorInput;->resetPeekPosition()V
 
     goto :goto_2
@@ -165,7 +144,6 @@
 
     throw v1
 
-    .line 699
     .end local v0    # "extractor":Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
     :cond_3
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
@@ -174,7 +152,6 @@
 
     invoke-interface {v1, v2}, Lorg/telegram/messenger/exoplayer2/extractor/Extractor;->init(Lorg/telegram/messenger/exoplayer2/extractor/ExtractorOutput;)V
 
-    .line 700
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/source/ExtractorMediaPeriod$ExtractorHolder;->extractor:Lorg/telegram/messenger/exoplayer2/extractor/Extractor;
 
     goto :goto_0

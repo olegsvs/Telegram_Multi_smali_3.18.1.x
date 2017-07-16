@@ -32,7 +32,6 @@
     .locals 1
 
     .prologue
-    .line 502
     iput-boolean p1, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$globalAll:Z
 
     iput-boolean p2, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$globalGroup:Z
@@ -56,7 +55,6 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 505
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "Notifications"
@@ -65,55 +63,45 @@
 
     move-result-object v1
 
-    .line 506
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 507
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$globalAll:Z
 
     if-eqz v2, :cond_1
 
-    .line 508
     const-string/jumbo v2, "MessagesLed"
 
     invoke-interface {v0, v2, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 514
     :goto_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 515
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_0
 
-    .line 516
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 518
     :cond_0
     return-void
 
-    .line 509
     :cond_1
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$6;->val$globalGroup:Z
 
     if-eqz v2, :cond_2
 
-    .line 510
     const-string/jumbo v2, "GroupLed"
 
     invoke-interface {v0, v2, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
     goto :goto_0
 
-    .line 512
     :cond_2
     new-instance v2, Ljava/lang/StringBuilder;
 

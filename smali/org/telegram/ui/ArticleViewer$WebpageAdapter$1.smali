@@ -25,7 +25,6 @@
     .param p2, "x0"    # Landroid/content/Context;
 
     .prologue
-    .line 2403
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$WebpageAdapter$1;->this$1:Lorg/telegram/ui/ArticleViewer$WebpageAdapter;
 
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
@@ -41,7 +40,6 @@
     .param p2, "heightMeasureSpec"    # I
 
     .prologue
-    .line 2406
     const/high16 v0, 0x42300000    # 44.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -56,6 +54,5 @@
 
     invoke-super {p0, p1, v0}, Landroid/widget/FrameLayout;->onMeasure(II)V
 
-    .line 2407
     return-void
 .end method

@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Paint/Painting;
 
     .prologue
-    .line 214
     iput-object p1, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iput p2, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->val$color:I
@@ -47,7 +46,6 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 217
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     iget-object v1, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
@@ -58,12 +56,10 @@
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/Paint/Painting;->access$1100(Lorg/telegram/ui/Components/Paint/Painting;Landroid/graphics/RectF;)V
 
-    .line 219
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Painting;->access$1200(Lorg/telegram/ui/Components/Paint/Painting;)V
 
-    .line 221
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     new-instance v1, Lorg/telegram/ui/Components/Paint/Painting$2$1;
@@ -72,12 +68,10 @@
 
     invoke-static {v0, v2, v1}, Lorg/telegram/ui/Components/Paint/Painting;->access$1600(Lorg/telegram/ui/Components/Paint/Painting;Landroid/graphics/RectF;Ljava/lang/Runnable;)V
 
-    .line 258
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Painting;->access$1700(Lorg/telegram/ui/Components/Paint/Painting;)V
 
-    .line 260
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Paint/Painting;->access$800(Lorg/telegram/ui/Components/Paint/Painting;)Lorg/telegram/ui/Components/Paint/RenderState;
@@ -86,16 +80,13 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Paint/RenderState;->reset()V
 
-    .line 262
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/Paint/Painting;->access$1002(Lorg/telegram/ui/Components/Paint/Painting;Landroid/graphics/RectF;)Landroid/graphics/RectF;
 
-    .line 263
     iget-object v0, p0, Lorg/telegram/ui/Components/Paint/Painting$2;->this$0:Lorg/telegram/ui/Components/Paint/Painting;
 
     invoke-static {v0, v2}, Lorg/telegram/ui/Components/Paint/Painting;->access$002(Lorg/telegram/ui/Components/Paint/Painting;Lorg/telegram/ui/Components/Paint/Path;)Lorg/telegram/ui/Components/Paint/Path;
 
-    .line 264
     return-void
 .end method

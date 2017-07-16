@@ -36,24 +36,17 @@
     .param p5, "isOrdered"    # Z
 
     .prologue
-    .line 419
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 420
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CodeBook;->dimensions:I
 
-    .line 421
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CodeBook;->entries:I
 
-    .line 422
     iput-object p3, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CodeBook;->lengthMap:[J
 
-    .line 423
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CodeBook;->lookupType:I
 
-    .line 424
     iput-boolean p5, p0, Lorg/telegram/messenger/exoplayer2/extractor/ogg/VorbisUtil$CodeBook;->isOrdered:Z
 
-    .line 425
     return-void
 .end method

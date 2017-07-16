@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     .prologue
-    .line 292
     iput-object p1, p0, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,14 +42,12 @@
     .param p2, "isChecked"    # Z
 
     .prologue
-    .line 295
     invoke-virtual {p1}, Landroid/widget/CompoundButton;->getParent()Landroid/view/ViewParent;
 
     move-result-object v0
 
     check-cast v0, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
 
-    .line 296
     .local v0, "cell":Lorg/telegram/ui/Cells/ArchivedStickerSetCell;
     invoke-virtual {v0}, Lorg/telegram/ui/Cells/ArchivedStickerSetCell;->getTag()Ljava/lang/Object;
 
@@ -62,7 +59,6 @@
 
     move-result v1
 
-    .line 297
     .local v1, "num":I
     iget-object v3, p0, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
@@ -78,11 +74,9 @@
 
     if-lt v1, v3, :cond_0
 
-    .line 302
     :goto_0
     return-void
 
-    .line 300
     :cond_0
     iget-object v3, p0, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 
@@ -98,7 +92,6 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
 
-    .line 301
     .local v2, "stickerSet":Lorg/telegram/tgnet/TLRPC$StickerSetCovered;
     iget-object v3, p0, Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ArchivedStickersActivity$ListAdapter;
 

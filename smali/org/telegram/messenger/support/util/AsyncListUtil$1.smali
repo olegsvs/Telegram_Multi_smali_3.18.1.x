@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     .prologue
-    .line 208
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     iput-object p1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -49,7 +48,6 @@
     .param p1, "generation"    # I
 
     .prologue
-    .line 285
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -72,7 +70,6 @@
     .locals 3
 
     .prologue
-    .line 278
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     const/4 v0, 0x0
 
@@ -88,7 +85,6 @@
 
     if-ge v0, v1, :cond_0
 
-    .line 279
     iget-object v1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v1, v1, Lorg/telegram/messenger/support/util/AsyncListUtil;->mBackgroundProxy:Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;
@@ -103,12 +99,10 @@
 
     invoke-interface {v1, v2}, Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;->recycleTile(Lorg/telegram/messenger/support/util/TileList$Tile;)V
 
-    .line 278
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 281
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -116,7 +110,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/messenger/support/util/TileList;->clear()V
 
-    .line 282
     return-void
 .end method
 
@@ -134,7 +127,6 @@
     .end annotation
 
     .prologue
-    .line 229
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     .local p2, "tile":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->isRequestedGeneration(I)Z
@@ -143,18 +135,15 @@
 
     if-nez v4, :cond_1
 
-    .line 233
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v4, v4, Lorg/telegram/messenger/support/util/AsyncListUtil;->mBackgroundProxy:Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;
 
     invoke-interface {v4, p2}, Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;->recycleTile(Lorg/telegram/messenger/support/util/TileList$Tile;)V
 
-    .line 256
     :cond_0
     return-void
 
-    .line 236
     :cond_1
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -164,11 +153,9 @@
 
     move-result-object v0
 
-    .line 237
     .local v0, "duplicate":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     if-eqz v0, :cond_2
 
-    .line 238
     const-string/jumbo v4, "AsyncListUtil"
 
     new-instance v5, Ljava/lang/StringBuilder;
@@ -193,14 +180,12 @@
 
     invoke-static {v4, v5}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 239
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v4, v4, Lorg/telegram/messenger/support/util/AsyncListUtil;->mBackgroundProxy:Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;
 
     invoke-interface {v4, v0}, Lorg/telegram/messenger/support/util/ThreadUtil$BackgroundCallback;->recycleTile(Lorg/telegram/messenger/support/util/TileList$Tile;)V
 
-    .line 245
     :cond_2
     iget v4, p2, Lorg/telegram/messenger/support/util/TileList$Tile;->mStartPosition:I
 
@@ -208,11 +193,9 @@
 
     add-int v1, v4, v5
 
-    .line 246
     .local v1, "endPosition":I
     const/4 v2, 0x0
 
-    .line 247
     .local v2, "index":I
     :goto_0
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
@@ -225,7 +208,6 @@
 
     if-ge v2, v4, :cond_0
 
-    .line 248
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v4, v4, Lorg/telegram/messenger/support/util/AsyncListUtil;->mMissingPositions:Landroid/util/SparseIntArray;
@@ -234,7 +216,6 @@
 
     move-result v3
 
-    .line 249
     .local v3, "position":I
     iget v4, p2, Lorg/telegram/messenger/support/util/TileList$Tile;->mStartPosition:I
 
@@ -242,14 +223,12 @@
 
     if-ge v3, v1, :cond_3
 
-    .line 250
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v4, v4, Lorg/telegram/messenger/support/util/AsyncListUtil;->mMissingPositions:Landroid/util/SparseIntArray;
 
     invoke-virtual {v4, v2}, Landroid/util/SparseIntArray;->removeAt(I)V
 
-    .line 251
     iget-object v4, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v4, v4, Lorg/telegram/messenger/support/util/AsyncListUtil;->mViewCallback:Lorg/telegram/messenger/support/util/AsyncListUtil$ViewCallback;
@@ -258,7 +237,6 @@
 
     goto :goto_0
 
-    .line 253
     :cond_3
     add-int/lit8 v2, v2, 0x1
 
@@ -271,7 +249,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 260
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->isRequestedGeneration(I)Z
 
@@ -279,11 +256,9 @@
 
     if-nez v1, :cond_0
 
-    .line 272
     :goto_0
     return-void
 
-    .line 263
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -293,11 +268,9 @@
 
     move-result-object v0
 
-    .line 264
     .local v0, "tile":Lorg/telegram/messenger/support/util/TileList$Tile;, "Lorg/telegram/messenger/support/util/TileList$Tile<TT;>;"
     if-nez v0, :cond_1
 
-    .line 265
     const-string/jumbo v1, "AsyncListUtil"
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -322,7 +295,6 @@
 
     goto :goto_0
 
-    .line 271
     :cond_1
     iget-object v1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
@@ -339,7 +311,6 @@
     .param p2, "itemCount"    # I
 
     .prologue
-    .line 214
     .local p0, "this":Lorg/telegram/messenger/support/util/AsyncListUtil$1;, "Lorg/telegram/messenger/support/util/AsyncListUtil.1;"
     invoke-direct {p0, p1}, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->isRequestedGeneration(I)Z
 
@@ -347,24 +318,20 @@
 
     if-nez v0, :cond_0
 
-    .line 225
     :goto_0
     return-void
 
-    .line 217
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iput p2, v0, Lorg/telegram/messenger/support/util/AsyncListUtil;->mItemCount:I
 
-    .line 218
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v0, v0, Lorg/telegram/messenger/support/util/AsyncListUtil;->mViewCallback:Lorg/telegram/messenger/support/util/AsyncListUtil$ViewCallback;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/util/AsyncListUtil$ViewCallback;->onDataRefresh()V
 
-    .line 219
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     iget-object v1, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
@@ -373,17 +340,14 @@
 
     iput v1, v0, Lorg/telegram/messenger/support/util/AsyncListUtil;->mDisplayedGeneration:I
 
-    .line 220
     invoke-direct {p0}, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->recycleAllTiles()V
 
-    .line 222
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     const/4 v1, 0x0
 
     iput-boolean v1, v0, Lorg/telegram/messenger/support/util/AsyncListUtil;->mAllowScrollHints:Z
 
-    .line 224
     iget-object v0, p0, Lorg/telegram/messenger/support/util/AsyncListUtil$1;->this$0:Lorg/telegram/messenger/support/util/AsyncListUtil;
 
     invoke-virtual {v0}, Lorg/telegram/messenger/support/util/AsyncListUtil;->updateRange()V

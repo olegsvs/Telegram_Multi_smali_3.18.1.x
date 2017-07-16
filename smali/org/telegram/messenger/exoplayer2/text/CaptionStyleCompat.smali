@@ -50,7 +50,6 @@
 
     const/4 v1, -0x1
 
-    .line 69
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
     const/high16 v2, -0x1000000
@@ -78,28 +77,20 @@
     .param p6, "typeface"    # Landroid/graphics/Typeface;
 
     .prologue
-    .line 137
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 138
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->foregroundColor:I
 
-    .line 139
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->backgroundColor:I
 
-    .line 140
     iput p3, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->windowColor:I
 
-    .line 141
     iput p4, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->edgeType:I
 
-    .line 142
     iput p5, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->edgeColor:I
 
-    .line 143
     iput-object p6, p0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->typeface:Landroid/graphics/Typeface;
 
-    .line 144
     return-void
 .end method
 
@@ -111,19 +102,16 @@
     .end annotation
 
     .prologue
-    .line 119
     sget v0, Lorg/telegram/messenger/exoplayer2/util/Util;->SDK_INT:I
 
     const/16 v1, 0x15
 
     if-lt v0, v1, :cond_0
 
-    .line 120
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->createFromCaptionStyleV21(Landroid/view/accessibility/CaptioningManager$CaptionStyle;)Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
     move-result-object v0
 
-    .line 124
     :goto_0
     return-object v0
 
@@ -143,7 +131,6 @@
     .end annotation
 
     .prologue
-    .line 150
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
     iget v1, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
@@ -156,7 +143,6 @@
 
     iget v5, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
 
-    .line 152
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
 
     move-result-object v6
@@ -174,10 +160,8 @@
     .end annotation
 
     .prologue
-    .line 159
     new-instance v0, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
-    .line 160
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasForegroundColor()Z
 
     move-result v1
@@ -186,7 +170,6 @@
 
     iget v1, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->foregroundColor:I
 
-    .line 161
     :goto_0
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasBackgroundColor()Z
 
@@ -196,7 +179,6 @@
 
     iget v2, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->backgroundColor:I
 
-    .line 162
     :goto_1
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasWindowColor()Z
 
@@ -206,7 +188,6 @@
 
     iget v3, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->windowColor:I
 
-    .line 163
     :goto_2
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeType()Z
 
@@ -216,7 +197,6 @@
 
     iget v4, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeType:I
 
-    .line 164
     :goto_3
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->hasEdgeColor()Z
 
@@ -226,7 +206,6 @@
 
     iget v5, p0, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->edgeColor:I
 
-    .line 165
     :goto_4
     invoke-virtual {p0}, Landroid/view/accessibility/CaptioningManager$CaptionStyle;->getTypeface()Landroid/graphics/Typeface;
 
@@ -236,7 +215,6 @@
 
     return-object v0
 
-    .line 160
     :cond_0
     sget-object v1, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
@@ -244,7 +222,6 @@
 
     goto :goto_0
 
-    .line 161
     :cond_1
     sget-object v2, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
@@ -252,7 +229,6 @@
 
     goto :goto_1
 
-    .line 162
     :cond_2
     sget-object v3, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
@@ -260,7 +236,6 @@
 
     goto :goto_2
 
-    .line 163
     :cond_3
     sget-object v4, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 
@@ -268,7 +243,6 @@
 
     goto :goto_3
 
-    .line 164
     :cond_4
     sget-object v5, Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;->DEFAULT:Lorg/telegram/messenger/exoplayer2/text/CaptionStyleCompat;
 

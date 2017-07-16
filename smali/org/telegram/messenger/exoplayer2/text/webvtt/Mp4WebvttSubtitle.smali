@@ -33,18 +33,15 @@
     .end annotation
 
     .prologue
-    .line 32
     .local p1, "cueList":Ljava/util/List;, "Ljava/util/List<Lorg/telegram/messenger/exoplayer2/text/Cue;>;"
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 33
     invoke-static {p1}, Ljava/util/Collections;->unmodifiableList(Ljava/util/List;)Ljava/util/List;
 
     move-result-object v0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/text/webvtt/Mp4WebvttSubtitle;->cues:Ljava/util/List;
 
-    .line 34
     return-void
 .end method
 
@@ -64,7 +61,6 @@
     .end annotation
 
     .prologue
-    .line 54
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0
@@ -89,7 +85,6 @@
     .param p1, "index"    # I
 
     .prologue
-    .line 48
     if-nez p1, :cond_0
 
     const/4 v0, 0x1
@@ -97,12 +92,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 49
     const-wide/16 v0, 0x0
 
     return-wide v0
 
-    .line 48
     :cond_0
     const/4 v0, 0x0
 
@@ -113,7 +106,6 @@
     .locals 1
 
     .prologue
-    .line 43
     const/4 v0, 0x1
 
     return v0
@@ -124,7 +116,6 @@
     .param p1, "timeUs"    # J
 
     .prologue
-    .line 38
     const-wide/16 v0, 0x0
 
     cmp-long v0, p1, v0

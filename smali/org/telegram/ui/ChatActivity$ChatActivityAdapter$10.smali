@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     .prologue
-    .line 11107
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iput-object p2, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -47,7 +46,6 @@
     .param p2, "i"    # I
 
     .prologue
-    .line 11111
     :try_start_0
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
@@ -71,10 +69,8 @@
 
     invoke-virtual {v4, v5, v6, v7}, Lorg/telegram/messenger/MessagesController;->deleteUserFromChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 11112
     const/4 v1, 0x0
 
-    .line 11113
     .local v1, "changed":Z
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
@@ -94,7 +90,6 @@
 
     if-eqz v4, :cond_0
 
-    .line 11114
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -115,7 +110,6 @@
 
     if-ge v0, v4, :cond_0
 
-    .line 11115
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -132,7 +126,6 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
 
-    .line 11116
     .local v3, "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     iget v4, v3, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
 
@@ -142,7 +135,6 @@
 
     if-ne v4, v5, :cond_2
 
-    .line 11117
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -155,16 +147,13 @@
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 11118
     const/4 v1, 0x1
 
-    .line 11123
     .end local v0    # "a":I
     .end local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :cond_0
     if-eqz v1, :cond_1
 
-    .line 11124
     iget-object v4, p0, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter$10;->this$1:Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;
 
     iget-object v4, v4, Lorg/telegram/ui/ChatActivity$ChatActivityAdapter;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -177,13 +166,11 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 11129
     .end local v1    # "changed":Z
     :cond_1
     :goto_1
     return-void
 
-    .line 11114
     .restart local v0    # "a":I
     .restart local v1    # "changed":Z
     .restart local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
@@ -192,14 +179,12 @@
 
     goto :goto_0
 
-    .line 11126
     .end local v0    # "a":I
     .end local v1    # "changed":Z
     .end local v3    # "p":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
     :catch_0
     move-exception v2
 
-    .line 11127
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v4, "tmessages"
 

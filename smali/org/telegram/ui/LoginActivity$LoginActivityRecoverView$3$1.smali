@@ -31,7 +31,6 @@
     .param p1, "this$2"    # Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     .prologue
-    .line 2587
     iput-object p1, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     iput-object p2, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -55,7 +54,6 @@
 
     const/4 v8, 0x1
 
-    .line 2590
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     iget-object v4, v4, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
@@ -64,24 +62,20 @@
 
     invoke-virtual {v4}, Lorg/telegram/ui/LoginActivity;->needHideProgress()V
 
-    .line 2591
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     iget-object v4, v4, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
 
     invoke-static {v4, v9}, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;->access$6602(Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;Z)Z
 
-    .line 2592
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v4, :cond_0
 
-    .line 2593
     iget-object v0, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
 
-    .line 2594
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -93,43 +87,35 @@
 
     invoke-virtual {v4, v5}, Lorg/telegram/tgnet/ConnectionsManager;->setUserId(I)V
 
-    .line 2595
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->clearConfig()V
 
-    .line 2596
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
 
     invoke-virtual {v4}, Lorg/telegram/messenger/MessagesController;->cleanup()V
 
-    .line 2597
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->setCurrentUser(Lorg/telegram/tgnet/TLRPC$User;)V
 
-    .line 2598
     invoke-static {v8}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 2599
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
 
     invoke-virtual {v4, v8}, Lorg/telegram/messenger/MessagesStorage;->cleanup(Z)V
 
-    .line 2600
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
-    .line 2601
     .local v3, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v4, v0, Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;->user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2602
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -138,7 +124,6 @@
 
     invoke-virtual {v4, v3, v5, v8, v8}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 2603
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
@@ -147,28 +132,24 @@
 
     invoke-virtual {v4, v5, v9}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 2604
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v4
 
     invoke-virtual {v4}, Lorg/telegram/messenger/ContactsController;->checkAppAccount()V
 
-    .line 2605
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v4
 
     invoke-virtual {v4, v8}, Lorg/telegram/messenger/MessagesController;->getBlockedUsers(Z)V
 
-    .line 2606
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
     move-result-object v4
 
     invoke-virtual {v4}, Lorg/telegram/tgnet/ConnectionsManager;->updateDcSettings()V
 
-    .line 2607
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     iget-object v4, v4, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
@@ -177,13 +158,11 @@
 
     invoke-static {v4}, Lorg/telegram/ui/LoginActivity;->access$4800(Lorg/telegram/ui/LoginActivity;)V
 
-    .line 2624
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_auth_authorization;
     .end local v3    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :goto_0
     return-void
 
-    .line 2609
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -197,7 +176,6 @@
 
     if-eqz v4, :cond_1
 
-    .line 2610
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
 
     iget-object v4, v4, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;->this$1:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView;
@@ -206,7 +184,6 @@
 
     goto :goto_0
 
-    .line 2611
     :cond_1
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
@@ -220,7 +197,6 @@
 
     if-eqz v4, :cond_3
 
-    .line 2612
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$TL_error;->text:Ljava/lang/String;
@@ -233,20 +209,17 @@
 
     move-result v1
 
-    .line 2614
     .local v1, "time":I
     const/16 v4, 0x3c
 
     if-ge v1, v4, :cond_2
 
-    .line 2615
     const-string/jumbo v4, "Seconds"
 
     invoke-static {v4, v1}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 2619
     .local v2, "timeString":Ljava/lang/String;
     :goto_1
     iget-object v4, p0, Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3$1;->this$2:Lorg/telegram/ui/LoginActivity$LoginActivityRecoverView$3;
@@ -277,7 +250,6 @@
 
     goto :goto_0
 
-    .line 2617
     .end local v2    # "timeString":Ljava/lang/String;
     :cond_2
     const-string/jumbo v4, "Minutes"
@@ -291,7 +263,6 @@
     .restart local v2    # "timeString":Ljava/lang/String;
     goto :goto_1
 
-    .line 2621
     .end local v1    # "time":I
     .end local v2    # "timeString":Ljava/lang/String;
     :cond_3

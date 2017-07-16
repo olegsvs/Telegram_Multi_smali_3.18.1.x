@@ -1,4 +1,3 @@
-.class public Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;
 .super Ljava/lang/Object;
 .source "SegmentBase.java"
 
@@ -10,7 +9,6 @@
 
 .annotation system Ldalvik/annotation/InnerClass;
     accessFlags = 0x9
-    name = "SegmentTimelineElement"
 .end annotation
 
 
@@ -27,15 +25,9 @@
     .param p3, "duration"    # J
 
     .prologue
-    .line 352
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 353
-    iput-wide p1, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;->startTime:J
 
-    .line 354
-    iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/source/dash/manifest/SegmentBase$SegmentTimelineElement;->duration:J
 
-    .line 355
     return-void
 .end method

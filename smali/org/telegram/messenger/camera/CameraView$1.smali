@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/camera/CameraView;
 
     .prologue
-    .line 165
     iput-object p1, p0, Lorg/telegram/messenger/camera/CameraView$1;->this$0:Lorg/telegram/messenger/camera/CameraView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 168
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraView$1;->this$0:Lorg/telegram/messenger/camera/CameraView;
 
     invoke-static {v0}, Lorg/telegram/messenger/camera/CameraView;->access$000(Lorg/telegram/messenger/camera/CameraView;)Lorg/telegram/messenger/camera/CameraSession;
@@ -50,7 +48,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 169
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraView$1;->this$0:Lorg/telegram/messenger/camera/CameraView;
 
     invoke-static {v0}, Lorg/telegram/messenger/camera/CameraView;->access$000(Lorg/telegram/messenger/camera/CameraView;)Lorg/telegram/messenger/camera/CameraSession;
@@ -59,12 +56,10 @@
 
     invoke-virtual {v0}, Lorg/telegram/messenger/camera/CameraSession;->setInitied()V
 
-    .line 171
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/camera/CameraView$1;->this$0:Lorg/telegram/messenger/camera/CameraView;
 
     invoke-static {v0}, Lorg/telegram/messenger/camera/CameraView;->access$100(Lorg/telegram/messenger/camera/CameraView;)V
 
-    .line 172
     return-void
 .end method

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/BlockedUsersActivity;
 
     .prologue
-    .line 113
     iput-object p1, p0, Lorg/telegram/ui/BlockedUsersActivity$2;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 116
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -56,17 +54,14 @@
 
     if-lt p2, v1, :cond_0
 
-    .line 122
     :goto_0
     return-void
 
-    .line 119
     :cond_0
     new-instance v0, Landroid/os/Bundle;
 
     invoke-direct {v0}, Landroid/os/Bundle;-><init>()V
 
-    .line 120
     .local v0, "args":Landroid/os/Bundle;
     const-string/jumbo v2, "user_id"
 
@@ -88,7 +83,6 @@
 
     invoke-virtual {v0, v2, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 121
     iget-object v1, p0, Lorg/telegram/ui/BlockedUsersActivity$2;->this$0:Lorg/telegram/ui/BlockedUsersActivity;
 
     new-instance v2, Lorg/telegram/ui/ProfileActivity;

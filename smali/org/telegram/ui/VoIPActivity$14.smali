@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VoIPActivity;
 
     .prologue
-    .line 758
     iput-object p1, p0, Lorg/telegram/ui/VoIPActivity$14;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,11 +40,9 @@
     .locals 1
 
     .prologue
-    .line 761
     iget-object v0, p0, Lorg/telegram/ui/VoIPActivity$14;->this$0:Lorg/telegram/ui/VoIPActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/VoIPActivity;->finish()V
 
-    .line 762
     return-void
 .end method

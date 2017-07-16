@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/VideoEditorActivity;
 
     .prologue
-    .line 683
     iput-object p1, p0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 686
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -53,7 +51,6 @@
 
     monitor-enter v3
 
-    .line 687
     :try_start_0
     move-object/from16 v0, p0
 
@@ -67,7 +64,6 @@
 
     if-eqz v2, :cond_0
 
-    .line 689
     :try_start_1
     move-object/from16 v0, p0
 
@@ -79,7 +75,6 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->stop()V
 
-    .line 690
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -90,7 +85,6 @@
 
     invoke-virtual {v2}, Landroid/media/MediaPlayer;->release()V
 
-    .line 691
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -102,7 +96,6 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
     .catchall {:try_start_1 .. :try_end_1} :catchall_0
 
-    .line 696
     :cond_0
     :goto_0
     :try_start_2
@@ -110,7 +103,6 @@
     :try_end_2
     .catchall {:try_start_2 .. :try_end_2} :catchall_0
 
-    .line 697
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -121,7 +113,6 @@
 
     if-eqz v2, :cond_3
 
-    .line 698
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -132,7 +123,6 @@
 
     if-eqz v2, :cond_1
 
-    .line 701
     :cond_1
     move-object/from16 v0, p0
 
@@ -184,7 +174,6 @@
 
     if-ne v2, v3, :cond_6
 
-    .line 702
     :cond_2
     move-object/from16 v0, p0
 
@@ -320,7 +309,6 @@
     :goto_2
     invoke-interface/range {v2 .. v18}, Lorg/telegram/ui/VideoEditorActivity$VideoEditorActivityDelegate;->didFinishEditVideo(Ljava/lang/String;JJIIIIIIJJLjava/lang/String;)V
 
-    .line 711
     :cond_3
     :goto_3
     move-object/from16 v0, p0
@@ -329,21 +317,17 @@
 
     invoke-virtual {v2}, Lorg/telegram/ui/VideoEditorActivity;->finishFragment()V
 
-    .line 712
     return-void
 
-    .line 692
     :catch_0
     move-exception v19
 
-    .line 693
     .local v19, "e":Ljava/lang/Exception;
     :try_start_3
     invoke-static/range {v19 .. v19}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 696
     .end local v19    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v2
@@ -354,7 +338,6 @@
 
     throw v2
 
-    .line 702
     :cond_4
     move-object/from16 v0, p0
 
@@ -371,7 +354,6 @@
 
     goto :goto_2
 
-    .line 704
     :cond_6
     move-object/from16 v0, p0
 
@@ -383,7 +365,6 @@
 
     if-eqz v2, :cond_7
 
-    .line 705
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
@@ -392,14 +373,12 @@
 
     invoke-static {v2, v3}, Lorg/telegram/ui/VideoEditorActivity;->access$1102(Lorg/telegram/ui/VideoEditorActivity;I)I
 
-    .line 706
     move-object/from16 v0, p0
 
     iget-object v2, v0, Lorg/telegram/ui/VideoEditorActivity$7;->this$0:Lorg/telegram/ui/VideoEditorActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/VideoEditorActivity;->access$3400(Lorg/telegram/ui/VideoEditorActivity;)V
 
-    .line 708
     :cond_7
     move-object/from16 v0, p0
 

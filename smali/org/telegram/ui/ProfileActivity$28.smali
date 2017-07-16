@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 2990
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     iput p2, p0, Lorg/telegram/ui/ProfileActivity$28;->val$fId:I
@@ -46,7 +45,6 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 2994
     :try_start_0
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -54,7 +52,6 @@
 
     if-ge v3, v4, :cond_0
 
-    .line 2995
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v4, "clipboard"
@@ -65,7 +62,6 @@
 
     check-cast v1, Landroid/text/ClipboardManager;
 
-    .line 2996
     .local v1, "clipboard":Landroid/text/ClipboardManager;
     new-instance v3, Ljava/lang/StringBuilder;
 
@@ -89,7 +85,6 @@
 
     invoke-virtual {v1, v3}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    .line 3002
     .end local v1    # "clipboard":Landroid/text/ClipboardManager;
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/ProfileActivity$28;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -128,11 +123,9 @@
 
     invoke-virtual {v3}, Landroid/widget/Toast;->show()V
 
-    .line 3006
     :goto_1
     return-void
 
-    .line 2998
     :cond_0
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -144,7 +137,6 @@
 
     check-cast v1, Landroid/content/ClipboardManager;
 
-    .line 2999
     .local v1, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v3, "label"
 
@@ -172,7 +164,6 @@
 
     move-result-object v0
 
-    .line 3000
     .local v0, "clip":Landroid/content/ClipData;
     invoke-virtual {v1, v0}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_0
@@ -180,13 +171,11 @@
 
     goto :goto_0
 
-    .line 3003
     .end local v0    # "clip":Landroid/content/ClipData;
     .end local v1    # "clipboard":Landroid/content/ClipboardManager;
     :catch_0
     move-exception v2
 
-    .line 3004
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v3, "tmessages"
 

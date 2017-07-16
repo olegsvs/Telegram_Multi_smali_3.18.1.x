@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChatActivity$19;
 
     .prologue
-    .line 1951
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$19$2;->this$1:Lorg/telegram/ui/ChatActivity$19;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 2
 
     .prologue
-    .line 1954
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$19$2;->this$1:Lorg/telegram/ui/ChatActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$19;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -58,7 +56,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemLongClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemLongClickListener;)V
 
-    .line 1955
     iget-object v0, p0, Lorg/telegram/ui/ChatActivity$19$2;->this$1:Lorg/telegram/ui/ChatActivity$19;
 
     iget-object v0, v0, Lorg/telegram/ui/ChatActivity$19;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -71,6 +68,5 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/Components/RecyclerListView;->setLongClickable(Z)V
 
-    .line 1956
     return-void
 .end method

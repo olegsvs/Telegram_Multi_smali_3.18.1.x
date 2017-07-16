@@ -35,7 +35,6 @@
     .locals 1
 
     .prologue
-    .line 18651
     const v0, -0x5a93d5c2
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->constructor:I
@@ -47,7 +46,6 @@
     .locals 0
 
     .prologue
-    .line 18650
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -60,15 +58,12 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18660
     sget v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->constructor:I
 
     if-eq v1, p1, :cond_1
 
-    .line 18661
     if-eqz p2, :cond_0
 
-    .line 18662
     new-instance v1, Ljava/lang/RuntimeException;
 
     const-string/jumbo v2, "can\'t parse magic %x in TL_updates_state"
@@ -93,21 +88,17 @@
 
     throw v1
 
-    .line 18664
     :cond_0
     const/4 v0, 0x0
 
-    .line 18669
     :goto_0
     return-object v0
 
-    .line 18667
     :cond_1
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_updates_state;-><init>()V
 
-    .line 18668
     .local v0, "result":Lorg/telegram/tgnet/TLRPC$TL_updates_state;
     invoke-virtual {v0, p0, p2}, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->readParams(Lorg/telegram/tgnet/AbstractSerializedData;Z)V
 
@@ -122,42 +113,36 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 18673
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->pts:I
 
-    .line 18674
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->qts:I
 
-    .line 18675
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->date:I
 
-    .line 18676
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->seq:I
 
-    .line 18677
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v0
 
     iput v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->unread_count:I
 
-    .line 18678
     return-void
 .end method
 
@@ -166,36 +151,29 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 18681
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18682
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->pts:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18683
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->qts:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18684
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->date:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18685
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->seq:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18686
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->unread_count:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 18687
     return-void
 .end method

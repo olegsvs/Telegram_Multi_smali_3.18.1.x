@@ -26,7 +26,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;
 
     .prologue
-    .line 853
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$2;->this$0:Lorg/telegram/messenger/exoplayer2/audio/AudioTrack;
 
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$2;->val$toRelease:Landroid/media/AudioTrack;
@@ -42,11 +41,9 @@
     .locals 1
 
     .prologue
-    .line 856
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/audio/AudioTrack$2;->val$toRelease:Landroid/media/AudioTrack;
 
     invoke-virtual {v0}, Landroid/media/AudioTrack;->release()V
 
-    .line 857
     return-void
 .end method

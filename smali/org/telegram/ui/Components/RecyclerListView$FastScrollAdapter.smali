@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 101
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
     return-void

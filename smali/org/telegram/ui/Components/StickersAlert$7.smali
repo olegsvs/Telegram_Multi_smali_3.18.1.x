@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersAlert;
 
     .prologue
-    .line 336
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$7;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -44,18 +43,13 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 339
     iput v0, p1, Landroid/graphics/Rect;->left:I
 
-    .line 340
     iput v0, p1, Landroid/graphics/Rect;->right:I
 
-    .line 341
     iput v0, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 342
     iput v0, p1, Landroid/graphics/Rect;->top:I
 
-    .line 343
     return-void
 .end method

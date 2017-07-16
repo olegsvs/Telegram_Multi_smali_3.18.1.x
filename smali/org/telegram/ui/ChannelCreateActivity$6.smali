@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 412
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$6;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,7 +41,6 @@
     .param p1, "editable"    # Landroid/text/Editable;
 
     .prologue
-    .line 426
     return-void
 .end method
 
@@ -54,7 +52,6 @@
     .param p4, "i3"    # I
 
     .prologue
-    .line 416
     return-void
 .end method
 
@@ -66,6 +63,5 @@
     .param p4, "i3"    # I
 
     .prologue
-    .line 421
     return-void
 .end method

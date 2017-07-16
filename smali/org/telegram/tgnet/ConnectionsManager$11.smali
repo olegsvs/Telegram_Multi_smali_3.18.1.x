@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/tgnet/ConnectionsManager;
 
     .prologue
-    .line 479
     iput-object p1, p0, Lorg/telegram/tgnet/ConnectionsManager$11;->this$0:Lorg/telegram/tgnet/ConnectionsManager;
 
     iput-boolean p2, p0, Lorg/telegram/tgnet/ConnectionsManager$11;->val$value:Z
@@ -45,7 +44,6 @@
     .locals 3
 
     .prologue
-    .line 482
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$11;->this$0:Lorg/telegram/tgnet/ConnectionsManager;
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->access$300(Lorg/telegram/tgnet/ConnectionsManager;)Z
@@ -56,12 +54,10 @@
 
     if-ne v0, v1, :cond_1
 
-    .line 489
     :cond_0
     :goto_0
     return-void
 
-    .line 485
     :cond_1
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$11;->this$0:Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -69,7 +65,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/tgnet/ConnectionsManager;->access$302(Lorg/telegram/tgnet/ConnectionsManager;Z)Z
 
-    .line 486
     iget-object v0, p0, Lorg/telegram/tgnet/ConnectionsManager$11;->this$0:Lorg/telegram/tgnet/ConnectionsManager;
 
     invoke-static {v0}, Lorg/telegram/tgnet/ConnectionsManager;->access$200(Lorg/telegram/tgnet/ConnectionsManager;)I
@@ -80,7 +75,6 @@
 
     if-ne v0, v1, :cond_0
 
-    .line 487
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0

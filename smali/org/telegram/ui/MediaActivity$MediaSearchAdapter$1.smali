@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     .prologue
-    .line 1966
     iput-object p1, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->this$1:Lorg/telegram/ui/MediaActivity$MediaSearchAdapter;
 
     iput p2, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->val$max_id:I
@@ -51,21 +50,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1969
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1970
     .local v2, "messageObjects":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-nez p2, :cond_1
 
     move-object v3, p1
 
-    .line 1971
     check-cast v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 1972
     .local v3, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     const/4 v0, 0x0
 
@@ -79,7 +74,6 @@
 
     if-ge v0, v4, :cond_1
 
-    .line 1973
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -88,7 +82,6 @@
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 1974
     .local v1, "message":Lorg/telegram/tgnet/TLRPC$Message;
     iget v4, p0, Lorg/telegram/ui/MediaActivity$MediaSearchAdapter$1;->val$max_id:I
 
@@ -100,13 +93,11 @@
 
     if-le v4, v5, :cond_0
 
-    .line 1972
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1977
     :cond_0
     new-instance v4, Lorg/telegram/messenger/MessageObject;
 
@@ -120,7 +111,6 @@
 
     goto :goto_1
 
-    .line 1980
     .end local v0    # "a":I
     .end local v1    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     .end local v3    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
@@ -131,6 +121,5 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1990
     return-void
 .end method

@@ -19,7 +19,6 @@
     .locals 0
 
     .prologue
-    .line 1219
     invoke-direct {p0}, Lnet/hockeyapp/android/CrashManagerListener;-><init>()V
 
     return-void
@@ -31,7 +30,6 @@
     .locals 1
 
     .prologue
-    .line 1222
     const/4 v0, 0x1
 
     return v0

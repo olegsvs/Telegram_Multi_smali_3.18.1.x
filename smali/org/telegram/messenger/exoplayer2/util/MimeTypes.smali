@@ -108,7 +108,6 @@
     .locals 0
 
     .prologue
-    .line 80
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -121,17 +120,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 150
     if-nez p0, :cond_1
 
     move-object v2, v3
 
-    .line 160
     :cond_0
     :goto_0
     return-object v2
 
-    .line 153
     :cond_1
     const-string/jumbo v4, ","
 
@@ -139,7 +135,6 @@
 
     move-result-object v1
 
-    .line 154
     .local v1, "codecList":[Ljava/lang/String;
     array-length v5, v1
 
@@ -150,13 +145,11 @@
 
     aget-object v0, v1, v4
 
-    .line 155
     .local v0, "codec":Ljava/lang/String;
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 156
     .local v2, "mimeType":Ljava/lang/String;
     if-eqz v2, :cond_2
 
@@ -166,7 +159,6 @@
 
     if-nez v6, :cond_0
 
-    .line 154
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
@@ -177,7 +169,6 @@
     :cond_3
     move-object v2, v3
 
-    .line 160
     goto :goto_0
 .end method
 
@@ -188,21 +179,17 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 170
     if-nez p0, :cond_1
 
-    .line 197
     :cond_0
     :goto_0
     return-object v0
 
-    .line 173
     :cond_1
     invoke-virtual {p0}, Ljava/lang/String;->trim()Ljava/lang/String;
 
     move-result-object p0
 
-    .line 174
     const-string/jumbo v1, "avc1"
 
     invoke-virtual {p0, v1}, Ljava/lang/String;->startsWith(Ljava/lang/String;)Z
@@ -219,13 +206,11 @@
 
     if-eqz v1, :cond_3
 
-    .line 175
     :cond_2
     const-string/jumbo v0, "video/avc"
 
     goto :goto_0
 
-    .line 176
     :cond_3
     const-string/jumbo v1, "hev1"
 
@@ -243,13 +228,11 @@
 
     if-eqz v1, :cond_5
 
-    .line 177
     :cond_4
     const-string/jumbo v0, "video/hevc"
 
     goto :goto_0
 
-    .line 178
     :cond_5
     const-string/jumbo v1, "vp9"
 
@@ -259,12 +242,10 @@
 
     if-eqz v1, :cond_6
 
-    .line 179
     const-string/jumbo v0, "video/x-vnd.on2.vp9"
 
     goto :goto_0
 
-    .line 180
     :cond_6
     const-string/jumbo v1, "vp8"
 
@@ -274,12 +255,10 @@
 
     if-eqz v1, :cond_7
 
-    .line 181
     const-string/jumbo v0, "video/x-vnd.on2.vp8"
 
     goto :goto_0
 
-    .line 182
     :cond_7
     const-string/jumbo v1, "mp4a"
 
@@ -289,12 +268,10 @@
 
     if-eqz v1, :cond_8
 
-    .line 183
     const-string/jumbo v0, "audio/mp4a-latm"
 
     goto :goto_0
 
-    .line 184
     :cond_8
     const-string/jumbo v1, "ac-3"
 
@@ -312,13 +289,11 @@
 
     if-eqz v1, :cond_a
 
-    .line 185
     :cond_9
     const-string/jumbo v0, "audio/ac3"
 
     goto :goto_0
 
-    .line 186
     :cond_a
     const-string/jumbo v1, "ec-3"
 
@@ -336,13 +311,11 @@
 
     if-eqz v1, :cond_c
 
-    .line 187
     :cond_b
     const-string/jumbo v0, "audio/eac3"
 
     goto/16 :goto_0
 
-    .line 188
     :cond_c
     const-string/jumbo v1, "dtsc"
 
@@ -360,13 +333,11 @@
 
     if-eqz v1, :cond_e
 
-    .line 189
     :cond_d
     const-string/jumbo v0, "audio/vnd.dts"
 
     goto/16 :goto_0
 
-    .line 190
     :cond_e
     const-string/jumbo v1, "dtsh"
 
@@ -384,13 +355,11 @@
 
     if-eqz v1, :cond_10
 
-    .line 191
     :cond_f
     const-string/jumbo v0, "audio/vnd.dts.hd"
 
     goto/16 :goto_0
 
-    .line 192
     :cond_10
     const-string/jumbo v1, "opus"
 
@@ -400,12 +369,10 @@
 
     if-eqz v1, :cond_11
 
-    .line 193
     const-string/jumbo v0, "audio/opus"
 
     goto/16 :goto_0
 
-    .line 194
     :cond_11
     const-string/jumbo v1, "vorbis"
 
@@ -415,7 +382,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 195
     const-string/jumbo v0, "audio/vorbis"
 
     goto/16 :goto_0
@@ -426,17 +392,13 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 245
     if-nez p0, :cond_0
 
-    .line 246
     const/4 v1, 0x0
 
-    .line 252
     :goto_0
     return-object v1
 
-    .line 248
     :cond_0
     const/16 v1, 0x2f
 
@@ -444,13 +406,11 @@
 
     move-result v0
 
-    .line 249
     .local v0, "indexOfSlash":I
     const/4 v1, -0x1
 
     if-ne v0, v1, :cond_1
 
-    .line 250
     new-instance v1, Ljava/lang/IllegalArgumentException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -475,7 +435,6 @@
 
     throw v1
 
-    .line 252
     :cond_1
     const/4 v1, 0x0
 
@@ -493,19 +452,16 @@
     .prologue
     const/4 v0, -0x1
 
-    .line 209
     invoke-static {p0}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
     move-result v1
 
     if-eqz v1, :cond_1
 
-    .line 224
     :cond_0
     :goto_0
     return v0
 
-    .line 211
     :cond_1
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isAudio(Ljava/lang/String;)Z
 
@@ -513,12 +469,10 @@
 
     if-eqz v1, :cond_2
 
-    .line 212
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 213
     :cond_2
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isVideo(Ljava/lang/String;)Z
 
@@ -526,12 +480,10 @@
 
     if-eqz v1, :cond_3
 
-    .line 214
     const/4 v0, 0x2
 
     goto :goto_0
 
-    .line 215
     :cond_3
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->isText(Ljava/lang/String;)Z
 
@@ -549,7 +501,6 @@
 
     const-string/jumbo v1, "application/cea-708"
 
-    .line 216
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -566,7 +517,6 @@
 
     const-string/jumbo v1, "application/ttml+xml"
 
-    .line 217
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -583,7 +533,6 @@
 
     const-string/jumbo v1, "application/x-mp4vtt"
 
-    .line 218
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -600,7 +549,6 @@
 
     const-string/jumbo v1, "application/vobsub"
 
-    .line 219
     invoke-virtual {v1, p0}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v1
@@ -615,13 +563,11 @@
 
     if-eqz v1, :cond_5
 
-    .line 220
     :cond_4
     const/4 v0, 0x3
 
     goto :goto_0
 
-    .line 221
     :cond_5
     const-string/jumbo v1, "application/id3"
 
@@ -631,7 +577,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 222
     const/4 v0, 0x4
 
     goto :goto_0
@@ -642,7 +587,6 @@
     .param p0, "codec"    # Ljava/lang/String;
 
     .prologue
-    .line 235
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v0
@@ -661,17 +605,14 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 130
     if-nez p0, :cond_1
 
     move-object v2, v3
 
-    .line 140
     :cond_0
     :goto_0
     return-object v2
 
-    .line 133
     :cond_1
     const-string/jumbo v4, ","
 
@@ -679,7 +620,6 @@
 
     move-result-object v1
 
-    .line 134
     .local v1, "codecList":[Ljava/lang/String;
     array-length v5, v1
 
@@ -690,13 +630,11 @@
 
     aget-object v0, v1, v4
 
-    .line 135
     .local v0, "codec":Ljava/lang/String;
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getMediaMimeType(Ljava/lang/String;)Ljava/lang/String;
 
     move-result-object v2
 
-    .line 136
     .local v2, "mimeType":Ljava/lang/String;
     if-eqz v2, :cond_2
 
@@ -706,7 +644,6 @@
 
     if-nez v6, :cond_0
 
-    .line 134
     :cond_2
     add-int/lit8 v4, v4, 0x1
 
@@ -717,7 +654,6 @@
     :cond_3
     move-object v2, v3
 
-    .line 140
     goto :goto_0
 .end method
 
@@ -726,7 +662,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 119
     const-string/jumbo v0, "application"
 
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
@@ -745,7 +680,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 89
     const-string/jumbo v0, "audio"
 
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
@@ -764,7 +698,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 109
     const-string/jumbo v0, "text"
 
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;
@@ -783,7 +716,6 @@
     .param p0, "mimeType"    # Ljava/lang/String;
 
     .prologue
-    .line 99
     const-string/jumbo v0, "video"
 
     invoke-static {p0}, Lorg/telegram/messenger/exoplayer2/util/MimeTypes;->getTopLevelType(Ljava/lang/String;)Ljava/lang/String;

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/TwoStepVerificationActivity;
 
     .prologue
-    .line 236
     iput-object p1, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const v4, 0x7f07053d
 
-    .line 239
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$100(Lorg/telegram/ui/TwoStepVerificationActivity;)I
@@ -53,7 +51,6 @@
 
     if-nez v2, :cond_1
 
-    .line 240
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$200(Lorg/telegram/ui/TwoStepVerificationActivity;)Lorg/telegram/tgnet/TLRPC$account_Password;
@@ -64,17 +61,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 241
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/TwoStepVerificationActivity;->access$300(Lorg/telegram/ui/TwoStepVerificationActivity;)V
 
-    .line 242
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;-><init>()V
 
-    .line 243
     .local v1, "req":Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -88,12 +82,10 @@
 
     invoke-virtual {v2, v1, v3, v4}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    .line 309
     .end local v1    # "req":Lorg/telegram/tgnet/TLRPC$TL_auth_requestPasswordRecovery;
     :goto_0
     return-void
 
-    .line 289
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
@@ -115,7 +107,6 @@
 
     goto :goto_0
 
-    .line 292
     :cond_1
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
@@ -127,7 +118,6 @@
 
     if-ne v2, v3, :cond_2
 
-    .line 293
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     const-string/jumbo v3, "RestorePasswordNoEmailTitle"
@@ -148,7 +138,6 @@
 
     goto :goto_0
 
-    .line 295
     :cond_2
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -160,7 +149,6 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 296
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "YourEmailSkipWarningText"
 
@@ -172,7 +160,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 297
     const-string/jumbo v2, "YourEmailSkipWarning"
 
     const v3, 0x7f0706c6
@@ -183,7 +170,6 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 298
     const-string/jumbo v2, "YourEmailSkip"
 
     const v3, 0x7f0706c5
@@ -198,7 +184,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 305
     const-string/jumbo v2, "Cancel"
 
     const v3, 0x7f0700f0
@@ -211,7 +196,6 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 306
     iget-object v2, p0, Lorg/telegram/ui/TwoStepVerificationActivity$4;->this$0:Lorg/telegram/ui/TwoStepVerificationActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;

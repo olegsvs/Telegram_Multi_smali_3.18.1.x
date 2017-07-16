@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     .prologue
-    .line 88
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersArchiveAlert$2;->this$0:Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "which"    # I
 
     .prologue
-    .line 91
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersArchiveAlert$2;->this$0:Lorg/telegram/ui/Components/StickersArchiveAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersArchiveAlert;->access$100(Lorg/telegram/ui/Components/StickersArchiveAlert;)Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -62,9 +60,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;)Z
 
-    .line 92
     invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
 
-    .line 93
     return-void
 .end method

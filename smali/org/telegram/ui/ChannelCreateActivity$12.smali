@@ -31,7 +31,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChannelCreateActivity;
 
     .prologue
-    .line 669
     iput-object p1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->val$file:Lorg/telegram/tgnet/TLRPC$InputFile;
@@ -49,14 +48,12 @@
     .locals 5
 
     .prologue
-    .line 672
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->val$file:Lorg/telegram/tgnet/TLRPC$InputFile;
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1402(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLRPC$InputFile;)Lorg/telegram/tgnet/TLRPC$InputFile;
 
-    .line 673
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     iget-object v2, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->val$small:Lorg/telegram/tgnet/TLRPC$PhotoSize;
@@ -65,7 +62,6 @@
 
     invoke-static {v1, v2}, Lorg/telegram/ui/ChannelCreateActivity;->access$1302(Lorg/telegram/ui/ChannelCreateActivity;Lorg/telegram/tgnet/TLRPC$FileLocation;)Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 674
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$1600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -88,7 +84,6 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/ui/Components/BackupImageView;->setImage(Lorg/telegram/tgnet/TLObject;Ljava/lang/String;Landroid/graphics/drawable/Drawable;)V
 
-    .line 675
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$500(Lorg/telegram/ui/ChannelCreateActivity;)Z
@@ -97,7 +92,6 @@
 
     if-eqz v1, :cond_1
 
-    .line 677
     :try_start_0
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
@@ -119,7 +113,6 @@
 
     if-eqz v1, :cond_0
 
-    .line 678
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/ChannelCreateActivity;->access$600(Lorg/telegram/ui/ChannelCreateActivity;)Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -128,7 +121,6 @@
 
     invoke-virtual {v1}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
 
-    .line 679
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
 
     const/4 v2, 0x0
@@ -137,7 +129,6 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 684
     :cond_0
     :goto_0
     iget-object v1, p0, Lorg/telegram/ui/ChannelCreateActivity$12;->this$0:Lorg/telegram/ui/ChannelCreateActivity;
@@ -148,15 +139,12 @@
 
     invoke-virtual {v1}, Landroid/view/View;->performClick()Z
 
-    .line 686
     :cond_1
     return-void
 
-    .line 681
     :catch_0
     move-exception v0
 
-    .line 682
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

@@ -29,7 +29,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     .prologue
-    .line 849
     iput-object p1, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$7;->this$1:Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView;
 
     iput-object p2, p0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$7;->val$req:Lorg/telegram/tgnet/TLRPC$TL_account_confirmPhone;
@@ -47,13 +46,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 852
     new-instance v0, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$7$1;
 
     invoke-direct {v0, p0, p2}, Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$7$1;-><init>(Lorg/telegram/ui/CancelAccountDeletionActivity$LoginActivitySmsView$7;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 878
     return-void
 .end method

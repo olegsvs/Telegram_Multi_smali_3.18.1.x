@@ -26,7 +26,6 @@
     .param p3, "componentName"    # Landroid/content/ComponentName;
 
     .prologue
-    .line 28
     iput-object p1, p0, Lorg/telegram/messenger/support/customtabs/CustomTabsServiceConnection$1;->this$0:Lorg/telegram/messenger/support/customtabs/CustomTabsServiceConnection;
 
     invoke-direct {p0, p2, p3}, Lorg/telegram/messenger/support/customtabs/CustomTabsClient;-><init>(Lorg/telegram/messenger/support/customtabs/ICustomTabsService;Landroid/content/ComponentName;)V

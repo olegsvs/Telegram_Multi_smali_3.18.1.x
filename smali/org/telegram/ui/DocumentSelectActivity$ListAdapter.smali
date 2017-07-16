@@ -26,15 +26,12 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 712
     iput-object p1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 713
     iput-object p2, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 714
     return-void
 .end method
 
@@ -45,7 +42,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 731
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -58,7 +54,6 @@
 
     if-ge p1, v0, :cond_0
 
-    .line 732
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -71,11 +66,9 @@
 
     check-cast v0, Lorg/telegram/ui/DocumentSelectActivity$ListItem;
 
-    .line 739
     :goto_0
     return-object v0
 
-    .line 733
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -113,7 +106,6 @@
 
     if-eq p1, v0, :cond_1
 
-    .line 734
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -128,7 +120,6 @@
 
     sub-int/2addr p1, v0
 
-    .line 735
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2700(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -141,7 +132,6 @@
 
     if-ge p1, v0, :cond_1
 
-    .line 736
     iget-object v0, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/DocumentSelectActivity;->access$2700(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -156,7 +146,6 @@
 
     goto :goto_0
 
-    .line 739
     :cond_1
     const/4 v0, 0x0
 
@@ -167,7 +156,6 @@
     .locals 2
 
     .prologue
-    .line 723
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DocumentSelectActivity;->access$2600(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -178,7 +166,6 @@
 
     move-result v0
 
-    .line 724
     .local v0, "count":I
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -204,7 +191,6 @@
 
     if-nez v1, :cond_0
 
-    .line 725
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DocumentSelectActivity;->access$2700(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/ArrayList;
@@ -219,7 +205,6 @@
 
     add-int/2addr v0, v1
 
-    .line 727
     :cond_0
     return v0
 .end method
@@ -229,7 +214,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 744
     invoke-virtual {p0, p1}, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->getItem(I)Lorg/telegram/ui/DocumentSelectActivity$ListItem;
 
     move-result-object v0
@@ -252,7 +236,6 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 718
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v0
@@ -282,31 +265,26 @@
 
     const/4 v8, 0x0
 
-    .line 769
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v1
 
     if-ne v1, v7, :cond_0
 
-    .line 770
     invoke-virtual {p0, p2}, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->getItem(I)Lorg/telegram/ui/DocumentSelectActivity$ListItem;
 
     move-result-object v6
 
-    .line 771
     .local v6, "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     iget-object v0, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v0, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
-    .line 772
     .local v0, "documentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     iget v1, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->icon:I
 
     if-eqz v1, :cond_1
 
-    .line 773
     iget-object v1, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->title:Ljava/lang/String;
 
     iget-object v2, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->subtitle:Ljava/lang/String;
@@ -317,7 +295,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setTextAndValueAndTypeAndThumb(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 778
     :goto_0
     iget-object v1, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->file:Ljava/io/File;
 
@@ -335,7 +312,6 @@
 
     if-eqz v1, :cond_3
 
-    .line 779
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
     invoke-static {v1}, Lorg/telegram/ui/DocumentSelectActivity;->access$500(Lorg/telegram/ui/DocumentSelectActivity;)Ljava/util/HashMap;
@@ -365,14 +341,12 @@
     :goto_1
     invoke-virtual {v0, v2, v1}, Lorg/telegram/ui/Cells/SharedDocumentCell;->setChecked(ZZ)V
 
-    .line 784
     .end local v0    # "documentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     .end local v6    # "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     :cond_0
     :goto_2
     return-void
 
-    .line 775
     .restart local v0    # "documentCell":Lorg/telegram/ui/Cells/SharedDocumentCell;
     .restart local v6    # "item":Lorg/telegram/ui/DocumentSelectActivity$ListItem;
     :cond_1
@@ -398,7 +372,6 @@
 
     move-result-object v3
 
-    .line 776
     .local v3, "type":Ljava/lang/String;
     iget-object v1, v6, Lorg/telegram/ui/DocumentSelectActivity$ListItem;->title:Ljava/lang/String;
 
@@ -416,10 +389,8 @@
     :cond_2
     move v1, v8
 
-    .line 779
     goto :goto_1
 
-    .line 781
     :cond_3
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->this$0:Lorg/telegram/ui/DocumentSelectActivity;
 
@@ -446,17 +417,14 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 750
     packed-switch p2, :pswitch_data_0
 
-    .line 761
     new-instance v0, Lorg/telegram/ui/Cells/SharedDocumentCell;
 
     iget-object v1, p0, Lorg/telegram/ui/DocumentSelectActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/SharedDocumentCell;-><init>(Landroid/content/Context;)V
 
-    .line 764
     .local v0, "view":Landroid/view/View;
     :cond_0
     :goto_0
@@ -466,7 +434,6 @@
 
     return-object v1
 
-    .line 752
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/GraySectionCell;
@@ -478,7 +445,6 @@
     .restart local v0    # "view":Landroid/view/View;
     move-object v1, v0
 
-    .line 753
     check-cast v1, Lorg/telegram/ui/Cells/GraySectionCell;
 
     const-string/jumbo v2, "Recent"
@@ -495,19 +461,16 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Cells/GraySectionCell;->setText(Ljava/lang/String;)V
 
-    .line 754
     sget-boolean v1, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v1, :cond_0
 
-    .line 755
     sget v1, Lorg/telegram/ui/ActionBar/Theme;->prefShadowColor:I
 
     invoke-virtual {v0, v1}, Landroid/view/View;->setBackgroundColor(I)V
 
     move-object v1, v0
 
-    .line 756
     check-cast v1, Lorg/telegram/ui/Cells/GraySectionCell;
 
     sget v2, Lorg/telegram/ui/ActionBar/Theme;->prefSectionColor:I
@@ -516,7 +479,6 @@
 
     goto :goto_0
 
-    .line 750
     nop
 
     :pswitch_data_0

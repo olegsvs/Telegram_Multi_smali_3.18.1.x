@@ -31,7 +31,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/Components/StickersAlert$2;
 
     .prologue
-    .line 171
     iput-object p1, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iput-object p2, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -51,19 +50,16 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 174
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0, v1}, Lorg/telegram/ui/Components/StickersAlert;->access$002(Lorg/telegram/ui/Components/StickersAlert;I)I
 
-    .line 175
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     if-nez v0, :cond_1
 
-    .line 176
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v2, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -74,7 +70,6 @@
 
     invoke-static {v2, v0}, Lorg/telegram/ui/Components/StickersAlert;->access$902(Lorg/telegram/ui/Components/StickersAlert;Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;)Lorg/telegram/tgnet/TLRPC$TL_messages_stickerSet;
 
-    .line 177
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v2, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -98,21 +93,18 @@
     :goto_0
     invoke-static {v2, v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1002(Lorg/telegram/ui/Components/StickersAlert;Z)Z
 
-    .line 178
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1100(Lorg/telegram/ui/Components/StickersAlert;)V
 
-    .line 179
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/StickersAlert;->access$1200(Lorg/telegram/ui/Components/StickersAlert;)V
 
-    .line 180
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;
@@ -123,17 +115,14 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/StickersAlert$GridAdapter;->notifyDataSetChanged()V
 
-    .line 185
     :goto_1
     return-void
 
     :cond_0
     move v0, v1
 
-    .line 177
     goto :goto_0
 
-    .line 182
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
@@ -157,7 +146,6 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 183
     iget-object v0, p0, Lorg/telegram/ui/Components/StickersAlert$2$1;->this$1:Lorg/telegram/ui/Components/StickersAlert$2;
 
     iget-object v0, v0, Lorg/telegram/ui/Components/StickersAlert$2;->this$0:Lorg/telegram/ui/Components/StickersAlert;

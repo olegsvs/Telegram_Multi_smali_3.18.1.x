@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/ChatDialogsView;
 
     .prologue
-    .line 373
     iput-object p1, p0, Lorg/telegram/ui/Components/ChatDialogsView$7;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,11 +41,9 @@
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    .line 376
     iget-object v0, p0, Lorg/telegram/ui/Components/ChatDialogsView$7;->this$0:Lorg/telegram/ui/Components/ChatDialogsView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/ChatDialogsView;->btnPressed()V
 
-    .line 377
     return-void
 .end method

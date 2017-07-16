@@ -28,20 +28,16 @@
     .locals 1
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 36
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection$Factory;->reason:I
 
-    .line 37
     const/4 v0, 0x0
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection$Factory;->data:Ljava/lang/Object;
 
-    .line 38
     return-void
 .end method
 
@@ -51,16 +47,12 @@
     .param p2, "data"    # Ljava/lang/Object;
 
     .prologue
-    .line 44
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 45
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection$Factory;->reason:I
 
-    .line 46
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection$Factory;->data:Ljava/lang/Object;
 
-    .line 47
     return-void
 .end method
 
@@ -76,7 +68,6 @@
 
     const/4 v1, 0x0
 
-    .line 51
     array-length v2, p2
 
     if-ne v2, v0, :cond_0
@@ -84,7 +75,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 52
     new-instance v0, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection;
 
     aget v1, p2, v1
@@ -100,7 +90,6 @@
     :cond_0
     move v0, v1
 
-    .line 51
     goto :goto_0
 .end method
 
@@ -108,7 +97,6 @@
     .locals 1
 
     .prologue
-    .line 30
     invoke-virtual {p0, p1, p2}, Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection$Factory;->createTrackSelection(Lorg/telegram/messenger/exoplayer2/source/TrackGroup;[I)Lorg/telegram/messenger/exoplayer2/trackselection/FixedTrackSelection;
 
     move-result-object v0

@@ -16,17 +16,14 @@
     .locals 1
 
     .prologue
-    .line 19
     invoke-direct {p0}, Landroid/graphics/drawable/Drawable;-><init>()V
 
-    .line 22
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->paint:Landroid/graphics/Paint;
 
-    .line 23
     const/4 v0, 0x4
 
     new-array v0, v0, [I
@@ -53,7 +50,6 @@
     .param p1, "bitOffset"    # I
 
     .prologue
-    .line 31
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->data:[B
 
     div-int/lit8 v1, p1, 0x8
@@ -76,16 +72,13 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 52
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->data:[B
 
     if-nez v0, :cond_1
 
-    .line 85
     :cond_0
     return-void
 
-    .line 56
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->data:[B
 
@@ -95,10 +88,8 @@
 
     if-ne v0, v1, :cond_3
 
-    .line 57
     const/4 v6, 0x0
 
-    .line 58
     .local v6, "bitPointer":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/IdenticonDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -134,7 +125,6 @@
 
     double-to-float v11, v0
 
-    .line 59
     .local v11, "rectSize":F
     const/4 v0, 0x0
 
@@ -162,7 +152,6 @@
 
     move-result v12
 
-    .line 60
     .local v12, "xOffset":F
     const/4 v0, 0x0
 
@@ -190,7 +179,6 @@
 
     move-result v13
 
-    .line 61
     .local v13, "yOffset":F
     const/4 v10, 0x0
 
@@ -200,7 +188,6 @@
 
     if-ge v10, v0, :cond_0
 
-    .line 62
     const/4 v9, 0x0
 
     .local v9, "ix":I
@@ -209,23 +196,19 @@
 
     if-ge v9, v0, :cond_2
 
-    .line 63
     invoke-direct {p0, v6}, Lorg/telegram/ui/Components/IdenticonDrawable;->getBits(I)I
 
     move-result v7
 
-    .line 64
     .local v7, "byteValue":I
     add-int/lit8 v6, v6, 0x2
 
-    .line 65
     invoke-static {v7}, Ljava/lang/Math;->abs(I)I
 
     move-result v0
 
     rem-int/lit8 v8, v0, 0x4
 
-    .line 66
     .local v8, "colorIndex":I
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->paint:Landroid/graphics/Paint;
 
@@ -235,7 +218,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 67
     int-to-float v0, v9
 
     mul-float/2addr v0, v11
@@ -270,12 +252,10 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 62
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_1
 
-    .line 61
     .end local v7    # "byteValue":I
     .end local v8    # "colorIndex":I
     :cond_2
@@ -283,7 +263,6 @@
 
     goto :goto_0
 
-    .line 71
     .end local v6    # "bitPointer":I
     .end local v9    # "ix":I
     .end local v10    # "iy":I
@@ -293,7 +272,6 @@
     :cond_3
     const/4 v6, 0x0
 
-    .line 72
     .restart local v6    # "bitPointer":I
     invoke-virtual {p0}, Lorg/telegram/ui/Components/IdenticonDrawable;->getBounds()Landroid/graphics/Rect;
 
@@ -329,7 +307,6 @@
 
     double-to-float v11, v0
 
-    .line 73
     .restart local v11    # "rectSize":F
     const/4 v0, 0x0
 
@@ -357,7 +334,6 @@
 
     move-result v12
 
-    .line 74
     .restart local v12    # "xOffset":F
     const/4 v0, 0x0
 
@@ -385,7 +361,6 @@
 
     move-result v13
 
-    .line 75
     .restart local v13    # "yOffset":F
     const/4 v10, 0x0
 
@@ -395,7 +370,6 @@
 
     if-ge v10, v0, :cond_0
 
-    .line 76
     const/4 v9, 0x0
 
     .restart local v9    # "ix":I
@@ -404,12 +378,10 @@
 
     if-ge v9, v0, :cond_4
 
-    .line 77
     invoke-direct {p0, v6}, Lorg/telegram/ui/Components/IdenticonDrawable;->getBits(I)I
 
     move-result v7
 
-    .line 78
     .restart local v7    # "byteValue":I
     invoke-static {v7}, Ljava/lang/Math;->abs(I)I
 
@@ -417,7 +389,6 @@
 
     rem-int/lit8 v8, v0, 0x4
 
-    .line 79
     .restart local v8    # "colorIndex":I
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->paint:Landroid/graphics/Paint;
 
@@ -427,7 +398,6 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 80
     int-to-float v0, v9
 
     mul-float/2addr v0, v11
@@ -462,15 +432,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 81
     add-int/lit8 v6, v6, 0x2
 
-    .line 76
     add-int/lit8 v9, v9, 0x1
 
     goto :goto_3
 
-    .line 75
     .end local v7    # "byteValue":I
     .end local v8    # "colorIndex":I
     :cond_4
@@ -483,7 +450,6 @@
     .locals 1
 
     .prologue
-    .line 109
     const/high16 v0, 0x42000000    # 32.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -497,7 +463,6 @@
     .locals 1
 
     .prologue
-    .line 104
     const/high16 v0, 0x42000000    # 32.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -511,7 +476,6 @@
     .locals 1
 
     .prologue
-    .line 99
     const/4 v0, 0x0
 
     return v0
@@ -522,7 +486,6 @@
     .param p1, "alpha"    # I
 
     .prologue
-    .line 90
     return-void
 .end method
 
@@ -531,7 +494,6 @@
     .param p1, "cf"    # Landroid/graphics/ColorFilter;
 
     .prologue
-    .line 95
     return-void
 .end method
 
@@ -540,7 +502,6 @@
     .param p1, "value"    # [I
 
     .prologue
-    .line 43
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->colors:[I
 
     array-length v0, v0
@@ -549,7 +510,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 44
     new-instance v0, Ljava/lang/IllegalArgumentException;
 
     const-string/jumbo v1, "colors must have length of 4"
@@ -558,14 +518,11 @@
 
     throw v0
 
-    .line 46
     :cond_0
     iput-object p1, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->colors:[I
 
-    .line 47
     invoke-virtual {p0}, Lorg/telegram/ui/Components/IdenticonDrawable;->invalidateSelf()V
 
-    .line 48
     return-void
 .end method
 
@@ -574,17 +531,14 @@
     .param p1, "encryptedChat"    # Lorg/telegram/tgnet/TLRPC$EncryptedChat;
 
     .prologue
-    .line 35
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_hash:[B
 
     iput-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->data:[B
 
-    .line 36
     iget-object v0, p0, Lorg/telegram/ui/Components/IdenticonDrawable;->data:[B
 
     if-nez v0, :cond_0
 
-    .line 37
     iget-object v0, p1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->auth_key:[B
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->calcAuthKeyHash([B)[B
@@ -595,10 +549,8 @@
 
     iput-object v0, p1, Lorg/telegram/tgnet/TLRPC$EncryptedChat;->key_hash:[B
 
-    .line 39
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/Components/IdenticonDrawable;->invalidateSelf()V
 
-    .line 40
     return-void
 .end method

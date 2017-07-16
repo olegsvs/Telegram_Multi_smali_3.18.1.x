@@ -48,13 +48,10 @@
     .param p1, "cid"    # I
 
     .prologue
-    .line 66
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 67
     iput p1, p0, Lorg/telegram/ui/GroupInviteActivity;->chat_id:I
 
-    .line 68
     return-void
 .end method
 
@@ -63,7 +60,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->copyLinkRow:I
 
     return v0
@@ -74,7 +70,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->linkRow:I
 
     return v0
@@ -85,7 +80,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->linkInfoRow:I
 
     return v0
@@ -96,7 +90,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->chat_id:I
 
     return v0
@@ -107,7 +100,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity;->invite:Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
     return-object v0
@@ -119,7 +111,6 @@
     .param p1, "x1"    # Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
     .prologue
-    .line 47
     iput-object p1, p0, Lorg/telegram/ui/GroupInviteActivity;->invite:Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
     return-object p1
@@ -130,7 +121,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->shareLinkRow:I
 
     return v0
@@ -141,7 +131,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->revokeLinkRow:I
 
     return v0
@@ -153,7 +142,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 47
     invoke-direct {p0, p1}, Lorg/telegram/ui/GroupInviteActivity;->generateLink(Z)V
 
     return-void
@@ -164,7 +152,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget-boolean v0, p0, Lorg/telegram/ui/GroupInviteActivity;->loading:Z
 
     return v0
@@ -176,7 +163,6 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 47
     iput-boolean p1, p0, Lorg/telegram/ui/GroupInviteActivity;->loading:Z
 
     return p1
@@ -187,7 +173,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     return-object v0
@@ -198,7 +183,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     return v0
@@ -209,7 +193,6 @@
     .param p0, "x0"    # Lorg/telegram/ui/GroupInviteActivity;
 
     .prologue
-    .line 47
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->shadowRow:I
 
     return v0
@@ -220,12 +203,10 @@
     .param p1, "newRequest"    # Z
 
     .prologue
-    .line 201
     const/4 v3, 0x1
 
     iput-boolean v3, p0, Lorg/telegram/ui/GroupInviteActivity;->loading:Z
 
-    .line 203
     iget v3, p0, Lorg/telegram/ui/GroupInviteActivity;->chat_id:I
 
     invoke-static {v3}, Lorg/telegram/messenger/ChatObject;->isChannel(I)Z
@@ -234,12 +215,10 @@
 
     if-eqz v3, :cond_1
 
-    .line 204
     new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_channels_exportInvite;
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_channels_exportInvite;-><init>()V
 
-    .line 205
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_channels_exportInvite;
     iget v3, p0, Lorg/telegram/ui/GroupInviteActivity;->chat_id:I
 
@@ -249,10 +228,8 @@
 
     iput-object v3, v0, Lorg/telegram/tgnet/TLRPC$TL_channels_exportInvite;->channel:Lorg/telegram/tgnet/TLRPC$InputChannel;
 
-    .line 206
     move-object v2, v0
 
-    .line 212
     .end local v0    # "req":Lorg/telegram/tgnet/TLRPC$TL_channels_exportInvite;
     .local v2, "request":Lorg/telegram/tgnet/TLObject;
     :goto_0
@@ -268,7 +245,6 @@
 
     move-result v1
 
-    .line 237
     .local v1, "reqId":I
     invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
@@ -278,21 +254,17 @@
 
     invoke-virtual {v3, v1, v4}, Lorg/telegram/tgnet/ConnectionsManager;->bindRequestToGuid(II)V
 
-    .line 238
     iget-object v3, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     if-eqz v3, :cond_0
 
-    .line 239
     iget-object v3, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     invoke-virtual {v3}, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 241
     :cond_0
     return-void
 
-    .line 208
     .end local v1    # "reqId":I
     .end local v2    # "request":Lorg/telegram/tgnet/TLObject;
     :cond_1
@@ -300,13 +272,11 @@
 
     invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;-><init>()V
 
-    .line 209
     .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;
     iget v3, p0, Lorg/telegram/ui/GroupInviteActivity;->chat_id:I
 
     iput v3, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_exportChatInvite;->chat_id:I
 
-    .line 210
     move-object v2, v0
 
     .restart local v2    # "request":Lorg/telegram/tgnet/TLObject;
@@ -326,19 +296,16 @@
 
     const/4 v5, 0x0
 
-    .line 96
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const v3, 0x7f0200b6
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackButtonImage(I)V
 
-    .line 97
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     invoke-virtual {v2, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setAllowOverlayTitle(Z)V
 
-    .line 98
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     const-string/jumbo v3, "InviteLink"
@@ -351,7 +318,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 99
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
     new-instance v3, Lorg/telegram/ui/GroupInviteActivity$1;
@@ -360,26 +326,22 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/ActionBar;->setActionBarMenuOnItemClick(Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;)V
 
-    .line 108
     new-instance v2, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     invoke-direct {v2, p0, p1}, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;-><init>(Lorg/telegram/ui/GroupInviteActivity;Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
-    .line 110
     new-instance v2, Landroid/widget/FrameLayout;
 
     invoke-direct {v2, p1}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->fragmentView:Landroid/view/View;
 
-    .line 111
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity;->fragmentView:Landroid/view/View;
 
     check-cast v0, Landroid/widget/FrameLayout;
 
-    .line 112
     .local v0, "frameLayout":Landroid/widget/FrameLayout;
     const-string/jumbo v2, "windowBackgroundGray"
 
@@ -389,7 +351,6 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 113
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v3, "theme"
@@ -398,7 +359,6 @@
 
     move-result-object v1
 
-    .line 114
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v2, "prefBGColor"
 
@@ -410,26 +370,22 @@
 
     invoke-virtual {v0, v2}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
-    .line 115
     new-instance v2, Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-direct {v2, p1}, Lorg/telegram/ui/Components/EmptyTextProgressView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
-    .line 116
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v2}, Lorg/telegram/ui/Components/EmptyTextProgressView;->showProgress()V
 
-    .line 118
     new-instance v2, Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-direct {v2, p1}, Lorg/telegram/ui/Components/RecyclerListView;-><init>(Landroid/content/Context;)V
 
     iput-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
-    .line 119
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v3, Lorg/telegram/messenger/support/widget/LinearLayoutManager;
@@ -438,19 +394,16 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setLayoutManager(Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;)V
 
-    .line 120
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v3, p0, Lorg/telegram/ui/GroupInviteActivity;->emptyView:Lorg/telegram/ui/Components/EmptyTextProgressView;
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setEmptyView(Landroid/view/View;)V
 
-    .line 121
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Components/RecyclerListView;->setVerticalScrollBarEnabled(Z)V
 
-    .line 122
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     const/16 v3, 0x33
@@ -461,14 +414,12 @@
 
     invoke-virtual {v0, v2, v3}, Landroid/widget/FrameLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 123
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     iget-object v3, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setAdapter(Lorg/telegram/messenger/support/widget/RecyclerView$Adapter;)V
 
-    .line 124
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listView:Lorg/telegram/ui/Components/RecyclerListView;
 
     new-instance v3, Lorg/telegram/ui/GroupInviteActivity$2;
@@ -477,7 +428,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 170
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->fragmentView:Landroid/view/View;
 
     return-object v2
@@ -491,17 +441,14 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 175
     sget v2, Lorg/telegram/messenger/NotificationCenter;->chatInfoDidLoaded:I
 
     if-ne p1, v2, :cond_0
 
-    .line 176
     aget-object v1, p2, v4
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$ChatFull;
 
-    .line 177
     .local v1, "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
     const/4 v2, 0x1
 
@@ -513,7 +460,6 @@
 
     move-result v0
 
-    .line 178
     .local v0, "guid":I
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$ChatFull;->id:I
 
@@ -525,7 +471,6 @@
 
     if-ne v0, v2, :cond_0
 
-    .line 179
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v2
@@ -538,35 +483,29 @@
 
     iput-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->invite:Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
-    .line 180
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->invite:Lorg/telegram/tgnet/TLRPC$ExportedChatInvite;
 
     instance-of v2, v2, Lorg/telegram/tgnet/TLRPC$TL_chatInviteExported;
 
     if-nez v2, :cond_1
 
-    .line 181
     invoke-direct {p0, v4}, Lorg/telegram/ui/GroupInviteActivity;->generateLink(Z)V
 
-    .line 190
     .end local v0    # "guid":I
     .end local v1    # "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
     :cond_0
     :goto_0
     return-void
 
-    .line 183
     .restart local v0    # "guid":I
     .restart local v1    # "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
     :cond_1
     iput-boolean v4, p0, Lorg/telegram/ui/GroupInviteActivity;->loading:Z
 
-    .line 184
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     if-eqz v2, :cond_0
 
-    .line 185
     iget-object v2, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     invoke-virtual {v2}, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->notifyDataSetChanged()V
@@ -578,7 +517,6 @@
     .locals 11
 
     .prologue
-    .line 337
     const/16 v0, 0xe
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -984,10 +922,8 @@
     .prologue
     const/4 v3, 0x1
 
-    .line 72
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 74
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -996,7 +932,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 75
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v0
@@ -1007,15 +942,12 @@
 
     invoke-virtual {v0, v1, v2, v3}, Lorg/telegram/messenger/MessagesController;->loadFullChat(IIZ)V
 
-    .line 76
     iput-boolean v3, p0, Lorg/telegram/ui/GroupInviteActivity;->loading:Z
 
-    .line 78
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
-    .line 79
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1024,7 +956,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->linkRow:I
 
-    .line 80
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1033,7 +964,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->linkInfoRow:I
 
-    .line 81
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1042,7 +972,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->copyLinkRow:I
 
-    .line 82
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1051,7 +980,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->revokeLinkRow:I
 
-    .line 83
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1060,7 +988,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->shareLinkRow:I
 
-    .line 84
     iget v0, p0, Lorg/telegram/ui/GroupInviteActivity;->rowCount:I
 
     add-int/lit8 v1, v0, 0x1
@@ -1069,7 +996,6 @@
 
     iput v0, p0, Lorg/telegram/ui/GroupInviteActivity;->shadowRow:I
 
-    .line 86
     return v3
 .end method
 
@@ -1077,7 +1003,6 @@
     .locals 2
 
     .prologue
-    .line 91
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -1086,7 +1011,6 @@
 
     invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->removeObserver(Ljava/lang/Object;I)V
 
-    .line 92
     return-void
 .end method
 
@@ -1094,20 +1018,16 @@
     .locals 1
 
     .prologue
-    .line 194
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 195
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 196
     iget-object v0, p0, Lorg/telegram/ui/GroupInviteActivity;->listAdapter:Lorg/telegram/ui/GroupInviteActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/GroupInviteActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 198
     :cond_0
     return-void
 .end method

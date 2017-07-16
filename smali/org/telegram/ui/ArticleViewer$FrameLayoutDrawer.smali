@@ -24,13 +24,10 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 215
     iput-object p1, p0, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ArticleViewer;
 
-    .line 216
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 217
     return-void
 .end method
 
@@ -43,7 +40,6 @@
     .param p3, "drawingTime"    # J
 
     .prologue
-    .line 242
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0}, Lorg/telegram/ui/ArticleViewer;->access$200(Lorg/telegram/ui/ArticleViewer;)Lorg/telegram/messenger/exoplayer2/ui/AspectRatioFrameLayout;
@@ -74,12 +70,10 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 237
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ArticleViewer;->access$100(Lorg/telegram/ui/ArticleViewer;Landroid/graphics/Canvas;)V
 
-    .line 238
     return-void
 .end method
 
@@ -88,12 +82,10 @@
     .param p1, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 231
     iget-object v0, p0, Lorg/telegram/ui/ArticleViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/ArticleViewer;
 
     invoke-static {v0, p1}, Lorg/telegram/ui/ArticleViewer;->access$000(Lorg/telegram/ui/ArticleViewer;Landroid/view/MotionEvent;)Z
 
-    .line 232
     const/4 v0, 0x1
 
     return v0

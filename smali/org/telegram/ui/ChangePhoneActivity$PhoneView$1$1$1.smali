@@ -27,7 +27,6 @@
     .param p1, "this$3"    # Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1;
 
     .prologue
-    .line 383
     iput-object p1, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1$1;->this$3:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 1
 
     .prologue
-    .line 386
     iget-object v0, p0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1$1;->this$3:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1;
 
     iget-object v0, v0, Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1$1;->this$2:Lorg/telegram/ui/ChangePhoneActivity$PhoneView$1;
@@ -54,6 +52,5 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->showKeyboard(Landroid/view/View;)V
 
-    .line 387
     return-void
 .end method

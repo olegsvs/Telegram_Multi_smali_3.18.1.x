@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/NotificationsController;
 
     .prologue
-    .line 220
     iput-object p1, p0, Lorg/telegram/messenger/NotificationsController$5;->this$0:Lorg/telegram/messenger/NotificationsController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,17 +40,14 @@
     .locals 24
 
     .prologue
-    .line 224
     :try_start_0
     sget-boolean v20, Lorg/telegram/messenger/ApplicationLoader;->mainInterfacePaused:Z
 
     if-nez v20, :cond_0
 
-    .line 337
     :goto_0
     return-void
 
-    .line 227
     :cond_0
     sget-object v20, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -63,27 +59,21 @@
 
     move-result-object v16
 
-    .line 229
     .local v16, "preferences":Landroid/content/SharedPreferences;
     const/4 v15, 0x0
 
-    .line 230
     .local v15, "notifyDisabled":Z
     const/4 v14, 0x0
 
-    .line 231
     .local v14, "needVibrate":I
     const/4 v4, 0x0
 
-    .line 232
     .local v4, "choosenSoundPath":Ljava/lang/String;
     const v10, -0xffff01
 
-    .line 233
     .local v10, "ledColor":I
     const/16 v17, 0x0
 
-    .line 236
     .local v17, "priority":I
     const-string/jumbo v20, "EnableAll"
 
@@ -101,10 +91,8 @@
 
     if-nez v20, :cond_1
 
-    .line 237
     const/4 v15, 0x1
 
-    .line 240
     :cond_1
     sget-object v20, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
@@ -112,21 +100,16 @@
 
     move-result-object v6
 
-    .line 241
     .local v6, "defaultPath":Ljava/lang/String;
     if-nez v15, :cond_8
 
-    .line 242
     const/16 v19, 0x0
 
-    .line 243
     .local v19, "vibrateOverride":I
     const/4 v4, 0x0
 
-    .line 244
     const/16 v18, 0x0
 
-    .line 246
     .local v18, "vibrateOnlyIfSilent":Z
     if-eqz v4, :cond_f
 
@@ -136,10 +119,8 @@
 
     if-eqz v20, :cond_f
 
-    .line 247
     const/4 v4, 0x0
 
-    .line 251
     :cond_2
     :goto_1
     const-string/jumbo v20, "vibrate_messages"
@@ -156,7 +137,6 @@
 
     move-result v14
 
-    .line 252
     const-string/jumbo v20, "priority_group"
 
     const/16 v21, 0x1
@@ -171,7 +151,6 @@
 
     move-result v17
 
-    .line 253
     const-string/jumbo v20, "MessagesLed"
 
     const v21, -0xffff01
@@ -188,20 +167,16 @@
 
     move-result v10
 
-    .line 255
     const/16 v20, 0x4
 
     move/from16 v0, v20
 
     if-ne v14, v0, :cond_3
 
-    .line 256
     const/16 v18, 0x1
 
-    .line 257
     const/4 v14, 0x0
 
-    .line 259
     :cond_3
     const/16 v20, 0x2
 
@@ -251,11 +226,9 @@
 
     if-eq v0, v1, :cond_7
 
-    .line 260
     :cond_6
     move/from16 v14, v19
 
-    .line 262
     :cond_7
     if-eqz v18, :cond_8
 
@@ -265,7 +238,6 @@
 
     if-eq v14, v0, :cond_8
 
-    .line 264
     :try_start_1
     move-object/from16 v0, p0
 
@@ -285,7 +257,6 @@
 
     move-result v12
 
-    .line 265
     .local v12, "mode":I
     if-eqz v12, :cond_8
 
@@ -295,10 +266,8 @@
 
     if-eq v12, v0, :cond_8
 
-    .line 266
     const/4 v14, 0x2
 
-    .line 274
     .end local v12    # "mode":I
     .end local v18    # "vibrateOnlyIfSilent":Z
     .end local v19    # "vibrateOverride":I
@@ -317,7 +286,6 @@
 
     invoke-direct {v8, v0, v1}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    .line 275
     .local v8, "intent":Landroid/content/Intent;
     new-instance v20, Ljava/lang/StringBuilder;
 
@@ -355,14 +323,12 @@
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setAction(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 276
     const v20, 0x8000
 
     move/from16 v0, v20
 
     invoke-virtual {v8, v0}, Landroid/content/Intent;->setFlags(I)Landroid/content/Intent;
 
-    .line 278
     sget-object v20, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const/16 v21, 0x0
@@ -379,7 +345,6 @@
 
     move-result-object v5
 
-    .line 280
     .local v5, "contentIntent":Landroid/app/PendingIntent;
     const-string/jumbo v20, "AppName"
 
@@ -389,7 +354,6 @@
 
     move-result-object v13
 
-    .line 282
     .local v13, "name":Ljava/lang/String;
     new-instance v20, Landroid/support/v4/app/NotificationCompat$Builder;
 
@@ -397,7 +361,6 @@
 
     invoke-direct/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 283
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v13}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentTitle(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -406,14 +369,12 @@
 
     const v21, 0x7f0201f1
 
-    .line 284
     invoke-virtual/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;->setSmallIcon(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v20
 
     const/16 v21, 0x1
 
-    .line 285
     invoke-virtual/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;->setAutoCancel(Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v20
@@ -424,7 +385,6 @@
 
     move-object/from16 v21, v0
 
-    .line 286
     invoke-static/range {v21 .. v21}, Lorg/telegram/messenger/NotificationsController;->access$400(Lorg/telegram/messenger/NotificationsController;)I
 
     move-result v21
@@ -433,7 +393,6 @@
 
     move-result-object v20
 
-    .line 287
     move-object/from16 v0, v20
 
     invoke-virtual {v0, v5}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentIntent(Landroid/app/PendingIntent;)Landroid/support/v4/app/NotificationCompat$Builder;
@@ -442,26 +401,22 @@
 
     const-string/jumbo v21, "messages"
 
-    .line 288
     invoke-virtual/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;->setGroup(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v20
 
     const/16 v21, 0x1
 
-    .line 289
     invoke-virtual/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;->setGroupSummary(Z)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v20
 
     const v21, -0xd35a20
 
-    .line 290
     invoke-virtual/range {v20 .. v21}, Landroid/support/v4/app/NotificationCompat$Builder;->setColor(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
     move-result-object v11
 
-    .line 292
     .local v11, "mBuilder":Landroid/support/v4/app/NotificationCompat$Builder;
     const-string/jumbo v20, "msg"
 
@@ -469,7 +424,6 @@
 
     invoke-virtual {v11, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setCategory(Ljava/lang/String;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 294
     const-string/jumbo v20, "YouHaveNewMessage"
 
     const v21, 0x7f0706bd
@@ -478,11 +432,9 @@
 
     move-result-object v9
 
-    .line 295
     .local v9, "lastMessage":Ljava/lang/String;
     invoke-virtual {v11, v9}, Landroid/support/v4/app/NotificationCompat$Builder;->setContentText(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 296
     new-instance v20, Landroid/support/v4/app/NotificationCompat$BigTextStyle;
 
     invoke-direct/range {v20 .. v20}, Landroid/support/v4/app/NotificationCompat$BigTextStyle;-><init>()V
@@ -497,22 +449,18 @@
 
     invoke-virtual {v11, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setStyle(Landroid/support/v4/app/NotificationCompat$Style;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 298
     if-nez v17, :cond_10
 
-    .line 299
     const/16 v20, 0x0
 
     move/from16 v0, v20
 
     invoke-virtual {v11, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setPriority(I)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 306
     :cond_9
     :goto_3
     if-nez v15, :cond_17
 
-    .line 307
     invoke-virtual {v9}, Ljava/lang/String;->length()I
 
     move-result v20
@@ -525,7 +473,6 @@
 
     if-le v0, v1, :cond_a
 
-    .line 308
     new-instance v20, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v20 .. v20}, Ljava/lang/StringBuilder;-><init>()V
@@ -568,11 +515,9 @@
 
     move-result-object v9
 
-    .line 310
     :cond_a
     invoke-virtual {v11, v9}, Landroid/support/v4/app/NotificationCompat$Builder;->setTicker(Ljava/lang/CharSequence;)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 311
     if-eqz v4, :cond_b
 
     const-string/jumbo v20, "NoSound"
@@ -585,14 +530,12 @@
 
     if-nez v20, :cond_b
 
-    .line 312
     invoke-virtual {v4, v6}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
     move-result v20
 
     if-eqz v20, :cond_12
 
-    .line 313
     sget-object v20, Landroid/provider/Settings$System;->DEFAULT_NOTIFICATION_URI:Landroid/net/Uri;
 
     const/16 v21, 0x5
@@ -603,12 +546,10 @@
 
     invoke-virtual {v11, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setSound(Landroid/net/Uri;I)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 318
     :cond_b
     :goto_4
     if-eqz v10, :cond_c
 
-    .line 319
     const/16 v20, 0x3e8
 
     const/16 v21, 0x3e8
@@ -619,7 +560,6 @@
 
     invoke-virtual {v11, v10, v0, v1}, Landroid/support/v4/app/NotificationCompat$Builder;->setLights(III)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 321
     :cond_c
     const/16 v20, 0x2
 
@@ -637,7 +577,6 @@
 
     if-eqz v20, :cond_13
 
-    .line 322
     :cond_d
     const/16 v20, 0x2
 
@@ -653,7 +592,6 @@
 
     invoke-virtual {v11, v0}, Landroid/support/v4/app/NotificationCompat$Builder;->setVibrate([J)Landroid/support/v4/app/NotificationCompat$Builder;
 
-    .line 333
     :cond_e
     :goto_5
     move-object/from16 v0, p0
@@ -678,7 +616,6 @@
 
     goto/16 :goto_0
 
-    .line 334
     .end local v4    # "choosenSoundPath":Ljava/lang/String;
     .end local v5    # "contentIntent":Landroid/app/PendingIntent;
     .end local v6    # "defaultPath":Ljava/lang/String;
@@ -694,13 +631,11 @@
     :catch_0
     move-exception v7
 
-    .line 335
     .local v7, "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 248
     .end local v7    # "e":Ljava/lang/Exception;
     .restart local v4    # "choosenSoundPath":Ljava/lang/String;
     .restart local v6    # "defaultPath":Ljava/lang/String;
@@ -714,7 +649,6 @@
     :cond_f
     if-nez v4, :cond_2
 
-    .line 249
     :try_start_3
     const-string/jumbo v20, "GlobalSoundPath"
 
@@ -728,17 +662,14 @@
 
     goto/16 :goto_1
 
-    .line 268
     :catch_1
     move-exception v7
 
-    .line 269
     .restart local v7    # "e":Ljava/lang/Exception;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_2
 
-    .line 300
     .end local v7    # "e":Ljava/lang/Exception;
     .end local v18    # "vibrateOnlyIfSilent":Z
     .end local v19    # "vibrateOverride":I
@@ -756,7 +687,6 @@
 
     if-ne v0, v1, :cond_11
 
-    .line 301
     const/16 v20, 0x1
 
     move/from16 v0, v20
@@ -765,7 +695,6 @@
 
     goto/16 :goto_3
 
-    .line 302
     :cond_11
     const/16 v20, 0x2
 
@@ -775,7 +704,6 @@
 
     if-ne v0, v1, :cond_9
 
-    .line 303
     const/16 v20, 0x2
 
     move/from16 v0, v20
@@ -784,7 +712,6 @@
 
     goto/16 :goto_3
 
-    .line 315
     :cond_12
     invoke-static {v4}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -800,7 +727,6 @@
 
     goto/16 :goto_4
 
-    .line 323
     :cond_13
     const/16 v20, 0x1
 
@@ -808,7 +734,6 @@
 
     if-ne v14, v0, :cond_14
 
-    .line 324
     const/16 v20, 0x4
 
     move/from16 v0, v20
@@ -825,7 +750,6 @@
 
     goto :goto_5
 
-    .line 325
     :cond_14
     if-eqz v14, :cond_15
 
@@ -835,7 +759,6 @@
 
     if-ne v14, v0, :cond_16
 
-    .line 326
     :cond_15
     const/16 v20, 0x2
 
@@ -845,7 +768,6 @@
 
     goto/16 :goto_5
 
-    .line 327
     :cond_16
     const/16 v20, 0x3
 
@@ -853,7 +775,6 @@
 
     if-ne v14, v0, :cond_e
 
-    .line 328
     const/16 v20, 0x2
 
     move/from16 v0, v20
@@ -870,7 +791,6 @@
 
     goto/16 :goto_5
 
-    .line 331
     :cond_17
     const/16 v20, 0x2
 
@@ -890,14 +810,12 @@
 
     goto/16 :goto_5
 
-    .line 322
     :array_0
     .array-data 8
         0x0
         0x0
     .end array-data
 
-    .line 324
     :array_1
     .array-data 8
         0x0
@@ -906,14 +824,12 @@
         0x64
     .end array-data
 
-    .line 328
     :array_2
     .array-data 8
         0x0
         0x3e8
     .end array-data
 
-    .line 331
     :array_3
     .array-data 8
         0x0

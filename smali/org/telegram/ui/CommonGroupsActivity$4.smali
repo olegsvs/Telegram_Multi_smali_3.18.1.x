@@ -29,7 +29,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/CommonGroupsActivity;
 
     .prologue
-    .line 152
     iput-object p1, p0, Lorg/telegram/ui/CommonGroupsActivity$4;->this$0:Lorg/telegram/ui/CommonGroupsActivity;
 
     iput p2, p0, Lorg/telegram/ui/CommonGroupsActivity$4;->val$count:I
@@ -47,13 +46,11 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 155
     new-instance v0, Lorg/telegram/ui/CommonGroupsActivity$4$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/CommonGroupsActivity$4$1;-><init>(Lorg/telegram/ui/CommonGroupsActivity$4;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 176
     return-void
 .end method

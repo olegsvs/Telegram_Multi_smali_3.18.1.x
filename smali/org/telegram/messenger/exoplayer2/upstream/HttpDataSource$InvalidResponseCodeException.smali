@@ -53,7 +53,6 @@
     .end annotation
 
     .prologue
-    .line 136
     .local p2, "headerFields":Ljava/util/Map;, "Ljava/util/Map<Ljava/lang/String;Ljava/util/List<Ljava/lang/String;>;>;"
     new-instance v0, Ljava/lang/StringBuilder;
 
@@ -77,12 +76,9 @@
 
     invoke-direct {p0, v0, p3, v1}, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$HttpDataSourceException;-><init>(Ljava/lang/String;Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;I)V
 
-    .line 137
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;->responseCode:I
 
-    .line 138
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/HttpDataSource$InvalidResponseCodeException;->headerFields:Ljava/util/Map;
 
-    .line 139
     return-void
 .end method

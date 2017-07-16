@@ -24,7 +24,6 @@
     .locals 0
 
     .prologue
-    .line 25
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -36,7 +35,6 @@
     .locals 0
 
     .prologue
-    .line 71
     monitor-enter p0
 
     monitor-exit p0
@@ -49,7 +47,6 @@
     .param p1, "other"    # Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;
 
     .prologue
-    .line 79
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderInitCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderInitCount:I
@@ -58,7 +55,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderInitCount:I
 
-    .line 80
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderReleaseCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderReleaseCount:I
@@ -67,7 +63,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->decoderReleaseCount:I
 
-    .line 81
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->inputBufferCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->inputBufferCount:I
@@ -76,7 +71,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->inputBufferCount:I
 
-    .line 82
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->renderedOutputBufferCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->renderedOutputBufferCount:I
@@ -85,7 +79,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->renderedOutputBufferCount:I
 
-    .line 83
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->skippedOutputBufferCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->skippedOutputBufferCount:I
@@ -94,7 +87,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->skippedOutputBufferCount:I
 
-    .line 84
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->droppedOutputBufferCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->droppedOutputBufferCount:I
@@ -103,7 +95,6 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->droppedOutputBufferCount:I
 
-    .line 85
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->maxConsecutiveDroppedOutputBufferCount:I
 
     iget v1, p1, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->maxConsecutiveDroppedOutputBufferCount:I
@@ -114,6 +105,5 @@
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/decoder/DecoderCounters;->maxConsecutiveDroppedOutputBufferCount:I
 
-    .line 87
     return-void
 .end method

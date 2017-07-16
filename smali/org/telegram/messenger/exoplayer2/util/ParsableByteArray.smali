@@ -16,7 +16,6 @@
     .locals 0
 
     .prologue
-    .line 35
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
     return-void
@@ -27,18 +26,14 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 42
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 43
     new-array v0, p1, [B
 
     iput-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 44
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 45
     return-void
 .end method
 
@@ -47,18 +42,14 @@
     .param p1, "data"    # [B
 
     .prologue
-    .line 52
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 53
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 54
     array-length v0, p1
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 55
     return-void
 .end method
 
@@ -68,16 +59,12 @@
     .param p2, "limit"    # I
 
     .prologue
-    .line 63
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 64
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 65
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 66
     return-void
 .end method
 
@@ -87,7 +74,6 @@
     .locals 2
 
     .prologue
-    .line 102
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -101,7 +87,6 @@
     .locals 1
 
     .prologue
-    .line 133
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     if-nez v0, :cond_0
@@ -123,7 +108,6 @@
     .locals 1
 
     .prologue
-    .line 126
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     return v0
@@ -133,7 +117,6 @@
     .locals 1
 
     .prologue
-    .line 109
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
     return v0
@@ -143,7 +126,6 @@
     .locals 2
 
     .prologue
-    .line 201
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -161,21 +143,18 @@
     .param p2, "length"    # I
 
     .prologue
-    .line 193
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     invoke-virtual {p1, v0, v1, p2}, Ljava/nio/ByteBuffer;->put([BII)Ljava/nio/ByteBuffer;
 
-    .line 194
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/2addr v0, p2
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 195
     return-void
 .end method
 
@@ -187,15 +166,12 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 168
     iget-object v0, p1, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->data:[B
 
     invoke-virtual {p0, v0, v1, p2}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readBytes([BII)V
 
-    .line 169
     invoke-virtual {p1, v1}, Lorg/telegram/messenger/exoplayer2/util/ParsableBitArray;->setPosition(I)V
 
-    .line 170
     return-void
 .end method
 
@@ -206,21 +182,18 @@
     .param p3, "length"    # I
 
     .prologue
-    .line 181
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     invoke-static {v0, v1, p1, p2, p3}, Ljava/lang/System;->arraycopy(Ljava/lang/Object;ILjava/lang/Object;II)V
 
-    .line 182
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/2addr v0, p3
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 183
     return-void
 .end method
 
@@ -228,7 +201,6 @@
     .locals 2
 
     .prologue
-    .line 413
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v0
@@ -244,7 +216,6 @@
     .locals 1
 
     .prologue
-    .line 406
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
@@ -260,7 +231,6 @@
     .locals 4
 
     .prologue
-    .line 292
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -332,27 +302,21 @@
 
     const/16 v5, 0xa
 
-    .line 468
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->bytesLeft()I
 
     move-result v2
 
     if-nez v2, :cond_1
 
-    .line 469
     const/4 v0, 0x0
 
-    .line 494
     :cond_0
     :goto_0
     return-object v0
 
-    .line 471
     :cond_1
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 472
-    .local v1, "lineLimit":I
     :goto_1
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
@@ -370,12 +334,10 @@
 
     if-eq v2, v6, :cond_2
 
-    .line 473
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_1
 
-    .line 475
     :cond_2
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -419,14 +381,12 @@
 
     if-ne v2, v3, :cond_3
 
-    .line 478
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v2, 0x3
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 480
     :cond_3
     new-instance v0, Ljava/lang/String;
 
@@ -440,18 +400,14 @@
 
     invoke-direct {v0, v2, v3, v4}, Ljava/lang/String;-><init>([BII)V
 
-    .line 481
-    .local v0, "line":Ljava/lang/String;
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 482
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
     if-eq v2, v3, :cond_0
 
-    .line 485
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -460,21 +416,18 @@
 
     if-ne v2, v6, :cond_4
 
-    .line 486
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v2, 0x1
 
     iput v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 487
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
     if-eq v2, v3, :cond_0
 
-    .line 491
     :cond_4
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -484,7 +437,6 @@
 
     if-ne v2, v5, :cond_0
 
-    .line 492
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/lit8 v2, v2, 0x1
@@ -498,7 +450,6 @@
     .locals 4
 
     .prologue
-    .line 302
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -566,7 +517,6 @@
     .locals 4
 
     .prologue
-    .line 254
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -620,7 +570,6 @@
     .prologue
     const-wide/16 v6, 0xff
 
-    .line 326
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -782,7 +731,6 @@
     .locals 4
 
     .prologue
-    .line 238
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -822,7 +770,6 @@
     .prologue
     const-wide/16 v6, 0xff
 
-    .line 282
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -904,7 +851,6 @@
     .locals 4
 
     .prologue
-    .line 263
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -956,16 +902,13 @@
     .locals 4
 
     .prologue
-    .line 382
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLittleEndianInt()I
 
     move-result v0
 
-    .line 383
     .local v0, "result":I
     if-gez v0, :cond_0
 
-    .line 384
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -990,7 +933,6 @@
 
     throw v1
 
-    .line 386
     :cond_0
     return v0
 .end method
@@ -999,7 +941,6 @@
     .locals 4
 
     .prologue
-    .line 223
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1037,7 +978,6 @@
     .prologue
     const-wide/16 v6, 0xff
 
-    .line 312
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1200,10 +1140,8 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 434
     move v2, p1
 
-    .line 435
     .local v2, "stringLength":I
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -1211,7 +1149,6 @@
 
     add-int/lit8 v0, v3, -0x1
 
-    .line 436
     .local v0, "lastIndex":I
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
@@ -1223,10 +1160,8 @@
 
     if-nez v3, :cond_0
 
-    .line 437
     add-int/lit8 v2, v2, -0x1
 
-    .line 439
     :cond_0
     new-instance v1, Ljava/lang/String;
 
@@ -1240,7 +1175,6 @@
 
     invoke-direct {v1, v3, v4, v2, v5}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
-    .line 440
     .local v1, "result":Ljava/lang/String;
     iget v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -1248,7 +1182,6 @@
 
     iput v3, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 441
     return-object v1
 .end method
 
@@ -1256,7 +1189,6 @@
     .locals 4
 
     .prologue
-    .line 230
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1295,7 +1227,6 @@
     .param p1, "length"    # I
 
     .prologue
-    .line 423
     invoke-static {}, Ljava/nio/charset/Charset;->defaultCharset()Ljava/nio/charset/Charset;
 
     move-result-object v0
@@ -1313,7 +1244,6 @@
     .param p2, "charset"    # Ljava/nio/charset/Charset;
 
     .prologue
-    .line 452
     new-instance v0, Ljava/lang/String;
 
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -1322,7 +1252,6 @@
 
     invoke-direct {v0, v1, v2, p1, p2}, Ljava/lang/String;-><init>([BIILjava/nio/charset/Charset;)V
 
-    .line 453
     .local v0, "result":Ljava/lang/String;
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -1330,7 +1259,6 @@
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 454
     return-object v0
 .end method
 
@@ -1338,30 +1266,25 @@
     .locals 6
 
     .prologue
-    .line 355
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v0
 
-    .line 356
     .local v0, "b1":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v1
 
-    .line 357
     .local v1, "b2":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v2
 
-    .line 358
     .local v2, "b3":I
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readUnsignedByte()I
 
     move-result v3
 
-    .line 359
     .local v3, "b4":I
     shl-int/lit8 v4, v0, 0x15
 
@@ -1382,7 +1305,6 @@
     .locals 3
 
     .prologue
-    .line 208
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1402,7 +1324,6 @@
     .locals 5
 
     .prologue
-    .line 340
     iget-object v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1431,7 +1352,6 @@
 
     or-int v0, v1, v2
 
-    .line 342
     .local v0, "result":I
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
@@ -1439,7 +1359,6 @@
 
     iput v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 343
     return v0
 .end method
 
@@ -1449,7 +1368,6 @@
     .prologue
     const-wide/16 v6, 0xff
 
-    .line 272
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1531,7 +1449,6 @@
     .locals 4
 
     .prologue
-    .line 245
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1583,16 +1500,13 @@
     .locals 4
 
     .prologue
-    .line 368
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readInt()I
 
     move-result v0
 
-    .line 369
     .local v0, "result":I
     if-gez v0, :cond_0
 
-    .line 370
     new-instance v1, Ljava/lang/IllegalStateException;
 
     new-instance v2, Ljava/lang/StringBuilder;
@@ -1617,7 +1531,6 @@
 
     throw v1
 
-    .line 372
     :cond_0
     return v0
 .end method
@@ -1626,12 +1539,10 @@
     .locals 5
 
     .prologue
-    .line 395
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->readLong()J
 
     move-result-wide v0
 
-    .line 396
     .local v0, "result":J
     const-wide/16 v2, 0x0
 
@@ -1639,7 +1550,6 @@
 
     if-gez v2, :cond_0
 
-    .line 397
     new-instance v2, Ljava/lang/IllegalStateException;
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -1664,7 +1574,6 @@
 
     throw v2
 
-    .line 399
     :cond_0
     return-wide v0
 .end method
@@ -1673,7 +1582,6 @@
     .locals 4
 
     .prologue
-    .line 215
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1713,10 +1621,8 @@
 
     const/4 v10, 0x1
 
-    .line 504
     const/4 v2, 0x0
 
-    .line 505
     .local v2, "length":I
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -1726,7 +1632,6 @@
 
     int-to-long v4, v6
 
-    .line 507
     .local v4, "value":J
     const/4 v1, 0x7
 
@@ -1734,7 +1639,6 @@
     :goto_0
     if-ltz v1, :cond_0
 
-    .line 508
     shl-int v6, v10, v1
 
     int-to-long v6, v6
@@ -1747,10 +1651,8 @@
 
     if-nez v6, :cond_2
 
-    .line 509
     if-ge v1, v11, :cond_1
 
-    .line 510
     shl-int v6, v10, v1
 
     add-int/lit8 v6, v6, -0x1
@@ -1759,15 +1661,12 @@
 
     and-long/2addr v4, v6
 
-    .line 511
     rsub-int/lit8 v2, v1, 0x7
 
-    .line 518
     :cond_0
     :goto_1
     if-nez v2, :cond_3
 
-    .line 519
     new-instance v6, Ljava/lang/NumberFormatException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1792,24 +1691,20 @@
 
     throw v6
 
-    .line 512
     :cond_1
     const/4 v6, 0x7
 
     if-ne v1, v6, :cond_0
 
-    .line 513
     const/4 v2, 0x1
 
     goto :goto_1
 
-    .line 507
     :cond_2
     add-int/lit8 v1, v1, -0x1
 
     goto :goto_0
 
-    .line 521
     :cond_3
     const/4 v0, 0x1
 
@@ -1817,7 +1712,6 @@
     :goto_2
     if-ge v0, v2, :cond_5
 
-    .line 522
     iget-object v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
     iget v7, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1826,7 +1720,6 @@
 
     aget-byte v3, v6, v7
 
-    .line 523
     .local v3, "x":I
     and-int/lit16 v6, v3, 0xc0
 
@@ -1834,7 +1727,6 @@
 
     if-eq v6, v7, :cond_4
 
-    .line 524
     new-instance v6, Ljava/lang/NumberFormatException;
 
     new-instance v7, Ljava/lang/StringBuilder;
@@ -1859,7 +1751,6 @@
 
     throw v6
 
-    .line 526
     :cond_4
     shl-long v6, v4, v11
 
@@ -1869,12 +1760,10 @@
 
     or-long v4, v6, v8
 
-    .line 521
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_2
 
-    .line 528
     .end local v3    # "x":I
     :cond_5
     iget v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
@@ -1883,7 +1772,6 @@
 
     iput v6, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 529
     return-wide v4
 .end method
 
@@ -1893,13 +1781,10 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 94
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 95
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 96
     return-void
 .end method
 
@@ -1908,7 +1793,6 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 75
     invoke-virtual {p0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->capacity()I
 
     move-result v0
@@ -1920,10 +1804,8 @@
     :goto_0
     invoke-virtual {p0, v0, p1}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->reset([BI)V
 
-    .line 76
     return-void
 
-    .line 75
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
@@ -1936,18 +1818,14 @@
     .param p2, "limit"    # I
 
     .prologue
-    .line 85
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
 
-    .line 86
     iput p2, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 87
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 88
     return-void
 .end method
 
@@ -1956,7 +1834,6 @@
     .param p1, "limit"    # I
 
     .prologue
-    .line 118
     if-ltz p1, :cond_0
 
     iget-object v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->data:[B
@@ -1970,13 +1847,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 119
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
 
-    .line 120
     return-void
 
-    .line 118
     :cond_0
     const/4 v0, 0x0
 
@@ -1988,7 +1862,6 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 145
     if-ltz p1, :cond_0
 
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->limit:I
@@ -2000,13 +1873,10 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 146
     iput p1, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
-    .line 147
     return-void
 
-    .line 145
     :cond_0
     const/4 v0, 0x0
 
@@ -2018,13 +1888,11 @@
     .param p1, "bytes"    # I
 
     .prologue
-    .line 157
     iget v0, p0, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->position:I
 
     add-int/2addr v0, p1
 
     invoke-virtual {p0, v0}, Lorg/telegram/messenger/exoplayer2/util/ParsableByteArray;->setPosition(I)V
 
-    .line 158
     return-void
 .end method

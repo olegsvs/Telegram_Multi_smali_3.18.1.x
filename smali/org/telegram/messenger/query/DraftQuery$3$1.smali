@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/query/DraftQuery$3;
 
     .prologue
-    .line 231
     iput-object p1, p0, Lorg/telegram/messenger/query/DraftQuery$3$1;->this$0:Lorg/telegram/messenger/query/DraftQuery$3;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +42,12 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 234
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 235
     check-cast v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 236
     .local v0, "messagesRes":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     iget-object v1, v0, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -61,7 +57,6 @@
 
     if-nez v1, :cond_0
 
-    .line 237
     iget-object v1, p0, Lorg/telegram/messenger/query/DraftQuery$3$1;->this$0:Lorg/telegram/messenger/query/DraftQuery$3;
 
     iget-wide v2, v1, Lorg/telegram/messenger/query/DraftQuery$3;->val$did:J
@@ -78,7 +73,6 @@
 
     invoke-static {v2, v3, v1}, Lorg/telegram/messenger/query/DraftQuery;->access$100(JLorg/telegram/tgnet/TLRPC$Message;)V
 
-    .line 240
     .end local v0    # "messagesRes":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     :cond_0
     return-void

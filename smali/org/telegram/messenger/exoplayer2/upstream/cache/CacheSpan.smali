@@ -40,7 +40,6 @@
     .param p4, "length"    # J
 
     .prologue
-    .line 60
     const-wide v6, -0x7fffffffffffffffL    # -4.9E-324
 
     const/4 v8, 0x0
@@ -55,7 +54,6 @@
 
     invoke-direct/range {v0 .. v8}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;-><init>(Ljava/lang/String;JJJLjava/io/File;)V
 
-    .line 61
     return-void
 .end method
 
@@ -68,19 +66,14 @@
     .param p8, "file"    # Ljava/io/File;
 
     .prologue
-    .line 74
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 75
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;
 
-    .line 76
     iput-wide p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->position:J
 
-    .line 77
     iput-wide p4, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->length:J
 
-    .line 78
     if-eqz p8, :cond_0
 
     const/4 v0, 0x1
@@ -88,16 +81,12 @@
     :goto_0
     iput-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->isCached:Z
 
-    .line 79
     iput-object p8, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->file:Ljava/io/File;
 
-    .line 80
     iput-wide p6, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->lastAccessTimestamp:J
 
-    .line 81
     return-void
 
-    .line 78
     :cond_0
     const/4 v0, 0x0
 
@@ -110,7 +99,6 @@
     .locals 1
 
     .prologue
-    .line 24
     check-cast p1, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;
 
     invoke-virtual {p0, p1}, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->compareTo(Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;)I
@@ -127,7 +115,6 @@
     .prologue
     const-wide/16 v6, 0x0
 
-    .line 99
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;
 
     iget-object v3, p1, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;
@@ -138,7 +125,6 @@
 
     if-nez v2, :cond_0
 
-    .line 100
     iget-object v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;
 
     iget-object v3, p1, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->key:Ljava/lang/String;
@@ -147,11 +133,9 @@
 
     move-result v2
 
-    .line 103
     :goto_0
     return v2
 
-    .line 102
     :cond_0
     iget-wide v2, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->position:J
 
@@ -159,7 +143,6 @@
 
     sub-long v0, v2, v4
 
-    .line 103
     .local v0, "startOffsetDiff":J
     cmp-long v2, v0, v6
 
@@ -188,7 +171,6 @@
     .locals 1
 
     .prologue
-    .line 94
     iget-boolean v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->isCached:Z
 
     if-nez v0, :cond_0
@@ -208,7 +190,6 @@
     .locals 4
 
     .prologue
-    .line 87
     iget-wide v0, p0, Lorg/telegram/messenger/exoplayer2/upstream/cache/CacheSpan;->length:J
 
     const-wide/16 v2, -0x1

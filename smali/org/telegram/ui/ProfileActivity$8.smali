@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ProfileActivity;
 
     .prologue
-    .line 688
     iput-object p1, p0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +42,6 @@
     .param p2, "position"    # I
 
     .prologue
-    .line 691
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -56,12 +54,10 @@
 
     if-nez v23, :cond_1
 
-    .line 1070
     :cond_0
     :goto_0
     return-void
 
-    .line 694
     :cond_1
     move-object/from16 v0, p0
 
@@ -79,12 +75,10 @@
 
     if-ne v0, v1, :cond_4
 
-    .line 695
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 696
     .local v7, "args":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -98,7 +92,6 @@
 
     if-eqz v23, :cond_3
 
-    .line 697
     const-string/jumbo v23, "dialog_id"
 
     move-object/from16 v0, p0
@@ -134,7 +127,6 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 701
     :goto_2
     new-instance v16, Lorg/telegram/ui/MediaActivity;
 
@@ -142,7 +134,6 @@
 
     invoke-direct {v0, v7}, Lorg/telegram/ui/MediaActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 702
     .local v16, "fragment":Lorg/telegram/ui/MediaActivity;
     move-object/from16 v0, p0
 
@@ -160,7 +151,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/MediaActivity;->setChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 703
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -175,7 +165,6 @@
 
     goto :goto_0
 
-    .line 697
     .end local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     :cond_2
     move-object/from16 v0, p0
@@ -196,7 +185,6 @@
 
     goto :goto_1
 
-    .line 699
     :cond_3
     const-string/jumbo v23, "dialog_id"
 
@@ -230,7 +218,6 @@
 
     goto :goto_2
 
-    .line 704
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_4
     move-object/from16 v0, p0
@@ -249,12 +236,10 @@
 
     if-ne v0, v1, :cond_7
 
-    .line 705
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 706
     .restart local v7    # "args":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -268,7 +253,6 @@
 
     if-eqz v23, :cond_6
 
-    .line 707
     const-string/jumbo v23, "dialog_id"
 
     move-object/from16 v0, p0
@@ -304,7 +288,6 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 711
     :goto_4
     const-string/jumbo v23, "selected_mode"
 
@@ -316,14 +299,12 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 712
     new-instance v16, Lorg/telegram/ui/MediaActivity;
 
     move-object/from16 v0, v16
 
     invoke-direct {v0, v7}, Lorg/telegram/ui/MediaActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 713
     .restart local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     move-object/from16 v0, p0
 
@@ -341,7 +322,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/MediaActivity;->setChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 714
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -356,7 +336,6 @@
 
     goto/16 :goto_0
 
-    .line 707
     .end local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     :cond_5
     move-object/from16 v0, p0
@@ -377,7 +356,6 @@
 
     goto :goto_3
 
-    .line 709
     :cond_6
     const-string/jumbo v23, "dialog_id"
 
@@ -411,7 +389,6 @@
 
     goto :goto_4
 
-    .line 715
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_7
     move-object/from16 v0, p0
@@ -430,12 +407,10 @@
 
     if-ne v0, v1, :cond_a
 
-    .line 716
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 717
     .restart local v7    # "args":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -449,7 +424,6 @@
 
     if-eqz v23, :cond_9
 
-    .line 718
     const-string/jumbo v23, "dialog_id"
 
     move-object/from16 v0, p0
@@ -485,7 +459,6 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 722
     :goto_6
     const-string/jumbo v23, "selected_mode"
 
@@ -497,14 +470,12 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 723
     new-instance v16, Lorg/telegram/ui/MediaActivity;
 
     move-object/from16 v0, v16
 
     invoke-direct {v0, v7}, Lorg/telegram/ui/MediaActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 724
     .restart local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     move-object/from16 v0, p0
 
@@ -522,7 +493,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/MediaActivity;->setChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 725
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -537,7 +507,6 @@
 
     goto/16 :goto_0
 
-    .line 718
     .end local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     :cond_8
     move-object/from16 v0, p0
@@ -558,7 +527,6 @@
 
     goto :goto_5
 
-    .line 720
     :cond_9
     const-string/jumbo v23, "dialog_id"
 
@@ -592,7 +560,6 @@
 
     goto :goto_6
 
-    .line 726
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_a
     move-object/from16 v0, p0
@@ -611,12 +578,10 @@
 
     if-ne v0, v1, :cond_d
 
-    .line 727
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 728
     .restart local v7    # "args":Landroid/os/Bundle;
     move-object/from16 v0, p0
 
@@ -630,7 +595,6 @@
 
     if-eqz v23, :cond_c
 
-    .line 729
     const-string/jumbo v23, "dialog_id"
 
     move-object/from16 v0, p0
@@ -666,7 +630,6 @@
 
     invoke-virtual {v7, v0, v1, v2}, Landroid/os/Bundle;->putLong(Ljava/lang/String;J)V
 
-    .line 733
     :goto_8
     const-string/jumbo v23, "selected_mode"
 
@@ -678,14 +641,12 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 734
     new-instance v16, Lorg/telegram/ui/MediaActivity;
 
     move-object/from16 v0, v16
 
     invoke-direct {v0, v7}, Lorg/telegram/ui/MediaActivity;-><init>(Landroid/os/Bundle;)V
 
-    .line 735
     .restart local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     move-object/from16 v0, p0
 
@@ -703,7 +664,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/MediaActivity;->setChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;)V
 
-    .line 736
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -718,7 +678,6 @@
 
     goto/16 :goto_0
 
-    .line 729
     .end local v16    # "fragment":Lorg/telegram/ui/MediaActivity;
     :cond_b
     move-object/from16 v0, p0
@@ -739,7 +698,6 @@
 
     goto :goto_7
 
-    .line 731
     :cond_c
     const-string/jumbo v23, "dialog_id"
 
@@ -773,7 +731,6 @@
 
     goto :goto_8
 
-    .line 737
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_d
     move-object/from16 v0, p0
@@ -792,7 +749,6 @@
 
     if-ne v0, v1, :cond_e
 
-    .line 738
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -817,7 +773,6 @@
 
     goto/16 :goto_0
 
-    .line 739
     :cond_e
     move-object/from16 v0, p0
 
@@ -835,12 +790,10 @@
 
     if-ne v0, v1, :cond_f
 
-    .line 740
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 741
     .restart local v7    # "args":Landroid/os/Bundle;
     const-string/jumbo v23, "chat_id"
 
@@ -870,7 +823,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 742
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -887,7 +839,6 @@
 
     goto/16 :goto_0
 
-    .line 743
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_f
     move-object/from16 v0, p0
@@ -906,7 +857,6 @@
 
     if-ne v0, v1, :cond_10
 
-    .line 744
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -945,7 +895,6 @@
 
     goto/16 :goto_0
 
-    .line 745
     :cond_10
     move-object/from16 v0, p0
 
@@ -963,7 +912,6 @@
 
     if-ne v0, v1, :cond_14
 
-    .line 748
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -980,7 +928,6 @@
 
     if-eqz v23, :cond_11
 
-    .line 749
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -991,7 +938,6 @@
 
     move-result-wide v12
 
-    .line 756
     .local v12, "did":J
     :goto_9
     const/16 v23, 0x5
@@ -1006,7 +952,6 @@
 
     const v25, 0x7f070450
 
-    .line 757
     invoke-static/range {v24 .. v25}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v24
@@ -1033,7 +978,6 @@
 
     const/16 v29, 0x1
 
-    .line 758
     invoke-static/range {v28 .. v29}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v28
@@ -1066,7 +1010,6 @@
 
     const/16 v29, 0x2
 
-    .line 759
     invoke-static/range {v28 .. v29}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v28
@@ -1085,7 +1028,6 @@
 
     const v25, 0x7f07043c
 
-    .line 760
     invoke-static/range {v24 .. v25}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v24
@@ -1098,14 +1040,12 @@
 
     const v25, 0x7f07044f
 
-    .line 761
     invoke-static/range {v24 .. v25}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v24
 
     aput-object v24, v11, v23
 
-    .line 764
     .local v11, "descriptions":[Ljava/lang/String;
     const/16 v23, 0x5
 
@@ -1117,7 +1057,6 @@
 
     fill-array-data v17, :array_0
 
-    .line 772
     .local v17, "icons":[I
     new-instance v18, Landroid/widget/LinearLayout;
 
@@ -1137,8 +1076,6 @@
 
     invoke-direct {v0, v1}, Landroid/widget/LinearLayout;-><init>(Landroid/content/Context;)V
 
-    .line 773
-    .local v18, "linearLayout":Landroid/widget/LinearLayout;
     const/16 v23, 0x1
 
     move-object/from16 v0, v18
@@ -1147,7 +1084,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/LinearLayout;->setOrientation(I)V
 
-    .line 775
     const/4 v6, 0x0
 
     .local v6, "a":I
@@ -1160,7 +1096,6 @@
 
     if-ge v6, v0, :cond_13
 
-    .line 776
     new-instance v20, Landroid/widget/TextView;
 
     move-object/from16 v0, p0
@@ -1179,7 +1114,6 @@
 
     invoke-direct {v0, v1}, Landroid/widget/TextView;-><init>(Landroid/content/Context;)V
 
-    .line 777
     .local v20, "textView":Landroid/widget/TextView;
     const-string/jumbo v23, "dialogTextBlack"
 
@@ -1193,7 +1127,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 778
     const/16 v23, 0x1
 
     const/high16 v24, 0x41800000    # 16.0f
@@ -1206,7 +1139,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/TextView;->setTextSize(IF)V
 
-    .line 779
     const/16 v23, 0x1
 
     move-object/from16 v0, v20
@@ -1215,7 +1147,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setLines(I)V
 
-    .line 780
     const/16 v23, 0x1
 
     move-object/from16 v0, v20
@@ -1224,7 +1155,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setMaxLines(I)V
 
-    .line 781
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1245,7 +1175,6 @@
 
     move-result-object v14
 
-    .line 782
     .local v14, "drawable":Landroid/graphics/drawable/Drawable;
     new-instance v23, Landroid/graphics/PorterDuffColorFilter;
 
@@ -1263,7 +1192,6 @@
 
     invoke-virtual {v14, v0}, Landroid/graphics/drawable/Drawable;->setColorFilter(Landroid/graphics/ColorFilter;)V
 
-    .line 783
     const/16 v23, 0x0
 
     const/16 v24, 0x0
@@ -1280,7 +1208,6 @@
 
     invoke-virtual {v0, v14, v1, v2, v3}, Landroid/widget/TextView;->setCompoundDrawablesWithIntrinsicBounds(Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;Landroid/graphics/drawable/Drawable;)V
 
-    .line 784
     invoke-static {v6}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v23
@@ -1291,7 +1218,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setTag(Ljava/lang/Object;)V
 
-    .line 785
     const/16 v23, 0x0
 
     invoke-static/range {v23 .. v23}, Lorg/telegram/ui/ActionBar/Theme;->getSelectorDrawable(Z)Landroid/graphics/drawable/Drawable;
@@ -1304,7 +1230,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 786
     const/high16 v23, 0x41c00000    # 24.0f
 
     invoke-static/range {v23 .. v23}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1333,7 +1258,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/widget/TextView;->setPadding(IIII)V
 
-    .line 787
     const/16 v23, 0x1
 
     move-object/from16 v0, v20
@@ -1342,7 +1266,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setSingleLine(Z)V
 
-    .line 788
     const/16 v23, 0x13
 
     move-object/from16 v0, v20
@@ -1351,7 +1274,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setGravity(I)V
 
-    .line 789
     const/high16 v23, 0x41d00000    # 26.0f
 
     invoke-static/range {v23 .. v23}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1364,7 +1286,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setCompoundDrawablePadding(I)V
 
-    .line 790
     aget-object v23, v11, v6
 
     move-object/from16 v0, v20
@@ -1373,7 +1294,6 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 791
     const/16 v23, -0x1
 
     const/16 v24, 0x30
@@ -1392,7 +1312,6 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/widget/LinearLayout;->addView(Landroid/view/View;Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 792
     new-instance v23, Lorg/telegram/ui/ProfileActivity$8$1;
 
     move-object/from16 v0, v23
@@ -1407,18 +1326,15 @@
 
     invoke-virtual {v0, v1}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
 
-    .line 775
     add-int/lit8 v6, v6, 0x1
 
     goto/16 :goto_a
 
-    .line 750
     .end local v6    # "a":I
     .end local v11    # "descriptions":[Ljava/lang/String;
     .end local v12    # "did":J
     .end local v14    # "drawable":Landroid/graphics/drawable/Drawable;
     .end local v17    # "icons":[I
-    .end local v18    # "linearLayout":Landroid/widget/LinearLayout;
     .end local v20    # "textView":Landroid/widget/TextView;
     :cond_11
     move-object/from16 v0, p0
@@ -1433,7 +1349,6 @@
 
     if-eqz v23, :cond_12
 
-    .line 751
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1451,7 +1366,6 @@
     .restart local v12    # "did":J
     goto/16 :goto_9
 
-    .line 753
     .end local v12    # "did":J
     :cond_12
     move-object/from16 v0, p0
@@ -1477,11 +1391,9 @@
     .restart local v12    # "did":J
     goto/16 :goto_9
 
-    .line 846
     .restart local v6    # "a":I
     .restart local v11    # "descriptions":[Ljava/lang/String;
     .restart local v17    # "icons":[I
-    .restart local v18    # "linearLayout":Landroid/widget/LinearLayout;
     :cond_13
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -1499,7 +1411,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 847
     .local v8, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v23, "Notifications"
 
@@ -1513,12 +1424,10 @@
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 848
     move-object/from16 v0, v18
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setView(Landroid/view/View;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 849
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1533,13 +1442,11 @@
 
     goto/16 :goto_0
 
-    .line 850
     .end local v6    # "a":I
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v11    # "descriptions":[Ljava/lang/String;
     .end local v12    # "did":J
     .end local v17    # "icons":[I
-    .end local v18    # "linearLayout":Landroid/widget/LinearLayout;
     :cond_14
     move-object/from16 v0, p0
 
@@ -1557,7 +1464,6 @@
 
     if-ne v0, v1, :cond_15
 
-    .line 851
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -1574,7 +1480,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 852
     .restart local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v23, "AreYouSureSecretChat"
 
@@ -1588,7 +1493,6 @@
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 853
     const-string/jumbo v23, "AppName"
 
     const v24, 0x7f070078
@@ -1601,7 +1505,6 @@
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 854
     const-string/jumbo v23, "OK"
 
     const v24, 0x7f070452
@@ -1624,7 +1527,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 861
     const-string/jumbo v23, "Cancel"
 
     const v24, 0x7f0700f0
@@ -1641,7 +1543,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 862
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -1656,7 +1557,6 @@
 
     goto/16 :goto_0
 
-    .line 863
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_15
     move-object/from16 v0, p0
@@ -1675,7 +1575,6 @@
 
     if-ne v0, v1, :cond_17
 
-    .line 864
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v23
@@ -1698,7 +1597,6 @@
 
     move-result-object v21
 
-    .line 865
     .local v21, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v21, :cond_0
 
@@ -1710,7 +1608,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 869
     :try_start_0
     new-instance v23, Ljava/lang/StringBuilder;
 
@@ -1736,7 +1633,6 @@
 
     move-result-object v19
 
-    .line 870
     .local v19, "text":Ljava/lang/String;
     sget v23, Landroid/os/Build$VERSION;->SDK_INT:I
 
@@ -1748,7 +1644,6 @@
 
     if-ge v0, v1, :cond_16
 
-    .line 871
     sget-object v23, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v24, "clipboard"
@@ -1759,13 +1654,11 @@
 
     check-cast v10, Landroid/text/ClipboardManager;
 
-    .line 872
     .local v10, "clipboard":Landroid/text/ClipboardManager;
     move-object/from16 v0, v19
 
     invoke-virtual {v10, v0}, Landroid/text/ClipboardManager;->setText(Ljava/lang/CharSequence;)V
 
-    .line 878
     .end local v10    # "clipboard":Landroid/text/ClipboardManager;
     :goto_b
     move-object/from16 v0, p0
@@ -1810,12 +1703,10 @@
 
     goto/16 :goto_0
 
-    .line 879
     .end local v19    # "text":Ljava/lang/String;
     :catch_0
     move-exception v15
 
-    .line 880
     .local v15, "e":Ljava/lang/Exception;
     const-string/jumbo v23, "tmessages"
 
@@ -1825,7 +1716,6 @@
 
     goto/16 :goto_0
 
-    .line 874
     .end local v15    # "e":Ljava/lang/Exception;
     .restart local v19    # "text":Ljava/lang/String;
     :cond_16
@@ -1840,7 +1730,6 @@
 
     check-cast v10, Landroid/content/ClipboardManager;
 
-    .line 875
     .local v10, "clipboard":Landroid/content/ClipboardManager;
     const-string/jumbo v23, "label"
 
@@ -1852,7 +1741,6 @@
 
     move-result-object v9
 
-    .line 876
     .local v9, "clip":Landroid/content/ClipData;
     invoke-virtual {v10, v9}, Landroid/content/ClipboardManager;->setPrimaryClip(Landroid/content/ClipData;)V
     :try_end_1
@@ -1860,7 +1748,6 @@
 
     goto :goto_b
 
-    .line 903
     .end local v9    # "clip":Landroid/content/ClipData;
     .end local v10    # "clipboard":Landroid/content/ClipboardManager;
     .end local v19    # "text":Ljava/lang/String;
@@ -1882,7 +1769,6 @@
 
     if-ne v0, v1, :cond_18
 
-    .line 904
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v23
@@ -1905,7 +1791,6 @@
 
     move-result-object v21
 
-    .line 905
     .restart local v21    # "user":Lorg/telegram/tgnet/TLRPC$User;
     if-eqz v21, :cond_0
 
@@ -1941,7 +1826,6 @@
 
     if-eqz v23, :cond_0
 
-    .line 909
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -1958,7 +1842,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 910
     .restart local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const/16 v23, 0x2
 
@@ -2008,7 +1891,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 938
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2023,7 +1905,6 @@
 
     goto/16 :goto_0
 
-    .line 939
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v21    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_18
@@ -2059,7 +1940,6 @@
 
     if-ge v0, v1, :cond_1a
 
-    .line 941
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2076,7 +1956,6 @@
 
     if-nez v23, :cond_19
 
-    .line 942
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2153,7 +2032,6 @@
 
     move/from16 v22, v0
 
-    .line 946
     .local v22, "user_id":I
     :goto_c
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -2166,12 +2044,10 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 949
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 950
     .restart local v7    # "args":Landroid/os/Bundle;
     const-string/jumbo v23, "user_id"
 
@@ -2181,7 +2057,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 951
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2198,7 +2073,6 @@
 
     goto/16 :goto_0
 
-    .line 944
     .end local v7    # "args":Landroid/os/Bundle;
     .end local v22    # "user_id":I
     :cond_19
@@ -2253,7 +2127,6 @@
     .restart local v22    # "user_id":I
     goto :goto_c
 
-    .line 952
     .end local v22    # "user_id":I
     :cond_1a
     move-object/from16 v0, p0
@@ -2272,7 +2145,6 @@
 
     if-ne v0, v1, :cond_1b
 
-    .line 953
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2283,7 +2155,6 @@
 
     goto/16 :goto_0
 
-    .line 954
     :cond_1b
     move-object/from16 v0, p0
 
@@ -2301,7 +2172,6 @@
 
     if-ne v0, v1, :cond_1c
 
-    .line 967
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -2318,7 +2188,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 968
     .restart local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const/16 v23, 0x2
 
@@ -2366,7 +2235,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1001
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2381,7 +2249,6 @@
 
     goto/16 :goto_0
 
-    .line 1002
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_1c
     move-object/from16 v0, p0
@@ -2400,7 +2267,6 @@
 
     if-ne v0, v1, :cond_1d
 
-    .line 1003
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2411,7 +2277,6 @@
 
     goto/16 :goto_0
 
-    .line 1004
     :cond_1d
     move-object/from16 v0, p0
 
@@ -2461,13 +2326,11 @@
 
     if-ne v0, v1, :cond_22
 
-    .line 1005
     :cond_1e
     new-instance v7, Landroid/os/Bundle;
 
     invoke-direct {v7}, Landroid/os/Bundle;-><init>()V
 
-    .line 1006
     .restart local v7    # "args":Landroid/os/Bundle;
     const-string/jumbo v23, "chat_id"
 
@@ -2487,7 +2350,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1007
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2504,7 +2366,6 @@
 
     if-ne v0, v1, :cond_20
 
-    .line 1008
     const-string/jumbo v23, "type"
 
     const/16 v24, 0x0
@@ -2515,7 +2376,6 @@
 
     invoke-virtual {v7, v0, v1}, Landroid/os/Bundle;->putInt(Ljava/lang/String;I)V
 
-    .line 1014
     :cond_1f
     :goto_d
     move-object/from16 v0, p0
@@ -2534,7 +2394,6 @@
 
     goto/16 :goto_0
 
-    .line 1009
     :cond_20
     move-object/from16 v0, p0
 
@@ -2552,7 +2411,6 @@
 
     if-ne v0, v1, :cond_21
 
-    .line 1010
     const-string/jumbo v23, "type"
 
     const/16 v24, 0x1
@@ -2565,7 +2423,6 @@
 
     goto :goto_d
 
-    .line 1011
     :cond_21
     move-object/from16 v0, p0
 
@@ -2583,7 +2440,6 @@
 
     if-ne v0, v1, :cond_1f
 
-    .line 1012
     const-string/jumbo v23, "type"
 
     const/16 v24, 0x2
@@ -2596,7 +2452,6 @@
 
     goto :goto_d
 
-    .line 1015
     .end local v7    # "args":Landroid/os/Bundle;
     :cond_22
     move-object/from16 v0, p0
@@ -2615,7 +2470,6 @@
 
     if-ne v0, v1, :cond_23
 
-    .line 1016
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -2632,7 +2486,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1017
     .restart local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const/16 v23, 0x1
 
@@ -2668,7 +2521,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setItems([Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1034
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2683,7 +2535,6 @@
 
     goto/16 :goto_0
 
-    .line 1035
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_23
     move-object/from16 v0, p0
@@ -2702,7 +2553,6 @@
 
     if-eq v0, v1, :cond_0
 
-    .line 1055
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2719,7 +2569,6 @@
 
     if-ne v0, v1, :cond_24
 
-    .line 1056
     new-instance v8, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     move-object/from16 v0, p0
@@ -2736,7 +2585,6 @@
 
     invoke-direct {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 1057
     .restart local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v23, "ConvertGroupAlert"
 
@@ -2750,7 +2598,6 @@
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1058
     const-string/jumbo v23, "ConvertGroupAlertWarning"
 
     const v24, 0x7f07019e
@@ -2763,7 +2610,6 @@
 
     invoke-virtual {v8, v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1059
     const-string/jumbo v23, "OK"
 
     const v24, 0x7f070452
@@ -2786,7 +2632,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1065
     const-string/jumbo v23, "Cancel"
 
     const v24, 0x7f0700f0
@@ -2803,7 +2648,6 @@
 
     invoke-virtual {v8, v0, v1}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 1066
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/ui/ProfileActivity$8;->this$0:Lorg/telegram/ui/ProfileActivity;
@@ -2818,7 +2662,6 @@
 
     goto/16 :goto_0
 
-    .line 1068
     .end local v8    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_24
     move-object/from16 v0, p0
@@ -2835,7 +2678,6 @@
 
     goto/16 :goto_0
 
-    .line 764
     nop
 
     :array_0

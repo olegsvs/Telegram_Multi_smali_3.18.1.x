@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PaymentFormActivity;
 
     .prologue
-    .line 1546
     iput-object p1, p0, Lorg/telegram/ui/PaymentFormActivity$17;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,12 +43,10 @@
     .param p3, "keyEvent"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 1549
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0
 
-    .line 1550
     iget-object v0, p0, Lorg/telegram/ui/PaymentFormActivity$17;->this$0:Lorg/telegram/ui/PaymentFormActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PaymentFormActivity;->access$1900(Lorg/telegram/ui/PaymentFormActivity;)Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
@@ -58,10 +55,8 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->performClick()Z
 
-    .line 1551
     const/4 v0, 0x1
 
-    .line 1553
     :goto_0
     return v0
 

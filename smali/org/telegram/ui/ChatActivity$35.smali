@@ -24,7 +24,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChatActivity;
 
     .prologue
-    .line 2509
     iput-object p1, p0, Lorg/telegram/ui/ChatActivity$35;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-direct {p0}, Lorg/telegram/messenger/support/widget/RecyclerView$ItemDecoration;-><init>()V
@@ -46,19 +45,14 @@
 
     const/4 v1, 0x0
 
-    .line 2512
     iput v1, p1, Landroid/graphics/Rect;->left:I
 
-    .line 2513
     iput v1, p1, Landroid/graphics/Rect;->right:I
 
-    .line 2514
     iput v1, p1, Landroid/graphics/Rect;->top:I
 
-    .line 2515
     iput v1, p1, Landroid/graphics/Rect;->bottom:I
 
-    .line 2516
     invoke-virtual {p3}, Lorg/telegram/messenger/support/widget/RecyclerView;->getLayoutManager()Lorg/telegram/messenger/support/widget/RecyclerView$LayoutManager;
 
     move-result-object v2
@@ -71,12 +65,10 @@
 
     if-ne v2, v3, :cond_0
 
-    .line 2517
     invoke-virtual {p3, p2}, Lorg/telegram/messenger/support/widget/RecyclerView;->getChildAdapterPosition(Landroid/view/View;)I
 
     move-result v0
 
-    .line 2518
     .local v0, "position":I
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$35;->this$0:Lorg/telegram/ui/ChatActivity;
 
@@ -84,27 +76,22 @@
 
     move-result-object v2
 
-    invoke-virtual {v2}, Lorg/telegram/ui/Adapters/MentionsAdapter;->getBotContextSwitch()Lorg/telegram/tgnet/TLRPC$TL_inlineBotSwitchPM;
 
     move-result-object v2
 
     if-eqz v2, :cond_3
 
-    .line 2519
     if-nez v0, :cond_1
 
-    .line 2531
     .end local v0    # "position":I
     :cond_0
     :goto_0
     return-void
 
-    .line 2522
     .restart local v0    # "position":I
     :cond_1
     add-int/lit8 v0, v0, -0x1
 
-    .line 2523
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$35;->this$0:Lorg/telegram/ui/ChatActivity;
 
     invoke-static {v2}, Lorg/telegram/ui/ChatActivity;->access$6400(Lorg/telegram/ui/ChatActivity;)Lorg/telegram/ui/Components/ExtendedGridLayoutManager;
@@ -117,14 +104,12 @@
 
     if-nez v2, :cond_2
 
-    .line 2524
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v2
 
     iput v2, p1, Landroid/graphics/Rect;->top:I
 
-    .line 2529
     :cond_2
     :goto_1
     iget-object v2, p0, Lorg/telegram/ui/ChatActivity$35;->this$0:Lorg/telegram/ui/ChatActivity;
@@ -144,7 +129,6 @@
 
     goto :goto_0
 
-    .line 2527
     :cond_3
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
@@ -154,7 +138,6 @@
 
     goto :goto_1
 
-    .line 2529
     :cond_4
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 

@@ -31,7 +31,6 @@
     .locals 1
 
     .prologue
-    .line 23354
     const v0, -0x17dd9b63
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getGameHighScores;->constructor:I
@@ -43,7 +42,6 @@
     .locals 0
 
     .prologue
-    .line 23353
     invoke-direct {p0}, Lorg/telegram/tgnet/TLObject;-><init>()V
 
     return-void
@@ -58,7 +56,6 @@
     .param p3, "exception"    # Z
 
     .prologue
-    .line 23361
     invoke-static {p1, p2, p3}, Lorg/telegram/tgnet/TLRPC$TL_messages_highScores;->TLdeserialize(Lorg/telegram/tgnet/AbstractSerializedData;IZ)Lorg/telegram/tgnet/TLRPC$TL_messages_highScores;
 
     move-result-object v0
@@ -71,26 +68,21 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 23365
     sget v0, Lorg/telegram/tgnet/TLRPC$TL_messages_getGameHighScores;->constructor:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23366
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getGameHighScores;->peer:Lorg/telegram/tgnet/TLRPC$InputPeer;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputPeer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23367
     iget v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getGameHighScores;->id:I
 
     invoke-virtual {p1, v0}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 23368
     iget-object v0, p0, Lorg/telegram/tgnet/TLRPC$TL_messages_getGameHighScores;->user_id:Lorg/telegram/tgnet/TLRPC$InputUser;
 
     invoke-virtual {v0, p1}, Lorg/telegram/tgnet/TLRPC$InputUser;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 23369
     return-void
 .end method

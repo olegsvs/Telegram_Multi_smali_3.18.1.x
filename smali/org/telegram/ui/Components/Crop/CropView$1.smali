@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropView;
 
     .prologue
-    .line 237
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropView$1;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +40,10 @@
     .locals 1
 
     .prologue
-    .line 240
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropView$1;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/Crop/CropView;->reset()V
 
-    .line 241
     iget-object v0, p0, Lorg/telegram/ui/Components/Crop/CropView$1;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-static {v0}, Lorg/telegram/ui/Components/Crop/CropView;->access$100(Lorg/telegram/ui/Components/Crop/CropView;)Landroid/widget/ImageView;
@@ -59,7 +56,6 @@
 
     invoke-virtual {v0, p0}, Landroid/view/ViewTreeObserver;->removeOnPreDrawListener(Landroid/view/ViewTreeObserver$OnPreDrawListener;)V
 
-    .line 242
     const/4 v0, 0x0
 
     return v0

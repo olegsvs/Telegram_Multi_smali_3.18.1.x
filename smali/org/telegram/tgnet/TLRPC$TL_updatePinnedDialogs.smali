@@ -36,7 +36,6 @@
     .locals 1
 
     .prologue
-    .line 12924
     const v0, -0x27350973
 
     sput v0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->constructor:I
@@ -48,10 +47,8 @@
     .locals 1
 
     .prologue
-    .line 12923
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Update;-><init>()V
 
-    .line 12926
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
@@ -69,35 +66,29 @@
     .param p2, "exception"    # Z
 
     .prologue
-    .line 12929
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
 
     iput v4, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
-    .line 12930
     iget v4, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
     and-int/lit8 v4, v4, 0x1
 
     if-eqz v4, :cond_1
 
-    .line 12931
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v2
 
-    .line 12932
     .local v2, "magic":I
     const v4, 0x1cb5c415
 
     if-eq v2, v4, :cond_0
 
-    .line 12933
     if-eqz p2, :cond_1
 
-    .line 12934
     new-instance v4, Ljava/lang/RuntimeException;
 
     const-string/jumbo v5, "wrong Vector magic, got %x"
@@ -122,13 +113,11 @@
 
     throw v4
 
-    .line 12938
     :cond_0
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v1
 
-    .line 12939
     .local v1, "count":I
     const/4 v0, 0x0
 
@@ -136,7 +125,6 @@
     :goto_0
     if-ge v0, v1, :cond_1
 
-    .line 12940
     invoke-virtual {p1, p2}, Lorg/telegram/tgnet/AbstractSerializedData;->readInt32(Z)I
 
     move-result v4
@@ -145,11 +133,9 @@
 
     move-result-object v3
 
-    .line 12941
     .local v3, "object":Lorg/telegram/tgnet/TLRPC$Peer;
     if-nez v3, :cond_2
 
-    .line 12947
     .end local v0    # "a":I
     .end local v1    # "count":I
     .end local v2    # "magic":I
@@ -157,7 +143,6 @@
     :cond_1
     return-void
 
-    .line 12944
     .restart local v0    # "a":I
     .restart local v1    # "count":I
     .restart local v2    # "magic":I
@@ -167,7 +152,6 @@
 
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 12939
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
@@ -178,47 +162,39 @@
     .param p1, "stream"    # Lorg/telegram/tgnet/AbstractSerializedData;
 
     .prologue
-    .line 12950
     sget v2, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->constructor:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12951
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12952
     iget v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->flags:I
 
     and-int/lit8 v2, v2, 0x1
 
     if-eqz v2, :cond_0
 
-    .line 12953
     const v2, 0x1cb5c415
 
     invoke-virtual {p1, v2}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12954
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
 
     move-result v1
 
-    .line 12955
     .local v1, "count":I
     invoke-virtual {p1, v1}, Lorg/telegram/tgnet/AbstractSerializedData;->writeInt32(I)V
 
-    .line 12956
     const/4 v0, 0x0
 
     .local v0, "a":I
     :goto_0
     if-ge v0, v1, :cond_0
 
-    .line 12957
     iget-object v2, p0, Lorg/telegram/tgnet/TLRPC$TL_updatePinnedDialogs;->order:Ljava/util/ArrayList;
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -229,12 +205,10 @@
 
     invoke-virtual {v2, p1}, Lorg/telegram/tgnet/TLRPC$Peer;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
 
-    .line 12956
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 12960
     .end local v0    # "a":I
     .end local v1    # "count":I
     :cond_0

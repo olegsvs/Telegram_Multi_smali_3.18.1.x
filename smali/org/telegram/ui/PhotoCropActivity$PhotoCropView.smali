@@ -66,46 +66,34 @@
 
     const/4 v0, 0x0
 
-    .line 56
     iput-object p1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
-    .line 57
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 44
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectPaint:Landroid/graphics/Paint;
 
-    .line 45
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->circlePaint:Landroid/graphics/Paint;
 
-    .line 46
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->halfPaint:Landroid/graphics/Paint;
 
-    .line 47
     iput v3, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
-    .line 48
     iput v3, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeY:F
 
-    .line 49
     iput v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iput v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
-    .line 50
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->draggingState:I
 
-    .line 51
     iput v2, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->oldX:F
 
     iput v2, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->oldY:F
 
-    .line 58
     invoke-direct {p0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->init()V
 
-    .line 59
     return-void
 .end method
 
@@ -113,21 +101,18 @@
     .locals 2
 
     .prologue
-    .line 62
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectPaint:Landroid/graphics/Paint;
 
-    .line 63
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectPaint:Landroid/graphics/Paint;
 
     const v1, 0x3ffafafa
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 64
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectPaint:Landroid/graphics/Paint;
 
     const/high16 v1, 0x40000000    # 2.0f
@@ -140,54 +125,46 @@
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStrokeWidth(F)V
 
-    .line 65
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectPaint:Landroid/graphics/Paint;
 
     sget-object v1, Landroid/graphics/Paint$Style;->STROKE:Landroid/graphics/Paint$Style;
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setStyle(Landroid/graphics/Paint$Style;)V
 
-    .line 66
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->circlePaint:Landroid/graphics/Paint;
 
-    .line 67
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->circlePaint:Landroid/graphics/Paint;
 
     const/4 v1, -0x1
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 68
     new-instance v0, Landroid/graphics/Paint;
 
     invoke-direct {v0}, Landroid/graphics/Paint;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->halfPaint:Landroid/graphics/Paint;
 
-    .line 69
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->halfPaint:Landroid/graphics/Paint;
 
     const/high16 v1, -0x38000000    # -131072.0f
 
     invoke-virtual {v0, v1}, Landroid/graphics/Paint;->setColor(I)V
 
-    .line 70
     const v0, -0xcccccd
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->setBackgroundColor(I)V
 
-    .line 72
     new-instance v0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView$1;-><init>(Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;)V
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->setOnTouchListener(Landroid/view/View$OnTouchListener;)V
 
-    .line 227
     return-void
 .end method
 
@@ -199,7 +176,6 @@
 
     const/high16 v10, 0x41600000    # 14.0f
 
-    .line 230
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
     if-eqz v8, :cond_0
@@ -216,12 +192,10 @@
 
     if-nez v8, :cond_1
 
-    .line 277
     :cond_0
     :goto_0
     return-void
 
-    .line 233
     :cond_1
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
@@ -237,7 +211,6 @@
 
     div-float v3, v8, v9
 
-    .line 234
     .local v3, "percX":F
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
@@ -253,7 +226,6 @@
 
     div-float v4, v8, v9
 
-    .line 235
     .local v4, "percY":F
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
@@ -263,7 +235,6 @@
 
     div-float v1, v8, v9
 
-    .line 236
     .local v1, "percSizeX":F
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeY:F
 
@@ -273,7 +244,6 @@
 
     div-float v2, v8, v9
 
-    .line 237
     .local v2, "percSizeY":F
     iget-object v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -287,7 +257,6 @@
 
     int-to-float v7, v8
 
-    .line 238
     .local v7, "w":F
     iget-object v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -301,7 +270,6 @@
 
     int-to-float v0, v8
 
-    .line 239
     .local v0, "h":F
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
@@ -309,7 +277,6 @@
 
     div-float v5, v8, v7
 
-    .line 240
     .local v5, "scaleX":F
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewHeight:I
 
@@ -317,18 +284,15 @@
 
     div-float v6, v8, v0
 
-    .line 241
     .local v6, "scaleY":F
     cmpl-float v8, v5, v6
 
     if-lez v8, :cond_2
 
-    .line 242
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewHeight:I
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
-    .line 243
     mul-float v8, v7, v6
 
     float-to-double v8, v8
@@ -341,7 +305,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
-    .line 248
     :goto_1
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
@@ -359,7 +322,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
 
-    .line 249
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewHeight:I
 
     iget v9, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
@@ -376,7 +338,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapY:I
 
-    .line 251
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     cmpl-float v8, v8, v11
@@ -389,52 +350,44 @@
 
     if-nez v8, :cond_5
 
-    .line 252
     iget-boolean v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->freeform:Z
 
     if-eqz v8, :cond_3
 
-    .line 253
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapY:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
-    .line 254
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
-    .line 255
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
-    .line 256
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeY:F
 
-    .line 276
     :goto_2
     invoke-virtual {p0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->invalidate()V
 
     goto/16 :goto_0
 
-    .line 245
     :cond_2
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
-    .line 246
     mul-float v8, v0, v5
 
     float-to-double v8, v8
@@ -449,7 +402,6 @@
 
     goto :goto_1
 
-    .line 258
     :cond_3
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
@@ -457,14 +409,12 @@
 
     if-le v8, v9, :cond_4
 
-    .line 259
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapY:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
-    .line 260
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
     iget v9, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
@@ -483,14 +433,12 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
-    .line 261
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
-    .line 262
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
     int-to-float v8, v8
@@ -499,7 +447,6 @@
 
     goto :goto_2
 
-    .line 264
     :cond_4
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
 
@@ -507,7 +454,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
-    .line 265
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewHeight:I
 
     iget v9, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
@@ -526,14 +472,12 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
-    .line 266
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
     int-to-float v8, v8
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
-    .line 267
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
     int-to-float v8, v8
@@ -542,7 +486,6 @@
 
     goto :goto_2
 
-    .line 271
     :cond_5
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
@@ -558,7 +501,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
-    .line 272
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
     int-to-float v8, v8
@@ -573,7 +515,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
-    .line 273
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapWidth:I
 
     int-to-float v8, v8
@@ -582,7 +523,6 @@
 
     iput v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
-    .line 274
     iget v8, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapHeight:I
 
     int-to-float v8, v8
@@ -600,7 +540,6 @@
     .locals 12
 
     .prologue
-    .line 288
     iget v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v11, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
@@ -615,7 +554,6 @@
 
     div-float v4, v10, v11
 
-    .line 289
     .local v4, "percX":F
     iget v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
 
@@ -631,7 +569,6 @@
 
     div-float v5, v10, v11
 
-    .line 290
     .local v5, "percY":F
     iget v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
 
@@ -641,7 +578,6 @@
 
     div-float v2, v10, v11
 
-    .line 291
     .local v2, "percSizeX":F
     iget v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeY:F
 
@@ -651,7 +587,6 @@
 
     div-float v3, v10, v11
 
-    .line 292
     .local v3, "percSizeY":F
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -669,7 +604,6 @@
 
     float-to-int v8, v10
 
-    .line 293
     .local v8, "x":I
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -687,7 +621,6 @@
 
     float-to-int v9, v10
 
-    .line 294
     .local v9, "y":I
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -705,7 +638,6 @@
 
     float-to-int v6, v10
 
-    .line 295
     .local v6, "sizeX":I
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -723,21 +655,16 @@
 
     float-to-int v7, v10
 
-    .line 296
     .local v7, "sizeY":I
     if-gez v8, :cond_0
 
-    .line 297
     const/4 v8, 0x0
 
-    .line 299
     :cond_0
     if-gez v9, :cond_1
 
-    .line 300
     const/4 v9, 0x0
 
-    .line 302
     :cond_1
     add-int v10, v8, v6
 
@@ -753,7 +680,6 @@
 
     if-le v10, v11, :cond_2
 
-    .line 303
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
     invoke-static {v10}, Lorg/telegram/ui/PhotoCropActivity;->access$000(Lorg/telegram/ui/PhotoCropActivity;)Landroid/graphics/Bitmap;
@@ -766,7 +692,6 @@
 
     sub-int v6, v10, v8
 
-    .line 305
     :cond_2
     add-int v10, v9, v7
 
@@ -782,7 +707,6 @@
 
     if-le v10, v11, :cond_3
 
-    .line 306
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
     invoke-static {v10}, Lorg/telegram/ui/PhotoCropActivity;->access$000(Lorg/telegram/ui/PhotoCropActivity;)Landroid/graphics/Bitmap;
@@ -795,7 +719,6 @@
 
     sub-int v7, v10, v9
 
-    .line 309
     :cond_3
     :try_start_0
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
@@ -810,24 +733,19 @@
 
     move-result-object v10
 
-    .line 319
     :goto_0
     return-object v10
 
-    .line 310
     :catch_0
     move-exception v0
 
-    .line 311
     .local v0, "e":Ljava/lang/Throwable;
     const-string/jumbo v10, "tmessags"
 
     invoke-static {v10, v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
-    .line 312
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 314
     :try_start_1
     iget-object v10, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -843,15 +761,12 @@
 
     goto :goto_0
 
-    .line 315
     :catch_1
     move-exception v1
 
-    .line 316
     .local v1, "e2":Ljava/lang/Throwable;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 319
     const/4 v10, 0x0
 
     goto :goto_0
@@ -866,7 +781,6 @@
 
     const/high16 v9, 0x41a00000    # 20.0f
 
-    .line 324
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoCropActivity;->access$100(Lorg/telegram/ui/PhotoCropActivity;)Landroid/graphics/drawable/BitmapDrawable;
@@ -875,7 +789,6 @@
 
     if-eqz v0, :cond_0
 
-    .line 326
     :try_start_0
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
@@ -901,7 +814,6 @@
 
     invoke-virtual {v0, v1, v2, v3, v4}, Landroid/graphics/drawable/BitmapDrawable;->setBounds(IIII)V
 
-    .line 327
     iget-object v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->this$0:Lorg/telegram/ui/PhotoCropActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/PhotoCropActivity;->access$100(Lorg/telegram/ui/PhotoCropActivity;)Landroid/graphics/drawable/BitmapDrawable;
@@ -912,7 +824,6 @@
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 332
     :cond_0
     :goto_0
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
@@ -939,7 +850,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 333
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
 
     int-to-float v1, v0
@@ -960,7 +870,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 334
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -989,7 +898,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 335
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->bitmapX:I
 
     int-to-float v1, v0
@@ -1022,7 +930,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 337
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v2, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectY:F
@@ -1045,14 +952,12 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 339
     const/high16 v0, 0x3f800000    # 1.0f
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v8
 
-    .line 340
     .local v8, "side":I
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
@@ -1094,7 +999,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 341
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     int-to-float v1, v8
@@ -1135,7 +1039,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 343
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -1184,7 +1087,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 344
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -1233,7 +1135,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 346
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     int-to-float v1, v8
@@ -1282,7 +1183,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 347
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     int-to-float v1, v8
@@ -1331,7 +1231,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 349
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -1388,7 +1287,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 350
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -1445,7 +1343,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 352
     const/4 v6, 0x1
 
     .local v6, "a":I
@@ -1454,7 +1351,6 @@
 
     if-ge v6, v0, :cond_1
 
-    .line 353
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     iget v1, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectSizeX:F
@@ -1505,7 +1401,6 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 354
     iget v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->rectX:F
 
     int-to-float v1, v8
@@ -1556,24 +1451,20 @@
 
     invoke-virtual/range {v0 .. v5}, Landroid/graphics/Canvas;->drawRect(FFFFLandroid/graphics/Paint;)V
 
-    .line 352
     add-int/lit8 v6, v6, 0x1
 
     goto :goto_1
 
-    .line 328
     .end local v6    # "a":I
     .end local v8    # "side":I
     :catch_0
     move-exception v7
 
-    .line 329
     .local v7, "e":Ljava/lang/Throwable;
     invoke-static {v7}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto/16 :goto_0
 
-    .line 356
     .end local v7    # "e":Ljava/lang/Throwable;
     .restart local v6    # "a":I
     .restart local v8    # "side":I
@@ -1592,10 +1483,8 @@
     .prologue
     const/high16 v2, 0x41e00000    # 28.0f
 
-    .line 281
     invoke-super/range {p0 .. p5}, Landroid/widget/FrameLayout;->onLayout(ZIIII)V
 
-    .line 282
     sub-int v0, p4, p2
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1606,7 +1495,6 @@
 
     iput v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewWidth:I
 
-    .line 283
     sub-int v0, p5, p3
 
     invoke-static {v2}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
@@ -1617,9 +1505,7 @@
 
     iput v0, p0, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->viewHeight:I
 
-    .line 284
     invoke-direct {p0}, Lorg/telegram/ui/PhotoCropActivity$PhotoCropView;->updateBitmapSize()V
 
-    .line 285
     return-void
 .end method

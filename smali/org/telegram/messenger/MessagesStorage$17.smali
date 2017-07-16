@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesStorage;
 
     .prologue
-    .line 1222
     iput-object p1, p0, Lorg/telegram/messenger/MessagesStorage$17;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 8
 
     .prologue
-    .line 1226
     :try_start_0
     iget-object v5, p0, Lorg/telegram/messenger/MessagesStorage$17;->this$0:Lorg/telegram/messenger/MessagesStorage;
 
@@ -59,13 +57,11 @@
 
     move-result-object v0
 
-    .line 1227
     .local v0, "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     new-instance v4, Ljava/util/ArrayList;
 
     invoke-direct {v4}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1228
     .local v4, "wallPapers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$WallPaper;>;"
     :cond_0
     :goto_0
@@ -75,18 +71,15 @@
 
     if-eqz v5, :cond_1
 
-    .line 1229
     const/4 v5, 0x0
 
     invoke-virtual {v0, v5}, Lorg/telegram/SQLite/SQLiteCursor;->byteBufferValue(I)Lorg/telegram/tgnet/NativeByteBuffer;
 
     move-result-object v1
 
-    .line 1230
     .local v1, "data":Lorg/telegram/tgnet/NativeByteBuffer;
     if-eqz v1, :cond_0
 
-    .line 1231
     const/4 v5, 0x0
 
     invoke-virtual {v1, v5}, Lorg/telegram/tgnet/NativeByteBuffer;->readInt32(Z)I
@@ -99,18 +92,15 @@
 
     move-result-object v3
 
-    .line 1232
     .local v3, "wallPaper":Lorg/telegram/tgnet/TLRPC$WallPaper;
     invoke-virtual {v1}, Lorg/telegram/tgnet/NativeByteBuffer;->reuse()V
 
-    .line 1233
     invoke-virtual {v4, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_0
 
-    .line 1243
     .end local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .end local v1    # "data":Lorg/telegram/tgnet/NativeByteBuffer;
     .end local v3    # "wallPaper":Lorg/telegram/tgnet/TLRPC$WallPaper;
@@ -118,23 +108,19 @@
     :catch_0
     move-exception v2
 
-    .line 1244
     .local v2, "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 1246
     .end local v2    # "e":Ljava/lang/Exception;
     :goto_1
     return-void
 
-    .line 1236
     .restart local v0    # "cursor":Lorg/telegram/SQLite/SQLiteCursor;
     .restart local v4    # "wallPapers":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$WallPaper;>;"
     :cond_1
     :try_start_1
     invoke-virtual {v0}, Lorg/telegram/SQLite/SQLiteCursor;->dispose()V
 
-    .line 1237
     new-instance v5, Lorg/telegram/messenger/MessagesStorage$17$1;
 
     invoke-direct {v5, p0, v4}, Lorg/telegram/messenger/MessagesStorage$17$1;-><init>(Lorg/telegram/messenger/MessagesStorage$17;Ljava/util/ArrayList;)V

@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateActivity;
 
     .prologue
-    .line 512
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateActivity$6;->this$0:Lorg/telegram/ui/GroupCreateActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .param p3, "event"    # Landroid/view/KeyEvent;
 
     .prologue
-    .line 515
     const/4 v0, 0x6
 
     if-ne p2, v0, :cond_0

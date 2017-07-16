@@ -27,7 +27,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/GroupCreateFinalActivity;
 
     .prologue
-    .line 283
     iput-object p1, p0, Lorg/telegram/ui/GroupCreateFinalActivity$5;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -44,7 +43,6 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 296
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$5;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1300(Lorg/telegram/ui/GroupCreateFinalActivity;)Lorg/telegram/ui/Components/AvatarDrawable;
@@ -84,7 +82,6 @@
 
     invoke-virtual {v2, v3, v0, v1, v4}, Lorg/telegram/ui/Components/AvatarDrawable;->setInfo(ILjava/lang/String;Ljava/lang/String;Z)V
 
-    .line 297
     iget-object v0, p0, Lorg/telegram/ui/GroupCreateFinalActivity$5;->this$0:Lorg/telegram/ui/GroupCreateFinalActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/GroupCreateFinalActivity;->access$1400(Lorg/telegram/ui/GroupCreateFinalActivity;)Lorg/telegram/ui/Components/BackupImageView;
@@ -93,13 +90,11 @@
 
     invoke-virtual {v0}, Lorg/telegram/ui/Components/BackupImageView;->invalidate()V
 
-    .line 298
     return-void
 
     :cond_0
     move-object v0, v1
 
-    .line 296
     goto :goto_0
 .end method
 
@@ -111,7 +106,6 @@
     .param p4, "after"    # I
 
     .prologue
-    .line 287
     return-void
 .end method
 
@@ -123,6 +117,5 @@
     .param p4, "count"    # I
 
     .prologue
-    .line 292
     return-void
 .end method

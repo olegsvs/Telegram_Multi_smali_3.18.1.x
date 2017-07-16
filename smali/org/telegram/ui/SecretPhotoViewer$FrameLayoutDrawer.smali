@@ -24,18 +24,14 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 52
     iput-object p1, p0, Lorg/telegram/ui/SecretPhotoViewer$FrameLayoutDrawer;->this$0:Lorg/telegram/ui/SecretPhotoViewer;
 
-    .line 53
     invoke-direct {p0, p2}, Landroid/widget/FrameLayout;-><init>(Landroid/content/Context;)V
 
-    .line 54
     const/4 v0, 0x0
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/SecretPhotoViewer$FrameLayoutDrawer;->setWillNotDraw(Z)V
 
-    .line 55
     return-void
 .end method
 
@@ -46,13 +42,11 @@
     .param p1, "canvas"    # Landroid/graphics/Canvas;
 
     .prologue
-    .line 59
     invoke-static {}, Lorg/telegram/ui/SecretPhotoViewer;->getInstance()Lorg/telegram/ui/SecretPhotoViewer;
 
     move-result-object v0
 
     invoke-static {v0, p1}, Lorg/telegram/ui/SecretPhotoViewer;->access$000(Lorg/telegram/ui/SecretPhotoViewer;Landroid/graphics/Canvas;)V
 
-    .line 60
     return-void
 .end method

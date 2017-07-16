@@ -27,7 +27,6 @@
     .param p1, "this$1"    # Lorg/telegram/ui/PhotoViewer$2;
 
     .prologue
-    .line 1219
     iput-object p1, p0, Lorg/telegram/ui/PhotoViewer$2$1;->this$1:Lorg/telegram/ui/PhotoViewer$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +40,6 @@
     .locals 6
 
     .prologue
-    .line 1222
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$2$1;->this$1:Lorg/telegram/ui/PhotoViewer$2;
 
     iget-object v3, v3, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -56,7 +54,6 @@
 
     check-cast v0, Landroid/widget/FrameLayout$LayoutParams;
 
-    .line 1223
     .local v0, "layoutParams":Landroid/widget/FrameLayout$LayoutParams;
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
@@ -68,7 +65,6 @@
 
     check-cast v1, Landroid/view/WindowManager;
 
-    .line 1224
     .local v1, "manager":Landroid/view/WindowManager;
     invoke-interface {v1}, Landroid/view/WindowManager;->getDefaultDisplay()Landroid/view/Display;
 
@@ -78,7 +74,6 @@
 
     move-result v2
 
-    .line 1225
     .local v2, "rotation":I
     const/4 v3, 0x3
 
@@ -109,7 +104,6 @@
 
     iput v3, v0, Landroid/widget/FrameLayout$LayoutParams;->topMargin:I
 
-    .line 1226
     iget-object v3, p0, Lorg/telegram/ui/PhotoViewer$2$1;->this$1:Lorg/telegram/ui/PhotoViewer$2;
 
     iget-object v3, v3, Lorg/telegram/ui/PhotoViewer$2;->this$0:Lorg/telegram/ui/PhotoViewer;
@@ -120,10 +114,8 @@
 
     invoke-virtual {v3, v0}, Lorg/telegram/ui/Components/CheckBox;->setLayoutParams(Landroid/view/ViewGroup$LayoutParams;)V
 
-    .line 1227
     return-void
 
-    .line 1225
     :cond_1
     const/high16 v3, 0x42880000    # 68.0f
 

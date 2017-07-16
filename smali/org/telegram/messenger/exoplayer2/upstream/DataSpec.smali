@@ -37,12 +37,10 @@
     .param p1, "uri"    # Landroid/net/Uri;
 
     .prologue
-    .line 90
     const/4 v0, 0x0
 
     invoke-direct {p0, p1, v0}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;I)V
 
-    .line 91
     return-void
 .end method
 
@@ -52,7 +50,6 @@
     .param p2, "flags"    # I
 
     .prologue
-    .line 100
     const-wide/16 v2, 0x0
 
     const-wide/16 v4, -0x1
@@ -67,7 +64,6 @@
 
     invoke-direct/range {v0 .. v7}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJLjava/lang/String;I)V
 
-    .line 101
     return-void
 .end method
 
@@ -81,7 +77,6 @@
     .param p9, "flags"    # I
 
     .prologue
-    .line 141
     const/4 v3, 0x0
 
     move-object v1, p0
@@ -100,7 +95,6 @@
 
     invoke-direct/range {v1 .. v11}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;[BJJJLjava/lang/String;I)V
 
-    .line 142
     return-void
 .end method
 
@@ -112,7 +106,6 @@
     .param p6, "key"    # Ljava/lang/String;
 
     .prologue
-    .line 112
     const/4 v9, 0x0
 
     move-object v0, p0
@@ -129,7 +122,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJJLjava/lang/String;I)V
 
-    .line 113
     return-void
 .end method
 
@@ -142,7 +134,6 @@
     .param p7, "flags"    # I
 
     .prologue
-    .line 125
     move-object v0, p0
 
     move-object v1, p1
@@ -159,7 +150,6 @@
 
     invoke-direct/range {v0 .. v9}, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;-><init>(Landroid/net/Uri;JJJLjava/lang/String;I)V
 
-    .line 126
     return-void
 .end method
 
@@ -174,10 +164,8 @@
     .param p10, "flags"    # I
 
     .prologue
-    .line 157
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
-    .line 158
     const-wide/16 v0, 0x0
 
     cmp-long v0, p3, v0
@@ -189,7 +177,6 @@
     :goto_0
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 159
     const-wide/16 v0, 0x0
 
     cmp-long v0, p5, v0
@@ -201,7 +188,6 @@
     :goto_1
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 160
     const-wide/16 v0, 0x0
 
     cmp-long v0, p7, v0
@@ -220,43 +206,32 @@
     :goto_2
     invoke-static {v0}, Lorg/telegram/messenger/exoplayer2/util/Assertions;->checkArgument(Z)V
 
-    .line 161
     iput-object p1, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->uri:Landroid/net/Uri;
 
-    .line 162
     iput-object p2, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->postBody:[B
 
-    .line 163
     iput-wide p3, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->absoluteStreamPosition:J
 
-    .line 164
     iput-wide p5, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->position:J
 
-    .line 165
     iput-wide p7, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->length:J
 
-    .line 166
     iput-object p9, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->key:Ljava/lang/String;
 
-    .line 167
     iput p10, p0, Lorg/telegram/messenger/exoplayer2/upstream/DataSpec;->flags:I
 
-    .line 168
     return-void
 
-    .line 158
     :cond_1
     const/4 v0, 0x0
 
     goto :goto_0
 
-    .line 159
     :cond_2
     const/4 v0, 0x0
 
     goto :goto_1
 
-    .line 160
     :cond_3
     const/4 v0, 0x0
 
@@ -269,7 +244,6 @@
     .locals 4
 
     .prologue
-    .line 172
     new-instance v0, Ljava/lang/StringBuilder;
 
     invoke-direct {v0}, Ljava/lang/StringBuilder;-><init>()V

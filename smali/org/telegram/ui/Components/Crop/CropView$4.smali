@@ -35,7 +35,6 @@
     .param p1, "this$0"    # Lorg/telegram/ui/Components/Crop/CropView;
 
     .prologue
-    .line 501
     iput-object p1, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     iput p2, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$animDX:F
@@ -68,7 +67,6 @@
 
     const/4 v7, 0x0
 
-    .line 504
     invoke-virtual {p1}, Landroid/animation/ValueAnimator;->getAnimatedValue()Ljava/lang/Object;
 
     move-result-object v4
@@ -79,7 +77,6 @@
 
     move-result v3
 
-    .line 506
     .local v3, "value":F
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$animDX:F
 
@@ -91,7 +88,6 @@
 
     sub-float v1, v4, v5
 
-    .line 507
     .local v1, "deltaX":F
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$currentValues:[F
 
@@ -101,7 +97,6 @@
 
     aput v5, v4, v6
 
-    .line 508
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$animDY:F
 
     mul-float/2addr v4, v3
@@ -112,7 +107,6 @@
 
     sub-float v2, v4, v5
 
-    .line 509
     .local v2, "deltaY":F
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$currentValues:[F
 
@@ -122,7 +116,6 @@
 
     aput v5, v4, v10
 
-    .line 510
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/Crop/CropView;->access$1100(Lorg/telegram/ui/Components/Crop/CropView;)Lorg/telegram/ui/Components/Crop/CropView$CropState;
@@ -143,7 +136,6 @@
 
     invoke-static {v4, v5, v6}, Lorg/telegram/ui/Components/Crop/CropView$CropState;->access$1800(Lorg/telegram/ui/Components/Crop/CropView$CropState;FF)V
 
-    .line 512
     iget v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$animScale:F
 
     sub-float/2addr v4, v9
@@ -158,7 +150,6 @@
 
     div-float v0, v4, v5
 
-    .line 513
     .local v0, "deltaScale":F
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->val$currentValues:[F
 
@@ -168,7 +159,6 @@
 
     aput v5, v4, v7
 
-    .line 514
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-static {v4}, Lorg/telegram/ui/Components/Crop/CropView;->access$1100(Lorg/telegram/ui/Components/Crop/CropView;)Lorg/telegram/ui/Components/Crop/CropView$CropState;
@@ -177,11 +167,9 @@
 
     invoke-static {v4, v0, v8, v8}, Lorg/telegram/ui/Components/Crop/CropView$CropState;->access$1200(Lorg/telegram/ui/Components/Crop/CropView$CropState;FFF)V
 
-    .line 516
     iget-object v4, p0, Lorg/telegram/ui/Components/Crop/CropView$4;->this$0:Lorg/telegram/ui/Components/Crop/CropView;
 
     invoke-virtual {v4}, Lorg/telegram/ui/Components/Crop/CropView;->updateMatrix()V
 
-    .line 517
     return-void
 .end method

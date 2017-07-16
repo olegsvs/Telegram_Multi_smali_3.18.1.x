@@ -197,7 +197,7 @@
 
 # virtual methods
 .method public onGetChooserTargets(Landroid/content/ComponentName;Landroid/content/IntentFilter;)Ljava/util/List;
-    .locals 9
+    .locals 10
     .param p1, "targetActivityName"    # Landroid/content/ComponentName;
     .param p2, "matchedFilter"    # Landroid/content/IntentFilter;
     .annotation system Ldalvik/annotation/Signature;
@@ -214,7 +214,7 @@
     .end annotation
 
     .prologue
-    const/4 v8, 0x0
+    const/4 v9, 0x0
 
     .line 49
     new-instance v5, Ljava/util/ArrayList;
@@ -238,9 +238,29 @@
     :cond_1
     sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v7, "mainconfig"
+    new-instance v7, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v6, v7, v8}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v7}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v8, "mainconfig"
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v7
+
+    invoke-virtual {v7}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3
 
@@ -265,9 +285,9 @@
     .local v2, "imageLoader":Lorg/telegram/messenger/ImageLoader;
     new-instance v4, Ljava/util/concurrent/Semaphore;
 
-    invoke-direct {v4, v8}, Ljava/util/concurrent/Semaphore;-><init>(I)V
-
-    .line 60
+    invoke-direct {v4, v9}, Ljava/util/concurrent/Semaphore;-><init>(I)V
+    
+	.line 60
     .local v4, "semaphore":Ljava/util/concurrent/Semaphore;
     new-instance v0, Landroid/content/ComponentName;
 

@@ -755,60 +755,80 @@
 .end method
 
 .method public static getPipRect(F)Lorg/telegram/ui/Components/Rect;
-    .locals 13
+    .locals 14
     .param p0, "aspectRatio"    # F
 
     .prologue
-    const/4 v12, 0x1
+    const/4 v13, 0x1
 
-    const/high16 v11, 0x43400000    # 192.0f
+    const/high16 v12, 0x43400000    # 192.0f
+
+    const/4 v11, 0x0
 
     const/4 v10, 0x0
 
-    const/4 v9, 0x0
-
-    .line 296
+    .line 297
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v8, "pipconfig"
+    new-instance v8, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v7, v8, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v9, "pipconfig"
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v9
+
+    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v8
+
+    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v8
+
+    invoke-virtual {v7, v8, v10}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 297
+    .line 298
     .local v0, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v7, "sidex"
 
-    invoke-interface {v0, v7, v12}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v0, v7, v13}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v3
 
-    .line 298
+    .line 299
     .local v3, "sidex":I
     const-string/jumbo v7, "sidey"
 
-    invoke-interface {v0, v7, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v0, v7, v10}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v4
 
-    .line 299
+    .line 300
     .local v4, "sidey":I
     const-string/jumbo v7, "px"
 
-    invoke-interface {v0, v7, v10}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+    invoke-interface {v0, v7, v11}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v1
 
-    .line 300
+    .line 301
     .local v1, "px":F
     const-string/jumbo v7, "py"
 
-    invoke-interface {v0, v7, v10}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
+    invoke-interface {v0, v7, v11}, Landroid/content/SharedPreferences;->getFloat(Ljava/lang/String;F)F
 
     move-result v2
 
-    .line 304
+    .line 305
     .local v2, "py":F
     const/high16 v7, 0x3f800000    # 1.0f
 
@@ -816,12 +836,12 @@
 
     if-lez v7, :cond_0
 
-    .line 305
-    invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    .line 306
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v6
 
-    .line 306
+    .line 307
     .local v6, "videoWidth":I
     int-to-float v7, v6
 
@@ -829,18 +849,18 @@
 
     float-to-int v5, v7
 
-    .line 312
+    .line 313
     .local v5, "videoHeight":I
     :goto_0
     new-instance v7, Lorg/telegram/ui/Components/Rect;
 
-    invoke-static {v12, v3, v1, v6}, Lorg/telegram/ui/Components/PipVideoView;->getSideCoord(ZIFI)I
+    invoke-static {v13, v3, v1, v6}, Lorg/telegram/ui/Components/PipVideoView;->getSideCoord(ZIFI)I
 
     move-result v8
 
     int-to-float v8, v8
 
-    invoke-static {v9, v4, v2, v5}, Lorg/telegram/ui/Components/PipVideoView;->getSideCoord(ZIFI)I
+    invoke-static {v10, v4, v2, v5}, Lorg/telegram/ui/Components/PipVideoView;->getSideCoord(ZIFI)I
 
     move-result v9
 
@@ -854,15 +874,15 @@
 
     return-object v7
 
-    .line 308
+    .line 309
     .end local v5    # "videoHeight":I
     .end local v6    # "videoWidth":I
     :cond_0
-    invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
 
     move-result v5
 
-    .line 309
+    .line 310
     .restart local v5    # "videoHeight":I
     int-to-float v7, v5
 

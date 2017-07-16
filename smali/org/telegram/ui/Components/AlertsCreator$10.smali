@@ -49,13 +49,13 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 5
+    .locals 6
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
-    .line 741
+    .line 742
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$selected:[I
 
     invoke-virtual {p1}, Landroid/view/View;->getTag()Ljava/lang/Object;
@@ -68,24 +68,44 @@
 
     move-result v2
 
-    aput v2, v3, v4
+    aput v2, v3, v5
 
-    .line 743
+    .line 744
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "Notifications"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "Notifications"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 744
+    .line 745
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 745
+    .line 746
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$globalGroup:Z
 
@@ -96,39 +116,39 @@
     :goto_0
     iget-object v3, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$selected:[I
 
-    aget v3, v3, v4
+    aget v3, v3, v5
 
     invoke-interface {v0, v2, v3}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 746
-    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
     .line 747
-    iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
-
-    if-eqz v2, :cond_0
+    invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
     .line 748
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
+    if-eqz v2, :cond_0
+
+    .line 749
+    iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$parentFragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
     invoke-virtual {v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->dismissCurrentDialig()V
 
-    .line 750
+    .line 751
     :cond_0
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$onSelect:Ljava/lang/Runnable;
 
     if-eqz v2, :cond_1
 
-    .line 751
+    .line 752
     iget-object v2, p0, Lorg/telegram/ui/Components/AlertsCreator$10;->val$onSelect:Ljava/lang/Runnable;
 
     invoke-interface {v2}, Ljava/lang/Runnable;->run()V
 
-    .line 753
+    .line 754
     :cond_1
     return-void
 
-    .line 745
+    .line 746
     :cond_2
     const-string/jumbo v2, "popupAll"
 

@@ -786,65 +786,40 @@
 
     .line 463
     :try_start_3
-    const-string/jumbo v7, "https://plus.google.com/u/0/communities/106927015963860485525"
+    new-instance v1, Landroid/content/Intent;
 
-    .line 464
-    .restart local v7    # "link":Ljava/lang/String;
-    invoke-static {}, Ljava/util/Locale;->getDefault()Ljava/util/Locale;
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    move-result-object v11
-
-    invoke-virtual {v11}, Ljava/util/Locale;->getLanguage()Ljava/lang/String;
+    invoke-virtual {v6}, Lorg/telegram/ui/LaunchActivity;->getApplicationContext()Landroid/content/Context;
 
     move-result-object v6
 
-    .line 465
-    .local v6, "lg":Ljava/lang/String;
-    const-string/jumbo v11, "es"
+    const-class v7, Lorg/telegram/ui/ChangeUserActivity;
 
-    invoke-virtual {v6, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-direct {v1, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
 
-    move-result v11
+    .line 395
+    .local v1, "changeUser":Landroid/content/Intent;
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    if-nez v11, :cond_10
+    iget-object v7, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    const-string/jumbo v11, "gl"
+    const v8, 0x7f07063d
 
-    invoke-virtual {v6, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-virtual {v7, v8}, Lorg/telegram/ui/LaunchActivity;->getText(I)Ljava/lang/CharSequence;
 
-    move-result v11
+    move-result-object v7
 
-    if-nez v11, :cond_10
+    invoke-interface {v7}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    const-string/jumbo v11, "ca"
+    move-result-object v7
 
-    invoke-virtual {v6, v11}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
+    invoke-static {v6, v7}, Lorg/telegram/ui/ChangeUserActivity;->showPrepareDialog(Landroid/content/Context;Ljava/lang/String;)V
 
-    move-result v11
+    .line 396
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    if-eqz v11, :cond_11
-
-    .line 466
-    :cond_10
-    const-string/jumbo v7, "https://plus.google.com/u/0/communities/111922519175849600270"
-
-    .line 468
-    :cond_11
-    iget-object v11, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
-
-    new-instance v12, Landroid/content/Intent;
-
-    const-string/jumbo v13, "android.intent.action.VIEW"
-
-    invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v14
-
-    invoke-direct {v12, v13, v14}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    const/16 v13, 0x1f5
-
-    invoke-virtual {v11, v12, v13}, Lorg/telegram/ui/LaunchActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {v6, v1}, Lorg/telegram/ui/LaunchActivity;->startActivity(Landroid/content/Intent;)V
     :try_end_3
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 

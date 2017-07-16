@@ -359,7 +359,7 @@
 
     const/16 v2, 0xd
 
-    const-string/jumbo v3, "Community"
+    const-string/jumbo v3, "Change_another_user"
 
     const v4, 0x7f070192
 

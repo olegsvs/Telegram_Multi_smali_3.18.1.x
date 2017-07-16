@@ -45,21 +45,41 @@
     .locals 8
 
     .prologue
-    const/4 v4, 0x0
+    const/4 v5, 0x0
 
     .line 197
     iget-object v2, p0, Lorg/telegram/messenger/ContactsController$2$1;->this$1:Lorg/telegram/messenger/ContactsController$2;
 
     iget-object v2, v2, Lorg/telegram/messenger/ContactsController$2;->this$0:Lorg/telegram/messenger/ContactsController;
 
-    invoke-static {v2, v4}, Lorg/telegram/messenger/ContactsController;->access$102(Lorg/telegram/messenger/ContactsController;Z)Z
+    invoke-static {v2, v5}, Lorg/telegram/messenger/ContactsController;->access$102(Lorg/telegram/messenger/ContactsController;Z)Z
 
     .line 198
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "mainconfig"
+    new-instance v3, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v2, v3, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "mainconfig"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 

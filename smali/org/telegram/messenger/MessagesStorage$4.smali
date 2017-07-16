@@ -51,7 +51,27 @@
     .local v7, "ids":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Long;>;"
     sget-object v16, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v17, "Notifications"
+    new-instance v17, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v17 .. v17}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v18, "Notifications"
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v18
+
+    invoke-virtual/range {v17 .. v18}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v17
+
+    invoke-virtual/range {v17 .. v17}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v17
 
     const/16 v18, 0x0
 

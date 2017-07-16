@@ -46,35 +46,55 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 5
+    .locals 6
     .param p1, "dialogInterface"    # Landroid/content/DialogInterface;
     .param p2, "i"    # I
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v3, 0x0
-
-    .line 233
-    iget-object v1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$4;->val$buttonClicked:[Z
-
-    aput-boolean v4, v1, v3
+    const/4 v4, 0x0
 
     .line 234
+    iget-object v1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$4;->val$buttonClicked:[Z
+
+    aput-boolean v5, v1, v4
+
+    .line 235
     iget-object v1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$4;->val$foundContextBotFinal:Lorg/telegram/tgnet/TLRPC$User;
 
     if-eqz v1, :cond_0
 
-    .line 235
+    .line 236
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v2, "Notifications"
+    new-instance v2, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "Notifications"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 236
+    .line 237
     .local v0, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -102,18 +122,18 @@
 
     move-result-object v2
 
-    invoke-interface {v1, v2, v4}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 237
+    .line 238
     iget-object v1, p0, Lorg/telegram/ui/Adapters/MentionsAdapter$4;->this$0:Lorg/telegram/ui/Adapters/MentionsAdapter;
 
     invoke-static {v1}, Lorg/telegram/ui/Adapters/MentionsAdapter;->access$800(Lorg/telegram/ui/Adapters/MentionsAdapter;)V
 
-    .line 239
+    .line 240
     .end local v0    # "preferences":Landroid/content/SharedPreferences;
     :cond_0
     return-void

@@ -739,16 +739,16 @@
 .end method
 
 .method private processFoundUser(Lorg/telegram/tgnet/TLRPC$User;)V
-    .locals 9
+    .locals 10
     .param p1, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    const/4 v7, 0x0
+    const/4 v9, 0x0
 
     const/4 v8, 0x1
 
     .line 217
-    iput v7, p0, Lorg/telegram/ui/Adapters/MentionsAdapter;->contextUsernameReqid:I
+    iput v9, p0, Lorg/telegram/ui/Adapters/MentionsAdapter;->contextUsernameReqid:I
 
     .line 218
     iget-object v5, p0, Lorg/telegram/ui/Adapters/MentionsAdapter;->locationProvider:Lorg/telegram/messenger/SendMessagesHelper$LocationProvider;
@@ -779,9 +779,29 @@
     .line 222
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "Notifications"
+    new-instance v6, Ljava/lang/StringBuilder;
 
-    invoke-virtual {v5, v6, v7}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "Notifications"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6, v9}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v4
 
@@ -809,7 +829,7 @@
 
     move-result-object v5
 
-    invoke-interface {v4, v5, v7}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v4, v5, v9}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v0
 

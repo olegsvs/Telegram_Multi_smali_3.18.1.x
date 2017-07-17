@@ -7,6 +7,8 @@ WebPlayerView - needed
 DialogsActivity after MessagesController
 LoginActivity - consts wrong
 ProfileActivity$ListAdapter.smali - needed
+Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe
+Settings TODO
 community 13
 
 ArticleViewer$15$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
@@ -128,15 +130,15 @@ ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger
 
 ReportOtherActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
-SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$4$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$4$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-SettingsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; + WORK? (ICON on change theme)
+SettingsActivity$4$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; TODO
 
 ShareActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 

@@ -9,19 +9,11 @@ LoginActivity - consts wrong
 ProfileActivity$ListAdapter.smali - needed
 Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe
 Settings TODO
+ShareActivity (nedded?)
 community 13
 
-ArticleViewer$15$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-ArticleViewer.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-ArticleViewer.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-CacheControlActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-CacheControlActivity$4$2$1$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-CacheControlActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-CacheControlActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-ChangeChatNameActivity.smali ChangeNameActivity.smali ChangePhoneActivity$PhoneView.smali
-ChangeChatNameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-ChangeNameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-ChangePhoneActivity$PhoneView.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ui/IntroActivity.smali:    const-string/jumbo v6, "userID"
+ui/IntroActivity.smali:    const-string/jumbo v7, "userID"
 
 /* Copy From TG Multi, needed fix const IDs
 ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
@@ -34,36 +26,69 @@ ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUse
 ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 */
 
-ChangeUsernameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
-
-ChatActivity$23.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity$35.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity$63$3$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity$63$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity$93.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-ContactAddActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-ContactAddActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-ContactsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-DataSettingsActivity$2$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-DataSettingsActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-DataSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-DataSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
+
+SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; + WORK? (ICON on change theme)
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
+SettingsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; TODO
+
+ShareActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; NEEDED?
+
+/*NEEDED?
+WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+WallpapersActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+WallpapersActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+*/
+/*NEEDED?
+WebviewActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+*/
+
+TODO
+Settings DataAndStorage - DataUsageError 
+W OpenGLRenderer: Failed to set EGL_SWAP_BEHAVIOR on surface 0xd024d960, error=EGL_BAD_MATCH
+W AudioFlinger: write blocked for 10386 msecs, 51 delayed writes, thread 0xe9903100
+W InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@65bfbb8 attribute=null, token = android.os.BinderProxy@e687e46
+D AndroidRuntime: Shutting down VM
+E AndroidRuntime: FATAL EXCEPTION: main
+E AndroidRuntime: Process: org.telegram.plus, PID: 4928
+E AndroidRuntime: java.lang.VerifyError: Verifier rejected class org.telegram.ui.CacheControlActivity$ListAdapter: void org.telegram.ui.CacheControlActivity$ListAdapter.onBindViewHolder(org.telegram.messenger.support.widget.RecyclerView$ViewHolder, int) failed to verif
+ntrolActivity$ListAdapter.onBindViewHolder(org.telegram.messenger.support.widget.RecyclerView$ViewHolder, int): [0xB8] register v7 has type Precise Reference: java.lang.String but expected Integer (declaration of 'org.telegram.ui.CacheControlActivity$ListAdapter' appea
+us-2/base.apk)
+E AndroidRuntime:        at org.telegram.ui.CacheControlActivity.createView(CacheControlActivity.java:323)
+E AndroidRuntime:        at org.telegram.ui.ActionBar.ActionBarLayout.presentFragment(ActionBarLayout.java:661)
+E AndroidRuntime:        at org.telegram.ui.ActionBar.ActionBarLayout.presentFragment(ActionBarLayout.java:585)
+E AndroidRuntime:        at org.telegram.ui.ActionBar.BaseFragment.presentFragment(BaseFragment.java:225)
+E AndroidRuntime:        at org.telegram.ui.DataSettingsActivity$2.onItemClick(DataSettingsActivity.java:236)
+E AndroidRuntime:        at org.telegram.ui.Components.RecyclerListView$RecyclerListViewItemClickListener$1$1.run(RecyclerListView.java:481)
+E AndroidRuntime:        at android.os.Handler.handleCallback(Handler.java:751)
+E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:95)
+E AndroidRuntime:        at android.os.Looper.loop(Looper.java:154)
+E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:6119)
+E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
+E AndroidRuntime:        at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:886)
+E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:776)
+W ActivityManager:   Force finishing activity org.telegram.plus/org.telegram.ui.LaunchActivity
+
+
+Complete ::
+ThemeActivity$2$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ThemeActivity$ListAdapter$1$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+VideoEditorActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+VideoEditorActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+VoIPActivity$22.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+VoIPActivity$22.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+SettingsActivity$4$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
 LaunchActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 LaunchActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
@@ -95,6 +120,20 @@ NotificationsSettingsActivity$3.smali:    invoke-static {}, Lorg/telegram/messen
 NotificationsSettingsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 NotificationsSettingsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
+ArticleViewer$15$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ArticleViewer.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ArticleViewer.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+CacheControlActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+CacheControlActivity$4$2$1$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+CacheControlActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+CacheControlActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ChangeChatNameActivity.smali +
+ChangeNameActivity.smali +
+ChangePhoneActivity$PhoneView.smali+
+ChangeChatNameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ChangeNameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+ChangePhoneActivity$PhoneView.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+
 NotificationsSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 NotificationsSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 NotificationsSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
@@ -107,10 +146,40 @@ PrivacyControlActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/Cha
 
 PrivacySettingsActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
+ChangeUsernameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+
 ProfileActivity$8$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileActivity$8$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; TODO
 ProfileActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+ReportOtherActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+ChatActivity$23.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$35.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$63$3$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$63$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$93.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+ContactAddActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ContactAddActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+ContactsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+DataSettingsActivity$2$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+DataSettingsActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+DataSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+DataSettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
 ProfileNotificationsActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileNotificationsActivity$3$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
@@ -127,61 +196,3 @@ ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegr
 ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-ReportOtherActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-
-SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; + WORK? (ICON on change theme)
-SettingsActivity$4$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-SettingsActivity$4$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-SettingsActivity$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
-SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
-SettingsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; TODO
-
-ShareActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-ThemeActivity$2$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ThemeActivity$ListAdapter$1$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-VideoEditorActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-VideoEditorActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-VoIPActivity$22.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-VoIPActivity$22.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-WallpapersActivity$2.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-WallpapersActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-WallpapersActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-WebviewActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-
-TODO
-Settings DataAndStorage - DataUsageError 
-W OpenGLRenderer: Failed to set EGL_SWAP_BEHAVIOR on surface 0xd024d960, error=EGL_BAD_MATCH
-W AudioFlinger: write blocked for 10386 msecs, 51 delayed writes, thread 0xe9903100
-W InputMethodManagerService: Window already focused, ignoring focus gain of: com.android.internal.view.IInputMethodClient$Stub$Proxy@65bfbb8 attribute=null, token = android.os.BinderProxy@e687e46
-D AndroidRuntime: Shutting down VM
-E AndroidRuntime: FATAL EXCEPTION: main
-E AndroidRuntime: Process: org.telegram.plus, PID: 4928
-E AndroidRuntime: java.lang.VerifyError: Verifier rejected class org.telegram.ui.CacheControlActivity$ListAdapter: void org.telegram.ui.CacheControlActivity$ListAdapter.onBindViewHolder(org.telegram.messenger.support.widget.RecyclerView$ViewHolder, int) failed to verif
-ntrolActivity$ListAdapter.onBindViewHolder(org.telegram.messenger.support.widget.RecyclerView$ViewHolder, int): [0xB8] register v7 has type Precise Reference: java.lang.String but expected Integer (declaration of 'org.telegram.ui.CacheControlActivity$ListAdapter' appea
-us-2/base.apk)
-E AndroidRuntime:        at org.telegram.ui.CacheControlActivity.createView(CacheControlActivity.java:323)
-E AndroidRuntime:        at org.telegram.ui.ActionBar.ActionBarLayout.presentFragment(ActionBarLayout.java:661)
-E AndroidRuntime:        at org.telegram.ui.ActionBar.ActionBarLayout.presentFragment(ActionBarLayout.java:585)
-E AndroidRuntime:        at org.telegram.ui.ActionBar.BaseFragment.presentFragment(BaseFragment.java:225)
-E AndroidRuntime:        at org.telegram.ui.DataSettingsActivity$2.onItemClick(DataSettingsActivity.java:236)
-E AndroidRuntime:        at org.telegram.ui.Components.RecyclerListView$RecyclerListViewItemClickListener$1$1.run(RecyclerListView.java:481)
-E AndroidRuntime:        at android.os.Handler.handleCallback(Handler.java:751)
-E AndroidRuntime:        at android.os.Handler.dispatchMessage(Handler.java:95)
-E AndroidRuntime:        at android.os.Looper.loop(Looper.java:154)
-E AndroidRuntime:        at android.app.ActivityThread.main(ActivityThread.java:6119)
-E AndroidRuntime:        at java.lang.reflect.Method.invoke(Native Method)
-E AndroidRuntime:        at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:886)
-E AndroidRuntime:        at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:776)
-W ActivityManager:   Force finishing activity org.telegram.plus/org.telegram.ui.LaunchActivity

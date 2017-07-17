@@ -252,24 +252,6 @@
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 
-    new-instance v1, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;
-
-    const/4 v2, 0x7
-
-    const-string/jumbo v3, "DownloadThemes"
-
-    const v4, 0x7f070209
-
-    invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v3
-
-    const v4, 0x7f020148
-
-    invoke-direct {v1, p0, v2, v3, v4}, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter$Item;-><init>(Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;ILjava/lang/String;I)V
-
-    invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
     .line 198
     iget-object v0, p0, Lorg/telegram/ui/Adapters/DrawerLayoutAdapter;->items:Ljava/util/ArrayList;
 

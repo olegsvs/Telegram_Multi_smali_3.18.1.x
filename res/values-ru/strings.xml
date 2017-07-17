@@ -1082,7 +1082,7 @@
     <string name="PleaseEnterFirstPassword">Введите ваш пароль</string>
     <string name="PleaseEnterPassword">Введите ваш новый пароль</string>
     <string name="PleaseReEnterPassword">Повторите ваш пароль</string>
-    <string name="PlusSettings">Настройки Plus</string>
+    <string name="PlusSettings">Настройки Multi</string>
     <string name="PopupNotification">Всплывающие уведомления</string>
     <string name="PrivacyFloodControlError">Извините, слишком много запросов. Не удаётся изменить настройки приватности прямо сейчас, пожалуйста, подождите.</string>
     <string name="PrivacyLastSeen">Последняя активность</string>

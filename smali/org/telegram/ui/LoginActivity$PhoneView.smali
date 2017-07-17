@@ -1583,521 +1583,645 @@
 
 # virtual methods
 .method public fillNumber()V
-    .locals 15
+    .locals 17
 
     .prologue
-    .line 1081
+    .line 1080
     :try_start_0
-    sget-object v12, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
+    sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v13, "phone"
+    const-string/jumbo v15, "phone"
 
-    invoke-virtual {v12, v13}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+    invoke-virtual {v14, v15}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
 
-    move-result-object v11
+    move-result-object v12
 
-    check-cast v11, Landroid/telephony/TelephonyManager;
+    check-cast v12, Landroid/telephony/TelephonyManager;
+
+    .line 1081
+    .local v12, "tm":Landroid/telephony/TelephonyManager;
+    invoke-virtual {v12}, Landroid/telephony/TelephonyManager;->getSimState()I
+
+    move-result v14
+
+    const/4 v15, 0x1
+
+    if-eq v14, v15, :cond_3
+
+    invoke-virtual {v12}, Landroid/telephony/TelephonyManager;->getPhoneType()I
+
+    move-result v14
+
+    if-eqz v14, :cond_3
 
     .line 1082
-    .local v11, "tm":Landroid/telephony/TelephonyManager;
-    invoke-virtual {v11}, Landroid/telephony/TelephonyManager;->getSimState()I
-
-    move-result v12
-
-    const/4 v13, 0x1
-
-    if-eq v12, v13, :cond_3
-
-    invoke-virtual {v11}, Landroid/telephony/TelephonyManager;->getPhoneType()I
-
-    move-result v12
-
-    if-eqz v12, :cond_3
+    const/4 v2, 0x1
 
     .line 1083
-    const/4 v1, 0x1
+    .local v2, "allowCall":Z
+    const/4 v3, 0x1
 
     .line 1084
-    .local v1, "allowCall":Z
-    const/4 v2, 0x1
+    .local v3, "allowSms":Z
+    sget v14, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v15, 0x17
+
+    if-lt v14, v15, :cond_7
 
     .line 1085
-    .local v2, "allowSms":Z
-    sget v12, Landroid/os/Build$VERSION;->SDK_INT:I
+    move-object/from16 v0, p0
 
-    const/16 v13, 0x17
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
 
-    if-lt v12, v13, :cond_7
-
-    .line 1086
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.READ_PHONE_STATE"
-
-    invoke-virtual {v12, v13}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
-
-    move-result v12
-
-    if-nez v12, :cond_4
-
-    const/4 v1, 0x1
-
-    .line 1087
-    :goto_0
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.RECEIVE_SMS"
-
-    invoke-virtual {v12, v13}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
-
-    move-result v12
-
-    if-nez v12, :cond_5
-
-    const/4 v2, 0x1
-
-    .line 1088
-    :goto_1
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2100(Lorg/telegram/ui/LoginActivity;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_7
-
-    if-nez v1, :cond_7
-
-    if-nez v2, :cond_7
-
-    .line 1089
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/util/ArrayList;->clear()V
-
-    .line 1090
-    if-nez v1, :cond_0
-
-    .line 1091
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.READ_PHONE_STATE"
-
-    invoke-virtual {v12, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1093
-    :cond_0
-    if-nez v2, :cond_1
-
-    .line 1094
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.RECEIVE_SMS"
-
-    invoke-virtual {v12, v13}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
-
-    .line 1096
-    :cond_1
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
-
-    move-result-object v12
-
-    invoke-virtual {v12}, Ljava/util/ArrayList;->isEmpty()Z
-
-    move-result v12
-
-    if-nez v12, :cond_3
-
-    .line 1097
-    sget-object v12, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
-
-    const-string/jumbo v13, "mainconfig"
-
-    const/4 v14, 0x0
-
-    invoke-virtual {v12, v13, v14}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v8
-
-    .line 1098
-    .local v8, "preferences":Landroid/content/SharedPreferences;
-    const-string/jumbo v12, "firstloginshow"
-
-    const/4 v13, 0x1
-
-    invoke-interface {v8, v12, v13}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
-
-    move-result v12
-
-    if-nez v12, :cond_2
-
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.READ_PHONE_STATE"
-
-    invoke-virtual {v12, v13}, Landroid/app/Activity;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
-
-    move-result v12
-
-    if-nez v12, :cond_2
-
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "android.permission.RECEIVE_SMS"
-
-    invoke-virtual {v12, v13}, Landroid/app/Activity;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
-
-    move-result v12
-
-    if-eqz v12, :cond_6
-
-    .line 1099
-    :cond_2
-    invoke-interface {v8}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v12
-
-    const-string/jumbo v13, "firstloginshow"
-
-    const/4 v14, 0x0
-
-    invoke-interface {v12, v13, v14}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
-
-    move-result-object v12
-
-    invoke-interface {v12}, Landroid/content/SharedPreferences$Editor;->commit()Z
-
-    .line 1100
-    new-instance v3, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
-
-    move-result-object v12
-
-    invoke-direct {v3, v12}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
-
-    .line 1101
-    .local v3, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-    const-string/jumbo v12, "AppName"
-
-    const v13, 0x7f070078
-
-    invoke-static {v12, v13}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v3, v12}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    .line 1102
-    const-string/jumbo v12, "OK"
-
-    const v13, 0x7f070452
-
-    invoke-static {v12, v13}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v12
-
-    const/4 v13, 0x0
-
-    invoke-virtual {v3, v12, v13}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    .line 1103
-    const-string/jumbo v12, "AllowFillNumber"
-
-    const v13, 0x7f070060
-
-    invoke-static {v12, v13}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
-
-    move-result-object v12
-
-    invoke-virtual {v3, v12}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-
-    .line 1104
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    iget-object v13, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
-
-    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
 
     move-result-object v14
 
-    invoke-virtual {v13, v14}, Lorg/telegram/ui/LoginActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+    const-string/jumbo v15, "android.permission.READ_PHONE_STATE"
 
-    move-result-object v13
+    invoke-virtual {v14, v15}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
 
-    invoke-static {v12, v13}, Lorg/telegram/ui/LoginActivity;->access$2302(Lorg/telegram/ui/LoginActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
+    move-result v14
 
-    .line 1144
-    .end local v1    # "allowCall":Z
-    .end local v2    # "allowSms":Z
-    .end local v3    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
-    .end local v8    # "preferences":Landroid/content/SharedPreferences;
-    .end local v11    # "tm":Landroid/telephony/TelephonyManager;
-    :cond_3
-    :goto_2
-    return-void
+    if-nez v14, :cond_4
+
+    const/4 v2, 0x1
 
     .line 1086
-    .restart local v1    # "allowCall":Z
-    .restart local v2    # "allowSms":Z
-    .restart local v11    # "tm":Landroid/telephony/TelephonyManager;
-    :cond_4
-    const/4 v1, 0x0
+    :goto_0
+    move-object/from16 v0, p0
 
-    goto/16 :goto_0
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "android.permission.RECEIVE_SMS"
+
+    invoke-virtual {v14, v15}, Landroid/app/Activity;->checkSelfPermission(Ljava/lang/String;)I
+
+    move-result v14
+
+    if-nez v14, :cond_5
+
+    const/4 v3, 0x1
 
     .line 1087
-    :cond_5
-    const/4 v2, 0x0
+    :goto_1
+    move-object/from16 v0, p0
 
-    goto/16 :goto_1
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
 
-    .line 1106
-    .restart local v8    # "preferences":Landroid/content/SharedPreferences;
-    :cond_6
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+    invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2100(Lorg/telegram/ui/LoginActivity;)Z
 
-    invoke-virtual {v12}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+    move-result v14
 
-    move-result-object v13
+    if-eqz v14, :cond_7
 
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+    if-nez v2, :cond_7
 
-    invoke-static {v12}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+    if-nez v3, :cond_7
 
-    move-result-object v12
+    .line 1088
+    move-object/from16 v0, p0
 
-    iget-object v14, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
 
     invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
 
     move-result-object v14
 
-    invoke-virtual {v14}, Ljava/util/ArrayList;->size()I
+    invoke-virtual {v14}, Ljava/util/ArrayList;->clear()V
+
+    .line 1089
+    if-nez v2, :cond_0
+
+    .line 1090
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "android.permission.READ_PHONE_STATE"
+
+    invoke-virtual {v14, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1092
+    :cond_0
+    if-nez v3, :cond_1
+
+    .line 1093
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "android.permission.RECEIVE_SMS"
+
+    invoke-virtual {v14, v15}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
+
+    .line 1095
+    :cond_1
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+
+    move-result-object v14
+
+    invoke-virtual {v14}, Ljava/util/ArrayList;->isEmpty()Z
 
     move-result v14
 
-    new-array v14, v14, [Ljava/lang/String;
+    if-nez v14, :cond_3
 
-    invoke-virtual {v12, v14}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+    .line 1096
+    sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    move-result-object v12
+    new-instance v15, Ljava/lang/StringBuilder;
 
-    check-cast v12, [Ljava/lang/String;
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
 
-    const/4 v14, 0x7
+    const-string/jumbo v16, "mainconfig"
 
-    invoke-virtual {v13, v12, v14}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
+
+    const/16 v16, 0x0
+
+    invoke-virtual/range {v14 .. v16}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v9
+
+    .line 1097
+    .local v9, "preferences":Landroid/content/SharedPreferences;
+    const-string/jumbo v14, "firstloginshow"
+
+    const/4 v15, 0x1
+
+    invoke-interface {v9, v14, v15}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+
+    move-result v14
+
+    if-nez v14, :cond_2
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "android.permission.READ_PHONE_STATE"
+
+    invoke-virtual {v14, v15}, Landroid/app/Activity;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-nez v14, :cond_2
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "android.permission.RECEIVE_SMS"
+
+    invoke-virtual {v14, v15}, Landroid/app/Activity;->shouldShowRequestPermissionRationale(Ljava/lang/String;)Z
+
+    move-result v14
+
+    if-eqz v14, :cond_6
+
+    .line 1098
+    :cond_2
+    invoke-interface {v9}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "firstloginshow"
+
+    const/16 v16, 0x0
+
+    invoke-interface/range {v14 .. v16}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 1099
+    sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
+
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v16, "users"
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
+
+    const/16 v16, 0x0
+
+    invoke-virtual/range {v14 .. v16}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v13
+
+    .line 1100
+    .local v13, "users":Landroid/content/SharedPreferences;
+    invoke-interface {v13}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v14
+
+    const-string/jumbo v15, "users_count"
+
+    const/16 v16, 0x1
+
+    invoke-interface/range {v14 .. v16}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v14
+
+    invoke-interface {v14}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 1101
+    new-instance v4, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v14
+
+    invoke-direct {v4, v14}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+
+    .line 1102
+    .local v4, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    const-string/jumbo v14, "AppName"
+
+    const v15, 0x7f070072
+
+    invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v4, v14}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 1103
+    const-string/jumbo v14, "OK"
+
+    const v15, 0x7f0703b5
+
+    invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v14
+
+    const/4 v15, 0x0
+
+    invoke-virtual {v4, v14, v15}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 1104
+    const-string/jumbo v14, "AllowFillNumber"
+
+    const v15, 0x7f07005c
+
+    invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-virtual {v4, v14}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 1105
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Lorg/telegram/ui/LoginActivity;->showDialog(Landroid/app/Dialog;)Landroid/app/Dialog;
+
+    move-result-object v15
+
+    invoke-static {v14, v15}, Lorg/telegram/ui/LoginActivity;->access$2302(Lorg/telegram/ui/LoginActivity;Landroid/app/Dialog;)Landroid/app/Dialog;
+
+    .line 1145
+    .end local v2    # "allowCall":Z
+    .end local v3    # "allowSms":Z
+    .end local v4    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    .end local v9    # "preferences":Landroid/content/SharedPreferences;
+    .end local v12    # "tm":Landroid/telephony/TelephonyManager;
+    .end local v13    # "users":Landroid/content/SharedPreferences;
+    :cond_3
+    :goto_2
+    return-void
+
+    .line 1085
+    .restart local v2    # "allowCall":Z
+    .restart local v3    # "allowSms":Z
+    .restart local v12    # "tm":Landroid/telephony/TelephonyManager;
+    :cond_4
+    const/4 v2, 0x0
+
+    goto/16 :goto_0
+
+    .line 1086
+    :cond_5
+    const/4 v3, 0x0
+
+    goto/16 :goto_1
+
+    .line 1107
+    .restart local v9    # "preferences":Landroid/content/SharedPreferences;
+    :cond_6
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/LoginActivity;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v15
+
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    invoke-static {v14}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+
+    move-result-object v14
+
+    move-object/from16 v0, p0
+
+    iget-object v0, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->this$0:Lorg/telegram/ui/LoginActivity;
+
+    move-object/from16 v16, v0
+
+    invoke-static/range {v16 .. v16}, Lorg/telegram/ui/LoginActivity;->access$2200(Lorg/telegram/ui/LoginActivity;)Ljava/util/ArrayList;
+
+    move-result-object v16
+
+    invoke-virtual/range {v16 .. v16}, Ljava/util/ArrayList;->size()I
+
+    move-result v16
+
+    move/from16 v0, v16
+
+    new-array v0, v0, [Ljava/lang/String;
+
+    move-object/from16 v16, v0
+
+    move-object/from16 v0, v16
+
+    invoke-virtual {v14, v0}, Ljava/util/ArrayList;->toArray([Ljava/lang/Object;)[Ljava/lang/Object;
+
+    move-result-object v14
+
+    check-cast v14, [Ljava/lang/String;
+
+    const/16 v16, 0x7
+
+    move/from16 v0, v16
+
+    invoke-virtual {v15, v14, v0}, Landroid/app/Activity;->requestPermissions([Ljava/lang/String;I)V
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
     goto :goto_2
 
-    .line 1141
-    .end local v1    # "allowCall":Z
-    .end local v2    # "allowSms":Z
-    .end local v8    # "preferences":Landroid/content/SharedPreferences;
-    .end local v11    # "tm":Landroid/telephony/TelephonyManager;
-    :catch_0
-    move-exception v5
-
     .line 1142
-    .local v5, "e":Ljava/lang/Exception;
-    invoke-static {v5}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+    .end local v2    # "allowCall":Z
+    .end local v3    # "allowSms":Z
+    .end local v9    # "preferences":Landroid/content/SharedPreferences;
+    .end local v12    # "tm":Landroid/telephony/TelephonyManager;
+    :catch_0
+    move-exception v6
+
+    .line 1143
+    .local v6, "e":Ljava/lang/Exception;
+    invoke-static {v6}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 1112
-    .end local v5    # "e":Ljava/lang/Exception;
-    .restart local v1    # "allowCall":Z
-    .restart local v2    # "allowSms":Z
-    .restart local v11    # "tm":Landroid/telephony/TelephonyManager;
-    :cond_7
-    if-nez v1, :cond_8
-
-    if-eqz v2, :cond_3
-
     .line 1113
-    :cond_8
-    :try_start_1
-    invoke-virtual {v11}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
+    .end local v6    # "e":Ljava/lang/Exception;
+    .restart local v2    # "allowCall":Z
+    .restart local v3    # "allowSms":Z
+    .restart local v12    # "tm":Landroid/telephony/TelephonyManager;
+    :cond_7
+    if-nez v2, :cond_8
 
-    move-result-object v12
-
-    invoke-static {v12}, Lorg/telegram/PhoneFormat/PhoneFormat;->stripExceptNumbers(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v6
+    if-eqz v3, :cond_3
 
     .line 1114
-    .local v6, "number":Ljava/lang/String;
-    const/4 v10, 0x0
+    :cond_8
+    :try_start_1
+    invoke-virtual {v12}, Landroid/telephony/TelephonyManager;->getLine1Number()Ljava/lang/String;
+
+    move-result-object v14
+
+    invoke-static {v14}, Lorg/telegram/PhoneFormat/PhoneFormat;->stripExceptNumbers(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v7
 
     .line 1115
-    .local v10, "textToSet":Ljava/lang/String;
-    const/4 v7, 0x0
+    .local v7, "number":Ljava/lang/String;
+    const/4 v11, 0x0
 
     .line 1116
-    .local v7, "ok":Z
-    invoke-static {v6}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
-
-    move-result v12
-
-    if-nez v12, :cond_3
+    .local v11, "textToSet":Ljava/lang/String;
+    const/4 v8, 0x0
 
     .line 1117
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
+    .local v8, "ok":Z
+    invoke-static {v7}, Landroid/text/TextUtils;->isEmpty(Ljava/lang/CharSequence;)Z
 
-    move-result v12
+    move-result v14
 
-    const/4 v13, 0x4
-
-    if-le v12, v13, :cond_a
+    if-nez v14, :cond_3
 
     .line 1118
-    const/4 v0, 0x4
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
 
-    .local v0, "a":I
-    :goto_3
-    const/4 v12, 0x1
+    move-result v14
 
-    if-lt v0, v12, :cond_9
+    const/4 v15, 0x4
+
+    if-le v14, v15, :cond_a
 
     .line 1119
-    const/4 v12, 0x0
+    const/4 v1, 0x4
 
-    invoke-virtual {v6, v12, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v9
-
-    .line 1120
-    .local v9, "sub":Ljava/lang/String;
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->codesMap:Ljava/util/HashMap;
-
-    invoke-virtual {v12, v9}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
-
-    move-result-object v4
-
-    check-cast v4, Ljava/lang/String;
-
-    .line 1121
-    .local v4, "country":Ljava/lang/String;
-    if-eqz v4, :cond_b
-
-    .line 1122
-    const/4 v7, 0x1
-
-    .line 1123
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
-
-    move-result v12
-
-    invoke-virtual {v6, v0, v12}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 1124
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->codeField:Landroid/widget/EditText;
-
-    invoke-virtual {v12, v9}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
-
-    .line 1128
-    .end local v4    # "country":Ljava/lang/String;
-    .end local v9    # "sub":Ljava/lang/String;
-    :cond_9
-    if-nez v7, :cond_a
-
-    .line 1129
-    const/4 v12, 0x1
-
-    invoke-virtual {v6}, Ljava/lang/String;->length()I
-
-    move-result v13
-
-    invoke-virtual {v6, v12, v13}, Ljava/lang/String;->substring(II)Ljava/lang/String;
-
-    move-result-object v10
-
-    .line 1130
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->codeField:Landroid/widget/EditText;
-
-    const/4 v13, 0x0
-
+    .local v1, "a":I
+    :goto_3
     const/4 v14, 0x1
 
-    invoke-virtual {v6, v13, v14}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+    if-lt v1, v14, :cond_9
 
-    move-result-object v13
+    .line 1120
+    const/4 v14, 0x0
 
-    invoke-virtual {v12, v13}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+    invoke-virtual {v7, v14, v1}, Ljava/lang/String;->substring(II)Ljava/lang/String;
 
-    .line 1133
-    .end local v0    # "a":I
-    :cond_a
-    if-eqz v10, :cond_3
+    move-result-object v10
+
+    .line 1121
+    .local v10, "sub":Ljava/lang/String;
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->codesMap:Ljava/util/HashMap;
+
+    invoke-virtual {v14, v10}, Ljava/util/HashMap;->get(Ljava/lang/Object;)Ljava/lang/Object;
+
+    move-result-object v5
+
+    check-cast v5, Ljava/lang/String;
+
+    .line 1122
+    .local v5, "country":Ljava/lang/String;
+    if-eqz v5, :cond_b
+
+    .line 1123
+    const/4 v8, 0x1
+
+    .line 1124
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
+
+    move-result v14
+
+    invoke-virtual {v7, v1, v14}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 1125
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->codeField:Landroid/widget/EditText;
+
+    invoke-virtual {v14, v10}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
+
+    .line 1129
+    .end local v5    # "country":Ljava/lang/String;
+    .end local v10    # "sub":Ljava/lang/String;
+    :cond_9
+    if-nez v8, :cond_a
+
+    .line 1130
+    const/4 v14, 0x1
+
+    invoke-virtual {v7}, Ljava/lang/String;->length()I
+
+    move-result v15
+
+    invoke-virtual {v7, v14, v15}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v11
+
+    .line 1131
+    move-object/from16 v0, p0
+
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->codeField:Landroid/widget/EditText;
+
+    const/4 v15, 0x0
+
+    const/16 v16, 0x1
+
+    move/from16 v0, v16
+
+    invoke-virtual {v7, v15, v0}, Ljava/lang/String;->substring(II)Ljava/lang/String;
+
+    move-result-object v15
+
+    invoke-virtual {v14, v15}, Landroid/widget/EditText;->setText(Ljava/lang/CharSequence;)V
 
     .line 1134
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
-
-    invoke-virtual {v12}, Lorg/telegram/ui/Components/HintEditText;->requestFocus()Z
+    .end local v1    # "a":I
+    :cond_a
+    if-eqz v11, :cond_3
 
     .line 1135
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+    move-object/from16 v0, p0
 
-    invoke-virtual {v12, v10}, Lorg/telegram/ui/Components/HintEditText;->setText(Ljava/lang/CharSequence;)V
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+
+    invoke-virtual {v14}, Lorg/telegram/ui/Components/HintEditText;->requestFocus()Z
 
     .line 1136
-    iget-object v12, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+    move-object/from16 v0, p0
 
-    iget-object v13, p0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
 
-    invoke-virtual {v13}, Lorg/telegram/ui/Components/HintEditText;->length()I
+    invoke-virtual {v14, v11}, Lorg/telegram/ui/Components/HintEditText;->setText(Ljava/lang/CharSequence;)V
 
-    move-result v13
+    .line 1137
+    move-object/from16 v0, p0
 
-    invoke-virtual {v12, v13}, Lorg/telegram/ui/Components/HintEditText;->setSelection(I)V
+    iget-object v14, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+
+    move-object/from16 v0, p0
+
+    iget-object v15, v0, Lorg/telegram/ui/LoginActivity$PhoneView;->phoneField:Lorg/telegram/ui/Components/HintEditText;
+
+    invoke-virtual {v15}, Lorg/telegram/ui/Components/HintEditText;->length()I
+
+    move-result v15
+
+    invoke-virtual {v14, v15}, Lorg/telegram/ui/Components/HintEditText;->setSelection(I)V
     :try_end_1
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_0
 
     goto/16 :goto_2
 
-    .line 1118
-    .restart local v0    # "a":I
-    .restart local v4    # "country":Ljava/lang/String;
-    .restart local v9    # "sub":Ljava/lang/String;
+    .line 1119
+    .restart local v1    # "a":I
+    .restart local v5    # "country":Ljava/lang/String;
+    .restart local v10    # "sub":Ljava/lang/String;
     :cond_b
-    add-int/lit8 v0, v0, -0x1
+    add-int/lit8 v1, v1, -0x1
 
     goto :goto_3
 .end method
@@ -2472,7 +2596,27 @@
     .line 967
     sget-object v17, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v18, "mainconfig"
+    new-instance v18, Ljava/lang/StringBuilder;
+
+    invoke-direct/range {v18 .. v18}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v19, "mainconfig"
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v19
+
+    invoke-virtual/range {v18 .. v19}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v18
+
+    invoke-virtual/range {v18 .. v18}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v18
 
     const/16 v19, 0x0
 

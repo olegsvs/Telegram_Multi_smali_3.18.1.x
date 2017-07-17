@@ -361,7 +361,7 @@
 
     const-string/jumbo v3, "Change_another_user"
 
-    const v4, 0x7f070192
+    const v4, 0x7f070741
 
     invoke-static {v3, v4}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

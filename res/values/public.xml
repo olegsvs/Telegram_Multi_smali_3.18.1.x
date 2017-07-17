@@ -2735,4 +2735,5 @@
     <public type="id" name="tabsLayout" id="0x7f0c0060" />
     <public type="id" name="tabsText" id="0x7f0c0061" />
     <public type="integer" name="google_play_services_version" id="0x7f0d0000" />
+	<public type="string" name="Change_another_user" id="0x7f070741" />
 </resources>

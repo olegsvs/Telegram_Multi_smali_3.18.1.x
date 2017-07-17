@@ -3729,6 +3729,7 @@
 
 .field public static final updatePlusText:I = 0x7f0706f0
 
+.field public static final Change_another_user:I = 0x7f070741
 
 # direct methods
 .method public constructor <init>()V

@@ -26,14 +26,16 @@ ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUse
 ChangeUserActivity.smali:    invoke-static {v1}, Lorg/telegram/messenger/ChangeUserHelper;->setUserTag(I)V
 ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
 ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChangeUsernameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 */
 
-ChatActivity$23.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChatActivity$35.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChatActivity$63$3$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChatActivity$63$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChatActivity$93.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+ChangeUsernameActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; +
+
+ChatActivity$23.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$35.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$63$3$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$63$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ChatActivity$93.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
 ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 ChatActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;

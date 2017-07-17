@@ -405,7 +405,27 @@
     .local v12, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v15, "Notifications"
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v16, "Notifications"
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
 
     const/16 v16, 0x0
 
@@ -1737,7 +1757,27 @@
     .local v12, "textCell":Lorg/telegram/ui/Cells/TextColorCell;
     sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v15, "Notifications"
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v16, "Notifications"
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
 
     const/16 v16, 0x0
 
@@ -1920,7 +1960,27 @@
     .local v11, "radioCell":Lorg/telegram/ui/Cells/RadioCell;
     sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v15, "Notifications"
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v16, "Notifications"
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
 
     const/16 v16, 0x0
 
@@ -2130,7 +2190,27 @@
     .local v3, "cell":Lorg/telegram/ui/Cells/TextCheckBoxCell;
     sget-object v14, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v15, "Notifications"
+    new-instance v15, Ljava/lang/StringBuilder;
+
+    invoke-direct {v15}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v16, "Notifications"
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v16
+
+    invoke-virtual/range {v15 .. v16}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v15
+
+    invoke-virtual {v15}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v15
 
     const/16 v16, 0x0
 

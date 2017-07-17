@@ -110,23 +110,23 @@ ProfileActivity$8$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUs
 ProfileActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; TODO
 ProfileActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
-ProfileNotificationsActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3$7.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+ProfileNotificationsActivity$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3$6.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3$7.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$3.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
-ReportOtherActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+ReportOtherActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 
 SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 SettingsActivity$4$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;

@@ -196,3 +196,34 @@ ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegr
 ProfileNotificationsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ProfileNotificationsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
+
+
+Version without subscribe
+$ grep -r "\"userID"\"
+messenger/ApplicationLoader.java:            ChangeUserHelper.setUserTag(applicationContext.getSharedPreferences("userID", 0).getInt("userID", 0));
+ui/ChangeUserActivity.java:            SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        sharedPref.edit().putInt("userID", firstDisabledUser).commit();
+ui/ChangeUserActivity.java:        SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        sharedPref.edit().putInt("userID", sharedPref.getInt("lastID", 0)).commit();
+ui/ChangeUserActivity.java:        SharedPreferences userDisabled = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        SharedPreferences userDisabled = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:            SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:            sharedPref.edit().putInt("userID", ChangeUserHelper.getID()).commit();
+ui/DialogsActivity.java:        SharedPreferences userID = ApplicationLoader.applicationContext.getSharedPreferences("userID", 0);
+ui/IntroActivity.java:        SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/IntroActivity.java:            sharedPref.edit().putInt("userID", 0).apply();
+
+MyVersion
+messenger/ApplicationLoader.java:            ChangeUserHelper.setUserTag(applicationContext.getSharedPreferences("userID", 0).getInt("userID", 0));
+ui/ChangeUserActivity.java:            SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        sharedPref.edit().putInt("userID", firstDisabledUser).commit();
+ui/ChangeUserActivity.java:        SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        sharedPref.edit().putInt("userID", sharedPref.getInt("lastID", 0)).commit();
+ui/ChangeUserActivity.java:        SharedPreferences userDisabled = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:        SharedPreferences userDisabled = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:            SharedPreferences sharedPref = getSharedPreferences("userID", 0);
+ui/ChangeUserActivity.java:            sharedPref.edit().putInt("userID", ChangeUserHelper.getID()).commit();
+ui/DialogsActivity.java:        SharedPreferences userID = ApplicationLoader.applicationContext.getSharedPreferences("userID", 0);
+

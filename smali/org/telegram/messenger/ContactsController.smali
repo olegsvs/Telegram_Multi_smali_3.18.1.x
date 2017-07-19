@@ -4916,7 +4916,7 @@
     const-string/jumbo v3, "invitetexttime"
 
     invoke-interface {v0, v3, v6}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-	
+
     move-result v2
 
     .line 185

@@ -413,7 +413,7 @@
 
     add-int/2addr v7, v8
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 817
     :cond_6
@@ -424,7 +424,7 @@
     .line 818
     const v7, 0x7fffffff
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 827
     .restart local v2    # "editor":Landroid/content/SharedPreferences$Editor;

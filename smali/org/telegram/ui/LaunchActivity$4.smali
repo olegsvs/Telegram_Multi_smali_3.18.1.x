@@ -802,7 +802,7 @@
     :cond_f
     const/16 v11, 0xd
 
-    if-ne v3, v11, :cond_12
+    if-ne v3, v11, :cond_10
 
     .line 463
     :try_start_3
@@ -844,8 +844,8 @@
     .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_3
 
     .line 472
-    .end local v6    # "lg":Ljava/lang/String;
-    .end local v7    # "link":Ljava/lang/String;
+    .end local v6
+    .end local v7
     :goto_5
     iget-object v11, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
@@ -871,10 +871,10 @@
 
     .line 473
     .end local v2    # "e":Ljava/lang/Exception;
-    :cond_12
+    :cond_10
     const/16 v11, 0xf
 
-    if-ne v3, v11, :cond_13
+    if-ne v3, v11, :cond_11
 
     .line 475
     :try_start_4
@@ -927,7 +927,7 @@
 
     .line 481
     .end local v2    # "e":Ljava/lang/Exception;
-    :cond_13
+    :cond_11
     const/16 v11, 0xe
 
     if-ne v3, v11, :cond_0

@@ -691,13 +691,13 @@
     :try_start_0
     new-instance v7, Ljava/io/File;
 
-	new-instance v29, Ljava/lang/StringBuilder;
+    new-instance v29, Ljava/lang/StringBuilder;
 
     invoke-direct/range {v29 .. v29}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
 
-	move-result-object v31
+    move-result-object v31
 
     move-object/from16 v0, v29
 
@@ -720,7 +720,7 @@
     move-result-object v29
 
     invoke-virtual/range {v29 .. v29}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-	
+
     move-result-object v29
 
     const-string/jumbo v31, "user.dat"
@@ -729,7 +729,7 @@
 
     move-object/from16 v1, v31
 
-	invoke-direct {v7, v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+    invoke-direct {v7, v0, v1}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
     .line 166
     .local v7, "configFile":Ljava/io/File;

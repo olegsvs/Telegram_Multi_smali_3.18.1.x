@@ -109,8 +109,8 @@
     <string name="AndOther_other">и %1$d других</string>
     <string name="AndOther_two">и %1$d других</string>
     <string name="AndOther_zero">и %1$d других</string>
-    <string name="AppName">Plus Messenger</string>
-    <string name="AppWillRestart">Plus Messenger будет перезагружен</string>
+    <string name="AppName">Telegram Multi</string>
+    <string name="AppWillRestart">Telegram Multi будет перезагружен</string>
     <string name="ApplyLocalizationFile">Применить файл локализации</string>
     <string name="ApplyTheme">Применить тему</string>
     <string name="ApplyThemeSum">Установить xml темы из локальной папки</string>
@@ -691,7 +691,7 @@
     <string name="IsTyping">набирает…</string>
     <string name="JoinChannel">"
 
-Присоединяйтесь к официальному каналу Plus Messenger:"</string>
+Присоединяйтесь к официальному каналу Telegram Multi:"</string>
     <string name="JoinToGroup">"Хотите присоединиться к чату '%1$s'?"</string>
     <string name="JoinToGroupErrorFull">Извините, эта группа уже заполнена.</string>
     <string name="JoinToGroupErrorNotExist">Извините, похоже, что такого чата не существует.</string>
@@ -1017,18 +1017,18 @@
     <string name="OwnAvatarAlignTop">Размешение своего аватара сверху</string>
     <string name="OwnNameSize">Размер имени</string>
     <string name="Page1Message">Самый &lt;b>быстрый&lt;/b> мессенджер в мире.&lt;br/>А ещё &lt;b>бесплатный&lt;/b> и &lt;b>безопасный&lt;/b>.</string>
-    <string name="Page1Title">Plus Messenger</string>
-    <string name="Page2Message">&lt;b>Plus Messenger&lt;/b> доставляет сообщения быстрее, чем&lt;br/>любое другое приложение.</string>
+    <string name="Page1Title">Telegram Multi</string>
+    <string name="Page2Message">&lt;b>Telegram Multi&lt;/b> доставляет сообщения быстрее, чем&lt;br/>любое другое приложение.</string>
     <string name="Page2Title">Быстрый</string>
-    <string name="Page3Message">&lt;b>Plus Messenger&lt;/b> бесплатный навсегда. Без рекламы.&lt;br/>Без абонентской платы.</string>
+    <string name="Page3Message">&lt;b>Telegram Multi&lt;/b> бесплатный навсегда. Без рекламы.&lt;br/>Без абонентской платы.</string>
     <string name="Page3Title">Бесплатный</string>
-    <string name="Page4Message">&lt;b>Plus Messenger&lt;/b> хранит ваши сообщения в безопасности&lt;br/>от хакерских атак.</string>
+    <string name="Page4Message">&lt;b>Telegram Multi&lt;/b> хранит ваши сообщения в безопасности&lt;br/>от хакерских атак.</string>
     <string name="Page4Title">Безопасный</string>
-    <string name="Page5Message">&lt;b>Plus Messenger&lt;/b> не имеет ограничений на размер&lt;br/>ваших медиа и чатов.</string>
+    <string name="Page5Message">&lt;b>Telegram Multi&lt;/b> не имеет ограничений на размер&lt;br/>ваших медиа и чатов.</string>
     <string name="Page5Title">Мощный</string>
-    <string name="Page6Message">&lt;b>Plus Messenger&lt;/b> позволяет вам получать доступ к вашим сообщениям&lt;br/>на множестве устройств.</string>
+    <string name="Page6Message">&lt;b>Telegram Multi&lt;/b> позволяет вам получать доступ к вашим сообщениям&lt;br/>на множестве устройств.</string>
     <string name="Page6Title">Облачный</string>
-    <string name="Page7Message">&lt;b>Plus Messenger&lt;/b>-сообщения надёжно зашифрованы&lt;br/>и могут самоуничтожаться.</string>
+    <string name="Page7Message">&lt;b>Telegram Multi&lt;/b>-сообщения надёжно зашифрованы&lt;br/>и могут самоуничтожаться.</string>
     <string name="Page7Title">Приватный</string>
     <string name="Passcode">Код доступа</string>
     <string name="PasscodeDoNotMatch">Коды доступа не совпадают</string>
@@ -1081,7 +1081,7 @@
     <string name="PleaseEnterFirstPassword">Введите ваш пароль</string>
     <string name="PleaseEnterPassword">Введите ваш новый пароль</string>
     <string name="PleaseReEnterPassword">Повторите ваш пароль</string>
-    <string name="PlusSettings">Настройки Plus</string>
+    <string name="PlusSettings">Настройки Multi</string>
     <string name="PopupNotification">Всплывающие уведомления</string>
     <string name="PrivacyFloodControlError">Извините, слишком много запросов. Не удаётся изменить настройки приватности прямо сейчас, пожалуйста, подождите.</string>
     <string name="PrivacyLastSeen">Последняя активность</string>
@@ -1172,7 +1172,7 @@
     <string name="Satellite">Спутник</string>
     <string name="Saturation">Насыщенность</string>
     <string name="Save">Сохранить</string>
-    <string name="SaveErrorMsg0">Тема ещё не создана. Примените сначала любой мод Plus Messenger</string>
+    <string name="SaveErrorMsg0">Тема ещё не создана. Примените сначала любой мод Telegram Multi</string>
     <string name="SaveSettings">Сохранить настройки</string>
     <string name="SaveSettingsSum">"Сохранить настройки в папку 'Telegram'"</string>
     <string name="SaveTheme">Сохранить тему</string>
@@ -1340,7 +1340,7 @@
     <string name="TapHereGifs">Нажмите для доступа к сохранённым GIF</string>
     <string name="TelegramFaq">Вопросы и ответы о Telegram</string>
     <string name="TelegramFaqUrl">https://telegram.org/faq</string>
-    <string name="TelegramForAndroid">Plus Messenger для Android</string>
+    <string name="TelegramForAndroid">Telegram Multi для Android</string>
     <string name="TerminateAllSessions">Завершить все другие сеансы</string>
     <string name="TerminateSessionInfo">Нажмите на сеанс для завершения.</string>
     <string name="TerminateSessionQuestion">Завершить этот сеанс?</string>
@@ -1348,7 +1348,7 @@
     <string name="ThemeApplied">Тема применена!</string>
     <string name="ThemeUpdated">%s обновлена</string>
     <string name="Themes">Темы</string>
-    <string name="ThemesAppMsg">Хотите посмотреть темы, созданные другими пользователями Plus Messenger?</string>
+    <string name="ThemesAppMsg">Хотите посмотреть темы, созданные другими пользователями Telegram Multi?</string>
     <string name="Theming">Кастомизация</string>
     <string name="TimeDateColor">Цвет времени/даты</string>
     <string name="TimeDateSize">Размер времени/даты</string>
@@ -1572,4 +1572,5 @@
     <string name="hockeyapp_update_dialog_positive_button">Показать</string>
     <string name="hockeyapp_update_dialog_title">Доступно обновление</string>
     <string name="hockeyapp_update_mandatory_toast">%s доступен и является обязательным для обновления!</string>
+    <string name="Change_another_user">Мультиюзер</string>
 </resources>

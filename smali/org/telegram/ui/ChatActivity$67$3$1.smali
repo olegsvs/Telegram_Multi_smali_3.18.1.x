@@ -77,7 +77,6 @@
 
     move-result-object v1
 
-
     const/4 v2, 0x0
 
     invoke-virtual {v0, v1, v2}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;

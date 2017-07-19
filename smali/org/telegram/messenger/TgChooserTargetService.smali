@@ -286,8 +286,8 @@
     new-instance v4, Ljava/util/concurrent/Semaphore;
 
     invoke-direct {v4, v9}, Ljava/util/concurrent/Semaphore;-><init>(I)V
-    
-	.line 60
+
+    .line 60
     .local v4, "semaphore":Ljava/util/concurrent/Semaphore;
     new-instance v0, Landroid/content/ComponentName;
 

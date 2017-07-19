@@ -2210,8 +2210,6 @@
     goto/16 :goto_0
 
     .line 986
-    nop
-
     :array_0
     .array-data 4
         0x3f800000    # 1.0f
@@ -4986,8 +4984,6 @@
     goto/16 :goto_4
 
     .line 720
-    nop
-
     :array_0
     .array-data 4
         0x0

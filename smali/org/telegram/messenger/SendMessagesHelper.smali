@@ -7274,7 +7274,7 @@
     :cond_5d
     const/4 v4, 0x0
 
-    goto :goto_22
+    goto/16 :goto_22
 
     .line 1696
     .end local v7    # "reqSend":Lorg/telegram/tgnet/TLRPC$TL_messages_sendMessage;
@@ -8924,7 +8924,7 @@
     move-object/from16 v7, v47
 
     .restart local v7    # "reqSend":Lorg/telegram/tgnet/TLObject;
-    goto :goto_33
+    goto/16 :goto_33
 
     .line 1894
     .end local v47    # "request":Lorg/telegram/tgnet/TLRPC$TL_messages_sendMedia;

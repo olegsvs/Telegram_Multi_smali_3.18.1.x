@@ -409,6 +409,8 @@
 
 .field public static final ic_action_previous:I = 0x7f0200c4
 
+.field public static final ic_add_white_18dp:I = 0x7f020295
+
 .field public static final ic_again:I = 0x7f0200c5
 
 .field public static final ic_againinline:I = 0x7f0200c6

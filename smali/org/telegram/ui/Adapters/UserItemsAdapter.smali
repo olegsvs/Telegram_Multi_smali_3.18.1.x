@@ -149,7 +149,7 @@
     .local v0, "holder":Lorg/telegram/ui/Adapters/UserItemsAdapter$ViewHolder;
     iget-object v2, p0, Lorg/telegram/ui/Adapters/UserItemsAdapter;->inflater:Landroid/view/LayoutInflater;
 
-    const v3, 0x7f03000c
+    const v3, 0x7f03079c
 
     const/4 v4, 0x0
 
@@ -158,7 +158,7 @@
     move-result-object p2
 
     .line 83
-    const v2, 0x7f0d004c
+    const v2, 0x7f0c0074
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -169,7 +169,7 @@
     iput-object v2, v0, Lorg/telegram/ui/Adapters/UserItemsAdapter$ViewHolder;->imgViewPhoto:Landroid/widget/ImageView;
 
     .line 84
-    const v2, 0x7f0d004f
+    const v2, 0x7f0c0077
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -180,7 +180,7 @@
     iput-object v2, v0, Lorg/telegram/ui/Adapters/UserItemsAdapter$ViewHolder;->imgViewCurrent:Landroid/widget/ImageView;
 
     .line 85
-    const v2, 0x7f0d004d
+    const v2, 0x7f0c0075
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 
@@ -191,7 +191,7 @@
     iput-object v2, v0, Lorg/telegram/ui/Adapters/UserItemsAdapter$ViewHolder;->txtViewName:Landroid/widget/TextView;
 
     .line 86
-    const v2, 0x7f0d004e
+    const v2, 0x7f0c0076
 
     invoke-virtual {p2, v2}, Landroid/view/View;->findViewById(I)Landroid/view/View;
 

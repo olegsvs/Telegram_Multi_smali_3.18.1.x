@@ -15,6 +15,8 @@
 
 
 # static fields
+.field public static final activity_change_user:I = 0x7f030799
+
 .field public static final color_colorselectview:I = 0x7f030000
 
 .field public static final color_hexview:I = 0x7f030001
@@ -60,6 +62,8 @@
 .field public static final seek_bar_preference:I = 0x7f030015
 
 .field public static final tabs_bg:I = 0x7f030016
+
+.field public static final user_list_item:I = 0x7f03079c
 
 
 # direct methods

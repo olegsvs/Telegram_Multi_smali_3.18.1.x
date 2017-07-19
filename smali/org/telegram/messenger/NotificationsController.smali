@@ -15409,8 +15409,6 @@
     goto/16 :goto_16
 
     .line 1857
-    nop
-
     :array_0
     .array-data 8
         0x0

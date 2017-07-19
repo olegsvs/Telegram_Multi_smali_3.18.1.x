@@ -15112,13 +15112,13 @@
     .line 2314
     :cond_1
     new-instance v1, Ljava/io/File;
-	
+
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
-	
+
     move-result-object v7
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
@@ -27584,23 +27584,6 @@
     invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
 
     .line 1752
-    return-void
-.end method
-
-.method private static sortThemes()V
-    .locals 2
-
-    .prologue
-    .line 2296
-    sget-object v0, Lorg/telegram/ui/ActionBar/Theme;->themes:Ljava/util/ArrayList;
-
-    new-instance v1, Lorg/telegram/ui/ActionBar/Theme$5;
-
-    invoke-direct {v1}, Lorg/telegram/ui/ActionBar/Theme$5;-><init>()V
-
-    invoke-static {v0, v1}, Ljava/util/Collections;->sort(Ljava/util/List;Ljava/util/Comparator;)V
-
-    .line 2307
     return-void
 .end method
 

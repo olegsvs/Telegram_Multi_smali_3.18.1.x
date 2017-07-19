@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 108
+    .line 107
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,12 +41,12 @@
     .locals 2
 
     .prologue
-    .line 110
+    .line 109
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ChangeUserActivity;->prepareArrayList()V
 
-    .line 111
+    .line 110
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     new-instance v1, Lorg/telegram/ui/ChangeUserActivity$2$1;
@@ -55,6 +55,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/ui/ChangeUserActivity;->runOnUiThread(Ljava/lang/Runnable;)V
 
-    .line 116
+    .line 115
     return-void
 .end method

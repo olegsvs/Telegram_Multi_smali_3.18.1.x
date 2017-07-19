@@ -524,6 +524,8 @@
 
     goto/16 :goto_0
 
+    nop
+
     .line 619
     :pswitch_data_0
     .packed-switch 0x0

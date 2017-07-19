@@ -1574,7 +1574,7 @@
 
     move-result-object v1
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 514
     :cond_6

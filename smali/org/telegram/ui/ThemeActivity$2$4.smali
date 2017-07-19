@@ -244,7 +244,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 177
     :catch_0

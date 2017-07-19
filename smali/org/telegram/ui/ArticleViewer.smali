@@ -13313,7 +13313,7 @@
 
     invoke-interface {v5}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 2120
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;

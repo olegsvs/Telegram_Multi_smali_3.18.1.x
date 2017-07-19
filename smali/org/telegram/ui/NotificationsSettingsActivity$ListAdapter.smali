@@ -2457,6 +2457,8 @@
     .restart local v16    # "value":Ljava/lang/String;
     goto :goto_8
 
+    nop
+
     .line 643
     :pswitch_data_0
     .packed-switch 0x0

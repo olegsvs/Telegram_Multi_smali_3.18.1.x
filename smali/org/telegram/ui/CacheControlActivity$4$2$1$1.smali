@@ -70,13 +70,13 @@
     .line 462
     new-instance v1, Ljava/io/File;
 
-	new-instance v2, Ljava/lang/StringBuilder;
+    new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
-	
+
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
 
-	move-result-object v3
+    move-result-object v3
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -92,13 +92,12 @@
 
     invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
 
-
     move-result-object v2
 
     const-string/jumbo v3, "cache4.db"
 
     invoke-direct {v1, v2, v3}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-	
+
     .line 463
     .local v1, "file":Ljava/io/File;
     iget-object v2, p0, Lorg/telegram/ui/CacheControlActivity$4$2$1$1;->this$3:Lorg/telegram/ui/CacheControlActivity$4$2$1;

@@ -910,6 +910,8 @@
 
     goto/16 :goto_5
 
+    nop
+
     .line 322
     :array_0
     .array-data 8

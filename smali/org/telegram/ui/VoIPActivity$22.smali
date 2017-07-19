@@ -607,7 +607,6 @@
 
     move-result-object v4
 
-
     invoke-virtual {v3, v4, v5}, Lorg/telegram/ui/VoIPActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v3

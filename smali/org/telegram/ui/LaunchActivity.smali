@@ -13570,8 +13570,6 @@
     goto/16 :goto_b
 
     .line 529
-    nop
-
     :sswitch_data_0
     .sparse-switch
         -0x5b244d4f -> :sswitch_6

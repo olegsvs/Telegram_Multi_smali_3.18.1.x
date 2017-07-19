@@ -3965,7 +3965,7 @@
     const/16 v73, 0x10e
 
     .line 3653
-    goto :goto_0
+    goto/16 :goto_0
 
     .end local v79    # "temp":I
     :cond_3
@@ -3981,7 +3981,7 @@
     .line 3655
     const/16 v74, 0x0
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 3656
     :cond_4

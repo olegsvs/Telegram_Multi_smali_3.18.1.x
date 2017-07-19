@@ -20663,8 +20663,6 @@
     goto/16 :goto_0
 
     .line 3954
-    nop
-
     :array_0
     .array-data 4
         0x0
@@ -23680,7 +23678,7 @@
     :goto_1
     invoke-direct {p0}, Lorg/telegram/ui/ChatActivity;->checkListViewPaddings()V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 7966
     :cond_5

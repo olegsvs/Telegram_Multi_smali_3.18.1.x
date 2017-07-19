@@ -1378,13 +1378,13 @@
     .line 101
     new-instance v0, Ljava/io/File;
 
-	new-instance v1, Ljava/lang/StringBuilder;
+    new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
-	
+
     invoke-static {}, Lorg/telegram/messenger/ApplicationLoader;->getFilesDirFixed()Ljava/io/File;
 
-	move-result-object v2
+    move-result-object v2
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/Object;)Ljava/lang/StringBuilder;
 
@@ -1405,7 +1405,7 @@
     const-string/jumbo v2, "cache4.db"
 
     invoke-direct {v0, v1, v2}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
-	
+
     .line 102
     .local v0, "file":Ljava/io/File;
     invoke-virtual {v0}, Ljava/io/File;->length()J

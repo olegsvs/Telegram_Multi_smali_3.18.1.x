@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/ui/ChangeUserActivity$2;
 
     .prologue
-    .line 111
+    .line 110
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$2$1;->this$1:Lorg/telegram/ui/ChangeUserActivity$2;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,6 +41,6 @@
     .locals 0
 
     .prologue
-    .line 114
+    .line 113
     return-void
 .end method

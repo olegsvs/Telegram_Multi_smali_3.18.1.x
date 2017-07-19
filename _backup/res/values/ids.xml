@@ -85,4 +85,13 @@
     <item type="id" name="seekBarPrefBarContainer">false</item>
     <item type="id" name="tabsLayout">false</item>
     <item type="id" name="tabsText">false</item>
+    <item type="id" name="users_listview">false</item>
+    <item type="id" name="fab_label" />
+    <item type="id" name="fab">false</item>
+    <item type="id" name="back_to_last_user_button">false</item>
+    <item type="id" name="relativeLayout1">false</item>
+    <item type="id" name="userPhoto">false</item>
+    <item type="id" name="userName">false</item>
+    <item type="id" name="userPhone">false</item>
+    <item type="id" name="userCurrent">false</item>
 </resources>

@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 201
+    .line 218
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$6;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,16 +38,11 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 1
+    .locals 0
     .param p1, "dialog"    # Landroid/content/DialogInterface;
     .param p2, "arg1"    # I
 
     .prologue
-    .line 203
-    iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$6;->this$0:Lorg/telegram/ui/ChangeUserActivity;
-
-    invoke-virtual {v0}, Lorg/telegram/ui/ChangeUserActivity;->restart()V
-
-    .line 204
+    .line 221
     return-void
 .end method

@@ -503,6 +503,8 @@
 
 .field public static final ChangeRecoveryEmail:I = 0x7f070103
 
+.field public static final Change_another_user:I = 0x7f070741
+
 .field public static final ChannelAddAdmin:I = 0x7f070104
 
 .field public static final ChannelAddMembers:I = 0x7f070105
@@ -3729,7 +3731,6 @@
 
 .field public static final updatePlusText:I = 0x7f0706f0
 
-.field public static final Change_another_user:I = 0x7f070741
 
 # direct methods
 .method public constructor <init>()V

@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChangeUserActivity;->showAlertDeleteUser(I)V
+    value = Lorg/telegram/ui/ChangeUserActivity;->showAlertAddUser()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 184
+    .line 213
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$5;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,9 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 187
+    .line 215
+    invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
+
+    .line 216
     return-void
 .end method

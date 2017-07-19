@@ -10273,290 +10273,302 @@
 .end method
 
 .method public onFragmentCreate()Z
-    .locals 5
+    .locals 6
 
     .prologue
-    const/4 v4, 0x1
+    const/4 v5, 0x1
 
-    const/4 v2, 0x0
+    const/4 v3, 0x0
 
-    .line 177
+    .line 148
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 179
+    .line 150
+    sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
+
+    const-string/jumbo v2, "userID"
+
+    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v0
+
+    .line 151
+    .local v0, "userID":Landroid/content/SharedPreferences;
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    const-string/jumbo v2, "!firstLaunch?"
+
+    invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 152
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 154
     invoke-virtual {p0}, Lorg/telegram/ui/DialogsActivity;->getArguments()Landroid/os/Bundle;
 
-    move-result-object v0
+    move-result-object v1
 
-    if-eqz v0, :cond_0
+    if-eqz v1, :cond_0
 
-    .line 180
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+    .line 155
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "onlySelect"
+    const-string/jumbo v2, "onlySelect"
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v0
+    move-result v1
 
-    iput-boolean v0, p0, Lorg/telegram/ui/DialogsActivity;->onlySelect:Z
+    iput-boolean v1, p0, Lorg/telegram/ui/DialogsActivity;->onlySelect:Z
 
-    .line 181
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+    .line 156
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
-    const-string/jumbo v1, "cantSendToChannels"
+    const-string/jumbo v2, "cantSendToChannels"
 
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
-    move-result v0
+    move-result v1
 
-    iput-boolean v0, p0, Lorg/telegram/ui/DialogsActivity;->cantSendToChannels:Z
+    iput-boolean v1, p0, Lorg/telegram/ui/DialogsActivity;->cantSendToChannels:Z
+
+    .line 157
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+
+    const-string/jumbo v2, "dialogsType"
+
+    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    iput v1, p0, Lorg/telegram/ui/DialogsActivity;->dialogsType:I
+
+    .line 158
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+
+    const-string/jumbo v2, "selectAlertString"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertString:Ljava/lang/String;
+
+    .line 159
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+
+    const-string/jumbo v2, "selectAlertStringGroup"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertStringGroup:Ljava/lang/String;
+
+    .line 160
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+
+    const-string/jumbo v2, "addToGroupAlertString"
+
+    invoke-virtual {v1, v2}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v1
+
+    iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->addToGroupAlertString:Ljava/lang/String;
+
+    .line 163
+    :cond_0
+    iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->searchString:Ljava/lang/String;
+
+    if-nez v1, :cond_1
+
+    .line 164
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->dialogsNeedReload:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 165
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->emojiDidLoaded:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 166
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 167
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->encryptedChatUpdated:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 168
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->contactsDidLoaded:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 169
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->appDidLogout:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 170
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->openedChatChanged:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 171
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->notificationsSettingsUpdated:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 172
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->messageReceivedByAck:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 173
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->messageReceivedByServer:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 174
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->messageSendError:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 175
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->didSetPasscode:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 176
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->needReloadRecentDialogsSearch:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 177
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->didLoadedReplyMessages:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
+
+    .line 178
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
+
+    move-result-object v1
+
+    sget v2, Lorg/telegram/messenger/NotificationCenter;->reloadHints:I
+
+    invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
     .line 182
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+    :cond_1
+    sget-boolean v1, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
 
-    const-string/jumbo v1, "dialogsType"
-
-    invoke-virtual {v0, v1, v2}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
-
-    move-result v0
-
-    iput v0, p0, Lorg/telegram/ui/DialogsActivity;->dialogsType:I
+    if-nez v1, :cond_2
 
     .line 183
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
-    const-string/jumbo v1, "selectAlertString"
+    move-result-object v1
 
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
+    const/16 v2, 0x64
 
-    move-result-object v0
-
-    iput-object v0, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertString:Ljava/lang/String;
+    invoke-virtual {v1, v3, v2, v5}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
 
     .line 184
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
-
-    const-string/jumbo v1, "selectAlertStringGroup"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertStringGroup:Ljava/lang/String;
-
-    .line 185
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
-
-    const-string/jumbo v1, "addToGroupAlertString"
-
-    invoke-virtual {v0, v1}, Landroid/os/Bundle;->getString(Ljava/lang/String;)Ljava/lang/String;
-
-    move-result-object v0
-
-    iput-object v0, p0, Lorg/telegram/ui/DialogsActivity;->addToGroupAlertString:Ljava/lang/String;
-
-    .line 188
-    :cond_0
-    iget-object v0, p0, Lorg/telegram/ui/DialogsActivity;->searchString:Ljava/lang/String;
-
-    if-nez v0, :cond_1
-
-    .line 189
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->dialogsNeedReload:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 190
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->emojiDidLoaded:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 191
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 192
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->encryptedChatUpdated:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 193
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->contactsDidLoaded:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 194
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->appDidLogout:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 195
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->openedChatChanged:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 196
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->notificationsSettingsUpdated:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 197
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->messageReceivedByAck:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 198
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->messageReceivedByServer:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 199
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->messageSendError:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 200
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->didSetPasscode:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 201
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->needReloadRecentDialogsSearch:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 202
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->didLoadedReplyMessages:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 203
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->reloadHints:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 205
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->refreshTabs:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 206
-    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/messenger/NotificationCenter;->updateDialogsTheme:I
-
-    invoke-virtual {v0, p0, v1}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
-
-    .line 210
-    :cond_1
-    sget-boolean v0, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
-
-    if-nez v0, :cond_2
-
-    .line 211
-    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
-
-    move-result-object v0
-
-    sget v1, Lorg/telegram/ui/ActionBar/Theme;->plusChatsToLoad:I
-
-    invoke-virtual {v0, v2, v1, v4}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
-
-    .line 212
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
-    move-result-object v0
+    move-result-object v1
 
-    invoke-virtual {v0}, Lorg/telegram/messenger/ContactsController;->checkInviteText()V
+    invoke-virtual {v1}, Lorg/telegram/messenger/ContactsController;->checkInviteText()V
 
-    .line 213
+    .line 185
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
-    move-result-object v0
+    move-result-object v1
 
     const-wide/16 v2, 0x0
 
-    const/4 v1, 0x0
+    const/4 v4, 0x0
 
-    invoke-virtual {v0, v2, v3, v1}, Lorg/telegram/messenger/MessagesController;->loadPinnedDialogs(JLjava/util/ArrayList;)V
+    invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->loadPinnedDialogs(JLjava/util/ArrayList;)V
 
-    .line 214
+    .line 186
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->checkFeaturedStickers()V
 
-    .line 215
-    sput-boolean v4, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
+    .line 187
+    sput-boolean v5, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
 
-    .line 217
+    .line 189
     :cond_2
-    return v4
+    return v5
 .end method
 
 .method public onFragmentDestroy()V

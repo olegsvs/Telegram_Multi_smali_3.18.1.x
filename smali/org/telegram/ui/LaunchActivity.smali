@@ -4497,7 +4497,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v14, "org.telegram.plus.OPEN_ACCOUNT"
+    const-string/jumbo v14, "org.telegram.multi.OPEN_ACCOUNT"
 
     invoke-virtual {v4, v14}, Ljava/lang/String;->equals(Ljava/lang/Object;)Z
 
@@ -14670,7 +14670,7 @@
 
     move-result-object v0
 
-    const-string/jumbo v1, "org.telegram.plus.beta"
+    const-string/jumbo v1, "org.telegram.multi.beta"
 
     invoke-virtual {v0, v1}, Ljava/lang/String;->contains(Ljava/lang/CharSequence;)Z
 

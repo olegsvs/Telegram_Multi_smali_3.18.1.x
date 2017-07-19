@@ -15,11 +15,11 @@
 
 
 # static fields
-.field public static final ACCESS:Ljava/lang/String; = "org.telegram.plus.android.provider.ACCESS"
+.field public static final ACCESS:Ljava/lang/String; = "org.telegram.multi.android.provider.ACCESS"
 
-.field public static final C2D_MESSAGE:Ljava/lang/String; = "org.telegram.plus.permission.C2D_MESSAGE"
+.field public static final C2D_MESSAGE:Ljava/lang/String; = "org.telegram.multi.permission.C2D_MESSAGE"
 
-.field public static final MAPS_RECEIVE:Ljava/lang/String; = "org.telegram.plus.permission.MAPS_RECEIVE"
+.field public static final MAPS_RECEIVE:Ljava/lang/String; = "org.telegram.multi.permission.MAPS_RECEIVE"
 
 
 # direct methods

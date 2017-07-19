@@ -1931,8 +1931,7 @@ If you forget your password, you will lose access to your Telegram account. Ther
     <string name="hockeyapp_update_mandatory_toast">%s is available and is a mandatory update!</string>
     <string name="UsePlusTheme">Use Plus theming</string>
     <string name="AppNameBeta">Telegram Multi Beta</string>
-    <string name="PlusVersion">Plus Version</string>
-    <string name="ShortAppName">Plus</string>
+    <string name="PlusVersion">Telegram Multi Version</string>
     <string name="ShowMySettings">Show my settings</string>
     <string name="gcm_defaultSenderId">326898382893</string>
     <string name="google_api_key" />
@@ -1941,4 +1940,19 @@ If you forget your password, you will lose access to your Telegram account. Ther
     <string name="hockeyapp_update_version_details_label">"%1$s
 %2$s - %3$s"</string>
     <string name="Change_another_user">Multiuser</string>
+	<string name="AddUser">Add account</string>
+    <string name="DeleteFirstUser">Impossible delete first user!</string>
+    <string name="DialogAddNo">No</string>
+    <string name="DialogAddSure">Continue?</string>
+    <string name="DialogAddUser">The application will quit and automatically start in a couple of seconds to add a new user</string>
+    <string name="DialogAddYes">Yes</string>
+    <string name="DialogDeleteUser">Delete user?</string>
+    <string name="DialogNo">No</string>
+    <string name="DialogSure">You are sure?</string>
+    <string name="DialogYes">Yes</string>
+    <string name="GoBack">Go Back!</string>
+    <string name="IsCurrentUser">Is current user!</string>
+    <string name="MaxUsersCount">Maximum 10 users!</string>
+    <string name="ScanningProfiles">Scanning profiles</string>
+    <string name="ShortAppName">Telegram Multi</string>
 </resources>

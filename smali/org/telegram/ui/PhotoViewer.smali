@@ -5910,7 +5910,7 @@
     .line 5538
     iget-object v2, p0, Lorg/telegram/ui/PhotoViewer;->parentActivity:Landroid/app/Activity;
 
-    const-string/jumbo v3, "org.telegram.plus.provider"
+    const-string/jumbo v3, "org.telegram.multi.provider"
 
     invoke-static {v2, v3, v0}, Landroid/support/v4/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 

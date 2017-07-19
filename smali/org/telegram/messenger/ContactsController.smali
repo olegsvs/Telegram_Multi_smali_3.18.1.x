@@ -4403,7 +4403,7 @@
     .line 1616
     const-string/jumbo v8, "mimetype"
 
-    const-string/jumbo v9, "vnd.android.cursor.item/vnd.org.telegram.plus.android.profile"
+    const-string/jumbo v9, "vnd.android.cursor.item/vnd.org.telegram.multi.android.profile"
 
     invoke-virtual {v0, v8, v9}, Landroid/content/ContentProviderOperation$Builder;->withValue(Ljava/lang/String;Ljava/lang/Object;)Landroid/content/ContentProviderOperation$Builder;
 
@@ -4642,7 +4642,7 @@
     .line 230
     .end local v4    # "e":Ljava/lang/Exception;
     :cond_0
-    const-string/jumbo v6, "org.telegram.plus"
+    const-string/jumbo v6, "org.telegram.multi"
 
     invoke-virtual {v3, v6}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
 
@@ -4813,7 +4813,7 @@
 
     move-result-object v7
 
-    const-string/jumbo v8, "org.telegram.plus"
+    const-string/jumbo v8, "org.telegram.multi"
 
     invoke-direct {v6, v7, v8}, Landroid/accounts/Account;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
@@ -5101,7 +5101,7 @@
 
     .line 271
     .local v2, "am":Landroid/accounts/AccountManager;
-    const-string/jumbo v4, "org.telegram.plus"
+    const-string/jumbo v4, "org.telegram.multi"
 
     invoke-virtual {v2, v4}, Landroid/accounts/AccountManager;->getAccountsByType(Ljava/lang/String;)[Landroid/accounts/Account;
 

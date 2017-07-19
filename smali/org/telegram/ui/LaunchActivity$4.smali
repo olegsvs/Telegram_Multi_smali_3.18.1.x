@@ -882,7 +882,7 @@
 
     const-string/jumbo v11, "android.intent.action.VIEW"
 
-    const-string/jumbo v12, "https://play.google.com/store/apps/details?id=org.telegram.plus"
+    const-string/jumbo v12, "https://play.google.com/store/apps/details?id=org.telegram.multi"
 
     invoke-static {v12}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

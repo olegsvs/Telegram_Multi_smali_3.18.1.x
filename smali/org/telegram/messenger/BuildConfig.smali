@@ -4,7 +4,7 @@
 
 
 # static fields
-.field public static final APPLICATION_ID:Ljava/lang/String; = "org.telegram.plus"
+.field public static final APPLICATION_ID:Ljava/lang/String; = "org.telegram.multi"
 
 .field public static final BUILD_TYPE:Ljava/lang/String; = "release"
 

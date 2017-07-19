@@ -2333,7 +2333,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "org.telegram.plus.provider"
+    const-string/jumbo v3, "org.telegram.multi.provider"
 
     move-object/from16 v0, v20
 
@@ -2390,7 +2390,7 @@
 
     move-result-object v2
 
-    const-string/jumbo v3, "org.telegram.plus.provider"
+    const-string/jumbo v3, "org.telegram.multi.provider"
 
     move-object/from16 v0, v20
 
@@ -3384,7 +3384,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "org.telegram.plus.provider"
+    const-string/jumbo v4, "org.telegram.multi.provider"
 
     invoke-static {v3, v4, v14}, Landroid/support/v4/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 
@@ -3439,7 +3439,7 @@
 
     move-result-object v3
 
-    const-string/jumbo v4, "org.telegram.plus.provider"
+    const-string/jumbo v4, "org.telegram.multi.provider"
 
     invoke-static {v3, v4, v14}, Landroid/support/v4/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 

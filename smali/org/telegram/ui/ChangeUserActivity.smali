@@ -1489,7 +1489,7 @@
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
     .line 79
-    const v3, 0x7f0705b2
+    const v3, 0x7f070741
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 

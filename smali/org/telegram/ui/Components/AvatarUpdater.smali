@@ -795,7 +795,7 @@
 
     move-result-object v4
 
-    const-string/jumbo v5, "org.telegram.plus.provider"
+    const-string/jumbo v5, "org.telegram.multi.provider"
 
     invoke-static {v4, v5, v1}, Landroid/support/v4/content/FileProvider;->getUriForFile(Landroid/content/Context;Ljava/lang/String;Ljava/io/File;)Landroid/net/Uri;
 

@@ -4,9 +4,9 @@
 
 
 # static fields
-.field private static final AUTHORITY:Ljava/lang/String; = "org.telegram.plus.android.provider.content"
+.field private static final AUTHORITY:Ljava/lang/String; = "org.telegram.multi.android.provider.content"
 
-.field private static final AUTHORITY_BETA:Ljava/lang/String; = "org.telegram.plus.beta.android.provider.content"
+.field private static final AUTHORITY_BETA:Ljava/lang/String; = "org.telegram.multi.beta.android.provider.content"
 
 .field public static GET_NAME:Landroid/net/Uri; = null
 
@@ -23,7 +23,7 @@
 
     .prologue
     .line 22
-    const-string/jumbo v0, "content://org.telegram.plus.android.provider.content/theme"
+    const-string/jumbo v0, "content://org.telegram.multi.android.provider.content/theme"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -32,7 +32,7 @@
     sput-object v0, Lorg/telegram/messenger/ModuleContentProvider;->THEME_URI:Landroid/net/Uri;
 
     .line 23
-    const-string/jumbo v0, "content://org.telegram.plus.android.provider.content/name"
+    const-string/jumbo v0, "content://org.telegram.multi.android.provider.content/name"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 
@@ -41,7 +41,7 @@
     sput-object v0, Lorg/telegram/messenger/ModuleContentProvider;->GET_NAME:Landroid/net/Uri;
 
     .line 24
-    const-string/jumbo v0, "content://org.telegram.plus.android.provider.content/newname"
+    const-string/jumbo v0, "content://org.telegram.multi.android.provider.content/newname"
 
     invoke-static {v0}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
 

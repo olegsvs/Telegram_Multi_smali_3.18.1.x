@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChangeUserActivity;->showAlertDeleteUser(I)V
+    value = Lorg/telegram/ui/ChangeUserActivity;->showAlertAddUser()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 196
+    .line 172
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$4;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -38,11 +38,16 @@
 
 # virtual methods
 .method public onClick(Landroid/content/DialogInterface;I)V
-    .locals 0
+    .locals 1
     .param p1, "dialog"    # Landroid/content/DialogInterface;
     .param p2, "arg1"    # I
 
     .prologue
-    .line 199
+    .line 174
+    iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$4;->this$0:Lorg/telegram/ui/ChangeUserActivity;
+
+    invoke-virtual {v0}, Lorg/telegram/ui/ChangeUserActivity;->restart()V
+
+    .line 175
     return-void
 .end method

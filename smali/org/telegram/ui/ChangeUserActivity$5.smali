@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 213
+    .line 177
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$5;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,9 +43,6 @@
     .param p2, "arg1"    # I
 
     .prologue
-    .line 215
-    invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
-
-    .line 216
+    .line 180
     return-void
 .end method

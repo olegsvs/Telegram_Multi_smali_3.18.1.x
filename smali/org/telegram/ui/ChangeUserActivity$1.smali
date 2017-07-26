@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 90
+    .line 83
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$1;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -53,28 +53,28 @@
     .end annotation
 
     .prologue
-    .line 96
+    .line 89
     .local p1, "arg0":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     if-lez p3, :cond_0
 
-    .line 97
+    .line 90
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$1;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     invoke-static {v0, p3}, Lorg/telegram/ui/ChangeUserActivity;->access$000(Lorg/telegram/ui/ChangeUserActivity;I)V
 
-    .line 99
+    .line 92
     :goto_0
     const/4 v0, 0x1
 
     return v0
 
-    .line 98
+    .line 91
     :cond_0
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$1;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
     iget-object v1, p0, Lorg/telegram/ui/ChangeUserActivity$1;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
-    const v2, 0x7f0705b3
+    const v2, 0x7f070615
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 

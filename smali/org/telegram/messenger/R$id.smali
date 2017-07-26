@@ -219,6 +219,8 @@
 
 .field public static final userPhoto:I = 0x7f0c0074
 
+.field public static final buttonAddUser:I = 0x7f0c0078
+
 # direct methods
 .method public constructor <init>()V
     .locals 0

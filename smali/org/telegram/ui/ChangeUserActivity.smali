@@ -40,16 +40,16 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 53
+    .line 46
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 55
+    .line 48
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
-    .line 56
+    .line 49
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->adapter:Lorg/telegram/ui/Adapters/UserItemsAdapter;
 
-    .line 61
+    .line 54
     const/4 v0, 0x0
 
     iput v0, p0, Lorg/telegram/ui/ChangeUserActivity;->currentUser:I
@@ -63,7 +63,7 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 53
+    .line 46
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChangeUserActivity;->showAlertDeleteUser(I)V
 
     return-void
@@ -75,7 +75,7 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 53
+    .line 46
     invoke-direct {p0, p1}, Lorg/telegram/ui/ChangeUserActivity;->deleteUser(I)V
 
     return-void
@@ -86,7 +86,7 @@
     .param p0, "dp"    # F
 
     .prologue
-    .line 415
+    .line 374
     invoke-static {}, Landroid/content/res/Resources;->getSystem()Landroid/content/res/Resources;
 
     move-result-object v2
@@ -95,7 +95,7 @@
 
     move-result-object v0
 
-    .line 416
+    .line 375
     .local v0, "metrics":Landroid/util/DisplayMetrics;
     iget v2, v0, Landroid/util/DisplayMetrics;->densityDpi:I
 
@@ -107,7 +107,7 @@
 
     mul-float v1, p0, v2
 
-    .line 417
+    .line 376
     .local v1, "px":F
     return v1
 .end method
@@ -119,10 +119,10 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 172
+    .line 131
     const/4 v1, -0x1
 
-    .line 173
+    .line 132
     .local v1, "toDelete":I
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getUsersEnabled()Ljava/util/List;
 
@@ -148,14 +148,14 @@
 
     move-result v1
 
-    .line 175
-    const-string v2, "userID"
+    .line 134
+    const-string/jumbo v2, "userID"
 
     invoke-virtual {p0, v2, v5}, Lorg/telegram/ui/ChangeUserActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 176
+    .line 135
     .local v0, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -165,7 +165,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "state_user_"
+    const-string/jumbo v4, "state_user_"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -187,14 +187,14 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 177
+    .line 136
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 178
+    .line 137
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
@@ -209,7 +209,7 @@
 
     move-result-object v2
 
-    const-string v3, "/files_user_"
+    const-string/jumbo v3, "/files_user_"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -229,20 +229,20 @@
 
     invoke-virtual {p0, v2}, Lorg/telegram/ui/ChangeUserActivity;->deleteDir(Ljava/lang/String;)V
 
-    .line 179
+    .line 138
     iget v2, p0, Lorg/telegram/ui/ChangeUserActivity;->currentUser:I
 
     if-ne v2, p1, :cond_1
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->setUser(I)V
 
-    .line 180
+    .line 139
     .end local v0    # "sharedPref":Landroid/content/SharedPreferences;
     :cond_0
     :goto_0
     return-void
 
-    .line 179
+    .line 138
     .restart local v0    # "sharedPref":Landroid/content/SharedPreferences;
     :cond_1
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->prepareArrayList()V
@@ -255,23 +255,23 @@
     .param p1, "tag"    # Ljava/lang/String;
 
     .prologue
-    .line 343
+    .line 302
     invoke-static {p1}, Lorg/telegram/messenger/ApplicationLoader2;->convertConfig2(Ljava/lang/String;)V
 
-    .line 344
+    .line 303
     invoke-static {p1}, Lorg/telegram/messenger/UserConfig2;->getCurrentUser(Ljava/lang/String;)Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v0
 
-    .line 345
+    .line 304
     .local v0, "user":Lorg/telegram/tgnet/TLRPC$User;
-    const-string v1, "TGM"
+    const-string/jumbo v1, "TGM"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "getUserByTag: called "
+    const-string/jumbo v3, "getUserByTag: called "
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -291,7 +291,7 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 346
+    .line 305
     return-object v0
 .end method
 
@@ -299,8 +299,8 @@
     .locals 6
 
     .prologue
-    .line 205
-    const v5, 0x7f0705b5
+    .line 164
+    const v5, 0x7f070617
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -310,9 +310,9 @@
 
     move-result-object v4
 
-    .line 206
+    .line 165
     .local v4, "title":Ljava/lang/String;
-    const v5, 0x7f0705b6
+    const v5, 0x7f070618
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -322,9 +322,9 @@
 
     move-result-object v3
 
-    .line 207
+    .line 166
     .local v3, "message":Ljava/lang/String;
-    const v5, 0x7f0705b7
+    const v5, 0x7f070619
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -334,9 +334,9 @@
 
     move-result-object v1
 
-    .line 208
+    .line 167
     .local v1, "button1String":Ljava/lang/String;
-    const v5, 0x7f0705b4
+    const v5, 0x7f070616
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -346,37 +346,37 @@
 
     move-result-object v2
 
-    .line 210
+    .line 169
     .local v2, "button2String":Ljava/lang/String;
-    new-instance v0, Landroid/app/AlertDialog$Builder;
+    new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 211
-    .local v0, "ad":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {v0, v4}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    .line 170
+    .local v0, "ad":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 212
-    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    .line 171
+    invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 213
+    .line 172
+    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$4;
+
+    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$4;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
+
+    invoke-virtual {v0, v1, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 177
     new-instance v5, Lorg/telegram/ui/ChangeUserActivity$5;
 
     invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$5;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
 
-    invoke-virtual {v0, v1, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v2, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 218
-    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$6;
+    .line 182
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$6;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
-
-    invoke-virtual {v0, v2, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 223
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-
-    .line 224
+    .line 183
     return-void
 .end method
 
@@ -385,8 +385,8 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 183
-    const v5, 0x7f0705ba
+    .line 142
+    const v5, 0x7f07061c
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -396,9 +396,9 @@
 
     move-result-object v4
 
-    .line 184
+    .line 143
     .local v4, "title":Ljava/lang/String;
-    const v5, 0x7f0705b8
+    const v5, 0x7f07061a
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -408,9 +408,9 @@
 
     move-result-object v3
 
-    .line 185
+    .line 144
     .local v3, "message":Ljava/lang/String;
-    const v5, 0x7f0705bb
+    const v5, 0x7f07061d
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -420,9 +420,9 @@
 
     move-result-object v1
 
-    .line 186
+    .line 145
     .local v1, "button1String":Ljava/lang/String;
-    const v5, 0x7f0705b9
+    const v5, 0x7f07061b
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -432,37 +432,37 @@
 
     move-result-object v2
 
-    .line 188
+    .line 147
     .local v2, "button2String":Ljava/lang/String;
-    new-instance v0, Landroid/app/AlertDialog$Builder;
+    new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    invoke-direct {v0, p0}, Landroid/app/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
+    invoke-direct {v0, p0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 189
-    .local v0, "ad":Landroid/app/AlertDialog$Builder;
-    invoke-virtual {v0, v4}, Landroid/app/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    .line 148
+    .local v0, "ad":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+    invoke-virtual {v0, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 190
-    invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
+    .line 149
+    invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 191
+    .line 150
+    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$2;
+
+    invoke-direct {v5, p0, p1}, Lorg/telegram/ui/ChangeUserActivity$2;-><init>(Lorg/telegram/ui/ChangeUserActivity;I)V
+
+    invoke-virtual {v0, v1, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
+
+    .line 155
     new-instance v5, Lorg/telegram/ui/ChangeUserActivity$3;
 
-    invoke-direct {v5, p0, p1}, Lorg/telegram/ui/ChangeUserActivity$3;-><init>(Lorg/telegram/ui/ChangeUserActivity;I)V
+    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$3;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
 
-    invoke-virtual {v0, v1, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
+    invoke-virtual {v0, v2, v5}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 196
-    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$4;
+    .line 160
+    invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$4;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
-
-    invoke-virtual {v0, v2, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
-
-    .line 201
-    invoke-virtual {v0}, Landroid/app/AlertDialog$Builder;->show()Landroid/app/AlertDialog;
-
-    .line 202
+    .line 161
     return-void
 .end method
 
@@ -474,39 +474,39 @@
     .prologue
     const/4 v1, 0x0
 
-    .line 153
+    .line 112
     new-instance v0, Landroid/app/ProgressDialog;
 
     invoke-direct {v0, p0}, Landroid/app/ProgressDialog;-><init>(Landroid/content/Context;)V
 
     sput-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
-    .line 154
+    .line 113
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, p1}, Landroid/app/ProgressDialog;->setMessage(Ljava/lang/CharSequence;)V
 
-    .line 155
+    .line 114
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setIndeterminate(Z)V
 
-    .line 156
+    .line 115
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setProgressStyle(I)V
 
-    .line 157
+    .line 116
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0, v1}, Landroid/app/ProgressDialog;->setCancelable(Z)V
 
-    .line 158
+    .line 117
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v0}, Landroid/app/ProgressDialog;->show()V
 
-    .line 159
+    .line 118
     return-void
 .end method
 
@@ -519,43 +519,43 @@
     .param p3, "desc"    # Ljava/lang/String;
 
     .prologue
-    .line 362
-    const-string v0, "TGM"
+    .line 321
+    const-string/jumbo v0, "TGM"
 
-    const-string v1, "AddObjectToList: called"
+    const-string/jumbo v1, "AddObjectToList: called"
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 363
+    .line 322
     new-instance v0, Lorg/telegram/ui/Components/UserItems;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/UserItems;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
-    .line 364
+    .line 323
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p3}, Lorg/telegram/ui/Components/UserItems;->setPhone(Ljava/lang/String;)V
 
-    .line 365
+    .line 324
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/UserItems;->setPhoto(Landroid/graphics/Bitmap;)V
 
-    .line 366
+    .line 325
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p2}, Lorg/telegram/ui/Components/UserItems;->setName(Ljava/lang/String;)V
 
-    .line 367
+    .line 326
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->itemList:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 368
+    .line 327
     return-void
 .end method
 
@@ -567,14 +567,14 @@
     .param p4, "pos"    # I
 
     .prologue
-    .line 372
-    const-string v0, "TGM"
+    .line 331
+    const-string/jumbo v0, "TGM"
 
     new-instance v1, Ljava/lang/StringBuilder;
 
     invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v2, "AddObjectToList with setCurrent: called "
+    const-string/jumbo v2, "AddObjectToList with setCurrent: called "
 
     invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -590,44 +590,44 @@
 
     invoke-static {v0, v1}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 373
+    .line 332
     new-instance v0, Lorg/telegram/ui/Components/UserItems;
 
     invoke-direct {v0}, Lorg/telegram/ui/Components/UserItems;-><init>()V
 
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
-    .line 374
+    .line 333
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p3}, Lorg/telegram/ui/Components/UserItems;->setPhone(Ljava/lang/String;)V
 
-    .line 375
+    .line 334
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p1}, Lorg/telegram/ui/Components/UserItems;->setPhoto(Landroid/graphics/Bitmap;)V
 
-    .line 376
+    .line 335
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p4}, Lorg/telegram/ui/Components/UserItems;->setCurrent(I)V
 
-    .line 377
+    .line 336
     iput p4, p0, Lorg/telegram/ui/ChangeUserActivity;->currentUser:I
 
-    .line 378
+    .line 337
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, p2}, Lorg/telegram/ui/Components/UserItems;->setName(Ljava/lang/String;)V
 
-    .line 379
+    .line 338
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->itemList:Ljava/util/ArrayList;
 
     iget-object v1, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 380
+    .line 339
     return-void
 .end method
 
@@ -637,20 +637,20 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 240
+    .line 199
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getUsersDisabled()I
 
     move-result v0
 
-    .line 241
+    .line 200
     .local v0, "firstDisabledUser":I
-    const-string v2, "TGM"
+    const-string/jumbo v2, "TGM"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "addUser: firstDisabledUser"
+    const-string/jumbo v4, "addUser: firstDisabledUser"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -666,20 +666,20 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 242
-    const-string v2, "userID"
+    .line 201
+    const-string/jumbo v2, "userID"
 
     invoke-virtual {p0, v2, v5}, Lorg/telegram/ui/ChangeUserActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 243
+    .line 202
     .local v1, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    const-string v3, "lastID"
+    const-string/jumbo v3, "lastID"
 
     invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
 
@@ -691,14 +691,14 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 244
-    const-string v2, "userTAG"
+    .line 203
+    const-string/jumbo v2, "userTAG"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "lastUser: tag changed to "
+    const-string/jumbo v4, "lastUser: tag changed to "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -718,15 +718,15 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 245
+    .line 204
     invoke-static {v0}, Lorg/telegram/messenger/ChangeUserHelper;->setUserTag(I)V
 
-    .line 246
+    .line 205
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    const-string v3, "userID"
+    const-string/jumbo v3, "userID"
 
     invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -734,7 +734,7 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 247
+    .line 206
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
@@ -743,7 +743,7 @@
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "state_user_"
+    const-string/jumbo v4, "state_user_"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -763,12 +763,12 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 248
+    .line 207
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    const-string v3, "addedUser"
+    const-string/jumbo v3, "addedUser"
 
     invoke-interface {v2, v3, v0}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
@@ -776,21 +776,21 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 249
+    .line 208
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 250
-    const-string v2, "userTAG"
+    .line 209
+    const-string/jumbo v2, "userTAG"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "addUser: tag changed to "
+    const-string/jumbo v4, "addUser: tag changed to "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -810,10 +810,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 251
+    .line 210
     invoke-direct {p0}, Lorg/telegram/ui/ChangeUserActivity;->showAlertAddUser()V
 
-    .line 252
+    .line 211
     return-void
 .end method
 
@@ -825,14 +825,14 @@
 
     const/4 v4, 0x0
 
-    .line 255
-    const-string v1, "userID"
+    .line 214
+    const-string/jumbo v1, "userID"
 
     invoke-virtual {p0, v1, v4}, Lorg/telegram/ui/ChangeUserActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 256
+    .line 215
     .local v0, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -842,13 +842,13 @@
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "state_user_"
+    const-string/jumbo v3, "state_user_"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string v3, "addedUser"
+    const-string/jumbo v3, "addedUser"
 
     invoke-interface {v0, v3, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -870,14 +870,14 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 257
+    .line 216
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
-    const-string v2, "userID"
+    const-string/jumbo v2, "userID"
 
-    const-string v3, "lastID"
+    const-string/jumbo v3, "lastID"
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -889,15 +889,15 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 258
+    .line 217
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 259
-    const-string v1, "addedUser"
+    .line 218
+    const-string/jumbo v1, "addedUser"
 
     invoke-interface {v0, v1, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -905,20 +905,20 @@
 
     invoke-direct {p0, v1}, Lorg/telegram/ui/ChangeUserActivity;->deleteUser(I)V
 
-    .line 260
-    const-string v1, "userTAG"
+    .line 219
+    const-string/jumbo v1, "userTAG"
 
     new-instance v2, Ljava/lang/StringBuilder;
 
     invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v3, "backToLastUser: tag changed to _"
+    const-string/jumbo v3, "backToLastUser: tag changed to _"
 
     invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v2
 
-    const-string v3, "lastID"
+    const-string/jumbo v3, "lastID"
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
@@ -934,11 +934,53 @@
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 261
-    invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
+    .line 220
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->restart()V
 
-    .line 262
+    .line 221
     return-void
+.end method
+
+.method public buttonAddUserClick(Landroid/view/View;)V
+    .locals 2
+    .param p1, "v"    # Landroid/view/View;
+
+    .prologue
+    .line 105
+    iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
+
+    invoke-virtual {v0}, Landroid/widget/ListView;->getCount()I
+
+    move-result v0
+
+    const/16 v1, 0x63
+
+    if-gt v0, v1, :cond_0
+
+    .line 106
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->addUser()V
+
+    .line 109
+    :goto_0
+    return-void
+
+    .line 108
+    :cond_0
+    const v0, 0x7f07062f
+
+    invoke-virtual {p0, v0}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
+
+    move-result-object v0
+
+    const/4 v1, 0x0
+
+    invoke-static {p0, v0, v1}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v0
+
+    invoke-virtual {v0}, Landroid/widget/Toast;->show()V
+
+    goto :goto_0
 .end method
 
 .method public createRoundBitmap(Ljava/io/File;)Landroid/graphics/Bitmap;
@@ -946,7 +988,7 @@
     .param p1, "path"    # Ljava/io/File;
 
     .prologue
-    .line 394
+    .line 353
     :try_start_0
     invoke-virtual {p1}, Ljava/io/File;->toString()Ljava/lang/String;
 
@@ -956,11 +998,11 @@
 
     move-result-object v0
 
-    .line 395
+    .line 354
     .local v0, "bitmap":Landroid/graphics/Bitmap;
     if-eqz v0, :cond_0
 
-    .line 396
+    .line 355
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
     move-result v7
@@ -975,7 +1017,7 @@
 
     move-result-object v2
 
-    .line 398
+    .line 357
     .local v2, "circleBitmap":Landroid/graphics/Bitmap;
     new-instance v6, Landroid/graphics/BitmapShader;
 
@@ -985,27 +1027,27 @@
 
     invoke-direct {v6, v0, v7, v8}, Landroid/graphics/BitmapShader;-><init>(Landroid/graphics/Bitmap;Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
 
-    .line 399
+    .line 358
     .local v6, "shader":Landroid/graphics/BitmapShader;
     new-instance v4, Landroid/graphics/Paint;
 
     invoke-direct {v4}, Landroid/graphics/Paint;-><init>()V
 
-    .line 400
+    .line 359
     .local v4, "paint":Landroid/graphics/Paint;
     invoke-virtual {v4, v6}, Landroid/graphics/Paint;->setShader(Landroid/graphics/Shader;)Landroid/graphics/Shader;
 
-    .line 401
+    .line 360
     const/4 v7, 0x1
 
     invoke-virtual {v4, v7}, Landroid/graphics/Paint;->setAntiAlias(Z)V
 
-    .line 402
+    .line 361
     new-instance v1, Landroid/graphics/Canvas;
 
     invoke-direct {v1, v2}, Landroid/graphics/Canvas;-><init>(Landroid/graphics/Bitmap;)V
 
-    .line 403
+    .line 362
     .local v1, "c":Landroid/graphics/Canvas;
     invoke-virtual {v0}, Landroid/graphics/Bitmap;->getWidth()I
 
@@ -1033,10 +1075,10 @@
 
     invoke-virtual {v1, v7, v8, v9, v4}, Landroid/graphics/Canvas;->drawCircle(FFFLandroid/graphics/Paint;)V
 
-    .line 404
+    .line 363
     const/high16 v7, 0x42480000    # 50.0f
 
-    .line 405
+    .line 364
     invoke-static {v7}, Lorg/telegram/ui/ChangeUserActivity;->convertDpToPixel(F)F
 
     move-result v7
@@ -1053,14 +1095,14 @@
 
     const/4 v9, 0x0
 
-    .line 404
+    .line 363
     invoke-static {v2, v7, v8, v9}, Landroid/graphics/Bitmap;->createScaledBitmap(Landroid/graphics/Bitmap;IIZ)Landroid/graphics/Bitmap;
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
     move-result-object v5
 
-    .line 411
+    .line 370
     .end local v0    # "bitmap":Landroid/graphics/Bitmap;
     .end local v1    # "c":Landroid/graphics/Canvas;
     .end local v2    # "circleBitmap":Landroid/graphics/Bitmap;
@@ -1069,21 +1111,15 @@
     :goto_0
     return-object v5
 
-    .line 408
+    .line 367
     :catch_0
     move-exception v3
 
-    .line 409
+    .line 368
     .local v3, "e":Ljava/lang/Throwable;
-    const-string v7, "TGM"
+    invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    invoke-virtual {v3}, Ljava/lang/Throwable;->toString()Ljava/lang/String;
-
-    move-result-object v8
-
-    invoke-static {v7, v8}, Landroid/util/Log;->e(Ljava/lang/String;Ljava/lang/String;)I
-
-    .line 411
+    .line 370
     .end local v3    # "e":Ljava/lang/Throwable;
     :cond_0
     const/4 v5, 0x0
@@ -1096,12 +1132,12 @@
     .param p1, "folder"    # Ljava/lang/String;
 
     .prologue
-    .line 227
+    .line 186
     new-instance v1, Ljava/io/File;
 
     invoke-direct {v1, p1}, Ljava/io/File;-><init>(Ljava/lang/String;)V
 
-    .line 228
+    .line 187
     .local v1, "dir":Ljava/io/File;
     invoke-virtual {v1}, Ljava/io/File;->isDirectory()Z
 
@@ -1109,12 +1145,12 @@
 
     if-eqz v3, :cond_1
 
-    .line 230
+    .line 189
     invoke-virtual {v1}, Ljava/io/File;->list()[Ljava/lang/String;
 
     move-result-object v0
 
-    .line 231
+    .line 190
     .local v0, "children":[Ljava/lang/String;
     const/4 v2, 0x0
 
@@ -1124,7 +1160,7 @@
 
     if-ge v2, v3, :cond_0
 
-    .line 233
+    .line 192
     new-instance v3, Ljava/io/File;
 
     aget-object v4, v0, v2
@@ -1133,16 +1169,16 @@
 
     invoke-virtual {v3}, Ljava/io/File;->delete()Z
 
-    .line 231
+    .line 190
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 235
+    .line 194
     :cond_0
     invoke-virtual {v1}, Ljava/io/File;->delete()Z
 
-    .line 237
+    .line 196
     .end local v0    # "children":[Ljava/lang/String;
     .end local v2    # "i":I
     :cond_1
@@ -1154,17 +1190,17 @@
     .param p1, "drawable"    # I
 
     .prologue
-    .line 383
-    const-string v3, "TGM"
+    .line 342
+    const-string/jumbo v3, "TGM"
 
-    const-string v4, "drawableToBitmap: called"
+    const-string/jumbo v4, "drawableToBitmap: called"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 384
+    .line 343
     const/4 v0, 0x0
 
-    .line 385
+    .line 344
     .local v0, "b":Landroid/graphics/Bitmap;
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getResources()Landroid/content/res/Resources;
 
@@ -1174,19 +1210,19 @@
 
     move-result-object v2
 
-    .line 386
+    .line 345
     .local v2, "d":Landroid/graphics/drawable/Drawable;
     invoke-virtual {v2}, Landroid/graphics/drawable/Drawable;->getCurrent()Landroid/graphics/drawable/Drawable;
 
     move-result-object v1
 
-    .line 387
+    .line 346
     .local v1, "currentState":Landroid/graphics/drawable/Drawable;
     instance-of v3, v1, Landroid/graphics/drawable/BitmapDrawable;
 
     if-eqz v3, :cond_0
 
-    .line 388
+    .line 347
     check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
 
     .end local v1    # "currentState":Landroid/graphics/drawable/Drawable;
@@ -1194,7 +1230,7 @@
 
     move-result-object v0
 
-    .line 389
+    .line 348
     :cond_0
     return-object v0
 .end method
@@ -1204,14 +1240,14 @@
     .param p1, "user"    # Lorg/telegram/tgnet/TLRPC$User;
 
     .prologue
-    .line 351
-    const-string v1, "TGM"
+    .line 310
+    const-string/jumbo v1, "TGM"
 
-    const-string v2, "getBitmap: called"
+    const-string/jumbo v2, "getBitmap: called"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 352
+    .line 311
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     if-eqz v1, :cond_0
@@ -1222,14 +1258,14 @@
 
     if-eqz v1, :cond_0
 
-    .line 353
-    const-string v1, "TGM"
+    .line 312
+    const-string/jumbo v1, "TGM"
 
-    const-string v2, "getBitmap: photo != null"
+    const-string/jumbo v2, "getBitmap: photo != null"
 
     invoke-static {v1, v2}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 354
+    .line 313
     iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v1, v1, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
@@ -1244,7 +1280,7 @@
 
     move-result-object v0
 
-    .line 357
+    .line 316
     :goto_0
     return-object v0
 
@@ -1264,19 +1300,19 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 265
+    .line 224
     const/4 v0, 0x0
 
-    .line 266
+    .line 225
     .local v0, "count":I
-    const-string v3, "TGM"
+    const-string/jumbo v3, "TGM"
 
-    const-string v4, "getUsersDisabled: called"
+    const-string/jumbo v4, "getUsersDisabled: called"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 267
-    const-string v3, "userID"
+    .line 226
+    const-string/jumbo v3, "userID"
 
     const/4 v4, 0x0
 
@@ -1284,7 +1320,7 @@
 
     move-result-object v2
 
-    .line 268
+    .line 227
     .local v2, "userDisabled":Landroid/content/SharedPreferences;
     const/4 v1, 0x0
 
@@ -1294,12 +1330,12 @@
 
     if-ge v1, v3, :cond_1
 
-    .line 269
+    .line 228
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "state_user_"
+    const-string/jumbo v4, "state_user_"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1319,19 +1355,19 @@
 
     if-ne v3, v5, :cond_0
 
-    .line 271
+    .line 230
     .end local v1    # "i":I
     :goto_1
     return v1
 
-    .line 268
+    .line 227
     .restart local v1    # "i":I
     :cond_0
     add-int/lit8 v1, v1, 0x1
 
     goto :goto_0
 
-    .line 271
+    .line 230
     :cond_1
     const/4 v1, -0x1
 
@@ -1351,21 +1387,21 @@
     .end annotation
 
     .prologue
-    .line 275
+    .line 234
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 276
+    .line 235
     .local v2, "users":Ljava/util/List;, "Ljava/util/List<Ljava/lang/Integer;>;"
-    const-string v3, "TGM"
+    const-string/jumbo v3, "TGM"
 
-    const-string v4, "getUsersEnabled: called"
+    const-string/jumbo v4, "getUsersEnabled: called"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 277
-    const-string v3, "userID"
+    .line 236
+    const-string/jumbo v3, "userID"
 
     const/4 v4, 0x0
 
@@ -1373,7 +1409,7 @@
 
     move-result-object v1
 
-    .line 278
+    .line 237
     .local v1, "userDisabled":Landroid/content/SharedPreferences;
     const/4 v0, 0x0
 
@@ -1383,12 +1419,12 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 279
+    .line 238
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "state_user_"
+    const-string/jumbo v4, "state_user_"
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1410,20 +1446,20 @@
 
     if-nez v3, :cond_0
 
-    .line 280
+    .line 239
     invoke-static {v0}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v3
 
     invoke-interface {v2, v3}, Ljava/util/List;->add(Ljava/lang/Object;)Z
 
-    .line 278
+    .line 237
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 283
+    .line 242
     :cond_1
     return-object v2
 .end method
@@ -1432,13 +1468,13 @@
     .locals 0
 
     .prologue
-    .line 66
+    .line 59
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 67
+    .line 60
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->finish()V
 
-    .line 68
+    .line 61
     return-void
 .end method
 
@@ -1449,24 +1485,24 @@
     .prologue
     const/4 v5, 0x1
 
-    .line 73
+    .line 66
     invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
-    .line 74
+    .line 67
     const v3, 0x7f030799
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/ChangeUserActivity;->setContentView(I)V
 
-    .line 75
+    .line 68
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getIntent()Landroid/content/Intent;
 
     move-result-object v1
 
-    .line 76
+    .line 69
     .local v1, "intent":Landroid/content/Intent;
     if-eqz v1, :cond_0
 
-    const-string v3, "fromIntro"
+    const-string/jumbo v3, "fromIntro"
 
     const/4 v4, 0x0
 
@@ -1478,18 +1514,18 @@
 
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->backToLastUser()V
 
-    .line 77
+    .line 70
     :cond_0
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getActionBar()Landroid/app/ActionBar;
 
     move-result-object v0
 
-    .line 78
+    .line 71
     .local v0, "actionBar":Landroid/app/ActionBar;
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
-    .line 79
-    const v3, 0x7f070741
+    .line 72
+    const v3, 0x7f0700ee
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -1497,34 +1533,34 @@
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setTitle(Ljava/lang/CharSequence;)V
 
-    .line 80
+    .line 73
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayHomeAsUpEnabled(Z)V
 
-    .line 81
+    .line 74
     sget v3, Landroid/os/Build$VERSION;->SDK_INT:I
 
     const/16 v4, 0x12
 
     if-lt v3, v4, :cond_1
 
-    .line 82
+    .line 75
     const v3, 0x7f0200b6
 
     invoke-virtual {v0, v3}, Landroid/app/ActionBar;->setHomeAsUpIndicator(I)V
 
-    .line 86
+    .line 79
     :cond_1
     :try_start_0
     sput-object p0, Lorg/telegram/ui/ChangeUserActivity;->ctx:Landroid/content/Context;
 
-    .line 87
+    .line 80
     new-instance v3, Ljava/util/ArrayList;
 
     invoke-direct {v3}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v3, p0, Lorg/telegram/ui/ChangeUserActivity;->itemList:Ljava/util/ArrayList;
 
-    .line 88
+    .line 81
     const v3, 0x7f0c0062
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/ChangeUserActivity;->findViewById(I)Landroid/view/View;
@@ -1535,12 +1571,12 @@
 
     iput-object v3, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
-    .line 89
+    .line 82
     iget-object v3, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
     invoke-virtual {v3, p0}, Landroid/widget/ListView;->setOnItemClickListener(Landroid/widget/AdapterView$OnItemClickListener;)V
 
-    .line 90
+    .line 83
     iget-object v3, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
     new-instance v4, Lorg/telegram/ui/ChangeUserActivity$1;
@@ -1549,49 +1585,40 @@
 
     invoke-virtual {v3, v4}, Landroid/widget/ListView;->setOnItemLongClickListener(Landroid/widget/AdapterView$OnItemLongClickListener;)V
 
-    .line 103
+    .line 96
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->prepareArrayList()V
 
-    .line 104
-    const-string v3, "TGM"
+    .line 97
+    const-string/jumbo v3, "TGM"
 
-    const-string v4, "onCreate: prepareArray"
+    const-string/jumbo v4, "onCreate: prepareArray"
 
     invoke-static {v3, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 105
+    .line 98
     sget-object v3, Lorg/telegram/ui/ChangeUserActivity;->prepareProgress:Landroid/app/ProgressDialog;
 
     invoke-virtual {v3}, Landroid/app/ProgressDialog;->dismiss()V
-
-    .line 106
-    new-instance v3, Ljava/lang/Thread;
-
-    new-instance v4, Lorg/telegram/ui/ChangeUserActivity$2;
-
-    invoke-direct {v4, p0}, Lorg/telegram/ui/ChangeUserActivity$2;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
-
-    invoke-direct {v3, v4}, Ljava/lang/Thread;-><init>(Ljava/lang/Runnable;)V
     :try_end_0
     .catch Ljava/lang/Throwable; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 149
+    .line 102
     :goto_0
     return-void
 
-    .line 146
+    .line 99
     :catch_0
     move-exception v2
 
-    .line 147
+    .line 100
     .local v2, "th":Ljava/lang/Throwable;
-    const-string v3, "TGM"
+    const-string/jumbo v3, "TGM"
 
     new-instance v4, Ljava/lang/StringBuilder;
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v5, "onCreate: "
+    const-string/jumbo v5, "onCreate: "
 
     invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1620,25 +1647,25 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 163
+    .line 122
     invoke-super {p0}, Landroid/app/Activity;->onDestroy()V
 
-    .line 164
+    .line 123
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
-    .line 165
+    .line 124
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->adapter:Lorg/telegram/ui/Adapters/UserItemsAdapter;
 
-    .line 166
+    .line 125
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->itemList:Ljava/util/ArrayList;
 
-    .line 167
+    .line 126
     iput-object v0, p0, Lorg/telegram/ui/ChangeUserActivity;->userItems:Lorg/telegram/ui/Components/UserItems;
 
-    .line 168
+    .line 127
     invoke-static {}, Ljava/lang/System;->gc()V
 
-    .line 169
+    .line 128
     return-void
 .end method
 
@@ -1658,7 +1685,7 @@
     .end annotation
 
     .prologue
-    .line 319
+    .line 278
     .local p1, "parent":Landroid/widget/AdapterView;, "Landroid/widget/AdapterView<*>;"
     iget v0, p0, Lorg/telegram/ui/ChangeUserActivity;->currentUser:I
 
@@ -1666,7 +1693,7 @@
 
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->ctx:Landroid/content/Context;
 
-    const v1, 0x7f0705be
+    const v1, 0x7f07062d
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -1684,11 +1711,11 @@
 
     invoke-virtual {v0}, Landroid/widget/Toast;->show()V
 
-    .line 320
+    .line 279
     :goto_0
     return-void
 
-    .line 319
+    .line 278
     :cond_0
     invoke-virtual {p0, p3}, Lorg/telegram/ui/ChangeUserActivity;->setUser(I)V
 
@@ -1700,14 +1727,14 @@
     .param p1, "item"    # Landroid/view/MenuItem;
 
     .prologue
-    .line 422
+    .line 381
     invoke-interface {p1}, Landroid/view/MenuItem;->getItemId()I
 
     move-result v0
 
     packed-switch v0, :pswitch_data_0
 
-    .line 427
+    .line 386
     invoke-super {p0, p1}, Landroid/app/Activity;->onOptionsItemSelected(Landroid/view/MenuItem;)Z
 
     move-result v0
@@ -1715,16 +1742,16 @@
     :goto_0
     return v0
 
-    .line 424
+    .line 383
     :pswitch_0
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->onBackPressed()V
 
-    .line 425
+    .line 384
     const/4 v0, 0x1
 
     goto :goto_0
 
-    .line 422
+    .line 381
     nop
 
     :pswitch_data_0
@@ -1737,14 +1764,14 @@
     .locals 8
 
     .prologue
-    .line 323
+    .line 282
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
     iput-object v5, p0, Lorg/telegram/ui/ChangeUserActivity;->itemList:Ljava/util/ArrayList;
 
-    .line 324
+    .line 283
     const/4 v1, 0x0
 
     .local v1, "i":I
@@ -1759,7 +1786,7 @@
 
     if-ge v1, v5, :cond_2
 
-    .line 325
+    .line 284
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getUsersEnabled()Ljava/util/List;
 
     move-result-object v5
@@ -1774,15 +1801,15 @@
 
     move-result v2
 
-    .line 326
+    .line 285
     .local v2, "k":I
-    const-string v5, "TGM"
+    const-string/jumbo v5, "TGM"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "prepareArrayLits: "
+    const-string/jumbo v7, "prepareArrayLits: "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1798,14 +1825,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 327
-    const-string v5, "TGM"
+    .line 286
+    const-string/jumbo v5, "TGM"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "prepareArrayList: getUsersEnabled().size "
+    const-string/jumbo v7, "prepareArrayList: getUsersEnabled().size "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1829,14 +1856,14 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 328
-    const-string v5, "TGM"
+    .line 287
+    const-string/jumbo v5, "TGM"
 
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "prepareArrayList: getUsersEnabled().get(i) "
+    const-string/jumbo v7, "prepareArrayList: getUsersEnabled().get(i) "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1846,7 +1873,7 @@
 
     move-result-object v6
 
-    const-string v7, " i = "
+    const-string/jumbo v7, " i = "
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1862,16 +1889,16 @@
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 329
-    const-string v0, "null"
+    .line 288
+    const-string/jumbo v0, "null"
 
-    .line 330
+    .line 289
     .local v0, "first_name":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "_user_"
+    const-string/jumbo v6, "_user_"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1897,7 +1924,7 @@
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "_user_"
+    const-string/jumbo v6, "_user_"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1917,13 +1944,13 @@
 
     iget-object v0, v5, Lorg/telegram/tgnet/TLRPC$User;->first_name:Ljava/lang/String;
 
-    .line 332
+    .line 291
     :goto_1
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "_user_"
+    const-string/jumbo v6, "_user_"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1943,13 +1970,13 @@
 
     iget-object v3, v5, Lorg/telegram/tgnet/TLRPC$User;->phone:Ljava/lang/String;
 
-    .line 333
+    .line 292
     .local v3, "phone":Ljava/lang/String;
     new-instance v5, Ljava/lang/StringBuilder;
 
     invoke-direct {v5}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v6, "_user_"
+    const-string/jumbo v6, "_user_"
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -1971,7 +1998,7 @@
 
     move-result-object v4
 
-    .line 334
+    .line 293
     .local v4, "photo":Landroid/graphics/Bitmap;
     invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
 
@@ -1981,13 +2008,13 @@
 
     invoke-virtual {p0, v4, v0, v3, v1}, Lorg/telegram/ui/ChangeUserActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;I)V
 
-    .line 324
+    .line 283
     :goto_2
     add-int/lit8 v1, v1, 0x1
 
     goto/16 :goto_0
 
-    .line 331
+    .line 290
     .end local v3    # "phone":Ljava/lang/String;
     .end local v4    # "photo":Landroid/graphics/Bitmap;
     :cond_0
@@ -1999,7 +2026,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "_user_"
+    const-string/jumbo v7, "_user_"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2023,7 +2050,7 @@
 
     move-result-object v5
 
-    const-string v6, " "
+    const-string/jumbo v6, " "
 
     invoke-virtual {v5, v6}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2033,7 +2060,7 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v7, "_user_"
+    const-string/jumbo v7, "_user_"
 
     invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2063,7 +2090,7 @@
 
     goto/16 :goto_1
 
-    .line 335
+    .line 294
     .restart local v3    # "phone":Ljava/lang/String;
     .restart local v4    # "photo":Landroid/graphics/Bitmap;
     :cond_1
@@ -2071,7 +2098,7 @@
 
     goto :goto_2
 
-    .line 337
+    .line 296
     .end local v0    # "first_name":Ljava/lang/String;
     .end local v2    # "k":I
     .end local v3    # "phone":Ljava/lang/String;
@@ -2085,21 +2112,97 @@
 
     iput-object v5, p0, Lorg/telegram/ui/ChangeUserActivity;->adapter:Lorg/telegram/ui/Adapters/UserItemsAdapter;
 
-    .line 338
+    .line 297
     iget-object v5, p0, Lorg/telegram/ui/ChangeUserActivity;->lvUserList:Landroid/widget/ListView;
 
     iget-object v6, p0, Lorg/telegram/ui/ChangeUserActivity;->adapter:Lorg/telegram/ui/Adapters/UserItemsAdapter;
 
     invoke-virtual {v5, v6}, Landroid/widget/ListView;->setAdapter(Landroid/widget/ListAdapter;)V
 
-    .line 339
-    const-string v5, "TGM"
+    .line 298
+    const-string/jumbo v5, "TGM"
 
-    const-string v6, "prepareArrayLits: setAdapters"
+    const-string/jumbo v6, "prepareArrayLits: setAdapters"
 
     invoke-static {v5, v6}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 340
+    .line 299
+    return-void
+.end method
+
+.method public restart()V
+    .locals 9
+
+    .prologue
+    const/4 v8, 0x1
+
+    .line 263
+    new-instance v2, Landroid/content/Intent;
+
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const-class v5, Lorg/telegram/ui/LaunchActivity;
+
+    invoke-direct {v2, v4, v5}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 264
+    .local v2, "mStartActivity":Landroid/content/Intent;
+    const v1, 0x1e240
+
+    .line 265
+    .local v1, "mPendingIntentId":I
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const/high16 v5, 0x10000000
+
+    invoke-static {v4, v1, v2, v5}, Landroid/app/PendingIntent;->getActivity(Landroid/content/Context;ILandroid/content/Intent;I)Landroid/app/PendingIntent;
+
+    move-result-object v0
+
+    .line 267
+    .local v0, "mPendingIntent":Landroid/app/PendingIntent;
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v4
+
+    const-string/jumbo v5, "alarm"
+
+    invoke-virtual {v4, v5}, Landroid/content/Context;->getSystemService(Ljava/lang/String;)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Landroid/app/AlarmManager;
+
+    .line 268
+    .local v3, "mgr":Landroid/app/AlarmManager;
+    invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
+
+    move-result-wide v4
+
+    const-wide/16 v6, 0x1f4
+
+    add-long/2addr v4, v6
+
+    invoke-virtual {v3, v8, v4, v5, v0}, Landroid/app/AlarmManager;->set(IJLandroid/app/PendingIntent;)V
+
+    .line 270
+    invoke-virtual {p0, v8}, Lorg/telegram/ui/ChangeUserActivity;->moveTaskToBack(Z)Z
+
+    .line 271
+    invoke-static {}, Landroid/os/Process;->myPid()I
+
+    move-result v4
+
+    invoke-static {v4}, Landroid/os/Process;->killProcess(I)V
+
+    .line 272
+    invoke-static {v8}, Ljava/lang/System;->exit(I)V
+
+    .line 273
     return-void
 .end method
 
@@ -2108,10 +2211,10 @@
     .param p1, "position"    # I
 
     .prologue
-    .line 287
+    .line 246
     const/4 v1, -0x1
 
-    .line 288
+    .line 247
     .local v1, "toSetUser":I
     invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->getUsersEnabled()Ljava/util/List;
 
@@ -2137,11 +2240,11 @@
 
     move-result v1
 
-    .line 289
+    .line 248
     invoke-static {v1}, Lorg/telegram/messenger/ChangeUserHelper;->setUserTag(I)V
 
-    .line 290
-    const-string v2, "userID"
+    .line 249
+    const-string/jumbo v2, "userID"
 
     const/4 v3, 0x0
 
@@ -2149,13 +2252,13 @@
 
     move-result-object v0
 
-    .line 291
+    .line 250
     .local v0, "sharedPref":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
-    const-string v3, "userID"
+    const-string/jumbo v3, "userID"
 
     invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
 
@@ -2167,21 +2270,21 @@
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 292
+    .line 251
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v2
 
     invoke-interface {v2}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 293
-    const-string v2, "userTAG"
+    .line 252
+    const-string/jumbo v2, "userTAG"
 
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string v4, "setUser: tag changed to "
+    const-string/jumbo v4, "setUser: tag changed to "
 
     invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
@@ -2201,10 +2304,10 @@
 
     invoke-static {v2, v3}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
 
-    .line 294
-    invoke-static {}, Lorg/telegram/messenger/Utilities;->restartApp()V
+    .line 253
+    invoke-virtual {p0}, Lorg/telegram/ui/ChangeUserActivity;->restart()V
 
-    .line 295
+    .line 254
     .end local v0    # "sharedPref":Landroid/content/SharedPreferences;
     :cond_0
     return-void

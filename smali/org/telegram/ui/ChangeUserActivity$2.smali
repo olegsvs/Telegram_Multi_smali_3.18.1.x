@@ -3,12 +3,12 @@
 .source "ChangeUserActivity.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/ui/ChangeUserActivity;->onCreate(Landroid/os/Bundle;)V
+    value = Lorg/telegram/ui/ChangeUserActivity;->showAlertDeleteUser(I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,15 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/ui/ChangeUserActivity;
 
+.field final synthetic val$position:I
+
 
 # direct methods
-.method constructor <init>(Lorg/telegram/ui/ChangeUserActivity;)V
+.method constructor <init>(Lorg/telegram/ui/ChangeUserActivity;I)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/ui/ChangeUserActivity;
 
     .prologue
-    .line 107
+    .line 150
     iput-object p1, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
+
+    iput p2, p0, Lorg/telegram/ui/ChangeUserActivity$2;->val$position:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -37,24 +41,19 @@
 
 
 # virtual methods
-.method public run()V
+.method public onClick(Landroid/content/DialogInterface;I)V
     .locals 2
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "arg1"    # I
 
     .prologue
-    .line 109
+    .line 152
     iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
-    invoke-virtual {v0}, Lorg/telegram/ui/ChangeUserActivity;->prepareArrayList()V
+    iget v1, p0, Lorg/telegram/ui/ChangeUserActivity$2;->val$position:I
 
-    .line 110
-    iget-object v0, p0, Lorg/telegram/ui/ChangeUserActivity$2;->this$0:Lorg/telegram/ui/ChangeUserActivity;
+    invoke-static {v0, v1}, Lorg/telegram/ui/ChangeUserActivity;->access$100(Lorg/telegram/ui/ChangeUserActivity;I)V
 
-    new-instance v1, Lorg/telegram/ui/ChangeUserActivity$2$1;
-
-    invoke-direct {v1, p0}, Lorg/telegram/ui/ChangeUserActivity$2$1;-><init>(Lorg/telegram/ui/ChangeUserActivity$2;)V
-
-    invoke-virtual {v0, v1}, Lorg/telegram/ui/ChangeUserActivity;->runOnUiThread(Ljava/lang/Runnable;)V
-
-    .line 115
+    .line 153
     return-void
 .end method

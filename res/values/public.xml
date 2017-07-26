@@ -4739,5 +4739,6 @@
     <public type="id" name="userName" id="0x7f0c0075" />
     <public type="id" name="userPhone" id="0x7f0c0076" />
     <public type="id" name="userCurrent" id="0x7f0c0077" />
+	<public type="id" name="buttonAddUser" id="0x7f0c0078" />
     <public type="integer" name="google_play_services_version" id="0x7f0d0000" />
 </resources>

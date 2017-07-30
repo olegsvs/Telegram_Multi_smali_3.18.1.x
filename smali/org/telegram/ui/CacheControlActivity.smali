@@ -893,7 +893,7 @@
 
     const-string/jumbo v4, "themeColor"
 
-    const v5, -0xff6978
+    const v5, -0xab8a62
 
     invoke-interface {v2, v4, v5}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 

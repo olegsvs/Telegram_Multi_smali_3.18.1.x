@@ -7252,7 +7252,7 @@
     .local v22, "themePrefs":Landroid/content/SharedPreferences;
     const-string/jumbo v35, "themeColor"
 
-    const v36, -0xff6978
+    const v36, -0xab8a62
 
     move-object/from16 v0, v22
 

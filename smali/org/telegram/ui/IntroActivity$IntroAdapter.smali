@@ -238,7 +238,7 @@
     if-ne v0, p2, :cond_0
 
     .line 298
-    const v3, -0xff6978
+    const v3, -0xab8a62
 
     invoke-virtual {v1, v3}, Landroid/view/View;->setBackgroundColor(I)V
 

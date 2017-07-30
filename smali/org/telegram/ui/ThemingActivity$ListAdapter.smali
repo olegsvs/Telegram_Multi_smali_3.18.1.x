@@ -948,7 +948,7 @@
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v6, "themeColor"
 
-    const v7, -0xff6978
+    const v7, -0xab8a62
 
     invoke-interface {v1, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 

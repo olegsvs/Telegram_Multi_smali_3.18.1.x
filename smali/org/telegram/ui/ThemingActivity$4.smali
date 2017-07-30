@@ -83,7 +83,7 @@
     .line 467
     iget-object v0, p0, Lorg/telegram/ui/ThemingActivity$4;->this$0:Lorg/telegram/ui/ThemingActivity;
 
-    const v1, -0xff6978
+    const v1, -0xab8a62
 
     invoke-static {v0, v1}, Lorg/telegram/ui/ThemingActivity;->access$300(Lorg/telegram/ui/ThemingActivity;I)V
 

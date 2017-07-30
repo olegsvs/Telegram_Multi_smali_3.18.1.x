@@ -31894,7 +31894,7 @@
     .line 1335
     const-string/jumbo v2, "themeColor"
 
-    const v3, -0xff6978
+    const v3, -0xab8a62
 
     move-object/from16 v0, v23
 

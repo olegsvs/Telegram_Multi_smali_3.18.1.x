@@ -86,7 +86,7 @@
     :goto_0
     const-string/jumbo v3, "themeColor"
 
-    const v4, -0xff6978
+    const v4, -0xab8a62
 
     move-object/from16 v0, v19
 

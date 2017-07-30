@@ -1,3 +1,5 @@
+java -jar uber-apk-signer.jar -a apk --ks key.jks --allowResign --ksAlias olegsvs_2017
+
 LocationController - needed
 MediaController - work perfectly?
 MessagesController - needed 
@@ -14,17 +16,6 @@ community 13
 
 ui/IntroActivity.smali:    const-string/jumbo v6, "userID"
 ui/IntroActivity.smali:    const-string/jumbo v7, "userID"
-
-/* Copy From TG Multi, needed fix const IDs
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
-ChangeUserActivity.smali:    invoke-static {v0}, Lorg/telegram/messenger/ChangeUserHelper;->setUserTag(I)V
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
-ChangeUserActivity.smali:    invoke-static {v1}, Lorg/telegram/messenger/ChangeUserHelper;->setUserTag(I)V
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
-ChangeUserActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-*/
 
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO

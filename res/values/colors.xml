@@ -9,7 +9,6 @@
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#de000000</color>
     <color name="divider">#ffdcdcdc</color>
-    <color name="header">#ff54759e</color>
     <color name="hockeyapp_background_header">#ffe6ecef</color>
     <color name="hockeyapp_background_light">#ffcccccc</color>
     <color name="hockeyapp_background_white">#ffffffff</color>
@@ -20,6 +19,7 @@
     <color name="hockeyapp_text_light">#ffcccccc</color>
     <color name="hockeyapp_text_normal">#ff888888</color>
     <color name="hockeyapp_text_white">#ffffffff</color>
-    <color name="primary_dark">#ff54759e</color>
-    <color name="primary_light">#ff26A69A</color>
+    <color name="header">#ff009688</color><!--58BCD5-->
+    <color name="primary_dark">#ff00695C</color><!--2C90A9-->
+    <color name="primary_light">#ff26A69A</color><!--6ED2E9-->
 </resources>

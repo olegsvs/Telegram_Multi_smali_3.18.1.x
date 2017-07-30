@@ -14,8 +14,7 @@ Settings TODO
 ShareActivity (nedded?)
 community 13
 
-ui/IntroActivity.smali:    const-string/jumbo v6, "userID"
-ui/IntroActivity.smali:    const-string/jumbo v7, "userID"
+
 
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
 DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
@@ -67,6 +66,9 @@ W ActivityManager:   Force finishing activity org.telegram.plus/org.telegram.ui.
 
 
 Complete ::
+ui/IntroActivity.smali:    const-string/jumbo v6, "userID"
+ui/IntroActivity.smali:    const-string/jumbo v7, "userID"
+
 ThemeActivity$2$4.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 ThemeActivity$ListAdapter$1$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;+
 

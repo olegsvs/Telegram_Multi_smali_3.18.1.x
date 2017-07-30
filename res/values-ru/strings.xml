@@ -1,20 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AddUser">Добавить аккаунт</string>
-    <string name="DeleteFirstUser">Невозможно удалить первого пользователя!</string>
-    <string name="DialogAddNo">Нет</string>
-    <string name="DialogAddSure">Продолжить?</string>
-    <string name="DialogAddUser">Приложение завершит работу и автоматически запустится через пару секунд для добавления нового пользователя</string>
-    <string name="DialogAddYes">Да</string>
-    <string name="DialogDeleteUser">Удалить пользователя?</string>
-    <string name="DialogNo">Нет</string>
-    <string name="DialogSure">Вы уверены?</string>
-    <string name="DialogYes">Да</string>
-    <string name="GoBack">Вернуться назад</string>
-    <string name="IsCurrentUser">Это текущий пользователь!</string>
-    <string name="MaxUsersCount">Можно добавить максимум 10 пользователей!</string>
-    <string name="ScanningProfiles">Сканирование профилей</string>
-	<string name="Change_another_user">Мультиюзер</string>
     <string name="common_google_play_services_enable_button">Включить</string>
     <string name="common_google_play_services_enable_text">Для работы приложения \"%1$s\" требуется включить сервисы Google Play.</string>
     <string name="common_google_play_services_enable_title">Включите сервисы Google Play</string>
@@ -1587,4 +1572,19 @@
     <string name="hockeyapp_update_dialog_positive_button">Показать</string>
     <string name="hockeyapp_update_dialog_title">Доступно обновление</string>
     <string name="hockeyapp_update_mandatory_toast">%s доступен и является обязательным для обновления!</string>
+    <string name="Change_another_user">Мультиюзер</string>
+    <string name="DialogAddNo">Нет</string>
+    <string name="DialogAddSure">Продолжить?</string>
+    <string name="DialogAddUser">Приложение завершит работу и автоматически запустится через пару секунд для добавления нового пользователя</string>
+    <string name="DialogAddYes">Да</string>
+    <string name="DialogDeleteUser">Удалить пользователя?</string>
+    <string name="DialogNo">Нет</string>
+    <string name="DialogSure">Вы уверены?</string>
+    <string name="DialogYes">Да</string>
+    <string name="IsCurrentUser">Это текущий пользователь!</string>
+    <string name="MaxUsersCount">Можно добавить максимум 10 пользователей!</string>
+    <string name="ScanningProfiles">Сканирование профилей</string>
+    <string name="DeleteFirstUser">Невозможно удалить первого пользователя!</string>
+    <string name="AddUser">Добавить аккаунт</string>
+    <string name="GoBack">Вернуться назад</string>
 </resources>

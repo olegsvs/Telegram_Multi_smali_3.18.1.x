@@ -31,6 +31,8 @@
 
 .field public static final bubble_title:I = 0x7f0c0049
 
+.field public static final buttonAddUser:I = 0x7f0c0078
+
 .field public static final button_add_response:I = 0x7f0c0038
 
 .field public static final button_attachment:I = 0x7f0c0033
@@ -195,6 +197,14 @@
 
 .field public static final text_headline:I = 0x7f0c003b
 
+.field public static final userCurrent:I = 0x7f0c0077
+
+.field public static final userName:I = 0x7f0c0075
+
+.field public static final userPhone:I = 0x7f0c0076
+
+.field public static final userPhoto:I = 0x7f0c0074
+
 .field public static final view_header:I = 0x7f0c003e
 
 .field public static final web_update_details:I = 0x7f0c0042
@@ -211,15 +221,6 @@
 
 .field public static final wrapper_messages_buttons:I = 0x7f0c0037
 
-.field public static final userCurrent:I = 0x7f0c0077
-
-.field public static final userName:I = 0x7f0c0075
-
-.field public static final userPhone:I = 0x7f0c0076
-
-.field public static final userPhoto:I = 0x7f0c0074
-
-.field public static final buttonAddUser:I = 0x7f0c0078
 
 # direct methods
 .method public constructor <init>()V

@@ -3,7 +3,7 @@
 .source "IntroActivity.java"
 
 # interfaces
-.implements Landroid/view/View$OnLongClickListener;
+.implements Landroid/view/View$OnClickListener;
 
 
 # annotations
@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 231
+    .line 251
     iput-object p1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -37,20 +37,56 @@
 
 
 # virtual methods
-.method public onLongClick(Landroid/view/View;)Z
-    .locals 1
-    .param p1, "v"    # Landroid/view/View;
+.method public onClick(Landroid/view/View;)V
+    .locals 4
+    .param p1, "view"    # Landroid/view/View;
 
     .prologue
-    .line 234
-    invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
+    const/4 v3, 0x1
 
-    move-result-object v0
+    .line 254
+    iget-object v1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
 
-    invoke-virtual {v0}, Lorg/telegram/tgnet/ConnectionsManager;->switchBackend()V
+    invoke-static {v1}, Lorg/telegram/ui/IntroActivity;->access$600(Lorg/telegram/ui/IntroActivity;)Z
 
-    .line 235
-    const/4 v0, 0x1
+    move-result v1
 
-    return v0
+    if-eqz v1, :cond_0
+
+    .line 262
+    :goto_0
+    return-void
+
+    .line 257
+    :cond_0
+    iget-object v1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
+
+    invoke-static {v1, v3}, Lorg/telegram/ui/IntroActivity;->access$602(Lorg/telegram/ui/IntroActivity;Z)Z
+
+    .line 258
+    new-instance v0, Landroid/content/Intent;
+
+    iget-object v1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
+
+    const-class v2, Lorg/telegram/ui/ChangeUserActivity;
+
+    invoke-direct {v0, v1, v2}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 259
+    .local v0, "intent2":Landroid/content/Intent;
+    const-string/jumbo v1, "fromIntro"
+
+    invoke-virtual {v0, v1, v3}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Z)Landroid/content/Intent;
+
+    .line 260
+    iget-object v1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
+
+    invoke-virtual {v1, v0}, Lorg/telegram/ui/IntroActivity;->startActivity(Landroid/content/Intent;)V
+
+    .line 261
+    iget-object v1, p0, Lorg/telegram/ui/IntroActivity$3;->this$0:Lorg/telegram/ui/IntroActivity;
+
+    invoke-virtual {v1}, Lorg/telegram/ui/IntroActivity;->finish()V
+
+    goto :goto_0
 .end method

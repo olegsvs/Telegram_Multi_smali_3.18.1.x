@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<item type="id" name="buttonAddUser">false</item>
     <item type="id" name="menu_bold" />
     <item type="id" name="menu_groupbolditalic" />
     <item type="id" name="menu_italic" />
@@ -95,4 +94,9 @@
     <item type="id" name="userName">false</item>
     <item type="id" name="userPhone">false</item>
     <item type="id" name="userCurrent">false</item>
+    <item type="id" name="buttonAddUser">false</item>
+    <item type="id" name="APKTOOL_DUMMY_67">false</item>
+    <item type="id" name="APKTOOL_DUMMY_68">false</item>
+    <item type="id" name="APKTOOL_DUMMY_69">false</item>
+    <item type="id" name="APKTOOL_DUMMY_6a">false</item>
 </resources>

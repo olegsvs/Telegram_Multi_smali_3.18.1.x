@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 142
+    .line 162
     iput-object p1, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -42,14 +42,14 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 155
+    .line 175
     if-eqz p1, :cond_0
 
     const/4 v4, 0x2
 
     if-ne p1, v4, :cond_1
 
-    .line 156
+    .line 176
     :cond_0
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
@@ -69,7 +69,7 @@
 
     if-eq v4, v5, :cond_1
 
-    .line 157
+    .line 177
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     iget-object v5, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
@@ -84,7 +84,7 @@
 
     invoke-static {v4, v5}, Lorg/telegram/ui/IntroActivity;->access$102(Lorg/telegram/ui/IntroActivity;I)I
 
-    .line 161
+    .line 181
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/IntroActivity;->access$300(Lorg/telegram/ui/IntroActivity;)Landroid/widget/ImageView;
@@ -97,14 +97,14 @@
 
     if-nez v4, :cond_2
 
-    .line 162
+    .line 182
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/IntroActivity;->access$300(Lorg/telegram/ui/IntroActivity;)Landroid/widget/ImageView;
 
     move-result-object v1
 
-    .line 163
+    .line 183
     .local v1, "fadeoutImage":Landroid/widget/ImageView;
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
@@ -112,12 +112,12 @@
 
     move-result-object v0
 
-    .line 170
+    .line 190
     .local v0, "fadeinImage":Landroid/widget/ImageView;
     :goto_0
     invoke-virtual {v0}, Landroid/widget/ImageView;->bringToFront()V
 
-    .line 171
+    .line 191
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     invoke-static {v4}, Lorg/telegram/ui/IntroActivity;->access$500(Lorg/telegram/ui/IntroActivity;)[I
@@ -134,13 +134,13 @@
 
     invoke-virtual {v0, v4}, Landroid/widget/ImageView;->setImageResource(I)V
 
-    .line 172
+    .line 192
     invoke-virtual {v0}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 173
+    .line 193
     invoke-virtual {v1}, Landroid/widget/ImageView;->clearAnimation()V
 
-    .line 175
+    .line 195
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     const v5, 0x7f040001
@@ -149,7 +149,7 @@
 
     move-result-object v3
 
-    .line 176
+    .line 196
     .local v3, "outAnimation":Landroid/view/animation/Animation;
     new-instance v4, Lorg/telegram/ui/IntroActivity$1$1;
 
@@ -157,7 +157,7 @@
 
     invoke-virtual {v3, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 192
+    .line 212
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
     const/high16 v5, 0x7f040000
@@ -166,7 +166,7 @@
 
     move-result-object v2
 
-    .line 193
+    .line 213
     .local v2, "inAnimation":Landroid/view/animation/Animation;
     new-instance v4, Lorg/telegram/ui/IntroActivity$1$2;
 
@@ -174,13 +174,13 @@
 
     invoke-virtual {v2, v4}, Landroid/view/animation/Animation;->setAnimationListener(Landroid/view/animation/Animation$AnimationListener;)V
 
-    .line 210
+    .line 230
     invoke-virtual {v1, v3}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 211
+    .line 231
     invoke-virtual {v0, v2}, Landroid/widget/ImageView;->startAnimation(Landroid/view/animation/Animation;)V
 
-    .line 214
+    .line 234
     .end local v0    # "fadeinImage":Landroid/widget/ImageView;
     .end local v1    # "fadeoutImage":Landroid/widget/ImageView;
     .end local v2    # "inAnimation":Landroid/view/animation/Animation;
@@ -188,7 +188,7 @@
     :cond_1
     return-void
 
-    .line 166
+    .line 186
     :cond_2
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
@@ -196,7 +196,7 @@
 
     move-result-object v1
 
-    .line 167
+    .line 187
     .restart local v1    # "fadeoutImage":Landroid/widget/ImageView;
     iget-object v4, p0, Lorg/telegram/ui/IntroActivity$1;->this$0:Lorg/telegram/ui/IntroActivity;
 
@@ -215,7 +215,7 @@
     .param p3, "positionOffsetPixels"    # I
 
     .prologue
-    .line 146
+    .line 166
     return-void
 .end method
 
@@ -224,6 +224,6 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 151
+    .line 171
     return-void
 .end method

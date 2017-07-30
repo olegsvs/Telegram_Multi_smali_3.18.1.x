@@ -966,7 +966,7 @@
 
     .line 108
     :cond_0
-    const v0, 0x7f07074B
+    const v0, 0x7f07074b
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -1693,7 +1693,7 @@
 
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->ctx:Landroid/content/Context;
 
-    const v1, 0x7f07074A
+    const v1, 0x7f07074a
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 

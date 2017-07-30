@@ -40,19 +40,18 @@
     .prologue
     const/4 v0, 0x0
 
-    .line 39
+    .line 41
     invoke-direct {p0}, Landroid/app/Activity;-><init>()V
 
-    .line 45
+    .line 47
     iput v0, p0, Lorg/telegram/ui/IntroActivity;->lastPage:I
 
-    .line 46
+    .line 48
     iput-boolean v0, p0, Lorg/telegram/ui/IntroActivity;->justCreated:Z
 
-    .line 47
+    .line 49
     iput-boolean v0, p0, Lorg/telegram/ui/IntroActivity;->startPressed:Z
 
-    .line 266
     return-void
 .end method
 
@@ -61,7 +60,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget v0, p0, Lorg/telegram/ui/IntroActivity;->lastPage:I
 
     return v0
@@ -73,7 +72,7 @@
     .param p1, "x1"    # I
 
     .prologue
-    .line 39
+    .line 41
     iput p1, p0, Lorg/telegram/ui/IntroActivity;->lastPage:I
 
     return p1
@@ -84,7 +83,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
 
     return-object v0
@@ -95,7 +94,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->topImage1:Landroid/widget/ImageView;
 
     return-object v0
@@ -106,7 +105,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->topImage2:Landroid/widget/ImageView;
 
     return-object v0
@@ -117,7 +116,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->icons:[I
 
     return-object v0
@@ -128,7 +127,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-boolean v0, p0, Lorg/telegram/ui/IntroActivity;->startPressed:Z
 
     return v0
@@ -140,7 +139,7 @@
     .param p1, "x1"    # Z
 
     .prologue
-    .line 39
+    .line 41
     iput-boolean p1, p0, Lorg/telegram/ui/IntroActivity;->startPressed:Z
 
     return p1
@@ -151,7 +150,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->titles:[I
 
     return-object v0
@@ -162,7 +161,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->messages:[I
 
     return-object v0
@@ -173,7 +172,7 @@
     .param p0, "x0"    # Lorg/telegram/ui/IntroActivity;
 
     .prologue
-    .line 39
+    .line 41
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->bottomPages:Landroid/view/ViewGroup;
 
     return-object v0
@@ -182,370 +181,570 @@
 
 # virtual methods
 .method protected onCreate(Landroid/os/Bundle;)V
-    .locals 12
+    .locals 14
     .param p1, "savedInstanceState"    # Landroid/os/Bundle;
 
     .prologue
-    const/high16 v11, 0x40800000    # 4.0f
+    const/high16 v13, 0x40800000    # 4.0f
 
-    const/high16 v10, 0x40000000    # 2.0f
+    const/high16 v12, 0x40000000    # 2.0f
 
-    const/4 v9, 0x0
+    const/4 v8, 0x7
 
-    const/4 v6, 0x7
+    const/4 v11, 0x1
 
-    const/4 v8, 0x1
-
-    .line 54
-    const v4, 0x7f090007
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->setTheme(I)V
-
-    .line 55
-    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
+    const/4 v10, 0x0
 
     .line 56
-    invoke-virtual {p0, v8}, Lorg/telegram/ui/IntroActivity;->requestWindowFeature(I)Z
+    const v6, 0x7f090008
+
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->setTheme(I)V
+
+    .line 57
+    invoke-super {p0, p1}, Landroid/app/Activity;->onCreate(Landroid/os/Bundle;)V
 
     .line 58
-    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
-
-    move-result v4
-
-    if-eqz v4, :cond_2
-
-    .line 59
-    const v4, 0x7f030011
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->setContentView(I)V
+    invoke-virtual {p0, v11}, Lorg/telegram/ui/IntroActivity;->requestWindowFeature(I)Z
 
     .line 60
-    const v4, 0x7f0c0050
+    invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->isTablet()Z
 
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
+    move-result v6
 
-    move-result-object v2
+    if-eqz v6, :cond_3
 
     .line 61
-    .local v2, "imageView":Landroid/view/View;
-    invoke-virtual {p0}, Lorg/telegram/ui/IntroActivity;->getResources()Landroid/content/res/Resources;
+    const v6, 0x7f030011
 
-    move-result-object v4
-
-    const v5, 0x7f020049
-
-    invoke-virtual {v4, v5}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
-
-    move-result-object v1
-
-    check-cast v1, Landroid/graphics/drawable/BitmapDrawable;
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->setContentView(I)V
 
     .line 62
-    .local v1, "drawable":Landroid/graphics/drawable/BitmapDrawable;
-    sget-object v4, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+    const v6, 0x7f0c0050
 
-    sget-object v5, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
-
-    invoke-virtual {v1, v4, v5}, Landroid/graphics/drawable/BitmapDrawable;->setTileModeXY(Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
-
-    .line 63
-    invoke-virtual {v2, v1}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 69
-    .end local v1    # "drawable":Landroid/graphics/drawable/BitmapDrawable;
-    .end local v2    # "imageView":Landroid/view/View;
-    :goto_0
-    sget-boolean v4, Lorg/telegram/messenger/LocaleController;->isRTL:Z
-
-    if-eqz v4, :cond_3
-
-    .line 70
-    new-array v4, v6, [I
-
-    fill-array-data v4, :array_0
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->icons:[I
-
-    .line 79
-    new-array v4, v6, [I
-
-    fill-array-data v4, :array_1
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->titles:[I
-
-    .line 88
-    new-array v4, v6, [I
-
-    fill-array-data v4, :array_2
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->messages:[I
-
-    .line 126
-    :goto_1
-    const v4, 0x7f0c004d
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/support/v4/view/ViewPager;
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
-
-    .line 127
-    const v4, 0x7f0c004e
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
 
     move-result-object v3
 
-    check-cast v3, Landroid/widget/TextView;
+    .line 63
+    .local v3, "imageView":Landroid/view/View;
+    invoke-virtual {p0}, Lorg/telegram/ui/IntroActivity;->getResources()Landroid/content/res/Resources;
+
+    move-result-object v6
+
+    const v7, 0x7f020049
+
+    invoke-virtual {v6, v7}, Landroid/content/res/Resources;->getDrawable(I)Landroid/graphics/drawable/Drawable;
+
+    move-result-object v2
+
+    check-cast v2, Landroid/graphics/drawable/BitmapDrawable;
+
+    .line 64
+    .local v2, "drawable":Landroid/graphics/drawable/BitmapDrawable;
+    sget-object v6, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    sget-object v7, Landroid/graphics/Shader$TileMode;->REPEAT:Landroid/graphics/Shader$TileMode;
+
+    invoke-virtual {v2, v6, v7}, Landroid/graphics/drawable/BitmapDrawable;->setTileModeXY(Landroid/graphics/Shader$TileMode;Landroid/graphics/Shader$TileMode;)V
+
+    .line 65
+    invoke-virtual {v3, v2}, Landroid/view/View;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
+
+    .line 71
+    .end local v2    # "drawable":Landroid/graphics/drawable/BitmapDrawable;
+    .end local v3    # "imageView":Landroid/view/View;
+    :goto_0
+    sget-boolean v6, Lorg/telegram/messenger/LocaleController;->isRTL:Z
+
+    if-eqz v6, :cond_4
+
+    .line 72
+    new-array v6, v8, [I
+
+    fill-array-data v6, :array_0
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->icons:[I
+
+    .line 81
+    new-array v6, v8, [I
+
+    fill-array-data v6, :array_1
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->titles:[I
+
+    .line 90
+    new-array v6, v8, [I
+
+    fill-array-data v6, :array_2
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->messages:[I
 
     .line 128
-    .local v3, "startMessagingButton":Landroid/widget/TextView;
-    const-string/jumbo v4, "StartMessaging"
+    :goto_1
+    const v6, 0x7f0c004d
 
-    const v5, 0x7f0705fa
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
 
-    invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    move-result-object v6
 
-    move-result-object v4
+    check-cast v6, Landroid/support/v4/view/ViewPager;
 
-    invoke-virtual {v4}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
-
-    move-result-object v4
-
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
 
     .line 129
-    sget v4, Landroid/os/Build$VERSION;->SDK_INT:I
+    const v6, 0x7f0c004e
 
-    const/16 v5, 0x15
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
 
-    if-lt v4, v5, :cond_0
+    move-result-object v5
+
+    check-cast v5, Landroid/widget/TextView;
 
     .line 130
+    .local v5, "startMessagingButton":Landroid/widget/TextView;
+    const-string/jumbo v6, "StartMessaging"
+
+    const v7, 0x7f0705fa
+
+    invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
+
+    .line 131
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
+
+    const/16 v7, 0x15
+
+    if-lt v6, v7, :cond_0
+
+    .line 132
     new-instance v0, Landroid/animation/StateListAnimator;
 
     invoke-direct {v0}, Landroid/animation/StateListAnimator;-><init>()V
 
-    .line 131
-    .local v0, "animator":Landroid/animation/StateListAnimator;
-    new-array v4, v8, [I
-
-    const v5, 0x10100a7
-
-    aput v5, v4, v9
-
-    const-string/jumbo v5, "translationZ"
-
-    const/4 v6, 0x2
-
-    new-array v6, v6, [F
-
-    invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    aput v7, v6, v9
-
-    invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    aput v7, v6, v8
-
-    invoke-static {v3, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    const-wide/16 v6, 0xc8
-
-    invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v4, v5}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
-
-    .line 132
-    new-array v4, v9, [I
-
-    const-string/jumbo v5, "translationZ"
-
-    const/4 v6, 0x2
-
-    new-array v6, v6, [F
-
-    invoke-static {v11}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    aput v7, v6, v9
-
-    invoke-static {v10}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
-
-    move-result v7
-
-    int-to-float v7, v7
-
-    aput v7, v6, v8
-
-    invoke-static {v3, v5, v6}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    const-wide/16 v6, 0xc8
-
-    invoke-virtual {v5, v6, v7}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
-
-    move-result-object v5
-
-    invoke-virtual {v0, v4, v5}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
-
     .line 133
-    invoke-virtual {v3, v0}, Landroid/widget/TextView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+    .local v0, "animator":Landroid/animation/StateListAnimator;
+    new-array v6, v11, [I
+
+    const v7, 0x10100a7
+
+    aput v7, v6, v10
+
+    const-string/jumbo v7, "translationZ"
+
+    const/4 v8, 0x2
+
+    new-array v8, v8, [F
+
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v10
+
+    invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v11
+
+    invoke-static {v5, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    const-wide/16 v8, 0xc8
+
+    invoke-virtual {v7, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v6, v7}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    .line 134
+    new-array v6, v10, [I
+
+    const-string/jumbo v7, "translationZ"
+
+    const/4 v8, 0x2
+
+    new-array v8, v8, [F
+
+    invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v10
+
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v11
+
+    invoke-static {v5, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    const-wide/16 v8, 0xc8
+
+    invoke-virtual {v7, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v6, v7}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
 
     .line 135
-    .end local v0    # "animator":Landroid/animation/StateListAnimator;
-    :cond_0
-    const v4, 0x7f0c004b
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/ImageView;
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->topImage1:Landroid/widget/ImageView;
-
-    .line 136
-    const v4, 0x7f0c004c
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/widget/ImageView;
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->topImage2:Landroid/widget/ImageView;
-
-    .line 137
-    const v4, 0x7f0c004f
-
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
-
-    move-result-object v4
-
-    check-cast v4, Landroid/view/ViewGroup;
-
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->bottomPages:Landroid/view/ViewGroup;
+    invoke-virtual {v5, v0}, Landroid/widget/TextView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
 
     .line 138
-    iget-object v4, p0, Lorg/telegram/ui/IntroActivity;->topImage2:Landroid/widget/ImageView;
+    .end local v0    # "animator":Landroid/animation/StateListAnimator;
+    :cond_0
+    const v6, 0x7f0c0065
 
-    const/16 v5, 0x8
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
 
-    invoke-virtual {v4, v5}, Landroid/widget/ImageView;->setVisibility(I)V
+    move-result-object v1
+
+    check-cast v1, Landroid/widget/TextView;
 
     .line 139
-    iget-object v4, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+    .local v1, "backToLastUserButton":Landroid/widget/TextView;
+    const-string/jumbo v6, "userID"
 
-    new-instance v5, Lorg/telegram/ui/IntroActivity$IntroAdapter;
+    invoke-virtual {p0, v6, v10}, Lorg/telegram/ui/IntroActivity;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    const/4 v6, 0x0
-
-    invoke-direct {v5, p0, v6}, Lorg/telegram/ui/IntroActivity$IntroAdapter;-><init>(Lorg/telegram/ui/IntroActivity;Lorg/telegram/ui/IntroActivity$1;)V
-
-    invoke-virtual {v4, v5}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+    move-result-object v4
 
     .line 140
-    iget-object v4, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+    .local v4, "sharedPref":Landroid/content/SharedPreferences;
+    const-string/jumbo v6, "!firstLaunch?"
 
-    invoke-virtual {v4, v9}, Landroid/support/v4/view/ViewPager;->setPageMargin(I)V
+    invoke-interface {v4, v6, v10}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v6
+
+    if-eqz v6, :cond_5
 
     .line 141
-    iget-object v4, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+    const-string/jumbo v6, "AddUser"
 
-    invoke-virtual {v4, v8}, Landroid/support/v4/view/ViewPager;->setOffscreenPageLimit(I)V
+    const v7, 0x7f07074e
+
+    invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
     .line 142
-    iget-object v4, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+    invoke-virtual {v1, v10}, Landroid/widget/TextView;->setVisibility(I)V
 
-    new-instance v5, Lorg/telegram/ui/IntroActivity$1;
+    .line 143
+    const v6, 0x7f07074f
 
-    invoke-direct {v5, p0}, Lorg/telegram/ui/IntroActivity$1;-><init>(Lorg/telegram/ui/IntroActivity;)V
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->getText(I)Ljava/lang/CharSequence;
 
-    invoke-virtual {v4, v5}, Landroid/support/v4/view/ViewPager;->addOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
+    move-result-object v6
 
-    .line 217
-    new-instance v4, Lorg/telegram/ui/IntroActivity$2;
+    invoke-interface {v6}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    invoke-direct {v4, p0}, Lorg/telegram/ui/IntroActivity$2;-><init>(Lorg/telegram/ui/IntroActivity;)V
+    move-result-object v6
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+    invoke-virtual {v6}, Ljava/lang/String;->toUpperCase()Ljava/lang/String;
 
-    .line 230
-    sget-boolean v4, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
+    move-result-object v6
 
-    if-eqz v4, :cond_1
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setText(Ljava/lang/CharSequence;)V
 
-    .line 231
-    new-instance v4, Lorg/telegram/ui/IntroActivity$3;
+    .line 149
+    :goto_2
+    sget v6, Landroid/os/Build$VERSION;->SDK_INT:I
 
-    invoke-direct {v4, p0}, Lorg/telegram/ui/IntroActivity$3;-><init>(Lorg/telegram/ui/IntroActivity;)V
+    const/16 v7, 0x15
 
-    invoke-virtual {v3, v4}, Landroid/widget/TextView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+    if-lt v6, v7, :cond_1
 
-    .line 240
+    .line 150
+    new-instance v0, Landroid/animation/StateListAnimator;
+
+    invoke-direct {v0}, Landroid/animation/StateListAnimator;-><init>()V
+
+    .line 151
+    .restart local v0    # "animator":Landroid/animation/StateListAnimator;
+    new-array v6, v11, [I
+
+    const v7, 0x10100a7
+
+    aput v7, v6, v10
+
+    const-string/jumbo v7, "translationZ"
+
+    const/4 v8, 0x2
+
+    new-array v8, v8, [F
+
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v10
+
+    invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v11
+
+    invoke-static {v1, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    const-wide/16 v8, 0xc8
+
+    invoke-virtual {v7, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v6, v7}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    .line 152
+    new-array v6, v10, [I
+
+    const-string/jumbo v7, "translationZ"
+
+    const/4 v8, 0x2
+
+    new-array v8, v8, [F
+
+    invoke-static {v13}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v10
+
+    invoke-static {v12}, Lorg/telegram/messenger/AndroidUtilities;->dp(F)I
+
+    move-result v9
+
+    int-to-float v9, v9
+
+    aput v9, v8, v11
+
+    invoke-static {v1, v7, v8}, Landroid/animation/ObjectAnimator;->ofFloat(Ljava/lang/Object;Ljava/lang/String;[F)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    const-wide/16 v8, 0xc8
+
+    invoke-virtual {v7, v8, v9}, Landroid/animation/ObjectAnimator;->setDuration(J)Landroid/animation/ObjectAnimator;
+
+    move-result-object v7
+
+    invoke-virtual {v0, v6, v7}, Landroid/animation/StateListAnimator;->addState([ILandroid/animation/Animator;)V
+
+    .line 153
+    invoke-virtual {v1, v0}, Landroid/widget/TextView;->setStateListAnimator(Landroid/animation/StateListAnimator;)V
+
+    .line 155
+    .end local v0    # "animator":Landroid/animation/StateListAnimator;
     :cond_1
-    iput-boolean v8, p0, Lorg/telegram/ui/IntroActivity;->justCreated:Z
+    const v6, 0x7f0c004b
 
-    .line 241
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/ImageView;
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->topImage1:Landroid/widget/ImageView;
+
+    .line 156
+    const v6, 0x7f0c004c
+
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/widget/ImageView;
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->topImage2:Landroid/widget/ImageView;
+
+    .line 157
+    const v6, 0x7f0c004f
+
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->findViewById(I)Landroid/view/View;
+
+    move-result-object v6
+
+    check-cast v6, Landroid/view/ViewGroup;
+
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->bottomPages:Landroid/view/ViewGroup;
+
+    .line 158
+    iget-object v6, p0, Lorg/telegram/ui/IntroActivity;->topImage2:Landroid/widget/ImageView;
+
+    const/16 v7, 0x8
+
+    invoke-virtual {v6, v7}, Landroid/widget/ImageView;->setVisibility(I)V
+
+    .line 159
+    iget-object v6, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+
+    new-instance v7, Lorg/telegram/ui/IntroActivity$IntroAdapter;
+
+    const/4 v8, 0x0
+
+    invoke-direct {v7, p0, v8}, Lorg/telegram/ui/IntroActivity$IntroAdapter;-><init>(Lorg/telegram/ui/IntroActivity;Lorg/telegram/ui/IntroActivity$1;)V
+
+    invoke-virtual {v6, v7}, Landroid/support/v4/view/ViewPager;->setAdapter(Landroid/support/v4/view/PagerAdapter;)V
+
+    .line 160
+    iget-object v6, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v6, v10}, Landroid/support/v4/view/ViewPager;->setPageMargin(I)V
+
+    .line 161
+    iget-object v6, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+
+    invoke-virtual {v6, v11}, Landroid/support/v4/view/ViewPager;->setOffscreenPageLimit(I)V
+
+    .line 162
+    iget-object v6, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
+
+    new-instance v7, Lorg/telegram/ui/IntroActivity$1;
+
+    invoke-direct {v7, p0}, Lorg/telegram/ui/IntroActivity$1;-><init>(Lorg/telegram/ui/IntroActivity;)V
+
+    invoke-virtual {v6, v7}, Landroid/support/v4/view/ViewPager;->addOnPageChangeListener(Landroid/support/v4/view/ViewPager$OnPageChangeListener;)V
+
+    .line 237
+    new-instance v6, Lorg/telegram/ui/IntroActivity$2;
+
+    invoke-direct {v6, p0}, Lorg/telegram/ui/IntroActivity$2;-><init>(Lorg/telegram/ui/IntroActivity;)V
+
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 251
+    new-instance v6, Lorg/telegram/ui/IntroActivity$3;
+
+    invoke-direct {v6, p0}, Lorg/telegram/ui/IntroActivity$3;-><init>(Lorg/telegram/ui/IntroActivity;)V
+
+    invoke-virtual {v1, v6}, Landroid/widget/TextView;->setOnClickListener(Landroid/view/View$OnClickListener;)V
+
+    .line 264
+    sget-boolean v6, Lorg/telegram/messenger/BuildVars;->DEBUG_VERSION:Z
+
+    if-eqz v6, :cond_2
+
+    .line 265
+    new-instance v6, Lorg/telegram/ui/IntroActivity$4;
+
+    invoke-direct {v6, p0}, Lorg/telegram/ui/IntroActivity$4;-><init>(Lorg/telegram/ui/IntroActivity;)V
+
+    invoke-virtual {v5, v6}, Landroid/widget/TextView;->setOnLongClickListener(Landroid/view/View$OnLongClickListener;)V
+
+    .line 274
+    :cond_2
+    iput-boolean v11, p0, Lorg/telegram/ui/IntroActivity;->justCreated:Z
+
+    .line 275
     return-void
 
-    .line 65
-    .end local v3    # "startMessagingButton":Landroid/widget/TextView;
-    :cond_2
-    invoke-virtual {p0, v8}, Lorg/telegram/ui/IntroActivity;->setRequestedOrientation(I)V
+    .line 67
+    .end local v1    # "backToLastUserButton":Landroid/widget/TextView;
+    .end local v4    # "sharedPref":Landroid/content/SharedPreferences;
+    .end local v5    # "startMessagingButton":Landroid/widget/TextView;
+    :cond_3
+    invoke-virtual {p0, v11}, Lorg/telegram/ui/IntroActivity;->setRequestedOrientation(I)V
 
-    .line 66
-    const v4, 0x7f030010
+    .line 68
+    const v6, 0x7f030010
 
-    invoke-virtual {p0, v4}, Lorg/telegram/ui/IntroActivity;->setContentView(I)V
+    invoke-virtual {p0, v6}, Lorg/telegram/ui/IntroActivity;->setContentView(I)V
 
     goto/16 :goto_0
 
-    .line 98
-    :cond_3
-    new-array v4, v6, [I
+    .line 100
+    :cond_4
+    new-array v6, v8, [I
 
-    fill-array-data v4, :array_3
+    fill-array-data v6, :array_3
 
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->icons:[I
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->icons:[I
 
-    .line 107
-    new-array v4, v6, [I
+    .line 109
+    new-array v6, v8, [I
 
-    fill-array-data v4, :array_4
+    fill-array-data v6, :array_4
 
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->titles:[I
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->titles:[I
 
-    .line 116
-    new-array v4, v6, [I
+    .line 118
+    new-array v6, v8, [I
 
-    fill-array-data v4, :array_5
+    fill-array-data v6, :array_5
 
-    iput-object v4, p0, Lorg/telegram/ui/IntroActivity;->messages:[I
+    iput-object v6, p0, Lorg/telegram/ui/IntroActivity;->messages:[I
 
     goto/16 :goto_1
 
-    .line 70
+    .line 146
+    .restart local v1    # "backToLastUserButton":Landroid/widget/TextView;
+    .restart local v4    # "sharedPref":Landroid/content/SharedPreferences;
+    .restart local v5    # "startMessagingButton":Landroid/widget/TextView;
+    :cond_5
+    invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v6
+
+    const-string/jumbo v7, "state_user_0"
+
+    invoke-interface {v6, v7, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    .line 147
+    invoke-interface {v4}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v6
+
+    const-string/jumbo v7, "userID"
+
+    invoke-interface {v6, v7, v10}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v6
+
+    invoke-interface {v6}, Landroid/content/SharedPreferences$Editor;->apply()V
+
+    goto/16 :goto_2
+
+    .line 72
     :array_0
     .array-data 4
         0x7f02011d
@@ -557,7 +756,7 @@
         0x7f020117
     .end array-data
 
-    .line 79
+    .line 81
     :array_1
     .array-data 4
         0x7f07047b
@@ -569,7 +768,7 @@
         0x7f07046f
     .end array-data
 
-    .line 88
+    .line 90
     :array_2
     .array-data 4
         0x7f07047a
@@ -581,19 +780,19 @@
         0x7f07046e
     .end array-data
 
-    .line 98
+    .line 100
     :array_3
     .array-data 4
         0x7f020117
         0x7f020118
         0x7f020119
-        0x7f02011a
-        0x7f02011b
-        0x7f02011c
-        0x7f02011d
+        0x7f02011A
+        0x7f02011B
+        0x7f02011C
+        0x7f02011D
     .end array-data
 
-    .line 107
+    .line 109
     :array_4
     .array-data 4
         0x7f07046f
@@ -605,7 +804,7 @@
         0x7f07047b
     .end array-data
 
-    .line 116
+    .line 118
     :array_5
     .array-data 4
         0x7f07046e
@@ -622,13 +821,13 @@
     .locals 0
 
     .prologue
-    .line 262
+    .line 296
     invoke-super {p0}, Landroid/app/Activity;->onPause()V
 
-    .line 263
+    .line 297
     invoke-static {}, Lorg/telegram/messenger/AndroidUtilities;->unregisterUpdates()V
 
-    .line 264
+    .line 298
     return-void
 .end method
 
@@ -640,48 +839,48 @@
 
     const/4 v1, 0x0
 
-    .line 245
+    .line 279
     invoke-super {p0}, Landroid/app/Activity;->onResume()V
 
-    .line 246
+    .line 280
     iget-boolean v0, p0, Lorg/telegram/ui/IntroActivity;->justCreated:Z
 
     if-eqz v0, :cond_0
 
-    .line 247
+    .line 281
     sget-boolean v0, Lorg/telegram/messenger/LocaleController;->isRTL:Z
 
     if-eqz v0, :cond_1
 
-    .line 248
+    .line 282
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, v2}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 249
+    .line 283
     iput v2, p0, Lorg/telegram/ui/IntroActivity;->lastPage:I
 
-    .line 254
+    .line 288
     :goto_0
     iput-boolean v1, p0, Lorg/telegram/ui/IntroActivity;->justCreated:Z
 
-    .line 256
+    .line 290
     :cond_0
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->checkForCrashes(Landroid/app/Activity;)V
 
-    .line 257
+    .line 291
     invoke-static {p0}, Lorg/telegram/messenger/AndroidUtilities;->checkForUpdates(Landroid/app/Activity;)V
 
-    .line 258
+    .line 292
     return-void
 
-    .line 251
+    .line 285
     :cond_1
     iget-object v0, p0, Lorg/telegram/ui/IntroActivity;->viewPager:Landroid/support/v4/view/ViewPager;
 
     invoke-virtual {v0, v1}, Landroid/support/v4/view/ViewPager;->setCurrentItem(I)V
 
-    .line 252
+    .line 286
     iput v1, p0, Lorg/telegram/ui/IntroActivity;->lastPage:I
 
     goto :goto_0

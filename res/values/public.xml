@@ -742,6 +742,7 @@
     <public type="drawable" name="tab_text_selector" id="0x7f02026a" />
     <public type="drawable" name="transparentback" id="0x7f020284" />
     <public type="drawable" name="transparentbackrepeat" id="0x7f020285" />
+    <public type="drawable" name="fab_add" id="0x7f020296" />
     <public type="drawable" name="ic_bar_bg" id="0x7f0200cb" />
     <public type="drawable" name="ic_bar_bg_v" id="0x7f0200cc" />
     <public type="drawable" name="ic_bar_close" id="0x7f0200cd" />
@@ -750,6 +751,7 @@
     <public type="drawable" name="ic_masks_sticker2" id="0x7f0200ea" />
     <public type="drawable" name="pl_shuffle_active" id="0x7f020227" />
     <public type="drawable" name="switch_to_on3" id="0x7f02025c" />
+    <public type="drawable" name="ic_add_black_24dp" id="0x7f020297" />
     <public type="layout" name="color_colorselectview" id="0x7f030000" />
     <public type="layout" name="color_hexview" id="0x7f030001" />
     <public type="layout" name="color_historyview" id="0x7f030002" />
@@ -773,8 +775,6 @@
     <public type="layout" name="player_small_notification" id="0x7f030014" />
     <public type="layout" name="seek_bar_preference" id="0x7f030015" />
     <public type="layout" name="tabs_bg" id="0x7f030016" />
-    <public type="layout" name="activity_change_user" id="0x7f030799" />
-    <public type="layout" name="user_list_item" id="0x7f03079c" />
     <public type="layout" name="APKTOOL_DUMMY_17" id="0x7f030017" />
     <public type="layout" name="APKTOOL_DUMMY_18" id="0x7f030018" />
     <public type="layout" name="APKTOOL_DUMMY_19" id="0x7f030019" />
@@ -2697,13 +2697,21 @@
     <public type="layout" name="APKTOOL_DUMMY_796" id="0x7f030796" />
     <public type="layout" name="APKTOOL_DUMMY_797" id="0x7f030797" />
     <public type="layout" name="APKTOOL_DUMMY_798" id="0x7f030798" />
+    <public type="layout" name="activity_change_user" id="0x7f030799" />
     <public type="layout" name="APKTOOL_DUMMY_79a" id="0x7f03079a" />
     <public type="layout" name="APKTOOL_DUMMY_79b" id="0x7f03079b" />
+    <public type="layout" name="user_list_item" id="0x7f03079c" />
     <public type="anim" name="icon_anim_fade_in" id="0x7f040000" />
     <public type="anim" name="icon_anim_fade_out" id="0x7f040001" />
     <public type="anim" name="no_animation" id="0x7f040002" />
     <public type="anim" name="popup_in" id="0x7f040003" />
     <public type="anim" name="popup_out" id="0x7f040004" />
+    <public type="anim" name="fab_scale_down" id="0x7f040005" />
+    <public type="anim" name="fab_scale_up" id="0x7f040006" />
+    <public type="anim" name="fab_slide_in_from_left" id="0x7f040007" />
+    <public type="anim" name="fab_slide_in_from_right" id="0x7f040008" />
+    <public type="anim" name="fab_slide_out_to_left" id="0x7f040009" />
+    <public type="anim" name="fab_slide_out_to_right" id="0x7f04000a" />
     <public type="xml" name="auth" id="0x7f050000" />
     <public type="xml" name="auth_menu" id="0x7f050001" />
     <public type="xml" name="automotive_app_desc" id="0x7f050002" />
@@ -4575,6 +4583,20 @@
     <public type="string" name="google_crash_reporting_api_key" id="0x7f07073f" />
     <public type="string" name="hockeyapp_update_version_details_label" id="0x7f070740" />
     <public type="string" name="Change_another_user" id="0x7f070741" />
+    <public type="string" name="DialogAddNo" id="0x7f070742" />
+    <public type="string" name="DialogAddSure" id="0x7f070743" />
+    <public type="string" name="DialogAddUser" id="0x7f070744" />
+    <public type="string" name="DialogAddYes" id="0x7f070745" />
+    <public type="string" name="DialogDeleteUser" id="0x7f070746" />
+    <public type="string" name="DialogNo" id="0x7f070747" />
+    <public type="string" name="DialogSure" id="0x7f070748" />
+    <public type="string" name="DialogYes" id="0x7f070749" />
+    <public type="string" name="IsCurrentUser" id="0x7f07074a" />
+    <public type="string" name="MaxUsersCount" id="0x7f07074b" />
+    <public type="string" name="ScanningProfiles" id="0x7f07074c" />
+    <public type="string" name="DeleteFirstUser" id="0x7f07074d" />
+    <public type="string" name="AddUser" id="0x7f07074e" />
+    <public type="string" name="GoBack" id="0x7f07074f" />
     <public type="bool" name="isTablet" id="0x7f080000" />
     <public type="bool" name="useHardwareAcceleration" id="0x7f080001" />
     <public type="style" name="myBackgroundStyle" id="0x7f090000" />
@@ -4624,18 +4646,6 @@
     <public type="color" name="common_google_signin_btn_text_light" id="0x7f0b0017" />
     <public type="color" name="common_google_signin_btn_tint" id="0x7f0b0018" />
     <public type="id" name="menu_bold" id="0x7f0c0000" />
-    <public type="string" name="DialogAddNo" id="0x7f070742" />
-    <public type="string" name="DialogAddSure" id="0x7f070743" />
-    <public type="string" name="DialogAddUser" id="0x7f070744" />
-    <public type="string" name="DialogAddYes" id="0x7f070745" />
-    <public type="string" name="DialogDeleteUser" id="0x7f070746" />
-    <public type="string" name="DialogNo" id="0x7f070747" />
-    <public type="string" name="DialogSure" id="0x7f070748" />
-    <public type="string" name="DialogYes" id="0x7f070749" />
-    <public type="string" name="IsCurrentUser" id="0x7f07074A" />
-    <public type="string" name="MaxUsersCount" id="0x7f07074B" />
-    <public type="string" name="ScanningProfiles" id="0x7f07074C" />
-	<public type="string" name="DeleteFirstUser" id="0x7f07074D" />
     <public type="id" name="menu_groupbolditalic" id="0x7f0c0001" />
     <public type="id" name="menu_italic" id="0x7f0c0002" />
     <public type="id" name="menu_regular" id="0x7f0c0003" />
@@ -4747,10 +4757,18 @@
     <public type="id" name="start" id="0x7f0c0071" />
     <public type="id" name="down" id="0x7f0c0072" />
     <public type="id" name="up" id="0x7f0c0073" />
-	<public type="id" name="userPhoto" id="0x7f0c0074" />
+    <public type="id" name="userPhoto" id="0x7f0c0074" />
     <public type="id" name="userName" id="0x7f0c0075" />
     <public type="id" name="userPhone" id="0x7f0c0076" />
     <public type="id" name="userCurrent" id="0x7f0c0077" />
-	<public type="id" name="buttonAddUser" id="0x7f0c0078" />
+    <public type="id" name="buttonAddUser" id="0x7f0c0078" />
+    <public type="id" name="APKTOOL_DUMMY_67" id="0x7f0c0067" />
+    <public type="id" name="APKTOOL_DUMMY_68" id="0x7f0c0068" />
+    <public type="id" name="APKTOOL_DUMMY_69" id="0x7f0c0069" />
+    <public type="id" name="APKTOOL_DUMMY_6a" id="0x7f0c006a" />
     <public type="integer" name="google_play_services_version" id="0x7f0d0000" />
+    <public type="dimen" name="fab_margin" id="0x7f0e0000" />
+    <public type="dimen" name="fab_size_mini" id="0x7f0e0001" />
+    <public type="dimen" name="fab_size_normal" id="0x7f0e0002" />
+    <public type="dimen" name="labels_text_size" id="0x7f0e0003" />
 </resources>

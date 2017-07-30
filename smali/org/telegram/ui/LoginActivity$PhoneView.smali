@@ -1899,7 +1899,7 @@
     .local v4, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v14, "AppName"
 
-    const v15, 0x7f070072
+    const v15, 0x7f070078
 
     invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1910,7 +1910,7 @@
     .line 1103
     const-string/jumbo v14, "OK"
 
-    const v15, 0x7f0703b5
+    const v15, 0x7f070452
 
     invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -1923,7 +1923,7 @@
     .line 1104
     const-string/jumbo v14, "AllowFillNumber"
 
-    const v15, 0x7f07005c
+    const v15, 0x7f070060
 
     invoke-static {v14, v15}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

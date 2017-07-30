@@ -74,7 +74,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/ChangeUserActivity$1;->this$0:Lorg/telegram/ui/ChangeUserActivity;
 
-    const v2, 0x7f070615
+    const v2, 0x7f07074D
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 

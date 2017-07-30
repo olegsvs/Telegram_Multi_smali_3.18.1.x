@@ -20,6 +20,6 @@
     <color name="hockeyapp_text_light">#ffcccccc</color>
     <color name="hockeyapp_text_normal">#ff888888</color>
     <color name="hockeyapp_text_white">#ffffffff</color>
-    <color name="primary_dark">#ff00695c</color>
-    <color name="primary_light">#ff54759e</color>
+    <color name="primary_dark">#ff54759e</color>
+    <color name="primary_light">#ff26A69A</color>
 </resources>

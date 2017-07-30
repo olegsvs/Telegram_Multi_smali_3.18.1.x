@@ -300,7 +300,7 @@
 
     .prologue
     .line 164
-    const v5, 0x7f070617
+    const v5, 0x7f070743
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -312,7 +312,7 @@
 
     .line 165
     .local v4, "title":Ljava/lang/String;
-    const v5, 0x7f070618
+    const v5, 0x7f070744
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -324,7 +324,7 @@
 
     .line 166
     .local v3, "message":Ljava/lang/String;
-    const v5, 0x7f070619
+    const v5, 0x7f070745
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -336,7 +336,7 @@
 
     .line 167
     .local v1, "button1String":Ljava/lang/String;
-    const v5, 0x7f070616
+    const v5, 0x7f070742
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -386,7 +386,7 @@
 
     .prologue
     .line 142
-    const v5, 0x7f07061c
+    const v5, 0x7f070748
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -398,7 +398,7 @@
 
     .line 143
     .local v4, "title":Ljava/lang/String;
-    const v5, 0x7f07061a
+    const v5, 0x7f070746
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -410,7 +410,7 @@
 
     .line 144
     .local v3, "message":Ljava/lang/String;
-    const v5, 0x7f07061d
+    const v5, 0x7f070749
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -422,7 +422,7 @@
 
     .line 145
     .local v1, "button1String":Ljava/lang/String;
-    const v5, 0x7f07061b
+    const v5, 0x7f070747
 
     invoke-virtual {p0, v5}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -966,7 +966,7 @@
 
     .line 108
     :cond_0
-    const v0, 0x7f07062f
+    const v0, 0x7f07074B
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -1525,7 +1525,7 @@
     invoke-virtual {v0, v5}, Landroid/app/ActionBar;->setDisplayShowTitleEnabled(Z)V
 
     .line 72
-    const v3, 0x7f0700ee
+    const v3, 0x7f070741
 
     invoke-virtual {p0, v3}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 
@@ -1693,7 +1693,7 @@
 
     sget-object v0, Lorg/telegram/ui/ChangeUserActivity;->ctx:Landroid/content/Context;
 
-    const v1, 0x7f07062d
+    const v1, 0x7f07074A
 
     invoke-virtual {p0, v1}, Lorg/telegram/ui/ChangeUserActivity;->getText(I)Ljava/lang/CharSequence;
 

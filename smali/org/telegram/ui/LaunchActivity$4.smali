@@ -824,7 +824,7 @@
 
     iget-object v7, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    const v8, 0x7f07063d
+    const v8, 0x7f07074C
 
     invoke-virtual {v7, v8}, Lorg/telegram/ui/LaunchActivity;->getText(I)Ljava/lang/CharSequence;
 

@@ -313,7 +313,7 @@ Note: if you forget the passcode, you'll need to delete and reinstall the app. A
     <string name="ChannelJoinTo">"Do you want to join the channel '%1$s'?"</string>
     <string name="ChannelJoined">You joined this channel</string>
     <string name="ChannelLeaveAlert">Are you sure you want to leave the channel?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Anyone who has Telegram installed will be able to join your channel by following this link.</string>
     <string name="ChannelLinkTitle">Link</string>
     <string name="ChannelMegaJoined">You joined this group</string>

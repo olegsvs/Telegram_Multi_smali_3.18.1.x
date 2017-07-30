@@ -276,7 +276,7 @@ Nota: Si oblideu el codi d'accés haureu d'eliminar i reinstal·lar l'aplicació
     <string name="ChannelJoinTo">Voleu afegir-vos al canal «%1$s»?</string>
     <string name="ChannelJoined">Us heu unit al canal</string>
     <string name="ChannelLeaveAlert">Segur que voleu abandonar el canal?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">"Qualsevol que tingui el Telegram instal·lat podrà unir-se al canal tot seguint l'enllaç."</string>
     <string name="ChannelLinkTitle">Enllaç</string>
     <string name="ChannelMegaJoined">Us heu unit al grup</string>

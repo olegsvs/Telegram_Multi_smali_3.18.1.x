@@ -173,7 +173,7 @@ Not: Eğer parolayı unuttuysanız, uygulamayı silip yeniden yüklemeniz gereke
     <string name="ChangePhoneNewNumber">Yeni numaranız</string>
     <string name="ChangePhoneNumberOccupied">%1$s numarası zaten bir Telegram hesabına bağlı. Lütfen yazdığınız numaraya geçmeden önce o numaraya bağlı hesabı silin.</string>
     <string name="ChangeRecoveryEmail">Kurtarma E-postasını Değiştir</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="Channels">Kanallar</string>
     <string name="ChatBackground">Sohbet Arkaplanı</string>
     <string name="ChatCamera">Kamera</string>

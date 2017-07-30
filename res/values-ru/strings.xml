@@ -260,7 +260,7 @@
     <string name="ChannelJoinTo">"Хотите подписаться на канал '%1$s'?"</string>
     <string name="ChannelJoined">Вы подписались на этот канал</string>
     <string name="ChannelLeaveAlert">Уверены, что хотите покинуть канал?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrru</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Любой пользователь Telegram сможет подписаться на ваш канал, перейдя по этой ссылке.</string>
     <string name="ChannelLinkTitle">Ссылка</string>
     <string name="ChannelMegaJoined">Вы вступили в эту группу</string>

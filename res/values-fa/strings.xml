@@ -243,7 +243,7 @@ Note شما می تونی از تلگرام تو همه دستگاه های خو
     <string name="ChannelJoinTo">"می خوای عضو کانال '%1$s' بشی ؟"</string>
     <string name="ChannelJoined">مبارکه ! وارد این کانال شدی.</string>
     <string name="ChannelLeaveAlert">مطمئنی می خوای کانال رو ترک کنی ؟</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrir</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">همه کاربرهای تلگرام می تونن با استفاده از این لینک عضو کانال شما بشن</string>
     <string name="ChannelLinkTitle">لینک</string>
     <string name="ChannelMegaJoined">مبارکه ! وارد این گروه شدی.</string>

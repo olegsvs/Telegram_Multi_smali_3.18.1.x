@@ -299,7 +299,7 @@ Nota: se ti dimentichi il codice, dovrai disinstallare e reinstallare l'app. Tut
     <string name="ChannelJoinTo">"Vuoi unirti al canale '%1$s'?"</string>
     <string name="ChannelJoined">Ti sei unito a questo canale</string>
     <string name="ChannelLeaveAlert">Sei sicuro di voler lasciare il canale?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrit</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Chiunque abbia Telegram installato potrà aggiungersi al tuo canale aprendo questo link.</string>
     <string name="ChannelLinkTitle">Link</string>
     <string name="ChannelMegaJoined">Ti sei unito a questo gruppo</string>

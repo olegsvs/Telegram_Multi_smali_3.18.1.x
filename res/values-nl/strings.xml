@@ -298,7 +298,7 @@ Let op: vergeet je de toegangscode dan zul je de app moeten verwijderen en herin
     <string name="ChannelJoinTo">"Lid worden van kanaal '%1$s'?"</string>
     <string name="ChannelJoined">Je bent nu lid van dit kanaal</string>
     <string name="ChannelLeaveAlert">Kanaal echt verlaten?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrnl</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Andere Telegram-gebruikers kunnen lid worden van je groep door deze link te openen.</string>
     <string name="ChannelLinkTitle">Link</string>
     <string name="ChannelMegaJoined">Je bent nu lid van deze groep</string>

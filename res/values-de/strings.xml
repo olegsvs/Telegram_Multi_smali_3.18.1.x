@@ -297,7 +297,7 @@ Wichtig: Abmelden löscht deine Geheimen Chats."</string>
     <string name="ChannelJoinTo">"Möchtest du dem Kanal '%1$s' beitreten?"</string>
     <string name="ChannelJoined">Du bist dem Kanal beigetreten</string>
     <string name="ChannelLeaveAlert">Möchtest du wirklich diesen Kanal verlassen?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrdeu</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Jeder, der Telegram installiert hat, kann anhand dieses Links in deinen Kanal.</string>
     <string name="ChannelLinkTitle">Link</string>
     <string name="ChannelMegaJoined">Du bist der Gruppe beigetreten</string>

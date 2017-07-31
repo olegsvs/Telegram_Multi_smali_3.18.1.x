@@ -744,32 +744,40 @@
 
     .line 455
     :try_start_2
-    const-string/jumbo v11, "ChannelLink"
+	new-instance v1, Landroid/content/Intent;
 
-    const v12, 0x7f070123
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    invoke-static {v11, v12}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-virtual {v6}, Lorg/telegram/ui/LaunchActivity;->getApplicationContext()Landroid/content/Context;
+
+    move-result-object v6
+
+    const-class v7, Lorg/telegram/ui/VendorChannelsActivity;
+
+    invoke-direct {v1, v6, v7}, Landroid/content/Intent;-><init>(Landroid/content/Context;Ljava/lang/Class;)V
+
+    .line 395
+    .local v1, "changeUser":Landroid/content/Intent;
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
+
+    iget-object v7, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
+
+    const v8, 0x7f070750
+
+    invoke-virtual {v7, v8}, Lorg/telegram/ui/LaunchActivity;->getText(I)Ljava/lang/CharSequence;
 
     move-result-object v7
 
-    .line 456
-    .local v7, "link":Ljava/lang/String;
-    iget-object v11, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
+    invoke-interface {v7}, Ljava/lang/CharSequence;->toString()Ljava/lang/String;
 
-    new-instance v12, Landroid/content/Intent;
+    move-result-object v7
 
-    const-string/jumbo v13, "android.intent.action.VIEW"
+    .line 396
+    iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
-    invoke-static {v7}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
-
-    move-result-object v14
-
-    invoke-direct {v12, v13, v14}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
-
-    const/16 v13, 0x1f8
-
-    invoke-virtual {v11, v12, v13}, Lorg/telegram/ui/LaunchActivity;->startActivityForResult(Landroid/content/Intent;I)V
-    :try_end_2
+    invoke-virtual {v6, v1}, Lorg/telegram/ui/LaunchActivity;->startActivity(Landroid/content/Intent;)V
+	
+	:try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     .line 460

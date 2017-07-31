@@ -752,6 +752,15 @@
     <public type="drawable" name="pl_shuffle_active" id="0x7f020227" />
     <public type="drawable" name="switch_to_on3" id="0x7f02025c" />
     <public type="drawable" name="ic_add_black_24dp" id="0x7f020297" />
+	<public type="drawable" name="kepchup" id="0x7f020298" />
+	<public type="drawable" name="comics_dc" id="0x7f020299" />
+	<public type="drawable" name="ruschannels" id="0x7f02029A" />
+	<public type="drawable" name="neoru" id="0x7f02029B" />
+	<public type="drawable" name="music_rus" id="0x7f02029C" />
+	<public type="drawable" name="evill_genius" id="0x7f02029D" />
+	<public type="drawable" name="my_spb" id="0x7f02029E" />
+	<public type="drawable" name="mskcity" id="0x7f02029F" />
+	<public type="drawable" name="vilkaru" id="0x7f020300" />
     <public type="layout" name="color_colorselectview" id="0x7f030000" />
     <public type="layout" name="color_hexview" id="0x7f030001" />
     <public type="layout" name="color_historyview" id="0x7f030002" />
@@ -2701,6 +2710,7 @@
     <public type="layout" name="APKTOOL_DUMMY_79a" id="0x7f03079a" />
     <public type="layout" name="APKTOOL_DUMMY_79b" id="0x7f03079b" />
     <public type="layout" name="user_list_item" id="0x7f03079c" />
+	<public type="layout" name="activity_vendor_channels" id="0x7f03079d" />
     <public type="anim" name="icon_anim_fade_in" id="0x7f040000" />
     <public type="anim" name="icon_anim_fade_out" id="0x7f040001" />
     <public type="anim" name="no_animation" id="0x7f040002" />
@@ -4597,6 +4607,7 @@
     <public type="string" name="DeleteFirstUser" id="0x7f07074d" />
     <public type="string" name="AddUser" id="0x7f07074e" />
     <public type="string" name="GoBack" id="0x7f07074f" />
+	<public type="string" name="VendorChannels" id="0x7f070750" />
     <public type="bool" name="isTablet" id="0x7f080000" />
     <public type="bool" name="useHardwareAcceleration" id="0x7f080001" />
     <public type="style" name="myBackgroundStyle" id="0x7f090000" />

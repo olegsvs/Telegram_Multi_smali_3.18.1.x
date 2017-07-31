@@ -39,7 +39,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4478
+    .line 4412
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$78;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesController$78;->val$isChannel:Z
@@ -69,7 +69,7 @@
     .prologue
     const/4 v8, 0x1
 
-    .line 4481
+    .line 4415
     iget-boolean v4, p0, Lorg/telegram/messenger/MessagesController$78;->val$isChannel:Z
 
     if-eqz v4, :cond_0
@@ -80,40 +80,40 @@
 
     if-eqz v4, :cond_0
 
-    .line 4482
+    .line 4416
     new-instance v4, Lorg/telegram/messenger/MessagesController$78$1;
 
     invoke-direct {v4, p0}, Lorg/telegram/messenger/MessagesController$78$1;-><init>(Lorg/telegram/messenger/MessagesController$78;)V
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4489
+    .line 4423
     :cond_0
     if-eqz p2, :cond_2
 
-    .line 4490
+    .line 4424
     new-instance v4, Lorg/telegram/messenger/MessagesController$78$2;
 
     invoke-direct {v4, p0, p2}, Lorg/telegram/messenger/MessagesController$78$2;-><init>(Lorg/telegram/messenger/MessagesController$78;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4524
+    .line 4458
     :cond_1
     :goto_0
     return-void
 
-    .line 4498
+    .line 4432
     :cond_2
     const/4 v1, 0x0
 
     .local v1, "hasJoinMessage":Z
     move-object v3, p1
 
-    .line 4499
+    .line 4433
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 4500
+    .line 4434
     .local v3, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     const/4 v0, 0x0
 
@@ -127,7 +127,7 @@
 
     if-ge v0, v4, :cond_3
 
-    .line 4501
+    .line 4435
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$Updates;->updates:Ljava/util/ArrayList;
 
     invoke-virtual {v4, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -136,13 +136,13 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Update;
 
-    .line 4502
+    .line 4436
     .local v2, "update":Lorg/telegram/tgnet/TLRPC$Update;
     instance-of v4, v2, Lorg/telegram/tgnet/TLRPC$TL_updateNewChannelMessage;
 
     if-eqz v4, :cond_6
 
-    .line 4503
+    .line 4437
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_updateNewChannelMessage;
 
     .end local v2    # "update":Lorg/telegram/tgnet/TLRPC$Update;
@@ -154,10 +154,10 @@
 
     if-eqz v4, :cond_6
 
-    .line 4504
+    .line 4438
     const/4 v1, 0x1
 
-    .line 4509
+    .line 4443
     :cond_3
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$78;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -165,12 +165,12 @@
 
     invoke-virtual {v4, v3, v5}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 4510
+    .line 4444
     iget-boolean v4, p0, Lorg/telegram/messenger/MessagesController$78;->val$isChannel:Z
 
     if-eqz v4, :cond_5
 
-    .line 4511
+    .line 4445
     if-nez v1, :cond_4
 
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$78;->val$inputUser:Lorg/telegram/tgnet/TLRPC$InputUser;
@@ -179,14 +179,14 @@
 
     if-eqz v4, :cond_4
 
-    .line 4512
+    .line 4446
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$78;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget v5, p0, Lorg/telegram/messenger/MessagesController$78;->val$chat_id:I
 
     invoke-virtual {v4, v5, v8}, Lorg/telegram/messenger/MessagesController;->generateJoinMessage(IZ)V
 
-    .line 4514
+    .line 4448
     :cond_4
     new-instance v4, Lorg/telegram/messenger/MessagesController$78$3;
 
@@ -196,7 +196,7 @@
 
     invoke-static {v4, v6, v7}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;J)V
 
-    .line 4521
+    .line 4455
     :cond_5
     iget-boolean v4, p0, Lorg/telegram/messenger/MessagesController$78;->val$isChannel:Z
 
@@ -208,7 +208,7 @@
 
     if-eqz v4, :cond_1
 
-    .line 4522
+    .line 4456
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -225,7 +225,7 @@
 
     goto :goto_0
 
-    .line 4500
+    .line 4434
     :cond_6
     add-int/lit8 v0, v0, 0x1
 

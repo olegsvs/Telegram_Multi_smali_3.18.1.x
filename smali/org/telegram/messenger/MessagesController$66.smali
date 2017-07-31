@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4128
+    .line 4062
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$66;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$66;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
@@ -51,27 +51,27 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4131
+    .line 4065
     if-eqz p2, :cond_0
 
-    .line 4132
+    .line 4066
     new-instance v1, Lorg/telegram/messenger/MessagesController$66$1;
 
     invoke-direct {v1, p0, p2}, Lorg/telegram/messenger/MessagesController$66$1;-><init>(Lorg/telegram/messenger/MessagesController$66;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4155
+    .line 4089
     :goto_0
     return-void
 
     :cond_0
     move-object v0, p1
 
-    .line 4141
+    .line 4075
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 4142
+    .line 4076
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$66;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -79,7 +79,7 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 4143
+    .line 4077
     new-instance v1, Lorg/telegram/messenger/MessagesController$66$2;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/messenger/MessagesController$66$2;-><init>(Lorg/telegram/messenger/MessagesController$66;Lorg/telegram/tgnet/TLRPC$Updates;)V

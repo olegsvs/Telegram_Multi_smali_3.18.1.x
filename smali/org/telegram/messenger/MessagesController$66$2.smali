@@ -29,7 +29,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$66;
 
     .prologue
-    .line 4143
+    .line 4077
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$66$2;->this$1:Lorg/telegram/messenger/MessagesController$66;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$66$2;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
@@ -47,7 +47,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4146
+    .line 4080
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$66$2;->this$1:Lorg/telegram/messenger/MessagesController$66;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$66;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -58,7 +58,7 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 4147
+    .line 4081
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$66$2;->this$1:Lorg/telegram/messenger/MessagesController$66;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$66;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -69,7 +69,7 @@
 
     invoke-virtual {v0, v1, v4}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 4148
+    .line 4082
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$66$2;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
 
     iget-object v0, v0, Lorg/telegram/tgnet/TLRPC$Updates;->chats:Ljava/util/ArrayList;
@@ -86,7 +86,7 @@
 
     if-nez v0, :cond_0
 
-    .line 4149
+    .line 4083
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -117,11 +117,11 @@
 
     invoke-virtual {v1, v2, v3}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 4153
+    .line 4087
     :goto_0
     return-void
 
-    .line 4151
+    .line 4085
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 

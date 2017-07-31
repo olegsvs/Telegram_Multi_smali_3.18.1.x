@@ -53,7 +53,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2772
+    .line 2706
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$51;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$51;->val$count:I
@@ -101,15 +101,15 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2775
+    .line 2709
     if-eqz p1, :cond_2
 
     move-object/from16 v3, p1
 
-    .line 2776
+    .line 2710
     check-cast v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 2777
+    .line 2711
     .local v3, "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
@@ -123,20 +123,20 @@
 
     if-le v2, v4, :cond_0
 
-    .line 2778
+    .line 2712
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     const/4 v4, 0x0
 
     invoke-virtual {v2, v4}, Ljava/util/ArrayList;->remove(I)Ljava/lang/Object;
 
-    .line 2780
+    .line 2714
     :cond_0
     move-object/from16 v0, p0
 
     iget v7, v0, Lorg/telegram/messenger/MessagesController$51;->val$max_id:I
 
-    .line 2781
+    .line 2715
     .local v7, "mid":I
     move-object/from16 v0, p0
 
@@ -152,7 +152,7 @@
 
     if-nez v2, :cond_1
 
-    .line 2782
+    .line 2716
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     iget-object v4, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
@@ -171,7 +171,7 @@
 
     iget v7, v2, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 2783
+    .line 2717
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
@@ -184,7 +184,7 @@
     :goto_0
     if-ltz v20, :cond_1
 
-    .line 2784
+    .line 2718
     iget-object v2, v3, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     move/from16 v0, v20
@@ -195,7 +195,7 @@
 
     check-cast v21, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 2785
+    .line 2719
     .local v21, "message":Lorg/telegram/tgnet/TLRPC$Message;
     move-object/from16 v0, v21
 
@@ -207,12 +207,12 @@
 
     if-le v2, v4, :cond_3
 
-    .line 2786
+    .line 2720
     move-object/from16 v0, v21
 
     iget v7, v0, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 2791
+    .line 2725
     .end local v20    # "a":I
     .end local v21    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_1
@@ -280,13 +280,13 @@
 
     invoke-virtual/range {v2 .. v19}, Lorg/telegram/messenger/MessagesController;->processLoadedMessages(Lorg/telegram/tgnet/TLRPC$messages_Messages;JIIIZIIIIIIZZIZ)V
 
-    .line 2793
+    .line 2727
     .end local v3    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     .end local v7    # "mid":I
     :cond_2
     return-void
 
-    .line 2783
+    .line 2717
     .restart local v3    # "res":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     .restart local v7    # "mid":I
     .restart local v20    # "a":I

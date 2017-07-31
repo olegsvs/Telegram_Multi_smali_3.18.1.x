@@ -35,7 +35,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$93;
 
     .prologue
-    .line 5238
+    .line 5158
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$93$2;->this$1:Lorg/telegram/messenger/MessagesController$93;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$93$2;->val$msgUpdates:Ljava/util/ArrayList;
@@ -59,7 +59,7 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 5241
+    .line 5161
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$93$2;->val$msgUpdates:Ljava/util/ArrayList;
 
     invoke-virtual {v1}, Ljava/util/ArrayList;->isEmpty()Z
@@ -68,12 +68,12 @@
 
     if-nez v1, :cond_2
 
-    .line 5242
+    .line 5162
     new-instance v0, Ljava/util/HashMap;
 
     invoke-direct {v0}, Ljava/util/HashMap;-><init>()V
 
-    .line 5243
+    .line 5163
     .local v0, "corrected":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;[J>;"
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$93$2;->val$msgUpdates:Ljava/util/ArrayList;
 
@@ -95,7 +95,7 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
 
-    .line 5244
+    .line 5164
     .local v10, "update":Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -117,11 +117,11 @@
 
     move-result-object v9
 
-    .line 5245
+    .line 5165
     .local v9, "ids":[J
     if-eqz v9, :cond_0
 
-    .line 5246
+    .line 5166
     iget v1, v10, Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;->id:I
 
     invoke-static {v1}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
@@ -132,7 +132,7 @@
 
     goto :goto_0
 
-    .line 5250
+    .line 5170
     .end local v9    # "ids":[J
     .end local v10    # "update":Lorg/telegram/tgnet/TLRPC$TL_updateMessageID;
     :cond_1
@@ -142,14 +142,14 @@
 
     if-nez v1, :cond_2
 
-    .line 5251
+    .line 5171
     new-instance v1, Lorg/telegram/messenger/MessagesController$93$2$1;
 
     invoke-direct {v1, p0, v0}, Lorg/telegram/messenger/MessagesController$93$2$1;-><init>(Lorg/telegram/messenger/MessagesController$93$2;Ljava/util/HashMap;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5266
+    .line 5186
     .end local v0    # "corrected":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;[J>;"
     :cond_2
     sget-object v1, Lorg/telegram/messenger/Utilities;->stageQueue:Lorg/telegram/messenger/DispatchQueue;
@@ -160,6 +160,6 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 5383
+    .line 5303
     return-void
 .end method

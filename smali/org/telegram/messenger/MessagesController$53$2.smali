@@ -33,7 +33,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$53;
 
     .prologue
-    .line 2977
+    .line 2911
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$53$2;->val$objects:Ljava/util/ArrayList;
@@ -55,7 +55,7 @@
     .prologue
     const/4 v10, 0x2
 
-    .line 2980
+    .line 2914
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$53;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 2981
+    .line 2915
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$53;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -89,10 +89,10 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 2982
+    .line 2916
     const v1, 0x7fffffff
 
-    .line 2983
+    .line 2917
     .local v1, "first_unread_final":I
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
@@ -106,7 +106,7 @@
 
     if-ne v3, v10, :cond_1
 
-    .line 2984
+    .line 2918
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -123,7 +123,7 @@
 
     if-ge v0, v3, :cond_1
 
-    .line 2985
+    .line 2919
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$53;->val$messagesRes:Lorg/telegram/tgnet/TLRPC$messages_Messages;
@@ -136,7 +136,7 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 2986
+    .line 2920
     .local v2, "message":Lorg/telegram/tgnet/TLRPC$Message;
     iget-boolean v3, v2, Lorg/telegram/tgnet/TLRPC$Message;->out:Z
 
@@ -154,16 +154,16 @@
 
     if-ge v3, v1, :cond_0
 
-    .line 2987
+    .line 2921
     iget v1, v2, Lorg/telegram/tgnet/TLRPC$Message;->id:I
 
-    .line 2984
+    .line 2918
     :cond_0
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 2991
+    .line 2925
     .end local v0    # "a":I
     .end local v2    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_1
@@ -171,12 +171,12 @@
 
     if-ne v1, v3, :cond_2
 
-    .line 2992
+    .line 2926
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget v1, v3, Lorg/telegram/messenger/MessagesController$53;->val$first_unread:I
 
-    .line 2994
+    .line 2928
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -334,7 +334,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2995
+    .line 2929
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->val$messagesToReload:Ljava/util/ArrayList;
 
     invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
@@ -343,7 +343,7 @@
 
     if-nez v3, :cond_3
 
-    .line 2996
+    .line 2930
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$53;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -356,7 +356,7 @@
 
     invoke-static {v3, v4, v6, v7}, Lorg/telegram/messenger/MessagesController;->access$4400(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;J)V
 
-    .line 2998
+    .line 2932
     :cond_3
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->val$webpagesToReload:Ljava/util/HashMap;
 
@@ -366,7 +366,7 @@
 
     if-nez v3, :cond_4
 
-    .line 2999
+    .line 2933
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$53$2;->this$1:Lorg/telegram/messenger/MessagesController$53;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$53;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -379,7 +379,7 @@
 
     invoke-virtual {v3, v4, v5, v6}, Lorg/telegram/messenger/MessagesController;->reloadWebPages(JLjava/util/HashMap;)V
 
-    .line 3001
+    .line 2935
     :cond_4
     return-void
 .end method

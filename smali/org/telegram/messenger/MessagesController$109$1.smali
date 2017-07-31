@@ -1,4 +1,4 @@
-.class Lorg/telegram/messenger/MessagesController$103$1;
+.class Lorg/telegram/messenger/MessagesController$109$1;
 .super Ljava/lang/Object;
 .source "MessagesController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController$103;->run()V
+    value = Lorg/telegram/messenger/MessagesController$109;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic this$1:Lorg/telegram/messenger/MessagesController$103;
+.field final synthetic this$1:Lorg/telegram/messenger/MessagesController$109;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController$103;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController$109;)V
     .locals 0
-    .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$103;
+    .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$109;
 
     .prologue
-    .line 6293
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$103$1;->this$1:Lorg/telegram/messenger/MessagesController$103;
+    .line 7216
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$109$1;->this$1:Lorg/telegram/messenger/MessagesController$109;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,19 +41,19 @@
     .locals 3
 
     .prologue
-    .line 6296
+    .line 7219
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$103$1;->this$1:Lorg/telegram/messenger/MessagesController$103;
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$109$1;->this$1:Lorg/telegram/messenger/MessagesController$109;
 
-    iget-object v1, v1, Lorg/telegram/messenger/MessagesController$103;->val$objArr:Ljava/util/ArrayList;
+    iget-object v1, v1, Lorg/telegram/messenger/MessagesController$109;->val$pushMessages:Ljava/util/ArrayList;
 
     const/4 v2, 0x1
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationsController;->processNewMessages(Ljava/util/ArrayList;Z)V
 
-    .line 6297
+    .line 7220
     return-void
 .end method

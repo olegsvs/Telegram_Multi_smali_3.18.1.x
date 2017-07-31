@@ -1,54 +1,37 @@
-.class Lorg/telegram/messenger/MessagesController$114;
+.class final Lorg/telegram/messenger/MessagesController$114;
 .super Ljava/lang/Object;
 .source "MessagesController.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Landroid/content/DialogInterface$OnClickListener;
 
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
+    value = Lorg/telegram/messenger/MessagesController;->openByUserName(Ljava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;I)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x0
+    accessFlags = 0x8
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
+.field final synthetic val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
-.field final synthetic val$deletedMessages:Landroid/util/SparseArray;
-
-.field final synthetic val$markAsReadEncrypted:Ljava/util/HashMap;
-
-.field final synthetic val$markAsReadMessages:Ljava/util/ArrayList;
-
-.field final synthetic val$markAsReadMessagesInbox:Landroid/util/SparseArray;
-
-.field final synthetic val$markAsReadMessagesOutbox:Landroid/util/SparseArray;
+.field final synthetic val$reqId:I
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Landroid/util/SparseArray;Landroid/util/SparseArray;Ljava/util/HashMap;Ljava/util/ArrayList;Landroid/util/SparseArray;)V
+.method constructor <init>(ILorg/telegram/ui/ActionBar/BaseFragment;)V
     .locals 0
-    .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 7721
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$114;->this$0:Lorg/telegram/messenger/MessagesController;
+    .line 8117
+    iput p1, p0, Lorg/telegram/messenger/MessagesController$114;->val$reqId:I
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$114;->val$markAsReadMessagesInbox:Landroid/util/SparseArray;
-
-    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$114;->val$markAsReadMessagesOutbox:Landroid/util/SparseArray;
-
-    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$114;->val$markAsReadEncrypted:Ljava/util/HashMap;
-
-    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$114;->val$markAsReadMessages:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Lorg/telegram/messenger/MessagesController$114;->val$deletedMessages:Landroid/util/SparseArray;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$114;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -57,17 +40,53 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public onClick(Landroid/content/DialogInterface;I)V
+    .locals 4
+    .param p1, "dialog"    # Landroid/content/DialogInterface;
+    .param p2, "which"    # I
 
     .prologue
-    .line 7724
-    new-instance v0, Lorg/telegram/messenger/MessagesController$114$1;
+    .line 8120
+    invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
 
-    invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$114$1;-><init>(Lorg/telegram/messenger/MessagesController$114;)V
+    move-result-object v1
 
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
+    iget v2, p0, Lorg/telegram/messenger/MessagesController$114;->val$reqId:I
 
-    .line 7808
+    const/4 v3, 0x1
+
+    invoke-virtual {v1, v2, v3}, Lorg/telegram/tgnet/ConnectionsManager;->cancelRequest(IZ)V
+
+    .line 8122
+    :try_start_0
+    invoke-interface {p1}, Landroid/content/DialogInterface;->dismiss()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8126
+    :goto_0
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$114;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    if-eqz v1, :cond_0
+
+    .line 8127
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$114;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    const/4 v2, 0x0
+
+    invoke-virtual {v1, v2}, Lorg/telegram/ui/ActionBar/BaseFragment;->setVisibleDialog(Landroid/app/Dialog;)V
+
+    .line 8129
+    :cond_0
     return-void
+
+    .line 8123
+    :catch_0
+    move-exception v0
+
+    .line 8124
+    .local v0, "e":Ljava/lang/Exception;
+    invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto :goto_0
 .end method

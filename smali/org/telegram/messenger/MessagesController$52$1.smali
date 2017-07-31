@@ -29,7 +29,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$52;
 
     .prologue
-    .line 2814
+    .line 2748
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$52$1;->this$1:Lorg/telegram/messenger/MessagesController$52;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$52$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -47,7 +47,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 2817
+    .line 2751
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$52$1;->this$1:Lorg/telegram/messenger/MessagesController$52;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$52;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -66,22 +66,22 @@
 
     check-cast v8, Ljava/util/ArrayList;
 
-    .line 2818
+    .line 2752
     .local v8, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/messenger/MessageObject;>;"
     if-nez v8, :cond_1
 
-    .line 2845
+    .line 2779
     :cond_0
     :goto_0
     return-void
 
-    .line 2821
+    .line 2755
     :cond_1
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;-><init>()V
 
-    .line 2822
+    .line 2756
     .local v1, "messagesRes":Lorg/telegram/tgnet/TLRPC$TL_messages_messages;
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$52$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
@@ -89,7 +89,7 @@
 
     if-nez v0, :cond_2
 
-    .line 2823
+    .line 2757
     const/4 v7, 0x0
 
     .local v7, "a":I
@@ -100,7 +100,7 @@
 
     if-ge v7, v0, :cond_6
 
-    .line 2824
+    .line 2758
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -117,7 +117,7 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->webpage:Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 2825
+    .line 2759
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -130,19 +130,19 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2823
+    .line 2757
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_1
 
-    .line 2828
+    .line 2762
     .end local v7    # "a":I
     :cond_2
     iget-object v9, p0, Lorg/telegram/messenger/MessagesController$52$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
 
-    .line 2829
+    .line 2763
     .local v9, "media":Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;->webpage:Lorg/telegram/tgnet/TLRPC$WebPage;
 
@@ -156,7 +156,7 @@
 
     if-eqz v0, :cond_5
 
-    .line 2830
+    .line 2764
     :cond_3
     const/4 v7, 0x0
 
@@ -168,7 +168,7 @@
 
     if-ge v7, v0, :cond_6
 
-    .line 2831
+    .line 2765
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -183,10 +183,10 @@
 
     iput-object v2, v0, Lorg/telegram/tgnet/TLRPC$MessageMedia;->webpage:Lorg/telegram/tgnet/TLRPC$WebPage;
 
-    .line 2832
+    .line 2766
     if-nez v7, :cond_4
 
-    .line 2833
+    .line 2767
     invoke-virtual {v8, v7}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
 
     move-result-object v0
@@ -197,7 +197,7 @@
 
     invoke-static {v0}, Lorg/telegram/messenger/ImageLoader;->saveMessageThumbs(Lorg/telegram/tgnet/TLRPC$Message;)V
 
-    .line 2835
+    .line 2769
     :cond_4
     iget-object v2, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;->messages:Ljava/util/ArrayList;
 
@@ -211,12 +211,12 @@
 
     invoke-virtual {v2, v0}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 2830
+    .line 2764
     add-int/lit8 v7, v7, 0x1
 
     goto :goto_2
 
-    .line 2838
+    .line 2772
     .end local v7    # "a":I
     :cond_5
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$52$1;->this$1:Lorg/telegram/messenger/MessagesController$52;
@@ -237,7 +237,7 @@
 
     invoke-virtual {v0, v2, v8}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 2841
+    .line 2775
     .end local v9    # "media":Lorg/telegram/tgnet/TLRPC$TL_messageMediaWebPage;
     :cond_6
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_messages;->messages:Ljava/util/ArrayList;
@@ -248,7 +248,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2842
+    .line 2776
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -263,7 +263,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/MessagesStorage;->putMessages(Lorg/telegram/tgnet/TLRPC$messages_Messages;JIIZ)V
 
-    .line 2843
+    .line 2777
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0

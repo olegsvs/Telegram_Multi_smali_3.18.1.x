@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 3603
+    .line 3537
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$57;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$57;->val$dialogsToUpdate:Ljava/util/HashMap;
@@ -45,7 +45,7 @@
     .locals 7
 
     .prologue
-    .line 3606
+    .line 3540
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$57;->val$dialogsToUpdate:Ljava/util/HashMap;
 
     invoke-virtual {v2}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -70,7 +70,7 @@
 
     check-cast v1, Ljava/util/Map$Entry;
 
-    .line 3607
+    .line 3541
     .local v1, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/Integer;>;"
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$57;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -86,11 +86,11 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 3608
+    .line 3542
     .local v0, "currentDialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v0, :cond_0
 
-    .line 3609
+    .line 3543
     invoke-interface {v1}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
     move-result-object v2
@@ -105,7 +105,7 @@
 
     goto :goto_0
 
-    .line 3612
+    .line 3546
     .end local v0    # "currentDialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v1    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Ljava/lang/Integer;>;"
     :cond_1
@@ -131,7 +131,7 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 3613
+    .line 3547
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v2
@@ -140,6 +140,6 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/messenger/NotificationsController;->processDialogsUpdateRead(Ljava/util/HashMap;)V
 
-    .line 3614
+    .line 3548
     return-void
 .end method

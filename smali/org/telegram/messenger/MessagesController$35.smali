@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2079
+    .line 2015
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$35;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$35;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -51,21 +51,21 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2082
+    .line 2018
     if-nez p2, :cond_1
 
     move-object v0, p1
 
-    .line 2083
+    .line 2019
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
 
-    .line 2084
+    .line 2020
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;->offset:I
 
     if-lez v1, :cond_0
 
-    .line 2085
+    .line 2021
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$35;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$35;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->deleteUserChannelHistory(Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/tgnet/TLRPC$User;I)V
 
-    .line 2087
+    .line 2023
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$35;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -90,7 +90,7 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->processNewChannelDifferenceParams(III)V
 
-    .line 2089
+    .line 2025
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
     :cond_1
     return-void

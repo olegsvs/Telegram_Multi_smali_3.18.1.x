@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4291
+    .line 4225
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$71;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,10 +43,10 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4294
+    .line 4228
     if-eqz p1, :cond_0
 
-    .line 4295
+    .line 4229
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$71;->this$0:Lorg/telegram/messenger/MessagesController;
 
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Updates;
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0, p1, v1}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 4297
+    .line 4231
     :cond_0
     return-void
 .end method

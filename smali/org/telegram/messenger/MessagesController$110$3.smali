@@ -1,4 +1,4 @@
-.class Lorg/telegram/messenger/MessagesController$113$3;
+.class Lorg/telegram/messenger/MessagesController$110$3;
 .super Ljava/lang/Object;
 .source "MessagesController.java"
 
@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController$113;->run()V
+    value = Lorg/telegram/messenger/MessagesController$110;->run()V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,17 +18,17 @@
 
 
 # instance fields
-.field final synthetic this$1:Lorg/telegram/messenger/MessagesController$113;
+.field final synthetic this$1:Lorg/telegram/messenger/MessagesController$110;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController$113;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController$110;)V
     .locals 0
-    .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$113;
+    .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$110;
 
     .prologue
-    .line 7594
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$113$3;->this$1:Lorg/telegram/messenger/MessagesController$113;
+    .line 7478
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$110$3;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -43,25 +43,25 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 7597
+    .line 7481
     if-eqz p1, :cond_0
 
     move-object v0, p1
 
-    .line 7598
+    .line 7482
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 7599
+    .line 7483
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$113$3;->this$1:Lorg/telegram/messenger/MessagesController$113;
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$110$3;->this$1:Lorg/telegram/messenger/MessagesController$110;
 
-    iget-object v1, v1, Lorg/telegram/messenger/MessagesController$113;->this$0:Lorg/telegram/messenger/MessagesController;
+    iget-object v1, v1, Lorg/telegram/messenger/MessagesController$110;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v2, 0x0
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 7601
+    .line 7485
     .end local v0    # "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     :cond_0
     return-void

@@ -37,7 +37,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4987
+    .line 4907
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$88;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 4987
+    .line 4907
     check-cast p1, Lorg/telegram/tgnet/TLRPC$Updates;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$Updates;
@@ -69,7 +69,7 @@
     .param p2, "updates2"    # Lorg/telegram/tgnet/TLRPC$Updates;
 
     .prologue
-    .line 4990
+    .line 4910
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$88;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0, p1}, Lorg/telegram/messenger/MessagesController;->access$5300(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$Updates;)I

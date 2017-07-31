@@ -37,7 +37,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1660
+    .line 1653
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$23;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$23;->val$did:I
@@ -63,15 +63,15 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1663
+    .line 1656
     if-nez p2, :cond_0
 
     move-object v2, p1
 
-    .line 1664
+    .line 1657
     check-cast v2, Lorg/telegram/tgnet/TLRPC$photos_Photos;
 
-    .line 1665
+    .line 1658
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$photos_Photos;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$23;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual/range {v1 .. v9}, Lorg/telegram/messenger/MessagesController;->processLoadedUserPhotos(Lorg/telegram/tgnet/TLRPC$photos_Photos;IIIJZI)V
 
-    .line 1667
+    .line 1660
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$photos_Photos;
     :cond_0
     return-void

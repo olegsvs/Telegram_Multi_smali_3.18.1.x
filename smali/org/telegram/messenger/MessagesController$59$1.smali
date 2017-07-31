@@ -33,7 +33,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$59;
 
     .prologue
-    .line 3787
+    .line 3721
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$59$1;->val$new_dialogs_dict:Ljava/util/HashMap;
@@ -59,7 +59,7 @@
 
     const-wide/16 v12, 0x0
 
-    .line 3790
+    .line 3724
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v7, v7, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -72,7 +72,7 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 3791
+    .line 3725
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v7, v7, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -85,7 +85,7 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 3793
+    .line 3727
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$59$1;->val$new_dialogs_dict:Ljava/util/HashMap;
 
     invoke-virtual {v7}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -110,7 +110,7 @@
 
     check-cast v5, Ljava/util/Map$Entry;
 
-    .line 3794
+    .line 3728
     .local v5, "pair":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     invoke-interface {v5}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -118,7 +118,7 @@
 
     check-cast v1, Ljava/lang/Long;
 
-    .line 3795
+    .line 3729
     .local v1, "key":Ljava/lang/Long;
     invoke-interface {v5}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -126,7 +126,7 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 3796
+    .line 3730
     .local v6, "value":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -140,11 +140,11 @@
 
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 3797
+    .line 3731
     .local v0, "currentDialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-nez v0, :cond_1
 
-    .line 3798
+    .line 3732
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -155,7 +155,7 @@
 
     iput v9, v8, Lorg/telegram/messenger/MessagesController;->nextDialogsCacheOffset:I
 
-    .line 3799
+    .line 3733
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -164,7 +164,7 @@
 
     invoke-virtual {v8, v1, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3800
+    .line 3734
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->val$new_dialogMessage:Ljava/util/HashMap;
 
     iget-wide v10, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
@@ -179,7 +179,7 @@
 
     check-cast v2, Lorg/telegram/messenger/MessageObject;
 
-    .line 3801
+    .line 3735
     .local v2, "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -189,7 +189,7 @@
 
     invoke-virtual {v8, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3802
+    .line 3736
     if-eqz v2, :cond_0
 
     iget-object v8, v2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -200,7 +200,7 @@
 
     if-nez v8, :cond_0
 
-    .line 3803
+    .line 3737
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -217,7 +217,7 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3804
+    .line 3738
     iget-object v8, v2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v8, v8, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -226,7 +226,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 3805
+    .line 3739
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -245,14 +245,14 @@
 
     goto/16 :goto_0
 
-    .line 3809
+    .line 3743
     .end local v2    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_1
     iget v8, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
     iput v8, v0, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 3810
+    .line 3744
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -265,7 +265,7 @@
 
     check-cast v4, Lorg/telegram/messenger/MessageObject;
 
-    .line 3811
+    .line 3745
     .local v4, "oldMsg":Lorg/telegram/messenger/MessageObject;
     if-eqz v4, :cond_2
 
@@ -273,7 +273,7 @@
 
     if-lez v8, :cond_7
 
-    .line 3812
+    .line 3746
     :cond_2
     if-eqz v4, :cond_3
 
@@ -288,7 +288,7 @@
 
     if-le v8, v9, :cond_0
 
-    .line 3813
+    .line 3747
     :cond_4
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -298,7 +298,7 @@
 
     invoke-virtual {v8, v1, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3814
+    .line 3748
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->val$new_dialogMessage:Ljava/util/HashMap;
 
     iget-wide v10, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
@@ -313,7 +313,7 @@
 
     check-cast v2, Lorg/telegram/messenger/MessageObject;
 
-    .line 3815
+    .line 3749
     .restart local v2    # "messageObject":Lorg/telegram/messenger/MessageObject;
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -323,7 +323,7 @@
 
     invoke-virtual {v8, v1, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3816
+    .line 3750
     if-eqz v2, :cond_5
 
     iget-object v8, v2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -334,7 +334,7 @@
 
     if-nez v8, :cond_5
 
-    .line 3817
+    .line 3751
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -351,7 +351,7 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3818
+    .line 3752
     iget-object v8, v2, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v8, v8, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -360,7 +360,7 @@
 
     if-eqz v8, :cond_5
 
-    .line 3819
+    .line 3753
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -377,11 +377,11 @@
 
     invoke-virtual {v8, v9, v2}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3822
+    .line 3756
     :cond_5
     if-eqz v4, :cond_6
 
-    .line 3823
+    .line 3757
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -398,7 +398,7 @@
 
     invoke-virtual {v8, v9}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3824
+    .line 3758
     iget-object v8, v4, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v8, v8, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -407,7 +407,7 @@
 
     if-eqz v8, :cond_6
 
-    .line 3825
+    .line 3759
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -424,11 +424,11 @@
 
     invoke-virtual {v8, v9}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3828
+    .line 3762
     :cond_6
     if-nez v2, :cond_0
 
-    .line 3829
+    .line 3763
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -437,7 +437,7 @@
 
     goto/16 :goto_0
 
-    .line 3833
+    .line 3767
     .end local v2    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_7
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->val$new_dialogMessage:Ljava/util/HashMap;
@@ -454,7 +454,7 @@
 
     check-cast v3, Lorg/telegram/messenger/MessageObject;
 
-    .line 3834
+    .line 3768
     .local v3, "newMsg":Lorg/telegram/messenger/MessageObject;
     iget-boolean v8, v4, Lorg/telegram/messenger/MessageObject;->deleted:Z
 
@@ -472,7 +472,7 @@
 
     if-le v8, v9, :cond_0
 
-    .line 3835
+    .line 3769
     :cond_8
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -482,7 +482,7 @@
 
     invoke-virtual {v8, v1, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3836
+    .line 3770
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -491,7 +491,7 @@
 
     invoke-virtual {v8, v1, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3837
+    .line 3771
     if-eqz v3, :cond_9
 
     iget-object v8, v3, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
@@ -502,7 +502,7 @@
 
     if-nez v8, :cond_9
 
-    .line 3838
+    .line 3772
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -519,7 +519,7 @@
 
     invoke-virtual {v8, v9, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3839
+    .line 3773
     iget-object v8, v3, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v8, v8, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -528,7 +528,7 @@
 
     if-eqz v8, :cond_9
 
-    .line 3840
+    .line 3774
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -545,7 +545,7 @@
 
     invoke-virtual {v8, v9, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3843
+    .line 3777
     :cond_9
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
@@ -563,7 +563,7 @@
 
     invoke-virtual {v8, v9}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3844
+    .line 3778
     iget-object v8, v4, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     iget-wide v8, v8, Lorg/telegram/tgnet/TLRPC$Message;->random_id:J
@@ -572,7 +572,7 @@
 
     if-eqz v8, :cond_0
 
-    .line 3845
+    .line 3779
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v8, v8, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -591,7 +591,7 @@
 
     goto/16 :goto_0
 
-    .line 3852
+    .line 3786
     .end local v0    # "currentDialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v1    # "key":Ljava/lang/Long;
     .end local v3    # "newMsg":Lorg/telegram/messenger/MessageObject;
@@ -607,7 +607,7 @@
 
     invoke-virtual {v7}, Ljava/util/ArrayList;->clear()V
 
-    .line 3853
+    .line 3787
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v7, v7, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -626,14 +626,14 @@
 
     invoke-virtual {v7, v8}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 3854
+    .line 3788
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$59$1;->this$1:Lorg/telegram/messenger/MessagesController$59;
 
     iget-object v7, v7, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v7, v14}, Lorg/telegram/messenger/MessagesController;->sortDialogs(Ljava/util/HashMap;)V
 
-    .line 3855
+    .line 3789
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v7
@@ -646,7 +646,7 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 3856
+    .line 3790
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v7
@@ -655,6 +655,6 @@
 
     invoke-virtual {v7, v8}, Lorg/telegram/messenger/NotificationsController;->processDialogsUpdateRead(Ljava/util/HashMap;)V
 
-    .line 3857
+    .line 3791
     return-void
 .end method

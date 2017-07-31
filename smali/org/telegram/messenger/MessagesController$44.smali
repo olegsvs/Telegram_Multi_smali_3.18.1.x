@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2360
+    .line 2294
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,17 +43,17 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 2363
+    .line 2297
     if-nez p2, :cond_1
 
-    .line 2364
+    .line 2298
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$3802(Lorg/telegram/messenger/MessagesController;Z)Z
 
-    .line 2370
+    .line 2304
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -62,10 +62,10 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$4002(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 2371
+    .line 2305
     return-void
 
-    .line 2366
+    .line 2300
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -79,7 +79,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2367
+    .line 2301
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$44;->this$0:Lorg/telegram/messenger/MessagesController;

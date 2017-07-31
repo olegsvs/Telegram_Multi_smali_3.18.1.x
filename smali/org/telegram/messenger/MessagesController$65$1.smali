@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$65;
 
     .prologue
-    .line 4037
+    .line 3971
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$65$1;->this$1:Lorg/telegram/messenger/MessagesController$65;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v5, 0x0
 
-    .line 4040
+    .line 3974
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
@@ -64,7 +64,7 @@
 
     invoke-virtual/range {v0 .. v6}, Lorg/telegram/messenger/NotificationsController;->processReadMessages(Landroid/util/SparseArray;JIIZ)V
 
-    .line 4041
+    .line 3975
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$65$1;->this$1:Lorg/telegram/messenger/MessagesController$65;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$65;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -85,14 +85,14 @@
 
     check-cast v7, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 4042
+    .line 3976
     .local v7, "dialog":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     if-eqz v7, :cond_0
 
-    .line 4043
+    .line 3977
     iput v5, v7, Lorg/telegram/tgnet/TLRPC$TL_dialog;->unread_count:I
 
-    .line 4044
+    .line 3978
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -113,13 +113,13 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 4046
+    .line 3980
     :cond_0
     new-instance v8, Ljava/util/HashMap;
 
     invoke-direct {v8}, Ljava/util/HashMap;-><init>()V
 
-    .line 4047
+    .line 3981
     .local v8, "dialogsToUpdate":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Integer;>;"
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$65$1;->this$1:Lorg/telegram/messenger/MessagesController$65;
 
@@ -135,13 +135,13 @@
 
     invoke-virtual {v8, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 4048
+    .line 3982
     invoke-static {}, Lorg/telegram/messenger/NotificationsController;->getInstance()Lorg/telegram/messenger/NotificationsController;
 
     move-result-object v0
 
     invoke-virtual {v0, v8}, Lorg/telegram/messenger/NotificationsController;->processDialogsUpdateRead(Ljava/util/HashMap;)V
 
-    .line 4049
+    .line 3983
     return-void
 .end method

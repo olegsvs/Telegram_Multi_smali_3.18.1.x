@@ -29,7 +29,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$17;
 
     .prologue
-    .line 1445
+    .line 1438
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$17$1;->this$1:Lorg/telegram/messenger/MessagesController$17;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$17$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -49,7 +49,7 @@
 
     const/4 v8, 0x0
 
-    .line 1448
+    .line 1441
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$17$1;->this$1:Lorg/telegram/messenger/MessagesController$17;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$17;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -68,39 +68,59 @@
 
     invoke-virtual {v3, v4}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1449
+    .line 1442
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$17$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     if-eqz v3, :cond_0
 
-    .line 1450
+    .line 1443
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$17$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
 
-    .line 1451
+    .line 1444
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "Notifications"
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "Notifications"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
 
     invoke-virtual {v3, v4, v8}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 1452
+    .line 1445
     .local v1, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v1}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v0
 
-    .line 1453
+    .line 1446
     .local v0, "editor":Landroid/content/SharedPreferences$Editor;
     iget-boolean v3, v2, Lorg/telegram/tgnet/TLRPC$TL_peerSettings;->report_spam:Z
 
     if-nez v3, :cond_1
 
-    .line 1454
+    .line 1447
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -125,18 +145,18 @@
 
     invoke-interface {v0, v3, v6}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1459
+    .line 1452
     :goto_0
     invoke-interface {v0}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 1461
+    .line 1454
     .end local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
     :cond_0
     return-void
 
-    .line 1456
+    .line 1449
     .restart local v0    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v1    # "preferences":Landroid/content/SharedPreferences;
     .restart local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_peerSettings;
@@ -167,7 +187,7 @@
 
     invoke-interface {v0, v3, v4}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 1457
+    .line 1450
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3

@@ -33,7 +33,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2219
+    .line 2153
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$38;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$38;->val$did:J
@@ -57,21 +57,21 @@
     .prologue
     const/4 v7, -0x1
 
-    .line 2222
+    .line 2156
     if-nez p2, :cond_1
 
     move-object v0, p1
 
-    .line 2223
+    .line 2157
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
 
-    .line 2224
+    .line 2158
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
     iget v1, v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;->offset:I
 
     if-lez v1, :cond_0
 
-    .line 2225
+    .line 2159
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$38;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-wide v2, p0, Lorg/telegram/messenger/MessagesController$38;->val$did:J
@@ -84,7 +84,7 @@
 
     invoke-static/range {v1 .. v6}, Lorg/telegram/messenger/MessagesController;->access$3400(Lorg/telegram/messenger/MessagesController;JZII)V
 
-    .line 2227
+    .line 2161
     :cond_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$38;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -94,7 +94,7 @@
 
     invoke-virtual {v1, v7, v2, v7, v3}, Lorg/telegram/messenger/MessagesController;->processNewDifferenceParams(IIII)V
 
-    .line 2229
+    .line 2163
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedHistory;
     :cond_1
     return-void

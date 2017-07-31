@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$74;
 
     .prologue
-    .line 4353
+    .line 4287
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$74$1;->this$1:Lorg/telegram/messenger/MessagesController$74;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v4, 0x1
 
-    .line 4356
+    .line 4290
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$74$1;->this$1:Lorg/telegram/messenger/MessagesController$74;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessagesController$74;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -60,7 +60,7 @@
 
     move-result-object v1
 
-    .line 4357
+    .line 4291
     .local v1, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$74$1;->this$1:Lorg/telegram/messenger/MessagesController$74;
 
@@ -72,14 +72,14 @@
 
     if-eqz v2, :cond_0
 
-    .line 4358
+    .line 4292
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->flags:I
 
     or-int/lit8 v2, v2, 0x40
 
     iput v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->flags:I
 
-    .line 4362
+    .line 4296
     :goto_0
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$74$1;->this$1:Lorg/telegram/messenger/MessagesController$74;
 
@@ -87,16 +87,16 @@
 
     iput-object v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->username:Ljava/lang/String;
 
-    .line 4363
+    .line 4297
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 4364
+    .line 4298
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 4365
+    .line 4299
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v2
@@ -105,7 +105,7 @@
 
     invoke-virtual {v2, v3, v0, v4, v4}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 4366
+    .line 4300
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v2
@@ -126,10 +126,10 @@
 
     invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 4367
+    .line 4301
     return-void
 
-    .line 4360
+    .line 4294
     .end local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Chat;>;"
     :cond_0
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$Chat;->flags:I

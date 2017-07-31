@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 3709
+    .line 3643
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$59;->val$dialogsRes:Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
@@ -45,36 +45,36 @@
     .locals 20
 
     .prologue
-    .line 3712
+    .line 3646
     new-instance v12, Ljava/util/HashMap;
 
     invoke-direct {v12}, Ljava/util/HashMap;-><init>()V
 
-    .line 3713
+    .line 3647
     .local v12, "new_dialogs_dict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/tgnet/TLRPC$TL_dialog;>;"
     new-instance v11, Ljava/util/HashMap;
 
     invoke-direct {v11}, Ljava/util/HashMap;-><init>()V
 
-    .line 3714
+    .line 3648
     .local v11, "new_dialogMessage":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Lorg/telegram/messenger/MessageObject;>;"
     new-instance v14, Ljava/util/HashMap;
 
     invoke-direct {v14}, Ljava/util/HashMap;-><init>()V
 
-    .line 3715
+    .line 3649
     .local v14, "usersDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$User;>;"
     new-instance v5, Ljava/util/HashMap;
 
     invoke-direct {v5}, Ljava/util/HashMap;-><init>()V
 
-    .line 3716
+    .line 3650
     .local v5, "chatsDict":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Integer;Lorg/telegram/tgnet/TLRPC$Chat;>;"
     new-instance v7, Ljava/util/HashMap;
 
     invoke-direct {v7}, Ljava/util/HashMap;-><init>()V
 
-    .line 3718
+    .line 3652
     .local v7, "dialogsToUpdate":Ljava/util/HashMap;, "Ljava/util/HashMap<Ljava/lang/Long;Ljava/lang/Integer;>;"
     const/4 v2, 0x0
 
@@ -100,7 +100,7 @@
 
     if-ge v2, v0, :cond_0
 
-    .line 3719
+    .line 3653
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->val$dialogsRes:Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
@@ -121,7 +121,7 @@
 
     check-cast v13, Lorg/telegram/tgnet/TLRPC$User;
 
-    .line 3720
+    .line 3654
     .local v13, "u":Lorg/telegram/tgnet/TLRPC$User;
     iget v0, v13, Lorg/telegram/tgnet/TLRPC$User;->id:I
 
@@ -135,12 +135,12 @@
 
     invoke-virtual {v14, v0, v13}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3718
+    .line 3652
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_0
 
-    .line 3722
+    .line 3656
     .end local v13    # "u":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     const/4 v2, 0x0
@@ -166,7 +166,7 @@
 
     if-ge v2, v0, :cond_1
 
-    .line 3723
+    .line 3657
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->val$dialogsRes:Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
@@ -187,7 +187,7 @@
 
     check-cast v3, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 3724
+    .line 3658
     .local v3, "c":Lorg/telegram/tgnet/TLRPC$Chat;
     iget v0, v3, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
 
@@ -201,12 +201,12 @@
 
     invoke-virtual {v5, v0, v3}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3722
+    .line 3656
     add-int/lit8 v2, v2, 0x1
 
     goto :goto_1
 
-    .line 3727
+    .line 3661
     .end local v3    # "c":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_1
     const/4 v2, 0x0
@@ -232,7 +232,7 @@
 
     if-ge v2, v0, :cond_5
 
-    .line 3728
+    .line 3662
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->val$dialogsRes:Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
@@ -253,7 +253,7 @@
 
     check-cast v9, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 3729
+    .line 3663
     .local v9, "message":Lorg/telegram/tgnet/TLRPC$Message;
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -267,7 +267,7 @@
 
     if-eqz v16, :cond_3
 
-    .line 3730
+    .line 3664
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -290,7 +290,7 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 3731
+    .line 3665
     .local v4, "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v4, :cond_4
 
@@ -300,7 +300,7 @@
 
     if-eqz v16, :cond_4
 
-    .line 3727
+    .line 3661
     .end local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_2
     :goto_3
@@ -308,7 +308,7 @@
 
     goto :goto_2
 
-    .line 3734
+    .line 3668
     :cond_3
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -322,7 +322,7 @@
 
     if-eqz v16, :cond_4
 
-    .line 3735
+    .line 3669
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$Message;->to_id:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -345,7 +345,7 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 3736
+    .line 3670
     .restart local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v4, :cond_4
 
@@ -355,7 +355,7 @@
 
     if-nez v16, :cond_2
 
-    .line 3740
+    .line 3674
     .end local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_4
     new-instance v10, Lorg/telegram/messenger/MessageObject;
@@ -366,7 +366,7 @@
 
     invoke-direct {v10, v9, v14, v5, v0}, Lorg/telegram/messenger/MessageObject;-><init>(Lorg/telegram/tgnet/TLRPC$Message;Ljava/util/AbstractMap;Ljava/util/AbstractMap;Z)V
 
-    .line 3741
+    .line 3675
     .local v10, "messageObject":Lorg/telegram/messenger/MessageObject;
     invoke-virtual {v10}, Lorg/telegram/messenger/MessageObject;->getDialogId()J
 
@@ -382,7 +382,7 @@
 
     goto :goto_3
 
-    .line 3743
+    .line 3677
     .end local v9    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     .end local v10    # "messageObject":Lorg/telegram/messenger/MessageObject;
     :cond_5
@@ -409,7 +409,7 @@
 
     if-ge v2, v0, :cond_f
 
-    .line 3744
+    .line 3678
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->val$dialogsRes:Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
@@ -430,7 +430,7 @@
 
     check-cast v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
-    .line 3745
+    .line 3679
     .local v6, "d":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
@@ -442,7 +442,7 @@
 
     if-nez v16, :cond_6
 
-    .line 3746
+    .line 3680
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -455,7 +455,7 @@
 
     if-eqz v16, :cond_8
 
-    .line 3747
+    .line 3681
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -476,7 +476,7 @@
 
     iput-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
-    .line 3754
+    .line 3688
     :cond_6
     :goto_5
     invoke-static {v6}, Lorg/telegram/messenger/DialogObject;->isChannel(Lorg/telegram/tgnet/TLRPC$TL_dialog;)Z
@@ -485,7 +485,7 @@
 
     if-eqz v16, :cond_a
 
-    .line 3755
+    .line 3689
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
     move-wide/from16 v16, v0
@@ -514,7 +514,7 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 3756
+    .line 3690
     .restart local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v4, :cond_b
 
@@ -524,7 +524,7 @@
 
     if-eqz v16, :cond_b
 
-    .line 3743
+    .line 3677
     .end local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_7
     :goto_6
@@ -532,7 +532,7 @@
 
     goto :goto_4
 
-    .line 3748
+    .line 3682
     :cond_8
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -546,7 +546,7 @@
 
     if-eqz v16, :cond_9
 
-    .line 3749
+    .line 3683
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -575,7 +575,7 @@
 
     goto :goto_5
 
-    .line 3750
+    .line 3684
     :cond_9
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
@@ -589,7 +589,7 @@
 
     if-eqz v16, :cond_6
 
-    .line 3751
+    .line 3685
     iget-object v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->peer:Lorg/telegram/tgnet/TLRPC$Peer;
 
     move-object/from16 v16, v0
@@ -618,7 +618,7 @@
 
     goto :goto_5
 
-    .line 3759
+    .line 3693
     :cond_a
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
@@ -632,7 +632,7 @@
 
     if-gez v16, :cond_b
 
-    .line 3760
+    .line 3694
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
     move-wide/from16 v16, v0
@@ -661,7 +661,7 @@
 
     check-cast v4, Lorg/telegram/tgnet/TLRPC$Chat;
 
-    .line 3761
+    .line 3695
     .restart local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     if-eqz v4, :cond_b
 
@@ -671,7 +671,7 @@
 
     if-nez v16, :cond_7
 
-    .line 3765
+    .line 3699
     .end local v4    # "chat":Lorg/telegram/tgnet/TLRPC$Chat;
     :cond_b
     iget v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->last_message_date:I
@@ -680,7 +680,7 @@
 
     if-nez v16, :cond_c
 
-    .line 3766
+    .line 3700
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
     move-wide/from16 v16, v0
@@ -697,11 +697,11 @@
 
     check-cast v8, Lorg/telegram/messenger/MessageObject;
 
-    .line 3767
+    .line 3701
     .local v8, "mess":Lorg/telegram/messenger/MessageObject;
     if-eqz v8, :cond_c
 
-    .line 3768
+    .line 3702
     iget-object v0, v8, Lorg/telegram/messenger/MessageObject;->messageOwner:Lorg/telegram/tgnet/TLRPC$Message;
 
     move-object/from16 v16, v0
@@ -716,7 +716,7 @@
 
     iput v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->last_message_date:I
 
-    .line 3771
+    .line 3705
     .end local v8    # "mess":Lorg/telegram/messenger/MessageObject;
     :cond_c
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
@@ -731,7 +731,7 @@
 
     invoke-virtual {v12, v0, v6}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3772
+    .line 3706
     iget-wide v0, v6, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
     move-wide/from16 v16, v0
@@ -754,7 +754,7 @@
 
     invoke-virtual {v7, v0, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3774
+    .line 3708
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -781,18 +781,18 @@
 
     check-cast v15, Ljava/lang/Integer;
 
-    .line 3775
+    .line 3709
     .local v15, "value":Ljava/lang/Integer;
     if-nez v15, :cond_d
 
-    .line 3776
+    .line 3710
     const/16 v16, 0x0
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
-    .line 3778
+    .line 3712
     :cond_d
     move-object/from16 v0, p0
 
@@ -832,7 +832,7 @@
 
     invoke-virtual/range {v16 .. v18}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 3780
+    .line 3714
     move-object/from16 v0, p0
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$59;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -860,18 +860,18 @@
     .end local v15    # "value":Ljava/lang/Integer;
     check-cast v15, Ljava/lang/Integer;
 
-    .line 3781
+    .line 3715
     .restart local v15    # "value":Ljava/lang/Integer;
     if-nez v15, :cond_e
 
-    .line 3782
+    .line 3716
     const/16 v16, 0x0
 
     invoke-static/range {v16 .. v16}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
 
     move-result-object v15
 
-    .line 3784
+    .line 3718
     :cond_e
     move-object/from16 v0, p0
 
@@ -913,7 +913,7 @@
 
     goto/16 :goto_6
 
-    .line 3787
+    .line 3721
     .end local v6    # "d":Lorg/telegram/tgnet/TLRPC$TL_dialog;
     .end local v15    # "value":Ljava/lang/Integer;
     :cond_f
@@ -927,6 +927,6 @@
 
     invoke-static/range {v16 .. v16}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 3859
+    .line 3793
     return-void
 .end method

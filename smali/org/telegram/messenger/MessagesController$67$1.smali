@@ -29,7 +29,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$67;
 
     .prologue
-    .line 4170
+    .line 4104
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$67$1;->this$1:Lorg/telegram/messenger/MessagesController$67;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$67$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
@@ -47,7 +47,7 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 4173
+    .line 4107
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$67$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$67$1;->this$1:Lorg/telegram/messenger/MessagesController$67;
@@ -62,7 +62,7 @@
 
     invoke-static {v0, v1, v2, v3}, Lorg/telegram/ui/Components/AlertsCreator;->processError(Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/ui/ActionBar/BaseFragment;Lorg/telegram/tgnet/TLObject;[Ljava/lang/Object;)Landroid/app/Dialog;
 
-    .line 4174
+    .line 4108
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -73,6 +73,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 4175
+    .line 4109
     return-void
 .end method

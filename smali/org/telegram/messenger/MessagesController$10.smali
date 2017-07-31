@@ -35,7 +35,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1090
+    .line 1083
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$10;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
@@ -65,15 +65,15 @@
 
     const/4 v8, 0x0
 
-    .line 1093
+    .line 1086
     if-nez p2, :cond_4
 
     move-object v1, p1
 
-    .line 1094
+    .line 1087
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_messages_chatFull;
 
-    .line 1095
+    .line 1088
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_chatFull;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -85,7 +85,7 @@
 
     invoke-virtual {v4, v5, v6, v10, v10}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1096
+    .line 1089
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -94,7 +94,7 @@
 
     invoke-virtual {v4, v5, v8}, Lorg/telegram/messenger/MessagesStorage;->updateChatInfo(Lorg/telegram/tgnet/TLRPC$ChatFull;Z)V
 
-    .line 1098
+    .line 1091
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->val$chat:Lorg/telegram/tgnet/TLRPC$Chat;
 
     invoke-static {v4}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
@@ -103,7 +103,7 @@
 
     if-eqz v4, :cond_3
 
-    .line 1099
+    .line 1092
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v4, v4, Lorg/telegram/messenger/MessagesController;->dialogs_read_inbox_max:Ljava/util/concurrent/ConcurrentHashMap;
@@ -120,11 +120,11 @@
 
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1100
+    .line 1093
     .local v3, "value":Ljava/lang/Integer;
     if-nez v3, :cond_0
 
-    .line 1101
+    .line 1094
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -139,7 +139,7 @@
 
     move-result-object v3
 
-    .line 1104
+    .line 1097
     :cond_0
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -169,46 +169,46 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1105
+    .line 1098
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     if-nez v4, :cond_1
 
-    .line 1106
+    .line 1099
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1107
+    .line 1100
     .local v0, "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;-><init>()V
 
-    .line 1108
+    .line 1101
     .local v2, "update":Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;
     iget v4, p0, Lorg/telegram/messenger/MessagesController$10;->val$chat_id:I
 
     iput v4, v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;->channel_id:I
 
-    .line 1109
+    .line 1102
     iget-object v4, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_chatFull;->full_chat:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iget v4, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->read_inbox_max_id:I
 
     iput v4, v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;->max_id:I
 
-    .line 1110
+    .line 1103
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1111
+    .line 1104
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v4, v0, v9, v9, v8}, Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
 
-    .line 1114
+    .line 1107
     .end local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     .end local v2    # "update":Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelInbox;
     :cond_1
@@ -229,11 +229,11 @@
     .end local v3    # "value":Ljava/lang/Integer;
     check-cast v3, Ljava/lang/Integer;
 
-    .line 1115
+    .line 1108
     .restart local v3    # "value":Ljava/lang/Integer;
     if-nez v3, :cond_2
 
-    .line 1116
+    .line 1109
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v4
@@ -248,7 +248,7 @@
 
     move-result-object v3
 
-    .line 1118
+    .line 1111
     :cond_2
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -278,46 +278,46 @@
 
     invoke-virtual {v4, v5, v6}, Ljava/util/concurrent/ConcurrentHashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1119
+    .line 1112
     invoke-virtual {v3}, Ljava/lang/Integer;->intValue()I
 
     move-result v4
 
     if-nez v4, :cond_3
 
-    .line 1120
+    .line 1113
     new-instance v0, Ljava/util/ArrayList;
 
     invoke-direct {v0}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1121
+    .line 1114
     .restart local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;-><init>()V
 
-    .line 1122
+    .line 1115
     .local v2, "update":Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;
     iget v4, p0, Lorg/telegram/messenger/MessagesController$10;->val$chat_id:I
 
     iput v4, v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;->channel_id:I
 
-    .line 1123
+    .line 1116
     iget-object v4, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_chatFull;->full_chat:Lorg/telegram/tgnet/TLRPC$ChatFull;
 
     iget v4, v4, Lorg/telegram/tgnet/TLRPC$ChatFull;->read_outbox_max_id:I
 
     iput v4, v2, Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;->max_id:I
 
-    .line 1124
+    .line 1117
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1125
+    .line 1118
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$10;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v4, v0, v9, v9, v8}, Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
 
-    .line 1129
+    .line 1122
     .end local v0    # "arrayList":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$Update;>;"
     .end local v2    # "update":Lorg/telegram/tgnet/TLRPC$TL_updateReadChannelOutbox;
     .end local v3    # "value":Ljava/lang/Integer;
@@ -328,12 +328,12 @@
 
     invoke-static {v4}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1159
+    .line 1152
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_chatFull;
     :goto_0
     return-void
 
-    .line 1151
+    .line 1144
     :cond_4
     new-instance v4, Lorg/telegram/messenger/MessagesController$10$2;
 

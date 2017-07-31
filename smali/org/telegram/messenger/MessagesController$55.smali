@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 3087
+    .line 3021
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$55;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,15 +43,15 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 3090
+    .line 3024
     if-nez p2, :cond_0
 
     move-object v0, p1
 
-    .line 3091
+    .line 3025
     check-cast v0, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
 
-    .line 3092
+    .line 3026
     .local v0, "dialogsRes":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -67,12 +67,12 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
 
-    .line 3223
+    .line 3157
     .end local v0    # "dialogsRes":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     :goto_0
     return-void
 
-    .line 3216
+    .line 3150
     :cond_0
     new-instance v1, Lorg/telegram/messenger/MessagesController$55$2;
 

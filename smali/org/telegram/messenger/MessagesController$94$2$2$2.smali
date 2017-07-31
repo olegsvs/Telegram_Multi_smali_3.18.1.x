@@ -29,7 +29,7 @@
     .param p1, "this$3"    # Lorg/telegram/messenger/MessagesController$94$2$2;
 
     .prologue
-    .line 5593
+    .line 5513
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$94$2$2$2;->this$3:Lorg/telegram/messenger/MessagesController$94$2$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$94$2$2$2;->val$pushMessages:Ljava/util/ArrayList;
@@ -47,7 +47,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5596
+    .line 5516
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$94$2$2$2;->val$pushMessages:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -56,14 +56,14 @@
 
     if-nez v0, :cond_0
 
-    .line 5597
+    .line 5517
     new-instance v0, Lorg/telegram/messenger/MessagesController$94$2$2$2$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$94$2$2$2$1;-><init>(Lorg/telegram/messenger/MessagesController$94$2$2$2;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5604
+    .line 5524
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -91,6 +91,6 @@
 
     invoke-virtual/range {v0 .. v5}, Lorg/telegram/messenger/MessagesStorage;->putMessages(Ljava/util/ArrayList;ZZZI)V
 
-    .line 5605
+    .line 5525
     return-void
 .end method

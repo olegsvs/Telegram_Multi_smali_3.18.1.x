@@ -3,7 +3,7 @@
 .source "MessagesController.java"
 
 # interfaces
-.implements Ljava/lang/Runnable;
+.implements Lorg/telegram/tgnet/RequestDelegate;
 
 
 # annotations
@@ -20,19 +20,15 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$objArr:Ljava/util/ArrayList;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 6290
+    .line 6484
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$103;->this$0:Lorg/telegram/messenger/MessagesController;
-
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$103;->val$objArr:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,17 +37,12 @@
 
 
 # virtual methods
-.method public run()V
-    .locals 1
+.method public run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
+    .locals 0
+    .param p1, "response"    # Lorg/telegram/tgnet/TLObject;
+    .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 6293
-    new-instance v0, Lorg/telegram/messenger/MessagesController$103$1;
-
-    invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$103$1;-><init>(Lorg/telegram/messenger/MessagesController$103;)V
-
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
-
-    .line 6299
+    .line 6488
     return-void
 .end method

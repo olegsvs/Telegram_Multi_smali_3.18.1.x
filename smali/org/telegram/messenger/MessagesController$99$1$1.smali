@@ -29,7 +29,7 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/MessagesController$99$1;
 
     .prologue
-    .line 6009
+    .line 5929
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$99$1$1;->this$2:Lorg/telegram/messenger/MessagesController$99$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$99$1$1;->val$res:Lorg/telegram/tgnet/TLRPC$TL_channels_channelParticipant;
@@ -45,7 +45,7 @@
     .locals 3
 
     .prologue
-    .line 6012
+    .line 5932
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$99$1$1;->this$2:Lorg/telegram/messenger/MessagesController$99$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$99$1;->this$1:Lorg/telegram/messenger/MessagesController$99;
@@ -60,6 +60,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 6013
+    .line 5933
     return-void
 .end method

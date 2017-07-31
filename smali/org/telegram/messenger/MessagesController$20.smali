@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1576
+    .line 1569
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$20;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$20;->val$oldTask:Ljava/util/ArrayList;
@@ -45,14 +45,14 @@
     .locals 2
 
     .prologue
-    .line 1579
+    .line 1572
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$20;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v1, 0x1
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$3002(Lorg/telegram/messenger/MessagesController;Z)Z
 
-    .line 1580
+    .line 1573
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -61,6 +61,6 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesStorage;->getNewTask(Ljava/util/ArrayList;)V
 
-    .line 1581
+    .line 1574
     return-void
 .end method

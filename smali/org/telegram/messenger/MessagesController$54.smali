@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 3050
+    .line 2984
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$54;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$54;->val$count:I
@@ -49,15 +49,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3053
+    .line 2987
     if-nez p2, :cond_0
 
     move-object v1, p1
 
-    .line 3054
+    .line 2988
     check-cast v1, Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
 
-    .line 3055
+    .line 2989
     .local v1, "dialogsRes":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$54;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -75,7 +75,7 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/MessagesController;->processLoadedDialogs(Lorg/telegram/tgnet/TLRPC$messages_Dialogs;Ljava/util/ArrayList;IIIZZZ)V
 
-    .line 3057
+    .line 2991
     .end local v1    # "dialogsRes":Lorg/telegram/tgnet/TLRPC$messages_Dialogs;
     :cond_0
     return-void

@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1442
+    .line 1435
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$17;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$17;->val$dialogId:J
@@ -47,13 +47,13 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1445
+    .line 1438
     new-instance v0, Lorg/telegram/messenger/MessagesController$17$1;
 
     invoke-direct {v0, p0, p1}, Lorg/telegram/messenger/MessagesController$17$1;-><init>(Lorg/telegram/messenger/MessagesController$17;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 1463
+    .line 1456
     return-void
 .end method

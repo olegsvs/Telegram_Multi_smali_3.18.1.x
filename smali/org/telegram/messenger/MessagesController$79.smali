@@ -35,7 +35,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4585
+    .line 4519
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$79;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$79;->val$user:Lorg/telegram/tgnet/TLRPC$User;
@@ -59,7 +59,7 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4588
+    .line 4522
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$79;->val$user:Lorg/telegram/tgnet/TLRPC$User;
 
     iget v1, v1, Lorg/telegram/tgnet/TLRPC$User;->id:I
@@ -70,18 +70,18 @@
 
     if-ne v1, v2, :cond_0
 
-    .line 4589
+    .line 4523
     new-instance v1, Lorg/telegram/messenger/MessagesController$79$1;
 
     invoke-direct {v1, p0}, Lorg/telegram/messenger/MessagesController$79$1;-><init>(Lorg/telegram/messenger/MessagesController$79;)V
 
     invoke-static {v1}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4596
+    .line 4530
     :cond_0
     if-eqz p2, :cond_2
 
-    .line 4609
+    .line 4543
     :cond_1
     :goto_0
     return-void
@@ -89,10 +89,10 @@
     :cond_2
     move-object v0, p1
 
-    .line 4599
+    .line 4533
     check-cast v0, Lorg/telegram/tgnet/TLRPC$Updates;
 
-    .line 4600
+    .line 4534
     .local v0, "updates":Lorg/telegram/tgnet/TLRPC$Updates;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$79;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -100,7 +100,7 @@
 
     invoke-virtual {v1, v0, v2}, Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 
-    .line 4601
+    .line 4535
     iget-boolean v1, p0, Lorg/telegram/messenger/MessagesController$79;->val$isChannel:Z
 
     if-eqz v1, :cond_1
@@ -111,7 +111,7 @@
 
     if-nez v1, :cond_1
 
-    .line 4602
+    .line 4536
     new-instance v1, Lorg/telegram/messenger/MessagesController$79$2;
 
     invoke-direct {v1, p0}, Lorg/telegram/messenger/MessagesController$79$2;-><init>(Lorg/telegram/messenger/MessagesController$79;)V

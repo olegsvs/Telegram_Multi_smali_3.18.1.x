@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController$113;->run()V
+    value = Lorg/telegram/messenger/MessagesController$113;->run(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/TLRPC$TL_error;)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -18,21 +18,25 @@
 
 
 # instance fields
-.field final synthetic this$1:Lorg/telegram/messenger/MessagesController$113;
+.field final synthetic this$0:Lorg/telegram/messenger/MessagesController$113;
 
-.field final synthetic val$currentUser:Lorg/telegram/tgnet/TLRPC$User;
+.field final synthetic val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+.field final synthetic val$response:Lorg/telegram/tgnet/TLObject;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController$113;Lorg/telegram/tgnet/TLRPC$User;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController$113;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
     .locals 0
-    .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$113;
+    .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController$113;
 
     .prologue
-    .line 7469
-    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$1:Lorg/telegram/messenger/MessagesController$113;
+    .line 8078
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$currentUser:Lorg/telegram/tgnet/TLRPC$User;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,20 +46,323 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 9
 
     .prologue
-    .line 7472
-    invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
+    const/4 v8, 0x0
 
-    move-result-object v0
+    const/4 v7, 0x1
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$currentUser:Lorg/telegram/tgnet/TLRPC$User;
+    const/4 v6, 0x0
 
-    const/4 v2, 0x1
+    .line 8082
+    :try_start_0
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
 
-    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/ContactsController;->addContactToPhoneBook(Lorg/telegram/tgnet/TLRPC$User;Z)J
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$progressDialog:Lorg/telegram/ui/ActionBar/AlertDialog;
 
-    .line 7473
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->dismiss()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8086
+    :goto_0
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-virtual {v3, v8}, Lorg/telegram/ui/ActionBar/BaseFragment;->setVisibleDialog(Landroid/app/Dialog;)V
+
+    .line 8087
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$error:Lorg/telegram/tgnet/TLRPC$TL_error;
+
+    if-nez v3, :cond_2
+
+    .line 8088
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$113$1;->val$response:Lorg/telegram/tgnet/TLObject;
+
+    check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+
+    .line 8089
+    .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v3
+
+    iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v4, v6}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
+
+    .line 8090
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v3
+
+    iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v4, v6}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
+
+    .line 8091
+    invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
+
+    move-result-object v3
+
+    iget-object v4, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
+
+    iget-object v5, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v4, v5, v6, v7}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
+
+    .line 8092
+    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_1
+
+    .line 8093
+    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->chats:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lorg/telegram/tgnet/TLRPC$Chat;
+
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v4, v4, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-static {v8, v3, v4, v7, v6}, Lorg/telegram/messenger/MessagesController;->openChatOrProfileWith(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;IZ)V
+
+    .line 8113
+    .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    :cond_0
+    :goto_1
     return-void
+
+    .line 8083
+    :catch_0
+    move-exception v0
+
+    .line 8084
+    .local v0, "e":Ljava/lang/Exception;
+    invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto :goto_0
+
+    .line 8094
+    .end local v0    # "e":Ljava/lang/Exception;
+    .restart local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    :cond_1
+    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
+
+    invoke-virtual {v3}, Ljava/util/ArrayList;->isEmpty()Z
+
+    move-result v3
+
+    if-nez v3, :cond_0
+
+    .line 8095
+    iget-object v3, v2, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;->users:Ljava/util/ArrayList;
+
+    invoke-virtual {v3, v6}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v3
+
+    check-cast v3, Lorg/telegram/tgnet/TLRPC$User;
+
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v4, v4, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    iget-object v5, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget v5, v5, Lorg/telegram/messenger/MessagesController$113;->val$type:I
+
+    invoke-static {v3, v8, v4, v5, v6}, Lorg/telegram/messenger/MessagesController;->openChatOrProfileWith(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;IZ)V
+
+    goto :goto_1
+
+    .line 8098
+    .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolvedPeer;
+    :cond_2
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    if-eqz v3, :cond_0
+
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v3
+
+    if-eqz v3, :cond_0
+
+    .line 8100
+    :try_start_1
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "NoUsernameFound"
+
+    const v5, 0x7f070352
+
+    invoke-static {v4, v5}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    invoke-static {v3, v4, v5}, Landroid/widget/Toast;->makeText(Landroid/content/Context;Ljava/lang/CharSequence;I)Landroid/widget/Toast;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Landroid/widget/Toast;->show()V
+
+    .line 8101
+    sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
+
+    const-string/jumbo v4, "plusconfig"
+
+    const/4 v5, 0x0
+
+    invoke-virtual {v3, v4, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+
+    move-result-object v3
+
+    const-string/jumbo v4, "searchOnTwitter"
+
+    const/4 v5, 0x1
+
+    invoke-interface {v3, v4, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_2
+
+    move-result v3
+
+    if-eqz v3, :cond_0
+
+    .line 8103
+    :try_start_2
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v3
+
+    new-instance v4, Landroid/content/Intent;
+
+    const-string/jumbo v5, "android.intent.action.VIEW"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "twitter://user?screen_name="
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v7, v7, Lorg/telegram/messenger/MessagesController$113;->val$un:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v6
+
+    invoke-direct {v4, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v3, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    :try_end_2
+    .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_1
+
+    goto/16 :goto_1
+
+    .line 8104
+    :catch_1
+    move-exception v1
+
+    .line 8105
+    .local v1, "e2":Ljava/lang/Exception;
+    :try_start_3
+    iget-object v3, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v3, v3, Lorg/telegram/messenger/MessagesController$113;->val$fragment:Lorg/telegram/ui/ActionBar/BaseFragment;
+
+    invoke-virtual {v3}, Lorg/telegram/ui/ActionBar/BaseFragment;->getParentActivity()Landroid/app/Activity;
+
+    move-result-object v3
+
+    new-instance v4, Landroid/content/Intent;
+
+    const-string/jumbo v5, "android.intent.action.VIEW"
+
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "https://twitter.com/"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    iget-object v7, p0, Lorg/telegram/messenger/MessagesController$113$1;->this$0:Lorg/telegram/messenger/MessagesController$113;
+
+    iget-object v7, v7, Lorg/telegram/messenger/MessagesController$113;->val$un:Ljava/lang/String;
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
+
+    invoke-static {v6}, Landroid/net/Uri;->parse(Ljava/lang/String;)Landroid/net/Uri;
+
+    move-result-object v6
+
+    invoke-direct {v4, v5, v6}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+
+    invoke-virtual {v3, v4}, Landroid/app/Activity;->startActivity(Landroid/content/Intent;)V
+    :try_end_3
+    .catch Ljava/lang/Exception; {:try_start_3 .. :try_end_3} :catch_2
+
+    goto/16 :goto_1
+
+    .line 8108
+    .end local v1    # "e2":Ljava/lang/Exception;
+    :catch_2
+    move-exception v0
+
+    .line 8109
+    .restart local v0    # "e":Ljava/lang/Exception;
+    invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto/16 :goto_1
 .end method

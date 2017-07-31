@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 541
+    .line 536
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$4;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +45,10 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 544
+    .line 539
     if-nez p2, :cond_0
 
-    .line 545
+    .line 540
     iget-object v6, p0, Lorg/telegram/messenger/MessagesController$4;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getClientUserId()I
@@ -63,31 +63,31 @@
 
     move-result-object v4
 
-    .line 546
+    .line 541
     .local v4, "user":Lorg/telegram/tgnet/TLRPC$User;
     if-nez v4, :cond_1
 
-    .line 547
+    .line 542
     invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
 
     move-result-object v4
 
-    .line 548
+    .line 543
     iget-object v6, p0, Lorg/telegram/messenger/MessagesController$4;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v6, v4, v10}, Lorg/telegram/messenger/MessagesController;->putUser(Lorg/telegram/tgnet/TLRPC$User;Z)Z
 
-    .line 552
+    .line 547
     :goto_0
     if-nez v4, :cond_2
 
-    .line 581
+    .line 576
     .end local v4    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_0
     :goto_1
     return-void
 
-    .line 550
+    .line 545
     .restart local v4    # "user":Lorg/telegram/tgnet/TLRPC$User;
     :cond_1
     invoke-static {v4}, Lorg/telegram/messenger/UserConfig;->setCurrentUser(Lorg/telegram/tgnet/TLRPC$User;)V
@@ -97,16 +97,16 @@
     :cond_2
     move-object v1, p1
 
-    .line 555
+    .line 550
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_photos_photo;
 
-    .line 556
+    .line 551
     .local v1, "photo":Lorg/telegram/tgnet/TLRPC$TL_photos_photo;
     iget-object v6, v1, Lorg/telegram/tgnet/TLRPC$TL_photos_photo;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
 
     iget-object v2, v6, Lorg/telegram/tgnet/TLRPC$Photo;->sizes:Ljava/util/ArrayList;
 
-    .line 557
+    .line 552
     .local v2, "sizes":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$PhotoSize;>;"
     const/16 v6, 0x64
 
@@ -114,7 +114,7 @@
 
     move-result-object v3
 
-    .line 558
+    .line 553
     .local v3, "smallSize":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     const/16 v6, 0x3e8
 
@@ -122,7 +122,7 @@
 
     move-result-object v0
 
-    .line 559
+    .line 554
     .local v0, "bigSize":Lorg/telegram/tgnet/TLRPC$PhotoSize;
     new-instance v6, Lorg/telegram/tgnet/TLRPC$TL_userProfilePhoto;
 
@@ -130,7 +130,7 @@
 
     iput-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
-    .line 560
+    .line 555
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v7, v1, Lorg/telegram/tgnet/TLRPC$TL_photos_photo;->photo:Lorg/telegram/tgnet/TLRPC$Photo;
@@ -139,28 +139,28 @@
 
     iput-wide v8, v6, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_id:J
 
-    .line 561
+    .line 556
     if-eqz v3, :cond_3
 
-    .line 562
+    .line 557
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v7, v3, Lorg/telegram/tgnet/TLRPC$PhotoSize;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     iput-object v7, v6, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_small:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 564
+    .line 559
     :cond_3
     if-eqz v0, :cond_5
 
-    .line 565
+    .line 560
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v7, v0, Lorg/telegram/tgnet/TLRPC$PhotoSize;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
     iput-object v7, v6, Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;->photo_big:Lorg/telegram/tgnet/TLRPC$FileLocation;
 
-    .line 569
+    .line 564
     :cond_4
     :goto_2
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
@@ -171,16 +171,16 @@
 
     invoke-virtual {v6, v7}, Lorg/telegram/messenger/MessagesStorage;->clearUserPhotos(I)V
 
-    .line 570
+    .line 565
     new-instance v5, Ljava/util/ArrayList;
 
     invoke-direct {v5}, Ljava/util/ArrayList;-><init>()V
 
-    .line 571
+    .line 566
     .local v5, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     invoke-virtual {v5, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 572
+    .line 567
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v6
@@ -191,7 +191,7 @@
 
     invoke-virtual {v6, v5, v7, v8, v10}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 573
+    .line 568
     new-instance v6, Lorg/telegram/messenger/MessagesController$4$1;
 
     invoke-direct {v6, p0}, Lorg/telegram/messenger/MessagesController$4$1;-><init>(Lorg/telegram/messenger/MessagesController$4;)V
@@ -200,12 +200,12 @@
 
     goto :goto_1
 
-    .line 566
+    .line 561
     .end local v5    # "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     :cond_5
     if-eqz v3, :cond_4
 
-    .line 567
+    .line 562
     iget-object v6, v4, Lorg/telegram/tgnet/TLRPC$User;->photo:Lorg/telegram/tgnet/TLRPC$UserProfilePhoto;
 
     iget-object v7, v3, Lorg/telegram/tgnet/TLRPC$PhotoSize;->location:Lorg/telegram/tgnet/TLRPC$FileLocation;

@@ -2,12 +2,11 @@ java -jar uber-apk-signer.jar -a apk --ks key.jks --allowResign --ksAlias olegsv
 
 LocationController - needed
 MediaController - work perfectly?
-MessagesController - needed 
+MessagesController - needed
 ChatentryView - needed
 PasscodeView -needed
 WebPlayerView - needed
-DialogsActivity after MessagesController
-LoginActivity - consts wrong
+DialogsActivity after work perfectly?
 ProfileActivity$ListAdapter.smali - needed
 Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe
 Settings TODO

@@ -2645,6 +2645,367 @@
     return-wide p1
 .end method
 
+.method public static addToCustomChats(I)V
+    .locals 23
+    .param p0, "id"    # I
+
+    .prologue
+    .line 8040
+    const/4 v11, 0x0
+
+    .line 8041
+    .local v11, "currentUser":Lorg/telegram/tgnet/TLRPC$User;
+    const/4 v10, 0x0
+
+    .line 8043
+    .local v10, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
+    const/16 v17, 0x0
+
+    .line 8044
+    .local v17, "isBroadcast":Z
+    move/from16 v3, p0
+
+    .line 8045
+    .local v3, "chatId":I
+    const/4 v2, 0x2
+
+    new-array v0, v2, [I
+
+    move-object/from16 v18, v0
+
+    fill-array-data v18, :array_0
+
+    .line 8046
+    .local v18, "maxMessageId":[I
+    const/4 v2, 0x2
+
+    new-array v0, v2, [I
+
+    move-object/from16 v19, v0
+
+    fill-array-data v19, :array_1
+
+    .line 8047
+    .local v19, "minMessageId":[I
+    const/16 v16, 0x0
+
+    .line 8048
+    .local v16, "info":Lorg/telegram/tgnet/TLRPC$ChatFull;
+    const/16 v22, 0x0
+
+    .line 8049
+    .local v22, "userId":I
+    const/4 v15, 0x0
+
+    .line 8050
+    .local v15, "encId":I
+    const-wide/16 v12, 0x0
+
+    .line 8051
+    .local v12, "dialog_id":J
+    if-eqz v3, :cond_1
+
+    .line 8052
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    invoke-static {v3}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lorg/telegram/messenger/MessagesController;->getChat(Ljava/lang/Integer;)Lorg/telegram/tgnet/TLRPC$Chat;
+
+    move-result-object v10
+
+    .line 8053
+    if-nez v10, :cond_0
+
+    .line 8054
+    new-instance v21, Ljava/util/concurrent/Semaphore;
+
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v21
+
+    invoke-direct {v0, v2}, Ljava/util/concurrent/Semaphore;-><init>(I)V
+
+    .line 8055
+    .local v21, "semaphore":Ljava/util/concurrent/Semaphore;
+    invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Lorg/telegram/messenger/MessagesStorage;->getStorageQueue()Lorg/telegram/messenger/DispatchQueue;
+
+    move-result-object v2
+
+    new-instance v4, Lorg/telegram/messenger/MessagesController$115;
+
+    move-object/from16 v0, v21
+
+    invoke-direct {v4, v3, v0}, Lorg/telegram/messenger/MessagesController$115;-><init>(ILjava/util/concurrent/Semaphore;)V
+
+    invoke-virtual {v2, v4}, Lorg/telegram/messenger/DispatchQueue;->postRunnable(Ljava/lang/Runnable;)V
+
+    .line 8063
+    :try_start_0
+    invoke-virtual/range {v21 .. v21}, Ljava/util/concurrent/Semaphore;->acquire()V
+    :try_end_0
+    .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
+
+    .line 8067
+    :goto_0
+    if-eqz v10, :cond_0
+
+    .line 8068
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v10, v4}, Lorg/telegram/messenger/MessagesController;->putChat(Lorg/telegram/tgnet/TLRPC$Chat;Z)V
+
+    .line 8071
+    .end local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :cond_0
+    if-lez v3, :cond_4
+
+    .line 8072
+    neg-int v2, v3
+
+    int-to-long v12, v2
+
+    .line 8077
+    :goto_1
+    invoke-static {v10}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
+
+    move-result v2
+
+    if-eqz v2, :cond_1
+
+    .line 8078
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    const/4 v4, 0x0
+
+    invoke-virtual {v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->startShortPoll(IZ)V
+
+    .line 8145
+    :cond_1
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    invoke-virtual {v2, v11, v10}, Lorg/telegram/messenger/MessagesController;->loadPeerSettings(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;)V
+
+    .line 8146
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    const/4 v4, 0x1
+
+    invoke-virtual {v2, v12, v13, v4}, Lorg/telegram/messenger/MessagesController;->setLastCreatedDialogId(JZ)V
+
+    .line 8148
+    if-eqz v10, :cond_3
+
+    .line 8149
+    const/16 v21, 0x0
+
+    .line 8150
+    .restart local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    if-eqz v17, :cond_2
+
+    .line 8151
+    new-instance v21, Ljava/util/concurrent/Semaphore;
+
+    .end local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    const/4 v2, 0x0
+
+    move-object/from16 v0, v21
+
+    invoke-direct {v0, v2}, Ljava/util/concurrent/Semaphore;-><init>(I)V
+
+    .line 8153
+    .restart local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :cond_2
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    iget v4, v10, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
+
+    invoke-static {v10}, Lorg/telegram/messenger/ChatObject;->isChannel(Lorg/telegram/tgnet/TLRPC$Chat;)Z
+
+    move-result v5
+
+    move-object/from16 v0, v21
+
+    invoke-virtual {v2, v4, v0, v5}, Lorg/telegram/messenger/MessagesController;->loadChatInfo(ILjava/util/concurrent/Semaphore;Z)V
+
+    .line 8154
+    if-eqz v17, :cond_3
+
+    if-eqz v21, :cond_3
+
+    .line 8156
+    :try_start_1
+    invoke-virtual/range {v21 .. v21}, Ljava/util/concurrent/Semaphore;->acquire()V
+    :try_end_1
+    .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_1
+
+    .line 8163
+    .end local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :cond_3
+    :goto_2
+    move-object/from16 v0, v16
+
+    instance-of v2, v0, Lorg/telegram/tgnet/TLRPC$TL_chatFull;
+
+    if-eqz v2, :cond_5
+
+    .line 8164
+    const/4 v9, 0x0
+
+    .local v9, "a":I
+    :goto_3
+    move-object/from16 v0, v16
+
+    iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipants;->participants:Ljava/util/ArrayList;
+
+    invoke-virtual {v2}, Ljava/util/ArrayList;->size()I
+
+    move-result v2
+
+    if-ge v9, v2, :cond_5
+
+    .line 8165
+    move-object/from16 v0, v16
+
+    iget-object v2, v0, Lorg/telegram/tgnet/TLRPC$ChatFull;->participants:Lorg/telegram/tgnet/TLRPC$ChatParticipants;
+
+    iget-object v2, v2, Lorg/telegram/tgnet/TLRPC$ChatParticipants;->participants:Ljava/util/ArrayList;
+
+    invoke-virtual {v2, v9}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
+
+    move-result-object v20
+
+    check-cast v20, Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+
+    .line 8166
+    .local v20, "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    move-object/from16 v0, v20
+
+    iget v4, v0, Lorg/telegram/tgnet/TLRPC$ChatParticipant;->user_id:I
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    invoke-virtual {v2, v4}, Lorg/telegram/messenger/MessagesController;->getUser(Ljava/lang/Integer;)Lorg/telegram/tgnet/TLRPC$User;
+
+    .line 8164
+    add-int/lit8 v9, v9, 0x1
+
+    goto :goto_3
+
+    .line 8064
+    .end local v9    # "a":I
+    .end local v20    # "participant":Lorg/telegram/tgnet/TLRPC$ChatParticipant;
+    .restart local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :catch_0
+    move-exception v14
+
+    .line 8065
+    .local v14, "e":Ljava/lang/Exception;
+    invoke-static {v14}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto/16 :goto_0
+
+    .line 8074
+    .end local v14    # "e":Ljava/lang/Exception;
+    .end local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :cond_4
+    const/16 v17, 0x1
+
+    .line 8075
+    invoke-static {v3}, Lorg/telegram/messenger/AndroidUtilities;->makeBroadcastId(I)J
+
+    move-result-wide v12
+
+    goto :goto_1
+
+    .line 8157
+    .restart local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :catch_1
+    move-exception v14
+
+    .line 8158
+    .restart local v14    # "e":Ljava/lang/Exception;
+    invoke-static {v14}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
+
+    goto :goto_2
+
+    .line 8170
+    .end local v14    # "e":Ljava/lang/Exception;
+    .end local v21    # "semaphore":Ljava/util/concurrent/Semaphore;
+    :cond_5
+    const-string/jumbo v2, "TGM"
+
+    const-string/jumbo v4, "onFragmentCreate:  MessagesController.getInstance().addUserToChat(chatId,UserConfig.getCurrentUser() , null, 0, null, null);"
+
+    invoke-static {v2, v4}, Landroid/util/Log;->i(Ljava/lang/String;Ljava/lang/String;)I
+
+    .line 8171
+    invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
+
+    move-result-object v2
+
+    invoke-static {}, Lorg/telegram/messenger/UserConfig;->getCurrentUser()Lorg/telegram/tgnet/TLRPC$User;
+
+    move-result-object v4
+
+    const/4 v5, 0x0
+
+    const/4 v6, 0x0
+
+    const/4 v7, 0x0
+
+    const/4 v8, 0x0
+
+    invoke-virtual/range {v2 .. v8}, Lorg/telegram/messenger/MessagesController;->addUserToChat(ILorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$ChatFull;ILjava/lang/String;Lorg/telegram/ui/ActionBar/BaseFragment;)V
+
+    .line 8172
+    return-void
+
+    .line 8045
+    nop
+
+    :array_0
+    .array-data 4
+        0x7fffffff
+        0x7fffffff
+    .end array-data
+
+    .line 8046
+    :array_1
+    .array-data 4
+        -0x80000000
+        -0x80000000
+    .end array-data
+.end method
+
 .method private applyDialogNotificationsSettings(JLorg/telegram/tgnet/TLRPC$PeerNotifySettings;)V
     .locals 15
     .param p1, "dialog_id"    # J
@@ -2654,7 +3015,27 @@
     .line 3517
     sget-object v9, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v10, "Notifications"
+    new-instance v10, Ljava/lang/StringBuilder;
+
+    invoke-direct {v10}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v11, "Notifications"
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v11
+
+    invoke-virtual {v10, v11}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v10
+
+    invoke-virtual {v10}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v10
 
     const/4 v11, 0x0
 
@@ -3115,7 +3496,27 @@
     .line 3572
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "Notifications"
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "Notifications"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
 
     const/4 v7, 0x0
 
@@ -5844,6 +6245,39 @@
     goto :goto_0
 .end method
 
+.method public static openByUserNameCustom(Ljava/lang/String;I)V
+    .locals 4
+    .param p0, "username"    # Ljava/lang/String;
+    .param p1, "type"    # I
+
+    .prologue
+    .line 8175
+    new-instance v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;
+
+    invoke-direct {v0}, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;-><init>()V
+
+    .line 8176
+    .local v0, "req":Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;
+    iput-object p0, v0, Lorg/telegram/tgnet/TLRPC$TL_contacts_resolveUsername;->username:Ljava/lang/String;
+
+    .line 8177
+    invoke-static {}, Lorg/telegram/tgnet/ConnectionsManager;->getInstance()Lorg/telegram/tgnet/ConnectionsManager;
+
+    move-result-object v2
+
+    new-instance v3, Lorg/telegram/messenger/MessagesController$119;
+
+    invoke-direct {v3}, Lorg/telegram/messenger/MessagesController$119;-><init>()V
+
+    invoke-virtual {v2, v0, v3}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
+
+    move-result v1
+
+    .line 8198
+    .local v1, "reqId":I
+    return-void
+.end method
+
 .method public static openChatOrProfileWith(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;Lorg/telegram/ui/ActionBar/BaseFragment;IZ)V
     .locals 4
     .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
@@ -5964,6 +6398,65 @@
     invoke-virtual {p2, v2, p4}, Lorg/telegram/ui/ActionBar/BaseFragment;->presentFragment(Lorg/telegram/ui/ActionBar/BaseFragment;Z)Z
 
     goto :goto_0
+.end method
+
+.method public static openChatOrProfileWithCustom(Lorg/telegram/tgnet/TLRPC$User;Lorg/telegram/tgnet/TLRPC$Chat;IZ)V
+    .locals 2
+    .param p0, "user"    # Lorg/telegram/tgnet/TLRPC$User;
+    .param p1, "chat"    # Lorg/telegram/tgnet/TLRPC$Chat;
+    .param p2, "type"    # I
+    .param p3, "closeLast"    # Z
+
+    .prologue
+    .line 8024
+    if-nez p0, :cond_1
+
+    if-nez p1, :cond_1
+
+    .line 8037
+    :cond_0
+    :goto_0
+    return-void
+
+    .line 8027
+    :cond_1
+    const/4 v0, 0x0
+
+    .line 8028
+    .local v0, "reason":Ljava/lang/String;
+    if-eqz p1, :cond_3
+
+    .line 8029
+    iget-object v1, p1, Lorg/telegram/tgnet/TLRPC$Chat;->restriction_reason:Ljava/lang/String;
+
+    invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->getRestrictionReason(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    .line 8033
+    :cond_2
+    :goto_1
+    if-nez v0, :cond_0
+
+    .line 8035
+    iget v1, p1, Lorg/telegram/tgnet/TLRPC$Chat;->id:I
+
+    invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->addToCustomChats(I)V
+
+    goto :goto_0
+
+    .line 8030
+    :cond_3
+    if-eqz p0, :cond_2
+
+    .line 8031
+    iget-object v1, p0, Lorg/telegram/tgnet/TLRPC$User;->restriction_reason:Ljava/lang/String;
+
+    invoke-static {v1}, Lorg/telegram/messenger/MessagesController;->getRestrictionReason(Ljava/lang/String;)Ljava/lang/String;
+
+    move-result-object v0
+
+    goto :goto_1
 .end method
 
 .method private processChannelsUpdatesQueue(II)V
@@ -13777,7 +14270,27 @@
     :cond_1
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "Notifications"
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "Notifications"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
 
     const/4 v5, 0x0
 
@@ -13886,7 +14399,27 @@
     .line 7851
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "Notifications"
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "Notifications"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
 
     invoke-virtual {v5, v6, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
@@ -15522,7 +16055,27 @@
     .line 1406
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v6, "Notifications"
+    new-instance v6, Ljava/lang/StringBuilder;
+
+    invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v7, "Notifications"
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v7
+
+    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v6
+
+    invoke-virtual {v6}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v6
 
     invoke-virtual {v5, v6, v8}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
@@ -16709,7 +17262,27 @@
     .line 4720
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "Notifications"
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "Notifications"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
 
     invoke-virtual {v2, v3, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
@@ -16758,7 +17331,27 @@
     .line 4724
     sget-object v2, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v3, "mainconfig"
+    new-instance v3, Ljava/lang/StringBuilder;
+
+    invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v4, "mainconfig"
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v4
+
+    invoke-virtual {v3, v4}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v3
+
+    invoke-virtual {v3}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v3
 
     invoke-virtual {v2, v3, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
@@ -29598,7 +30191,27 @@
     :cond_1
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v4, "Notifications"
+    new-instance v4, Ljava/lang/StringBuilder;
+
+    invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v5, "Notifications"
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
+
+    move-result-object v5
+
+    invoke-virtual {v4, v5}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v4
+
+    invoke-virtual {v4}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v4
 
     const/4 v5, 0x0
 

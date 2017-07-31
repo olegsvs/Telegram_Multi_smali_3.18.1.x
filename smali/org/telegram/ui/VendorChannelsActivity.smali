@@ -709,7 +709,7 @@
 
     move-result-object v0
 
-    const-string v1, "@vilkaru"
+    const-string v1, "\u0412\u0438\u043b\u043a\u0430.ru"
 
     const-string v2, "\u0421\u0430\u043c\u044b\u0435 \u043d\u043e\u0432\u044b\u0435 \u0438 \u0432\u043a\u0443\u0441\u043d\u044b\u0435 \u0440\u0435\u0446\u0435\u043f\u0442\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u0443 \u043d\u0430\u0441"
 
@@ -722,7 +722,7 @@
 
     move-result-object v0
 
-    const-string v1, "@kepchup"
+    const-string v1, "\u041a\u0435\u043f\u0427\u0443\u043f ;-)"
 
     const-string v2, "\u042e\u043c\u043e\u0440 \u0438 \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u043c, \u043a\u0430\u043a \u0441\u0442\u0438\u043b\u044c \u0436\u0438\u0437\u043d\u0438!"
 
@@ -735,7 +735,7 @@
 
     move-result-object v0
 
-    const-string v1, "@comics_dc"
+    const-string v1, "DC/MARVEL"
 
     const-string v2, "\u041a\u0438\u043d\u043e\u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0430\u044f \u0441\u0443\u043f\u0435\u0440\u0433\u0435\u0440\u043e\u0435\u0432"
 
@@ -748,7 +748,7 @@
 
     move-result-object v0
 
-    const-string v1, "@ruschannels"
+    const-string v1, "RusChannels"
 
     const-string v2, "\u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0435\u0439\u0448\u0438\u0445 \u0440\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0445 \u043a\u0430\u043d\u0430\u043b\u043e\u0432 Telegram"
 
@@ -761,7 +761,7 @@
 
     move-result-object v0
 
-    const-string v1, "@neoru"
+    const-string v1, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
 
     const-string v2, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
 
@@ -774,7 +774,7 @@
 
     move-result-object v0
 
-    const-string v1, "@music_rus"
+    const-string v1, "\u041c\u0443\u0437\u044b\u043a\u0430 (\u0420\u041e\u0421\u0421\u0418\u042f)"
 
     const-string v2, "\u041b\u0443\u0447\u0448\u0430\u044f \u043c\u0443\u0437\u044b\u043a\u0430"
 
@@ -787,7 +787,7 @@
 
     move-result-object v0
 
-    const-string v1, "@evill_genius"
+    const-string v1, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
 
     const-string v2, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
 
@@ -800,7 +800,7 @@
 
     move-result-object v0
 
-    const-string v1, "@my_spb"
+    const-string v1, "\u041c\u043e\u0439 \u041f\u0438\u0442\u0435\u0440"
 
     const-string v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435"
 
@@ -813,7 +813,7 @@
 
     move-result-object v0
 
-    const-string v1, "@mskcity"
+    const-string v1, "\u041c\u043e\u044f \u041c\u043e\u0441\u043a\u0432\u0430"
 
     const-string v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435"
 

@@ -10278,21 +10278,21 @@
     .prologue
     const/4 v5, 0x1
 
-    const/4 v3, 0x0
+    const/4 v4, 0x0
 
-    .line 148
+    .line 147
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onFragmentCreate()Z
 
-    .line 150
+    .line 151
     sget-object v1, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     const-string/jumbo v2, "userID"
 
-    invoke-virtual {v1, v2, v3}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v1, v2, v4}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v0
 
-    .line 151
+    .line 152
     .local v0, "userID":Landroid/content/SharedPreferences;
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
@@ -10306,54 +10306,132 @@
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 152
+    .line 154
+    new-instance v1, Ljava/lang/StringBuilder;
+
+    invoke-direct {v1}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v2, "state_vendor_channels_user_"
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
+
+    move-result v2
+
+    invoke-virtual {v1, v2}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v1
+
+    invoke-virtual {v1}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v1
+
+    invoke-interface {v0, v1, v4}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v1
+
+    if-nez v1, :cond_0
+
+    .line 155
+    const-string/jumbo v1, "tgmulti"
+
+    invoke-static {v1, v4}, Lorg/telegram/messenger/MessagesController;->openByUserNameCustom(Ljava/lang/String;I)V
+
+    .line 156
+    const-string/jumbo v1, "RusChannels"
+
+    invoke-static {v1, v4}, Lorg/telegram/messenger/MessagesController;->openByUserNameCustom(Ljava/lang/String;I)V
+
+    .line 157
+    const-string/jumbo v1, "music_rus"
+
+    invoke-static {v1, v4}, Lorg/telegram/messenger/MessagesController;->openByUserNameCustom(Ljava/lang/String;I)V
+
+    .line 158
+    invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    new-instance v2, Ljava/lang/StringBuilder;
+
+    invoke-direct {v2}, Ljava/lang/StringBuilder;-><init>()V
+
+    const-string/jumbo v3, "state_vendor_channels_user_"
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I
+
+    move-result v3
+
+    invoke-virtual {v2, v3}, Ljava/lang/StringBuilder;->append(I)Ljava/lang/StringBuilder;
+
+    move-result-object v2
+
+    invoke-virtual {v2}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-interface {v1, v2, v5}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
+
+    move-result-object v1
+
+    invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->commit()Z
+
+    .line 162
+    :cond_0
     invoke-interface {v0}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v1
 
     invoke-interface {v1}, Landroid/content/SharedPreferences$Editor;->apply()V
 
-    .line 154
+    .line 164
     invoke-virtual {p0}, Lorg/telegram/ui/DialogsActivity;->getArguments()Landroid/os/Bundle;
 
     move-result-object v1
 
-    if-eqz v1, :cond_0
+    if-eqz v1, :cond_1
 
-    .line 155
+    .line 165
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "onlySelect"
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lorg/telegram/ui/DialogsActivity;->onlySelect:Z
 
-    .line 156
+    .line 166
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "cantSendToChannels"
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v1
 
     iput-boolean v1, p0, Lorg/telegram/ui/DialogsActivity;->cantSendToChannels:Z
 
-    .line 157
+    .line 167
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "dialogsType"
 
-    invoke-virtual {v1, v2, v3}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
+    invoke-virtual {v1, v2, v4}, Landroid/os/Bundle;->getInt(Ljava/lang/String;I)I
 
     move-result v1
 
     iput v1, p0, Lorg/telegram/ui/DialogsActivity;->dialogsType:I
 
-    .line 158
+    .line 168
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "selectAlertString"
@@ -10364,7 +10442,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertString:Ljava/lang/String;
 
-    .line 159
+    .line 169
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "selectAlertStringGroup"
@@ -10375,7 +10453,7 @@
 
     iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->selectAlertStringGroup:Ljava/lang/String;
 
-    .line 160
+    .line 170
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->arguments:Landroid/os/Bundle;
 
     const-string/jumbo v2, "addToGroupAlertString"
@@ -10386,13 +10464,13 @@
 
     iput-object v1, p0, Lorg/telegram/ui/DialogsActivity;->addToGroupAlertString:Ljava/lang/String;
 
-    .line 163
-    :cond_0
+    .line 173
+    :cond_1
     iget-object v1, p0, Lorg/telegram/ui/DialogsActivity;->searchString:Ljava/lang/String;
 
-    if-nez v1, :cond_1
+    if-nez v1, :cond_2
 
-    .line 164
+    .line 174
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10401,7 +10479,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 165
+    .line 175
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10410,7 +10488,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 166
+    .line 176
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10419,7 +10497,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 167
+    .line 177
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10428,7 +10506,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 168
+    .line 178
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10437,7 +10515,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 169
+    .line 179
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10446,7 +10524,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 170
+    .line 180
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10455,7 +10533,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 171
+    .line 181
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10464,7 +10542,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 172
+    .line 182
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10473,7 +10551,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 173
+    .line 183
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10482,7 +10560,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 174
+    .line 184
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10491,7 +10569,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 175
+    .line 185
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10500,7 +10578,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 176
+    .line 186
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10509,7 +10587,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 177
+    .line 187
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10518,7 +10596,7 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 178
+    .line 188
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v1
@@ -10527,29 +10605,29 @@
 
     invoke-virtual {v1, p0, v2}, Lorg/telegram/messenger/NotificationCenter;->addObserver(Ljava/lang/Object;I)V
 
-    .line 182
-    :cond_1
+    .line 192
+    :cond_2
     sget-boolean v1, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
 
-    if-nez v1, :cond_2
+    if-nez v1, :cond_3
 
-    .line 183
+    .line 193
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
 
     const/16 v2, 0x64
 
-    invoke-virtual {v1, v3, v2, v5}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
+    invoke-virtual {v1, v4, v2, v5}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
 
-    .line 184
+    .line 194
     invoke-static {}, Lorg/telegram/messenger/ContactsController;->getInstance()Lorg/telegram/messenger/ContactsController;
 
     move-result-object v1
 
     invoke-virtual {v1}, Lorg/telegram/messenger/ContactsController;->checkInviteText()V
 
-    .line 185
+    .line 195
     invoke-static {}, Lorg/telegram/messenger/MessagesController;->getInstance()Lorg/telegram/messenger/MessagesController;
 
     move-result-object v1
@@ -10560,14 +10638,14 @@
 
     invoke-virtual {v1, v2, v3, v4}, Lorg/telegram/messenger/MessagesController;->loadPinnedDialogs(JLjava/util/ArrayList;)V
 
-    .line 186
+    .line 196
     invoke-static {}, Lorg/telegram/messenger/query/StickersQuery;->checkFeaturedStickers()V
 
-    .line 187
+    .line 197
     sput-boolean v5, Lorg/telegram/ui/DialogsActivity;->dialogsLoaded:Z
 
-    .line 189
-    :cond_2
+    .line 199
+    :cond_3
     return v5
 .end method
 

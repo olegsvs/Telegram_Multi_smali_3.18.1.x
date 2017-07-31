@@ -1,22 +1,12 @@
 java -jar uber-apk-signer.jar -a apk --ks key.jks --allowResign --ksAlias olegsvs_2017
 
 LocationController - needed
-MediaController - work perfectly?
-MessagesController - needed
-ChatentryView - needed
 PasscodeView -needed
 WebPlayerView - needed
-DialogsActivity after work perfectly?
 ProfileActivity$ListAdapter.smali - needed
 Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe
 Settings TODO
-ShareActivity (nedded?)
-community 13
-
-
-
-DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
-DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
+ShareActivity (needed?)
 
 SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; + WORK? (ICON on change theme)
 SettingsActivity$ListAdapter.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;? TODO
@@ -65,6 +55,17 @@ W ActivityManager:   Force finishing activity org.telegram.plus/org.telegram.ui.
 
 
 Complete ::
+MediaController
+
+MessagesController
+
+ChatentryView
+
+DialogsActivity
+
+DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
+DialogsActivity.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getID()I TODO
+
 ui/IntroActivity.smali:    const-string/jumbo v6, "userID"
 ui/IntroActivity.smali:    const-string/jumbo v7, "userID"
 

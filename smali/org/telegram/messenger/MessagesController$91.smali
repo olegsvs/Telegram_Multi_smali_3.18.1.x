@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 5007
+    .line 5087
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$91;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-wide p2, p0, Lorg/telegram/messenger/MessagesController$91;->val$newTaskId:J
@@ -53,15 +53,15 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 5010
+    .line 5090
     if-eqz p1, :cond_0
 
     move-object v9, p1
 
-    .line 5011
+    .line 5091
     check-cast v9, Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;
 
-    .line 5012
+    .line 5092
     .local v9, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;
     iget-object v0, v9, Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;->dialogs:Ljava/util/ArrayList;
 
@@ -79,12 +79,12 @@
 
     if-nez v0, :cond_0
 
-    .line 5013
+    .line 5093
     new-instance v1, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;-><init>()V
 
-    .line 5014
+    .line 5094
     .local v1, "dialogs":Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;->dialogs:Ljava/util/ArrayList;
 
@@ -92,28 +92,28 @@
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5015
+    .line 5095
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;->messages:Ljava/util/ArrayList;
 
     iget-object v2, v9, Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5016
+    .line 5096
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;->users:Ljava/util/ArrayList;
 
     iget-object v2, v9, Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5017
+    .line 5097
     iget-object v0, v1, Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;->chats:Ljava/util/ArrayList;
 
     iget-object v2, v9, Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;->chats:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v2}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 5018
+    .line 5098
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$91;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v2, 0x0
@@ -130,7 +130,7 @@
 
     invoke-virtual/range {v0 .. v8}, Lorg/telegram/messenger/MessagesController;->processLoadedDialogs(Lorg/telegram/tgnet/TLRPC$messages_Dialogs;Ljava/util/ArrayList;IIIZZZ)V
 
-    .line 5021
+    .line 5101
     .end local v1    # "dialogs":Lorg/telegram/tgnet/TLRPC$TL_messages_dialogs;
     .end local v9    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_peerDialogs;
     :cond_0
@@ -142,7 +142,7 @@
 
     if-eqz v0, :cond_1
 
-    .line 5022
+    .line 5102
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v0
@@ -151,7 +151,7 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/messenger/MessagesStorage;->removePendingTask(J)V
 
-    .line 5024
+    .line 5104
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$91;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -169,6 +169,6 @@
 
     invoke-virtual {v0, v2}, Ljava/util/HashMap;->remove(Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 5025
+    .line 5105
     return-void
 .end method

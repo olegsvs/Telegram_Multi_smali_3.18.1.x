@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 5030
+    .line 5110
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$92;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesController$92;->val$stop:Z
@@ -49,12 +49,12 @@
     .locals 7
 
     .prologue
-    .line 5033
+    .line 5113
     iget-boolean v0, p0, Lorg/telegram/messenger/MessagesController$92;->val$stop:Z
 
     if-eqz v0, :cond_1
 
-    .line 5034
+    .line 5114
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$92;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1600(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -65,12 +65,12 @@
 
     invoke-virtual {v0, v1}, Landroid/util/SparseIntArray;->delete(I)V
 
-    .line 5041
+    .line 5121
     :cond_0
     :goto_0
     return-void
 
-    .line 5036
+    .line 5116
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$92;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -84,7 +84,7 @@
 
     invoke-virtual {v0, v1, v2}, Landroid/util/SparseIntArray;->put(II)V
 
-    .line 5037
+    .line 5117
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$92;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1500(Lorg/telegram/messenger/MessagesController;)Landroid/util/SparseIntArray;
@@ -99,7 +99,7 @@
 
     if-gez v0, :cond_0
 
-    .line 5038
+    .line 5118
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$92;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget v2, p0, Lorg/telegram/messenger/MessagesController$92;->val$channelId:I

@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 760
+    .line 764
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$7;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesController$7;->val$set:Z
@@ -49,12 +49,12 @@
     .locals 4
 
     .prologue
-    .line 763
+    .line 767
     iget-boolean v0, p0, Lorg/telegram/messenger/MessagesController$7;->val$set:Z
 
     if-eqz v0, :cond_0
 
-    .line 764
+    .line 768
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$7;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$1000(Lorg/telegram/messenger/MessagesController;)Ljava/util/ArrayList;
@@ -69,11 +69,11 @@
 
     invoke-virtual {v0, v1}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 768
+    .line 772
     :goto_0
     return-void
 
-    .line 766
+    .line 770
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$7;->this$0:Lorg/telegram/messenger/MessagesController;
 

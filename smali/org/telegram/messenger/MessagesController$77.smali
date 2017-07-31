@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4348
+    .line 4414
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$77;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,6 +43,6 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4352
+    .line 4418
     return-void
 .end method

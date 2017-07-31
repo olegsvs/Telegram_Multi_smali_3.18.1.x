@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4761
+    .line 4841
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$86;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,43 +43,43 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4764
+    .line 4844
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$86;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v3, 0x0
 
     iput-boolean v3, v2, Lorg/telegram/messenger/MessagesController;->updatingState:Z
 
-    .line 4765
+    .line 4845
     if-nez p2, :cond_2
 
     move-object v1, p1
 
-    .line 4766
+    .line 4846
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;
 
-    .line 4767
+    .line 4847
     .local v1, "res":Lorg/telegram/tgnet/TLRPC$TL_updates_state;
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->date:I
 
     sput v2, Lorg/telegram/messenger/MessagesStorage;->lastDateValue:I
 
-    .line 4768
+    .line 4848
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->pts:I
 
     sput v2, Lorg/telegram/messenger/MessagesStorage;->lastPtsValue:I
 
-    .line 4769
+    .line 4849
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->seq:I
 
     sput v2, Lorg/telegram/messenger/MessagesStorage;->lastSeqValue:I
 
-    .line 4770
+    .line 4850
     iget v2, v1, Lorg/telegram/tgnet/TLRPC$TL_updates_state;->qts:I
 
     sput v2, Lorg/telegram/messenger/MessagesStorage;->lastQtsValue:I
 
-    .line 4771
+    .line 4851
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -88,19 +88,19 @@
 
     if-ge v0, v2, :cond_0
 
-    .line 4772
+    .line 4852
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$86;->this$0:Lorg/telegram/messenger/MessagesController;
 
     const/4 v3, 0x2
 
     invoke-static {v2, v0, v3}, Lorg/telegram/messenger/MessagesController;->access$5200(Lorg/telegram/messenger/MessagesController;II)V
 
-    .line 4771
+    .line 4851
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 4774
+    .line 4854
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
@@ -116,14 +116,14 @@
 
     invoke-virtual {v2, v3, v4, v5, v6}, Lorg/telegram/messenger/MessagesStorage;->saveDiffParams(IIII)V
 
-    .line 4780
+    .line 4860
     .end local v0    # "a":I
     .end local v1    # "res":Lorg/telegram/tgnet/TLRPC$TL_updates_state;
     :cond_1
     :goto_1
     return-void
 
-    .line 4776
+    .line 4856
     :cond_2
     iget v2, p2, Lorg/telegram/tgnet/TLRPC$TL_error;->code:I
 
@@ -131,7 +131,7 @@
 
     if-eq v2, v3, :cond_1
 
-    .line 4777
+    .line 4857
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$86;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v2}, Lorg/telegram/messenger/MessagesController;->loadCurrentState()V

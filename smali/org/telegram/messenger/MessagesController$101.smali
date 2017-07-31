@@ -24,21 +24,21 @@
 
 .field final synthetic val$printUpdate:Z
 
-.field final synthetic val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
+.field final synthetic val$user_id:I
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;ZLorg/telegram/tgnet/TLRPC$Updates;Ljava/util/ArrayList;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;ZILjava/util/ArrayList;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 6186
+    .line 6262
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$101;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean p2, p0, Lorg/telegram/messenger/MessagesController$101;->val$printUpdate:Z
 
-    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$101;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
+    iput p3, p0, Lorg/telegram/messenger/MessagesController$101;->val$user_id:I
 
     iput-object p4, p0, Lorg/telegram/messenger/MessagesController$101;->val$objArr:Ljava/util/ArrayList;
 
@@ -55,12 +55,12 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 6189
+    .line 6265
     iget-boolean v0, p0, Lorg/telegram/messenger/MessagesController$101;->val$printUpdate:Z
 
     if-eqz v0, :cond_0
 
-    .line 6190
+    .line 6266
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -81,15 +81,11 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 6193
+    .line 6268
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$101;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$101;->val$updates:Lorg/telegram/tgnet/TLRPC$Updates;
-
-    iget v1, v1, Lorg/telegram/tgnet/TLRPC$Updates;->chat_id:I
-
-    neg-int v1, v1
+    iget v1, p0, Lorg/telegram/messenger/MessagesController$101;->val$user_id:I
 
     int-to-long v2, v1
 
@@ -97,7 +93,7 @@
 
     invoke-virtual {v0, v2, v3, v1}, Lorg/telegram/messenger/MessagesController;->updateInterfaceWithMessages(JLjava/util/ArrayList;)V
 
-    .line 6194
+    .line 6269
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -108,6 +104,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 6195
+    .line 6270
     return-void
 .end method

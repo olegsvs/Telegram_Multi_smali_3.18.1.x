@@ -20,35 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$deletedMessages:Landroid/util/SparseArray;
-
-.field final synthetic val$markAsReadEncrypted:Ljava/util/HashMap;
-
-.field final synthetic val$markAsReadMessages:Ljava/util/ArrayList;
-
-.field final synthetic val$markAsReadMessagesInbox:Landroid/util/SparseArray;
-
-.field final synthetic val$markAsReadMessagesOutbox:Landroid/util/SparseArray;
+.field final synthetic val$notification:Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Landroid/util/SparseArray;Landroid/util/SparseArray;Ljava/util/HashMap;Ljava/util/ArrayList;Landroid/util/SparseArray;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 7605
+    .line 7066
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$111;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$111;->val$markAsReadMessagesInbox:Landroid/util/SparseArray;
-
-    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$111;->val$markAsReadMessagesOutbox:Landroid/util/SparseArray;
-
-    iput-object p4, p0, Lorg/telegram/messenger/MessagesController$111;->val$markAsReadEncrypted:Ljava/util/HashMap;
-
-    iput-object p5, p0, Lorg/telegram/messenger/MessagesController$111;->val$markAsReadMessages:Ljava/util/ArrayList;
-
-    iput-object p6, p0, Lorg/telegram/messenger/MessagesController$111;->val$deletedMessages:Landroid/util/SparseArray;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$111;->val$notification:Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -58,16 +42,38 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 5
 
     .prologue
-    .line 7608
-    new-instance v0, Lorg/telegram/messenger/MessagesController$111$1;
+    const/4 v4, 0x2
 
-    invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$111$1;-><init>(Lorg/telegram/messenger/MessagesController$111;)V
+    .line 7069
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
+    move-result-object v0
 
-    .line 7692
+    sget v1, Lorg/telegram/messenger/NotificationCenter;->needShowAlert:I
+
+    new-array v2, v4, [Ljava/lang/Object;
+
+    const/4 v3, 0x0
+
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    const/4 v3, 0x1
+
+    iget-object v4, p0, Lorg/telegram/messenger/MessagesController$111;->val$notification:Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;
+
+    iget-object v4, v4, Lorg/telegram/tgnet/TLRPC$TL_updateServiceNotification;->message:Ljava/lang/String;
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
+
+    .line 7070
     return-void
 .end method

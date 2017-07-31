@@ -39,7 +39,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1855
+    .line 1862
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$31;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$31;->val$res:Lorg/telegram/tgnet/TLRPC$photos_Photos;
@@ -65,7 +65,7 @@
     .locals 5
 
     .prologue
-    .line 1858
+    .line 1865
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$31;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$31;->val$res:Lorg/telegram/tgnet/TLRPC$photos_Photos;
@@ -76,7 +76,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1859
+    .line 1866
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -147,6 +147,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1860
+    .line 1867
     return-void
 .end method

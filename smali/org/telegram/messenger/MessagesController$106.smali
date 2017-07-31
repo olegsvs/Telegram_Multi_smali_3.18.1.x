@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 6562
+    .line 6596
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$106;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$106;->val$usersArr:Ljava/util/ArrayList;
@@ -51,20 +51,20 @@
     .prologue
     const/4 v2, 0x0
 
-    .line 6565
+    .line 6599
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$106;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$106;->val$usersArr:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 6566
+    .line 6600
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$106;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$106;->val$chatsArr:Ljava/util/ArrayList;
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
 
-    .line 6567
+    .line 6601
     return-void
 .end method

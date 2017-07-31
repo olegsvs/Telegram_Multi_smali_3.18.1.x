@@ -23,7 +23,7 @@
     .locals 0
 
     .prologue
-    .line 190
+    .line 193
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$UserActionUpdatesPts;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Lorg/telegram/tgnet/TLRPC$Updates;-><init>()V
@@ -37,7 +37,7 @@
     .param p2, "x1"    # Lorg/telegram/messenger/MessagesController$1;
 
     .prologue
-    .line 190
+    .line 193
     invoke-direct {p0, p1}, Lorg/telegram/messenger/MessagesController$UserActionUpdatesPts;-><init>(Lorg/telegram/messenger/MessagesController;)V
 
     return-void

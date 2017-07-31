@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2559
+    .line 2625
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$48;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$48;->val$newPrintingStrings:Ljava/util/HashMap;
@@ -51,21 +51,21 @@
     .prologue
     const/4 v4, 0x0
 
-    .line 2562
+    .line 2628
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$48;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$48;->val$newPrintingStrings:Ljava/util/HashMap;
 
     iput-object v1, v0, Lorg/telegram/messenger/MessagesController;->printingStrings:Ljava/util/HashMap;
 
-    .line 2563
+    .line 2629
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$48;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$48;->val$newPrintingStringsTypes:Ljava/util/HashMap;
 
     iput-object v1, v0, Lorg/telegram/messenger/MessagesController;->printingStringsTypes:Ljava/util/HashMap;
 
-    .line 2564
+    .line 2630
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$48;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController;->printingStrings:Ljava/util/HashMap;
@@ -84,7 +84,7 @@
 
     if-nez v0, :cond_0
 
-    .line 2565
+    .line 2631
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -111,7 +111,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 2567
+    .line 2633
     :cond_0
     return-void
 .end method

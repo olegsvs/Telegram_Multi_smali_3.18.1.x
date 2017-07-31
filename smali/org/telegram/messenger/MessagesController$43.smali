@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 2270
+    .line 2336
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,10 +45,10 @@
     .prologue
     const/4 v6, 0x0
 
-    .line 2273
+    .line 2339
     if-nez p2, :cond_1
 
-    .line 2274
+    .line 2340
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {}, Ljava/lang/System;->currentTimeMillis()J
@@ -57,27 +57,27 @@
 
     invoke-static {v0, v2, v3}, Lorg/telegram/messenger/MessagesController;->access$3702(Lorg/telegram/messenger/MessagesController;J)J
 
-    .line 2275
+    .line 2341
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0, v6}, Lorg/telegram/messenger/MessagesController;->access$3802(Lorg/telegram/messenger/MessagesController;Z)Z
 
-    .line 2276
+    .line 2342
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0, v6}, Lorg/telegram/messenger/MessagesController;->access$3902(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 2282
+    .line 2348
     :cond_0
     :goto_0
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0, v6}, Lorg/telegram/messenger/MessagesController;->access$4002(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 2283
+    .line 2349
     return-void
 
-    .line 2278
+    .line 2344
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -91,7 +91,7 @@
 
     if-eqz v0, :cond_0
 
-    .line 2279
+    .line 2345
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$43;->this$0:Lorg/telegram/messenger/MessagesController;

@@ -20,19 +20,23 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$finalUpdate:Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;
+.field final synthetic val$chatsArr:Ljava/util/ArrayList;
+
+.field final synthetic val$usersArr:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 6929
+    .line 6653
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$107;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$107;->val$finalUpdate:Lorg/telegram/tgnet/TLRPC$TL_updateUserBlocked;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$107;->val$usersArr:Ljava/util/ArrayList;
+
+    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$107;->val$chatsArr:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -42,16 +46,25 @@
 
 # virtual methods
 .method public run()V
-    .locals 1
+    .locals 3
 
     .prologue
-    .line 6932
-    new-instance v0, Lorg/telegram/messenger/MessagesController$107$1;
+    const/4 v2, 0x0
 
-    invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$107$1;-><init>(Lorg/telegram/messenger/MessagesController$107;)V
+    .line 6656
+    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$107;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$107;->val$usersArr:Ljava/util/ArrayList;
 
-    .line 6945
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
+
+    .line 6657
+    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$107;->this$0:Lorg/telegram/messenger/MessagesController;
+
+    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$107;->val$chatsArr:Ljava/util/ArrayList;
+
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
+
+    .line 6658
     return-void
 .end method

@@ -29,7 +29,7 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/MessagesController$99$1;
 
     .prologue
-    .line 5968
+    .line 6048
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$99$1$2;->this$2:Lorg/telegram/messenger/MessagesController$99$1;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$99$1$2;->val$pushMessages:Ljava/util/ArrayList;
@@ -45,13 +45,13 @@
     .locals 1
 
     .prologue
-    .line 5971
+    .line 6051
     new-instance v0, Lorg/telegram/messenger/MessagesController$99$1$2$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$99$1$2$1;-><init>(Lorg/telegram/messenger/MessagesController$99$1$2;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 5977
+    .line 6057
     return-void
 .end method

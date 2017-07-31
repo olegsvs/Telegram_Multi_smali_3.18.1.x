@@ -27,7 +27,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 3935
+    .line 4001
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$63;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -45,20 +45,20 @@
     .prologue
     const/4 v4, -0x1
 
-    .line 3938
+    .line 4004
     if-nez p2, :cond_0
 
-    .line 3939
+    .line 4005
     instance-of v1, p1, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
 
     if-eqz v1, :cond_0
 
     move-object v0, p1
 
-    .line 3940
+    .line 4006
     check-cast v0, Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
 
-    .line 3941
+    .line 4007
     .local v0, "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$63;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -68,7 +68,7 @@
 
     invoke-virtual {v1, v4, v2, v4, v3}, Lorg/telegram/messenger/MessagesController;->processNewDifferenceParams(IIII)V
 
-    .line 3944
+    .line 4010
     .end local v0    # "res":Lorg/telegram/tgnet/TLRPC$TL_messages_affectedMessages;
     :cond_0
     return-void

@@ -29,7 +29,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$11;
 
     .prologue
-    .line 1174
+    .line 1181
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$11$1;->val$response:Lorg/telegram/tgnet/TLObject;
@@ -51,12 +51,12 @@
 
     const/4 v7, 0x0
 
-    .line 1177
+    .line 1184
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$11$1;->val$response:Lorg/telegram/tgnet/TLObject;
 
     check-cast v1, Lorg/telegram/tgnet/TLRPC$TL_userFull;
 
-    .line 1178
+    .line 1185
     .local v1, "userFull":Lorg/telegram/tgnet/TLRPC$TL_userFull;
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
@@ -74,19 +74,19 @@
 
     invoke-static {v3, v4, v5, v6}, Lorg/telegram/messenger/MessagesController;->access$1700(Lorg/telegram/messenger/MessagesController;JLorg/telegram/tgnet/TLRPC$PeerNotifySettings;)V
 
-    .line 1179
+    .line 1186
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_userFull;->bot_info:Lorg/telegram/tgnet/TLRPC$BotInfo;
 
     instance-of v3, v3, Lorg/telegram/tgnet/TLRPC$TL_botInfo;
 
     if-eqz v3, :cond_0
 
-    .line 1180
+    .line 1187
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_userFull;->bot_info:Lorg/telegram/tgnet/TLRPC$BotInfo;
 
     invoke-static {v3}, Lorg/telegram/messenger/query/BotQuery;->putBotInfo(Lorg/telegram/tgnet/TLRPC$BotInfo;)V
 
-    .line 1182
+    .line 1189
     :cond_0
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
@@ -108,7 +108,7 @@
 
     invoke-virtual {v3, v4, v1}, Ljava/util/HashMap;->put(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;
 
-    .line 1183
+    .line 1190
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$11;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -129,7 +129,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->remove(Ljava/lang/Object;)Z
 
-    .line 1184
+    .line 1191
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$11;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -150,7 +150,7 @@
 
     invoke-virtual {v3, v4}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1185
+    .line 1192
     new-instance v3, Ljava/lang/StringBuilder;
 
     invoke-direct {v3}, Ljava/lang/StringBuilder;-><init>()V
@@ -189,26 +189,26 @@
 
     move-result-object v0
 
-    .line 1186
+    .line 1193
     .local v0, "names":Ljava/lang/String;
     new-instance v2, Ljava/util/ArrayList;
 
     invoke-direct {v2}, Ljava/util/ArrayList;-><init>()V
 
-    .line 1187
+    .line 1194
     .local v2, "users":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Lorg/telegram/tgnet/TLRPC$User;>;"
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_userFull;->user:Lorg/telegram/tgnet/TLRPC$User;
 
     invoke-virtual {v2, v3}, Ljava/util/ArrayList;->add(Ljava/lang/Object;)Z
 
-    .line 1188
+    .line 1195
     iget-object v3, p0, Lorg/telegram/messenger/MessagesController$11$1;->this$1:Lorg/telegram/messenger/MessagesController$11;
 
     iget-object v3, v3, Lorg/telegram/messenger/MessagesController$11;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v3, v2, v7}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1189
+    .line 1196
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v3
@@ -217,7 +217,7 @@
 
     invoke-virtual {v3, v2, v4, v7, v8}, Lorg/telegram/messenger/MessagesStorage;->putUsersAndChats(Ljava/util/ArrayList;Ljava/util/ArrayList;ZZ)V
 
-    .line 1190
+    .line 1197
     if-eqz v0, :cond_1
 
     new-instance v3, Ljava/lang/StringBuilder;
@@ -258,7 +258,7 @@
 
     if-nez v3, :cond_1
 
-    .line 1191
+    .line 1198
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -275,7 +275,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1193
+    .line 1200
     :cond_1
     iget-object v3, v1, Lorg/telegram/tgnet/TLRPC$TL_userFull;->bot_info:Lorg/telegram/tgnet/TLRPC$BotInfo;
 
@@ -283,7 +283,7 @@
 
     if-eqz v3, :cond_2
 
-    .line 1194
+    .line 1201
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v3
@@ -308,7 +308,7 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1196
+    .line 1203
     :cond_2
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -334,6 +334,6 @@
 
     invoke-virtual {v3, v4, v5}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1197
+    .line 1204
     return-void
 .end method

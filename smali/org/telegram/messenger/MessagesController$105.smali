@@ -8,7 +8,7 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
+    value = Lorg/telegram/messenger/MessagesController;->processUpdates(Lorg/telegram/tgnet/TLRPC$Updates;Z)V
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
@@ -20,23 +20,15 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$chatsArr:Ljava/util/ArrayList;
-
-.field final synthetic val$usersArr:Ljava/util/ArrayList;
-
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;Ljava/util/ArrayList;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 6505
+    .line 6583
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$105;->this$0:Lorg/telegram/messenger/MessagesController;
-
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$105;->val$usersArr:Ljava/util/ArrayList;
-
-    iput-object p3, p0, Lorg/telegram/messenger/MessagesController$105;->val$chatsArr:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,25 +38,32 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     .prologue
-    const/4 v2, 0x0
+    .line 6586
+    invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
-    .line 6508
-    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$105;->this$0:Lorg/telegram/messenger/MessagesController;
+    move-result-object v0
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$105;->val$usersArr:Ljava/util/ArrayList;
+    sget v1, Lorg/telegram/messenger/NotificationCenter;->updateInterfaces:I
 
-    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
+    const/4 v2, 0x1
 
-    .line 6509
-    iget-object v0, p0, Lorg/telegram/messenger/MessagesController$105;->this$0:Lorg/telegram/messenger/MessagesController;
+    new-array v2, v2, [Ljava/lang/Object;
 
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$105;->val$chatsArr:Ljava/util/ArrayList;
+    const/4 v3, 0x0
 
-    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putChats(Ljava/util/ArrayList;Z)V
+    const/4 v4, 0x4
 
-    .line 6510
+    invoke-static {v4}, Ljava/lang/Integer;->valueOf(I)Ljava/lang/Integer;
+
+    move-result-object v4
+
+    aput-object v4, v2, v3
+
+    invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
+
+    .line 6587
     return-void
 .end method

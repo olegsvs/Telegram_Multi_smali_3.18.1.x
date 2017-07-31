@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$56;
 
     .prologue
-    .line 3172
+    .line 3238
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -43,7 +43,7 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 3175
+    .line 3241
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$56;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -58,35 +58,35 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 3176
+    .line 3242
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$56;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean v3, v0, Lorg/telegram/messenger/MessagesController;->loadingDialogs:Z
 
-    .line 3177
+    .line 3243
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-boolean v0, v0, Lorg/telegram/messenger/MessagesController$56;->val$resetEnd:Z
 
     if-eqz v0, :cond_0
 
-    .line 3178
+    .line 3244
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$56;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean v3, v0, Lorg/telegram/messenger/MessagesController;->dialogsEndReached:Z
 
-    .line 3179
+    .line 3245
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$56;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean v3, v0, Lorg/telegram/messenger/MessagesController;->serverDialogsEndReached:Z
 
-    .line 3181
+    .line 3247
     :cond_0
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
@@ -98,7 +98,7 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 3182
+    .line 3248
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$56$1;->this$1:Lorg/telegram/messenger/MessagesController$56;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$56;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -109,6 +109,6 @@
 
     invoke-virtual {v0, v3, v1, v3}, Lorg/telegram/messenger/MessagesController;->loadDialogs(IIZ)V
 
-    .line 3183
+    .line 3249
     return-void
 .end method

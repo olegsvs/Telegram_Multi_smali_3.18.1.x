@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 342
+    .line 347
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -47,7 +47,7 @@
     .prologue
     const/4 v10, 0x0
 
-    .line 346
+    .line 351
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -56,7 +56,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxMegagroupCount:I
 
-    .line 347
+    .line 352
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -65,7 +65,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxGroupCount:I
 
-    .line 348
+    .line 353
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -74,7 +74,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->groupBigSize:I
 
-    .line 349
+    .line 354
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -83,7 +83,7 @@
 
     invoke-static {v7, v8}, Lorg/telegram/messenger/MessagesController;->access$202(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 350
+    .line 355
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -92,7 +92,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxEditTime:I
 
-    .line 351
+    .line 356
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -101,7 +101,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->ratingDecay:I
 
-    .line 352
+    .line 357
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -110,7 +110,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxRecentGifsCount:I
 
-    .line 353
+    .line 358
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -119,12 +119,12 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxRecentStickersCount:I
 
-    .line 354
+    .line 359
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-boolean v0, v7, Lorg/telegram/messenger/MessagesController;->callsEnabled:Z
 
-    .line 355
+    .line 360
     .local v0, "callsOld":Z
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -134,7 +134,7 @@
 
     iput-boolean v8, v7, Lorg/telegram/messenger/MessagesController;->callsEnabled:Z
 
-    .line 356
+    .line 361
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -143,7 +143,7 @@
 
     iput-object v8, v7, Lorg/telegram/messenger/MessagesController;->linkPrefix:Ljava/lang/String;
 
-    .line 357
+    .line 362
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v7, v7, Lorg/telegram/messenger/MessagesController;->linkPrefix:Ljava/lang/String;
@@ -156,7 +156,7 @@
 
     if-eqz v7, :cond_0
 
-    .line 358
+    .line 363
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -179,7 +179,7 @@
 
     iput-object v8, v7, Lorg/telegram/messenger/MessagesController;->linkPrefix:Ljava/lang/String;
 
-    .line 360
+    .line 365
     :cond_0
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -193,7 +193,7 @@
 
     if-eqz v7, :cond_4
 
-    .line 361
+    .line 366
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -208,7 +208,7 @@
 
     iput-object v8, v7, Lorg/telegram/messenger/MessagesController;->linkPrefix:Ljava/lang/String;
 
-    .line 365
+    .line 370
     :cond_1
     :goto_0
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -219,7 +219,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->callReceiveTimeout:I
 
-    .line 366
+    .line 371
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -228,7 +228,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->callRingTimeout:I
 
-    .line 367
+    .line 372
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -237,7 +237,7 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->callConnectTimeout:I
 
-    .line 368
+    .line 373
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
@@ -246,49 +246,31 @@
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->callPacketTimeout:I
 
-    .line 369
+    .line 374
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    const/16 v8, 0xa
+    iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->val$config:Lorg/telegram/tgnet/TLRPC$TL_config;
+
+    iget v8, v8, Lorg/telegram/tgnet/TLRPC$TL_config;->pinned_dialogs_count_max:I
 
     iput v8, v7, Lorg/telegram/messenger/MessagesController;->maxPinnedDialogsCount:I
 
-    .line 371
+    .line 376
     sget-object v7, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    new-instance v8, Ljava/lang/StringBuilder;
-
-    invoke-direct {v8}, Ljava/lang/StringBuilder;-><init>()V
-
-    const-string/jumbo v9, "mainconfig"
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
-
-    move-result-object v9
-
-    invoke-virtual {v8, v9}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
-
-    move-result-object v8
-
-    invoke-virtual {v8}, Ljava/lang/StringBuilder;->toString()Ljava/lang/String;
-
-    move-result-object v8
+    const-string/jumbo v8, "mainconfig"
 
     invoke-virtual {v7, v8, v10}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v5
 
-    .line 372
+    .line 377
     .local v5, "preferences":Landroid/content/SharedPreferences;
     invoke-interface {v5}, Landroid/content/SharedPreferences;->edit()Landroid/content/SharedPreferences$Editor;
 
     move-result-object v4
 
-    .line 373
+    .line 378
     .local v4, "editor":Landroid/content/SharedPreferences$Editor;
     const-string/jumbo v7, "maxGroupCount"
 
@@ -298,7 +280,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 375
+    .line 380
     const-string/jumbo v7, "maxMegagroupCount"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -307,7 +289,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 376
+    .line 381
     const-string/jumbo v7, "groupBigSize"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -316,7 +298,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 377
+    .line 382
     const-string/jumbo v7, "maxEditTime"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -325,7 +307,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 378
+    .line 383
     const-string/jumbo v7, "ratingDecay"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -334,7 +316,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 379
+    .line 384
     const-string/jumbo v7, "maxRecentGifsCount"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -343,7 +325,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 380
+    .line 385
     const-string/jumbo v7, "maxRecentStickersCount"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -352,7 +334,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 381
+    .line 386
     const-string/jumbo v7, "callReceiveTimeout"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -361,7 +343,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 382
+    .line 387
     const-string/jumbo v7, "callRingTimeout"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -370,7 +352,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 383
+    .line 388
     const-string/jumbo v7, "callConnectTimeout"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -379,7 +361,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 384
+    .line 389
     const-string/jumbo v7, "callPacketTimeout"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -388,7 +370,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 385
+    .line 390
     const-string/jumbo v7, "callsEnabled"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -397,7 +379,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
-    .line 386
+    .line 391
     const-string/jumbo v7, "linkPrefix"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -406,7 +388,7 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 387
+    .line 392
     const-string/jumbo v7, "maxPinnedDialogsCount"
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -415,13 +397,13 @@
 
     invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences$Editor;->putInt(Ljava/lang/String;I)Landroid/content/SharedPreferences$Editor;
 
-    .line 389
+    .line 394
     :try_start_0
     new-instance v1, Lorg/telegram/tgnet/SerializedData;
 
     invoke-direct {v1}, Lorg/telegram/tgnet/SerializedData;-><init>()V
 
-    .line 390
+    .line 395
     .local v1, "data":Lorg/telegram/tgnet/SerializedData;
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -435,7 +417,7 @@
 
     invoke-virtual {v1, v7}, Lorg/telegram/tgnet/SerializedData;->writeInt32(I)V
 
-    .line 391
+    .line 396
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v7}, Lorg/telegram/messenger/MessagesController;->access$200(Lorg/telegram/messenger/MessagesController;)Ljava/util/ArrayList;
@@ -459,7 +441,7 @@
 
     check-cast v2, Lorg/telegram/tgnet/TLRPC$TL_disabledFeature;
 
-    .line 392
+    .line 397
     .local v2, "disabledFeature":Lorg/telegram/tgnet/TLRPC$TL_disabledFeature;
     invoke-virtual {v2, v1}, Lorg/telegram/tgnet/TLRPC$TL_disabledFeature;->serializeToStream(Lorg/telegram/tgnet/AbstractSerializedData;)V
     :try_end_0
@@ -467,35 +449,35 @@
 
     goto :goto_1
 
-    .line 398
+    .line 403
     .end local v1    # "data":Lorg/telegram/tgnet/SerializedData;
     .end local v2    # "disabledFeature":Lorg/telegram/tgnet/TLRPC$TL_disabledFeature;
     :catch_0
     move-exception v3
 
-    .line 399
+    .line 404
     .local v3, "e":Ljava/lang/Exception;
     const-string/jumbo v7, "disabledFeatures"
 
     invoke-interface {v4, v7}, Landroid/content/SharedPreferences$Editor;->remove(Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;
 
-    .line 400
+    .line 405
     invoke-static {v3}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 402
+    .line 407
     .end local v3    # "e":Ljava/lang/Exception;
     :cond_2
     :goto_2
     invoke-interface {v4}, Landroid/content/SharedPreferences$Editor;->commit()Z
 
-    .line 404
+    .line 409
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-boolean v7, v7, Lorg/telegram/messenger/MessagesController;->callsEnabled:Z
 
     if-eq v7, v0, :cond_3
 
-    .line 405
+    .line 410
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v7
@@ -506,11 +488,11 @@
 
     invoke-virtual {v7, v8, v9}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 407
+    .line 412
     :cond_3
     return-void
 
-    .line 362
+    .line 367
     .end local v4    # "editor":Landroid/content/SharedPreferences$Editor;
     .end local v5    # "preferences":Landroid/content/SharedPreferences;
     :cond_4
@@ -526,7 +508,7 @@
 
     if-eqz v7, :cond_1
 
-    .line 363
+    .line 368
     iget-object v7, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v8, p0, Lorg/telegram/messenger/MessagesController$3;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -543,7 +525,7 @@
 
     goto/16 :goto_0
 
-    .line 394
+    .line 399
     .restart local v1    # "data":Lorg/telegram/tgnet/SerializedData;
     .restart local v4    # "editor":Landroid/content/SharedPreferences$Editor;
     .restart local v5    # "preferences":Landroid/content/SharedPreferences;
@@ -559,7 +541,7 @@
 
     move-result-object v6
 
-    .line 395
+    .line 400
     .local v6, "string":Ljava/lang/String;
     invoke-virtual {v6}, Ljava/lang/String;->length()I
 
@@ -567,7 +549,7 @@
 
     if-eqz v7, :cond_2
 
-    .line 396
+    .line 401
     const-string/jumbo v7, "disabledFeatures"
 
     invoke-interface {v4, v7, v6}, Landroid/content/SharedPreferences$Editor;->putString(Ljava/lang/String;Ljava/lang/String;)Landroid/content/SharedPreferences$Editor;

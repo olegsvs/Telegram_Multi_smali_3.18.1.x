@@ -20,23 +20,19 @@
 # instance fields
 .field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$arrayList:Ljava/util/ArrayList;
-
-.field final synthetic val$key:I
+.field final synthetic val$pushMessages:Ljava/util/ArrayList;
 
 
 # direct methods
-.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;I)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)V
     .locals 0
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 7711
+    .line 7327
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$112;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$112;->val$arrayList:Ljava/util/ArrayList;
-
-    iput p3, p0, Lorg/telegram/messenger/MessagesController$112;->val$key:I
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$112;->val$pushMessages:Ljava/util/ArrayList;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -46,36 +42,16 @@
 
 # virtual methods
 .method public run()V
-    .locals 5
+    .locals 1
 
     .prologue
-    const/4 v4, 0x0
+    .line 7330
+    new-instance v0, Lorg/telegram/messenger/MessagesController$112$1;
 
-    .line 7714
-    invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
+    invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$112$1;-><init>(Lorg/telegram/messenger/MessagesController$112;)V
 
-    move-result-object v1
+    invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$112;->val$arrayList:Ljava/util/ArrayList;
-
-    iget v3, p0, Lorg/telegram/messenger/MessagesController$112;->val$key:I
-
-    invoke-virtual {v1, v2, v4, v3}, Lorg/telegram/messenger/MessagesStorage;->markMessagesAsDeleted(Ljava/util/ArrayList;ZI)Ljava/util/ArrayList;
-
-    move-result-object v0
-
-    .line 7715
-    .local v0, "dialogIds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
-    invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
-
-    move-result-object v1
-
-    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$112;->val$arrayList:Ljava/util/ArrayList;
-
-    iget v3, p0, Lorg/telegram/messenger/MessagesController$112;->val$key:I
-
-    invoke-virtual {v1, v2, v0, v4, v3}, Lorg/telegram/messenger/MessagesStorage;->updateDialogsWithDeletedMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;ZI)V
-
-    .line 7716
+    .line 7336
     return-void
 .end method

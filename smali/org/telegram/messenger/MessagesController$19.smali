@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1560
+    .line 1567
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$19;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$19;->val$mids:Landroid/util/SparseArray;
@@ -45,7 +45,7 @@
     .locals 5
 
     .prologue
-    .line 1563
+    .line 1570
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0
@@ -64,6 +64,6 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/NotificationCenter;->postNotificationName(I[Ljava/lang/Object;)V
 
-    .line 1564
+    .line 1571
     return-void
 .end method

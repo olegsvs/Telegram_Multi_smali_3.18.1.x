@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$21;
 
     .prologue
-    .line 1592
+    .line 1599
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$21$1;->this$1:Lorg/telegram/messenger/MessagesController$21;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 1595
+    .line 1602
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$21$1;->this$1:Lorg/telegram/messenger/MessagesController$21;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$21;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -56,7 +56,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesController;->getNewDeleteTask(Ljava/util/ArrayList;)V
 
-    .line 1596
+    .line 1603
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$21$1;->this$1:Lorg/telegram/messenger/MessagesController$21;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$21;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -65,7 +65,7 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$3102(Lorg/telegram/messenger/MessagesController;I)I
 
-    .line 1597
+    .line 1604
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$21$1;->this$1:Lorg/telegram/messenger/MessagesController$21;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$21;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -74,6 +74,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$2902(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;)Ljava/util/ArrayList;
 
-    .line 1598
+    .line 1605
     return-void
 .end method

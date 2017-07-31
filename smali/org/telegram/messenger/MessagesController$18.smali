@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1552
+    .line 1559
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$18;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$18;->val$minDate:I
@@ -45,7 +45,7 @@
     .locals 2
 
     .prologue
-    .line 1555
+    .line 1562
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$18;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-static {v0}, Lorg/telegram/messenger/MessagesController;->access$2900(Lorg/telegram/messenger/MessagesController;)Ljava/util/ArrayList;
@@ -81,7 +81,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 1556
+    .line 1563
     :cond_1
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$18;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -89,7 +89,7 @@
 
     invoke-virtual {v0, v1}, Lorg/telegram/messenger/MessagesController;->getNewDeleteTask(Ljava/util/ArrayList;)V
 
-    .line 1558
+    .line 1565
     :cond_2
     return-void
 .end method

@@ -27,7 +27,7 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/MessagesController$55$1;
 
     .prologue
-    .line 3140
+    .line 3206
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$55$1$1;->this$2:Lorg/telegram/messenger/MessagesController$55$1;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 3143
+    .line 3209
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$55$1$1;->this$2:Lorg/telegram/messenger/MessagesController$55$1;
 
     iget-object v0, v0, Lorg/telegram/messenger/MessagesController$55$1;->this$1:Lorg/telegram/messenger/MessagesController$55;
@@ -52,6 +52,6 @@
 
     invoke-static {v0, v1}, Lorg/telegram/messenger/MessagesController;->access$4502(Lorg/telegram/messenger/MessagesController;Z)Z
 
-    .line 3144
+    .line 3210
     return-void
 .end method

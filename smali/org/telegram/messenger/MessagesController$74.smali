@@ -31,7 +31,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 4283
+    .line 4349
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$74;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$74;->val$chat_id:I
@@ -51,19 +51,19 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 4286
+    .line 4352
     instance-of v0, p1, Lorg/telegram/tgnet/TLRPC$TL_boolTrue;
 
     if-eqz v0, :cond_0
 
-    .line 4287
+    .line 4353
     new-instance v0, Lorg/telegram/messenger/MessagesController$74$1;
 
     invoke-direct {v0, p0}, Lorg/telegram/messenger/MessagesController$74$1;-><init>(Lorg/telegram/messenger/MessagesController$74;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 4304
+    .line 4370
     :cond_0
     return-void
 .end method

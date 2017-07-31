@@ -33,7 +33,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1770
+    .line 1777
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$28;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$28;->val$users:Ljava/util/ArrayList;
@@ -55,12 +55,12 @@
     .prologue
     const/4 v3, 0x0
 
-    .line 1773
+    .line 1780
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->val$users:Ljava/util/ArrayList;
 
     if-eqz v0, :cond_0
 
-    .line 1774
+    .line 1781
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$28;->val$users:Ljava/util/ArrayList;
@@ -69,13 +69,13 @@
 
     invoke-virtual {v0, v1, v2}, Lorg/telegram/messenger/MessagesController;->putUsers(Ljava/util/ArrayList;Z)V
 
-    .line 1776
+    .line 1783
     :cond_0
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput-boolean v3, v0, Lorg/telegram/messenger/MessagesController;->loadingBlockedUsers:Z
 
-    .line 1777
+    .line 1784
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->val$ids:Ljava/util/ArrayList;
 
     invoke-virtual {v0}, Ljava/util/ArrayList;->isEmpty()Z
@@ -92,30 +92,30 @@
 
     if-nez v0, :cond_1
 
-    .line 1778
+    .line 1785
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-virtual {v0, v3}, Lorg/telegram/messenger/MessagesController;->getBlockedUsers(Z)V
 
-    .line 1786
+    .line 1793
     :goto_0
     return-void
 
-    .line 1780
+    .line 1787
     :cond_1
     iget-boolean v0, p0, Lorg/telegram/messenger/MessagesController$28;->val$cache:Z
 
     if-nez v0, :cond_2
 
-    .line 1781
+    .line 1788
     const/4 v0, 0x1
 
     sput-boolean v0, Lorg/telegram/messenger/UserConfig;->blockedUsersLoaded:Z
 
-    .line 1782
+    .line 1789
     invoke-static {v3}, Lorg/telegram/messenger/UserConfig;->saveConfig(Z)V
 
-    .line 1784
+    .line 1791
     :cond_2
     iget-object v0, p0, Lorg/telegram/messenger/MessagesController$28;->this$0:Lorg/telegram/messenger/MessagesController;
 
@@ -123,7 +123,7 @@
 
     iput-object v1, v0, Lorg/telegram/messenger/MessagesController;->blockedUsers:Ljava/util/ArrayList;
 
-    .line 1785
+    .line 1792
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v0

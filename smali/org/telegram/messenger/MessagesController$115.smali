@@ -1,4 +1,4 @@
-.class final Lorg/telegram/messenger/MessagesController$115;
+.class Lorg/telegram/messenger/MessagesController$115;
 .super Ljava/lang/Object;
 .source "MessagesController.java"
 
@@ -8,30 +8,35 @@
 
 # annotations
 .annotation system Ldalvik/annotation/EnclosingMethod;
-    value = Lorg/telegram/messenger/MessagesController;->addToCustomChats(I)V
+    value = Lorg/telegram/messenger/MessagesController;->processUpdateArray(Ljava/util/ArrayList;Ljava/util/ArrayList;Ljava/util/ArrayList;Z)Z
 .end annotation
 
 .annotation system Ldalvik/annotation/InnerClass;
-    accessFlags = 0x8
+    accessFlags = 0x0
     name = null
 .end annotation
 
 
 # instance fields
-.field final synthetic val$chatId:I
+.field final synthetic this$0:Lorg/telegram/messenger/MessagesController;
 
-.field final synthetic val$semaphore:Ljava/util/concurrent/Semaphore;
+.field final synthetic val$arrayList:Ljava/util/ArrayList;
+
+.field final synthetic val$key:I
 
 
 # direct methods
-.method constructor <init>(ILjava/util/concurrent/Semaphore;)V
+.method constructor <init>(Lorg/telegram/messenger/MessagesController;Ljava/util/ArrayList;I)V
     .locals 0
+    .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 8168
-    iput p1, p0, Lorg/telegram/messenger/MessagesController$115;->val$chatId:I
+    .line 7827
+    iput-object p1, p0, Lorg/telegram/messenger/MessagesController$115;->this$0:Lorg/telegram/messenger/MessagesController;
 
-    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$115;->val$semaphore:Ljava/util/concurrent/Semaphore;
+    iput-object p2, p0, Lorg/telegram/messenger/MessagesController$115;->val$arrayList:Ljava/util/ArrayList;
+
+    iput p3, p0, Lorg/telegram/messenger/MessagesController$115;->val$key:I
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
 
@@ -41,26 +46,36 @@
 
 # virtual methods
 .method public run()V
-    .locals 3
+    .locals 5
 
     .prologue
-    .line 8171
+    const/4 v4, 0x0
+
+    .line 7830
     invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
     move-result-object v1
 
-    iget v2, p0, Lorg/telegram/messenger/MessagesController$115;->val$chatId:I
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$115;->val$arrayList:Ljava/util/ArrayList;
 
-    invoke-virtual {v1, v2}, Lorg/telegram/messenger/MessagesStorage;->getChat(I)Lorg/telegram/tgnet/TLRPC$Chat;
+    iget v3, p0, Lorg/telegram/messenger/MessagesController$115;->val$key:I
+
+    invoke-virtual {v1, v2, v4, v3}, Lorg/telegram/messenger/MessagesStorage;->markMessagesAsDeleted(Ljava/util/ArrayList;ZI)Ljava/util/ArrayList;
 
     move-result-object v0
 
-    .line 8172
-    .local v0, "currentChat":Lorg/telegram/tgnet/TLRPC$Chat;
-    iget-object v1, p0, Lorg/telegram/messenger/MessagesController$115;->val$semaphore:Ljava/util/concurrent/Semaphore;
+    .line 7831
+    .local v0, "dialogIds":Ljava/util/ArrayList;, "Ljava/util/ArrayList<Ljava/lang/Long;>;"
+    invoke-static {}, Lorg/telegram/messenger/MessagesStorage;->getInstance()Lorg/telegram/messenger/MessagesStorage;
 
-    invoke-virtual {v1}, Ljava/util/concurrent/Semaphore;->release()V
+    move-result-object v1
 
-    .line 8173
+    iget-object v2, p0, Lorg/telegram/messenger/MessagesController$115;->val$arrayList:Ljava/util/ArrayList;
+
+    iget v3, p0, Lorg/telegram/messenger/MessagesController$115;->val$key:I
+
+    invoke-virtual {v1, v2, v0, v4, v3}, Lorg/telegram/messenger/MessagesStorage;->updateDialogsWithDeletedMessages(Ljava/util/ArrayList;Ljava/util/ArrayList;ZI)V
+
+    .line 7832
     return-void
 .end method

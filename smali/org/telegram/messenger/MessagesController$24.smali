@@ -37,7 +37,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 1671
+    .line 1678
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$24;->this$0:Lorg/telegram/messenger/MessagesController;
 
     iput p2, p0, Lorg/telegram/messenger/MessagesController$24;->val$did:I
@@ -63,34 +63,34 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 1674
+    .line 1681
     if-nez p2, :cond_3
 
     move-object v11, p1
 
-    .line 1675
+    .line 1682
     check-cast v11, Lorg/telegram/tgnet/TLRPC$messages_Messages;
 
-    .line 1676
+    .line 1683
     .local v11, "messages":Lorg/telegram/tgnet/TLRPC$messages_Messages;
     new-instance v2, Lorg/telegram/tgnet/TLRPC$TL_photos_photos;
 
     invoke-direct {v2}, Lorg/telegram/tgnet/TLRPC$TL_photos_photos;-><init>()V
 
-    .line 1677
+    .line 1684
     .local v2, "res":Lorg/telegram/tgnet/TLRPC$TL_photos_photos;
     iget v1, v11, Lorg/telegram/tgnet/TLRPC$messages_Messages;->count:I
 
     iput v1, v2, Lorg/telegram/tgnet/TLRPC$TL_photos_photos;->count:I
 
-    .line 1678
+    .line 1685
     iget-object v1, v2, Lorg/telegram/tgnet/TLRPC$TL_photos_photos;->users:Ljava/util/ArrayList;
 
     iget-object v3, v11, Lorg/telegram/tgnet/TLRPC$messages_Messages;->users:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v3}, Ljava/util/ArrayList;->addAll(Ljava/util/Collection;)Z
 
-    .line 1679
+    .line 1686
     const/4 v0, 0x0
 
     .local v0, "a":I
@@ -103,7 +103,7 @@
 
     if-ge v0, v1, :cond_2
 
-    .line 1680
+    .line 1687
     iget-object v1, v11, Lorg/telegram/tgnet/TLRPC$messages_Messages;->messages:Ljava/util/ArrayList;
 
     invoke-virtual {v1, v0}, Ljava/util/ArrayList;->get(I)Ljava/lang/Object;
@@ -112,7 +112,7 @@
 
     check-cast v10, Lorg/telegram/tgnet/TLRPC$Message;
 
-    .line 1681
+    .line 1688
     .local v10, "message":Lorg/telegram/tgnet/TLRPC$Message;
     iget-object v1, v10, Lorg/telegram/tgnet/TLRPC$Message;->action:Lorg/telegram/tgnet/TLRPC$MessageAction;
 
@@ -124,14 +124,14 @@
 
     if-nez v1, :cond_1
 
-    .line 1679
+    .line 1686
     :cond_0
     :goto_1
     add-int/lit8 v0, v0, 0x1
 
     goto :goto_0
 
-    .line 1684
+    .line 1691
     :cond_1
     iget-object v1, v2, Lorg/telegram/tgnet/TLRPC$TL_photos_photos;->photos:Ljava/util/ArrayList;
 
@@ -143,7 +143,7 @@
 
     goto :goto_1
 
-    .line 1686
+    .line 1693
     .end local v10    # "message":Lorg/telegram/tgnet/TLRPC$Message;
     :cond_2
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$24;->this$0:Lorg/telegram/messenger/MessagesController;
@@ -162,7 +162,7 @@
 
     invoke-virtual/range {v1 .. v9}, Lorg/telegram/messenger/MessagesController;->processLoadedUserPhotos(Lorg/telegram/tgnet/TLRPC$photos_Photos;IIIJZI)V
 
-    .line 1688
+    .line 1695
     .end local v0    # "a":I
     .end local v2    # "res":Lorg/telegram/tgnet/TLRPC$TL_photos_photos;
     .end local v11    # "messages":Lorg/telegram/tgnet/TLRPC$messages_Messages;

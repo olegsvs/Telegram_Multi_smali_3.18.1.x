@@ -37,7 +37,7 @@
     .param p1, "this$0"    # Lorg/telegram/messenger/MessagesController;
 
     .prologue
-    .line 219
+    .line 222
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$1;->this$0:Lorg/telegram/messenger/MessagesController;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -51,7 +51,7 @@
     .locals 1
 
     .prologue
-    .line 219
+    .line 222
     check-cast p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;
 
     check-cast p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;
@@ -75,7 +75,7 @@
 
     const/4 v4, -0x1
 
-    .line 222
+    .line 225
     iget-boolean v6, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinned:Z
 
     if-nez v6, :cond_1
@@ -84,12 +84,12 @@
 
     if-eqz v6, :cond_1
 
-    .line 244
+    .line 247
     :cond_0
     :goto_0
     return v3
 
-    .line 224
+    .line 227
     :cond_1
     iget-boolean v6, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinned:Z
 
@@ -101,10 +101,10 @@
 
     move v3, v4
 
-    .line 225
+    .line 228
     goto :goto_0
 
-    .line 226
+    .line 229
     :cond_2
     iget-boolean v6, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinned:Z
 
@@ -114,14 +114,14 @@
 
     if-eqz v6, :cond_4
 
-    .line 227
+    .line 230
     iget v6, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinnedNum:I
 
     iget v7, p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinnedNum:I
 
     if-lt v6, v7, :cond_0
 
-    .line 229
+    .line 232
     iget v3, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinnedNum:I
 
     iget v6, p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->pinnedNum:I
@@ -130,16 +130,16 @@
 
     move v3, v4
 
-    .line 230
+    .line 233
     goto :goto_0
 
     :cond_3
     move v3, v5
 
-    .line 232
+    .line 235
     goto :goto_0
 
-    .line 235
+    .line 238
     :cond_4
     iget-wide v6, p1, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
 
@@ -147,7 +147,7 @@
 
     move-result-object v2
 
-    .line 236
+    .line 239
     .local v2, "draftMessage":Lorg/telegram/tgnet/TLRPC$DraftMessage;
     if-eqz v2, :cond_5
 
@@ -159,7 +159,7 @@
 
     iget v0, v2, Lorg/telegram/tgnet/TLRPC$DraftMessage;->date:I
 
-    .line 237
+    .line 240
     .local v0, "date1":I
     :goto_1
     iget-wide v6, p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->id:J
@@ -168,7 +168,7 @@
 
     move-result-object v2
 
-    .line 238
+    .line 241
     if-eqz v2, :cond_6
 
     iget v6, v2, Lorg/telegram/tgnet/TLRPC$DraftMessage;->date:I
@@ -179,20 +179,20 @@
 
     iget v1, v2, Lorg/telegram/tgnet/TLRPC$DraftMessage;->date:I
 
-    .line 239
+    .line 242
     .local v1, "date2":I
     :goto_2
     if-lt v0, v1, :cond_0
 
-    .line 241
+    .line 244
     if-le v0, v1, :cond_7
 
     move v3, v4
 
-    .line 242
+    .line 245
     goto :goto_0
 
-    .line 236
+    .line 239
     .end local v0    # "date1":I
     .end local v1    # "date2":I
     :cond_5
@@ -200,7 +200,7 @@
 
     goto :goto_1
 
-    .line 238
+    .line 241
     .restart local v0    # "date1":I
     :cond_6
     iget v1, p2, Lorg/telegram/tgnet/TLRPC$TL_dialog;->last_message_date:I
@@ -211,6 +211,6 @@
     :cond_7
     move v3, v5
 
-    .line 244
+    .line 247
     goto :goto_0
 .end method

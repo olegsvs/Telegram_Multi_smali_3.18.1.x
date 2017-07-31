@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$68;
 
     .prologue
-    .line 4159
+    .line 4225
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$68$2;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 4
 
     .prologue
-    .line 4162
+    .line 4228
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$68$2;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
     iget-object v2, v2, Lorg/telegram/messenger/MessagesController$68;->val$context:Landroid/content/Context;
@@ -54,7 +54,7 @@
 
     if-nez v2, :cond_0
 
-    .line 4164
+    .line 4230
     :try_start_0
     iget-object v2, p0, Lorg/telegram/messenger/MessagesController$68$2;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
@@ -64,7 +64,7 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4168
+    .line 4234
     :goto_0
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
@@ -74,11 +74,11 @@
 
     invoke-direct {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 4169
+    .line 4235
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v2, "AppName"
 
-    const v3, 0x7f070072
+    const v3, 0x7f070078
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -86,10 +86,10 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 4170
+    .line 4236
     const-string/jumbo v2, "ErrorOccurred"
 
-    const v3, 0x7f0701f1
+    const v3, 0x7f07023f
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -97,10 +97,10 @@
 
     invoke-virtual {v0, v2}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 4171
+    .line 4237
     const-string/jumbo v2, "OK"
 
-    const v3, 0x7f0703b5
+    const v3, 0x7f070452
 
     invoke-static {v2, v3}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -110,7 +110,7 @@
 
     invoke-virtual {v0, v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 4172
+    .line 4238
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->show()Lorg/telegram/ui/ActionBar/AlertDialog;
 
     move-result-object v2
@@ -119,16 +119,16 @@
 
     invoke-virtual {v2, v3}, Lorg/telegram/ui/ActionBar/AlertDialog;->setCanceledOnTouchOutside(Z)V
 
-    .line 4174
+    .line 4240
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     :cond_0
     return-void
 
-    .line 4165
+    .line 4231
     :catch_0
     move-exception v1
 
-    .line 4166
+    .line 4232
     .local v1, "e":Ljava/lang/Exception;
     invoke-static {v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

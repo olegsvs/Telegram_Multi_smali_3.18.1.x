@@ -29,7 +29,7 @@
     .param p1, "this$2"    # Lorg/telegram/messenger/MessagesController$93$2;
 
     .prologue
-    .line 5171
+    .line 5251
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$93$2$1;->this$2:Lorg/telegram/messenger/MessagesController$93$2;
 
     iput-object p2, p0, Lorg/telegram/messenger/MessagesController$93$2$1;->val$corrected:Ljava/util/HashMap;
@@ -49,7 +49,7 @@
 
     const/4 v12, 0x0
 
-    .line 5174
+    .line 5254
     iget-object v4, p0, Lorg/telegram/messenger/MessagesController$93$2$1;->val$corrected:Ljava/util/HashMap;
 
     invoke-virtual {v4}, Ljava/util/HashMap;->entrySet()Ljava/util/Set;
@@ -73,7 +73,7 @@
 
     check-cast v0, Ljava/util/Map$Entry;
 
-    .line 5175
+    .line 5255
     .local v0, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;[J>;"
     invoke-interface {v0}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -81,7 +81,7 @@
 
     check-cast v2, Ljava/lang/Integer;
 
-    .line 5176
+    .line 5256
     .local v2, "newId":Ljava/lang/Integer;
     invoke-interface {v0}, Ljava/util/Map$Entry;->getValue()Ljava/lang/Object;
 
@@ -89,7 +89,7 @@
 
     check-cast v1, [J
 
-    .line 5177
+    .line 5257
     .local v1, "ids":[J
     aget-wide v6, v1, v13
 
@@ -99,7 +99,7 @@
 
     move-result-object v3
 
-    .line 5178
+    .line 5258
     .local v3, "oldId":Ljava/lang/Integer;
     invoke-static {}, Lorg/telegram/messenger/SendMessagesHelper;->getInstance()Lorg/telegram/messenger/SendMessagesHelper;
 
@@ -111,7 +111,7 @@
 
     invoke-virtual {v5, v6}, Lorg/telegram/messenger/SendMessagesHelper;->processSentMessage(I)V
 
-    .line 5179
+    .line 5259
     invoke-static {}, Lorg/telegram/messenger/NotificationCenter;->getInstance()Lorg/telegram/messenger/NotificationCenter;
 
     move-result-object v5
@@ -146,7 +146,7 @@
 
     goto :goto_0
 
-    .line 5181
+    .line 5261
     .end local v0    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/Integer;[J>;"
     .end local v1    # "ids":[J
     .end local v2    # "newId":Ljava/lang/Integer;

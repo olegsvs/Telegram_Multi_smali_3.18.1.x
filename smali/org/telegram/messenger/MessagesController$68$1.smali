@@ -27,7 +27,7 @@
     .param p1, "this$1"    # Lorg/telegram/messenger/MessagesController$68;
 
     .prologue
-    .line 4144
+    .line 4210
     iput-object p1, p0, Lorg/telegram/messenger/MessagesController$68$1;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
@@ -41,7 +41,7 @@
     .locals 2
 
     .prologue
-    .line 4147
+    .line 4213
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$68$1;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
     iget-object v1, v1, Lorg/telegram/messenger/MessagesController$68;->val$context:Landroid/content/Context;
@@ -54,7 +54,7 @@
 
     if-nez v1, :cond_0
 
-    .line 4149
+    .line 4215
     :try_start_0
     iget-object v1, p0, Lorg/telegram/messenger/MessagesController$68$1;->this$1:Lorg/telegram/messenger/MessagesController$68;
 
@@ -64,16 +64,16 @@
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 4154
+    .line 4220
     :cond_0
     :goto_0
     return-void
 
-    .line 4150
+    .line 4216
     :catch_0
     move-exception v0
 
-    .line 4151
+    .line 4217
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 

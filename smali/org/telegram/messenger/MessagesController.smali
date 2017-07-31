@@ -1537,7 +1537,7 @@
     .line 297
     sget-object v10, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v11, "Notifications"
+    const-string/jumbo v11, "Notifications_user_0"
 
     const/4 v12, 0x0
 
@@ -8939,7 +8939,7 @@
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old2;->first_name:Ljava/lang/String;
 
     .line 449
-    const-string/jumbo v1, "Notifications"
+    const-string/jumbo v1, "Notifications_user_0"
 
     iput-object v1, v0, Lorg/telegram/tgnet/TLRPC$TL_userForeign_old2;->last_name:Ljava/lang/String;
 

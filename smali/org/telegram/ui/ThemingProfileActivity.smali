@@ -84,12 +84,12 @@
 .end method
 
 .method static synthetic access$000(Lorg/telegram/ui/ThemingProfileActivity;)Z
-    .locals 1
+    .locals 2
     .param p0, "x0"    # Lorg/telegram/ui/ThemingProfileActivity;
 
     .prologue
     .line 53
-    iget-boolean v0, p0, Lorg/telegram/ui/ThemingProfileActivity;->showPrefix:Z
+    const/4 v0, 0x0
 
     return v0
 .end method

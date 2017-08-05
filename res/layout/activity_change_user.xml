@@ -2,5 +2,5 @@
 <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0"
   xmlns:android="http://schemas.android.com/apk/res/android">
     <ListView android:id="@id/users_listview" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="397.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.8" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-    <Button android:id="@id/buttonAddUser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/AddUser" android:layout_weight="1.0" android:onClick="buttonAddUserClick" />
+    <Button android:id="@id/buttonAddUser" android:background="@color/header" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/AddUser" android:layout_weight="1.0" android:onClick="buttonAddUserClick" />
 </LinearLayout>

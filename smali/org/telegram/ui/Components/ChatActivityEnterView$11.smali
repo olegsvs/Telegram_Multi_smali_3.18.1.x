@@ -229,7 +229,7 @@
     :cond_2
     const v1, 0x7f0201f8
 
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 785
     :catch_0

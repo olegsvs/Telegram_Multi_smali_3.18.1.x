@@ -176,7 +176,7 @@ Telegramはあなたが所有するすべての端末から利用できます。
     <string name="ChangePhoneNewNumber">新しい電話番号</string>
     <string name="ChangePhoneNumberOccupied">%1$s はTelegramのアカウントで使用されています。移行する前にそのアカウントを削除してください。</string>
     <string name="ChangeRecoveryEmail">回復用のメールアドレスを変更する</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="Channels">チャンネル</string>
     <string name="ChatBackground">チャット画面の背景設定</string>
     <string name="ChatCamera">カメラ</string>

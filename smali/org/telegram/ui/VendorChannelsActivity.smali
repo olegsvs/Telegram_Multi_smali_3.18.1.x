@@ -330,25 +330,26 @@
     return-object v3
 .end method
 
+
 .method public goToChannel(I)V
     .locals 5
     .param p1, "position"    # I
 
     .prologue
-    .line 80
-    const-string v1, "https://telegram.me/"
+    .line 68
+    const-string v2, "https://telegram.me/"
 
-    .line 81
-    .local v1, "link":Ljava/lang/String;
+    .line 69
+    .local v2, "link":Ljava/lang/String;
     const/4 v0, 0x0
 
-    .line 82
+    .line 70
     .local v0, "channel":Ljava/lang/String;
     packed-switch p1, :pswitch_data_0
 
-    .line 111
+    .line 99
     :goto_0
-    new-instance v2, Landroid/content/Intent;
+    new-instance v1, Landroid/content/Intent;
 
     const-string v3, "android.intent.action.VIEW"
 
@@ -356,7 +357,7 @@
 
     invoke-direct {v4}, Ljava/lang/StringBuilder;-><init>()V
 
-    invoke-virtual {v4, v1}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v4, v2}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v4
 
@@ -372,78 +373,91 @@
 
     move-result-object v4
 
-    invoke-direct {v2, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
+    invoke-direct {v1, v3, v4}, Landroid/content/Intent;-><init>(Ljava/lang/String;Landroid/net/Uri;)V
 
+    .line 100
+    .local v1, "intent":Landroid/content/Intent;
+    const/high16 v3, 0x10000000
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->addFlags(I)Landroid/content/Intent;
+
+    .line 101
+    const-string v3, "org.telegram.multi"
+
+    invoke-virtual {v1, v3}, Landroid/content/Intent;->setPackage(Ljava/lang/String;)Landroid/content/Intent;
+
+    .line 102
     const/16 v3, 0x1f8
 
-    invoke-virtual {p0, v2, v3}, Lorg/telegram/ui/VendorChannelsActivity;->startActivityForResult(Landroid/content/Intent;I)V
+    invoke-virtual {p0, v1, v3}, Lorg/telegram/ui/VendorChannelsActivity;->startActivityForResult(Landroid/content/Intent;I)V
 
-    .line 112
+    .line 103
     return-void
 
-    .line 84
+    .line 72
+    .end local v1    # "intent":Landroid/content/Intent;
     :pswitch_0
     const-string v0, "vilkaru"
+
+    .line 73
+    goto :goto_0
+
+    .line 75
+    :pswitch_1
+    const-string v0, "kepchup"
+
+    .line 76
+    goto :goto_0
+
+    .line 78
+    :pswitch_2
+    const-string v0, "comics_dc"
+
+    .line 79
+    goto :goto_0
+
+    .line 81
+    :pswitch_3
+    const-string v0, "ruschannels"
+
+    .line 82
+    goto :goto_0
+
+    .line 84
+    :pswitch_4
+    const-string v0, "neoru"
 
     .line 85
     goto :goto_0
 
     .line 87
-    :pswitch_1
-    const-string v0, "kepchup"
+    :pswitch_5
+    const-string v0, "music_rus"
 
     .line 88
     goto :goto_0
 
     .line 90
-    :pswitch_2
-    const-string v0, "comics_dc"
+    :pswitch_6
+    const-string v0, "evill_genius"
 
     .line 91
     goto :goto_0
 
     .line 93
-    :pswitch_3
-    const-string v0, "ruschannels"
+    :pswitch_7
+    const-string v0, "my_spb"
 
     .line 94
     goto :goto_0
 
     .line 96
-    :pswitch_4
-    const-string v0, "neoru"
-
-    .line 97
-    goto :goto_0
-
-    .line 99
-    :pswitch_5
-    const-string v0, "music_rus"
-
-    .line 100
-    goto :goto_0
-
-    .line 102
-    :pswitch_6
-    const-string v0, "evill_genius"
-
-    .line 103
-    goto :goto_0
-
-    .line 105
-    :pswitch_7
-    const-string v0, "my_spb"
-
-    .line 106
-    goto :goto_0
-
-    .line 108
     :pswitch_8
     const-string v0, "mskcity"
 
     goto :goto_0
 
-    .line 82
+    .line 70
     nop
 
     :pswitch_data_0
@@ -709,9 +723,9 @@
 
     move-result-object v0
 
-    const-string v1, "\u0412\u0438\u043b\u043a\u0430.ru"
+    const-string/jumbo v1, "\u0412\u0438\u043b\u043a\u0430.ru"
 
-    const-string v2, "\u0421\u0430\u043c\u044b\u0435 \u043d\u043e\u0432\u044b\u0435 \u0438 \u0432\u043a\u0443\u0441\u043d\u044b\u0435 \u0440\u0435\u0446\u0435\u043f\u0442\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u0443 \u043d\u0430\u0441"
+    const-string/jumbo v2, "\u0421\u0430\u043c\u044b\u0435 \u043d\u043e\u0432\u044b\u0435 \u0438 \u0432\u043a\u0443\u0441\u043d\u044b\u0435 \u0440\u0435\u0446\u0435\u043f\u0442\u044b \u0442\u043e\u043b\u044c\u043a\u043e \u0443 \u043d\u0430\u0441"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -722,9 +736,9 @@
 
     move-result-object v0
 
-    const-string v1, "\u041a\u0435\u043f\u0427\u0443\u043f ;-)"
+    const-string/jumbo v1, "\u041a\u0435\u043f\u0427\u0443\u043f ;-)"
 
-    const-string v2, "\u042e\u043c\u043e\u0440 \u0438 \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u043c, \u043a\u0430\u043a \u0441\u0442\u0438\u043b\u044c \u0436\u0438\u0437\u043d\u0438!"
+    const-string/jumbo v2, "\u042e\u043c\u043e\u0440 \u0438 \u043e\u043f\u0442\u0438\u043c\u0438\u0437\u043c, \u043a\u0430\u043a \u0441\u0442\u0438\u043b\u044c \u0436\u0438\u0437\u043d\u0438!"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
@@ -737,12 +751,12 @@
 
     const-string v1, "DC/MARVEL"
 
-    const-string v2, "\u041a\u0438\u043d\u043e\u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0430\u044f \u0441\u0443\u043f\u0435\u0440\u0433\u0435\u0440\u043e\u0435\u0432"
+    const-string/jumbo v2, "\u041a\u0438\u043d\u043e\u0432\u0441\u0435\u043b\u0435\u043d\u043d\u0430\u044f \u0441\u0443\u043f\u0435\u0440\u0433\u0435\u0440\u043e\u0435\u0432"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 135
-    const v0, 0x7f02029A
+    const v0, 0x7f02029a
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
@@ -750,72 +764,72 @@
 
     const-string v1, "RusChannels"
 
-    const-string v2, "\u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0435\u0439\u0448\u0438\u0445 \u0440\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0445 \u043a\u0430\u043d\u0430\u043b\u043e\u0432 Telegram"
+    const-string/jumbo v2, "\u041a\u0430\u0442\u0430\u043b\u043e\u0433 \u0438\u043d\u0442\u0435\u0440\u0435\u0441\u043d\u0435\u0439\u0448\u0438\u0445 \u0440\u0443\u0441\u0441\u043a\u043e\u044f\u0437\u044b\u0447\u043d\u044b\u0445 \u043a\u0430\u043d\u0430\u043b\u043e\u0432 Telegram"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 136
-    const v0, 0x7f02029B
+    const v0, 0x7f02029b
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const-string v1, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
+    const-string/jumbo v1, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
 
-    const-string v2, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
+    const-string/jumbo v2, "\u041d\u0435\u043e\u0440\u0438\u0442\u043e\u0440\u0438\u043a\u0430"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 137
-    const v0, 0x7f02029C
+    const v0, 0x7f02029c
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const-string v1, "\u041c\u0443\u0437\u044b\u043a\u0430 (\u0420\u041e\u0421\u0421\u0418\u042f)"
+    const-string/jumbo v1, "\u041c\u0443\u0437\u044b\u043a\u0430 (\u0420\u041e\u0421\u0421\u0418\u042f)"
 
-    const-string v2, "\u041b\u0443\u0447\u0448\u0430\u044f \u043c\u0443\u0437\u044b\u043a\u0430"
+    const-string/jumbo v2, "\u041b\u0443\u0447\u0448\u0430\u044f \u043c\u0443\u0437\u044b\u043a\u0430"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 138
-    const v0, 0x7f02029D
+    const v0, 0x7f02029d
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const-string v1, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
+    const-string/jumbo v1, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
 
-    const-string v2, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
+    const-string/jumbo v2, "\u0417\u043b\u043e\u0439 \u0433\u0435\u043d\u0438\u0439"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 139
-    const v0, 0x7f02029E
+    const v0, 0x7f02029e
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const-string v1, "\u041c\u043e\u0439 \u041f\u0438\u0442\u0435\u0440"
+    const-string/jumbo v1, "\u041c\u043e\u0439 \u041f\u0438\u0442\u0435\u0440"
 
-    const-string v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435"
+    const-string/jumbo v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 
     .line 140
-    const v0, 0x7f02029F
+    const v0, 0x7f02029f
 
     invoke-virtual {p0, v0}, Lorg/telegram/ui/VendorChannelsActivity;->drawableToBitmap(I)Landroid/graphics/Bitmap;
 
     move-result-object v0
 
-    const-string v1, "\u041c\u043e\u044f \u041c\u043e\u0441\u043a\u0432\u0430"
+    const-string/jumbo v1, "\u041c\u043e\u044f \u041c\u043e\u0441\u043a\u0432\u0430"
 
-    const-string v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435"
+    const-string/jumbo v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u041c\u043e\u0441\u043a\u0432\u0435"
 
     invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
 

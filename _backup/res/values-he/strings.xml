@@ -210,7 +210,7 @@
     <string name="ChannelJoinTo">"אתה מעוניין להצטרף לערוץ '%1$s'?"</string>
     <string name="ChannelJoined">אתה מחובר לערוץ</string>
     <string name="ChannelLeaveAlert">אתה בטוח שאתה רוצה לעזוב את הערוץ?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrhe</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">כל מי שמשתמש בתוכנת טלגרם יוכל להצטרף לערוץ שלך על ידי הקישור הבא.</string>
     <string name="ChannelLinkTitle">קישור</string>
     <string name="ChannelMembers">משתמשים</string>

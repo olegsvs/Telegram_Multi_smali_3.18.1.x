@@ -325,7 +325,7 @@
 
     invoke-static {v4, v5}, Lorg/telegram/messenger/NotificationsController;->updateServerNotificationsSettings(J)V
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 898
     .end local v11    # "dialg":Lorg/telegram/tgnet/TLRPC$TL_dialog;

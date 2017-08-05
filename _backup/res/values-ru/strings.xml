@@ -196,6 +196,7 @@
     <string name="Call">Позвонить</string>
     <string name="CallText">Мы позвоним вам через %1$d:%2$02d</string>
     <string name="Calling">Звоним вам...</string>
+    <string name="Calls">Звонки</string>
     <string name="Cancel">Отмена</string>
     <string name="CancelRegistration">Отмена регистрации</string>
     <string name="Cancelled">Отменено</string>
@@ -245,7 +246,7 @@
     <string name="ChannelJoinTo">"Хотите подписаться на канал '%1$s'?"</string>
     <string name="ChannelJoined">Вы подписались на этот канал</string>
     <string name="ChannelLeaveAlert">Уверены, что хотите покинуть канал?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrru</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Любой пользователь Telegram сможет подписаться на ваш канал, перейдя по этой ссылке.</string>
     <string name="ChannelLinkTitle">Ссылка</string>
     <string name="ChannelMegaJoined">Вы вступили в эту группу</string>
@@ -1573,4 +1574,19 @@
     <string name="hockeyapp_update_dialog_title">Доступно обновление</string>
     <string name="hockeyapp_update_mandatory_toast">%s доступен и является обязательным для обновления!</string>
     <string name="Change_another_user">Мультиюзер</string>
+    <string name="DialogAddNo">Нет</string>
+    <string name="DialogAddSure">Продолжить?</string>
+    <string name="DialogAddUser">Приложение завершит работу и автоматически запустится через пару секунд для добавления нового пользователя</string>
+    <string name="DialogAddYes">Да</string>
+    <string name="DialogDeleteUser">Удалить пользователя?</string>
+    <string name="DialogNo">Нет</string>
+    <string name="DialogSure">Вы уверены?</string>
+    <string name="DialogYes">Да</string>
+    <string name="IsCurrentUser">Это текущий пользователь!</string>
+    <string name="MaxUsersCount">Можно добавить максимум 10 пользователей!</string>
+    <string name="ScanningProfiles">Сканирование профилей</string>
+    <string name="DeleteFirstUser">Невозможно удалить первого пользователя!</string>
+    <string name="AddUser">Добавить аккаунт</string>
+    <string name="GoBack">Вернуться назад</string>
+    <string name="VendorChannels">Каналы Telegram</string>
 </resources>

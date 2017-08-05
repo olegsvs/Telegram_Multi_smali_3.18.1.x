@@ -297,7 +297,7 @@
     <string name="ChannelJoinTo">"هل ترغب في الدخول لقناة '%1$s'؟"</string>
     <string name="ChannelJoined">لقد قمت بالإشتراك في لقناة.</string>
     <string name="ChannelLeaveAlert">هل أنت متأكد من رغبتك في مغادرة القناة؟</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">أي شخص يمتلك تيليجرام على جهازه سيمكنه الدخول لقناتك باستخدام هذا الرابط.</string>
     <string name="ChannelLinkTitle">الرابط</string>
     <string name="ChannelMegaJoined">لقد قمت بالدخول لهذه المجموعة</string>

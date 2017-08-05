@@ -299,7 +299,7 @@ Nota: si olvidas el código, tendrás que eliminar y reinstalar la aplicación. 
     <string name="ChannelJoinTo">¿Quieres unirte al canal “%1$s”?</string>
     <string name="ChannelJoined">Te uniste a este canal</string>
     <string name="ChannelLeaveAlert">¿Quieres salir de este canal?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgres</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Cualquiera que tenga Telegram instalada podrá unirse a tu canal siguiendo este enlace.</string>
     <string name="ChannelLinkTitle">Enlace</string>
     <string name="ChannelMegaJoined">Te uniste a este grupo</string>

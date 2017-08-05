@@ -1,7 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="Calls">Звонки</string>
-	<string name="VendorChannels">Каналы Telegram</string>
     <string name="common_google_play_services_enable_button">Включить</string>
     <string name="common_google_play_services_enable_text">Для работы приложения \"%1$s\" требуется включить сервисы Google Play.</string>
     <string name="common_google_play_services_enable_title">Включите сервисы Google Play</string>
@@ -198,6 +196,7 @@
     <string name="Call">Позвонить</string>
     <string name="CallText">Мы позвоним вам через %1$d:%2$02d</string>
     <string name="Calling">Звоним вам...</string>
+    <string name="Calls">Звонки</string>
     <string name="Cancel">Отмена</string>
     <string name="CancelRegistration">Отмена регистрации</string>
     <string name="Cancelled">Отменено</string>
@@ -1589,4 +1588,5 @@
     <string name="DeleteFirstUser">Невозможно удалить первого пользователя!</string>
     <string name="AddUser">Добавить аккаунт</string>
     <string name="GoBack">Вернуться назад</string>
+    <string name="VendorChannels">Каналы Telegram</string>
 </resources>

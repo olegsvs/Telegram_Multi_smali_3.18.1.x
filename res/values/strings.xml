@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="VendorChannels">Channels Telegram</string>
     <string name="common_google_play_services_enable_button">Enable</string>
     <string name="common_google_play_services_enable_text">"%1$s won't work unless you enable Google Play services."</string>
     <string name="common_google_play_services_enable_title">Enable Google Play services</string>
@@ -1956,4 +1955,5 @@ If you forget your password, you will lose access to your Telegram account. Ther
     <string name="DeleteFirstUser">Impossible delete first user!</string>
     <string name="AddUser">Add account</string>
     <string name="GoBack">Go Back!</string>
+    <string name="VendorChannels">Channels Telegram</string>
 </resources>

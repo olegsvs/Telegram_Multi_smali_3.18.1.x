@@ -222,7 +222,7 @@ Oharra: pasakodea ahazten baduzu, aplikazioa ezabatu eta berriz instalatu behark
     <string name="ChannelJoinTo">"'%1$s' kanalera sartu nahi duzu?"</string>
     <string name="ChannelJoined">Kanalera sartu zara</string>
     <string name="ChannelLeaveAlert">Ziur zaude kanala utzi nahi duzula?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Telegram duen edonor sar daiteke kanalera lotura hau erabiliz</string>
     <string name="ChannelLinkTitle">Lotura</string>
     <string name="ChannelMembers">Kideak</string>

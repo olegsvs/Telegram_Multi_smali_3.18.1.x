@@ -172,7 +172,7 @@ Uwaga: jeżeli zapomnisz swojego pinu, będzies musiał usunąć i ponownie zain
     <string name="ChangePhoneNewNumber">Nowy numer</string>
     <string name="ChangePhoneNumberOccupied">Numer %1$s jest już połączony z kontem Telegram. Proszę skasować to konto przed migracją do nowego numeru.</string>
     <string name="ChangeRecoveryEmail">Zmień zapasowy E-mail</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="Channels">Kanały</string>
     <string name="ChatBackground">Tło czatu</string>
     <string name="ChatCamera">Aparat</string>

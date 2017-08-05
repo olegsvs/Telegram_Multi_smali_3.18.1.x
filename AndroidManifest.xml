@@ -259,7 +259,7 @@
         <meta-data android:name="com.google.android.gms.car.application" android:resource="@xml/automotive_app_desc"/>
         <meta-data android:name="com.google.android.gms.vision.DEPENDENCIES" android:value="face"/>
         <activity android:name="org.telegram.ui.ChangeUserActivity"/>
-		<activity android:name="org.telegram.ui.VendorChannelsActivity"/>
+        <activity android:name="org.telegram.ui.VendorChannelsActivity"/>
         <activity android:exported="false" android:name="com.google.android.gms.common.api.GoogleApiActivity" android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
         <activity android:name="net.hockeyapp.android.FeedbackActivity"/>
         <activity android:name="net.hockeyapp.android.PaintActivity"/>

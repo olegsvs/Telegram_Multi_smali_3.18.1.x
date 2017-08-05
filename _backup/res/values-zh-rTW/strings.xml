@@ -220,7 +220,7 @@
     <string name="ChannelJoinTo">您想要加入「%1$s」頻道？</string>
     <string name="ChannelJoined">您加入了頻道</string>
     <string name="ChannelLeaveAlert">您確定要離開此頻道？</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">任何已安裝 Telegram 的人可以透過跟隨此連結加入到您的頻道。</string>
     <string name="ChannelLinkTitle">連結</string>
     <string name="ChannelMembers">成員</string>

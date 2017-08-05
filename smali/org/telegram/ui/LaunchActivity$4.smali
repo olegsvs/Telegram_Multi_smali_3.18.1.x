@@ -744,7 +744,7 @@
 
     .line 455
     :try_start_2
-	new-instance v1, Landroid/content/Intent;
+    new-instance v1, Landroid/content/Intent;
 
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
@@ -776,12 +776,11 @@
     iget-object v6, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 
     invoke-virtual {v6, v1}, Lorg/telegram/ui/LaunchActivity;->startActivity(Landroid/content/Intent;)V
-	
-	:try_end_2
+    :try_end_2
     .catch Ljava/lang/Exception; {:try_start_2 .. :try_end_2} :catch_2
 
     .line 460
-    .end local v7    # "link":Ljava/lang/String;
+    .end local v7
     :goto_4
     iget-object v11, p0, Lorg/telegram/ui/LaunchActivity$4;->this$0:Lorg/telegram/ui/LaunchActivity;
 

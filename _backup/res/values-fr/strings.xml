@@ -259,7 +259,7 @@ Note: si vous oubliez le code d'accès, vous devrez supprimer et réinstaller l'
     <string name="ChannelJoinTo">"Voulez-vous rejoindre la chaîne '%1$s'?"</string>
     <string name="ChannelJoined">Vous avez join cette chaîne</string>
     <string name="ChannelLeaveAlert">Êtes-vous sûr(e) de vouloir quitter ce groupe ?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">"Quelqu'un qui à Telegram sera capable de rejoindre votre chaîne en suivant ce lien."</string>
     <string name="ChannelLinkTitle">Lien</string>
     <string name="ChannelMegaJoined">Vous avez rejoint ce groupe</string>

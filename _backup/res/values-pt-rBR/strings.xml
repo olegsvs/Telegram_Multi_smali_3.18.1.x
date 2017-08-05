@@ -299,7 +299,7 @@ Nota: se você esquecer a sua senha, terá de excluir e reinstalar o app. Todos 
     <string name="ChannelJoinTo">"Você deseja entrar no canal '%1$s'?"</string>
     <string name="ChannelJoined">Você entrou nesse canal</string>
     <string name="ChannelLeaveAlert">Você tem certeza que deseja sair do canal?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgrpt</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Qualquer um com Telegram instalado poderá entrar no seu canal abrindo este link.</string>
     <string name="ChannelLinkTitle">Link</string>
     <string name="ChannelMegaJoined">Você entrou nesse grupo</string>

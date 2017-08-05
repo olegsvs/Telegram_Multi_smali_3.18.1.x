@@ -247,7 +247,7 @@
     <string name="ChannelJoinTo">"Искате ли да се присъедините към канала '%1$s'?"</string>
     <string name="ChannelJoined">Присъединихте се към този канал</string>
     <string name="ChannelLeaveAlert">Наистина ли напускате канала?</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="ChannelLinkInfo">Всеки, който има инсталиран Телеграм ще може да се присъедини към канала ви, като последва тази връзка.</string>
     <string name="ChannelLinkTitle">Връзка</string>
     <string name="ChannelMegaJoined">Присъединихте се към тази група</string>

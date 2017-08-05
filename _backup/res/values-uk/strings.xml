@@ -130,7 +130,7 @@
     <string name="ChangePhoneHelp">Ми відправимо СМС з кодом підтвердження на ваш новий номер.</string>
     <string name="ChangePhoneNewNumber">Новий номер</string>
     <string name="ChangePhoneNumberOccupied">"Номер %1$s вже прив'язаний до аккаунту Telegram. Видаліть цей аккаунт, перш ніж перейти на новий номер"</string>
-    <string name="ChannelLink">https://telegram.me/plusmsgr</string>
+    <string name="ChannelLink">https://telegram.me/tgmulti</string>
     <string name="Channels">Канали</string>
     <string name="ChatBackground">Тло чату</string>
     <string name="ChatDocument">Файл</string>

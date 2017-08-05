@@ -14403,17 +14403,17 @@
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    const-string/jumbo v7, "Notifications"
+    const-string/jumbo p0, "Notifications"
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
     invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String;
 
-    move-result-object v7
+    move-result-object p0
 
-    invoke-virtual {v6, v7}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
+    invoke-virtual {v6, p0}, Ljava/lang/StringBuilder;->append(Ljava/lang/String;)Ljava/lang/StringBuilder;
 
     move-result-object v6
 
@@ -16165,7 +16165,7 @@
 
     invoke-virtual {v5, v4, v6}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;)I
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 1400
     .end local v0    # "dialogId":J
@@ -16180,7 +16180,7 @@
     int-to-long v0, v5
 
     .restart local v0    # "dialogId":J
-    goto :goto_1
+    goto/16 :goto_1
 
     .line 1415
     .restart local v2    # "hidden":Z
@@ -30343,7 +30343,7 @@
 
     invoke-virtual {v3, v2, v4, v8}, Lorg/telegram/tgnet/ConnectionsManager;->sendRequest(Lorg/telegram/tgnet/TLObject;Lorg/telegram/tgnet/RequestDelegate;I)I
 
-    goto :goto_0
+    goto/16 :goto_0
 
     .line 1380
     :cond_4

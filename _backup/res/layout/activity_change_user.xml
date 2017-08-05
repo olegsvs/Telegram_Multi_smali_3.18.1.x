@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout android:layout_width="fill_parent" android:layout_height="fill_parent"
-  xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:fab="http://schemas.android.com/apk/res-auto">
-    <ListView android:id="@id/users_listview" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="fill_parent" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
-    <com.github.clans.fab.FloatingActionButton android:layout_gravity="bottom|center|right" android:id="@id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_marginRight="8.0dip" android:layout_marginBottom="8.0dip" android:src="@drawable/ic_add_white_18dp" android:layout_alignParentRight="true" android:layout_alignParentBottom="true" />
-</RelativeLayout>
+<LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="fill_parent" android:weightSum="3.0"
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <ListView android:id="@id/users_listview" android:longClickable="true" android:layout_width="fill_parent" android:layout_height="397.0dip" android:layout_marginBottom="8.0dip" android:layout_weight="1.8" android:layout_centerHorizontal="true" android:layout_centerVertical="true" />
+    <Button android:id="@id/buttonAddUser" android:layout_width="fill_parent" android:layout_height="wrap_content" android:text="@string/AddUser" android:layout_weight="1.0" android:onClick="buttonAddUserClick" />
+</LinearLayout>

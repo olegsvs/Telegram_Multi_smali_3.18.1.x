@@ -24959,222 +24959,205 @@
     .locals 11
 
     .prologue
-    .line 8342
+    .line 8110
     :try_start_0
-    sget-object v8, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
+    sget-object v6, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
-    const-string/jumbo v9, "theme"
-
-    const/4 v10, 0x0
-
-    invoke-virtual {v8, v9, v10}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
-
-    move-result-object v6
-
-    .line 8346
-    .local v6, "themePrefs":Landroid/content/SharedPreferences;
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
-
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
-
-    invoke-virtual {v8, v9}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
-
-    .line 8347
-    const-string/jumbo v8, "chatHeaderGradient"
-
-    const/4 v9, 0x0
-
-    invoke-interface {v6, v8, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v7
-
-    .line 8349
-    .local v7, "val":I
-    if-lez v7, :cond_0
-
-    .line 8351
-    packed-switch v7, :pswitch_data_0
-
-    .line 8362
-    sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
-
-    .line 8364
-    .local v3, "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
-    :goto_0
-    const-string/jumbo v8, "chatHeaderGradientColor"
-
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->defColor:I
-
-    invoke-interface {v6, v8, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
-
-    move-result v4
-
-    .line 8365
-    .local v4, "gradColor":I
-    const/4 v8, 0x2
-
-    new-array v0, v8, [I
+    const-string/jumbo v7, "theme"
 
     const/4 v8, 0x0
 
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
+    invoke-virtual {v6, v7, v8}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
-    aput v9, v0, v8
+    move-result-object v4
 
-    const/4 v8, 0x1
+    .line 8111
+    .local v4, "themePrefs":Landroid/content/SharedPreferences;
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    aput v4, v0, v8
+    sget v7, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
 
-    .line 8366
-    .local v0, "colors":[I
-    new-instance v2, Landroid/graphics/drawable/GradientDrawable;
+    invoke-virtual {v6, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundColor(I)V
 
-    invoke-direct {v2, v3, v0}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
+    .line 8112
+    const-string/jumbo v6, "chatHeaderGradient"
 
-    .line 8367
-    .local v2, "gd":Landroid/graphics/drawable/GradientDrawable;
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
+    const/4 v7, 0x0
 
-    invoke-virtual {v8, v2}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
-
-    .line 8369
-    .end local v0    # "colors":[I
-    .end local v2    # "gd":Landroid/graphics/drawable/GradientDrawable;
-    .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
-    .end local v4    # "gradColor":I
-    :cond_0
-    const-string/jumbo v8, "chatNameColor"
-
-    const/4 v9, -0x1
-
-    invoke-interface {v6, v8, v9}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v4, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
     move-result v5
 
-    .line 8370
-    .local v5, "nameColor":I
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+    .line 8113
+    .local v5, "val":I
+    if-lez v5, :cond_0
 
-    invoke-virtual {v8, v5}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setTitleColor(I)V
+    .line 8115
+    packed-switch v5, :pswitch_data_0
 
-    .line 8371
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+    .line 8126
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TOP_BOTTOM:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    const-string/jumbo v9, "chatNameSize"
+    .line 8129
+    .local v1, "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    :goto_0
+    const-string/jumbo v6, "chatHeaderGradientColor"
 
-    const/16 v10, 0x12
+    sget v7, Lorg/telegram/ui/ActionBar/Theme;->defColor:I
 
-    invoke-interface {v6, v9, v10}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+    invoke-interface {v4, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
 
-    move-result v9
+    move-result v2
 
-    invoke-virtual {v8, v9}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setTitleSize(I)V
+    .line 8130
+    .local v2, "gradColor":I
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->actionBar:Lorg/telegram/ui/ActionBar/ActionBar;
 
-    .line 8373
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+    new-instance v7, Landroid/graphics/drawable/GradientDrawable;
 
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatStatusSize:I
+    const/4 v8, 0x2
 
-    invoke-virtual {v8, v9}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setSubtitleSize(I)V
+    new-array v8, v8, [I
 
-    .line 8389
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    const/4 v9, 0x0
 
-    if-eqz v8, :cond_1
+    sget v10, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
 
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+    aput v10, v8, v9
 
-    invoke-virtual {v8}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
+    const/4 v9, 0x1
 
-    move-result-object v8
+    aput v2, v8, v9
 
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderIconsColor:I
+    invoke-direct {v7, v1, v8}, Landroid/graphics/drawable/GradientDrawable;-><init>(Landroid/graphics/drawable/GradientDrawable$Orientation;[I)V
 
-    invoke-virtual {v8, v9}, Landroid/widget/EditText;->setTextColor(I)V
+    invoke-virtual {v6, v7}, Lorg/telegram/ui/ActionBar/ActionBar;->setBackgroundDrawable(Landroid/graphics/drawable/Drawable;)V
 
-    .line 8391
+    .line 8132
+    .end local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .end local v2    # "gradColor":I
+    :cond_0
+    const-string/jumbo v6, "chatNameColor"
+
+    const/4 v7, -0x1
+
+    invoke-interface {v4, v6, v7}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v3
+
+    .line 8133
+    .local v3, "nameColor":I
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+
+    invoke-virtual {v6, v3}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setTitleColor(I)V
+
+    .line 8134
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+
+    const-string/jumbo v7, "chatNameSize"
+
+    const/16 v8, 0x12
+
+    invoke-interface {v4, v7, v8}, Landroid/content/SharedPreferences;->getInt(Ljava/lang/String;I)I
+
+    move-result v7
+
+    invoke-virtual {v6, v7}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setTitleSize(I)V
+
+    .line 8135
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->avatarContainer:Lorg/telegram/ui/Components/ChatAvatarContainer;
+
+    sget v7, Lorg/telegram/ui/ActionBar/Theme;->chatStatusSize:I
+
+    invoke-virtual {v6, v7}, Lorg/telegram/ui/Components/ChatAvatarContainer;->setSubtitleSize(I)V
+
+    .line 8136
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    if-eqz v6, :cond_1
+
+    .line 8137
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->searchItem:Lorg/telegram/ui/ActionBar/ActionBarMenuItem;
+
+    invoke-virtual {v6}, Lorg/telegram/ui/ActionBar/ActionBarMenuItem;->getSearchField()Landroid/widget/EditText;
+
+    move-result-object v6
+
+    sget v7, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderIconsColor:I
+
+    invoke-virtual {v6, v7}, Landroid/widget/EditText;->setTextColor(I)V
+
+    .line 8139
     :cond_1
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->bottomOverlayChat:Landroid/widget/FrameLayout;
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->reportSpamView:Landroid/widget/LinearLayout;
 
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
+    sget v7, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
 
-    invoke-virtual {v8, v9}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
+    invoke-virtual {v6, v7}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
 
-    .line 8392
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->bottomOverlayChatText:Landroid/widget/TextView;
+    .line 8140
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->reportSpamButton:Landroid/widget/TextView;
 
-    invoke-virtual {v8, v5}, Landroid/widget/TextView;->setTextColor(I)V
+    invoke-virtual {v6, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    .line 8394
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->reportSpamView:Landroid/widget/LinearLayout;
+    .line 8141
+    iget-object v6, p0, Lorg/telegram/ui/ChatActivity;->addToContactsButton:Landroid/widget/TextView;
 
-    sget v9, Lorg/telegram/ui/ActionBar/Theme;->chatHeaderColor:I
+    invoke-virtual {v6, v3}, Landroid/widget/TextView;->setTextColor(I)V
 
-    invoke-virtual {v8, v9}, Landroid/widget/LinearLayout;->setBackgroundColor(I)V
-
-    .line 8395
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->reportSpamButton:Landroid/widget/TextView;
-
-    invoke-virtual {v8, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 8396
-    iget-object v8, p0, Lorg/telegram/ui/ChatActivity;->addToContactsButton:Landroid/widget/TextView;
-
-    invoke-virtual {v8, v5}, Landroid/widget/TextView;->setTextColor(I)V
-
-    .line 8407
-    .end local v5    # "nameColor":I
-    .end local v6    # "themePrefs":Landroid/content/SharedPreferences;
-    .end local v7    # "val":I
+    .line 8145
+    .end local v3    # "nameColor":I
+    .end local v4    # "themePrefs":Landroid/content/SharedPreferences;
+    .end local v5    # "val":I
     :goto_1
     return-void
 
-    .line 8353
-    .restart local v6    # "themePrefs":Landroid/content/SharedPreferences;
-    .restart local v7    # "val":I
+    .line 8117
+    .restart local v4    # "themePrefs":Landroid/content/SharedPreferences;
+    .restart local v5    # "val":I
     :pswitch_0
-    sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->LEFT_RIGHT:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 8354
-    .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .line 8118
+    .restart local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 8356
-    .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .line 8120
+    .end local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_1
-    sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->TL_BR:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->TL_BR:Landroid/graphics/drawable/GradientDrawable$Orientation;
 
-    .line 8357
-    .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .line 8121
+    .restart local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 8359
-    .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .line 8123
+    .end local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     :pswitch_2
-    sget-object v3, Landroid/graphics/drawable/GradientDrawable$Orientation;->BL_TR:Landroid/graphics/drawable/GradientDrawable$Orientation;
+    sget-object v1, Landroid/graphics/drawable/GradientDrawable$Orientation;->BL_TR:Landroid/graphics/drawable/GradientDrawable$Orientation;
     :try_end_0
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_0
 
-    .line 8360
-    .restart local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .line 8124
+    .restart local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
     goto :goto_0
 
-    .line 8404
-    .end local v3    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
-    .end local v6    # "themePrefs":Landroid/content/SharedPreferences;
-    .end local v7    # "val":I
+    .line 8142
+    .end local v1    # "go":Landroid/graphics/drawable/GradientDrawable$Orientation;
+    .end local v4    # "themePrefs":Landroid/content/SharedPreferences;
+    .end local v5    # "val":I
     :catch_0
-    move-exception v1
+    move-exception v0
 
-    .line 8405
-    .local v1, "e":Ljava/lang/Exception;
-    const-string/jumbo v8, "tmessages"
+    .line 8143
+    .local v0, "e":Ljava/lang/Exception;
+    const-string/jumbo v6, "tmessages"
 
-    invoke-static {v8, v1}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
+    invoke-static {v6, v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 8351
+    .line 8115
     :pswitch_data_0
     .packed-switch 0x2
         :pswitch_0

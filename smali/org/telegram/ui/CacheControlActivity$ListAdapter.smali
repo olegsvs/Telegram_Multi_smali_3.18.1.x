@@ -165,9 +165,9 @@
     .param p2, "position"    # I
 
     .prologue
-    const v6, 0x7f07015c
+    const v6, 0x7f07017c
 
-    const v7, 0x7f0200e4
+    const v7, 0x7f0200ae
 
     const/4 v8, 0x1
 
@@ -204,7 +204,7 @@
     .line 603
     const-string/jumbo v5, "LocalDatabase"
 
-    const v6, 0x7f0702cf
+    const v6, 0x7f070359
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -252,7 +252,7 @@
 
     const-string/jumbo v6, "CalculatingSize"
 
-    const v7, 0x7f0700cb
+    const v7, 0x7f0700dd
 
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -284,7 +284,7 @@
 
     const-string/jumbo v5, "CacheEmpty"
 
-    const v7, 0x7f0700ca
+    const v7, 0x7f0700dc
 
     invoke-static {v5, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -373,7 +373,7 @@
     :goto_2
     const-string/jumbo v5, "KeepMedia"
 
-    const v6, 0x7f070295
+    const v6, 0x7f070313
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -403,7 +403,7 @@
     :cond_6
     const-string/jumbo v5, "KeepMediaForever"
 
-    const v6, 0x7f070296
+    const v6, 0x7f070314
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -435,7 +435,7 @@
     .line 627
     const-string/jumbo v5, "LocalDatabaseInfo"
 
-    const v6, 0x7f0702d1
+    const v6, 0x7f07035b
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -446,7 +446,7 @@
     .line 628
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0200e5
+    const v6, 0x7f0200af
 
     const-string/jumbo v7, "windowBackgroundGrayShadow"
 
@@ -499,7 +499,7 @@
     .line 633
     const-string/jumbo v5, "KeepMediaInfo"
 
-    const v6, 0x7f070297
+    const v6, 0x7f070315
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 

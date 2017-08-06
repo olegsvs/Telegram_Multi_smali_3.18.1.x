@@ -905,7 +905,6 @@
 
     .line 331
     .local v1, "sColor":I
-    invoke-virtual {v0, v1}, Landroid/widget/FrameLayout;->setBackgroundColor(I)V
 
     .line 333
     new-instance v3, Lorg/telegram/ui/Components/RecyclerListView;

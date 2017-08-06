@@ -26,15 +26,15 @@
     .param p2, "context"    # Landroid/content/Context;
 
     .prologue
-    .line 586
+    .line 566
     iput-object p1, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/Components/RecyclerListView$SelectionAdapter;-><init>()V
 
-    .line 587
+    .line 567
     iput-object p2, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    .line 588
+    .line 568
     return-void
 .end method
 
@@ -44,7 +44,7 @@
     .locals 1
 
     .prologue
-    .line 598
+    .line 578
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$2000(Lorg/telegram/ui/CacheControlActivity;)I
@@ -59,7 +59,7 @@
     .param p1, "i"    # I
 
     .prologue
-    .line 662
+    .line 642
     iget-object v0, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v0}, Lorg/telegram/ui/CacheControlActivity;->access$2100(Lorg/telegram/ui/CacheControlActivity;)I
@@ -84,11 +84,11 @@
 
     if-ne p1, v0, :cond_1
 
-    .line 663
+    .line 643
     :cond_0
     const/4 v0, 0x1
 
-    .line 665
+    .line 645
     :goto_0
     return v0
 
@@ -103,12 +103,12 @@
     .param p1, "holder"    # Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;
 
     .prologue
-    .line 592
+    .line 572
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getAdapterPosition()I
 
     move-result v0
 
-    .line 593
+    .line 573
     .local v0, "position":I
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -128,7 +128,7 @@
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
-    invoke-static {v1}, Lorg/telegram/ui/CacheControlActivity;->access$900(Lorg/telegram/ui/CacheControlActivity;)J
+    invoke-static {v1}, Lorg/telegram/ui/CacheControlActivity;->access$800(Lorg/telegram/ui/CacheControlActivity;)J
 
     move-result-wide v2
 
@@ -165,33 +165,33 @@
     .param p2, "position"    # I
 
     .prologue
-    const v6, 0x7f07017c
+    const v6, 0x7f07015c
 
-    const v8, 0x7f0200ae
+    const v7, 0x7f0200e4
 
-    const/4 v7, 0x1
+    const/4 v8, 0x1
 
     const/4 v12, 0x0
 
-    .line 619
+    .line 599
     invoke-virtual {p1}, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->getItemViewType()I
 
     move-result v5
 
     packed-switch v5, :pswitch_data_0
 
-    .line 658
+    .line 638
     :cond_0
     :goto_0
     return-void
 
-    .line 621
+    .line 601
     :pswitch_0
     iget-object v3, p1, Lorg/telegram/messenger/support/widget/RecyclerView$ViewHolder;->itemView:Landroid/view/View;
 
     check-cast v3, Lorg/telegram/ui/Cells/TextSettingsCell;
 
-    .line 622
+    .line 602
     .local v3, "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -201,10 +201,10 @@
 
     if-ne p2, v5, :cond_1
 
-    .line 623
+    .line 603
     const-string/jumbo v5, "LocalDatabase"
 
-    const v6, 0x7f070359
+    const v6, 0x7f0702cf
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -224,7 +224,7 @@
 
     goto :goto_0
 
-    .line 624
+    .line 604
     :cond_1
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -234,7 +234,7 @@
 
     if-ne p2, v5, :cond_4
 
-    .line 625
+    .line 605
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
     invoke-static {v5}, Lorg/telegram/ui/CacheControlActivity;->access$1000(Lorg/telegram/ui/CacheControlActivity;)Z
@@ -243,7 +243,7 @@
 
     if-eqz v5, :cond_2
 
-    .line 626
+    .line 606
     const-string/jumbo v5, "ClearMediaCache"
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
@@ -252,7 +252,7 @@
 
     const-string/jumbo v6, "CalculatingSize"
 
-    const v7, 0x7f0700dd
+    const v7, 0x7f0700cb
 
     invoke-static {v6, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -262,7 +262,7 @@
 
     goto :goto_0
 
-    .line 628
+    .line 608
     :cond_2
     const-string/jumbo v5, "ClearMediaCache"
 
@@ -272,7 +272,7 @@
 
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
-    invoke-static {v5}, Lorg/telegram/ui/CacheControlActivity;->access$900(Lorg/telegram/ui/CacheControlActivity;)J
+    invoke-static {v5}, Lorg/telegram/ui/CacheControlActivity;->access$800(Lorg/telegram/ui/CacheControlActivity;)J
 
     move-result-wide v8
 
@@ -284,7 +284,7 @@
 
     const-string/jumbo v5, "CacheEmpty"
 
-    const v7, 0x7f0700dc
+    const v7, 0x7f0700ca
 
     invoke-static {v5, v7}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -298,7 +298,7 @@
     :cond_3
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
-    invoke-static {v5}, Lorg/telegram/ui/CacheControlActivity;->access$900(Lorg/telegram/ui/CacheControlActivity;)J
+    invoke-static {v5}, Lorg/telegram/ui/CacheControlActivity;->access$800(Lorg/telegram/ui/CacheControlActivity;)J
 
     move-result-wide v8
 
@@ -308,7 +308,7 @@
 
     goto :goto_1
 
-    .line 630
+    .line 610
     :cond_4
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -318,7 +318,7 @@
 
     if-ne p2, v5, :cond_0
 
-    .line 631
+    .line 611
     sget-object v5, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v6, Ljava/lang/StringBuilder;
@@ -347,7 +347,7 @@
 
     move-result-object v1
 
-    .line 632
+    .line 612
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v5, "keep_media"
 
@@ -357,23 +357,23 @@
 
     move-result v0
 
-    .line 634
+    .line 614
     .local v0, "keepMedia":I
     if-nez v0, :cond_5
 
-    .line 635
+    .line 615
     const-string/jumbo v5, "Weeks"
 
-    invoke-static {v5, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v5, v8}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
-    .line 641
+    .line 621
     .local v4, "value":Ljava/lang/String;
     :goto_2
     const-string/jumbo v5, "KeepMedia"
 
-    const v6, 0x7f070313
+    const v6, 0x7f070295
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -383,27 +383,27 @@
 
     goto/16 :goto_0
 
-    .line 636
+    .line 616
     .end local v4    # "value":Ljava/lang/String;
     :cond_5
-    if-ne v0, v7, :cond_6
+    if-ne v0, v8, :cond_6
 
-    .line 637
+    .line 617
     const-string/jumbo v5, "Months"
 
-    invoke-static {v5, v7}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
+    invoke-static {v5, v8}, Lorg/telegram/messenger/LocaleController;->formatPluralString(Ljava/lang/String;I)Ljava/lang/String;
 
     move-result-object v4
 
     .restart local v4    # "value":Ljava/lang/String;
     goto :goto_2
 
-    .line 639
+    .line 619
     .end local v4    # "value":Ljava/lang/String;
     :cond_6
     const-string/jumbo v5, "KeepMediaForever"
 
-    const v6, 0x7f070314
+    const v6, 0x7f070296
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -412,7 +412,7 @@
     .restart local v4    # "value":Ljava/lang/String;
     goto :goto_2
 
-    .line 645
+    .line 625
     .end local v0    # "keepMedia":I
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v3    # "textCell":Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -422,7 +422,7 @@
 
     check-cast v2, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
-    .line 646
+    .line 626
     .local v2, "privacyCell":Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -432,10 +432,10 @@
 
     if-ne p2, v5, :cond_7
 
-    .line 647
+    .line 627
     const-string/jumbo v5, "LocalDatabaseInfo"
 
-    const v6, 0x7f07035b
+    const v6, 0x7f0702d1
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -443,10 +443,10 @@
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 648
+    .line 628
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
-    const v6, 0x7f0200af
+    const v6, 0x7f0200e5
 
     const-string/jumbo v7, "windowBackgroundGrayShadow"
 
@@ -458,7 +458,7 @@
 
     goto/16 :goto_0
 
-    .line 649
+    .line 629
     :cond_7
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -468,17 +468,17 @@
 
     if-ne p2, v5, :cond_8
 
-    .line 650
+    .line 630
     const-string/jumbo v5, ""
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 651
+    .line 631
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v6, "windowBackgroundGrayShadow"
 
-    invoke-static {v5, v8, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v5, v7, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -486,7 +486,7 @@
 
     goto/16 :goto_0
 
-    .line 652
+    .line 632
     :cond_8
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->this$0:Lorg/telegram/ui/CacheControlActivity;
 
@@ -496,10 +496,10 @@
 
     if-ne p2, v5, :cond_0
 
-    .line 653
+    .line 633
     const-string/jumbo v5, "KeepMediaInfo"
 
-    const v6, 0x7f070315
+    const v6, 0x7f070297
 
     invoke-static {v5, v6}, Lorg/telegram/messenger/LocaleController;->getString(Ljava/lang/String;I)Ljava/lang/String;
 
@@ -511,12 +511,12 @@
 
     invoke-virtual {v2, v5}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;->setText(Ljava/lang/CharSequence;)V
 
-    .line 654
+    .line 634
     iget-object v5, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     const-string/jumbo v6, "windowBackgroundGrayShadow"
 
-    invoke-static {v5, v8, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
+    invoke-static {v5, v7, v6}, Lorg/telegram/ui/ActionBar/Theme;->getThemedDrawable(Landroid/content/Context;ILjava/lang/String;)Landroid/graphics/drawable/Drawable;
 
     move-result-object v5
 
@@ -524,9 +524,9 @@
 
     goto/16 :goto_0
 
+    .line 599
     nop
 
-    .line 619
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0
@@ -540,17 +540,17 @@
     .param p2, "viewType"    # I
 
     .prologue
-    .line 604
+    .line 584
     packed-switch p2, :pswitch_data_0
 
-    .line 611
+    .line 591
     new-instance v0, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;
 
     iget-object v1, p0, Lorg/telegram/ui/CacheControlActivity$ListAdapter;->mContext:Landroid/content/Context;
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextInfoPrivacyCell;-><init>(Landroid/content/Context;)V
 
-    .line 614
+    .line 594
     .local v0, "view":Landroid/view/View;
     :goto_0
     new-instance v1, Lorg/telegram/ui/Components/RecyclerListView$Holder;
@@ -559,7 +559,7 @@
 
     return-object v1
 
-    .line 606
+    .line 586
     .end local v0    # "view":Landroid/view/View;
     :pswitch_0
     new-instance v0, Lorg/telegram/ui/Cells/TextSettingsCell;
@@ -568,7 +568,7 @@
 
     invoke-direct {v0, v1}, Lorg/telegram/ui/Cells/TextSettingsCell;-><init>(Landroid/content/Context;)V
 
-    .line 607
+    .line 587
     .restart local v0    # "view":Landroid/view/View;
     const-string/jumbo v1, "windowBackgroundWhite"
 
@@ -580,7 +580,7 @@
 
     goto :goto_0
 
-    .line 604
+    .line 584
     :pswitch_data_0
     .packed-switch 0x0
         :pswitch_0

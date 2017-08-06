@@ -29,7 +29,7 @@
     .param p1, "this$2"    # Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     .prologue
-    .line 268
+    .line 253
     iput-object p1, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iput-object p2, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->val$themeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
@@ -49,10 +49,10 @@
     .prologue
     const/4 v10, 0x1
 
-    .line 271
+    .line 256
     if-nez p2, :cond_8
 
-    .line 273
+    .line 258
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->val$themeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     iget-object v9, v9, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->pathToFile:Ljava/lang/String;
@@ -65,12 +65,12 @@
 
     if-nez v9, :cond_5
 
-    .line 274
+    .line 259
     new-instance v6, Ljava/lang/StringBuilder;
 
     invoke-direct {v6}, Ljava/lang/StringBuilder;-><init>()V
 
-    .line 275
+    .line 260
     .local v6, "result":Ljava/lang/StringBuilder;
     invoke-static {}, Lorg/telegram/ui/ActionBar/Theme;->getDefaultColors()Ljava/util/HashMap;
 
@@ -97,7 +97,7 @@
 
     check-cast v3, Ljava/util/Map$Entry;
 
-    .line 276
+    .line 261
     .local v3, "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     invoke-interface {v3}, Ljava/util/Map$Entry;->getKey()Ljava/lang/Object;
 
@@ -129,7 +129,7 @@
 
     goto :goto_0
 
-    .line 278
+    .line 263
     .end local v3    # "entry":Ljava/util/Map$Entry;, "Ljava/util/Map$Entry<Ljava/lang/String;Ljava/lang/Integer;>;"
     :cond_0
     new-instance v1, Ljava/io/File;
@@ -158,13 +158,15 @@
 
     move-result-object v9
 
+    const-string/jumbo v10, "default_theme.attheme"
+
     invoke-direct {v1, v9, v10}, Ljava/io/File;-><init>(Ljava/lang/String;Ljava/lang/String;)V
 
-    .line 279
+    .line 264
     .local v1, "currentFile":Ljava/io/File;
     const/4 v7, 0x0
 
-    .line 281
+    .line 266
     .local v7, "stream":Ljava/io/FileOutputStream;
     :try_start_0
     new-instance v8, Ljava/io/FileOutputStream;
@@ -174,7 +176,7 @@
     .catch Ljava/lang/Exception; {:try_start_0 .. :try_end_0} :catch_1
     .catchall {:try_start_0 .. :try_end_0} :catchall_0
 
-    .line 282
+    .line 267
     .end local v7    # "stream":Ljava/io/FileOutputStream;
     .local v8, "stream":Ljava/io/FileOutputStream;
     :try_start_1
@@ -191,10 +193,10 @@
     .catch Ljava/lang/Exception; {:try_start_1 .. :try_end_1} :catch_5
     .catchall {:try_start_1 .. :try_end_1} :catchall_1
 
-    .line 287
+    .line 272
     if-eqz v8, :cond_1
 
-    .line 288
+    .line 273
     :try_start_2
     invoke-virtual {v8}, Ljava/io/FileOutputStream;->close()V
     :try_end_2
@@ -203,7 +205,7 @@
     :cond_1
     move-object v7, v8
 
-    .line 299
+    .line 284
     .end local v6    # "result":Ljava/lang/StringBuilder;
     .end local v8    # "stream":Ljava/io/FileOutputStream;
     :cond_2
@@ -226,7 +228,7 @@
 
     invoke-direct {v4, v9, v10}, Ljava/io/File;-><init>(Ljava/io/File;Ljava/lang/String;)V
 
-    .line 301
+    .line 286
     .local v4, "finalFile":Ljava/io/File;
     :try_start_3
     invoke-static {v1, v4}, Lorg/telegram/messenger/AndroidUtilities;->copyFile(Ljava/io/File;Ljava/io/File;)Z
@@ -237,21 +239,21 @@
 
     if-nez v9, :cond_7
 
-    .line 340
+    .line 325
     .end local v1    # "currentFile":Ljava/io/File;
     .end local v4    # "finalFile":Ljava/io/File;
     :cond_3
     :goto_2
     return-void
 
-    .line 290
+    .line 275
     .restart local v1    # "currentFile":Ljava/io/File;
     .restart local v6    # "result":Ljava/lang/StringBuilder;
     .restart local v8    # "stream":Ljava/io/FileOutputStream;
     :catch_0
     move-exception v2
 
-    .line 291
+    .line 276
     .local v2, "e":Ljava/lang/Exception;
     const-string/jumbo v9, "tmessage"
 
@@ -259,17 +261,17 @@
 
     move-object v7, v8
 
-    .line 293
+    .line 278
     .end local v8    # "stream":Ljava/io/FileOutputStream;
     .restart local v7    # "stream":Ljava/io/FileOutputStream;
     goto :goto_1
 
-    .line 283
+    .line 268
     .end local v2    # "e":Ljava/lang/Exception;
     :catch_1
     move-exception v2
 
-    .line 284
+    .line 269
     .restart local v2    # "e":Ljava/lang/Exception;
     :goto_3
     :try_start_4
@@ -277,10 +279,10 @@
     :try_end_4
     .catchall {:try_start_4 .. :try_end_4} :catchall_0
 
-    .line 287
+    .line 272
     if-eqz v7, :cond_2
 
-    .line 288
+    .line 273
     :try_start_5
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_5
@@ -288,42 +290,42 @@
 
     goto :goto_1
 
-    .line 290
+    .line 275
     :catch_2
     move-exception v2
 
-    .line 291
+    .line 276
     const-string/jumbo v9, "tmessage"
 
     invoke-static {v9, v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/String;Ljava/lang/Throwable;)V
 
     goto :goto_1
 
-    .line 286
+    .line 271
     .end local v2    # "e":Ljava/lang/Exception;
     :catchall_0
     move-exception v9
 
-    .line 287
+    .line 272
     :goto_4
     if-eqz v7, :cond_4
 
-    .line 288
+    .line 273
     :try_start_6
     invoke-virtual {v7}, Ljava/io/FileOutputStream;->close()V
     :try_end_6
     .catch Ljava/lang/Exception; {:try_start_6 .. :try_end_6} :catch_3
 
-    .line 292
+    .line 277
     :cond_4
     :goto_5
     throw v9
 
-    .line 290
+    .line 275
     :catch_3
     move-exception v2
 
-    .line 291
+    .line 276
     .restart local v2    # "e":Ljava/lang/Exception;
     const-string/jumbo v10, "tmessage"
 
@@ -331,7 +333,7 @@
 
     goto :goto_5
 
-    .line 294
+    .line 279
     .end local v1    # "currentFile":Ljava/io/File;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v6    # "result":Ljava/lang/StringBuilder;
@@ -343,7 +345,7 @@
 
     if-eqz v9, :cond_6
 
-    .line 295
+    .line 280
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->val$themeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     iget-object v9, v9, Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;->assetName:Ljava/lang/String;
@@ -355,7 +357,7 @@
     .restart local v1    # "currentFile":Ljava/io/File;
     goto :goto_1
 
-    .line 297
+    .line 282
     .end local v1    # "currentFile":Ljava/io/File;
     :cond_6
     new-instance v1, Ljava/io/File;
@@ -369,7 +371,7 @@
     .restart local v1    # "currentFile":Ljava/io/File;
     goto :goto_1
 
-    .line 304
+    .line 289
     .restart local v4    # "finalFile":Ljava/io/File;
     :cond_7
     :try_start_7
@@ -379,13 +381,13 @@
 
     invoke-direct {v5, v9}, Landroid/content/Intent;-><init>(Ljava/lang/String;)V
 
-    .line 305
+    .line 290
     .local v5, "intent":Landroid/content/Intent;
     const-string/jumbo v9, "text/xml"
 
     invoke-virtual {v5, v9}, Landroid/content/Intent;->setType(Ljava/lang/String;)Landroid/content/Intent;
 
-    .line 306
+    .line 291
     const-string/jumbo v9, "android.intent.extra.STREAM"
 
     invoke-static {v4}, Landroid/net/Uri;->fromFile(Ljava/io/File;)Landroid/net/Uri;
@@ -394,7 +396,7 @@
 
     invoke-virtual {v5, v9, v10}, Landroid/content/Intent;->putExtra(Ljava/lang/String;Landroid/os/Parcelable;)Landroid/content/Intent;
 
-    .line 307
+    .line 292
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iget-object v9, v9, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
@@ -421,25 +423,25 @@
 
     goto :goto_2
 
-    .line 308
+    .line 293
     .end local v5    # "intent":Landroid/content/Intent;
     :catch_4
     move-exception v2
 
-    .line 309
+    .line 294
     .restart local v2    # "e":Ljava/lang/Exception;
     invoke-static {v2}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
     goto :goto_2
 
-    .line 311
+    .line 296
     .end local v1    # "currentFile":Ljava/io/File;
     .end local v2    # "e":Ljava/lang/Exception;
     .end local v4    # "finalFile":Ljava/io/File;
     :cond_8
     if-ne p2, v10, :cond_9
 
-    .line 312
+    .line 297
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iget-object v9, v9, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
@@ -452,12 +454,12 @@
 
     if-eqz v9, :cond_3
 
-    .line 313
+    .line 298
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->val$themeInfo:Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;
 
     invoke-static {v9}, Lorg/telegram/ui/ActionBar/Theme;->applyTheme(Lorg/telegram/ui/ActionBar/Theme$ThemeInfo;)V
 
-    .line 314
+    .line 299
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iget-object v9, v9, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
@@ -470,7 +472,7 @@
 
     invoke-virtual {v9, v10}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->rebuildAllFragmentViews(Z)V
 
-    .line 315
+    .line 300
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iget-object v9, v9, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
@@ -483,7 +485,7 @@
 
     invoke-virtual {v9}, Lorg/telegram/ui/ActionBar/ActionBarLayout;->showLastFragment()V
 
-    .line 316
+    .line 301
     new-instance v9, Lorg/telegram/ui/Components/ThemeEditorView;
 
     invoke-direct {v9}, Lorg/telegram/ui/Components/ThemeEditorView;-><init>()V
@@ -506,7 +508,7 @@
 
     goto/16 :goto_2
 
-    .line 319
+    .line 304
     :cond_9
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
@@ -520,7 +522,7 @@
 
     if-eqz v9, :cond_3
 
-    .line 322
+    .line 307
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
@@ -535,7 +537,7 @@
 
     invoke-direct {v0, v9}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 323
+    .line 308
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     const-string/jumbo v9, "DeleteThemeAlert"
 
@@ -547,7 +549,7 @@
 
     invoke-virtual {v0, v9}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 324
+    .line 309
     const-string/jumbo v9, "AppName"
 
     const v10, 0x7f070078
@@ -558,7 +560,7 @@
 
     invoke-virtual {v0, v9}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 325
+    .line 310
     const-string/jumbo v9, "Delete"
 
     const v10, 0x7f0701d9
@@ -573,7 +575,7 @@
 
     invoke-virtual {v0, v9, v10}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 337
+    .line 322
     const-string/jumbo v9, "Cancel"
 
     const v10, 0x7f0700f0
@@ -586,7 +588,7 @@
 
     invoke-virtual {v0, v9, v10}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 338
+    .line 323
     iget-object v9, p0, Lorg/telegram/ui/ThemeActivity$ListAdapter$1$1;->this$2:Lorg/telegram/ui/ThemeActivity$ListAdapter$1;
 
     iget-object v9, v9, Lorg/telegram/ui/ThemeActivity$ListAdapter$1;->this$1:Lorg/telegram/ui/ThemeActivity$ListAdapter;
@@ -601,7 +603,7 @@
 
     goto/16 :goto_2
 
-    .line 286
+    .line 271
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .restart local v1    # "currentFile":Ljava/io/File;
     .restart local v6    # "result":Ljava/lang/StringBuilder;
@@ -615,7 +617,7 @@
     .restart local v7    # "stream":Ljava/io/FileOutputStream;
     goto/16 :goto_4
 
-    .line 283
+    .line 268
     .end local v7    # "stream":Ljava/io/FileOutputStream;
     .restart local v8    # "stream":Ljava/io/FileOutputStream;
     :catch_5

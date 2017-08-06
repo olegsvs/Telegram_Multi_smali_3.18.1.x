@@ -25,7 +25,6 @@
     .line 58
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;-><init>()V
 
-    .line 222
     return-void
 .end method
 
@@ -237,7 +236,7 @@
 
     invoke-virtual {v1, v2}, Lorg/telegram/ui/Components/RecyclerListView;->setOnItemClickListener(Lorg/telegram/ui/Components/RecyclerListView$OnItemClickListener;)V
 
-    .line 211
+    .line 196
     iget-object v1, p0, Lorg/telegram/ui/ThemeActivity;->fragmentView:Landroid/view/View;
 
     return-object v1
@@ -247,7 +246,7 @@
     .locals 11
 
     .prologue
-    .line 389
+    .line 374
     const/16 v0, 0xf
 
     new-array v9, v0, [Lorg/telegram/ui/ActionBar/ThemeDescription;
@@ -703,20 +702,20 @@
     .locals 1
 
     .prologue
-    .line 216
+    .line 201
     invoke-super {p0}, Lorg/telegram/ui/ActionBar/BaseFragment;->onResume()V
 
-    .line 217
+    .line 202
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity;->listAdapter:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     if-eqz v0, :cond_0
 
-    .line 218
+    .line 203
     iget-object v0, p0, Lorg/telegram/ui/ThemeActivity;->listAdapter:Lorg/telegram/ui/ThemeActivity$ListAdapter;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ThemeActivity$ListAdapter;->notifyDataSetChanged()V
 
-    .line 220
+    .line 205
     :cond_0
     return-void
 .end method

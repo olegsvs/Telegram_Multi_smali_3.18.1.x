@@ -46,11 +46,11 @@
 
 # virtual methods
 .method public onClick(Landroid/view/View;)V
-    .locals 9
+    .locals 10
     .param p1, "v"    # Landroid/view/View;
 
     .prologue
-    const/4 v7, 0x1
+    const/4 v9, 0x1
 
     const/4 v8, 0x0
 
@@ -146,7 +146,7 @@
     invoke-virtual {v3, v5, v1}, Lorg/telegram/ui/Components/ThemeEditorView;->show(Landroid/app/Activity;Ljava/lang/String;)V
 
     .line 166
-    invoke-static {v1, v7}, Lorg/telegram/ui/ActionBar/Theme;->saveCurrentTheme(Ljava/lang/String;Z)V
+    invoke-static {v1, v9}, Lorg/telegram/ui/ActionBar/Theme;->saveCurrentTheme(Ljava/lang/String;Z)V
 
     .line 167
     iget-object v5, p0, Lorg/telegram/ui/ThemeActivity$2$4;->this$1:Lorg/telegram/ui/ThemeActivity$2;
@@ -210,7 +210,7 @@
 
     const-string/jumbo v6, "themehint"
 
-    invoke-interface {v5, v6, v7}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
+    invoke-interface {v5, v6, v9}, Landroid/content/SharedPreferences$Editor;->putBoolean(Ljava/lang/String;Z)Landroid/content/SharedPreferences$Editor;
 
     move-result-object v5
 

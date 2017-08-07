@@ -1,11 +1,11 @@
 java -jar uber-apk-signer.jar -a apk --ks key.jks --allowResign --ksAlias olegsvs_2017
 
-LocationController - needed
-PasscodeView -needed
-WebPlayerView - needed
-ProfileActivity$ListAdapter.smali - needed
-Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe
-Settings TODO
+LocationController - needed?
+PasscodeView -fixed
+WebPlayerView - needed?
+ProfileActivity$ListAdapter.smali - fixed
+Icon on change custom theme - wrong - const SettingsActivity$4$1.smali maybe fixed
+Settings fixed
 ShareActivity (needed?)
 
 SettingsActivity$4$1.smali:    invoke-static {}, Lorg/telegram/messenger/ChangeUserHelper;->getUserTag()Ljava/lang/String; + WORK? (ICON on change theme)

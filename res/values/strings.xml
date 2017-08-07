@@ -1950,7 +1950,7 @@ If you forget your password, you will lose access to your Telegram account. Ther
     <string name="DialogSure">You are sure?</string>
     <string name="DialogYes">Yes</string>
     <string name="IsCurrentUser">Is current user!</string>
-    <string name="MaxUsersCount">Maximum 10 users!</string>
+    <string name="MaxUsersCount">Maximum 99 users!</string>
     <string name="ScanningProfiles">Scanning profiles</string>
     <string name="DeleteFirstUser">Impossible delete first user!</string>
     <string name="AddUser">Add account</string>

@@ -3501,7 +3501,7 @@
     .line 1432
     new-instance v13, Landroid/text/style/ForegroundColorSpan;
 
-    sget-boolean v12, Lorg/telegram/ui/ActionBar/Theme;->usemultiTheme:Z
+    sget-boolean v12, Lorg/telegram/ui/ActionBar/Theme;->usePlusTheme:Z
 
     if-eqz v12, :cond_a
 

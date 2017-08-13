@@ -879,9 +879,20 @@
 в нижнем правом углу или кнопку меню
 для дополнительных опций."</string>
     <string name="NoContacts">Контактов пока нет</string>
+	<string name="CountReceived">Принято</string>
+	<string name="BytesReceived">Байтов принято</string>
+	<string name="ResetStatistics">Сброс статистики</string>
+    <string name="BytesSent">Байтов отправлено</string>
+    <string name="CountSent">Отправлено</string>
+	<string name="RoamingUsage">Использование данных в роуминге</string>
+	<string name="WiFiUsage">Использование сети Wi-Fi</string>
+	<string name="MobileUsage">Использование моб. данных</string>
+	<string name="AddShortcut">Добавить ярлык</string>
+	<string name="StorageUsage">Использование памяти</string>
+	<string name="PinToTop">Закрепить сверху</string>
     <string name="NoFavoritesHelp">"Нет избранных
 
-Для добвления любого чата в этот список, просто коснитесь названия чата и удерживайте, затем выберите \"Добавить в избранное\"."</string>
+Для добавления любого чата в этот список, просто коснитесь названия чата и удерживайте, затем выберите \"Добавить в избранное\"."</string>
     <string name="NoFiles">Файлов пока нет...</string>
     <string name="NoHandleAppInstalled">У вас нет приложений, которые могут обрабатывать файлы типа «%1$s», пожалуйста, установите одно для продолжения.</string>
     <string name="NoMailInstalled">Пожалуйста, отправьте нам письмо с описанием вашей проблемы на sms@stel.com.</string>

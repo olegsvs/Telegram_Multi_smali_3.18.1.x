@@ -1929,7 +1929,7 @@ If you forget your password, you will lose access to your Telegram account. Ther
     <string name="hockeyapp_update_dialog_positive_button">Show</string>
     <string name="hockeyapp_update_dialog_title">Update Available</string>
     <string name="hockeyapp_update_mandatory_toast">%s is available and is a mandatory update!</string>
-    <string name="UsePlusTheme">Use Plus theming</string>
+    <string name="UsePlusTheme">Use Multi theming</string>
     <string name="AppNameBeta">Telegram Multi Beta</string>
     <string name="PlusVersion">Telegram Multi Version</string>
     <string name="ShortAppName">Telegram Multi</string>

@@ -446,7 +446,7 @@
 
     .line 93
     :pswitch_7
-    const-string v0, "my_spb"
+    const-string v0, "mskcity"
 
     .line 94
     goto :goto_0

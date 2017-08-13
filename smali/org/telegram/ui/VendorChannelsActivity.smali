@@ -818,8 +818,6 @@
 
     const-string/jumbo v2, "\u041a\u0430\u043d\u0430\u043b \u043e \u0431\u043b\u0438\u0436\u0430\u0439\u0448\u0438\u0445 \u0441\u043e\u0431\u044b\u0442\u0438\u044f\u0445 \u0432 \u0421\u0430\u043d\u043a\u0442-\u041f\u0435\u0442\u0435\u0440\u0431\u0443\u0440\u0433\u0435"
 
-    invoke-virtual {p0, v0, v1, v2}, Lorg/telegram/ui/VendorChannelsActivity;->AddObjectToList(Landroid/graphics/Bitmap;Ljava/lang/String;Ljava/lang/String;)V
-
     .line 140
     const v0, 0x7f02029f
 

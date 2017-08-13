@@ -1575,6 +1575,8 @@
     <string name="hockeyapp_update_mandatory_toast">%s доступен и является обязательным для обновления!</string>
     <string name="Change_another_user">Мультиюзер</string>
     <string name="DialogAddNo">Нет</string>
+	<string name="Theme">Тема</string>
+	<string name="DataSettings">Память и данные</string>
     <string name="DialogAddSure">Продолжить?</string>
     <string name="DialogAddUser">Приложение завершит работу и автоматически запустится через пару секунд для добавления нового пользователя</string>
     <string name="DialogAddYes">Да</string>

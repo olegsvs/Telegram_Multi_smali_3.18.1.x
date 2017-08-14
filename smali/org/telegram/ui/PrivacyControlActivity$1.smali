@@ -24,7 +24,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyControlActivity;
 
     .prologue
-    .line 132
+    .line 125
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-direct {p0}, Lorg/telegram/ui/ActionBar/ActionBar$ActionBarMenuOnItemClick;-><init>()V
@@ -35,34 +35,34 @@
 
 # virtual methods
 .method public onItemClick(I)V
-    .locals 7
+    .locals 8
     .param p1, "id"    # I
 
     .prologue
-    const/4 v6, 0x1
+    const/4 v7, 0x1
 
-    const/4 v5, 0x0
+    const/4 v6, 0x0
 
-    .line 135
+    .line 128
     const/4 v3, -0x1
 
     if-ne p1, v3, :cond_1
 
-    .line 136
+    .line 129
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/PrivacyControlActivity;->finishFragment()V
 
-    .line 167
+    .line 160
     :cond_0
     :goto_0
     return-void
 
-    .line 137
+    .line 130
     :cond_1
-    if-ne p1, v6, :cond_0
+    if-ne p1, v7, :cond_0
 
-    .line 138
+    .line 131
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v3}, Lorg/telegram/ui/PrivacyControlActivity;->getParentActivity()Landroid/app/Activity;
@@ -71,7 +71,7 @@
 
     if-eqz v3, :cond_0
 
-    .line 142
+    .line 135
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-static {v3}, Lorg/telegram/ui/PrivacyControlActivity;->access$000(Lorg/telegram/ui/PrivacyControlActivity;)I
@@ -88,7 +88,7 @@
 
     if-nez v3, :cond_3
 
-    .line 143
+    .line 136
     sget-object v3, Lorg/telegram/messenger/ApplicationLoader;->applicationContext:Landroid/content/Context;
 
     new-instance v4, Ljava/lang/StringBuilder;
@@ -113,23 +113,23 @@
 
     move-result-object v4
 
-    invoke-virtual {v3, v4, v5}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
+    invoke-virtual {v3, v4, v6}, Landroid/content/Context;->getSharedPreferences(Ljava/lang/String;I)Landroid/content/SharedPreferences;
 
     move-result-object v1
 
-    .line 144
+    .line 137
     .local v1, "preferences":Landroid/content/SharedPreferences;
     const-string/jumbo v3, "privacyAlertShowed"
 
-    invoke-interface {v1, v3, v5}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
+    invoke-interface {v1, v3, v6}, Landroid/content/SharedPreferences;->getBoolean(Ljava/lang/String;Z)Z
 
     move-result v2
 
-    .line 145
+    .line 138
     .local v2, "showed":Z
     if-nez v2, :cond_3
 
-    .line 146
+    .line 139
     new-instance v0, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
@@ -140,7 +140,7 @@
 
     invoke-direct {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;-><init>(Landroid/content/Context;)V
 
-    .line 147
+    .line 140
     .local v0, "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
@@ -148,9 +148,9 @@
 
     move-result v3
 
-    if-ne v3, v6, :cond_2
+    if-ne v3, v7, :cond_2
 
-    .line 148
+    .line 141
     const-string/jumbo v3, "WhoCanAddMeInfo"
 
     const v4, 0x7f0706a6
@@ -161,7 +161,7 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 152
+    .line 145
     :goto_1
     const-string/jumbo v3, "AppName"
 
@@ -173,7 +173,7 @@
 
     invoke-virtual {v0, v3}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setTitle(Ljava/lang/CharSequence;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 153
+    .line 146
     const-string/jumbo v3, "OK"
 
     const v4, 0x7f070452
@@ -188,7 +188,7 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 160
+    .line 153
     const-string/jumbo v3, "Cancel"
 
     const v4, 0x7f0700f0
@@ -201,7 +201,7 @@
 
     invoke-virtual {v0, v3, v4}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
 
-    .line 161
+    .line 154
     iget-object v3, p0, Lorg/telegram/ui/PrivacyControlActivity$1;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     invoke-virtual {v0}, Lorg/telegram/ui/ActionBar/AlertDialog$Builder;->create()Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -212,7 +212,7 @@
 
     goto/16 :goto_0
 
-    .line 150
+    .line 143
     :cond_2
     const-string/jumbo v3, "CustomHelp"
 
@@ -226,7 +226,7 @@
 
     goto :goto_1
 
-    .line 165
+    .line 158
     .end local v0    # "builder":Lorg/telegram/ui/ActionBar/AlertDialog$Builder;
     .end local v1    # "preferences":Landroid/content/SharedPreferences;
     .end local v2    # "showed":Z

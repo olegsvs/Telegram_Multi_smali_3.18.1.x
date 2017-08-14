@@ -19,7 +19,7 @@
     .locals 0
 
     .prologue
-    .line 89
+    .line 82
     invoke-direct {p0}, Landroid/text/method/LinkMovementMethod;-><init>()V
 
     return-void
@@ -34,7 +34,7 @@
     .param p3, "event"    # Landroid/view/MotionEvent;
 
     .prologue
-    .line 93
+    .line 86
     :try_start_0
     invoke-super {p0, p1, p2, p3}, Landroid/text/method/LinkMovementMethod;->onTouchEvent(Landroid/widget/TextView;Landroid/text/Spannable;Landroid/view/MotionEvent;)Z
     :try_end_0
@@ -42,19 +42,19 @@
 
     move-result v1
 
-    .line 97
+    .line 90
     :goto_0
     return v1
 
-    .line 94
+    .line 87
     :catch_0
     move-exception v0
 
-    .line 95
+    .line 88
     .local v0, "e":Ljava/lang/Exception;
     invoke-static {v0}, Lorg/telegram/messenger/FileLog;->e(Ljava/lang/Throwable;)V
 
-    .line 97
+    .line 90
     const/4 v1, 0x0
 
     goto :goto_0

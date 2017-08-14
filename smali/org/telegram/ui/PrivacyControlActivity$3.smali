@@ -29,7 +29,7 @@
     .param p1, "this$0"    # Lorg/telegram/ui/PrivacyControlActivity;
 
     .prologue
-    .line 374
+    .line 321
     iput-object p1, p0, Lorg/telegram/ui/PrivacyControlActivity$3;->this$0:Lorg/telegram/ui/PrivacyControlActivity;
 
     iput-object p2, p0, Lorg/telegram/ui/PrivacyControlActivity$3;->val$progressDialogFinal:Lorg/telegram/ui/ActionBar/AlertDialog;
@@ -47,13 +47,13 @@
     .param p2, "error"    # Lorg/telegram/tgnet/TLRPC$TL_error;
 
     .prologue
-    .line 377
+    .line 324
     new-instance v0, Lorg/telegram/ui/PrivacyControlActivity$3$1;
 
     invoke-direct {v0, p0, p2, p1}, Lorg/telegram/ui/PrivacyControlActivity$3$1;-><init>(Lorg/telegram/ui/PrivacyControlActivity$3;Lorg/telegram/tgnet/TLRPC$TL_error;Lorg/telegram/tgnet/TLObject;)V
 
     invoke-static {v0}, Lorg/telegram/messenger/AndroidUtilities;->runOnUIThread(Ljava/lang/Runnable;)V
 
-    .line 397
+    .line 344
     return-void
 .end method

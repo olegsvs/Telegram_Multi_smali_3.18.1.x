@@ -135,16 +135,16 @@
     invoke-virtual {v0, v3}, Landroid/app/AlertDialog$Builder;->setMessage(Ljava/lang/CharSequence;)Landroid/app/AlertDialog$Builder;
 
     .line 175
-    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$3;
+    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$2;
 
-    invoke-direct {v5, p0, p1}, Lorg/telegram/ui/ChangeUserActivity$3;-><init>(Lorg/telegram/ui/ChangeUserActivity;I)V
+    invoke-direct {v5, p0, p1}, Lorg/telegram/ui/ChangeUserActivity$2;-><init>(Lorg/telegram/ui/ChangeUserActivity;I)V
 
     invoke-virtual {v0, v1, v5}, Landroid/app/AlertDialog$Builder;->setPositiveButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 
     .line 180
-    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$4;
+    new-instance v5, Lorg/telegram/ui/ChangeUserActivity$3;
 
-    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$4;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
+    invoke-direct {v5, p0}, Lorg/telegram/ui/ChangeUserActivity$3;-><init>(Lorg/telegram/ui/ChangeUserActivity;)V
 
     invoke-virtual {v0, v2, v5}, Landroid/app/AlertDialog$Builder;->setNegativeButton(Ljava/lang/CharSequence;Landroid/content/DialogInterface$OnClickListener;)Landroid/app/AlertDialog$Builder;
 

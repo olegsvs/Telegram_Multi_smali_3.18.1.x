@@ -1,5 +1,5 @@
 !!brut.androlib.meta.MetaInfo
-apkFileName: TG_MULTI_3_FIX_CALLS_3.18.0.0-aligned-signed.apk
+apkFileName: TG_MULTI.apk
 compressionType: false
 doNotCompress:
 - arsc
@@ -24,5 +24,5 @@ usesFramework:
   tag: null
 version: 2.2.3
 versionInfo:
-  versionCode: '9659'
-  versionName: 3.18.1.5
+  versionCode: '9661'
+  versionName: 3.18.1.6
